@@ -1,0 +1,15 @@
+digraph "" {
+    "r0 := @this: pka"
+    "load.r r0"
+    "r0 := @this: pka"->"load.r r0";
+    "specialinvoke <pka: boolean a()>"
+    "load.r r0"->"specialinvoke <pka: boolean a()>";
+    "ifne return"
+    "specialinvoke <pka: boolean a()>"->"ifne return";
+    "ifne return"->"load.r r0";
+    "load.r r0"->"specialinvoke <pka: boolean a()>";
+    "pop"
+    "specialinvoke <pka: boolean a()>"->"pop";
+    "return"
+    "pop"->"return";
+}

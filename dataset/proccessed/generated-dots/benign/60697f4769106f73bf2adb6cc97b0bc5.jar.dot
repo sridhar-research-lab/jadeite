@@ -1,0 +1,41 @@
+digraph "" {
+    "r0 := @this: ScrollerII"
+    "load.r r0"
+    "r0 := @this: ScrollerII"->"load.r r0";
+    "push \"bgcolor\""
+    "load.r r0"->"push \"bgcolor\"";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"
+    "push \"bgcolor\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "ifnonnull load.r r0"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"ifnonnull load.r r0";
+    "staticget <java.awt.Color: java.awt.Color white>"
+    "ifnonnull load.r r0"->"staticget <java.awt.Color: java.awt.Color white>";
+    "store.r $r6"
+    "staticget <java.awt.Color: java.awt.Color white>"->"store.r $r6";
+    "goto load.r r0"
+    "store.r $r6"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "load.r $r6"
+    "load.r r0"->"load.r $r6";
+    "fieldput <ScrollerII: java.awt.Color k>"
+    "load.r $r6"->"fieldput <ScrollerII: java.awt.Color k>";
+    "fieldput <ScrollerII: java.awt.Color k>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "fieldget <ScrollerII: java.awt.Color k>"
+    "load.r r0"->"fieldget <ScrollerII: java.awt.Color k>";
+    "virtualinvoke <java.awt.Component: void setBackground(java.awt.Color)>"
+    "fieldget <ScrollerII: java.awt.Color k>"->"virtualinvoke <java.awt.Component: void setBackground(java.awt.Color)>";
+    "virtualinvoke <java.awt.Component: void setBackground(java.awt.Color)>"->"load.r r0";
+    "fieldget <ScrollerII: java.lang.Thread a>"
+    "load.r r0"->"fieldget <ScrollerII: java.lang.Thread a>";
+    "virtualinvoke <java.lang.Thread: void start()>"
+    "fieldget <ScrollerII: java.lang.Thread a>"->"virtualinvoke <java.lang.Thread: void start()>";
+    "return"
+    "virtualinvoke <java.lang.Thread: void start()>"->"return";
+    "ifnonnull load.r r0"->"load.r r0";
+    "load.r r0"->"push \"bgcolor\"";
+    "push \"bgcolor\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "staticinvoke <java.awt.Color: java.awt.Color decode(java.lang.String)>"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"staticinvoke <java.awt.Color: java.awt.Color decode(java.lang.String)>";
+    "staticinvoke <java.awt.Color: java.awt.Color decode(java.lang.String)>"->"store.r $r6";
+}

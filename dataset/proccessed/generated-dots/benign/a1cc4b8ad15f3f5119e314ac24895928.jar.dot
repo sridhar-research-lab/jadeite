@@ -1,0 +1,46 @@
+digraph "" {
+    "r0 := @this: LorenzMS"
+    "load.r r0"
+    "r0 := @this: LorenzMS"->"load.r r0";
+    "virtualinvoke <java.awt.Component: java.awt.Dimension size()>"
+    "load.r r0"->"virtualinvoke <java.awt.Component: java.awt.Dimension size()>";
+    "fieldget <java.awt.Dimension: int width>"
+    "virtualinvoke <java.awt.Component: java.awt.Dimension size()>"->"fieldget <java.awt.Dimension: int width>";
+    "staticput <LorenzMS: int width>"
+    "fieldget <java.awt.Dimension: int width>"->"staticput <LorenzMS: int width>";
+    "staticput <LorenzMS: int width>"->"load.r r0";
+    "load.r r0"->"virtualinvoke <java.awt.Component: java.awt.Dimension size()>";
+    "fieldget <java.awt.Dimension: int height>"
+    "virtualinvoke <java.awt.Component: java.awt.Dimension size()>"->"fieldget <java.awt.Dimension: int height>";
+    "staticput <LorenzMS: int height>"
+    "fieldget <java.awt.Dimension: int height>"->"staticput <LorenzMS: int height>";
+    "staticget <LorenzMS: int width>"
+    "staticput <LorenzMS: int height>"->"staticget <LorenzMS: int width>";
+    "push 2"
+    "staticget <LorenzMS: int width>"->"push 2";
+    "div.i"
+    "push 2"->"div.i";
+    "staticput <LorenzMS: int cX>"
+    "div.i"->"staticput <LorenzMS: int cX>";
+    "staticget <LorenzMS: int height>"
+    "staticput <LorenzMS: int cX>"->"staticget <LorenzMS: int height>";
+    "staticget <LorenzMS: int height>"->"push 2";
+    "push 2"->"div.i";
+    "staticput <LorenzMS: int cY>"
+    "div.i"->"staticput <LorenzMS: int cY>";
+    "staticput <LorenzMS: int cY>"->"load.r r0";
+    "load.r r0"->"staticget <LorenzMS: int width>";
+    "staticget <LorenzMS: int width>"->"staticget <LorenzMS: int height>";
+    "virtualinvoke <java.awt.Component: java.awt.Image createImage(int,int)>"
+    "staticget <LorenzMS: int height>"->"virtualinvoke <java.awt.Component: java.awt.Image createImage(int,int)>";
+    "staticput <LorenzMS: java.awt.Image mOSI>"
+    "virtualinvoke <java.awt.Component: java.awt.Image createImage(int,int)>"->"staticput <LorenzMS: java.awt.Image mOSI>";
+    "staticget <LorenzMS: java.awt.Image mOSI>"
+    "staticput <LorenzMS: java.awt.Image mOSI>"->"staticget <LorenzMS: java.awt.Image mOSI>";
+    "virtualinvoke <java.awt.Image: java.awt.Graphics getGraphics()>"
+    "staticget <LorenzMS: java.awt.Image mOSI>"->"virtualinvoke <java.awt.Image: java.awt.Graphics getGraphics()>";
+    "staticput <LorenzMS: java.awt.Graphics mOSG>"
+    "virtualinvoke <java.awt.Image: java.awt.Graphics getGraphics()>"->"staticput <LorenzMS: java.awt.Graphics mOSG>";
+    "return"
+    "staticput <LorenzMS: java.awt.Graphics mOSG>"->"return";
+}

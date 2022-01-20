@@ -1,0 +1,69 @@
+digraph "" {
+    "r0 := @this: lotus.notes.apps.outlineapplet.OutlineApplet"
+    "push \"browser\""
+    "r0 := @this: lotus.notes.apps.outlineapplet.OutlineApplet"->"push \"browser\"";
+    "staticinvoke <java.lang.System: java.lang.String getProperty(java.lang.String)>"
+    "push \"browser\""->"staticinvoke <java.lang.System: java.lang.String getProperty(java.lang.String)>";
+    "store.r r1"
+    "staticinvoke <java.lang.System: java.lang.String getProperty(java.lang.String)>"->"store.r r1";
+    "load.r r1"
+    "store.r r1"->"load.r r1";
+    "ifnull load.r r1"
+    "load.r r1"->"ifnull load.r r1";
+    "ifnull load.r r1"->"load.r r1";
+    "virtualinvoke <java.lang.String: java.lang.String toLowerCase()>"
+    "load.r r1"->"virtualinvoke <java.lang.String: java.lang.String toLowerCase()>";
+    "virtualinvoke <java.lang.String: java.lang.String toLowerCase()>"->"store.r r1";
+    "store.r r1"->"load.r r1";
+    "ifnull load.r r0"
+    "load.r r1"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r r1";
+    "push \"lotus\""
+    "load.r r1"->"push \"lotus\"";
+    "virtualinvoke <java.lang.String: int indexOf(java.lang.String)>"
+    "push \"lotus\""->"virtualinvoke <java.lang.String: int indexOf(java.lang.String)>";
+    "push -1"
+    "virtualinvoke <java.lang.String: int indexOf(java.lang.String)>"->"push -1";
+    "ifcmpne.i load.r r0"
+    "push -1"->"ifcmpne.i load.r r0";
+    "ifcmpne.i load.r r0"->"load.r r1";
+    "push \"netscape\""
+    "load.r r1"->"push \"netscape\"";
+    "push \"netscape\""->"virtualinvoke <java.lang.String: int indexOf(java.lang.String)>";
+    "virtualinvoke <java.lang.String: int indexOf(java.lang.String)>"->"push -1";
+    "push -1"->"ifcmpne.i load.r r0";
+    "ifcmpne.i load.r r0"->"load.r r1";
+    "push \"plugin\""
+    "load.r r1"->"push \"plugin\"";
+    "push \"plugin\""->"virtualinvoke <java.lang.String: int indexOf(java.lang.String)>";
+    "virtualinvoke <java.lang.String: int indexOf(java.lang.String)>"->"push -1";
+    "push -1"->"ifcmpne.i load.r r0";
+    "load.r r0"
+    "ifcmpne.i load.r r0"->"load.r r0";
+    "virtualinvoke <lotus.notes.apps.outlineapplet.OutlineApplet: boolean setInstalled()>"
+    "load.r r0"->"virtualinvoke <lotus.notes.apps.outlineapplet.OutlineApplet: boolean setInstalled()>";
+    "pop"
+    "virtualinvoke <lotus.notes.apps.outlineapplet.OutlineApplet: boolean setInstalled()>"->"pop";
+    "pop"->"load.r r0";
+    "push 0"
+    "load.r r0"->"push 0";
+    "fieldput <lotus.notes.apps.outlineapplet.OutlineApplet: boolean sizeInitialized>"
+    "push 0"->"fieldput <lotus.notes.apps.outlineapplet.OutlineApplet: boolean sizeInitialized>";
+    "fieldput <lotus.notes.apps.outlineapplet.OutlineApplet: boolean sizeInitialized>"->"load.r r0";
+    "push null"
+    "load.r r0"->"push null";
+    "virtualinvoke <java.awt.Container: void setLayout(java.awt.LayoutManager)>"
+    "push null"->"virtualinvoke <java.awt.Container: void setLayout(java.awt.LayoutManager)>";
+    "virtualinvoke <java.awt.Container: void setLayout(java.awt.LayoutManager)>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "specialinvoke <lotus.notes.apps.outlineapplet.OutlineApplet: java.awt.Frame getParentFrame()>"
+    "load.r r0"->"specialinvoke <lotus.notes.apps.outlineapplet.OutlineApplet: java.awt.Frame getParentFrame()>";
+    "fieldput <lotus.notes.apps.outlineapplet.OutlineApplet: java.awt.Frame ParentFrame>"
+    "specialinvoke <lotus.notes.apps.outlineapplet.OutlineApplet: java.awt.Frame getParentFrame()>"->"fieldput <lotus.notes.apps.outlineapplet.OutlineApplet: java.awt.Frame ParentFrame>";
+    "fieldput <lotus.notes.apps.outlineapplet.OutlineApplet: java.awt.Frame ParentFrame>"->"load.r r0";
+    "load.r r0"->"push 0";
+    "specialinvoke <lotus.notes.apps.outlineapplet.OutlineApplet: void initPanelRects(boolean)>"
+    "push 0"->"specialinvoke <lotus.notes.apps.outlineapplet.OutlineApplet: void initPanelRects(boolean)>";
+    "return"
+    "specialinvoke <lotus.notes.apps.outlineapplet.OutlineApplet: void initPanelRects(boolean)>"->"return";
+}

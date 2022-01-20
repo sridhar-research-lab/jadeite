@@ -1,0 +1,151 @@
+digraph "" {
+    "r0 := @this: Starphone"
+    "load.r r0"
+    "r0 := @this: Starphone"->"load.r r0";
+    "specialinvoke <javax.swing.JApplet: void init()>"
+    "load.r r0"->"specialinvoke <javax.swing.JApplet: void init()>";
+    "specialinvoke <javax.swing.JApplet: void init()>"->"load.r r0";
+    "push \"chatName\""
+    "load.r r0"->"push \"chatName\"";
+    "virtualinvoke <Starphone: java.lang.String getParameter(java.lang.String)>"
+    "push \"chatName\""->"virtualinvoke <Starphone: java.lang.String getParameter(java.lang.String)>";
+    "staticput <Starphone: java.lang.String chatName>"
+    "virtualinvoke <Starphone: java.lang.String getParameter(java.lang.String)>"->"staticput <Starphone: java.lang.String chatName>";
+    "staticput <Starphone: java.lang.String chatName>"->"load.r r0";
+    "staticinvoke <netscape.javascript.JSObject: netscape.javascript.JSObject getWindow(java.applet.Applet)>"
+    "load.r r0"->"staticinvoke <netscape.javascript.JSObject: netscape.javascript.JSObject getWindow(java.applet.Applet)>";
+    "staticput <Starphone: netscape.javascript.JSObject win>"
+    "staticinvoke <netscape.javascript.JSObject: netscape.javascript.JSObject getWindow(java.applet.Applet)>"->"staticput <Starphone: netscape.javascript.JSObject win>";
+    "staticinvoke <Starphone: void initializePlatform()>"
+    "staticput <Starphone: netscape.javascript.JSObject win>"->"staticinvoke <Starphone: void initializePlatform()>";
+    "staticget <Starphone: java.lang.String username>"
+    "staticinvoke <Starphone: void initializePlatform()>"->"staticget <Starphone: java.lang.String username>";
+    "ifnull push \"embedUser\""
+    "staticget <Starphone: java.lang.String username>"->"ifnull push \"embedUser\"";
+    "ifnull push \"embedUser\""->"staticget <Starphone: java.lang.String username>";
+    "push \"\""
+    "staticget <Starphone: java.lang.String username>"->"push \"\"";
+    "virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>"
+    "push \"\""->"virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>";
+    "ifeq staticinvoke <IAXCall: java.util.Vector getCallarray()>"
+    "virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>"->"ifeq staticinvoke <IAXCall: java.util.Vector getCallarray()>";
+    "push \"embedUser\""
+    "ifeq staticinvoke <IAXCall: java.util.Vector getCallarray()>"->"push \"embedUser\"";
+    "staticput <Starphone: java.lang.String username>"
+    "push \"embedUser\""->"staticput <Starphone: java.lang.String username>";
+    "push \"embedPass\""
+    "staticput <Starphone: java.lang.String username>"->"push \"embedPass\"";
+    "staticput <Starphone: java.lang.String secret>"
+    "push \"embedPass\""->"staticput <Starphone: java.lang.String secret>";
+    "staticinvoke <IAXCall: java.util.Vector getCallarray()>"
+    "staticput <Starphone: java.lang.String secret>"->"staticinvoke <IAXCall: java.util.Vector getCallarray()>";
+    "new IAXCall"
+    "staticinvoke <IAXCall: java.util.Vector getCallarray()>"->"new IAXCall";
+    "dup1.r"
+    "new IAXCall"->"dup1.r";
+    "specialinvoke <IAXCall: void <init>()>"
+    "dup1.r"->"specialinvoke <IAXCall: void <init>()>";
+    "virtualinvoke <java.util.Vector: boolean add(java.lang.Object)>"
+    "specialinvoke <IAXCall: void <init>()>"->"virtualinvoke <java.util.Vector: boolean add(java.lang.Object)>";
+    "pop"
+    "virtualinvoke <java.util.Vector: boolean add(java.lang.Object)>"->"pop";
+    "new jsListener"
+    "pop"->"new jsListener";
+    "new jsListener"->"dup1.r";
+    "staticget <Starphone: java.lang.String chatName>"
+    "dup1.r"->"staticget <Starphone: java.lang.String chatName>";
+    "specialinvoke <jsListener: void <init>(java.lang.String)>"
+    "staticget <Starphone: java.lang.String chatName>"->"specialinvoke <jsListener: void <init>(java.lang.String)>";
+    "staticput <Starphone: jsListener mw>"
+    "specialinvoke <jsListener: void <init>(java.lang.String)>"->"staticput <Starphone: jsListener mw>";
+    "new networkThread"
+    "staticput <Starphone: jsListener mw>"->"new networkThread";
+    "new networkThread"->"dup1.r";
+    "staticget <Starphone: jsListener mw>"
+    "dup1.r"->"staticget <Starphone: jsListener mw>";
+    "specialinvoke <networkThread: void <init>(IAXEventListener)>"
+    "staticget <Starphone: jsListener mw>"->"specialinvoke <networkThread: void <init>(IAXEventListener)>";
+    "staticput <Starphone: networkThread nt>"
+    "specialinvoke <networkThread: void <init>(IAXEventListener)>"->"staticput <Starphone: networkThread nt>";
+    "new java.lang.Thread"
+    "staticput <Starphone: networkThread nt>"->"new java.lang.Thread";
+    "new java.lang.Thread"->"dup1.r";
+    "staticget <Starphone: networkThread nt>"
+    "dup1.r"->"staticget <Starphone: networkThread nt>";
+    "specialinvoke <java.lang.Thread: void <init>(java.lang.Runnable)>"
+    "staticget <Starphone: networkThread nt>"->"specialinvoke <java.lang.Thread: void <init>(java.lang.Runnable)>";
+    "virtualinvoke <java.lang.Thread: void start()>"
+    "specialinvoke <java.lang.Thread: void <init>(java.lang.Runnable)>"->"virtualinvoke <java.lang.Thread: void start()>";
+    "new regThread"
+    "virtualinvoke <java.lang.Thread: void start()>"->"new regThread";
+    "new regThread"->"dup1.r";
+    "push \"asterisk.liveonthenet.com\""
+    "dup1.r"->"push \"asterisk.liveonthenet.com\"";
+    "push \"asterisk.liveonthenet.com\""->"staticget <Starphone: java.lang.String username>";
+    "specialinvoke <regThread: void <init>(java.lang.String,java.lang.String)>"
+    "staticget <Starphone: java.lang.String username>"->"specialinvoke <regThread: void <init>(java.lang.String,java.lang.String)>";
+    "staticput <Starphone: regThread rt>"
+    "specialinvoke <regThread: void <init>(java.lang.String,java.lang.String)>"->"staticput <Starphone: regThread rt>";
+    "staticput <Starphone: regThread rt>"->"new java.lang.Thread";
+    "new java.lang.Thread"->"dup1.r";
+    "staticget <Starphone: regThread rt>"
+    "dup1.r"->"staticget <Starphone: regThread rt>";
+    "staticget <Starphone: regThread rt>"->"specialinvoke <java.lang.Thread: void <init>(java.lang.Runnable)>";
+    "staticput <Starphone: java.lang.Thread trt>"
+    "specialinvoke <java.lang.Thread: void <init>(java.lang.Runnable)>"->"staticput <Starphone: java.lang.Thread trt>";
+    "staticget <Starphone: java.lang.Thread trt>"
+    "staticput <Starphone: java.lang.Thread trt>"->"staticget <Starphone: java.lang.Thread trt>";
+    "staticget <Starphone: java.lang.Thread trt>"->"virtualinvoke <java.lang.Thread: void start()>";
+    "new schedThread"
+    "virtualinvoke <java.lang.Thread: void start()>"->"new schedThread";
+    "store.r $r19"
+    "new schedThread"->"store.r $r19";
+    "load.r $r19"
+    "store.r $r19"->"load.r $r19";
+    "specialinvoke <schedThread: void <init>()>"
+    "load.r $r19"->"specialinvoke <schedThread: void <init>()>";
+    "specialinvoke <schedThread: void <init>()>"->"new java.lang.Thread";
+    "new java.lang.Thread"->"dup1.r";
+    "dup1.r"->"load.r $r19";
+    "load.r $r19"->"specialinvoke <java.lang.Thread: void <init>(java.lang.Runnable)>";
+    "specialinvoke <java.lang.Thread: void <init>(java.lang.Runnable)>"->"virtualinvoke <java.lang.Thread: void start()>";
+    "staticget <java.lang.System: java.io.PrintStream out>"
+    "virtualinvoke <java.lang.Thread: void start()>"->"staticget <java.lang.System: java.io.PrintStream out>";
+    "push \"inited\""
+    "staticget <java.lang.System: java.io.PrintStream out>"->"push \"inited\"";
+    "virtualinvoke <java.io.PrintStream: void println(java.lang.String)>"
+    "push \"inited\""->"virtualinvoke <java.io.PrintStream: void println(java.lang.String)>";
+    "virtualinvoke <java.io.PrintStream: void println(java.lang.String)>"->"load.r r0";
+    "load.r r0"->"staticget <Starphone: jsListener mw>";
+    "virtualinvoke <Starphone: void setContentPane(java.awt.Container)>"
+    "staticget <Starphone: jsListener mw>"->"virtualinvoke <Starphone: void setContentPane(java.awt.Container)>";
+    "virtualinvoke <Starphone: void setContentPane(java.awt.Container)>"->"load.r $r19";
+    "new java.lang.StringBuilder"
+    "load.r $r19"->"new java.lang.StringBuilder";
+    "new java.lang.StringBuilder"->"dup1.r";
+    "specialinvoke <java.lang.StringBuilder: void <init>()>"
+    "dup1.r"->"specialinvoke <java.lang.StringBuilder: void <init>()>";
+    "push \"presence:\""
+    "specialinvoke <java.lang.StringBuilder: void <init>()>"->"push \"presence:\"";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"
+    "push \"presence:\""->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"staticget <Starphone: java.lang.String chatName>";
+    "staticget <Starphone: java.lang.String chatName>"->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.String toString()>"
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"virtualinvoke <java.lang.StringBuilder: java.lang.String toString()>";
+    "fieldput <schedThread: java.lang.String callTarget>"
+    "virtualinvoke <java.lang.StringBuilder: java.lang.String toString()>"->"fieldput <schedThread: java.lang.String callTarget>";
+    "fieldput <schedThread: java.lang.String callTarget>"->"new java.lang.StringBuilder";
+    "new java.lang.StringBuilder"->"dup1.r";
+    "dup1.r"->"specialinvoke <java.lang.StringBuilder: void <init>()>";
+    "specialinvoke <java.lang.StringBuilder: void <init>()>"->"push \"presence:\"";
+    "push \"presence:\""->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"staticget <Starphone: java.lang.String chatName>";
+    "staticget <Starphone: java.lang.String chatName>"->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"virtualinvoke <java.lang.StringBuilder: java.lang.String toString()>";
+    "staticinvoke <Starphone: short genCall(java.lang.String)>"
+    "virtualinvoke <java.lang.StringBuilder: java.lang.String toString()>"->"staticinvoke <Starphone: short genCall(java.lang.String)>";
+    "staticinvoke <Starphone: short genCall(java.lang.String)>"->"pop";
+    "return"
+    "pop"->"return";
+}

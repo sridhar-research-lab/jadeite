@@ -1,0 +1,41 @@
+digraph "" {
+    "r0 := @this: finemenu"
+    "load.r r0"
+    "r0 := @this: finemenu"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "virtualinvoke <java.awt.Component: java.awt.Dimension size()>"
+    "load.r r0"->"virtualinvoke <java.awt.Component: java.awt.Dimension size()>";
+    "fieldget <java.awt.Dimension: int width>"
+    "virtualinvoke <java.awt.Component: java.awt.Dimension size()>"->"fieldget <java.awt.Dimension: int width>";
+    "fieldput <finemenu: int WinWidth>"
+    "fieldget <java.awt.Dimension: int width>"->"fieldput <finemenu: int WinWidth>";
+    "fieldput <finemenu: int WinWidth>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"virtualinvoke <java.awt.Component: java.awt.Dimension size()>";
+    "fieldget <java.awt.Dimension: int height>"
+    "virtualinvoke <java.awt.Component: java.awt.Dimension size()>"->"fieldget <java.awt.Dimension: int height>";
+    "fieldput <finemenu: int WinHeight>"
+    "fieldget <java.awt.Dimension: int height>"->"fieldput <finemenu: int WinHeight>";
+    "fieldput <finemenu: int WinHeight>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "fieldget <finemenu: int WinWidth>"
+    "load.r r0"->"fieldget <finemenu: int WinWidth>";
+    "fieldget <finemenu: int WinWidth>"->"load.r r0";
+    "fieldget <finemenu: int WinHeight>"
+    "load.r r0"->"fieldget <finemenu: int WinHeight>";
+    "virtualinvoke <java.awt.Component: java.awt.Image createImage(int,int)>"
+    "fieldget <finemenu: int WinHeight>"->"virtualinvoke <java.awt.Component: java.awt.Image createImage(int,int)>";
+    "fieldput <finemenu: java.awt.Image offScreenImage>"
+    "virtualinvoke <java.awt.Component: java.awt.Image createImage(int,int)>"->"fieldput <finemenu: java.awt.Image offScreenImage>";
+    "fieldput <finemenu: java.awt.Image offScreenImage>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "fieldget <finemenu: java.awt.Image offScreenImage>"
+    "load.r r0"->"fieldget <finemenu: java.awt.Image offScreenImage>";
+    "virtualinvoke <java.awt.Image: java.awt.Graphics getGraphics()>"
+    "fieldget <finemenu: java.awt.Image offScreenImage>"->"virtualinvoke <java.awt.Image: java.awt.Graphics getGraphics()>";
+    "fieldput <finemenu: java.awt.Graphics offScreenGraphics>"
+    "virtualinvoke <java.awt.Image: java.awt.Graphics getGraphics()>"->"fieldput <finemenu: java.awt.Graphics offScreenGraphics>";
+    "return"
+    "fieldput <finemenu: java.awt.Graphics offScreenGraphics>"->"return";
+}

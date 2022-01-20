@@ -1,0 +1,20 @@
+digraph "" {
+    "r0 := @this: Aggiornamento_java"
+    "new java.lang.Thread"
+    "r0 := @this: Aggiornamento_java"->"new java.lang.Thread";
+    "dup1.r"
+    "new java.lang.Thread"->"dup1.r";
+    "new Aggiornamento_java$1"
+    "dup1.r"->"new Aggiornamento_java$1";
+    "new Aggiornamento_java$1"->"dup1.r";
+    "load.r r0"
+    "dup1.r"->"load.r r0";
+    "specialinvoke <Aggiornamento_java$1: void <init>(Aggiornamento_java)>"
+    "load.r r0"->"specialinvoke <Aggiornamento_java$1: void <init>(Aggiornamento_java)>";
+    "specialinvoke <java.lang.Thread: void <init>(java.lang.Runnable)>"
+    "specialinvoke <Aggiornamento_java$1: void <init>(Aggiornamento_java)>"->"specialinvoke <java.lang.Thread: void <init>(java.lang.Runnable)>";
+    "virtualinvoke <java.lang.Thread: void start()>"
+    "specialinvoke <java.lang.Thread: void <init>(java.lang.Runnable)>"->"virtualinvoke <java.lang.Thread: void start()>";
+    "return"
+    "virtualinvoke <java.lang.Thread: void start()>"->"return";
+}

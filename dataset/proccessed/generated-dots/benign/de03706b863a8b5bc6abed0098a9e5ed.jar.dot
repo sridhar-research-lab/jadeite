@@ -1,0 +1,142 @@
+digraph "" {
+    "r0 := @this: EPApplet"
+    "staticget <EPApplet: int a>"
+    "r0 := @this: EPApplet"->"staticget <EPApplet: int a>";
+    "push 123456"
+    "staticget <EPApplet: int a>"->"push 123456";
+    "ifcmpne.i push 123456"
+    "push 123456"->"ifcmpne.i push 123456";
+    "staticget <java.lang.System: java.io.PrintStream out>"
+    "ifcmpne.i push 123456"->"staticget <java.lang.System: java.io.PrintStream out>";
+    "push \"Applet already running.\""
+    "staticget <java.lang.System: java.io.PrintStream out>"->"push \"Applet already running.\"";
+    "virtualinvoke <java.io.PrintStream: void println(java.lang.String)>"
+    "push \"Applet already running.\""->"virtualinvoke <java.io.PrintStream: void println(java.lang.String)>";
+    "load.r r0"
+    "virtualinvoke <java.io.PrintStream: void println(java.lang.String)>"->"load.r r0";
+    "specialinvoke <EPApplet: void a()>"
+    "load.r r0"->"specialinvoke <EPApplet: void a()>";
+    "return"
+    "specialinvoke <EPApplet: void a()>"->"return";
+    "store.r $r20"
+    "specialinvoke <EPApplet: void a()>"->"store.r $r20";
+    "store.r $r20"->"load.r r0";
+    "load.r r0"->"specialinvoke <EPApplet: void a()>";
+    "specialinvoke <EPApplet: void a()>"->"return";
+    "ifcmpne.i push 123456"->"push 123456";
+    "staticput <EPApplet: int a>"
+    "push 123456"->"staticput <EPApplet: int a>";
+    "new javax.swing.text.html.parser.ParserDelegator"
+    "staticput <EPApplet: int a>"->"new javax.swing.text.html.parser.ParserDelegator";
+    "specialinvoke <javax.swing.text.html.parser.ParserDelegator: void <init>()>"
+    "new javax.swing.text.html.parser.ParserDelegator"->"specialinvoke <javax.swing.text.html.parser.ParserDelegator: void <init>()>";
+    "staticinvoke <rp_gd: void b()>"
+    "specialinvoke <javax.swing.text.html.parser.ParserDelegator: void <init>()>"->"staticinvoke <rp_gd: void b()>";
+    "staticinvoke <rp_gd: void b()>"->"load.r r0";
+    "push 1"
+    "load.r r0"->"push 1";
+    "fieldput <EPApplet: boolean a>"
+    "push 1"->"fieldput <EPApplet: boolean a>";
+    "push \"java.version\""
+    "fieldput <EPApplet: boolean a>"->"push \"java.version\"";
+    "staticinvoke <java.lang.System: java.lang.String getProperty(java.lang.String)>"
+    "push \"java.version\""->"staticinvoke <java.lang.System: java.lang.String getProperty(java.lang.String)>";
+    "dup1.r"
+    "staticinvoke <java.lang.System: java.lang.String getProperty(java.lang.String)>"->"dup1.r";
+    "dup1.r"->"store.r $r20";
+    "ifnonnull push 2"
+    "store.r $r20"->"ifnonnull push 2";
+    "push \"\""
+    "ifnonnull push 2"->"push \"\"";
+    "push \"\""->"store.r $r20";
+    "push 2"
+    "store.r $r20"->"push 2";
+    "new java.lang.StringBuilder"
+    "push 2"->"new java.lang.StringBuilder";
+    "new java.lang.StringBuilder"->"dup1.r";
+    "specialinvoke <java.lang.StringBuilder: void <init>()>"
+    "dup1.r"->"specialinvoke <java.lang.StringBuilder: void <init>()>";
+    "push \"Java version: \""
+    "specialinvoke <java.lang.StringBuilder: void <init>()>"->"push \"Java version: \"";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"
+    "push \"Java version: \""->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "load.r $r20"
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"load.r $r20";
+    "load.r $r20"->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.String toString()>"
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"virtualinvoke <java.lang.StringBuilder: java.lang.String toString()>";
+    "staticinvoke <rp_C: void a(int,java.lang.String)>"
+    "virtualinvoke <java.lang.StringBuilder: java.lang.String toString()>"->"staticinvoke <rp_C: void a(int,java.lang.String)>";
+    "staticinvoke <rp_C: void a(int,java.lang.String)>"->"load.r $r20";
+    "push \"1.5\""
+    "load.r $r20"->"push \"1.5\"";
+    "virtualinvoke <java.lang.String: int compareTo(java.lang.String)>"
+    "push \"1.5\""->"virtualinvoke <java.lang.String: int compareTo(java.lang.String)>";
+    "ifge load.r r0"
+    "virtualinvoke <java.lang.String: int compareTo(java.lang.String)>"->"ifge load.r r0";
+    "ifge load.r r0"->"load.r r0";
+    "staticinvoke <netscape.javascript.JSObject: netscape.javascript.JSObject getWindow(java.applet.Applet)>"
+    "load.r r0"->"staticinvoke <netscape.javascript.JSObject: netscape.javascript.JSObject getWindow(java.applet.Applet)>";
+    "staticinvoke <netscape.javascript.JSObject: netscape.javascript.JSObject getWindow(java.applet.Applet)>"->"push 2";
+    "push 2"->"new java.lang.StringBuilder";
+    "new java.lang.StringBuilder"->"dup1.r";
+    "dup1.r"->"specialinvoke <java.lang.StringBuilder: void <init>()>";
+    "push \"Java 1.5 or higher required. (\""
+    "specialinvoke <java.lang.StringBuilder: void <init>()>"->"push \"Java 1.5 or higher required. (\"";
+    "push \"Java 1.5 or higher required. (\""->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"load.r $r20";
+    "load.r $r20"->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "push \"installed)\""
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"push \"installed)\"";
+    "push \"installed)\""->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"virtualinvoke <java.lang.StringBuilder: java.lang.String toString()>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.String toString()>"->"staticinvoke <rp_C: void a(int,java.lang.String)>";
+    "staticinvoke <rp_C: void a(int,java.lang.String)>"->"new java.lang.StringBuilder";
+    "new java.lang.StringBuilder"->"dup1.r";
+    "dup1.r"->"specialinvoke <java.lang.StringBuilder: void <init>()>";
+    "push \"wrongJavaVersion(\\\"\""
+    "specialinvoke <java.lang.StringBuilder: void <init>()>"->"push \"wrongJavaVersion(\\\"\"";
+    "push \"wrongJavaVersion(\\\"\""->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"load.r $r20";
+    "load.r $r20"->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "push \"\\\")\""
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"push \"\\\")\"";
+    "push \"\\\")\""->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"virtualinvoke <java.lang.StringBuilder: java.lang.String toString()>";
+    "virtualinvoke <netscape.javascript.JSObject: java.lang.Object eval(java.lang.String)>"
+    "virtualinvoke <java.lang.StringBuilder: java.lang.String toString()>"->"virtualinvoke <netscape.javascript.JSObject: java.lang.Object eval(java.lang.String)>";
+    "pop"
+    "virtualinvoke <netscape.javascript.JSObject: java.lang.Object eval(java.lang.String)>"->"pop";
+    "push 0"
+    "pop"->"push 0";
+    "store.b $r20"
+    "push 0"->"store.b $r20";
+    "goto load.b $r20"
+    "store.b $r20"->"goto load.b $r20";
+    "load.b $r20"
+    "goto load.b $r20"->"load.b $r20";
+    "ifne staticinvoke <javax.swing.UIManager: java.lang.String getCrossPlatformLookAndFeelClassName()>"
+    "load.b $r20"->"ifne staticinvoke <javax.swing.UIManager: java.lang.String getCrossPlatformLookAndFeelClassName()>";
+    "ifne staticinvoke <javax.swing.UIManager: java.lang.String getCrossPlatformLookAndFeelClassName()>"->"store.r $r20";
+    "goto return"
+    "store.r $r20"->"goto return";
+    "ifne staticinvoke <javax.swing.UIManager: java.lang.String getCrossPlatformLookAndFeelClassName()>"->"store.r $r20";
+    "store.r $r20"->"goto return";
+    "ifne staticinvoke <javax.swing.UIManager: java.lang.String getCrossPlatformLookAndFeelClassName()>"->"store.r $r20";
+    "store.r $r20"->"goto return";
+    "store.r r0"
+    "ifne staticinvoke <javax.swing.UIManager: java.lang.String getCrossPlatformLookAndFeelClassName()>"->"store.r r0";
+    "store.r r0"->"return";
+    "ifne staticinvoke <javax.swing.UIManager: java.lang.String getCrossPlatformLookAndFeelClassName()>"->"load.r r0";
+    "load.r r0"->"specialinvoke <EPApplet: void a()>";
+    "specialinvoke <EPApplet: void a()>"->"return";
+    "staticinvoke <javax.swing.UIManager: java.lang.String getCrossPlatformLookAndFeelClassName()>"
+    "ifne staticinvoke <javax.swing.UIManager: java.lang.String getCrossPlatformLookAndFeelClassName()>"->"staticinvoke <javax.swing.UIManager: java.lang.String getCrossPlatformLookAndFeelClassName()>";
+    "staticinvoke <javax.swing.UIManager: void setLookAndFeel(java.lang.String)>"
+    "staticinvoke <javax.swing.UIManager: java.lang.String getCrossPlatformLookAndFeelClassName()>"->"staticinvoke <javax.swing.UIManager: void setLookAndFeel(java.lang.String)>";
+    "staticinvoke <javax.swing.UIManager: void setLookAndFeel(java.lang.String)>"->"goto return";
+    "ifge load.r r0"->"load.r r0";
+    "fieldget <EPApplet: boolean a>"
+    "load.r r0"->"fieldget <EPApplet: boolean a>";
+    "fieldget <EPApplet: boolean a>"->"store.b $r20";
+}

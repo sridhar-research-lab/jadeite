@@ -1,0 +1,120 @@
+digraph "" {
+    "r0 := @this: KeyPressedLabels"
+    "load.r r0"
+    "r0 := @this: KeyPressedLabels"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "virtualinvoke <java.awt.Component: java.awt.Dimension getSize()>"
+    "load.r r0"->"virtualinvoke <java.awt.Component: java.awt.Dimension getSize()>";
+    "dup1.r"
+    "virtualinvoke <java.awt.Component: java.awt.Dimension getSize()>"->"dup1.r";
+    "fieldget <java.awt.Dimension: int height>"
+    "dup1.r"->"fieldget <java.awt.Dimension: int height>";
+    "store.i $i0"
+    "fieldget <java.awt.Dimension: int height>"->"store.i $i0";
+    "store.i $i0"->"load.r r0";
+    "load.i $i0"
+    "load.r r0"->"load.i $i0";
+    "fieldput <KeyPressedLabels: int canvasHeight>"
+    "load.i $i0"->"fieldput <KeyPressedLabels: int canvasHeight>";
+    "fieldget <java.awt.Dimension: int width>"
+    "fieldput <KeyPressedLabels: int canvasHeight>"->"fieldget <java.awt.Dimension: int width>";
+    "fieldput <KeyPressedLabels: int canvasWidth>"
+    "fieldget <java.awt.Dimension: int width>"->"fieldput <KeyPressedLabels: int canvasWidth>";
+    "fieldput <KeyPressedLabels: int canvasWidth>"->"load.r r0";
+    "new java.util.Vector"
+    "load.r r0"->"new java.util.Vector";
+    "new java.util.Vector"->"dup1.r";
+    "specialinvoke <java.util.Vector: void <init>()>"
+    "dup1.r"->"specialinvoke <java.util.Vector: void <init>()>";
+    "fieldput <KeyPressedLabels: java.util.Vector labelList>"
+    "specialinvoke <java.util.Vector: void <init>()>"->"fieldput <KeyPressedLabels: java.util.Vector labelList>";
+    "fieldput <KeyPressedLabels: java.util.Vector labelList>"->"load.r r0";
+    "fieldget <KeyPressedLabels: java.util.Vector labelList>"
+    "load.r r0"->"fieldget <KeyPressedLabels: java.util.Vector labelList>";
+    "new Label"
+    "fieldget <KeyPressedLabels: java.util.Vector labelList>"->"new Label";
+    "new Label"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "fieldget <KeyPressedLabels: int canvasWidth>"
+    "load.r r0"->"fieldget <KeyPressedLabels: int canvasWidth>";
+    "push 2"
+    "fieldget <KeyPressedLabels: int canvasWidth>"->"push 2";
+    "div.i"
+    "push 2"->"div.i";
+    "div.i"->"load.r r0";
+    "fieldget <KeyPressedLabels: int canvasHeight>"
+    "load.r r0"->"fieldget <KeyPressedLabels: int canvasHeight>";
+    "fieldget <KeyPressedLabels: int canvasHeight>"->"push 2";
+    "push 2"->"div.i";
+    "specialinvoke <Label: void <init>(int,int)>"
+    "div.i"->"specialinvoke <Label: void <init>(int,int)>";
+    "virtualinvoke <java.util.Vector: void addElement(java.lang.Object)>"
+    "specialinvoke <Label: void <init>(int,int)>"->"virtualinvoke <java.util.Vector: void addElement(java.lang.Object)>";
+    "virtualinvoke <java.util.Vector: void addElement(java.lang.Object)>"->"load.r r0";
+    "staticget <java.awt.Color: java.awt.Color white>"
+    "load.r r0"->"staticget <java.awt.Color: java.awt.Color white>";
+    "virtualinvoke <java.awt.Component: void setBackground(java.awt.Color)>"
+    "staticget <java.awt.Color: java.awt.Color white>"->"virtualinvoke <java.awt.Component: void setBackground(java.awt.Color)>";
+    "virtualinvoke <java.awt.Component: void setBackground(java.awt.Color)>"->"load.r r0";
+    "staticget <java.awt.Color: java.awt.Color black>"
+    "load.r r0"->"staticget <java.awt.Color: java.awt.Color black>";
+    "virtualinvoke <java.awt.Component: void setForeground(java.awt.Color)>"
+    "staticget <java.awt.Color: java.awt.Color black>"->"virtualinvoke <java.awt.Component: void setForeground(java.awt.Color)>";
+    "new java.awt.Font"
+    "virtualinvoke <java.awt.Component: void setForeground(java.awt.Color)>"->"new java.awt.Font";
+    "store.r $i0"
+    "new java.awt.Font"->"store.r $i0";
+    "load.r $i0"
+    "store.r $i0"->"load.r $i0";
+    "push \"Courier\""
+    "load.r $i0"->"push \"Courier\"";
+    "push 0"
+    "push \"Courier\""->"push 0";
+    "push 14"
+    "push 0"->"push 14";
+    "specialinvoke <java.awt.Font: void <init>(java.lang.String,int,int)>"
+    "push 14"->"specialinvoke <java.awt.Font: void <init>(java.lang.String,int,int)>";
+    "specialinvoke <java.awt.Font: void <init>(java.lang.String,int,int)>"->"load.r r0";
+    "load.r r0"->"load.r $i0";
+    "virtualinvoke <java.awt.Container: void setFont(java.awt.Font)>"
+    "load.r $i0"->"virtualinvoke <java.awt.Container: void setFont(java.awt.Font)>";
+    "virtualinvoke <java.awt.Container: void setFont(java.awt.Font)>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"load.r $i0";
+    "virtualinvoke <java.awt.Component: java.awt.FontMetrics getFontMetrics(java.awt.Font)>"
+    "load.r $i0"->"virtualinvoke <java.awt.Component: java.awt.FontMetrics getFontMetrics(java.awt.Font)>";
+    "push 87"
+    "virtualinvoke <java.awt.Component: java.awt.FontMetrics getFontMetrics(java.awt.Font)>"->"push 87";
+    "virtualinvoke <java.awt.FontMetrics: int charWidth(char)>"
+    "push 87"->"virtualinvoke <java.awt.FontMetrics: int charWidth(char)>";
+    "fieldput <KeyPressedLabels: int chWid>"
+    "virtualinvoke <java.awt.FontMetrics: int charWidth(char)>"->"fieldput <KeyPressedLabels: int chWid>";
+    "fieldput <KeyPressedLabels: int chWid>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <KeyPressedLabels: int canvasWidth>";
+    "fieldget <KeyPressedLabels: int canvasWidth>"->"load.r r0";
+    "load.r r0"->"fieldget <KeyPressedLabels: int canvasHeight>";
+    "virtualinvoke <java.awt.Component: java.awt.Image createImage(int,int)>"
+    "fieldget <KeyPressedLabels: int canvasHeight>"->"virtualinvoke <java.awt.Component: java.awt.Image createImage(int,int)>";
+    "fieldput <KeyPressedLabels: java.awt.Image backgroundImage>"
+    "virtualinvoke <java.awt.Component: java.awt.Image createImage(int,int)>"->"fieldput <KeyPressedLabels: java.awt.Image backgroundImage>";
+    "fieldput <KeyPressedLabels: java.awt.Image backgroundImage>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "fieldget <KeyPressedLabels: java.awt.Image backgroundImage>"
+    "load.r r0"->"fieldget <KeyPressedLabels: java.awt.Image backgroundImage>";
+    "virtualinvoke <java.awt.Image: java.awt.Graphics getGraphics()>"
+    "fieldget <KeyPressedLabels: java.awt.Image backgroundImage>"->"virtualinvoke <java.awt.Image: java.awt.Graphics getGraphics()>";
+    "fieldput <KeyPressedLabels: java.awt.Graphics backgroundGraphics>"
+    "virtualinvoke <java.awt.Image: java.awt.Graphics getGraphics()>"->"fieldput <KeyPressedLabels: java.awt.Graphics backgroundGraphics>";
+    "fieldput <KeyPressedLabels: java.awt.Graphics backgroundGraphics>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "virtualinvoke <java.awt.Component: void addKeyListener(java.awt.event.KeyListener)>"
+    "load.r r0"->"virtualinvoke <java.awt.Component: void addKeyListener(java.awt.event.KeyListener)>";
+    "virtualinvoke <java.awt.Component: void addKeyListener(java.awt.event.KeyListener)>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "virtualinvoke <java.awt.Component: void addMouseListener(java.awt.event.MouseListener)>"
+    "load.r r0"->"virtualinvoke <java.awt.Component: void addMouseListener(java.awt.event.MouseListener)>";
+    "return"
+    "virtualinvoke <java.awt.Component: void addMouseListener(java.awt.event.MouseListener)>"->"return";
+}

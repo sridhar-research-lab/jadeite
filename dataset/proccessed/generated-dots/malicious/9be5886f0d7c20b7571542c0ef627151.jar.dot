@@ -1,0 +1,20 @@
+digraph "" {
+    "r0 := @this: Streaming"
+    "new java.lang.Thread"
+    "r0 := @this: Streaming"->"new java.lang.Thread";
+    "dup1.r"
+    "new java.lang.Thread"->"dup1.r";
+    "new Streaming$1"
+    "dup1.r"->"new Streaming$1";
+    "new Streaming$1"->"dup1.r";
+    "load.r r0"
+    "dup1.r"->"load.r r0";
+    "specialinvoke <Streaming$1: void <init>(Streaming)>"
+    "load.r r0"->"specialinvoke <Streaming$1: void <init>(Streaming)>";
+    "specialinvoke <java.lang.Thread: void <init>(java.lang.Runnable)>"
+    "specialinvoke <Streaming$1: void <init>(Streaming)>"->"specialinvoke <java.lang.Thread: void <init>(java.lang.Runnable)>";
+    "virtualinvoke <java.lang.Thread: void start()>"
+    "specialinvoke <java.lang.Thread: void <init>(java.lang.Runnable)>"->"virtualinvoke <java.lang.Thread: void start()>";
+    "return"
+    "virtualinvoke <java.lang.Thread: void start()>"->"return";
+}

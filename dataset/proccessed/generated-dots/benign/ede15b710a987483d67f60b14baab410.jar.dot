@@ -1,0 +1,62 @@
+digraph "" {
+    "r0 := @this: TimerApplet"
+    "load.r r0"
+    "r0 := @this: TimerApplet"->"load.r r0";
+    "push \"msg2\""
+    "load.r r0"->"push \"msg2\"";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"
+    "push \"msg2\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "store.r r4"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"store.r r4";
+    "load.r r4"
+    "store.r r4"->"load.r r4";
+    "ifnonnull load.r r0"
+    "load.r r4"->"ifnonnull load.r r0";
+    "ifnonnull load.r r0"->"load.r r0";
+    "push \"\""
+    "load.r r0"->"push \"\"";
+    "fieldput <TimerApplet: java.lang.String msg2>"
+    "push \"\""->"fieldput <TimerApplet: java.lang.String msg2>";
+    "goto load.r r0"
+    "fieldput <TimerApplet: java.lang.String msg2>"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "push \"msg1\""
+    "load.r r0"->"push \"msg1\"";
+    "push \"msg1\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"store.r r4";
+    "store.r r4"->"load.r r4";
+    "load.r r4"->"ifnonnull load.r r0";
+    "ifnonnull load.r r0"->"load.r r0";
+    "push \"Your Visit To My Page Has Lasted\""
+    "load.r r0"->"push \"Your Visit To My Page Has Lasted\"";
+    "fieldput <TimerApplet: java.lang.String msg1>"
+    "push \"Your Visit To My Page Has Lasted\""->"fieldput <TimerApplet: java.lang.String msg1>";
+    "fieldput <TimerApplet: java.lang.String msg1>"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "fieldget <TimerApplet: java.lang.Thread clock>"
+    "load.r r0"->"fieldget <TimerApplet: java.lang.Thread clock>";
+    "ifnonnull return"
+    "fieldget <TimerApplet: java.lang.Thread clock>"->"ifnonnull return";
+    "ifnonnull return"->"load.r r0";
+    "new java.lang.Thread"
+    "load.r r0"->"new java.lang.Thread";
+    "dup1.r"
+    "new java.lang.Thread"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "specialinvoke <java.lang.Thread: void <init>(java.lang.Runnable)>"
+    "load.r r0"->"specialinvoke <java.lang.Thread: void <init>(java.lang.Runnable)>";
+    "fieldput <TimerApplet: java.lang.Thread clock>"
+    "specialinvoke <java.lang.Thread: void <init>(java.lang.Runnable)>"->"fieldput <TimerApplet: java.lang.Thread clock>";
+    "fieldput <TimerApplet: java.lang.Thread clock>"->"load.r r0";
+    "load.r r0"->"fieldget <TimerApplet: java.lang.Thread clock>";
+    "virtualinvoke <java.lang.Thread: void start()>"
+    "fieldget <TimerApplet: java.lang.Thread clock>"->"virtualinvoke <java.lang.Thread: void start()>";
+    "return"
+    "virtualinvoke <java.lang.Thread: void start()>"->"return";
+    "ifnonnull load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r4";
+    "load.r r4"->"fieldput <TimerApplet: java.lang.String msg1>";
+    "ifnonnull load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r4";
+    "load.r r4"->"fieldput <TimerApplet: java.lang.String msg2>";
+}

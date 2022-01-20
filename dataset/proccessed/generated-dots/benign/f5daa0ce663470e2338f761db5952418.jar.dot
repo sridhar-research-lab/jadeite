@@ -1,0 +1,94 @@
+digraph "" {
+    "r0 := @this: snowdrift"
+    "load.r r0"
+    "r0 := @this: snowdrift"->"load.r r0";
+    "staticget <java.awt.Color: java.awt.Color black>"
+    "load.r r0"->"staticget <java.awt.Color: java.awt.Color black>";
+    "virtualinvoke <java.awt.Component: void setBackground(java.awt.Color)>"
+    "staticget <java.awt.Color: java.awt.Color black>"->"virtualinvoke <java.awt.Component: void setBackground(java.awt.Color)>";
+    "virtualinvoke <java.awt.Component: void setBackground(java.awt.Color)>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "virtualinvoke <java.awt.Component: java.awt.Dimension getSize()>"
+    "load.r r0"->"virtualinvoke <java.awt.Component: java.awt.Dimension getSize()>";
+    "dup1.r"
+    "virtualinvoke <java.awt.Component: java.awt.Dimension getSize()>"->"dup1.r";
+    "fieldget <java.awt.Dimension: int width>"
+    "dup1.r"->"fieldget <java.awt.Dimension: int width>";
+    "store.i $i0"
+    "fieldget <java.awt.Dimension: int width>"->"store.i $i0";
+    "store.i $i0"->"load.r r0";
+    "load.i $i0"
+    "load.r r0"->"load.i $i0";
+    "fieldput <snowdrift: int XSIZE>"
+    "load.i $i0"->"fieldput <snowdrift: int XSIZE>";
+    "fieldget <java.awt.Dimension: int height>"
+    "fieldput <snowdrift: int XSIZE>"->"fieldget <java.awt.Dimension: int height>";
+    "fieldput <snowdrift: int YSIZE>"
+    "fieldget <java.awt.Dimension: int height>"->"fieldput <snowdrift: int YSIZE>";
+    "fieldput <snowdrift: int YSIZE>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "fieldget <snowdrift: int XSIZE>"
+    "load.r r0"->"fieldget <snowdrift: int XSIZE>";
+    "fieldget <snowdrift: int XSIZE>"->"load.r r0";
+    "fieldget <snowdrift: int YSIZE>"
+    "load.r r0"->"fieldget <snowdrift: int YSIZE>";
+    "mul.i"
+    "fieldget <snowdrift: int YSIZE>"->"mul.i";
+    "fieldput <snowdrift: int SIZE>"
+    "mul.i"->"fieldput <snowdrift: int SIZE>";
+    "staticget <java.lang.System: java.io.PrintStream err>"
+    "fieldput <snowdrift: int SIZE>"->"staticget <java.lang.System: java.io.PrintStream err>";
+    "new java.lang.StringBuffer"
+    "staticget <java.lang.System: java.io.PrintStream err>"->"new java.lang.StringBuffer";
+    "new java.lang.StringBuffer"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "load.r r0"->"fieldget <snowdrift: int XSIZE>";
+    "staticinvoke <java.lang.String: java.lang.String valueOf(int)>"
+    "fieldget <snowdrift: int XSIZE>"->"staticinvoke <java.lang.String: java.lang.String valueOf(int)>";
+    "specialinvoke <java.lang.StringBuffer: void <init>(java.lang.String)>"
+    "staticinvoke <java.lang.String: java.lang.String valueOf(int)>"->"specialinvoke <java.lang.StringBuffer: void <init>(java.lang.String)>";
+    "push \" \""
+    "specialinvoke <java.lang.StringBuffer: void <init>(java.lang.String)>"->"push \" \"";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"
+    "push \" \""->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"load.r r0";
+    "load.r r0"->"fieldget <snowdrift: int YSIZE>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(int)>"
+    "fieldget <snowdrift: int YSIZE>"->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(int)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(int)>"->"push \" \"";
+    "push \" \""->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"load.r r0";
+    "fieldget <snowdrift: int SIZE>"
+    "load.r r0"->"fieldget <snowdrift: int SIZE>";
+    "fieldget <snowdrift: int SIZE>"->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(int)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>"
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(int)>"->"virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>";
+    "virtualinvoke <java.io.PrintStream: void println(java.lang.String)>"
+    "virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>"->"virtualinvoke <java.io.PrintStream: void println(java.lang.String)>";
+    "virtualinvoke <java.io.PrintStream: void println(java.lang.String)>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <snowdrift: int SIZE>";
+    "newarray"
+    "fieldget <snowdrift: int SIZE>"->"newarray";
+    "fieldput <snowdrift: int[] starfield>"
+    "newarray"->"fieldput <snowdrift: int[] starfield>";
+    "fieldput <snowdrift: int[] starfield>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <snowdrift: int XSIZE>";
+    "fieldget <snowdrift: int XSIZE>"->"load.r r0";
+    "load.r r0"->"fieldget <snowdrift: int YSIZE>";
+    "virtualinvoke <java.awt.Component: java.awt.Image createImage(int,int)>"
+    "fieldget <snowdrift: int YSIZE>"->"virtualinvoke <java.awt.Component: java.awt.Image createImage(int,int)>";
+    "fieldput <snowdrift: java.awt.Image art>"
+    "virtualinvoke <java.awt.Component: java.awt.Image createImage(int,int)>"->"fieldput <snowdrift: java.awt.Image art>";
+    "new java.util.Random"
+    "fieldput <snowdrift: java.awt.Image art>"->"new java.util.Random";
+    "new java.util.Random"->"dup1.r";
+    "specialinvoke <java.util.Random: void <init>()>"
+    "dup1.r"->"specialinvoke <java.util.Random: void <init>()>";
+    "staticput <snowdrift: java.util.Random rd>"
+    "specialinvoke <java.util.Random: void <init>()>"->"staticput <snowdrift: java.util.Random rd>";
+    "return"
+    "staticput <snowdrift: java.util.Random rd>"->"return";
+}

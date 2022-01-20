@@ -1,0 +1,94 @@
+digraph "" {
+    "r0 := @this: thetriv"
+    "staticinvoke <java.lang.Thread: java.lang.Thread currentThread()>"
+    "r0 := @this: thetriv"->"staticinvoke <java.lang.Thread: java.lang.Thread currentThread()>";
+    "push 10"
+    "staticinvoke <java.lang.Thread: java.lang.Thread currentThread()>"->"push 10";
+    "virtualinvoke <java.lang.Thread: void setPriority(int)>"
+    "push 10"->"virtualinvoke <java.lang.Thread: void setPriority(int)>";
+    "load.r r0"
+    "virtualinvoke <java.lang.Thread: void setPriority(int)>"->"load.r r0";
+    "fieldget <thetriv: AnimationTimer timer>"
+    "load.r r0"->"fieldget <thetriv: AnimationTimer timer>";
+    "staticget <thetriv: int timerSpeed>"
+    "fieldget <thetriv: AnimationTimer timer>"->"staticget <thetriv: int timerSpeed>";
+    "fieldput <AnimationTimer: int delay>"
+    "staticget <thetriv: int timerSpeed>"->"fieldput <AnimationTimer: int delay>";
+    "fieldput <AnimationTimer: int delay>"->"load.r r0";
+    "push \"text\""
+    "load.r r0"->"push \"text\"";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"
+    "push \"text\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "store.r r1"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"store.r r1";
+    "new java.net.URL"
+    "store.r r1"->"new java.net.URL";
+    "dup1.r"
+    "new java.net.URL"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "virtualinvoke <java.applet.Applet: java.net.URL getCodeBase()>"
+    "load.r r0"->"virtualinvoke <java.applet.Applet: java.net.URL getCodeBase()>";
+    "load.r r1"
+    "virtualinvoke <java.applet.Applet: java.net.URL getCodeBase()>"->"load.r r1";
+    "specialinvoke <java.net.URL: void <init>(java.net.URL,java.lang.String)>"
+    "load.r r1"->"specialinvoke <java.net.URL: void <init>(java.net.URL,java.lang.String)>";
+    "staticput <thetriv: java.net.URL theURL>"
+    "specialinvoke <java.net.URL: void <init>(java.net.URL,java.lang.String)>"->"staticput <thetriv: java.net.URL theURL>";
+    "goto load.r r0"
+    "staticput <thetriv: java.net.URL theURL>"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "virtualinvoke <thetriv: void readQuestions()>"
+    "load.r r0"->"virtualinvoke <thetriv: void readQuestions()>";
+    "virtualinvoke <thetriv: void readQuestions()>"->"load.r r0";
+    "virtualinvoke <thetriv: void setupSounds()>"
+    "load.r r0"->"virtualinvoke <thetriv: void setupSounds()>";
+    "virtualinvoke <thetriv: void setupSounds()>"->"load.r r0";
+    "virtualinvoke <thetriv: void setupGraphics()>"
+    "load.r r0"->"virtualinvoke <thetriv: void setupGraphics()>";
+    "staticinvoke <thetriv: void reset()>"
+    "virtualinvoke <thetriv: void setupGraphics()>"->"staticinvoke <thetriv: void reset()>";
+    "staticinvoke <thetriv: void questionUser()>"
+    "staticinvoke <thetriv: void reset()>"->"staticinvoke <thetriv: void questionUser()>";
+    "staticinvoke <thetriv: void questionUser()>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "virtualinvoke <java.awt.Component: java.awt.Dimension size()>"
+    "load.r r0"->"virtualinvoke <java.awt.Component: java.awt.Dimension size()>";
+    "virtualinvoke <java.awt.Component: java.awt.Dimension size()>"->"dup1.r";
+    "fieldget <java.awt.Dimension: int width>"
+    "dup1.r"->"fieldget <java.awt.Dimension: int width>";
+    "store.i r1"
+    "fieldget <java.awt.Dimension: int width>"->"store.i r1";
+    "store.i r1"->"load.r r0";
+    "load.i r1"
+    "load.r r0"->"load.i r1";
+    "fieldput <thetriv: int wid>"
+    "load.i r1"->"fieldput <thetriv: int wid>";
+    "fieldget <java.awt.Dimension: int height>"
+    "fieldput <thetriv: int wid>"->"fieldget <java.awt.Dimension: int height>";
+    "fieldput <thetriv: int hei>"
+    "fieldget <java.awt.Dimension: int height>"->"fieldput <thetriv: int hei>";
+    "fieldput <thetriv: int hei>"->"load.r r0";
+    "load.r r0"->"fieldget <thetriv: AnimationTimer timer>";
+    "virtualinvoke <AnimationTimer: void start_animation()>"
+    "fieldget <thetriv: AnimationTimer timer>"->"virtualinvoke <AnimationTimer: void start_animation()>";
+    "return"
+    "virtualinvoke <AnimationTimer: void start_animation()>"->"return";
+    "specialinvoke <java.net.URL: void <init>(java.net.URL,java.lang.String)>"->"store.r r1";
+    "staticget <java.lang.System: java.io.PrintStream out>"
+    "store.r r1"->"staticget <java.lang.System: java.io.PrintStream out>";
+    "new java.lang.StringBuffer"
+    "staticget <java.lang.System: java.io.PrintStream out>"->"new java.lang.StringBuffer";
+    "new java.lang.StringBuffer"->"dup1.r";
+    "push \"Bad URL: \""
+    "dup1.r"->"push \"Bad URL: \"";
+    "specialinvoke <java.lang.StringBuffer: void <init>(java.lang.String)>"
+    "push \"Bad URL: \""->"specialinvoke <java.lang.StringBuffer: void <init>(java.lang.String)>";
+    "staticget <thetriv: java.net.URL theURL>"
+    "specialinvoke <java.lang.StringBuffer: void <init>(java.lang.String)>"->"staticget <thetriv: java.net.URL theURL>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.Object)>"
+    "staticget <thetriv: java.net.URL theURL>"->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.Object)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>"
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.Object)>"->"virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>";
+    "virtualinvoke <java.io.PrintStream: void println(java.lang.String)>"
+    "virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>"->"virtualinvoke <java.io.PrintStream: void println(java.lang.String)>";
+}

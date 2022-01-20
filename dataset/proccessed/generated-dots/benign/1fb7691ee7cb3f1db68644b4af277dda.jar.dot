@@ -1,0 +1,207 @@
+digraph "" {
+    "r0 := @this: HiLo"
+    "load.r r0"
+    "r0 := @this: HiLo"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "virtualinvoke <java.awt.Component: void addMouseListener(java.awt.event.MouseListener)>"
+    "load.r r0"->"virtualinvoke <java.awt.Component: void addMouseListener(java.awt.event.MouseListener)>";
+    "virtualinvoke <java.awt.Component: void addMouseListener(java.awt.event.MouseListener)>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "push \"CardBack\""
+    "load.r r0"->"push \"CardBack\"";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"
+    "push \"CardBack\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "fieldput <HiLo: java.lang.String cardBackParam>"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"fieldput <HiLo: java.lang.String cardBackParam>";
+    "fieldput <HiLo: java.lang.String cardBackParam>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "push \"Currency\""
+    "load.r r0"->"push \"Currency\"";
+    "push \"Currency\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "fieldput <HiLo: java.lang.String currencyParam>"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"fieldput <HiLo: java.lang.String currencyParam>";
+    "fieldput <HiLo: java.lang.String currencyParam>"->"load.r r0";
+    "new java.awt.MediaTracker"
+    "load.r r0"->"new java.awt.MediaTracker";
+    "dup1.r"
+    "new java.awt.MediaTracker"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "specialinvoke <java.awt.MediaTracker: void <init>(java.awt.Component)>"
+    "load.r r0"->"specialinvoke <java.awt.MediaTracker: void <init>(java.awt.Component)>";
+    "fieldput <HiLo: java.awt.MediaTracker tracker>"
+    "specialinvoke <java.awt.MediaTracker: void <init>(java.awt.Component)>"->"fieldput <HiLo: java.awt.MediaTracker tracker>";
+    "fieldput <HiLo: java.awt.MediaTracker tracker>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "push \"images/bkgnd.gif\""
+    "load.r r0"->"push \"images/bkgnd.gif\"";
+    "virtualinvoke <HiLo: java.awt.Image getImageFromJAR(java.lang.String)>"
+    "push \"images/bkgnd.gif\""->"virtualinvoke <HiLo: java.awt.Image getImageFromJAR(java.lang.String)>";
+    "fieldput <HiLo: java.awt.Image backgroundImg>"
+    "virtualinvoke <HiLo: java.awt.Image getImageFromJAR(java.lang.String)>"->"fieldput <HiLo: java.awt.Image backgroundImg>";
+    "fieldput <HiLo: java.awt.Image backgroundImg>"->"load.r r0";
+    "fieldget <HiLo: java.awt.MediaTracker tracker>"
+    "load.r r0"->"fieldget <HiLo: java.awt.MediaTracker tracker>";
+    "fieldget <HiLo: java.awt.MediaTracker tracker>"->"load.r r0";
+    "fieldget <HiLo: java.awt.Image backgroundImg>"
+    "load.r r0"->"fieldget <HiLo: java.awt.Image backgroundImg>";
+    "push 0"
+    "fieldget <HiLo: java.awt.Image backgroundImg>"->"push 0";
+    "virtualinvoke <java.awt.MediaTracker: void addImage(java.awt.Image,int)>"
+    "push 0"->"virtualinvoke <java.awt.MediaTracker: void addImage(java.awt.Image,int)>";
+    "virtualinvoke <java.awt.MediaTracker: void addImage(java.awt.Image,int)>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "push \"images/cards/cards.gif\""
+    "load.r r0"->"push \"images/cards/cards.gif\"";
+    "push \"images/cards/cards.gif\""->"virtualinvoke <HiLo: java.awt.Image getImageFromJAR(java.lang.String)>";
+    "fieldput <HiLo: java.awt.Image cardFrontImg>"
+    "virtualinvoke <HiLo: java.awt.Image getImageFromJAR(java.lang.String)>"->"fieldput <HiLo: java.awt.Image cardFrontImg>";
+    "fieldput <HiLo: java.awt.Image cardFrontImg>"->"load.r r0";
+    "load.r r0"->"fieldget <HiLo: java.awt.MediaTracker tracker>";
+    "fieldget <HiLo: java.awt.MediaTracker tracker>"->"load.r r0";
+    "fieldget <HiLo: java.awt.Image cardFrontImg>"
+    "load.r r0"->"fieldget <HiLo: java.awt.Image cardFrontImg>";
+    "fieldget <HiLo: java.awt.Image cardFrontImg>"->"push 0";
+    "push 0"->"virtualinvoke <java.awt.MediaTracker: void addImage(java.awt.Image,int)>";
+    "virtualinvoke <java.awt.MediaTracker: void addImage(java.awt.Image,int)>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "virtualinvoke <java.applet.Applet: java.net.URL getCodeBase()>"
+    "load.r r0"->"virtualinvoke <java.applet.Applet: java.net.URL getCodeBase()>";
+    "new java.lang.StringBuffer"
+    "virtualinvoke <java.applet.Applet: java.net.URL getCodeBase()>"->"new java.lang.StringBuffer";
+    "new java.lang.StringBuffer"->"dup1.r";
+    "push \"images/cards/\""
+    "dup1.r"->"push \"images/cards/\"";
+    "specialinvoke <java.lang.StringBuffer: void <init>(java.lang.String)>"
+    "push \"images/cards/\""->"specialinvoke <java.lang.StringBuffer: void <init>(java.lang.String)>";
+    "specialinvoke <java.lang.StringBuffer: void <init>(java.lang.String)>"->"load.r r0";
+    "fieldget <HiLo: java.lang.String cardBackParam>"
+    "load.r r0"->"fieldget <HiLo: java.lang.String cardBackParam>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"
+    "fieldget <HiLo: java.lang.String cardBackParam>"->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>"
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>";
+    "virtualinvoke <java.applet.Applet: java.awt.Image getImage(java.net.URL,java.lang.String)>"
+    "virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>"->"virtualinvoke <java.applet.Applet: java.awt.Image getImage(java.net.URL,java.lang.String)>";
+    "fieldput <HiLo: java.awt.Image cardBackImg>"
+    "virtualinvoke <java.applet.Applet: java.awt.Image getImage(java.net.URL,java.lang.String)>"->"fieldput <HiLo: java.awt.Image cardBackImg>";
+    "fieldput <HiLo: java.awt.Image cardBackImg>"->"load.r r0";
+    "load.r r0"->"fieldget <HiLo: java.awt.MediaTracker tracker>";
+    "fieldget <HiLo: java.awt.MediaTracker tracker>"->"load.r r0";
+    "fieldget <HiLo: java.awt.Image cardBackImg>"
+    "load.r r0"->"fieldget <HiLo: java.awt.Image cardBackImg>";
+    "fieldget <HiLo: java.awt.Image cardBackImg>"->"push 0";
+    "push 0"->"virtualinvoke <java.awt.MediaTracker: void addImage(java.awt.Image,int)>";
+    "virtualinvoke <java.awt.MediaTracker: void addImage(java.awt.Image,int)>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "push \"images/higher.gif\""
+    "load.r r0"->"push \"images/higher.gif\"";
+    "push \"images/higher.gif\""->"virtualinvoke <HiLo: java.awt.Image getImageFromJAR(java.lang.String)>";
+    "fieldput <HiLo: java.awt.Image higherImg>"
+    "virtualinvoke <HiLo: java.awt.Image getImageFromJAR(java.lang.String)>"->"fieldput <HiLo: java.awt.Image higherImg>";
+    "fieldput <HiLo: java.awt.Image higherImg>"->"load.r r0";
+    "load.r r0"->"fieldget <HiLo: java.awt.MediaTracker tracker>";
+    "fieldget <HiLo: java.awt.MediaTracker tracker>"->"load.r r0";
+    "fieldget <HiLo: java.awt.Image higherImg>"
+    "load.r r0"->"fieldget <HiLo: java.awt.Image higherImg>";
+    "fieldget <HiLo: java.awt.Image higherImg>"->"push 0";
+    "push 0"->"virtualinvoke <java.awt.MediaTracker: void addImage(java.awt.Image,int)>";
+    "virtualinvoke <java.awt.MediaTracker: void addImage(java.awt.Image,int)>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "push \"images/lower.gif\""
+    "load.r r0"->"push \"images/lower.gif\"";
+    "push \"images/lower.gif\""->"virtualinvoke <HiLo: java.awt.Image getImageFromJAR(java.lang.String)>";
+    "fieldput <HiLo: java.awt.Image lowerImg>"
+    "virtualinvoke <HiLo: java.awt.Image getImageFromJAR(java.lang.String)>"->"fieldput <HiLo: java.awt.Image lowerImg>";
+    "fieldput <HiLo: java.awt.Image lowerImg>"->"load.r r0";
+    "load.r r0"->"fieldget <HiLo: java.awt.MediaTracker tracker>";
+    "fieldget <HiLo: java.awt.MediaTracker tracker>"->"load.r r0";
+    "fieldget <HiLo: java.awt.Image lowerImg>"
+    "load.r r0"->"fieldget <HiLo: java.awt.Image lowerImg>";
+    "fieldget <HiLo: java.awt.Image lowerImg>"->"push 0";
+    "push 0"->"virtualinvoke <java.awt.MediaTracker: void addImage(java.awt.Image,int)>";
+    "virtualinvoke <java.awt.MediaTracker: void addImage(java.awt.Image,int)>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "push \"images/inc10.gif\""
+    "load.r r0"->"push \"images/inc10.gif\"";
+    "push \"images/inc10.gif\""->"virtualinvoke <HiLo: java.awt.Image getImageFromJAR(java.lang.String)>";
+    "fieldput <HiLo: java.awt.Image inc10Img>"
+    "virtualinvoke <HiLo: java.awt.Image getImageFromJAR(java.lang.String)>"->"fieldput <HiLo: java.awt.Image inc10Img>";
+    "fieldput <HiLo: java.awt.Image inc10Img>"->"load.r r0";
+    "load.r r0"->"fieldget <HiLo: java.awt.MediaTracker tracker>";
+    "fieldget <HiLo: java.awt.MediaTracker tracker>"->"load.r r0";
+    "fieldget <HiLo: java.awt.Image inc10Img>"
+    "load.r r0"->"fieldget <HiLo: java.awt.Image inc10Img>";
+    "fieldget <HiLo: java.awt.Image inc10Img>"->"push 0";
+    "push 0"->"virtualinvoke <java.awt.MediaTracker: void addImage(java.awt.Image,int)>";
+    "virtualinvoke <java.awt.MediaTracker: void addImage(java.awt.Image,int)>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "push \"images/inc100.gif\""
+    "load.r r0"->"push \"images/inc100.gif\"";
+    "push \"images/inc100.gif\""->"virtualinvoke <HiLo: java.awt.Image getImageFromJAR(java.lang.String)>";
+    "fieldput <HiLo: java.awt.Image inc100Img>"
+    "virtualinvoke <HiLo: java.awt.Image getImageFromJAR(java.lang.String)>"->"fieldput <HiLo: java.awt.Image inc100Img>";
+    "fieldput <HiLo: java.awt.Image inc100Img>"->"load.r r0";
+    "load.r r0"->"fieldget <HiLo: java.awt.MediaTracker tracker>";
+    "fieldget <HiLo: java.awt.MediaTracker tracker>"->"load.r r0";
+    "fieldget <HiLo: java.awt.Image inc100Img>"
+    "load.r r0"->"fieldget <HiLo: java.awt.Image inc100Img>";
+    "fieldget <HiLo: java.awt.Image inc100Img>"->"push 0";
+    "push 0"->"virtualinvoke <java.awt.MediaTracker: void addImage(java.awt.Image,int)>";
+    "virtualinvoke <java.awt.MediaTracker: void addImage(java.awt.Image,int)>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "push \"images/dec10.gif\""
+    "load.r r0"->"push \"images/dec10.gif\"";
+    "push \"images/dec10.gif\""->"virtualinvoke <HiLo: java.awt.Image getImageFromJAR(java.lang.String)>";
+    "fieldput <HiLo: java.awt.Image dec10Img>"
+    "virtualinvoke <HiLo: java.awt.Image getImageFromJAR(java.lang.String)>"->"fieldput <HiLo: java.awt.Image dec10Img>";
+    "fieldput <HiLo: java.awt.Image dec10Img>"->"load.r r0";
+    "load.r r0"->"fieldget <HiLo: java.awt.MediaTracker tracker>";
+    "fieldget <HiLo: java.awt.MediaTracker tracker>"->"load.r r0";
+    "fieldget <HiLo: java.awt.Image dec10Img>"
+    "load.r r0"->"fieldget <HiLo: java.awt.Image dec10Img>";
+    "fieldget <HiLo: java.awt.Image dec10Img>"->"push 0";
+    "push 0"->"virtualinvoke <java.awt.MediaTracker: void addImage(java.awt.Image,int)>";
+    "virtualinvoke <java.awt.MediaTracker: void addImage(java.awt.Image,int)>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "push \"images/dec100.gif\""
+    "load.r r0"->"push \"images/dec100.gif\"";
+    "push \"images/dec100.gif\""->"virtualinvoke <HiLo: java.awt.Image getImageFromJAR(java.lang.String)>";
+    "fieldput <HiLo: java.awt.Image dec100Img>"
+    "virtualinvoke <HiLo: java.awt.Image getImageFromJAR(java.lang.String)>"->"fieldput <HiLo: java.awt.Image dec100Img>";
+    "fieldput <HiLo: java.awt.Image dec100Img>"->"load.r r0";
+    "load.r r0"->"fieldget <HiLo: java.awt.MediaTracker tracker>";
+    "fieldget <HiLo: java.awt.MediaTracker tracker>"->"load.r r0";
+    "fieldget <HiLo: java.awt.Image dec100Img>"
+    "load.r r0"->"fieldget <HiLo: java.awt.Image dec100Img>";
+    "fieldget <HiLo: java.awt.Image dec100Img>"->"push 0";
+    "push 0"->"virtualinvoke <java.awt.MediaTracker: void addImage(java.awt.Image,int)>";
+    "virtualinvoke <java.awt.MediaTracker: void addImage(java.awt.Image,int)>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "push \"images/ok.gif\""
+    "load.r r0"->"push \"images/ok.gif\"";
+    "push \"images/ok.gif\""->"virtualinvoke <HiLo: java.awt.Image getImageFromJAR(java.lang.String)>";
+    "fieldput <HiLo: java.awt.Image okImg>"
+    "virtualinvoke <HiLo: java.awt.Image getImageFromJAR(java.lang.String)>"->"fieldput <HiLo: java.awt.Image okImg>";
+    "fieldput <HiLo: java.awt.Image okImg>"->"load.r r0";
+    "load.r r0"->"fieldget <HiLo: java.awt.MediaTracker tracker>";
+    "fieldget <HiLo: java.awt.MediaTracker tracker>"->"load.r r0";
+    "fieldget <HiLo: java.awt.Image okImg>"
+    "load.r r0"->"fieldget <HiLo: java.awt.Image okImg>";
+    "fieldget <HiLo: java.awt.Image okImg>"->"push 0";
+    "push 0"->"virtualinvoke <java.awt.MediaTracker: void addImage(java.awt.Image,int)>";
+    "virtualinvoke <java.awt.MediaTracker: void addImage(java.awt.Image,int)>"->"load.r r0";
+    "new PlayingCardDeck"
+    "load.r r0"->"new PlayingCardDeck";
+    "new PlayingCardDeck"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "load.r r0"->"fieldget <HiLo: java.awt.Image cardFrontImg>";
+    "fieldget <HiLo: java.awt.Image cardFrontImg>"->"load.r r0";
+    "load.r r0"->"fieldget <HiLo: java.awt.Image cardBackImg>";
+    "specialinvoke <PlayingCardDeck: void <init>(java.awt.Image,java.awt.Image)>"
+    "fieldget <HiLo: java.awt.Image cardBackImg>"->"specialinvoke <PlayingCardDeck: void <init>(java.awt.Image,java.awt.Image)>";
+    "fieldput <HiLo: PlayingCardDeck deck>"
+    "specialinvoke <PlayingCardDeck: void <init>(java.awt.Image,java.awt.Image)>"->"fieldput <HiLo: PlayingCardDeck deck>";
+    "return"
+    "fieldput <HiLo: PlayingCardDeck deck>"->"return";
+}

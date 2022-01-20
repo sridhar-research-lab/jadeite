@@ -1,0 +1,908 @@
+digraph "" {
+    "r0 := @this: wmap"
+    "staticget <java.lang.System: java.io.PrintStream out>"
+    "r0 := @this: wmap"->"staticget <java.lang.System: java.io.PrintStream out>";
+    "new java.util.Date"
+    "staticget <java.lang.System: java.io.PrintStream out>"->"new java.util.Date";
+    "dup1.r"
+    "new java.util.Date"->"dup1.r";
+    "specialinvoke <java.util.Date: void <init>()>"
+    "dup1.r"->"specialinvoke <java.util.Date: void <init>()>";
+    "virtualinvoke <java.io.PrintStream: void println(java.lang.Object)>"
+    "specialinvoke <java.util.Date: void <init>()>"->"virtualinvoke <java.io.PrintStream: void println(java.lang.Object)>";
+    "virtualinvoke <java.io.PrintStream: void println(java.lang.Object)>"->"staticget <java.lang.System: java.io.PrintStream out>";
+    "new java.lang.StringBuffer"
+    "staticget <java.lang.System: java.io.PrintStream out>"->"new java.lang.StringBuffer";
+    "new java.lang.StringBuffer"->"dup1.r";
+    "specialinvoke <java.lang.StringBuffer: void <init>()>"
+    "dup1.r"->"specialinvoke <java.lang.StringBuffer: void <init>()>";
+    "push \" Document Base: \""
+    "specialinvoke <java.lang.StringBuffer: void <init>()>"->"push \" Document Base: \"";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"
+    "push \" Document Base: \""->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "load.r r0"
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"load.r r0";
+    "virtualinvoke <java.applet.Applet: java.net.URL getDocumentBase()>"
+    "load.r r0"->"virtualinvoke <java.applet.Applet: java.net.URL getDocumentBase()>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.Object)>"
+    "virtualinvoke <java.applet.Applet: java.net.URL getDocumentBase()>"->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.Object)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>"
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.Object)>"->"virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>";
+    "virtualinvoke <java.io.PrintStream: void println(java.lang.String)>"
+    "virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>"->"virtualinvoke <java.io.PrintStream: void println(java.lang.String)>";
+    "virtualinvoke <java.io.PrintStream: void println(java.lang.String)>"->"staticget <java.lang.System: java.io.PrintStream out>";
+    "staticget <java.lang.System: java.io.PrintStream out>"->"new java.lang.StringBuffer";
+    "new java.lang.StringBuffer"->"dup1.r";
+    "dup1.r"->"specialinvoke <java.lang.StringBuffer: void <init>()>";
+    "push \" Code Base:   \""
+    "specialinvoke <java.lang.StringBuffer: void <init>()>"->"push \" Code Base:   \"";
+    "push \" Code Base:   \""->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"load.r r0";
+    "virtualinvoke <java.applet.Applet: java.net.URL getCodeBase()>"
+    "load.r r0"->"virtualinvoke <java.applet.Applet: java.net.URL getCodeBase()>";
+    "virtualinvoke <java.applet.Applet: java.net.URL getCodeBase()>"->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.Object)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.Object)>"->"virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>"->"virtualinvoke <java.io.PrintStream: void println(java.lang.String)>";
+    "virtualinvoke <java.io.PrintStream: void println(java.lang.String)>"->"load.r r0";
+    "push null"
+    "load.r r0"->"push null";
+    "virtualinvoke <java.awt.Container: void setLayout(java.awt.LayoutManager)>"
+    "push null"->"virtualinvoke <java.awt.Container: void setLayout(java.awt.LayoutManager)>";
+    "virtualinvoke <java.awt.Container: void setLayout(java.awt.LayoutManager)>"->"load.r r0";
+    "staticget <java.awt.Color: java.awt.Color white>"
+    "load.r r0"->"staticget <java.awt.Color: java.awt.Color white>";
+    "virtualinvoke <java.awt.Component: void setBackground(java.awt.Color)>"
+    "staticget <java.awt.Color: java.awt.Color white>"->"virtualinvoke <java.awt.Component: void setBackground(java.awt.Color)>";
+    "virtualinvoke <java.awt.Component: void setBackground(java.awt.Color)>"->"load.r r0";
+    "push \"GETINTERVAL\""
+    "load.r r0"->"push \"GETINTERVAL\"";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"
+    "push \"GETINTERVAL\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "store.r $r85"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"store.r $r85";
+    "load.r $r85"
+    "store.r $r85"->"load.r $r85";
+    "ifnull load.r r0"
+    "load.r $r85"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r r0";
+    "load.r r0"->"load.r $r85";
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"
+    "load.r $r85"->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>";
+    "fieldput <wmap: int m_nUpdateInterval>"
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"->"fieldput <wmap: int m_nUpdateInterval>";
+    "goto load.r r0"
+    "fieldput <wmap: int m_nUpdateInterval>"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "push \"FONTNAME\""
+    "load.r r0"->"push \"FONTNAME\"";
+    "push \"FONTNAME\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "fieldput <wmap: java.lang.String m_sFontName>"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"fieldput <wmap: java.lang.String m_sFontName>";
+    "fieldput <wmap: java.lang.String m_sFontName>"->"load.r r0";
+    "fieldget <wmap: java.lang.String m_sFontName>"
+    "load.r r0"->"fieldget <wmap: java.lang.String m_sFontName>";
+    "ifnonnull load.r r0"
+    "fieldget <wmap: java.lang.String m_sFontName>"->"ifnonnull load.r r0";
+    "ifnonnull load.r r0"->"load.r r0";
+    "push \"Verdana\""
+    "load.r r0"->"push \"Verdana\"";
+    "push \"Verdana\""->"fieldput <wmap: java.lang.String m_sFontName>";
+    "fieldput <wmap: java.lang.String m_sFontName>"->"load.r r0";
+    "new java.awt.Font"
+    "load.r r0"->"new java.awt.Font";
+    "new java.awt.Font"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "load.r r0"->"fieldget <wmap: java.lang.String m_sFontName>";
+    "push 1"
+    "fieldget <wmap: java.lang.String m_sFontName>"->"push 1";
+    "push 11"
+    "push 1"->"push 11";
+    "specialinvoke <java.awt.Font: void <init>(java.lang.String,int,int)>"
+    "push 11"->"specialinvoke <java.awt.Font: void <init>(java.lang.String,int,int)>";
+    "fieldput <wmap: java.awt.Font m_font1>"
+    "specialinvoke <java.awt.Font: void <init>(java.lang.String,int,int)>"->"fieldput <wmap: java.awt.Font m_font1>";
+    "fieldput <wmap: java.awt.Font m_font1>"->"load.r r0";
+    "load.r r0"->"new java.awt.Font";
+    "new java.awt.Font"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "load.r r0"->"fieldget <wmap: java.lang.String m_sFontName>";
+    "push 0"
+    "fieldget <wmap: java.lang.String m_sFontName>"->"push 0";
+    "push 9"
+    "push 0"->"push 9";
+    "push 9"->"specialinvoke <java.awt.Font: void <init>(java.lang.String,int,int)>";
+    "fieldput <wmap: java.awt.Font m_font2>"
+    "specialinvoke <java.awt.Font: void <init>(java.lang.String,int,int)>"->"fieldput <wmap: java.awt.Font m_font2>";
+    "fieldput <wmap: java.awt.Font m_font2>"->"load.r r0";
+    "load.r r0"->"new java.awt.Font";
+    "new java.awt.Font"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "load.r r0"->"fieldget <wmap: java.lang.String m_sFontName>";
+    "fieldget <wmap: java.lang.String m_sFontName>"->"push 0";
+    "push 10"
+    "push 0"->"push 10";
+    "push 10"->"specialinvoke <java.awt.Font: void <init>(java.lang.String,int,int)>";
+    "fieldput <wmap: java.awt.Font m_font3>"
+    "specialinvoke <java.awt.Font: void <init>(java.lang.String,int,int)>"->"fieldput <wmap: java.awt.Font m_font3>";
+    "fieldput <wmap: java.awt.Font m_font3>"->"load.r r0";
+    "load.r r0"->"new java.awt.Font";
+    "new java.awt.Font"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "load.r r0"->"fieldget <wmap: java.lang.String m_sFontName>";
+    "fieldget <wmap: java.lang.String m_sFontName>"->"push 0";
+    "push 0"->"push 9";
+    "push 9"->"specialinvoke <java.awt.Font: void <init>(java.lang.String,int,int)>";
+    "fieldput <wmap: java.awt.Font m_font4>"
+    "specialinvoke <java.awt.Font: void <init>(java.lang.String,int,int)>"->"fieldput <wmap: java.awt.Font m_font4>";
+    "fieldput <wmap: java.awt.Font m_font4>"->"load.r r0";
+    "load.r r0"->"new java.awt.Font";
+    "new java.awt.Font"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "load.r r0"->"fieldget <wmap: java.lang.String m_sFontName>";
+    "fieldget <wmap: java.lang.String m_sFontName>"->"push 1";
+    "push 1"->"push 11";
+    "push 11"->"specialinvoke <java.awt.Font: void <init>(java.lang.String,int,int)>";
+    "fieldput <wmap: java.awt.Font m_fontStatusMsg>"
+    "specialinvoke <java.awt.Font: void <init>(java.lang.String,int,int)>"->"fieldput <wmap: java.awt.Font m_fontStatusMsg>";
+    "fieldput <wmap: java.awt.Font m_fontStatusMsg>"->"load.r r0";
+    "push \"LINKCOLOR\""
+    "load.r r0"->"push \"LINKCOLOR\"";
+    "push \"LINKCOLOR\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"store.r $r85";
+    "store.r $r85"->"load.r $r85";
+    "load.r $r85"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r $r85";
+    "load.r $r85"->"push 0";
+    "virtualinvoke <java.lang.String: char charAt(int)>"
+    "push 0"->"virtualinvoke <java.lang.String: char charAt(int)>";
+    "push 35"
+    "virtualinvoke <java.lang.String: char charAt(int)>"->"push 35";
+    "ifcmpne.c load.r r0"
+    "push 35"->"ifcmpne.c load.r r0";
+    "ifcmpne.c load.r r0"->"load.r $r85";
+    "load.r $r85"->"push 1";
+    "virtualinvoke <java.lang.String: java.lang.String substring(int)>"
+    "push 1"->"virtualinvoke <java.lang.String: java.lang.String substring(int)>";
+    "virtualinvoke <java.lang.String: java.lang.String substring(int)>"->"store.r $r85";
+    "store.r $r85"->"load.r r0";
+    "new java.awt.Color"
+    "load.r r0"->"new java.awt.Color";
+    "new java.awt.Color"->"dup1.r";
+    "dup1.r"->"load.r $r85";
+    "load.r $r85"->"push 0";
+    "push 2"
+    "push 0"->"push 2";
+    "virtualinvoke <java.lang.String: java.lang.String substring(int,int)>"
+    "push 2"->"virtualinvoke <java.lang.String: java.lang.String substring(int,int)>";
+    "push 16"
+    "virtualinvoke <java.lang.String: java.lang.String substring(int,int)>"->"push 16";
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String,int)>"
+    "push 16"->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String,int)>";
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String,int)>"->"load.r $r85";
+    "load.r $r85"->"push 2";
+    "push 4"
+    "push 2"->"push 4";
+    "push 4"->"virtualinvoke <java.lang.String: java.lang.String substring(int,int)>";
+    "virtualinvoke <java.lang.String: java.lang.String substring(int,int)>"->"push 16";
+    "push 16"->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String,int)>";
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String,int)>"->"load.r $r85";
+    "load.r $r85"->"push 4";
+    "push 6"
+    "push 4"->"push 6";
+    "push 6"->"virtualinvoke <java.lang.String: java.lang.String substring(int,int)>";
+    "virtualinvoke <java.lang.String: java.lang.String substring(int,int)>"->"push 16";
+    "push 16"->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String,int)>";
+    "specialinvoke <java.awt.Color: void <init>(int,int,int)>"
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String,int)>"->"specialinvoke <java.awt.Color: void <init>(int,int,int)>";
+    "fieldput <wmap: java.awt.Color m_linkColor>"
+    "specialinvoke <java.awt.Color: void <init>(int,int,int)>"->"fieldput <wmap: java.awt.Color m_linkColor>";
+    "fieldput <wmap: java.awt.Color m_linkColor>"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "push \"world_t10.gif\""
+    "load.r r0"->"push \"world_t10.gif\"";
+    "fieldput <wmap: java.lang.String m_sWorldMap>"
+    "push \"world_t10.gif\""->"fieldput <wmap: java.lang.String m_sWorldMap>";
+    "fieldput <wmap: java.lang.String m_sWorldMap>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "push \"DISTRIBUTIONMAP\""
+    "load.r r0"->"push \"DISTRIBUTIONMAP\"";
+    "push \"DISTRIBUTIONMAP\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "fieldput <wmap: java.lang.String m_sDistributionMap>"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"fieldput <wmap: java.lang.String m_sDistributionMap>";
+    "fieldput <wmap: java.lang.String m_sDistributionMap>"->"load.r r0";
+    "fieldget <wmap: java.lang.String m_sDistributionMap>"
+    "load.r r0"->"fieldget <wmap: java.lang.String m_sDistributionMap>";
+    "fieldget <wmap: java.lang.String m_sDistributionMap>"->"ifnonnull load.r r0";
+    "ifnonnull load.r r0"->"load.r r0";
+    "push \"world_1v.gif\""
+    "load.r r0"->"push \"world_1v.gif\"";
+    "push \"world_1v.gif\""->"fieldput <wmap: java.lang.String m_sDistributionMap>";
+    "fieldput <wmap: java.lang.String m_sDistributionMap>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "push \"IMAGEDIR\""
+    "load.r r0"->"push \"IMAGEDIR\"";
+    "push \"IMAGEDIR\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "fieldput <wmap: java.lang.String m_sImageDir>"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"fieldput <wmap: java.lang.String m_sImageDir>";
+    "fieldput <wmap: java.lang.String m_sImageDir>"->"load.r r0";
+    "fieldget <wmap: java.lang.String m_sImageDir>"
+    "load.r r0"->"fieldget <wmap: java.lang.String m_sImageDir>";
+    "fieldget <wmap: java.lang.String m_sImageDir>"->"ifnonnull load.r r0";
+    "ifnonnull load.r r0"->"load.r r0";
+    "push \"images\""
+    "load.r r0"->"push \"images\"";
+    "push \"images\""->"fieldput <wmap: java.lang.String m_sImageDir>";
+    "fieldput <wmap: java.lang.String m_sImageDir>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "push \"LABEL1\""
+    "load.r r0"->"push \"LABEL1\"";
+    "push \"LABEL1\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "fieldput <wmap: java.lang.String m_sLabel1>"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"fieldput <wmap: java.lang.String m_sLabel1>";
+    "fieldput <wmap: java.lang.String m_sLabel1>"->"load.r r0";
+    "fieldget <wmap: java.lang.String m_sLabel1>"
+    "load.r r0"->"fieldget <wmap: java.lang.String m_sLabel1>";
+    "fieldget <wmap: java.lang.String m_sLabel1>"->"ifnonnull load.r r0";
+    "ifnonnull load.r r0"->"load.r r0";
+    "push \"View By\""
+    "load.r r0"->"push \"View By\"";
+    "push \"View By\""->"fieldput <wmap: java.lang.String m_sLabel1>";
+    "fieldput <wmap: java.lang.String m_sLabel1>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "push \"LABEL2_1\""
+    "load.r r0"->"push \"LABEL2_1\"";
+    "push \"LABEL2_1\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "fieldput <wmap: java.lang.String m_sLabel2_1>"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"fieldput <wmap: java.lang.String m_sLabel2_1>";
+    "fieldput <wmap: java.lang.String m_sLabel2_1>"->"load.r r0";
+    "fieldget <wmap: java.lang.String m_sLabel2_1>"
+    "load.r r0"->"fieldget <wmap: java.lang.String m_sLabel2_1>";
+    "fieldget <wmap: java.lang.String m_sLabel2_1>"->"ifnonnull load.r r0";
+    "ifnonnull load.r r0"->"load.r r0";
+    "push \"Select Map\""
+    "load.r r0"->"push \"Select Map\"";
+    "push \"Select Map\""->"fieldput <wmap: java.lang.String m_sLabel2_1>";
+    "fieldput <wmap: java.lang.String m_sLabel2_1>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "push \"LABEL2_2\""
+    "load.r r0"->"push \"LABEL2_2\"";
+    "push \"LABEL2_2\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "fieldput <wmap: java.lang.String m_sLabel2_2>"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"fieldput <wmap: java.lang.String m_sLabel2_2>";
+    "fieldput <wmap: java.lang.String m_sLabel2_2>"->"load.r r0";
+    "fieldget <wmap: java.lang.String m_sLabel2_2>"
+    "load.r r0"->"fieldget <wmap: java.lang.String m_sLabel2_2>";
+    "fieldget <wmap: java.lang.String m_sLabel2_2>"->"ifnonnull load.r r0";
+    "ifnonnull load.r r0"->"load.r r0";
+    "push \"Top 10\""
+    "load.r r0"->"push \"Top 10\"";
+    "push \"Top 10\""->"fieldput <wmap: java.lang.String m_sLabel2_2>";
+    "fieldput <wmap: java.lang.String m_sLabel2_2>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "push \"LABEL3\""
+    "load.r r0"->"push \"LABEL3\"";
+    "push \"LABEL3\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "fieldput <wmap: java.lang.String m_sLabel3>"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"fieldput <wmap: java.lang.String m_sLabel3>";
+    "fieldput <wmap: java.lang.String m_sLabel3>"->"load.r r0";
+    "fieldget <wmap: java.lang.String m_sLabel3>"
+    "load.r r0"->"fieldget <wmap: java.lang.String m_sLabel3>";
+    "fieldget <wmap: java.lang.String m_sLabel3>"->"ifnonnull load.r r0";
+    "ifnonnull load.r r0"->"load.r r0";
+    "push \"Time Period\""
+    "load.r r0"->"push \"Time Period\"";
+    "push \"Time Period\""->"fieldput <wmap: java.lang.String m_sLabel3>";
+    "fieldput <wmap: java.lang.String m_sLabel3>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "push \"LABEL4\""
+    "load.r r0"->"push \"LABEL4\"";
+    "push \"LABEL4\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "fieldput <wmap: java.lang.String m_sLabel4>"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"fieldput <wmap: java.lang.String m_sLabel4>";
+    "fieldput <wmap: java.lang.String m_sLabel4>"->"load.r r0";
+    "fieldget <wmap: java.lang.String m_sLabel4>"
+    "load.r r0"->"fieldget <wmap: java.lang.String m_sLabel4>";
+    "fieldget <wmap: java.lang.String m_sLabel4>"->"ifnonnull load.r r0";
+    "ifnonnull load.r r0"->"load.r r0";
+    "push \"Track\""
+    "load.r r0"->"push \"Track\"";
+    "push \"Track\""->"fieldput <wmap: java.lang.String m_sLabel4>";
+    "fieldput <wmap: java.lang.String m_sLabel4>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "push \"LABEL5\""
+    "load.r r0"->"push \"LABEL5\"";
+    "push \"LABEL5\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "fieldput <wmap: java.lang.String m_sLabel5>"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"fieldput <wmap: java.lang.String m_sLabel5>";
+    "fieldput <wmap: java.lang.String m_sLabel5>"->"load.r r0";
+    "fieldget <wmap: java.lang.String m_sLabel5>"
+    "load.r r0"->"fieldget <wmap: java.lang.String m_sLabel5>";
+    "fieldget <wmap: java.lang.String m_sLabel5>"->"ifnonnull load.r r0";
+    "ifnonnull load.r r0"->"load.r r0";
+    "push \"Last Updated\""
+    "load.r r0"->"push \"Last Updated\"";
+    "push \"Last Updated\""->"fieldput <wmap: java.lang.String m_sLabel5>";
+    "fieldput <wmap: java.lang.String m_sLabel5>"->"load.r r0";
+    "push \"OPENNEWWINDOW\""
+    "load.r r0"->"push \"OPENNEWWINDOW\"";
+    "push \"OPENNEWWINDOW\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"store.r $r85";
+    "store.r $r85"->"load.r $r85";
+    "load.r $r85"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r r0";
+    "load.r r0"->"load.r $r85";
+    "load.r $r85"->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>";
+    "fieldput <wmap: int m_nOpenNewWindow>"
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"->"fieldput <wmap: int m_nOpenNewWindow>";
+    "fieldput <wmap: int m_nOpenNewWindow>"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "fieldget <wmap: int m_nOpenNewWindow>"
+    "load.r r0"->"fieldget <wmap: int m_nOpenNewWindow>";
+    "ifeq load.r r0"
+    "fieldget <wmap: int m_nOpenNewWindow>"->"ifeq load.r r0";
+    "ifeq load.r r0"->"load.r r0";
+    "push \"Virus_Encyclopedia\""
+    "load.r r0"->"push \"Virus_Encyclopedia\"";
+    "fieldput <wmap: java.lang.String m_sTargetWindow>"
+    "push \"Virus_Encyclopedia\""->"fieldput <wmap: java.lang.String m_sTargetWindow>";
+    "fieldput <wmap: java.lang.String m_sTargetWindow>"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "push \"LINKTARGET\""
+    "load.r r0"->"push \"LINKTARGET\"";
+    "push \"LINKTARGET\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"store.r $r85";
+    "store.r $r85"->"load.r $r85";
+    "ifnull staticget <java.lang.System: java.io.PrintStream out>"
+    "load.r $r85"->"ifnull staticget <java.lang.System: java.io.PrintStream out>";
+    "ifnull staticget <java.lang.System: java.io.PrintStream out>"->"load.r r0";
+    "load.r r0"->"load.r $r85";
+    "load.r $r85"->"fieldput <wmap: java.lang.String m_sTargetWindow>";
+    "fieldput <wmap: java.lang.String m_sTargetWindow>"->"staticget <java.lang.System: java.io.PrintStream out>";
+    "staticget <java.lang.System: java.io.PrintStream out>"->"new java.lang.StringBuffer";
+    "new java.lang.StringBuffer"->"dup1.r";
+    "dup1.r"->"specialinvoke <java.lang.StringBuffer: void <init>()>";
+    "push \"Target Window Name = \""
+    "specialinvoke <java.lang.StringBuffer: void <init>()>"->"push \"Target Window Name = \"";
+    "push \"Target Window Name = \""->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"load.r r0";
+    "fieldget <wmap: java.lang.String m_sTargetWindow>"
+    "load.r r0"->"fieldget <wmap: java.lang.String m_sTargetWindow>";
+    "fieldget <wmap: java.lang.String m_sTargetWindow>"->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>"->"virtualinvoke <java.io.PrintStream: void println(java.lang.String)>";
+    "virtualinvoke <java.io.PrintStream: void println(java.lang.String)>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "push \"ENCYCLOPEDIA\""
+    "load.r r0"->"push \"ENCYCLOPEDIA\"";
+    "push \"ENCYCLOPEDIA\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "fieldput <wmap: java.lang.String m_sEncyclopediaUrl>"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"fieldput <wmap: java.lang.String m_sEncyclopediaUrl>";
+    "fieldput <wmap: java.lang.String m_sEncyclopediaUrl>"->"load.r r0";
+    "new java.util.Hashtable"
+    "load.r r0"->"new java.util.Hashtable";
+    "new java.util.Hashtable"->"dup1.r";
+    "specialinvoke <java.util.Hashtable: void <init>()>"
+    "dup1.r"->"specialinvoke <java.util.Hashtable: void <init>()>";
+    "fieldput <wmap: java.util.Hashtable m_htViewMode>"
+    "specialinvoke <java.util.Hashtable: void <init>()>"->"fieldput <wmap: java.util.Hashtable m_htViewMode>";
+    "fieldput <wmap: java.util.Hashtable m_htViewMode>"->"load.r r0";
+    "push \"VIEWMODES\""
+    "load.r r0"->"push \"VIEWMODES\"";
+    "push \"VIEWMODES\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"store.r $r85";
+    "store.r $r85"->"load.r $r85";
+    "load.r $r85"->"ifnonnull load.r r0";
+    "push \"Location, 0;Virus Name, 1\""
+    "ifnonnull load.r r0"->"push \"Location, 0;Virus Name, 1\"";
+    "push \"Location, 0;Virus Name, 1\""->"store.r $r85";
+    "store.r $r85"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "fieldget <wmap: java.awt.Label m_label1>"
+    "load.r r0"->"fieldget <wmap: java.awt.Label m_label1>";
+    "specialinvoke <wmap: void addLabel(java.awt.Label)>"
+    "fieldget <wmap: java.awt.Label m_label1>"->"specialinvoke <wmap: void addLabel(java.awt.Label)>";
+    "specialinvoke <wmap: void addLabel(java.awt.Label)>"->"load.r r0";
+    "load.r r0"->"fieldget <wmap: java.awt.Label m_label1>";
+    "fieldget <wmap: java.awt.Label m_label1>"->"load.r r0";
+    "load.r r0"->"fieldget <wmap: java.lang.String m_sLabel1>";
+    "virtualinvoke <java.awt.Label: void setText(java.lang.String)>"
+    "fieldget <wmap: java.lang.String m_sLabel1>"->"virtualinvoke <java.awt.Label: void setText(java.lang.String)>";
+    "virtualinvoke <java.awt.Label: void setText(java.lang.String)>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "fieldget <wmap: java.awt.Choice m_choice1>"
+    "load.r r0"->"fieldget <wmap: java.awt.Choice m_choice1>";
+    "specialinvoke <wmap: void addChoice(java.awt.Choice)>"
+    "fieldget <wmap: java.awt.Choice m_choice1>"->"specialinvoke <wmap: void addChoice(java.awt.Choice)>";
+    "specialinvoke <wmap: void addChoice(java.awt.Choice)>"->"load.r r0";
+    "load.r r0"->"load.r $r85";
+    "load.r $r85"->"load.r r0";
+    "load.r r0"->"fieldget <wmap: java.awt.Choice m_choice1>";
+    "fieldget <wmap: java.awt.Choice m_choice1>"->"load.r r0";
+    "fieldget <wmap: java.util.Hashtable m_htViewMode>"
+    "load.r r0"->"fieldget <wmap: java.util.Hashtable m_htViewMode>";
+    "specialinvoke <wmap: void setChoice(java.lang.String,java.awt.Choice,java.util.Hashtable)>"
+    "fieldget <wmap: java.util.Hashtable m_htViewMode>"->"specialinvoke <wmap: void setChoice(java.lang.String,java.awt.Choice,java.util.Hashtable)>";
+    "specialinvoke <wmap: void setChoice(java.lang.String,java.awt.Choice,java.util.Hashtable)>"->"load.r r0";
+    "load.r r0"->"new java.util.Hashtable";
+    "new java.util.Hashtable"->"dup1.r";
+    "dup1.r"->"specialinvoke <java.util.Hashtable: void <init>()>";
+    "fieldput <wmap: java.util.Hashtable m_htMap>"
+    "specialinvoke <java.util.Hashtable: void <init>()>"->"fieldput <wmap: java.util.Hashtable m_htMap>";
+    "fieldput <wmap: java.util.Hashtable m_htMap>"->"load.r r0";
+    "push \"MAPS\""
+    "load.r r0"->"push \"MAPS\"";
+    "push \"MAPS\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"store.r $r85";
+    "store.r $r85"->"load.r $r85";
+    "load.r $r85"->"ifnonnull load.r r0";
+    "push \"Worldwide, world_t10.gif;North America, n_america.gif;South America, s_america.gif;Europe, europe.gif;Asia, asia.gif;Africa, africa.gif;Australia, australia.gif;South-East Asia, se_asia.gif;North Europe, n_europe.gif;South Europe, s_europe.gif;Middle East, m_east.gif\""
+    "ifnonnull load.r r0"->"push \"Worldwide, world_t10.gif;North America, n_america.gif;South America, s_america.gif;Europe, europe.gif;Asia, asia.gif;Africa, africa.gif;Australia, australia.gif;South-East Asia, se_asia.gif;North Europe, n_europe.gif;South Europe, s_europe.gif;Middle East, m_east.gif\"";
+    "push \"Worldwide, world_t10.gif;North America, n_america.gif;South America, s_america.gif;Europe, europe.gif;Asia, asia.gif;Africa, africa.gif;Australia, australia.gif;South-East Asia, se_asia.gif;North Europe, n_europe.gif;South Europe, s_europe.gif;Middle East, m_east.gif\""->"store.r $r85";
+    "store.r $r85"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "fieldget <wmap: java.awt.Label m_label2>"
+    "load.r r0"->"fieldget <wmap: java.awt.Label m_label2>";
+    "fieldget <wmap: java.awt.Label m_label2>"->"specialinvoke <wmap: void addLabel(java.awt.Label)>";
+    "specialinvoke <wmap: void addLabel(java.awt.Label)>"->"load.r r0";
+    "load.r r0"->"fieldget <wmap: java.awt.Label m_label2>";
+    "fieldget <wmap: java.awt.Label m_label2>"->"load.r r0";
+    "load.r r0"->"fieldget <wmap: java.lang.String m_sLabel2_1>";
+    "fieldget <wmap: java.lang.String m_sLabel2_1>"->"virtualinvoke <java.awt.Label: void setText(java.lang.String)>";
+    "virtualinvoke <java.awt.Label: void setText(java.lang.String)>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "fieldget <wmap: java.awt.Choice m_choice2>"
+    "load.r r0"->"fieldget <wmap: java.awt.Choice m_choice2>";
+    "fieldget <wmap: java.awt.Choice m_choice2>"->"specialinvoke <wmap: void addChoice(java.awt.Choice)>";
+    "specialinvoke <wmap: void addChoice(java.awt.Choice)>"->"load.r r0";
+    "load.r r0"->"load.r $r85";
+    "load.r $r85"->"load.r r0";
+    "load.r r0"->"fieldget <wmap: java.awt.Choice m_choice2>";
+    "fieldget <wmap: java.awt.Choice m_choice2>"->"load.r r0";
+    "fieldget <wmap: java.util.Hashtable m_htMap>"
+    "load.r r0"->"fieldget <wmap: java.util.Hashtable m_htMap>";
+    "fieldget <wmap: java.util.Hashtable m_htMap>"->"specialinvoke <wmap: void setChoice(java.lang.String,java.awt.Choice,java.util.Hashtable)>";
+    "specialinvoke <wmap: void setChoice(java.lang.String,java.awt.Choice,java.util.Hashtable)>"->"load.r r0";
+    "load.r r0"->"new java.util.Hashtable";
+    "new java.util.Hashtable"->"dup1.r";
+    "dup1.r"->"specialinvoke <java.util.Hashtable: void <init>()>";
+    "fieldput <wmap: java.util.Hashtable m_htDay>"
+    "specialinvoke <java.util.Hashtable: void <init>()>"->"fieldput <wmap: java.util.Hashtable m_htDay>";
+    "fieldput <wmap: java.util.Hashtable m_htDay>"->"load.r r0";
+    "push \"PERIODS\""
+    "load.r r0"->"push \"PERIODS\"";
+    "push \"PERIODS\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"store.r $r85";
+    "store.r $r85"->"load.r $r85";
+    "load.r $r85"->"ifnonnull load.r r0";
+    "push \"Today, 1;Past 7 Days, 7;Past 30 Days, 30\""
+    "ifnonnull load.r r0"->"push \"Today, 1;Past 7 Days, 7;Past 30 Days, 30\"";
+    "push \"Today, 1;Past 7 Days, 7;Past 30 Days, 30\""->"store.r $r85";
+    "store.r $r85"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "fieldget <wmap: java.awt.Label m_label3>"
+    "load.r r0"->"fieldget <wmap: java.awt.Label m_label3>";
+    "fieldget <wmap: java.awt.Label m_label3>"->"specialinvoke <wmap: void addLabel(java.awt.Label)>";
+    "specialinvoke <wmap: void addLabel(java.awt.Label)>"->"load.r r0";
+    "load.r r0"->"fieldget <wmap: java.awt.Label m_label3>";
+    "fieldget <wmap: java.awt.Label m_label3>"->"load.r r0";
+    "load.r r0"->"fieldget <wmap: java.lang.String m_sLabel3>";
+    "fieldget <wmap: java.lang.String m_sLabel3>"->"virtualinvoke <java.awt.Label: void setText(java.lang.String)>";
+    "virtualinvoke <java.awt.Label: void setText(java.lang.String)>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "fieldget <wmap: java.awt.Choice m_choice3>"
+    "load.r r0"->"fieldget <wmap: java.awt.Choice m_choice3>";
+    "fieldget <wmap: java.awt.Choice m_choice3>"->"specialinvoke <wmap: void addChoice(java.awt.Choice)>";
+    "specialinvoke <wmap: void addChoice(java.awt.Choice)>"->"load.r r0";
+    "load.r r0"->"load.r $r85";
+    "load.r $r85"->"load.r r0";
+    "load.r r0"->"fieldget <wmap: java.awt.Choice m_choice3>";
+    "fieldget <wmap: java.awt.Choice m_choice3>"->"load.r r0";
+    "fieldget <wmap: java.util.Hashtable m_htDay>"
+    "load.r r0"->"fieldget <wmap: java.util.Hashtable m_htDay>";
+    "fieldget <wmap: java.util.Hashtable m_htDay>"->"specialinvoke <wmap: void setChoice(java.lang.String,java.awt.Choice,java.util.Hashtable)>";
+    "specialinvoke <wmap: void setChoice(java.lang.String,java.awt.Choice,java.util.Hashtable)>"->"load.r r0";
+    "load.r r0"->"new java.util.Hashtable";
+    "new java.util.Hashtable"->"dup1.r";
+    "dup1.r"->"specialinvoke <java.util.Hashtable: void <init>()>";
+    "fieldput <wmap: java.util.Hashtable m_htTrack>"
+    "specialinvoke <java.util.Hashtable: void <init>()>"->"fieldput <wmap: java.util.Hashtable m_htTrack>";
+    "fieldput <wmap: java.util.Hashtable m_htTrack>"->"load.r r0";
+    "push \"TRACKS\""
+    "load.r r0"->"push \"TRACKS\"";
+    "push \"TRACKS\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"store.r $r85";
+    "store.r $r85"->"load.r $r85";
+    "load.r $r85"->"ifnonnull load.r r0";
+    "push \"Infected files, 0;Infected computers, 1\""
+    "ifnonnull load.r r0"->"push \"Infected files, 0;Infected computers, 1\"";
+    "push \"Infected files, 0;Infected computers, 1\""->"store.r $r85";
+    "store.r $r85"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "fieldget <wmap: java.awt.Label m_label4>"
+    "load.r r0"->"fieldget <wmap: java.awt.Label m_label4>";
+    "fieldget <wmap: java.awt.Label m_label4>"->"specialinvoke <wmap: void addLabel(java.awt.Label)>";
+    "specialinvoke <wmap: void addLabel(java.awt.Label)>"->"load.r r0";
+    "load.r r0"->"fieldget <wmap: java.awt.Label m_label4>";
+    "fieldget <wmap: java.awt.Label m_label4>"->"load.r r0";
+    "load.r r0"->"fieldget <wmap: java.lang.String m_sLabel4>";
+    "fieldget <wmap: java.lang.String m_sLabel4>"->"virtualinvoke <java.awt.Label: void setText(java.lang.String)>";
+    "virtualinvoke <java.awt.Label: void setText(java.lang.String)>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "fieldget <wmap: java.awt.Choice m_choice4>"
+    "load.r r0"->"fieldget <wmap: java.awt.Choice m_choice4>";
+    "fieldget <wmap: java.awt.Choice m_choice4>"->"specialinvoke <wmap: void addChoice(java.awt.Choice)>";
+    "specialinvoke <wmap: void addChoice(java.awt.Choice)>"->"load.r r0";
+    "load.r r0"->"load.r $r85";
+    "load.r $r85"->"load.r r0";
+    "load.r r0"->"fieldget <wmap: java.awt.Choice m_choice4>";
+    "fieldget <wmap: java.awt.Choice m_choice4>"->"load.r r0";
+    "fieldget <wmap: java.util.Hashtable m_htTrack>"
+    "load.r r0"->"fieldget <wmap: java.util.Hashtable m_htTrack>";
+    "fieldget <wmap: java.util.Hashtable m_htTrack>"->"specialinvoke <wmap: void setChoice(java.lang.String,java.awt.Choice,java.util.Hashtable)>";
+    "specialinvoke <wmap: void setChoice(java.lang.String,java.awt.Choice,java.util.Hashtable)>"->"load.r r0";
+    "load.r r0"->"new java.util.Hashtable";
+    "new java.util.Hashtable"->"dup1.r";
+    "dup1.r"->"specialinvoke <java.util.Hashtable: void <init>()>";
+    "fieldput <wmap: java.util.Hashtable m_htCountry>"
+    "specialinvoke <java.util.Hashtable: void <init>()>"->"fieldput <wmap: java.util.Hashtable m_htCountry>";
+    "fieldput <wmap: java.util.Hashtable m_htCountry>"->"push 1";
+    "store.i $r142"
+    "push 1"->"store.i $r142";
+    "store.i $r142"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "load.r r0"->"new java.lang.StringBuffer";
+    "new java.lang.StringBuffer"->"dup1.r";
+    "dup1.r"->"specialinvoke <java.lang.StringBuffer: void <init>()>";
+    "push \"CONTINENT\""
+    "specialinvoke <java.lang.StringBuffer: void <init>()>"->"push \"CONTINENT\"";
+    "push \"CONTINENT\""->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "load.i $r142"
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"load.i $r142";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(int)>"
+    "load.i $r142"->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(int)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(int)>"->"virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>"->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "store.r $r84"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"store.r $r84";
+    "load.r $r84"
+    "store.r $r84"->"load.r $r84";
+    "ifnonnull new java.util.StringTokenizer"
+    "load.r $r84"->"ifnonnull new java.util.StringTokenizer";
+    "ifnonnull new java.util.StringTokenizer"->"load.r r0";
+    "new java.util.Stack"
+    "load.r r0"->"new java.util.Stack";
+    "new java.util.Stack"->"dup1.r";
+    "specialinvoke <java.util.Stack: void <init>()>"
+    "dup1.r"->"specialinvoke <java.util.Stack: void <init>()>";
+    "fieldput <wmap: java.util.Stack m_MapHistoryStack>"
+    "specialinvoke <java.util.Stack: void <init>()>"->"fieldput <wmap: java.util.Stack m_MapHistoryStack>";
+    "fieldput <wmap: java.util.Stack m_MapHistoryStack>"->"load.r r0";
+    "new ImageButton"
+    "load.r r0"->"new ImageButton";
+    "new ImageButton"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "new java.net.URL"
+    "load.r r0"->"new java.net.URL";
+    "new java.net.URL"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "load.r r0"->"virtualinvoke <java.applet.Applet: java.net.URL getDocumentBase()>";
+    "virtualinvoke <java.applet.Applet: java.net.URL getDocumentBase()>"->"new java.lang.StringBuffer";
+    "new java.lang.StringBuffer"->"dup1.r";
+    "dup1.r"->"specialinvoke <java.lang.StringBuffer: void <init>()>";
+    "specialinvoke <java.lang.StringBuffer: void <init>()>"->"load.r r0";
+    "load.r r0"->"fieldget <wmap: java.lang.String m_sImageDir>";
+    "fieldget <wmap: java.lang.String m_sImageDir>"->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "push \"/\""
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"push \"/\"";
+    "push \"/\""->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "push \"worldmap.gif\""
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"push \"worldmap.gif\"";
+    "push \"worldmap.gif\""->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>";
+    "specialinvoke <java.net.URL: void <init>(java.net.URL,java.lang.String)>"
+    "virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>"->"specialinvoke <java.net.URL: void <init>(java.net.URL,java.lang.String)>";
+    "specialinvoke <ImageButton: void <init>(wmap,java.net.URL)>"
+    "specialinvoke <java.net.URL: void <init>(java.net.URL,java.lang.String)>"->"specialinvoke <ImageButton: void <init>(wmap,java.net.URL)>";
+    "fieldput <wmap: ImageButton m_btnWorldMap>"
+    "specialinvoke <ImageButton: void <init>(wmap,java.net.URL)>"->"fieldput <wmap: ImageButton m_btnWorldMap>";
+    "fieldput <wmap: ImageButton m_btnWorldMap>"->"load.r r0";
+    "load.r r0"->"new ImageButton";
+    "new ImageButton"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "load.r r0"->"new java.net.URL";
+    "new java.net.URL"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "load.r r0"->"virtualinvoke <java.applet.Applet: java.net.URL getDocumentBase()>";
+    "virtualinvoke <java.applet.Applet: java.net.URL getDocumentBase()>"->"new java.lang.StringBuffer";
+    "new java.lang.StringBuffer"->"dup1.r";
+    "dup1.r"->"specialinvoke <java.lang.StringBuffer: void <init>()>";
+    "specialinvoke <java.lang.StringBuffer: void <init>()>"->"load.r r0";
+    "load.r r0"->"fieldget <wmap: java.lang.String m_sImageDir>";
+    "fieldget <wmap: java.lang.String m_sImageDir>"->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"push \"/\"";
+    "push \"/\""->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "push \"previous.gif\""
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"push \"previous.gif\"";
+    "push \"previous.gif\""->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>"->"specialinvoke <java.net.URL: void <init>(java.net.URL,java.lang.String)>";
+    "specialinvoke <java.net.URL: void <init>(java.net.URL,java.lang.String)>"->"specialinvoke <ImageButton: void <init>(wmap,java.net.URL)>";
+    "fieldput <wmap: ImageButton m_btnPrevMap>"
+    "specialinvoke <ImageButton: void <init>(wmap,java.net.URL)>"->"fieldput <wmap: ImageButton m_btnPrevMap>";
+    "fieldput <wmap: ImageButton m_btnPrevMap>"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "fieldget <wmap: ImageButton m_btnWorldMap>"
+    "load.r r0"->"fieldget <wmap: ImageButton m_btnWorldMap>";
+    "virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>"
+    "fieldget <wmap: ImageButton m_btnWorldMap>"->"virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>";
+    "pop"
+    "virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>"->"pop";
+    "pop"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "fieldget <wmap: ImageButton m_btnPrevMap>"
+    "load.r r0"->"fieldget <wmap: ImageButton m_btnPrevMap>";
+    "fieldget <wmap: ImageButton m_btnPrevMap>"->"virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>";
+    "virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>"->"pop";
+    "pop"->"load.r r0";
+    "load.r r0"->"fieldget <wmap: ImageButton m_btnWorldMap>";
+    "virtualinvoke <java.awt.Component: void hide()>"
+    "fieldget <wmap: ImageButton m_btnWorldMap>"->"virtualinvoke <java.awt.Component: void hide()>";
+    "virtualinvoke <java.awt.Component: void hide()>"->"load.r r0";
+    "load.r r0"->"fieldget <wmap: ImageButton m_btnPrevMap>";
+    "fieldget <wmap: ImageButton m_btnPrevMap>"->"virtualinvoke <java.awt.Component: void hide()>";
+    "virtualinvoke <java.awt.Component: void hide()>"->"load.r r0";
+    "new java.util.Vector"
+    "load.r r0"->"new java.util.Vector";
+    "new java.util.Vector"->"dup1.r";
+    "specialinvoke <java.util.Vector: void <init>()>"
+    "dup1.r"->"specialinvoke <java.util.Vector: void <init>()>";
+    "fieldput <wmap: java.util.Vector m_vMap>"
+    "specialinvoke <java.util.Vector: void <init>()>"->"fieldput <wmap: java.util.Vector m_vMap>";
+    "fieldput <wmap: java.util.Vector m_vMap>"->"push 0";
+    "store.i $r85"
+    "push 0"->"store.i $r85";
+    "goto load.i $r85"
+    "store.i $r85"->"goto load.i $r85";
+    "load.i $r85"
+    "goto load.i $r85"->"load.i $r85";
+    "load.i $r85"->"load.r r0";
+    "load.r r0"->"fieldget <wmap: java.awt.Choice m_choice2>";
+    "virtualinvoke <java.awt.Choice: int countItems()>"
+    "fieldget <wmap: java.awt.Choice m_choice2>"->"virtualinvoke <java.awt.Choice: int countItems()>";
+    "ifcmplt.i load.r r0"
+    "virtualinvoke <java.awt.Choice: int countItems()>"->"ifcmplt.i load.r r0";
+    "ifcmplt.i load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "push \"DEFAULTMAP\""
+    "load.r r0"->"push \"DEFAULTMAP\"";
+    "push \"DEFAULTMAP\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "fieldput <wmap: java.lang.String m_sDefaultMap>"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"fieldput <wmap: java.lang.String m_sDefaultMap>";
+    "fieldput <wmap: java.lang.String m_sDefaultMap>"->"load.r r0";
+    "fieldget <wmap: java.lang.String m_sDefaultMap>"
+    "load.r r0"->"fieldget <wmap: java.lang.String m_sDefaultMap>";
+    "ifnonnull new ViewParams"
+    "fieldget <wmap: java.lang.String m_sDefaultMap>"->"ifnonnull new ViewParams";
+    "ifnonnull new ViewParams"->"load.r r0";
+    "load.r r0"->"push \"world_t10.gif\"";
+    "push \"world_t10.gif\""->"fieldput <wmap: java.lang.String m_sDefaultMap>";
+    "new ViewParams"
+    "fieldput <wmap: java.lang.String m_sDefaultMap>"->"new ViewParams";
+    "new ViewParams"->"store.r $r85";
+    "store.r $r85"->"load.r $r85";
+    "load.r $r85"->"load.r r0";
+    "load.r r0"->"fieldget <wmap: java.lang.String m_sDefaultMap>";
+    "fieldget <wmap: java.lang.String m_sDefaultMap>"->"push null";
+    "push null"->"push 0";
+    "push 0"->"push 1";
+    "push \"1\""
+    "push 1"->"push \"1\"";
+    "specialinvoke <ViewParams: void <init>(java.lang.String,java.lang.String,int,int,java.lang.String)>"
+    "push \"1\""->"specialinvoke <ViewParams: void <init>(java.lang.String,java.lang.String,int,int,java.lang.String)>";
+    "specialinvoke <ViewParams: void <init>(java.lang.String,java.lang.String,int,int,java.lang.String)>"->"load.r r0";
+    "push \"DEFAULTTRACK\""
+    "load.r r0"->"push \"DEFAULTTRACK\"";
+    "push \"DEFAULTTRACK\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "store.r $r142"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"store.r $r142";
+    "load.r $r142"
+    "store.r $r142"->"load.r $r142";
+    "load.r $r142"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r $r85";
+    "load.r $r85"->"load.r $r142";
+    "load.r $r142"->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>";
+    "virtualinvoke <ViewParams: void setTrack(int)>"
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"->"virtualinvoke <ViewParams: void setTrack(int)>";
+    "virtualinvoke <ViewParams: void setTrack(int)>"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "push \"DEFAULTPERIOD\""
+    "load.r r0"->"push \"DEFAULTPERIOD\"";
+    "push \"DEFAULTPERIOD\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"store.r $r142";
+    "store.r $r142"->"load.r $r142";
+    "load.r $r142"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r $r85";
+    "load.r $r85"->"load.r $r142";
+    "virtualinvoke <ViewParams: void setPeriod(java.lang.String)>"
+    "load.r $r142"->"virtualinvoke <ViewParams: void setPeriod(java.lang.String)>";
+    "virtualinvoke <ViewParams: void setPeriod(java.lang.String)>"->"load.r r0";
+    "load.r r0"->"fieldget <wmap: java.awt.Label m_label1>";
+    "fieldget <wmap: java.awt.Label m_label1>"->"push 0";
+    "push 5"
+    "push 0"->"push 5";
+    "push 100"
+    "push 5"->"push 100";
+    "push 15"
+    "push 100"->"push 15";
+    "virtualinvoke <java.awt.Component: void reshape(int,int,int,int)>"
+    "push 15"->"virtualinvoke <java.awt.Component: void reshape(int,int,int,int)>";
+    "virtualinvoke <java.awt.Component: void reshape(int,int,int,int)>"->"load.r r0";
+    "load.r r0"->"fieldget <wmap: java.awt.Choice m_choice1>";
+    "fieldget <wmap: java.awt.Choice m_choice1>"->"push 0";
+    "push 20"
+    "push 0"->"push 20";
+    "push 20"->"push 100";
+    "push 100"->"push 20";
+    "push 20"->"virtualinvoke <java.awt.Component: void reshape(int,int,int,int)>";
+    "virtualinvoke <java.awt.Component: void reshape(int,int,int,int)>"->"load.r r0";
+    "load.r r0"->"fieldget <wmap: java.awt.Label m_label4>";
+    "push 110"
+    "fieldget <wmap: java.awt.Label m_label4>"->"push 110";
+    "push 110"->"push 5";
+    "push 140"
+    "push 5"->"push 140";
+    "push 140"->"push 15";
+    "push 15"->"virtualinvoke <java.awt.Component: void reshape(int,int,int,int)>";
+    "virtualinvoke <java.awt.Component: void reshape(int,int,int,int)>"->"load.r r0";
+    "load.r r0"->"fieldget <wmap: java.awt.Choice m_choice4>";
+    "fieldget <wmap: java.awt.Choice m_choice4>"->"push 110";
+    "push 110"->"push 20";
+    "push 20"->"push 140";
+    "push 140"->"push 20";
+    "push 20"->"virtualinvoke <java.awt.Component: void reshape(int,int,int,int)>";
+    "virtualinvoke <java.awt.Component: void reshape(int,int,int,int)>"->"load.r r0";
+    "load.r r0"->"fieldget <wmap: java.awt.Label m_label2>";
+    "push 260"
+    "fieldget <wmap: java.awt.Label m_label2>"->"push 260";
+    "push 260"->"push 5";
+    "push 120"
+    "push 5"->"push 120";
+    "push 120"->"push 15";
+    "push 15"->"virtualinvoke <java.awt.Component: void reshape(int,int,int,int)>";
+    "virtualinvoke <java.awt.Component: void reshape(int,int,int,int)>"->"load.r r0";
+    "load.r r0"->"fieldget <wmap: java.awt.Choice m_choice2>";
+    "fieldget <wmap: java.awt.Choice m_choice2>"->"push 260";
+    "push 260"->"push 20";
+    "push 20"->"push 120";
+    "push 120"->"push 20";
+    "push 20"->"virtualinvoke <java.awt.Component: void reshape(int,int,int,int)>";
+    "virtualinvoke <java.awt.Component: void reshape(int,int,int,int)>"->"load.r r0";
+    "load.r r0"->"fieldget <wmap: java.awt.Label m_label3>";
+    "push 390"
+    "fieldget <wmap: java.awt.Label m_label3>"->"push 390";
+    "push 390"->"push 5";
+    "push 5"->"push 120";
+    "push 120"->"push 15";
+    "push 15"->"virtualinvoke <java.awt.Component: void reshape(int,int,int,int)>";
+    "virtualinvoke <java.awt.Component: void reshape(int,int,int,int)>"->"load.r r0";
+    "load.r r0"->"fieldget <wmap: java.awt.Choice m_choice3>";
+    "fieldget <wmap: java.awt.Choice m_choice3>"->"push 390";
+    "push 390"->"push 20";
+    "push 20"->"push 120";
+    "push 120"->"push 20";
+    "push 20"->"virtualinvoke <java.awt.Component: void reshape(int,int,int,int)>";
+    "virtualinvoke <java.awt.Component: void reshape(int,int,int,int)>"->"load.r r0";
+    "load.r r0"->"fieldget <wmap: ImageButton m_btnWorldMap>";
+    "fieldget <wmap: ImageButton m_btnWorldMap>"->"push 0";
+    "push 302"
+    "push 0"->"push 302";
+    "push 103"
+    "push 302"->"push 103";
+    "push 13"
+    "push 103"->"push 13";
+    "push 13"->"virtualinvoke <java.awt.Component: void reshape(int,int,int,int)>";
+    "virtualinvoke <java.awt.Component: void reshape(int,int,int,int)>"->"load.r r0";
+    "load.r r0"->"fieldget <wmap: ImageButton m_btnPrevMap>";
+    "push 106"
+    "fieldget <wmap: ImageButton m_btnPrevMap>"->"push 106";
+    "push 106"->"push 302";
+    "push 302"->"push 103";
+    "push 103"->"push 13";
+    "push 13"->"virtualinvoke <java.awt.Component: void reshape(int,int,int,int)>";
+    "virtualinvoke <java.awt.Component: void reshape(int,int,int,int)>"->"load.r r0";
+    "load.r r0"->"load.r $r85";
+    "specialinvoke <wmap: boolean setViewParams(ViewParams)>"
+    "load.r $r85"->"specialinvoke <wmap: boolean setViewParams(ViewParams)>";
+    "specialinvoke <wmap: boolean setViewParams(ViewParams)>"->"pop";
+    "return"
+    "pop"->"return";
+    "virtualinvoke <ViewParams: void setTrack(int)>"->"store.r $r142";
+    "ifcmplt.i load.r r0"->"load.r r0";
+    "fieldget <wmap: java.util.Vector m_vMap>"
+    "load.r r0"->"fieldget <wmap: java.util.Vector m_vMap>";
+    "fieldget <wmap: java.util.Vector m_vMap>"->"load.r r0";
+    "load.r r0"->"fieldget <wmap: java.awt.Choice m_choice2>";
+    "fieldget <wmap: java.awt.Choice m_choice2>"->"load.i $r85";
+    "virtualinvoke <java.awt.Choice: java.lang.String getItem(int)>"
+    "load.i $r85"->"virtualinvoke <java.awt.Choice: java.lang.String getItem(int)>";
+    "virtualinvoke <java.util.Vector: void addElement(java.lang.Object)>"
+    "virtualinvoke <java.awt.Choice: java.lang.String getItem(int)>"->"virtualinvoke <java.util.Vector: void addElement(java.lang.Object)>";
+    "inc.i $r85 1"
+    "virtualinvoke <java.util.Vector: void addElement(java.lang.Object)>"->"inc.i $r85 1";
+    "specialinvoke <ImageButton: void <init>(wmap,java.net.URL)>"->"store.r $r85";
+    "new java.util.StringTokenizer"
+    "ifnonnull new java.util.StringTokenizer"->"new java.util.StringTokenizer";
+    "new java.util.StringTokenizer"->"store.r $r85";
+    "store.r $r85"->"load.r $r85";
+    "load.r $r85"->"load.r $r84";
+    "push \";\""
+    "load.r $r84"->"push \";\"";
+    "specialinvoke <java.util.StringTokenizer: void <init>(java.lang.String,java.lang.String)>"
+    "push \";\""->"specialinvoke <java.util.StringTokenizer: void <init>(java.lang.String,java.lang.String)>";
+    "goto load.r $r85"
+    "specialinvoke <java.util.StringTokenizer: void <init>(java.lang.String,java.lang.String)>"->"goto load.r $r85";
+    "goto load.r $r85"->"load.r $r85";
+    "virtualinvoke <java.util.StringTokenizer: boolean hasMoreTokens()>"
+    "load.r $r85"->"virtualinvoke <java.util.StringTokenizer: boolean hasMoreTokens()>";
+    "ifne new java.util.StringTokenizer"
+    "virtualinvoke <java.util.StringTokenizer: boolean hasMoreTokens()>"->"ifne new java.util.StringTokenizer";
+    "inc.i $r142 1"
+    "ifne new java.util.StringTokenizer"->"inc.i $r142 1";
+    "ifne new java.util.StringTokenizer"->"new java.util.StringTokenizer";
+    "store.r $r86"
+    "new java.util.StringTokenizer"->"store.r $r86";
+    "load.r $r86"
+    "store.r $r86"->"load.r $r86";
+    "load.r $r86"->"load.r $r85";
+    "virtualinvoke <java.util.StringTokenizer: java.lang.String nextToken()>"
+    "load.r $r85"->"virtualinvoke <java.util.StringTokenizer: java.lang.String nextToken()>";
+    "push \",\""
+    "virtualinvoke <java.util.StringTokenizer: java.lang.String nextToken()>"->"push \",\"";
+    "push \",\""->"specialinvoke <java.util.StringTokenizer: void <init>(java.lang.String,java.lang.String)>";
+    "specialinvoke <java.util.StringTokenizer: void <init>(java.lang.String,java.lang.String)>"->"load.r $r86";
+    "load.r $r86"->"virtualinvoke <java.util.StringTokenizer: java.lang.String nextToken()>";
+    "virtualinvoke <java.lang.String: java.lang.String trim()>"
+    "virtualinvoke <java.util.StringTokenizer: java.lang.String nextToken()>"->"virtualinvoke <java.lang.String: java.lang.String trim()>";
+    "virtualinvoke <java.lang.String: java.lang.String trim()>"->"store.r $r84";
+    "store.r $r84"->"load.r $r86";
+    "load.r $r86"->"virtualinvoke <java.util.StringTokenizer: boolean hasMoreTokens()>";
+    "ifne load.r $r86"
+    "virtualinvoke <java.util.StringTokenizer: boolean hasMoreTokens()>"->"ifne load.r $r86";
+    "ifne load.r $r86"->"goto load.r $r85";
+    "ifne load.r $r86"->"load.r $r86";
+    "load.r $r86"->"virtualinvoke <java.util.StringTokenizer: java.lang.String nextToken()>";
+    "virtualinvoke <java.util.StringTokenizer: java.lang.String nextToken()>"->"virtualinvoke <java.lang.String: java.lang.String trim()>";
+    "virtualinvoke <java.lang.String: java.lang.String trim()>"->"store.r $r86";
+    "store.r $r86"->"load.r r0";
+    "fieldget <wmap: java.util.Hashtable m_htCountry>"
+    "load.r r0"->"fieldget <wmap: java.util.Hashtable m_htCountry>";
+    "fieldget <wmap: java.util.Hashtable m_htCountry>"->"load.r $r86";
+    "load.r $r86"->"load.r $r84";
+    "virtualinvoke <java.util.Hashtable: java.lang.Object put(java.lang.Object,java.lang.Object)>"
+    "load.r $r84"->"virtualinvoke <java.util.Hashtable: java.lang.Object put(java.lang.Object,java.lang.Object)>";
+    "virtualinvoke <java.util.Hashtable: java.lang.Object put(java.lang.Object,java.lang.Object)>"->"pop";
+    "ifeq load.r r0"->"load.r r0";
+    "push \"_self\""
+    "load.r r0"->"push \"_self\"";
+    "push \"_self\""->"fieldput <wmap: java.lang.String m_sTargetWindow>";
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"->"store.r $r85";
+    "store.r $r85"->"load.r r0";
+    "load.r r0"->"push 0";
+    "push 0"->"fieldput <wmap: int m_nOpenNewWindow>";
+    "specialinvoke <java.awt.Color: void <init>(int,int,int)>"->"store.r $r85";
+    "store.r $r85"->"load.r r0";
+    "staticget <java.awt.Color: java.awt.Color blue>"
+    "load.r r0"->"staticget <java.awt.Color: java.awt.Color blue>";
+    "staticget <java.awt.Color: java.awt.Color blue>"->"fieldput <wmap: java.awt.Color m_linkColor>";
+    "fieldput <wmap: java.awt.Color m_linkColor>"->"goto load.r r0";
+    "ifnull load.r r0"->"load.r r0";
+    "load.r r0"->"staticget <java.awt.Color: java.awt.Color blue>";
+    "staticget <java.awt.Color: java.awt.Color blue>"->"fieldput <wmap: java.awt.Color m_linkColor>";
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"->"store.r $r85";
+    "store.r $r85"->"load.r r0";
+    "push 10000"
+    "load.r r0"->"push 10000";
+    "push 10000"->"fieldput <wmap: int m_nUpdateInterval>";
+}

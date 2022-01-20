@@ -1,0 +1,71 @@
+digraph "" {
+    "r0 := @this: quote.GReader"
+    "new java.io.ByteArrayInputStream"
+    "r0 := @this: quote.GReader"->"new java.io.ByteArrayInputStream";
+    "store.r $r7"
+    "new java.io.ByteArrayInputStream"->"store.r $r7";
+    "load.r $r7"
+    "store.r $r7"->"load.r $r7";
+    "staticget <quote.GReader: java.lang.String serializedObject>"
+    "load.r $r7"->"staticget <quote.GReader: java.lang.String serializedObject>";
+    "staticinvoke <quote.Gmerrews: byte[] StringToBytes(java.lang.String)>"
+    "staticget <quote.GReader: java.lang.String serializedObject>"->"staticinvoke <quote.Gmerrews: byte[] StringToBytes(java.lang.String)>";
+    "specialinvoke <java.io.ByteArrayInputStream: void <init>(byte[])>"
+    "staticinvoke <quote.Gmerrews: byte[] StringToBytes(java.lang.String)>"->"specialinvoke <java.io.ByteArrayInputStream: void <init>(byte[])>";
+    "new java.io.ObjectInputStream"
+    "specialinvoke <java.io.ByteArrayInputStream: void <init>(byte[])>"->"new java.io.ObjectInputStream";
+    "dup1.r"
+    "new java.io.ObjectInputStream"->"dup1.r";
+    "dup1.r"->"load.r $r7";
+    "specialinvoke <java.io.ObjectInputStream: void <init>(java.io.InputStream)>"
+    "load.r $r7"->"specialinvoke <java.io.ObjectInputStream: void <init>(java.io.InputStream)>";
+    "virtualinvoke <java.io.ObjectInputStream: java.lang.Object readObject()>"
+    "specialinvoke <java.io.ObjectInputStream: void <init>(java.io.InputStream)>"->"virtualinvoke <java.io.ObjectInputStream: java.lang.Object readObject()>";
+    "load.r r0"
+    "virtualinvoke <java.io.ObjectInputStream: java.lang.Object readObject()>"->"load.r r0";
+    "push \"deataeeee\""
+    "load.r r0"->"push \"deataeeee\"";
+    "push \"e\""
+    "push \"deataeeee\""->"push \"e\"";
+    "push \"\""
+    "push \"e\""->"push \"\"";
+    "virtualinvoke <java.lang.String: java.lang.String replace(java.lang.CharSequence,java.lang.CharSequence)>"
+    "push \"\""->"virtualinvoke <java.lang.String: java.lang.String replace(java.lang.CharSequence,java.lang.CharSequence)>";
+    "virtualinvoke <quote.GReader: java.lang.String getParameter(java.lang.String)>"
+    "virtualinvoke <java.lang.String: java.lang.String replace(java.lang.CharSequence,java.lang.CharSequence)>"->"virtualinvoke <quote.GReader: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <quote.GReader: java.lang.String getParameter(java.lang.String)>"->"store.r $r7";
+    "store.r $r7"->"load.r r0";
+    "push \"c______c\""
+    "load.r r0"->"push \"c______c\"";
+    "push \"_\""
+    "push \"c______c\""->"push \"_\"";
+    "push \"_\""->"push \"\"";
+    "push \"\""->"virtualinvoke <java.lang.String: java.lang.String replace(java.lang.CharSequence,java.lang.CharSequence)>";
+    "virtualinvoke <java.lang.String: java.lang.String replace(java.lang.CharSequence,java.lang.CharSequence)>"->"virtualinvoke <quote.GReader: java.lang.String getParameter(java.lang.String)>";
+    "store.r r0"
+    "virtualinvoke <quote.GReader: java.lang.String getParameter(java.lang.String)>"->"store.r r0";
+    "staticget <quote.GMailer: quote.GMailer instance>"
+    "store.r r0"->"staticget <quote.GMailer: quote.GMailer instance>";
+    "store.r r5"
+    "staticget <quote.GMailer: quote.GMailer instance>"->"store.r r5";
+    "ifnull goto return"
+    "store.r r5"->"ifnull goto return";
+    "load.r r5"
+    "ifnull goto return"->"load.r r5";
+    "load.r r5"->"ifnull goto return";
+    "ifnull goto return"->"load.r $r7";
+    "ifnonnull staticget <quote.GMailer: quote.GMailer instance>"
+    "load.r $r7"->"ifnonnull staticget <quote.GMailer: quote.GMailer instance>";
+    "ifnonnull staticget <quote.GMailer: quote.GMailer instance>"->"push \"\"";
+    "push \"\""->"store.r $r7";
+    "store.r $r7"->"staticget <quote.GMailer: quote.GMailer instance>";
+    "staticget <quote.GMailer: quote.GMailer instance>"->"load.r $r7";
+    "load.r $r7"->"load.r r0";
+    "virtualinvoke <quote.GMailer: void __C(java.lang.String,java.lang.String)>"
+    "load.r r0"->"virtualinvoke <quote.GMailer: void __C(java.lang.String,java.lang.String)>";
+    "goto return"
+    "virtualinvoke <quote.GMailer: void __C(java.lang.String,java.lang.String)>"->"goto return";
+    "return"
+    "goto return"->"return";
+    "virtualinvoke <quote.GMailer: void __C(java.lang.String,java.lang.String)>"->"store.r r0";
+}

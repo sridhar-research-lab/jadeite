@@ -1,0 +1,320 @@
+digraph "" {
+    "r0 := @this: JitterText"
+    "load.r r0"
+    "r0 := @this: JitterText"->"load.r r0";
+    "virtualinvoke <java.awt.Component: java.awt.Graphics getGraphics()>"
+    "load.r r0"->"virtualinvoke <java.awt.Component: java.awt.Graphics getGraphics()>";
+    "store.r r1"
+    "virtualinvoke <java.awt.Component: java.awt.Graphics getGraphics()>"->"store.r r1";
+    "store.r r1"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "virtualinvoke <java.awt.Component: java.awt.Dimension size()>"
+    "load.r r0"->"virtualinvoke <java.awt.Component: java.awt.Dimension size()>";
+    "fieldget <java.awt.Dimension: int height>"
+    "virtualinvoke <java.awt.Component: java.awt.Dimension size()>"->"fieldget <java.awt.Dimension: int height>";
+    "push 10"
+    "fieldget <java.awt.Dimension: int height>"->"push 10";
+    "sub.i"
+    "push 10"->"sub.i";
+    "fieldput <JitterText: int fontHeight>"
+    "sub.i"->"fieldput <JitterText: int fontHeight>";
+    "fieldput <JitterText: int fontHeight>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"virtualinvoke <java.awt.Component: java.awt.Dimension size()>";
+    "fieldget <java.awt.Dimension: int width>"
+    "virtualinvoke <java.awt.Component: java.awt.Dimension size()>"->"fieldget <java.awt.Dimension: int width>";
+    "fieldget <java.awt.Dimension: int width>"->"load.r r0";
+    "load.r r0"->"virtualinvoke <java.awt.Component: java.awt.Dimension size()>";
+    "virtualinvoke <java.awt.Component: java.awt.Dimension size()>"->"fieldget <java.awt.Dimension: int height>";
+    "virtualinvoke <java.awt.Component: java.awt.Image createImage(int,int)>"
+    "fieldget <java.awt.Dimension: int height>"->"virtualinvoke <java.awt.Component: java.awt.Image createImage(int,int)>";
+    "fieldput <JitterText: java.awt.Image offScrImage>"
+    "virtualinvoke <java.awt.Component: java.awt.Image createImage(int,int)>"->"fieldput <JitterText: java.awt.Image offScrImage>";
+    "fieldput <JitterText: java.awt.Image offScrImage>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "fieldget <JitterText: java.awt.Image offScrImage>"
+    "load.r r0"->"fieldget <JitterText: java.awt.Image offScrImage>";
+    "virtualinvoke <java.awt.Image: java.awt.Graphics getGraphics()>"
+    "fieldget <JitterText: java.awt.Image offScrImage>"->"virtualinvoke <java.awt.Image: java.awt.Graphics getGraphics()>";
+    "fieldput <JitterText: java.awt.Graphics offScrGC>"
+    "virtualinvoke <java.awt.Image: java.awt.Graphics getGraphics()>"->"fieldput <JitterText: java.awt.Graphics offScrGC>";
+    "fieldput <JitterText: java.awt.Graphics offScrGC>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "push \"text\""
+    "load.r r0"->"push \"text\"";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"
+    "push \"text\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "fieldput <JitterText: java.lang.String s>"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"fieldput <JitterText: java.lang.String s>";
+    "fieldput <JitterText: java.lang.String s>"->"load.r r0";
+    "fieldget <JitterText: java.lang.String s>"
+    "load.r r0"->"fieldget <JitterText: java.lang.String s>";
+    "ifnonnull load.r r0"
+    "fieldget <JitterText: java.lang.String s>"->"ifnonnull load.r r0";
+    "ifnonnull load.r r0"->"load.r r0";
+    "push \"Java Power!\""
+    "load.r r0"->"push \"Java Power!\"";
+    "push \"Java Power!\""->"fieldput <JitterText: java.lang.String s>";
+    "fieldput <JitterText: java.lang.String s>"->"load.r r0";
+    "load.r r0"->"virtualinvoke <java.awt.Component: java.awt.Dimension size()>";
+    "virtualinvoke <java.awt.Component: java.awt.Dimension size()>"->"fieldget <java.awt.Dimension: int width>";
+    "fieldget <java.awt.Dimension: int width>"->"load.r r0";
+    "load.r r0"->"fieldget <JitterText: java.lang.String s>";
+    "virtualinvoke <java.lang.String: int length()>"
+    "fieldget <JitterText: java.lang.String s>"->"virtualinvoke <java.lang.String: int length()>";
+    "push 1"
+    "virtualinvoke <java.lang.String: int length()>"->"push 1";
+    "add.i"
+    "push 1"->"add.i";
+    "push 5"
+    "add.i"->"push 5";
+    "mul.i"
+    "push 5"->"mul.i";
+    "mul.i"->"sub.i";
+    "sub.i"->"push 10";
+    "push 10"->"sub.i";
+    "store.i i0"
+    "sub.i"->"store.i i0";
+    "load.r r1"
+    "store.i i0"->"load.r r1";
+    "new java.awt.Font"
+    "load.r r1"->"new java.awt.Font";
+    "dup1.r"
+    "new java.awt.Font"->"dup1.r";
+    "push \"TimesRoman\""
+    "dup1.r"->"push \"TimesRoman\"";
+    "push \"TimesRoman\""->"push 1";
+    "push 1"->"load.r r0";
+    "fieldget <JitterText: int fontHeight>"
+    "load.r r0"->"fieldget <JitterText: int fontHeight>";
+    "specialinvoke <java.awt.Font: void <init>(java.lang.String,int,int)>"
+    "fieldget <JitterText: int fontHeight>"->"specialinvoke <java.awt.Font: void <init>(java.lang.String,int,int)>";
+    "virtualinvoke <java.awt.Graphics: void setFont(java.awt.Font)>"
+    "specialinvoke <java.awt.Font: void <init>(java.lang.String,int,int)>"->"virtualinvoke <java.awt.Graphics: void setFont(java.awt.Font)>";
+    "virtualinvoke <java.awt.Graphics: void setFont(java.awt.Font)>"->"load.r r0";
+    "load.r r0"->"load.r r1";
+    "virtualinvoke <java.awt.Graphics: java.awt.FontMetrics getFontMetrics()>"
+    "load.r r1"->"virtualinvoke <java.awt.Graphics: java.awt.FontMetrics getFontMetrics()>";
+    "fieldput <JitterText: java.awt.FontMetrics fm>"
+    "virtualinvoke <java.awt.Graphics: java.awt.FontMetrics getFontMetrics()>"->"fieldput <JitterText: java.awt.FontMetrics fm>";
+    "fieldput <JitterText: java.awt.FontMetrics fm>"->"load.r r0";
+    "fieldget <JitterText: java.awt.FontMetrics fm>"
+    "load.r r0"->"fieldget <JitterText: java.awt.FontMetrics fm>";
+    "fieldget <JitterText: java.awt.FontMetrics fm>"->"load.r r0";
+    "load.r r0"->"fieldget <JitterText: java.lang.String s>";
+    "virtualinvoke <java.awt.FontMetrics: int stringWidth(java.lang.String)>"
+    "fieldget <JitterText: java.lang.String s>"->"virtualinvoke <java.awt.FontMetrics: int stringWidth(java.lang.String)>";
+    "load.i i0"
+    "virtualinvoke <java.awt.FontMetrics: int stringWidth(java.lang.String)>"->"load.i i0";
+    "ifcmple.i load.r r0"
+    "load.i i0"->"ifcmple.i load.r r0";
+    "ifcmple.i load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <JitterText: int fontHeight>";
+    "fieldget <JitterText: int fontHeight>"->"push 1";
+    "push 1"->"sub.i";
+    "sub.i"->"fieldput <JitterText: int fontHeight>";
+    "fieldput <JitterText: int fontHeight>"->"load.r r0";
+    "load.r r0"->"fieldget <JitterText: java.awt.FontMetrics fm>";
+    "fieldget <JitterText: java.awt.FontMetrics fm>"->"load.r r0";
+    "load.r r0"->"fieldget <JitterText: java.lang.String s>";
+    "fieldget <JitterText: java.lang.String s>"->"virtualinvoke <java.awt.FontMetrics: int stringWidth(java.lang.String)>";
+    "virtualinvoke <java.awt.FontMetrics: int stringWidth(java.lang.String)>"->"load.i i0";
+    "ifcmpgt.i load.r r1"
+    "load.i i0"->"ifcmpgt.i load.r r1";
+    "ifcmpgt.i load.r r1"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"virtualinvoke <java.awt.Component: java.awt.Dimension size()>";
+    "virtualinvoke <java.awt.Component: java.awt.Dimension size()>"->"fieldget <java.awt.Dimension: int height>";
+    "fieldget <java.awt.Dimension: int height>"->"load.r r0";
+    "load.r r0"->"fieldget <JitterText: java.awt.FontMetrics fm>";
+    "virtualinvoke <java.awt.FontMetrics: int getMaxDescent()>"
+    "fieldget <JitterText: java.awt.FontMetrics fm>"->"virtualinvoke <java.awt.FontMetrics: int getMaxDescent()>";
+    "virtualinvoke <java.awt.FontMetrics: int getMaxDescent()>"->"sub.i";
+    "fieldput <JitterText: int baseline>"
+    "sub.i"->"fieldput <JitterText: int baseline>";
+    "fieldput <JitterText: int baseline>"->"load.r r0";
+    "load.r r0"->"new java.awt.Font";
+    "new java.awt.Font"->"dup1.r";
+    "dup1.r"->"push \"TimesRoman\"";
+    "push \"TimesRoman\""->"push 1";
+    "push 1"->"load.r r0";
+    "load.r r0"->"fieldget <JitterText: int fontHeight>";
+    "fieldget <JitterText: int fontHeight>"->"specialinvoke <java.awt.Font: void <init>(java.lang.String,int,int)>";
+    "fieldput <JitterText: java.awt.Font font>"
+    "specialinvoke <java.awt.Font: void <init>(java.lang.String,int,int)>"->"fieldput <JitterText: java.awt.Font font>";
+    "fieldput <JitterText: java.awt.Font font>"->"load.r r0";
+    "push \"TEXTCOLOR\""
+    "load.r r0"->"push \"TEXTCOLOR\"";
+    "push \"TEXTCOLOR\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"store.r r1";
+    "store.r r1"->"load.r r1";
+    "load.r r1"->"ifnonnull load.r r0";
+    "ifnonnull load.r r0"->"load.r r0";
+    "staticget <java.awt.Color: java.awt.Color black>"
+    "load.r r0"->"staticget <java.awt.Color: java.awt.Color black>";
+    "fieldput <JitterText: java.awt.Color textColor>"
+    "staticget <java.awt.Color: java.awt.Color black>"->"fieldput <JitterText: java.awt.Color textColor>";
+    "goto load.r r0"
+    "fieldput <JitterText: java.awt.Color textColor>"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "push \"BGCOLOR\""
+    "load.r r0"->"push \"BGCOLOR\"";
+    "push \"BGCOLOR\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"store.r r1";
+    "store.r r1"->"load.r r1";
+    "load.r r1"->"ifnonnull load.r r0";
+    "ifnonnull load.r r0"->"load.r r0";
+    "staticget <java.awt.Color: java.awt.Color lightGray>"
+    "load.r r0"->"staticget <java.awt.Color: java.awt.Color lightGray>";
+    "fieldput <JitterText: java.awt.Color bgColor>"
+    "staticget <java.awt.Color: java.awt.Color lightGray>"->"fieldput <JitterText: java.awt.Color bgColor>";
+    "fieldput <JitterText: java.awt.Color bgColor>"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "fieldget <JitterText: java.awt.Color bgColor>"
+    "load.r r0"->"fieldget <JitterText: java.awt.Color bgColor>";
+    "virtualinvoke <java.awt.Component: void setBackground(java.awt.Color)>"
+    "fieldget <JitterText: java.awt.Color bgColor>"->"virtualinvoke <java.awt.Component: void setBackground(java.awt.Color)>";
+    "virtualinvoke <java.awt.Component: void setBackground(java.awt.Color)>"->"load.r r0";
+    "push \"SPEED\""
+    "load.r r0"->"push \"SPEED\"";
+    "push \"SPEED\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"store.r r1";
+    "store.r r1"->"load.r r1";
+    "ifnull load.r r0"
+    "load.r r1"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r1";
+    "staticinvoke <java.lang.Integer: java.lang.Integer valueOf(java.lang.String)>"
+    "load.r r1"->"staticinvoke <java.lang.Integer: java.lang.Integer valueOf(java.lang.String)>";
+    "virtualinvoke <java.lang.Integer: int intValue()>"
+    "staticinvoke <java.lang.Integer: java.lang.Integer valueOf(java.lang.String)>"->"virtualinvoke <java.lang.Integer: int intValue()>";
+    "fieldput <JitterText: int speed>"
+    "virtualinvoke <java.lang.Integer: int intValue()>"->"fieldput <JitterText: int speed>";
+    "fieldput <JitterText: int speed>"->"load.r r0";
+    "fieldget <JitterText: int speed>"
+    "load.r r0"->"fieldget <JitterText: int speed>";
+    "ifne load.r r0"
+    "fieldget <JitterText: int speed>"->"ifne load.r r0";
+    "ifne load.r r0"->"load.r r0";
+    "push 200"
+    "load.r r0"->"push 200";
+    "push 200"->"fieldput <JitterText: int speed>";
+    "fieldput <JitterText: int speed>"->"load.r r0";
+    "push \"RANDOMCOLOR\""
+    "load.r r0"->"push \"RANDOMCOLOR\"";
+    "push \"RANDOMCOLOR\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"store.r r1";
+    "store.r r1"->"load.r r1";
+    "load.r r1"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r r1";
+    "load.r r1"->"staticinvoke <java.lang.Integer: java.lang.Integer valueOf(java.lang.String)>";
+    "staticinvoke <java.lang.Integer: java.lang.Integer valueOf(java.lang.String)>"->"virtualinvoke <java.lang.Integer: int intValue()>";
+    "ifne push 1"
+    "virtualinvoke <java.lang.Integer: int intValue()>"->"ifne push 1";
+    "push 0"
+    "ifne push 1"->"push 0";
+    "store.b r1"
+    "push 0"->"store.b r1";
+    "store.b r1"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "load.b r1"
+    "load.r r0"->"load.b r1";
+    "fieldput <JitterText: boolean randomColor>"
+    "load.b r1"->"fieldput <JitterText: boolean randomColor>";
+    "fieldput <JitterText: boolean randomColor>"->"load.r r0";
+    "fieldget <JitterText: java.awt.Color[] randomColors>"
+    "load.r r0"->"fieldget <JitterText: java.awt.Color[] randomColors>";
+    "fieldget <JitterText: java.awt.Color[] randomColors>"->"push 0";
+    "staticget <java.awt.Color: java.awt.Color magenta>"
+    "push 0"->"staticget <java.awt.Color: java.awt.Color magenta>";
+    "arraywrite.r"
+    "staticget <java.awt.Color: java.awt.Color magenta>"->"arraywrite.r";
+    "arraywrite.r"->"load.r r0";
+    "load.r r0"->"fieldget <JitterText: java.awt.Color[] randomColors>";
+    "fieldget <JitterText: java.awt.Color[] randomColors>"->"push 1";
+    "staticget <java.awt.Color: java.awt.Color orange>"
+    "push 1"->"staticget <java.awt.Color: java.awt.Color orange>";
+    "staticget <java.awt.Color: java.awt.Color orange>"->"arraywrite.r";
+    "arraywrite.r"->"load.r r0";
+    "load.r r0"->"fieldget <JitterText: java.awt.Color[] randomColors>";
+    "push 2"
+    "fieldget <JitterText: java.awt.Color[] randomColors>"->"push 2";
+    "staticget <java.awt.Color: java.awt.Color red>"
+    "push 2"->"staticget <java.awt.Color: java.awt.Color red>";
+    "staticget <java.awt.Color: java.awt.Color red>"->"arraywrite.r";
+    "arraywrite.r"->"load.r r0";
+    "load.r r0"->"fieldget <JitterText: java.awt.Color[] randomColors>";
+    "push 3"
+    "fieldget <JitterText: java.awt.Color[] randomColors>"->"push 3";
+    "staticget <java.awt.Color: java.awt.Color white>"
+    "push 3"->"staticget <java.awt.Color: java.awt.Color white>";
+    "staticget <java.awt.Color: java.awt.Color white>"->"arraywrite.r";
+    "arraywrite.r"->"load.r r0";
+    "load.r r0"->"fieldget <JitterText: java.awt.Color[] randomColors>";
+    "push 4"
+    "fieldget <JitterText: java.awt.Color[] randomColors>"->"push 4";
+    "staticget <java.awt.Color: java.awt.Color yellow>"
+    "push 4"->"staticget <java.awt.Color: java.awt.Color yellow>";
+    "staticget <java.awt.Color: java.awt.Color yellow>"->"arraywrite.r";
+    "arraywrite.r"->"load.r r0";
+    "load.r r0"->"fieldget <JitterText: java.awt.Color[] randomColors>";
+    "fieldget <JitterText: java.awt.Color[] randomColors>"->"push 5";
+    "staticget <java.awt.Color: java.awt.Color blue>"
+    "push 5"->"staticget <java.awt.Color: java.awt.Color blue>";
+    "staticget <java.awt.Color: java.awt.Color blue>"->"arraywrite.r";
+    "arraywrite.r"->"load.r r0";
+    "load.r r0"->"fieldget <JitterText: java.awt.Color[] randomColors>";
+    "push 6"
+    "fieldget <JitterText: java.awt.Color[] randomColors>"->"push 6";
+    "staticget <java.awt.Color: java.awt.Color cyan>"
+    "push 6"->"staticget <java.awt.Color: java.awt.Color cyan>";
+    "staticget <java.awt.Color: java.awt.Color cyan>"->"arraywrite.r";
+    "arraywrite.r"->"load.r r0";
+    "load.r r0"->"fieldget <JitterText: java.awt.Color[] randomColors>";
+    "push 7"
+    "fieldget <JitterText: java.awt.Color[] randomColors>"->"push 7";
+    "staticget <java.awt.Color: java.awt.Color green>"
+    "push 7"->"staticget <java.awt.Color: java.awt.Color green>";
+    "staticget <java.awt.Color: java.awt.Color green>"->"arraywrite.r";
+    "arraywrite.r"->"load.r r0";
+    "load.r r0"->"fieldget <JitterText: java.awt.Color[] randomColors>";
+    "push 8"
+    "fieldget <JitterText: java.awt.Color[] randomColors>"->"push 8";
+    "staticget <java.awt.Color: java.awt.Color pink>"
+    "push 8"->"staticget <java.awt.Color: java.awt.Color pink>";
+    "staticget <java.awt.Color: java.awt.Color pink>"->"arraywrite.r";
+    "arraywrite.r"->"load.r r0";
+    "load.r r0"->"fieldget <JitterText: java.awt.Color[] randomColors>";
+    "push 9"
+    "fieldget <JitterText: java.awt.Color[] randomColors>"->"push 9";
+    "staticget <java.awt.Color: java.awt.Color gray>"
+    "push 9"->"staticget <java.awt.Color: java.awt.Color gray>";
+    "staticget <java.awt.Color: java.awt.Color gray>"->"arraywrite.r";
+    "arraywrite.r"->"load.r r0";
+    "new java.lang.Thread"
+    "load.r r0"->"new java.lang.Thread";
+    "new java.lang.Thread"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "specialinvoke <java.lang.Thread: void <init>(java.lang.Runnable)>"
+    "load.r r0"->"specialinvoke <java.lang.Thread: void <init>(java.lang.Runnable)>";
+    "fieldput <JitterText: java.lang.Thread jitterThread>"
+    "specialinvoke <java.lang.Thread: void <init>(java.lang.Runnable)>"->"fieldput <JitterText: java.lang.Thread jitterThread>";
+    "return"
+    "fieldput <JitterText: java.lang.Thread jitterThread>"->"return";
+    "ifne push 1"->"push 1";
+    "push 1"->"store.b r1";
+    "ifnonnull load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r1";
+    "specialinvoke <JitterText: java.awt.Color parseColorString(java.lang.String)>"
+    "load.r r1"->"specialinvoke <JitterText: java.awt.Color parseColorString(java.lang.String)>";
+    "specialinvoke <JitterText: java.awt.Color parseColorString(java.lang.String)>"->"fieldput <JitterText: java.awt.Color bgColor>";
+    "ifnonnull load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r1";
+    "load.r r1"->"specialinvoke <JitterText: java.awt.Color parseColorString(java.lang.String)>";
+    "specialinvoke <JitterText: java.awt.Color parseColorString(java.lang.String)>"->"fieldput <JitterText: java.awt.Color textColor>";
+}

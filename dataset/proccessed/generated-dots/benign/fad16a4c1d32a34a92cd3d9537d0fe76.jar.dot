@@ -1,0 +1,232 @@
+digraph "" {
+    "r0 := @this: popupURL"
+    "load.r r0"
+    "r0 := @this: popupURL"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "virtualinvoke <java.applet.Applet: java.net.URL getDocumentBase()>"
+    "load.r r0"->"virtualinvoke <java.applet.Applet: java.net.URL getDocumentBase()>";
+    "push \"image.gif\""
+    "virtualinvoke <java.applet.Applet: java.net.URL getDocumentBase()>"->"push \"image.gif\"";
+    "virtualinvoke <java.applet.Applet: java.awt.Image getImage(java.net.URL,java.lang.String)>"
+    "push \"image.gif\""->"virtualinvoke <java.applet.Applet: java.awt.Image getImage(java.net.URL,java.lang.String)>";
+    "fieldput <popupURL: java.awt.Image image>"
+    "virtualinvoke <java.applet.Applet: java.awt.Image getImage(java.net.URL,java.lang.String)>"->"fieldput <popupURL: java.awt.Image image>";
+    "fieldput <popupURL: java.awt.Image image>"->"load.r r0";
+    "push 176L"
+    "load.r r0"->"push 176L";
+    "virtualinvoke <java.awt.Component: void enableEvents(long)>"
+    "push 176L"->"virtualinvoke <java.awt.Component: void enableEvents(long)>";
+    "virtualinvoke <java.awt.Component: void enableEvents(long)>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "fieldget <popupURL: int pagenumber>"
+    "load.r r0"->"fieldget <popupURL: int pagenumber>";
+    "newarray"
+    "fieldget <popupURL: int pagenumber>"->"newarray";
+    "fieldput <popupURL: java.lang.String[] holdPage>"
+    "newarray"->"fieldput <popupURL: java.lang.String[] holdPage>";
+    "fieldput <popupURL: java.lang.String[] holdPage>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <popupURL: int pagenumber>";
+    "fieldget <popupURL: int pagenumber>"->"newarray";
+    "fieldput <popupURL: java.lang.String[] holdURL>"
+    "newarray"->"fieldput <popupURL: java.lang.String[] holdURL>";
+    "fieldput <popupURL: java.lang.String[] holdURL>"->"load.r r0";
+    "new java.awt.PopupMenu"
+    "load.r r0"->"new java.awt.PopupMenu";
+    "dup1.r"
+    "new java.awt.PopupMenu"->"dup1.r";
+    "specialinvoke <java.awt.PopupMenu: void <init>()>"
+    "dup1.r"->"specialinvoke <java.awt.PopupMenu: void <init>()>";
+    "fieldput <popupURL: java.awt.PopupMenu popup>"
+    "specialinvoke <java.awt.PopupMenu: void <init>()>"->"fieldput <popupURL: java.awt.PopupMenu popup>";
+    "fieldput <popupURL: java.awt.PopupMenu popup>"->"load.r r0";
+    "push 0"
+    "load.r r0"->"push 0";
+    "fieldput <popupURL: int in>"
+    "push 0"->"fieldput <popupURL: int in>";
+    "goto load.r r0"
+    "fieldput <popupURL: int in>"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "fieldget <popupURL: int in>"
+    "load.r r0"->"fieldget <popupURL: int in>";
+    "fieldget <popupURL: int in>"->"load.r r0";
+    "load.r r0"->"fieldget <popupURL: int pagenumber>";
+    "ifcmplt.i load.r r0"
+    "fieldget <popupURL: int pagenumber>"->"ifcmplt.i load.r r0";
+    "ifcmplt.i load.r r0"->"load.r r0";
+    "load.r r0"->"push 0";
+    "fieldput <popupURL: int i>"
+    "push 0"->"fieldput <popupURL: int i>";
+    "fieldput <popupURL: int i>"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "fieldget <popupURL: int i>"
+    "load.r r0"->"fieldget <popupURL: int i>";
+    "fieldget <popupURL: int i>"->"load.r r0";
+    "fieldget <popupURL: int count>"
+    "load.r r0"->"fieldget <popupURL: int count>";
+    "fieldget <popupURL: int count>"->"ifcmplt.i load.r r0";
+    "ifcmplt.i load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "fieldget <popupURL: java.awt.PopupMenu popup>"
+    "load.r r0"->"fieldget <popupURL: java.awt.PopupMenu popup>";
+    "virtualinvoke <java.awt.Component: void add(java.awt.PopupMenu)>"
+    "fieldget <popupURL: java.awt.PopupMenu popup>"->"virtualinvoke <java.awt.Component: void add(java.awt.PopupMenu)>";
+    "virtualinvoke <java.awt.Component: void add(java.awt.PopupMenu)>"->"load.r r0";
+    "load.r r0"->"fieldget <popupURL: java.awt.PopupMenu popup>";
+    "new popupURL$1"
+    "fieldget <popupURL: java.awt.PopupMenu popup>"->"new popupURL$1";
+    "new popupURL$1"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "specialinvoke <popupURL$1: void <init>(popupURL)>"
+    "load.r r0"->"specialinvoke <popupURL$1: void <init>(popupURL)>";
+    "virtualinvoke <java.awt.MenuItem: void addActionListener(java.awt.event.ActionListener)>"
+    "specialinvoke <popupURL$1: void <init>(popupURL)>"->"virtualinvoke <java.awt.MenuItem: void addActionListener(java.awt.event.ActionListener)>";
+    "virtualinvoke <java.awt.MenuItem: void addActionListener(java.awt.event.ActionListener)>"->"load.r r0";
+    "new popupURL$2"
+    "load.r r0"->"new popupURL$2";
+    "new popupURL$2"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "specialinvoke <popupURL$2: void <init>(popupURL)>"
+    "load.r r0"->"specialinvoke <popupURL$2: void <init>(popupURL)>";
+    "virtualinvoke <java.awt.Component: void addMouseListener(java.awt.event.MouseListener)>"
+    "specialinvoke <popupURL$2: void <init>(popupURL)>"->"virtualinvoke <java.awt.Component: void addMouseListener(java.awt.event.MouseListener)>";
+    "return"
+    "virtualinvoke <java.awt.Component: void addMouseListener(java.awt.event.MouseListener)>"->"return";
+    "ifcmplt.i load.r r0"->"load.r r0";
+    "new java.awt.MenuItem"
+    "load.r r0"->"new java.awt.MenuItem";
+    "new java.awt.MenuItem"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "fieldget <popupURL: java.lang.String[] holdPage>"
+    "load.r r0"->"fieldget <popupURL: java.lang.String[] holdPage>";
+    "fieldget <popupURL: java.lang.String[] holdPage>"->"load.r r0";
+    "load.r r0"->"fieldget <popupURL: int i>";
+    "arrayread.r"
+    "fieldget <popupURL: int i>"->"arrayread.r";
+    "specialinvoke <java.awt.MenuItem: void <init>(java.lang.String)>"
+    "arrayread.r"->"specialinvoke <java.awt.MenuItem: void <init>(java.lang.String)>";
+    "fieldput <popupURL: java.awt.MenuItem menu>"
+    "specialinvoke <java.awt.MenuItem: void <init>(java.lang.String)>"->"fieldput <popupURL: java.awt.MenuItem menu>";
+    "fieldput <popupURL: java.awt.MenuItem menu>"->"load.r r0";
+    "fieldget <popupURL: java.awt.MenuItem menu>"
+    "load.r r0"->"fieldget <popupURL: java.awt.MenuItem menu>";
+    "fieldget <popupURL: java.awt.MenuItem menu>"->"load.r r0";
+    "load.r r0"->"fieldget <popupURL: java.lang.String[] holdPage>";
+    "fieldget <popupURL: java.lang.String[] holdPage>"->"load.r r0";
+    "load.r r0"->"fieldget <popupURL: int i>";
+    "fieldget <popupURL: int i>"->"arrayread.r";
+    "virtualinvoke <java.awt.MenuItem: void setActionCommand(java.lang.String)>"
+    "arrayread.r"->"virtualinvoke <java.awt.MenuItem: void setActionCommand(java.lang.String)>";
+    "virtualinvoke <java.awt.MenuItem: void setActionCommand(java.lang.String)>"->"load.r r0";
+    "load.r r0"->"fieldget <popupURL: java.awt.PopupMenu popup>";
+    "fieldget <popupURL: java.awt.PopupMenu popup>"->"load.r r0";
+    "load.r r0"->"fieldget <popupURL: java.awt.MenuItem menu>";
+    "virtualinvoke <java.awt.Menu: java.awt.MenuItem add(java.awt.MenuItem)>"
+    "fieldget <popupURL: java.awt.MenuItem menu>"->"virtualinvoke <java.awt.Menu: java.awt.MenuItem add(java.awt.MenuItem)>";
+    "pop"
+    "virtualinvoke <java.awt.Menu: java.awt.MenuItem add(java.awt.MenuItem)>"->"pop";
+    "pop"->"load.r r0";
+    "load.r r0"->"fieldget <popupURL: int i>";
+    "fieldget <popupURL: int i>"->"load.r r0";
+    "load.r r0"->"fieldget <popupURL: int count>";
+    "push 1"
+    "fieldget <popupURL: int count>"->"push 1";
+    "sub.i"
+    "push 1"->"sub.i";
+    "ifcmpeq.i load.r r0"
+    "sub.i"->"ifcmpeq.i load.r r0";
+    "ifcmpeq.i load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <popupURL: java.awt.PopupMenu popup>";
+    "virtualinvoke <java.awt.Menu: void addSeparator()>"
+    "fieldget <popupURL: java.awt.PopupMenu popup>"->"virtualinvoke <java.awt.Menu: void addSeparator()>";
+    "virtualinvoke <java.awt.Menu: void addSeparator()>"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <popupURL: int i>";
+    "fieldget <popupURL: int i>"->"push 1";
+    "add.i"
+    "push 1"->"add.i";
+    "add.i"->"fieldput <popupURL: int i>";
+    "ifcmplt.i load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "new java.lang.StringBuffer"
+    "load.r r0"->"new java.lang.StringBuffer";
+    "new java.lang.StringBuffer"->"dup1.r";
+    "push \"page\""
+    "dup1.r"->"push \"page\"";
+    "specialinvoke <java.lang.StringBuffer: void <init>(java.lang.String)>"
+    "push \"page\""->"specialinvoke <java.lang.StringBuffer: void <init>(java.lang.String)>";
+    "specialinvoke <java.lang.StringBuffer: void <init>(java.lang.String)>"->"load.r r0";
+    "load.r r0"->"fieldget <popupURL: int in>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(int)>"
+    "fieldget <popupURL: int in>"->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(int)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>"
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(int)>"->"virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"
+    "virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>"->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "fieldput <popupURL: java.lang.String webpage>"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"fieldput <popupURL: java.lang.String webpage>";
+    "fieldput <popupURL: java.lang.String webpage>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"new java.lang.StringBuffer";
+    "new java.lang.StringBuffer"->"dup1.r";
+    "push \"url\""
+    "dup1.r"->"push \"url\"";
+    "push \"url\""->"specialinvoke <java.lang.StringBuffer: void <init>(java.lang.String)>";
+    "specialinvoke <java.lang.StringBuffer: void <init>(java.lang.String)>"->"load.r r0";
+    "load.r r0"->"fieldget <popupURL: int in>";
+    "fieldget <popupURL: int in>"->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(int)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(int)>"->"virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>"->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "fieldput <popupURL: java.lang.String pageURL>"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"fieldput <popupURL: java.lang.String pageURL>";
+    "fieldput <popupURL: java.lang.String pageURL>"->"load.r r0";
+    "fieldget <popupURL: java.lang.String webpage>"
+    "load.r r0"->"fieldget <popupURL: java.lang.String webpage>";
+    "ifnull load.r r0"
+    "fieldget <popupURL: java.lang.String webpage>"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r r0";
+    "fieldget <popupURL: java.lang.String pageURL>"
+    "load.r r0"->"fieldget <popupURL: java.lang.String pageURL>";
+    "ifnonnull load.r r0"
+    "fieldget <popupURL: java.lang.String pageURL>"->"ifnonnull load.r r0";
+    "ifnonnull load.r r0"->"goto load.r r0";
+    "ifnonnull load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <popupURL: int count>";
+    "fieldget <popupURL: int count>"->"push 1";
+    "push 1"->"add.i";
+    "fieldput <popupURL: int count>"
+    "add.i"->"fieldput <popupURL: int count>";
+    "fieldput <popupURL: int count>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "fieldget <popupURL: int index>"
+    "load.r r0"->"fieldget <popupURL: int index>";
+    "fieldget <popupURL: int index>"->"push 1";
+    "push 1"->"add.i";
+    "fieldput <popupURL: int index>"
+    "add.i"->"fieldput <popupURL: int index>";
+    "fieldput <popupURL: int index>"->"load.r r0";
+    "load.r r0"->"fieldget <popupURL: java.lang.String[] holdPage>";
+    "fieldget <popupURL: java.lang.String[] holdPage>"->"load.r r0";
+    "load.r r0"->"fieldget <popupURL: int in>";
+    "fieldget <popupURL: int in>"->"load.r r0";
+    "load.r r0"->"fieldget <popupURL: java.lang.String webpage>";
+    "arraywrite.r"
+    "fieldget <popupURL: java.lang.String webpage>"->"arraywrite.r";
+    "arraywrite.r"->"load.r r0";
+    "fieldget <popupURL: java.lang.String[] holdURL>"
+    "load.r r0"->"fieldget <popupURL: java.lang.String[] holdURL>";
+    "fieldget <popupURL: java.lang.String[] holdURL>"->"load.r r0";
+    "load.r r0"->"fieldget <popupURL: int in>";
+    "fieldget <popupURL: int in>"->"load.r r0";
+    "load.r r0"->"fieldget <popupURL: java.lang.String pageURL>";
+    "fieldget <popupURL: java.lang.String pageURL>"->"arraywrite.r";
+    "arraywrite.r"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <popupURL: int in>";
+    "fieldget <popupURL: int in>"->"push 1";
+    "push 1"->"add.i";
+    "add.i"->"fieldput <popupURL: int in>";
+}

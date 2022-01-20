@@ -1,0 +1,178 @@
+digraph "" {
+    "r0 := @this: ImageMap"
+    "load.r r0"
+    "r0 := @this: ImageMap"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "push \"highlight\""
+    "load.r r0"->"push \"highlight\"";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"
+    "push \"highlight\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <ImageMap: void parseHighlight(java.lang.String)>"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"virtualinvoke <ImageMap: void parseHighlight(java.lang.String)>";
+    "virtualinvoke <ImageMap: void parseHighlight(java.lang.String)>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "virtualinvoke <java.applet.Applet: java.net.URL getDocumentBase()>"
+    "load.r r0"->"virtualinvoke <java.applet.Applet: java.net.URL getDocumentBase()>";
+    "virtualinvoke <java.applet.Applet: java.net.URL getDocumentBase()>"->"load.r r0";
+    "push \"img\""
+    "load.r r0"->"push \"img\"";
+    "push \"img\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.awt.Image getImage(java.net.URL,java.lang.String)>"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"virtualinvoke <java.applet.Applet: java.awt.Image getImage(java.net.URL,java.lang.String)>";
+    "fieldput <ImageMap: java.awt.Image baseImage>"
+    "virtualinvoke <java.applet.Applet: java.awt.Image getImage(java.net.URL,java.lang.String)>"->"fieldput <ImageMap: java.awt.Image baseImage>";
+    "new java.util.Vector"
+    "fieldput <ImageMap: java.awt.Image baseImage>"->"new java.util.Vector";
+    "store.r $r6"
+    "new java.util.Vector"->"store.r $r6";
+    "load.r $r6"
+    "store.r $r6"->"load.r $r6";
+    "specialinvoke <java.util.Vector: void <init>()>"
+    "load.r $r6"->"specialinvoke <java.util.Vector: void <init>()>";
+    "push 1"
+    "specialinvoke <java.util.Vector: void <init>()>"->"push 1";
+    "store.i i2"
+    "push 1"->"store.i i2";
+    "store.i i2"->"load.r r0";
+    "new java.lang.StringBuffer"
+    "load.r r0"->"new java.lang.StringBuffer";
+    "dup1.r"
+    "new java.lang.StringBuffer"->"dup1.r";
+    "specialinvoke <java.lang.StringBuffer: void <init>()>"
+    "dup1.r"->"specialinvoke <java.lang.StringBuffer: void <init>()>";
+    "push \"area\""
+    "specialinvoke <java.lang.StringBuffer: void <init>()>"->"push \"area\"";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"
+    "push \"area\""->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "load.i i2"
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"load.i i2";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(int)>"
+    "load.i i2"->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(int)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>"
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(int)>"->"virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>"->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "store.r r29"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"store.r r29";
+    "load.r r29"
+    "store.r r29"->"load.r r29";
+    "ifnonnull load.r r29"
+    "load.r r29"->"ifnonnull load.r r29";
+    "ifnonnull load.r r29"->"load.r r0";
+    "load.r r0"->"new java.lang.StringBuffer";
+    "new java.lang.StringBuffer"->"dup1.r";
+    "dup1.r"->"specialinvoke <java.lang.StringBuffer: void <init>()>";
+    "push \"rect\""
+    "specialinvoke <java.lang.StringBuffer: void <init>()>"->"push \"rect\"";
+    "push \"rect\""->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"load.i i2";
+    "load.i i2"->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(int)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(int)>"->"virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>"->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"store.r r29";
+    "store.r r29"->"load.r r29";
+    "ifnull load.r r0"
+    "load.r r29"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r r0";
+    "load.r r0"->"new java.lang.StringBuffer";
+    "new java.lang.StringBuffer"->"dup1.r";
+    "dup1.r"->"specialinvoke <java.lang.StringBuffer: void <init>()>";
+    "push \"href\""
+    "specialinvoke <java.lang.StringBuffer: void <init>()>"->"push \"href\"";
+    "push \"href\""->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"load.i i2";
+    "load.i i2"->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(int)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(int)>"->"virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>"->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "store.r r31"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"store.r r31";
+    "load.r r31"
+    "store.r r31"->"load.r r31";
+    "ifnull new HrefArea"
+    "load.r r31"->"ifnull new HrefArea";
+    "ifnull new HrefArea"->"new java.lang.StringBuffer";
+    "new java.lang.StringBuffer"->"dup1.r";
+    "dup1.r"->"specialinvoke <java.lang.StringBuffer: void <init>()>";
+    "specialinvoke <java.lang.StringBuffer: void <init>()>"->"load.r r29";
+    "load.r r29"->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "push \",\""
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"push \",\"";
+    "push \",\""->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"load.r r31";
+    "load.r r31"->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>"->"store.r r29";
+    "new HrefArea"
+    "store.r r29"->"new HrefArea";
+    "new HrefArea"->"dup1.r";
+    "specialinvoke <HrefArea: void <init>()>"
+    "dup1.r"->"specialinvoke <HrefArea: void <init>()>";
+    "specialinvoke <HrefArea: void <init>()>"->"store.r r31";
+    "goto load.r r31"
+    "store.r r31"->"goto load.r r31";
+    "goto load.r r31"->"load.r r31";
+    "load.r r31"->"load.r r0";
+    "load.r r0"->"load.r r29";
+    "virtualinvoke <ImageMapArea: void init(ImageMap,java.lang.String)>"
+    "load.r r29"->"virtualinvoke <ImageMapArea: void init(ImageMap,java.lang.String)>";
+    "virtualinvoke <ImageMapArea: void init(ImageMap,java.lang.String)>"->"load.r $r6";
+    "load.r $r6"->"load.r r31";
+    "virtualinvoke <java.util.Vector: void addElement(java.lang.Object)>"
+    "load.r r31"->"virtualinvoke <java.util.Vector: void addElement(java.lang.Object)>";
+    "inc.i i2 1"
+    "virtualinvoke <java.util.Vector: void addElement(java.lang.Object)>"->"inc.i i2 1";
+    "goto load.r r0"
+    "inc.i i2 1"->"goto load.r r0";
+    "ifnull load.r r0"->"load.r r0";
+    "load.r r0"->"load.r $r6";
+    "virtualinvoke <java.util.Vector: int size()>"
+    "load.r $r6"->"virtualinvoke <java.util.Vector: int size()>";
+    "newarray"
+    "virtualinvoke <java.util.Vector: int size()>"->"newarray";
+    "fieldput <ImageMap: ImageMapArea[] areas>"
+    "newarray"->"fieldput <ImageMap: ImageMapArea[] areas>";
+    "fieldput <ImageMap: ImageMapArea[] areas>"->"load.r $r6";
+    "load.r $r6"->"load.r r0";
+    "fieldget <ImageMap: ImageMapArea[] areas>"
+    "load.r r0"->"fieldget <ImageMap: ImageMapArea[] areas>";
+    "virtualinvoke <java.util.Vector: void copyInto(java.lang.Object[])>"
+    "fieldget <ImageMap: ImageMapArea[] areas>"->"virtualinvoke <java.util.Vector: void copyInto(java.lang.Object[])>";
+    "virtualinvoke <java.util.Vector: void copyInto(java.lang.Object[])>"->"load.r r0";
+    "virtualinvoke <ImageMap: void checkSize()>"
+    "load.r r0"->"virtualinvoke <ImageMap: void checkSize()>";
+    "return"
+    "virtualinvoke <ImageMap: void checkSize()>"->"return";
+    "ifnonnull load.r r29"->"load.r r29";
+    "load.r r29"->"push \",\"";
+    "virtualinvoke <java.lang.String: int indexOf(java.lang.String)>"
+    "push \",\""->"virtualinvoke <java.lang.String: int indexOf(java.lang.String)>";
+    "store.i i3"
+    "virtualinvoke <java.lang.String: int indexOf(java.lang.String)>"->"store.i i3";
+    "store.i i3"->"load.r r29";
+    "push 0"
+    "load.r r29"->"push 0";
+    "load.i i3"
+    "push 0"->"load.i i3";
+    "virtualinvoke <java.lang.String: java.lang.String substring(int,int)>"
+    "load.i i3"->"virtualinvoke <java.lang.String: java.lang.String substring(int,int)>";
+    "staticinvoke <java.lang.Class: java.lang.Class forName(java.lang.String)>"
+    "virtualinvoke <java.lang.String: java.lang.String substring(int,int)>"->"staticinvoke <java.lang.Class: java.lang.Class forName(java.lang.String)>";
+    "virtualinvoke <java.lang.Class: java.lang.Object newInstance()>"
+    "staticinvoke <java.lang.Class: java.lang.Class forName(java.lang.String)>"->"virtualinvoke <java.lang.Class: java.lang.Object newInstance()>";
+    "checkcast"
+    "virtualinvoke <java.lang.Class: java.lang.Object newInstance()>"->"checkcast";
+    "checkcast"->"store.r r31";
+    "goto load.r r29"
+    "store.r r31"->"goto load.r r29";
+    "goto load.r r29"->"load.r r29";
+    "load.r r29"->"load.i i3";
+    "load.i i3"->"push 1";
+    "add.i"
+    "push 1"->"add.i";
+    "virtualinvoke <java.lang.String: java.lang.String substring(int)>"
+    "add.i"->"virtualinvoke <java.lang.String: java.lang.String substring(int)>";
+    "virtualinvoke <java.lang.String: java.lang.String substring(int)>"->"store.r r29";
+    "virtualinvoke <java.lang.Throwable: void printStackTrace()>"
+    "virtualinvoke <java.lang.Class: java.lang.Object newInstance()>"->"virtualinvoke <java.lang.Throwable: void printStackTrace()>";
+    "virtualinvoke <java.lang.Throwable: void printStackTrace()>"->"goto load.r r0";
+}

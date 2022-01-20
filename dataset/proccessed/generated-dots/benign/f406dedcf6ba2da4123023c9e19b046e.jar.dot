@@ -1,0 +1,157 @@
+digraph "" {
+    "r0 := @this: AppletHull"
+    "load.r r0"
+    "r0 := @this: AppletHull"->"load.r r0";
+    "new java.awt.Panel"
+    "load.r r0"->"new java.awt.Panel";
+    "dup1.r"
+    "new java.awt.Panel"->"dup1.r";
+    "specialinvoke <java.awt.Panel: void <init>()>"
+    "dup1.r"->"specialinvoke <java.awt.Panel: void <init>()>";
+    "fieldput <AppletHull: java.awt.Panel mainPanel>"
+    "specialinvoke <java.awt.Panel: void <init>()>"->"fieldput <AppletHull: java.awt.Panel mainPanel>";
+    "fieldput <AppletHull: java.awt.Panel mainPanel>"->"load.r r0";
+    "new java.awt.Choice"
+    "load.r r0"->"new java.awt.Choice";
+    "new java.awt.Choice"->"dup1.r";
+    "specialinvoke <java.awt.Choice: void <init>()>"
+    "dup1.r"->"specialinvoke <java.awt.Choice: void <init>()>";
+    "fieldput <AppletHull: java.awt.Choice dataChoice2d>"
+    "specialinvoke <java.awt.Choice: void <init>()>"->"fieldput <AppletHull: java.awt.Choice dataChoice2d>";
+    "fieldput <AppletHull: java.awt.Choice dataChoice2d>"->"load.r r0";
+    "fieldget <AppletHull: java.awt.Choice dataChoice2d>"
+    "load.r r0"->"fieldget <AppletHull: java.awt.Choice dataChoice2d>";
+    "push \"In Circle\""
+    "fieldget <AppletHull: java.awt.Choice dataChoice2d>"->"push \"In Circle\"";
+    "virtualinvoke <java.awt.Choice: void addItem(java.lang.String)>"
+    "push \"In Circle\""->"virtualinvoke <java.awt.Choice: void addItem(java.lang.String)>";
+    "virtualinvoke <java.awt.Choice: void addItem(java.lang.String)>"->"load.r r0";
+    "load.r r0"->"fieldget <AppletHull: java.awt.Choice dataChoice2d>";
+    "push \"On Circle\""
+    "fieldget <AppletHull: java.awt.Choice dataChoice2d>"->"push \"On Circle\"";
+    "push \"On Circle\""->"virtualinvoke <java.awt.Choice: void addItem(java.lang.String)>";
+    "virtualinvoke <java.awt.Choice: void addItem(java.lang.String)>"->"load.r r0";
+    "load.r r0"->"fieldget <AppletHull: java.awt.Choice dataChoice2d>";
+    "push \"In Square\""
+    "fieldget <AppletHull: java.awt.Choice dataChoice2d>"->"push \"In Square\"";
+    "push \"In Square\""->"virtualinvoke <java.awt.Choice: void addItem(java.lang.String)>";
+    "virtualinvoke <java.awt.Choice: void addItem(java.lang.String)>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <AppletHull: java.awt.Choice dataChoice2d>";
+    "fieldput <AppletHull: java.awt.Choice dataChoice>"
+    "fieldget <AppletHull: java.awt.Choice dataChoice2d>"->"fieldput <AppletHull: java.awt.Choice dataChoice>";
+    "fieldput <AppletHull: java.awt.Choice dataChoice>"->"load.r r0";
+    "new java.awt.TextField"
+    "load.r r0"->"new java.awt.TextField";
+    "new java.awt.TextField"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "fieldget <AppletHull: Point3dObject3d[] points>"
+    "load.r r0"->"fieldget <AppletHull: Point3dObject3d[] points>";
+    "arraylength"
+    "fieldget <AppletHull: Point3dObject3d[] points>"->"arraylength";
+    "staticinvoke <java.lang.Integer: java.lang.String toString(int)>"
+    "arraylength"->"staticinvoke <java.lang.Integer: java.lang.String toString(int)>";
+    "push 3"
+    "staticinvoke <java.lang.Integer: java.lang.String toString(int)>"->"push 3";
+    "specialinvoke <java.awt.TextField: void <init>(java.lang.String,int)>"
+    "push 3"->"specialinvoke <java.awt.TextField: void <init>(java.lang.String,int)>";
+    "fieldput <AppletHull: java.awt.TextField dataSize>"
+    "specialinvoke <java.awt.TextField: void <init>(java.lang.String,int)>"->"fieldput <AppletHull: java.awt.TextField dataSize>";
+    "fieldput <AppletHull: java.awt.TextField dataSize>"->"load.r r0";
+    "specialinvoke <Applet3d: void init()>"
+    "load.r r0"->"specialinvoke <Applet3d: void init()>";
+    "specialinvoke <Applet3d: void init()>"->"load.r r0";
+    "fieldget <AppletHull: java.awt.Panel mainPanel>"
+    "load.r r0"->"fieldget <AppletHull: java.awt.Panel mainPanel>";
+    "fieldget <AppletHull: java.awt.Panel mainPanel>"->"load.r r0";
+    "virtualinvoke <AppletHull: java.awt.Choice createModelChoice()>"
+    "load.r r0"->"virtualinvoke <AppletHull: java.awt.Choice createModelChoice()>";
+    "virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>"
+    "virtualinvoke <AppletHull: java.awt.Choice createModelChoice()>"->"virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>";
+    "pop"
+    "virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>"->"pop";
+    "pop"->"load.r r0";
+    "fieldget <Applet3d: Viewer viewer>"
+    "load.r r0"->"fieldget <Applet3d: Viewer viewer>";
+    "virtualinvoke <Viewer: boolean setView()>"
+    "fieldget <Applet3d: Viewer viewer>"->"virtualinvoke <Viewer: boolean setView()>";
+    "virtualinvoke <Viewer: boolean setView()>"->"pop";
+    "pop"->"load.r r0";
+    "load.r r0"->"fieldget <Applet3d: Viewer viewer>";
+    "staticget <Points3d: int color>"
+    "fieldget <Applet3d: Viewer viewer>"->"staticget <Points3d: int color>";
+    "push 1"
+    "staticget <Points3d: int color>"->"push 1";
+    "virtualinvoke <Viewer: void setColorVisibility(int,boolean)>"
+    "push 1"->"virtualinvoke <Viewer: void setColorVisibility(int,boolean)>";
+    "virtualinvoke <Viewer: void setColorVisibility(int,boolean)>"->"load.r r0";
+    "load.r r0"->"fieldget <AppletHull: java.awt.Panel mainPanel>";
+    "fieldget <AppletHull: java.awt.Panel mainPanel>"->"load.r r0";
+    "fieldget <AppletHull: java.awt.Choice dataChoice>"
+    "load.r r0"->"fieldget <AppletHull: java.awt.Choice dataChoice>";
+    "virtualinvoke <java.awt.Container: void remove(java.awt.Component)>"
+    "fieldget <AppletHull: java.awt.Choice dataChoice>"->"virtualinvoke <java.awt.Container: void remove(java.awt.Component)>";
+    "virtualinvoke <java.awt.Container: void remove(java.awt.Component)>"->"load.r r0";
+    "load.r r0"->"fieldget <AppletHull: java.awt.Panel mainPanel>";
+    "fieldget <AppletHull: java.awt.Panel mainPanel>"->"load.r r0";
+    "load.r r0"->"fieldget <AppletHull: java.awt.Choice dataChoice2d>";
+    "fieldget <AppletHull: java.awt.Choice dataChoice2d>"->"push 1";
+    "virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component,int)>"
+    "push 1"->"virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component,int)>";
+    "virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component,int)>"->"pop";
+    "pop"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <AppletHull: java.awt.Choice dataChoice2d>";
+    "fieldget <AppletHull: java.awt.Choice dataChoice2d>"->"fieldput <AppletHull: java.awt.Choice dataChoice>";
+    "fieldput <AppletHull: java.awt.Choice dataChoice>"->"load.r r0";
+    "virtualinvoke <java.awt.Container: void validate()>"
+    "load.r r0"->"virtualinvoke <java.awt.Container: void validate()>";
+    "virtualinvoke <java.awt.Container: void validate()>"->"load.r r0";
+    "load.r r0"->"fieldget <AppletHull: java.awt.Panel mainPanel>";
+    "fieldget <AppletHull: java.awt.Panel mainPanel>"->"load.r r0";
+    "fieldget <AppletHull: java.awt.TextField dataSize>"
+    "load.r r0"->"fieldget <AppletHull: java.awt.TextField dataSize>";
+    "fieldget <AppletHull: java.awt.TextField dataSize>"->"virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>";
+    "virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>"->"pop";
+    "pop"->"load.r r0";
+    "load.r r0"->"fieldget <AppletHull: java.awt.Panel mainPanel>";
+    "new java.awt.Label"
+    "fieldget <AppletHull: java.awt.Panel mainPanel>"->"new java.awt.Label";
+    "new java.awt.Label"->"dup1.r";
+    "push \"Points\""
+    "dup1.r"->"push \"Points\"";
+    "specialinvoke <java.awt.Label: void <init>(java.lang.String)>"
+    "push \"Points\""->"specialinvoke <java.awt.Label: void <init>(java.lang.String)>";
+    "specialinvoke <java.awt.Label: void <init>(java.lang.String)>"->"virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>";
+    "virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>"->"pop";
+    "pop"->"load.r r0";
+    "push \"controls\""
+    "load.r r0"->"push \"controls\"";
+    "virtualinvoke <Applet3d: boolean getBoolParameter(java.lang.String)>"
+    "push \"controls\""->"virtualinvoke <Applet3d: boolean getBoolParameter(java.lang.String)>";
+    "ifeq load.r r0"
+    "virtualinvoke <Applet3d: boolean getBoolParameter(java.lang.String)>"->"ifeq load.r r0";
+    "ifeq load.r r0"->"load.r r0";
+    "push \"South\""
+    "load.r r0"->"push \"South\"";
+    "push \"South\""->"load.r r0";
+    "load.r r0"->"fieldget <AppletHull: java.awt.Panel mainPanel>";
+    "virtualinvoke <java.awt.Container: java.awt.Component add(java.lang.String,java.awt.Component)>"
+    "fieldget <AppletHull: java.awt.Panel mainPanel>"->"virtualinvoke <java.awt.Container: java.awt.Component add(java.lang.String,java.awt.Component)>";
+    "virtualinvoke <java.awt.Container: java.awt.Component add(java.lang.String,java.awt.Component)>"->"pop";
+    "pop"->"load.r r0";
+    "load.r r0"->"push \"Points\"";
+    "virtualinvoke <Applet3d: java.lang.String getParameter(java.lang.String)>"
+    "push \"Points\""->"virtualinvoke <Applet3d: java.lang.String getParameter(java.lang.String)>";
+    "ifnull return"
+    "virtualinvoke <Applet3d: java.lang.String getParameter(java.lang.String)>"->"ifnull return";
+    "ifnull return"->"load.r r0";
+    "load.r r0"->"fieldget <Applet3d: Viewer viewer>";
+    "fieldget <Applet3d: Viewer viewer>"->"staticget <Points3d: int color>";
+    "staticget <Points3d: int color>"->"load.r r0";
+    "load.r r0"->"push \"Points\"";
+    "push \"Points\""->"virtualinvoke <Applet3d: boolean getBoolParameter(java.lang.String)>";
+    "virtualinvoke <Applet3d: boolean getBoolParameter(java.lang.String)>"->"virtualinvoke <Viewer: void setColorVisibility(int,boolean)>";
+    "return"
+    "virtualinvoke <Viewer: void setColorVisibility(int,boolean)>"->"return";
+}

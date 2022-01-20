@@ -1,0 +1,423 @@
+digraph "" {
+    "r0 := @this: MistyMessage"
+    "load.r r0"
+    "r0 := @this: MistyMessage"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "virtualinvoke <java.awt.Component: java.awt.Dimension size()>"
+    "load.r r0"->"virtualinvoke <java.awt.Component: java.awt.Dimension size()>";
+    "fieldget <java.awt.Dimension: int width>"
+    "virtualinvoke <java.awt.Component: java.awt.Dimension size()>"->"fieldget <java.awt.Dimension: int width>";
+    "fieldput <MistyMessage: int AppletW>"
+    "fieldget <java.awt.Dimension: int width>"->"fieldput <MistyMessage: int AppletW>";
+    "fieldput <MistyMessage: int AppletW>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"virtualinvoke <java.awt.Component: java.awt.Dimension size()>";
+    "fieldget <java.awt.Dimension: int height>"
+    "virtualinvoke <java.awt.Component: java.awt.Dimension size()>"->"fieldget <java.awt.Dimension: int height>";
+    "fieldput <MistyMessage: int AppletH>"
+    "fieldget <java.awt.Dimension: int height>"->"fieldput <MistyMessage: int AppletH>";
+    "fieldput <MistyMessage: int AppletH>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "virtualinvoke <java.awt.Component: java.awt.Graphics getGraphics()>"
+    "load.r r0"->"virtualinvoke <java.awt.Component: java.awt.Graphics getGraphics()>";
+    "fieldput <MistyMessage: java.awt.Graphics gfx>"
+    "virtualinvoke <java.awt.Component: java.awt.Graphics getGraphics()>"->"fieldput <MistyMessage: java.awt.Graphics gfx>";
+    "fieldput <MistyMessage: java.awt.Graphics gfx>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "fieldget <MistyMessage: int AppletW>"
+    "load.r r0"->"fieldget <MistyMessage: int AppletW>";
+    "fieldget <MistyMessage: int AppletW>"->"load.r r0";
+    "fieldget <MistyMessage: int AppletH>"
+    "load.r r0"->"fieldget <MistyMessage: int AppletH>";
+    "mul.i"
+    "fieldget <MistyMessage: int AppletH>"->"mul.i";
+    "newarray"
+    "mul.i"->"newarray";
+    "fieldput <MistyMessage: byte[] buffer>"
+    "newarray"->"fieldput <MistyMessage: byte[] buffer>";
+    "fieldput <MistyMessage: byte[] buffer>"->"load.r r0";
+    "push \"colorscheme\""
+    "load.r r0"->"push \"colorscheme\"";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"
+    "push \"colorscheme\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "store.r r35"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"store.r r35";
+    "load.r r35"
+    "store.r r35"->"load.r r35";
+    "push \"orange\""
+    "load.r r35"->"push \"orange\"";
+    "virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>"
+    "push \"orange\""->"virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>";
+    "ifeq load.r r35"
+    "virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>"->"ifeq load.r r35";
+    "push 5"
+    "ifeq load.r r35"->"push 5";
+    "store.b r35"
+    "push 5"->"store.b r35";
+    "push 3"
+    "store.b r35"->"push 3";
+    "store.b b26"
+    "push 3"->"store.b b26";
+    "push 1"
+    "store.b b26"->"push 1";
+    "store.b b27"
+    "push 1"->"store.b b27";
+    "goto load.r r0"
+    "store.b b27"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "push \"delay_appear\""
+    "load.r r0"->"push \"delay_appear\"";
+    "push \"delay_appear\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>";
+    "fieldput <MistyMessage: int delay_appear>"
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"->"fieldput <MistyMessage: int delay_appear>";
+    "fieldput <MistyMessage: int delay_appear>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "push \"delay_wait\""
+    "load.r r0"->"push \"delay_wait\"";
+    "push \"delay_wait\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>";
+    "fieldput <MistyMessage: int delay_wait>"
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"->"fieldput <MistyMessage: int delay_wait>";
+    "fieldput <MistyMessage: int delay_wait>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "push \"delay_dissappear\""
+    "load.r r0"->"push \"delay_dissappear\"";
+    "push \"delay_dissappear\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>";
+    "fieldput <MistyMessage: int delay_dissappear>"
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"->"fieldput <MistyMessage: int delay_dissappear>";
+    "fieldput <MistyMessage: int delay_dissappear>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "push \"delay_waitblank\""
+    "load.r r0"->"push \"delay_waitblank\"";
+    "push \"delay_waitblank\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>";
+    "fieldput <MistyMessage: int delay_waitblank>"
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"->"fieldput <MistyMessage: int delay_waitblank>";
+    "fieldput <MistyMessage: int delay_waitblank>"->"load.r r0";
+    "push \"looptext\""
+    "load.r r0"->"push \"looptext\"";
+    "push \"looptext\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "push \"yes\""
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"push \"yes\"";
+    "push \"yes\""->"virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>";
+    "ifeq load.r r0"
+    "virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>"->"ifeq load.r r0";
+    "ifeq load.r r0"->"load.r r0";
+    "load.r r0"->"push 1";
+    "fieldput <MistyMessage: boolean looptext>"
+    "push 1"->"fieldput <MistyMessage: boolean looptext>";
+    "fieldput <MistyMessage: boolean looptext>"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "push 10"
+    "load.r r0"->"push 10";
+    "push 10"->"newarray";
+    "fieldput <MistyMessage: java.lang.String[] Text>"
+    "newarray"->"fieldput <MistyMessage: java.lang.String[] Text>";
+    "push 0"
+    "fieldput <MistyMessage: java.lang.String[] Text>"->"push 0";
+    "store.i i32"
+    "push 0"->"store.i i32";
+    "goto load.i i32"
+    "store.i i32"->"goto load.i i32";
+    "load.i i32"
+    "goto load.i i32"->"load.i i32";
+    "load.i i32"->"load.r r0";
+    "fieldget <MistyMessage: int nTextsMax>"
+    "load.r r0"->"fieldget <MistyMessage: int nTextsMax>";
+    "ifcmplt.i load.r r0"
+    "fieldget <MistyMessage: int nTextsMax>"->"ifcmplt.i load.r r0";
+    "ifcmplt.i load.r r0"->"push 0";
+    "push 0"->"store.i i32";
+    "store.i i32"->"goto load.i i32";
+    "goto load.i i32"->"load.i i32";
+    "push 256"
+    "load.i i32"->"push 256";
+    "ifcmplt.i load.b r35"
+    "push 256"->"ifcmplt.i load.b r35";
+    "ifcmplt.i load.b r35"->"load.r r0";
+    "new java.awt.image.IndexColorModel"
+    "load.r r0"->"new java.awt.image.IndexColorModel";
+    "dup1.r"
+    "new java.awt.image.IndexColorModel"->"dup1.r";
+    "push 8"
+    "dup1.r"->"push 8";
+    "push 8"->"push 256";
+    "push 256"->"load.r r0";
+    "fieldget <MistyMessage: byte[] reds>"
+    "load.r r0"->"fieldget <MistyMessage: byte[] reds>";
+    "fieldget <MistyMessage: byte[] reds>"->"load.r r0";
+    "fieldget <MistyMessage: byte[] greens>"
+    "load.r r0"->"fieldget <MistyMessage: byte[] greens>";
+    "fieldget <MistyMessage: byte[] greens>"->"load.r r0";
+    "fieldget <MistyMessage: byte[] blues>"
+    "load.r r0"->"fieldget <MistyMessage: byte[] blues>";
+    "specialinvoke <java.awt.image.IndexColorModel: void <init>(int,int,byte[],byte[],byte[])>"
+    "fieldget <MistyMessage: byte[] blues>"->"specialinvoke <java.awt.image.IndexColorModel: void <init>(int,int,byte[],byte[],byte[])>";
+    "fieldput <MistyMessage: java.awt.image.IndexColorModel icm>"
+    "specialinvoke <java.awt.image.IndexColorModel: void <init>(int,int,byte[],byte[],byte[])>"->"fieldput <MistyMessage: java.awt.image.IndexColorModel icm>";
+    "fieldput <MistyMessage: java.awt.image.IndexColorModel icm>"->"load.r r0";
+    "load.r r0"->"push 256";
+    "push 256"->"load.r r0";
+    "fieldget <MistyMessage: int fontW>"
+    "load.r r0"->"fieldget <MistyMessage: int fontW>";
+    "fieldget <MistyMessage: int fontW>"->"mul.i";
+    "mul.i"->"load.r r0";
+    "fieldget <MistyMessage: int fontH>"
+    "load.r r0"->"fieldget <MistyMessage: int fontH>";
+    "newmultiarray 2"
+    "fieldget <MistyMessage: int fontH>"->"newmultiarray 2";
+    "fieldput <MistyMessage: boolean[][] fontMatrix>"
+    "newmultiarray 2"->"fieldput <MistyMessage: boolean[][] fontMatrix>";
+    "fieldput <MistyMessage: boolean[][] fontMatrix>"->"load.r r0";
+    "new java.awt.image.MemoryImageSource"
+    "load.r r0"->"new java.awt.image.MemoryImageSource";
+    "new java.awt.image.MemoryImageSource"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "load.r r0"->"fieldget <MistyMessage: int AppletW>";
+    "fieldget <MistyMessage: int AppletW>"->"load.r r0";
+    "load.r r0"->"fieldget <MistyMessage: int AppletH>";
+    "fieldget <MistyMessage: int AppletH>"->"load.r r0";
+    "fieldget <MistyMessage: java.awt.image.IndexColorModel icm>"
+    "load.r r0"->"fieldget <MistyMessage: java.awt.image.IndexColorModel icm>";
+    "fieldget <MistyMessage: java.awt.image.IndexColorModel icm>"->"load.r r0";
+    "fieldget <MistyMessage: byte[] buffer>"
+    "load.r r0"->"fieldget <MistyMessage: byte[] buffer>";
+    "fieldget <MistyMessage: byte[] buffer>"->"push 0";
+    "push 0"->"load.r r0";
+    "load.r r0"->"fieldget <MistyMessage: int AppletW>";
+    "specialinvoke <java.awt.image.MemoryImageSource: void <init>(int,int,java.awt.image.ColorModel,byte[],int,int)>"
+    "fieldget <MistyMessage: int AppletW>"->"specialinvoke <java.awt.image.MemoryImageSource: void <init>(int,int,java.awt.image.ColorModel,byte[],int,int)>";
+    "fieldput <MistyMessage: java.awt.image.MemoryImageSource mis>"
+    "specialinvoke <java.awt.image.MemoryImageSource: void <init>(int,int,java.awt.image.ColorModel,byte[],int,int)>"->"fieldput <MistyMessage: java.awt.image.MemoryImageSource mis>";
+    "fieldput <MistyMessage: java.awt.image.MemoryImageSource mis>"->"load.r r0";
+    "fieldget <MistyMessage: java.awt.image.MemoryImageSource mis>"
+    "load.r r0"->"fieldget <MistyMessage: java.awt.image.MemoryImageSource mis>";
+    "fieldget <MistyMessage: java.awt.image.MemoryImageSource mis>"->"push 1";
+    "virtualinvoke <java.awt.image.MemoryImageSource: void setAnimated(boolean)>"
+    "push 1"->"virtualinvoke <java.awt.image.MemoryImageSource: void setAnimated(boolean)>";
+    "virtualinvoke <java.awt.image.MemoryImageSource: void setAnimated(boolean)>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <MistyMessage: java.awt.image.MemoryImageSource mis>";
+    "virtualinvoke <java.awt.Component: java.awt.Image createImage(java.awt.image.ImageProducer)>"
+    "fieldget <MistyMessage: java.awt.image.MemoryImageSource mis>"->"virtualinvoke <java.awt.Component: java.awt.Image createImage(java.awt.image.ImageProducer)>";
+    "fieldput <MistyMessage: java.awt.Image img>"
+    "virtualinvoke <java.awt.Component: java.awt.Image createImage(java.awt.image.ImageProducer)>"->"fieldput <MistyMessage: java.awt.Image img>";
+    "staticget <java.lang.System: java.io.PrintStream out>"
+    "fieldput <MistyMessage: java.awt.Image img>"->"staticget <java.lang.System: java.io.PrintStream out>";
+    "new java.lang.StringBuffer"
+    "staticget <java.lang.System: java.io.PrintStream out>"->"new java.lang.StringBuffer";
+    "new java.lang.StringBuffer"->"dup1.r";
+    "specialinvoke <java.lang.StringBuffer: void <init>()>"
+    "dup1.r"->"specialinvoke <java.lang.StringBuffer: void <init>()>";
+    "push \"w=\""
+    "specialinvoke <java.lang.StringBuffer: void <init>()>"->"push \"w=\"";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"
+    "push \"w=\""->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"load.r r0";
+    "load.r r0"->"fieldget <MistyMessage: int AppletW>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(int)>"
+    "fieldget <MistyMessage: int AppletW>"->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(int)>";
+    "push \", h=\""
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(int)>"->"push \", h=\"";
+    "push \", h=\""->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"load.r r0";
+    "load.r r0"->"fieldget <MistyMessage: int AppletH>";
+    "fieldget <MistyMessage: int AppletH>"->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(int)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>"
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(int)>"->"virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>";
+    "virtualinvoke <java.io.PrintStream: void println(java.lang.String)>"
+    "virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>"->"virtualinvoke <java.io.PrintStream: void println(java.lang.String)>";
+    "virtualinvoke <java.io.PrintStream: void println(java.lang.String)>"->"push 0";
+    "store.i r35"
+    "push 0"->"store.i r35";
+    "goto load.i r35"
+    "store.i r35"->"goto load.i r35";
+    "load.i r35"
+    "goto load.i r35"->"load.i r35";
+    "load.i r35"->"load.r r0";
+    "load.r r0"->"fieldget <MistyMessage: int AppletW>";
+    "ifcmplt.i push 0"
+    "fieldget <MistyMessage: int AppletW>"->"ifcmplt.i push 0";
+    "ifcmplt.i push 0"->"load.r r0";
+    "virtualinvoke <MistyMessage: void gettaFont()>"
+    "load.r r0"->"virtualinvoke <MistyMessage: void gettaFont()>";
+    "virtualinvoke <MistyMessage: void gettaFont()>"->"load.r r0";
+    "new MistyMessage$MouseEventHandler"
+    "load.r r0"->"new MistyMessage$MouseEventHandler";
+    "new MistyMessage$MouseEventHandler"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "specialinvoke <MistyMessage$MouseEventHandler: void <init>(MistyMessage)>"
+    "load.r r0"->"specialinvoke <MistyMessage$MouseEventHandler: void <init>(MistyMessage)>";
+    "virtualinvoke <java.awt.Component: void addMouseListener(java.awt.event.MouseListener)>"
+    "specialinvoke <MistyMessage$MouseEventHandler: void <init>(MistyMessage)>"->"virtualinvoke <java.awt.Component: void addMouseListener(java.awt.event.MouseListener)>";
+    "virtualinvoke <java.awt.Component: void addMouseListener(java.awt.event.MouseListener)>"->"load.r r0";
+    "new MistyMessage$MouseMotionEventHandler"
+    "load.r r0"->"new MistyMessage$MouseMotionEventHandler";
+    "new MistyMessage$MouseMotionEventHandler"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "specialinvoke <MistyMessage$MouseMotionEventHandler: void <init>(MistyMessage)>"
+    "load.r r0"->"specialinvoke <MistyMessage$MouseMotionEventHandler: void <init>(MistyMessage)>";
+    "virtualinvoke <java.awt.Component: void addMouseMotionListener(java.awt.event.MouseMotionListener)>"
+    "specialinvoke <MistyMessage$MouseMotionEventHandler: void <init>(MistyMessage)>"->"virtualinvoke <java.awt.Component: void addMouseMotionListener(java.awt.event.MouseMotionListener)>";
+    "return"
+    "virtualinvoke <java.awt.Component: void addMouseMotionListener(java.awt.event.MouseMotionListener)>"->"return";
+    "ifcmplt.i push 0"->"push 0";
+    "store.i b26"
+    "push 0"->"store.i b26";
+    "goto load.i b26"
+    "store.i b26"->"goto load.i b26";
+    "load.i b26"
+    "goto load.i b26"->"load.i b26";
+    "load.i b26"->"load.r r0";
+    "load.r r0"->"fieldget <MistyMessage: int AppletH>";
+    "fieldget <MistyMessage: int AppletH>"->"ifcmplt.i load.r r0";
+    "inc.i r35 1"
+    "ifcmplt.i load.r r0"->"inc.i r35 1";
+    "ifcmplt.i load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <MistyMessage: byte[] buffer>";
+    "fieldget <MistyMessage: byte[] buffer>"->"load.i b26";
+    "load.i b26"->"load.r r0";
+    "load.r r0"->"fieldget <MistyMessage: int AppletW>";
+    "fieldget <MistyMessage: int AppletW>"->"mul.i";
+    "mul.i"->"load.i r35";
+    "add.i"
+    "load.i r35"->"add.i";
+    "add.i"->"push 0";
+    "arraywrite.b"
+    "push 0"->"arraywrite.b";
+    "inc.i b26 1"
+    "arraywrite.b"->"inc.i b26 1";
+    "load.b r35"
+    "ifcmplt.i load.b r35"->"load.b r35";
+    "load.b r35"->"load.i i32";
+    "mul.b"
+    "load.i i32"->"mul.b";
+    "store.i r41"
+    "mul.b"->"store.i r41";
+    "load.i r41"
+    "store.i r41"->"load.i r41";
+    "push 255"
+    "load.i r41"->"push 255";
+    "ifcmple.i load.r r0"
+    "push 255"->"ifcmple.i load.r r0";
+    "ifcmple.i load.r r0"->"push 255";
+    "push 255"->"store.i r41";
+    "store.i r41"->"load.r r0";
+    "load.r r0"->"fieldget <MistyMessage: byte[] reds>";
+    "fieldget <MistyMessage: byte[] reds>"->"load.i i32";
+    "load.i i32"->"load.i r41";
+    "i2b"
+    "load.i r41"->"i2b";
+    "i2b"->"arraywrite.b";
+    "load.b b26"
+    "arraywrite.b"->"load.b b26";
+    "load.b b26"->"load.i i32";
+    "load.i i32"->"mul.b";
+    "mul.b"->"store.i r41";
+    "store.i r41"->"load.i r41";
+    "load.i r41"->"push 255";
+    "push 255"->"ifcmple.i load.r r0";
+    "ifcmple.i load.r r0"->"push 255";
+    "push 255"->"store.i r41";
+    "store.i r41"->"load.r r0";
+    "load.r r0"->"fieldget <MistyMessage: byte[] greens>";
+    "fieldget <MistyMessage: byte[] greens>"->"load.i i32";
+    "load.i i32"->"load.i r41";
+    "load.i r41"->"i2b";
+    "i2b"->"arraywrite.b";
+    "load.b b27"
+    "arraywrite.b"->"load.b b27";
+    "load.b b27"->"load.i i32";
+    "load.i i32"->"mul.b";
+    "mul.b"->"store.i r41";
+    "store.i r41"->"load.i r41";
+    "load.i r41"->"push 255";
+    "push 255"->"ifcmple.i load.r r0";
+    "ifcmple.i load.r r0"->"push 255";
+    "push 255"->"store.i r41";
+    "store.i r41"->"load.r r0";
+    "load.r r0"->"fieldget <MistyMessage: byte[] blues>";
+    "fieldget <MistyMessage: byte[] blues>"->"load.i i32";
+    "load.i i32"->"load.i r41";
+    "load.i r41"->"i2b";
+    "i2b"->"arraywrite.b";
+    "inc.i i32 1"
+    "arraywrite.b"->"inc.i i32 1";
+    "ifcmplt.i load.r r0"->"load.r r0";
+    "load.r r0"->"new java.lang.StringBuffer";
+    "new java.lang.StringBuffer"->"dup1.r";
+    "dup1.r"->"specialinvoke <java.lang.StringBuffer: void <init>()>";
+    "push \"Text\""
+    "specialinvoke <java.lang.StringBuffer: void <init>()>"->"push \"Text\"";
+    "push \"Text\""->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"load.i i32";
+    "load.i i32"->"push 1";
+    "push 1"->"add.i";
+    "add.i"->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(int)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(int)>"->"virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>"->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "store.r r41"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"store.r r41";
+    "load.r r41"
+    "store.r r41"->"load.r r41";
+    "ifnull inc.i i32 1"
+    "load.r r41"->"ifnull inc.i i32 1";
+    "ifnull inc.i i32 1"->"load.r r0";
+    "fieldget <MistyMessage: java.lang.String[] Text>"
+    "load.r r0"->"fieldget <MistyMessage: java.lang.String[] Text>";
+    "fieldget <MistyMessage: java.lang.String[] Text>"->"load.r r0";
+    "fieldget <MistyMessage: int nTexts>"
+    "load.r r0"->"fieldget <MistyMessage: int nTexts>";
+    "fieldget <MistyMessage: int nTexts>"->"load.r r41";
+    "arraywrite.r"
+    "load.r r41"->"arraywrite.r";
+    "arraywrite.r"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <MistyMessage: int nTexts>";
+    "fieldget <MistyMessage: int nTexts>"->"push 1";
+    "push 1"->"add.i";
+    "fieldput <MistyMessage: int nTexts>"
+    "add.i"->"fieldput <MistyMessage: int nTexts>";
+    "fieldput <MistyMessage: int nTexts>"->"inc.i i32 1";
+    "ifeq load.r r0"->"load.r r0";
+    "load.r r0"->"push 0";
+    "push 0"->"fieldput <MistyMessage: boolean looptext>";
+    "ifeq load.r r35"->"load.r r35";
+    "push \"green\""
+    "load.r r35"->"push \"green\"";
+    "push \"green\""->"virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>";
+    "virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>"->"ifeq load.r r35";
+    "push 2"
+    "ifeq load.r r35"->"push 2";
+    "push 2"->"store.b r35";
+    "push 4"
+    "store.b r35"->"push 4";
+    "push 4"->"store.b b26";
+    "store.b b26"->"push 2";
+    "push 2"->"store.b b27";
+    "store.b b27"->"goto load.r r0";
+    "ifeq load.r r35"->"load.r r35";
+    "push \"blue\""
+    "load.r r35"->"push \"blue\"";
+    "push \"blue\""->"virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>";
+    "ifeq push 2"
+    "virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>"->"ifeq push 2";
+    "ifeq push 2"->"push 2";
+    "push 2"->"store.b r35";
+    "store.b r35"->"push 3";
+    "push 3"->"store.b b26";
+    "store.b b26"->"push 5";
+    "push 5"->"store.b b27";
+    "store.b b27"->"goto load.r r0";
+    "ifeq push 2"->"push 2";
+    "push 2"->"store.b r35";
+    "store.b r35"->"push 2";
+    "push 2"->"store.b b26";
+    "store.b b26"->"push 2";
+    "push 2"->"store.b b27";
+}

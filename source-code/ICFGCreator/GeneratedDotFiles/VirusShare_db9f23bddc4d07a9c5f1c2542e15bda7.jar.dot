@@ -1,0 +1,40 @@
+digraph "" {
+    "r0 := @this: Xxploit"
+    "push 1"
+    "r0 := @this: Xxploit"->"push 1";
+    "store.i i1"
+    "push 1"->"store.i i1";
+    "load.i i1"
+    "store.i i1"->"load.i i1";
+    "push 5"
+    "load.i i1"->"push 5";
+    "ifcmpgt.i staticinvoke <java.lang.System: java.lang.SecurityManager getSecurityManager()>"
+    "push 5"->"ifcmpgt.i staticinvoke <java.lang.System: java.lang.SecurityManager getSecurityManager()>";
+    "staticinvoke <java.lang.System: java.lang.SecurityManager getSecurityManager()>"
+    "ifcmpgt.i staticinvoke <java.lang.System: java.lang.SecurityManager getSecurityManager()>"->"staticinvoke <java.lang.System: java.lang.SecurityManager getSecurityManager()>";
+    "ifnull staticinvoke <java.lang.System: java.lang.SecurityManager getSecurityManager()>"
+    "staticinvoke <java.lang.System: java.lang.SecurityManager getSecurityManager()>"->"ifnull staticinvoke <java.lang.System: java.lang.SecurityManager getSecurityManager()>";
+    "load.r r0"
+    "ifnull staticinvoke <java.lang.System: java.lang.SecurityManager getSecurityManager()>"->"load.r r0";
+    "specialinvoke <Xxploit: int tryExpl()>"
+    "load.r r0"->"specialinvoke <Xxploit: int tryExpl()>";
+    "pop"
+    "specialinvoke <Xxploit: int tryExpl()>"->"pop";
+    "inc.i i1 1"
+    "pop"->"inc.i i1 1";
+    "goto load.i i1"
+    "inc.i i1 1"->"goto load.i i1";
+    "store.r r0"
+    "specialinvoke <Xxploit: int tryExpl()>"->"store.r r0";
+    "return"
+    "store.r r0"->"return";
+    "ifnull staticinvoke <java.lang.System: java.lang.SecurityManager getSecurityManager()>"->"staticinvoke <java.lang.System: java.lang.SecurityManager getSecurityManager()>";
+    "ifnonnull goto return"
+    "staticinvoke <java.lang.System: java.lang.SecurityManager getSecurityManager()>"->"ifnonnull goto return";
+    "push null"
+    "ifnonnull goto return"->"push null";
+    "staticinvoke <Payload: void main(java.lang.String[])>"
+    "push null"->"staticinvoke <Payload: void main(java.lang.String[])>";
+    "goto return"
+    "staticinvoke <Payload: void main(java.lang.String[])>"->"goto return";
+}

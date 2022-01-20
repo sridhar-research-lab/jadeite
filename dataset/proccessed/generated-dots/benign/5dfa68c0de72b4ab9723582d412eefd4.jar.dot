@@ -1,0 +1,104 @@
+digraph "" {
+    "r0 := @this: ScratchApplet"
+    "load.r r0"
+    "r0 := @this: ScratchApplet"->"load.r r0";
+    "virtualinvoke <ScratchApplet: java.net.URL getCodeBase()>"
+    "load.r r0"->"virtualinvoke <ScratchApplet: java.net.URL getCodeBase()>";
+    "virtualinvoke <java.net.URL: java.lang.String toString()>"
+    "virtualinvoke <ScratchApplet: java.net.URL getCodeBase()>"->"virtualinvoke <java.net.URL: java.lang.String toString()>";
+    "store.r r1"
+    "virtualinvoke <java.net.URL: java.lang.String toString()>"->"store.r r1";
+    "store.r r1"->"load.r r0";
+    "push \"project\""
+    "load.r r0"->"push \"project\"";
+    "virtualinvoke <ScratchApplet: java.lang.String getParameter(java.lang.String)>"
+    "push \"project\""->"virtualinvoke <ScratchApplet: java.lang.String getParameter(java.lang.String)>";
+    "store.r r2"
+    "virtualinvoke <ScratchApplet: java.lang.String getParameter(java.lang.String)>"->"store.r r2";
+    "load.r r2"
+    "store.r r2"->"load.r r2";
+    "ifnull push null"
+    "load.r r2"->"ifnull push null";
+    "new java.lang.StringBuffer"
+    "ifnull push null"->"new java.lang.StringBuffer";
+    "dup1.r"
+    "new java.lang.StringBuffer"->"dup1.r";
+    "specialinvoke <java.lang.StringBuffer: void <init>()>"
+    "dup1.r"->"specialinvoke <java.lang.StringBuffer: void <init>()>";
+    "load.r r1"
+    "specialinvoke <java.lang.StringBuffer: void <init>()>"->"load.r r1";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"
+    "load.r r1"->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"load.r r2";
+    "load.r r2"->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>"
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>"->"store.r r2";
+    "goto load.r r2"
+    "store.r r2"->"goto load.r r2";
+    "goto load.r r2"->"load.r r2";
+    "load.r r2"->"store.r r2";
+    "store.r r2"->"load.r r0";
+    "push \"autostart\""
+    "load.r r0"->"push \"autostart\"";
+    "push \"autostart\""->"virtualinvoke <ScratchApplet: java.lang.String getParameter(java.lang.String)>";
+    "store.r r3"
+    "virtualinvoke <ScratchApplet: java.lang.String getParameter(java.lang.String)>"->"store.r r3";
+    "push 1"
+    "store.r r3"->"push 1";
+    "store.b z2"
+    "push 1"->"store.b z2";
+    "load.r r3"
+    "store.b z2"->"load.r r3";
+    "ifnull push 50L"
+    "load.r r3"->"ifnull push 50L";
+    "ifnull push 50L"->"load.r r3";
+    "push \"false\""
+    "load.r r3"->"push \"false\"";
+    "virtualinvoke <java.lang.String: boolean equalsIgnoreCase(java.lang.String)>"
+    "push \"false\""->"virtualinvoke <java.lang.String: boolean equalsIgnoreCase(java.lang.String)>";
+    "ifeq load.r r3"
+    "virtualinvoke <java.lang.String: boolean equalsIgnoreCase(java.lang.String)>"->"ifeq load.r r3";
+    "push 0"
+    "ifeq load.r r3"->"push 0";
+    "push 0"->"store.b z2";
+    "store.b z2"->"load.r r3";
+    "push \"no\""
+    "load.r r3"->"push \"no\"";
+    "push \"no\""->"virtualinvoke <java.lang.String: boolean equalsIgnoreCase(java.lang.String)>";
+    "ifeq push 50L"
+    "virtualinvoke <java.lang.String: boolean equalsIgnoreCase(java.lang.String)>"->"ifeq push 50L";
+    "ifeq push 50L"->"push 0";
+    "push 0"->"store.b z2";
+    "push 50L"
+    "store.b z2"->"push 50L";
+    "staticinvoke <java.lang.Thread: void sleep(long)>"
+    "push 50L"->"staticinvoke <java.lang.Thread: void sleep(long)>";
+    "goto load.r r0"
+    "staticinvoke <java.lang.Thread: void sleep(long)>"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r1";
+    "load.r r1"->"load.r r2";
+    "load.r r2"->"load.r r0";
+    "virtualinvoke <ScratchApplet: java.awt.Container getContentPane()>"
+    "load.r r0"->"virtualinvoke <ScratchApplet: java.awt.Container getContentPane()>";
+    "load.b z2"
+    "virtualinvoke <ScratchApplet: java.awt.Container getContentPane()>"->"load.b z2";
+    "staticinvoke <PlayerPrims: LContext startup(java.lang.String,java.lang.String,java.awt.Container,boolean)>"
+    "load.b z2"->"staticinvoke <PlayerPrims: LContext startup(java.lang.String,java.lang.String,java.awt.Container,boolean)>";
+    "fieldput <ScratchApplet: LContext lc>"
+    "staticinvoke <PlayerPrims: LContext startup(java.lang.String,java.lang.String,java.awt.Container,boolean)>"->"fieldput <ScratchApplet: LContext lc>";
+    "fieldput <ScratchApplet: LContext lc>"->"load.r r0";
+    "fieldget <ScratchApplet: LContext lc>"
+    "load.r r0"->"fieldget <ScratchApplet: LContext lc>";
+    "staticget <java.lang.System: java.io.PrintStream out>"
+    "fieldget <ScratchApplet: LContext lc>"->"staticget <java.lang.System: java.io.PrintStream out>";
+    "fieldput <LContext: java.io.PrintStream tyo>"
+    "staticget <java.lang.System: java.io.PrintStream out>"->"fieldput <LContext: java.io.PrintStream tyo>";
+    "return"
+    "fieldput <LContext: java.io.PrintStream tyo>"->"return";
+    "staticinvoke <java.lang.Thread: void sleep(long)>"->"store.r r3";
+    "push null"
+    "ifnull push null"->"push null";
+    "push null"->"store.r r2";
+}

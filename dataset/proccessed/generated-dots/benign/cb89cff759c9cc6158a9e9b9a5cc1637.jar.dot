@@ -1,0 +1,46 @@
+digraph "" {
+    "r0 := @this: CMEditor"
+    "load.r r0"
+    "r0 := @this: CMEditor"->"load.r r0";
+    "staticget <java.awt.Color: java.awt.Color cyan>"
+    "load.r r0"->"staticget <java.awt.Color: java.awt.Color cyan>";
+    "virtualinvoke <java.awt.Component: void setBackground(java.awt.Color)>"
+    "staticget <java.awt.Color: java.awt.Color cyan>"->"virtualinvoke <java.awt.Component: void setBackground(java.awt.Color)>";
+    "new CMFrame"
+    "virtualinvoke <java.awt.Component: void setBackground(java.awt.Color)>"->"new CMFrame";
+    "store.r $r3"
+    "new CMFrame"->"store.r $r3";
+    "load.r $r3"
+    "store.r $r3"->"load.r $r3";
+    "load.r $r3"->"load.r r0";
+    "specialinvoke <CMFrame: void <init>(CMEditor)>"
+    "load.r r0"->"specialinvoke <CMFrame: void <init>(CMEditor)>";
+    "specialinvoke <CMFrame: void <init>(CMEditor)>"->"load.r $r3";
+    "push 700"
+    "load.r $r3"->"push 700";
+    "push 550"
+    "push 700"->"push 550";
+    "virtualinvoke <java.awt.Component: void setSize(int,int)>"
+    "push 550"->"virtualinvoke <java.awt.Component: void setSize(int,int)>";
+    "virtualinvoke <java.awt.Component: void setSize(int,int)>"->"load.r $r3";
+    "push 20"
+    "load.r $r3"->"push 20";
+    "push 20"->"push 20";
+    "virtualinvoke <java.awt.Component: void setLocation(int,int)>"
+    "push 20"->"virtualinvoke <java.awt.Component: void setLocation(int,int)>";
+    "virtualinvoke <java.awt.Component: void setLocation(int,int)>"->"load.r $r3";
+    "push 0"
+    "load.r $r3"->"push 0";
+    "virtualinvoke <java.awt.Frame: void setResizable(boolean)>"
+    "push 0"->"virtualinvoke <java.awt.Frame: void setResizable(boolean)>";
+    "virtualinvoke <java.awt.Frame: void setResizable(boolean)>"->"load.r $r3";
+    "push 1"
+    "load.r $r3"->"push 1";
+    "virtualinvoke <java.awt.Component: void setVisible(boolean)>"
+    "push 1"->"virtualinvoke <java.awt.Component: void setVisible(boolean)>";
+    "virtualinvoke <java.awt.Component: void setVisible(boolean)>"->"load.r $r3";
+    "virtualinvoke <java.awt.Window: void show()>"
+    "load.r $r3"->"virtualinvoke <java.awt.Window: void show()>";
+    "return"
+    "virtualinvoke <java.awt.Window: void show()>"->"return";
+}

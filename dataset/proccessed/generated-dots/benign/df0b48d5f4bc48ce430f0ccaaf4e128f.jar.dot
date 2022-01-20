@@ -1,0 +1,59 @@
+digraph "" {
+    "r0 := @this: org.jfree.ui.tabbedui.TabbedApplet"
+    "r1 := @parameter0: org.jfree.ui.tabbedui.AbstractTabbedUI"
+    "r0 := @this: org.jfree.ui.tabbedui.TabbedApplet"->"r1 := @parameter0: org.jfree.ui.tabbedui.AbstractTabbedUI";
+    "load.r r0"
+    "r1 := @parameter0: org.jfree.ui.tabbedui.AbstractTabbedUI"->"load.r r0";
+    "load.r r1"
+    "load.r r0"->"load.r r1";
+    "fieldput <org.jfree.ui.tabbedui.TabbedApplet: org.jfree.ui.tabbedui.AbstractTabbedUI tabbedUI>"
+    "load.r r1"->"fieldput <org.jfree.ui.tabbedui.TabbedApplet: org.jfree.ui.tabbedui.AbstractTabbedUI tabbedUI>";
+    "fieldput <org.jfree.ui.tabbedui.TabbedApplet: org.jfree.ui.tabbedui.AbstractTabbedUI tabbedUI>"->"load.r r0";
+    "fieldget <org.jfree.ui.tabbedui.TabbedApplet: org.jfree.ui.tabbedui.AbstractTabbedUI tabbedUI>"
+    "load.r r0"->"fieldget <org.jfree.ui.tabbedui.TabbedApplet: org.jfree.ui.tabbedui.AbstractTabbedUI tabbedUI>";
+    "push \"jMenuBar\""
+    "fieldget <org.jfree.ui.tabbedui.TabbedApplet: org.jfree.ui.tabbedui.AbstractTabbedUI tabbedUI>"->"push \"jMenuBar\"";
+    "new org.jfree.ui.tabbedui.TabbedApplet$MenuBarChangeListener"
+    "push \"jMenuBar\""->"new org.jfree.ui.tabbedui.TabbedApplet$MenuBarChangeListener";
+    "dup1.r"
+    "new org.jfree.ui.tabbedui.TabbedApplet$MenuBarChangeListener"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "specialinvoke <org.jfree.ui.tabbedui.TabbedApplet$MenuBarChangeListener: void <init>(org.jfree.ui.tabbedui.TabbedApplet)>"
+    "load.r r0"->"specialinvoke <org.jfree.ui.tabbedui.TabbedApplet$MenuBarChangeListener: void <init>(org.jfree.ui.tabbedui.TabbedApplet)>";
+    "virtualinvoke <javax.swing.JComponent: void addPropertyChangeListener(java.lang.String,java.beans.PropertyChangeListener)>"
+    "specialinvoke <org.jfree.ui.tabbedui.TabbedApplet$MenuBarChangeListener: void <init>(org.jfree.ui.tabbedui.TabbedApplet)>"->"virtualinvoke <javax.swing.JComponent: void addPropertyChangeListener(java.lang.String,java.beans.PropertyChangeListener)>";
+    "new javax.swing.JPanel"
+    "virtualinvoke <javax.swing.JComponent: void addPropertyChangeListener(java.lang.String,java.beans.PropertyChangeListener)>"->"new javax.swing.JPanel";
+    "store.r $r5"
+    "new javax.swing.JPanel"->"store.r $r5";
+    "load.r $r5"
+    "store.r $r5"->"load.r $r5";
+    "specialinvoke <javax.swing.JPanel: void <init>()>"
+    "load.r $r5"->"specialinvoke <javax.swing.JPanel: void <init>()>";
+    "specialinvoke <javax.swing.JPanel: void <init>()>"->"load.r $r5";
+    "new java.awt.BorderLayout"
+    "load.r $r5"->"new java.awt.BorderLayout";
+    "new java.awt.BorderLayout"->"dup1.r";
+    "specialinvoke <java.awt.BorderLayout: void <init>()>"
+    "dup1.r"->"specialinvoke <java.awt.BorderLayout: void <init>()>";
+    "virtualinvoke <java.awt.Container: void setLayout(java.awt.LayoutManager)>"
+    "specialinvoke <java.awt.BorderLayout: void <init>()>"->"virtualinvoke <java.awt.Container: void setLayout(java.awt.LayoutManager)>";
+    "virtualinvoke <java.awt.Container: void setLayout(java.awt.LayoutManager)>"->"load.r $r5";
+    "load.r $r5"->"load.r r1";
+    "push \"Center\""
+    "load.r r1"->"push \"Center\"";
+    "virtualinvoke <java.awt.Container: void add(java.awt.Component,java.lang.Object)>"
+    "push \"Center\""->"virtualinvoke <java.awt.Container: void add(java.awt.Component,java.lang.Object)>";
+    "virtualinvoke <java.awt.Container: void add(java.awt.Component,java.lang.Object)>"->"load.r r0";
+    "load.r r0"->"load.r $r5";
+    "virtualinvoke <javax.swing.JApplet: void setContentPane(java.awt.Container)>"
+    "load.r $r5"->"virtualinvoke <javax.swing.JApplet: void setContentPane(java.awt.Container)>";
+    "virtualinvoke <javax.swing.JApplet: void setContentPane(java.awt.Container)>"->"load.r r0";
+    "load.r r0"->"load.r r1";
+    "virtualinvoke <org.jfree.ui.tabbedui.AbstractTabbedUI: javax.swing.JMenuBar getJMenuBar()>"
+    "load.r r1"->"virtualinvoke <org.jfree.ui.tabbedui.AbstractTabbedUI: javax.swing.JMenuBar getJMenuBar()>";
+    "virtualinvoke <javax.swing.JApplet: void setJMenuBar(javax.swing.JMenuBar)>"
+    "virtualinvoke <org.jfree.ui.tabbedui.AbstractTabbedUI: javax.swing.JMenuBar getJMenuBar()>"->"virtualinvoke <javax.swing.JApplet: void setJMenuBar(javax.swing.JMenuBar)>";
+    "return"
+    "virtualinvoke <javax.swing.JApplet: void setJMenuBar(javax.swing.JMenuBar)>"->"return";
+}

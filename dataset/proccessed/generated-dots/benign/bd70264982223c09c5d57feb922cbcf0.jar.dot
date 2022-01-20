@@ -1,0 +1,346 @@
+digraph "" {
+    "r0 := @this: SRLApplet"
+    "load.r r0"
+    "r0 := @this: SRLApplet"->"load.r r0";
+    "push \"LOGGING\""
+    "load.r r0"->"push \"LOGGING\"";
+    "virtualinvoke <SRLApplet: java.lang.String getParameter(java.lang.String)>"
+    "push \"LOGGING\""->"virtualinvoke <SRLApplet: java.lang.String getParameter(java.lang.String)>";
+    "store.r r1"
+    "virtualinvoke <SRLApplet: java.lang.String getParameter(java.lang.String)>"->"store.r r1";
+    "load.r r1"
+    "store.r r1"->"load.r r1";
+    "ifnull load.r r0"
+    "load.r r1"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r r1";
+    "virtualinvoke <java.lang.String: int length()>"
+    "load.r r1"->"virtualinvoke <java.lang.String: int length()>";
+    "ifle load.r r0"
+    "virtualinvoke <java.lang.String: int length()>"->"ifle load.r r0";
+    "ifle load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r1";
+    "fieldput <SRLApplet: java.lang.String Logging>"
+    "load.r r1"->"fieldput <SRLApplet: java.lang.String Logging>";
+    "fieldput <SRLApplet: java.lang.String Logging>"->"load.r r0";
+    "push \"SESSION_ID\""
+    "load.r r0"->"push \"SESSION_ID\"";
+    "push \"SESSION_ID\""->"virtualinvoke <SRLApplet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <SRLApplet: java.lang.String getParameter(java.lang.String)>"->"store.r r1";
+    "store.r r1"->"load.r r1";
+    "load.r r1"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r r1";
+    "load.r r1"->"virtualinvoke <java.lang.String: int length()>";
+    "virtualinvoke <java.lang.String: int length()>"->"ifle load.r r0";
+    "ifle load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r1";
+    "fieldput <SRLApplet: java.lang.String SessionID>"
+    "load.r r1"->"fieldput <SRLApplet: java.lang.String SessionID>";
+    "fieldput <SRLApplet: java.lang.String SessionID>"->"load.r r0";
+    "push \"REFERRER_ID\""
+    "load.r r0"->"push \"REFERRER_ID\"";
+    "push \"REFERRER_ID\""->"virtualinvoke <SRLApplet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <SRLApplet: java.lang.String getParameter(java.lang.String)>"->"store.r r1";
+    "store.r r1"->"load.r r1";
+    "load.r r1"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r r1";
+    "load.r r1"->"virtualinvoke <java.lang.String: int length()>";
+    "virtualinvoke <java.lang.String: int length()>"->"ifle load.r r0";
+    "ifle load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r1";
+    "fieldput <SRLApplet: java.lang.String ReferrerID>"
+    "load.r r1"->"fieldput <SRLApplet: java.lang.String ReferrerID>";
+    "fieldput <SRLApplet: java.lang.String ReferrerID>"->"load.r r0";
+    "push \"CLIENT_ID\""
+    "load.r r0"->"push \"CLIENT_ID\"";
+    "push \"CLIENT_ID\""->"virtualinvoke <SRLApplet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <SRLApplet: java.lang.String getParameter(java.lang.String)>"->"store.r r1";
+    "store.r r1"->"load.r r1";
+    "ifnull push 0"
+    "load.r r1"->"ifnull push 0";
+    "ifnull push 0"->"load.r r1";
+    "load.r r1"->"virtualinvoke <java.lang.String: int length()>";
+    "ifle push 0"
+    "virtualinvoke <java.lang.String: int length()>"->"ifle push 0";
+    "ifle push 0"->"load.r r0";
+    "load.r r0"->"load.r r1";
+    "fieldput <SRLApplet: java.lang.String UserID>"
+    "load.r r1"->"fieldput <SRLApplet: java.lang.String UserID>";
+    "push 0"
+    "fieldput <SRLApplet: java.lang.String UserID>"->"push 0";
+    "store.b r1"
+    "push 0"->"store.b r1";
+    "store.b r1"->"push 0";
+    "store.b z3"
+    "push 0"->"store.b z3";
+    "store.b z3"->"push 0";
+    "store.b z4"
+    "push 0"->"store.b z4";
+    "store.b z4"->"push 0";
+    "store.b z5"
+    "push 0"->"store.b z5";
+    "store.b z5"->"load.r r0";
+    "virtualinvoke <java.lang.Object: java.lang.Class getClass()>"
+    "load.r r0"->"virtualinvoke <java.lang.Object: java.lang.Class getClass()>";
+    "virtualinvoke <java.lang.Class: java.security.ProtectionDomain getProtectionDomain()>"
+    "virtualinvoke <java.lang.Object: java.lang.Class getClass()>"->"virtualinvoke <java.lang.Class: java.security.ProtectionDomain getProtectionDomain()>";
+    "virtualinvoke <java.security.ProtectionDomain: java.security.CodeSource getCodeSource()>"
+    "virtualinvoke <java.lang.Class: java.security.ProtectionDomain getProtectionDomain()>"->"virtualinvoke <java.security.ProtectionDomain: java.security.CodeSource getCodeSource()>";
+    "store.r r4"
+    "virtualinvoke <java.security.ProtectionDomain: java.security.CodeSource getCodeSource()>"->"store.r r4";
+    "load.r r4"
+    "store.r r4"->"load.r r4";
+    "ifnull staticget <java.lang.System: java.io.PrintStream out>"
+    "load.r r4"->"ifnull staticget <java.lang.System: java.io.PrintStream out>";
+    "ifnull staticget <java.lang.System: java.io.PrintStream out>"->"load.r r4";
+    "virtualinvoke <java.security.CodeSource: java.net.URL getLocation()>"
+    "load.r r4"->"virtualinvoke <java.security.CodeSource: java.net.URL getLocation()>";
+    "new java.lang.String"
+    "virtualinvoke <java.security.CodeSource: java.net.URL getLocation()>"->"new java.lang.String";
+    "new java.lang.String"->"store.r r4";
+    "virtualinvoke <java.net.URL: java.lang.String toString()>"
+    "store.r r4"->"virtualinvoke <java.net.URL: java.lang.String toString()>";
+    "store.r $r39"
+    "virtualinvoke <java.net.URL: java.lang.String toString()>"->"store.r $r39";
+    "store.r $r39"->"load.r r4";
+    "load.r $r39"
+    "load.r r4"->"load.r $r39";
+    "specialinvoke <java.lang.String: void <init>(java.lang.String)>"
+    "load.r $r39"->"specialinvoke <java.lang.String: void <init>(java.lang.String)>";
+    "specialinvoke <java.lang.String: void <init>(java.lang.String)>"->"load.r r4";
+    "push \"cyri\""
+    "load.r r4"->"push \"cyri\"";
+    "virtualinvoke <java.lang.String: int indexOf(java.lang.String)>"
+    "push \"cyri\""->"virtualinvoke <java.lang.String: int indexOf(java.lang.String)>";
+    "push -1"
+    "virtualinvoke <java.lang.String: int indexOf(java.lang.String)>"->"push -1";
+    "ifcmpeq.i load.r r4"
+    "push -1"->"ifcmpeq.i load.r r4";
+    "push 1"
+    "ifcmpeq.i load.r r4"->"push 1";
+    "push 1"->"store.b z3";
+    "store.b z3"->"load.r r4";
+    "push \"intel\""
+    "load.r r4"->"push \"intel\"";
+    "push \"intel\""->"virtualinvoke <java.lang.String: int indexOf(java.lang.String)>";
+    "virtualinvoke <java.lang.String: int indexOf(java.lang.String)>"->"push -1";
+    "push -1"->"ifcmpeq.i load.r r4";
+    "ifcmpeq.i load.r r4"->"push 1";
+    "push 1"->"store.b r1";
+    "store.b r1"->"load.r r4";
+    "push \"client\""
+    "load.r r4"->"push \"client\"";
+    "push \"client\""->"virtualinvoke <java.lang.String: int indexOf(java.lang.String)>";
+    "virtualinvoke <java.lang.String: int indexOf(java.lang.String)>"->"push -1";
+    "push -1"->"ifcmpeq.i load.r r4";
+    "ifcmpeq.i load.r r4"->"push 1";
+    "push 1"->"store.b z4";
+    "store.b z4"->"load.r r4";
+    "push \"test\""
+    "load.r r4"->"push \"test\"";
+    "push \"test\""->"virtualinvoke <java.lang.String: int indexOf(java.lang.String)>";
+    "virtualinvoke <java.lang.String: int indexOf(java.lang.String)>"->"push -1";
+    "ifcmpeq.i goto goto load.b r1"
+    "push -1"->"ifcmpeq.i goto goto load.b r1";
+    "ifcmpeq.i goto goto load.b r1"->"push 1";
+    "push 1"->"store.b z5";
+    "goto goto load.b r1"
+    "store.b z5"->"goto goto load.b r1";
+    "goto load.b r1"
+    "goto goto load.b r1"->"goto load.b r1";
+    "load.b r1"
+    "goto load.b r1"->"load.b r1";
+    "ifeq load.b z3"
+    "load.b r1"->"ifeq load.b z3";
+    "ifeq load.b z3"->"load.r r0";
+    "push \"srlproxy_intel.dll\""
+    "load.r r0"->"push \"srlproxy_intel.dll\"";
+    "fieldput <SRLApplet: java.lang.String _jarProxyFileName>"
+    "push \"srlproxy_intel.dll\""->"fieldput <SRLApplet: java.lang.String _jarProxyFileName>";
+    "fieldput <SRLApplet: java.lang.String _jarProxyFileName>"->"load.r r0";
+    "push \"SystemRequirementsLab_intel_4.4.24.0.msi\""
+    "load.r r0"->"push \"SystemRequirementsLab_intel_4.4.24.0.msi\"";
+    "fieldput <SRLApplet: java.lang.String _msiFileName>"
+    "push \"SystemRequirementsLab_intel_4.4.24.0.msi\""->"fieldput <SRLApplet: java.lang.String _msiFileName>";
+    "fieldput <SRLApplet: java.lang.String _msiFileName>"->"load.r r0";
+    "push \"srlproxy_intel_4.4.24.0.dll\""
+    "load.r r0"->"push \"srlproxy_intel_4.4.24.0.dll\"";
+    "fieldput <SRLApplet: java.lang.String _proxyFileName>"
+    "push \"srlproxy_intel_4.4.24.0.dll\""->"fieldput <SRLApplet: java.lang.String _proxyFileName>";
+    "load.b z3"
+    "fieldput <SRLApplet: java.lang.String _proxyFileName>"->"load.b z3";
+    "ifeq load.b z4"
+    "load.b z3"->"ifeq load.b z4";
+    "ifeq load.b z4"->"load.r r0";
+    "push \"srlproxy_cyri.dll\""
+    "load.r r0"->"push \"srlproxy_cyri.dll\"";
+    "push \"srlproxy_cyri.dll\""->"fieldput <SRLApplet: java.lang.String _jarProxyFileName>";
+    "fieldput <SRLApplet: java.lang.String _jarProxyFileName>"->"load.r r0";
+    "push \"SystemRequirementsLab_cyri_4.4.24.0.msi\""
+    "load.r r0"->"push \"SystemRequirementsLab_cyri_4.4.24.0.msi\"";
+    "push \"SystemRequirementsLab_cyri_4.4.24.0.msi\""->"fieldput <SRLApplet: java.lang.String _msiFileName>";
+    "fieldput <SRLApplet: java.lang.String _msiFileName>"->"load.r r0";
+    "push \"srlproxy_cyri_4.4.24.0.dll\""
+    "load.r r0"->"push \"srlproxy_cyri_4.4.24.0.dll\"";
+    "push \"srlproxy_cyri_4.4.24.0.dll\""->"fieldput <SRLApplet: java.lang.String _proxyFileName>";
+    "load.b z4"
+    "fieldput <SRLApplet: java.lang.String _proxyFileName>"->"load.b z4";
+    "ifeq load.b z5"
+    "load.b z4"->"ifeq load.b z5";
+    "ifeq load.b z5"->"load.r r0";
+    "push \"srlproxy_client.dll\""
+    "load.r r0"->"push \"srlproxy_client.dll\"";
+    "push \"srlproxy_client.dll\""->"fieldput <SRLApplet: java.lang.String _jarProxyFileName>";
+    "fieldput <SRLApplet: java.lang.String _jarProxyFileName>"->"load.r r0";
+    "push \"SystemRequirementsLab_client_4.4.24.0.msi\""
+    "load.r r0"->"push \"SystemRequirementsLab_client_4.4.24.0.msi\"";
+    "push \"SystemRequirementsLab_client_4.4.24.0.msi\""->"fieldput <SRLApplet: java.lang.String _msiFileName>";
+    "fieldput <SRLApplet: java.lang.String _msiFileName>"->"load.r r0";
+    "push \"srlproxy_client_4.4.24.0.dll\""
+    "load.r r0"->"push \"srlproxy_client_4.4.24.0.dll\"";
+    "push \"srlproxy_client_4.4.24.0.dll\""->"fieldput <SRLApplet: java.lang.String _proxyFileName>";
+    "load.b z5"
+    "fieldput <SRLApplet: java.lang.String _proxyFileName>"->"load.b z5";
+    "ifeq load.r r0"
+    "load.b z5"->"ifeq load.r r0";
+    "ifeq load.r r0"->"load.r r0";
+    "push \"srlproxy_test.dll\""
+    "load.r r0"->"push \"srlproxy_test.dll\"";
+    "push \"srlproxy_test.dll\""->"fieldput <SRLApplet: java.lang.String _jarProxyFileName>";
+    "fieldput <SRLApplet: java.lang.String _jarProxyFileName>"->"load.r r0";
+    "push \"SystemRequirementsLab_test_4.4.24.0.msi\""
+    "load.r r0"->"push \"SystemRequirementsLab_test_4.4.24.0.msi\"";
+    "push \"SystemRequirementsLab_test_4.4.24.0.msi\""->"fieldput <SRLApplet: java.lang.String _msiFileName>";
+    "fieldput <SRLApplet: java.lang.String _msiFileName>"->"load.r r0";
+    "push \"srlproxy_test_4.4.24.0.dll\""
+    "load.r r0"->"push \"srlproxy_test_4.4.24.0.dll\"";
+    "push \"srlproxy_test_4.4.24.0.dll\""->"fieldput <SRLApplet: java.lang.String _proxyFileName>";
+    "fieldput <SRLApplet: java.lang.String _proxyFileName>"->"load.r r0";
+    "push \"user.home\""
+    "load.r r0"->"push \"user.home\"";
+    "staticinvoke <java.lang.System: java.lang.String getProperty(java.lang.String)>"
+    "push \"user.home\""->"staticinvoke <java.lang.System: java.lang.String getProperty(java.lang.String)>";
+    "fieldput <SRLApplet: java.lang.String _proxyDir>"
+    "staticinvoke <java.lang.System: java.lang.String getProperty(java.lang.String)>"->"fieldput <SRLApplet: java.lang.String _proxyDir>";
+    "fieldput <SRLApplet: java.lang.String _proxyDir>"->"load.r r0";
+    "new java.lang.StringBuffer"
+    "load.r r0"->"new java.lang.StringBuffer";
+    "dup1.r"
+    "new java.lang.StringBuffer"->"dup1.r";
+    "specialinvoke <java.lang.StringBuffer: void <init>()>"
+    "dup1.r"->"specialinvoke <java.lang.StringBuffer: void <init>()>";
+    "specialinvoke <java.lang.StringBuffer: void <init>()>"->"load.r r0";
+    "fieldget <SRLApplet: java.lang.String _proxyDir>"
+    "load.r r0"->"fieldget <SRLApplet: java.lang.String _proxyDir>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"
+    "fieldget <SRLApplet: java.lang.String _proxyDir>"->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "push \"\\Application Data\""
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"push \"\\Application Data\"";
+    "push \"\\Application Data\""->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>"
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>"->"fieldput <SRLApplet: java.lang.String _proxyDir>";
+    "new java.io.File"
+    "fieldput <SRLApplet: java.lang.String _proxyDir>"->"new java.io.File";
+    "new java.io.File"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "load.r r0"->"fieldget <SRLApplet: java.lang.String _proxyDir>";
+    "specialinvoke <java.io.File: void <init>(java.lang.String)>"
+    "fieldget <SRLApplet: java.lang.String _proxyDir>"->"specialinvoke <java.io.File: void <init>(java.lang.String)>";
+    "virtualinvoke <java.io.File: boolean exists()>"
+    "specialinvoke <java.io.File: void <init>(java.lang.String)>"->"virtualinvoke <java.io.File: boolean exists()>";
+    "ifne load.r r0"
+    "virtualinvoke <java.io.File: boolean exists()>"->"ifne load.r r0";
+    "ifne load.r r0"->"load.r r0";
+    "load.r r0"->"push \"user.home\"";
+    "push \"user.home\""->"staticinvoke <java.lang.System: java.lang.String getProperty(java.lang.String)>";
+    "staticinvoke <java.lang.System: java.lang.String getProperty(java.lang.String)>"->"fieldput <SRLApplet: java.lang.String _proxyDir>";
+    "fieldput <SRLApplet: java.lang.String _proxyDir>"->"load.r r0";
+    "load.r r0"->"new java.lang.StringBuffer";
+    "new java.lang.StringBuffer"->"dup1.r";
+    "dup1.r"->"specialinvoke <java.lang.StringBuffer: void <init>()>";
+    "specialinvoke <java.lang.StringBuffer: void <init>()>"->"load.r r0";
+    "load.r r0"->"fieldget <SRLApplet: java.lang.String _proxyDir>";
+    "fieldget <SRLApplet: java.lang.String _proxyDir>"->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "push \"\\SystemRequirementsLab\""
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"push \"\\SystemRequirementsLab\"";
+    "push \"\\SystemRequirementsLab\""->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>"->"fieldput <SRLApplet: java.lang.String _proxyDir>";
+    "fieldput <SRLApplet: java.lang.String _proxyDir>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <SRLApplet: java.lang.String _proxyDir>";
+    "fieldput <SRLApplet: java.lang.String _msiDir>"
+    "fieldget <SRLApplet: java.lang.String _proxyDir>"->"fieldput <SRLApplet: java.lang.String _msiDir>";
+    "fieldput <SRLApplet: java.lang.String _msiDir>"->"new java.io.File";
+    "new java.io.File"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "load.r r0"->"fieldget <SRLApplet: java.lang.String _proxyDir>";
+    "fieldget <SRLApplet: java.lang.String _proxyDir>"->"specialinvoke <java.io.File: void <init>(java.lang.String)>";
+    "virtualinvoke <java.io.File: boolean mkdirs()>"
+    "specialinvoke <java.io.File: void <init>(java.lang.String)>"->"virtualinvoke <java.io.File: boolean mkdirs()>";
+    "pop"
+    "virtualinvoke <java.io.File: boolean mkdirs()>"->"pop";
+    "pop"->"load.r r0";
+    "load.r r0"->"new java.lang.StringBuffer";
+    "new java.lang.StringBuffer"->"dup1.r";
+    "dup1.r"->"specialinvoke <java.lang.StringBuffer: void <init>()>";
+    "specialinvoke <java.lang.StringBuffer: void <init>()>"->"load.r r0";
+    "load.r r0"->"fieldget <SRLApplet: java.lang.String _proxyDir>";
+    "fieldget <SRLApplet: java.lang.String _proxyDir>"->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "push \"\\\\""
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"push \"\\\\"";
+    "push \"\\\\""->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"load.r r0";
+    "fieldget <SRLApplet: java.lang.String _msiFileName>"
+    "load.r r0"->"fieldget <SRLApplet: java.lang.String _msiFileName>";
+    "fieldget <SRLApplet: java.lang.String _msiFileName>"->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>";
+    "fieldput <SRLApplet: java.lang.String _msiPath>"
+    "virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>"->"fieldput <SRLApplet: java.lang.String _msiPath>";
+    "fieldput <SRLApplet: java.lang.String _msiPath>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "fieldget <SRLApplet: java.lang.String _jarMSIFileName>"
+    "load.r r0"->"fieldget <SRLApplet: java.lang.String _jarMSIFileName>";
+    "fieldget <SRLApplet: java.lang.String _jarMSIFileName>"->"load.r r0";
+    "fieldget <SRLApplet: java.lang.String _msiPath>"
+    "load.r r0"->"fieldget <SRLApplet: java.lang.String _msiPath>";
+    "specialinvoke <SRLApplet: void GetFileFromJAR(java.lang.String,java.lang.String)>"
+    "fieldget <SRLApplet: java.lang.String _msiPath>"->"specialinvoke <SRLApplet: void GetFileFromJAR(java.lang.String,java.lang.String)>";
+    "specialinvoke <SRLApplet: void GetFileFromJAR(java.lang.String,java.lang.String)>"->"load.r r0";
+    "fieldget <SRLApplet: SRLProxy srlProxy>"
+    "load.r r0"->"fieldget <SRLApplet: SRLProxy srlProxy>";
+    "ifnonnull goto return"
+    "fieldget <SRLApplet: SRLProxy srlProxy>"->"ifnonnull goto return";
+    "ifnonnull goto return"->"load.r r0";
+    "specialinvoke <SRLApplet: void LoadProxy()>"
+    "load.r r0"->"specialinvoke <SRLApplet: void LoadProxy()>";
+    "specialinvoke <SRLApplet: void LoadProxy()>"->"load.r r0";
+    "new SRLProxy"
+    "load.r r0"->"new SRLProxy";
+    "new SRLProxy"->"dup1.r";
+    "specialinvoke <SRLProxy: void <init>()>"
+    "dup1.r"->"specialinvoke <SRLProxy: void <init>()>";
+    "fieldput <SRLApplet: SRLProxy srlProxy>"
+    "specialinvoke <SRLProxy: void <init>()>"->"fieldput <SRLApplet: SRLProxy srlProxy>";
+    "goto return"
+    "fieldput <SRLApplet: SRLProxy srlProxy>"->"goto return";
+    "return"
+    "goto return"->"return";
+    "staticget <java.lang.System: java.io.PrintStream err>"
+    "specialinvoke <SRLProxy: void <init>()>"->"staticget <java.lang.System: java.io.PrintStream err>";
+    "push \"Unable to locate class on command line.\""
+    "staticget <java.lang.System: java.io.PrintStream err>"->"push \"Unable to locate class on command line.\"";
+    "virtualinvoke <java.io.PrintStream: void println(java.lang.String)>"
+    "push \"Unable to locate class on command line.\""->"virtualinvoke <java.io.PrintStream: void println(java.lang.String)>";
+    "virtualinvoke <java.lang.Exception: void printStackTrace()>"
+    "virtualinvoke <java.io.PrintStream: void println(java.lang.String)>"->"virtualinvoke <java.lang.Exception: void printStackTrace()>";
+    "virtualinvoke <java.lang.String: int indexOf(java.lang.String)>"->"staticget <java.lang.System: java.io.PrintStream err>";
+    "staticget <java.lang.System: java.io.PrintStream err>"->"push \"Unable to locate class on command line.\"";
+    "push \"Unable to locate class on command line.\""->"virtualinvoke <java.io.PrintStream: void println(java.lang.String)>";
+    "virtualinvoke <java.io.PrintStream: void println(java.lang.String)>"->"virtualinvoke <java.lang.Exception: void printStackTrace()>";
+    "staticget <java.lang.System: java.io.PrintStream out>"
+    "ifnull staticget <java.lang.System: java.io.PrintStream out>"->"staticget <java.lang.System: java.io.PrintStream out>";
+    "push \"unknown source, likely rt.jar\""
+    "staticget <java.lang.System: java.io.PrintStream out>"->"push \"unknown source, likely rt.jar\"";
+    "push \"unknown source, likely rt.jar\""->"virtualinvoke <java.io.PrintStream: void println(java.lang.String)>";
+}

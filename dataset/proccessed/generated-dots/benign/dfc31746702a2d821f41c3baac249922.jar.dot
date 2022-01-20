@@ -1,0 +1,327 @@
+digraph "" {
+    "r0 := @this: Chart"
+    "load.r r0"
+    "r0 := @this: Chart"->"load.r r0";
+    "new Parameters"
+    "load.r r0"->"new Parameters";
+    "dup1.r"
+    "new Parameters"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "specialinvoke <Parameters: void <init>(java.applet.Applet)>"
+    "load.r r0"->"specialinvoke <Parameters: void <init>(java.applet.Applet)>";
+    "fieldput <Chart: Parameters param>"
+    "specialinvoke <Parameters: void <init>(java.applet.Applet)>"->"fieldput <Chart: Parameters param>";
+    "fieldput <Chart: Parameters param>"->"load.r r0";
+    "staticget <Parameters: java.awt.Color chartBGColor>"
+    "load.r r0"->"staticget <Parameters: java.awt.Color chartBGColor>";
+    "virtualinvoke <java.awt.Component: void setBackground(java.awt.Color)>"
+    "staticget <Parameters: java.awt.Color chartBGColor>"->"virtualinvoke <java.awt.Component: void setBackground(java.awt.Color)>";
+    "virtualinvoke <java.awt.Component: void setBackground(java.awt.Color)>"->"load.r r0";
+    "staticget <Parameters: java.awt.Color chartFGColor>"
+    "load.r r0"->"staticget <Parameters: java.awt.Color chartFGColor>";
+    "virtualinvoke <java.awt.Component: void setForeground(java.awt.Color)>"
+    "staticget <Parameters: java.awt.Color chartFGColor>"->"virtualinvoke <java.awt.Component: void setForeground(java.awt.Color)>";
+    "virtualinvoke <java.awt.Component: void setForeground(java.awt.Color)>"->"load.r r0";
+    "virtualinvoke <java.awt.Component: void repaint()>"
+    "load.r r0"->"virtualinvoke <java.awt.Component: void repaint()>";
+    "virtualinvoke <java.awt.Component: void repaint()>"->"load.r r0";
+    "new java.awt.BorderLayout"
+    "load.r r0"->"new java.awt.BorderLayout";
+    "new java.awt.BorderLayout"->"dup1.r";
+    "push 3"
+    "dup1.r"->"push 3";
+    "push 3"->"push 3";
+    "specialinvoke <java.awt.BorderLayout: void <init>(int,int)>"
+    "push 3"->"specialinvoke <java.awt.BorderLayout: void <init>(int,int)>";
+    "virtualinvoke <java.awt.Container: void setLayout(java.awt.LayoutManager)>"
+    "specialinvoke <java.awt.BorderLayout: void <init>(int,int)>"->"virtualinvoke <java.awt.Container: void setLayout(java.awt.LayoutManager)>";
+    "staticget <Parameters: boolean PopupOK>"
+    "virtualinvoke <java.awt.Container: void setLayout(java.awt.LayoutManager)>"->"staticget <Parameters: boolean PopupOK>";
+    "ifeq staticget <Parameters: boolean PopupOK>"
+    "staticget <Parameters: boolean PopupOK>"->"ifeq staticget <Parameters: boolean PopupOK>";
+    "new java.awt.PopupMenu"
+    "ifeq staticget <Parameters: boolean PopupOK>"->"new java.awt.PopupMenu";
+    "specialinvoke <java.awt.PopupMenu: void <init>()>"
+    "new java.awt.PopupMenu"->"specialinvoke <java.awt.PopupMenu: void <init>()>";
+    "push 1"
+    "specialinvoke <java.awt.PopupMenu: void <init>()>"->"push 1";
+    "staticput <Parameters: boolean PopupOK>"
+    "push 1"->"staticput <Parameters: boolean PopupOK>";
+    "goto staticget <Parameters: boolean PopupOK>"
+    "staticput <Parameters: boolean PopupOK>"->"goto staticget <Parameters: boolean PopupOK>";
+    "goto staticget <Parameters: boolean PopupOK>"->"staticget <Parameters: boolean PopupOK>";
+    "ifne staticget <Parameters: java.applet.Applet applet>"
+    "staticget <Parameters: boolean PopupOK>"->"ifne staticget <Parameters: java.applet.Applet applet>";
+    "new java.awt.Panel"
+    "ifne staticget <Parameters: java.applet.Applet applet>"->"new java.awt.Panel";
+    "store.r $r10"
+    "new java.awt.Panel"->"store.r $r10";
+    "load.r $r10"
+    "store.r $r10"->"load.r $r10";
+    "specialinvoke <java.awt.Panel: void <init>()>"
+    "load.r $r10"->"specialinvoke <java.awt.Panel: void <init>()>";
+    "specialinvoke <java.awt.Panel: void <init>()>"->"load.r $r10";
+    "new java.awt.FlowLayout"
+    "load.r $r10"->"new java.awt.FlowLayout";
+    "new java.awt.FlowLayout"->"dup1.r";
+    "dup1.r"->"push 1";
+    "specialinvoke <java.awt.FlowLayout: void <init>(int)>"
+    "push 1"->"specialinvoke <java.awt.FlowLayout: void <init>(int)>";
+    "specialinvoke <java.awt.FlowLayout: void <init>(int)>"->"virtualinvoke <java.awt.Container: void setLayout(java.awt.LayoutManager)>";
+    "virtualinvoke <java.awt.Container: void setLayout(java.awt.LayoutManager)>"->"load.r $r10";
+    "load.r $r10"->"staticget <Parameters: java.awt.Color chartFGColor>";
+    "staticget <Parameters: java.awt.Color chartFGColor>"->"virtualinvoke <java.awt.Component: void setBackground(java.awt.Color)>";
+    "virtualinvoke <java.awt.Component: void setBackground(java.awt.Color)>"->"load.r $r10";
+    "load.r $r10"->"staticget <Parameters: java.awt.Color chartBGColor>";
+    "staticget <Parameters: java.awt.Color chartBGColor>"->"virtualinvoke <java.awt.Component: void setForeground(java.awt.Color)>";
+    "new java.awt.Choice"
+    "virtualinvoke <java.awt.Component: void setForeground(java.awt.Color)>"->"new java.awt.Choice";
+    "store.r $r14"
+    "new java.awt.Choice"->"store.r $r14";
+    "load.r $r14"
+    "store.r $r14"->"load.r $r14";
+    "specialinvoke <java.awt.Choice: void <init>()>"
+    "load.r $r14"->"specialinvoke <java.awt.Choice: void <init>()>";
+    "specialinvoke <java.awt.Choice: void <init>()>"->"load.r $r14";
+    "load.r $r14"->"staticget <Parameters: java.awt.Color chartFGColor>";
+    "staticget <Parameters: java.awt.Color chartFGColor>"->"virtualinvoke <java.awt.Component: void setForeground(java.awt.Color)>";
+    "virtualinvoke <java.awt.Component: void setForeground(java.awt.Color)>"->"load.r $r14";
+    "push \"Chart Type\""
+    "load.r $r14"->"push \"Chart Type\"";
+    "virtualinvoke <java.awt.Choice: void addItem(java.lang.String)>"
+    "push \"Chart Type\""->"virtualinvoke <java.awt.Choice: void addItem(java.lang.String)>";
+    "virtualinvoke <java.awt.Choice: void addItem(java.lang.String)>"->"load.r $r14";
+    "push \"----------\""
+    "load.r $r14"->"push \"----------\"";
+    "push \"----------\""->"virtualinvoke <java.awt.Choice: void addItem(java.lang.String)>";
+    "virtualinvoke <java.awt.Choice: void addItem(java.lang.String)>"->"load.r $r14";
+    "push \"Bar\""
+    "load.r $r14"->"push \"Bar\"";
+    "push \"Bar\""->"virtualinvoke <java.awt.Choice: void addItem(java.lang.String)>";
+    "virtualinvoke <java.awt.Choice: void addItem(java.lang.String)>"->"load.r $r14";
+    "push \"Candle\""
+    "load.r $r14"->"push \"Candle\"";
+    "push \"Candle\""->"virtualinvoke <java.awt.Choice: void addItem(java.lang.String)>";
+    "virtualinvoke <java.awt.Choice: void addItem(java.lang.String)>"->"load.r $r14";
+    "push \"Line\""
+    "load.r $r14"->"push \"Line\"";
+    "push \"Line\""->"virtualinvoke <java.awt.Choice: void addItem(java.lang.String)>";
+    "virtualinvoke <java.awt.Choice: void addItem(java.lang.String)>"->"load.r $r10";
+    "load.r $r10"->"load.r $r14";
+    "virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>"
+    "load.r $r14"->"virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>";
+    "pop"
+    "virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>"->"pop";
+    "pop"->"new java.awt.Choice";
+    "new java.awt.Choice"->"store.r $r14";
+    "store.r $r14"->"load.r $r14";
+    "load.r $r14"->"specialinvoke <java.awt.Choice: void <init>()>";
+    "specialinvoke <java.awt.Choice: void <init>()>"->"load.r $r14";
+    "load.r $r14"->"staticget <Parameters: java.awt.Color chartFGColor>";
+    "staticget <Parameters: java.awt.Color chartFGColor>"->"virtualinvoke <java.awt.Component: void setForeground(java.awt.Color)>";
+    "virtualinvoke <java.awt.Component: void setForeground(java.awt.Color)>"->"load.r $r14";
+    "push \"Cursor\""
+    "load.r $r14"->"push \"Cursor\"";
+    "push \"Cursor\""->"virtualinvoke <java.awt.Choice: void addItem(java.lang.String)>";
+    "virtualinvoke <java.awt.Choice: void addItem(java.lang.String)>"->"load.r $r14";
+    "push \"------\""
+    "load.r $r14"->"push \"------\"";
+    "push \"------\""->"virtualinvoke <java.awt.Choice: void addItem(java.lang.String)>";
+    "virtualinvoke <java.awt.Choice: void addItem(java.lang.String)>"->"load.r $r14";
+    "push \"+\""
+    "load.r $r14"->"push \"+\"";
+    "push \"+\""->"virtualinvoke <java.awt.Choice: void addItem(java.lang.String)>";
+    "virtualinvoke <java.awt.Choice: void addItem(java.lang.String)>"->"load.r $r14";
+    "push \"|\""
+    "load.r $r14"->"push \"|\"";
+    "push \"|\""->"virtualinvoke <java.awt.Choice: void addItem(java.lang.String)>";
+    "virtualinvoke <java.awt.Choice: void addItem(java.lang.String)>"->"load.r $r14";
+    "push \"-\""
+    "load.r $r14"->"push \"-\"";
+    "push \"-\""->"virtualinvoke <java.awt.Choice: void addItem(java.lang.String)>";
+    "virtualinvoke <java.awt.Choice: void addItem(java.lang.String)>"->"load.r $r14";
+    "push \"none\""
+    "load.r $r14"->"push \"none\"";
+    "push \"none\""->"virtualinvoke <java.awt.Choice: void addItem(java.lang.String)>";
+    "virtualinvoke <java.awt.Choice: void addItem(java.lang.String)>"->"load.r $r10";
+    "load.r $r10"->"load.r $r14";
+    "load.r $r14"->"virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>";
+    "virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>"->"pop";
+    "pop"->"new java.awt.Choice";
+    "new java.awt.Choice"->"store.r $r14";
+    "store.r $r14"->"load.r $r14";
+    "load.r $r14"->"specialinvoke <java.awt.Choice: void <init>()>";
+    "specialinvoke <java.awt.Choice: void <init>()>"->"load.r $r14";
+    "load.r $r14"->"staticget <Parameters: java.awt.Color chartFGColor>";
+    "staticget <Parameters: java.awt.Color chartFGColor>"->"virtualinvoke <java.awt.Component: void setForeground(java.awt.Color)>";
+    "virtualinvoke <java.awt.Component: void setForeground(java.awt.Color)>"->"load.r $r14";
+    "push \"Tools\""
+    "load.r $r14"->"push \"Tools\"";
+    "push \"Tools\""->"virtualinvoke <java.awt.Choice: void addItem(java.lang.String)>";
+    "virtualinvoke <java.awt.Choice: void addItem(java.lang.String)>"->"load.r $r14";
+    "push \"-----\""
+    "load.r $r14"->"push \"-----\"";
+    "push \"-----\""->"virtualinvoke <java.awt.Choice: void addItem(java.lang.String)>";
+    "virtualinvoke <java.awt.Choice: void addItem(java.lang.String)>"->"load.r $r14";
+    "push \"Unzoom\""
+    "load.r $r14"->"push \"Unzoom\"";
+    "push \"Unzoom\""->"virtualinvoke <java.awt.Choice: void addItem(java.lang.String)>";
+    "virtualinvoke <java.awt.Choice: void addItem(java.lang.String)>"->"load.r $r14";
+    "push \"Refresh\""
+    "load.r $r14"->"push \"Refresh\"";
+    "push \"Refresh\""->"virtualinvoke <java.awt.Choice: void addItem(java.lang.String)>";
+    "virtualinvoke <java.awt.Choice: void addItem(java.lang.String)>"->"load.r $r10";
+    "load.r $r10"->"load.r $r14";
+    "load.r $r14"->"virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>";
+    "virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>"->"pop";
+    "pop"->"new java.awt.Choice";
+    "new java.awt.Choice"->"store.r $r14";
+    "store.r $r14"->"load.r $r14";
+    "load.r $r14"->"specialinvoke <java.awt.Choice: void <init>()>";
+    "specialinvoke <java.awt.Choice: void <init>()>"->"load.r $r14";
+    "load.r $r14"->"staticget <Parameters: java.awt.Color chartFGColor>";
+    "staticget <Parameters: java.awt.Color chartFGColor>"->"virtualinvoke <java.awt.Component: void setForeground(java.awt.Color)>";
+    "virtualinvoke <java.awt.Component: void setForeground(java.awt.Color)>"->"load.r $r14";
+    "push \"Trend Line\""
+    "load.r $r14"->"push \"Trend Line\"";
+    "push \"Trend Line\""->"virtualinvoke <java.awt.Choice: void addItem(java.lang.String)>";
+    "virtualinvoke <java.awt.Choice: void addItem(java.lang.String)>"->"load.r $r14";
+    "load.r $r14"->"push \"----------\"";
+    "push \"----------\""->"virtualinvoke <java.awt.Choice: void addItem(java.lang.String)>";
+    "virtualinvoke <java.awt.Choice: void addItem(java.lang.String)>"->"load.r $r14";
+    "push \"Remove All\""
+    "load.r $r14"->"push \"Remove All\"";
+    "push \"Remove All\""->"virtualinvoke <java.awt.Choice: void addItem(java.lang.String)>";
+    "virtualinvoke <java.awt.Choice: void addItem(java.lang.String)>"->"load.r $r14";
+    "push \"Remove Last\""
+    "load.r $r14"->"push \"Remove Last\"";
+    "push \"Remove Last\""->"virtualinvoke <java.awt.Choice: void addItem(java.lang.String)>";
+    "virtualinvoke <java.awt.Choice: void addItem(java.lang.String)>"->"load.r $r10";
+    "load.r $r10"->"load.r $r14";
+    "load.r $r14"->"virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>";
+    "virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>"->"pop";
+    "pop"->"new java.awt.Choice";
+    "new java.awt.Choice"->"store.r $r14";
+    "store.r $r14"->"load.r $r14";
+    "load.r $r14"->"specialinvoke <java.awt.Choice: void <init>()>";
+    "specialinvoke <java.awt.Choice: void <init>()>"->"load.r $r14";
+    "load.r $r14"->"staticget <Parameters: java.awt.Color chartFGColor>";
+    "staticget <Parameters: java.awt.Color chartFGColor>"->"virtualinvoke <java.awt.Component: void setForeground(java.awt.Color)>";
+    "virtualinvoke <java.awt.Component: void setForeground(java.awt.Color)>"->"load.r $r14";
+    "push \"Indicators\""
+    "load.r $r14"->"push \"Indicators\"";
+    "push \"Indicators\""->"virtualinvoke <java.awt.Choice: void addItem(java.lang.String)>";
+    "virtualinvoke <java.awt.Choice: void addItem(java.lang.String)>"->"load.r $r14";
+    "load.r $r14"->"push \"----------\"";
+    "push \"----------\""->"virtualinvoke <java.awt.Choice: void addItem(java.lang.String)>";
+    "virtualinvoke <java.awt.Choice: void addItem(java.lang.String)>"->"load.r $r14";
+    "push \"Moving Average\""
+    "load.r $r14"->"push \"Moving Average\"";
+    "push \"Moving Average\""->"virtualinvoke <java.awt.Choice: void addItem(java.lang.String)>";
+    "virtualinvoke <java.awt.Choice: void addItem(java.lang.String)>"->"load.r $r14";
+    "push \"EMA\""
+    "load.r $r14"->"push \"EMA\"";
+    "push \"EMA\""->"virtualinvoke <java.awt.Choice: void addItem(java.lang.String)>";
+    "virtualinvoke <java.awt.Choice: void addItem(java.lang.String)>"->"load.r $r14";
+    "push \"RSI\""
+    "load.r $r14"->"push \"RSI\"";
+    "push \"RSI\""->"virtualinvoke <java.awt.Choice: void addItem(java.lang.String)>";
+    "virtualinvoke <java.awt.Choice: void addItem(java.lang.String)>"->"load.r $r14";
+    "push \"ROC\""
+    "load.r $r14"->"push \"ROC\"";
+    "push \"ROC\""->"virtualinvoke <java.awt.Choice: void addItem(java.lang.String)>";
+    "virtualinvoke <java.awt.Choice: void addItem(java.lang.String)>"->"load.r $r14";
+    "push \"MACD\""
+    "load.r $r14"->"push \"MACD\"";
+    "push \"MACD\""->"virtualinvoke <java.awt.Choice: void addItem(java.lang.String)>";
+    "virtualinvoke <java.awt.Choice: void addItem(java.lang.String)>"->"load.r $r14";
+    "push \"Bollinger Band\""
+    "load.r $r14"->"push \"Bollinger Band\"";
+    "push \"Bollinger Band\""->"virtualinvoke <java.awt.Choice: void addItem(java.lang.String)>";
+    "virtualinvoke <java.awt.Choice: void addItem(java.lang.String)>"->"load.r $r14";
+    "push \"On Balance Volume\""
+    "load.r $r14"->"push \"On Balance Volume\"";
+    "push \"On Balance Volume\""->"virtualinvoke <java.awt.Choice: void addItem(java.lang.String)>";
+    "virtualinvoke <java.awt.Choice: void addItem(java.lang.String)>"->"load.r $r14";
+    "push \"Accumulation Distribution\""
+    "load.r $r14"->"push \"Accumulation Distribution\"";
+    "push \"Accumulation Distribution\""->"virtualinvoke <java.awt.Choice: void addItem(java.lang.String)>";
+    "virtualinvoke <java.awt.Choice: void addItem(java.lang.String)>"->"load.r $r14";
+    "push \"Commodity Channel Index\""
+    "load.r $r14"->"push \"Commodity Channel Index\"";
+    "push \"Commodity Channel Index\""->"virtualinvoke <java.awt.Choice: void addItem(java.lang.String)>";
+    "virtualinvoke <java.awt.Choice: void addItem(java.lang.String)>"->"load.r $r14";
+    "push \"Erase All\""
+    "load.r $r14"->"push \"Erase All\"";
+    "push \"Erase All\""->"virtualinvoke <java.awt.Choice: void addItem(java.lang.String)>";
+    "virtualinvoke <java.awt.Choice: void addItem(java.lang.String)>"->"load.r $r14";
+    "push \"Erase Last\""
+    "load.r $r14"->"push \"Erase Last\"";
+    "push \"Erase Last\""->"virtualinvoke <java.awt.Choice: void addItem(java.lang.String)>";
+    "virtualinvoke <java.awt.Choice: void addItem(java.lang.String)>"->"load.r $r10";
+    "load.r $r10"->"load.r $r14";
+    "load.r $r14"->"virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>";
+    "virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>"->"pop";
+    "pop"->"load.r r0";
+    "push \"North\""
+    "load.r r0"->"push \"North\"";
+    "push \"North\""->"load.r $r10";
+    "virtualinvoke <java.awt.Container: java.awt.Component add(java.lang.String,java.awt.Component)>"
+    "load.r $r10"->"virtualinvoke <java.awt.Container: java.awt.Component add(java.lang.String,java.awt.Component)>";
+    "virtualinvoke <java.awt.Container: java.awt.Component add(java.lang.String,java.awt.Component)>"->"pop";
+    "staticget <Parameters: java.applet.Applet applet>"
+    "pop"->"staticget <Parameters: java.applet.Applet applet>";
+    "push \"icode\""
+    "staticget <Parameters: java.applet.Applet applet>"->"push \"icode\"";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"
+    "push \"icode\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "ifnull return"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"ifnull return";
+    "ifnull return"->"load.r r0";
+    "new Plotter"
+    "load.r r0"->"new Plotter";
+    "new Plotter"->"dup1.r";
+    "staticget <Parameters: java.lang.String paramString>"
+    "dup1.r"->"staticget <Parameters: java.lang.String paramString>";
+    "specialinvoke <Plotter: void <init>(java.lang.String)>"
+    "staticget <Parameters: java.lang.String paramString>"->"specialinvoke <Plotter: void <init>(java.lang.String)>";
+    "fieldput <Chart: Plotter currentPlotter>"
+    "specialinvoke <Plotter: void <init>(java.lang.String)>"->"fieldput <Chart: Plotter currentPlotter>";
+    "fieldput <Chart: Plotter currentPlotter>"->"load.r r0";
+    "push \"Center\""
+    "load.r r0"->"push \"Center\"";
+    "push \"Center\""->"load.r r0";
+    "fieldget <Chart: Plotter currentPlotter>"
+    "load.r r0"->"fieldget <Chart: Plotter currentPlotter>";
+    "fieldget <Chart: Plotter currentPlotter>"->"virtualinvoke <java.awt.Container: java.awt.Component add(java.lang.String,java.awt.Component)>";
+    "virtualinvoke <java.awt.Container: java.awt.Component add(java.lang.String,java.awt.Component)>"->"pop";
+    "goto return"
+    "pop"->"goto return";
+    "return"
+    "goto return"->"return";
+    "ifne staticget <Parameters: java.applet.Applet applet>"->"staticget <Parameters: java.applet.Applet applet>";
+    "staticget <Parameters: java.applet.Applet applet>"->"push \"icode\"";
+    "push \"icode\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"ifnull return";
+    "ifnull return"->"load.r r0";
+    "new PlotterPopup"
+    "load.r r0"->"new PlotterPopup";
+    "new PlotterPopup"->"dup1.r";
+    "dup1.r"->"staticget <Parameters: java.lang.String paramString>";
+    "specialinvoke <PlotterPopup: void <init>(java.lang.String)>"
+    "staticget <Parameters: java.lang.String paramString>"->"specialinvoke <PlotterPopup: void <init>(java.lang.String)>";
+    "fieldput <Chart: PlotterPopup currentPlotterPopup>"
+    "specialinvoke <PlotterPopup: void <init>(java.lang.String)>"->"fieldput <Chart: PlotterPopup currentPlotterPopup>";
+    "fieldput <Chart: PlotterPopup currentPlotterPopup>"->"load.r r0";
+    "load.r r0"->"push \"Center\"";
+    "push \"Center\""->"load.r r0";
+    "fieldget <Chart: PlotterPopup currentPlotterPopup>"
+    "load.r r0"->"fieldget <Chart: PlotterPopup currentPlotterPopup>";
+    "fieldget <Chart: PlotterPopup currentPlotterPopup>"->"virtualinvoke <java.awt.Container: java.awt.Component add(java.lang.String,java.awt.Component)>";
+    "virtualinvoke <java.awt.Container: java.awt.Component add(java.lang.String,java.awt.Component)>"->"pop";
+    "specialinvoke <java.awt.PopupMenu: void <init>()>"->"store.r $r10";
+    "push 0"
+    "store.r $r10"->"push 0";
+    "push 0"->"staticput <Parameters: boolean PopupOK>";
+    "staticput <Parameters: boolean PopupOK>"->"goto staticget <Parameters: boolean PopupOK>";
+}

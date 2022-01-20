@@ -1,0 +1,39 @@
+digraph "" {
+    "r0 := @this: Applet3"
+    "load.r r0"
+    "r0 := @this: Applet3"->"load.r r0";
+    "new java.awt.Color"
+    "load.r r0"->"new java.awt.Color";
+    "dup1.r"
+    "new java.awt.Color"->"dup1.r";
+    "push 6250640"
+    "dup1.r"->"push 6250640";
+    "specialinvoke <java.awt.Color: void <init>(int)>"
+    "push 6250640"->"specialinvoke <java.awt.Color: void <init>(int)>";
+    "virtualinvoke <java.awt.Component: void setBackground(java.awt.Color)>"
+    "specialinvoke <java.awt.Color: void <init>(int)>"->"virtualinvoke <java.awt.Component: void setBackground(java.awt.Color)>";
+    "virtualinvoke <java.awt.Component: void setBackground(java.awt.Color)>"->"load.r r0";
+    "push 3"
+    "load.r r0"->"push 3";
+    "fieldput <Applet3: int StepC>"
+    "push 3"->"fieldput <Applet3: int StepC>";
+    "fieldput <Applet3: int StepC>"->"load.r r0";
+    "push 400.0"
+    "load.r r0"->"push 400.0";
+    "staticinvoke <java.lang.Math: double random()>"
+    "push 400.0"->"staticinvoke <java.lang.Math: double random()>";
+    "mul.d"
+    "staticinvoke <java.lang.Math: double random()>"->"mul.d";
+    "d2i"
+    "mul.d"->"d2i";
+    "fieldput <Applet3: int RndE>"
+    "d2i"->"fieldput <Applet3: int RndE>";
+    "fieldput <Applet3: int RndE>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "fieldget <Applet3: int RndE>"
+    "load.r r0"->"fieldget <Applet3: int RndE>";
+    "fieldput <Applet3: int NCounter>"
+    "fieldget <Applet3: int RndE>"->"fieldput <Applet3: int NCounter>";
+    "return"
+    "fieldput <Applet3: int NCounter>"->"return";
+}

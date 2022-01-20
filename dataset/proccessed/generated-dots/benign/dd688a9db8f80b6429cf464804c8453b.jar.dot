@@ -1,0 +1,18 @@
+digraph "" {
+    "r0 := @this: ecm"
+    "load.r r0"
+    "r0 := @this: ecm"->"load.r r0";
+    "fieldget <ecm: boolean onlyFactoring>"
+    "load.r r0"->"fieldget <ecm: boolean onlyFactoring>";
+    "ifeq return"
+    "fieldget <ecm: boolean onlyFactoring>"->"ifeq return";
+    "ifeq return"->"load.r r0";
+    "push \"Type number or numerical expression to factor here and press Return:\""
+    "load.r r0"->"push \"Type number or numerical expression to factor here and press Return:\"";
+    "push 1"
+    "push \"Type number or numerical expression to factor here and press Return:\""->"push 1";
+    "virtualinvoke <ecm: void layout(java.lang.String,boolean)>"
+    "push 1"->"virtualinvoke <ecm: void layout(java.lang.String,boolean)>";
+    "return"
+    "virtualinvoke <ecm: void layout(java.lang.String,boolean)>"->"return";
+}

@@ -1,0 +1,144 @@
+digraph "" {
+    "r0 := @this: TG"
+    "push null"
+    "r0 := @this: TG"->"push null";
+    "staticput <TG: java.awt.Frame tgFrame>"
+    "push null"->"staticput <TG: java.awt.Frame tgFrame>";
+    "load.r r0"
+    "staticput <TG: java.awt.Frame tgFrame>"->"load.r r0";
+    "staticput <TG: TG tgBaseContainer>"
+    "load.r r0"->"staticput <TG: TG tgBaseContainer>";
+    "staticget <TG: TG tgBaseContainer>"
+    "staticput <TG: TG tgBaseContainer>"->"staticget <TG: TG tgBaseContainer>";
+    "staticget <TG: TG tgBaseContainer>"->"push null";
+    "virtualinvoke <TG: void setLayout(java.awt.LayoutManager)>"
+    "push null"->"virtualinvoke <TG: void setLayout(java.awt.LayoutManager)>";
+    "virtualinvoke <TG: void setLayout(java.awt.LayoutManager)>"->"load.r r0";
+    "virtualinvoke <java.lang.Object: java.lang.Class getClass()>"
+    "load.r r0"->"virtualinvoke <java.lang.Object: java.lang.Class getClass()>";
+    "virtualinvoke <java.lang.Class: java.lang.ClassLoader getClassLoader()>"
+    "virtualinvoke <java.lang.Object: java.lang.Class getClass()>"->"virtualinvoke <java.lang.Class: java.lang.ClassLoader getClassLoader()>";
+    "staticput <TG: java.lang.ClassLoader classLoader>"
+    "virtualinvoke <java.lang.Class: java.lang.ClassLoader getClassLoader()>"->"staticput <TG: java.lang.ClassLoader classLoader>";
+    "staticput <TG: java.lang.ClassLoader classLoader>"->"load.r r0";
+    "specialinvoke <TG: void getAppletParameters()>"
+    "load.r r0"->"specialinvoke <TG: void getAppletParameters()>";
+    "staticinvoke <TG: void convertParamsToDesireds()>"
+    "specialinvoke <TG: void getAppletParameters()>"->"staticinvoke <TG: void convertParamsToDesireds()>";
+    "staticinvoke <TG: void initFont()>"
+    "staticinvoke <TG: void convertParamsToDesireds()>"->"staticinvoke <TG: void initFont()>";
+    "staticinvoke <TG: void initFont()>"->"load.r r0";
+    "staticget <TG: java.awt.Font baseFont>"
+    "load.r r0"->"staticget <TG: java.awt.Font baseFont>";
+    "virtualinvoke <TG: void setFont(java.awt.Font)>"
+    "staticget <TG: java.awt.Font baseFont>"->"virtualinvoke <TG: void setFont(java.awt.Font)>";
+    "new java.awt.PopupMenu"
+    "virtualinvoke <TG: void setFont(java.awt.Font)>"->"new java.awt.PopupMenu";
+    "dup1.r"
+    "new java.awt.PopupMenu"->"dup1.r";
+    "specialinvoke <java.awt.PopupMenu: void <init>()>"
+    "dup1.r"->"specialinvoke <java.awt.PopupMenu: void <init>()>";
+    "staticput <TG: java.awt.PopupMenu appletMenu>"
+    "specialinvoke <java.awt.PopupMenu: void <init>()>"->"staticput <TG: java.awt.PopupMenu appletMenu>";
+    "staticget <TG: java.awt.PopupMenu appletMenu>"
+    "staticput <TG: java.awt.PopupMenu appletMenu>"->"staticget <TG: java.awt.PopupMenu appletMenu>";
+    "staticinvoke <TG: java.awt.Menu buildAppletFileMenu()>"
+    "staticget <TG: java.awt.PopupMenu appletMenu>"->"staticinvoke <TG: java.awt.Menu buildAppletFileMenu()>";
+    "virtualinvoke <java.awt.PopupMenu: java.awt.MenuItem add(java.awt.MenuItem)>"
+    "staticinvoke <TG: java.awt.Menu buildAppletFileMenu()>"->"virtualinvoke <java.awt.PopupMenu: java.awt.MenuItem add(java.awt.MenuItem)>";
+    "pop"
+    "virtualinvoke <java.awt.PopupMenu: java.awt.MenuItem add(java.awt.MenuItem)>"->"pop";
+    "pop"->"staticget <TG: java.awt.PopupMenu appletMenu>";
+    "staticinvoke <TG: java.awt.Menu buildEditMenu()>"
+    "staticget <TG: java.awt.PopupMenu appletMenu>"->"staticinvoke <TG: java.awt.Menu buildEditMenu()>";
+    "staticinvoke <TG: java.awt.Menu buildEditMenu()>"->"virtualinvoke <java.awt.PopupMenu: java.awt.MenuItem add(java.awt.MenuItem)>";
+    "virtualinvoke <java.awt.PopupMenu: java.awt.MenuItem add(java.awt.MenuItem)>"->"pop";
+    "pop"->"staticget <TG: java.awt.PopupMenu appletMenu>";
+    "staticinvoke <TG: java.awt.Menu buildWindowMenu()>"
+    "staticget <TG: java.awt.PopupMenu appletMenu>"->"staticinvoke <TG: java.awt.Menu buildWindowMenu()>";
+    "staticinvoke <TG: java.awt.Menu buildWindowMenu()>"->"virtualinvoke <java.awt.PopupMenu: java.awt.MenuItem add(java.awt.MenuItem)>";
+    "virtualinvoke <java.awt.PopupMenu: java.awt.MenuItem add(java.awt.MenuItem)>"->"pop";
+    "pop"->"staticget <TG: java.awt.PopupMenu appletMenu>";
+    "virtualinvoke <java.awt.PopupMenu: void addSeparator()>"
+    "staticget <TG: java.awt.PopupMenu appletMenu>"->"virtualinvoke <java.awt.PopupMenu: void addSeparator()>";
+    "virtualinvoke <java.awt.PopupMenu: void addSeparator()>"->"staticget <TG: java.awt.PopupMenu appletMenu>";
+    "staticinvoke <TG: java.awt.Menu buildHelpMenu()>"
+    "staticget <TG: java.awt.PopupMenu appletMenu>"->"staticinvoke <TG: java.awt.Menu buildHelpMenu()>";
+    "staticinvoke <TG: java.awt.Menu buildHelpMenu()>"->"virtualinvoke <java.awt.PopupMenu: java.awt.MenuItem add(java.awt.MenuItem)>";
+    "virtualinvoke <java.awt.PopupMenu: java.awt.MenuItem add(java.awt.MenuItem)>"->"pop";
+    "pop"->"staticget <TG: TG tgBaseContainer>";
+    "staticget <TG: TG tgBaseContainer>"->"staticget <TG: java.awt.PopupMenu appletMenu>";
+    "virtualinvoke <TG: void add(java.awt.PopupMenu)>"
+    "staticget <TG: java.awt.PopupMenu appletMenu>"->"virtualinvoke <TG: void add(java.awt.PopupMenu)>";
+    "staticinvoke <TG: void initBaseContainer()>"
+    "virtualinvoke <TG: void add(java.awt.PopupMenu)>"->"staticinvoke <TG: void initBaseContainer()>";
+    "staticinvoke <TG: java.awt.Dimension getDesiredDimensions()>"
+    "staticinvoke <TG: void initBaseContainer()>"->"staticinvoke <TG: java.awt.Dimension getDesiredDimensions()>";
+    "staticinvoke <TG: java.awt.Dimension getDesiredDimensions()>"->"dup1.r";
+    "dup1.r"->"staticget <TG: TG tgBaseContainer>";
+    "virtualinvoke <TG: java.awt.Insets getInsets()>"
+    "staticget <TG: TG tgBaseContainer>"->"virtualinvoke <TG: java.awt.Insets getInsets()>";
+    "store.r r2"
+    "virtualinvoke <TG: java.awt.Insets getInsets()>"->"store.r r2";
+    "fieldget <java.awt.Dimension: int height>"
+    "store.r r2"->"fieldget <java.awt.Dimension: int height>";
+    "load.r r2"
+    "fieldget <java.awt.Dimension: int height>"->"load.r r2";
+    "fieldget <java.awt.Insets: int top>"
+    "load.r r2"->"fieldget <java.awt.Insets: int top>";
+    "add.i"
+    "fieldget <java.awt.Insets: int top>"->"add.i";
+    "add.i"->"load.r r2";
+    "fieldget <java.awt.Insets: int bottom>"
+    "load.r r2"->"fieldget <java.awt.Insets: int bottom>";
+    "fieldget <java.awt.Insets: int bottom>"->"add.i";
+    "store.i r0"
+    "add.i"->"store.i r0";
+    "fieldget <java.awt.Dimension: int width>"
+    "store.i r0"->"fieldget <java.awt.Dimension: int width>";
+    "fieldget <java.awt.Dimension: int width>"->"load.r r2";
+    "fieldget <java.awt.Insets: int left>"
+    "load.r r2"->"fieldget <java.awt.Insets: int left>";
+    "fieldget <java.awt.Insets: int left>"->"add.i";
+    "add.i"->"load.r r2";
+    "fieldget <java.awt.Insets: int right>"
+    "load.r r2"->"fieldget <java.awt.Insets: int right>";
+    "fieldget <java.awt.Insets: int right>"->"add.i";
+    "store.i r2"
+    "add.i"->"store.i r2";
+    "store.i r2"->"staticget <TG: TG tgBaseContainer>";
+    "virtualinvoke <TG: java.awt.Dimension getSize()>"
+    "staticget <TG: TG tgBaseContainer>"->"virtualinvoke <TG: java.awt.Dimension getSize()>";
+    "store.r r3"
+    "virtualinvoke <TG: java.awt.Dimension getSize()>"->"store.r r3";
+    "load.r r3"
+    "store.r r3"->"load.r r3";
+    "load.r r3"->"fieldget <java.awt.Dimension: int height>";
+    "load.i r0"
+    "fieldget <java.awt.Dimension: int height>"->"load.i r0";
+    "ifcmpne.i staticinvoke <TG: void adjustSubwindowSizes()>"
+    "load.i r0"->"ifcmpne.i staticinvoke <TG: void adjustSubwindowSizes()>";
+    "ifcmpne.i staticinvoke <TG: void adjustSubwindowSizes()>"->"load.r r3";
+    "load.r r3"->"fieldget <java.awt.Dimension: int width>";
+    "load.i r2"
+    "fieldget <java.awt.Dimension: int width>"->"load.i r2";
+    "ifcmpeq.i push 1"
+    "load.i r2"->"ifcmpeq.i push 1";
+    "staticinvoke <TG: void adjustSubwindowSizes()>"
+    "ifcmpeq.i push 1"->"staticinvoke <TG: void adjustSubwindowSizes()>";
+    "push 1"
+    "staticinvoke <TG: void adjustSubwindowSizes()>"->"push 1";
+    "staticput <TG: boolean needDoLayout>"
+    "push 1"->"staticput <TG: boolean needDoLayout>";
+    "staticput <TG: boolean needDoLayout>"->"staticget <TG: TG tgBaseContainer>";
+    "virtualinvoke <TG: void validate()>"
+    "staticget <TG: TG tgBaseContainer>"->"virtualinvoke <TG: void validate()>";
+    "push 10"
+    "virtualinvoke <TG: void validate()>"->"push 10";
+    "newarray"
+    "push 10"->"newarray";
+    "staticput <TG: Task[] timerQueue>"
+    "newarray"->"staticput <TG: Task[] timerQueue>";
+    "return"
+    "staticput <TG: Task[] timerQueue>"->"return";
+}

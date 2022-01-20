@@ -1,0 +1,1606 @@
+digraph "" {
+    "r0 := @this: stmenu"
+    "load.r r0"
+    "r0 := @this: stmenu"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "virtualinvoke <java.awt.Component: java.awt.Dimension size()>"
+    "load.r r0"->"virtualinvoke <java.awt.Component: java.awt.Dimension size()>";
+    "fieldput <stmenu: java.awt.Dimension d>"
+    "virtualinvoke <java.awt.Component: java.awt.Dimension size()>"->"fieldput <stmenu: java.awt.Dimension d>";
+    "push 0"
+    "fieldput <stmenu: java.awt.Dimension d>"->"push 0";
+    "store.i i65"
+    "push 0"->"store.i i65";
+    "store.i i65"->"push 0";
+    "store.i i66"
+    "push 0"->"store.i i66";
+    "store.i i66"->"load.r r0";
+    "push \"Notice\""
+    "load.r r0"->"push \"Notice\"";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"
+    "push \"Notice\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "store.r $i31"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"store.r $i31";
+    "load.r $i31"
+    "store.r $i31"->"load.r $i31";
+    "ifnull load.r r0"
+    "load.r $i31"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r $i31";
+    "load.r $i31"->"load.r r0";
+    "virtualinvoke <java.applet.Applet: java.net.URL getDocumentBase()>"
+    "load.r r0"->"virtualinvoke <java.applet.Applet: java.net.URL getDocumentBase()>";
+    "staticinvoke <evalkey: java.lang.String getKey(java.lang.String,java.net.URL)>"
+    "virtualinvoke <java.applet.Applet: java.net.URL getDocumentBase()>"->"staticinvoke <evalkey: java.lang.String getKey(java.lang.String,java.net.URL)>";
+    "store.r r2"
+    "staticinvoke <evalkey: java.lang.String getKey(java.lang.String,java.net.URL)>"->"store.r r2";
+    "load.r r2"
+    "store.r r2"->"load.r r2";
+    "push \"SmartTree Menu (Developer Version), Copyright (c) 2000, OpenCube Inc.\""
+    "load.r r2"->"push \"SmartTree Menu (Developer Version), Copyright (c) 2000, OpenCube Inc.\"";
+    "virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>"
+    "push \"SmartTree Menu (Developer Version), Copyright (c) 2000, OpenCube Inc.\""->"virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>";
+    "ifne load.r r0"
+    "virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>"->"ifne load.r r0";
+    "ifne load.r r0"->"load.r r2";
+    "push \"-1\""
+    "load.r r2"->"push \"-1\"";
+    "push \"-1\""->"virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>";
+    "ifeq load.r r0"
+    "virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>"->"ifeq load.r r0";
+    "ifeq load.r r0"->"load.r r0";
+    "push \"Incorrect Base URL Registration\""
+    "load.r r0"->"push \"Incorrect Base URL Registration\"";
+    "fieldput <stmenu: java.lang.String m_onsbtext>"
+    "push \"Incorrect Base URL Registration\""->"fieldput <stmenu: java.lang.String m_onsbtext>";
+    "return"
+    "fieldput <stmenu: java.lang.String m_onsbtext>"->"return";
+    "ifeq load.r r0"->"load.r r0";
+    "push \"Incorrect Copyright Notice in \'Notice\' tag\""
+    "load.r r0"->"push \"Incorrect Copyright Notice in \'Notice\' tag\"";
+    "push \"Incorrect Copyright Notice in \'Notice\' tag\""->"fieldput <stmenu: java.lang.String m_onsbtext>";
+    "fieldput <stmenu: java.lang.String m_onsbtext>"->"return";
+    "ifne load.r r0"->"load.r r0";
+    "push 1"
+    "load.r r0"->"push 1";
+    "fieldput <stmenu: boolean tag>"
+    "push 1"->"fieldput <stmenu: boolean tag>";
+    "goto new java.util.Properties"
+    "fieldput <stmenu: boolean tag>"->"goto new java.util.Properties";
+    "new java.util.Properties"
+    "goto new java.util.Properties"->"new java.util.Properties";
+    "new java.util.Properties"->"store.r r2";
+    "store.r r2"->"load.r r2";
+    "specialinvoke <java.util.Properties: void <init>()>"
+    "load.r r2"->"specialinvoke <java.util.Properties: void <init>()>";
+    "specialinvoke <java.util.Properties: void <init>()>"->"load.r r0";
+    "push \"filelocation\""
+    "load.r r0"->"push \"filelocation\"";
+    "push \"filelocation\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"store.r $i31";
+    "store.r $i31"->"load.r $i31";
+    "ifnonnull load.r r2"
+    "load.r $i31"->"ifnonnull load.r r2";
+    "ifnonnull load.r r2"->"load.r r0";
+    "push \"Missing \\\"filelocation\\\" parameter\""
+    "load.r r0"->"push \"Missing \\\"filelocation\\\" parameter\"";
+    "push \"Missing \\\"filelocation\\\" parameter\""->"fieldput <stmenu: java.lang.String m_onsbtext>";
+    "fieldput <stmenu: java.lang.String m_onsbtext>"->"load.r r0";
+    "load.r r0"->"push 0";
+    "push 0"->"fieldput <stmenu: boolean tag>";
+    "fieldput <stmenu: boolean tag>"->"return";
+    "fieldput <stmenu: boolean tag>"->"store.r r2";
+    "store.r r2"->"load.r r0";
+    "new java.lang.StringBuffer"
+    "load.r r0"->"new java.lang.StringBuffer";
+    "dup1.r"
+    "new java.lang.StringBuffer"->"dup1.r";
+    "push \"Error loading param file: \\\"\""
+    "dup1.r"->"push \"Error loading param file: \\\"\"";
+    "specialinvoke <java.lang.StringBuffer: void <init>(java.lang.String)>"
+    "push \"Error loading param file: \\\"\""->"specialinvoke <java.lang.StringBuffer: void <init>(java.lang.String)>";
+    "specialinvoke <java.lang.StringBuffer: void <init>(java.lang.String)>"->"load.r $i31";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"
+    "load.r $i31"->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "push \"\\\"\""
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"push \"\\\"\"";
+    "push \"\\\"\""->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>"
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>"->"fieldput <stmenu: java.lang.String m_onsbtext>";
+    "fieldput <stmenu: java.lang.String m_onsbtext>"->"load.r r0";
+    "load.r r0"->"push 0";
+    "push 0"->"fieldput <stmenu: boolean tag>";
+    "fieldput <stmenu: boolean tag>"->"return";
+    "ifnonnull load.r r2"->"load.r r2";
+    "new java.net.URL"
+    "load.r r2"->"new java.net.URL";
+    "new java.net.URL"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "load.r r0"->"virtualinvoke <java.applet.Applet: java.net.URL getDocumentBase()>";
+    "virtualinvoke <java.applet.Applet: java.net.URL getDocumentBase()>"->"load.r $i31";
+    "specialinvoke <java.net.URL: void <init>(java.net.URL,java.lang.String)>"
+    "load.r $i31"->"specialinvoke <java.net.URL: void <init>(java.net.URL,java.lang.String)>";
+    "virtualinvoke <java.net.URL: java.io.InputStream openStream()>"
+    "specialinvoke <java.net.URL: void <init>(java.net.URL,java.lang.String)>"->"virtualinvoke <java.net.URL: java.io.InputStream openStream()>";
+    "store.r $r62"
+    "virtualinvoke <java.net.URL: java.io.InputStream openStream()>"->"store.r $r62";
+    "load.r $r62"
+    "store.r $r62"->"load.r $r62";
+    "virtualinvoke <java.util.Properties: void load(java.io.InputStream)>"
+    "load.r $r62"->"virtualinvoke <java.util.Properties: void load(java.io.InputStream)>";
+    "virtualinvoke <java.util.Properties: void load(java.io.InputStream)>"->"load.r $r62";
+    "virtualinvoke <java.io.InputStream: void close()>"
+    "load.r $r62"->"virtualinvoke <java.io.InputStream: void close()>";
+    "goto load.r r2"
+    "virtualinvoke <java.io.InputStream: void close()>"->"goto load.r r2";
+    "goto load.r r2"->"load.r r2";
+    "push \"loadmsgcolor\""
+    "load.r r2"->"push \"loadmsgcolor\"";
+    "virtualinvoke <java.util.Properties: java.lang.String getProperty(java.lang.String)>"
+    "push \"loadmsgcolor\""->"virtualinvoke <java.util.Properties: java.lang.String getProperty(java.lang.String)>";
+    "virtualinvoke <java.util.Properties: java.lang.String getProperty(java.lang.String)>"->"store.r $i31";
+    "store.r $i31"->"load.r $i31";
+    "ifnull load.r r2"
+    "load.r $i31"->"ifnull load.r r2";
+    "ifnull load.r r2"->"load.r r0";
+    "load.r r0"->"load.r $i31";
+    "staticinvoke <occcolor: java.awt.Color ConvertColor(java.lang.String)>"
+    "load.r $i31"->"staticinvoke <occcolor: java.awt.Color ConvertColor(java.lang.String)>";
+    "fieldput <stmenu: java.awt.Color m_load_msgcolor>"
+    "staticinvoke <occcolor: java.awt.Color ConvertColor(java.lang.String)>"->"fieldput <stmenu: java.awt.Color m_load_msgcolor>";
+    "fieldput <stmenu: java.awt.Color m_load_msgcolor>"->"load.r r2";
+    "push \"onsbtext\""
+    "load.r r2"->"push \"onsbtext\"";
+    "push \"onsbtext\""->"virtualinvoke <java.util.Properties: java.lang.String getProperty(java.lang.String)>";
+    "virtualinvoke <java.util.Properties: java.lang.String getProperty(java.lang.String)>"->"store.r $i31";
+    "store.r $i31"->"load.r $i31";
+    "load.r $i31"->"ifnull load.r r2";
+    "ifnull load.r r2"->"load.r r0";
+    "load.r r0"->"load.r $i31";
+    "load.r $i31"->"fieldput <stmenu: java.lang.String m_onsbtext>";
+    "fieldput <stmenu: java.lang.String m_onsbtext>"->"load.r r2";
+    "push \"offsbtext\""
+    "load.r r2"->"push \"offsbtext\"";
+    "push \"offsbtext\""->"virtualinvoke <java.util.Properties: java.lang.String getProperty(java.lang.String)>";
+    "virtualinvoke <java.util.Properties: java.lang.String getProperty(java.lang.String)>"->"store.r $i31";
+    "store.r $i31"->"load.r $i31";
+    "load.r $i31"->"ifnull load.r r2";
+    "ifnull load.r r2"->"load.r r0";
+    "load.r r0"->"load.r $i31";
+    "fieldput <stmenu: java.lang.String m_offsbtext>"
+    "load.r $i31"->"fieldput <stmenu: java.lang.String m_offsbtext>";
+    "fieldput <stmenu: java.lang.String m_offsbtext>"->"load.r r2";
+    "push \"loadmsg\""
+    "load.r r2"->"push \"loadmsg\"";
+    "push \"loadmsg\""->"virtualinvoke <java.util.Properties: java.lang.String getProperty(java.lang.String)>";
+    "virtualinvoke <java.util.Properties: java.lang.String getProperty(java.lang.String)>"->"store.r $i31";
+    "store.r $i31"->"load.r $i31";
+    "load.r $i31"->"ifnull load.r r2";
+    "ifnull load.r r2"->"load.r r0";
+    "load.r r0"->"load.r $i31";
+    "fieldput <stmenu: java.lang.String m_load_msg>"
+    "load.r $i31"->"fieldput <stmenu: java.lang.String m_load_msg>";
+    "fieldput <stmenu: java.lang.String m_load_msg>"->"load.r r2";
+    "push \"maintextyoffset\""
+    "load.r r2"->"push \"maintextyoffset\"";
+    "push \"maintextyoffset\""->"virtualinvoke <java.util.Properties: java.lang.String getProperty(java.lang.String)>";
+    "virtualinvoke <java.util.Properties: java.lang.String getProperty(java.lang.String)>"->"store.r $i31";
+    "store.r $i31"->"load.r $i31";
+    "load.r $i31"->"ifnull load.r r2";
+    "ifnull load.r r2"->"load.r r0";
+    "load.r r0"->"load.r $i31";
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"
+    "load.r $i31"->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>";
+    "fieldput <stmenu: int m_maintext_yoffset>"
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"->"fieldput <stmenu: int m_maintext_yoffset>";
+    "fieldput <stmenu: int m_maintext_yoffset>"->"load.r r2";
+    "push \"loadfont\""
+    "load.r r2"->"push \"loadfont\"";
+    "push \"loadfont\""->"virtualinvoke <java.util.Properties: java.lang.String getProperty(java.lang.String)>";
+    "virtualinvoke <java.util.Properties: java.lang.String getProperty(java.lang.String)>"->"store.r $i31";
+    "store.r $i31"->"load.r $i31";
+    "load.r $i31"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r r0";
+    "load.r r0"->"load.r $i31";
+    "push \",\""
+    "load.r $i31"->"push \",\"";
+    "staticinvoke <ocfontc: java.awt.Font getFontSD(java.lang.String,java.lang.String)>"
+    "push \",\""->"staticinvoke <ocfontc: java.awt.Font getFontSD(java.lang.String,java.lang.String)>";
+    "fieldput <stmenu: java.awt.Font m_load_font>"
+    "staticinvoke <ocfontc: java.awt.Font getFontSD(java.lang.String,java.lang.String)>"->"fieldput <stmenu: java.awt.Font m_load_font>";
+    "fieldput <stmenu: java.awt.Font m_load_font>"->"goto load.r r2";
+    "goto load.r r2"->"load.r r2";
+    "push \"loadwhere\""
+    "load.r r2"->"push \"loadwhere\"";
+    "push \"loadwhere\""->"virtualinvoke <java.util.Properties: java.lang.String getProperty(java.lang.String)>";
+    "virtualinvoke <java.util.Properties: java.lang.String getProperty(java.lang.String)>"->"store.r $i31";
+    "store.r $i31"->"load.r $i31";
+    "load.r $i31"->"ifnull load.r r2";
+    "ifnull load.r r2"->"load.r r0";
+    "load.r r0"->"load.r $i31";
+    "fieldput <stmenu: java.lang.String m_loadwhere>"
+    "load.r $i31"->"fieldput <stmenu: java.lang.String m_loadwhere>";
+    "fieldput <stmenu: java.lang.String m_loadwhere>"->"load.r r2";
+    "push \"animatearrows\""
+    "load.r r2"->"push \"animatearrows\"";
+    "push \"animatearrows\""->"virtualinvoke <java.util.Properties: java.lang.String getProperty(java.lang.String)>";
+    "virtualinvoke <java.util.Properties: java.lang.String getProperty(java.lang.String)>"->"store.r $i31";
+    "store.r $i31"->"load.r $i31";
+    "load.r $i31"->"ifnull load.r r2";
+    "ifnull load.r r2"->"load.r r0";
+    "load.r r0"->"load.r $i31";
+    "staticinvoke <java.lang.Boolean: java.lang.Boolean valueOf(java.lang.String)>"
+    "load.r $i31"->"staticinvoke <java.lang.Boolean: java.lang.Boolean valueOf(java.lang.String)>";
+    "virtualinvoke <java.lang.Boolean: boolean booleanValue()>"
+    "staticinvoke <java.lang.Boolean: java.lang.Boolean valueOf(java.lang.String)>"->"virtualinvoke <java.lang.Boolean: boolean booleanValue()>";
+    "fieldput <stmenu: boolean m_animate_arrows>"
+    "virtualinvoke <java.lang.Boolean: boolean booleanValue()>"->"fieldput <stmenu: boolean m_animate_arrows>";
+    "fieldput <stmenu: boolean m_animate_arrows>"->"load.r r2";
+    "push \"showhand\""
+    "load.r r2"->"push \"showhand\"";
+    "push \"showhand\""->"virtualinvoke <java.util.Properties: java.lang.String getProperty(java.lang.String)>";
+    "virtualinvoke <java.util.Properties: java.lang.String getProperty(java.lang.String)>"->"store.r $i31";
+    "store.r $i31"->"load.r $i31";
+    "load.r $i31"->"ifnull load.r r2";
+    "ifnull load.r r2"->"load.r r0";
+    "load.r r0"->"load.r $i31";
+    "load.r $i31"->"staticinvoke <java.lang.Boolean: java.lang.Boolean valueOf(java.lang.String)>";
+    "staticinvoke <java.lang.Boolean: java.lang.Boolean valueOf(java.lang.String)>"->"virtualinvoke <java.lang.Boolean: boolean booleanValue()>";
+    "fieldput <stmenu: boolean m_showhand>"
+    "virtualinvoke <java.lang.Boolean: boolean booleanValue()>"->"fieldput <stmenu: boolean m_showhand>";
+    "fieldput <stmenu: boolean m_showhand>"->"load.r r2";
+    "push \"tilebginmargins\""
+    "load.r r2"->"push \"tilebginmargins\"";
+    "push \"tilebginmargins\""->"virtualinvoke <java.util.Properties: java.lang.String getProperty(java.lang.String)>";
+    "virtualinvoke <java.util.Properties: java.lang.String getProperty(java.lang.String)>"->"store.r $i31";
+    "store.r $i31"->"load.r $i31";
+    "load.r $i31"->"ifnull load.r r2";
+    "ifnull load.r r2"->"load.r r0";
+    "load.r r0"->"load.r $i31";
+    "load.r $i31"->"staticinvoke <java.lang.Boolean: java.lang.Boolean valueOf(java.lang.String)>";
+    "staticinvoke <java.lang.Boolean: java.lang.Boolean valueOf(java.lang.String)>"->"virtualinvoke <java.lang.Boolean: boolean booleanValue()>";
+    "fieldput <stmenu: boolean m_tilebgin_margins>"
+    "virtualinvoke <java.lang.Boolean: boolean booleanValue()>"->"fieldput <stmenu: boolean m_tilebgin_margins>";
+    "fieldput <stmenu: boolean m_tilebgin_margins>"->"load.r r2";
+    "push \"underlinemaintext\""
+    "load.r r2"->"push \"underlinemaintext\"";
+    "push \"underlinemaintext\""->"virtualinvoke <java.util.Properties: java.lang.String getProperty(java.lang.String)>";
+    "virtualinvoke <java.util.Properties: java.lang.String getProperty(java.lang.String)>"->"store.r $i31";
+    "store.r $i31"->"load.r $i31";
+    "load.r $i31"->"ifnull load.r r2";
+    "ifnull load.r r2"->"load.r r0";
+    "load.r r0"->"load.r $i31";
+    "load.r $i31"->"staticinvoke <java.lang.Boolean: java.lang.Boolean valueOf(java.lang.String)>";
+    "staticinvoke <java.lang.Boolean: java.lang.Boolean valueOf(java.lang.String)>"->"virtualinvoke <java.lang.Boolean: boolean booleanValue()>";
+    "fieldput <stmenu: boolean m_unmaintext>"
+    "virtualinvoke <java.lang.Boolean: boolean booleanValue()>"->"fieldput <stmenu: boolean m_unmaintext>";
+    "fieldput <stmenu: boolean m_unmaintext>"->"load.r r2";
+    "push \"hidebar\""
+    "load.r r2"->"push \"hidebar\"";
+    "push \"hidebar\""->"virtualinvoke <java.util.Properties: java.lang.String getProperty(java.lang.String)>";
+    "virtualinvoke <java.util.Properties: java.lang.String getProperty(java.lang.String)>"->"store.r $i31";
+    "store.r $i31"->"load.r $i31";
+    "load.r $i31"->"ifnull load.r r2";
+    "ifnull load.r r2"->"load.r r0";
+    "load.r r0"->"load.r $i31";
+    "load.r $i31"->"staticinvoke <java.lang.Boolean: java.lang.Boolean valueOf(java.lang.String)>";
+    "staticinvoke <java.lang.Boolean: java.lang.Boolean valueOf(java.lang.String)>"->"virtualinvoke <java.lang.Boolean: boolean booleanValue()>";
+    "fieldput <stmenu: boolean m_hide_sb>"
+    "virtualinvoke <java.lang.Boolean: boolean booleanValue()>"->"fieldput <stmenu: boolean m_hide_sb>";
+    "fieldput <stmenu: boolean m_hide_sb>"->"load.r r2";
+    "push \"underlinesubtext\""
+    "load.r r2"->"push \"underlinesubtext\"";
+    "push \"underlinesubtext\""->"virtualinvoke <java.util.Properties: java.lang.String getProperty(java.lang.String)>";
+    "virtualinvoke <java.util.Properties: java.lang.String getProperty(java.lang.String)>"->"store.r $i31";
+    "store.r $i31"->"load.r $i31";
+    "load.r $i31"->"ifnull load.r r2";
+    "ifnull load.r r2"->"load.r r0";
+    "load.r r0"->"load.r $i31";
+    "load.r $i31"->"staticinvoke <java.lang.Boolean: java.lang.Boolean valueOf(java.lang.String)>";
+    "staticinvoke <java.lang.Boolean: java.lang.Boolean valueOf(java.lang.String)>"->"virtualinvoke <java.lang.Boolean: boolean booleanValue()>";
+    "fieldput <stmenu: boolean m_unsubtext>"
+    "virtualinvoke <java.lang.Boolean: boolean booleanValue()>"->"fieldput <stmenu: boolean m_unsubtext>";
+    "fieldput <stmenu: boolean m_unsubtext>"->"load.r r2";
+    "push \"clipmainbg\""
+    "load.r r2"->"push \"clipmainbg\"";
+    "push \"clipmainbg\""->"virtualinvoke <java.util.Properties: java.lang.String getProperty(java.lang.String)>";
+    "virtualinvoke <java.util.Properties: java.lang.String getProperty(java.lang.String)>"->"store.r $i31";
+    "store.r $i31"->"load.r $i31";
+    "load.r $i31"->"ifnull load.r r2";
+    "ifnull load.r r2"->"load.r r0";
+    "load.r r0"->"load.r $i31";
+    "load.r $i31"->"staticinvoke <java.lang.Boolean: java.lang.Boolean valueOf(java.lang.String)>";
+    "staticinvoke <java.lang.Boolean: java.lang.Boolean valueOf(java.lang.String)>"->"virtualinvoke <java.lang.Boolean: boolean booleanValue()>";
+    "fieldput <stmenu: boolean m_clip_main_bg>"
+    "virtualinvoke <java.lang.Boolean: boolean booleanValue()>"->"fieldput <stmenu: boolean m_clip_main_bg>";
+    "fieldput <stmenu: boolean m_clip_main_bg>"->"load.r r2";
+    "push \"clipadditionheight\""
+    "load.r r2"->"push \"clipadditionheight\"";
+    "push \"clipadditionheight\""->"virtualinvoke <java.util.Properties: java.lang.String getProperty(java.lang.String)>";
+    "virtualinvoke <java.util.Properties: java.lang.String getProperty(java.lang.String)>"->"store.r $i31";
+    "store.r $i31"->"load.r $i31";
+    "load.r $i31"->"ifnull load.r r2";
+    "ifnull load.r r2"->"load.r r0";
+    "load.r r0"->"load.r $i31";
+    "load.r $i31"->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>";
+    "fieldput <stmenu: int m_additional_clip_height>"
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"->"fieldput <stmenu: int m_additional_clip_height>";
+    "fieldput <stmenu: int m_additional_clip_height>"->"load.r r2";
+    "push \"tilemainbg\""
+    "load.r r2"->"push \"tilemainbg\"";
+    "push \"tilemainbg\""->"virtualinvoke <java.util.Properties: java.lang.String getProperty(java.lang.String)>";
+    "virtualinvoke <java.util.Properties: java.lang.String getProperty(java.lang.String)>"->"store.r $i31";
+    "store.r $i31"->"load.r $i31";
+    "load.r $i31"->"ifnull load.r r2";
+    "ifnull load.r r2"->"load.r r0";
+    "load.r r0"->"load.r $i31";
+    "load.r $i31"->"staticinvoke <java.lang.Boolean: java.lang.Boolean valueOf(java.lang.String)>";
+    "staticinvoke <java.lang.Boolean: java.lang.Boolean valueOf(java.lang.String)>"->"virtualinvoke <java.lang.Boolean: boolean booleanValue()>";
+    "fieldput <stmenu: boolean m_tile_mainbg>"
+    "virtualinvoke <java.lang.Boolean: boolean booleanValue()>"->"fieldput <stmenu: boolean m_tile_mainbg>";
+    "fieldput <stmenu: boolean m_tile_mainbg>"->"load.r r2";
+    "push \"tilesubbg\""
+    "load.r r2"->"push \"tilesubbg\"";
+    "push \"tilesubbg\""->"virtualinvoke <java.util.Properties: java.lang.String getProperty(java.lang.String)>";
+    "virtualinvoke <java.util.Properties: java.lang.String getProperty(java.lang.String)>"->"store.r $i31";
+    "store.r $i31"->"load.r $i31";
+    "load.r $i31"->"ifnull load.r r2";
+    "ifnull load.r r2"->"load.r r0";
+    "load.r r0"->"load.r $i31";
+    "load.r $i31"->"staticinvoke <java.lang.Boolean: java.lang.Boolean valueOf(java.lang.String)>";
+    "staticinvoke <java.lang.Boolean: java.lang.Boolean valueOf(java.lang.String)>"->"virtualinvoke <java.lang.Boolean: boolean booleanValue()>";
+    "fieldput <stmenu: boolean m_tile_subbg>"
+    "virtualinvoke <java.lang.Boolean: boolean booleanValue()>"->"fieldput <stmenu: boolean m_tile_subbg>";
+    "fieldput <stmenu: boolean m_tile_subbg>"->"load.r r2";
+    "push \"bgcolor\""
+    "load.r r2"->"push \"bgcolor\"";
+    "push \"bgcolor\""->"virtualinvoke <java.util.Properties: java.lang.String getProperty(java.lang.String)>";
+    "virtualinvoke <java.util.Properties: java.lang.String getProperty(java.lang.String)>"->"store.r $i31";
+    "store.r $i31"->"load.r $i31";
+    "load.r $i31"->"ifnull load.r r2";
+    "ifnull load.r r2"->"load.r r0";
+    "load.r r0"->"load.r $i31";
+    "load.r $i31"->"staticinvoke <occcolor: java.awt.Color ConvertColor(java.lang.String)>";
+    "fieldput <stmenu: java.awt.Color m_bgcolor>"
+    "staticinvoke <occcolor: java.awt.Color ConvertColor(java.lang.String)>"->"fieldput <stmenu: java.awt.Color m_bgcolor>";
+    "fieldput <stmenu: java.awt.Color m_bgcolor>"->"load.r r2";
+    "push \"mainboxcolor\""
+    "load.r r2"->"push \"mainboxcolor\"";
+    "push \"mainboxcolor\""->"virtualinvoke <java.util.Properties: java.lang.String getProperty(java.lang.String)>";
+    "virtualinvoke <java.util.Properties: java.lang.String getProperty(java.lang.String)>"->"store.r $i31";
+    "store.r $i31"->"load.r $i31";
+    "load.r $i31"->"ifnull load.r r2";
+    "ifnull load.r r2"->"load.r r0";
+    "load.r r0"->"load.r $i31";
+    "load.r $i31"->"staticinvoke <occcolor: java.awt.Color ConvertColor(java.lang.String)>";
+    "fieldput <stmenu: java.awt.Color m_main_boxcolor>"
+    "staticinvoke <occcolor: java.awt.Color ConvertColor(java.lang.String)>"->"fieldput <stmenu: java.awt.Color m_main_boxcolor>";
+    "fieldput <stmenu: java.awt.Color m_main_boxcolor>"->"load.r r2";
+    "push \"maintextcolor\""
+    "load.r r2"->"push \"maintextcolor\"";
+    "push \"maintextcolor\""->"virtualinvoke <java.util.Properties: java.lang.String getProperty(java.lang.String)>";
+    "virtualinvoke <java.util.Properties: java.lang.String getProperty(java.lang.String)>"->"store.r $i31";
+    "store.r $i31"->"load.r $i31";
+    "load.r $i31"->"ifnull load.r r2";
+    "ifnull load.r r2"->"load.r r0";
+    "load.r r0"->"load.r $i31";
+    "load.r $i31"->"staticinvoke <occcolor: java.awt.Color ConvertColor(java.lang.String)>";
+    "fieldput <stmenu: java.awt.Color m_main_textcolor>"
+    "staticinvoke <occcolor: java.awt.Color ConvertColor(java.lang.String)>"->"fieldput <stmenu: java.awt.Color m_main_textcolor>";
+    "fieldput <stmenu: java.awt.Color m_main_textcolor>"->"load.r r2";
+    "push \"maintexthlcolor\""
+    "load.r r2"->"push \"maintexthlcolor\"";
+    "push \"maintexthlcolor\""->"virtualinvoke <java.util.Properties: java.lang.String getProperty(java.lang.String)>";
+    "virtualinvoke <java.util.Properties: java.lang.String getProperty(java.lang.String)>"->"store.r $i31";
+    "store.r $i31"->"load.r $i31";
+    "load.r $i31"->"ifnull load.r r2";
+    "ifnull load.r r2"->"load.r r0";
+    "load.r r0"->"load.r $i31";
+    "load.r $i31"->"staticinvoke <occcolor: java.awt.Color ConvertColor(java.lang.String)>";
+    "fieldput <stmenu: java.awt.Color m_main_texthlcolor>"
+    "staticinvoke <occcolor: java.awt.Color ConvertColor(java.lang.String)>"->"fieldput <stmenu: java.awt.Color m_main_texthlcolor>";
+    "fieldput <stmenu: java.awt.Color m_main_texthlcolor>"->"load.r r2";
+    "push \"mainoutcolor\""
+    "load.r r2"->"push \"mainoutcolor\"";
+    "push \"mainoutcolor\""->"virtualinvoke <java.util.Properties: java.lang.String getProperty(java.lang.String)>";
+    "virtualinvoke <java.util.Properties: java.lang.String getProperty(java.lang.String)>"->"store.r $i31";
+    "store.r $i31"->"load.r $i31";
+    "load.r $i31"->"ifnull load.r r2";
+    "ifnull load.r r2"->"load.r r0";
+    "load.r r0"->"load.r $i31";
+    "load.r $i31"->"staticinvoke <occcolor: java.awt.Color ConvertColor(java.lang.String)>";
+    "fieldput <stmenu: java.awt.Color m_main_outcolor>"
+    "staticinvoke <occcolor: java.awt.Color ConvertColor(java.lang.String)>"->"fieldput <stmenu: java.awt.Color m_main_outcolor>";
+    "fieldput <stmenu: java.awt.Color m_main_outcolor>"->"load.r r2";
+    "push \"mainhloutcolor\""
+    "load.r r2"->"push \"mainhloutcolor\"";
+    "push \"mainhloutcolor\""->"virtualinvoke <java.util.Properties: java.lang.String getProperty(java.lang.String)>";
+    "virtualinvoke <java.util.Properties: java.lang.String getProperty(java.lang.String)>"->"store.r $i31";
+    "store.r $i31"->"load.r $i31";
+    "load.r $i31"->"ifnull load.r r2";
+    "ifnull load.r r2"->"load.r r0";
+    "load.r r0"->"load.r $i31";
+    "load.r $i31"->"staticinvoke <occcolor: java.awt.Color ConvertColor(java.lang.String)>";
+    "fieldput <stmenu: java.awt.Color m_main_hloutcolor>"
+    "staticinvoke <occcolor: java.awt.Color ConvertColor(java.lang.String)>"->"fieldput <stmenu: java.awt.Color m_main_hloutcolor>";
+    "fieldput <stmenu: java.awt.Color m_main_hloutcolor>"->"load.r r2";
+    "push \"subboxcolor\""
+    "load.r r2"->"push \"subboxcolor\"";
+    "push \"subboxcolor\""->"virtualinvoke <java.util.Properties: java.lang.String getProperty(java.lang.String)>";
+    "virtualinvoke <java.util.Properties: java.lang.String getProperty(java.lang.String)>"->"store.r $i31";
+    "store.r $i31"->"load.r $i31";
+    "load.r $i31"->"ifnull load.r r2";
+    "ifnull load.r r2"->"load.r r0";
+    "load.r r0"->"load.r $i31";
+    "load.r $i31"->"staticinvoke <occcolor: java.awt.Color ConvertColor(java.lang.String)>";
+    "fieldput <stmenu: java.awt.Color m_sub_boxcolor>"
+    "staticinvoke <occcolor: java.awt.Color ConvertColor(java.lang.String)>"->"fieldput <stmenu: java.awt.Color m_sub_boxcolor>";
+    "fieldput <stmenu: java.awt.Color m_sub_boxcolor>"->"load.r r2";
+    "push \"suboutcolor\""
+    "load.r r2"->"push \"suboutcolor\"";
+    "push \"suboutcolor\""->"virtualinvoke <java.util.Properties: java.lang.String getProperty(java.lang.String)>";
+    "virtualinvoke <java.util.Properties: java.lang.String getProperty(java.lang.String)>"->"store.r $i31";
+    "store.r $i31"->"load.r $i31";
+    "load.r $i31"->"ifnull load.r r2";
+    "ifnull load.r r2"->"load.r r0";
+    "load.r r0"->"load.r $i31";
+    "load.r $i31"->"staticinvoke <occcolor: java.awt.Color ConvertColor(java.lang.String)>";
+    "fieldput <stmenu: java.awt.Color m_sub_outcolor>"
+    "staticinvoke <occcolor: java.awt.Color ConvertColor(java.lang.String)>"->"fieldput <stmenu: java.awt.Color m_sub_outcolor>";
+    "fieldput <stmenu: java.awt.Color m_sub_outcolor>"->"load.r r2";
+    "push \"subhloutcolor\""
+    "load.r r2"->"push \"subhloutcolor\"";
+    "push \"subhloutcolor\""->"virtualinvoke <java.util.Properties: java.lang.String getProperty(java.lang.String)>";
+    "virtualinvoke <java.util.Properties: java.lang.String getProperty(java.lang.String)>"->"store.r $i31";
+    "store.r $i31"->"load.r $i31";
+    "load.r $i31"->"ifnull load.r r2";
+    "ifnull load.r r2"->"load.r r0";
+    "load.r r0"->"load.r $i31";
+    "load.r $i31"->"staticinvoke <occcolor: java.awt.Color ConvertColor(java.lang.String)>";
+    "fieldput <stmenu: java.awt.Color m_sub_hloutcolor>"
+    "staticinvoke <occcolor: java.awt.Color ConvertColor(java.lang.String)>"->"fieldput <stmenu: java.awt.Color m_sub_hloutcolor>";
+    "fieldput <stmenu: java.awt.Color m_sub_hloutcolor>"->"load.r r2";
+    "push \"subtextcolor\""
+    "load.r r2"->"push \"subtextcolor\"";
+    "push \"subtextcolor\""->"virtualinvoke <java.util.Properties: java.lang.String getProperty(java.lang.String)>";
+    "virtualinvoke <java.util.Properties: java.lang.String getProperty(java.lang.String)>"->"store.r $i31";
+    "store.r $i31"->"load.r $i31";
+    "load.r $i31"->"ifnull load.r r2";
+    "ifnull load.r r2"->"load.r r0";
+    "load.r r0"->"load.r $i31";
+    "load.r $i31"->"staticinvoke <occcolor: java.awt.Color ConvertColor(java.lang.String)>";
+    "fieldput <stmenu: java.awt.Color m_sub_textcolor>"
+    "staticinvoke <occcolor: java.awt.Color ConvertColor(java.lang.String)>"->"fieldput <stmenu: java.awt.Color m_sub_textcolor>";
+    "fieldput <stmenu: java.awt.Color m_sub_textcolor>"->"load.r r2";
+    "push \"subhltextcolor\""
+    "load.r r2"->"push \"subhltextcolor\"";
+    "push \"subhltextcolor\""->"virtualinvoke <java.util.Properties: java.lang.String getProperty(java.lang.String)>";
+    "virtualinvoke <java.util.Properties: java.lang.String getProperty(java.lang.String)>"->"store.r $i31";
+    "store.r $i31"->"load.r $i31";
+    "load.r $i31"->"ifnull load.r r2";
+    "ifnull load.r r2"->"load.r r0";
+    "load.r r0"->"load.r $i31";
+    "load.r $i31"->"staticinvoke <occcolor: java.awt.Color ConvertColor(java.lang.String)>";
+    "fieldput <stmenu: java.awt.Color m_sub_hltextcolor>"
+    "staticinvoke <occcolor: java.awt.Color ConvertColor(java.lang.String)>"->"fieldput <stmenu: java.awt.Color m_sub_hltextcolor>";
+    "fieldput <stmenu: java.awt.Color m_sub_hltextcolor>"->"load.r r2";
+    "push \"arrowcolor\""
+    "load.r r2"->"push \"arrowcolor\"";
+    "push \"arrowcolor\""->"virtualinvoke <java.util.Properties: java.lang.String getProperty(java.lang.String)>";
+    "virtualinvoke <java.util.Properties: java.lang.String getProperty(java.lang.String)>"->"store.r $i31";
+    "store.r $i31"->"load.r $i31";
+    "load.r $i31"->"ifnull load.r r2";
+    "ifnull load.r r2"->"load.r r0";
+    "load.r r0"->"load.r $i31";
+    "load.r $i31"->"staticinvoke <occcolor: java.awt.Color ConvertColor(java.lang.String)>";
+    "fieldput <stmenu: java.awt.Color m_arrowcolor>"
+    "staticinvoke <occcolor: java.awt.Color ConvertColor(java.lang.String)>"->"fieldput <stmenu: java.awt.Color m_arrowcolor>";
+    "fieldput <stmenu: java.awt.Color m_arrowcolor>"->"load.r r2";
+    "push \"arrowhlcolor\""
+    "load.r r2"->"push \"arrowhlcolor\"";
+    "push \"arrowhlcolor\""->"virtualinvoke <java.util.Properties: java.lang.String getProperty(java.lang.String)>";
+    "virtualinvoke <java.util.Properties: java.lang.String getProperty(java.lang.String)>"->"store.r $i31";
+    "store.r $i31"->"load.r $i31";
+    "load.r $i31"->"ifnull load.r r2";
+    "ifnull load.r r2"->"load.r r0";
+    "load.r r0"->"load.r $i31";
+    "load.r $i31"->"staticinvoke <occcolor: java.awt.Color ConvertColor(java.lang.String)>";
+    "fieldput <stmenu: java.awt.Color m_arrowhlcolor>"
+    "staticinvoke <occcolor: java.awt.Color ConvertColor(java.lang.String)>"->"fieldput <stmenu: java.awt.Color m_arrowhlcolor>";
+    "fieldput <stmenu: java.awt.Color m_arrowhlcolor>"->"load.r r2";
+    "push \"arrowactivecolor\""
+    "load.r r2"->"push \"arrowactivecolor\"";
+    "push \"arrowactivecolor\""->"virtualinvoke <java.util.Properties: java.lang.String getProperty(java.lang.String)>";
+    "virtualinvoke <java.util.Properties: java.lang.String getProperty(java.lang.String)>"->"store.r $i31";
+    "store.r $i31"->"load.r $i31";
+    "load.r $i31"->"ifnull load.r r2";
+    "ifnull load.r r2"->"load.r r0";
+    "load.r r0"->"load.r $i31";
+    "load.r $i31"->"staticinvoke <occcolor: java.awt.Color ConvertColor(java.lang.String)>";
+    "fieldput <stmenu: java.awt.Color m_arrow_activecolor>"
+    "staticinvoke <occcolor: java.awt.Color ConvertColor(java.lang.String)>"->"fieldput <stmenu: java.awt.Color m_arrow_activecolor>";
+    "fieldput <stmenu: java.awt.Color m_arrow_activecolor>"->"load.r r2";
+    "push \"mainbgimage\""
+    "load.r r2"->"push \"mainbgimage\"";
+    "push \"mainbgimage\""->"virtualinvoke <java.util.Properties: java.lang.String getProperty(java.lang.String)>";
+    "virtualinvoke <java.util.Properties: java.lang.String getProperty(java.lang.String)>"->"store.r $i31";
+    "store.r $i31"->"load.r $i31";
+    "load.r $i31"->"ifnull load.r r2";
+    "ifnull load.r r2"->"load.r r0";
+    "load.r r0"->"load.r $i31";
+    "fieldput <stmenu: java.lang.String m_main_bgfile>"
+    "load.r $i31"->"fieldput <stmenu: java.lang.String m_main_bgfile>";
+    "fieldput <stmenu: java.lang.String m_main_bgfile>"->"load.r r2";
+    "push \"subbgimage\""
+    "load.r r2"->"push \"subbgimage\"";
+    "push \"subbgimage\""->"virtualinvoke <java.util.Properties: java.lang.String getProperty(java.lang.String)>";
+    "virtualinvoke <java.util.Properties: java.lang.String getProperty(java.lang.String)>"->"store.r $i31";
+    "store.r $i31"->"load.r $i31";
+    "load.r $i31"->"ifnull load.r r2";
+    "ifnull load.r r2"->"load.r r0";
+    "load.r r0"->"load.r $i31";
+    "fieldput <stmenu: java.lang.String m_sub_bgfile>"
+    "load.r $i31"->"fieldput <stmenu: java.lang.String m_sub_bgfile>";
+    "fieldput <stmenu: java.lang.String m_sub_bgfile>"->"load.r r2";
+    "push \"jumpsize\""
+    "load.r r2"->"push \"jumpsize\"";
+    "push \"jumpsize\""->"virtualinvoke <java.util.Properties: java.lang.String getProperty(java.lang.String)>";
+    "virtualinvoke <java.util.Properties: java.lang.String getProperty(java.lang.String)>"->"store.r $i31";
+    "store.r $i31"->"load.r $i31";
+    "load.r $i31"->"ifnull load.r r2";
+    "ifnull load.r r2"->"load.r r0";
+    "load.r r0"->"load.r $i31";
+    "load.r $i31"->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>";
+    "fieldput <stmenu: int m_jump_size>"
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"->"fieldput <stmenu: int m_jump_size>";
+    "fieldput <stmenu: int m_jump_size>"->"load.r r2";
+    "push \"startopenindex\""
+    "load.r r2"->"push \"startopenindex\"";
+    "push \"startopenindex\""->"virtualinvoke <java.util.Properties: java.lang.String getProperty(java.lang.String)>";
+    "virtualinvoke <java.util.Properties: java.lang.String getProperty(java.lang.String)>"->"store.r $i31";
+    "store.r $i31"->"load.r $i31";
+    "load.r $i31"->"ifnull load.r r2";
+    "ifnull load.r r2"->"load.r r0";
+    "load.r r0"->"load.r $i31";
+    "load.r $i31"->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>";
+    "fieldput <stmenu: int m_startopen_index>"
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"->"fieldput <stmenu: int m_startopen_index>";
+    "fieldput <stmenu: int m_startopen_index>"->"load.r r2";
+    "push \"jumpdelay\""
+    "load.r r2"->"push \"jumpdelay\"";
+    "push \"jumpdelay\""->"virtualinvoke <java.util.Properties: java.lang.String getProperty(java.lang.String)>";
+    "virtualinvoke <java.util.Properties: java.lang.String getProperty(java.lang.String)>"->"store.r $i31";
+    "store.r $i31"->"load.r $i31";
+    "load.r $i31"->"ifnull load.r r2";
+    "ifnull load.r r2"->"load.r r0";
+    "load.r r0"->"load.r $i31";
+    "load.r $i31"->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>";
+    "fieldput <stmenu: int m_delay>"
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"->"fieldput <stmenu: int m_delay>";
+    "fieldput <stmenu: int m_delay>"->"load.r r2";
+    "push \"mainlmargin\""
+    "load.r r2"->"push \"mainlmargin\"";
+    "push \"mainlmargin\""->"virtualinvoke <java.util.Properties: java.lang.String getProperty(java.lang.String)>";
+    "virtualinvoke <java.util.Properties: java.lang.String getProperty(java.lang.String)>"->"store.r $i31";
+    "store.r $i31"->"load.r $i31";
+    "load.r $i31"->"ifnull load.r r2";
+    "ifnull load.r r2"->"load.r r0";
+    "load.r r0"->"load.r $i31";
+    "load.r $i31"->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>";
+    "fieldput <stmenu: int m_main_lmargin>"
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"->"fieldput <stmenu: int m_main_lmargin>";
+    "fieldput <stmenu: int m_main_lmargin>"->"load.r r2";
+    "push \"mainrmargin\""
+    "load.r r2"->"push \"mainrmargin\"";
+    "push \"mainrmargin\""->"virtualinvoke <java.util.Properties: java.lang.String getProperty(java.lang.String)>";
+    "virtualinvoke <java.util.Properties: java.lang.String getProperty(java.lang.String)>"->"store.r $i31";
+    "store.r $i31"->"load.r $i31";
+    "load.r $i31"->"ifnull load.r r2";
+    "ifnull load.r r2"->"load.r r0";
+    "load.r r0"->"load.r $i31";
+    "load.r $i31"->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>";
+    "fieldput <stmenu: int m_main_rmargin>"
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"->"fieldput <stmenu: int m_main_rmargin>";
+    "fieldput <stmenu: int m_main_rmargin>"->"load.r r2";
+    "push \"sublmargin\""
+    "load.r r2"->"push \"sublmargin\"";
+    "push \"sublmargin\""->"virtualinvoke <java.util.Properties: java.lang.String getProperty(java.lang.String)>";
+    "virtualinvoke <java.util.Properties: java.lang.String getProperty(java.lang.String)>"->"store.r $i31";
+    "store.r $i31"->"load.r $i31";
+    "load.r $i31"->"ifnull load.r r2";
+    "ifnull load.r r2"->"load.r r0";
+    "load.r r0"->"load.r $i31";
+    "load.r $i31"->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>";
+    "fieldput <stmenu: int m_sub_lmargin>"
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"->"fieldput <stmenu: int m_sub_lmargin>";
+    "fieldput <stmenu: int m_sub_lmargin>"->"load.r r2";
+    "push \"subrmargin\""
+    "load.r r2"->"push \"subrmargin\"";
+    "push \"subrmargin\""->"virtualinvoke <java.util.Properties: java.lang.String getProperty(java.lang.String)>";
+    "virtualinvoke <java.util.Properties: java.lang.String getProperty(java.lang.String)>"->"store.r $i31";
+    "store.r $i31"->"load.r $i31";
+    "load.r $i31"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r r0";
+    "load.r r0"->"load.r $i31";
+    "load.r $i31"->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>";
+    "fieldput <stmenu: int m_sub_rmargin>"
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"->"fieldput <stmenu: int m_sub_rmargin>";
+    "fieldput <stmenu: int m_sub_rmargin>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "fieldget <stmenu: int m_sub_lmargin>"
+    "load.r r0"->"fieldget <stmenu: int m_sub_lmargin>";
+    "fieldget <stmenu: int m_sub_lmargin>"->"load.r r0";
+    "fieldget <stmenu: int m_main_lmargin>"
+    "load.r r0"->"fieldget <stmenu: int m_main_lmargin>";
+    "add.i"
+    "fieldget <stmenu: int m_main_lmargin>"->"add.i";
+    "add.i"->"fieldput <stmenu: int m_sub_lmargin>";
+    "fieldput <stmenu: int m_sub_lmargin>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "fieldget <stmenu: int m_sub_rmargin>"
+    "load.r r0"->"fieldget <stmenu: int m_sub_rmargin>";
+    "fieldget <stmenu: int m_sub_rmargin>"->"load.r r0";
+    "fieldget <stmenu: int m_main_rmargin>"
+    "load.r r0"->"fieldget <stmenu: int m_main_rmargin>";
+    "fieldget <stmenu: int m_main_rmargin>"->"add.i";
+    "add.i"->"fieldput <stmenu: int m_sub_rmargin>";
+    "fieldput <stmenu: int m_sub_rmargin>"->"load.r r2";
+    "push \"maintextindent\""
+    "load.r r2"->"push \"maintextindent\"";
+    "push \"maintextindent\""->"virtualinvoke <java.util.Properties: java.lang.String getProperty(java.lang.String)>";
+    "virtualinvoke <java.util.Properties: java.lang.String getProperty(java.lang.String)>"->"store.r $i31";
+    "store.r $i31"->"load.r $i31";
+    "load.r $i31"->"ifnull load.r r2";
+    "ifnull load.r r2"->"load.r r0";
+    "load.r r0"->"load.r $i31";
+    "load.r $i31"->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>";
+    "fieldput <stmenu: int m_main_text_indent>"
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"->"fieldput <stmenu: int m_main_text_indent>";
+    "fieldput <stmenu: int m_main_text_indent>"->"load.r r2";
+    "push \"mainiconindent\""
+    "load.r r2"->"push \"mainiconindent\"";
+    "push \"mainiconindent\""->"virtualinvoke <java.util.Properties: java.lang.String getProperty(java.lang.String)>";
+    "virtualinvoke <java.util.Properties: java.lang.String getProperty(java.lang.String)>"->"store.r $i31";
+    "store.r $i31"->"load.r $i31";
+    "load.r $i31"->"ifnull load.r r2";
+    "ifnull load.r r2"->"load.r r0";
+    "load.r r0"->"load.r $i31";
+    "load.r $i31"->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>";
+    "fieldput <stmenu: int m_main_icon_indent>"
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"->"fieldput <stmenu: int m_main_icon_indent>";
+    "fieldput <stmenu: int m_main_icon_indent>"->"load.r r2";
+    "push \"subiconindent\""
+    "load.r r2"->"push \"subiconindent\"";
+    "push \"subiconindent\""->"virtualinvoke <java.util.Properties: java.lang.String getProperty(java.lang.String)>";
+    "virtualinvoke <java.util.Properties: java.lang.String getProperty(java.lang.String)>"->"store.r $i31";
+    "store.r $i31"->"load.r $i31";
+    "load.r $i31"->"ifnull load.r r2";
+    "ifnull load.r r2"->"load.r r0";
+    "load.r r0"->"load.r $i31";
+    "load.r $i31"->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>";
+    "fieldput <stmenu: int m_sub_icon_indent>"
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"->"fieldput <stmenu: int m_sub_icon_indent>";
+    "fieldput <stmenu: int m_sub_icon_indent>"->"load.r r2";
+    "push \"mainicontopoffset\""
+    "load.r r2"->"push \"mainicontopoffset\"";
+    "push \"mainicontopoffset\""->"virtualinvoke <java.util.Properties: java.lang.String getProperty(java.lang.String)>";
+    "virtualinvoke <java.util.Properties: java.lang.String getProperty(java.lang.String)>"->"store.r $i31";
+    "store.r $i31"->"load.r $i31";
+    "load.r $i31"->"ifnull load.r r2";
+    "ifnull load.r r2"->"load.r r0";
+    "load.r r0"->"load.r $i31";
+    "load.r $i31"->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>";
+    "fieldput <stmenu: int m_main_icon_voffset>"
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"->"fieldput <stmenu: int m_main_icon_voffset>";
+    "fieldput <stmenu: int m_main_icon_voffset>"->"load.r r2";
+    "push \"subicontopoffset\""
+    "load.r r2"->"push \"subicontopoffset\"";
+    "push \"subicontopoffset\""->"virtualinvoke <java.util.Properties: java.lang.String getProperty(java.lang.String)>";
+    "virtualinvoke <java.util.Properties: java.lang.String getProperty(java.lang.String)>"->"store.r $i31";
+    "store.r $i31"->"load.r $i31";
+    "load.r $i31"->"ifnull load.r r2";
+    "ifnull load.r r2"->"load.r r0";
+    "load.r r0"->"load.r $i31";
+    "load.r $i31"->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>";
+    "fieldput <stmenu: int m_sub_icon_voffset>"
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"->"fieldput <stmenu: int m_sub_icon_voffset>";
+    "fieldput <stmenu: int m_sub_icon_voffset>"->"load.r r2";
+    "push \"subtextindent\""
+    "load.r r2"->"push \"subtextindent\"";
+    "push \"subtextindent\""->"virtualinvoke <java.util.Properties: java.lang.String getProperty(java.lang.String)>";
+    "virtualinvoke <java.util.Properties: java.lang.String getProperty(java.lang.String)>"->"store.r $i31";
+    "store.r $i31"->"load.r $i31";
+    "load.r $i31"->"ifnull load.r r2";
+    "ifnull load.r r2"->"load.r r0";
+    "load.r r0"->"load.r $i31";
+    "load.r $i31"->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>";
+    "fieldput <stmenu: int m_sub_text_indent>"
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"->"fieldput <stmenu: int m_sub_text_indent>";
+    "fieldput <stmenu: int m_sub_text_indent>"->"load.r r2";
+    "push \"arrowyoffset\""
+    "load.r r2"->"push \"arrowyoffset\"";
+    "push \"arrowyoffset\""->"virtualinvoke <java.util.Properties: java.lang.String getProperty(java.lang.String)>";
+    "virtualinvoke <java.util.Properties: java.lang.String getProperty(java.lang.String)>"->"store.r $i31";
+    "store.r $i31"->"load.r $i31";
+    "load.r $i31"->"ifnull load.r r2";
+    "ifnull load.r r2"->"load.r r0";
+    "load.r r0"->"load.r $i31";
+    "load.r $i31"->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>";
+    "fieldput <stmenu: int m_arrowyoffset>"
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"->"fieldput <stmenu: int m_arrowyoffset>";
+    "fieldput <stmenu: int m_arrowyoffset>"->"load.r r2";
+    "push \"arrowxoffset\""
+    "load.r r2"->"push \"arrowxoffset\"";
+    "push \"arrowxoffset\""->"virtualinvoke <java.util.Properties: java.lang.String getProperty(java.lang.String)>";
+    "virtualinvoke <java.util.Properties: java.lang.String getProperty(java.lang.String)>"->"store.r $i31";
+    "store.r $i31"->"load.r $i31";
+    "load.r $i31"->"ifnull load.r r2";
+    "ifnull load.r r2"->"load.r r0";
+    "load.r r0"->"load.r $i31";
+    "load.r $i31"->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>";
+    "fieldput <stmenu: int m_arrowxoffset>"
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"->"fieldput <stmenu: int m_arrowxoffset>";
+    "fieldput <stmenu: int m_arrowxoffset>"->"load.r r2";
+    "push \"itemheight\""
+    "load.r r2"->"push \"itemheight\"";
+    "push \"itemheight\""->"virtualinvoke <java.util.Properties: java.lang.String getProperty(java.lang.String)>";
+    "virtualinvoke <java.util.Properties: java.lang.String getProperty(java.lang.String)>"->"store.r $i31";
+    "store.r $i31"->"load.r $i31";
+    "load.r $i31"->"ifnull load.r r2";
+    "ifnull load.r r2"->"load.r r0";
+    "load.r r0"->"load.r $i31";
+    "load.r $i31"->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>";
+    "fieldput <stmenu: int m_item_height>"
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"->"fieldput <stmenu: int m_item_height>";
+    "fieldput <stmenu: int m_item_height>"->"load.r r0";
+    "fieldget <stmenu: int m_item_height>"
+    "load.r r0"->"fieldget <stmenu: int m_item_height>";
+    "ifle load.r r2"
+    "fieldget <stmenu: int m_item_height>"->"ifle load.r r2";
+    "ifle load.r r2"->"load.r r0";
+    "load.r r0"->"push 1";
+    "fieldput <stmenu: boolean inputHeightFixed>"
+    "push 1"->"fieldput <stmenu: boolean inputHeightFixed>";
+    "fieldput <stmenu: boolean inputHeightFixed>"->"load.r r2";
+    "push \"mainfont\""
+    "load.r r2"->"push \"mainfont\"";
+    "push \"mainfont\""->"virtualinvoke <java.util.Properties: java.lang.String getProperty(java.lang.String)>";
+    "virtualinvoke <java.util.Properties: java.lang.String getProperty(java.lang.String)>"->"store.r $i31";
+    "store.r $i31"->"load.r $i31";
+    "load.r $i31"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r r0";
+    "load.r r0"->"load.r $i31";
+    "load.r $i31"->"push \",\"";
+    "push \",\""->"staticinvoke <ocfontc: java.awt.Font getFontSD(java.lang.String,java.lang.String)>";
+    "fieldput <stmenu: java.awt.Font m_main_font>"
+    "staticinvoke <ocfontc: java.awt.Font getFontSD(java.lang.String,java.lang.String)>"->"fieldput <stmenu: java.awt.Font m_main_font>";
+    "fieldput <stmenu: java.awt.Font m_main_font>"->"goto load.r r2";
+    "goto load.r r2"->"load.r r2";
+    "push \"subfont\""
+    "load.r r2"->"push \"subfont\"";
+    "push \"subfont\""->"virtualinvoke <java.util.Properties: java.lang.String getProperty(java.lang.String)>";
+    "virtualinvoke <java.util.Properties: java.lang.String getProperty(java.lang.String)>"->"store.r $i31";
+    "store.r $i31"->"load.r $i31";
+    "load.r $i31"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r r0";
+    "load.r r0"->"load.r $i31";
+    "load.r $i31"->"push \",\"";
+    "push \",\""->"staticinvoke <ocfontc: java.awt.Font getFontSD(java.lang.String,java.lang.String)>";
+    "fieldput <stmenu: java.awt.Font m_sub_font>"
+    "staticinvoke <ocfontc: java.awt.Font getFontSD(java.lang.String,java.lang.String)>"->"fieldput <stmenu: java.awt.Font m_sub_font>";
+    "fieldput <stmenu: java.awt.Font m_sub_font>"->"goto load.r r2";
+    "goto load.r r2"->"load.r r2";
+    "push \"endcapimage\""
+    "load.r r2"->"push \"endcapimage\"";
+    "push \"endcapimage\""->"virtualinvoke <java.util.Properties: java.lang.String getProperty(java.lang.String)>";
+    "virtualinvoke <java.util.Properties: java.lang.String getProperty(java.lang.String)>"->"store.r $i31";
+    "store.r $i31"->"load.r $i31";
+    "load.r $i31"->"ifnull load.r r2";
+    "ifnull load.r r2"->"load.r r0";
+    "load.r r0"->"load.r $i31";
+    "fieldput <stmenu: java.lang.String m_endcap_image>"
+    "load.r $i31"->"fieldput <stmenu: java.lang.String m_endcap_image>";
+    "fieldput <stmenu: java.lang.String m_endcap_image>"->"load.r r2";
+    "push \"barwidth\""
+    "load.r r2"->"push \"barwidth\"";
+    "push \"barwidth\""->"virtualinvoke <java.util.Properties: java.lang.String getProperty(java.lang.String)>";
+    "virtualinvoke <java.util.Properties: java.lang.String getProperty(java.lang.String)>"->"store.r $i31";
+    "store.r $i31"->"load.r $i31";
+    "load.r $i31"->"ifnull load.r r2";
+    "ifnull load.r r2"->"load.r r0";
+    "load.r r0"->"load.r $i31";
+    "load.r $i31"->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>";
+    "fieldput <stmenu: int m_sbwidth>"
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"->"fieldput <stmenu: int m_sbwidth>";
+    "fieldput <stmenu: int m_sbwidth>"->"load.r r2";
+    "push \"barbuttoncolor\""
+    "load.r r2"->"push \"barbuttoncolor\"";
+    "push \"barbuttoncolor\""->"virtualinvoke <java.util.Properties: java.lang.String getProperty(java.lang.String)>";
+    "virtualinvoke <java.util.Properties: java.lang.String getProperty(java.lang.String)>"->"store.r $i31";
+    "store.r $i31"->"load.r $i31";
+    "load.r $i31"->"ifnull load.r r2";
+    "ifnull load.r r2"->"load.r r0";
+    "load.r r0"->"load.r $i31";
+    "load.r $i31"->"staticinvoke <occcolor: java.awt.Color ConvertColor(java.lang.String)>";
+    "fieldput <stmenu: java.awt.Color m_bc>"
+    "staticinvoke <occcolor: java.awt.Color ConvertColor(java.lang.String)>"->"fieldput <stmenu: java.awt.Color m_bc>";
+    "fieldput <stmenu: java.awt.Color m_bc>"->"load.r r2";
+    "push \"bararrowcolor\""
+    "load.r r2"->"push \"bararrowcolor\"";
+    "push \"bararrowcolor\""->"virtualinvoke <java.util.Properties: java.lang.String getProperty(java.lang.String)>";
+    "virtualinvoke <java.util.Properties: java.lang.String getProperty(java.lang.String)>"->"store.r $i31";
+    "store.r $i31"->"load.r $i31";
+    "load.r $i31"->"ifnull load.r r2";
+    "ifnull load.r r2"->"load.r r0";
+    "load.r r0"->"load.r $i31";
+    "load.r $i31"->"staticinvoke <occcolor: java.awt.Color ConvertColor(java.lang.String)>";
+    "fieldput <stmenu: java.awt.Color m_ac>"
+    "staticinvoke <occcolor: java.awt.Color ConvertColor(java.lang.String)>"->"fieldput <stmenu: java.awt.Color m_ac>";
+    "fieldput <stmenu: java.awt.Color m_ac>"->"load.r r2";
+    "push \"bararrowhlcolor\""
+    "load.r r2"->"push \"bararrowhlcolor\"";
+    "push \"bararrowhlcolor\""->"virtualinvoke <java.util.Properties: java.lang.String getProperty(java.lang.String)>";
+    "virtualinvoke <java.util.Properties: java.lang.String getProperty(java.lang.String)>"->"store.r $i31";
+    "store.r $i31"->"load.r $i31";
+    "load.r $i31"->"ifnull load.r r2";
+    "ifnull load.r r2"->"load.r r0";
+    "load.r r0"->"load.r $i31";
+    "load.r $i31"->"staticinvoke <occcolor: java.awt.Color ConvertColor(java.lang.String)>";
+    "fieldput <stmenu: java.awt.Color m_hc>"
+    "staticinvoke <occcolor: java.awt.Color ConvertColor(java.lang.String)>"->"fieldput <stmenu: java.awt.Color m_hc>";
+    "fieldput <stmenu: java.awt.Color m_hc>"->"load.r r2";
+    "push \"barbgcolor\""
+    "load.r r2"->"push \"barbgcolor\"";
+    "push \"barbgcolor\""->"virtualinvoke <java.util.Properties: java.lang.String getProperty(java.lang.String)>";
+    "virtualinvoke <java.util.Properties: java.lang.String getProperty(java.lang.String)>"->"store.r $i31";
+    "store.r $i31"->"load.r $i31";
+    "load.r $i31"->"ifnull load.r r2";
+    "ifnull load.r r2"->"load.r r0";
+    "load.r r0"->"load.r $i31";
+    "load.r $i31"->"staticinvoke <occcolor: java.awt.Color ConvertColor(java.lang.String)>";
+    "fieldput <stmenu: java.awt.Color m_bgc>"
+    "staticinvoke <occcolor: java.awt.Color ConvertColor(java.lang.String)>"->"fieldput <stmenu: java.awt.Color m_bgc>";
+    "fieldput <stmenu: java.awt.Color m_bgc>"->"load.r r2";
+    "push \"barslidecolor\""
+    "load.r r2"->"push \"barslidecolor\"";
+    "push \"barslidecolor\""->"virtualinvoke <java.util.Properties: java.lang.String getProperty(java.lang.String)>";
+    "virtualinvoke <java.util.Properties: java.lang.String getProperty(java.lang.String)>"->"store.r $i31";
+    "store.r $i31"->"load.r $i31";
+    "load.r $i31"->"ifnull load.r r2";
+    "ifnull load.r r2"->"load.r r0";
+    "load.r r0"->"load.r $i31";
+    "load.r $i31"->"staticinvoke <occcolor: java.awt.Color ConvertColor(java.lang.String)>";
+    "fieldput <stmenu: java.awt.Color m_sc>"
+    "staticinvoke <occcolor: java.awt.Color ConvertColor(java.lang.String)>"->"fieldput <stmenu: java.awt.Color m_sc>";
+    "fieldput <stmenu: java.awt.Color m_sc>"->"load.r r2";
+    "push \"baroutlinecolor\""
+    "load.r r2"->"push \"baroutlinecolor\"";
+    "push \"baroutlinecolor\""->"virtualinvoke <java.util.Properties: java.lang.String getProperty(java.lang.String)>";
+    "virtualinvoke <java.util.Properties: java.lang.String getProperty(java.lang.String)>"->"store.r $i31";
+    "store.r $i31"->"load.r $i31";
+    "load.r $i31"->"ifnull load.r r2";
+    "ifnull load.r r2"->"load.r r0";
+    "load.r r0"->"load.r $i31";
+    "load.r $i31"->"staticinvoke <occcolor: java.awt.Color ConvertColor(java.lang.String)>";
+    "fieldput <stmenu: java.awt.Color m_oc>"
+    "staticinvoke <occcolor: java.awt.Color ConvertColor(java.lang.String)>"->"fieldput <stmenu: java.awt.Color m_oc>";
+    "fieldput <stmenu: java.awt.Color m_oc>"->"load.r r2";
+    "push \"barbarrowcolor\""
+    "load.r r2"->"push \"barbarrowcolor\"";
+    "push \"barbarrowcolor\""->"virtualinvoke <java.util.Properties: java.lang.String getProperty(java.lang.String)>";
+    "virtualinvoke <java.util.Properties: java.lang.String getProperty(java.lang.String)>"->"store.r $i31";
+    "store.r $i31"->"load.r $i31";
+    "load.r $i31"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r r0";
+    "load.r r0"->"load.r $i31";
+    "load.r $i31"->"staticinvoke <occcolor: java.awt.Color ConvertColor(java.lang.String)>";
+    "fieldput <stmenu: java.awt.Color m_mac>"
+    "staticinvoke <occcolor: java.awt.Color ConvertColor(java.lang.String)>"->"fieldput <stmenu: java.awt.Color m_mac>";
+    "fieldput <stmenu: java.awt.Color m_mac>"->"goto load.r r2";
+    "goto load.r r2"->"load.r r2";
+    "push \"barbarrowhlcolor\""
+    "load.r r2"->"push \"barbarrowhlcolor\"";
+    "push \"barbarrowhlcolor\""->"virtualinvoke <java.util.Properties: java.lang.String getProperty(java.lang.String)>";
+    "virtualinvoke <java.util.Properties: java.lang.String getProperty(java.lang.String)>"->"store.r $i31";
+    "store.r $i31"->"load.r $i31";
+    "load.r $i31"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r r0";
+    "load.r r0"->"load.r $i31";
+    "load.r $i31"->"staticinvoke <occcolor: java.awt.Color ConvertColor(java.lang.String)>";
+    "fieldput <stmenu: java.awt.Color m_machl>"
+    "staticinvoke <occcolor: java.awt.Color ConvertColor(java.lang.String)>"->"fieldput <stmenu: java.awt.Color m_machl>";
+    "fieldput <stmenu: java.awt.Color m_machl>"->"goto load.r r2";
+    "goto load.r r2"->"load.r r2";
+    "push \"barinactivecolor\""
+    "load.r r2"->"push \"barinactivecolor\"";
+    "push \"barinactivecolor\""->"virtualinvoke <java.util.Properties: java.lang.String getProperty(java.lang.String)>";
+    "virtualinvoke <java.util.Properties: java.lang.String getProperty(java.lang.String)>"->"store.r $i31";
+    "store.r $i31"->"load.r $i31";
+    "load.r $i31"->"ifnull load.r r2";
+    "ifnull load.r r2"->"load.r r0";
+    "load.r r0"->"load.r $i31";
+    "load.r $i31"->"staticinvoke <occcolor: java.awt.Color ConvertColor(java.lang.String)>";
+    "fieldput <stmenu: java.awt.Color m_unact>"
+    "staticinvoke <occcolor: java.awt.Color ConvertColor(java.lang.String)>"->"fieldput <stmenu: java.awt.Color m_unact>";
+    "fieldput <stmenu: java.awt.Color m_unact>"->"load.r r2";
+    "push \"barslideinset\""
+    "load.r r2"->"push \"barslideinset\"";
+    "push \"barslideinset\""->"virtualinvoke <java.util.Properties: java.lang.String getProperty(java.lang.String)>";
+    "virtualinvoke <java.util.Properties: java.lang.String getProperty(java.lang.String)>"->"store.r $i31";
+    "store.r $i31"->"load.r $i31";
+    "load.r $i31"->"ifnull load.r r2";
+    "ifnull load.r r2"->"load.r r0";
+    "load.r r0"->"load.r $i31";
+    "load.r $i31"->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>";
+    "fieldput <stmenu: int m_si>"
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"->"fieldput <stmenu: int m_si>";
+    "fieldput <stmenu: int m_si>"->"load.r r2";
+    "push \"barflat\""
+    "load.r r2"->"push \"barflat\"";
+    "push \"barflat\""->"virtualinvoke <java.util.Properties: java.lang.String getProperty(java.lang.String)>";
+    "virtualinvoke <java.util.Properties: java.lang.String getProperty(java.lang.String)>"->"store.r $i31";
+    "store.r $i31"->"load.r $i31";
+    "load.r $i31"->"ifnull load.r r2";
+    "ifnull load.r r2"->"load.r r0";
+    "load.r r0"->"load.r $i31";
+    "load.r $i31"->"staticinvoke <java.lang.Boolean: java.lang.Boolean valueOf(java.lang.String)>";
+    "staticinvoke <java.lang.Boolean: java.lang.Boolean valueOf(java.lang.String)>"->"virtualinvoke <java.lang.Boolean: boolean booleanValue()>";
+    "fieldput <stmenu: boolean m_sbflat>"
+    "virtualinvoke <java.lang.Boolean: boolean booleanValue()>"->"fieldput <stmenu: boolean m_sbflat>";
+    "fieldput <stmenu: boolean m_sbflat>"->"load.r r2";
+    "push \"barindentbubble\""
+    "load.r r2"->"push \"barindentbubble\"";
+    "push \"barindentbubble\""->"virtualinvoke <java.util.Properties: java.lang.String getProperty(java.lang.String)>";
+    "virtualinvoke <java.util.Properties: java.lang.String getProperty(java.lang.String)>"->"store.r $i31";
+    "store.r $i31"->"load.r $i31";
+    "load.r $i31"->"ifnull load.r r2";
+    "ifnull load.r r2"->"load.r r0";
+    "load.r r0"->"load.r $i31";
+    "load.r $i31"->"staticinvoke <java.lang.Boolean: java.lang.Boolean valueOf(java.lang.String)>";
+    "staticinvoke <java.lang.Boolean: java.lang.Boolean valueOf(java.lang.String)>"->"virtualinvoke <java.lang.Boolean: boolean booleanValue()>";
+    "fieldput <stmenu: boolean m_indent_bubble>"
+    "virtualinvoke <java.lang.Boolean: boolean booleanValue()>"->"fieldput <stmenu: boolean m_indent_bubble>";
+    "fieldput <stmenu: boolean m_indent_bubble>"->"load.r r2";
+    "push \"tilebginbar\""
+    "load.r r2"->"push \"tilebginbar\"";
+    "push \"tilebginbar\""->"virtualinvoke <java.util.Properties: java.lang.String getProperty(java.lang.String)>";
+    "virtualinvoke <java.util.Properties: java.lang.String getProperty(java.lang.String)>"->"store.r $i31";
+    "store.r $i31"->"load.r $i31";
+    "load.r $i31"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r r0";
+    "load.r r0"->"load.r $i31";
+    "load.r $i31"->"staticinvoke <java.lang.Boolean: java.lang.Boolean valueOf(java.lang.String)>";
+    "staticinvoke <java.lang.Boolean: java.lang.Boolean valueOf(java.lang.String)>"->"virtualinvoke <java.lang.Boolean: boolean booleanValue()>";
+    "fieldput <stmenu: boolean m_tile_bg_insb>"
+    "virtualinvoke <java.lang.Boolean: boolean booleanValue()>"->"fieldput <stmenu: boolean m_tile_bg_insb>";
+    "fieldput <stmenu: boolean m_tile_bg_insb>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "fieldget <stmenu: java.awt.Dimension d>"
+    "load.r r0"->"fieldget <stmenu: java.awt.Dimension d>";
+    "fieldget <java.awt.Dimension: int width>"
+    "fieldget <stmenu: java.awt.Dimension d>"->"fieldget <java.awt.Dimension: int width>";
+    "fieldget <java.awt.Dimension: int width>"->"load.r r0";
+    "fieldget <stmenu: int m_sbwidth>"
+    "load.r r0"->"fieldget <stmenu: int m_sbwidth>";
+    "sub.i"
+    "fieldget <stmenu: int m_sbwidth>"->"sub.i";
+    "fieldput <stmenu: int sbx>"
+    "sub.i"->"fieldput <stmenu: int sbx>";
+    "fieldput <stmenu: int sbx>"->"load.r r0";
+    "new java.awt.Dimension"
+    "load.r r0"->"new java.awt.Dimension";
+    "new java.awt.Dimension"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "load.r r0"->"fieldget <stmenu: java.awt.Dimension d>";
+    "fieldget <stmenu: java.awt.Dimension d>"->"fieldget <java.awt.Dimension: int width>";
+    "fieldget <java.awt.Dimension: int width>"->"load.r r0";
+    "load.r r0"->"fieldget <stmenu: int m_sbwidth>";
+    "fieldget <stmenu: int m_sbwidth>"->"sub.i";
+    "sub.i"->"load.r r0";
+    "load.r r0"->"fieldget <stmenu: java.awt.Dimension d>";
+    "fieldget <java.awt.Dimension: int height>"
+    "fieldget <stmenu: java.awt.Dimension d>"->"fieldget <java.awt.Dimension: int height>";
+    "specialinvoke <java.awt.Dimension: void <init>(int,int)>"
+    "fieldget <java.awt.Dimension: int height>"->"specialinvoke <java.awt.Dimension: void <init>(int,int)>";
+    "specialinvoke <java.awt.Dimension: void <init>(int,int)>"->"fieldput <stmenu: java.awt.Dimension d>";
+    "fieldput <stmenu: java.awt.Dimension d>"->"push 0";
+    "store.i $i31"
+    "push 0"->"store.i $i31";
+    "store.i $i31"->"goto load.r r2";
+    "goto load.r r2"->"load.r r2";
+    "load.r r2"->"new java.lang.StringBuffer";
+    "new java.lang.StringBuffer"->"dup1.r";
+    "push \"maindesc\""
+    "dup1.r"->"push \"maindesc\"";
+    "push \"maindesc\""->"specialinvoke <java.lang.StringBuffer: void <init>(java.lang.String)>";
+    "load.i i65"
+    "specialinvoke <java.lang.StringBuffer: void <init>(java.lang.String)>"->"load.i i65";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(int)>"
+    "load.i i65"->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(int)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(int)>"->"virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>"->"virtualinvoke <java.util.Properties: java.lang.String getProperty(java.lang.String)>";
+    "virtualinvoke <java.util.Properties: java.lang.String getProperty(java.lang.String)>"->"ifnonnull load.r r2";
+    "ifnonnull load.r r2"->"load.r r0";
+    "load.i $i31"
+    "load.r r0"->"load.i $i31";
+    "fieldput <stmenu: int total_subs>"
+    "load.i $i31"->"fieldput <stmenu: int total_subs>";
+    "fieldput <stmenu: int total_subs>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "fieldget <stmenu: int total_subs>"
+    "load.r r0"->"fieldget <stmenu: int total_subs>";
+    "newarray"
+    "fieldget <stmenu: int total_subs>"->"newarray";
+    "fieldput <stmenu: int[] sub_id>"
+    "newarray"->"fieldput <stmenu: int[] sub_id>";
+    "fieldput <stmenu: int[] sub_id>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <stmenu: int total_subs>";
+    "fieldget <stmenu: int total_subs>"->"newarray";
+    "fieldput <stmenu: java.lang.String[] m_sub_desc>"
+    "newarray"->"fieldput <stmenu: java.lang.String[] m_sub_desc>";
+    "fieldput <stmenu: java.lang.String[] m_sub_desc>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <stmenu: int total_subs>";
+    "fieldget <stmenu: int total_subs>"->"newarray";
+    "fieldput <stmenu: int[] sub_icon_id>"
+    "newarray"->"fieldput <stmenu: int[] sub_icon_id>";
+    "fieldput <stmenu: int[] sub_icon_id>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <stmenu: int total_subs>";
+    "fieldget <stmenu: int total_subs>"->"newarray";
+    "fieldput <stmenu: int[] sub_starty>"
+    "newarray"->"fieldput <stmenu: int[] sub_starty>";
+    "fieldput <stmenu: int[] sub_starty>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <stmenu: int total_subs>";
+    "fieldget <stmenu: int total_subs>"->"newarray";
+    "fieldput <stmenu: int[] sub_offy>"
+    "newarray"->"fieldput <stmenu: int[] sub_offy>";
+    "fieldput <stmenu: int[] sub_offy>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <stmenu: int total_subs>";
+    "fieldget <stmenu: int total_subs>"->"newarray";
+    "fieldput <stmenu: java.lang.String[] m_sub_url>"
+    "newarray"->"fieldput <stmenu: java.lang.String[] m_sub_url>";
+    "fieldput <stmenu: java.lang.String[] m_sub_url>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "fieldget <stmenu: int num_main>"
+    "load.r r0"->"fieldget <stmenu: int num_main>";
+    "fieldget <stmenu: int num_main>"->"newarray";
+    "fieldput <stmenu: java.lang.String[] m_main_url>"
+    "newarray"->"fieldput <stmenu: java.lang.String[] m_main_url>";
+    "fieldput <stmenu: java.lang.String[] m_main_url>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <stmenu: int num_main>";
+    "fieldget <stmenu: int num_main>"->"newarray";
+    "fieldput <stmenu: int[] num_mainsubs>"
+    "newarray"->"fieldput <stmenu: int[] num_mainsubs>";
+    "fieldput <stmenu: int[] num_mainsubs>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <stmenu: int num_main>";
+    "fieldget <stmenu: int num_main>"->"newarray";
+    "fieldput <stmenu: java.lang.String[] m_main_desc>"
+    "newarray"->"fieldput <stmenu: java.lang.String[] m_main_desc>";
+    "fieldput <stmenu: java.lang.String[] m_main_desc>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <stmenu: int num_main>";
+    "fieldget <stmenu: int num_main>"->"newarray";
+    "fieldput <stmenu: int[] main_icon_id>"
+    "newarray"->"fieldput <stmenu: int[] main_icon_id>";
+    "fieldput <stmenu: int[] main_icon_id>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <stmenu: int num_main>";
+    "fieldget <stmenu: int num_main>"->"newarray";
+    "fieldput <stmenu: boolean[] m_sub_expanded>"
+    "newarray"->"fieldput <stmenu: boolean[] m_sub_expanded>";
+    "fieldput <stmenu: boolean[] m_sub_expanded>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <stmenu: int num_main>";
+    "fieldget <stmenu: int num_main>"->"newarray";
+    "fieldput <stmenu: int[] main_starty>"
+    "newarray"->"fieldput <stmenu: int[] main_starty>";
+    "fieldput <stmenu: int[] main_starty>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <stmenu: int num_main>";
+    "fieldget <stmenu: int num_main>"->"newarray";
+    "fieldput <stmenu: int[] sub_start_index>"
+    "newarray"->"fieldput <stmenu: int[] sub_start_index>";
+    "fieldput <stmenu: int[] sub_start_index>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <stmenu: int num_main>";
+    "fieldget <stmenu: int num_main>"->"newarray";
+    "fieldput <stmenu: java.awt.Image[] arErase>"
+    "newarray"->"fieldput <stmenu: java.awt.Image[] arErase>";
+    "fieldput <stmenu: java.awt.Image[] arErase>"->"push 0";
+    "push 0"->"store.i i65";
+    "store.i i65"->"push 0";
+    "push 0"->"store.i i66";
+    "goto load.i i66"
+    "store.i i66"->"goto load.i i66";
+    "load.i i66"
+    "goto load.i i66"->"load.i i66";
+    "load.i i66"->"load.r r0";
+    "load.r r0"->"fieldget <stmenu: int num_main>";
+    "ifcmplt.i push 0"
+    "fieldget <stmenu: int num_main>"->"ifcmplt.i push 0";
+    "ifcmplt.i push 0"->"push 0";
+    "push 0"->"store.i i65";
+    "store.i i65"->"push 0";
+    "push 0"->"store.i i66";
+    "store.i i66"->"goto load.i i66";
+    "goto load.i i66"->"load.i i66";
+    "load.i i66"->"load.r r0";
+    "fieldget <stmenu: int[] num_mainsubs>"
+    "load.r r0"->"fieldget <stmenu: int[] num_mainsubs>";
+    "arraylength"
+    "fieldget <stmenu: int[] num_mainsubs>"->"arraylength";
+    "ifcmplt.i load.r r0"
+    "arraylength"->"ifcmplt.i load.r r0";
+    "ifcmplt.i load.r r0"->"goto load.r r2";
+    "goto load.r r2"->"load.r r2";
+    "load.r r2"->"new java.lang.StringBuffer";
+    "new java.lang.StringBuffer"->"dup1.r";
+    "push \"iconfile\""
+    "dup1.r"->"push \"iconfile\"";
+    "push \"iconfile\""->"specialinvoke <java.lang.StringBuffer: void <init>(java.lang.String)>";
+    "specialinvoke <java.lang.StringBuffer: void <init>(java.lang.String)>"->"load.r r0";
+    "fieldget <stmenu: int num_icons>"
+    "load.r r0"->"fieldget <stmenu: int num_icons>";
+    "fieldget <stmenu: int num_icons>"->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(int)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(int)>"->"virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>"->"virtualinvoke <java.util.Properties: java.lang.String getProperty(java.lang.String)>";
+    "ifnonnull load.r r0"
+    "virtualinvoke <java.util.Properties: java.lang.String getProperty(java.lang.String)>"->"ifnonnull load.r r0";
+    "ifnonnull load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <stmenu: int num_icons>";
+    "fieldget <stmenu: int num_icons>"->"newarray";
+    "fieldput <stmenu: java.lang.String[] m_icon_file>"
+    "newarray"->"fieldput <stmenu: java.lang.String[] m_icon_file>";
+    "fieldput <stmenu: java.lang.String[] m_icon_file>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <stmenu: int num_icons>";
+    "fieldget <stmenu: int num_icons>"->"newarray";
+    "fieldput <stmenu: java.lang.String[] m_icon_switchfile>"
+    "newarray"->"fieldput <stmenu: java.lang.String[] m_icon_switchfile>";
+    "fieldput <stmenu: java.lang.String[] m_icon_switchfile>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <stmenu: int num_icons>";
+    "fieldget <stmenu: int num_icons>"->"newarray";
+    "fieldput <stmenu: java.awt.Image[] i_pic>"
+    "newarray"->"fieldput <stmenu: java.awt.Image[] i_pic>";
+    "fieldput <stmenu: java.awt.Image[] i_pic>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <stmenu: int num_icons>";
+    "fieldget <stmenu: int num_icons>"->"newarray";
+    "fieldput <stmenu: java.awt.Image[] s_pic>"
+    "newarray"->"fieldput <stmenu: java.awt.Image[] s_pic>";
+    "fieldput <stmenu: java.awt.Image[] s_pic>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <stmenu: int num_icons>";
+    "fieldget <stmenu: int num_icons>"->"newarray";
+    "fieldput <stmenu: java.awt.Dimension[] icon_d>"
+    "newarray"->"fieldput <stmenu: java.awt.Dimension[] icon_d>";
+    "fieldput <stmenu: java.awt.Dimension[] icon_d>"->"push 0";
+    "push 0"->"store.i i65";
+    "goto load.i i65"
+    "store.i i65"->"goto load.i i65";
+    "goto load.i i65"->"load.i i65";
+    "load.i i65"->"load.r r0";
+    "load.r r0"->"fieldget <stmenu: int num_icons>";
+    "ifcmplt.i load.r r2"
+    "fieldget <stmenu: int num_icons>"->"ifcmplt.i load.r r2";
+    "ifcmplt.i load.r r2"->"return";
+    "ifcmplt.i load.r r2"->"load.r r2";
+    "load.r r2"->"new java.lang.StringBuffer";
+    "new java.lang.StringBuffer"->"dup1.r";
+    "dup1.r"->"push \"iconfile\"";
+    "push \"iconfile\""->"specialinvoke <java.lang.StringBuffer: void <init>(java.lang.String)>";
+    "specialinvoke <java.lang.StringBuffer: void <init>(java.lang.String)>"->"load.i i65";
+    "load.i i65"->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(int)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(int)>"->"virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>"->"virtualinvoke <java.util.Properties: java.lang.String getProperty(java.lang.String)>";
+    "store.r i66"
+    "virtualinvoke <java.util.Properties: java.lang.String getProperty(java.lang.String)>"->"store.r i66";
+    "load.r i66"
+    "store.r i66"->"load.r i66";
+    "load.r i66"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r r0";
+    "fieldget <stmenu: java.lang.String[] m_icon_file>"
+    "load.r r0"->"fieldget <stmenu: java.lang.String[] m_icon_file>";
+    "fieldget <stmenu: java.lang.String[] m_icon_file>"->"load.i i65";
+    "new java.lang.String"
+    "load.i i65"->"new java.lang.String";
+    "new java.lang.String"->"dup1.r";
+    "dup1.r"->"load.r i66";
+    "specialinvoke <java.lang.String: void <init>(java.lang.String)>"
+    "load.r i66"->"specialinvoke <java.lang.String: void <init>(java.lang.String)>";
+    "arraywrite.r"
+    "specialinvoke <java.lang.String: void <init>(java.lang.String)>"->"arraywrite.r";
+    "arraywrite.r"->"goto load.r r2";
+    "goto load.r r2"->"load.r r2";
+    "load.r r2"->"new java.lang.StringBuffer";
+    "new java.lang.StringBuffer"->"dup1.r";
+    "push \"iconswitchfile\""
+    "dup1.r"->"push \"iconswitchfile\"";
+    "push \"iconswitchfile\""->"specialinvoke <java.lang.StringBuffer: void <init>(java.lang.String)>";
+    "specialinvoke <java.lang.StringBuffer: void <init>(java.lang.String)>"->"load.i i65";
+    "load.i i65"->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(int)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(int)>"->"virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>"->"virtualinvoke <java.util.Properties: java.lang.String getProperty(java.lang.String)>";
+    "virtualinvoke <java.util.Properties: java.lang.String getProperty(java.lang.String)>"->"store.r i66";
+    "store.r i66"->"load.r i66";
+    "load.r i66"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r r0";
+    "fieldget <stmenu: java.lang.String[] m_icon_switchfile>"
+    "load.r r0"->"fieldget <stmenu: java.lang.String[] m_icon_switchfile>";
+    "fieldget <stmenu: java.lang.String[] m_icon_switchfile>"->"load.i i65";
+    "load.i i65"->"new java.lang.String";
+    "new java.lang.String"->"dup1.r";
+    "dup1.r"->"load.r i66";
+    "load.r i66"->"specialinvoke <java.lang.String: void <init>(java.lang.String)>";
+    "specialinvoke <java.lang.String: void <init>(java.lang.String)>"->"arraywrite.r";
+    "goto inc.i i65 1"
+    "arraywrite.r"->"goto inc.i i65 1";
+    "inc.i i65 1"
+    "goto inc.i i65 1"->"inc.i i65 1";
+    "ifnull load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <stmenu: java.lang.String[] m_icon_switchfile>";
+    "fieldget <stmenu: java.lang.String[] m_icon_switchfile>"->"load.i i65";
+    "load.i i65"->"load.r r0";
+    "load.r r0"->"fieldget <stmenu: java.lang.String[] m_icon_file>";
+    "fieldget <stmenu: java.lang.String[] m_icon_file>"->"load.i i65";
+    "arrayread.r"
+    "load.i i65"->"arrayread.r";
+    "arrayread.r"->"arraywrite.r";
+    "ifnull load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <stmenu: java.lang.String[] m_icon_file>";
+    "fieldget <stmenu: java.lang.String[] m_icon_file>"->"load.i i65";
+    "load.i i65"->"new java.lang.String";
+    "new java.lang.String"->"dup1.r";
+    "push \" \""
+    "dup1.r"->"push \" \"";
+    "push \" \""->"specialinvoke <java.lang.String: void <init>(java.lang.String)>";
+    "specialinvoke <java.lang.String: void <init>(java.lang.String)>"->"arraywrite.r";
+    "ifnonnull load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <stmenu: int num_icons>";
+    "fieldget <stmenu: int num_icons>"->"push 1";
+    "push 1"->"add.i";
+    "fieldput <stmenu: int num_icons>"
+    "add.i"->"fieldput <stmenu: int num_icons>";
+    "ifcmplt.i load.r r0"->"load.r r0";
+    "fieldget <stmenu: int[] sub_start_index>"
+    "load.r r0"->"fieldget <stmenu: int[] sub_start_index>";
+    "fieldget <stmenu: int[] sub_start_index>"->"load.i i66";
+    "load.i i66"->"load.i i65";
+    "arraywrite.i"
+    "load.i i65"->"arraywrite.i";
+    "arraywrite.i"->"load.i i65";
+    "load.i i65"->"load.r r0";
+    "load.r r0"->"fieldget <stmenu: int[] num_mainsubs>";
+    "fieldget <stmenu: int[] num_mainsubs>"->"load.i i66";
+    "arrayread.i"
+    "load.i i66"->"arrayread.i";
+    "arrayread.i"->"add.i";
+    "add.i"->"store.i i65";
+    "inc.i i66 1"
+    "store.i i65"->"inc.i i66 1";
+    "ifcmplt.i push 0"->"push 0";
+    "store.i $r62"
+    "push 0"->"store.i $r62";
+    "store.i $r62"->"goto load.r r2";
+    "goto load.r r2"->"load.r r2";
+    "load.r r2"->"new java.lang.StringBuffer";
+    "new java.lang.StringBuffer"->"dup1.r";
+    "push \"subdesc\""
+    "dup1.r"->"push \"subdesc\"";
+    "push \"subdesc\""->"specialinvoke <java.lang.StringBuffer: void <init>(java.lang.String)>";
+    "specialinvoke <java.lang.StringBuffer: void <init>(java.lang.String)>"->"load.i i66";
+    "load.i i66"->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(int)>";
+    "push \"-\""
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(int)>"->"push \"-\"";
+    "push \"-\""->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "load.i $r62"
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"load.i $r62";
+    "load.i $r62"->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(int)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(int)>"->"virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>"->"virtualinvoke <java.util.Properties: java.lang.String getProperty(java.lang.String)>";
+    "virtualinvoke <java.util.Properties: java.lang.String getProperty(java.lang.String)>"->"ifnonnull load.r r0";
+    "ifnonnull load.r r0"->"push 0";
+    "push 0"->"store.i $i31";
+    "goto load.i $i31"
+    "store.i $i31"->"goto load.i $i31";
+    "goto load.i $i31"->"load.i $i31";
+    "load.i $i31"->"load.r r0";
+    "load.r r0"->"fieldget <stmenu: int[] num_mainsubs>";
+    "fieldget <stmenu: int[] num_mainsubs>"->"load.i i66";
+    "load.i i66"->"arrayread.i";
+    "arrayread.i"->"ifcmplt.i load.r r0";
+    "ifcmplt.i load.r r0"->"load.r r2";
+    "load.r r2"->"new java.lang.StringBuffer";
+    "new java.lang.StringBuffer"->"dup1.r";
+    "dup1.r"->"push \"maindesc\"";
+    "push \"maindesc\""->"specialinvoke <java.lang.StringBuffer: void <init>(java.lang.String)>";
+    "specialinvoke <java.lang.StringBuffer: void <init>(java.lang.String)>"->"load.i i66";
+    "load.i i66"->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(int)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(int)>"->"virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>"->"virtualinvoke <java.util.Properties: java.lang.String getProperty(java.lang.String)>";
+    "virtualinvoke <java.util.Properties: java.lang.String getProperty(java.lang.String)>"->"store.r $i31";
+    "store.r $i31"->"load.r $i31";
+    "load.r $i31"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r r0";
+    "fieldget <stmenu: java.lang.String[] m_main_desc>"
+    "load.r r0"->"fieldget <stmenu: java.lang.String[] m_main_desc>";
+    "fieldget <stmenu: java.lang.String[] m_main_desc>"->"load.i i66";
+    "load.i i66"->"new java.lang.String";
+    "new java.lang.String"->"dup1.r";
+    "dup1.r"->"load.r $i31";
+    "load.r $i31"->"specialinvoke <java.lang.String: void <init>(java.lang.String)>";
+    "specialinvoke <java.lang.String: void <init>(java.lang.String)>"->"arraywrite.r";
+    "arraywrite.r"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <stmenu: java.lang.String[] m_main_desc>";
+    "fieldget <stmenu: java.lang.String[] m_main_desc>"->"load.i i66";
+    "load.i i66"->"arrayread.r";
+    "virtualinvoke <stmenu: java.lang.String[] getIdandText(java.lang.String)>"
+    "arrayread.r"->"virtualinvoke <stmenu: java.lang.String[] getIdandText(java.lang.String)>";
+    "virtualinvoke <stmenu: java.lang.String[] getIdandText(java.lang.String)>"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "fieldget <stmenu: int[] main_icon_id>"
+    "load.r r0"->"fieldget <stmenu: int[] main_icon_id>";
+    "fieldget <stmenu: int[] main_icon_id>"->"store.r $i31";
+    "store.r $i31"->"push 0";
+    "push 0"->"arrayread.r";
+    "arrayread.r"->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>";
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"->"store.i $r62";
+    "store.i $r62"->"load.r $i31";
+    "load.r $i31"->"load.i i66";
+    "load.i i66"->"load.i $r62";
+    "load.i $r62"->"arraywrite.i";
+    "arraywrite.i"->"push 1";
+    "push 1"->"arrayread.r";
+    "arrayread.r"->"store.r $i31";
+    "store.r $i31"->"load.r r0";
+    "load.r r0"->"fieldget <stmenu: java.lang.String[] m_main_desc>";
+    "fieldget <stmenu: java.lang.String[] m_main_desc>"->"load.i i66";
+    "load.i i66"->"load.r $i31";
+    "load.r $i31"->"arraywrite.r";
+    "arraywrite.r"->"goto load.r r2";
+    "goto load.r r2"->"load.r r2";
+    "load.r r2"->"new java.lang.StringBuffer";
+    "new java.lang.StringBuffer"->"dup1.r";
+    "push \"mainurl\""
+    "dup1.r"->"push \"mainurl\"";
+    "push \"mainurl\""->"specialinvoke <java.lang.StringBuffer: void <init>(java.lang.String)>";
+    "specialinvoke <java.lang.StringBuffer: void <init>(java.lang.String)>"->"load.i i66";
+    "load.i i66"->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(int)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(int)>"->"virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>"->"virtualinvoke <java.util.Properties: java.lang.String getProperty(java.lang.String)>";
+    "virtualinvoke <java.util.Properties: java.lang.String getProperty(java.lang.String)>"->"store.r $i31";
+    "store.r $i31"->"load.r $i31";
+    "load.r $i31"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r r0";
+    "fieldget <stmenu: java.lang.String[] m_main_url>"
+    "load.r r0"->"fieldget <stmenu: java.lang.String[] m_main_url>";
+    "fieldget <stmenu: java.lang.String[] m_main_url>"->"load.i i66";
+    "load.i i66"->"new java.lang.String";
+    "new java.lang.String"->"dup1.r";
+    "dup1.r"->"load.r $i31";
+    "load.r $i31"->"specialinvoke <java.lang.String: void <init>(java.lang.String)>";
+    "specialinvoke <java.lang.String: void <init>(java.lang.String)>"->"arraywrite.r";
+    "goto inc.i i66 1"
+    "arraywrite.r"->"goto inc.i i66 1";
+    "goto inc.i i66 1"->"inc.i i66 1";
+    "ifnull load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <stmenu: java.lang.String[] m_main_url>";
+    "fieldget <stmenu: java.lang.String[] m_main_url>"->"load.i i66";
+    "load.i i66"->"push \"-1\"";
+    "push \"-1\""->"arraywrite.r";
+    "ifnull load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <stmenu: java.lang.String[] m_main_desc>";
+    "fieldget <stmenu: java.lang.String[] m_main_desc>"->"load.i i66";
+    "push \"\""
+    "load.i i66"->"push \"\"";
+    "push \"\""->"arraywrite.r";
+    "arraywrite.r"->"load.r r0";
+    "load.r r0"->"fieldget <stmenu: int[] main_icon_id>";
+    "fieldget <stmenu: int[] main_icon_id>"->"load.i i66";
+    "push -1"
+    "load.i i66"->"push -1";
+    "push -1"->"arraywrite.i";
+    "ifcmplt.i load.r r0"->"load.r r0";
+    "fieldget <stmenu: int[] sub_id>"
+    "load.r r0"->"fieldget <stmenu: int[] sub_id>";
+    "fieldget <stmenu: int[] sub_id>"->"load.i i65";
+    "load.i i65"->"load.i i66";
+    "load.i i66"->"arraywrite.i";
+    "arraywrite.i"->"load.r r2";
+    "load.r r2"->"new java.lang.StringBuffer";
+    "new java.lang.StringBuffer"->"dup1.r";
+    "dup1.r"->"push \"subdesc\"";
+    "push \"subdesc\""->"specialinvoke <java.lang.StringBuffer: void <init>(java.lang.String)>";
+    "specialinvoke <java.lang.StringBuffer: void <init>(java.lang.String)>"->"load.i i66";
+    "load.i i66"->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(int)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(int)>"->"push \"-\"";
+    "push \"-\""->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"load.i $i31";
+    "load.i $i31"->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(int)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(int)>"->"virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>"->"virtualinvoke <java.util.Properties: java.lang.String getProperty(java.lang.String)>";
+    "virtualinvoke <java.util.Properties: java.lang.String getProperty(java.lang.String)>"->"store.r $r62";
+    "store.r $r62"->"load.r $r62";
+    "load.r $r62"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r r0";
+    "fieldget <stmenu: java.lang.String[] m_sub_desc>"
+    "load.r r0"->"fieldget <stmenu: java.lang.String[] m_sub_desc>";
+    "fieldget <stmenu: java.lang.String[] m_sub_desc>"->"load.i i65";
+    "load.i i65"->"load.r $r62";
+    "load.r $r62"->"arraywrite.r";
+    "arraywrite.r"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <stmenu: java.lang.String[] m_sub_desc>";
+    "fieldget <stmenu: java.lang.String[] m_sub_desc>"->"load.i i65";
+    "load.i i65"->"arrayread.r";
+    "arrayread.r"->"virtualinvoke <stmenu: java.lang.String[] getIdandText(java.lang.String)>";
+    "virtualinvoke <stmenu: java.lang.String[] getIdandText(java.lang.String)>"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "fieldget <stmenu: int[] sub_icon_id>"
+    "load.r r0"->"fieldget <stmenu: int[] sub_icon_id>";
+    "fieldget <stmenu: int[] sub_icon_id>"->"store.r $r62";
+    "store.r $r62"->"push 0";
+    "push 0"->"arrayread.r";
+    "arrayread.r"->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>";
+    "store.i $i32"
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"->"store.i $i32";
+    "store.i $i32"->"load.r $r62";
+    "load.r $r62"->"load.i i65";
+    "load.i $i32"
+    "load.i i65"->"load.i $i32";
+    "load.i $i32"->"arraywrite.i";
+    "arraywrite.i"->"push 1";
+    "push 1"->"arrayread.r";
+    "arrayread.r"->"store.r $r62";
+    "store.r $r62"->"load.r r0";
+    "load.r r0"->"fieldget <stmenu: java.lang.String[] m_sub_desc>";
+    "fieldget <stmenu: java.lang.String[] m_sub_desc>"->"load.i i65";
+    "load.i i65"->"load.r $r62";
+    "load.r $r62"->"arraywrite.r";
+    "arraywrite.r"->"goto load.r r2";
+    "goto load.r r2"->"load.r r2";
+    "load.r r2"->"new java.lang.StringBuffer";
+    "new java.lang.StringBuffer"->"dup1.r";
+    "push \"suburl\""
+    "dup1.r"->"push \"suburl\"";
+    "push \"suburl\""->"specialinvoke <java.lang.StringBuffer: void <init>(java.lang.String)>";
+    "specialinvoke <java.lang.StringBuffer: void <init>(java.lang.String)>"->"load.i i66";
+    "load.i i66"->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(int)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(int)>"->"push \"-\"";
+    "push \"-\""->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"load.i $i31";
+    "load.i $i31"->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(int)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(int)>"->"virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>"->"virtualinvoke <java.util.Properties: java.lang.String getProperty(java.lang.String)>";
+    "virtualinvoke <java.util.Properties: java.lang.String getProperty(java.lang.String)>"->"store.r $r62";
+    "store.r $r62"->"load.r $r62";
+    "load.r $r62"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r r0";
+    "fieldget <stmenu: java.lang.String[] m_sub_url>"
+    "load.r r0"->"fieldget <stmenu: java.lang.String[] m_sub_url>";
+    "fieldget <stmenu: java.lang.String[] m_sub_url>"->"load.i i65";
+    "load.i i65"->"load.r $r62";
+    "load.r $r62"->"arraywrite.r";
+    "arraywrite.r"->"goto inc.i i65 1";
+    "goto inc.i i65 1"->"inc.i i65 1";
+    "inc.i $i31 1"
+    "inc.i i65 1"->"inc.i $i31 1";
+    "ifnull load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <stmenu: java.lang.String[] m_sub_url>";
+    "fieldget <stmenu: java.lang.String[] m_sub_url>"->"load.i i65";
+    "load.i i65"->"push \"-1\"";
+    "push \"-1\""->"arraywrite.r";
+    "ifnull load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <stmenu: java.lang.String[] m_sub_desc>";
+    "fieldget <stmenu: java.lang.String[] m_sub_desc>"->"load.i i65";
+    "load.i i65"->"push \"\"";
+    "push \"\""->"arraywrite.r";
+    "arraywrite.r"->"load.r r0";
+    "load.r r0"->"fieldget <stmenu: int[] sub_icon_id>";
+    "fieldget <stmenu: int[] sub_icon_id>"->"load.i i66";
+    "load.i i66"->"push -1";
+    "push -1"->"arraywrite.i";
+    "ifnonnull load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <stmenu: int[] num_mainsubs>";
+    "fieldget <stmenu: int[] num_mainsubs>"->"dup1.r";
+    "dup1.r"->"load.i i66";
+    "load.i i66"->"arrayread.i";
+    "arrayread.i"->"push 1";
+    "push 1"->"add.i";
+    "add.i"->"store.i $i31";
+    "store.i $i31"->"load.i i66";
+    "load.i i66"->"load.i $i31";
+    "load.i $i31"->"arraywrite.i";
+    "inc.i $r62 1"
+    "arraywrite.i"->"inc.i $r62 1";
+    "ifnonnull load.r r2"->"load.r r2";
+    "load.r r2"->"new java.lang.StringBuffer";
+    "new java.lang.StringBuffer"->"dup1.r";
+    "dup1.r"->"push \"subdesc\"";
+    "push \"subdesc\""->"specialinvoke <java.lang.StringBuffer: void <init>(java.lang.String)>";
+    "specialinvoke <java.lang.StringBuffer: void <init>(java.lang.String)>"->"load.i i65";
+    "load.i i65"->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(int)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(int)>"->"push \"-\"";
+    "push \"-\""->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"load.i i66";
+    "load.i i66"->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(int)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(int)>"->"virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>"->"virtualinvoke <java.util.Properties: java.lang.String getProperty(java.lang.String)>";
+    "ifnonnull inc.i i66 1"
+    "virtualinvoke <java.util.Properties: java.lang.String getProperty(java.lang.String)>"->"ifnonnull inc.i i66 1";
+    "ifnonnull inc.i i66 1"->"push 0";
+    "push 0"->"store.i i66";
+    "store.i i66"->"inc.i i65 1";
+    "inc.i i65 1"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <stmenu: int num_main>";
+    "fieldget <stmenu: int num_main>"->"push 1";
+    "push 1"->"add.i";
+    "fieldput <stmenu: int num_main>"
+    "add.i"->"fieldput <stmenu: int num_main>";
+    "ifnonnull inc.i i66 1"->"inc.i i66 1";
+    "inc.i i66 1"->"inc.i $i31 1";
+    "inc.i $i31 1"->"load.i i66";
+    "load.i i66"->"load.r r0";
+    "fieldget <stmenu: int max_subs>"
+    "load.r r0"->"fieldget <stmenu: int max_subs>";
+    "ifcmple.i load.r r2"
+    "fieldget <stmenu: int max_subs>"->"ifcmple.i load.r r2";
+    "ifcmple.i load.r r2"->"load.r r0";
+    "load.r r0"->"load.i i66";
+    "fieldput <stmenu: int max_subs>"
+    "load.i i66"->"fieldput <stmenu: int max_subs>";
+    "ifnull load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "fieldget <stmenu: java.awt.Color m_mac>"
+    "load.r r0"->"fieldget <stmenu: java.awt.Color m_mac>";
+    "fieldget <stmenu: java.awt.Color m_mac>"->"fieldput <stmenu: java.awt.Color m_machl>";
+    "ifnull load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "fieldget <stmenu: java.awt.Color m_bc>"
+    "load.r r0"->"fieldget <stmenu: java.awt.Color m_bc>";
+    "fieldget <stmenu: java.awt.Color m_bc>"->"fieldput <stmenu: java.awt.Color m_mac>";
+    "ifnull load.r r0"->"load.r r0";
+    "new java.awt.Font"
+    "load.r r0"->"new java.awt.Font";
+    "new java.awt.Font"->"dup1.r";
+    "push \"Helvetica\""
+    "dup1.r"->"push \"Helvetica\"";
+    "push \"Helvetica\""->"push 0";
+    "push 12"
+    "push 0"->"push 12";
+    "specialinvoke <java.awt.Font: void <init>(java.lang.String,int,int)>"
+    "push 12"->"specialinvoke <java.awt.Font: void <init>(java.lang.String,int,int)>";
+    "specialinvoke <java.awt.Font: void <init>(java.lang.String,int,int)>"->"fieldput <stmenu: java.awt.Font m_sub_font>";
+    "ifnull load.r r0"->"load.r r0";
+    "load.r r0"->"new java.awt.Font";
+    "new java.awt.Font"->"dup1.r";
+    "dup1.r"->"push \"Helvetica\"";
+    "push \"Helvetica\""->"push 0";
+    "push 0"->"push 12";
+    "push 12"->"specialinvoke <java.awt.Font: void <init>(java.lang.String,int,int)>";
+    "specialinvoke <java.awt.Font: void <init>(java.lang.String,int,int)>"->"fieldput <stmenu: java.awt.Font m_main_font>";
+    "ifnull load.r r0"->"load.r r0";
+    "load.r r0"->"new java.awt.Font";
+    "new java.awt.Font"->"dup1.r";
+    "dup1.r"->"push \"Helvetica\"";
+    "push \"Helvetica\""->"push 0";
+    "push 0"->"push 12";
+    "push 12"->"specialinvoke <java.awt.Font: void <init>(java.lang.String,int,int)>";
+    "specialinvoke <java.awt.Font: void <init>(java.lang.String,int,int)>"->"fieldput <stmenu: java.awt.Font m_load_font>";
+    "ifnull load.r r0"->"load.r r0";
+    "push \"Missing \'Notice\' Tag\""
+    "load.r r0"->"push \"Missing \'Notice\' Tag\"";
+    "push \"Missing \'Notice\' Tag\""->"fieldput <stmenu: java.lang.String m_onsbtext>";
+    "fieldput <stmenu: java.lang.String m_onsbtext>"->"return";
+}

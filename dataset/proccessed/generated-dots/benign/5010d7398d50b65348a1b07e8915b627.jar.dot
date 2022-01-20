@@ -1,0 +1,34 @@
+digraph "" {
+    "r0 := @this: wordle.WordleApplet"
+    "new wordle.f"
+    "r0 := @this: wordle.WordleApplet"->"new wordle.f";
+    "dup1.r"
+    "new wordle.f"->"dup1.r";
+    "load.r r0"
+    "dup1.r"->"load.r r0";
+    "specialinvoke <wordle.f: void <init>(wordle.WordleApplet)>"
+    "load.r r0"->"specialinvoke <wordle.f: void <init>(wordle.WordleApplet)>";
+    "staticinvoke <java.awt.EventQueue: void invokeAndWait(java.lang.Runnable)>"
+    "specialinvoke <wordle.f: void <init>(wordle.WordleApplet)>"->"staticinvoke <java.awt.EventQueue: void invokeAndWait(java.lang.Runnable)>";
+    "goto load.r r0"
+    "staticinvoke <java.awt.EventQueue: void invokeAndWait(java.lang.Runnable)>"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "new wordle.g"
+    "load.r r0"->"new wordle.g";
+    "new wordle.g"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "specialinvoke <wordle.g: void <init>(wordle.WordleApplet)>"
+    "load.r r0"->"specialinvoke <wordle.g: void <init>(wordle.WordleApplet)>";
+    "virtualinvoke <wordle.WordleApplet: void addComponentListener(java.awt.event.ComponentListener)>"
+    "specialinvoke <wordle.g: void <init>(wordle.WordleApplet)>"->"virtualinvoke <wordle.WordleApplet: void addComponentListener(java.awt.event.ComponentListener)>";
+    "return"
+    "virtualinvoke <wordle.WordleApplet: void addComponentListener(java.awt.event.ComponentListener)>"->"return";
+    "store.r $r4"
+    "staticinvoke <java.awt.EventQueue: void invokeAndWait(java.lang.Runnable)>"->"store.r $r4";
+    "staticget <java.lang.System: java.io.PrintStream err>"
+    "store.r $r4"->"staticget <java.lang.System: java.io.PrintStream err>";
+    "load.r $r4"
+    "staticget <java.lang.System: java.io.PrintStream err>"->"load.r $r4";
+    "virtualinvoke <java.io.PrintStream: void println(java.lang.Object)>"
+    "load.r $r4"->"virtualinvoke <java.io.PrintStream: void println(java.lang.Object)>";
+}

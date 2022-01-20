@@ -1,0 +1,532 @@
+digraph "" {
+    "r0 := @this: mimdesc"
+    "load.r r0"
+    "r0 := @this: mimdesc"->"load.r r0";
+    "specialinvoke <java.applet.Applet: void init()>"
+    "load.r r0"->"specialinvoke <java.applet.Applet: void init()>";
+    "new java.lang.Integer"
+    "specialinvoke <java.applet.Applet: void init()>"->"new java.lang.Integer";
+    "dup1.r"
+    "new java.lang.Integer"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "push \"regcode\""
+    "load.r r0"->"push \"regcode\"";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"
+    "push \"regcode\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "specialinvoke <java.lang.Integer: void <init>(java.lang.String)>"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"specialinvoke <java.lang.Integer: void <init>(java.lang.String)>";
+    "virtualinvoke <java.lang.Integer: int intValue()>"
+    "specialinvoke <java.lang.Integer: void <init>(java.lang.String)>"->"virtualinvoke <java.lang.Integer: int intValue()>";
+    "store.i i0"
+    "virtualinvoke <java.lang.Integer: int intValue()>"->"store.i i0";
+    "load.i i0"
+    "store.i i0"->"load.i i0";
+    "push 100000"
+    "load.i i0"->"push 100000";
+    "div.i"
+    "push 100000"->"div.i";
+    "store.i i1"
+    "div.i"->"store.i i1";
+    "store.i i1"->"load.i i0";
+    "push 10"
+    "load.i i0"->"push 10";
+    "push 10"->"div.i";
+    "load.i i1"
+    "div.i"->"load.i i1";
+    "push 10000"
+    "load.i i1"->"push 10000";
+    "mul.i"
+    "push 10000"->"mul.i";
+    "sub.i"
+    "mul.i"->"sub.i";
+    "store.i i2"
+    "sub.i"->"store.i i2";
+    "store.i i2"->"load.i i0";
+    "load.i i0"->"push 10";
+    "rem.i"
+    "push 10"->"rem.i";
+    "rem.i"->"store.i i0";
+    "store.i i0"->"load.i i1";
+    "push 512"
+    "load.i i1"->"push 512";
+    "ifcmpne.i load.r r0"
+    "push 512"->"ifcmpne.i load.r r0";
+    "ifcmpne.i load.r r0"->"load.i i0";
+    "load.i i0"->"load.i i1";
+    "load.i i2"
+    "load.i i1"->"load.i i2";
+    "load.i i2"->"mul.i";
+    "mul.i"->"push 10";
+    "push 10"->"rem.i";
+    "rem.i"->"ifcmpne.i load.r r0";
+    "ifcmpne.i load.r r0"->"load.r r0";
+    "push 1"
+    "load.r r0"->"push 1";
+    "fieldput <mimdesc: boolean registered>"
+    "push 1"->"fieldput <mimdesc: boolean registered>";
+    "fieldput <mimdesc: boolean registered>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "virtualinvoke <java.awt.Component: java.awt.Dimension size()>"
+    "load.r r0"->"virtualinvoke <java.awt.Component: java.awt.Dimension size()>";
+    "fieldput <mimdesc: java.awt.Dimension d>"
+    "virtualinvoke <java.awt.Component: java.awt.Dimension size()>"->"fieldput <mimdesc: java.awt.Dimension d>";
+    "fieldput <mimdesc: java.awt.Dimension d>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "fieldget <mimdesc: java.awt.Dimension d>"
+    "load.r r0"->"fieldget <mimdesc: java.awt.Dimension d>";
+    "fieldget <java.awt.Dimension: int width>"
+    "fieldget <mimdesc: java.awt.Dimension d>"->"fieldget <java.awt.Dimension: int width>";
+    "fieldput <mimdesc: int width>"
+    "fieldget <java.awt.Dimension: int width>"->"fieldput <mimdesc: int width>";
+    "fieldput <mimdesc: int width>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <mimdesc: java.awt.Dimension d>";
+    "fieldget <java.awt.Dimension: int height>"
+    "fieldget <mimdesc: java.awt.Dimension d>"->"fieldget <java.awt.Dimension: int height>";
+    "fieldput <mimdesc: int height>"
+    "fieldget <java.awt.Dimension: int height>"->"fieldput <mimdesc: int height>";
+    "fieldput <mimdesc: int height>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "fieldget <mimdesc: int width>"
+    "load.r r0"->"fieldget <mimdesc: int width>";
+    "fieldget <mimdesc: int width>"->"load.r r0";
+    "fieldget <mimdesc: int height>"
+    "load.r r0"->"fieldget <mimdesc: int height>";
+    "virtualinvoke <java.applet.Applet: void resize(int,int)>"
+    "fieldget <mimdesc: int height>"->"virtualinvoke <java.applet.Applet: void resize(int,int)>";
+    "virtualinvoke <java.applet.Applet: void resize(int,int)>"->"load.r r0";
+    "fieldget <mimdesc: int fps>"
+    "load.r r0"->"fieldget <mimdesc: int fps>";
+    "ifle push 100"
+    "fieldget <mimdesc: int fps>"->"ifle push 100";
+    "push 1000"
+    "ifle push 100"->"push 1000";
+    "push 1000"->"load.r r0";
+    "load.r r0"->"fieldget <mimdesc: int fps>";
+    "fieldget <mimdesc: int fps>"->"div.i";
+    "div.i"->"store.i i1";
+    "goto load.r r0"
+    "store.i i1"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "load.r r0"->"load.i i1";
+    "fieldput <mimdesc: int delay>"
+    "load.i i1"->"fieldput <mimdesc: int delay>";
+    "fieldput <mimdesc: int delay>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "push \"bgimage\""
+    "load.r r0"->"push \"bgimage\"";
+    "push \"bgimage\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "fieldput <mimdesc: java.lang.String bgfile>"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"fieldput <mimdesc: java.lang.String bgfile>";
+    "fieldput <mimdesc: java.lang.String bgfile>"->"load.r r0";
+    "fieldget <mimdesc: java.lang.String bgfile>"
+    "load.r r0"->"fieldget <mimdesc: java.lang.String bgfile>";
+    "push \"none\""
+    "fieldget <mimdesc: java.lang.String bgfile>"->"push \"none\"";
+    "virtualinvoke <java.lang.String: boolean equalsIgnoreCase(java.lang.String)>"
+    "push \"none\""->"virtualinvoke <java.lang.String: boolean equalsIgnoreCase(java.lang.String)>";
+    "ifeq load.r r0"
+    "virtualinvoke <java.lang.String: boolean equalsIgnoreCase(java.lang.String)>"->"ifeq load.r r0";
+    "ifeq load.r r0"->"load.r r0";
+    "push 0"
+    "load.r r0"->"push 0";
+    "fieldput <mimdesc: boolean bgflag>"
+    "push 0"->"fieldput <mimdesc: boolean bgflag>";
+    "fieldput <mimdesc: boolean bgflag>"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "push \"fontface\""
+    "load.r r0"->"push \"fontface\"";
+    "push \"fontface\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "fieldput <mimdesc: java.lang.String fontface>"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"fieldput <mimdesc: java.lang.String fontface>";
+    "fieldput <mimdesc: java.lang.String fontface>"->"load.r r0";
+    "load.r r0"->"new java.lang.Integer";
+    "new java.lang.Integer"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "push \"fontsize\""
+    "load.r r0"->"push \"fontsize\"";
+    "push \"fontsize\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"specialinvoke <java.lang.Integer: void <init>(java.lang.String)>";
+    "specialinvoke <java.lang.Integer: void <init>(java.lang.String)>"->"virtualinvoke <java.lang.Integer: int intValue()>";
+    "fieldput <mimdesc: int fontsize>"
+    "virtualinvoke <java.lang.Integer: int intValue()>"->"fieldput <mimdesc: int fontsize>";
+    "fieldput <mimdesc: int fontsize>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "push \"fgcolor\""
+    "load.r r0"->"push \"fgcolor\"";
+    "push \"fgcolor\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <mimdesc: int[] parseInt(java.lang.String)>"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"virtualinvoke <mimdesc: int[] parseInt(java.lang.String)>";
+    "store.r i1"
+    "virtualinvoke <mimdesc: int[] parseInt(java.lang.String)>"->"store.r i1";
+    "store.r i1"->"load.r r0";
+    "load.r i1"
+    "load.r r0"->"load.r i1";
+    "load.r i1"->"push 0";
+    "arrayread.i"
+    "push 0"->"arrayread.i";
+    "fieldput <mimdesc: int fgR>"
+    "arrayread.i"->"fieldput <mimdesc: int fgR>";
+    "fieldput <mimdesc: int fgR>"->"load.r r0";
+    "load.r r0"->"load.r i1";
+    "load.r i1"->"push 1";
+    "push 1"->"arrayread.i";
+    "fieldput <mimdesc: int fgG>"
+    "arrayread.i"->"fieldput <mimdesc: int fgG>";
+    "fieldput <mimdesc: int fgG>"->"load.r r0";
+    "load.r r0"->"load.r i1";
+    "push 2"
+    "load.r i1"->"push 2";
+    "push 2"->"arrayread.i";
+    "fieldput <mimdesc: int fgB>"
+    "arrayread.i"->"fieldput <mimdesc: int fgB>";
+    "fieldput <mimdesc: int fgB>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "push \"bgcolor\""
+    "load.r r0"->"push \"bgcolor\"";
+    "push \"bgcolor\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"virtualinvoke <mimdesc: int[] parseInt(java.lang.String)>";
+    "virtualinvoke <mimdesc: int[] parseInt(java.lang.String)>"->"store.r i1";
+    "store.r i1"->"load.r r0";
+    "load.r r0"->"load.r i1";
+    "load.r i1"->"push 0";
+    "push 0"->"arrayread.i";
+    "fieldput <mimdesc: int R>"
+    "arrayread.i"->"fieldput <mimdesc: int R>";
+    "fieldput <mimdesc: int R>"->"load.r r0";
+    "load.r r0"->"load.r i1";
+    "load.r i1"->"push 1";
+    "push 1"->"arrayread.i";
+    "fieldput <mimdesc: int G>"
+    "arrayread.i"->"fieldput <mimdesc: int G>";
+    "fieldput <mimdesc: int G>"->"load.r r0";
+    "load.r r0"->"load.r i1";
+    "load.r i1"->"push 2";
+    "push 2"->"arrayread.i";
+    "fieldput <mimdesc: int B>"
+    "arrayread.i"->"fieldput <mimdesc: int B>";
+    "fieldput <mimdesc: int B>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "push \"highcolor\""
+    "load.r r0"->"push \"highcolor\"";
+    "push \"highcolor\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"virtualinvoke <mimdesc: int[] parseInt(java.lang.String)>";
+    "virtualinvoke <mimdesc: int[] parseInt(java.lang.String)>"->"store.r i1";
+    "store.r i1"->"load.r r0";
+    "load.r r0"->"load.r i1";
+    "load.r i1"->"push 0";
+    "push 0"->"arrayread.i";
+    "fieldput <mimdesc: int highR>"
+    "arrayread.i"->"fieldput <mimdesc: int highR>";
+    "fieldput <mimdesc: int highR>"->"load.r r0";
+    "load.r r0"->"load.r i1";
+    "load.r i1"->"push 1";
+    "push 1"->"arrayread.i";
+    "fieldput <mimdesc: int highG>"
+    "arrayread.i"->"fieldput <mimdesc: int highG>";
+    "fieldput <mimdesc: int highG>"->"load.r r0";
+    "load.r r0"->"load.r i1";
+    "load.r i1"->"push 2";
+    "push 2"->"arrayread.i";
+    "fieldput <mimdesc: int highB>"
+    "arrayread.i"->"fieldput <mimdesc: int highB>";
+    "fieldput <mimdesc: int highB>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "push \"loadcolor\""
+    "load.r r0"->"push \"loadcolor\"";
+    "push \"loadcolor\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"virtualinvoke <mimdesc: int[] parseInt(java.lang.String)>";
+    "virtualinvoke <mimdesc: int[] parseInt(java.lang.String)>"->"store.r i1";
+    "store.r i1"->"load.r r0";
+    "load.r r0"->"load.r i1";
+    "load.r i1"->"push 0";
+    "push 0"->"arrayread.i";
+    "fieldput <mimdesc: int loadR>"
+    "arrayread.i"->"fieldput <mimdesc: int loadR>";
+    "fieldput <mimdesc: int loadR>"->"load.r r0";
+    "load.r r0"->"load.r i1";
+    "load.r i1"->"push 1";
+    "push 1"->"arrayread.i";
+    "fieldput <mimdesc: int loadG>"
+    "arrayread.i"->"fieldput <mimdesc: int loadG>";
+    "fieldput <mimdesc: int loadG>"->"load.r r0";
+    "load.r r0"->"load.r i1";
+    "load.r i1"->"push 2";
+    "push 2"->"arrayread.i";
+    "fieldput <mimdesc: int loadB>"
+    "arrayread.i"->"fieldput <mimdesc: int loadB>";
+    "fieldput <mimdesc: int loadB>"->"load.r r0";
+    "load.r r0"->"new java.lang.Integer";
+    "new java.lang.Integer"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "push \"border\""
+    "load.r r0"->"push \"border\"";
+    "push \"border\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"specialinvoke <java.lang.Integer: void <init>(java.lang.String)>";
+    "specialinvoke <java.lang.Integer: void <init>(java.lang.String)>"->"virtualinvoke <java.lang.Integer: int intValue()>";
+    "fieldput <mimdesc: int border>"
+    "virtualinvoke <java.lang.Integer: int intValue()>"->"fieldput <mimdesc: int border>";
+    "fieldput <mimdesc: int border>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "push \"descpanel\""
+    "load.r r0"->"push \"descpanel\"";
+    "push \"descpanel\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "push \"|\""
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"push \"|\"";
+    "virtualinvoke <mimdesc: java.lang.String[] parse(java.lang.String,java.lang.String)>"
+    "push \"|\""->"virtualinvoke <mimdesc: java.lang.String[] parse(java.lang.String,java.lang.String)>";
+    "virtualinvoke <mimdesc: java.lang.String[] parse(java.lang.String,java.lang.String)>"->"dup1.r";
+    "dup1.r"->"push 0";
+    "arrayread.r"
+    "push 0"->"arrayread.r";
+    "arrayread.r"->"store.r i1";
+    "store.r i1"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"load.r i1";
+    "load.r i1"->"virtualinvoke <mimdesc: int[] parseInt(java.lang.String)>";
+    "virtualinvoke <mimdesc: int[] parseInt(java.lang.String)>"->"dup1.r";
+    "dup1.r"->"push 0";
+    "push 0"->"arrayread.i";
+    "arrayread.i"->"store.i i1";
+    "store.i i1"->"load.r r0";
+    "load.r r0"->"load.i i1";
+    "fieldput <mimdesc: int descx>"
+    "load.i i1"->"fieldput <mimdesc: int descx>";
+    "fieldput <mimdesc: int descx>"->"push 1";
+    "push 1"->"arrayread.i";
+    "fieldput <mimdesc: int descy>"
+    "arrayread.i"->"fieldput <mimdesc: int descy>";
+    "fieldput <mimdesc: int descy>"->"push 1";
+    "push 1"->"arrayread.r";
+    "arrayread.r"->"virtualinvoke <mimdesc: int[] parseInt(java.lang.String)>";
+    "virtualinvoke <mimdesc: int[] parseInt(java.lang.String)>"->"dup1.r";
+    "dup1.r"->"push 0";
+    "push 0"->"arrayread.i";
+    "arrayread.i"->"store.i i1";
+    "store.i i1"->"load.r r0";
+    "load.r r0"->"load.i i1";
+    "fieldput <mimdesc: int descwidth>"
+    "load.i i1"->"fieldput <mimdesc: int descwidth>";
+    "fieldput <mimdesc: int descwidth>"->"push 1";
+    "push 1"->"arrayread.i";
+    "fieldput <mimdesc: int descheight>"
+    "arrayread.i"->"fieldput <mimdesc: int descheight>";
+    "fieldput <mimdesc: int descheight>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "push \"descmessage\""
+    "load.r r0"->"push \"descmessage\"";
+    "push \"descmessage\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "fieldput <mimdesc: java.lang.String descmessage>"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"fieldput <mimdesc: java.lang.String descmessage>";
+    "fieldput <mimdesc: java.lang.String descmessage>"->"load.r r0";
+    "load.r r0"->"new java.lang.Integer";
+    "new java.lang.Integer"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "push \"total\""
+    "load.r r0"->"push \"total\"";
+    "push \"total\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"specialinvoke <java.lang.Integer: void <init>(java.lang.String)>";
+    "specialinvoke <java.lang.Integer: void <init>(java.lang.String)>"->"virtualinvoke <java.lang.Integer: int intValue()>";
+    "fieldput <mimdesc: int total>"
+    "virtualinvoke <java.lang.Integer: int intValue()>"->"fieldput <mimdesc: int total>";
+    "fieldput <mimdesc: int total>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "fieldget <mimdesc: int total>"
+    "load.r r0"->"fieldget <mimdesc: int total>";
+    "newarray"
+    "fieldget <mimdesc: int total>"->"newarray";
+    "fieldput <mimdesc: java.lang.String[] file>"
+    "newarray"->"fieldput <mimdesc: java.lang.String[] file>";
+    "fieldput <mimdesc: java.lang.String[] file>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <mimdesc: int total>";
+    "fieldget <mimdesc: int total>"->"newarray";
+    "fieldput <mimdesc: java.lang.String[] head>"
+    "newarray"->"fieldput <mimdesc: java.lang.String[] head>";
+    "fieldput <mimdesc: java.lang.String[] head>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <mimdesc: int total>";
+    "fieldget <mimdesc: int total>"->"newarray";
+    "fieldput <mimdesc: java.lang.String[] url>"
+    "newarray"->"fieldput <mimdesc: java.lang.String[] url>";
+    "fieldput <mimdesc: java.lang.String[] url>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <mimdesc: int total>";
+    "fieldget <mimdesc: int total>"->"newarray";
+    "fieldput <mimdesc: java.lang.String[] frame>"
+    "newarray"->"fieldput <mimdesc: java.lang.String[] frame>";
+    "fieldput <mimdesc: java.lang.String[] frame>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <mimdesc: int total>";
+    "fieldget <mimdesc: int total>"->"newarray";
+    "fieldput <mimdesc: java.lang.String[] desc>"
+    "newarray"->"fieldput <mimdesc: java.lang.String[] desc>";
+    "fieldput <mimdesc: java.lang.String[] desc>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <mimdesc: int total>";
+    "fieldget <mimdesc: int total>"->"newarray";
+    "fieldput <mimdesc: java.awt.Image[] p>"
+    "newarray"->"fieldput <mimdesc: java.awt.Image[] p>";
+    "fieldput <mimdesc: java.awt.Image[] p>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <mimdesc: int total>";
+    "fieldget <mimdesc: int total>"->"newarray";
+    "fieldput <mimdesc: java.awt.Image[] q>"
+    "newarray"->"fieldput <mimdesc: java.awt.Image[] q>";
+    "fieldput <mimdesc: java.awt.Image[] q>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <mimdesc: int total>";
+    "fieldget <mimdesc: int total>"->"newarray";
+    "fieldput <mimdesc: int[] w>"
+    "newarray"->"fieldput <mimdesc: int[] w>";
+    "fieldput <mimdesc: int[] w>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <mimdesc: int total>";
+    "fieldget <mimdesc: int total>"->"newarray";
+    "fieldput <mimdesc: int[] h>"
+    "newarray"->"fieldput <mimdesc: int[] h>";
+    "fieldput <mimdesc: int[] h>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <mimdesc: int total>";
+    "fieldget <mimdesc: int total>"->"newarray";
+    "fieldput <mimdesc: int[] xx>"
+    "newarray"->"fieldput <mimdesc: int[] xx>";
+    "fieldput <mimdesc: int[] xx>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <mimdesc: int total>";
+    "fieldget <mimdesc: int total>"->"newarray";
+    "fieldput <mimdesc: int[] yy>"
+    "newarray"->"fieldput <mimdesc: int[] yy>";
+    "fieldput <mimdesc: int[] yy>"->"push 0";
+    "push 0"->"store.i i1";
+    "goto load.i i1"
+    "store.i i1"->"goto load.i i1";
+    "goto load.i i1"->"load.i i1";
+    "load.i i1"->"load.r r0";
+    "load.r r0"->"fieldget <mimdesc: int total>";
+    "ifcmplt.i load.r r0"
+    "fieldget <mimdesc: int total>"->"ifcmplt.i load.r r0";
+    "return"
+    "ifcmplt.i load.r r0"->"return";
+    "ifcmplt.i load.r r0"->"load.r r0";
+    "fieldget <mimdesc: int[] w>"
+    "load.r r0"->"fieldget <mimdesc: int[] w>";
+    "fieldget <mimdesc: int[] w>"->"load.r r0";
+    "fieldget <mimdesc: int[] h>"
+    "load.r r0"->"fieldget <mimdesc: int[] h>";
+    "fieldget <mimdesc: int[] h>"->"load.i i1";
+    "push -1"
+    "load.i i1"->"push -1";
+    "arraywrite.i"
+    "push -1"->"arraywrite.i";
+    "arraywrite.i"->"load.i i1";
+    "load.i i1"->"push -1";
+    "push -1"->"arraywrite.i";
+    "arraywrite.i"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "new java.lang.StringBuffer"
+    "load.r r0"->"new java.lang.StringBuffer";
+    "new java.lang.StringBuffer"->"dup1.r";
+    "push \"menu\""
+    "dup1.r"->"push \"menu\"";
+    "specialinvoke <java.lang.StringBuffer: void <init>(java.lang.String)>"
+    "push \"menu\""->"specialinvoke <java.lang.StringBuffer: void <init>(java.lang.String)>";
+    "specialinvoke <java.lang.StringBuffer: void <init>(java.lang.String)>"->"load.i i1";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(int)>"
+    "load.i i1"->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(int)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>"
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(int)>"->"virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>"->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"push \"|\"";
+    "push \"|\""->"virtualinvoke <mimdesc: java.lang.String[] parse(java.lang.String,java.lang.String)>";
+    "store.r i2"
+    "virtualinvoke <mimdesc: java.lang.String[] parse(java.lang.String,java.lang.String)>"->"store.r i2";
+    "store.r i2"->"load.r r0";
+    "fieldget <mimdesc: java.lang.String[] file>"
+    "load.r r0"->"fieldget <mimdesc: java.lang.String[] file>";
+    "fieldget <mimdesc: java.lang.String[] file>"->"load.i i1";
+    "load.r i2"
+    "load.i i1"->"load.r i2";
+    "load.r i2"->"push 0";
+    "push 0"->"arrayread.r";
+    "arraywrite.r"
+    "arrayread.r"->"arraywrite.r";
+    "arraywrite.r"->"load.r r0";
+    "load.r r0"->"load.r i2";
+    "load.r i2"->"push 1";
+    "push 1"->"arrayread.r";
+    "arrayread.r"->"virtualinvoke <mimdesc: int[] parseInt(java.lang.String)>";
+    "virtualinvoke <mimdesc: int[] parseInt(java.lang.String)>"->"dup1.r";
+    "dup1.r"->"push 0";
+    "push 0"->"arrayread.i";
+    "arrayread.i"->"store.i i0";
+    "store.i i0"->"load.r r0";
+    "fieldget <mimdesc: int[] xx>"
+    "load.r r0"->"fieldget <mimdesc: int[] xx>";
+    "fieldget <mimdesc: int[] xx>"->"load.i i1";
+    "load.i i1"->"load.i i0";
+    "load.i i0"->"arraywrite.i";
+    "arraywrite.i"->"push 1";
+    "push 1"->"arrayread.i";
+    "arrayread.i"->"store.i i0";
+    "store.i i0"->"load.r r0";
+    "fieldget <mimdesc: int[] yy>"
+    "load.r r0"->"fieldget <mimdesc: int[] yy>";
+    "fieldget <mimdesc: int[] yy>"->"load.i i1";
+    "load.i i1"->"load.i i0";
+    "load.i i0"->"arraywrite.i";
+    "arraywrite.i"->"load.r r0";
+    "fieldget <mimdesc: java.lang.String[] url>"
+    "load.r r0"->"fieldget <mimdesc: java.lang.String[] url>";
+    "fieldget <mimdesc: java.lang.String[] url>"->"load.i i1";
+    "load.i i1"->"load.r i2";
+    "load.r i2"->"push 2";
+    "push 2"->"arrayread.r";
+    "arrayread.r"->"arraywrite.r";
+    "arraywrite.r"->"load.r r0";
+    "fieldget <mimdesc: java.lang.String[] frame>"
+    "load.r r0"->"fieldget <mimdesc: java.lang.String[] frame>";
+    "fieldget <mimdesc: java.lang.String[] frame>"->"load.i i1";
+    "load.i i1"->"load.r i2";
+    "push 3"
+    "load.r i2"->"push 3";
+    "push 3"->"arrayread.r";
+    "arrayread.r"->"arraywrite.r";
+    "arraywrite.r"->"load.r r0";
+    "fieldget <mimdesc: java.lang.String[] head>"
+    "load.r r0"->"fieldget <mimdesc: java.lang.String[] head>";
+    "fieldget <mimdesc: java.lang.String[] head>"->"load.i i1";
+    "load.i i1"->"load.r i2";
+    "push 4"
+    "load.r i2"->"push 4";
+    "push 4"->"arrayread.r";
+    "arrayread.r"->"arraywrite.r";
+    "arraywrite.r"->"load.r r0";
+    "fieldget <mimdesc: java.lang.String[] desc>"
+    "load.r r0"->"fieldget <mimdesc: java.lang.String[] desc>";
+    "fieldget <mimdesc: java.lang.String[] desc>"->"load.i i1";
+    "load.i i1"->"new java.lang.StringBuffer";
+    "new java.lang.StringBuffer"->"dup1.r";
+    "push \" \""
+    "dup1.r"->"push \" \"";
+    "push \" \""->"specialinvoke <java.lang.StringBuffer: void <init>(java.lang.String)>";
+    "specialinvoke <java.lang.StringBuffer: void <init>(java.lang.String)>"->"load.r i2";
+    "push 5"
+    "load.r i2"->"push 5";
+    "push 5"->"arrayread.r";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"
+    "arrayread.r"->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>"->"arraywrite.r";
+    "inc.i i1 1"
+    "arraywrite.r"->"inc.i i1 1";
+    "ifeq load.r r0"->"load.r r0";
+    "load.r r0"->"push 1";
+    "push 1"->"fieldput <mimdesc: boolean bgflag>";
+    "push 100"
+    "ifle push 100"->"push 100";
+    "push 100"->"store.i i1";
+}

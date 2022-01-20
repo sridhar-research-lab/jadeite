@@ -1,0 +1,70 @@
+digraph "" {
+    "r0 := @this: vmain"
+    "staticget <vmain: java.lang.String[] B>"
+    "r0 := @this: vmain"->"staticget <vmain: java.lang.String[] B>";
+    "push 2"
+    "staticget <vmain: java.lang.String[] B>"->"push 2";
+    "arrayread.r"
+    "push 2"->"arrayread.r";
+    "store.r r1"
+    "arrayread.r"->"store.r r1";
+    "load.r r0"
+    "store.r r1"->"load.r r0";
+    "load.r r1"
+    "load.r r0"->"load.r r1";
+    "staticinvoke <vmain: short[] c(java.lang.String)>"
+    "load.r r1"->"staticinvoke <vmain: short[] c(java.lang.String)>";
+    "staticinvoke <vmain: short[] c(java.lang.String)>"->"staticget <vmain: java.lang.String[] B>";
+    "push 1"
+    "staticget <vmain: java.lang.String[] B>"->"push 1";
+    "push 1"->"arrayread.r";
+    "push 4"
+    "arrayread.r"->"push 4";
+    "staticinvoke <vmain: java.lang.String a(java.lang.String,int)>"
+    "push 4"->"staticinvoke <vmain: java.lang.String a(java.lang.String,int)>";
+    "staticinvoke <vmain: java.lang.String a(java.lang.String,int)>"->"staticinvoke <vmain: short[] c(java.lang.String)>";
+    "virtualinvoke <vmain: java.nio.IntBuffer[] a(short[],short[])>"
+    "staticinvoke <vmain: short[] c(java.lang.String)>"->"virtualinvoke <vmain: java.nio.IntBuffer[] a(short[],short[])>";
+    "pop"
+    "virtualinvoke <vmain: java.nio.IntBuffer[] a(short[],short[])>"->"pop";
+    "new java.net.URL"
+    "pop"->"new java.net.URL";
+    "dup1.r"
+    "new java.net.URL"->"dup1.r";
+    "new java.lang.StringBuffer"
+    "dup1.r"->"new java.lang.StringBuffer";
+    "new java.lang.StringBuffer"->"dup1.r";
+    "specialinvoke <java.lang.StringBuffer: void <init>()>"
+    "dup1.r"->"specialinvoke <java.lang.StringBuffer: void <init>()>";
+    "specialinvoke <java.lang.StringBuffer: void <init>()>"->"staticget <vmain: java.lang.String[] B>";
+    "push 5"
+    "staticget <vmain: java.lang.String[] B>"->"push 5";
+    "push 5"->"arrayread.r";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"
+    "arrayread.r"->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"staticget <vmain: java.lang.String[] B>";
+    "push 3"
+    "staticget <vmain: java.lang.String[] B>"->"push 3";
+    "push 3"->"arrayread.r";
+    "push 151"
+    "arrayread.r"->"push 151";
+    "push 151"->"staticinvoke <vmain: java.lang.String a(java.lang.String,int)>";
+    "staticinvoke <vmain: java.lang.String a(java.lang.String,int)>"->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"staticget <vmain: java.lang.String[] B>";
+    "staticget <vmain: java.lang.String[] B>"->"push 4";
+    "push 4"->"arrayread.r";
+    "arrayread.r"->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>"
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>";
+    "specialinvoke <java.net.URL: void <init>(java.lang.String)>"
+    "virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>"->"specialinvoke <java.net.URL: void <init>(java.lang.String)>";
+    "staticinvoke <javax.sound.midi.MidiSystem: javax.sound.midi.Soundbank getSoundbank(java.net.URL)>"
+    "specialinvoke <java.net.URL: void <init>(java.lang.String)>"->"staticinvoke <javax.sound.midi.MidiSystem: javax.sound.midi.Soundbank getSoundbank(java.net.URL)>";
+    "staticinvoke <javax.sound.midi.MidiSystem: javax.sound.midi.Soundbank getSoundbank(java.net.URL)>"->"pop";
+    "goto return"
+    "pop"->"goto return";
+    "return"
+    "goto return"->"return";
+    "store.r r0"
+    "staticinvoke <javax.sound.midi.MidiSystem: javax.sound.midi.Soundbank getSoundbank(java.net.URL)>"->"store.r r0";
+}

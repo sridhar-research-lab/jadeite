@@ -1,0 +1,138 @@
+digraph "" {
+    "r0 := @this: map03"
+    "load.r r0"
+    "r0 := @this: map03"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "virtualinvoke <java.applet.Applet: java.net.URL getDocumentBase()>"
+    "load.r r0"->"virtualinvoke <java.applet.Applet: java.net.URL getDocumentBase()>";
+    "push \"applet/map.gif\""
+    "virtualinvoke <java.applet.Applet: java.net.URL getDocumentBase()>"->"push \"applet/map.gif\"";
+    "virtualinvoke <java.applet.Applet: java.awt.Image getImage(java.net.URL,java.lang.String)>"
+    "push \"applet/map.gif\""->"virtualinvoke <java.applet.Applet: java.awt.Image getImage(java.net.URL,java.lang.String)>";
+    "fieldput <map03: java.awt.Image map>"
+    "virtualinvoke <java.applet.Applet: java.awt.Image getImage(java.net.URL,java.lang.String)>"->"fieldput <map03: java.awt.Image map>";
+    "fieldput <map03: java.awt.Image map>"->"load.r r0";
+    "new java.awt.BorderLayout"
+    "load.r r0"->"new java.awt.BorderLayout";
+    "dup1.r"
+    "new java.awt.BorderLayout"->"dup1.r";
+    "specialinvoke <java.awt.BorderLayout: void <init>()>"
+    "dup1.r"->"specialinvoke <java.awt.BorderLayout: void <init>()>";
+    "virtualinvoke <java.awt.Container: void setLayout(java.awt.LayoutManager)>"
+    "specialinvoke <java.awt.BorderLayout: void <init>()>"->"virtualinvoke <java.awt.Container: void setLayout(java.awt.LayoutManager)>";
+    "new java.awt.Panel"
+    "virtualinvoke <java.awt.Container: void setLayout(java.awt.LayoutManager)>"->"new java.awt.Panel";
+    "store.r $r5"
+    "new java.awt.Panel"->"store.r $r5";
+    "load.r $r5"
+    "store.r $r5"->"load.r $r5";
+    "specialinvoke <java.awt.Panel: void <init>()>"
+    "load.r $r5"->"specialinvoke <java.awt.Panel: void <init>()>";
+    "specialinvoke <java.awt.Panel: void <init>()>"->"load.r $r5";
+    "new java.awt.GridLayout"
+    "load.r $r5"->"new java.awt.GridLayout";
+    "new java.awt.GridLayout"->"dup1.r";
+    "push 0"
+    "dup1.r"->"push 0";
+    "push 2"
+    "push 0"->"push 2";
+    "specialinvoke <java.awt.GridLayout: void <init>(int,int)>"
+    "push 2"->"specialinvoke <java.awt.GridLayout: void <init>(int,int)>";
+    "specialinvoke <java.awt.GridLayout: void <init>(int,int)>"->"virtualinvoke <java.awt.Container: void setLayout(java.awt.LayoutManager)>";
+    "virtualinvoke <java.awt.Container: void setLayout(java.awt.LayoutManager)>"->"load.r r0";
+    "new java.awt.Scrollbar"
+    "load.r r0"->"new java.awt.Scrollbar";
+    "new java.awt.Scrollbar"->"dup1.r";
+    "dup1.r"->"push 0";
+    "specialinvoke <java.awt.Scrollbar: void <init>(int)>"
+    "push 0"->"specialinvoke <java.awt.Scrollbar: void <init>(int)>";
+    "fieldput <map03: java.awt.Scrollbar scrollDec>"
+    "specialinvoke <java.awt.Scrollbar: void <init>(int)>"->"fieldput <map03: java.awt.Scrollbar scrollDec>";
+    "fieldput <map03: java.awt.Scrollbar scrollDec>"->"load.r r0";
+    "new java.awt.Label"
+    "load.r r0"->"new java.awt.Label";
+    "new java.awt.Label"->"dup1.r";
+    "new java.lang.StringBuffer"
+    "dup1.r"->"new java.lang.StringBuffer";
+    "new java.lang.StringBuffer"->"dup1.r";
+    "push \" Declination \""
+    "dup1.r"->"push \" Declination \"";
+    "specialinvoke <java.lang.StringBuffer: void <init>(java.lang.String)>"
+    "push \" Declination \""->"specialinvoke <java.lang.StringBuffer: void <init>(java.lang.String)>";
+    "specialinvoke <java.lang.StringBuffer: void <init>(java.lang.String)>"->"load.r r0";
+    "fieldget <map03: double dec>"
+    "load.r r0"->"fieldget <map03: double dec>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(double)>"
+    "fieldget <map03: double dec>"->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(double)>";
+    "push 176"
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(double)>"->"push 176";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(char)>"
+    "push 176"->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(char)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>"
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(char)>"->"virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>";
+    "specialinvoke <java.awt.Label: void <init>(java.lang.String)>"
+    "virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>"->"specialinvoke <java.awt.Label: void <init>(java.lang.String)>";
+    "fieldput <map03: java.awt.Label decLabel>"
+    "specialinvoke <java.awt.Label: void <init>(java.lang.String)>"->"fieldput <map03: java.awt.Label decLabel>";
+    "fieldput <map03: java.awt.Label decLabel>"->"load.r $r5";
+    "load.r $r5"->"load.r r0";
+    "fieldget <map03: java.awt.Label decLabel>"
+    "load.r r0"->"fieldget <map03: java.awt.Label decLabel>";
+    "virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>"
+    "fieldget <map03: java.awt.Label decLabel>"->"virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>";
+    "pop"
+    "virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>"->"pop";
+    "pop"->"load.r $r5";
+    "load.r $r5"->"load.r r0";
+    "fieldget <map03: java.awt.Scrollbar scrollDec>"
+    "load.r r0"->"fieldget <map03: java.awt.Scrollbar scrollDec>";
+    "fieldget <map03: java.awt.Scrollbar scrollDec>"->"virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>";
+    "virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>"->"pop";
+    "pop"->"load.r r0";
+    "load.r r0"->"new java.awt.Scrollbar";
+    "new java.awt.Scrollbar"->"dup1.r";
+    "dup1.r"->"push 0";
+    "push 0"->"specialinvoke <java.awt.Scrollbar: void <init>(int)>";
+    "fieldput <map03: java.awt.Scrollbar scrollTau>"
+    "specialinvoke <java.awt.Scrollbar: void <init>(int)>"->"fieldput <map03: java.awt.Scrollbar scrollTau>";
+    "fieldput <map03: java.awt.Scrollbar scrollTau>"->"load.r r0";
+    "load.r r0"->"new java.awt.Label";
+    "new java.awt.Label"->"dup1.r";
+    "push \" Noon + 0 h\""
+    "dup1.r"->"push \" Noon + 0 h\"";
+    "push \" Noon + 0 h\""->"specialinvoke <java.awt.Label: void <init>(java.lang.String)>";
+    "fieldput <map03: java.awt.Label tauLabel>"
+    "specialinvoke <java.awt.Label: void <init>(java.lang.String)>"->"fieldput <map03: java.awt.Label tauLabel>";
+    "fieldput <map03: java.awt.Label tauLabel>"->"load.r r0";
+    "fieldget <map03: java.awt.Scrollbar scrollTau>"
+    "load.r r0"->"fieldget <map03: java.awt.Scrollbar scrollTau>";
+    "fieldget <map03: java.awt.Scrollbar scrollTau>"->"load.r r0";
+    "fieldget <map03: int valueTau>"
+    "load.r r0"->"fieldget <map03: int valueTau>";
+    "virtualinvoke <java.awt.Scrollbar: void setValue(int)>"
+    "fieldget <map03: int valueTau>"->"virtualinvoke <java.awt.Scrollbar: void setValue(int)>";
+    "virtualinvoke <java.awt.Scrollbar: void setValue(int)>"->"load.r $r5";
+    "load.r $r5"->"load.r r0";
+    "fieldget <map03: java.awt.Label tauLabel>"
+    "load.r r0"->"fieldget <map03: java.awt.Label tauLabel>";
+    "fieldget <map03: java.awt.Label tauLabel>"->"virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>";
+    "virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>"->"pop";
+    "pop"->"load.r $r5";
+    "load.r $r5"->"load.r r0";
+    "load.r r0"->"fieldget <map03: java.awt.Scrollbar scrollTau>";
+    "fieldget <map03: java.awt.Scrollbar scrollTau>"->"virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>";
+    "virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>"->"pop";
+    "pop"->"load.r r0";
+    "push \"North\""
+    "load.r r0"->"push \"North\"";
+    "push \"North\""->"load.r $r5";
+    "virtualinvoke <java.awt.Container: java.awt.Component add(java.lang.String,java.awt.Component)>"
+    "load.r $r5"->"virtualinvoke <java.awt.Container: java.awt.Component add(java.lang.String,java.awt.Component)>";
+    "virtualinvoke <java.awt.Container: java.awt.Component add(java.lang.String,java.awt.Component)>"->"pop";
+    "pop"->"load.r r0";
+    "virtualinvoke <java.awt.Component: void repaint()>"
+    "load.r r0"->"virtualinvoke <java.awt.Component: void repaint()>";
+    "return"
+    "virtualinvoke <java.awt.Component: void repaint()>"->"return";
+}

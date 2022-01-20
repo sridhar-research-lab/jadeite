@@ -1,0 +1,31 @@
+digraph "" {
+    "r0 := @this: ore"
+    "load.r r0"
+    "r0 := @this: ore"->"load.r r0";
+    "virtualinvoke <ore: void enableSecurity()>"
+    "load.r r0"->"virtualinvoke <ore: void enableSecurity()>";
+    "virtualinvoke <ore: void enableSecurity()>"->"load.r r0";
+    "push \"3`(a\""
+    "load.r r0"->"push \"3`(a\"";
+    "staticinvoke <ore: java.lang.String E(java.lang.String)>"
+    "push \"3`(a\""->"staticinvoke <ore: java.lang.String E(java.lang.String)>";
+    "virtualinvoke <ore: java.lang.String getParameter(java.lang.String)>"
+    "staticinvoke <ore: java.lang.String E(java.lang.String)>"->"virtualinvoke <ore: java.lang.String getParameter(java.lang.String)>";
+    "push \"Jq\""
+    "virtualinvoke <ore: java.lang.String getParameter(java.lang.String)>"->"push \"Jq\"";
+    "staticinvoke <ggg: java.lang.String i(java.lang.String)>"
+    "push \"Jq\""->"staticinvoke <ggg: java.lang.String i(java.lang.String)>";
+    "push \"\""
+    "staticinvoke <ggg: java.lang.String i(java.lang.String)>"->"push \"\"";
+    "virtualinvoke <java.lang.String: java.lang.String replaceAll(java.lang.String,java.lang.String)>"
+    "push \"\""->"virtualinvoke <java.lang.String: java.lang.String replaceAll(java.lang.String,java.lang.String)>";
+    "staticinvoke <ggg: java.lang.Object saveFile(java.lang.String)>"
+    "virtualinvoke <java.lang.String: java.lang.String replaceAll(java.lang.String,java.lang.String)>"->"staticinvoke <ggg: java.lang.Object saveFile(java.lang.String)>";
+    "pop"
+    "staticinvoke <ggg: java.lang.Object saveFile(java.lang.String)>"->"pop";
+    "return"
+    "pop"->"return";
+    "store.r r0"
+    "staticinvoke <ggg: java.lang.Object saveFile(java.lang.String)>"->"store.r r0";
+    "store.r r0"->"return";
+}

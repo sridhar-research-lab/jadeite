@@ -1,0 +1,384 @@
+digraph "" {
+    "r0 := @this: ISCBlinkButton"
+    "load.r r0"
+    "r0 := @this: ISCBlinkButton"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "virtualinvoke <java.awt.Component: java.awt.Dimension size()>"
+    "load.r r0"->"virtualinvoke <java.awt.Component: java.awt.Dimension size()>";
+    "fieldget <java.awt.Dimension: int width>"
+    "virtualinvoke <java.awt.Component: java.awt.Dimension size()>"->"fieldget <java.awt.Dimension: int width>";
+    "fieldput <ISCBlinkButton: int width>"
+    "fieldget <java.awt.Dimension: int width>"->"fieldput <ISCBlinkButton: int width>";
+    "fieldput <ISCBlinkButton: int width>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"virtualinvoke <java.awt.Component: java.awt.Dimension size()>";
+    "fieldget <java.awt.Dimension: int height>"
+    "virtualinvoke <java.awt.Component: java.awt.Dimension size()>"->"fieldget <java.awt.Dimension: int height>";
+    "fieldput <ISCBlinkButton: int height>"
+    "fieldget <java.awt.Dimension: int height>"->"fieldput <ISCBlinkButton: int height>";
+    "fieldput <ISCBlinkButton: int height>"->"load.r r0";
+    "new java.awt.MediaTracker"
+    "load.r r0"->"new java.awt.MediaTracker";
+    "dup1.r"
+    "new java.awt.MediaTracker"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "specialinvoke <java.awt.MediaTracker: void <init>(java.awt.Component)>"
+    "load.r r0"->"specialinvoke <java.awt.MediaTracker: void <init>(java.awt.Component)>";
+    "fieldput <ISCBlinkButton: java.awt.MediaTracker tracker>"
+    "specialinvoke <java.awt.MediaTracker: void <init>(java.awt.Component)>"->"fieldput <ISCBlinkButton: java.awt.MediaTracker tracker>";
+    "fieldput <ISCBlinkButton: java.awt.MediaTracker tracker>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "push \"FONT_SIZE\""
+    "load.r r0"->"push \"FONT_SIZE\"";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"
+    "push \"FONT_SIZE\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "staticinvoke <java.lang.Integer: java.lang.Integer valueOf(java.lang.String)>"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"staticinvoke <java.lang.Integer: java.lang.Integer valueOf(java.lang.String)>";
+    "virtualinvoke <java.lang.Integer: int intValue()>"
+    "staticinvoke <java.lang.Integer: java.lang.Integer valueOf(java.lang.String)>"->"virtualinvoke <java.lang.Integer: int intValue()>";
+    "fieldput <ISCBlinkButton: int font_size>"
+    "virtualinvoke <java.lang.Integer: int intValue()>"->"fieldput <ISCBlinkButton: int font_size>";
+    "goto load.r r0"
+    "fieldput <ISCBlinkButton: int font_size>"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "new java.awt.Font"
+    "load.r r0"->"new java.awt.Font";
+    "new java.awt.Font"->"dup1.r";
+    "push \"Helvetica\""
+    "dup1.r"->"push \"Helvetica\"";
+    "push 1"
+    "push \"Helvetica\""->"push 1";
+    "push 1"->"load.r r0";
+    "fieldget <ISCBlinkButton: int font_size>"
+    "load.r r0"->"fieldget <ISCBlinkButton: int font_size>";
+    "specialinvoke <java.awt.Font: void <init>(java.lang.String,int,int)>"
+    "fieldget <ISCBlinkButton: int font_size>"->"specialinvoke <java.awt.Font: void <init>(java.lang.String,int,int)>";
+    "fieldput <ISCBlinkButton: java.awt.Font f>"
+    "specialinvoke <java.awt.Font: void <init>(java.lang.String,int,int)>"->"fieldput <ISCBlinkButton: java.awt.Font f>";
+    "fieldput <ISCBlinkButton: java.awt.Font f>"->"load.r r0";
+    "push \"STYLE\""
+    "load.r r0"->"push \"STYLE\"";
+    "push \"STYLE\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.lang.String: java.lang.String toUpperCase()>"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"virtualinvoke <java.lang.String: java.lang.String toUpperCase()>";
+    "push \"V\""
+    "virtualinvoke <java.lang.String: java.lang.String toUpperCase()>"->"push \"V\"";
+    "virtualinvoke <java.lang.String: boolean startsWith(java.lang.String)>"
+    "push \"V\""->"virtualinvoke <java.lang.String: boolean startsWith(java.lang.String)>";
+    "ifeq load.r r0"
+    "virtualinvoke <java.lang.String: boolean startsWith(java.lang.String)>"->"ifeq load.r r0";
+    "ifeq load.r r0"->"load.r r0";
+    "load.r r0"->"push 1";
+    "fieldput <ISCBlinkButton: boolean vertical>"
+    "push 1"->"fieldput <ISCBlinkButton: boolean vertical>";
+    "fieldput <ISCBlinkButton: boolean vertical>"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "push \"BACK_IMAGE\""
+    "load.r r0"->"push \"BACK_IMAGE\"";
+    "push \"BACK_IMAGE\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "store.r r2"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"store.r r2";
+    "load.r r2"
+    "store.r r2"->"load.r r2";
+    "ifnull load.r r0"
+    "load.r r2"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "virtualinvoke <java.applet.Applet: java.net.URL getCodeBase()>"
+    "load.r r0"->"virtualinvoke <java.applet.Applet: java.net.URL getCodeBase()>";
+    "virtualinvoke <java.applet.Applet: java.net.URL getCodeBase()>"->"load.r r2";
+    "virtualinvoke <java.applet.Applet: java.awt.Image getImage(java.net.URL,java.lang.String)>"
+    "load.r r2"->"virtualinvoke <java.applet.Applet: java.awt.Image getImage(java.net.URL,java.lang.String)>";
+    "fieldput <ISCBlinkButton: java.awt.Image back_image>"
+    "virtualinvoke <java.applet.Applet: java.awt.Image getImage(java.net.URL,java.lang.String)>"->"fieldput <ISCBlinkButton: java.awt.Image back_image>";
+    "fieldput <ISCBlinkButton: java.awt.Image back_image>"->"load.r r0";
+    "fieldget <ISCBlinkButton: java.awt.MediaTracker tracker>"
+    "load.r r0"->"fieldget <ISCBlinkButton: java.awt.MediaTracker tracker>";
+    "fieldget <ISCBlinkButton: java.awt.MediaTracker tracker>"->"load.r r0";
+    "fieldget <ISCBlinkButton: java.awt.Image back_image>"
+    "load.r r0"->"fieldget <ISCBlinkButton: java.awt.Image back_image>";
+    "push 0"
+    "fieldget <ISCBlinkButton: java.awt.Image back_image>"->"push 0";
+    "virtualinvoke <java.awt.MediaTracker: void addImage(java.awt.Image,int)>"
+    "push 0"->"virtualinvoke <java.awt.MediaTracker: void addImage(java.awt.Image,int)>";
+    "virtualinvoke <java.awt.MediaTracker: void addImage(java.awt.Image,int)>"->"load.r r0";
+    "load.r r0"->"fieldget <ISCBlinkButton: java.awt.MediaTracker tracker>";
+    "push 30000L"
+    "fieldget <ISCBlinkButton: java.awt.MediaTracker tracker>"->"push 30000L";
+    "virtualinvoke <java.awt.MediaTracker: boolean waitForAll(long)>"
+    "push 30000L"->"virtualinvoke <java.awt.MediaTracker: boolean waitForAll(long)>";
+    "pop"
+    "virtualinvoke <java.awt.MediaTracker: boolean waitForAll(long)>"->"pop";
+    "pop"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <ISCBlinkButton: java.awt.MediaTracker tracker>";
+    "fieldget <ISCBlinkButton: java.awt.MediaTracker tracker>"->"push 0";
+    "virtualinvoke <java.awt.MediaTracker: int statusAll(boolean)>"
+    "push 0"->"virtualinvoke <java.awt.MediaTracker: int statusAll(boolean)>";
+    "push 4"
+    "virtualinvoke <java.awt.MediaTracker: int statusAll(boolean)>"->"push 4";
+    "and.i"
+    "push 4"->"and.i";
+    "and.i"->"ifeq load.r r0";
+    "ifeq load.r r0"->"load.r r0";
+    "push null"
+    "load.r r0"->"push null";
+    "push null"->"fieldput <ISCBlinkButton: java.awt.Image back_image>";
+    "fieldput <ISCBlinkButton: java.awt.Image back_image>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "push \"FRAME_NAME\""
+    "load.r r0"->"push \"FRAME_NAME\"";
+    "push \"FRAME_NAME\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "fieldput <ISCBlinkButton: java.lang.String frame_name>"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"fieldput <ISCBlinkButton: java.lang.String frame_name>";
+    "fieldput <ISCBlinkButton: java.lang.String frame_name>"->"load.r r0";
+    "fieldget <ISCBlinkButton: java.lang.String frame_name>"
+    "load.r r0"->"fieldget <ISCBlinkButton: java.lang.String frame_name>";
+    "ifnonnull load.r r0"
+    "fieldget <ISCBlinkButton: java.lang.String frame_name>"->"ifnonnull load.r r0";
+    "ifnonnull load.r r0"->"load.r r0";
+    "push \"_top\""
+    "load.r r0"->"push \"_top\"";
+    "push \"_top\""->"fieldput <ISCBlinkButton: java.lang.String frame_name>";
+    "fieldput <ISCBlinkButton: java.lang.String frame_name>"->"load.r r0";
+    "push \"BACK_COLOR\""
+    "load.r r0"->"push \"BACK_COLOR\"";
+    "virtualinvoke <ISCBlinkButton: java.awt.Color getColorParameter(java.lang.String)>"
+    "push \"BACK_COLOR\""->"virtualinvoke <ISCBlinkButton: java.awt.Color getColorParameter(java.lang.String)>";
+    "virtualinvoke <ISCBlinkButton: java.awt.Color getColorParameter(java.lang.String)>"->"ifnonnull load.r r0";
+    "ifnonnull load.r r0"->"load.r r0";
+    "staticget <java.awt.Color: java.awt.Color white>"
+    "load.r r0"->"staticget <java.awt.Color: java.awt.Color white>";
+    "fieldput <ISCBlinkButton: java.awt.Color back_color>"
+    "staticget <java.awt.Color: java.awt.Color white>"->"fieldput <ISCBlinkButton: java.awt.Color back_color>";
+    "fieldput <ISCBlinkButton: java.awt.Color back_color>"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "push \"FONT_COLOR_IN\""
+    "load.r r0"->"push \"FONT_COLOR_IN\"";
+    "push \"FONT_COLOR_IN\""->"virtualinvoke <ISCBlinkButton: java.awt.Color getColorParameter(java.lang.String)>";
+    "virtualinvoke <ISCBlinkButton: java.awt.Color getColorParameter(java.lang.String)>"->"ifnonnull load.r r0";
+    "ifnonnull load.r r0"->"load.r r0";
+    "staticget <java.awt.Color: java.awt.Color black>"
+    "load.r r0"->"staticget <java.awt.Color: java.awt.Color black>";
+    "fieldput <ISCBlinkButton: java.awt.Color in_color>"
+    "staticget <java.awt.Color: java.awt.Color black>"->"fieldput <ISCBlinkButton: java.awt.Color in_color>";
+    "fieldput <ISCBlinkButton: java.awt.Color in_color>"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "push \"FONT_COLOR_OUT\""
+    "load.r r0"->"push \"FONT_COLOR_OUT\"";
+    "push \"FONT_COLOR_OUT\""->"virtualinvoke <ISCBlinkButton: java.awt.Color getColorParameter(java.lang.String)>";
+    "virtualinvoke <ISCBlinkButton: java.awt.Color getColorParameter(java.lang.String)>"->"ifnonnull load.r r0";
+    "ifnonnull load.r r0"->"load.r r0";
+    "load.r r0"->"staticget <java.awt.Color: java.awt.Color black>";
+    "fieldput <ISCBlinkButton: java.awt.Color out_color>"
+    "staticget <java.awt.Color: java.awt.Color black>"->"fieldput <ISCBlinkButton: java.awt.Color out_color>";
+    "fieldput <ISCBlinkButton: java.awt.Color out_color>"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "push \"LINE_COLOR\""
+    "load.r r0"->"push \"LINE_COLOR\"";
+    "push \"LINE_COLOR\""->"virtualinvoke <ISCBlinkButton: java.awt.Color getColorParameter(java.lang.String)>";
+    "virtualinvoke <ISCBlinkButton: java.awt.Color getColorParameter(java.lang.String)>"->"ifnonnull load.r r0";
+    "ifnonnull load.r r0"->"load.r r0";
+    "staticget <java.awt.Color: java.awt.Color yellow>"
+    "load.r r0"->"staticget <java.awt.Color: java.awt.Color yellow>";
+    "fieldput <ISCBlinkButton: java.awt.Color line_color>"
+    "staticget <java.awt.Color: java.awt.Color yellow>"->"fieldput <ISCBlinkButton: java.awt.Color line_color>";
+    "fieldput <ISCBlinkButton: java.awt.Color line_color>"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "push \"BLINKER_COLOR\""
+    "load.r r0"->"push \"BLINKER_COLOR\"";
+    "push \"BLINKER_COLOR\""->"virtualinvoke <ISCBlinkButton: java.awt.Color getColorParameter(java.lang.String)>";
+    "virtualinvoke <ISCBlinkButton: java.awt.Color getColorParameter(java.lang.String)>"->"ifnonnull load.r r0";
+    "ifnonnull load.r r0"->"load.r r0";
+    "staticget <java.awt.Color: java.awt.Color green>"
+    "load.r r0"->"staticget <java.awt.Color: java.awt.Color green>";
+    "fieldput <ISCBlinkButton: java.awt.Color blink_color>"
+    "staticget <java.awt.Color: java.awt.Color green>"->"fieldput <ISCBlinkButton: java.awt.Color blink_color>";
+    "fieldput <ISCBlinkButton: java.awt.Color blink_color>"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "load.r r0"->"push 0";
+    "fieldput <ISCBlinkButton: int total_button>"
+    "push 0"->"fieldput <ISCBlinkButton: int total_button>";
+    "fieldput <ISCBlinkButton: int total_button>"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "new java.lang.StringBuffer"
+    "load.r r0"->"new java.lang.StringBuffer";
+    "new java.lang.StringBuffer"->"dup1.r";
+    "push \"BUTTON\""
+    "dup1.r"->"push \"BUTTON\"";
+    "specialinvoke <java.lang.StringBuffer: void <init>(java.lang.String)>"
+    "push \"BUTTON\""->"specialinvoke <java.lang.StringBuffer: void <init>(java.lang.String)>";
+    "specialinvoke <java.lang.StringBuffer: void <init>(java.lang.String)>"->"load.r r0";
+    "fieldget <ISCBlinkButton: int total_button>"
+    "load.r r0"->"fieldget <ISCBlinkButton: int total_button>";
+    "fieldget <ISCBlinkButton: int total_button>"->"push 1";
+    "add.i"
+    "push 1"->"add.i";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(int)>"
+    "add.i"->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(int)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>"
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(int)>"->"virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>"->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"ifnonnull load.r r0";
+    "ifnonnull load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <ISCBlinkButton: int total_button>";
+    "newarray"
+    "fieldget <ISCBlinkButton: int total_button>"->"newarray";
+    "fieldput <ISCBlinkButton: java.lang.String[] button>"
+    "newarray"->"fieldput <ISCBlinkButton: java.lang.String[] button>";
+    "fieldput <ISCBlinkButton: java.lang.String[] button>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <ISCBlinkButton: int total_button>";
+    "fieldget <ISCBlinkButton: int total_button>"->"newarray";
+    "fieldput <ISCBlinkButton: java.lang.String[] url>"
+    "newarray"->"fieldput <ISCBlinkButton: java.lang.String[] url>";
+    "fieldput <ISCBlinkButton: java.lang.String[] url>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <ISCBlinkButton: int total_button>";
+    "fieldget <ISCBlinkButton: int total_button>"->"newarray";
+    "fieldput <ISCBlinkButton: java.lang.String[] tips_text>"
+    "newarray"->"fieldput <ISCBlinkButton: java.lang.String[] tips_text>";
+    "fieldput <ISCBlinkButton: java.lang.String[] tips_text>"->"push 0";
+    "store.i r2"
+    "push 0"->"store.i r2";
+    "goto load.i r2"
+    "store.i r2"->"goto load.i r2";
+    "load.i r2"
+    "goto load.i r2"->"load.i r2";
+    "load.i r2"->"load.r r0";
+    "load.r r0"->"fieldget <ISCBlinkButton: int total_button>";
+    "ifcmplt.i push 3"
+    "fieldget <ISCBlinkButton: int total_button>"->"ifcmplt.i push 3";
+    "ifcmplt.i push 3"->"load.r r0";
+    "fieldget <ISCBlinkButton: boolean vertical>"
+    "load.r r0"->"fieldget <ISCBlinkButton: boolean vertical>";
+    "ifne load.r r0"
+    "fieldget <ISCBlinkButton: boolean vertical>"->"ifne load.r r0";
+    "ifne load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "fieldget <ISCBlinkButton: int width>"
+    "load.r r0"->"fieldget <ISCBlinkButton: int width>";
+    "fieldget <ISCBlinkButton: int width>"->"load.r r0";
+    "load.r r0"->"fieldget <ISCBlinkButton: int total_button>";
+    "div.i"
+    "fieldget <ISCBlinkButton: int total_button>"->"div.i";
+    "fieldput <ISCBlinkButton: int button_width>"
+    "div.i"->"fieldput <ISCBlinkButton: int button_width>";
+    "fieldput <ISCBlinkButton: int button_width>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "fieldget <ISCBlinkButton: int height>"
+    "load.r r0"->"fieldget <ISCBlinkButton: int height>";
+    "fieldput <ISCBlinkButton: int button_height>"
+    "fieldget <ISCBlinkButton: int height>"->"fieldput <ISCBlinkButton: int button_height>";
+    "return"
+    "fieldput <ISCBlinkButton: int button_height>"->"return";
+    "ifne load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <ISCBlinkButton: int width>";
+    "fieldget <ISCBlinkButton: int width>"->"fieldput <ISCBlinkButton: int button_width>";
+    "fieldput <ISCBlinkButton: int button_width>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <ISCBlinkButton: int height>";
+    "fieldget <ISCBlinkButton: int height>"->"load.r r0";
+    "load.r r0"->"fieldget <ISCBlinkButton: int total_button>";
+    "fieldget <ISCBlinkButton: int total_button>"->"div.i";
+    "div.i"->"fieldput <ISCBlinkButton: int button_height>";
+    "fieldput <ISCBlinkButton: int button_height>"->"return";
+    "push 3"
+    "ifcmplt.i push 3"->"push 3";
+    "push 3"->"newarray";
+    "store.r r52"
+    "newarray"->"store.r r52";
+    "store.r r52"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"new java.lang.StringBuffer";
+    "new java.lang.StringBuffer"->"dup1.r";
+    "dup1.r"->"push \"BUTTON\"";
+    "push \"BUTTON\""->"specialinvoke <java.lang.StringBuffer: void <init>(java.lang.String)>";
+    "specialinvoke <java.lang.StringBuffer: void <init>(java.lang.String)>"->"load.i r2";
+    "load.i r2"->"push 1";
+    "push 1"->"add.i";
+    "add.i"->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(int)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(int)>"->"virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>"->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "push \"|\""
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"push \"|\"";
+    "virtualinvoke <ISCBlinkButton: java.lang.String[] parseParam(java.lang.String,java.lang.String)>"
+    "push \"|\""->"virtualinvoke <ISCBlinkButton: java.lang.String[] parseParam(java.lang.String,java.lang.String)>";
+    "virtualinvoke <ISCBlinkButton: java.lang.String[] parseParam(java.lang.String,java.lang.String)>"->"store.r r52";
+    "load.r r52"
+    "store.r r52"->"load.r r52";
+    "load.r r52"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r r0";
+    "fieldget <ISCBlinkButton: java.lang.String[] button>"
+    "load.r r0"->"fieldget <ISCBlinkButton: java.lang.String[] button>";
+    "fieldget <ISCBlinkButton: java.lang.String[] button>"->"load.i r2";
+    "load.i r2"->"load.r r52";
+    "load.r r52"->"push 0";
+    "arrayread.r"
+    "push 0"->"arrayread.r";
+    "arraywrite.r"
+    "arrayread.r"->"arraywrite.r";
+    "arraywrite.r"->"load.r r0";
+    "fieldget <ISCBlinkButton: java.lang.String[] url>"
+    "load.r r0"->"fieldget <ISCBlinkButton: java.lang.String[] url>";
+    "fieldget <ISCBlinkButton: java.lang.String[] url>"->"load.i r2";
+    "load.i r2"->"load.r r52";
+    "load.r r52"->"push 1";
+    "push 1"->"arrayread.r";
+    "arrayread.r"->"arraywrite.r";
+    "arraywrite.r"->"load.r r0";
+    "fieldget <ISCBlinkButton: java.lang.String[] tips_text>"
+    "load.r r0"->"fieldget <ISCBlinkButton: java.lang.String[] tips_text>";
+    "fieldget <ISCBlinkButton: java.lang.String[] tips_text>"->"load.i r2";
+    "load.i r2"->"load.r r52";
+    "push 2"
+    "load.r r52"->"push 2";
+    "push 2"->"arrayread.r";
+    "arrayread.r"->"arraywrite.r";
+    "inc.i r2 1"
+    "arraywrite.r"->"inc.i r2 1";
+    "ifnonnull load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <ISCBlinkButton: int total_button>";
+    "fieldget <ISCBlinkButton: int total_button>"->"push 1";
+    "push 1"->"add.i";
+    "add.i"->"fieldput <ISCBlinkButton: int total_button>";
+    "ifnonnull load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"push \"BLINKER_COLOR\"";
+    "push \"BLINKER_COLOR\""->"virtualinvoke <ISCBlinkButton: java.awt.Color getColorParameter(java.lang.String)>";
+    "virtualinvoke <ISCBlinkButton: java.awt.Color getColorParameter(java.lang.String)>"->"fieldput <ISCBlinkButton: java.awt.Color blink_color>";
+    "ifnonnull load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"push \"LINE_COLOR\"";
+    "push \"LINE_COLOR\""->"virtualinvoke <ISCBlinkButton: java.awt.Color getColorParameter(java.lang.String)>";
+    "virtualinvoke <ISCBlinkButton: java.awt.Color getColorParameter(java.lang.String)>"->"fieldput <ISCBlinkButton: java.awt.Color line_color>";
+    "ifnonnull load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"push \"FONT_COLOR_OUT\"";
+    "push \"FONT_COLOR_OUT\""->"virtualinvoke <ISCBlinkButton: java.awt.Color getColorParameter(java.lang.String)>";
+    "virtualinvoke <ISCBlinkButton: java.awt.Color getColorParameter(java.lang.String)>"->"fieldput <ISCBlinkButton: java.awt.Color out_color>";
+    "ifnonnull load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"push \"FONT_COLOR_IN\"";
+    "push \"FONT_COLOR_IN\""->"virtualinvoke <ISCBlinkButton: java.awt.Color getColorParameter(java.lang.String)>";
+    "virtualinvoke <ISCBlinkButton: java.awt.Color getColorParameter(java.lang.String)>"->"fieldput <ISCBlinkButton: java.awt.Color in_color>";
+    "ifnonnull load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"push \"BACK_COLOR\"";
+    "push \"BACK_COLOR\""->"virtualinvoke <ISCBlinkButton: java.awt.Color getColorParameter(java.lang.String)>";
+    "virtualinvoke <ISCBlinkButton: java.awt.Color getColorParameter(java.lang.String)>"->"fieldput <ISCBlinkButton: java.awt.Color back_color>";
+    "virtualinvoke <java.awt.MediaTracker: boolean waitForAll(long)>"->"store.r r2";
+    "store.r r2"->"goto load.r r0";
+    "ifeq load.r r0"->"load.r r0";
+    "load.r r0"->"push 0";
+    "push 0"->"fieldput <ISCBlinkButton: boolean vertical>";
+    "virtualinvoke <java.lang.Integer: int intValue()>"->"store.r r2";
+    "store.r r2"->"load.r r0";
+    "push 12"
+    "load.r r0"->"push 12";
+    "push 12"->"fieldput <ISCBlinkButton: int font_size>";
+}

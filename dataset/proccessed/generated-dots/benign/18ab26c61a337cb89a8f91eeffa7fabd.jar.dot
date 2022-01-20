@@ -1,0 +1,611 @@
+digraph "" {
+    "r0 := @this: NewsMaker"
+    "load.r r0"
+    "r0 := @this: NewsMaker"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "virtualinvoke <java.awt.Component: java.awt.Dimension size()>"
+    "load.r r0"->"virtualinvoke <java.awt.Component: java.awt.Dimension size()>";
+    "fieldget <java.awt.Dimension: int width>"
+    "virtualinvoke <java.awt.Component: java.awt.Dimension size()>"->"fieldget <java.awt.Dimension: int width>";
+    "fieldput <NewsMaker: int aWide>"
+    "fieldget <java.awt.Dimension: int width>"->"fieldput <NewsMaker: int aWide>";
+    "fieldput <NewsMaker: int aWide>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"virtualinvoke <java.awt.Component: java.awt.Dimension size()>";
+    "fieldget <java.awt.Dimension: int height>"
+    "virtualinvoke <java.awt.Component: java.awt.Dimension size()>"->"fieldget <java.awt.Dimension: int height>";
+    "fieldput <NewsMaker: int aHigh>"
+    "fieldget <java.awt.Dimension: int height>"->"fieldput <NewsMaker: int aHigh>";
+    "fieldput <NewsMaker: int aHigh>"->"load.r r0";
+    "specialinvoke <NewsMaker: void DoC()>"
+    "load.r r0"->"specialinvoke <NewsMaker: void DoC()>";
+    "specialinvoke <NewsMaker: void DoC()>"->"load.r r0";
+    "push \"SoundFile\""
+    "load.r r0"->"push \"SoundFile\"";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"
+    "push \"SoundFile\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "store.r r39"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"store.r r39";
+    "load.r r39"
+    "store.r r39"->"load.r r39";
+    "ifnull load.r r0"
+    "load.r r39"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r39";
+    "fieldput <NewsMaker: java.lang.String sFile>"
+    "load.r r39"->"fieldput <NewsMaker: java.lang.String sFile>";
+    "fieldput <NewsMaker: java.lang.String sFile>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "virtualinvoke <java.applet.Applet: java.net.URL getCodeBase()>"
+    "load.r r0"->"virtualinvoke <java.applet.Applet: java.net.URL getCodeBase()>";
+    "virtualinvoke <java.applet.Applet: java.net.URL getCodeBase()>"->"load.r r0";
+    "fieldget <NewsMaker: java.lang.String sFile>"
+    "load.r r0"->"fieldget <NewsMaker: java.lang.String sFile>";
+    "virtualinvoke <java.applet.Applet: java.applet.AudioClip getAudioClip(java.net.URL,java.lang.String)>"
+    "fieldget <NewsMaker: java.lang.String sFile>"->"virtualinvoke <java.applet.Applet: java.applet.AudioClip getAudioClip(java.net.URL,java.lang.String)>";
+    "fieldput <NewsMaker: java.applet.AudioClip A>"
+    "virtualinvoke <java.applet.Applet: java.applet.AudioClip getAudioClip(java.net.URL,java.lang.String)>"->"fieldput <NewsMaker: java.applet.AudioClip A>";
+    "fieldput <NewsMaker: java.applet.AudioClip A>"->"load.r r0";
+    "push \"Speed\""
+    "load.r r0"->"push \"Speed\"";
+    "push \"Speed\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"store.r r39";
+    "store.r r39"->"load.r r39";
+    "load.r r39"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r39";
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"
+    "load.r r39"->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>";
+    "fieldput <NewsMaker: int Speed>"
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"->"fieldput <NewsMaker: int Speed>";
+    "fieldput <NewsMaker: int Speed>"->"load.r r0";
+    "push \"HeadLines\""
+    "load.r r0"->"push \"HeadLines\"";
+    "push \"HeadLines\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"store.r r39";
+    "store.r r39"->"load.r r39";
+    "load.r r39"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r r39";
+    "push \"YES\""
+    "load.r r39"->"push \"YES\"";
+    "virtualinvoke <java.lang.String: boolean equalsIgnoreCase(java.lang.String)>"
+    "push \"YES\""->"virtualinvoke <java.lang.String: boolean equalsIgnoreCase(java.lang.String)>";
+    "ifeq load.r r0"
+    "virtualinvoke <java.lang.String: boolean equalsIgnoreCase(java.lang.String)>"->"ifeq load.r r0";
+    "ifeq load.r r0"->"load.r r0";
+    "push 1"
+    "load.r r0"->"push 1";
+    "fieldput <NewsMaker: boolean HeadLines>"
+    "push 1"->"fieldput <NewsMaker: boolean HeadLines>";
+    "fieldput <NewsMaker: boolean HeadLines>"->"load.r r0";
+    "push \"Justification\""
+    "load.r r0"->"push \"Justification\"";
+    "push \"Justification\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"store.r r39";
+    "store.r r39"->"load.r r39";
+    "load.r r39"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r r39";
+    "push \"left\""
+    "load.r r39"->"push \"left\"";
+    "push \"left\""->"virtualinvoke <java.lang.String: boolean equalsIgnoreCase(java.lang.String)>";
+    "ifeq load.r r39"
+    "virtualinvoke <java.lang.String: boolean equalsIgnoreCase(java.lang.String)>"->"ifeq load.r r39";
+    "ifeq load.r r39"->"load.r r0";
+    "load.r r0"->"push \"left\"";
+    "fieldput <NewsMaker: java.lang.String howAlign>"
+    "push \"left\""->"fieldput <NewsMaker: java.lang.String howAlign>";
+    "goto load.r r0"
+    "fieldput <NewsMaker: java.lang.String howAlign>"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "push \"FontSize\""
+    "load.r r0"->"push \"FontSize\"";
+    "push \"FontSize\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"store.r r39";
+    "store.r r39"->"load.r r39";
+    "load.r r39"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r39";
+    "load.r r39"->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>";
+    "fieldput <NewsMaker: int fontSize>"
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"->"fieldput <NewsMaker: int fontSize>";
+    "fieldput <NewsMaker: int fontSize>"->"load.r r0";
+    "push \"FontName\""
+    "load.r r0"->"push \"FontName\"";
+    "push \"FontName\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"store.r r39";
+    "store.r r39"->"load.r r39";
+    "load.r r39"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r39";
+    "fieldput <NewsMaker: java.lang.String fontName>"
+    "load.r r39"->"fieldput <NewsMaker: java.lang.String fontName>";
+    "fieldput <NewsMaker: java.lang.String fontName>"->"load.r r0";
+    "push \"FontStyle\""
+    "load.r r0"->"push \"FontStyle\"";
+    "push \"FontStyle\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"store.r r39";
+    "store.r r39"->"load.r r39";
+    "load.r r39"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r r39";
+    "push \"PLAIN\""
+    "load.r r39"->"push \"PLAIN\"";
+    "push \"PLAIN\""->"virtualinvoke <java.lang.String: boolean equalsIgnoreCase(java.lang.String)>";
+    "virtualinvoke <java.lang.String: boolean equalsIgnoreCase(java.lang.String)>"->"ifeq load.r r39";
+    "ifeq load.r r39"->"load.r r0";
+    "new java.awt.Font"
+    "load.r r0"->"new java.awt.Font";
+    "dup1.r"
+    "new java.awt.Font"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "fieldget <NewsMaker: java.lang.String fontName>"
+    "load.r r0"->"fieldget <NewsMaker: java.lang.String fontName>";
+    "push 0"
+    "fieldget <NewsMaker: java.lang.String fontName>"->"push 0";
+    "push 0"->"load.r r0";
+    "fieldget <NewsMaker: int fontSize>"
+    "load.r r0"->"fieldget <NewsMaker: int fontSize>";
+    "specialinvoke <java.awt.Font: void <init>(java.lang.String,int,int)>"
+    "fieldget <NewsMaker: int fontSize>"->"specialinvoke <java.awt.Font: void <init>(java.lang.String,int,int)>";
+    "fieldput <NewsMaker: java.awt.Font theFont>"
+    "specialinvoke <java.awt.Font: void <init>(java.lang.String,int,int)>"->"fieldput <NewsMaker: java.awt.Font theFont>";
+    "fieldput <NewsMaker: java.awt.Font theFont>"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "fieldget <NewsMaker: java.awt.Font theFont>"
+    "load.r r0"->"fieldget <NewsMaker: java.awt.Font theFont>";
+    "virtualinvoke <java.awt.Component: java.awt.FontMetrics getFontMetrics(java.awt.Font)>"
+    "fieldget <NewsMaker: java.awt.Font theFont>"->"virtualinvoke <java.awt.Component: java.awt.FontMetrics getFontMetrics(java.awt.Font)>";
+    "fieldput <NewsMaker: java.awt.FontMetrics FM>"
+    "virtualinvoke <java.awt.Component: java.awt.FontMetrics getFontMetrics(java.awt.Font)>"->"fieldput <NewsMaker: java.awt.FontMetrics FM>";
+    "fieldput <NewsMaker: java.awt.FontMetrics FM>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "fieldget <NewsMaker: java.awt.FontMetrics FM>"
+    "load.r r0"->"fieldget <NewsMaker: java.awt.FontMetrics FM>";
+    "virtualinvoke <java.awt.FontMetrics: int getMaxAscent()>"
+    "fieldget <NewsMaker: java.awt.FontMetrics FM>"->"virtualinvoke <java.awt.FontMetrics: int getMaxAscent()>";
+    "virtualinvoke <java.awt.FontMetrics: int getMaxAscent()>"->"load.r r0";
+    "load.r r0"->"fieldget <NewsMaker: java.awt.FontMetrics FM>";
+    "virtualinvoke <java.awt.FontMetrics: int getMaxDescent()>"
+    "fieldget <NewsMaker: java.awt.FontMetrics FM>"->"virtualinvoke <java.awt.FontMetrics: int getMaxDescent()>";
+    "add.i"
+    "virtualinvoke <java.awt.FontMetrics: int getMaxDescent()>"->"add.i";
+    "add.i"->"load.r r0";
+    "load.r r0"->"fieldget <NewsMaker: java.awt.FontMetrics FM>";
+    "virtualinvoke <java.awt.FontMetrics: int getLeading()>"
+    "fieldget <NewsMaker: java.awt.FontMetrics FM>"->"virtualinvoke <java.awt.FontMetrics: int getLeading()>";
+    "virtualinvoke <java.awt.FontMetrics: int getLeading()>"->"add.i";
+    "fieldput <NewsMaker: int fontHigh>"
+    "add.i"->"fieldput <NewsMaker: int fontHigh>";
+    "fieldput <NewsMaker: int fontHigh>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "fieldget <NewsMaker: int fontHigh>"
+    "load.r r0"->"fieldget <NewsMaker: int fontHigh>";
+    "fieldput <NewsMaker: int scrollPosY>"
+    "fieldget <NewsMaker: int fontHigh>"->"fieldput <NewsMaker: int scrollPosY>";
+    "fieldput <NewsMaker: int scrollPosY>"->"load.r r0";
+    "push \"TextColor\""
+    "load.r r0"->"push \"TextColor\"";
+    "push \"TextColor\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"store.r r39";
+    "store.r r39"->"load.r r39";
+    "load.r r39"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r39";
+    "load.r r39"->"load.r r0";
+    "fieldget <NewsMaker: java.awt.Color textColor>"
+    "load.r r0"->"fieldget <NewsMaker: java.awt.Color textColor>";
+    "specialinvoke <NewsMaker: java.awt.Color parseC(java.lang.String,java.awt.Color)>"
+    "fieldget <NewsMaker: java.awt.Color textColor>"->"specialinvoke <NewsMaker: java.awt.Color parseC(java.lang.String,java.awt.Color)>";
+    "fieldput <NewsMaker: java.awt.Color textColor>"
+    "specialinvoke <NewsMaker: java.awt.Color parseC(java.lang.String,java.awt.Color)>"->"fieldput <NewsMaker: java.awt.Color textColor>";
+    "fieldput <NewsMaker: java.awt.Color textColor>"->"load.r r0";
+    "push \"TextHotColor\""
+    "load.r r0"->"push \"TextHotColor\"";
+    "push \"TextHotColor\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"store.r r39";
+    "store.r r39"->"load.r r39";
+    "load.r r39"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r39";
+    "load.r r39"->"load.r r0";
+    "fieldget <NewsMaker: java.awt.Color linkColor>"
+    "load.r r0"->"fieldget <NewsMaker: java.awt.Color linkColor>";
+    "fieldget <NewsMaker: java.awt.Color linkColor>"->"specialinvoke <NewsMaker: java.awt.Color parseC(java.lang.String,java.awt.Color)>";
+    "fieldput <NewsMaker: java.awt.Color linkColor>"
+    "specialinvoke <NewsMaker: java.awt.Color parseC(java.lang.String,java.awt.Color)>"->"fieldput <NewsMaker: java.awt.Color linkColor>";
+    "fieldput <NewsMaker: java.awt.Color linkColor>"->"load.r r0";
+    "push \"HeadLineColor\""
+    "load.r r0"->"push \"HeadLineColor\"";
+    "push \"HeadLineColor\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"store.r r39";
+    "store.r r39"->"load.r r39";
+    "load.r r39"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r39";
+    "load.r r39"->"load.r r0";
+    "fieldget <NewsMaker: java.awt.Color headColor>"
+    "load.r r0"->"fieldget <NewsMaker: java.awt.Color headColor>";
+    "fieldget <NewsMaker: java.awt.Color headColor>"->"specialinvoke <NewsMaker: java.awt.Color parseC(java.lang.String,java.awt.Color)>";
+    "fieldput <NewsMaker: java.awt.Color headColor>"
+    "specialinvoke <NewsMaker: java.awt.Color parseC(java.lang.String,java.awt.Color)>"->"fieldput <NewsMaker: java.awt.Color headColor>";
+    "fieldput <NewsMaker: java.awt.Color headColor>"->"load.r r0";
+    "push \"HeadLineHotColor\""
+    "load.r r0"->"push \"HeadLineHotColor\"";
+    "push \"HeadLineHotColor\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"store.r r39";
+    "store.r r39"->"load.r r39";
+    "load.r r39"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r39";
+    "load.r r39"->"load.r r0";
+    "fieldget <NewsMaker: java.awt.Color hotColor>"
+    "load.r r0"->"fieldget <NewsMaker: java.awt.Color hotColor>";
+    "fieldget <NewsMaker: java.awt.Color hotColor>"->"specialinvoke <NewsMaker: java.awt.Color parseC(java.lang.String,java.awt.Color)>";
+    "fieldput <NewsMaker: java.awt.Color hotColor>"
+    "specialinvoke <NewsMaker: java.awt.Color parseC(java.lang.String,java.awt.Color)>"->"fieldput <NewsMaker: java.awt.Color hotColor>";
+    "fieldput <NewsMaker: java.awt.Color hotColor>"->"load.r r0";
+    "push \"LeftMargin\""
+    "load.r r0"->"push \"LeftMargin\"";
+    "push \"LeftMargin\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"store.r r39";
+    "store.r r39"->"load.r r39";
+    "load.r r39"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r39";
+    "load.r r39"->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>";
+    "fieldput <NewsMaker: int leftMarg>"
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"->"fieldput <NewsMaker: int leftMarg>";
+    "fieldput <NewsMaker: int leftMarg>"->"load.r r0";
+    "push \"RightMargin\""
+    "load.r r0"->"push \"RightMargin\"";
+    "push \"RightMargin\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"store.r r39";
+    "store.r r39"->"load.r r39";
+    "load.r r39"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r39";
+    "load.r r39"->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>";
+    "fieldput <NewsMaker: int rightMarg>"
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"->"fieldput <NewsMaker: int rightMarg>";
+    "fieldput <NewsMaker: int rightMarg>"->"load.r r0";
+    "push \"TopMargin\""
+    "load.r r0"->"push \"TopMargin\"";
+    "push \"TopMargin\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"store.r r39";
+    "store.r r39"->"load.r r39";
+    "load.r r39"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r39";
+    "load.r r39"->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>";
+    "fieldput <NewsMaker: int topMarg>"
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"->"fieldput <NewsMaker: int topMarg>";
+    "fieldput <NewsMaker: int topMarg>"->"load.r r0";
+    "push \"BottomMargin\""
+    "load.r r0"->"push \"BottomMargin\"";
+    "push \"BottomMargin\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"store.r r39";
+    "store.r r39"->"load.r r39";
+    "load.r r39"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r39";
+    "load.r r39"->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>";
+    "fieldput <NewsMaker: int botMarg>"
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"->"fieldput <NewsMaker: int botMarg>";
+    "fieldput <NewsMaker: int botMarg>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "fieldget <NewsMaker: int aWide>"
+    "load.r r0"->"fieldget <NewsMaker: int aWide>";
+    "fieldget <NewsMaker: int aWide>"->"load.r r0";
+    "fieldget <NewsMaker: int leftMarg>"
+    "load.r r0"->"fieldget <NewsMaker: int leftMarg>";
+    "sub.i"
+    "fieldget <NewsMaker: int leftMarg>"->"sub.i";
+    "sub.i"->"load.r r0";
+    "fieldget <NewsMaker: int rightMarg>"
+    "load.r r0"->"fieldget <NewsMaker: int rightMarg>";
+    "fieldget <NewsMaker: int rightMarg>"->"sub.i";
+    "fieldput <NewsMaker: int sWide>"
+    "sub.i"->"fieldput <NewsMaker: int sWide>";
+    "fieldput <NewsMaker: int sWide>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "fieldget <NewsMaker: int aHigh>"
+    "load.r r0"->"fieldget <NewsMaker: int aHigh>";
+    "fieldget <NewsMaker: int aHigh>"->"load.r r0";
+    "fieldget <NewsMaker: int topMarg>"
+    "load.r r0"->"fieldget <NewsMaker: int topMarg>";
+    "fieldget <NewsMaker: int topMarg>"->"sub.i";
+    "sub.i"->"load.r r0";
+    "fieldget <NewsMaker: int botMarg>"
+    "load.r r0"->"fieldget <NewsMaker: int botMarg>";
+    "fieldget <NewsMaker: int botMarg>"->"sub.i";
+    "fieldput <NewsMaker: int sHigh>"
+    "sub.i"->"fieldput <NewsMaker: int sHigh>";
+    "fieldput <NewsMaker: int sHigh>"->"load.r r0";
+    "push \"Pause\""
+    "load.r r0"->"push \"Pause\"";
+    "push \"Pause\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"store.r r39";
+    "store.r r39"->"load.r r39";
+    "load.r r39"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r39";
+    "load.r r39"->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>";
+    "fieldput <NewsMaker: int Dwell>"
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"->"fieldput <NewsMaker: int Dwell>";
+    "fieldput <NewsMaker: int Dwell>"->"load.r r0";
+    "push \"BackImage\""
+    "load.r r0"->"push \"BackImage\"";
+    "push \"BackImage\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"store.r r39";
+    "store.r r39"->"load.r r39";
+    "load.r r39"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r39";
+    "fieldput <NewsMaker: java.lang.String i_File>"
+    "load.r r39"->"fieldput <NewsMaker: java.lang.String i_File>";
+    "fieldput <NewsMaker: java.lang.String i_File>"->"load.r r0";
+    "push \"BackgroundColor\""
+    "load.r r0"->"push \"BackgroundColor\"";
+    "push \"BackgroundColor\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"store.r r39";
+    "store.r r39"->"load.r r39";
+    "load.r r39"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r39";
+    "load.r r39"->"load.r r0";
+    "fieldget <NewsMaker: java.awt.Color backColor>"
+    "load.r r0"->"fieldget <NewsMaker: java.awt.Color backColor>";
+    "fieldget <NewsMaker: java.awt.Color backColor>"->"specialinvoke <NewsMaker: java.awt.Color parseC(java.lang.String,java.awt.Color)>";
+    "fieldput <NewsMaker: java.awt.Color backColor>"
+    "specialinvoke <NewsMaker: java.awt.Color parseC(java.lang.String,java.awt.Color)>"->"fieldput <NewsMaker: java.awt.Color backColor>";
+    "fieldput <NewsMaker: java.awt.Color backColor>"->"load.r r0";
+    "fieldget <NewsMaker: java.lang.String i_File>"
+    "load.r r0"->"fieldget <NewsMaker: java.lang.String i_File>";
+    "fieldget <NewsMaker: java.lang.String i_File>"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "virtualinvoke <java.applet.Applet: java.net.URL getDocumentBase()>"
+    "load.r r0"->"virtualinvoke <java.applet.Applet: java.net.URL getDocumentBase()>";
+    "virtualinvoke <java.applet.Applet: java.net.URL getDocumentBase()>"->"load.r r0";
+    "load.r r0"->"fieldget <NewsMaker: java.lang.String i_File>";
+    "virtualinvoke <java.applet.Applet: java.awt.Image getImage(java.net.URL,java.lang.String)>"
+    "fieldget <NewsMaker: java.lang.String i_File>"->"virtualinvoke <java.applet.Applet: java.awt.Image getImage(java.net.URL,java.lang.String)>";
+    "fieldput <NewsMaker: java.awt.Image i_Back>"
+    "virtualinvoke <java.applet.Applet: java.awt.Image getImage(java.net.URL,java.lang.String)>"->"fieldput <NewsMaker: java.awt.Image i_Back>";
+    "fieldput <NewsMaker: java.awt.Image i_Back>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "fieldget <NewsMaker: java.awt.Image i_Back>"
+    "load.r r0"->"fieldget <NewsMaker: java.awt.Image i_Back>";
+    "fieldget <NewsMaker: java.awt.Image i_Back>"->"load.r r0";
+    "virtualinvoke <java.awt.Component: boolean prepareImage(java.awt.Image,java.awt.image.ImageObserver)>"
+    "load.r r0"->"virtualinvoke <java.awt.Component: boolean prepareImage(java.awt.Image,java.awt.image.ImageObserver)>";
+    "pop"
+    "virtualinvoke <java.awt.Component: boolean prepareImage(java.awt.Image,java.awt.image.ImageObserver)>"->"pop";
+    "pop"->"load.r r0";
+    "fieldget <NewsMaker: boolean FreeVersion>"
+    "load.r r0"->"fieldget <NewsMaker: boolean FreeVersion>";
+    "fieldget <NewsMaker: boolean FreeVersion>"->"ifeq load.r r0";
+    "ifeq load.r r0"->"load.r r0";
+    "fieldget <NewsMaker: boolean fromDisk>"
+    "load.r r0"->"fieldget <NewsMaker: boolean fromDisk>";
+    "ifne load.r r0"
+    "fieldget <NewsMaker: boolean fromDisk>"->"ifne load.r r0";
+    "ifne load.r r0"->"load.r r0";
+    "push \"###http://www.microticker.com\""
+    "load.r r0"->"push \"###http://www.microticker.com\"";
+    "specialinvoke <NewsMaker: void doParse(java.lang.String)>"
+    "push \"###http://www.microticker.com\""->"specialinvoke <NewsMaker: void doParse(java.lang.String)>";
+    "specialinvoke <NewsMaker: void doParse(java.lang.String)>"->"load.r r0";
+    "push \"This is NewsMaker by MicroTicker.com... Free for non-profit, non-commercial use. Click here for more information.\""
+    "load.r r0"->"push \"This is NewsMaker by MicroTicker.com... Free for non-profit, non-commercial use. Click here for more information.\"";
+    "push \"This is NewsMaker by MicroTicker.com... Free for non-profit, non-commercial use. Click here for more information.\""->"specialinvoke <NewsMaker: void doParse(java.lang.String)>";
+    "specialinvoke <NewsMaker: void doParse(java.lang.String)>"->"load.r r0";
+    "fieldget <NewsMaker: boolean pfN>"
+    "load.r r0"->"fieldget <NewsMaker: boolean pfN>";
+    "fieldget <NewsMaker: boolean pfN>"->"ifne load.r r0";
+    "ifne load.r r0"->"load.r r0";
+    "push \"###http://www.codebrain.com\""
+    "load.r r0"->"push \"###http://www.codebrain.com\"";
+    "push \"###http://www.codebrain.com\""->"specialinvoke <NewsMaker: void doParse(java.lang.String)>";
+    "specialinvoke <NewsMaker: void doParse(java.lang.String)>"->"load.r r0";
+    "push \"NOTICE WRONG OR MISSING NOTICE WRONG OR MISSING NOTICE WRONG OR MISSING NOTICE WRONG OR MISSING NOTICE WRONG OR MISSING NOTICE WRONG OR MISSING\""
+    "load.r r0"->"push \"NOTICE WRONG OR MISSING NOTICE WRONG OR MISSING NOTICE WRONG OR MISSING NOTICE WRONG OR MISSING NOTICE WRONG OR MISSING NOTICE WRONG OR MISSING\"";
+    "push \"NOTICE WRONG OR MISSING NOTICE WRONG OR MISSING NOTICE WRONG OR MISSING NOTICE WRONG OR MISSING NOTICE WRONG OR MISSING NOTICE WRONG OR MISSING\""->"specialinvoke <NewsMaker: void doParse(java.lang.String)>";
+    "specialinvoke <NewsMaker: void doParse(java.lang.String)>"->"load.r r0";
+    "fieldget <NewsMaker: boolean pfK>"
+    "load.r r0"->"fieldget <NewsMaker: boolean pfK>";
+    "fieldget <NewsMaker: boolean pfK>"->"ifne load.r r0";
+    "ifne load.r r0"->"load.r r0";
+    "push \"###\""
+    "load.r r0"->"push \"###\"";
+    "push \"###\""->"specialinvoke <NewsMaker: void doParse(java.lang.String)>";
+    "specialinvoke <NewsMaker: void doParse(java.lang.String)>"->"load.r r0";
+    "push \"KEYCODE WRONG OR MISSING KEYCODE WRONG OR MISSING KEYCODE WRONG OR MISSING KEYCODE WRONG OR MISSING KEYCODE WRONG OR MISSING KEYCODE WRONG OR MISSING\""
+    "load.r r0"->"push \"KEYCODE WRONG OR MISSING KEYCODE WRONG OR MISSING KEYCODE WRONG OR MISSING KEYCODE WRONG OR MISSING KEYCODE WRONG OR MISSING KEYCODE WRONG OR MISSING\"";
+    "push \"KEYCODE WRONG OR MISSING KEYCODE WRONG OR MISSING KEYCODE WRONG OR MISSING KEYCODE WRONG OR MISSING KEYCODE WRONG OR MISSING KEYCODE WRONG OR MISSING\""->"specialinvoke <NewsMaker: void doParse(java.lang.String)>";
+    "specialinvoke <NewsMaker: void doParse(java.lang.String)>"->"load.r r0";
+    "push \"NewsMaker.txt\""
+    "load.r r0"->"push \"NewsMaker.txt\"";
+    "fieldput <NewsMaker: java.lang.String file>"
+    "push \"NewsMaker.txt\""->"fieldput <NewsMaker: java.lang.String file>";
+    "fieldput <NewsMaker: java.lang.String file>"->"load.r r0";
+    "push \"Script\""
+    "load.r r0"->"push \"Script\"";
+    "push \"Script\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"store.r r39";
+    "store.r r39"->"load.r r39";
+    "load.r r39"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r39";
+    "load.r r39"->"fieldput <NewsMaker: java.lang.String file>";
+    "fieldput <NewsMaker: java.lang.String file>"->"load.r r0";
+    "fieldget <NewsMaker: java.util.Vector Script>"
+    "load.r r0"->"fieldget <NewsMaker: java.util.Vector Script>";
+    "virtualinvoke <java.util.Vector: boolean isEmpty()>"
+    "fieldget <NewsMaker: java.util.Vector Script>"->"virtualinvoke <java.util.Vector: boolean isEmpty()>";
+    "ifeq push 0"
+    "virtualinvoke <java.util.Vector: boolean isEmpty()>"->"ifeq push 0";
+    "ifeq push 0"->"load.r r0";
+    "specialinvoke <NewsMaker: void getScript()>"
+    "load.r r0"->"specialinvoke <NewsMaker: void getScript()>";
+    "specialinvoke <NewsMaker: void getScript()>"->"push 0";
+    "store.i r39"
+    "push 0"->"store.i r39";
+    "goto load.i r39"
+    "store.i r39"->"goto load.i r39";
+    "load.i r39"
+    "goto load.i r39"->"load.i r39";
+    "load.i r39"->"load.r r0";
+    "load.r r0"->"fieldget <NewsMaker: java.util.Vector Script>";
+    "virtualinvoke <java.util.Vector: int size()>"
+    "fieldget <NewsMaker: java.util.Vector Script>"->"virtualinvoke <java.util.Vector: int size()>";
+    "ifcmplt.i load.r r0"
+    "virtualinvoke <java.util.Vector: int size()>"->"ifcmplt.i load.r r0";
+    "return"
+    "ifcmplt.i load.r r0"->"return";
+    "ifcmplt.i load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <NewsMaker: java.util.Vector Script>";
+    "fieldget <NewsMaker: java.util.Vector Script>"->"load.i r39";
+    "virtualinvoke <java.util.Vector: java.lang.Object elementAt(int)>"
+    "load.i r39"->"virtualinvoke <java.util.Vector: java.lang.Object elementAt(int)>";
+    "checkcast"
+    "virtualinvoke <java.util.Vector: java.lang.Object elementAt(int)>"->"checkcast";
+    "virtualinvoke <java.lang.String: java.lang.String trim()>"
+    "checkcast"->"virtualinvoke <java.lang.String: java.lang.String trim()>";
+    "store.r r64"
+    "virtualinvoke <java.lang.String: java.lang.String trim()>"->"store.r r64";
+    "load.r r64"
+    "store.r r64"->"load.r r64";
+    "virtualinvoke <java.lang.String: int length()>"
+    "load.r r64"->"virtualinvoke <java.lang.String: int length()>";
+    "push 3"
+    "virtualinvoke <java.lang.String: int length()>"->"push 3";
+    "ifcmpge.i load.r r64"
+    "push 3"->"ifcmpge.i load.r r64";
+    "ifcmpge.i load.r r64"->"load.r r64";
+    "load.r r64"->"virtualinvoke <java.lang.String: int length()>";
+    "ifle load.r r64"
+    "virtualinvoke <java.lang.String: int length()>"->"ifle load.r r64";
+    "new java.lang.StringBuffer"
+    "ifle load.r r64"->"new java.lang.StringBuffer";
+    "new java.lang.StringBuffer"->"dup1.r";
+    "specialinvoke <java.lang.StringBuffer: void <init>()>"
+    "dup1.r"->"specialinvoke <java.lang.StringBuffer: void <init>()>";
+    "specialinvoke <java.lang.StringBuffer: void <init>()>"->"load.r r64";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"
+    "load.r r64"->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "push \"^^^^^\""
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"push \"^^^^^\"";
+    "push \"^^^^^\""->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>"
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>"->"store.r r64";
+    "store.r r64"->"load.r r64";
+    "load.r r64"->"virtualinvoke <java.lang.String: int length()>";
+    "ifle inc.i r39 1"
+    "virtualinvoke <java.lang.String: int length()>"->"ifle inc.i r39 1";
+    "ifle inc.i r39 1"->"load.r r0";
+    "load.r r0"->"load.r r64";
+    "load.r r64"->"specialinvoke <NewsMaker: void doParse(java.lang.String)>";
+    "inc.i r39 1"
+    "specialinvoke <NewsMaker: void doParse(java.lang.String)>"->"inc.i r39 1";
+    "ifeq load.r r39"->"load.r r39";
+    "push \"BOLD\""
+    "load.r r39"->"push \"BOLD\"";
+    "push \"BOLD\""->"virtualinvoke <java.lang.String: boolean equalsIgnoreCase(java.lang.String)>";
+    "virtualinvoke <java.lang.String: boolean equalsIgnoreCase(java.lang.String)>"->"ifeq load.r r39";
+    "ifeq load.r r39"->"load.r r0";
+    "load.r r0"->"new java.awt.Font";
+    "new java.awt.Font"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "load.r r0"->"fieldget <NewsMaker: java.lang.String fontName>";
+    "fieldget <NewsMaker: java.lang.String fontName>"->"push 1";
+    "push 1"->"load.r r0";
+    "load.r r0"->"fieldget <NewsMaker: int fontSize>";
+    "fieldget <NewsMaker: int fontSize>"->"specialinvoke <java.awt.Font: void <init>(java.lang.String,int,int)>";
+    "specialinvoke <java.awt.Font: void <init>(java.lang.String,int,int)>"->"fieldput <NewsMaker: java.awt.Font theFont>";
+    "fieldput <NewsMaker: java.awt.Font theFont>"->"goto load.r r0";
+    "ifeq load.r r39"->"load.r r39";
+    "push \"ITALIC\""
+    "load.r r39"->"push \"ITALIC\"";
+    "push \"ITALIC\""->"virtualinvoke <java.lang.String: boolean equalsIgnoreCase(java.lang.String)>";
+    "virtualinvoke <java.lang.String: boolean equalsIgnoreCase(java.lang.String)>"->"ifeq load.r r39";
+    "ifeq load.r r39"->"load.r r0";
+    "load.r r0"->"new java.awt.Font";
+    "new java.awt.Font"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "load.r r0"->"fieldget <NewsMaker: java.lang.String fontName>";
+    "push 2"
+    "fieldget <NewsMaker: java.lang.String fontName>"->"push 2";
+    "push 2"->"load.r r0";
+    "load.r r0"->"fieldget <NewsMaker: int fontSize>";
+    "fieldget <NewsMaker: int fontSize>"->"specialinvoke <java.awt.Font: void <init>(java.lang.String,int,int)>";
+    "specialinvoke <java.awt.Font: void <init>(java.lang.String,int,int)>"->"fieldput <NewsMaker: java.awt.Font theFont>";
+    "fieldput <NewsMaker: java.awt.Font theFont>"->"goto load.r r0";
+    "ifeq load.r r39"->"load.r r39";
+    "push \"BOLDITALIC\""
+    "load.r r39"->"push \"BOLDITALIC\"";
+    "push \"BOLDITALIC\""->"virtualinvoke <java.lang.String: boolean equalsIgnoreCase(java.lang.String)>";
+    "virtualinvoke <java.lang.String: boolean equalsIgnoreCase(java.lang.String)>"->"ifeq load.r r0";
+    "ifeq load.r r0"->"load.r r0";
+    "load.r r0"->"new java.awt.Font";
+    "new java.awt.Font"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "load.r r0"->"fieldget <NewsMaker: java.lang.String fontName>";
+    "fieldget <NewsMaker: java.lang.String fontName>"->"push 3";
+    "push 3"->"load.r r0";
+    "load.r r0"->"fieldget <NewsMaker: int fontSize>";
+    "fieldget <NewsMaker: int fontSize>"->"specialinvoke <java.awt.Font: void <init>(java.lang.String,int,int)>";
+    "specialinvoke <java.awt.Font: void <init>(java.lang.String,int,int)>"->"fieldput <NewsMaker: java.awt.Font theFont>";
+    "fieldput <NewsMaker: java.awt.Font theFont>"->"goto load.r r0";
+    "ifeq load.r r0"->"load.r r0";
+    "load.r r0"->"new java.awt.Font";
+    "new java.awt.Font"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "load.r r0"->"fieldget <NewsMaker: java.lang.String fontName>";
+    "fieldget <NewsMaker: java.lang.String fontName>"->"push 0";
+    "push 0"->"load.r r0";
+    "load.r r0"->"fieldget <NewsMaker: int fontSize>";
+    "fieldget <NewsMaker: int fontSize>"->"specialinvoke <java.awt.Font: void <init>(java.lang.String,int,int)>";
+    "specialinvoke <java.awt.Font: void <init>(java.lang.String,int,int)>"->"fieldput <NewsMaker: java.awt.Font theFont>";
+    "fieldput <NewsMaker: java.awt.Font theFont>"->"goto load.r r0";
+    "ifnull load.r r0"->"load.r r0";
+    "load.r r0"->"new java.awt.Font";
+    "new java.awt.Font"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "load.r r0"->"fieldget <NewsMaker: java.lang.String fontName>";
+    "fieldget <NewsMaker: java.lang.String fontName>"->"push 0";
+    "push 0"->"load.r r0";
+    "load.r r0"->"fieldget <NewsMaker: int fontSize>";
+    "fieldget <NewsMaker: int fontSize>"->"specialinvoke <java.awt.Font: void <init>(java.lang.String,int,int)>";
+    "specialinvoke <java.awt.Font: void <init>(java.lang.String,int,int)>"->"fieldput <NewsMaker: java.awt.Font theFont>";
+    "ifeq load.r r39"->"load.r r39";
+    "push \"center\""
+    "load.r r39"->"push \"center\"";
+    "push \"center\""->"virtualinvoke <java.lang.String: boolean equalsIgnoreCase(java.lang.String)>";
+    "virtualinvoke <java.lang.String: boolean equalsIgnoreCase(java.lang.String)>"->"ifeq load.r r39";
+    "ifeq load.r r39"->"load.r r0";
+    "load.r r0"->"push \"center\"";
+    "push \"center\""->"fieldput <NewsMaker: java.lang.String howAlign>";
+    "fieldput <NewsMaker: java.lang.String howAlign>"->"goto load.r r0";
+    "ifeq load.r r39"->"load.r r39";
+    "push \"right\""
+    "load.r r39"->"push \"right\"";
+    "push \"right\""->"virtualinvoke <java.lang.String: boolean equalsIgnoreCase(java.lang.String)>";
+    "virtualinvoke <java.lang.String: boolean equalsIgnoreCase(java.lang.String)>"->"ifeq load.r r0";
+    "ifeq load.r r0"->"load.r r0";
+    "load.r r0"->"push \"right\"";
+    "push \"right\""->"fieldput <NewsMaker: java.lang.String howAlign>";
+    "fieldput <NewsMaker: java.lang.String howAlign>"->"goto load.r r0";
+    "ifeq load.r r0"->"load.r r0";
+    "load.r r0"->"push \"left\"";
+    "push \"left\""->"fieldput <NewsMaker: java.lang.String howAlign>";
+}

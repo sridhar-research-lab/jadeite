@@ -1,0 +1,80 @@
+digraph "" {
+    "r0 := @this: Menu"
+    "load.r r0"
+    "r0 := @this: Menu"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "push \"numeroMenus\""
+    "load.r r0"->"push \"numeroMenus\"";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"
+    "push \"numeroMenus\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>";
+    "fieldput <Menu: int cargarArray>"
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"->"fieldput <Menu: int cargarArray>";
+    "fieldput <Menu: int cargarArray>"->"load.r r0";
+    "staticget <java.awt.Color: java.awt.Color white>"
+    "load.r r0"->"staticget <java.awt.Color: java.awt.Color white>";
+    "virtualinvoke <java.awt.Component: void setBackground(java.awt.Color)>"
+    "staticget <java.awt.Color: java.awt.Color white>"->"virtualinvoke <java.awt.Component: void setBackground(java.awt.Color)>";
+    "virtualinvoke <java.awt.Component: void setBackground(java.awt.Color)>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "virtualinvoke <java.awt.Component: void addMouseMotionListener(java.awt.event.MouseMotionListener)>"
+    "load.r r0"->"virtualinvoke <java.awt.Component: void addMouseMotionListener(java.awt.event.MouseMotionListener)>";
+    "virtualinvoke <java.awt.Component: void addMouseMotionListener(java.awt.event.MouseMotionListener)>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "virtualinvoke <java.awt.Component: void addMouseListener(java.awt.event.MouseListener)>"
+    "load.r r0"->"virtualinvoke <java.awt.Component: void addMouseListener(java.awt.event.MouseListener)>";
+    "virtualinvoke <java.awt.Component: void addMouseListener(java.awt.event.MouseListener)>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "virtualinvoke <java.awt.Component: java.awt.Rectangle getBounds()>"
+    "load.r r0"->"virtualinvoke <java.awt.Component: java.awt.Rectangle getBounds()>";
+    "fieldget <java.awt.Rectangle: int width>"
+    "virtualinvoke <java.awt.Component: java.awt.Rectangle getBounds()>"->"fieldget <java.awt.Rectangle: int width>";
+    "fieldget <java.awt.Rectangle: int width>"->"load.r r0";
+    "load.r r0"->"virtualinvoke <java.awt.Component: java.awt.Rectangle getBounds()>";
+    "fieldget <java.awt.Rectangle: int height>"
+    "virtualinvoke <java.awt.Component: java.awt.Rectangle getBounds()>"->"fieldget <java.awt.Rectangle: int height>";
+    "virtualinvoke <java.awt.Component: java.awt.Image createImage(int,int)>"
+    "fieldget <java.awt.Rectangle: int height>"->"virtualinvoke <java.awt.Component: java.awt.Image createImage(int,int)>";
+    "fieldput <Menu: java.awt.Image buffer>"
+    "virtualinvoke <java.awt.Component: java.awt.Image createImage(int,int)>"->"fieldput <Menu: java.awt.Image buffer>";
+    "fieldput <Menu: java.awt.Image buffer>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "fieldget <Menu: int cargarArray>"
+    "load.r r0"->"fieldget <Menu: int cargarArray>";
+    "newarray"
+    "fieldget <Menu: int cargarArray>"->"newarray";
+    "fieldput <Menu: java.awt.Image[] imagenes>"
+    "newarray"->"fieldput <Menu: java.awt.Image[] imagenes>";
+    "fieldput <Menu: java.awt.Image[] imagenes>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <Menu: int cargarArray>";
+    "fieldget <Menu: int cargarArray>"->"newarray";
+    "fieldput <Menu: ControladorImg[] controladorImg>"
+    "newarray"->"fieldput <Menu: ControladorImg[] controladorImg>";
+    "fieldput <Menu: ControladorImg[] controladorImg>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <Menu: int cargarArray>";
+    "fieldget <Menu: int cargarArray>"->"newarray";
+    "fieldput <Menu: java.lang.String[] direccionesWeb>"
+    "newarray"->"fieldput <Menu: java.lang.String[] direccionesWeb>";
+    "fieldput <Menu: java.lang.String[] direccionesWeb>"->"load.r r0";
+    "push 0"
+    "load.r r0"->"push 0";
+    "fieldput <Menu: int velocidadHilo>"
+    "push 0"->"fieldput <Menu: int velocidadHilo>";
+    "fieldput <Menu: int velocidadHilo>"->"load.r r0";
+    "push null"
+    "load.r r0"->"push null";
+    "fieldput <Menu: java.lang.Thread hilo>"
+    "push null"->"fieldput <Menu: java.lang.Thread hilo>";
+    "fieldput <Menu: java.lang.Thread hilo>"->"load.r r0";
+    "specialinvoke <Menu: void cargarParametros()>"
+    "load.r r0"->"specialinvoke <Menu: void cargarParametros()>";
+    "specialinvoke <Menu: void cargarParametros()>"->"load.r r0";
+    "specialinvoke <Menu: void cargaImagenes()>"
+    "load.r r0"->"specialinvoke <Menu: void cargaImagenes()>";
+    "return"
+    "specialinvoke <Menu: void cargaImagenes()>"->"return";
+}

@@ -1,0 +1,181 @@
+digraph "" {
+    "r0 := @this: tscroll"
+    "load.r r0"
+    "r0 := @this: tscroll"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "virtualinvoke <java.awt.Component: java.awt.Dimension size()>"
+    "load.r r0"->"virtualinvoke <java.awt.Component: java.awt.Dimension size()>";
+    "fieldget <java.awt.Dimension: int width>"
+    "virtualinvoke <java.awt.Component: java.awt.Dimension size()>"->"fieldget <java.awt.Dimension: int width>";
+    "fieldput <tscroll: int appletWidth>"
+    "fieldget <java.awt.Dimension: int width>"->"fieldput <tscroll: int appletWidth>";
+    "fieldput <tscroll: int appletWidth>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"virtualinvoke <java.awt.Component: java.awt.Dimension size()>";
+    "fieldget <java.awt.Dimension: int height>"
+    "virtualinvoke <java.awt.Component: java.awt.Dimension size()>"->"fieldget <java.awt.Dimension: int height>";
+    "fieldput <tscroll: int appletHeight>"
+    "fieldget <java.awt.Dimension: int height>"->"fieldput <tscroll: int appletHeight>";
+    "fieldput <tscroll: int appletHeight>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "fieldget <tscroll: int appletWidth>"
+    "load.r r0"->"fieldget <tscroll: int appletWidth>";
+    "fieldget <tscroll: int appletWidth>"->"load.r r0";
+    "fieldget <tscroll: int appletHeight>"
+    "load.r r0"->"fieldget <tscroll: int appletHeight>";
+    "virtualinvoke <java.awt.Component: java.awt.Image createImage(int,int)>"
+    "fieldget <tscroll: int appletHeight>"->"virtualinvoke <java.awt.Component: java.awt.Image createImage(int,int)>";
+    "fieldput <tscroll: java.awt.Image offScreenImage>"
+    "virtualinvoke <java.awt.Component: java.awt.Image createImage(int,int)>"->"fieldput <tscroll: java.awt.Image offScreenImage>";
+    "fieldput <tscroll: java.awt.Image offScreenImage>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "fieldget <tscroll: java.awt.Image offScreenImage>"
+    "load.r r0"->"fieldget <tscroll: java.awt.Image offScreenImage>";
+    "virtualinvoke <java.awt.Image: java.awt.Graphics getGraphics()>"
+    "fieldget <tscroll: java.awt.Image offScreenImage>"->"virtualinvoke <java.awt.Image: java.awt.Graphics getGraphics()>";
+    "fieldput <tscroll: java.awt.Graphics offScreen>"
+    "virtualinvoke <java.awt.Image: java.awt.Graphics getGraphics()>"->"fieldput <tscroll: java.awt.Graphics offScreen>";
+    "goto load.r r0"
+    "fieldput <tscroll: java.awt.Graphics offScreen>"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "virtualinvoke <java.awt.Component: java.awt.Font getFont()>"
+    "load.r r0"->"virtualinvoke <java.awt.Component: java.awt.Font getFont()>";
+    "fieldput <tscroll: java.awt.Font wordFont>"
+    "virtualinvoke <java.awt.Component: java.awt.Font getFont()>"->"fieldput <tscroll: java.awt.Font wordFont>";
+    "fieldput <tscroll: java.awt.Font wordFont>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "fieldget <tscroll: java.awt.Font wordFont>"
+    "load.r r0"->"fieldget <tscroll: java.awt.Font wordFont>";
+    "virtualinvoke <java.awt.Component: java.awt.FontMetrics getFontMetrics(java.awt.Font)>"
+    "fieldget <tscroll: java.awt.Font wordFont>"->"virtualinvoke <java.awt.Component: java.awt.FontMetrics getFontMetrics(java.awt.Font)>";
+    "fieldput <tscroll: java.awt.FontMetrics wordMetrics>"
+    "virtualinvoke <java.awt.Component: java.awt.FontMetrics getFontMetrics(java.awt.Font)>"->"fieldput <tscroll: java.awt.FontMetrics wordMetrics>";
+    "fieldput <tscroll: java.awt.FontMetrics wordMetrics>"->"load.r r0";
+    "push \"speed\""
+    "load.r r0"->"push \"speed\"";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"
+    "push \"speed\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "store.r $r17"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"store.r $r17";
+    "load.r $r17"
+    "store.r $r17"->"load.r $r17";
+    "ifnonnull load.r $r17"
+    "load.r $r17"->"ifnonnull load.r $r17";
+    "push 1"
+    "ifnonnull load.r $r17"->"push 1";
+    "store.i $r17"
+    "push 1"->"store.i $r17";
+    "store.i $r17"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "load.i $r17"
+    "load.r r0"->"load.i $r17";
+    "fieldput <tscroll: int speed>"
+    "load.i $r17"->"fieldput <tscroll: int speed>";
+    "fieldput <tscroll: int speed>"->"load.r r0";
+    "push \"delay\""
+    "load.r r0"->"push \"delay\"";
+    "push \"delay\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"store.r $r17";
+    "store.r $r17"->"load.r $r17";
+    "load.r $r17"->"ifnonnull load.r $r17";
+    "push 100"
+    "ifnonnull load.r $r17"->"push 100";
+    "push 100"->"store.i $r17";
+    "store.i $r17"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "load.r r0"->"load.i $r17";
+    "fieldput <tscroll: int delay>"
+    "load.i $r17"->"fieldput <tscroll: int delay>";
+    "fieldput <tscroll: int delay>"->"load.r r0";
+    "push \"pause\""
+    "load.r r0"->"push \"pause\"";
+    "push \"pause\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"store.r $r17";
+    "store.r $r17"->"load.r $r17";
+    "load.r $r17"->"ifnonnull load.r $r17";
+    "push 0"
+    "ifnonnull load.r $r17"->"push 0";
+    "push 0"->"store.i $r17";
+    "store.i $r17"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "load.r r0"->"load.i $r17";
+    "fieldput <tscroll: int iPause>"
+    "load.i $r17"->"fieldput <tscroll: int iPause>";
+    "fieldput <tscroll: int iPause>"->"load.r r0";
+    "push \"tscr\""
+    "load.r r0"->"push \"tscr\"";
+    "push \"tscr\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"store.r $r17";
+    "store.r $r17"->"load.r $r17";
+    "load.r $r17"->"ifnonnull load.r $r17";
+    "ifnonnull load.r $r17"->"push 1";
+    "push 1"->"store.i $r17";
+    "store.i $r17"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "load.r r0"->"load.i $r17";
+    "fieldput <tscroll: int iScroll>"
+    "load.i $r17"->"fieldput <tscroll: int iScroll>";
+    "fieldput <tscroll: int iScroll>"->"load.r r0";
+    "push \"image\""
+    "load.r r0"->"push \"image\"";
+    "push \"image\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"store.r $r17";
+    "store.r $r17"->"load.r $r17";
+    "ifnull load.r r0"
+    "load.r $r17"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "virtualinvoke <java.applet.Applet: java.net.URL getCodeBase()>"
+    "load.r r0"->"virtualinvoke <java.applet.Applet: java.net.URL getCodeBase()>";
+    "virtualinvoke <java.applet.Applet: java.net.URL getCodeBase()>"->"load.r $r17";
+    "virtualinvoke <java.applet.Applet: java.awt.Image getImage(java.net.URL,java.lang.String)>"
+    "load.r $r17"->"virtualinvoke <java.applet.Applet: java.awt.Image getImage(java.net.URL,java.lang.String)>";
+    "fieldput <tscroll: java.awt.Image fdImg>"
+    "virtualinvoke <java.applet.Applet: java.awt.Image getImage(java.net.URL,java.lang.String)>"->"fieldput <tscroll: java.awt.Image fdImg>";
+    "fieldput <tscroll: java.awt.Image fdImg>"->"load.r r0";
+    "push \"fgimg\""
+    "load.r r0"->"push \"fgimg\"";
+    "push \"fgimg\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"store.r $r17";
+    "store.r $r17"->"load.r $r17";
+    "load.r $r17"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"virtualinvoke <java.applet.Applet: java.net.URL getCodeBase()>";
+    "virtualinvoke <java.applet.Applet: java.net.URL getCodeBase()>"->"load.r $r17";
+    "load.r $r17"->"virtualinvoke <java.applet.Applet: java.awt.Image getImage(java.net.URL,java.lang.String)>";
+    "fieldput <tscroll: java.awt.Image gdImg>"
+    "virtualinvoke <java.applet.Applet: java.awt.Image getImage(java.net.URL,java.lang.String)>"->"fieldput <tscroll: java.awt.Image gdImg>";
+    "fieldput <tscroll: java.awt.Image gdImg>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "push \"file\""
+    "load.r r0"->"push \"file\"";
+    "push \"file\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <tscroll: void readFile(java.lang.String)>"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"virtualinvoke <tscroll: void readFile(java.lang.String)>";
+    "return"
+    "virtualinvoke <tscroll: void readFile(java.lang.String)>"->"return";
+    "ifnonnull load.r $r17"->"load.r $r17";
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"
+    "load.r $r17"->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>";
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"->"store.i $r17";
+    "ifnonnull load.r $r17"->"load.r $r17";
+    "load.r $r17"->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>";
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"->"store.i $r17";
+    "ifnonnull load.r $r17"->"load.r $r17";
+    "load.r $r17"->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>";
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"->"store.i $r17";
+    "ifnonnull load.r $r17"->"load.r $r17";
+    "load.r $r17"->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>";
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"->"store.i $r17";
+    "virtualinvoke <java.awt.Image: java.awt.Graphics getGraphics()>"->"store.r $r17";
+    "store.r $r17"->"load.r r0";
+    "push null"
+    "load.r r0"->"push null";
+    "push null"->"fieldput <tscroll: java.awt.Graphics offScreen>";
+}

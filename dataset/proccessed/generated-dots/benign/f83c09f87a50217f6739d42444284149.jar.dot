@@ -1,0 +1,1525 @@
+digraph "" {
+    "r0 := @this: KickYoutubeApplet"
+    "load.r r0"
+    "r0 := @this: KickYoutubeApplet"->"load.r r0";
+    "push \"v\""
+    "load.r r0"->"push \"v\"";
+    "virtualinvoke <KickYoutubeApplet: java.lang.String getParameter(java.lang.String)>"
+    "push \"v\""->"virtualinvoke <KickYoutubeApplet: java.lang.String getParameter(java.lang.String)>";
+    "store.r $r16"
+    "virtualinvoke <KickYoutubeApplet: java.lang.String getParameter(java.lang.String)>"->"store.r $r16";
+    "store.r $r16"->"load.r r0";
+    "push \"u\""
+    "load.r r0"->"push \"u\"";
+    "push \"u\""->"virtualinvoke <KickYoutubeApplet: java.lang.String getParameter(java.lang.String)>";
+    "store.r r1"
+    "virtualinvoke <KickYoutubeApplet: java.lang.String getParameter(java.lang.String)>"->"store.r r1";
+    "store.r r1"->"load.r r0";
+    "push \"site\""
+    "load.r r0"->"push \"site\"";
+    "push \"site\""->"virtualinvoke <KickYoutubeApplet: java.lang.String getParameter(java.lang.String)>";
+    "store.r r2"
+    "virtualinvoke <KickYoutubeApplet: java.lang.String getParameter(java.lang.String)>"->"store.r r2";
+    "load.r r2"
+    "store.r r2"->"load.r r2";
+    "push \"youtube.com\""
+    "load.r r2"->"push \"youtube.com\"";
+    "virtualinvoke <java.lang.String: boolean contains(java.lang.CharSequence)>"
+    "push \"youtube.com\""->"virtualinvoke <java.lang.String: boolean contains(java.lang.CharSequence)>";
+    "ifeq load.r r2"
+    "virtualinvoke <java.lang.String: boolean contains(java.lang.CharSequence)>"->"ifeq load.r r2";
+    "ifeq load.r r2"->"load.r r0";
+    "specialinvoke <javax.swing.JApplet: void init()>"
+    "load.r r0"->"specialinvoke <javax.swing.JApplet: void init()>";
+    "load.r $r16"
+    "specialinvoke <javax.swing.JApplet: void init()>"->"load.r $r16";
+    "load.r $r16"->"store.r r1";
+    "store.r r1"->"load.r r0";
+    "load.r r0"->"push \"u\"";
+    "push \"u\""->"virtualinvoke <KickYoutubeApplet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <KickYoutubeApplet: java.lang.String getParameter(java.lang.String)>"->"store.r r2";
+    "store.r r2"->"load.r $r16";
+    "ifnonnull load.r r0"
+    "load.r $r16"->"ifnonnull load.r r0";
+    "ifnonnull load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r2";
+    "specialinvoke <KickYoutubeApplet: java.lang.String getRedirUrl(java.lang.String)>"
+    "load.r r2"->"specialinvoke <KickYoutubeApplet: java.lang.String getRedirUrl(java.lang.String)>";
+    "push \"UTF-8\""
+    "specialinvoke <KickYoutubeApplet: java.lang.String getRedirUrl(java.lang.String)>"->"push \"UTF-8\"";
+    "staticinvoke <java.net.URLDecoder: java.lang.String decode(java.lang.String,java.lang.String)>"
+    "push \"UTF-8\""->"staticinvoke <java.net.URLDecoder: java.lang.String decode(java.lang.String,java.lang.String)>";
+    "push \"v=\""
+    "staticinvoke <java.net.URLDecoder: java.lang.String decode(java.lang.String,java.lang.String)>"->"push \"v=\"";
+    "push \"&\""
+    "push \"v=\""->"push \"&\"";
+    "specialinvoke <KickYoutubeApplet: java.lang.String inbtwn(java.lang.String,java.lang.String,java.lang.String)>"
+    "push \"&\""->"specialinvoke <KickYoutubeApplet: java.lang.String inbtwn(java.lang.String,java.lang.String,java.lang.String)>";
+    "specialinvoke <KickYoutubeApplet: java.lang.String inbtwn(java.lang.String,java.lang.String,java.lang.String)>"->"store.r r1";
+    "store.r r1"->"load.r r0";
+    "new java.lang.StringBuilder"
+    "load.r r0"->"new java.lang.StringBuilder";
+    "dup1.r"
+    "new java.lang.StringBuilder"->"dup1.r";
+    "push \"http://www.youtube.com/get_video_info?video_id=\""
+    "dup1.r"->"push \"http://www.youtube.com/get_video_info?video_id=\"";
+    "specialinvoke <java.lang.StringBuilder: void <init>(java.lang.String)>"
+    "push \"http://www.youtube.com/get_video_info?video_id=\""->"specialinvoke <java.lang.StringBuilder: void <init>(java.lang.String)>";
+    "load.r r1"
+    "specialinvoke <java.lang.StringBuilder: void <init>(java.lang.String)>"->"load.r r1";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"
+    "load.r r1"->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.String toString()>"
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"virtualinvoke <java.lang.StringBuilder: java.lang.String toString()>";
+    "push \"GET\""
+    "virtualinvoke <java.lang.StringBuilder: java.lang.String toString()>"->"push \"GET\"";
+    "specialinvoke <KickYoutubeApplet: java.lang.String getUrlContent(java.lang.String,java.lang.String)>"
+    "push \"GET\""->"specialinvoke <KickYoutubeApplet: java.lang.String getUrlContent(java.lang.String,java.lang.String)>";
+    "store.r $r81"
+    "specialinvoke <KickYoutubeApplet: java.lang.String getUrlContent(java.lang.String,java.lang.String)>"->"store.r $r81";
+    "store.r $r81"->"load.r r0";
+    "load.r r0"->"new java.lang.StringBuilder";
+    "new java.lang.StringBuilder"->"dup1.r";
+    "push \"http://www.youtube.com/watch?v=\""
+    "dup1.r"->"push \"http://www.youtube.com/watch?v=\"";
+    "push \"http://www.youtube.com/watch?v=\""->"specialinvoke <java.lang.StringBuilder: void <init>(java.lang.String)>";
+    "specialinvoke <java.lang.StringBuilder: void <init>(java.lang.String)>"->"load.r r1";
+    "load.r r1"->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"virtualinvoke <java.lang.StringBuilder: java.lang.String toString()>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.String toString()>"->"push \"GET\"";
+    "push \"GET\""->"specialinvoke <KickYoutubeApplet: java.lang.String getUrlContent(java.lang.String,java.lang.String)>";
+    "store.r $r33"
+    "specialinvoke <KickYoutubeApplet: java.lang.String getUrlContent(java.lang.String,java.lang.String)>"->"store.r $r33";
+    "store.r $r33"->"load.r r0";
+    "load.r $r33"
+    "load.r r0"->"load.r $r33";
+    "push \"\'VIDEO_TITLE\': \'\""
+    "load.r $r33"->"push \"\'VIDEO_TITLE\': \'\"";
+    "push \"\',\""
+    "push \"\'VIDEO_TITLE\': \'\""->"push \"\',\"";
+    "push \"\',\""->"specialinvoke <KickYoutubeApplet: java.lang.String inbtwn(java.lang.String,java.lang.String,java.lang.String)>";
+    "specialinvoke <KickYoutubeApplet: java.lang.String inbtwn(java.lang.String,java.lang.String,java.lang.String)>"->"store.r $r16";
+    "store.r $r16"->"load.r $r16";
+    "ifnonnull load.r $r16"
+    "load.r $r16"->"ifnonnull load.r $r16";
+    "ifnonnull load.r $r16"->"load.r r0";
+    "load.r r0"->"load.r $r33";
+    "push \"name=\\\"title\\\" content=\\\"\""
+    "load.r $r33"->"push \"name=\\\"title\\\" content=\\\"\"";
+    "push \"\\\"\""
+    "push \"name=\\\"title\\\" content=\\\"\""->"push \"\\\"\"";
+    "push \"\\\"\""->"specialinvoke <KickYoutubeApplet: java.lang.String inbtwn(java.lang.String,java.lang.String,java.lang.String)>";
+    "specialinvoke <KickYoutubeApplet: java.lang.String inbtwn(java.lang.String,java.lang.String,java.lang.String)>"->"store.r $r16";
+    "store.r $r16"->"load.r $r16";
+    "load.r $r16"->"ifnonnull load.r r0";
+    "ifnonnull load.r r0"->"load.r r0";
+    "load.r r0"->"load.r $r33";
+    "push \"<h3>&ldquo;\""
+    "load.r $r33"->"push \"<h3>&ldquo;\"";
+    "push \"&rdquo;</h3>\""
+    "push \"<h3>&ldquo;\""->"push \"&rdquo;</h3>\"";
+    "push \"&rdquo;</h3>\""->"specialinvoke <KickYoutubeApplet: java.lang.String inbtwn(java.lang.String,java.lang.String,java.lang.String)>";
+    "specialinvoke <KickYoutubeApplet: java.lang.String inbtwn(java.lang.String,java.lang.String,java.lang.String)>"->"store.r $r16";
+    "store.r $r16"->"load.r r0";
+    "load.r r0"->"load.r $r16";
+    "specialinvoke <KickYoutubeApplet: java.lang.String setHTMLEntity(java.lang.String)>"
+    "load.r $r16"->"specialinvoke <KickYoutubeApplet: java.lang.String setHTMLEntity(java.lang.String)>";
+    "specialinvoke <KickYoutubeApplet: java.lang.String setHTMLEntity(java.lang.String)>"->"store.r $r16";
+    "store.r $r16"->"load.r r0";
+    "load.r r0"->"load.r $r33";
+    "push \"\\\"t\\\": \\\"\""
+    "load.r $r33"->"push \"\\\"t\\\": \\\"\"";
+    "push \"\\\"t\\\": \\\"\""->"push \"\\\"\"";
+    "push \"\\\"\""->"specialinvoke <KickYoutubeApplet: java.lang.String inbtwn(java.lang.String,java.lang.String,java.lang.String)>";
+    "specialinvoke <KickYoutubeApplet: java.lang.String inbtwn(java.lang.String,java.lang.String,java.lang.String)>"->"store.r r2";
+    "store.r r2"->"load.r r2";
+    "ifnonnull load.r r2"
+    "load.r r2"->"ifnonnull load.r r2";
+    "ifnonnull load.r r2"->"load.r r0";
+    "load.r r0"->"load.r $r33";
+    "push \"&t=\""
+    "load.r $r33"->"push \"&t=\"";
+    "push \"&t=\""->"push \"&\"";
+    "push \"&\""->"specialinvoke <KickYoutubeApplet: java.lang.String inbtwn(java.lang.String,java.lang.String,java.lang.String)>";
+    "specialinvoke <KickYoutubeApplet: java.lang.String inbtwn(java.lang.String,java.lang.String,java.lang.String)>"->"store.r r2";
+    "store.r r2"->"load.r r2";
+    "load.r r2"->"ifnonnull load.r r0";
+    "ifnonnull load.r r0"->"load.r r0";
+    "load.r $r81"
+    "load.r r0"->"load.r $r81";
+    "push \"&token=\""
+    "load.r $r81"->"push \"&token=\"";
+    "push \"&token=\""->"push \"&\"";
+    "push \"&\""->"specialinvoke <KickYoutubeApplet: java.lang.String inbtwn(java.lang.String,java.lang.String,java.lang.String)>";
+    "specialinvoke <KickYoutubeApplet: java.lang.String inbtwn(java.lang.String,java.lang.String,java.lang.String)>"->"store.r r2";
+    "store.r r2"->"load.r r0";
+    "load.r r0"->"new java.lang.StringBuilder";
+    "new java.lang.StringBuilder"->"dup1.r";
+    "push \"http://www.youtube.com/get_video?video_id=\""
+    "dup1.r"->"push \"http://www.youtube.com/get_video?video_id=\"";
+    "push \"http://www.youtube.com/get_video?video_id=\""->"specialinvoke <java.lang.StringBuilder: void <init>(java.lang.String)>";
+    "specialinvoke <java.lang.StringBuilder: void <init>(java.lang.String)>"->"load.r r1";
+    "load.r r1"->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"push \"&t=\"";
+    "push \"&t=\""->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"load.r r2";
+    "load.r r2"->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "push \"&fmt=13\""
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"push \"&fmt=13\"";
+    "push \"&fmt=13\""->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"virtualinvoke <java.lang.StringBuilder: java.lang.String toString()>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.String toString()>"->"specialinvoke <KickYoutubeApplet: java.lang.String getRedirUrl(java.lang.String)>";
+    "specialinvoke <KickYoutubeApplet: java.lang.String getRedirUrl(java.lang.String)>"->"store.r $r33";
+    "store.r $r33"->"load.r $r33";
+    "ifnull load.r r0"
+    "load.r $r33"->"ifnull load.r r0";
+    "new java.net.URL"
+    "ifnull load.r r0"->"new java.net.URL";
+    "new java.net.URL"->"store.r $r81";
+    "store.r $r81"->"load.r $r81";
+    "load.r $r81"->"new java.lang.StringBuilder";
+    "new java.lang.StringBuilder"->"dup1.r";
+    "push \"javascript:freedown_append(\'3GP\', \'Low Quality - 176x144\', \'\""
+    "dup1.r"->"push \"javascript:freedown_append(\'3GP\', \'Low Quality - 176x144\', \'\"";
+    "push \"javascript:freedown_append(\'3GP\', \'Low Quality - 176x144\', \'\""->"specialinvoke <java.lang.StringBuilder: void <init>(java.lang.String)>";
+    "specialinvoke <java.lang.StringBuilder: void <init>(java.lang.String)>"->"load.r $r33";
+    "load.r $r33"->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "push \"\', \'\""
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"push \"\', \'\"";
+    "push \"\', \'\""->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"load.r $r16";
+    "load.r $r16"->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "push \"\');\""
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"push \"\');\"";
+    "push \"\');\""->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"virtualinvoke <java.lang.StringBuilder: java.lang.String toString()>";
+    "specialinvoke <java.net.URL: void <init>(java.lang.String)>"
+    "virtualinvoke <java.lang.StringBuilder: java.lang.String toString()>"->"specialinvoke <java.net.URL: void <init>(java.lang.String)>";
+    "specialinvoke <java.net.URL: void <init>(java.lang.String)>"->"load.r r0";
+    "virtualinvoke <KickYoutubeApplet: java.applet.AppletContext getAppletContext()>"
+    "load.r r0"->"virtualinvoke <KickYoutubeApplet: java.applet.AppletContext getAppletContext()>";
+    "virtualinvoke <KickYoutubeApplet: java.applet.AppletContext getAppletContext()>"->"load.r $r81";
+    "interfaceinvoke <java.applet.AppletContext: void showDocument(java.net.URL)> 1"
+    "load.r $r81"->"interfaceinvoke <java.applet.AppletContext: void showDocument(java.net.URL)> 1";
+    "interfaceinvoke <java.applet.AppletContext: void showDocument(java.net.URL)> 1"->"load.r r0";
+    "load.r r0"->"new java.lang.StringBuilder";
+    "new java.lang.StringBuilder"->"dup1.r";
+    "dup1.r"->"push \"http://www.youtube.com/get_video?video_id=\"";
+    "push \"http://www.youtube.com/get_video?video_id=\""->"specialinvoke <java.lang.StringBuilder: void <init>(java.lang.String)>";
+    "specialinvoke <java.lang.StringBuilder: void <init>(java.lang.String)>"->"load.r r1";
+    "load.r r1"->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"push \"&t=\"";
+    "push \"&t=\""->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"load.r r2";
+    "load.r r2"->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "push \"&fmt=17\""
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"push \"&fmt=17\"";
+    "push \"&fmt=17\""->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"virtualinvoke <java.lang.StringBuilder: java.lang.String toString()>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.String toString()>"->"specialinvoke <KickYoutubeApplet: java.lang.String getRedirUrl(java.lang.String)>";
+    "specialinvoke <KickYoutubeApplet: java.lang.String getRedirUrl(java.lang.String)>"->"store.r $r33";
+    "store.r $r33"->"load.r $r33";
+    "load.r $r33"->"ifnull load.r r0";
+    "ifnull load.r r0"->"new java.net.URL";
+    "new java.net.URL"->"store.r $r81";
+    "store.r $r81"->"load.r $r81";
+    "load.r $r81"->"new java.lang.StringBuilder";
+    "new java.lang.StringBuilder"->"dup1.r";
+    "push \"javascript:freedown_append(\'3GP\', \'Medium Quality - 176x144\', \'\""
+    "dup1.r"->"push \"javascript:freedown_append(\'3GP\', \'Medium Quality - 176x144\', \'\"";
+    "push \"javascript:freedown_append(\'3GP\', \'Medium Quality - 176x144\', \'\""->"specialinvoke <java.lang.StringBuilder: void <init>(java.lang.String)>";
+    "specialinvoke <java.lang.StringBuilder: void <init>(java.lang.String)>"->"load.r $r33";
+    "load.r $r33"->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"push \"\', \'\"";
+    "push \"\', \'\""->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"load.r $r16";
+    "load.r $r16"->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"push \"\');\"";
+    "push \"\');\""->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"virtualinvoke <java.lang.StringBuilder: java.lang.String toString()>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.String toString()>"->"specialinvoke <java.net.URL: void <init>(java.lang.String)>";
+    "specialinvoke <java.net.URL: void <init>(java.lang.String)>"->"load.r r0";
+    "load.r r0"->"virtualinvoke <KickYoutubeApplet: java.applet.AppletContext getAppletContext()>";
+    "virtualinvoke <KickYoutubeApplet: java.applet.AppletContext getAppletContext()>"->"load.r $r81";
+    "load.r $r81"->"interfaceinvoke <java.applet.AppletContext: void showDocument(java.net.URL)> 1";
+    "interfaceinvoke <java.applet.AppletContext: void showDocument(java.net.URL)> 1"->"load.r r0";
+    "load.r r0"->"new java.lang.StringBuilder";
+    "new java.lang.StringBuilder"->"dup1.r";
+    "dup1.r"->"push \"http://www.youtube.com/get_video?video_id=\"";
+    "push \"http://www.youtube.com/get_video?video_id=\""->"specialinvoke <java.lang.StringBuilder: void <init>(java.lang.String)>";
+    "specialinvoke <java.lang.StringBuilder: void <init>(java.lang.String)>"->"load.r r1";
+    "load.r r1"->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"push \"&t=\"";
+    "push \"&t=\""->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"load.r r2";
+    "load.r r2"->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "push \"&fmt=36\""
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"push \"&fmt=36\"";
+    "push \"&fmt=36\""->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"virtualinvoke <java.lang.StringBuilder: java.lang.String toString()>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.String toString()>"->"specialinvoke <KickYoutubeApplet: java.lang.String getRedirUrl(java.lang.String)>";
+    "specialinvoke <KickYoutubeApplet: java.lang.String getRedirUrl(java.lang.String)>"->"store.r $r33";
+    "store.r $r33"->"load.r $r33";
+    "load.r $r33"->"ifnull load.r r0";
+    "ifnull load.r r0"->"new java.net.URL";
+    "new java.net.URL"->"store.r $r81";
+    "store.r $r81"->"load.r $r81";
+    "load.r $r81"->"new java.lang.StringBuilder";
+    "new java.lang.StringBuilder"->"dup1.r";
+    "push \"javascript:freedown_append(\'3GP\', \'High Quality - 320x240\', \'\""
+    "dup1.r"->"push \"javascript:freedown_append(\'3GP\', \'High Quality - 320x240\', \'\"";
+    "push \"javascript:freedown_append(\'3GP\', \'High Quality - 320x240\', \'\""->"specialinvoke <java.lang.StringBuilder: void <init>(java.lang.String)>";
+    "specialinvoke <java.lang.StringBuilder: void <init>(java.lang.String)>"->"load.r $r33";
+    "load.r $r33"->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"push \"\', \'\"";
+    "push \"\', \'\""->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"load.r $r16";
+    "load.r $r16"->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"push \"\');\"";
+    "push \"\');\""->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"virtualinvoke <java.lang.StringBuilder: java.lang.String toString()>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.String toString()>"->"specialinvoke <java.net.URL: void <init>(java.lang.String)>";
+    "specialinvoke <java.net.URL: void <init>(java.lang.String)>"->"load.r r0";
+    "load.r r0"->"virtualinvoke <KickYoutubeApplet: java.applet.AppletContext getAppletContext()>";
+    "virtualinvoke <KickYoutubeApplet: java.applet.AppletContext getAppletContext()>"->"load.r $r81";
+    "load.r $r81"->"interfaceinvoke <java.applet.AppletContext: void showDocument(java.net.URL)> 1";
+    "interfaceinvoke <java.applet.AppletContext: void showDocument(java.net.URL)> 1"->"load.r r0";
+    "load.r r0"->"new java.lang.StringBuilder";
+    "new java.lang.StringBuilder"->"dup1.r";
+    "dup1.r"->"push \"http://www.youtube.com/get_video?video_id=\"";
+    "push \"http://www.youtube.com/get_video?video_id=\""->"specialinvoke <java.lang.StringBuilder: void <init>(java.lang.String)>";
+    "specialinvoke <java.lang.StringBuilder: void <init>(java.lang.String)>"->"load.r r1";
+    "load.r r1"->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"push \"&t=\"";
+    "push \"&t=\""->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"load.r r2";
+    "load.r r2"->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "push \"&fmt=5\""
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"push \"&fmt=5\"";
+    "push \"&fmt=5\""->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"virtualinvoke <java.lang.StringBuilder: java.lang.String toString()>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.String toString()>"->"specialinvoke <KickYoutubeApplet: java.lang.String getRedirUrl(java.lang.String)>";
+    "specialinvoke <KickYoutubeApplet: java.lang.String getRedirUrl(java.lang.String)>"->"store.r $r33";
+    "store.r $r33"->"load.r $r33";
+    "load.r $r33"->"ifnull load.r r0";
+    "ifnull load.r r0"->"new java.net.URL";
+    "new java.net.URL"->"store.r $r81";
+    "store.r $r81"->"load.r $r81";
+    "load.r $r81"->"new java.lang.StringBuilder";
+    "new java.lang.StringBuilder"->"dup1.r";
+    "push \"javascript:freedown_append(\'FLV\', \'Low Quality - 320x240\', \'\""
+    "dup1.r"->"push \"javascript:freedown_append(\'FLV\', \'Low Quality - 320x240\', \'\"";
+    "push \"javascript:freedown_append(\'FLV\', \'Low Quality - 320x240\', \'\""->"specialinvoke <java.lang.StringBuilder: void <init>(java.lang.String)>";
+    "specialinvoke <java.lang.StringBuilder: void <init>(java.lang.String)>"->"load.r $r33";
+    "load.r $r33"->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"push \"\', \'\"";
+    "push \"\', \'\""->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"load.r $r16";
+    "load.r $r16"->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"push \"\');\"";
+    "push \"\');\""->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"virtualinvoke <java.lang.StringBuilder: java.lang.String toString()>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.String toString()>"->"specialinvoke <java.net.URL: void <init>(java.lang.String)>";
+    "specialinvoke <java.net.URL: void <init>(java.lang.String)>"->"load.r r0";
+    "load.r r0"->"virtualinvoke <KickYoutubeApplet: java.applet.AppletContext getAppletContext()>";
+    "virtualinvoke <KickYoutubeApplet: java.applet.AppletContext getAppletContext()>"->"load.r $r81";
+    "load.r $r81"->"interfaceinvoke <java.applet.AppletContext: void showDocument(java.net.URL)> 1";
+    "interfaceinvoke <java.applet.AppletContext: void showDocument(java.net.URL)> 1"->"load.r r0";
+    "load.r r0"->"new java.lang.StringBuilder";
+    "new java.lang.StringBuilder"->"dup1.r";
+    "dup1.r"->"push \"http://www.youtube.com/get_video?video_id=\"";
+    "push \"http://www.youtube.com/get_video?video_id=\""->"specialinvoke <java.lang.StringBuilder: void <init>(java.lang.String)>";
+    "specialinvoke <java.lang.StringBuilder: void <init>(java.lang.String)>"->"load.r r1";
+    "load.r r1"->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"push \"&t=\"";
+    "push \"&t=\""->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"load.r r2";
+    "load.r r2"->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "push \"&fmt=34\""
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"push \"&fmt=34\"";
+    "push \"&fmt=34\""->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"virtualinvoke <java.lang.StringBuilder: java.lang.String toString()>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.String toString()>"->"specialinvoke <KickYoutubeApplet: java.lang.String getRedirUrl(java.lang.String)>";
+    "specialinvoke <KickYoutubeApplet: java.lang.String getRedirUrl(java.lang.String)>"->"store.r $r33";
+    "store.r $r33"->"load.r $r33";
+    "load.r $r33"->"ifnull load.r r0";
+    "ifnull load.r r0"->"new java.net.URL";
+    "new java.net.URL"->"store.r $r81";
+    "store.r $r81"->"load.r $r81";
+    "load.r $r81"->"new java.lang.StringBuilder";
+    "new java.lang.StringBuilder"->"dup1.r";
+    "push \"javascript:freedown_append(\'FLV\', \'Medium Quality - 400x226\', \'\""
+    "dup1.r"->"push \"javascript:freedown_append(\'FLV\', \'Medium Quality - 400x226\', \'\"";
+    "push \"javascript:freedown_append(\'FLV\', \'Medium Quality - 400x226\', \'\""->"specialinvoke <java.lang.StringBuilder: void <init>(java.lang.String)>";
+    "specialinvoke <java.lang.StringBuilder: void <init>(java.lang.String)>"->"load.r $r33";
+    "load.r $r33"->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"push \"\', \'\"";
+    "push \"\', \'\""->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"load.r $r16";
+    "load.r $r16"->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"push \"\');\"";
+    "push \"\');\""->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"virtualinvoke <java.lang.StringBuilder: java.lang.String toString()>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.String toString()>"->"specialinvoke <java.net.URL: void <init>(java.lang.String)>";
+    "specialinvoke <java.net.URL: void <init>(java.lang.String)>"->"load.r r0";
+    "load.r r0"->"virtualinvoke <KickYoutubeApplet: java.applet.AppletContext getAppletContext()>";
+    "virtualinvoke <KickYoutubeApplet: java.applet.AppletContext getAppletContext()>"->"load.r $r81";
+    "load.r $r81"->"interfaceinvoke <java.applet.AppletContext: void showDocument(java.net.URL)> 1";
+    "interfaceinvoke <java.applet.AppletContext: void showDocument(java.net.URL)> 1"->"load.r r0";
+    "load.r r0"->"new java.lang.StringBuilder";
+    "new java.lang.StringBuilder"->"dup1.r";
+    "dup1.r"->"push \"http://www.youtube.com/get_video?video_id=\"";
+    "push \"http://www.youtube.com/get_video?video_id=\""->"specialinvoke <java.lang.StringBuilder: void <init>(java.lang.String)>";
+    "specialinvoke <java.lang.StringBuilder: void <init>(java.lang.String)>"->"load.r r1";
+    "load.r r1"->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"push \"&t=\"";
+    "push \"&t=\""->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"load.r r2";
+    "load.r r2"->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "push \"&fmt=6\""
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"push \"&fmt=6\"";
+    "push \"&fmt=6\""->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"virtualinvoke <java.lang.StringBuilder: java.lang.String toString()>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.String toString()>"->"specialinvoke <KickYoutubeApplet: java.lang.String getRedirUrl(java.lang.String)>";
+    "specialinvoke <KickYoutubeApplet: java.lang.String getRedirUrl(java.lang.String)>"->"store.r $r33";
+    "store.r $r33"->"load.r $r33";
+    "load.r $r33"->"ifnull load.r r0";
+    "ifnull load.r r0"->"new java.net.URL";
+    "new java.net.URL"->"store.r $r81";
+    "store.r $r81"->"load.r $r81";
+    "load.r $r81"->"new java.lang.StringBuilder";
+    "new java.lang.StringBuilder"->"dup1.r";
+    "push \"javascript:freedown_append(\'FLV\', \'Medium Quality - 480x360\', \'\""
+    "dup1.r"->"push \"javascript:freedown_append(\'FLV\', \'Medium Quality - 480x360\', \'\"";
+    "push \"javascript:freedown_append(\'FLV\', \'Medium Quality - 480x360\', \'\""->"specialinvoke <java.lang.StringBuilder: void <init>(java.lang.String)>";
+    "specialinvoke <java.lang.StringBuilder: void <init>(java.lang.String)>"->"load.r $r33";
+    "load.r $r33"->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"push \"\', \'\"";
+    "push \"\', \'\""->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"load.r $r16";
+    "load.r $r16"->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"push \"\');\"";
+    "push \"\');\""->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"virtualinvoke <java.lang.StringBuilder: java.lang.String toString()>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.String toString()>"->"specialinvoke <java.net.URL: void <init>(java.lang.String)>";
+    "specialinvoke <java.net.URL: void <init>(java.lang.String)>"->"load.r r0";
+    "load.r r0"->"virtualinvoke <KickYoutubeApplet: java.applet.AppletContext getAppletContext()>";
+    "virtualinvoke <KickYoutubeApplet: java.applet.AppletContext getAppletContext()>"->"load.r $r81";
+    "load.r $r81"->"interfaceinvoke <java.applet.AppletContext: void showDocument(java.net.URL)> 1";
+    "interfaceinvoke <java.applet.AppletContext: void showDocument(java.net.URL)> 1"->"load.r r0";
+    "load.r r0"->"new java.lang.StringBuilder";
+    "new java.lang.StringBuilder"->"dup1.r";
+    "dup1.r"->"push \"http://www.youtube.com/get_video?video_id=\"";
+    "push \"http://www.youtube.com/get_video?video_id=\""->"specialinvoke <java.lang.StringBuilder: void <init>(java.lang.String)>";
+    "specialinvoke <java.lang.StringBuilder: void <init>(java.lang.String)>"->"load.r r1";
+    "load.r r1"->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"push \"&t=\"";
+    "push \"&t=\""->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"load.r r2";
+    "load.r r2"->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "push \"&fmt=35\""
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"push \"&fmt=35\"";
+    "push \"&fmt=35\""->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"virtualinvoke <java.lang.StringBuilder: java.lang.String toString()>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.String toString()>"->"specialinvoke <KickYoutubeApplet: java.lang.String getRedirUrl(java.lang.String)>";
+    "specialinvoke <KickYoutubeApplet: java.lang.String getRedirUrl(java.lang.String)>"->"store.r $r33";
+    "store.r $r33"->"load.r $r33";
+    "load.r $r33"->"ifnull load.r r0";
+    "ifnull load.r r0"->"new java.net.URL";
+    "new java.net.URL"->"store.r $r81";
+    "store.r $r81"->"load.r $r81";
+    "load.r $r81"->"new java.lang.StringBuilder";
+    "new java.lang.StringBuilder"->"dup1.r";
+    "push \"javascript:freedown_append(\'FLV\', \'High Quality - 640x380\', \'\""
+    "dup1.r"->"push \"javascript:freedown_append(\'FLV\', \'High Quality - 640x380\', \'\"";
+    "push \"javascript:freedown_append(\'FLV\', \'High Quality - 640x380\', \'\""->"specialinvoke <java.lang.StringBuilder: void <init>(java.lang.String)>";
+    "specialinvoke <java.lang.StringBuilder: void <init>(java.lang.String)>"->"load.r $r33";
+    "load.r $r33"->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"push \"\', \'\"";
+    "push \"\', \'\""->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"load.r $r16";
+    "load.r $r16"->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"push \"\');\"";
+    "push \"\');\""->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"virtualinvoke <java.lang.StringBuilder: java.lang.String toString()>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.String toString()>"->"specialinvoke <java.net.URL: void <init>(java.lang.String)>";
+    "specialinvoke <java.net.URL: void <init>(java.lang.String)>"->"load.r r0";
+    "load.r r0"->"virtualinvoke <KickYoutubeApplet: java.applet.AppletContext getAppletContext()>";
+    "virtualinvoke <KickYoutubeApplet: java.applet.AppletContext getAppletContext()>"->"load.r $r81";
+    "load.r $r81"->"interfaceinvoke <java.applet.AppletContext: void showDocument(java.net.URL)> 1";
+    "interfaceinvoke <java.applet.AppletContext: void showDocument(java.net.URL)> 1"->"load.r r0";
+    "load.r r0"->"new java.lang.StringBuilder";
+    "new java.lang.StringBuilder"->"dup1.r";
+    "dup1.r"->"push \"http://www.youtube.com/get_video?video_id=\"";
+    "push \"http://www.youtube.com/get_video?video_id=\""->"specialinvoke <java.lang.StringBuilder: void <init>(java.lang.String)>";
+    "specialinvoke <java.lang.StringBuilder: void <init>(java.lang.String)>"->"load.r r1";
+    "load.r r1"->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"push \"&t=\"";
+    "push \"&t=\""->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"load.r r2";
+    "load.r r2"->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "push \"&fmt=18\""
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"push \"&fmt=18\"";
+    "push \"&fmt=18\""->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"virtualinvoke <java.lang.StringBuilder: java.lang.String toString()>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.String toString()>"->"specialinvoke <KickYoutubeApplet: java.lang.String getRedirUrl(java.lang.String)>";
+    "specialinvoke <KickYoutubeApplet: java.lang.String getRedirUrl(java.lang.String)>"->"store.r $r33";
+    "store.r $r33"->"load.r $r33";
+    "load.r $r33"->"ifnull load.r r0";
+    "ifnull load.r r0"->"new java.net.URL";
+    "new java.net.URL"->"store.r $r81";
+    "store.r $r81"->"load.r $r81";
+    "load.r $r81"->"new java.lang.StringBuilder";
+    "new java.lang.StringBuilder"->"dup1.r";
+    "push \"javascript:freedown_append(\'MP4\', \'High Quality - 480x360\', \'\""
+    "dup1.r"->"push \"javascript:freedown_append(\'MP4\', \'High Quality - 480x360\', \'\"";
+    "push \"javascript:freedown_append(\'MP4\', \'High Quality - 480x360\', \'\""->"specialinvoke <java.lang.StringBuilder: void <init>(java.lang.String)>";
+    "specialinvoke <java.lang.StringBuilder: void <init>(java.lang.String)>"->"load.r $r33";
+    "load.r $r33"->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"push \"\', \'\"";
+    "push \"\', \'\""->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"load.r $r16";
+    "load.r $r16"->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"push \"\');\"";
+    "push \"\');\""->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"virtualinvoke <java.lang.StringBuilder: java.lang.String toString()>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.String toString()>"->"specialinvoke <java.net.URL: void <init>(java.lang.String)>";
+    "specialinvoke <java.net.URL: void <init>(java.lang.String)>"->"load.r r0";
+    "load.r r0"->"virtualinvoke <KickYoutubeApplet: java.applet.AppletContext getAppletContext()>";
+    "virtualinvoke <KickYoutubeApplet: java.applet.AppletContext getAppletContext()>"->"load.r $r81";
+    "load.r $r81"->"interfaceinvoke <java.applet.AppletContext: void showDocument(java.net.URL)> 1";
+    "interfaceinvoke <java.applet.AppletContext: void showDocument(java.net.URL)> 1"->"load.r r0";
+    "load.r r0"->"new java.lang.StringBuilder";
+    "new java.lang.StringBuilder"->"dup1.r";
+    "dup1.r"->"push \"http://www.youtube.com/get_video?video_id=\"";
+    "push \"http://www.youtube.com/get_video?video_id=\""->"specialinvoke <java.lang.StringBuilder: void <init>(java.lang.String)>";
+    "specialinvoke <java.lang.StringBuilder: void <init>(java.lang.String)>"->"load.r r1";
+    "load.r r1"->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"push \"&t=\"";
+    "push \"&t=\""->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"load.r r2";
+    "load.r r2"->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "push \"&fmt=22\""
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"push \"&fmt=22\"";
+    "push \"&fmt=22\""->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"virtualinvoke <java.lang.StringBuilder: java.lang.String toString()>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.String toString()>"->"specialinvoke <KickYoutubeApplet: java.lang.String getRedirUrl(java.lang.String)>";
+    "specialinvoke <KickYoutubeApplet: java.lang.String getRedirUrl(java.lang.String)>"->"store.r $r33";
+    "store.r $r33"->"load.r $r33";
+    "load.r $r33"->"ifnull load.r r0";
+    "ifnull load.r r0"->"new java.net.URL";
+    "new java.net.URL"->"store.r $r81";
+    "store.r $r81"->"load.r $r81";
+    "load.r $r81"->"new java.lang.StringBuilder";
+    "new java.lang.StringBuilder"->"dup1.r";
+    "push \"javascript:freedown_append(\'MP4\', \'High Quality - 1280x720\', \'\""
+    "dup1.r"->"push \"javascript:freedown_append(\'MP4\', \'High Quality - 1280x720\', \'\"";
+    "push \"javascript:freedown_append(\'MP4\', \'High Quality - 1280x720\', \'\""->"specialinvoke <java.lang.StringBuilder: void <init>(java.lang.String)>";
+    "specialinvoke <java.lang.StringBuilder: void <init>(java.lang.String)>"->"load.r $r33";
+    "load.r $r33"->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"push \"\', \'\"";
+    "push \"\', \'\""->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"load.r $r16";
+    "load.r $r16"->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"push \"\');\"";
+    "push \"\');\""->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"virtualinvoke <java.lang.StringBuilder: java.lang.String toString()>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.String toString()>"->"specialinvoke <java.net.URL: void <init>(java.lang.String)>";
+    "specialinvoke <java.net.URL: void <init>(java.lang.String)>"->"load.r r0";
+    "load.r r0"->"virtualinvoke <KickYoutubeApplet: java.applet.AppletContext getAppletContext()>";
+    "virtualinvoke <KickYoutubeApplet: java.applet.AppletContext getAppletContext()>"->"load.r $r81";
+    "load.r $r81"->"interfaceinvoke <java.applet.AppletContext: void showDocument(java.net.URL)> 1";
+    "interfaceinvoke <java.applet.AppletContext: void showDocument(java.net.URL)> 1"->"load.r r0";
+    "load.r r0"->"new java.lang.StringBuilder";
+    "new java.lang.StringBuilder"->"dup1.r";
+    "dup1.r"->"push \"http://www.youtube.com/get_video?video_id=\"";
+    "push \"http://www.youtube.com/get_video?video_id=\""->"specialinvoke <java.lang.StringBuilder: void <init>(java.lang.String)>";
+    "specialinvoke <java.lang.StringBuilder: void <init>(java.lang.String)>"->"load.r r1";
+    "load.r r1"->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"push \"&t=\"";
+    "push \"&t=\""->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"load.r r2";
+    "load.r r2"->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "push \"&fmt=37\""
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"push \"&fmt=37\"";
+    "push \"&fmt=37\""->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"virtualinvoke <java.lang.StringBuilder: java.lang.String toString()>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.String toString()>"->"specialinvoke <KickYoutubeApplet: java.lang.String getRedirUrl(java.lang.String)>";
+    "specialinvoke <KickYoutubeApplet: java.lang.String getRedirUrl(java.lang.String)>"->"store.r r2";
+    "store.r r2"->"load.r r2";
+    "ifnull goto new java.net.URL"
+    "load.r r2"->"ifnull goto new java.net.URL";
+    "ifnull goto new java.net.URL"->"new java.net.URL";
+    "new java.net.URL"->"store.r r1";
+    "store.r r1"->"load.r r1";
+    "load.r r1"->"new java.lang.StringBuilder";
+    "new java.lang.StringBuilder"->"dup1.r";
+    "push \"javascript:freedown_append(\'MP4\', \'High Quality - 1920x1280\', \'\""
+    "dup1.r"->"push \"javascript:freedown_append(\'MP4\', \'High Quality - 1920x1280\', \'\"";
+    "push \"javascript:freedown_append(\'MP4\', \'High Quality - 1920x1280\', \'\""->"specialinvoke <java.lang.StringBuilder: void <init>(java.lang.String)>";
+    "specialinvoke <java.lang.StringBuilder: void <init>(java.lang.String)>"->"load.r r2";
+    "load.r r2"->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"push \"\', \'\"";
+    "push \"\', \'\""->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"load.r $r16";
+    "load.r $r16"->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"push \"\');\"";
+    "push \"\');\""->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"virtualinvoke <java.lang.StringBuilder: java.lang.String toString()>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.String toString()>"->"specialinvoke <java.net.URL: void <init>(java.lang.String)>";
+    "specialinvoke <java.net.URL: void <init>(java.lang.String)>"->"load.r r0";
+    "load.r r0"->"virtualinvoke <KickYoutubeApplet: java.applet.AppletContext getAppletContext()>";
+    "virtualinvoke <KickYoutubeApplet: java.applet.AppletContext getAppletContext()>"->"load.r r1";
+    "load.r r1"->"interfaceinvoke <java.applet.AppletContext: void showDocument(java.net.URL)> 1";
+    "goto new java.net.URL"
+    "interfaceinvoke <java.applet.AppletContext: void showDocument(java.net.URL)> 1"->"goto new java.net.URL";
+    "goto new java.net.URL"->"new java.net.URL";
+    "new java.net.URL"->"store.r r1";
+    "store.r r1"->"load.r r1";
+    "load.r r1"->"new java.lang.StringBuilder";
+    "new java.lang.StringBuilder"->"dup1.r";
+    "specialinvoke <java.lang.StringBuilder: void <init>()>"
+    "dup1.r"->"specialinvoke <java.lang.StringBuilder: void <init>()>";
+    "push \"javascript:freedown_done();\""
+    "specialinvoke <java.lang.StringBuilder: void <init>()>"->"push \"javascript:freedown_done();\"";
+    "push \"javascript:freedown_done();\""->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"virtualinvoke <java.lang.StringBuilder: java.lang.String toString()>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.String toString()>"->"specialinvoke <java.net.URL: void <init>(java.lang.String)>";
+    "specialinvoke <java.net.URL: void <init>(java.lang.String)>"->"load.r r0";
+    "load.r r0"->"virtualinvoke <KickYoutubeApplet: java.applet.AppletContext getAppletContext()>";
+    "virtualinvoke <KickYoutubeApplet: java.applet.AppletContext getAppletContext()>"->"load.r r1";
+    "load.r r1"->"interfaceinvoke <java.applet.AppletContext: void showDocument(java.net.URL)> 1";
+    "goto return"
+    "interfaceinvoke <java.applet.AppletContext: void showDocument(java.net.URL)> 1"->"goto return";
+    "return"
+    "goto return"->"return";
+    "store.r r0"
+    "interfaceinvoke <java.applet.AppletContext: void showDocument(java.net.URL)> 1"->"store.r r0";
+    "interfaceinvoke <java.applet.AppletContext: void showDocument(java.net.URL)> 1"->"store.r r1";
+    "store.r r1"->"goto new java.net.URL";
+    "ifeq load.r r2"->"load.r r2";
+    "push \"megavideo.com\""
+    "load.r r2"->"push \"megavideo.com\"";
+    "push \"megavideo.com\""->"virtualinvoke <java.lang.String: boolean contains(java.lang.CharSequence)>";
+    "virtualinvoke <java.lang.String: boolean contains(java.lang.CharSequence)>"->"ifeq load.r r2";
+    "ifeq load.r r2"->"load.r r0";
+    "load.r r0"->"specialinvoke <javax.swing.JApplet: void init()>";
+    "specialinvoke <javax.swing.JApplet: void init()>"->"load.r $r16";
+    "load.r $r16"->"store.r r1";
+    "store.r r1"->"load.r r0";
+    "load.r r0"->"push \"u\"";
+    "push \"u\""->"virtualinvoke <KickYoutubeApplet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <KickYoutubeApplet: java.lang.String getParameter(java.lang.String)>"->"store.r r2";
+    "store.r r2"->"load.r $r16";
+    "load.r $r16"->"ifnonnull load.r r0";
+    "ifnonnull load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r2";
+    "load.r r2"->"specialinvoke <KickYoutubeApplet: java.lang.String getRedirUrl(java.lang.String)>";
+    "specialinvoke <KickYoutubeApplet: java.lang.String getRedirUrl(java.lang.String)>"->"push \"UTF-8\"";
+    "push \"UTF-8\""->"staticinvoke <java.net.URLDecoder: java.lang.String decode(java.lang.String,java.lang.String)>";
+    "staticinvoke <java.net.URLDecoder: java.lang.String decode(java.lang.String,java.lang.String)>"->"push \"v=\"";
+    "push \"v=\""->"push \"&\"";
+    "push \"&\""->"specialinvoke <KickYoutubeApplet: java.lang.String inbtwn(java.lang.String,java.lang.String,java.lang.String)>";
+    "specialinvoke <KickYoutubeApplet: java.lang.String inbtwn(java.lang.String,java.lang.String,java.lang.String)>"->"store.r r1";
+    "store.r r1"->"load.r r0";
+    "load.r r0"->"new java.lang.StringBuilder";
+    "new java.lang.StringBuilder"->"dup1.r";
+    "push \"http://www.megavideo.com/xml/videolink.php?v=\""
+    "dup1.r"->"push \"http://www.megavideo.com/xml/videolink.php?v=\"";
+    "push \"http://www.megavideo.com/xml/videolink.php?v=\""->"specialinvoke <java.lang.StringBuilder: void <init>(java.lang.String)>";
+    "specialinvoke <java.lang.StringBuilder: void <init>(java.lang.String)>"->"load.r r1";
+    "load.r r1"->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"virtualinvoke <java.lang.StringBuilder: java.lang.String toString()>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.String toString()>"->"push \"GET\"";
+    "push \"GET\""->"specialinvoke <KickYoutubeApplet: java.lang.String getUrlContent(java.lang.String,java.lang.String)>";
+    "specialinvoke <KickYoutubeApplet: java.lang.String getUrlContent(java.lang.String,java.lang.String)>"->"store.r r1";
+    "store.r r1"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r1";
+    "push \" un=\\\"\""
+    "load.r r1"->"push \" un=\\\"\"";
+    "push \" un=\\\"\""->"push \"\\\"\"";
+    "push \"\\\"\""->"specialinvoke <KickYoutubeApplet: java.lang.String inbtwn(java.lang.String,java.lang.String,java.lang.String)>";
+    "specialinvoke <KickYoutubeApplet: java.lang.String inbtwn(java.lang.String,java.lang.String,java.lang.String)>"->"load.r r0";
+    "load.r r0"->"load.r r1";
+    "push \" k1=\\\"\""
+    "load.r r1"->"push \" k1=\\\"\"";
+    "push \" k1=\\\"\""->"push \"\\\"\"";
+    "push \"\\\"\""->"specialinvoke <KickYoutubeApplet: java.lang.String inbtwn(java.lang.String,java.lang.String,java.lang.String)>";
+    "staticinvoke <java.lang.Integer: java.lang.Integer valueOf(java.lang.String)>"
+    "specialinvoke <KickYoutubeApplet: java.lang.String inbtwn(java.lang.String,java.lang.String,java.lang.String)>"->"staticinvoke <java.lang.Integer: java.lang.Integer valueOf(java.lang.String)>";
+    "virtualinvoke <java.lang.Integer: int intValue()>"
+    "staticinvoke <java.lang.Integer: java.lang.Integer valueOf(java.lang.String)>"->"virtualinvoke <java.lang.Integer: int intValue()>";
+    "virtualinvoke <java.lang.Integer: int intValue()>"->"load.r r0";
+    "load.r r0"->"load.r r1";
+    "push \" k2=\\\"\""
+    "load.r r1"->"push \" k2=\\\"\"";
+    "push \" k2=\\\"\""->"push \"\\\"\"";
+    "push \"\\\"\""->"specialinvoke <KickYoutubeApplet: java.lang.String inbtwn(java.lang.String,java.lang.String,java.lang.String)>";
+    "specialinvoke <KickYoutubeApplet: java.lang.String inbtwn(java.lang.String,java.lang.String,java.lang.String)>"->"staticinvoke <java.lang.Integer: java.lang.Integer valueOf(java.lang.String)>";
+    "staticinvoke <java.lang.Integer: java.lang.Integer valueOf(java.lang.String)>"->"virtualinvoke <java.lang.Integer: int intValue()>";
+    "virtualinvoke <java.lang.Integer: int intValue()>"->"load.r r0";
+    "load.r r0"->"load.r r1";
+    "push \" s=\\\"\""
+    "load.r r1"->"push \" s=\\\"\"";
+    "push \" s=\\\"\""->"push \"\\\"\"";
+    "push \"\\\"\""->"specialinvoke <KickYoutubeApplet: java.lang.String inbtwn(java.lang.String,java.lang.String,java.lang.String)>";
+    "specialinvoke <KickYoutubeApplet: java.lang.String inbtwn(java.lang.String,java.lang.String,java.lang.String)>"->"store.r $r16";
+    "store.r $r16"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r1";
+    "push \" title=\\\"\""
+    "load.r r1"->"push \" title=\\\"\"";
+    "push \" title=\\\"\""->"push \"\\\"\"";
+    "push \"\\\"\""->"specialinvoke <KickYoutubeApplet: java.lang.String inbtwn(java.lang.String,java.lang.String,java.lang.String)>";
+    "specialinvoke <KickYoutubeApplet: java.lang.String inbtwn(java.lang.String,java.lang.String,java.lang.String)>"->"specialinvoke <KickYoutubeApplet: java.lang.String setHTMLEntity(java.lang.String)>";
+    "specialinvoke <KickYoutubeApplet: java.lang.String setHTMLEntity(java.lang.String)>"->"store.r r1";
+    "specialinvoke <KickYoutubeApplet: java.lang.String mv_decrypt(java.lang.String,int,int)>"
+    "store.r r1"->"specialinvoke <KickYoutubeApplet: java.lang.String mv_decrypt(java.lang.String,int,int)>";
+    "specialinvoke <KickYoutubeApplet: java.lang.String mv_decrypt(java.lang.String,int,int)>"->"store.r r2";
+    "store.r r2"->"new java.lang.StringBuilder";
+    "new java.lang.StringBuilder"->"dup1.r";
+    "dup1.r"->"specialinvoke <java.lang.StringBuilder: void <init>()>";
+    "push \"http://www\""
+    "specialinvoke <java.lang.StringBuilder: void <init>()>"->"push \"http://www\"";
+    "push \"http://www\""->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"load.r $r16";
+    "load.r $r16"->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "push \".megavideo.com/files/\""
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"push \".megavideo.com/files/\"";
+    "push \".megavideo.com/files/\""->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"load.r r2";
+    "load.r r2"->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "push \"/\""
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"push \"/\"";
+    "push \"/\""->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"load.r r1";
+    "load.r r1"->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "push \".flv\""
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"push \".flv\"";
+    "push \".flv\""->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"virtualinvoke <java.lang.StringBuilder: java.lang.String toString()>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.String toString()>"->"store.r r2";
+    "store.r r2"->"load.r r2";
+    "load.r r2"->"ifnull goto new java.net.URL";
+    "ifnull goto new java.net.URL"->"new java.net.URL";
+    "new java.net.URL"->"store.r $r16";
+    "store.r $r16"->"load.r $r16";
+    "load.r $r16"->"new java.lang.StringBuilder";
+    "new java.lang.StringBuilder"->"dup1.r";
+    "push \"javascript:freedown_append(\'FLV\', \'High Quality\', \'\""
+    "dup1.r"->"push \"javascript:freedown_append(\'FLV\', \'High Quality\', \'\"";
+    "push \"javascript:freedown_append(\'FLV\', \'High Quality\', \'\""->"specialinvoke <java.lang.StringBuilder: void <init>(java.lang.String)>";
+    "specialinvoke <java.lang.StringBuilder: void <init>(java.lang.String)>"->"load.r r2";
+    "load.r r2"->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"push \"\', \'\"";
+    "push \"\', \'\""->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"load.r r1";
+    "load.r r1"->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"push \"\');\"";
+    "push \"\');\""->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"virtualinvoke <java.lang.StringBuilder: java.lang.String toString()>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.String toString()>"->"specialinvoke <java.net.URL: void <init>(java.lang.String)>";
+    "specialinvoke <java.net.URL: void <init>(java.lang.String)>"->"load.r r0";
+    "load.r r0"->"virtualinvoke <KickYoutubeApplet: java.applet.AppletContext getAppletContext()>";
+    "virtualinvoke <KickYoutubeApplet: java.applet.AppletContext getAppletContext()>"->"load.r $r16";
+    "load.r $r16"->"interfaceinvoke <java.applet.AppletContext: void showDocument(java.net.URL)> 1";
+    "interfaceinvoke <java.applet.AppletContext: void showDocument(java.net.URL)> 1"->"goto new java.net.URL";
+    "interfaceinvoke <java.applet.AppletContext: void showDocument(java.net.URL)> 1"->"store.r r1";
+    "store.r r1"->"goto new java.net.URL";
+    "ifeq load.r r2"->"load.r r2";
+    "push \"dailymotion.com\""
+    "load.r r2"->"push \"dailymotion.com\"";
+    "push \"dailymotion.com\""->"virtualinvoke <java.lang.String: boolean contains(java.lang.CharSequence)>";
+    "virtualinvoke <java.lang.String: boolean contains(java.lang.CharSequence)>"->"ifeq load.r r2";
+    "ifeq load.r r2"->"load.r r0";
+    "load.r r0"->"specialinvoke <javax.swing.JApplet: void init()>";
+    "specialinvoke <javax.swing.JApplet: void init()>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r1";
+    "load.r r1"->"push \"GET\"";
+    "push \"GET\""->"specialinvoke <KickYoutubeApplet: java.lang.String getUrlContent(java.lang.String,java.lang.String)>";
+    "push \"\\\"sequence\\\",  \\\"\""
+    "specialinvoke <KickYoutubeApplet: java.lang.String getUrlContent(java.lang.String,java.lang.String)>"->"push \"\\\"sequence\\\",  \\\"\"";
+    "push \"\\\"sequence\\\",  \\\"\""->"push \"\\\"\"";
+    "push \"\\\"\""->"specialinvoke <KickYoutubeApplet: java.lang.String inbtwn(java.lang.String,java.lang.String,java.lang.String)>";
+    "specialinvoke <KickYoutubeApplet: java.lang.String inbtwn(java.lang.String,java.lang.String,java.lang.String)>"->"push \"UTF-8\"";
+    "push \"UTF-8\""->"staticinvoke <java.net.URLDecoder: java.lang.String decode(java.lang.String,java.lang.String)>";
+    "staticinvoke <java.net.URLDecoder: java.lang.String decode(java.lang.String,java.lang.String)>"->"store.r $r16";
+    "store.r $r16"->"load.r $r16";
+    "push \"\\\"sdURL\\\":\\\"\""
+    "load.r $r16"->"push \"\\\"sdURL\\\":\\\"\"";
+    "push \"\\\"sdURL\\\":\\\"\""->"push \"\\\"\"";
+    "push \"\\\"\""->"specialinvoke <KickYoutubeApplet: java.lang.String inbtwn(java.lang.String,java.lang.String,java.lang.String)>";
+    "push \"\\/\""
+    "specialinvoke <KickYoutubeApplet: java.lang.String inbtwn(java.lang.String,java.lang.String,java.lang.String)>"->"push \"\\/\"";
+    "push \"\\/\""->"push \"/\"";
+    "virtualinvoke <java.lang.String: java.lang.String replace(java.lang.CharSequence,java.lang.CharSequence)>"
+    "push \"/\""->"virtualinvoke <java.lang.String: java.lang.String replace(java.lang.CharSequence,java.lang.CharSequence)>";
+    "virtualinvoke <java.lang.String: java.lang.String toString()>"
+    "virtualinvoke <java.lang.String: java.lang.String replace(java.lang.CharSequence,java.lang.CharSequence)>"->"virtualinvoke <java.lang.String: java.lang.String toString()>";
+    "virtualinvoke <java.lang.String: java.lang.String toString()>"->"store.r r1";
+    "store.r r1"->"load.r $r16";
+    "push \"\\\"hqURL\\\":\\\"\""
+    "load.r $r16"->"push \"\\\"hqURL\\\":\\\"\"";
+    "push \"\\\"hqURL\\\":\\\"\""->"push \"\\\"\"";
+    "push \"\\\"\""->"specialinvoke <KickYoutubeApplet: java.lang.String inbtwn(java.lang.String,java.lang.String,java.lang.String)>";
+    "specialinvoke <KickYoutubeApplet: java.lang.String inbtwn(java.lang.String,java.lang.String,java.lang.String)>"->"push \"\\/\"";
+    "push \"\\/\""->"push \"/\"";
+    "push \"/\""->"virtualinvoke <java.lang.String: java.lang.String replace(java.lang.CharSequence,java.lang.CharSequence)>";
+    "virtualinvoke <java.lang.String: java.lang.String replace(java.lang.CharSequence,java.lang.CharSequence)>"->"virtualinvoke <java.lang.String: java.lang.String toString()>";
+    "virtualinvoke <java.lang.String: java.lang.String toString()>"->"store.r $r16";
+    "store.r $r16"->"load.r r1";
+    "ifnull load.r $r16"
+    "load.r r1"->"ifnull load.r $r16";
+    "ifnull load.r $r16"->"new java.net.URL";
+    "new java.net.URL"->"store.r r2";
+    "store.r r2"->"load.r r2";
+    "load.r r2"->"new java.lang.StringBuilder";
+    "new java.lang.StringBuilder"->"dup1.r";
+    "push \"javascript:freedown_append(\'FLV\', \'Standard Quality\', \'\""
+    "dup1.r"->"push \"javascript:freedown_append(\'FLV\', \'Standard Quality\', \'\"";
+    "push \"javascript:freedown_append(\'FLV\', \'Standard Quality\', \'\""->"specialinvoke <java.lang.StringBuilder: void <init>(java.lang.String)>";
+    "specialinvoke <java.lang.StringBuilder: void <init>(java.lang.String)>"->"load.r r1";
+    "load.r r1"->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "push \"\', \'\');\""
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"push \"\', \'\');\"";
+    "push \"\', \'\');\""->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"virtualinvoke <java.lang.StringBuilder: java.lang.String toString()>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.String toString()>"->"specialinvoke <java.net.URL: void <init>(java.lang.String)>";
+    "specialinvoke <java.net.URL: void <init>(java.lang.String)>"->"load.r r0";
+    "load.r r0"->"virtualinvoke <KickYoutubeApplet: java.applet.AppletContext getAppletContext()>";
+    "virtualinvoke <KickYoutubeApplet: java.applet.AppletContext getAppletContext()>"->"load.r r2";
+    "load.r r2"->"interfaceinvoke <java.applet.AppletContext: void showDocument(java.net.URL)> 1";
+    "interfaceinvoke <java.applet.AppletContext: void showDocument(java.net.URL)> 1"->"load.r $r16";
+    "load.r $r16"->"ifnull goto new java.net.URL";
+    "ifnull goto new java.net.URL"->"new java.net.URL";
+    "new java.net.URL"->"store.r r1";
+    "store.r r1"->"load.r r1";
+    "load.r r1"->"new java.lang.StringBuilder";
+    "new java.lang.StringBuilder"->"dup1.r";
+    "push \"javascript:freedown_append(\'MP4\', \'High Quality\', \'\""
+    "dup1.r"->"push \"javascript:freedown_append(\'MP4\', \'High Quality\', \'\"";
+    "push \"javascript:freedown_append(\'MP4\', \'High Quality\', \'\""->"specialinvoke <java.lang.StringBuilder: void <init>(java.lang.String)>";
+    "specialinvoke <java.lang.StringBuilder: void <init>(java.lang.String)>"->"load.r $r16";
+    "load.r $r16"->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"push \"\', \'\');\"";
+    "push \"\', \'\');\""->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"virtualinvoke <java.lang.StringBuilder: java.lang.String toString()>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.String toString()>"->"specialinvoke <java.net.URL: void <init>(java.lang.String)>";
+    "specialinvoke <java.net.URL: void <init>(java.lang.String)>"->"load.r r0";
+    "load.r r0"->"virtualinvoke <KickYoutubeApplet: java.applet.AppletContext getAppletContext()>";
+    "virtualinvoke <KickYoutubeApplet: java.applet.AppletContext getAppletContext()>"->"load.r r1";
+    "load.r r1"->"interfaceinvoke <java.applet.AppletContext: void showDocument(java.net.URL)> 1";
+    "interfaceinvoke <java.applet.AppletContext: void showDocument(java.net.URL)> 1"->"goto new java.net.URL";
+    "interfaceinvoke <java.applet.AppletContext: void showDocument(java.net.URL)> 1"->"store.r r1";
+    "store.r r1"->"goto new java.net.URL";
+    "ifeq load.r r2"->"load.r r2";
+    "push \"vimeo.com\""
+    "load.r r2"->"push \"vimeo.com\"";
+    "push \"vimeo.com\""->"virtualinvoke <java.lang.String: boolean contains(java.lang.CharSequence)>";
+    "virtualinvoke <java.lang.String: boolean contains(java.lang.CharSequence)>"->"ifeq load.r r2";
+    "ifeq load.r r2"->"load.r r0";
+    "load.r r0"->"specialinvoke <javax.swing.JApplet: void init()>";
+    "specialinvoke <javax.swing.JApplet: void init()>"->"load.r r1";
+    "push \"com/\""
+    "load.r r1"->"push \"com/\"";
+    "virtualinvoke <java.lang.String: java.lang.String[] split(java.lang.String)>"
+    "push \"com/\""->"virtualinvoke <java.lang.String: java.lang.String[] split(java.lang.String)>";
+    "push 1"
+    "virtualinvoke <java.lang.String: java.lang.String[] split(java.lang.String)>"->"push 1";
+    "arrayread.r"
+    "push 1"->"arrayread.r";
+    "arrayread.r"->"store.r $r16";
+    "store.r $r16"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"new java.lang.StringBuilder";
+    "new java.lang.StringBuilder"->"dup1.r";
+    "dup1.r"->"specialinvoke <java.lang.StringBuilder: void <init>()>";
+    "push \"http://vimeo.com/moogaloop/load/clip:\""
+    "specialinvoke <java.lang.StringBuilder: void <init>()>"->"push \"http://vimeo.com/moogaloop/load/clip:\"";
+    "push \"http://vimeo.com/moogaloop/load/clip:\""->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"load.r $r16";
+    "load.r $r16"->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"virtualinvoke <java.lang.StringBuilder: java.lang.String toString()>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.String toString()>"->"push \"GET\"";
+    "push \"GET\""->"specialinvoke <KickYoutubeApplet: java.lang.String getUrlContent(java.lang.String,java.lang.String)>";
+    "specialinvoke <KickYoutubeApplet: java.lang.String getUrlContent(java.lang.String,java.lang.String)>"->"store.r r1";
+    "store.r r1"->"load.r r1";
+    "push \"<request_signature>\""
+    "load.r r1"->"push \"<request_signature>\"";
+    "push \"</request_signature>\""
+    "push \"<request_signature>\""->"push \"</request_signature>\"";
+    "push \"</request_signature>\""->"specialinvoke <KickYoutubeApplet: java.lang.String inbtwn(java.lang.String,java.lang.String,java.lang.String)>";
+    "specialinvoke <KickYoutubeApplet: java.lang.String inbtwn(java.lang.String,java.lang.String,java.lang.String)>"->"push \"UTF-8\"";
+    "push \"UTF-8\""->"staticinvoke <java.net.URLDecoder: java.lang.String decode(java.lang.String,java.lang.String)>";
+    "staticinvoke <java.net.URLDecoder: java.lang.String decode(java.lang.String,java.lang.String)>"->"store.r r2";
+    "store.r r2"->"load.r r1";
+    "push \"<request_signature_expires>\""
+    "load.r r1"->"push \"<request_signature_expires>\"";
+    "push \"</request_signature_expires>\""
+    "push \"<request_signature_expires>\""->"push \"</request_signature_expires>\"";
+    "push \"</request_signature_expires>\""->"specialinvoke <KickYoutubeApplet: java.lang.String inbtwn(java.lang.String,java.lang.String,java.lang.String)>";
+    "specialinvoke <KickYoutubeApplet: java.lang.String inbtwn(java.lang.String,java.lang.String,java.lang.String)>"->"push \"UTF-8\"";
+    "push \"UTF-8\""->"staticinvoke <java.net.URLDecoder: java.lang.String decode(java.lang.String,java.lang.String)>";
+    "staticinvoke <java.net.URLDecoder: java.lang.String decode(java.lang.String,java.lang.String)>"->"store.r $r81";
+    "store.r $r81"->"new java.lang.StringBuilder";
+    "new java.lang.StringBuilder"->"dup1.r";
+    "dup1.r"->"specialinvoke <java.lang.StringBuilder: void <init>()>";
+    "push \"http://www.vimeo.com/moogaloop/play/clip:\""
+    "specialinvoke <java.lang.StringBuilder: void <init>()>"->"push \"http://www.vimeo.com/moogaloop/play/clip:\"";
+    "push \"http://www.vimeo.com/moogaloop/play/clip:\""->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"load.r $r16";
+    "load.r $r16"->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"push \"/\"";
+    "push \"/\""->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"load.r r2";
+    "load.r r2"->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"push \"/\"";
+    "push \"/\""->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"load.r $r81";
+    "load.r $r81"->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "push \"/?q=sd\""
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"push \"/?q=sd\"";
+    "push \"/?q=sd\""->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"virtualinvoke <java.lang.StringBuilder: java.lang.String toString()>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.String toString()>"->"specialinvoke <KickYoutubeApplet: java.lang.String getRedirUrl(java.lang.String)>";
+    "specialinvoke <KickYoutubeApplet: java.lang.String getRedirUrl(java.lang.String)>"->"store.r r1";
+    "store.r r1"->"load.r r0";
+    "load.r r0"->"new java.lang.StringBuilder";
+    "new java.lang.StringBuilder"->"dup1.r";
+    "dup1.r"->"specialinvoke <java.lang.StringBuilder: void <init>()>";
+    "specialinvoke <java.lang.StringBuilder: void <init>()>"->"push \"http://www.vimeo.com/moogaloop/play/clip:\"";
+    "push \"http://www.vimeo.com/moogaloop/play/clip:\""->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"load.r $r16";
+    "load.r $r16"->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"push \"/\"";
+    "push \"/\""->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"load.r r2";
+    "load.r r2"->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"push \"/\"";
+    "push \"/\""->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"load.r $r81";
+    "load.r $r81"->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "push \"/?q=hd\""
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"push \"/?q=hd\"";
+    "push \"/?q=hd\""->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"virtualinvoke <java.lang.StringBuilder: java.lang.String toString()>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.String toString()>"->"specialinvoke <KickYoutubeApplet: java.lang.String getRedirUrl(java.lang.String)>";
+    "specialinvoke <KickYoutubeApplet: java.lang.String getRedirUrl(java.lang.String)>"->"store.r $r16";
+    "store.r $r16"->"load.r r1";
+    "load.r r1"->"ifnull load.r $r16";
+    "push \"FLV\""
+    "ifnull load.r $r16"->"push \"FLV\"";
+    "push \"FLV\""->"store.r $r81";
+    "store.r $r81"->"load.r r1";
+    "push \".avi?\""
+    "load.r r1"->"push \".avi?\"";
+    "push \".avi?\""->"virtualinvoke <java.lang.String: boolean contains(java.lang.CharSequence)>";
+    "ifeq load.r r1"
+    "virtualinvoke <java.lang.String: boolean contains(java.lang.CharSequence)>"->"ifeq load.r r1";
+    "push \"AVI\""
+    "ifeq load.r r1"->"push \"AVI\"";
+    "push \"AVI\""->"store.r $r81";
+    "store.r $r81"->"load.r r1";
+    "push \".mp4?\""
+    "load.r r1"->"push \".mp4?\"";
+    "push \".mp4?\""->"virtualinvoke <java.lang.String: boolean contains(java.lang.CharSequence)>";
+    "ifeq new java.net.URL"
+    "virtualinvoke <java.lang.String: boolean contains(java.lang.CharSequence)>"->"ifeq new java.net.URL";
+    "push \"MP4\""
+    "ifeq new java.net.URL"->"push \"MP4\"";
+    "push \"MP4\""->"store.r $r81";
+    "store.r $r81"->"new java.net.URL";
+    "new java.net.URL"->"store.r r2";
+    "store.r r2"->"load.r r2";
+    "load.r r2"->"new java.lang.StringBuilder";
+    "new java.lang.StringBuilder"->"dup1.r";
+    "dup1.r"->"specialinvoke <java.lang.StringBuilder: void <init>()>";
+    "push \"javascript:freedown_append(\'\""
+    "specialinvoke <java.lang.StringBuilder: void <init>()>"->"push \"javascript:freedown_append(\'\"";
+    "push \"javascript:freedown_append(\'\""->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"load.r $r81";
+    "load.r $r81"->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "push \"\', \'Standard Quality\', \'\""
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"push \"\', \'Standard Quality\', \'\"";
+    "push \"\', \'Standard Quality\', \'\""->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"load.r r1";
+    "load.r r1"->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"push \"\', \'\');\"";
+    "push \"\', \'\');\""->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"virtualinvoke <java.lang.StringBuilder: java.lang.String toString()>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.String toString()>"->"specialinvoke <java.net.URL: void <init>(java.lang.String)>";
+    "specialinvoke <java.net.URL: void <init>(java.lang.String)>"->"load.r r0";
+    "load.r r0"->"virtualinvoke <KickYoutubeApplet: java.applet.AppletContext getAppletContext()>";
+    "virtualinvoke <KickYoutubeApplet: java.applet.AppletContext getAppletContext()>"->"load.r r2";
+    "load.r r2"->"interfaceinvoke <java.applet.AppletContext: void showDocument(java.net.URL)> 1";
+    "interfaceinvoke <java.applet.AppletContext: void showDocument(java.net.URL)> 1"->"load.r $r16";
+    "load.r $r16"->"ifnull goto new java.net.URL";
+    "ifnull goto new java.net.URL"->"push \"FLV\"";
+    "push \"FLV\""->"store.r r2";
+    "store.r r2"->"load.r $r16";
+    "load.r $r16"->"push \".avi?\"";
+    "push \".avi?\""->"virtualinvoke <java.lang.String: boolean contains(java.lang.CharSequence)>";
+    "ifeq load.r $r16"
+    "virtualinvoke <java.lang.String: boolean contains(java.lang.CharSequence)>"->"ifeq load.r $r16";
+    "ifeq load.r $r16"->"push \"AVI\"";
+    "push \"AVI\""->"store.r r2";
+    "store.r r2"->"load.r $r16";
+    "load.r $r16"->"push \".mp4?\"";
+    "push \".mp4?\""->"virtualinvoke <java.lang.String: boolean contains(java.lang.CharSequence)>";
+    "virtualinvoke <java.lang.String: boolean contains(java.lang.CharSequence)>"->"ifeq new java.net.URL";
+    "ifeq new java.net.URL"->"push \"MP4\"";
+    "push \"MP4\""->"store.r r2";
+    "store.r r2"->"new java.net.URL";
+    "new java.net.URL"->"store.r r1";
+    "store.r r1"->"load.r r1";
+    "load.r r1"->"new java.lang.StringBuilder";
+    "new java.lang.StringBuilder"->"dup1.r";
+    "dup1.r"->"specialinvoke <java.lang.StringBuilder: void <init>()>";
+    "specialinvoke <java.lang.StringBuilder: void <init>()>"->"push \"javascript:freedown_append(\'\"";
+    "push \"javascript:freedown_append(\'\""->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"load.r r2";
+    "load.r r2"->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "push \"\', \'High Quality\', \'\""
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"push \"\', \'High Quality\', \'\"";
+    "push \"\', \'High Quality\', \'\""->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"load.r $r16";
+    "load.r $r16"->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"push \"\', \'\');\"";
+    "push \"\', \'\');\""->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"virtualinvoke <java.lang.StringBuilder: java.lang.String toString()>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.String toString()>"->"specialinvoke <java.net.URL: void <init>(java.lang.String)>";
+    "specialinvoke <java.net.URL: void <init>(java.lang.String)>"->"load.r r0";
+    "load.r r0"->"virtualinvoke <KickYoutubeApplet: java.applet.AppletContext getAppletContext()>";
+    "virtualinvoke <KickYoutubeApplet: java.applet.AppletContext getAppletContext()>"->"load.r r1";
+    "load.r r1"->"interfaceinvoke <java.applet.AppletContext: void showDocument(java.net.URL)> 1";
+    "interfaceinvoke <java.applet.AppletContext: void showDocument(java.net.URL)> 1"->"goto new java.net.URL";
+    "interfaceinvoke <java.applet.AppletContext: void showDocument(java.net.URL)> 1"->"store.r r1";
+    "store.r r1"->"goto new java.net.URL";
+    "ifeq load.r r2"->"load.r r2";
+    "push \"metacafe.com\""
+    "load.r r2"->"push \"metacafe.com\"";
+    "push \"metacafe.com\""->"virtualinvoke <java.lang.String: boolean contains(java.lang.CharSequence)>";
+    "virtualinvoke <java.lang.String: boolean contains(java.lang.CharSequence)>"->"ifeq load.r r2";
+    "ifeq load.r r2"->"load.r r0";
+    "load.r r0"->"specialinvoke <javax.swing.JApplet: void init()>";
+    "specialinvoke <javax.swing.JApplet: void init()>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r1";
+    "load.r r1"->"push \"GET\"";
+    "push \"GET\""->"specialinvoke <KickYoutubeApplet: java.lang.String getUrlContent(java.lang.String,java.lang.String)>";
+    "push \"name=\\\"flashvars\\\" value=\\\"\""
+    "specialinvoke <KickYoutubeApplet: java.lang.String getUrlContent(java.lang.String,java.lang.String)>"->"push \"name=\\\"flashvars\\\" value=\\\"\"";
+    "push \"name=\\\"flashvars\\\" value=\\\"\""->"push \"\\\"\"";
+    "push \"\\\"\""->"specialinvoke <KickYoutubeApplet: java.lang.String inbtwn(java.lang.String,java.lang.String,java.lang.String)>";
+    "specialinvoke <KickYoutubeApplet: java.lang.String inbtwn(java.lang.String,java.lang.String,java.lang.String)>"->"push \"UTF-8\"";
+    "push \"UTF-8\""->"staticinvoke <java.net.URLDecoder: java.lang.String decode(java.lang.String,java.lang.String)>";
+    "staticinvoke <java.net.URLDecoder: java.lang.String decode(java.lang.String,java.lang.String)>"->"store.r $r16";
+    "store.r $r16"->"load.r r0";
+    "load.r r0"->"load.r $r16";
+    "push \"\\\"mediaURL\\\":\\\"\""
+    "load.r $r16"->"push \"\\\"mediaURL\\\":\\\"\"";
+    "push \"\\\"mediaURL\\\":\\\"\""->"push \"\\\"\"";
+    "push \"\\\"\""->"specialinvoke <KickYoutubeApplet: java.lang.String inbtwn(java.lang.String,java.lang.String,java.lang.String)>";
+    "specialinvoke <KickYoutubeApplet: java.lang.String inbtwn(java.lang.String,java.lang.String,java.lang.String)>"->"push \"\\/\"";
+    "push \"\\/\""->"push \"/\"";
+    "push \"/\""->"virtualinvoke <java.lang.String: java.lang.String replace(java.lang.CharSequence,java.lang.CharSequence)>";
+    "virtualinvoke <java.lang.String: java.lang.String replace(java.lang.CharSequence,java.lang.CharSequence)>"->"virtualinvoke <java.lang.String: java.lang.String toString()>";
+    "virtualinvoke <java.lang.String: java.lang.String toString()>"->"store.r r1";
+    "store.r r1"->"load.r r1";
+    "ifnonnull load.r r1"
+    "load.r r1"->"ifnonnull load.r r1";
+    "ifnonnull load.r r1"->"load.r r0";
+    "load.r r0"->"load.r $r16";
+    "push \"mediaURL=\""
+    "load.r $r16"->"push \"mediaURL=\"";
+    "push \"mediaURL=\""->"push \"&\"";
+    "push \"&\""->"specialinvoke <KickYoutubeApplet: java.lang.String inbtwn(java.lang.String,java.lang.String,java.lang.String)>";
+    "specialinvoke <KickYoutubeApplet: java.lang.String inbtwn(java.lang.String,java.lang.String,java.lang.String)>"->"push \"\\/\"";
+    "push \"\\/\""->"push \"/\"";
+    "push \"/\""->"virtualinvoke <java.lang.String: java.lang.String replace(java.lang.CharSequence,java.lang.CharSequence)>";
+    "virtualinvoke <java.lang.String: java.lang.String replace(java.lang.CharSequence,java.lang.CharSequence)>"->"virtualinvoke <java.lang.String: java.lang.String toString()>";
+    "virtualinvoke <java.lang.String: java.lang.String toString()>"->"store.r r1";
+    "store.r r1"->"load.r r1";
+    "load.r r1"->"ifnull goto new java.net.URL";
+    "ifnull goto new java.net.URL"->"new java.net.URL";
+    "new java.net.URL"->"store.r $r16";
+    "store.r $r16"->"load.r $r16";
+    "load.r $r16"->"new java.lang.StringBuilder";
+    "new java.lang.StringBuilder"->"dup1.r";
+    "dup1.r"->"push \"javascript:freedown_append(\'FLV\', \'Standard Quality\', \'\"";
+    "push \"javascript:freedown_append(\'FLV\', \'Standard Quality\', \'\""->"specialinvoke <java.lang.StringBuilder: void <init>(java.lang.String)>";
+    "specialinvoke <java.lang.StringBuilder: void <init>(java.lang.String)>"->"load.r r1";
+    "load.r r1"->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"push \"\', \'\');\"";
+    "push \"\', \'\');\""->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"virtualinvoke <java.lang.StringBuilder: java.lang.String toString()>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.String toString()>"->"specialinvoke <java.net.URL: void <init>(java.lang.String)>";
+    "specialinvoke <java.net.URL: void <init>(java.lang.String)>"->"load.r r0";
+    "load.r r0"->"virtualinvoke <KickYoutubeApplet: java.applet.AppletContext getAppletContext()>";
+    "virtualinvoke <KickYoutubeApplet: java.applet.AppletContext getAppletContext()>"->"load.r $r16";
+    "load.r $r16"->"interfaceinvoke <java.applet.AppletContext: void showDocument(java.net.URL)> 1";
+    "interfaceinvoke <java.applet.AppletContext: void showDocument(java.net.URL)> 1"->"goto new java.net.URL";
+    "interfaceinvoke <java.applet.AppletContext: void showDocument(java.net.URL)> 1"->"store.r r1";
+    "store.r r1"->"goto new java.net.URL";
+    "ifeq load.r r2"->"load.r r2";
+    "push \"ehow.com\""
+    "load.r r2"->"push \"ehow.com\"";
+    "push \"ehow.com\""->"virtualinvoke <java.lang.String: boolean contains(java.lang.CharSequence)>";
+    "virtualinvoke <java.lang.String: boolean contains(java.lang.CharSequence)>"->"ifeq load.r r2";
+    "ifeq load.r r2"->"load.r r0";
+    "load.r r0"->"specialinvoke <javax.swing.JApplet: void init()>";
+    "specialinvoke <javax.swing.JApplet: void init()>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r1";
+    "load.r r1"->"push \"GET\"";
+    "push \"GET\""->"specialinvoke <KickYoutubeApplet: java.lang.String getUrlContent(java.lang.String,java.lang.String)>";
+    "specialinvoke <KickYoutubeApplet: java.lang.String getUrlContent(java.lang.String,java.lang.String)>"->"new java.lang.StringBuilder";
+    "new java.lang.StringBuilder"->"dup1.r";
+    "dup1.r"->"specialinvoke <java.lang.StringBuilder: void <init>()>";
+    "push \"http\""
+    "specialinvoke <java.lang.StringBuilder: void <init>()>"->"push \"http\"";
+    "push \"http\""->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"store.r r1";
+    "push \"id: \'http\""
+    "store.r r1"->"push \"id: \'http\"";
+    "push \"\'\""
+    "push \"id: \'http\""->"push \"\'\"";
+    "push \"\'\""->"specialinvoke <KickYoutubeApplet: java.lang.String inbtwn(java.lang.String,java.lang.String,java.lang.String)>";
+    "specialinvoke <KickYoutubeApplet: java.lang.String inbtwn(java.lang.String,java.lang.String,java.lang.String)>"->"store.r $r16";
+    "store.r $r16"->"load.r r1";
+    "load.r r1"->"load.r $r16";
+    "load.r $r16"->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"virtualinvoke <java.lang.StringBuilder: java.lang.String toString()>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.String toString()>"->"store.r $r16";
+    "store.r $r16"->"load.r $r16";
+    "load.r $r16"->"ifnull goto new java.net.URL";
+    "ifnull goto new java.net.URL"->"new java.net.URL";
+    "new java.net.URL"->"store.r r1";
+    "store.r r1"->"load.r r1";
+    "load.r r1"->"new java.lang.StringBuilder";
+    "new java.lang.StringBuilder"->"dup1.r";
+    "dup1.r"->"push \"javascript:freedown_append(\'FLV\', \'High Quality\', \'\"";
+    "push \"javascript:freedown_append(\'FLV\', \'High Quality\', \'\""->"specialinvoke <java.lang.StringBuilder: void <init>(java.lang.String)>";
+    "specialinvoke <java.lang.StringBuilder: void <init>(java.lang.String)>"->"load.r $r16";
+    "load.r $r16"->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"push \"\', \'\');\"";
+    "push \"\', \'\');\""->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"virtualinvoke <java.lang.StringBuilder: java.lang.String toString()>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.String toString()>"->"specialinvoke <java.net.URL: void <init>(java.lang.String)>";
+    "specialinvoke <java.net.URL: void <init>(java.lang.String)>"->"load.r r0";
+    "load.r r0"->"virtualinvoke <KickYoutubeApplet: java.applet.AppletContext getAppletContext()>";
+    "virtualinvoke <KickYoutubeApplet: java.applet.AppletContext getAppletContext()>"->"load.r r1";
+    "load.r r1"->"interfaceinvoke <java.applet.AppletContext: void showDocument(java.net.URL)> 1";
+    "interfaceinvoke <java.applet.AppletContext: void showDocument(java.net.URL)> 1"->"goto new java.net.URL";
+    "interfaceinvoke <java.applet.AppletContext: void showDocument(java.net.URL)> 1"->"store.r r1";
+    "store.r r1"->"goto new java.net.URL";
+    "ifeq load.r r2"->"load.r r2";
+    "push \"ted.com\""
+    "load.r r2"->"push \"ted.com\"";
+    "push \"ted.com\""->"virtualinvoke <java.lang.String: boolean contains(java.lang.CharSequence)>";
+    "virtualinvoke <java.lang.String: boolean contains(java.lang.CharSequence)>"->"ifeq load.r r2";
+    "ifeq load.r r2"->"load.r r0";
+    "load.r r0"->"specialinvoke <javax.swing.JApplet: void init()>";
+    "specialinvoke <javax.swing.JApplet: void init()>"->"load.r r0";
+    "load.r r0"->"load.r r1";
+    "load.r r1"->"push \"GET\"";
+    "push \"GET\""->"specialinvoke <KickYoutubeApplet: java.lang.String getUrlContent(java.lang.String,java.lang.String)>";
+    "specialinvoke <KickYoutubeApplet: java.lang.String getUrlContent(java.lang.String,java.lang.String)>"->"store.r $r16";
+    "store.r $r16"->"load.r r0";
+    "load.r r0"->"load.r $r16";
+    "push \"vu=\""
+    "load.r $r16"->"push \"vu=\"";
+    "push \"vu=\""->"push \"&\"";
+    "push \"&\""->"specialinvoke <KickYoutubeApplet: java.lang.String inbtwn(java.lang.String,java.lang.String,java.lang.String)>";
+    "specialinvoke <KickYoutubeApplet: java.lang.String inbtwn(java.lang.String,java.lang.String,java.lang.String)>"->"store.r r2";
+    "store.r r2"->"new java.lang.StringBuilder";
+    "new java.lang.StringBuilder"->"dup1.r";
+    "dup1.r"->"specialinvoke <java.lang.StringBuilder: void <init>()>";
+    "push \"http://www.ted.com/\""
+    "specialinvoke <java.lang.StringBuilder: void <init>()>"->"push \"http://www.ted.com/\"";
+    "push \"http://www.ted.com/\""->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"load.r r0";
+    "load.r r0"->"load.r $r16";
+    "push \"<dt><a href=\\\"/\""
+    "load.r $r16"->"push \"<dt><a href=\\\"/\"";
+    "push \"<dt><a href=\\\"/\""->"push \"\\\"\"";
+    "push \"\\\"\""->"specialinvoke <KickYoutubeApplet: java.lang.String inbtwn(java.lang.String,java.lang.String,java.lang.String)>";
+    "specialinvoke <KickYoutubeApplet: java.lang.String inbtwn(java.lang.String,java.lang.String,java.lang.String)>"->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"virtualinvoke <java.lang.StringBuilder: java.lang.String toString()>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.String toString()>"->"store.r r1";
+    "store.r r1"->"new java.lang.StringBuilder";
+    "new java.lang.StringBuilder"->"dup1.r";
+    "dup1.r"->"specialinvoke <java.lang.StringBuilder: void <init>()>";
+    "specialinvoke <java.lang.StringBuilder: void <init>()>"->"push \"http://www.ted.com/\"";
+    "push \"http://www.ted.com/\""->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"load.r r0";
+    "load.r r0"->"load.r $r16";
+    "load.r $r16"->"push \"<dt><a href=\\\"/\"";
+    "push \"<dt><a href=\\\"/\""->"push \"\\\"\"";
+    "push 2"
+    "push \"\\\"\""->"push 2";
+    "specialinvoke <KickYoutubeApplet: java.lang.String inbtwnmore(java.lang.String,java.lang.String,java.lang.String,int)>"
+    "push 2"->"specialinvoke <KickYoutubeApplet: java.lang.String inbtwnmore(java.lang.String,java.lang.String,java.lang.String,int)>";
+    "specialinvoke <KickYoutubeApplet: java.lang.String inbtwnmore(java.lang.String,java.lang.String,java.lang.String,int)>"->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"virtualinvoke <java.lang.StringBuilder: java.lang.String toString()>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.String toString()>"->"store.r $r16";
+    "store.r $r16"->"load.r r2";
+    "ifnull load.r r1"
+    "load.r r2"->"ifnull load.r r1";
+    "ifnull load.r r1"->"new java.net.URL";
+    "new java.net.URL"->"store.r $r81";
+    "store.r $r81"->"load.r $r81";
+    "load.r $r81"->"new java.lang.StringBuilder";
+    "new java.lang.StringBuilder"->"dup1.r";
+    "dup1.r"->"push \"javascript:freedown_append(\'FLV\', \'Standard Quality\', \'\"";
+    "push \"javascript:freedown_append(\'FLV\', \'Standard Quality\', \'\""->"specialinvoke <java.lang.StringBuilder: void <init>(java.lang.String)>";
+    "specialinvoke <java.lang.StringBuilder: void <init>(java.lang.String)>"->"load.r r2";
+    "load.r r2"->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"push \"\', \'\');\"";
+    "push \"\', \'\');\""->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"virtualinvoke <java.lang.StringBuilder: java.lang.String toString()>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.String toString()>"->"specialinvoke <java.net.URL: void <init>(java.lang.String)>";
+    "specialinvoke <java.net.URL: void <init>(java.lang.String)>"->"load.r r0";
+    "load.r r0"->"virtualinvoke <KickYoutubeApplet: java.applet.AppletContext getAppletContext()>";
+    "virtualinvoke <KickYoutubeApplet: java.applet.AppletContext getAppletContext()>"->"load.r $r81";
+    "load.r $r81"->"interfaceinvoke <java.applet.AppletContext: void showDocument(java.net.URL)> 1";
+    "interfaceinvoke <java.applet.AppletContext: void showDocument(java.net.URL)> 1"->"load.r r1";
+    "load.r r1"->"ifnull load.r $r16";
+    "ifnull load.r $r16"->"new java.net.URL";
+    "new java.net.URL"->"store.r r2";
+    "store.r r2"->"load.r r2";
+    "load.r r2"->"new java.lang.StringBuilder";
+    "new java.lang.StringBuilder"->"dup1.r";
+    "push \"javascript:freedown_append(\'MP4\', \'Standard Quality\', \'\""
+    "dup1.r"->"push \"javascript:freedown_append(\'MP4\', \'Standard Quality\', \'\"";
+    "push \"javascript:freedown_append(\'MP4\', \'Standard Quality\', \'\""->"specialinvoke <java.lang.StringBuilder: void <init>(java.lang.String)>";
+    "specialinvoke <java.lang.StringBuilder: void <init>(java.lang.String)>"->"load.r r1";
+    "load.r r1"->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"push \"\', \'\');\"";
+    "push \"\', \'\');\""->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"virtualinvoke <java.lang.StringBuilder: java.lang.String toString()>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.String toString()>"->"specialinvoke <java.net.URL: void <init>(java.lang.String)>";
+    "specialinvoke <java.net.URL: void <init>(java.lang.String)>"->"load.r r0";
+    "load.r r0"->"virtualinvoke <KickYoutubeApplet: java.applet.AppletContext getAppletContext()>";
+    "virtualinvoke <KickYoutubeApplet: java.applet.AppletContext getAppletContext()>"->"load.r r2";
+    "load.r r2"->"interfaceinvoke <java.applet.AppletContext: void showDocument(java.net.URL)> 1";
+    "interfaceinvoke <java.applet.AppletContext: void showDocument(java.net.URL)> 1"->"load.r $r16";
+    "load.r $r16"->"ifnull goto new java.net.URL";
+    "ifnull goto new java.net.URL"->"new java.net.URL";
+    "new java.net.URL"->"store.r r1";
+    "store.r r1"->"load.r r1";
+    "load.r r1"->"new java.lang.StringBuilder";
+    "new java.lang.StringBuilder"->"dup1.r";
+    "dup1.r"->"push \"javascript:freedown_append(\'MP4\', \'High Quality\', \'\"";
+    "push \"javascript:freedown_append(\'MP4\', \'High Quality\', \'\""->"specialinvoke <java.lang.StringBuilder: void <init>(java.lang.String)>";
+    "specialinvoke <java.lang.StringBuilder: void <init>(java.lang.String)>"->"load.r $r16";
+    "load.r $r16"->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"push \"\', \'\');\"";
+    "push \"\', \'\');\""->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"virtualinvoke <java.lang.StringBuilder: java.lang.String toString()>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.String toString()>"->"specialinvoke <java.net.URL: void <init>(java.lang.String)>";
+    "specialinvoke <java.net.URL: void <init>(java.lang.String)>"->"load.r r0";
+    "load.r r0"->"virtualinvoke <KickYoutubeApplet: java.applet.AppletContext getAppletContext()>";
+    "virtualinvoke <KickYoutubeApplet: java.applet.AppletContext getAppletContext()>"->"load.r r1";
+    "load.r r1"->"interfaceinvoke <java.applet.AppletContext: void showDocument(java.net.URL)> 1";
+    "interfaceinvoke <java.applet.AppletContext: void showDocument(java.net.URL)> 1"->"goto new java.net.URL";
+    "interfaceinvoke <java.applet.AppletContext: void showDocument(java.net.URL)> 1"->"store.r r1";
+    "store.r r1"->"goto new java.net.URL";
+    "ifeq load.r r2"->"load.r r2";
+    "push \"tudou.com\""
+    "load.r r2"->"push \"tudou.com\"";
+    "push \"tudou.com\""->"virtualinvoke <java.lang.String: boolean contains(java.lang.CharSequence)>";
+    "virtualinvoke <java.lang.String: boolean contains(java.lang.CharSequence)>"->"ifeq load.r r2";
+    "ifeq load.r r2"->"load.r r0";
+    "load.r r0"->"specialinvoke <javax.swing.JApplet: void init()>";
+    "specialinvoke <javax.swing.JApplet: void init()>"->"load.r r0";
+    "load.r r0"->"load.r r1";
+    "load.r r1"->"push \"GET\"";
+    "push \"GET\""->"specialinvoke <KickYoutubeApplet: java.lang.String getUrlContent(java.lang.String,java.lang.String)>";
+    "specialinvoke <KickYoutubeApplet: java.lang.String getUrlContent(java.lang.String,java.lang.String)>"->"store.r r2";
+    "store.r r2"->"load.r r0";
+    "load.r r0"->"load.r r2";
+    "push \"defaultIid = \""
+    "load.r r2"->"push \"defaultIid = \"";
+    "push \"\n\""
+    "push \"defaultIid = \""->"push \"\n\"";
+    "push \"\n\""->"specialinvoke <KickYoutubeApplet: java.lang.String inbtwn(java.lang.String,java.lang.String,java.lang.String)>";
+    "specialinvoke <KickYoutubeApplet: java.lang.String inbtwn(java.lang.String,java.lang.String,java.lang.String)>"->"store.r $r16";
+    "store.r $r16"->"load.r $r16";
+    "load.r $r16"->"ifnonnull load.r r1";
+    "ifnonnull load.r r1"->"load.r r0";
+    "load.r r0"->"load.r r2";
+    "push \"iid: \\\"\""
+    "load.r r2"->"push \"iid: \\\"\"";
+    "push \"iid: \\\"\""->"push \"\\\"\"";
+    "push \"\\\"\""->"specialinvoke <KickYoutubeApplet: java.lang.String inbtwn(java.lang.String,java.lang.String,java.lang.String)>";
+    "specialinvoke <KickYoutubeApplet: java.lang.String inbtwn(java.lang.String,java.lang.String,java.lang.String)>"->"store.r $r16";
+    "store.r $r16"->"load.r r1";
+    "push \"hd.\""
+    "load.r r1"->"push \"hd.\"";
+    "push \"hd.\""->"virtualinvoke <java.lang.String: boolean contains(java.lang.CharSequence)>";
+    "ifeq push \"http://v2.tudou.com/v?it=\""
+    "virtualinvoke <java.lang.String: boolean contains(java.lang.CharSequence)>"->"ifeq push \"http://v2.tudou.com/v?it=\"";
+    "push \"http://v2.tudou.com/v2/kili?id=\""
+    "ifeq push \"http://v2.tudou.com/v?it=\""->"push \"http://v2.tudou.com/v2/kili?id=\"";
+    "push \"http://v2.tudou.com/v2/kili?id=\""->"store.r r1";
+    "goto load.r r0"
+    "store.r r1"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "load.r r0"->"new java.lang.StringBuilder";
+    "new java.lang.StringBuilder"->"dup1.r";
+    "dup1.r"->"specialinvoke <java.lang.StringBuilder: void <init>()>";
+    "specialinvoke <java.lang.StringBuilder: void <init>()>"->"load.r r1";
+    "load.r r1"->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"load.r $r16";
+    "load.r $r16"->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"virtualinvoke <java.lang.StringBuilder: java.lang.String toString()>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.String toString()>"->"push \"GET\"";
+    "push \"GET\""->"specialinvoke <KickYoutubeApplet: java.lang.String getUrlContent(java.lang.String,java.lang.String)>";
+    "push \"<f \""
+    "specialinvoke <KickYoutubeApplet: java.lang.String getUrlContent(java.lang.String,java.lang.String)>"->"push \"<f \"";
+    "push \"<f \""->"virtualinvoke <java.lang.String: java.lang.String[] split(java.lang.String)>";
+    "virtualinvoke <java.lang.String: java.lang.String[] split(java.lang.String)>"->"store.r r1";
+    "store.r r1"->"load.r r1";
+    "arraylength"
+    "load.r r1"->"arraylength";
+    "store.i $r16"
+    "arraylength"->"store.i $r16";
+    "push 0"
+    "store.i $r16"->"push 0";
+    "store.i r2"
+    "push 0"->"store.i r2";
+    "load.i r2"
+    "store.i r2"->"load.i r2";
+    "load.i $r16"
+    "load.i r2"->"load.i $r16";
+    "ifcmpge.i goto new java.net.URL"
+    "load.i $r16"->"ifcmpge.i goto new java.net.URL";
+    "ifcmpge.i goto new java.net.URL"->"load.r r1";
+    "load.r r1"->"load.i r2";
+    "load.i r2"->"arrayread.r";
+    "arrayread.r"->"store.r $r81";
+    "store.r $r81"->"load.r $r81";
+    "push \"size=\\\"\""
+    "load.r $r81"->"push \"size=\\\"\"";
+    "push \"size=\\\"\""->"virtualinvoke <java.lang.String: boolean contains(java.lang.CharSequence)>";
+    "ifeq inc.i r2 1"
+    "virtualinvoke <java.lang.String: boolean contains(java.lang.CharSequence)>"->"ifeq inc.i r2 1";
+    "ifeq inc.i r2 1"->"load.r $r81";
+    "push \">\""
+    "load.r $r81"->"push \">\"";
+    "push \">\""->"virtualinvoke <java.lang.String: java.lang.String[] split(java.lang.String)>";
+    "virtualinvoke <java.lang.String: java.lang.String[] split(java.lang.String)>"->"push 1";
+    "push 1"->"arrayread.r";
+    "push \"</\""
+    "arrayread.r"->"push \"</\"";
+    "push \"</\""->"virtualinvoke <java.lang.String: java.lang.String[] split(java.lang.String)>";
+    "virtualinvoke <java.lang.String: java.lang.String[] split(java.lang.String)>"->"push 0";
+    "push 0"->"arrayread.r";
+    "arrayread.r"->"store.r $r81";
+    "store.r $r81"->"load.r $r81";
+    "push \".f4v\""
+    "load.r $r81"->"push \".f4v\"";
+    "push \".f4v\""->"virtualinvoke <java.lang.String: boolean contains(java.lang.CharSequence)>";
+    "ifeq load.r $r81"
+    "virtualinvoke <java.lang.String: boolean contains(java.lang.CharSequence)>"->"ifeq load.r $r81";
+    "ifeq load.r $r81"->"new java.net.URL";
+    "new java.net.URL"->"store.r $r33";
+    "store.r $r33"->"load.r $r33";
+    "load.r $r33"->"new java.lang.StringBuilder";
+    "new java.lang.StringBuilder"->"dup1.r";
+    "dup1.r"->"specialinvoke <java.lang.StringBuilder: void <init>()>";
+    "push \"javascript:freedown_append(\'F4V\', \'Standard Quality\', \'\""
+    "specialinvoke <java.lang.StringBuilder: void <init>()>"->"push \"javascript:freedown_append(\'F4V\', \'Standard Quality\', \'\"";
+    "push \"javascript:freedown_append(\'F4V\', \'Standard Quality\', \'\""->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"load.r $r81";
+    "load.r $r81"->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"push \"\', \'\');\"";
+    "push \"\', \'\');\""->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"virtualinvoke <java.lang.StringBuilder: java.lang.String toString()>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.String toString()>"->"specialinvoke <java.net.URL: void <init>(java.lang.String)>";
+    "specialinvoke <java.net.URL: void <init>(java.lang.String)>"->"load.r r0";
+    "load.r r0"->"virtualinvoke <KickYoutubeApplet: java.applet.AppletContext getAppletContext()>";
+    "virtualinvoke <KickYoutubeApplet: java.applet.AppletContext getAppletContext()>"->"load.r $r33";
+    "load.r $r33"->"interfaceinvoke <java.applet.AppletContext: void showDocument(java.net.URL)> 1";
+    "interfaceinvoke <java.applet.AppletContext: void showDocument(java.net.URL)> 1"->"load.r $r81";
+    "load.r $r81"->"push \".flv\"";
+    "push \".flv\""->"virtualinvoke <java.lang.String: boolean contains(java.lang.CharSequence)>";
+    "virtualinvoke <java.lang.String: boolean contains(java.lang.CharSequence)>"->"ifeq load.r $r81";
+    "ifeq load.r $r81"->"new java.net.URL";
+    "new java.net.URL"->"store.r $r33";
+    "store.r $r33"->"load.r $r33";
+    "load.r $r33"->"new java.lang.StringBuilder";
+    "new java.lang.StringBuilder"->"dup1.r";
+    "dup1.r"->"specialinvoke <java.lang.StringBuilder: void <init>()>";
+    "specialinvoke <java.lang.StringBuilder: void <init>()>"->"push \"javascript:freedown_append(\'FLV\', \'Standard Quality\', \'\"";
+    "push \"javascript:freedown_append(\'FLV\', \'Standard Quality\', \'\""->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"load.r $r81";
+    "load.r $r81"->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"push \"\', \'\');\"";
+    "push \"\', \'\');\""->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"virtualinvoke <java.lang.StringBuilder: java.lang.String toString()>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.String toString()>"->"specialinvoke <java.net.URL: void <init>(java.lang.String)>";
+    "specialinvoke <java.net.URL: void <init>(java.lang.String)>"->"load.r r0";
+    "load.r r0"->"virtualinvoke <KickYoutubeApplet: java.applet.AppletContext getAppletContext()>";
+    "virtualinvoke <KickYoutubeApplet: java.applet.AppletContext getAppletContext()>"->"load.r $r33";
+    "load.r $r33"->"interfaceinvoke <java.applet.AppletContext: void showDocument(java.net.URL)> 1";
+    "interfaceinvoke <java.applet.AppletContext: void showDocument(java.net.URL)> 1"->"load.r $r81";
+    "push \".m4v\""
+    "load.r $r81"->"push \".m4v\"";
+    "push \".m4v\""->"virtualinvoke <java.lang.String: boolean contains(java.lang.CharSequence)>";
+    "virtualinvoke <java.lang.String: boolean contains(java.lang.CharSequence)>"->"ifeq load.r $r81";
+    "ifeq load.r $r81"->"new java.net.URL";
+    "new java.net.URL"->"store.r $r33";
+    "store.r $r33"->"load.r $r33";
+    "load.r $r33"->"new java.lang.StringBuilder";
+    "new java.lang.StringBuilder"->"dup1.r";
+    "dup1.r"->"specialinvoke <java.lang.StringBuilder: void <init>()>";
+    "push \"javascript:freedown_append(\'M4V\', \'Standard Quality\', \'\""
+    "specialinvoke <java.lang.StringBuilder: void <init>()>"->"push \"javascript:freedown_append(\'M4V\', \'Standard Quality\', \'\"";
+    "push \"javascript:freedown_append(\'M4V\', \'Standard Quality\', \'\""->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"load.r $r81";
+    "load.r $r81"->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"push \"\', \'\');\"";
+    "push \"\', \'\');\""->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"virtualinvoke <java.lang.StringBuilder: java.lang.String toString()>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.String toString()>"->"specialinvoke <java.net.URL: void <init>(java.lang.String)>";
+    "specialinvoke <java.net.URL: void <init>(java.lang.String)>"->"load.r r0";
+    "load.r r0"->"virtualinvoke <KickYoutubeApplet: java.applet.AppletContext getAppletContext()>";
+    "virtualinvoke <KickYoutubeApplet: java.applet.AppletContext getAppletContext()>"->"load.r $r33";
+    "load.r $r33"->"interfaceinvoke <java.applet.AppletContext: void showDocument(java.net.URL)> 1";
+    "interfaceinvoke <java.applet.AppletContext: void showDocument(java.net.URL)> 1"->"load.r $r81";
+    "push \".mp4\""
+    "load.r $r81"->"push \".mp4\"";
+    "push \".mp4\""->"virtualinvoke <java.lang.String: boolean contains(java.lang.CharSequence)>";
+    "virtualinvoke <java.lang.String: boolean contains(java.lang.CharSequence)>"->"ifeq inc.i r2 1";
+    "ifeq inc.i r2 1"->"new java.net.URL";
+    "new java.net.URL"->"store.r $r33";
+    "store.r $r33"->"load.r $r33";
+    "load.r $r33"->"new java.lang.StringBuilder";
+    "new java.lang.StringBuilder"->"dup1.r";
+    "dup1.r"->"specialinvoke <java.lang.StringBuilder: void <init>()>";
+    "specialinvoke <java.lang.StringBuilder: void <init>()>"->"push \"javascript:freedown_append(\'MP4\', \'Standard Quality\', \'\"";
+    "push \"javascript:freedown_append(\'MP4\', \'Standard Quality\', \'\""->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"load.r $r81";
+    "load.r $r81"->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"push \"\', \'\');\"";
+    "push \"\', \'\');\""->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"virtualinvoke <java.lang.StringBuilder: java.lang.String toString()>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.String toString()>"->"specialinvoke <java.net.URL: void <init>(java.lang.String)>";
+    "specialinvoke <java.net.URL: void <init>(java.lang.String)>"->"load.r r0";
+    "load.r r0"->"virtualinvoke <KickYoutubeApplet: java.applet.AppletContext getAppletContext()>";
+    "virtualinvoke <KickYoutubeApplet: java.applet.AppletContext getAppletContext()>"->"load.r $r33";
+    "load.r $r33"->"interfaceinvoke <java.applet.AppletContext: void showDocument(java.net.URL)> 1";
+    "inc.i r2 1"
+    "interfaceinvoke <java.applet.AppletContext: void showDocument(java.net.URL)> 1"->"inc.i r2 1";
+    "goto load.i r2"
+    "inc.i r2 1"->"goto load.i r2";
+    "interfaceinvoke <java.applet.AppletContext: void showDocument(java.net.URL)> 1"->"store.r r1";
+    "store.r r1"->"goto new java.net.URL";
+    "ifcmpge.i goto new java.net.URL"->"goto new java.net.URL";
+    "push \"http://v2.tudou.com/v?it=\""
+    "ifeq push \"http://v2.tudou.com/v?it=\""->"push \"http://v2.tudou.com/v?it=\"";
+    "push \"http://v2.tudou.com/v?it=\""->"store.r r1";
+    "ifeq load.r r2"->"load.r r2";
+    "push \"facebook.com\""
+    "load.r r2"->"push \"facebook.com\"";
+    "push \"facebook.com\""->"virtualinvoke <java.lang.String: boolean contains(java.lang.CharSequence)>";
+    "virtualinvoke <java.lang.String: boolean contains(java.lang.CharSequence)>"->"ifeq new java.net.URL";
+    "ifeq new java.net.URL"->"load.r r0";
+    "load.r r0"->"specialinvoke <javax.swing.JApplet: void init()>";
+    "specialinvoke <javax.swing.JApplet: void init()>"->"load.r r0";
+    "load.r r0"->"load.r r1";
+    "load.r r1"->"push \"GET\"";
+    "push \"GET\""->"specialinvoke <KickYoutubeApplet: java.lang.String getUrlContent(java.lang.String,java.lang.String)>";
+    "specialinvoke <KickYoutubeApplet: java.lang.String getUrlContent(java.lang.String,java.lang.String)>"->"store.r r1";
+    "staticget <java.lang.System: java.io.PrintStream out>"
+    "store.r r1"->"staticget <java.lang.System: java.io.PrintStream out>";
+    "staticget <java.lang.System: java.io.PrintStream out>"->"new java.lang.StringBuilder";
+    "new java.lang.StringBuilder"->"dup1.r";
+    "dup1.r"->"specialinvoke <java.lang.StringBuilder: void <init>()>";
+    "push \"pageSource: \""
+    "specialinvoke <java.lang.StringBuilder: void <init>()>"->"push \"pageSource: \"";
+    "push \"pageSource: \""->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"load.r r1";
+    "load.r r1"->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "push \"\r\n\""
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"push \"\r\n\"";
+    "push \"\r\n\""->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"virtualinvoke <java.lang.StringBuilder: java.lang.String toString()>";
+    "virtualinvoke <java.io.PrintStream: void println(java.lang.String)>"
+    "virtualinvoke <java.lang.StringBuilder: java.lang.String toString()>"->"virtualinvoke <java.io.PrintStream: void println(java.lang.String)>";
+    "virtualinvoke <java.io.PrintStream: void println(java.lang.String)>"->"load.r r0";
+    "load.r r0"->"load.r r1";
+    "push \"video_src\\\", \\\"\""
+    "load.r r1"->"push \"video_src\\\", \\\"\"";
+    "push \"video_src\\\", \\\"\""->"push \"\\\"\"";
+    "push \"\\\"\""->"specialinvoke <KickYoutubeApplet: java.lang.String inbtwn(java.lang.String,java.lang.String,java.lang.String)>";
+    "specialinvoke <KickYoutubeApplet: java.lang.String inbtwn(java.lang.String,java.lang.String,java.lang.String)>"->"store.r r1";
+    "store.r r1"->"staticget <java.lang.System: java.io.PrintStream out>";
+    "staticget <java.lang.System: java.io.PrintStream out>"->"new java.lang.StringBuilder";
+    "new java.lang.StringBuilder"->"dup1.r";
+    "dup1.r"->"specialinvoke <java.lang.StringBuilder: void <init>()>";
+    "push \"file: \""
+    "specialinvoke <java.lang.StringBuilder: void <init>()>"->"push \"file: \"";
+    "push \"file: \""->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"load.r r1";
+    "load.r r1"->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"push \"\r\n\"";
+    "push \"\r\n\""->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"virtualinvoke <java.lang.StringBuilder: java.lang.String toString()>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.String toString()>"->"virtualinvoke <java.io.PrintStream: void println(java.lang.String)>";
+    "virtualinvoke <java.io.PrintStream: void println(java.lang.String)>"->"load.r r1";
+    "load.r r1"->"push \".mp4\"";
+    "push \".mp4\""->"virtualinvoke <java.lang.String: boolean contains(java.lang.CharSequence)>";
+    "virtualinvoke <java.lang.String: boolean contains(java.lang.CharSequence)>"->"ifeq load.r r1";
+    "ifeq load.r r1"->"new java.net.URL";
+    "new java.net.URL"->"store.r $r16";
+    "store.r $r16"->"load.r $r16";
+    "load.r $r16"->"new java.lang.StringBuilder";
+    "new java.lang.StringBuilder"->"dup1.r";
+    "dup1.r"->"push \"javascript:freedown_append(\'MP4\', \'Standard Quality\', \'\"";
+    "push \"javascript:freedown_append(\'MP4\', \'Standard Quality\', \'\""->"specialinvoke <java.lang.StringBuilder: void <init>(java.lang.String)>";
+    "specialinvoke <java.lang.StringBuilder: void <init>(java.lang.String)>"->"load.r r1";
+    "load.r r1"->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"push \"\', \'\');\"";
+    "push \"\', \'\');\""->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"virtualinvoke <java.lang.StringBuilder: java.lang.String toString()>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.String toString()>"->"specialinvoke <java.net.URL: void <init>(java.lang.String)>";
+    "specialinvoke <java.net.URL: void <init>(java.lang.String)>"->"load.r r0";
+    "load.r r0"->"virtualinvoke <KickYoutubeApplet: java.applet.AppletContext getAppletContext()>";
+    "virtualinvoke <KickYoutubeApplet: java.applet.AppletContext getAppletContext()>"->"load.r $r16";
+    "load.r $r16"->"interfaceinvoke <java.applet.AppletContext: void showDocument(java.net.URL)> 1";
+    "interfaceinvoke <java.applet.AppletContext: void showDocument(java.net.URL)> 1"->"load.r r1";
+    "load.r r1"->"push \".flv\"";
+    "push \".flv\""->"virtualinvoke <java.lang.String: boolean contains(java.lang.CharSequence)>";
+    "ifeq goto new java.net.URL"
+    "virtualinvoke <java.lang.String: boolean contains(java.lang.CharSequence)>"->"ifeq goto new java.net.URL";
+    "ifeq goto new java.net.URL"->"new java.net.URL";
+    "new java.net.URL"->"store.r $r16";
+    "store.r $r16"->"load.r $r16";
+    "load.r $r16"->"new java.lang.StringBuilder";
+    "new java.lang.StringBuilder"->"dup1.r";
+    "dup1.r"->"push \"javascript:freedown_append(\'FLV\', \'Standard Quality\', \'\"";
+    "push \"javascript:freedown_append(\'FLV\', \'Standard Quality\', \'\""->"specialinvoke <java.lang.StringBuilder: void <init>(java.lang.String)>";
+    "specialinvoke <java.lang.StringBuilder: void <init>(java.lang.String)>"->"load.r r1";
+    "load.r r1"->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"push \"\', \'\');\"";
+    "push \"\', \'\');\""->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"virtualinvoke <java.lang.StringBuilder: java.lang.String toString()>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.String toString()>"->"specialinvoke <java.net.URL: void <init>(java.lang.String)>";
+    "specialinvoke <java.net.URL: void <init>(java.lang.String)>"->"load.r r0";
+    "load.r r0"->"virtualinvoke <KickYoutubeApplet: java.applet.AppletContext getAppletContext()>";
+    "virtualinvoke <KickYoutubeApplet: java.applet.AppletContext getAppletContext()>"->"load.r $r16";
+    "load.r $r16"->"interfaceinvoke <java.applet.AppletContext: void showDocument(java.net.URL)> 1";
+    "interfaceinvoke <java.applet.AppletContext: void showDocument(java.net.URL)> 1"->"goto new java.net.URL";
+    "interfaceinvoke <java.applet.AppletContext: void showDocument(java.net.URL)> 1"->"store.r r1";
+}

@@ -1,0 +1,275 @@
+digraph "" {
+    "r0 := @this: SIRfont"
+    "load.r r0"
+    "r0 := @this: SIRfont"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "push \"color\""
+    "load.r r0"->"push \"color\"";
+    "push \"255,255,255\""
+    "push \"color\""->"push \"255,255,255\"";
+    "virtualinvoke <SIRfont: java.awt.Color parmgetcolor(java.lang.String,java.lang.String)>"
+    "push \"255,255,255\""->"virtualinvoke <SIRfont: java.awt.Color parmgetcolor(java.lang.String,java.lang.String)>";
+    "virtualinvoke <java.awt.Component: void setBackground(java.awt.Color)>"
+    "virtualinvoke <SIRfont: java.awt.Color parmgetcolor(java.lang.String,java.lang.String)>"->"virtualinvoke <java.awt.Component: void setBackground(java.awt.Color)>";
+    "virtualinvoke <java.awt.Component: void setBackground(java.awt.Color)>"->"load.r r0";
+    "new java.awt.TextArea"
+    "load.r r0"->"new java.awt.TextArea";
+    "dup1.r"
+    "new java.awt.TextArea"->"dup1.r";
+    "push \"Type Example Text Here\""
+    "dup1.r"->"push \"Type Example Text Here\"";
+    "specialinvoke <java.awt.TextArea: void <init>(java.lang.String)>"
+    "push \"Type Example Text Here\""->"specialinvoke <java.awt.TextArea: void <init>(java.lang.String)>";
+    "fieldput <SIRfont: java.awt.TextArea textbox>"
+    "specialinvoke <java.awt.TextArea: void <init>(java.lang.String)>"->"fieldput <SIRfont: java.awt.TextArea textbox>";
+    "fieldput <SIRfont: java.awt.TextArea textbox>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "fieldget <SIRfont: java.awt.TextArea textbox>"
+    "load.r r0"->"fieldget <SIRfont: java.awt.TextArea textbox>";
+    "virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>"
+    "fieldget <SIRfont: java.awt.TextArea textbox>"->"virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>";
+    "pop"
+    "virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>"->"pop";
+    "pop"->"load.r r0";
+    "load.r r0"->"fieldget <SIRfont: java.awt.TextArea textbox>";
+    "new java.awt.Color"
+    "fieldget <SIRfont: java.awt.TextArea textbox>"->"new java.awt.Color";
+    "new java.awt.Color"->"dup1.r";
+    "push 255"
+    "dup1.r"->"push 255";
+    "push 255"->"push 255";
+    "push 255"->"push 255";
+    "specialinvoke <java.awt.Color: void <init>(int,int,int)>"
+    "push 255"->"specialinvoke <java.awt.Color: void <init>(int,int,int)>";
+    "specialinvoke <java.awt.Color: void <init>(int,int,int)>"->"virtualinvoke <java.awt.Component: void setBackground(java.awt.Color)>";
+    "virtualinvoke <java.awt.Component: void setBackground(java.awt.Color)>"->"load.r r0";
+    "new java.awt.Choice"
+    "load.r r0"->"new java.awt.Choice";
+    "new java.awt.Choice"->"dup1.r";
+    "specialinvoke <java.awt.Choice: void <init>()>"
+    "dup1.r"->"specialinvoke <java.awt.Choice: void <init>()>";
+    "fieldput <SIRfont: java.awt.Choice choicebox>"
+    "specialinvoke <java.awt.Choice: void <init>()>"->"fieldput <SIRfont: java.awt.Choice choicebox>";
+    "fieldput <SIRfont: java.awt.Choice choicebox>"->"load.r r0";
+    "virtualinvoke <java.awt.Component: java.awt.Toolkit getToolkit()>"
+    "load.r r0"->"virtualinvoke <java.awt.Component: java.awt.Toolkit getToolkit()>";
+    "virtualinvoke <java.awt.Toolkit: java.lang.String[] getFontList()>"
+    "virtualinvoke <java.awt.Component: java.awt.Toolkit getToolkit()>"->"virtualinvoke <java.awt.Toolkit: java.lang.String[] getFontList()>";
+    "store.r r1"
+    "virtualinvoke <java.awt.Toolkit: java.lang.String[] getFontList()>"->"store.r r1";
+    "push 0"
+    "store.r r1"->"push 0";
+    "store.i i3"
+    "push 0"->"store.i i3";
+    "goto load.i i3"
+    "store.i i3"->"goto load.i i3";
+    "load.i i3"
+    "goto load.i i3"->"load.i i3";
+    "load.r r1"
+    "load.i i3"->"load.r r1";
+    "arraylength"
+    "load.r r1"->"arraylength";
+    "ifcmplt.i load.r r0"
+    "arraylength"->"ifcmplt.i load.r r0";
+    "ifcmplt.i load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "fieldget <SIRfont: java.awt.Choice choicebox>"
+    "load.r r0"->"fieldget <SIRfont: java.awt.Choice choicebox>";
+    "fieldget <SIRfont: java.awt.Choice choicebox>"->"virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>";
+    "virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>"->"pop";
+    "pop"->"load.r r0";
+    "load.r r0"->"fieldget <SIRfont: java.awt.Choice choicebox>";
+    "fieldget <SIRfont: java.awt.Choice choicebox>"->"load.r r0";
+    "virtualinvoke <java.awt.Choice: void addItemListener(java.awt.event.ItemListener)>"
+    "load.r r0"->"virtualinvoke <java.awt.Choice: void addItemListener(java.awt.event.ItemListener)>";
+    "virtualinvoke <java.awt.Choice: void addItemListener(java.awt.event.ItemListener)>"->"load.r r0";
+    "load.r r0"->"new java.awt.Choice";
+    "new java.awt.Choice"->"dup1.r";
+    "dup1.r"->"specialinvoke <java.awt.Choice: void <init>()>";
+    "fieldput <SIRfont: java.awt.Choice sizechoice>"
+    "specialinvoke <java.awt.Choice: void <init>()>"->"fieldput <SIRfont: java.awt.Choice sizechoice>";
+    "fieldput <SIRfont: java.awt.Choice sizechoice>"->"load.r r0";
+    "fieldget <SIRfont: java.awt.Choice sizechoice>"
+    "load.r r0"->"fieldget <SIRfont: java.awt.Choice sizechoice>";
+    "push \"8\""
+    "fieldget <SIRfont: java.awt.Choice sizechoice>"->"push \"8\"";
+    "virtualinvoke <java.awt.Choice: void add(java.lang.String)>"
+    "push \"8\""->"virtualinvoke <java.awt.Choice: void add(java.lang.String)>";
+    "virtualinvoke <java.awt.Choice: void add(java.lang.String)>"->"load.r r0";
+    "load.r r0"->"fieldget <SIRfont: java.awt.Choice sizechoice>";
+    "push \"9\""
+    "fieldget <SIRfont: java.awt.Choice sizechoice>"->"push \"9\"";
+    "push \"9\""->"virtualinvoke <java.awt.Choice: void add(java.lang.String)>";
+    "virtualinvoke <java.awt.Choice: void add(java.lang.String)>"->"load.r r0";
+    "load.r r0"->"fieldget <SIRfont: java.awt.Choice sizechoice>";
+    "push \"10\""
+    "fieldget <SIRfont: java.awt.Choice sizechoice>"->"push \"10\"";
+    "push \"10\""->"virtualinvoke <java.awt.Choice: void add(java.lang.String)>";
+    "virtualinvoke <java.awt.Choice: void add(java.lang.String)>"->"load.r r0";
+    "load.r r0"->"fieldget <SIRfont: java.awt.Choice sizechoice>";
+    "push \"11\""
+    "fieldget <SIRfont: java.awt.Choice sizechoice>"->"push \"11\"";
+    "push \"11\""->"virtualinvoke <java.awt.Choice: void add(java.lang.String)>";
+    "push 12"
+    "virtualinvoke <java.awt.Choice: void add(java.lang.String)>"->"push 12";
+    "push 12"->"store.i i3";
+    "store.i i3"->"goto load.i i3";
+    "goto load.i i3"->"load.i i3";
+    "push 29"
+    "load.i i3"->"push 29";
+    "push 29"->"ifcmplt.i load.r r0";
+    "ifcmplt.i load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <SIRfont: java.awt.Choice sizechoice>";
+    "push \"36\""
+    "fieldget <SIRfont: java.awt.Choice sizechoice>"->"push \"36\"";
+    "push \"36\""->"virtualinvoke <java.awt.Choice: void add(java.lang.String)>";
+    "virtualinvoke <java.awt.Choice: void add(java.lang.String)>"->"load.r r0";
+    "load.r r0"->"fieldget <SIRfont: java.awt.Choice sizechoice>";
+    "push \"48\""
+    "fieldget <SIRfont: java.awt.Choice sizechoice>"->"push \"48\"";
+    "push \"48\""->"virtualinvoke <java.awt.Choice: void add(java.lang.String)>";
+    "virtualinvoke <java.awt.Choice: void add(java.lang.String)>"->"load.r r0";
+    "load.r r0"->"fieldget <SIRfont: java.awt.Choice sizechoice>";
+    "push \"72\""
+    "fieldget <SIRfont: java.awt.Choice sizechoice>"->"push \"72\"";
+    "push \"72\""->"virtualinvoke <java.awt.Choice: void add(java.lang.String)>";
+    "virtualinvoke <java.awt.Choice: void add(java.lang.String)>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <SIRfont: java.awt.Choice sizechoice>";
+    "fieldget <SIRfont: java.awt.Choice sizechoice>"->"virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>";
+    "virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>"->"pop";
+    "pop"->"load.r r0";
+    "load.r r0"->"fieldget <SIRfont: java.awt.Choice sizechoice>";
+    "push \"12\""
+    "fieldget <SIRfont: java.awt.Choice sizechoice>"->"push \"12\"";
+    "virtualinvoke <java.awt.Choice: void select(java.lang.String)>"
+    "push \"12\""->"virtualinvoke <java.awt.Choice: void select(java.lang.String)>";
+    "virtualinvoke <java.awt.Choice: void select(java.lang.String)>"->"load.r r0";
+    "load.r r0"->"fieldget <SIRfont: java.awt.Choice sizechoice>";
+    "fieldget <SIRfont: java.awt.Choice sizechoice>"->"load.r r0";
+    "load.r r0"->"virtualinvoke <java.awt.Choice: void addItemListener(java.awt.event.ItemListener)>";
+    "virtualinvoke <java.awt.Choice: void addItemListener(java.awt.event.ItemListener)>"->"load.r r0";
+    "load.r r0"->"fieldget <SIRfont: java.awt.TextArea textbox>";
+    "new java.awt.Font"
+    "fieldget <SIRfont: java.awt.TextArea textbox>"->"new java.awt.Font";
+    "new java.awt.Font"->"dup1.r";
+    "dup1.r"->"load.r r1";
+    "load.r r1"->"push 0";
+    "arrayread.r"
+    "push 0"->"arrayread.r";
+    "arrayread.r"->"push 0";
+    "push 0"->"push 12";
+    "specialinvoke <java.awt.Font: void <init>(java.lang.String,int,int)>"
+    "push 12"->"specialinvoke <java.awt.Font: void <init>(java.lang.String,int,int)>";
+    "virtualinvoke <java.awt.Component: void setFont(java.awt.Font)>"
+    "specialinvoke <java.awt.Font: void <init>(java.lang.String,int,int)>"->"virtualinvoke <java.awt.Component: void setFont(java.awt.Font)>";
+    "virtualinvoke <java.awt.Component: void setFont(java.awt.Font)>"->"load.r r0";
+    "new java.awt.Checkbox"
+    "load.r r0"->"new java.awt.Checkbox";
+    "new java.awt.Checkbox"->"dup1.r";
+    "push \"Bold\""
+    "dup1.r"->"push \"Bold\"";
+    "specialinvoke <java.awt.Checkbox: void <init>(java.lang.String)>"
+    "push \"Bold\""->"specialinvoke <java.awt.Checkbox: void <init>(java.lang.String)>";
+    "fieldput <SIRfont: java.awt.Checkbox checkbold>"
+    "specialinvoke <java.awt.Checkbox: void <init>(java.lang.String)>"->"fieldput <SIRfont: java.awt.Checkbox checkbold>";
+    "fieldput <SIRfont: java.awt.Checkbox checkbold>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "fieldget <SIRfont: java.awt.Checkbox checkbold>"
+    "load.r r0"->"fieldget <SIRfont: java.awt.Checkbox checkbold>";
+    "fieldget <SIRfont: java.awt.Checkbox checkbold>"->"virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>";
+    "virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>"->"pop";
+    "pop"->"load.r r0";
+    "load.r r0"->"fieldget <SIRfont: java.awt.Checkbox checkbold>";
+    "fieldget <SIRfont: java.awt.Checkbox checkbold>"->"load.r r0";
+    "virtualinvoke <java.awt.Checkbox: void addItemListener(java.awt.event.ItemListener)>"
+    "load.r r0"->"virtualinvoke <java.awt.Checkbox: void addItemListener(java.awt.event.ItemListener)>";
+    "virtualinvoke <java.awt.Checkbox: void addItemListener(java.awt.event.ItemListener)>"->"load.r r0";
+    "load.r r0"->"fieldget <SIRfont: java.awt.Checkbox checkbold>";
+    "fieldget <SIRfont: java.awt.Checkbox checkbold>"->"new java.awt.Font";
+    "new java.awt.Font"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "load.r r0"->"fieldget <SIRfont: java.awt.Checkbox checkbold>";
+    "virtualinvoke <java.awt.Component: java.awt.Font getFont()>"
+    "fieldget <SIRfont: java.awt.Checkbox checkbold>"->"virtualinvoke <java.awt.Component: java.awt.Font getFont()>";
+    "virtualinvoke <java.awt.Font: java.lang.String getName()>"
+    "virtualinvoke <java.awt.Component: java.awt.Font getFont()>"->"virtualinvoke <java.awt.Font: java.lang.String getName()>";
+    "push 1"
+    "virtualinvoke <java.awt.Font: java.lang.String getName()>"->"push 1";
+    "push 1"->"load.r r0";
+    "load.r r0"->"fieldget <SIRfont: java.awt.Checkbox checkbold>";
+    "fieldget <SIRfont: java.awt.Checkbox checkbold>"->"virtualinvoke <java.awt.Component: java.awt.Font getFont()>";
+    "virtualinvoke <java.awt.Font: int getSize()>"
+    "virtualinvoke <java.awt.Component: java.awt.Font getFont()>"->"virtualinvoke <java.awt.Font: int getSize()>";
+    "virtualinvoke <java.awt.Font: int getSize()>"->"specialinvoke <java.awt.Font: void <init>(java.lang.String,int,int)>";
+    "specialinvoke <java.awt.Font: void <init>(java.lang.String,int,int)>"->"virtualinvoke <java.awt.Component: void setFont(java.awt.Font)>";
+    "virtualinvoke <java.awt.Component: void setFont(java.awt.Font)>"->"load.r r0";
+    "load.r r0"->"fieldget <SIRfont: java.awt.Checkbox checkbold>";
+    "fieldget <SIRfont: java.awt.Checkbox checkbold>"->"load.r r0";
+    "push \"text\""
+    "load.r r0"->"push \"text\"";
+    "push \"0,0,0\""
+    "push \"text\""->"push \"0,0,0\"";
+    "push \"0,0,0\""->"virtualinvoke <SIRfont: java.awt.Color parmgetcolor(java.lang.String,java.lang.String)>";
+    "virtualinvoke <java.awt.Component: void setForeground(java.awt.Color)>"
+    "virtualinvoke <SIRfont: java.awt.Color parmgetcolor(java.lang.String,java.lang.String)>"->"virtualinvoke <java.awt.Component: void setForeground(java.awt.Color)>";
+    "virtualinvoke <java.awt.Component: void setForeground(java.awt.Color)>"->"load.r r0";
+    "load.r r0"->"new java.awt.Checkbox";
+    "new java.awt.Checkbox"->"dup1.r";
+    "push \"Italic\""
+    "dup1.r"->"push \"Italic\"";
+    "push \"Italic\""->"specialinvoke <java.awt.Checkbox: void <init>(java.lang.String)>";
+    "fieldput <SIRfont: java.awt.Checkbox checkitalic>"
+    "specialinvoke <java.awt.Checkbox: void <init>(java.lang.String)>"->"fieldput <SIRfont: java.awt.Checkbox checkitalic>";
+    "fieldput <SIRfont: java.awt.Checkbox checkitalic>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "fieldget <SIRfont: java.awt.Checkbox checkitalic>"
+    "load.r r0"->"fieldget <SIRfont: java.awt.Checkbox checkitalic>";
+    "fieldget <SIRfont: java.awt.Checkbox checkitalic>"->"virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>";
+    "virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>"->"pop";
+    "pop"->"load.r r0";
+    "load.r r0"->"fieldget <SIRfont: java.awt.Checkbox checkitalic>";
+    "fieldget <SIRfont: java.awt.Checkbox checkitalic>"->"load.r r0";
+    "load.r r0"->"virtualinvoke <java.awt.Checkbox: void addItemListener(java.awt.event.ItemListener)>";
+    "virtualinvoke <java.awt.Checkbox: void addItemListener(java.awt.event.ItemListener)>"->"load.r r0";
+    "load.r r0"->"fieldget <SIRfont: java.awt.Checkbox checkitalic>";
+    "fieldget <SIRfont: java.awt.Checkbox checkitalic>"->"new java.awt.Font";
+    "new java.awt.Font"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "load.r r0"->"fieldget <SIRfont: java.awt.Checkbox checkitalic>";
+    "fieldget <SIRfont: java.awt.Checkbox checkitalic>"->"virtualinvoke <java.awt.Component: java.awt.Font getFont()>";
+    "virtualinvoke <java.awt.Component: java.awt.Font getFont()>"->"virtualinvoke <java.awt.Font: java.lang.String getName()>";
+    "push 2"
+    "virtualinvoke <java.awt.Font: java.lang.String getName()>"->"push 2";
+    "push 2"->"load.r r0";
+    "load.r r0"->"fieldget <SIRfont: java.awt.Checkbox checkitalic>";
+    "fieldget <SIRfont: java.awt.Checkbox checkitalic>"->"virtualinvoke <java.awt.Component: java.awt.Font getFont()>";
+    "virtualinvoke <java.awt.Component: java.awt.Font getFont()>"->"virtualinvoke <java.awt.Font: int getSize()>";
+    "virtualinvoke <java.awt.Font: int getSize()>"->"specialinvoke <java.awt.Font: void <init>(java.lang.String,int,int)>";
+    "specialinvoke <java.awt.Font: void <init>(java.lang.String,int,int)>"->"virtualinvoke <java.awt.Component: void setFont(java.awt.Font)>";
+    "virtualinvoke <java.awt.Component: void setFont(java.awt.Font)>"->"load.r r0";
+    "load.r r0"->"fieldget <SIRfont: java.awt.Checkbox checkitalic>";
+    "fieldget <SIRfont: java.awt.Checkbox checkitalic>"->"load.r r0";
+    "load.r r0"->"push \"text\"";
+    "push \"text\""->"push \"0,0,0\"";
+    "push \"0,0,0\""->"virtualinvoke <SIRfont: java.awt.Color parmgetcolor(java.lang.String,java.lang.String)>";
+    "virtualinvoke <SIRfont: java.awt.Color parmgetcolor(java.lang.String,java.lang.String)>"->"virtualinvoke <java.awt.Component: void setForeground(java.awt.Color)>";
+    "return"
+    "virtualinvoke <java.awt.Component: void setForeground(java.awt.Color)>"->"return";
+    "ifcmplt.i load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <SIRfont: java.awt.Choice sizechoice>";
+    "fieldget <SIRfont: java.awt.Choice sizechoice>"->"load.i i3";
+    "staticinvoke <java.lang.Integer: java.lang.String toString(int)>"
+    "load.i i3"->"staticinvoke <java.lang.Integer: java.lang.String toString(int)>";
+    "staticinvoke <java.lang.Integer: java.lang.String toString(int)>"->"virtualinvoke <java.awt.Choice: void add(java.lang.String)>";
+    "inc.i i3 2"
+    "virtualinvoke <java.awt.Choice: void add(java.lang.String)>"->"inc.i i3 2";
+    "ifcmplt.i load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <SIRfont: java.awt.Choice choicebox>";
+    "fieldget <SIRfont: java.awt.Choice choicebox>"->"load.r r1";
+    "load.r r1"->"load.i i3";
+    "load.i i3"->"arrayread.r";
+    "arrayread.r"->"virtualinvoke <java.awt.Choice: void add(java.lang.String)>";
+    "inc.i i3 1"
+    "virtualinvoke <java.awt.Choice: void add(java.lang.String)>"->"inc.i i3 1";
+}

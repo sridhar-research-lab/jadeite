@@ -1,0 +1,33 @@
+digraph "" {
+    "r0 := @this: Go2"
+    "load.r r0"
+    "r0 := @this: Go2"->"load.r r0";
+    "push 190"
+    "load.r r0"->"push 190";
+    "push 190"->"push 190";
+    "virtualinvoke <java.applet.Applet: void resize(int,int)>"
+    "push 190"->"virtualinvoke <java.applet.Applet: void resize(int,int)>";
+    "virtualinvoke <java.applet.Applet: void resize(int,int)>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "virtualinvoke <java.awt.Component: java.awt.Dimension getSize()>"
+    "load.r r0"->"virtualinvoke <java.awt.Component: java.awt.Dimension getSize()>";
+    "fieldput <Go2: java.awt.Dimension d>"
+    "virtualinvoke <java.awt.Component: java.awt.Dimension getSize()>"->"fieldput <Go2: java.awt.Dimension d>";
+    "fieldput <Go2: java.awt.Dimension d>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "fieldget <Go2: java.awt.Dimension d>"
+    "load.r r0"->"fieldget <Go2: java.awt.Dimension d>";
+    "fieldget <java.awt.Dimension: int width>"
+    "fieldget <Go2: java.awt.Dimension d>"->"fieldget <java.awt.Dimension: int width>";
+    "fieldget <java.awt.Dimension: int width>"->"load.r r0";
+    "load.r r0"->"fieldget <Go2: java.awt.Dimension d>";
+    "fieldget <java.awt.Dimension: int height>"
+    "fieldget <Go2: java.awt.Dimension d>"->"fieldget <java.awt.Dimension: int height>";
+    "virtualinvoke <java.awt.Component: java.awt.Image createImage(int,int)>"
+    "fieldget <java.awt.Dimension: int height>"->"virtualinvoke <java.awt.Component: java.awt.Image createImage(int,int)>";
+    "fieldput <Go2: java.awt.Image buffer>"
+    "virtualinvoke <java.awt.Component: java.awt.Image createImage(int,int)>"->"fieldput <Go2: java.awt.Image buffer>";
+    "return"
+    "fieldput <Go2: java.awt.Image buffer>"->"return";
+}

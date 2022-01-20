@@ -1,0 +1,58 @@
+digraph "" {
+    "r0 := @this: de.mud.jta.SmallApplet"
+    "load.r r0"
+    "r0 := @this: de.mud.jta.SmallApplet"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "push \"host\""
+    "load.r r0"->"push \"host\"";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"
+    "push \"host\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "fieldput <de.mud.jta.SmallApplet: java.lang.String host>"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"fieldput <de.mud.jta.SmallApplet: java.lang.String host>";
+    "fieldput <de.mud.jta.SmallApplet: java.lang.String host>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "push \"port\""
+    "load.r r0"->"push \"port\"";
+    "push \"port\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "fieldput <de.mud.jta.SmallApplet: java.lang.String port>"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"fieldput <de.mud.jta.SmallApplet: java.lang.String port>";
+    "fieldput <de.mud.jta.SmallApplet: java.lang.String port>"->"load.r r0";
+    "new de.mud.jta.SmallApplet$1"
+    "load.r r0"->"new de.mud.jta.SmallApplet$1";
+    "dup1.r"
+    "new de.mud.jta.SmallApplet$1"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "specialinvoke <de.mud.jta.SmallApplet$1: void <init>(de.mud.jta.SmallApplet)>"
+    "load.r r0"->"specialinvoke <de.mud.jta.SmallApplet$1: void <init>(de.mud.jta.SmallApplet)>";
+    "fieldput <de.mud.jta.SmallApplet: de.mud.terminal.vt320 terminal>"
+    "specialinvoke <de.mud.jta.SmallApplet$1: void <init>(de.mud.jta.SmallApplet)>"->"fieldput <de.mud.jta.SmallApplet: de.mud.terminal.vt320 terminal>";
+    "fieldput <de.mud.jta.SmallApplet: de.mud.terminal.vt320 terminal>"->"load.r r0";
+    "new java.awt.BorderLayout"
+    "load.r r0"->"new java.awt.BorderLayout";
+    "new java.awt.BorderLayout"->"dup1.r";
+    "specialinvoke <java.awt.BorderLayout: void <init>()>"
+    "dup1.r"->"specialinvoke <java.awt.BorderLayout: void <init>()>";
+    "virtualinvoke <java.awt.Container: void setLayout(java.awt.LayoutManager)>"
+    "specialinvoke <java.awt.BorderLayout: void <init>()>"->"virtualinvoke <java.awt.Container: void setLayout(java.awt.LayoutManager)>";
+    "virtualinvoke <java.awt.Container: void setLayout(java.awt.LayoutManager)>"->"load.r r0";
+    "push \"Center\""
+    "load.r r0"->"push \"Center\"";
+    "push \"Center\""->"load.r r0";
+    "fieldget <de.mud.jta.SmallApplet: de.mud.terminal.vt320 terminal>"
+    "load.r r0"->"fieldget <de.mud.jta.SmallApplet: de.mud.terminal.vt320 terminal>";
+    "virtualinvoke <java.awt.Container: java.awt.Component add(java.lang.String,java.awt.Component)>"
+    "fieldget <de.mud.jta.SmallApplet: de.mud.terminal.vt320 terminal>"->"virtualinvoke <java.awt.Container: java.awt.Component add(java.lang.String,java.awt.Component)>";
+    "pop"
+    "virtualinvoke <java.awt.Container: java.awt.Component add(java.lang.String,java.awt.Component)>"->"pop";
+    "pop"->"load.r r0";
+    "new de.mud.jta.SmallApplet$2"
+    "load.r r0"->"new de.mud.jta.SmallApplet$2";
+    "new de.mud.jta.SmallApplet$2"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "specialinvoke <de.mud.jta.SmallApplet$2: void <init>(de.mud.jta.SmallApplet)>"
+    "load.r r0"->"specialinvoke <de.mud.jta.SmallApplet$2: void <init>(de.mud.jta.SmallApplet)>";
+    "fieldput <de.mud.jta.SmallApplet: de.mud.telnet.TelnetProtocolHandler telnet>"
+    "specialinvoke <de.mud.jta.SmallApplet$2: void <init>(de.mud.jta.SmallApplet)>"->"fieldput <de.mud.jta.SmallApplet: de.mud.telnet.TelnetProtocolHandler telnet>";
+    "return"
+    "fieldput <de.mud.jta.SmallApplet: de.mud.telnet.TelnetProtocolHandler telnet>"->"return";
+}

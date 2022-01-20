@@ -1,0 +1,22 @@
+digraph "" {
+    "r0 := @this: UnionBrowserRSAMDL"
+    "load.r r0"
+    "r0 := @this: UnionBrowserRSAMDL"->"load.r r0";
+    "push 128"
+    "load.r r0"->"push 128";
+    "fieldput <UnionBrowserRSAMDL: int pinMaxLen>"
+    "push 128"->"fieldput <UnionBrowserRSAMDL: int pinMaxLen>";
+    "fieldput <UnionBrowserRSAMDL: int pinMaxLen>"->"load.r r0";
+    "new java.math.BigInteger"
+    "load.r r0"->"new java.math.BigInteger";
+    "dup1.r"
+    "new java.math.BigInteger"->"dup1.r";
+    "push \"65537\""
+    "dup1.r"->"push \"65537\"";
+    "specialinvoke <java.math.BigInteger: void <init>(java.lang.String)>"
+    "push \"65537\""->"specialinvoke <java.math.BigInteger: void <init>(java.lang.String)>";
+    "fieldput <UnionBrowserRSAMDL: java.math.BigInteger e>"
+    "specialinvoke <java.math.BigInteger: void <init>(java.lang.String)>"->"fieldput <UnionBrowserRSAMDL: java.math.BigInteger e>";
+    "return"
+    "fieldput <UnionBrowserRSAMDL: java.math.BigInteger e>"->"return";
+}

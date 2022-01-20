@@ -1,0 +1,87 @@
+digraph "" {
+    "r0 := @this: typing"
+    "load.r r0"
+    "r0 := @this: typing"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "fieldget <typing: int a>"
+    "load.r r0"->"fieldget <typing: int a>";
+    "fieldget <typing: int a>"->"load.r r0";
+    "fieldget <typing: int b>"
+    "load.r r0"->"fieldget <typing: int b>";
+    "mul.i"
+    "fieldget <typing: int b>"->"mul.i";
+    "newarray"
+    "mul.i"->"newarray";
+    "fieldput <typing: int[] w>"
+    "newarray"->"fieldput <typing: int[] w>";
+    "fieldput <typing: int[] w>"->"load.r r0";
+    "new java.awt.image.DirectColorModel"
+    "load.r r0"->"new java.awt.image.DirectColorModel";
+    "dup1.r"
+    "new java.awt.image.DirectColorModel"->"dup1.r";
+    "push 32"
+    "dup1.r"->"push 32";
+    "push 16711680"
+    "push 32"->"push 16711680";
+    "push 65280"
+    "push 16711680"->"push 65280";
+    "push 255"
+    "push 65280"->"push 255";
+    "specialinvoke <java.awt.image.DirectColorModel: void <init>(int,int,int,int)>"
+    "push 255"->"specialinvoke <java.awt.image.DirectColorModel: void <init>(int,int,int,int)>";
+    "fieldput <typing: java.awt.image.DirectColorModel x>"
+    "specialinvoke <java.awt.image.DirectColorModel: void <init>(int,int,int,int)>"->"fieldput <typing: java.awt.image.DirectColorModel x>";
+    "fieldput <typing: java.awt.image.DirectColorModel x>"->"load.r r0";
+    "new java.awt.image.MemoryImageSource"
+    "load.r r0"->"new java.awt.image.MemoryImageSource";
+    "new java.awt.image.MemoryImageSource"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "load.r r0"->"fieldget <typing: int a>";
+    "fieldget <typing: int a>"->"load.r r0";
+    "load.r r0"->"fieldget <typing: int b>";
+    "fieldget <typing: int b>"->"load.r r0";
+    "fieldget <typing: int[] w>"
+    "load.r r0"->"fieldget <typing: int[] w>";
+    "push 0"
+    "fieldget <typing: int[] w>"->"push 0";
+    "push 0"->"load.r r0";
+    "load.r r0"->"fieldget <typing: int a>";
+    "specialinvoke <java.awt.image.MemoryImageSource: void <init>(int,int,int[],int,int)>"
+    "fieldget <typing: int a>"->"specialinvoke <java.awt.image.MemoryImageSource: void <init>(int,int,int[],int,int)>";
+    "fieldput <typing: java.awt.image.MemoryImageSource y>"
+    "specialinvoke <java.awt.image.MemoryImageSource: void <init>(int,int,int[],int,int)>"->"fieldput <typing: java.awt.image.MemoryImageSource y>";
+    "fieldput <typing: java.awt.image.MemoryImageSource y>"->"load.r r0";
+    "fieldget <typing: java.awt.image.MemoryImageSource y>"
+    "load.r r0"->"fieldget <typing: java.awt.image.MemoryImageSource y>";
+    "push 1"
+    "fieldget <typing: java.awt.image.MemoryImageSource y>"->"push 1";
+    "virtualinvoke <java.awt.image.MemoryImageSource: void setFullBufferUpdates(boolean)>"
+    "push 1"->"virtualinvoke <java.awt.image.MemoryImageSource: void setFullBufferUpdates(boolean)>";
+    "virtualinvoke <java.awt.image.MemoryImageSource: void setFullBufferUpdates(boolean)>"->"load.r r0";
+    "load.r r0"->"fieldget <typing: java.awt.image.MemoryImageSource y>";
+    "fieldget <typing: java.awt.image.MemoryImageSource y>"->"push 1";
+    "virtualinvoke <java.awt.image.MemoryImageSource: void setAnimated(boolean)>"
+    "push 1"->"virtualinvoke <java.awt.image.MemoryImageSource: void setAnimated(boolean)>";
+    "virtualinvoke <java.awt.image.MemoryImageSource: void setAnimated(boolean)>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <typing: java.awt.image.MemoryImageSource y>";
+    "virtualinvoke <java.awt.Component: java.awt.Image createImage(java.awt.image.ImageProducer)>"
+    "fieldget <typing: java.awt.image.MemoryImageSource y>"->"virtualinvoke <java.awt.Component: java.awt.Image createImage(java.awt.image.ImageProducer)>";
+    "fieldput <typing: java.awt.Image z>"
+    "virtualinvoke <java.awt.Component: java.awt.Image createImage(java.awt.image.ImageProducer)>"->"fieldput <typing: java.awt.Image z>";
+    "fieldput <typing: java.awt.Image z>"->"load.r r0";
+    "virtualinvoke <typing: void l()>"
+    "load.r r0"->"virtualinvoke <typing: void l()>";
+    "virtualinvoke <typing: void l()>"->"load.r r0";
+    "virtualinvoke <typing: void a()>"
+    "load.r r0"->"virtualinvoke <typing: void a()>";
+    "staticget <java.lang.System: java.io.PrintStream out>"
+    "virtualinvoke <typing: void a()>"->"staticget <java.lang.System: java.io.PrintStream out>";
+    "push \"Copyright(C) 2006 ha55ii, http://dan-ball.jp/\""
+    "staticget <java.lang.System: java.io.PrintStream out>"->"push \"Copyright(C) 2006 ha55ii, http://dan-ball.jp/\"";
+    "virtualinvoke <java.io.PrintStream: void println(java.lang.String)>"
+    "push \"Copyright(C) 2006 ha55ii, http://dan-ball.jp/\""->"virtualinvoke <java.io.PrintStream: void println(java.lang.String)>";
+    "return"
+    "virtualinvoke <java.io.PrintStream: void println(java.lang.String)>"->"return";
+}

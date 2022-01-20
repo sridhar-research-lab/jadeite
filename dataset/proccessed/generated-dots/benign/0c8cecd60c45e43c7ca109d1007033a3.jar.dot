@@ -1,0 +1,342 @@
+digraph "" {
+    "r0 := @this: ImageMap"
+    "load.r r0"
+    "r0 := @this: ImageMap"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "virtualinvoke <java.applet.Applet: java.net.URL getDocumentBase()>"
+    "load.r r0"->"virtualinvoke <java.applet.Applet: java.net.URL getDocumentBase()>";
+    "virtualinvoke <java.applet.Applet: java.net.URL getDocumentBase()>"->"load.r r0";
+    "push \"img\""
+    "load.r r0"->"push \"img\"";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"
+    "push \"img\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.awt.Image getImage(java.net.URL,java.lang.String)>"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"virtualinvoke <java.applet.Applet: java.awt.Image getImage(java.net.URL,java.lang.String)>";
+    "fieldput <ImageMap: java.awt.Image baseImage>"
+    "virtualinvoke <java.applet.Applet: java.awt.Image getImage(java.net.URL,java.lang.String)>"->"fieldput <ImageMap: java.awt.Image baseImage>";
+    "fieldput <ImageMap: java.awt.Image baseImage>"->"load.r r0";
+    "load.r r0"->"virtualinvoke <java.applet.Applet: java.net.URL getDocumentBase()>";
+    "virtualinvoke <java.net.URL: java.lang.String toString()>"
+    "virtualinvoke <java.applet.Applet: java.net.URL getDocumentBase()>"->"virtualinvoke <java.net.URL: java.lang.String toString()>";
+    "store.r r3"
+    "virtualinvoke <java.net.URL: java.lang.String toString()>"->"store.r r3";
+    "push 0"
+    "store.r r3"->"push 0";
+    "store.i i6"
+    "push 0"->"store.i i6";
+    "goto load.r r3"
+    "store.i i6"->"goto load.r r3";
+    "load.r r3"
+    "goto load.r r3"->"load.r r3";
+    "push 47"
+    "load.r r3"->"push 47";
+    "load.i i6"
+    "push 47"->"load.i i6";
+    "virtualinvoke <java.lang.String: int indexOf(int,int)>"
+    "load.i i6"->"virtualinvoke <java.lang.String: int indexOf(int,int)>";
+    "store.i r1"
+    "virtualinvoke <java.lang.String: int indexOf(int,int)>"->"store.i r1";
+    "load.i r1"
+    "store.i r1"->"load.i r1";
+    "push -1"
+    "load.i r1"->"push -1";
+    "ifcmpne.i load.i r1"
+    "push -1"->"ifcmpne.i load.i r1";
+    "new java.lang.StringBuffer"
+    "ifcmpne.i load.i r1"->"new java.lang.StringBuffer";
+    "dup1.r"
+    "new java.lang.StringBuffer"->"dup1.r";
+    "new java.lang.String"
+    "dup1.r"->"new java.lang.String";
+    "new java.lang.String"->"dup1.r";
+    "dup1.r"->"load.r r3";
+    "virtualinvoke <java.lang.String: char[] toCharArray()>"
+    "load.r r3"->"virtualinvoke <java.lang.String: char[] toCharArray()>";
+    "virtualinvoke <java.lang.String: char[] toCharArray()>"->"push 0";
+    "push 0"->"load.i i6";
+    "specialinvoke <java.lang.String: void <init>(char[],int,int)>"
+    "load.i i6"->"specialinvoke <java.lang.String: void <init>(char[],int,int)>";
+    "staticinvoke <java.lang.String: java.lang.String valueOf(java.lang.Object)>"
+    "specialinvoke <java.lang.String: void <init>(char[],int,int)>"->"staticinvoke <java.lang.String: java.lang.String valueOf(java.lang.Object)>";
+    "specialinvoke <java.lang.StringBuffer: void <init>(java.lang.String)>"
+    "staticinvoke <java.lang.String: java.lang.String valueOf(java.lang.Object)>"->"specialinvoke <java.lang.StringBuffer: void <init>(java.lang.String)>";
+    "specialinvoke <java.lang.StringBuffer: void <init>(java.lang.String)>"->"load.r r0";
+    "load.r r0"->"push \"img\"";
+    "push \"img\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>"
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>";
+    "store.r r1"
+    "virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>"->"store.r r1";
+    "staticget <java.lang.System: java.io.PrintStream out>"
+    "store.r r1"->"staticget <java.lang.System: java.io.PrintStream out>";
+    "staticget <java.lang.System: java.io.PrintStream out>"->"new java.lang.StringBuffer";
+    "new java.lang.StringBuffer"->"dup1.r";
+    "push \"full img url: \""
+    "dup1.r"->"push \"full img url: \"";
+    "push \"full img url: \""->"specialinvoke <java.lang.StringBuffer: void <init>(java.lang.String)>";
+    "load.r r1"
+    "specialinvoke <java.lang.StringBuffer: void <init>(java.lang.String)>"->"load.r r1";
+    "load.r r1"->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>";
+    "virtualinvoke <java.io.PrintStream: void println(java.lang.String)>"
+    "virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>"->"virtualinvoke <java.io.PrintStream: void println(java.lang.String)>";
+    "virtualinvoke <java.io.PrintStream: void println(java.lang.String)>"->"load.r r0";
+    "push \"Polymap Applet. Copyright \u00a9 1996 Cheong S Ang.\""
+    "load.r r0"->"push \"Polymap Applet. Copyright \u00a9 1996 Cheong S Ang.\"";
+    "virtualinvoke <java.applet.Applet: void showStatus(java.lang.String)>"
+    "push \"Polymap Applet. Copyright \u00a9 1996 Cheong S Ang.\""->"virtualinvoke <java.applet.Applet: void showStatus(java.lang.String)>";
+    "new java.net.URL"
+    "virtualinvoke <java.applet.Applet: void showStatus(java.lang.String)>"->"new java.net.URL";
+    "new java.net.URL"->"dup1.r";
+    "dup1.r"->"load.r r1";
+    "specialinvoke <java.net.URL: void <init>(java.lang.String)>"
+    "load.r r1"->"specialinvoke <java.net.URL: void <init>(java.lang.String)>";
+    "virtualinvoke <java.net.URL: java.io.InputStream openStream()>"
+    "specialinvoke <java.net.URL: void <init>(java.lang.String)>"->"virtualinvoke <java.net.URL: java.io.InputStream openStream()>";
+    "virtualinvoke <java.net.URL: java.io.InputStream openStream()>"->"store.r r3";
+    "push 1024"
+    "store.r r3"->"push 1024";
+    "newarray"
+    "push 1024"->"newarray";
+    "store.r i6"
+    "newarray"->"store.r i6";
+    "new java.io.ByteArrayOutputStream"
+    "store.r i6"->"new java.io.ByteArrayOutputStream";
+    "new java.io.ByteArrayOutputStream"->"store.r r1";
+    "store.r r1"->"load.r r1";
+    "specialinvoke <java.io.ByteArrayOutputStream: void <init>()>"
+    "load.r r1"->"specialinvoke <java.io.ByteArrayOutputStream: void <init>()>";
+    "specialinvoke <java.io.ByteArrayOutputStream: void <init>()>"->"load.r r3";
+    "load.r i6"
+    "load.r r3"->"load.r i6";
+    "load.r i6"->"push 0";
+    "push 0"->"push 1024";
+    "virtualinvoke <java.io.InputStream: int read(byte[],int,int)>"
+    "push 1024"->"virtualinvoke <java.io.InputStream: int read(byte[],int,int)>";
+    "store.i i9"
+    "virtualinvoke <java.io.InputStream: int read(byte[],int,int)>"->"store.i i9";
+    "store.i i9"->"load.r r1";
+    "load.r r1"->"load.r i6";
+    "load.r i6"->"push 0";
+    "load.i i9"
+    "push 0"->"load.i i9";
+    "virtualinvoke <java.io.ByteArrayOutputStream: void write(byte[],int,int)>"
+    "load.i i9"->"virtualinvoke <java.io.ByteArrayOutputStream: void write(byte[],int,int)>";
+    "goto load.i i9"
+    "virtualinvoke <java.io.ByteArrayOutputStream: void write(byte[],int,int)>"->"goto load.i i9";
+    "goto load.i i9"->"load.i i9";
+    "ifgt load.r r3"
+    "load.i i9"->"ifgt load.r r3";
+    "ifgt load.r r3"->"load.r r1";
+    "virtualinvoke <java.io.ByteArrayOutputStream: java.lang.String toString()>"
+    "load.r r1"->"virtualinvoke <java.io.ByteArrayOutputStream: java.lang.String toString()>";
+    "push \"PMAP1.0\""
+    "virtualinvoke <java.io.ByteArrayOutputStream: java.lang.String toString()>"->"push \"PMAP1.0\"";
+    "virtualinvoke <java.lang.String: int indexOf(java.lang.String)>"
+    "push \"PMAP1.0\""->"virtualinvoke <java.lang.String: int indexOf(java.lang.String)>";
+    "store.i r3"
+    "virtualinvoke <java.lang.String: int indexOf(java.lang.String)>"->"store.i r3";
+    "goto load.i r3"
+    "store.i r3"->"goto load.i r3";
+    "load.i r3"
+    "goto load.i r3"->"load.i r3";
+    "ifle return"
+    "load.i r3"->"ifle return";
+    "ifle return"->"load.r r0";
+    "load.r r0"->"new java.lang.String";
+    "new java.lang.String"->"load.r r1";
+    "virtualinvoke <java.io.ByteArrayOutputStream: byte[] toByteArray()>"
+    "load.r r1"->"virtualinvoke <java.io.ByteArrayOutputStream: byte[] toByteArray()>";
+    "virtualinvoke <java.io.ByteArrayOutputStream: byte[] toByteArray()>"->"store.r r1";
+    "store.r r1"->"load.r r1";
+    "load.r r1"->"push 0";
+    "push 0"->"load.i r3";
+    "push 20"
+    "load.i r3"->"push 20";
+    "specialinvoke <java.lang.String: void <init>(byte[],int,int,int)>"
+    "push 20"->"specialinvoke <java.lang.String: void <init>(byte[],int,int,int)>";
+    "specialinvoke <java.lang.String: void <init>(byte[],int,int,int)>"->"load.r r1";
+    "load.r r1"->"load.i r3";
+    "virtualinvoke <ImageMap: boolean DoPolymap(byte[],int)>"
+    "load.i r3"->"virtualinvoke <ImageMap: boolean DoPolymap(byte[],int)>";
+    "pop"
+    "virtualinvoke <ImageMap: boolean DoPolymap(byte[],int)>"->"pop";
+    "pop"->"load.r r0";
+    "fieldget <ImageMap: Polymap pm>"
+    "load.r r0"->"fieldget <ImageMap: Polymap pm>";
+    "fieldget <Polymap: int npobjs>"
+    "fieldget <ImageMap: Polymap pm>"->"fieldget <Polymap: int npobjs>";
+    "push 1"
+    "fieldget <Polymap: int npobjs>"->"push 1";
+    "sub.i"
+    "push 1"->"sub.i";
+    "sub.i"->"store.i r1";
+    "goto load.i r1"
+    "store.i r1"->"goto load.i r1";
+    "goto load.i r1"->"load.i r1";
+    "ifge load.r r0"
+    "load.i r1"->"ifge load.r r0";
+    "ifge load.r r0"->"load.r r0";
+    "push \"color\""
+    "load.r r0"->"push \"color\"";
+    "push \"color\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"store.r r1";
+    "store.r r1"->"load.r r0";
+    "new java.awt.Color"
+    "load.r r0"->"new java.awt.Color";
+    "new java.awt.Color"->"dup1.r";
+    "dup1.r"->"load.r r1";
+    "push 16"
+    "load.r r1"->"push 16";
+    "staticinvoke <java.lang.Integer: java.lang.Integer valueOf(java.lang.String,int)>"
+    "push 16"->"staticinvoke <java.lang.Integer: java.lang.Integer valueOf(java.lang.String,int)>";
+    "virtualinvoke <java.lang.Integer: int intValue()>"
+    "staticinvoke <java.lang.Integer: java.lang.Integer valueOf(java.lang.String,int)>"->"virtualinvoke <java.lang.Integer: int intValue()>";
+    "specialinvoke <java.awt.Color: void <init>(int)>"
+    "virtualinvoke <java.lang.Integer: int intValue()>"->"specialinvoke <java.awt.Color: void <init>(int)>";
+    "fieldput <ImageMap: java.awt.Color highlight_color>"
+    "specialinvoke <java.awt.Color: void <init>(int)>"->"fieldput <ImageMap: java.awt.Color highlight_color>";
+    "goto return"
+    "fieldput <ImageMap: java.awt.Color highlight_color>"->"goto return";
+    "return"
+    "goto return"->"return";
+    "specialinvoke <java.awt.Color: void <init>(int)>"->"store.r r1";
+    "store.r r1"->"load.r r0";
+    "staticget <java.awt.Color: java.awt.Color blue>"
+    "load.r r0"->"staticget <java.awt.Color: java.awt.Color blue>";
+    "staticget <java.awt.Color: java.awt.Color blue>"->"fieldput <ImageMap: java.awt.Color highlight_color>";
+    "fieldput <ImageMap: java.awt.Color highlight_color>"->"goto return";
+    "ifge load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <ImageMap: Polymap pm>";
+    "fieldget <Polymap: PolyObj[] pobj>"
+    "fieldget <ImageMap: Polymap pm>"->"fieldget <Polymap: PolyObj[] pobj>";
+    "fieldget <Polymap: PolyObj[] pobj>"->"load.i r1";
+    "arrayread.r"
+    "load.i r1"->"arrayread.r";
+    "fieldget <PolyObj: int nps>"
+    "arrayread.r"->"fieldget <PolyObj: int nps>";
+    "fieldget <PolyObj: int nps>"->"store.i r3";
+    "store.i r3"->"push 0";
+    "push 0"->"store.i i6";
+    "goto load.i i6"
+    "store.i i6"->"goto load.i i6";
+    "goto load.i i6"->"load.i i6";
+    "load.i i6"->"load.i r3";
+    "ifcmplt.i load.r r0"
+    "load.i r3"->"ifcmplt.i load.r r0";
+    "inc.i r1 -1"
+    "ifcmplt.i load.r r0"->"inc.i r1 -1";
+    "ifcmplt.i load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <ImageMap: Polymap pm>";
+    "fieldget <ImageMap: Polymap pm>"->"fieldget <Polymap: PolyObj[] pobj>";
+    "fieldget <Polymap: PolyObj[] pobj>"->"load.i r1";
+    "load.i r1"->"arrayread.r";
+    "fieldget <PolyObj: Poly[] p>"
+    "arrayread.r"->"fieldget <PolyObj: Poly[] p>";
+    "fieldget <PolyObj: Poly[] p>"->"load.i i6";
+    "load.i i6"->"arrayread.r";
+    "fieldget <Poly: int npts>"
+    "arrayread.r"->"fieldget <Poly: int npts>";
+    "fieldget <Poly: int npts>"->"store.i i9";
+    "store.i i9"->"load.i i9";
+    "load.i i9"->"newarray";
+    "store.r r62"
+    "newarray"->"store.r r62";
+    "store.r r62"->"load.i i9";
+    "load.i i9"->"newarray";
+    "store.r r63"
+    "newarray"->"store.r r63";
+    "store.r r63"->"push 0";
+    "store.i i14"
+    "push 0"->"store.i i14";
+    "goto load.i i14"
+    "store.i i14"->"goto load.i i14";
+    "load.i i14"
+    "goto load.i i14"->"load.i i14";
+    "load.i i14"->"load.i i9";
+    "ifcmplt.i load.r r62"
+    "load.i i9"->"ifcmplt.i load.r r62";
+    "ifcmplt.i load.r r62"->"load.r r0";
+    "load.r r0"->"fieldget <ImageMap: Polymap pm>";
+    "fieldget <ImageMap: Polymap pm>"->"fieldget <Polymap: PolyObj[] pobj>";
+    "fieldget <Polymap: PolyObj[] pobj>"->"load.i r1";
+    "load.i r1"->"arrayread.r";
+    "arrayread.r"->"fieldget <PolyObj: Poly[] p>";
+    "fieldget <PolyObj: Poly[] p>"->"load.i i6";
+    "load.i i6"->"arrayread.r";
+    "new java.awt.Polygon"
+    "arrayread.r"->"new java.awt.Polygon";
+    "new java.awt.Polygon"->"dup1.r";
+    "load.r r62"
+    "dup1.r"->"load.r r62";
+    "load.r r63"
+    "load.r r62"->"load.r r63";
+    "load.r r63"->"load.i i9";
+    "specialinvoke <java.awt.Polygon: void <init>(int[],int[],int)>"
+    "load.i i9"->"specialinvoke <java.awt.Polygon: void <init>(int[],int[],int)>";
+    "fieldput <Poly: java.awt.Polygon pol>"
+    "specialinvoke <java.awt.Polygon: void <init>(int[],int[],int)>"->"fieldput <Poly: java.awt.Polygon pol>";
+    "inc.i i6 1"
+    "fieldput <Poly: java.awt.Polygon pol>"->"inc.i i6 1";
+    "ifcmplt.i load.r r62"->"load.r r62";
+    "load.r r62"->"load.i i14";
+    "load.i i14"->"load.r r0";
+    "load.r r0"->"fieldget <ImageMap: Polymap pm>";
+    "fieldget <ImageMap: Polymap pm>"->"fieldget <Polymap: PolyObj[] pobj>";
+    "fieldget <Polymap: PolyObj[] pobj>"->"load.i r1";
+    "load.i r1"->"arrayread.r";
+    "arrayread.r"->"fieldget <PolyObj: Poly[] p>";
+    "fieldget <PolyObj: Poly[] p>"->"load.i i6";
+    "load.i i6"->"arrayread.r";
+    "fieldget <Poly: Point[] pt>"
+    "arrayread.r"->"fieldget <Poly: Point[] pt>";
+    "fieldget <Poly: Point[] pt>"->"load.i i14";
+    "load.i i14"->"arrayread.r";
+    "fieldget <Point: int x>"
+    "arrayread.r"->"fieldget <Point: int x>";
+    "arraywrite.i"
+    "fieldget <Point: int x>"->"arraywrite.i";
+    "arraywrite.i"->"load.r r63";
+    "load.r r63"->"load.i i14";
+    "load.i i14"->"load.r r0";
+    "load.r r0"->"fieldget <ImageMap: Polymap pm>";
+    "fieldget <ImageMap: Polymap pm>"->"fieldget <Polymap: PolyObj[] pobj>";
+    "fieldget <Polymap: PolyObj[] pobj>"->"load.i r1";
+    "load.i r1"->"arrayread.r";
+    "arrayread.r"->"fieldget <PolyObj: Poly[] p>";
+    "fieldget <PolyObj: Poly[] p>"->"load.i i6";
+    "load.i i6"->"arrayread.r";
+    "arrayread.r"->"fieldget <Poly: Point[] pt>";
+    "fieldget <Poly: Point[] pt>"->"load.i i14";
+    "load.i i14"->"arrayread.r";
+    "fieldget <Point: int y>"
+    "arrayread.r"->"fieldget <Point: int y>";
+    "fieldget <Point: int y>"->"arraywrite.i";
+    "inc.i i14 1"
+    "arraywrite.i"->"inc.i i14 1";
+    "virtualinvoke <java.lang.Throwable: void printStackTrace()>"
+    "virtualinvoke <java.lang.String: int indexOf(java.lang.String)>"->"virtualinvoke <java.lang.Throwable: void printStackTrace()>";
+    "virtualinvoke <java.lang.Throwable: void printStackTrace()>"->"return";
+    "ifgt load.r r3"->"load.r r3";
+    "load.r r3"->"load.r i6";
+    "load.r i6"->"push 0";
+    "push 0"->"push 1024";
+    "push 1024"->"virtualinvoke <java.io.InputStream: int read(byte[],int,int)>";
+    "virtualinvoke <java.io.InputStream: int read(byte[],int,int)>"->"store.i i9";
+    "store.i i9"->"load.i i9";
+    "ifle load.r r1"
+    "load.i i9"->"ifle load.r r1";
+    "ifle load.r r1"->"load.r r1";
+    "load.r r1"->"load.r i6";
+    "load.r i6"->"push 0";
+    "push 0"->"load.i i9";
+    "load.i i9"->"virtualinvoke <java.io.ByteArrayOutputStream: void write(byte[],int,int)>";
+    "ifcmpne.i load.i r1"->"load.i r1";
+    "load.i r1"->"push 1";
+    "add.i"
+    "push 1"->"add.i";
+    "add.i"->"store.i i6";
+}

@@ -1,0 +1,233 @@
+digraph "" {
+    "r0 := @this: ZooSlider"
+    "load.r r0"
+    "r0 := @this: ZooSlider"->"load.r r0";
+    "push \"imageWidth\""
+    "load.r r0"->"push \"imageWidth\"";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"
+    "push \"imageWidth\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "store.r r24"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"store.r r24";
+    "load.r r24"
+    "store.r r24"->"load.r r24";
+    "ifnull load.r r0"
+    "load.r r24"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r24";
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"
+    "load.r r24"->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>";
+    "push 1"
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"->"push 1";
+    "add.i"
+    "push 1"->"add.i";
+    "fieldput <ZooSlider: int imageWidth>"
+    "add.i"->"fieldput <ZooSlider: int imageWidth>";
+    "fieldput <ZooSlider: int imageWidth>"->"load.r r0";
+    "push \"imageHeight\""
+    "load.r r0"->"push \"imageHeight\"";
+    "push \"imageHeight\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"store.r r24";
+    "store.r r24"->"load.r r24";
+    "load.r r24"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r24";
+    "load.r r24"->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>";
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"->"push 1";
+    "push 1"->"add.i";
+    "fieldput <ZooSlider: int imageHeight>"
+    "add.i"->"fieldput <ZooSlider: int imageHeight>";
+    "fieldput <ZooSlider: int imageHeight>"->"load.r r0";
+    "push \"titleImage\""
+    "load.r r0"->"push \"titleImage\"";
+    "push \"titleImage\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"store.r r24";
+    "store.r r24"->"load.r r24";
+    "load.r r24"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r24";
+    "fieldput <ZooSlider: java.lang.String titleImageName>"
+    "load.r r24"->"fieldput <ZooSlider: java.lang.String titleImageName>";
+    "fieldput <ZooSlider: java.lang.String titleImageName>"->"load.r r0";
+    "new java.awt.Choice"
+    "load.r r0"->"new java.awt.Choice";
+    "dup1.r"
+    "new java.awt.Choice"->"dup1.r";
+    "specialinvoke <java.awt.Choice: void <init>()>"
+    "dup1.r"->"specialinvoke <java.awt.Choice: void <init>()>";
+    "fieldput <ZooSlider: java.awt.Choice imageList>"
+    "specialinvoke <java.awt.Choice: void <init>()>"->"fieldput <ZooSlider: java.awt.Choice imageList>";
+    "fieldput <ZooSlider: java.awt.Choice imageList>"->"load.r r0";
+    "new GridImageInfo"
+    "load.r r0"->"new GridImageInfo";
+    "new GridImageInfo"->"dup1.r";
+    "specialinvoke <GridImageInfo: void <init>()>"
+    "dup1.r"->"specialinvoke <GridImageInfo: void <init>()>";
+    "fieldput <ZooSlider: GridImageInfo imgInfo>"
+    "specialinvoke <GridImageInfo: void <init>()>"->"fieldput <ZooSlider: GridImageInfo imgInfo>";
+    "push \"\""
+    "fieldput <ZooSlider: GridImageInfo imgInfo>"->"push \"\"";
+    "push \"\""->"store.r r24";
+    "push 0"
+    "store.r r24"->"push 0";
+    "store.i i8"
+    "push 0"->"store.i i8";
+    "goto load.r r24"
+    "store.i i8"->"goto load.r r24";
+    "goto load.r r24"->"load.r r24";
+    "ifnonnull load.r r0"
+    "load.r r24"->"ifnonnull load.r r0";
+    "ifnonnull load.r r0"->"load.r r0";
+    "fieldget <ZooSlider: GridImageInfo imgInfo>"
+    "load.r r0"->"fieldget <ZooSlider: GridImageInfo imgInfo>";
+    "fieldget <ZooSlider: GridImageInfo imgInfo>"->"load.r r0";
+    "load.r r0"->"fieldget <ZooSlider: GridImageInfo imgInfo>";
+    "fieldget <ZooSlider: GridImageInfo imgInfo>"->"push 0";
+    "virtualinvoke <GridImageInfo: java.lang.String getImageName(int)>"
+    "push 0"->"virtualinvoke <GridImageInfo: java.lang.String getImageName(int)>";
+    "fieldput <GridImageInfo: java.lang.String currentName>"
+    "virtualinvoke <GridImageInfo: java.lang.String getImageName(int)>"->"fieldput <GridImageInfo: java.lang.String currentName>";
+    "fieldput <GridImageInfo: java.lang.String currentName>"->"load.r r0";
+    "load.r r0"->"fieldget <ZooSlider: GridImageInfo imgInfo>";
+    "fieldget <ZooSlider: GridImageInfo imgInfo>"->"load.r r0";
+    "load.r r0"->"fieldget <ZooSlider: GridImageInfo imgInfo>";
+    "fieldget <ZooSlider: GridImageInfo imgInfo>"->"push 0";
+    "virtualinvoke <GridImageInfo: java.lang.String getImageDesc(int)>"
+    "push 0"->"virtualinvoke <GridImageInfo: java.lang.String getImageDesc(int)>";
+    "fieldput <GridImageInfo: java.lang.String currentDesc>"
+    "virtualinvoke <GridImageInfo: java.lang.String getImageDesc(int)>"->"fieldput <GridImageInfo: java.lang.String currentDesc>";
+    "fieldput <GridImageInfo: java.lang.String currentDesc>"->"load.r r0";
+    "push \"gridRows\""
+    "load.r r0"->"push \"gridRows\"";
+    "push \"gridRows\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"store.r r24";
+    "store.r r24"->"load.r r24";
+    "load.r r24"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r24";
+    "load.r r24"->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>";
+    "fieldput <ZooSlider: int gridRows>"
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"->"fieldput <ZooSlider: int gridRows>";
+    "fieldput <ZooSlider: int gridRows>"->"load.r r0";
+    "push \"minGridRows\""
+    "load.r r0"->"push \"minGridRows\"";
+    "push \"minGridRows\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"store.r r24";
+    "store.r r24"->"load.r r24";
+    "load.r r24"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r24";
+    "load.r r24"->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>";
+    "fieldput <ZooSlider: int minGridRows>"
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"->"fieldput <ZooSlider: int minGridRows>";
+    "fieldput <ZooSlider: int minGridRows>"->"load.r r0";
+    "push \"maxGridRows\""
+    "load.r r0"->"push \"maxGridRows\"";
+    "push \"maxGridRows\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"store.r r24";
+    "store.r r24"->"load.r r24";
+    "load.r r24"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r24";
+    "load.r r24"->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>";
+    "fieldput <ZooSlider: int maxGridRows>"
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"->"fieldput <ZooSlider: int maxGridRows>";
+    "fieldput <ZooSlider: int maxGridRows>"->"load.r r0";
+    "load.r r0"->"new java.awt.Choice";
+    "new java.awt.Choice"->"dup1.r";
+    "dup1.r"->"specialinvoke <java.awt.Choice: void <init>()>";
+    "fieldput <ZooSlider: java.awt.Choice gridList>"
+    "specialinvoke <java.awt.Choice: void <init>()>"->"fieldput <ZooSlider: java.awt.Choice gridList>";
+    "fieldput <ZooSlider: java.awt.Choice gridList>"->"load.r r0";
+    "fieldget <ZooSlider: int minGridRows>"
+    "load.r r0"->"fieldget <ZooSlider: int minGridRows>";
+    "store.i r24"
+    "fieldget <ZooSlider: int minGridRows>"->"store.i r24";
+    "goto load.i r24"
+    "store.i r24"->"goto load.i r24";
+    "load.i r24"
+    "goto load.i r24"->"load.i r24";
+    "load.i r24"->"load.r r0";
+    "fieldget <ZooSlider: int maxGridRows>"
+    "load.r r0"->"fieldget <ZooSlider: int maxGridRows>";
+    "ifcmple.i load.r r0"
+    "fieldget <ZooSlider: int maxGridRows>"->"ifcmple.i load.r r0";
+    "ifcmple.i load.r r0"->"load.r r0";
+    "virtualinvoke <ZooSlider: void loadUtilImages()>"
+    "load.r r0"->"virtualinvoke <ZooSlider: void loadUtilImages()>";
+    "virtualinvoke <ZooSlider: void loadUtilImages()>"->"load.r r0";
+    "virtualinvoke <ZooSlider: void initialize()>"
+    "load.r r0"->"virtualinvoke <ZooSlider: void initialize()>";
+    "return"
+    "virtualinvoke <ZooSlider: void initialize()>"->"return";
+    "ifcmple.i load.r r0"->"load.r r0";
+    "fieldget <ZooSlider: java.awt.Choice gridList>"
+    "load.r r0"->"fieldget <ZooSlider: java.awt.Choice gridList>";
+    "new java.lang.StringBuffer"
+    "fieldget <ZooSlider: java.awt.Choice gridList>"->"new java.lang.StringBuffer";
+    "new java.lang.StringBuffer"->"dup1.r";
+    "specialinvoke <java.lang.StringBuffer: void <init>()>"
+    "dup1.r"->"specialinvoke <java.lang.StringBuffer: void <init>()>";
+    "specialinvoke <java.lang.StringBuffer: void <init>()>"->"load.i r24";
+    "staticinvoke <java.lang.String: java.lang.String valueOf(int)>"
+    "load.i r24"->"staticinvoke <java.lang.String: java.lang.String valueOf(int)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"
+    "staticinvoke <java.lang.String: java.lang.String valueOf(int)>"->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "push \" x \""
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"push \" x \"";
+    "push \" x \""->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"load.i r24";
+    "load.i r24"->"staticinvoke <java.lang.String: java.lang.String valueOf(int)>";
+    "staticinvoke <java.lang.String: java.lang.String valueOf(int)>"->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>"
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>";
+    "virtualinvoke <java.awt.Choice: void addItem(java.lang.String)>"
+    "virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>"->"virtualinvoke <java.awt.Choice: void addItem(java.lang.String)>";
+    "inc.i r24 1"
+    "virtualinvoke <java.awt.Choice: void addItem(java.lang.String)>"->"inc.i r24 1";
+    "ifnonnull load.r r0"->"load.r r0";
+    "load.r r0"->"new java.lang.StringBuffer";
+    "new java.lang.StringBuffer"->"dup1.r";
+    "dup1.r"->"specialinvoke <java.lang.StringBuffer: void <init>()>";
+    "push \"imageName\""
+    "specialinvoke <java.lang.StringBuffer: void <init>()>"->"push \"imageName\"";
+    "push \"imageName\""->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "load.i i8"
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"load.i i8";
+    "load.i i8"->"staticinvoke <java.lang.String: java.lang.String valueOf(int)>";
+    "staticinvoke <java.lang.String: java.lang.String valueOf(int)>"->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>"->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"store.r r24";
+    "store.r r24"->"load.r r24";
+    "load.r r24"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r r0";
+    "load.r r0"->"new java.lang.StringBuffer";
+    "new java.lang.StringBuffer"->"dup1.r";
+    "dup1.r"->"specialinvoke <java.lang.StringBuffer: void <init>()>";
+    "push \"imageDesc\""
+    "specialinvoke <java.lang.StringBuffer: void <init>()>"->"push \"imageDesc\"";
+    "push \"imageDesc\""->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"load.i i8";
+    "load.i i8"->"staticinvoke <java.lang.String: java.lang.String valueOf(int)>";
+    "staticinvoke <java.lang.String: java.lang.String valueOf(int)>"->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>"->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "store.r r29"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"store.r r29";
+    "load.r r29"
+    "store.r r29"->"load.r r29";
+    "load.r r29"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r r0";
+    "fieldget <ZooSlider: java.awt.Choice imageList>"
+    "load.r r0"->"fieldget <ZooSlider: java.awt.Choice imageList>";
+    "fieldget <ZooSlider: java.awt.Choice imageList>"->"load.r r29";
+    "load.r r29"->"virtualinvoke <java.awt.Choice: void addItem(java.lang.String)>";
+    "virtualinvoke <java.awt.Choice: void addItem(java.lang.String)>"->"load.r r0";
+    "load.r r0"->"fieldget <ZooSlider: GridImageInfo imgInfo>";
+    "fieldget <ZooSlider: GridImageInfo imgInfo>"->"load.r r24";
+    "load.r r24"->"load.r r29";
+    "virtualinvoke <GridImageInfo: void addInfo(java.lang.String,java.lang.String)>"
+    "load.r r29"->"virtualinvoke <GridImageInfo: void addInfo(java.lang.String,java.lang.String)>";
+    "inc.i i8 1"
+    "virtualinvoke <GridImageInfo: void addInfo(java.lang.String,java.lang.String)>"->"inc.i i8 1";
+}

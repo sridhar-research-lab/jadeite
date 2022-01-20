@@ -1,0 +1,103 @@
+digraph "" {
+    "r0 := @this: MdbgHWIme"
+    "load.r r0"
+    "r0 := @this: MdbgHWIme"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "staticinvoke <netscape.javascript.JSObject: netscape.javascript.JSObject getWindow(java.applet.Applet)>"
+    "load.r r0"->"staticinvoke <netscape.javascript.JSObject: netscape.javascript.JSObject getWindow(java.applet.Applet)>";
+    "fieldput <MdbgHWIme: netscape.javascript.JSObject windowJSObject>"
+    "staticinvoke <netscape.javascript.JSObject: netscape.javascript.JSObject getWindow(java.applet.Applet)>"->"fieldput <MdbgHWIme: netscape.javascript.JSObject windowJSObject>";
+    "fieldput <MdbgHWIme: netscape.javascript.JSObject windowJSObject>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "push \"charSelectedJSEventHandler\""
+    "load.r r0"->"push \"charSelectedJSEventHandler\"";
+    "virtualinvoke <MdbgHWIme: java.lang.String getParameter(java.lang.String)>"
+    "push \"charSelectedJSEventHandler\""->"virtualinvoke <MdbgHWIme: java.lang.String getParameter(java.lang.String)>";
+    "fieldput <MdbgHWIme: java.lang.String charSelectedJSEventHandler>"
+    "virtualinvoke <MdbgHWIme: java.lang.String getParameter(java.lang.String)>"->"fieldput <MdbgHWIme: java.lang.String charSelectedJSEventHandler>";
+    "staticinvoke <kiang.chinese.font.ChineseFontFinder: java.awt.Font getChineseFont()>"
+    "fieldput <MdbgHWIme: java.lang.String charSelectedJSEventHandler>"->"staticinvoke <kiang.chinese.font.ChineseFontFinder: java.awt.Font getChineseFont()>";
+    "store.r r1"
+    "staticinvoke <kiang.chinese.font.ChineseFontFinder: java.awt.Font getChineseFont()>"->"store.r r1";
+    "store.r r1"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r1"
+    "load.r r0"->"load.r r1";
+    "specialinvoke <MdbgHWIme: hanzilookup.HanziLookup buildLookupPanel(java.awt.Font)>"
+    "load.r r1"->"specialinvoke <MdbgHWIme: hanzilookup.HanziLookup buildLookupPanel(java.awt.Font)>";
+    "fieldput <MdbgHWIme: hanzilookup.HanziLookup lookupPanel>"
+    "specialinvoke <MdbgHWIme: hanzilookup.HanziLookup buildLookupPanel(java.awt.Font)>"->"fieldput <MdbgHWIme: hanzilookup.HanziLookup lookupPanel>";
+    "fieldput <MdbgHWIme: hanzilookup.HanziLookup lookupPanel>"->"load.r r1";
+    "ifnull load.r r0"
+    "load.r r1"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r r1";
+    "staticinvoke <kiang.chinese.font.ChineseFontFinder: boolean isSimplifiedFont(java.awt.Font)>"
+    "load.r r1"->"staticinvoke <kiang.chinese.font.ChineseFontFinder: boolean isSimplifiedFont(java.awt.Font)>";
+    "store.b z1"
+    "staticinvoke <kiang.chinese.font.ChineseFontFinder: boolean isSimplifiedFont(java.awt.Font)>"->"store.b z1";
+    "store.b z1"->"load.r r1";
+    "staticinvoke <kiang.chinese.font.ChineseFontFinder: boolean isTraditionalFont(java.awt.Font)>"
+    "load.r r1"->"staticinvoke <kiang.chinese.font.ChineseFontFinder: boolean isTraditionalFont(java.awt.Font)>";
+    "store.b r1"
+    "staticinvoke <kiang.chinese.font.ChineseFontFinder: boolean isTraditionalFont(java.awt.Font)>"->"store.b r1";
+    "load.b z1"
+    "store.b r1"->"load.b z1";
+    "ifeq load.b r1"
+    "load.b z1"->"ifeq load.b r1";
+    "load.b r1"
+    "ifeq load.b r1"->"load.b r1";
+    "ifne load.b r1"
+    "load.b r1"->"ifne load.b r1";
+    "ifne load.b r1"->"load.r r0";
+    "fieldget <MdbgHWIme: hanzilookup.HanziLookup lookupPanel>"
+    "load.r r0"->"fieldget <MdbgHWIme: hanzilookup.HanziLookup lookupPanel>";
+    "push 1"
+    "fieldget <MdbgHWIme: hanzilookup.HanziLookup lookupPanel>"->"push 1";
+    "virtualinvoke <hanzilookup.HanziLookup: void setSearchType(int)>"
+    "push 1"->"virtualinvoke <hanzilookup.HanziLookup: void setSearchType(int)>";
+    "goto load.r r0"
+    "virtualinvoke <hanzilookup.HanziLookup: void setSearchType(int)>"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <MdbgHWIme: hanzilookup.HanziLookup lookupPanel>";
+    "push 20"
+    "fieldget <MdbgHWIme: hanzilookup.HanziLookup lookupPanel>"->"push 20";
+    "virtualinvoke <hanzilookup.HanziLookup: void setNumResults(int)>"
+    "push 20"->"virtualinvoke <hanzilookup.HanziLookup: void setNumResults(int)>";
+    "virtualinvoke <hanzilookup.HanziLookup: void setNumResults(int)>"->"load.r r0";
+    "virtualinvoke <MdbgHWIme: java.awt.Container getContentPane()>"
+    "load.r r0"->"virtualinvoke <MdbgHWIme: java.awt.Container getContentPane()>";
+    "dup1.r"
+    "virtualinvoke <MdbgHWIme: java.awt.Container getContentPane()>"->"dup1.r";
+    "new java.awt.BorderLayout"
+    "dup1.r"->"new java.awt.BorderLayout";
+    "new java.awt.BorderLayout"->"dup1.r";
+    "specialinvoke <java.awt.BorderLayout: void <init>()>"
+    "dup1.r"->"specialinvoke <java.awt.BorderLayout: void <init>()>";
+    "virtualinvoke <java.awt.Container: void setLayout(java.awt.LayoutManager)>"
+    "specialinvoke <java.awt.BorderLayout: void <init>()>"->"virtualinvoke <java.awt.Container: void setLayout(java.awt.LayoutManager)>";
+    "virtualinvoke <java.awt.Container: void setLayout(java.awt.LayoutManager)>"->"load.r r0";
+    "load.r r0"->"fieldget <MdbgHWIme: hanzilookup.HanziLookup lookupPanel>";
+    "push \"Center\""
+    "fieldget <MdbgHWIme: hanzilookup.HanziLookup lookupPanel>"->"push \"Center\"";
+    "virtualinvoke <java.awt.Container: void add(java.awt.Component,java.lang.Object)>"
+    "push \"Center\""->"virtualinvoke <java.awt.Container: void add(java.awt.Component,java.lang.Object)>";
+    "virtualinvoke <java.awt.Container: void add(java.awt.Component,java.lang.Object)>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "specialinvoke <MdbgHWIme: javax.swing.JMenuBar buildMenuBar()>"
+    "load.r r0"->"specialinvoke <MdbgHWIme: javax.swing.JMenuBar buildMenuBar()>";
+    "virtualinvoke <MdbgHWIme: void setJMenuBar(javax.swing.JMenuBar)>"
+    "specialinvoke <MdbgHWIme: javax.swing.JMenuBar buildMenuBar()>"->"virtualinvoke <MdbgHWIme: void setJMenuBar(javax.swing.JMenuBar)>";
+    "return"
+    "virtualinvoke <MdbgHWIme: void setJMenuBar(javax.swing.JMenuBar)>"->"return";
+    "ifne load.b r1"->"load.b r1";
+    "ifeq load.r r0"
+    "load.b r1"->"ifeq load.r r0";
+    "ifeq load.r r0"->"load.b z1";
+    "ifne load.r r0"
+    "load.b z1"->"ifne load.r r0";
+    "ifne load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <MdbgHWIme: hanzilookup.HanziLookup lookupPanel>";
+    "push 2"
+    "fieldget <MdbgHWIme: hanzilookup.HanziLookup lookupPanel>"->"push 2";
+    "push 2"->"virtualinvoke <hanzilookup.HanziLookup: void setSearchType(int)>";
+}

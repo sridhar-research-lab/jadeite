@@ -1,0 +1,37 @@
+digraph "" {
+    "r0 := @this: Mondrian"
+    "load.r r0"
+    "r0 := @this: Mondrian"->"load.r r0";
+    "new java.lang.Thread"
+    "load.r r0"->"new java.lang.Thread";
+    "dup1.r"
+    "new java.lang.Thread"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "specialinvoke <java.lang.Thread: void <init>(java.lang.Runnable)>"
+    "load.r r0"->"specialinvoke <java.lang.Thread: void <init>(java.lang.Runnable)>";
+    "fieldput <Mondrian: java.lang.Thread fadeno>"
+    "specialinvoke <java.lang.Thread: void <init>(java.lang.Runnable)>"->"fieldput <Mondrian: java.lang.Thread fadeno>";
+    "fieldput <Mondrian: java.lang.Thread fadeno>"->"load.r r0";
+    "fieldget <Mondrian: java.lang.Thread fadeno>"
+    "load.r r0"->"fieldget <Mondrian: java.lang.Thread fadeno>";
+    "virtualinvoke <java.lang.Thread: void start()>"
+    "fieldget <Mondrian: java.lang.Thread fadeno>"->"virtualinvoke <java.lang.Thread: void start()>";
+    "virtualinvoke <java.lang.Thread: void start()>"->"load.r r0";
+    "virtualinvoke <java.awt.Component: java.awt.Dimension size()>"
+    "load.r r0"->"virtualinvoke <java.awt.Component: java.awt.Dimension size()>";
+    "fieldget <java.awt.Dimension: int width>"
+    "virtualinvoke <java.awt.Component: java.awt.Dimension size()>"->"fieldget <java.awt.Dimension: int width>";
+    "staticput <Mondrian: int maks_x>"
+    "fieldget <java.awt.Dimension: int width>"->"staticput <Mondrian: int maks_x>";
+    "staticput <Mondrian: int maks_x>"->"load.r r0";
+    "load.r r0"->"virtualinvoke <java.awt.Component: java.awt.Dimension size()>";
+    "fieldget <java.awt.Dimension: int height>"
+    "virtualinvoke <java.awt.Component: java.awt.Dimension size()>"->"fieldget <java.awt.Dimension: int height>";
+    "staticput <Mondrian: int maks_y>"
+    "fieldget <java.awt.Dimension: int height>"->"staticput <Mondrian: int maks_y>";
+    "staticput <Mondrian: int maks_y>"->"load.r r0";
+    "virtualinvoke <java.awt.Component: void repaint()>"
+    "load.r r0"->"virtualinvoke <java.awt.Component: void repaint()>";
+    "return"
+    "virtualinvoke <java.awt.Component: void repaint()>"->"return";
+}

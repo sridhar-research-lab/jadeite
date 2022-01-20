@@ -1,0 +1,550 @@
+digraph "" {
+    "r0 := @this: PGC"
+    "load.r r0"
+    "r0 := @this: PGC"->"load.r r0";
+    "virtualinvoke <PGC: void MainFrameDestroy()>"
+    "load.r r0"->"virtualinvoke <PGC: void MainFrameDestroy()>";
+    "virtualinvoke <PGC: void MainFrameDestroy()>"->"load.r r0";
+    "virtualinvoke <PGC: PGC_Eval GetEval()>"
+    "load.r r0"->"virtualinvoke <PGC: PGC_Eval GetEval()>";
+    "store.r r1"
+    "virtualinvoke <PGC: PGC_Eval GetEval()>"->"store.r r1";
+    "store.r r1"->"load.r r0";
+    "push \"enable_trace\""
+    "load.r r0"->"push \"enable_trace\"";
+    "virtualinvoke <PGC: java.lang.String getParameter(java.lang.String)>"
+    "push \"enable_trace\""->"virtualinvoke <PGC: java.lang.String getParameter(java.lang.String)>";
+    "store.r r50"
+    "virtualinvoke <PGC: java.lang.String getParameter(java.lang.String)>"->"store.r r50";
+    "load.r r50"
+    "store.r r50"->"load.r r50";
+    "ifnull load.r r0"
+    "load.r r50"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r r50";
+    "staticinvoke <PGC_Utility: int IValue(java.lang.String)>"
+    "load.r r50"->"staticinvoke <PGC_Utility: int IValue(java.lang.String)>";
+    "ifne push 1"
+    "staticinvoke <PGC_Utility: int IValue(java.lang.String)>"->"ifne push 1";
+    "push 0"
+    "ifne push 1"->"push 0";
+    "store.b r50"
+    "push 0"->"store.b r50";
+    "goto load.b r50"
+    "store.b r50"->"goto load.b r50";
+    "load.b r50"
+    "goto load.b r50"->"load.b r50";
+    "staticput <PGC: boolean option_enable_trace>"
+    "load.b r50"->"staticput <PGC: boolean option_enable_trace>";
+    "staticput <PGC: boolean option_enable_trace>"->"load.r r0";
+    "push \"launch_button\""
+    "load.r r0"->"push \"launch_button\"";
+    "push \"launch_button\""->"virtualinvoke <PGC: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <PGC: java.lang.String getParameter(java.lang.String)>"->"store.r r50";
+    "store.r r50"->"load.r r50";
+    "load.r r50"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r r0";
+    "new java.lang.String"
+    "load.r r0"->"new java.lang.String";
+    "dup1.r"
+    "new java.lang.String"->"dup1.r";
+    "dup1.r"->"load.r r50";
+    "specialinvoke <java.lang.String: void <init>(java.lang.String)>"
+    "load.r r50"->"specialinvoke <java.lang.String: void <init>(java.lang.String)>";
+    "fieldput <PGC: java.lang.String option_launch_button>"
+    "specialinvoke <java.lang.String: void <init>(java.lang.String)>"->"fieldput <PGC: java.lang.String option_launch_button>";
+    "fieldput <PGC: java.lang.String option_launch_button>"->"load.r r0";
+    "fieldget <PGC: java.lang.String option_launch_button>"
+    "load.r r0"->"fieldget <PGC: java.lang.String option_launch_button>";
+    "ifnull push 0"
+    "fieldget <PGC: java.lang.String option_launch_button>"->"ifnull push 0";
+    "ifnull push 0"->"load.r r0";
+    "load.r r0"->"fieldget <PGC: java.lang.String option_launch_button>";
+    "virtualinvoke <java.lang.String: int length()>"
+    "fieldget <PGC: java.lang.String option_launch_button>"->"virtualinvoke <java.lang.String: int length()>";
+    "ifgt push 1"
+    "virtualinvoke <java.lang.String: int length()>"->"ifgt push 1";
+    "ifgt push 1"->"push 0";
+    "push 0"->"store.b r50";
+    "goto load.r r0"
+    "store.b r50"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "load.r r0"->"load.b r50";
+    "fieldput <PGC: boolean launch_mode>"
+    "load.b r50"->"fieldput <PGC: boolean launch_mode>";
+    "fieldput <PGC: boolean launch_mode>"->"load.r r0";
+    "push \"launch_size\""
+    "load.r r0"->"push \"launch_size\"";
+    "push \"launch_size\""->"virtualinvoke <PGC: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <PGC: java.lang.String getParameter(java.lang.String)>"->"store.r r50";
+    "store.r r50"->"load.r r50";
+    "load.r r50"->"ifnull load.r r0";
+    "load.r r1"
+    "ifnull load.r r0"->"load.r r1";
+    "load.r r1"->"load.r r50";
+    "virtualinvoke <PGC_Eval: void Evaluate(java.lang.String)>"
+    "load.r r50"->"virtualinvoke <PGC_Eval: void Evaluate(java.lang.String)>";
+    "virtualinvoke <PGC_Eval: void Evaluate(java.lang.String)>"->"load.r r1";
+    "fieldget <PGC_Eval: Complex value>"
+    "load.r r1"->"fieldget <PGC_Eval: Complex value>";
+    "fieldget <PGC_Eval: Complex value>"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r1";
+    "load.r r1"->"fieldget <PGC_Eval: Complex value>";
+    "fieldget <Complex: double re>"
+    "fieldget <PGC_Eval: Complex value>"->"fieldget <Complex: double re>";
+    "d2i"
+    "fieldget <Complex: double re>"->"d2i";
+    "fieldput <PGC: int option_launch_size_x>"
+    "d2i"->"fieldput <PGC: int option_launch_size_x>";
+    "fieldput <PGC: int option_launch_size_x>"->"load.r r0";
+    "load.r r0"->"load.r r1";
+    "load.r r1"->"fieldget <PGC_Eval: Complex value>";
+    "fieldget <Complex: double im>"
+    "fieldget <PGC_Eval: Complex value>"->"fieldget <Complex: double im>";
+    "fieldget <Complex: double im>"->"d2i";
+    "fieldput <PGC: int option_launch_size_y>"
+    "d2i"->"fieldput <PGC: int option_launch_size_y>";
+    "fieldput <PGC: int option_launch_size_y>"->"load.r r0";
+    "push \"background_image\""
+    "load.r r0"->"push \"background_image\"";
+    "push \"background_image\""->"virtualinvoke <PGC: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <PGC: java.lang.String getParameter(java.lang.String)>"->"store.r r50";
+    "store.r r50"->"load.r r50";
+    "load.r r50"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r r0";
+    "load.r r0"->"new java.lang.String";
+    "new java.lang.String"->"dup1.r";
+    "dup1.r"->"load.r r50";
+    "load.r r50"->"specialinvoke <java.lang.String: void <init>(java.lang.String)>";
+    "fieldput <PGC: java.lang.String option_background_image>"
+    "specialinvoke <java.lang.String: void <init>(java.lang.String)>"->"fieldput <PGC: java.lang.String option_background_image>";
+    "fieldput <PGC: java.lang.String option_background_image>"->"load.r r0";
+    "push \"control_panel\""
+    "load.r r0"->"push \"control_panel\"";
+    "push \"control_panel\""->"virtualinvoke <PGC: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <PGC: java.lang.String getParameter(java.lang.String)>"->"store.r r50";
+    "store.r r50"->"load.r r50";
+    "load.r r50"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r r50";
+    "load.r r50"->"staticinvoke <PGC_Utility: int IValue(java.lang.String)>";
+    "staticinvoke <PGC_Utility: int IValue(java.lang.String)>"->"ifne push 1";
+    "ifne push 1"->"push 0";
+    "push 0"->"store.b r50";
+    "store.b r50"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "load.r r0"->"load.b r50";
+    "fieldput <PGC: boolean option_control_panel>"
+    "load.b r50"->"fieldput <PGC: boolean option_control_panel>";
+    "fieldput <PGC: boolean option_control_panel>"->"load.r r0";
+    "push \"graph_border\""
+    "load.r r0"->"push \"graph_border\"";
+    "push \"graph_border\""->"virtualinvoke <PGC: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <PGC: java.lang.String getParameter(java.lang.String)>"->"store.r r50";
+    "store.r r50"->"load.r r50";
+    "load.r r50"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r r50";
+    "load.r r50"->"staticinvoke <PGC_Utility: int IValue(java.lang.String)>";
+    "staticinvoke <PGC_Utility: int IValue(java.lang.String)>"->"ifne push 1";
+    "ifne push 1"->"push 0";
+    "push 0"->"store.b r50";
+    "store.b r50"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "load.r r0"->"load.b r50";
+    "fieldput <PGC: boolean option_graph_border>"
+    "load.b r50"->"fieldput <PGC: boolean option_graph_border>";
+    "fieldput <PGC: boolean option_graph_border>"->"load.r r0";
+    "push \"builtin_examples\""
+    "load.r r0"->"push \"builtin_examples\"";
+    "push \"builtin_examples\""->"virtualinvoke <PGC: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <PGC: java.lang.String getParameter(java.lang.String)>"->"store.r r50";
+    "store.r r50"->"load.r r50";
+    "load.r r50"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r r50";
+    "load.r r50"->"staticinvoke <PGC_Utility: int IValue(java.lang.String)>";
+    "staticinvoke <PGC_Utility: int IValue(java.lang.String)>"->"ifne push 1";
+    "ifne push 1"->"push 0";
+    "push 0"->"store.b r50";
+    "store.b r50"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "load.r r0"->"load.b r50";
+    "fieldput <PGC: boolean option_builtin_examples>"
+    "load.b r50"->"fieldput <PGC: boolean option_builtin_examples>";
+    "fieldput <PGC: boolean option_builtin_examples>"->"load.r r0";
+    "push \"builtin_functions\""
+    "load.r r0"->"push \"builtin_functions\"";
+    "push \"builtin_functions\""->"virtualinvoke <PGC: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <PGC: java.lang.String getParameter(java.lang.String)>"->"store.r r50";
+    "store.r r50"->"load.r r50";
+    "load.r r50"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r r50";
+    "load.r r50"->"staticinvoke <PGC_Utility: int IValue(java.lang.String)>";
+    "staticinvoke <PGC_Utility: int IValue(java.lang.String)>"->"ifne push 1";
+    "ifne push 1"->"push 0";
+    "push 0"->"store.b r50";
+    "store.b r50"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "load.r r0"->"load.b r50";
+    "fieldput <PGC: boolean option_builtin_functions>"
+    "load.b r50"->"fieldput <PGC: boolean option_builtin_functions>";
+    "fieldput <PGC: boolean option_builtin_functions>"->"load.r r0";
+    "fieldget <PGC: boolean option_builtin_functions>"
+    "load.r r0"->"fieldget <PGC: boolean option_builtin_functions>";
+    "ifne load.r r0"
+    "fieldget <PGC: boolean option_builtin_functions>"->"ifne load.r r0";
+    "ifne load.r r0"->"load.r r0";
+    "push 12"
+    "load.r r0"->"push 12";
+    "fieldput <PGC: int option_op>"
+    "push 12"->"fieldput <PGC: int option_op>";
+    "fieldput <PGC: int option_op>"->"load.r r0";
+    "push \"center\""
+    "load.r r0"->"push \"center\"";
+    "push \"center\""->"virtualinvoke <PGC: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <PGC: java.lang.String getParameter(java.lang.String)>"->"store.r r50";
+    "store.r r50"->"load.r r50";
+    "load.r r50"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r r1";
+    "load.r r1"->"load.r r50";
+    "load.r r50"->"virtualinvoke <PGC_Eval: void Evaluate(java.lang.String)>";
+    "virtualinvoke <PGC_Eval: void Evaluate(java.lang.String)>"->"load.r r1";
+    "load.r r1"->"fieldget <PGC_Eval: Complex value>";
+    "fieldget <PGC_Eval: Complex value>"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r1";
+    "load.r r1"->"fieldget <PGC_Eval: Complex value>";
+    "fieldput <PGC: Complex option_center>"
+    "fieldget <PGC_Eval: Complex value>"->"fieldput <PGC: Complex option_center>";
+    "fieldput <PGC: Complex option_center>"->"load.r r0";
+    "push \"zoom\""
+    "load.r r0"->"push \"zoom\"";
+    "push \"zoom\""->"virtualinvoke <PGC: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <PGC: java.lang.String getParameter(java.lang.String)>"->"store.r r50";
+    "store.r r50"->"load.r r50";
+    "load.r r50"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r r1";
+    "load.r r1"->"load.r r50";
+    "load.r r50"->"virtualinvoke <PGC_Eval: void Evaluate(java.lang.String)>";
+    "virtualinvoke <PGC_Eval: void Evaluate(java.lang.String)>"->"load.r r1";
+    "load.r r1"->"fieldget <PGC_Eval: Complex value>";
+    "fieldget <PGC_Eval: Complex value>"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r1";
+    "load.r r1"->"fieldget <PGC_Eval: Complex value>";
+    "fieldget <PGC_Eval: Complex value>"->"fieldget <Complex: double re>";
+    "fieldget <Complex: double re>"->"d2i";
+    "fieldput <PGC: int option_zoom>"
+    "d2i"->"fieldput <PGC: int option_zoom>";
+    "fieldput <PGC: int option_zoom>"->"load.r r0";
+    "push \"line\""
+    "load.r r0"->"push \"line\"";
+    "push \"line\""->"virtualinvoke <PGC: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <PGC: java.lang.String getParameter(java.lang.String)>"->"store.r r50";
+    "store.r r50"->"load.r r50";
+    "load.r r50"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r r50";
+    "load.r r50"->"staticinvoke <PGC_Utility: int IValue(java.lang.String)>";
+    "staticinvoke <PGC_Utility: int IValue(java.lang.String)>"->"ifne push 1";
+    "ifne push 1"->"push 0";
+    "push 0"->"store.b r50";
+    "store.b r50"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "load.r r0"->"load.b r50";
+    "fieldput <PGC: boolean option_line>"
+    "load.b r50"->"fieldput <PGC: boolean option_line>";
+    "fieldput <PGC: boolean option_line>"->"load.r r0";
+    "push \"plot\""
+    "load.r r0"->"push \"plot\"";
+    "push \"plot\""->"virtualinvoke <PGC: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <PGC: java.lang.String getParameter(java.lang.String)>"->"store.r r50";
+    "store.r r50"->"load.r r50";
+    "load.r r50"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r r50";
+    "load.r r50"->"staticinvoke <PGC_Utility: int IValue(java.lang.String)>";
+    "staticinvoke <PGC_Utility: int IValue(java.lang.String)>"->"ifne push 1";
+    "ifne push 1"->"push 0";
+    "push 0"->"store.b r50";
+    "store.b r50"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "load.r r0"->"load.b r50";
+    "fieldput <PGC: boolean option_plot>"
+    "load.b r50"->"fieldput <PGC: boolean option_plot>";
+    "fieldput <PGC: boolean option_plot>"->"load.r r0";
+    "push \"spin\""
+    "load.r r0"->"push \"spin\"";
+    "push \"spin\""->"virtualinvoke <PGC: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <PGC: java.lang.String getParameter(java.lang.String)>"->"store.r r50";
+    "store.r r50"->"load.r r50";
+    "load.r r50"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r r50";
+    "load.r r50"->"staticinvoke <PGC_Utility: int IValue(java.lang.String)>";
+    "staticinvoke <PGC_Utility: int IValue(java.lang.String)>"->"ifne push 1";
+    "ifne push 1"->"push 0";
+    "push 0"->"store.b r50";
+    "store.b r50"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "load.r r0"->"load.b r50";
+    "fieldput <PGC: boolean option_spin>"
+    "load.b r50"->"fieldput <PGC: boolean option_spin>";
+    "fieldput <PGC: boolean option_spin>"->"load.r r0";
+    "push \"active\""
+    "load.r r0"->"push \"active\"";
+    "push \"active\""->"virtualinvoke <PGC: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <PGC: java.lang.String getParameter(java.lang.String)>"->"store.r r50";
+    "store.r r50"->"load.r r50";
+    "load.r r50"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r r50";
+    "push \"a\""
+    "load.r r50"->"push \"a\"";
+    "virtualinvoke <java.lang.String: boolean equalsIgnoreCase(java.lang.String)>"
+    "push \"a\""->"virtualinvoke <java.lang.String: boolean equalsIgnoreCase(java.lang.String)>";
+    "ifeq load.r r50"
+    "virtualinvoke <java.lang.String: boolean equalsIgnoreCase(java.lang.String)>"->"ifeq load.r r50";
+    "ifeq load.r r50"->"load.r r0";
+    "load.r r0"->"push 0";
+    "fieldput <PGC: int option_active>"
+    "push 0"->"fieldput <PGC: int option_active>";
+    "fieldput <PGC: int option_active>"->"load.r r50";
+    "push \"b\""
+    "load.r r50"->"push \"b\"";
+    "push \"b\""->"virtualinvoke <java.lang.String: boolean equalsIgnoreCase(java.lang.String)>";
+    "virtualinvoke <java.lang.String: boolean equalsIgnoreCase(java.lang.String)>"->"ifeq load.r r50";
+    "ifeq load.r r50"->"load.r r0";
+    "push 1"
+    "load.r r0"->"push 1";
+    "push 1"->"fieldput <PGC: int option_active>";
+    "fieldput <PGC: int option_active>"->"load.r r50";
+    "push \"c\""
+    "load.r r50"->"push \"c\"";
+    "push \"c\""->"virtualinvoke <java.lang.String: boolean equalsIgnoreCase(java.lang.String)>";
+    "virtualinvoke <java.lang.String: boolean equalsIgnoreCase(java.lang.String)>"->"ifeq load.r r50";
+    "ifeq load.r r50"->"load.r r0";
+    "push 2"
+    "load.r r0"->"push 2";
+    "push 2"->"fieldput <PGC: int option_active>";
+    "fieldput <PGC: int option_active>"->"load.r r50";
+    "push \"d\""
+    "load.r r50"->"push \"d\"";
+    "push \"d\""->"virtualinvoke <java.lang.String: boolean equalsIgnoreCase(java.lang.String)>";
+    "ifeq load.r r0"
+    "virtualinvoke <java.lang.String: boolean equalsIgnoreCase(java.lang.String)>"->"ifeq load.r r0";
+    "ifeq load.r r0"->"load.r r0";
+    "push 3"
+    "load.r r0"->"push 3";
+    "push 3"->"fieldput <PGC: int option_active>";
+    "fieldput <PGC: int option_active>"->"load.r r0";
+    "push \"t_minimum\""
+    "load.r r0"->"push \"t_minimum\"";
+    "push \"t_minimum\""->"virtualinvoke <PGC: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <PGC: java.lang.String getParameter(java.lang.String)>"->"store.r r50";
+    "store.r r50"->"load.r r50";
+    "load.r r50"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r r1";
+    "load.r r1"->"load.r r50";
+    "load.r r50"->"virtualinvoke <PGC_Eval: void Evaluate(java.lang.String)>";
+    "virtualinvoke <PGC_Eval: void Evaluate(java.lang.String)>"->"load.r r1";
+    "load.r r1"->"fieldget <PGC_Eval: Complex value>";
+    "fieldget <PGC_Eval: Complex value>"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r1";
+    "load.r r1"->"fieldget <PGC_Eval: Complex value>";
+    "fieldget <PGC_Eval: Complex value>"->"fieldget <Complex: double re>";
+    "fieldput <PGC: double t_minimum>"
+    "fieldget <Complex: double re>"->"fieldput <PGC: double t_minimum>";
+    "fieldput <PGC: double t_minimum>"->"load.r r0";
+    "push \"t_maximum\""
+    "load.r r0"->"push \"t_maximum\"";
+    "push \"t_maximum\""->"virtualinvoke <PGC: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <PGC: java.lang.String getParameter(java.lang.String)>"->"store.r r50";
+    "store.r r50"->"load.r r50";
+    "load.r r50"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r r1";
+    "load.r r1"->"load.r r50";
+    "load.r r50"->"virtualinvoke <PGC_Eval: void Evaluate(java.lang.String)>";
+    "virtualinvoke <PGC_Eval: void Evaluate(java.lang.String)>"->"load.r r1";
+    "load.r r1"->"fieldget <PGC_Eval: Complex value>";
+    "fieldget <PGC_Eval: Complex value>"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r1";
+    "load.r r1"->"fieldget <PGC_Eval: Complex value>";
+    "fieldget <PGC_Eval: Complex value>"->"fieldget <Complex: double re>";
+    "fieldput <PGC: double t_maximum>"
+    "fieldget <Complex: double re>"->"fieldput <PGC: double t_maximum>";
+    "fieldput <PGC: double t_maximum>"->"load.r r0";
+    "push \"t_count\""
+    "load.r r0"->"push \"t_count\"";
+    "push \"t_count\""->"virtualinvoke <PGC: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <PGC: java.lang.String getParameter(java.lang.String)>"->"store.r r50";
+    "store.r r50"->"load.r r50";
+    "load.r r50"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r r1";
+    "load.r r1"->"load.r r50";
+    "load.r r50"->"virtualinvoke <PGC_Eval: void Evaluate(java.lang.String)>";
+    "virtualinvoke <PGC_Eval: void Evaluate(java.lang.String)>"->"load.r r1";
+    "load.r r1"->"fieldget <PGC_Eval: Complex value>";
+    "fieldget <PGC_Eval: Complex value>"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r1";
+    "load.r r1"->"fieldget <PGC_Eval: Complex value>";
+    "fieldget <PGC_Eval: Complex value>"->"fieldget <Complex: double re>";
+    "fieldget <Complex: double re>"->"d2i";
+    "fieldput <PGC: int t_count>"
+    "d2i"->"fieldput <PGC: int t_count>";
+    "fieldput <PGC: int t_count>"->"load.r r0";
+    "specialinvoke <PGC: void DefineVariables()>"
+    "load.r r0"->"specialinvoke <PGC: void DefineVariables()>";
+    "specialinvoke <PGC: void DefineVariables()>"->"push 0";
+    "store.i r50"
+    "push 0"->"store.i r50";
+    "goto load.i r50"
+    "store.i r50"->"goto load.i r50";
+    "load.i r50"
+    "goto load.i r50"->"load.i r50";
+    "load.i r50"->"load.r r0";
+    "fieldget <PGC: PGC_Variable[] variable>"
+    "load.r r0"->"fieldget <PGC: PGC_Variable[] variable>";
+    "arraylength"
+    "fieldget <PGC: PGC_Variable[] variable>"->"arraylength";
+    "ifcmplt.i load.r r0"
+    "arraylength"->"ifcmplt.i load.r r0";
+    "ifcmplt.i load.r r0"->"load.r r0";
+    "fieldget <PGC: boolean launch_mode>"
+    "load.r r0"->"fieldget <PGC: boolean launch_mode>";
+    "fieldget <PGC: boolean launch_mode>"->"ifeq load.r r0";
+    "ifeq load.r r0"->"load.r r0";
+    "specialinvoke <PGC: void LayoutLaunchButton()>"
+    "load.r r0"->"specialinvoke <PGC: void LayoutLaunchButton()>";
+    "specialinvoke <PGC: void LayoutLaunchButton()>"->"load.r r0";
+    "new java.awt.BorderLayout"
+    "load.r r0"->"new java.awt.BorderLayout";
+    "new java.awt.BorderLayout"->"dup1.r";
+    "specialinvoke <java.awt.BorderLayout: void <init>()>"
+    "dup1.r"->"specialinvoke <java.awt.BorderLayout: void <init>()>";
+    "virtualinvoke <java.awt.Container: void setLayout(java.awt.LayoutManager)>"
+    "specialinvoke <java.awt.BorderLayout: void <init>()>"->"virtualinvoke <java.awt.Container: void setLayout(java.awt.LayoutManager)>";
+    "virtualinvoke <java.awt.Container: void setLayout(java.awt.LayoutManager)>"->"load.r r0";
+    "push \"Center\""
+    "load.r r0"->"push \"Center\"";
+    "push \"Center\""->"load.r r0";
+    "fieldget <PGC: java.awt.Panel pnl_root_launch>"
+    "load.r r0"->"fieldget <PGC: java.awt.Panel pnl_root_launch>";
+    "virtualinvoke <java.awt.Container: java.awt.Component add(java.lang.String,java.awt.Component)>"
+    "fieldget <PGC: java.awt.Panel pnl_root_launch>"->"virtualinvoke <java.awt.Container: java.awt.Component add(java.lang.String,java.awt.Component)>";
+    "pop"
+    "virtualinvoke <java.awt.Container: java.awt.Component add(java.lang.String,java.awt.Component)>"->"pop";
+    "return"
+    "pop"->"return";
+    "ifeq load.r r0"->"load.r r0";
+    "specialinvoke <PGC: void LayoutCalculator()>"
+    "load.r r0"->"specialinvoke <PGC: void LayoutCalculator()>";
+    "specialinvoke <PGC: void LayoutCalculator()>"->"load.r r0";
+    "load.r r0"->"new java.awt.BorderLayout";
+    "new java.awt.BorderLayout"->"dup1.r";
+    "dup1.r"->"specialinvoke <java.awt.BorderLayout: void <init>()>";
+    "specialinvoke <java.awt.BorderLayout: void <init>()>"->"virtualinvoke <java.awt.Container: void setLayout(java.awt.LayoutManager)>";
+    "virtualinvoke <java.awt.Container: void setLayout(java.awt.LayoutManager)>"->"load.r r0";
+    "load.r r0"->"push \"Center\"";
+    "push \"Center\""->"load.r r0";
+    "fieldget <PGC: java.awt.Panel pnl_root_calculator>"
+    "load.r r0"->"fieldget <PGC: java.awt.Panel pnl_root_calculator>";
+    "fieldget <PGC: java.awt.Panel pnl_root_calculator>"->"virtualinvoke <java.awt.Container: java.awt.Component add(java.lang.String,java.awt.Component)>";
+    "virtualinvoke <java.awt.Container: java.awt.Component add(java.lang.String,java.awt.Component)>"->"pop";
+    "pop"->"load.r r0";
+    "specialinvoke <PGC: void SetOptions()>"
+    "load.r r0"->"specialinvoke <PGC: void SetOptions()>";
+    "specialinvoke <PGC: void SetOptions()>"->"return";
+    "ifcmplt.i load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <PGC: PGC_Variable[] variable>";
+    "fieldget <PGC: PGC_Variable[] variable>"->"load.i r50";
+    "arrayread.r"
+    "load.i r50"->"arrayread.r";
+    "fieldget <PGC_Variable: boolean is_input>"
+    "arrayread.r"->"fieldget <PGC_Variable: boolean is_input>";
+    "fieldget <PGC_Variable: boolean is_input>"->"ifeq load.r r0";
+    "ifeq load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <PGC: PGC_Variable[] variable>";
+    "fieldget <PGC: PGC_Variable[] variable>"->"load.i r50";
+    "load.i r50"->"arrayread.r";
+    "fieldget <PGC_Variable: java.lang.String name>"
+    "arrayread.r"->"fieldget <PGC_Variable: java.lang.String name>";
+    "fieldget <PGC_Variable: java.lang.String name>"->"virtualinvoke <PGC: java.lang.String getParameter(java.lang.String)>";
+    "store.r r67"
+    "virtualinvoke <PGC: java.lang.String getParameter(java.lang.String)>"->"store.r r67";
+    "load.r r67"
+    "store.r r67"->"load.r r67";
+    "ifnull inc.i r50 1"
+    "load.r r67"->"ifnull inc.i r50 1";
+    "ifnull inc.i r50 1"->"load.r r1";
+    "load.r r1"->"load.r r67";
+    "load.r r67"->"virtualinvoke <PGC_Eval: void Evaluate(java.lang.String)>";
+    "virtualinvoke <PGC_Eval: void Evaluate(java.lang.String)>"->"load.r r1";
+    "load.r r1"->"fieldget <PGC_Eval: Complex value>";
+    "fieldget <PGC_Eval: Complex value>"->"ifnull inc.i r50 1";
+    "ifnull inc.i r50 1"->"load.r r0";
+    "load.r r0"->"fieldget <PGC: PGC_Variable[] variable>";
+    "fieldget <PGC: PGC_Variable[] variable>"->"load.i r50";
+    "load.i r50"->"arrayread.r";
+    "arrayread.r"->"load.r r1";
+    "load.r r1"->"fieldget <PGC_Eval: Complex value>";
+    "fieldput <PGC_Variable: Complex coordinates>"
+    "fieldget <PGC_Eval: Complex value>"->"fieldput <PGC_Variable: Complex coordinates>";
+    "goto inc.i r50 1"
+    "fieldput <PGC_Variable: Complex coordinates>"->"goto inc.i r50 1";
+    "inc.i r50 1"
+    "goto inc.i r50 1"->"inc.i r50 1";
+    "ifeq load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <PGC: PGC_Variable[] variable>";
+    "fieldget <PGC: PGC_Variable[] variable>"->"load.i r50";
+    "load.i r50"->"arrayread.r";
+    "fieldget <PGC_Variable: boolean is_function>"
+    "arrayread.r"->"fieldget <PGC_Variable: boolean is_function>";
+    "ifeq inc.i r50 1"
+    "fieldget <PGC_Variable: boolean is_function>"->"ifeq inc.i r50 1";
+    "ifeq inc.i r50 1"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <PGC: PGC_Variable[] variable>";
+    "fieldget <PGC: PGC_Variable[] variable>"->"load.i r50";
+    "load.i r50"->"arrayread.r";
+    "arrayread.r"->"fieldget <PGC_Variable: java.lang.String name>";
+    "fieldget <PGC_Variable: java.lang.String name>"->"virtualinvoke <PGC: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <PGC: java.lang.String getParameter(java.lang.String)>"->"store.r r67";
+    "store.r r67"->"load.r r67";
+    "load.r r67"->"ifnull inc.i r50 1";
+    "ifnull inc.i r50 1"->"load.r r0";
+    "load.r r0"->"fieldget <PGC: PGC_Variable[] variable>";
+    "fieldget <PGC: PGC_Variable[] variable>"->"load.i r50";
+    "load.i r50"->"arrayread.r";
+    "arrayread.r"->"load.r r67";
+    "fieldput <PGC_Variable: java.lang.String expression>"
+    "load.r r67"->"fieldput <PGC_Variable: java.lang.String expression>";
+    "fieldput <PGC_Variable: java.lang.String expression>"->"load.i r50";
+    "push 4"
+    "load.i r50"->"push 4";
+    "ifcmpne.i inc.i r50 1"
+    "push 4"->"ifcmpne.i inc.i r50 1";
+    "ifcmpne.i inc.i r50 1"->"load.r r67";
+    "load.r r67"->"virtualinvoke <java.lang.String: int length()>";
+    "ifle inc.i r50 1"
+    "virtualinvoke <java.lang.String: int length()>"->"ifle inc.i r50 1";
+    "ifle inc.i r50 1"->"load.r r0";
+    "load.r r0"->"push 12";
+    "push 12"->"fieldput <PGC: int option_op>";
+    "ifne push 1"->"push 1";
+    "push 1"->"store.b r50";
+    "ifne push 1"->"push 1";
+    "push 1"->"store.b r50";
+    "ifne push 1"->"push 1";
+    "push 1"->"store.b r50";
+    "ifne push 1"->"push 1";
+    "push 1"->"store.b r50";
+    "ifne push 1"->"push 1";
+    "push 1"->"store.b r50";
+    "ifne push 1"->"push 1";
+    "push 1"->"store.b r50";
+    "ifne push 1"->"push 1";
+    "push 1"->"store.b r50";
+    "ifgt push 1"->"push 1";
+    "push 1"->"store.b r50";
+    "ifne push 1"->"push 1";
+    "push 1"->"store.b r50";
+}

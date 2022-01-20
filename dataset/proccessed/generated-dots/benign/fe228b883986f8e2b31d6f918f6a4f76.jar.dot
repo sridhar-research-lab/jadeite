@@ -1,0 +1,97 @@
+digraph "" {
+    "r0 := @this: Jtimer"
+    "load.r r0"
+    "r0 := @this: Jtimer"->"load.r r0";
+    "specialinvoke <java.applet.Applet: void init()>"
+    "load.r r0"->"specialinvoke <java.applet.Applet: void init()>";
+    "specialinvoke <java.applet.Applet: void init()>"->"load.r r0";
+    "push \"copyright\""
+    "load.r r0"->"push \"copyright\"";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"
+    "push \"copyright\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "ifnull new MsgDlg"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"ifnull new MsgDlg";
+    "ifnull new MsgDlg"->"load.r r0";
+    "load.r r0"->"push \"copyright\"";
+    "push \"copyright\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "push \"Jtimer.  Copyright (c) 1997 CodeHouse.  www.codehouse.com\""
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"push \"Jtimer.  Copyright (c) 1997 CodeHouse.  www.codehouse.com\"";
+    "virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>"
+    "push \"Jtimer.  Copyright (c) 1997 CodeHouse.  www.codehouse.com\""->"virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>";
+    "ifne staticget <java.lang.System: java.io.PrintStream out>"
+    "virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>"->"ifne staticget <java.lang.System: java.io.PrintStream out>";
+    "new MsgDlg"
+    "ifne staticget <java.lang.System: java.io.PrintStream out>"->"new MsgDlg";
+    "push \"Jtimer\""
+    "new MsgDlg"->"push \"Jtimer\"";
+    "push \"Copyright parameter for this program is\nmissing or invalid. This program will\nterminate.\n\nFor assistance, contact:\n\nsupport@codehouse.com\nwww.codehouse.com\n\""
+    "push \"Jtimer\""->"push \"Copyright parameter for this program is\nmissing or invalid. This program will\nterminate.\n\nFor assistance, contact:\n\nsupport@codehouse.com\nwww.codehouse.com\n\"";
+    "specialinvoke <MsgDlg: void <init>(java.lang.String,java.lang.String)>"
+    "push \"Copyright parameter for this program is\nmissing or invalid. This program will\nterminate.\n\nFor assistance, contact:\n\nsupport@codehouse.com\nwww.codehouse.com\n\""->"specialinvoke <MsgDlg: void <init>(java.lang.String,java.lang.String)>";
+    "push 1"
+    "specialinvoke <MsgDlg: void <init>(java.lang.String,java.lang.String)>"->"push 1";
+    "staticinvoke <java.lang.System: void exit(int)>"
+    "push 1"->"staticinvoke <java.lang.System: void exit(int)>";
+    "goto load.r r0"
+    "staticinvoke <java.lang.System: void exit(int)>"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "push \"frame\""
+    "load.r r0"->"push \"frame\"";
+    "push \"frame\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "store.r r1"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"store.r r1";
+    "load.r r1"
+    "store.r r1"->"load.r r1";
+    "ifnull load.r r0"
+    "load.r r1"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r r1";
+    "virtualinvoke <java.lang.String: java.lang.String toLowerCase()>"
+    "load.r r1"->"virtualinvoke <java.lang.String: java.lang.String toLowerCase()>";
+    "push \"true\""
+    "virtualinvoke <java.lang.String: java.lang.String toLowerCase()>"->"push \"true\"";
+    "push \"true\""->"virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>";
+    "ifeq load.r r0"
+    "virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>"->"ifeq load.r r0";
+    "new MainContainer"
+    "ifeq load.r r0"->"new MainContainer";
+    "dup1.r"
+    "new MainContainer"->"dup1.r";
+    "push \"bark.au\""
+    "dup1.r"->"push \"bark.au\"";
+    "specialinvoke <MainContainer: void <init>(java.lang.String)>"
+    "push \"bark.au\""->"specialinvoke <MainContainer: void <init>(java.lang.String)>";
+    "push 0"
+    "specialinvoke <MainContainer: void <init>(java.lang.String)>"->"push 0";
+    "virtualinvoke <MainContainer: void frame(boolean)>"
+    "push 0"->"virtualinvoke <MainContainer: void frame(boolean)>";
+    "return"
+    "virtualinvoke <MainContainer: void frame(boolean)>"->"return";
+    "ifeq load.r r0"->"load.r r0";
+    "staticget <java.awt.Color: java.awt.Color black>"
+    "load.r r0"->"staticget <java.awt.Color: java.awt.Color black>";
+    "virtualinvoke <java.awt.Component: void setBackground(java.awt.Color)>"
+    "staticget <java.awt.Color: java.awt.Color black>"->"virtualinvoke <java.awt.Component: void setBackground(java.awt.Color)>";
+    "virtualinvoke <java.awt.Component: void setBackground(java.awt.Color)>"->"load.r r0";
+    "new java.awt.BorderLayout"
+    "load.r r0"->"new java.awt.BorderLayout";
+    "new java.awt.BorderLayout"->"dup1.r";
+    "specialinvoke <java.awt.BorderLayout: void <init>()>"
+    "dup1.r"->"specialinvoke <java.awt.BorderLayout: void <init>()>";
+    "virtualinvoke <java.awt.Container: void setLayout(java.awt.LayoutManager)>"
+    "specialinvoke <java.awt.BorderLayout: void <init>()>"->"virtualinvoke <java.awt.Container: void setLayout(java.awt.LayoutManager)>";
+    "virtualinvoke <java.awt.Container: void setLayout(java.awt.LayoutManager)>"->"load.r r0";
+    "load.r r0"->"new MainContainer";
+    "new MainContainer"->"dup1.r";
+    "dup1.r"->"push \"bark.au\"";
+    "push \"bark.au\""->"specialinvoke <MainContainer: void <init>(java.lang.String)>";
+    "push \"Center\""
+    "specialinvoke <MainContainer: void <init>(java.lang.String)>"->"push \"Center\"";
+    "virtualinvoke <java.awt.Container: void add(java.awt.Component,java.lang.Object)>"
+    "push \"Center\""->"virtualinvoke <java.awt.Container: void add(java.awt.Component,java.lang.Object)>";
+    "virtualinvoke <java.awt.Container: void add(java.awt.Component,java.lang.Object)>"->"return";
+    "staticget <java.lang.System: java.io.PrintStream out>"
+    "ifne staticget <java.lang.System: java.io.PrintStream out>"->"staticget <java.lang.System: java.io.PrintStream out>";
+    "staticget <java.lang.System: java.io.PrintStream out>"->"push \"Jtimer.  Copyright (c) 1997 CodeHouse.  www.codehouse.com\"";
+    "virtualinvoke <java.io.PrintStream: void println(java.lang.String)>"
+    "push \"Jtimer.  Copyright (c) 1997 CodeHouse.  www.codehouse.com\""->"virtualinvoke <java.io.PrintStream: void println(java.lang.String)>";
+}

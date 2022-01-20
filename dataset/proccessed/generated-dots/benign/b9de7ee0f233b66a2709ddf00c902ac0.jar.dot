@@ -1,0 +1,221 @@
+digraph "" {
+    "r0 := @this: AdvertiserApplet"
+    "load.r r0"
+    "r0 := @this: AdvertiserApplet"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "push \"AUTHOR\""
+    "load.r r0"->"push \"AUTHOR\"";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"
+    "push \"AUTHOR\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "fieldput <AdvertiserApplet: java.lang.String author>"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"fieldput <AdvertiserApplet: java.lang.String author>";
+    "fieldput <AdvertiserApplet: java.lang.String author>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "push \"DELAY\""
+    "load.r r0"->"push \"DELAY\"";
+    "push \"DELAY\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>";
+    "push 1000"
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"->"push 1000";
+    "mul.i"
+    "push 1000"->"mul.i";
+    "fieldput <AdvertiserApplet: int pause>"
+    "mul.i"->"fieldput <AdvertiserApplet: int pause>";
+    "fieldput <AdvertiserApplet: int pause>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "push \"NUMBEROFADS\""
+    "load.r r0"->"push \"NUMBEROFADS\"";
+    "push \"NUMBEROFADS\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>";
+    "fieldput <AdvertiserApplet: int antallBilder>"
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"->"fieldput <AdvertiserApplet: int antallBilder>";
+    "fieldput <AdvertiserApplet: int antallBilder>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "fieldget <AdvertiserApplet: int antallBilder>"
+    "load.r r0"->"fieldget <AdvertiserApplet: int antallBilder>";
+    "newarray"
+    "fieldget <AdvertiserApplet: int antallBilder>"->"newarray";
+    "fieldput <AdvertiserApplet: java.awt.Image[] bildeTabell>"
+    "newarray"->"fieldput <AdvertiserApplet: java.awt.Image[] bildeTabell>";
+    "fieldput <AdvertiserApplet: java.awt.Image[] bildeTabell>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <AdvertiserApplet: int antallBilder>";
+    "fieldget <AdvertiserApplet: int antallBilder>"->"newarray";
+    "fieldput <AdvertiserApplet: java.lang.String[] menyTekst>"
+    "newarray"->"fieldput <AdvertiserApplet: java.lang.String[] menyTekst>";
+    "fieldput <AdvertiserApplet: java.lang.String[] menyTekst>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <AdvertiserApplet: int antallBilder>";
+    "fieldget <AdvertiserApplet: int antallBilder>"->"newarray";
+    "fieldput <AdvertiserApplet: java.lang.String[] tabellURL>"
+    "newarray"->"fieldput <AdvertiserApplet: java.lang.String[] tabellURL>";
+    "fieldput <AdvertiserApplet: java.lang.String[] tabellURL>"->"load.r r0";
+    "new java.awt.PopupMenu"
+    "load.r r0"->"new java.awt.PopupMenu";
+    "dup1.r"
+    "new java.awt.PopupMenu"->"dup1.r";
+    "specialinvoke <java.awt.PopupMenu: void <init>()>"
+    "dup1.r"->"specialinvoke <java.awt.PopupMenu: void <init>()>";
+    "fieldput <AdvertiserApplet: java.awt.PopupMenu popUp>"
+    "specialinvoke <java.awt.PopupMenu: void <init>()>"->"fieldput <AdvertiserApplet: java.awt.PopupMenu popUp>";
+    "push 1"
+    "fieldput <AdvertiserApplet: java.awt.PopupMenu popUp>"->"push 1";
+    "store.i i11"
+    "push 1"->"store.i i11";
+    "goto load.i i11"
+    "store.i i11"->"goto load.i i11";
+    "load.i i11"
+    "goto load.i i11"->"load.i i11";
+    "load.i i11"->"load.r r0";
+    "load.r r0"->"fieldget <AdvertiserApplet: int antallBilder>";
+    "ifcmple.i load.r r0"
+    "fieldget <AdvertiserApplet: int antallBilder>"->"ifcmple.i load.r r0";
+    "push 0"
+    "ifcmple.i load.r r0"->"push 0";
+    "push 0"->"store.i i11";
+    "store.i i11"->"goto load.i i11";
+    "goto load.i i11"->"load.i i11";
+    "load.i i11"->"load.r r0";
+    "load.r r0"->"fieldget <AdvertiserApplet: int antallBilder>";
+    "ifcmplt.i load.r r0"
+    "fieldget <AdvertiserApplet: int antallBilder>"->"ifcmplt.i load.r r0";
+    "ifcmplt.i load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "fieldget <AdvertiserApplet: java.awt.PopupMenu popUp>"
+    "load.r r0"->"fieldget <AdvertiserApplet: java.awt.PopupMenu popUp>";
+    "virtualinvoke <java.awt.Component: void add(java.awt.PopupMenu)>"
+    "fieldget <AdvertiserApplet: java.awt.PopupMenu popUp>"->"virtualinvoke <java.awt.Component: void add(java.awt.PopupMenu)>";
+    "virtualinvoke <java.awt.Component: void add(java.awt.PopupMenu)>"->"load.r r0";
+    "load.r r0"->"fieldget <AdvertiserApplet: java.awt.PopupMenu popUp>";
+    "new AdvertiserApplet$1"
+    "fieldget <AdvertiserApplet: java.awt.PopupMenu popUp>"->"new AdvertiserApplet$1";
+    "new AdvertiserApplet$1"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "specialinvoke <AdvertiserApplet$1: void <init>(AdvertiserApplet)>"
+    "load.r r0"->"specialinvoke <AdvertiserApplet$1: void <init>(AdvertiserApplet)>";
+    "virtualinvoke <java.awt.MenuItem: void addActionListener(java.awt.event.ActionListener)>"
+    "specialinvoke <AdvertiserApplet$1: void <init>(AdvertiserApplet)>"->"virtualinvoke <java.awt.MenuItem: void addActionListener(java.awt.event.ActionListener)>";
+    "virtualinvoke <java.awt.MenuItem: void addActionListener(java.awt.event.ActionListener)>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "virtualinvoke <java.awt.Component: void addMouseListener(java.awt.event.MouseListener)>"
+    "load.r r0"->"virtualinvoke <java.awt.Component: void addMouseListener(java.awt.event.MouseListener)>";
+    "return"
+    "virtualinvoke <java.awt.Component: void addMouseListener(java.awt.event.MouseListener)>"->"return";
+    "ifcmplt.i load.r r0"->"load.r r0";
+    "new java.awt.MenuItem"
+    "load.r r0"->"new java.awt.MenuItem";
+    "new java.awt.MenuItem"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "fieldget <AdvertiserApplet: java.lang.String[] menyTekst>"
+    "load.r r0"->"fieldget <AdvertiserApplet: java.lang.String[] menyTekst>";
+    "fieldget <AdvertiserApplet: java.lang.String[] menyTekst>"->"load.i i11";
+    "arrayread.r"
+    "load.i i11"->"arrayread.r";
+    "specialinvoke <java.awt.MenuItem: void <init>(java.lang.String)>"
+    "arrayread.r"->"specialinvoke <java.awt.MenuItem: void <init>(java.lang.String)>";
+    "fieldput <AdvertiserApplet: java.awt.MenuItem link>"
+    "specialinvoke <java.awt.MenuItem: void <init>(java.lang.String)>"->"fieldput <AdvertiserApplet: java.awt.MenuItem link>";
+    "fieldput <AdvertiserApplet: java.awt.MenuItem link>"->"load.r r0";
+    "fieldget <AdvertiserApplet: java.awt.MenuItem link>"
+    "load.r r0"->"fieldget <AdvertiserApplet: java.awt.MenuItem link>";
+    "fieldget <AdvertiserApplet: java.awt.MenuItem link>"->"load.r r0";
+    "fieldget <AdvertiserApplet: java.lang.String[] tabellURL>"
+    "load.r r0"->"fieldget <AdvertiserApplet: java.lang.String[] tabellURL>";
+    "fieldget <AdvertiserApplet: java.lang.String[] tabellURL>"->"load.i i11";
+    "load.i i11"->"arrayread.r";
+    "virtualinvoke <java.awt.MenuItem: void setActionCommand(java.lang.String)>"
+    "arrayread.r"->"virtualinvoke <java.awt.MenuItem: void setActionCommand(java.lang.String)>";
+    "virtualinvoke <java.awt.MenuItem: void setActionCommand(java.lang.String)>"->"load.r r0";
+    "load.r r0"->"fieldget <AdvertiserApplet: java.awt.PopupMenu popUp>";
+    "fieldget <AdvertiserApplet: java.awt.PopupMenu popUp>"->"load.r r0";
+    "load.r r0"->"fieldget <AdvertiserApplet: java.awt.MenuItem link>";
+    "virtualinvoke <java.awt.Menu: java.awt.MenuItem add(java.awt.MenuItem)>"
+    "fieldget <AdvertiserApplet: java.awt.MenuItem link>"->"virtualinvoke <java.awt.Menu: java.awt.MenuItem add(java.awt.MenuItem)>";
+    "pop"
+    "virtualinvoke <java.awt.Menu: java.awt.MenuItem add(java.awt.MenuItem)>"->"pop";
+    "inc.i i11 1"
+    "pop"->"inc.i i11 1";
+    "ifcmple.i load.r r0"->"load.r r0";
+    "new java.lang.StringBuffer"
+    "load.r r0"->"new java.lang.StringBuffer";
+    "new java.lang.StringBuffer"->"dup1.r";
+    "push \"IMG\""
+    "dup1.r"->"push \"IMG\"";
+    "specialinvoke <java.lang.StringBuffer: void <init>(java.lang.String)>"
+    "push \"IMG\""->"specialinvoke <java.lang.StringBuffer: void <init>(java.lang.String)>";
+    "specialinvoke <java.lang.StringBuffer: void <init>(java.lang.String)>"->"load.i i11";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(int)>"
+    "load.i i11"->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(int)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>"
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(int)>"->"virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>";
+    "fieldput <AdvertiserApplet: java.lang.String paramNavn>"
+    "virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>"->"fieldput <AdvertiserApplet: java.lang.String paramNavn>";
+    "fieldput <AdvertiserApplet: java.lang.String paramNavn>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "fieldget <AdvertiserApplet: java.lang.String paramNavn>"
+    "load.r r0"->"fieldget <AdvertiserApplet: java.lang.String paramNavn>";
+    "fieldget <AdvertiserApplet: java.lang.String paramNavn>"->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "fieldput <AdvertiserApplet: java.lang.String bildeNavn>"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"fieldput <AdvertiserApplet: java.lang.String bildeNavn>";
+    "fieldput <AdvertiserApplet: java.lang.String bildeNavn>"->"load.r r0";
+    "fieldget <AdvertiserApplet: java.awt.Image[] bildeTabell>"
+    "load.r r0"->"fieldget <AdvertiserApplet: java.awt.Image[] bildeTabell>";
+    "fieldget <AdvertiserApplet: java.awt.Image[] bildeTabell>"->"load.i i11";
+    "load.i i11"->"push 1";
+    "sub.i"
+    "push 1"->"sub.i";
+    "sub.i"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "virtualinvoke <java.applet.Applet: java.net.URL getDocumentBase()>"
+    "load.r r0"->"virtualinvoke <java.applet.Applet: java.net.URL getDocumentBase()>";
+    "virtualinvoke <java.applet.Applet: java.net.URL getDocumentBase()>"->"load.r r0";
+    "fieldget <AdvertiserApplet: java.lang.String bildeNavn>"
+    "load.r r0"->"fieldget <AdvertiserApplet: java.lang.String bildeNavn>";
+    "virtualinvoke <java.applet.Applet: java.awt.Image getImage(java.net.URL,java.lang.String)>"
+    "fieldget <AdvertiserApplet: java.lang.String bildeNavn>"->"virtualinvoke <java.applet.Applet: java.awt.Image getImage(java.net.URL,java.lang.String)>";
+    "arraywrite.r"
+    "virtualinvoke <java.applet.Applet: java.awt.Image getImage(java.net.URL,java.lang.String)>"->"arraywrite.r";
+    "arraywrite.r"->"load.r r0";
+    "load.r r0"->"new java.lang.StringBuffer";
+    "new java.lang.StringBuffer"->"dup1.r";
+    "push \"TXT\""
+    "dup1.r"->"push \"TXT\"";
+    "push \"TXT\""->"specialinvoke <java.lang.StringBuffer: void <init>(java.lang.String)>";
+    "specialinvoke <java.lang.StringBuffer: void <init>(java.lang.String)>"->"load.i i11";
+    "load.i i11"->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(int)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(int)>"->"virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>"->"fieldput <AdvertiserApplet: java.lang.String paramNavn>";
+    "fieldput <AdvertiserApplet: java.lang.String paramNavn>"->"load.r r0";
+    "load.r r0"->"fieldget <AdvertiserApplet: java.lang.String[] menyTekst>";
+    "fieldget <AdvertiserApplet: java.lang.String[] menyTekst>"->"load.i i11";
+    "load.i i11"->"push 1";
+    "push 1"->"sub.i";
+    "sub.i"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <AdvertiserApplet: java.lang.String paramNavn>";
+    "fieldget <AdvertiserApplet: java.lang.String paramNavn>"->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"arraywrite.r";
+    "arraywrite.r"->"load.r r0";
+    "load.r r0"->"new java.lang.StringBuffer";
+    "new java.lang.StringBuffer"->"dup1.r";
+    "push \"URL\""
+    "dup1.r"->"push \"URL\"";
+    "push \"URL\""->"specialinvoke <java.lang.StringBuffer: void <init>(java.lang.String)>";
+    "specialinvoke <java.lang.StringBuffer: void <init>(java.lang.String)>"->"load.i i11";
+    "load.i i11"->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(int)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(int)>"->"virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>"->"fieldput <AdvertiserApplet: java.lang.String paramNavn>";
+    "fieldput <AdvertiserApplet: java.lang.String paramNavn>"->"load.r r0";
+    "load.r r0"->"fieldget <AdvertiserApplet: java.lang.String[] tabellURL>";
+    "fieldget <AdvertiserApplet: java.lang.String[] tabellURL>"->"load.i i11";
+    "load.i i11"->"push 1";
+    "push 1"->"sub.i";
+    "sub.i"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <AdvertiserApplet: java.lang.String paramNavn>";
+    "fieldget <AdvertiserApplet: java.lang.String paramNavn>"->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"arraywrite.r";
+    "arraywrite.r"->"inc.i i11 1";
+}

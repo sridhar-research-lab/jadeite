@@ -1,0 +1,32 @@
+digraph "" {
+    "r0 := @this: Scroller"
+    "load.r r0"
+    "r0 := @this: Scroller"->"load.r r0";
+    "push \"background\""
+    "load.r r0"->"push \"background\"";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"
+    "push \"background\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "ifnull load.r r0"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"push \"background\"";
+    "push \"background\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "staticinvoke <java.awt.Color: java.awt.Color decode(java.lang.String)>"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"staticinvoke <java.awt.Color: java.awt.Color decode(java.lang.String)>";
+    "fieldput <Scroller: java.awt.Color Ç>"
+    "staticinvoke <java.awt.Color: java.awt.Color decode(java.lang.String)>"->"fieldput <Scroller: java.awt.Color Ç>";
+    "fieldput <Scroller: java.awt.Color Ç>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "fieldget <Scroller: java.awt.Color Ç>"
+    "load.r r0"->"fieldget <Scroller: java.awt.Color Ç>";
+    "virtualinvoke <java.awt.Component: void setBackground(java.awt.Color)>"
+    "fieldget <Scroller: java.awt.Color Ç>"->"virtualinvoke <java.awt.Component: void setBackground(java.awt.Color)>";
+    "virtualinvoke <java.awt.Component: void setBackground(java.awt.Color)>"->"load.r r0";
+    "fieldget <Scroller: java.lang.Thread À>"
+    "load.r r0"->"fieldget <Scroller: java.lang.Thread À>";
+    "virtualinvoke <java.lang.Thread: void start()>"
+    "fieldget <Scroller: java.lang.Thread À>"->"virtualinvoke <java.lang.Thread: void start()>";
+    "return"
+    "virtualinvoke <java.lang.Thread: void start()>"->"return";
+}

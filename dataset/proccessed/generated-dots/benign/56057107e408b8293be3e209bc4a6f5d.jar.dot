@@ -1,0 +1,51 @@
+digraph "" {
+    "r0 := @this: org.apache.xalan.client.XSLTProcessorApplet"
+    "load.r r0"
+    "r0 := @this: org.apache.xalan.client.XSLTProcessorApplet"->"load.r r0";
+    "push \"styleURL\""
+    "load.r r0"->"push \"styleURL\"";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"
+    "push \"styleURL\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "store.r r3"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"store.r r3";
+    "load.r r3"
+    "store.r r3"->"load.r r3";
+    "ifnull load.r r0"
+    "load.r r3"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r3";
+    "virtualinvoke <org.apache.xalan.client.XSLTProcessorApplet: void setStyleURL(java.lang.String)>"
+    "load.r r3"->"virtualinvoke <org.apache.xalan.client.XSLTProcessorApplet: void setStyleURL(java.lang.String)>";
+    "virtualinvoke <org.apache.xalan.client.XSLTProcessorApplet: void setStyleURL(java.lang.String)>"->"load.r r0";
+    "push \"documentURL\""
+    "load.r r0"->"push \"documentURL\"";
+    "push \"documentURL\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"store.r r3";
+    "store.r r3"->"load.r r3";
+    "load.r r3"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r3";
+    "virtualinvoke <org.apache.xalan.client.XSLTProcessorApplet: void setDocumentURL(java.lang.String)>"
+    "load.r r3"->"virtualinvoke <org.apache.xalan.client.XSLTProcessorApplet: void setDocumentURL(java.lang.String)>";
+    "virtualinvoke <org.apache.xalan.client.XSLTProcessorApplet: void setDocumentURL(java.lang.String)>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "virtualinvoke <java.applet.Applet: java.net.URL getCodeBase()>"
+    "load.r r0"->"virtualinvoke <java.applet.Applet: java.net.URL getCodeBase()>";
+    "fieldput <org.apache.xalan.client.XSLTProcessorApplet: java.net.URL m_codeBase>"
+    "virtualinvoke <java.applet.Applet: java.net.URL getCodeBase()>"->"fieldput <org.apache.xalan.client.XSLTProcessorApplet: java.net.URL m_codeBase>";
+    "fieldput <org.apache.xalan.client.XSLTProcessorApplet: java.net.URL m_codeBase>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "virtualinvoke <java.applet.Applet: java.net.URL getDocumentBase()>"
+    "load.r r0"->"virtualinvoke <java.applet.Applet: java.net.URL getDocumentBase()>";
+    "fieldput <org.apache.xalan.client.XSLTProcessorApplet: java.net.URL m_documentBase>"
+    "virtualinvoke <java.applet.Applet: java.net.URL getDocumentBase()>"->"fieldput <org.apache.xalan.client.XSLTProcessorApplet: java.net.URL m_documentBase>";
+    "fieldput <org.apache.xalan.client.XSLTProcessorApplet: java.net.URL m_documentBase>"->"load.r r0";
+    "push 320"
+    "load.r r0"->"push 320";
+    "push 240"
+    "push 320"->"push 240";
+    "virtualinvoke <java.applet.Applet: void resize(int,int)>"
+    "push 240"->"virtualinvoke <java.applet.Applet: void resize(int,int)>";
+    "return"
+    "virtualinvoke <java.applet.Applet: void resize(int,int)>"->"return";
+}

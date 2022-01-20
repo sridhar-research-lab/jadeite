@@ -1,0 +1,60 @@
+digraph "" {
+    "r0 := @this: Tower"
+    "load.r r0"
+    "r0 := @this: Tower"->"load.r r0";
+    "push 500"
+    "load.r r0"->"push 500";
+    "push 450"
+    "push 500"->"push 450";
+    "virtualinvoke <java.applet.Applet: void resize(int,int)>"
+    "push 450"->"virtualinvoke <java.applet.Applet: void resize(int,int)>";
+    "virtualinvoke <java.applet.Applet: void resize(int,int)>"->"load.r r0";
+    "new java.awt.BorderLayout"
+    "load.r r0"->"new java.awt.BorderLayout";
+    "dup1.r"
+    "new java.awt.BorderLayout"->"dup1.r";
+    "specialinvoke <java.awt.BorderLayout: void <init>()>"
+    "dup1.r"->"specialinvoke <java.awt.BorderLayout: void <init>()>";
+    "virtualinvoke <java.awt.Container: void setLayout(java.awt.LayoutManager)>"
+    "specialinvoke <java.awt.BorderLayout: void <init>()>"->"virtualinvoke <java.awt.Container: void setLayout(java.awt.LayoutManager)>";
+    "virtualinvoke <java.awt.Container: void setLayout(java.awt.LayoutManager)>"->"load.r r0";
+    "new TowerPanel"
+    "load.r r0"->"new TowerPanel";
+    "new TowerPanel"->"dup1.r";
+    "specialinvoke <TowerPanel: void <init>()>"
+    "dup1.r"->"specialinvoke <TowerPanel: void <init>()>";
+    "fieldput <Tower: TowerPanel panel>"
+    "specialinvoke <TowerPanel: void <init>()>"->"fieldput <Tower: TowerPanel panel>";
+    "fieldput <Tower: TowerPanel panel>"->"load.r r0";
+    "push \"Center\""
+    "load.r r0"->"push \"Center\"";
+    "push \"Center\""->"load.r r0";
+    "fieldget <Tower: TowerPanel panel>"
+    "load.r r0"->"fieldget <Tower: TowerPanel panel>";
+    "virtualinvoke <java.awt.Container: java.awt.Component add(java.lang.String,java.awt.Component)>"
+    "fieldget <Tower: TowerPanel panel>"->"virtualinvoke <java.awt.Container: java.awt.Component add(java.lang.String,java.awt.Component)>";
+    "pop"
+    "virtualinvoke <java.awt.Container: java.awt.Component add(java.lang.String,java.awt.Component)>"->"pop";
+    "new TowerControl"
+    "pop"->"new TowerControl";
+    "store.r $r5"
+    "new TowerControl"->"store.r $r5";
+    "load.r $r5"
+    "store.r $r5"->"load.r $r5";
+    "load.r $r5"->"load.r r0";
+    "load.r r0"->"fieldget <Tower: TowerPanel panel>";
+    "specialinvoke <TowerControl: void <init>(TowerPanel)>"
+    "fieldget <Tower: TowerPanel panel>"->"specialinvoke <TowerControl: void <init>(TowerPanel)>";
+    "specialinvoke <TowerControl: void <init>(TowerPanel)>"->"load.r r0";
+    "load.r r0"->"load.r $r5";
+    "fieldput <Tower: TowerControl control>"
+    "load.r $r5"->"fieldput <Tower: TowerControl control>";
+    "fieldput <Tower: TowerControl control>"->"load.r r0";
+    "push \"South\""
+    "load.r r0"->"push \"South\"";
+    "push \"South\""->"load.r $r5";
+    "load.r $r5"->"virtualinvoke <java.awt.Container: java.awt.Component add(java.lang.String,java.awt.Component)>";
+    "virtualinvoke <java.awt.Container: java.awt.Component add(java.lang.String,java.awt.Component)>"->"pop";
+    "return"
+    "pop"->"return";
+}

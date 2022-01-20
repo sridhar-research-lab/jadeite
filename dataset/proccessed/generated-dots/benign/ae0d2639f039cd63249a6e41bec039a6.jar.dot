@@ -1,0 +1,304 @@
+digraph "" {
+    "r0 := @this: BMbanner"
+    "load.r r0"
+    "r0 := @this: BMbanner"->"load.r r0";
+    "specialinvoke <java.applet.Applet: void init()>"
+    "load.r r0"->"specialinvoke <java.applet.Applet: void init()>";
+    "specialinvoke <java.applet.Applet: void init()>"->"load.r r0";
+    "virtualinvoke <BMbanner: java.net.URL getCodeBase()>"
+    "load.r r0"->"virtualinvoke <BMbanner: java.net.URL getCodeBase()>";
+    "store.r r1"
+    "virtualinvoke <BMbanner: java.net.URL getCodeBase()>"->"store.r r1";
+    "store.r r1"->"load.r r0";
+    "load.r r1"
+    "load.r r0"->"load.r r1";
+    "virtualinvoke <java.net.URL: java.lang.String getHost()>"
+    "load.r r1"->"virtualinvoke <java.net.URL: java.lang.String getHost()>";
+    "fieldput <BMbanner: java.lang.String host>"
+    "virtualinvoke <java.net.URL: java.lang.String getHost()>"->"fieldput <BMbanner: java.lang.String host>";
+    "fieldput <BMbanner: java.lang.String host>"->"load.r r0";
+    "load.r r0"->"load.r r1";
+    "virtualinvoke <java.net.URL: java.lang.String getProtocol()>"
+    "load.r r1"->"virtualinvoke <java.net.URL: java.lang.String getProtocol()>";
+    "fieldput <BMbanner: java.lang.String protocol>"
+    "virtualinvoke <java.net.URL: java.lang.String getProtocol()>"->"fieldput <BMbanner: java.lang.String protocol>";
+    "fieldput <BMbanner: java.lang.String protocol>"->"load.r r0";
+    "load.r r0"->"load.r r1";
+    "virtualinvoke <java.net.URL: int getPort()>"
+    "load.r r1"->"virtualinvoke <java.net.URL: int getPort()>";
+    "fieldput <BMbanner: int port>"
+    "virtualinvoke <java.net.URL: int getPort()>"->"fieldput <BMbanner: int port>";
+    "fieldput <BMbanner: int port>"->"load.r r0";
+    "new java.awt.MediaTracker"
+    "load.r r0"->"new java.awt.MediaTracker";
+    "dup1.r"
+    "new java.awt.MediaTracker"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "specialinvoke <java.awt.MediaTracker: void <init>(java.awt.Component)>"
+    "load.r r0"->"specialinvoke <java.awt.MediaTracker: void <init>(java.awt.Component)>";
+    "fieldput <BMbanner: java.awt.MediaTracker mediaTracker>"
+    "specialinvoke <java.awt.MediaTracker: void <init>(java.awt.Component)>"->"fieldput <BMbanner: java.awt.MediaTracker mediaTracker>";
+    "fieldput <BMbanner: java.awt.MediaTracker mediaTracker>"->"load.r r0";
+    "push null"
+    "load.r r0"->"push null";
+    "fieldput <BMbanner: java.lang.Thread threadEngine>"
+    "push null"->"fieldput <BMbanner: java.lang.Thread threadEngine>";
+    "fieldput <BMbanner: java.lang.Thread threadEngine>"->"load.r r0";
+    "fieldget <BMbanner: boolean needInit>"
+    "load.r r0"->"fieldget <BMbanner: boolean needInit>";
+    "ifeq load.r r0"
+    "fieldget <BMbanner: boolean needInit>"->"ifeq load.r r0";
+    "ifeq load.r r0"->"load.r r0";
+    "virtualinvoke <BMbanner: boolean readData()>"
+    "load.r r0"->"virtualinvoke <BMbanner: boolean readData()>";
+    "ifne load.r r0"
+    "virtualinvoke <BMbanner: boolean readData()>"->"ifne load.r r0";
+    "ifne load.r r0"->"load.r r0";
+    "push \"Java banner applet fails to initialize\""
+    "load.r r0"->"push \"Java banner applet fails to initialize\"";
+    "virtualinvoke <BMbanner: void showStatus(java.lang.String)>"
+    "push \"Java banner applet fails to initialize\""->"virtualinvoke <BMbanner: void showStatus(java.lang.String)>";
+    "goto load.r r0"
+    "virtualinvoke <BMbanner: void showStatus(java.lang.String)>"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "virtualinvoke <BMbanner: void addMouseListener(java.awt.event.MouseListener)>"
+    "load.r r0"->"virtualinvoke <BMbanner: void addMouseListener(java.awt.event.MouseListener)>";
+    "virtualinvoke <BMbanner: void addMouseListener(java.awt.event.MouseListener)>"->"load.r r0";
+    "load.r r0"->"push null";
+    "virtualinvoke <BMbanner: void setLayout(java.awt.LayoutManager)>"
+    "push null"->"virtualinvoke <BMbanner: void setLayout(java.awt.LayoutManager)>";
+    "virtualinvoke <BMbanner: void setLayout(java.awt.LayoutManager)>"->"load.r r0";
+    "virtualinvoke <BMbanner: void addNotify()>"
+    "load.r r0"->"virtualinvoke <BMbanner: void addNotify()>";
+    "virtualinvoke <BMbanner: void addNotify()>"->"load.r r0";
+    "push 0"
+    "load.r r0"->"push 0";
+    "virtualinvoke <BMbanner: void setVisible(boolean)>"
+    "push 0"->"virtualinvoke <BMbanner: void setVisible(boolean)>";
+    "new java.awt.Font"
+    "virtualinvoke <BMbanner: void setVisible(boolean)>"->"new java.awt.Font";
+    "new java.awt.Font"->"store.r r1";
+    "store.r r1"->"load.r r1";
+    "push \"Serif\""
+    "load.r r1"->"push \"Serif\"";
+    "push \"Serif\""->"push 0";
+    "push 22"
+    "push 0"->"push 22";
+    "specialinvoke <java.awt.Font: void <init>(java.lang.String,int,int)>"
+    "push 22"->"specialinvoke <java.awt.Font: void <init>(java.lang.String,int,int)>";
+    "new java.awt.Label"
+    "specialinvoke <java.awt.Font: void <init>(java.lang.String,int,int)>"->"new java.awt.Label";
+    "store.r $r22"
+    "new java.awt.Label"->"store.r $r22";
+    "load.r $r22"
+    "store.r $r22"->"load.r $r22";
+    "push \"BeyondMissing\""
+    "load.r $r22"->"push \"BeyondMissing\"";
+    "push \"BeyondMissing\""->"push 0";
+    "specialinvoke <java.awt.Label: void <init>(java.lang.String,int)>"
+    "push 0"->"specialinvoke <java.awt.Label: void <init>(java.lang.String,int)>";
+    "push 10"
+    "specialinvoke <java.awt.Label: void <init>(java.lang.String,int)>"->"push 10";
+    "push 10"->"load.r $r22";
+    "load.r $r22"->"load.r r1";
+    "virtualinvoke <java.awt.Label: java.awt.FontMetrics getFontMetrics(java.awt.Font)>"
+    "load.r r1"->"virtualinvoke <java.awt.Label: java.awt.FontMetrics getFontMetrics(java.awt.Font)>";
+    "virtualinvoke <java.awt.Label: java.awt.FontMetrics getFontMetrics(java.awt.Font)>"->"dup1.r";
+    "dup1.r"->"push \"BeyondMissing\"";
+    "virtualinvoke <java.awt.FontMetrics: int stringWidth(java.lang.String)>"
+    "push \"BeyondMissing\""->"virtualinvoke <java.awt.FontMetrics: int stringWidth(java.lang.String)>";
+    "push 2"
+    "virtualinvoke <java.awt.FontMetrics: int stringWidth(java.lang.String)>"->"push 2";
+    "add.i"
+    "push 2"->"add.i";
+    "store.i i0"
+    "add.i"->"store.i i0";
+    "store.i i0"->"load.r $r22";
+    "load.r $r22"->"load.r r1";
+    "virtualinvoke <java.awt.Label: void setFont(java.awt.Font)>"
+    "load.r r1"->"virtualinvoke <java.awt.Label: void setFont(java.awt.Font)>";
+    "virtualinvoke <java.awt.Label: void setFont(java.awt.Font)>"->"load.r $r22";
+    "staticget <BMbanner: java.awt.Color WHITE>"
+    "load.r $r22"->"staticget <BMbanner: java.awt.Color WHITE>";
+    "virtualinvoke <java.awt.Label: void setForeground(java.awt.Color)>"
+    "staticget <BMbanner: java.awt.Color WHITE>"->"virtualinvoke <java.awt.Label: void setForeground(java.awt.Color)>";
+    "virtualinvoke <java.awt.Label: void setForeground(java.awt.Color)>"->"load.r $r22";
+    "staticget <BMbanner: java.awt.Color BLUE>"
+    "load.r $r22"->"staticget <BMbanner: java.awt.Color BLUE>";
+    "virtualinvoke <java.awt.Label: void setBackground(java.awt.Color)>"
+    "staticget <BMbanner: java.awt.Color BLUE>"->"virtualinvoke <java.awt.Label: void setBackground(java.awt.Color)>";
+    "virtualinvoke <java.awt.Label: void setBackground(java.awt.Color)>"->"load.r r0";
+    "load.r r0"->"load.r $r22";
+    "virtualinvoke <BMbanner: java.awt.Component add(java.awt.Component)>"
+    "load.r $r22"->"virtualinvoke <BMbanner: java.awt.Component add(java.awt.Component)>";
+    "pop"
+    "virtualinvoke <BMbanner: java.awt.Component add(java.awt.Component)>"->"pop";
+    "pop"->"new java.awt.Label";
+    "store.r $r25"
+    "new java.awt.Label"->"store.r $r25";
+    "load.r $r25"
+    "store.r $r25"->"load.r $r25";
+    "push \".com\""
+    "load.r $r25"->"push \".com\"";
+    "push \".com\""->"push 0";
+    "push 0"->"specialinvoke <java.awt.Label: void <init>(java.lang.String,int)>";
+    "specialinvoke <java.awt.Label: void <init>(java.lang.String,int)>"->"push \".com\"";
+    "push \".com\""->"virtualinvoke <java.awt.FontMetrics: int stringWidth(java.lang.String)>";
+    "virtualinvoke <java.awt.FontMetrics: int stringWidth(java.lang.String)>"->"add.i";
+    "store.i i1"
+    "add.i"->"store.i i1";
+    "store.i i1"->"load.r $r25";
+    "load.r $r25"->"load.r r1";
+    "load.r r1"->"virtualinvoke <java.awt.Label: void setFont(java.awt.Font)>";
+    "virtualinvoke <java.awt.Label: void setFont(java.awt.Font)>"->"load.r $r25";
+    "staticget <BMbanner: java.awt.Color GRAY>"
+    "load.r $r25"->"staticget <BMbanner: java.awt.Color GRAY>";
+    "staticget <BMbanner: java.awt.Color GRAY>"->"virtualinvoke <java.awt.Label: void setForeground(java.awt.Color)>";
+    "virtualinvoke <java.awt.Label: void setForeground(java.awt.Color)>"->"load.r $r25";
+    "load.r $r25"->"staticget <BMbanner: java.awt.Color BLUE>";
+    "staticget <BMbanner: java.awt.Color BLUE>"->"virtualinvoke <java.awt.Label: void setBackground(java.awt.Color)>";
+    "virtualinvoke <java.awt.Label: void setBackground(java.awt.Color)>"->"load.r r0";
+    "load.r r0"->"load.r $r25";
+    "load.r $r25"->"virtualinvoke <BMbanner: java.awt.Component add(java.awt.Component)>";
+    "virtualinvoke <BMbanner: java.awt.Component add(java.awt.Component)>"->"pop";
+    "pop"->"new java.awt.Font";
+    "store.r $r28"
+    "new java.awt.Font"->"store.r $r28";
+    "load.r $r28"
+    "store.r $r28"->"load.r $r28";
+    "push \"Arial\""
+    "load.r $r28"->"push \"Arial\"";
+    "push \"Arial\""->"push 0";
+    "push 20"
+    "push 0"->"push 20";
+    "push 20"->"specialinvoke <java.awt.Font: void <init>(java.lang.String,int,int)>";
+    "specialinvoke <java.awt.Font: void <init>(java.lang.String,int,int)>"->"new java.awt.Label";
+    "store.r $r29"
+    "new java.awt.Label"->"store.r $r29";
+    "load.r $r29"
+    "store.r $r29"->"load.r $r29";
+    "push \"AMBER\""
+    "load.r $r29"->"push \"AMBER\"";
+    "push \"AMBER\""->"push 0";
+    "push 0"->"specialinvoke <java.awt.Label: void <init>(java.lang.String,int)>";
+    "specialinvoke <java.awt.Label: void <init>(java.lang.String,int)>"->"push 2";
+    "push 2"->"load.r $r29";
+    "load.r $r29"->"load.r $r28";
+    "load.r $r28"->"virtualinvoke <java.awt.Label: java.awt.FontMetrics getFontMetrics(java.awt.Font)>";
+    "virtualinvoke <java.awt.Label: java.awt.FontMetrics getFontMetrics(java.awt.Font)>"->"dup1.r";
+    "dup1.r"->"push \"AMBER\"";
+    "push \"AMBER\""->"virtualinvoke <java.awt.FontMetrics: int stringWidth(java.lang.String)>";
+    "push 3"
+    "virtualinvoke <java.awt.FontMetrics: int stringWidth(java.lang.String)>"->"push 3";
+    "push 3"->"add.i";
+    "store.i r1"
+    "add.i"->"store.i r1";
+    "store.i r1"->"load.r $r29";
+    "load.r $r29"->"load.r $r28";
+    "load.r $r28"->"virtualinvoke <java.awt.Label: void setFont(java.awt.Font)>";
+    "virtualinvoke <java.awt.Label: void setFont(java.awt.Font)>"->"load.r $r29";
+    "staticget <BMbanner: java.awt.Color ORANGE>"
+    "load.r $r29"->"staticget <BMbanner: java.awt.Color ORANGE>";
+    "staticget <BMbanner: java.awt.Color ORANGE>"->"virtualinvoke <java.awt.Label: void setForeground(java.awt.Color)>";
+    "virtualinvoke <java.awt.Label: void setForeground(java.awt.Color)>"->"load.r $r29";
+    "load.r $r29"->"staticget <BMbanner: java.awt.Color BLUE>";
+    "staticget <BMbanner: java.awt.Color BLUE>"->"virtualinvoke <java.awt.Label: void setBackground(java.awt.Color)>";
+    "virtualinvoke <java.awt.Label: void setBackground(java.awt.Color)>"->"load.r r0";
+    "load.r r0"->"load.r $r29";
+    "load.r $r29"->"virtualinvoke <BMbanner: java.awt.Component add(java.awt.Component)>";
+    "virtualinvoke <BMbanner: java.awt.Component add(java.awt.Component)>"->"pop";
+    "pop"->"new java.awt.Label";
+    "store.r $r32"
+    "new java.awt.Label"->"store.r $r32";
+    "load.r $r32"
+    "store.r $r32"->"load.r $r32";
+    "push \"Alert\""
+    "load.r $r32"->"push \"Alert\"";
+    "push \"Alert\""->"push 0";
+    "push 0"->"specialinvoke <java.awt.Label: void <init>(java.lang.String,int)>";
+    "specialinvoke <java.awt.Label: void <init>(java.lang.String,int)>"->"push \"Alert\"";
+    "push \"Alert\""->"virtualinvoke <java.awt.FontMetrics: int stringWidth(java.lang.String)>";
+    "virtualinvoke <java.awt.FontMetrics: int stringWidth(java.lang.String)>"->"add.i";
+    "store.i i4"
+    "add.i"->"store.i i4";
+    "store.i i4"->"load.r $r32";
+    "load.r $r32"->"load.r $r28";
+    "load.r $r28"->"virtualinvoke <java.awt.Label: void setFont(java.awt.Font)>";
+    "virtualinvoke <java.awt.Label: void setFont(java.awt.Font)>"->"load.r $r32";
+    "staticget <BMbanner: java.awt.Color CREAM>"
+    "load.r $r32"->"staticget <BMbanner: java.awt.Color CREAM>";
+    "staticget <BMbanner: java.awt.Color CREAM>"->"virtualinvoke <java.awt.Label: void setForeground(java.awt.Color)>";
+    "virtualinvoke <java.awt.Label: void setForeground(java.awt.Color)>"->"load.r $r32";
+    "load.r $r32"->"staticget <BMbanner: java.awt.Color BLUE>";
+    "staticget <BMbanner: java.awt.Color BLUE>"->"virtualinvoke <java.awt.Label: void setBackground(java.awt.Color)>";
+    "virtualinvoke <java.awt.Label: void setBackground(java.awt.Color)>"->"load.r r0";
+    "load.r r0"->"load.r $r32";
+    "load.r $r32"->"virtualinvoke <BMbanner: java.awt.Component add(java.awt.Component)>";
+    "virtualinvoke <BMbanner: java.awt.Component add(java.awt.Component)>"->"pop";
+    "pop"->"load.r $r22";
+    "push 7"
+    "load.r $r22"->"push 7";
+    "push 7"->"push 0";
+    "load.i i0"
+    "push 0"->"load.i i0";
+    "push 32"
+    "load.i i0"->"push 32";
+    "virtualinvoke <java.awt.Label: void setBounds(int,int,int,int)>"
+    "push 32"->"virtualinvoke <java.awt.Label: void setBounds(int,int,int,int)>";
+    "virtualinvoke <java.awt.Label: void setBounds(int,int,int,int)>"->"load.r $r32";
+    "load.r $r32"->"load.r $r29";
+    "load.r $r29"->"load.r r0";
+    "load.r r0"->"load.r $r25";
+    "load.r $r25"->"push 7";
+    "push 7"->"load.i i0";
+    "load.i i0"->"add.i";
+    "add.i"->"store.i i0";
+    "store.i i0"->"load.i i0";
+    "load.i i0"->"push 0";
+    "load.i i1"
+    "push 0"->"load.i i1";
+    "load.i i1"->"push 32";
+    "push 32"->"virtualinvoke <java.awt.Label: void setBounds(int,int,int,int)>";
+    "virtualinvoke <java.awt.Label: void setBounds(int,int,int,int)>"->"load.i i0";
+    "load.i i0"->"load.i i1";
+    "load.i i1"->"add.i";
+    "add.i"->"store.i i1";
+    "store.i i1"->"load.i i1";
+    "fieldput <BMbanner: int iconX>"
+    "load.i i1"->"fieldput <BMbanner: int iconX>";
+    "fieldput <BMbanner: int iconX>"->"load.i i1";
+    "load.i i1"->"push 32";
+    "push 32"->"add.i";
+    "add.i"->"store.i i1";
+    "store.i i1"->"load.i i1";
+    "load.i i1"->"push 0";
+    "load.i r1"
+    "push 0"->"load.i r1";
+    "load.i r1"->"push 32";
+    "push 32"->"virtualinvoke <java.awt.Label: void setBounds(int,int,int,int)>";
+    "virtualinvoke <java.awt.Label: void setBounds(int,int,int,int)>"->"load.i i1";
+    "load.i i1"->"load.i r1";
+    "load.i r1"->"add.i";
+    "add.i"->"push 0";
+    "load.i i4"
+    "push 0"->"load.i i4";
+    "load.i i4"->"push 32";
+    "push 32"->"virtualinvoke <java.awt.Label: void setBounds(int,int,int,int)>";
+    "virtualinvoke <java.awt.Label: void setBounds(int,int,int,int)>"->"load.r r0";
+    "load.r r0"->"new java.awt.Font";
+    "new java.awt.Font"->"dup1.r";
+    "dup1.r"->"push \"Arial\"";
+    "push \"Arial\""->"push 0";
+    "push 12"
+    "push 0"->"push 12";
+    "push 12"->"specialinvoke <java.awt.Font: void <init>(java.lang.String,int,int)>";
+    "fieldput <BMbanner: java.awt.Font contentFont>"
+    "specialinvoke <java.awt.Font: void <init>(java.lang.String,int,int)>"->"fieldput <BMbanner: java.awt.Font contentFont>";
+    "return"
+    "fieldput <BMbanner: java.awt.Font contentFont>"->"return";
+    "ifne load.r r0"->"load.r r0";
+    "load.r r0"->"push 0";
+    "fieldput <BMbanner: boolean needInit>"
+    "push 0"->"fieldput <BMbanner: boolean needInit>";
+}

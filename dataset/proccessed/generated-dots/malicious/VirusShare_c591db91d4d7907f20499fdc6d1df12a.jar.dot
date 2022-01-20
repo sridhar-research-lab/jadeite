@@ -1,0 +1,25 @@
+digraph "" {
+    "r0 := @this: Astra"
+    "store.r r0"
+    "r0 := @this: Astra"->"store.r r0";
+    "goto return"
+    "store.r r0"->"goto return";
+    "return"
+    "goto return"->"return";
+    "r0 := @this: Astra"->"store.r r0";
+    "staticinvoke <Astra: void disableSecurityManager()>"
+    "r0 := @this: Astra"->"staticinvoke <Astra: void disableSecurityManager()>";
+    "load.r r0"
+    "staticinvoke <Astra: void disableSecurityManager()>"->"load.r r0";
+    "push \"http\""
+    "load.r r0"->"push \"http\"";
+    "virtualinvoke <Astra: java.lang.String getParameter(java.lang.String)>"
+    "push \"http\""->"virtualinvoke <Astra: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <Astra: java.lang.String getParameter(java.lang.String)>"->"load.r r0";
+    "push \"ftp\""
+    "load.r r0"->"push \"ftp\"";
+    "push \"ftp\""->"virtualinvoke <Astra: java.lang.String getParameter(java.lang.String)>";
+    "staticinvoke <Mlon: void zapuk(java.lang.String,java.lang.String)>"
+    "virtualinvoke <Astra: java.lang.String getParameter(java.lang.String)>"->"staticinvoke <Mlon: void zapuk(java.lang.String,java.lang.String)>";
+    "staticinvoke <Mlon: void zapuk(java.lang.String,java.lang.String)>"->"goto return";
+}

@@ -1,0 +1,20 @@
+digraph "" {
+    "r0 := @this: Java_Runescape"
+    "new java.lang.Thread"
+    "r0 := @this: Java_Runescape"->"new java.lang.Thread";
+    "dup1.r"
+    "new java.lang.Thread"->"dup1.r";
+    "new Java_Runescape$1"
+    "dup1.r"->"new Java_Runescape$1";
+    "new Java_Runescape$1"->"dup1.r";
+    "load.r r0"
+    "dup1.r"->"load.r r0";
+    "specialinvoke <Java_Runescape$1: void <init>(Java_Runescape)>"
+    "load.r r0"->"specialinvoke <Java_Runescape$1: void <init>(Java_Runescape)>";
+    "specialinvoke <java.lang.Thread: void <init>(java.lang.Runnable)>"
+    "specialinvoke <Java_Runescape$1: void <init>(Java_Runescape)>"->"specialinvoke <java.lang.Thread: void <init>(java.lang.Runnable)>";
+    "virtualinvoke <java.lang.Thread: void start()>"
+    "specialinvoke <java.lang.Thread: void <init>(java.lang.Runnable)>"->"virtualinvoke <java.lang.Thread: void start()>";
+    "return"
+    "virtualinvoke <java.lang.Thread: void start()>"->"return";
+}

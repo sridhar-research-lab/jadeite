@@ -1,0 +1,1462 @@
+digraph "" {
+    "r0 := @this: OrbitViewer"
+    "load.r r0"
+    "r0 := @this: OrbitViewer"->"load.r r0";
+    "staticget <java.awt.Color: java.awt.Color white>"
+    "load.r r0"->"staticget <java.awt.Color: java.awt.Color white>";
+    "virtualinvoke <OrbitViewer: void setBackground(java.awt.Color)>"
+    "staticget <java.awt.Color: java.awt.Color white>"->"virtualinvoke <OrbitViewer: void setBackground(java.awt.Color)>";
+    "new java.awt.Panel"
+    "virtualinvoke <OrbitViewer: void setBackground(java.awt.Color)>"->"new java.awt.Panel";
+    "store.r $r14"
+    "new java.awt.Panel"->"store.r $r14";
+    "load.r $r14"
+    "store.r $r14"->"load.r $r14";
+    "specialinvoke <java.awt.Panel: void <init>()>"
+    "load.r $r14"->"specialinvoke <java.awt.Panel: void <init>()>";
+    "new java.awt.GridBagLayout"
+    "specialinvoke <java.awt.Panel: void <init>()>"->"new java.awt.GridBagLayout";
+    "store.r $r15"
+    "new java.awt.GridBagLayout"->"store.r $r15";
+    "load.r $r15"
+    "store.r $r15"->"load.r $r15";
+    "specialinvoke <java.awt.GridBagLayout: void <init>()>"
+    "load.r $r15"->"specialinvoke <java.awt.GridBagLayout: void <init>()>";
+    "new java.awt.GridBagConstraints"
+    "specialinvoke <java.awt.GridBagLayout: void <init>()>"->"new java.awt.GridBagConstraints";
+    "store.r $r16"
+    "new java.awt.GridBagConstraints"->"store.r $r16";
+    "load.r $r16"
+    "store.r $r16"->"load.r $r16";
+    "specialinvoke <java.awt.GridBagConstraints: void <init>()>"
+    "load.r $r16"->"specialinvoke <java.awt.GridBagConstraints: void <init>()>";
+    "specialinvoke <java.awt.GridBagConstraints: void <init>()>"->"load.r $r16";
+    "push 1"
+    "load.r $r16"->"push 1";
+    "fieldput <java.awt.GridBagConstraints: int fill>"
+    "push 1"->"fieldput <java.awt.GridBagConstraints: int fill>";
+    "fieldput <java.awt.GridBagConstraints: int fill>"->"load.r $r14";
+    "load.r $r14"->"load.r $r15";
+    "virtualinvoke <java.awt.Panel: void setLayout(java.awt.LayoutManager)>"
+    "load.r $r15"->"virtualinvoke <java.awt.Panel: void setLayout(java.awt.LayoutManager)>";
+    "virtualinvoke <java.awt.Panel: void setLayout(java.awt.LayoutManager)>"->"load.r r0";
+    "push 0"
+    "load.r r0"->"push 0";
+    "specialinvoke <OrbitViewer: astro.Comet getObject(int)>"
+    "push 0"->"specialinvoke <OrbitViewer: astro.Comet getObject(int)>";
+    "store.r r4"
+    "specialinvoke <OrbitViewer: astro.Comet getObject(int)>"->"store.r r4";
+    "store.r r4"->"load.r r0";
+    "load.r r0"->"push 1";
+    "push 1"->"specialinvoke <OrbitViewer: astro.Comet getObject(int)>";
+    "store.r r5"
+    "specialinvoke <OrbitViewer: astro.Comet getObject(int)>"->"store.r r5";
+    "store.r r5"->"load.r r0";
+    "push 2"
+    "load.r r0"->"push 2";
+    "push 2"->"specialinvoke <OrbitViewer: astro.Comet getObject(int)>";
+    "store.r r6"
+    "specialinvoke <OrbitViewer: astro.Comet getObject(int)>"->"store.r r6";
+    "store.r r6"->"load.r r0";
+    "push \"Date\""
+    "load.r r0"->"push \"Date\"";
+    "virtualinvoke <OrbitViewer: java.lang.String getParameter(java.lang.String)>"
+    "push \"Date\""->"virtualinvoke <OrbitViewer: java.lang.String getParameter(java.lang.String)>";
+    "store.r $r17"
+    "virtualinvoke <OrbitViewer: java.lang.String getParameter(java.lang.String)>"->"store.r $r17";
+    "load.r $r17"
+    "store.r $r17"->"load.r $r17";
+    "ifnull new java.util.Date"
+    "load.r $r17"->"ifnull new java.util.Date";
+    "ifnull new java.util.Date"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"load.r $r17";
+    "specialinvoke <OrbitViewer: astro.ATime ymdStringToAtime(java.lang.String)>"
+    "load.r $r17"->"specialinvoke <OrbitViewer: astro.ATime ymdStringToAtime(java.lang.String)>";
+    "fieldput <OrbitViewer: astro.ATime atime>"
+    "specialinvoke <OrbitViewer: astro.ATime ymdStringToAtime(java.lang.String)>"->"fieldput <OrbitViewer: astro.ATime atime>";
+    "goto load.r r0"
+    "fieldput <OrbitViewer: astro.ATime atime>"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "new OrbitCanvas"
+    "load.r r0"->"new OrbitCanvas";
+    "dup1.r"
+    "new OrbitCanvas"->"dup1.r";
+    "load.r r4"
+    "dup1.r"->"load.r r4";
+    "load.r r5"
+    "load.r r4"->"load.r r5";
+    "load.r r6"
+    "load.r r5"->"load.r r6";
+    "load.r r6"->"load.r r0";
+    "fieldget <OrbitViewer: astro.ATime atime>"
+    "load.r r0"->"fieldget <OrbitViewer: astro.ATime atime>";
+    "specialinvoke <OrbitCanvas: void <init>(astro.Comet,astro.Comet,astro.Comet,astro.ATime)>"
+    "fieldget <OrbitViewer: astro.ATime atime>"->"specialinvoke <OrbitCanvas: void <init>(astro.Comet,astro.Comet,astro.Comet,astro.ATime)>";
+    "fieldput <OrbitViewer: OrbitCanvas orbitCanvas>"
+    "specialinvoke <OrbitCanvas: void <init>(astro.Comet,astro.Comet,astro.Comet,astro.ATime)>"->"fieldput <OrbitViewer: OrbitCanvas orbitCanvas>";
+    "fieldput <OrbitViewer: OrbitCanvas orbitCanvas>"->"load.r $r16";
+    "push 1.0"
+    "load.r $r16"->"push 1.0";
+    "fieldput <java.awt.GridBagConstraints: double weightx>"
+    "push 1.0"->"fieldput <java.awt.GridBagConstraints: double weightx>";
+    "fieldput <java.awt.GridBagConstraints: double weightx>"->"load.r $r16";
+    "load.r $r16"->"push 1.0";
+    "fieldput <java.awt.GridBagConstraints: double weighty>"
+    "push 1.0"->"fieldput <java.awt.GridBagConstraints: double weighty>";
+    "fieldput <java.awt.GridBagConstraints: double weighty>"->"load.r $r16";
+    "push -1"
+    "load.r $r16"->"push -1";
+    "fieldput <java.awt.GridBagConstraints: int gridwidth>"
+    "push -1"->"fieldput <java.awt.GridBagConstraints: int gridwidth>";
+    "fieldput <java.awt.GridBagConstraints: int gridwidth>"->"load.r $r15";
+    "load.r $r15"->"load.r r0";
+    "fieldget <OrbitViewer: OrbitCanvas orbitCanvas>"
+    "load.r r0"->"fieldget <OrbitViewer: OrbitCanvas orbitCanvas>";
+    "fieldget <OrbitViewer: OrbitCanvas orbitCanvas>"->"load.r $r16";
+    "virtualinvoke <java.awt.GridBagLayout: void setConstraints(java.awt.Component,java.awt.GridBagConstraints)>"
+    "load.r $r16"->"virtualinvoke <java.awt.GridBagLayout: void setConstraints(java.awt.Component,java.awt.GridBagConstraints)>";
+    "virtualinvoke <java.awt.GridBagLayout: void setConstraints(java.awt.Component,java.awt.GridBagConstraints)>"->"load.r $r14";
+    "load.r $r14"->"load.r r0";
+    "load.r r0"->"fieldget <OrbitViewer: OrbitCanvas orbitCanvas>";
+    "virtualinvoke <java.awt.Panel: java.awt.Component add(java.awt.Component)>"
+    "fieldget <OrbitViewer: OrbitCanvas orbitCanvas>"->"virtualinvoke <java.awt.Panel: java.awt.Component add(java.awt.Component)>";
+    "pop"
+    "virtualinvoke <java.awt.Panel: java.awt.Component add(java.awt.Component)>"->"pop";
+    "pop"->"load.r r0";
+    "new java.awt.Scrollbar"
+    "load.r r0"->"new java.awt.Scrollbar";
+    "new java.awt.Scrollbar"->"dup1.r";
+    "dup1.r"->"push 1";
+    "push 130"
+    "push 1"->"push 130";
+    "push 12"
+    "push 130"->"push 12";
+    "push 12"->"push 0";
+    "push 192"
+    "push 0"->"push 192";
+    "specialinvoke <java.awt.Scrollbar: void <init>(int,int,int,int,int)>"
+    "push 192"->"specialinvoke <java.awt.Scrollbar: void <init>(int,int,int,int,int)>";
+    "fieldput <OrbitViewer: java.awt.Scrollbar scrollVert>"
+    "specialinvoke <java.awt.Scrollbar: void <init>(int,int,int,int,int)>"->"fieldput <OrbitViewer: java.awt.Scrollbar scrollVert>";
+    "fieldput <OrbitViewer: java.awt.Scrollbar scrollVert>"->"load.r $r16";
+    "push 0.0"
+    "load.r $r16"->"push 0.0";
+    "push 0.0"->"fieldput <java.awt.GridBagConstraints: double weightx>";
+    "fieldput <java.awt.GridBagConstraints: double weightx>"->"load.r $r16";
+    "load.r $r16"->"push 0.0";
+    "push 0.0"->"fieldput <java.awt.GridBagConstraints: double weighty>";
+    "fieldput <java.awt.GridBagConstraints: double weighty>"->"load.r $r16";
+    "load.r $r16"->"push 0";
+    "push 0"->"fieldput <java.awt.GridBagConstraints: int gridwidth>";
+    "fieldput <java.awt.GridBagConstraints: int gridwidth>"->"load.r $r15";
+    "load.r $r15"->"load.r r0";
+    "fieldget <OrbitViewer: java.awt.Scrollbar scrollVert>"
+    "load.r r0"->"fieldget <OrbitViewer: java.awt.Scrollbar scrollVert>";
+    "fieldget <OrbitViewer: java.awt.Scrollbar scrollVert>"->"load.r $r16";
+    "load.r $r16"->"virtualinvoke <java.awt.GridBagLayout: void setConstraints(java.awt.Component,java.awt.GridBagConstraints)>";
+    "virtualinvoke <java.awt.GridBagLayout: void setConstraints(java.awt.Component,java.awt.GridBagConstraints)>"->"load.r $r14";
+    "load.r $r14"->"load.r r0";
+    "load.r r0"->"fieldget <OrbitViewer: java.awt.Scrollbar scrollVert>";
+    "fieldget <OrbitViewer: java.awt.Scrollbar scrollVert>"->"virtualinvoke <java.awt.Panel: java.awt.Component add(java.awt.Component)>";
+    "virtualinvoke <java.awt.Panel: java.awt.Component add(java.awt.Component)>"->"pop";
+    "pop"->"load.r r0";
+    "load.r r0"->"fieldget <OrbitViewer: OrbitCanvas orbitCanvas>";
+    "push 180"
+    "fieldget <OrbitViewer: OrbitCanvas orbitCanvas>"->"push 180";
+    "push 180"->"load.r r0";
+    "load.r r0"->"fieldget <OrbitViewer: java.awt.Scrollbar scrollVert>";
+    "virtualinvoke <java.awt.Scrollbar: int getValue()>"
+    "fieldget <OrbitViewer: java.awt.Scrollbar scrollVert>"->"virtualinvoke <java.awt.Scrollbar: int getValue()>";
+    "sub.i"
+    "virtualinvoke <java.awt.Scrollbar: int getValue()>"->"sub.i";
+    "virtualinvoke <OrbitCanvas: void setRotateVert(int)>"
+    "sub.i"->"virtualinvoke <OrbitCanvas: void setRotateVert(int)>";
+    "virtualinvoke <OrbitCanvas: void setRotateVert(int)>"->"load.r r0";
+    "load.r r0"->"new java.awt.Scrollbar";
+    "new java.awt.Scrollbar"->"dup1.r";
+    "dup1.r"->"push 0";
+    "push 255"
+    "push 0"->"push 255";
+    "push 15"
+    "push 255"->"push 15";
+    "push 15"->"push 0";
+    "push 375"
+    "push 0"->"push 375";
+    "push 375"->"specialinvoke <java.awt.Scrollbar: void <init>(int,int,int,int,int)>";
+    "fieldput <OrbitViewer: java.awt.Scrollbar scrollHorz>"
+    "specialinvoke <java.awt.Scrollbar: void <init>(int,int,int,int,int)>"->"fieldput <OrbitViewer: java.awt.Scrollbar scrollHorz>";
+    "fieldput <OrbitViewer: java.awt.Scrollbar scrollHorz>"->"load.r $r16";
+    "load.r $r16"->"push 1.0";
+    "push 1.0"->"fieldput <java.awt.GridBagConstraints: double weightx>";
+    "fieldput <java.awt.GridBagConstraints: double weightx>"->"load.r $r16";
+    "load.r $r16"->"push 0.0";
+    "push 0.0"->"fieldput <java.awt.GridBagConstraints: double weighty>";
+    "fieldput <java.awt.GridBagConstraints: double weighty>"->"load.r $r16";
+    "load.r $r16"->"push 1";
+    "push 1"->"fieldput <java.awt.GridBagConstraints: int gridwidth>";
+    "fieldput <java.awt.GridBagConstraints: int gridwidth>"->"load.r $r15";
+    "load.r $r15"->"load.r r0";
+    "fieldget <OrbitViewer: java.awt.Scrollbar scrollHorz>"
+    "load.r r0"->"fieldget <OrbitViewer: java.awt.Scrollbar scrollHorz>";
+    "fieldget <OrbitViewer: java.awt.Scrollbar scrollHorz>"->"load.r $r16";
+    "load.r $r16"->"virtualinvoke <java.awt.GridBagLayout: void setConstraints(java.awt.Component,java.awt.GridBagConstraints)>";
+    "virtualinvoke <java.awt.GridBagLayout: void setConstraints(java.awt.Component,java.awt.GridBagConstraints)>"->"load.r $r14";
+    "load.r $r14"->"load.r r0";
+    "load.r r0"->"fieldget <OrbitViewer: java.awt.Scrollbar scrollHorz>";
+    "fieldget <OrbitViewer: java.awt.Scrollbar scrollHorz>"->"virtualinvoke <java.awt.Panel: java.awt.Component add(java.awt.Component)>";
+    "virtualinvoke <java.awt.Panel: java.awt.Component add(java.awt.Component)>"->"pop";
+    "pop"->"load.r r0";
+    "load.r r0"->"fieldget <OrbitViewer: OrbitCanvas orbitCanvas>";
+    "push 270"
+    "fieldget <OrbitViewer: OrbitCanvas orbitCanvas>"->"push 270";
+    "push 270"->"load.r r0";
+    "load.r r0"->"fieldget <OrbitViewer: java.awt.Scrollbar scrollHorz>";
+    "fieldget <OrbitViewer: java.awt.Scrollbar scrollHorz>"->"virtualinvoke <java.awt.Scrollbar: int getValue()>";
+    "virtualinvoke <java.awt.Scrollbar: int getValue()>"->"sub.i";
+    "virtualinvoke <OrbitCanvas: void setRotateHorz(int)>"
+    "sub.i"->"virtualinvoke <OrbitCanvas: void setRotateHorz(int)>";
+    "virtualinvoke <OrbitCanvas: void setRotateHorz(int)>"->"new java.awt.Panel";
+    "new java.awt.Panel"->"store.r r4";
+    "store.r r4"->"load.r r4";
+    "load.r r4"->"specialinvoke <java.awt.Panel: void <init>()>";
+    "specialinvoke <java.awt.Panel: void <init>()>"->"load.r $r16";
+    "load.r $r16"->"push 0.0";
+    "push 0.0"->"fieldput <java.awt.GridBagConstraints: double weightx>";
+    "fieldput <java.awt.GridBagConstraints: double weightx>"->"load.r $r16";
+    "load.r $r16"->"push 0.0";
+    "push 0.0"->"fieldput <java.awt.GridBagConstraints: double weighty>";
+    "fieldput <java.awt.GridBagConstraints: double weighty>"->"load.r $r16";
+    "load.r $r16"->"push 0";
+    "push 0"->"fieldput <java.awt.GridBagConstraints: int gridwidth>";
+    "fieldput <java.awt.GridBagConstraints: int gridwidth>"->"load.r $r15";
+    "load.r $r15"->"load.r r4";
+    "load.r r4"->"load.r $r16";
+    "load.r $r16"->"virtualinvoke <java.awt.GridBagLayout: void setConstraints(java.awt.Component,java.awt.GridBagConstraints)>";
+    "virtualinvoke <java.awt.GridBagLayout: void setConstraints(java.awt.Component,java.awt.GridBagConstraints)>"->"load.r $r14";
+    "load.r $r14"->"load.r r4";
+    "load.r r4"->"virtualinvoke <java.awt.Panel: java.awt.Component add(java.awt.Component)>";
+    "virtualinvoke <java.awt.Panel: java.awt.Component add(java.awt.Component)>"->"pop";
+    "pop"->"new java.awt.Panel";
+    "new java.awt.Panel"->"store.r $r15";
+    "store.r $r15"->"load.r $r15";
+    "load.r $r15"->"specialinvoke <java.awt.Panel: void <init>()>";
+    "specialinvoke <java.awt.Panel: void <init>()>"->"new java.awt.GridBagLayout";
+    "new java.awt.GridBagLayout"->"store.r $r16";
+    "store.r $r16"->"load.r $r16";
+    "load.r $r16"->"specialinvoke <java.awt.GridBagLayout: void <init>()>";
+    "specialinvoke <java.awt.GridBagLayout: void <init>()>"->"new java.awt.GridBagConstraints";
+    "new java.awt.GridBagConstraints"->"store.r r4";
+    "store.r r4"->"load.r r4";
+    "load.r r4"->"specialinvoke <java.awt.GridBagConstraints: void <init>()>";
+    "specialinvoke <java.awt.GridBagConstraints: void <init>()>"->"load.r r4";
+    "load.r r4"->"push 1";
+    "push 1"->"fieldput <java.awt.GridBagConstraints: int fill>";
+    "fieldput <java.awt.GridBagConstraints: int fill>"->"load.r $r15";
+    "load.r $r15"->"load.r $r16";
+    "load.r $r16"->"virtualinvoke <java.awt.Panel: void setLayout(java.awt.LayoutManager)>";
+    "virtualinvoke <java.awt.Panel: void setLayout(java.awt.LayoutManager)>"->"load.r $r15";
+    "load.r $r15"->"staticget <java.awt.Color: java.awt.Color white>";
+    "virtualinvoke <java.awt.Panel: void setBackground(java.awt.Color)>"
+    "staticget <java.awt.Color: java.awt.Color white>"->"virtualinvoke <java.awt.Panel: void setBackground(java.awt.Color)>";
+    "virtualinvoke <java.awt.Panel: void setBackground(java.awt.Color)>"->"load.r r0";
+    "new java.awt.Button"
+    "load.r r0"->"new java.awt.Button";
+    "new java.awt.Button"->"dup1.r";
+    "push \" Date \""
+    "dup1.r"->"push \" Date \"";
+    "specialinvoke <java.awt.Button: void <init>(java.lang.String)>"
+    "push \" Date \""->"specialinvoke <java.awt.Button: void <init>(java.lang.String)>";
+    "fieldput <OrbitViewer: java.awt.Button buttonDate>"
+    "specialinvoke <java.awt.Button: void <init>(java.lang.String)>"->"fieldput <OrbitViewer: java.awt.Button buttonDate>";
+    "fieldput <OrbitViewer: java.awt.Button buttonDate>"->"load.r r0";
+    "fieldget <OrbitViewer: java.awt.Button buttonDate>"
+    "load.r r0"->"fieldget <OrbitViewer: java.awt.Button buttonDate>";
+    "new java.awt.Font"
+    "fieldget <OrbitViewer: java.awt.Button buttonDate>"->"new java.awt.Font";
+    "new java.awt.Font"->"dup1.r";
+    "push \"Dialog\""
+    "dup1.r"->"push \"Dialog\"";
+    "push \"Dialog\""->"push 0";
+    "push 16"
+    "push 0"->"push 16";
+    "specialinvoke <java.awt.Font: void <init>(java.lang.String,int,int)>"
+    "push 16"->"specialinvoke <java.awt.Font: void <init>(java.lang.String,int,int)>";
+    "virtualinvoke <java.awt.Button: void setFont(java.awt.Font)>"
+    "specialinvoke <java.awt.Font: void <init>(java.lang.String,int,int)>"->"virtualinvoke <java.awt.Button: void setFont(java.awt.Font)>";
+    "virtualinvoke <java.awt.Button: void setFont(java.awt.Font)>"->"load.r r4";
+    "load.r r4"->"push 0";
+    "fieldput <java.awt.GridBagConstraints: int gridx>"
+    "push 0"->"fieldput <java.awt.GridBagConstraints: int gridx>";
+    "fieldput <java.awt.GridBagConstraints: int gridx>"->"load.r r4";
+    "load.r r4"->"push 0";
+    "fieldput <java.awt.GridBagConstraints: int gridy>"
+    "push 0"->"fieldput <java.awt.GridBagConstraints: int gridy>";
+    "fieldput <java.awt.GridBagConstraints: int gridy>"->"load.r r4";
+    "load.r r4"->"push 0.0";
+    "push 0.0"->"fieldput <java.awt.GridBagConstraints: double weightx>";
+    "fieldput <java.awt.GridBagConstraints: double weightx>"->"load.r r4";
+    "load.r r4"->"push 1.0";
+    "push 1.0"->"fieldput <java.awt.GridBagConstraints: double weighty>";
+    "fieldput <java.awt.GridBagConstraints: double weighty>"->"load.r r4";
+    "load.r r4"->"push 1";
+    "push 1"->"fieldput <java.awt.GridBagConstraints: int gridwidth>";
+    "fieldput <java.awt.GridBagConstraints: int gridwidth>"->"load.r r4";
+    "load.r r4"->"push 2";
+    "fieldput <java.awt.GridBagConstraints: int gridheight>"
+    "push 2"->"fieldput <java.awt.GridBagConstraints: int gridheight>";
+    "fieldput <java.awt.GridBagConstraints: int gridheight>"->"load.r r4";
+    "new java.awt.Insets"
+    "load.r r4"->"new java.awt.Insets";
+    "new java.awt.Insets"->"dup1.r";
+    "dup1.r"->"push 0";
+    "push 0"->"push 0";
+    "push 0"->"push 0";
+    "push 0"->"push 12";
+    "specialinvoke <java.awt.Insets: void <init>(int,int,int,int)>"
+    "push 12"->"specialinvoke <java.awt.Insets: void <init>(int,int,int,int)>";
+    "fieldput <java.awt.GridBagConstraints: java.awt.Insets insets>"
+    "specialinvoke <java.awt.Insets: void <init>(int,int,int,int)>"->"fieldput <java.awt.GridBagConstraints: java.awt.Insets insets>";
+    "fieldput <java.awt.GridBagConstraints: java.awt.Insets insets>"->"load.r $r16";
+    "load.r $r16"->"load.r r0";
+    "load.r r0"->"fieldget <OrbitViewer: java.awt.Button buttonDate>";
+    "fieldget <OrbitViewer: java.awt.Button buttonDate>"->"load.r r4";
+    "load.r r4"->"virtualinvoke <java.awt.GridBagLayout: void setConstraints(java.awt.Component,java.awt.GridBagConstraints)>";
+    "virtualinvoke <java.awt.GridBagLayout: void setConstraints(java.awt.Component,java.awt.GridBagConstraints)>"->"load.r $r15";
+    "load.r $r15"->"load.r r0";
+    "load.r r0"->"fieldget <OrbitViewer: java.awt.Button buttonDate>";
+    "fieldget <OrbitViewer: java.awt.Button buttonDate>"->"virtualinvoke <java.awt.Panel: java.awt.Component add(java.awt.Component)>";
+    "virtualinvoke <java.awt.Panel: java.awt.Component add(java.awt.Component)>"->"pop";
+    "pop"->"load.r r0";
+    "load.r r0"->"new java.awt.Button";
+    "new java.awt.Button"->"dup1.r";
+    "push \"<<\""
+    "dup1.r"->"push \"<<\"";
+    "push \"<<\""->"specialinvoke <java.awt.Button: void <init>(java.lang.String)>";
+    "fieldput <OrbitViewer: java.awt.Button buttonRevPlay>"
+    "specialinvoke <java.awt.Button: void <init>(java.lang.String)>"->"fieldput <OrbitViewer: java.awt.Button buttonRevPlay>";
+    "fieldput <OrbitViewer: java.awt.Button buttonRevPlay>"->"load.r r0";
+    "fieldget <OrbitViewer: java.awt.Button buttonRevPlay>"
+    "load.r r0"->"fieldget <OrbitViewer: java.awt.Button buttonRevPlay>";
+    "fieldget <OrbitViewer: java.awt.Button buttonRevPlay>"->"new java.awt.Font";
+    "new java.awt.Font"->"dup1.r";
+    "dup1.r"->"push \"Dialog\"";
+    "push \"Dialog\""->"push 1";
+    "push 14"
+    "push 1"->"push 14";
+    "push 14"->"specialinvoke <java.awt.Font: void <init>(java.lang.String,int,int)>";
+    "specialinvoke <java.awt.Font: void <init>(java.lang.String,int,int)>"->"virtualinvoke <java.awt.Button: void setFont(java.awt.Font)>";
+    "virtualinvoke <java.awt.Button: void setFont(java.awt.Font)>"->"load.r r4";
+    "load.r r4"->"push 1";
+    "push 1"->"fieldput <java.awt.GridBagConstraints: int gridx>";
+    "fieldput <java.awt.GridBagConstraints: int gridx>"->"load.r r4";
+    "load.r r4"->"push 0";
+    "push 0"->"fieldput <java.awt.GridBagConstraints: int gridy>";
+    "fieldput <java.awt.GridBagConstraints: int gridy>"->"load.r r4";
+    "load.r r4"->"push 0.0";
+    "push 0.0"->"fieldput <java.awt.GridBagConstraints: double weightx>";
+    "fieldput <java.awt.GridBagConstraints: double weightx>"->"load.r r4";
+    "load.r r4"->"push 0.0";
+    "push 0.0"->"fieldput <java.awt.GridBagConstraints: double weighty>";
+    "fieldput <java.awt.GridBagConstraints: double weighty>"->"load.r r4";
+    "load.r r4"->"push 1";
+    "push 1"->"fieldput <java.awt.GridBagConstraints: int gridwidth>";
+    "fieldput <java.awt.GridBagConstraints: int gridwidth>"->"load.r r4";
+    "load.r r4"->"push 1";
+    "push 1"->"fieldput <java.awt.GridBagConstraints: int gridheight>";
+    "fieldput <java.awt.GridBagConstraints: int gridheight>"->"load.r r4";
+    "load.r r4"->"new java.awt.Insets";
+    "new java.awt.Insets"->"dup1.r";
+    "dup1.r"->"push 0";
+    "push 0"->"push 0";
+    "push 3"
+    "push 0"->"push 3";
+    "push 3"->"push 0";
+    "push 0"->"specialinvoke <java.awt.Insets: void <init>(int,int,int,int)>";
+    "specialinvoke <java.awt.Insets: void <init>(int,int,int,int)>"->"fieldput <java.awt.GridBagConstraints: java.awt.Insets insets>";
+    "fieldput <java.awt.GridBagConstraints: java.awt.Insets insets>"->"load.r $r16";
+    "load.r $r16"->"load.r r0";
+    "load.r r0"->"fieldget <OrbitViewer: java.awt.Button buttonRevPlay>";
+    "fieldget <OrbitViewer: java.awt.Button buttonRevPlay>"->"load.r r4";
+    "load.r r4"->"virtualinvoke <java.awt.GridBagLayout: void setConstraints(java.awt.Component,java.awt.GridBagConstraints)>";
+    "virtualinvoke <java.awt.GridBagLayout: void setConstraints(java.awt.Component,java.awt.GridBagConstraints)>"->"load.r $r15";
+    "load.r $r15"->"load.r r0";
+    "load.r r0"->"fieldget <OrbitViewer: java.awt.Button buttonRevPlay>";
+    "fieldget <OrbitViewer: java.awt.Button buttonRevPlay>"->"virtualinvoke <java.awt.Panel: java.awt.Component add(java.awt.Component)>";
+    "virtualinvoke <java.awt.Panel: java.awt.Component add(java.awt.Component)>"->"pop";
+    "pop"->"load.r r0";
+    "load.r r0"->"new java.awt.Button";
+    "new java.awt.Button"->"dup1.r";
+    "push \"|<\""
+    "dup1.r"->"push \"|<\"";
+    "push \"|<\""->"specialinvoke <java.awt.Button: void <init>(java.lang.String)>";
+    "fieldput <OrbitViewer: java.awt.Button buttonRevStep>"
+    "specialinvoke <java.awt.Button: void <init>(java.lang.String)>"->"fieldput <OrbitViewer: java.awt.Button buttonRevStep>";
+    "fieldput <OrbitViewer: java.awt.Button buttonRevStep>"->"load.r r0";
+    "fieldget <OrbitViewer: java.awt.Button buttonRevStep>"
+    "load.r r0"->"fieldget <OrbitViewer: java.awt.Button buttonRevStep>";
+    "fieldget <OrbitViewer: java.awt.Button buttonRevStep>"->"new java.awt.Font";
+    "new java.awt.Font"->"dup1.r";
+    "dup1.r"->"push \"Dialog\"";
+    "push \"Dialog\""->"push 1";
+    "push 1"->"push 14";
+    "push 14"->"specialinvoke <java.awt.Font: void <init>(java.lang.String,int,int)>";
+    "specialinvoke <java.awt.Font: void <init>(java.lang.String,int,int)>"->"virtualinvoke <java.awt.Button: void setFont(java.awt.Font)>";
+    "virtualinvoke <java.awt.Button: void setFont(java.awt.Font)>"->"load.r r4";
+    "load.r r4"->"push 2";
+    "push 2"->"fieldput <java.awt.GridBagConstraints: int gridx>";
+    "fieldput <java.awt.GridBagConstraints: int gridx>"->"load.r r4";
+    "load.r r4"->"push 0";
+    "push 0"->"fieldput <java.awt.GridBagConstraints: int gridy>";
+    "fieldput <java.awt.GridBagConstraints: int gridy>"->"load.r r4";
+    "load.r r4"->"push 0.0";
+    "push 0.0"->"fieldput <java.awt.GridBagConstraints: double weightx>";
+    "fieldput <java.awt.GridBagConstraints: double weightx>"->"load.r r4";
+    "load.r r4"->"push 0.0";
+    "push 0.0"->"fieldput <java.awt.GridBagConstraints: double weighty>";
+    "fieldput <java.awt.GridBagConstraints: double weighty>"->"load.r r4";
+    "load.r r4"->"push 1";
+    "push 1"->"fieldput <java.awt.GridBagConstraints: int gridwidth>";
+    "fieldput <java.awt.GridBagConstraints: int gridwidth>"->"load.r r4";
+    "load.r r4"->"push 1";
+    "push 1"->"fieldput <java.awt.GridBagConstraints: int gridheight>";
+    "fieldput <java.awt.GridBagConstraints: int gridheight>"->"load.r r4";
+    "load.r r4"->"new java.awt.Insets";
+    "new java.awt.Insets"->"dup1.r";
+    "dup1.r"->"push 0";
+    "push 0"->"push 0";
+    "push 0"->"push 3";
+    "push 3"->"push 0";
+    "push 0"->"specialinvoke <java.awt.Insets: void <init>(int,int,int,int)>";
+    "specialinvoke <java.awt.Insets: void <init>(int,int,int,int)>"->"fieldput <java.awt.GridBagConstraints: java.awt.Insets insets>";
+    "fieldput <java.awt.GridBagConstraints: java.awt.Insets insets>"->"load.r $r16";
+    "load.r $r16"->"load.r r0";
+    "load.r r0"->"fieldget <OrbitViewer: java.awt.Button buttonRevStep>";
+    "fieldget <OrbitViewer: java.awt.Button buttonRevStep>"->"load.r r4";
+    "load.r r4"->"virtualinvoke <java.awt.GridBagLayout: void setConstraints(java.awt.Component,java.awt.GridBagConstraints)>";
+    "virtualinvoke <java.awt.GridBagLayout: void setConstraints(java.awt.Component,java.awt.GridBagConstraints)>"->"load.r $r15";
+    "load.r $r15"->"load.r r0";
+    "load.r r0"->"fieldget <OrbitViewer: java.awt.Button buttonRevStep>";
+    "fieldget <OrbitViewer: java.awt.Button buttonRevStep>"->"virtualinvoke <java.awt.Panel: java.awt.Component add(java.awt.Component)>";
+    "virtualinvoke <java.awt.Panel: java.awt.Component add(java.awt.Component)>"->"pop";
+    "pop"->"load.r r0";
+    "load.r r0"->"new java.awt.Button";
+    "new java.awt.Button"->"dup1.r";
+    "push \"||\""
+    "dup1.r"->"push \"||\"";
+    "push \"||\""->"specialinvoke <java.awt.Button: void <init>(java.lang.String)>";
+    "fieldput <OrbitViewer: java.awt.Button buttonStop>"
+    "specialinvoke <java.awt.Button: void <init>(java.lang.String)>"->"fieldput <OrbitViewer: java.awt.Button buttonStop>";
+    "fieldput <OrbitViewer: java.awt.Button buttonStop>"->"load.r r0";
+    "fieldget <OrbitViewer: java.awt.Button buttonStop>"
+    "load.r r0"->"fieldget <OrbitViewer: java.awt.Button buttonStop>";
+    "fieldget <OrbitViewer: java.awt.Button buttonStop>"->"new java.awt.Font";
+    "new java.awt.Font"->"dup1.r";
+    "dup1.r"->"push \"Dialog\"";
+    "push \"Dialog\""->"push 1";
+    "push 1"->"push 14";
+    "push 14"->"specialinvoke <java.awt.Font: void <init>(java.lang.String,int,int)>";
+    "specialinvoke <java.awt.Font: void <init>(java.lang.String,int,int)>"->"virtualinvoke <java.awt.Button: void setFont(java.awt.Font)>";
+    "virtualinvoke <java.awt.Button: void setFont(java.awt.Font)>"->"load.r r4";
+    "load.r r4"->"push 3";
+    "push 3"->"fieldput <java.awt.GridBagConstraints: int gridx>";
+    "fieldput <java.awt.GridBagConstraints: int gridx>"->"load.r r4";
+    "load.r r4"->"push 0";
+    "push 0"->"fieldput <java.awt.GridBagConstraints: int gridy>";
+    "fieldput <java.awt.GridBagConstraints: int gridy>"->"load.r r4";
+    "load.r r4"->"push 0.0";
+    "push 0.0"->"fieldput <java.awt.GridBagConstraints: double weightx>";
+    "fieldput <java.awt.GridBagConstraints: double weightx>"->"load.r r4";
+    "load.r r4"->"push 0.0";
+    "push 0.0"->"fieldput <java.awt.GridBagConstraints: double weighty>";
+    "fieldput <java.awt.GridBagConstraints: double weighty>"->"load.r r4";
+    "load.r r4"->"push 1";
+    "push 1"->"fieldput <java.awt.GridBagConstraints: int gridwidth>";
+    "fieldput <java.awt.GridBagConstraints: int gridwidth>"->"load.r r4";
+    "load.r r4"->"push 1";
+    "push 1"->"fieldput <java.awt.GridBagConstraints: int gridheight>";
+    "fieldput <java.awt.GridBagConstraints: int gridheight>"->"load.r r4";
+    "load.r r4"->"new java.awt.Insets";
+    "new java.awt.Insets"->"dup1.r";
+    "dup1.r"->"push 0";
+    "push 0"->"push 0";
+    "push 0"->"push 3";
+    "push 3"->"push 0";
+    "push 0"->"specialinvoke <java.awt.Insets: void <init>(int,int,int,int)>";
+    "specialinvoke <java.awt.Insets: void <init>(int,int,int,int)>"->"fieldput <java.awt.GridBagConstraints: java.awt.Insets insets>";
+    "fieldput <java.awt.GridBagConstraints: java.awt.Insets insets>"->"load.r $r16";
+    "load.r $r16"->"load.r r0";
+    "load.r r0"->"fieldget <OrbitViewer: java.awt.Button buttonStop>";
+    "fieldget <OrbitViewer: java.awt.Button buttonStop>"->"load.r r4";
+    "load.r r4"->"virtualinvoke <java.awt.GridBagLayout: void setConstraints(java.awt.Component,java.awt.GridBagConstraints)>";
+    "virtualinvoke <java.awt.GridBagLayout: void setConstraints(java.awt.Component,java.awt.GridBagConstraints)>"->"load.r $r15";
+    "load.r $r15"->"load.r r0";
+    "load.r r0"->"fieldget <OrbitViewer: java.awt.Button buttonStop>";
+    "fieldget <OrbitViewer: java.awt.Button buttonStop>"->"virtualinvoke <java.awt.Panel: java.awt.Component add(java.awt.Component)>";
+    "virtualinvoke <java.awt.Panel: java.awt.Component add(java.awt.Component)>"->"pop";
+    "pop"->"load.r r0";
+    "load.r r0"->"new java.awt.Button";
+    "new java.awt.Button"->"dup1.r";
+    "push \">|\""
+    "dup1.r"->"push \">|\"";
+    "push \">|\""->"specialinvoke <java.awt.Button: void <init>(java.lang.String)>";
+    "fieldput <OrbitViewer: java.awt.Button buttonForStep>"
+    "specialinvoke <java.awt.Button: void <init>(java.lang.String)>"->"fieldput <OrbitViewer: java.awt.Button buttonForStep>";
+    "fieldput <OrbitViewer: java.awt.Button buttonForStep>"->"load.r r0";
+    "fieldget <OrbitViewer: java.awt.Button buttonForStep>"
+    "load.r r0"->"fieldget <OrbitViewer: java.awt.Button buttonForStep>";
+    "fieldget <OrbitViewer: java.awt.Button buttonForStep>"->"new java.awt.Font";
+    "new java.awt.Font"->"dup1.r";
+    "dup1.r"->"push \"Dialog\"";
+    "push \"Dialog\""->"push 1";
+    "push 1"->"push 14";
+    "push 14"->"specialinvoke <java.awt.Font: void <init>(java.lang.String,int,int)>";
+    "specialinvoke <java.awt.Font: void <init>(java.lang.String,int,int)>"->"virtualinvoke <java.awt.Button: void setFont(java.awt.Font)>";
+    "virtualinvoke <java.awt.Button: void setFont(java.awt.Font)>"->"load.r r4";
+    "push 4"
+    "load.r r4"->"push 4";
+    "push 4"->"fieldput <java.awt.GridBagConstraints: int gridx>";
+    "fieldput <java.awt.GridBagConstraints: int gridx>"->"load.r r4";
+    "load.r r4"->"push 0";
+    "push 0"->"fieldput <java.awt.GridBagConstraints: int gridy>";
+    "fieldput <java.awt.GridBagConstraints: int gridy>"->"load.r r4";
+    "load.r r4"->"push 0.0";
+    "push 0.0"->"fieldput <java.awt.GridBagConstraints: double weightx>";
+    "fieldput <java.awt.GridBagConstraints: double weightx>"->"load.r r4";
+    "load.r r4"->"push 0.0";
+    "push 0.0"->"fieldput <java.awt.GridBagConstraints: double weighty>";
+    "fieldput <java.awt.GridBagConstraints: double weighty>"->"load.r r4";
+    "load.r r4"->"push 1";
+    "push 1"->"fieldput <java.awt.GridBagConstraints: int gridwidth>";
+    "fieldput <java.awt.GridBagConstraints: int gridwidth>"->"load.r r4";
+    "load.r r4"->"push 1";
+    "push 1"->"fieldput <java.awt.GridBagConstraints: int gridheight>";
+    "fieldput <java.awt.GridBagConstraints: int gridheight>"->"load.r r4";
+    "load.r r4"->"new java.awt.Insets";
+    "new java.awt.Insets"->"dup1.r";
+    "dup1.r"->"push 0";
+    "push 0"->"push 0";
+    "push 0"->"push 3";
+    "push 3"->"push 0";
+    "push 0"->"specialinvoke <java.awt.Insets: void <init>(int,int,int,int)>";
+    "specialinvoke <java.awt.Insets: void <init>(int,int,int,int)>"->"fieldput <java.awt.GridBagConstraints: java.awt.Insets insets>";
+    "fieldput <java.awt.GridBagConstraints: java.awt.Insets insets>"->"load.r $r16";
+    "load.r $r16"->"load.r r0";
+    "load.r r0"->"fieldget <OrbitViewer: java.awt.Button buttonForStep>";
+    "fieldget <OrbitViewer: java.awt.Button buttonForStep>"->"load.r r4";
+    "load.r r4"->"virtualinvoke <java.awt.GridBagLayout: void setConstraints(java.awt.Component,java.awt.GridBagConstraints)>";
+    "virtualinvoke <java.awt.GridBagLayout: void setConstraints(java.awt.Component,java.awt.GridBagConstraints)>"->"load.r $r15";
+    "load.r $r15"->"load.r r0";
+    "load.r r0"->"fieldget <OrbitViewer: java.awt.Button buttonForStep>";
+    "fieldget <OrbitViewer: java.awt.Button buttonForStep>"->"virtualinvoke <java.awt.Panel: java.awt.Component add(java.awt.Component)>";
+    "virtualinvoke <java.awt.Panel: java.awt.Component add(java.awt.Component)>"->"pop";
+    "pop"->"load.r r0";
+    "load.r r0"->"new java.awt.Button";
+    "new java.awt.Button"->"dup1.r";
+    "push \">>\""
+    "dup1.r"->"push \">>\"";
+    "push \">>\""->"specialinvoke <java.awt.Button: void <init>(java.lang.String)>";
+    "fieldput <OrbitViewer: java.awt.Button buttonForPlay>"
+    "specialinvoke <java.awt.Button: void <init>(java.lang.String)>"->"fieldput <OrbitViewer: java.awt.Button buttonForPlay>";
+    "fieldput <OrbitViewer: java.awt.Button buttonForPlay>"->"load.r r0";
+    "fieldget <OrbitViewer: java.awt.Button buttonForPlay>"
+    "load.r r0"->"fieldget <OrbitViewer: java.awt.Button buttonForPlay>";
+    "fieldget <OrbitViewer: java.awt.Button buttonForPlay>"->"new java.awt.Font";
+    "new java.awt.Font"->"dup1.r";
+    "dup1.r"->"push \"Dialog\"";
+    "push \"Dialog\""->"push 1";
+    "push 1"->"push 14";
+    "push 14"->"specialinvoke <java.awt.Font: void <init>(java.lang.String,int,int)>";
+    "specialinvoke <java.awt.Font: void <init>(java.lang.String,int,int)>"->"virtualinvoke <java.awt.Button: void setFont(java.awt.Font)>";
+    "virtualinvoke <java.awt.Button: void setFont(java.awt.Font)>"->"load.r r4";
+    "push 5"
+    "load.r r4"->"push 5";
+    "push 5"->"fieldput <java.awt.GridBagConstraints: int gridx>";
+    "fieldput <java.awt.GridBagConstraints: int gridx>"->"load.r r4";
+    "load.r r4"->"push 0";
+    "push 0"->"fieldput <java.awt.GridBagConstraints: int gridy>";
+    "fieldput <java.awt.GridBagConstraints: int gridy>"->"load.r r4";
+    "load.r r4"->"push 0.0";
+    "push 0.0"->"fieldput <java.awt.GridBagConstraints: double weightx>";
+    "fieldput <java.awt.GridBagConstraints: double weightx>"->"load.r r4";
+    "load.r r4"->"push 0.0";
+    "push 0.0"->"fieldput <java.awt.GridBagConstraints: double weighty>";
+    "fieldput <java.awt.GridBagConstraints: double weighty>"->"load.r r4";
+    "load.r r4"->"push 1";
+    "push 1"->"fieldput <java.awt.GridBagConstraints: int gridwidth>";
+    "fieldput <java.awt.GridBagConstraints: int gridwidth>"->"load.r r4";
+    "load.r r4"->"push 1";
+    "push 1"->"fieldput <java.awt.GridBagConstraints: int gridheight>";
+    "fieldput <java.awt.GridBagConstraints: int gridheight>"->"load.r r4";
+    "load.r r4"->"new java.awt.Insets";
+    "new java.awt.Insets"->"dup1.r";
+    "dup1.r"->"push 0";
+    "push 0"->"push 0";
+    "push 0"->"push 3";
+    "push 3"->"push 0";
+    "push 0"->"specialinvoke <java.awt.Insets: void <init>(int,int,int,int)>";
+    "specialinvoke <java.awt.Insets: void <init>(int,int,int,int)>"->"fieldput <java.awt.GridBagConstraints: java.awt.Insets insets>";
+    "fieldput <java.awt.GridBagConstraints: java.awt.Insets insets>"->"load.r $r16";
+    "load.r $r16"->"load.r r0";
+    "load.r r0"->"fieldget <OrbitViewer: java.awt.Button buttonForPlay>";
+    "fieldget <OrbitViewer: java.awt.Button buttonForPlay>"->"load.r r4";
+    "load.r r4"->"virtualinvoke <java.awt.GridBagLayout: void setConstraints(java.awt.Component,java.awt.GridBagConstraints)>";
+    "virtualinvoke <java.awt.GridBagLayout: void setConstraints(java.awt.Component,java.awt.GridBagConstraints)>"->"load.r $r15";
+    "load.r $r15"->"load.r r0";
+    "load.r r0"->"fieldget <OrbitViewer: java.awt.Button buttonForPlay>";
+    "fieldget <OrbitViewer: java.awt.Button buttonForPlay>"->"virtualinvoke <java.awt.Panel: java.awt.Component add(java.awt.Component)>";
+    "virtualinvoke <java.awt.Panel: java.awt.Component add(java.awt.Component)>"->"pop";
+    "pop"->"load.r r0";
+    "new java.awt.Choice"
+    "load.r r0"->"new java.awt.Choice";
+    "new java.awt.Choice"->"dup1.r";
+    "specialinvoke <java.awt.Choice: void <init>()>"
+    "dup1.r"->"specialinvoke <java.awt.Choice: void <init>()>";
+    "fieldput <OrbitViewer: java.awt.Choice choiceTimeStep>"
+    "specialinvoke <java.awt.Choice: void <init>()>"->"fieldput <OrbitViewer: java.awt.Choice choiceTimeStep>";
+    "fieldput <OrbitViewer: java.awt.Choice choiceTimeStep>"->"load.r r0";
+    "fieldget <OrbitViewer: java.awt.Choice choiceTimeStep>"
+    "load.r r0"->"fieldget <OrbitViewer: java.awt.Choice choiceTimeStep>";
+    "fieldget <OrbitViewer: java.awt.Choice choiceTimeStep>"->"new java.awt.Font";
+    "new java.awt.Font"->"dup1.r";
+    "dup1.r"->"push \"Dialog\"";
+    "push \"Dialog\""->"push 0";
+    "push 0"->"push 16";
+    "push 16"->"specialinvoke <java.awt.Font: void <init>(java.lang.String,int,int)>";
+    "virtualinvoke <java.awt.Choice: void setFont(java.awt.Font)>"
+    "specialinvoke <java.awt.Font: void <init>(java.lang.String,int,int)>"->"virtualinvoke <java.awt.Choice: void setFont(java.awt.Font)>";
+    "virtualinvoke <java.awt.Choice: void setFont(java.awt.Font)>"->"load.r r4";
+    "load.r r4"->"push 1";
+    "push 1"->"fieldput <java.awt.GridBagConstraints: int gridx>";
+    "fieldput <java.awt.GridBagConstraints: int gridx>"->"load.r r4";
+    "load.r r4"->"push 1";
+    "push 1"->"fieldput <java.awt.GridBagConstraints: int gridy>";
+    "fieldput <java.awt.GridBagConstraints: int gridy>"->"load.r r4";
+    "load.r r4"->"push 0.0";
+    "push 0.0"->"fieldput <java.awt.GridBagConstraints: double weightx>";
+    "fieldput <java.awt.GridBagConstraints: double weightx>"->"load.r r4";
+    "load.r r4"->"push 0.0";
+    "push 0.0"->"fieldput <java.awt.GridBagConstraints: double weighty>";
+    "fieldput <java.awt.GridBagConstraints: double weighty>"->"load.r r4";
+    "load.r r4"->"push 5";
+    "push 5"->"fieldput <java.awt.GridBagConstraints: int gridwidth>";
+    "fieldput <java.awt.GridBagConstraints: int gridwidth>"->"load.r r4";
+    "load.r r4"->"push 1";
+    "push 1"->"fieldput <java.awt.GridBagConstraints: int gridheight>";
+    "fieldput <java.awt.GridBagConstraints: int gridheight>"->"load.r r4";
+    "load.r r4"->"new java.awt.Insets";
+    "new java.awt.Insets"->"dup1.r";
+    "dup1.r"->"push 0";
+    "push 0"->"push 0";
+    "push 0"->"push 0";
+    "push 0"->"push 0";
+    "push 0"->"specialinvoke <java.awt.Insets: void <init>(int,int,int,int)>";
+    "specialinvoke <java.awt.Insets: void <init>(int,int,int,int)>"->"fieldput <java.awt.GridBagConstraints: java.awt.Insets insets>";
+    "fieldput <java.awt.GridBagConstraints: java.awt.Insets insets>"->"load.r $r16";
+    "load.r $r16"->"load.r r0";
+    "load.r r0"->"fieldget <OrbitViewer: java.awt.Choice choiceTimeStep>";
+    "fieldget <OrbitViewer: java.awt.Choice choiceTimeStep>"->"load.r r4";
+    "load.r r4"->"virtualinvoke <java.awt.GridBagLayout: void setConstraints(java.awt.Component,java.awt.GridBagConstraints)>";
+    "virtualinvoke <java.awt.GridBagLayout: void setConstraints(java.awt.Component,java.awt.GridBagConstraints)>"->"load.r $r15";
+    "load.r $r15"->"load.r r0";
+    "load.r r0"->"fieldget <OrbitViewer: java.awt.Choice choiceTimeStep>";
+    "fieldget <OrbitViewer: java.awt.Choice choiceTimeStep>"->"virtualinvoke <java.awt.Panel: java.awt.Component add(java.awt.Component)>";
+    "virtualinvoke <java.awt.Panel: java.awt.Component add(java.awt.Component)>"->"pop";
+    "pop"->"push 0";
+    "store.i r5"
+    "push 0"->"store.i r5";
+    "load.i r5"
+    "store.i r5"->"load.i r5";
+    "push 8"
+    "load.i r5"->"push 8";
+    "ifcmpge.i new java.awt.Label"
+    "push 8"->"ifcmpge.i new java.awt.Label";
+    "ifcmpge.i new java.awt.Label"->"load.r r0";
+    "load.r r0"->"fieldget <OrbitViewer: java.awt.Choice choiceTimeStep>";
+    "staticget <OrbitViewer: java.lang.String[] timeStepLabel>"
+    "fieldget <OrbitViewer: java.awt.Choice choiceTimeStep>"->"staticget <OrbitViewer: java.lang.String[] timeStepLabel>";
+    "staticget <OrbitViewer: java.lang.String[] timeStepLabel>"->"load.i r5";
+    "arrayread.r"
+    "load.i r5"->"arrayread.r";
+    "virtualinvoke <java.awt.Choice: void addItem(java.lang.String)>"
+    "arrayread.r"->"virtualinvoke <java.awt.Choice: void addItem(java.lang.String)>";
+    "virtualinvoke <java.awt.Choice: void addItem(java.lang.String)>"->"load.r r0";
+    "load.r r0"->"fieldget <OrbitViewer: java.awt.Choice choiceTimeStep>";
+    "fieldget <OrbitViewer: java.awt.Choice choiceTimeStep>"->"staticget <OrbitViewer: java.lang.String[] timeStepLabel>";
+    "staticget <OrbitViewer: java.lang.String[] timeStepLabel>"->"push 1";
+    "push 1"->"arrayread.r";
+    "virtualinvoke <java.awt.Choice: void select(java.lang.String)>"
+    "arrayread.r"->"virtualinvoke <java.awt.Choice: void select(java.lang.String)>";
+    "inc.i r5 1"
+    "virtualinvoke <java.awt.Choice: void select(java.lang.String)>"->"inc.i r5 1";
+    "goto load.i r5"
+    "inc.i r5 1"->"goto load.i r5";
+    "new java.awt.Label"
+    "ifcmpge.i new java.awt.Label"->"new java.awt.Label";
+    "new java.awt.Label"->"store.r r5";
+    "store.r r5"->"load.r r5";
+    "push \"Center:\""
+    "load.r r5"->"push \"Center:\"";
+    "specialinvoke <java.awt.Label: void <init>(java.lang.String)>"
+    "push \"Center:\""->"specialinvoke <java.awt.Label: void <init>(java.lang.String)>";
+    "specialinvoke <java.awt.Label: void <init>(java.lang.String)>"->"load.r r5";
+    "load.r r5"->"push 0";
+    "virtualinvoke <java.awt.Label: void setAlignment(int)>"
+    "push 0"->"virtualinvoke <java.awt.Label: void setAlignment(int)>";
+    "virtualinvoke <java.awt.Label: void setAlignment(int)>"->"load.r r5";
+    "load.r r5"->"new java.awt.Font";
+    "new java.awt.Font"->"dup1.r";
+    "dup1.r"->"push \"Dialog\"";
+    "push \"Dialog\""->"push 0";
+    "push 0"->"push 16";
+    "push 16"->"specialinvoke <java.awt.Font: void <init>(java.lang.String,int,int)>";
+    "virtualinvoke <java.awt.Label: void setFont(java.awt.Font)>"
+    "specialinvoke <java.awt.Font: void <init>(java.lang.String,int,int)>"->"virtualinvoke <java.awt.Label: void setFont(java.awt.Font)>";
+    "virtualinvoke <java.awt.Label: void setFont(java.awt.Font)>"->"load.r r4";
+    "load.r r4"->"push 0";
+    "push 0"->"fieldput <java.awt.GridBagConstraints: int gridx>";
+    "fieldput <java.awt.GridBagConstraints: int gridx>"->"load.r r4";
+    "load.r r4"->"push 2";
+    "push 2"->"fieldput <java.awt.GridBagConstraints: int gridy>";
+    "fieldput <java.awt.GridBagConstraints: int gridy>"->"load.r r4";
+    "load.r r4"->"push 0.0";
+    "push 0.0"->"fieldput <java.awt.GridBagConstraints: double weightx>";
+    "fieldput <java.awt.GridBagConstraints: double weightx>"->"load.r r4";
+    "load.r r4"->"push 1.0";
+    "push 1.0"->"fieldput <java.awt.GridBagConstraints: double weighty>";
+    "fieldput <java.awt.GridBagConstraints: double weighty>"->"load.r r4";
+    "load.r r4"->"push 1";
+    "push 1"->"fieldput <java.awt.GridBagConstraints: int gridwidth>";
+    "fieldput <java.awt.GridBagConstraints: int gridwidth>"->"load.r r4";
+    "load.r r4"->"push 1";
+    "push 1"->"fieldput <java.awt.GridBagConstraints: int gridheight>";
+    "fieldput <java.awt.GridBagConstraints: int gridheight>"->"load.r r4";
+    "load.r r4"->"new java.awt.Insets";
+    "new java.awt.Insets"->"dup1.r";
+    "dup1.r"->"push 0";
+    "push 0"->"push 0";
+    "push 0"->"push 0";
+    "push 0"->"push 0";
+    "push 0"->"specialinvoke <java.awt.Insets: void <init>(int,int,int,int)>";
+    "specialinvoke <java.awt.Insets: void <init>(int,int,int,int)>"->"fieldput <java.awt.GridBagConstraints: java.awt.Insets insets>";
+    "fieldput <java.awt.GridBagConstraints: java.awt.Insets insets>"->"load.r $r16";
+    "load.r $r16"->"load.r r5";
+    "load.r r5"->"load.r r4";
+    "load.r r4"->"virtualinvoke <java.awt.GridBagLayout: void setConstraints(java.awt.Component,java.awt.GridBagConstraints)>";
+    "virtualinvoke <java.awt.GridBagLayout: void setConstraints(java.awt.Component,java.awt.GridBagConstraints)>"->"load.r $r15";
+    "load.r $r15"->"load.r r5";
+    "load.r r5"->"virtualinvoke <java.awt.Panel: java.awt.Component add(java.awt.Component)>";
+    "virtualinvoke <java.awt.Panel: java.awt.Component add(java.awt.Component)>"->"pop";
+    "pop"->"load.r r0";
+    "load.r r0"->"new java.awt.Choice";
+    "new java.awt.Choice"->"dup1.r";
+    "dup1.r"->"specialinvoke <java.awt.Choice: void <init>()>";
+    "fieldput <OrbitViewer: java.awt.Choice choiceCenterObject>"
+    "specialinvoke <java.awt.Choice: void <init>()>"->"fieldput <OrbitViewer: java.awt.Choice choiceCenterObject>";
+    "fieldput <OrbitViewer: java.awt.Choice choiceCenterObject>"->"load.r r0";
+    "fieldget <OrbitViewer: java.awt.Choice choiceCenterObject>"
+    "load.r r0"->"fieldget <OrbitViewer: java.awt.Choice choiceCenterObject>";
+    "fieldget <OrbitViewer: java.awt.Choice choiceCenterObject>"->"new java.awt.Font";
+    "new java.awt.Font"->"dup1.r";
+    "dup1.r"->"push \"Dialog\"";
+    "push \"Dialog\""->"push 0";
+    "push 0"->"push 16";
+    "push 16"->"specialinvoke <java.awt.Font: void <init>(java.lang.String,int,int)>";
+    "specialinvoke <java.awt.Font: void <init>(java.lang.String,int,int)>"->"virtualinvoke <java.awt.Choice: void setFont(java.awt.Font)>";
+    "virtualinvoke <java.awt.Choice: void setFont(java.awt.Font)>"->"load.r r4";
+    "load.r r4"->"push 1";
+    "push 1"->"fieldput <java.awt.GridBagConstraints: int gridx>";
+    "fieldput <java.awt.GridBagConstraints: int gridx>"->"load.r r4";
+    "load.r r4"->"push 2";
+    "push 2"->"fieldput <java.awt.GridBagConstraints: int gridy>";
+    "fieldput <java.awt.GridBagConstraints: int gridy>"->"load.r r4";
+    "load.r r4"->"push 0.0";
+    "push 0.0"->"fieldput <java.awt.GridBagConstraints: double weightx>";
+    "fieldput <java.awt.GridBagConstraints: double weightx>"->"load.r r4";
+    "load.r r4"->"push 0.0";
+    "push 0.0"->"fieldput <java.awt.GridBagConstraints: double weighty>";
+    "fieldput <java.awt.GridBagConstraints: double weighty>"->"load.r r4";
+    "load.r r4"->"push 5";
+    "push 5"->"fieldput <java.awt.GridBagConstraints: int gridwidth>";
+    "fieldput <java.awt.GridBagConstraints: int gridwidth>"->"load.r r4";
+    "load.r r4"->"push 1";
+    "push 1"->"fieldput <java.awt.GridBagConstraints: int gridheight>";
+    "fieldput <java.awt.GridBagConstraints: int gridheight>"->"load.r r4";
+    "load.r r4"->"new java.awt.Insets";
+    "new java.awt.Insets"->"dup1.r";
+    "dup1.r"->"push 0";
+    "push 0"->"push 0";
+    "push 0"->"push 0";
+    "push 0"->"push 0";
+    "push 0"->"specialinvoke <java.awt.Insets: void <init>(int,int,int,int)>";
+    "specialinvoke <java.awt.Insets: void <init>(int,int,int,int)>"->"fieldput <java.awt.GridBagConstraints: java.awt.Insets insets>";
+    "fieldput <java.awt.GridBagConstraints: java.awt.Insets insets>"->"load.r $r16";
+    "load.r $r16"->"load.r r0";
+    "load.r r0"->"fieldget <OrbitViewer: java.awt.Choice choiceCenterObject>";
+    "fieldget <OrbitViewer: java.awt.Choice choiceCenterObject>"->"load.r r4";
+    "load.r r4"->"virtualinvoke <java.awt.GridBagLayout: void setConstraints(java.awt.Component,java.awt.GridBagConstraints)>";
+    "virtualinvoke <java.awt.GridBagLayout: void setConstraints(java.awt.Component,java.awt.GridBagConstraints)>"->"load.r $r15";
+    "load.r $r15"->"load.r r0";
+    "load.r r0"->"fieldget <OrbitViewer: java.awt.Choice choiceCenterObject>";
+    "fieldget <OrbitViewer: java.awt.Choice choiceCenterObject>"->"virtualinvoke <java.awt.Panel: java.awt.Component add(java.awt.Component)>";
+    "virtualinvoke <java.awt.Panel: java.awt.Component add(java.awt.Component)>"->"pop";
+    "pop"->"push 0";
+    "push 0"->"store.i r5";
+    "store.i r5"->"load.i r5";
+    "push 11"
+    "load.i r5"->"push 11";
+    "ifcmpge.i load.r r0"
+    "push 11"->"ifcmpge.i load.r r0";
+    "ifcmpge.i load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <OrbitViewer: java.awt.Choice choiceCenterObject>";
+    "staticget <OrbitViewer: java.lang.String[] CenterObjectLabel>"
+    "fieldget <OrbitViewer: java.awt.Choice choiceCenterObject>"->"staticget <OrbitViewer: java.lang.String[] CenterObjectLabel>";
+    "staticget <OrbitViewer: java.lang.String[] CenterObjectLabel>"->"load.i r5";
+    "load.i r5"->"arrayread.r";
+    "arrayread.r"->"virtualinvoke <java.awt.Choice: void addItem(java.lang.String)>";
+    "virtualinvoke <java.awt.Choice: void addItem(java.lang.String)>"->"inc.i r5 1";
+    "inc.i r5 1"->"goto load.i r5";
+    "ifcmpge.i load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <OrbitViewer: OrbitCanvas orbitCanvas>";
+    "fieldget <OrbitViewer: OrbitCanvas orbitCanvas>"->"push 0";
+    "virtualinvoke <OrbitCanvas: void SelectCenterObject(int)>"
+    "push 0"->"virtualinvoke <OrbitCanvas: void SelectCenterObject(int)>";
+    "virtualinvoke <OrbitCanvas: void SelectCenterObject(int)>"->"new java.awt.Label";
+    "new java.awt.Label"->"store.r r5";
+    "store.r r5"->"load.r r5";
+    "push \"Orbits:\""
+    "load.r r5"->"push \"Orbits:\"";
+    "push \"Orbits:\""->"specialinvoke <java.awt.Label: void <init>(java.lang.String)>";
+    "specialinvoke <java.awt.Label: void <init>(java.lang.String)>"->"load.r r5";
+    "load.r r5"->"push 0";
+    "push 0"->"virtualinvoke <java.awt.Label: void setAlignment(int)>";
+    "virtualinvoke <java.awt.Label: void setAlignment(int)>"->"load.r r5";
+    "load.r r5"->"new java.awt.Font";
+    "new java.awt.Font"->"dup1.r";
+    "dup1.r"->"push \"Dialog\"";
+    "push \"Dialog\""->"push 0";
+    "push 0"->"push 16";
+    "push 16"->"specialinvoke <java.awt.Font: void <init>(java.lang.String,int,int)>";
+    "specialinvoke <java.awt.Font: void <init>(java.lang.String,int,int)>"->"virtualinvoke <java.awt.Label: void setFont(java.awt.Font)>";
+    "virtualinvoke <java.awt.Label: void setFont(java.awt.Font)>"->"load.r r4";
+    "load.r r4"->"push 0";
+    "push 0"->"fieldput <java.awt.GridBagConstraints: int gridx>";
+    "fieldput <java.awt.GridBagConstraints: int gridx>"->"load.r r4";
+    "load.r r4"->"push 3";
+    "push 3"->"fieldput <java.awt.GridBagConstraints: int gridy>";
+    "fieldput <java.awt.GridBagConstraints: int gridy>"->"load.r r4";
+    "load.r r4"->"push 0.0";
+    "push 0.0"->"fieldput <java.awt.GridBagConstraints: double weightx>";
+    "fieldput <java.awt.GridBagConstraints: double weightx>"->"load.r r4";
+    "load.r r4"->"push 1.0";
+    "push 1.0"->"fieldput <java.awt.GridBagConstraints: double weighty>";
+    "fieldput <java.awt.GridBagConstraints: double weighty>"->"load.r r4";
+    "load.r r4"->"push 1";
+    "push 1"->"fieldput <java.awt.GridBagConstraints: int gridwidth>";
+    "fieldput <java.awt.GridBagConstraints: int gridwidth>"->"load.r r4";
+    "load.r r4"->"push 1";
+    "push 1"->"fieldput <java.awt.GridBagConstraints: int gridheight>";
+    "fieldput <java.awt.GridBagConstraints: int gridheight>"->"load.r r4";
+    "load.r r4"->"new java.awt.Insets";
+    "new java.awt.Insets"->"dup1.r";
+    "dup1.r"->"push 0";
+    "push 0"->"push 0";
+    "push 0"->"push 0";
+    "push 0"->"push 0";
+    "push 0"->"specialinvoke <java.awt.Insets: void <init>(int,int,int,int)>";
+    "specialinvoke <java.awt.Insets: void <init>(int,int,int,int)>"->"fieldput <java.awt.GridBagConstraints: java.awt.Insets insets>";
+    "fieldput <java.awt.GridBagConstraints: java.awt.Insets insets>"->"load.r $r16";
+    "load.r $r16"->"load.r r5";
+    "load.r r5"->"load.r r4";
+    "load.r r4"->"virtualinvoke <java.awt.GridBagLayout: void setConstraints(java.awt.Component,java.awt.GridBagConstraints)>";
+    "virtualinvoke <java.awt.GridBagLayout: void setConstraints(java.awt.Component,java.awt.GridBagConstraints)>"->"load.r $r15";
+    "load.r $r15"->"load.r r5";
+    "load.r r5"->"virtualinvoke <java.awt.Panel: java.awt.Component add(java.awt.Component)>";
+    "virtualinvoke <java.awt.Panel: java.awt.Component add(java.awt.Component)>"->"pop";
+    "pop"->"load.r r0";
+    "load.r r0"->"new java.awt.Choice";
+    "new java.awt.Choice"->"dup1.r";
+    "dup1.r"->"specialinvoke <java.awt.Choice: void <init>()>";
+    "fieldput <OrbitViewer: java.awt.Choice choiceOrbitObject>"
+    "specialinvoke <java.awt.Choice: void <init>()>"->"fieldput <OrbitViewer: java.awt.Choice choiceOrbitObject>";
+    "fieldput <OrbitViewer: java.awt.Choice choiceOrbitObject>"->"load.r r0";
+    "fieldget <OrbitViewer: java.awt.Choice choiceOrbitObject>"
+    "load.r r0"->"fieldget <OrbitViewer: java.awt.Choice choiceOrbitObject>";
+    "fieldget <OrbitViewer: java.awt.Choice choiceOrbitObject>"->"new java.awt.Font";
+    "new java.awt.Font"->"dup1.r";
+    "dup1.r"->"push \"Dialog\"";
+    "push \"Dialog\""->"push 0";
+    "push 0"->"push 16";
+    "push 16"->"specialinvoke <java.awt.Font: void <init>(java.lang.String,int,int)>";
+    "specialinvoke <java.awt.Font: void <init>(java.lang.String,int,int)>"->"virtualinvoke <java.awt.Choice: void setFont(java.awt.Font)>";
+    "virtualinvoke <java.awt.Choice: void setFont(java.awt.Font)>"->"load.r r4";
+    "load.r r4"->"push 1";
+    "push 1"->"fieldput <java.awt.GridBagConstraints: int gridx>";
+    "fieldput <java.awt.GridBagConstraints: int gridx>"->"load.r r4";
+    "load.r r4"->"push 3";
+    "push 3"->"fieldput <java.awt.GridBagConstraints: int gridy>";
+    "fieldput <java.awt.GridBagConstraints: int gridy>"->"load.r r4";
+    "load.r r4"->"push 0.0";
+    "push 0.0"->"fieldput <java.awt.GridBagConstraints: double weightx>";
+    "fieldput <java.awt.GridBagConstraints: double weightx>"->"load.r r4";
+    "load.r r4"->"push 0.0";
+    "push 0.0"->"fieldput <java.awt.GridBagConstraints: double weighty>";
+    "fieldput <java.awt.GridBagConstraints: double weighty>"->"load.r r4";
+    "load.r r4"->"push 5";
+    "push 5"->"fieldput <java.awt.GridBagConstraints: int gridwidth>";
+    "fieldput <java.awt.GridBagConstraints: int gridwidth>"->"load.r r4";
+    "load.r r4"->"push 1";
+    "push 1"->"fieldput <java.awt.GridBagConstraints: int gridheight>";
+    "fieldput <java.awt.GridBagConstraints: int gridheight>"->"load.r r4";
+    "load.r r4"->"new java.awt.Insets";
+    "new java.awt.Insets"->"dup1.r";
+    "dup1.r"->"push 0";
+    "push 0"->"push 0";
+    "push 0"->"push 0";
+    "push 0"->"push 0";
+    "push 0"->"specialinvoke <java.awt.Insets: void <init>(int,int,int,int)>";
+    "specialinvoke <java.awt.Insets: void <init>(int,int,int,int)>"->"fieldput <java.awt.GridBagConstraints: java.awt.Insets insets>";
+    "fieldput <java.awt.GridBagConstraints: java.awt.Insets insets>"->"load.r $r16";
+    "load.r $r16"->"load.r r0";
+    "load.r r0"->"fieldget <OrbitViewer: java.awt.Choice choiceOrbitObject>";
+    "fieldget <OrbitViewer: java.awt.Choice choiceOrbitObject>"->"load.r r4";
+    "load.r r4"->"virtualinvoke <java.awt.GridBagLayout: void setConstraints(java.awt.Component,java.awt.GridBagConstraints)>";
+    "virtualinvoke <java.awt.GridBagLayout: void setConstraints(java.awt.Component,java.awt.GridBagConstraints)>"->"load.r $r15";
+    "load.r $r15"->"load.r r0";
+    "load.r r0"->"fieldget <OrbitViewer: java.awt.Choice choiceOrbitObject>";
+    "fieldget <OrbitViewer: java.awt.Choice choiceOrbitObject>"->"virtualinvoke <java.awt.Panel: java.awt.Component add(java.awt.Component)>";
+    "virtualinvoke <java.awt.Panel: java.awt.Component add(java.awt.Component)>"->"pop";
+    "pop"->"push 0";
+    "push 0"->"store.i r5";
+    "store.i r5"->"load.i r5";
+    "load.i r5"->"push 14";
+    "ifcmpge.i push 0"
+    "push 14"->"ifcmpge.i push 0";
+    "ifcmpge.i push 0"->"load.r r0";
+    "load.r r0"->"fieldget <OrbitViewer: java.awt.Choice choiceOrbitObject>";
+    "staticget <OrbitViewer: java.lang.String[] OrbitDisplayLabel>"
+    "fieldget <OrbitViewer: java.awt.Choice choiceOrbitObject>"->"staticget <OrbitViewer: java.lang.String[] OrbitDisplayLabel>";
+    "staticget <OrbitViewer: java.lang.String[] OrbitDisplayLabel>"->"load.i r5";
+    "load.i r5"->"arrayread.r";
+    "arrayread.r"->"virtualinvoke <java.awt.Choice: void addItem(java.lang.String)>";
+    "virtualinvoke <java.awt.Choice: void addItem(java.lang.String)>"->"inc.i r5 1";
+    "inc.i r5 1"->"goto load.i r5";
+    "ifcmpge.i push 0"->"push 0";
+    "push 0"->"store.i r5";
+    "store.i r5"->"load.i r5";
+    "load.i r5"->"load.r r0";
+    "fieldget <OrbitViewer: int OrbitCount>"
+    "load.r r0"->"fieldget <OrbitViewer: int OrbitCount>";
+    "fieldget <OrbitViewer: int OrbitCount>"->"ifcmpge.i load.r r0";
+    "ifcmpge.i load.r r0"->"load.r r0";
+    "fieldget <OrbitViewer: boolean[] OrbitDisplay>"
+    "load.r r0"->"fieldget <OrbitViewer: boolean[] OrbitDisplay>";
+    "fieldget <OrbitViewer: boolean[] OrbitDisplay>"->"load.i r5";
+    "load.i r5"->"load.r r0";
+    "fieldget <OrbitViewer: boolean[] OrbitDisplayDefault>"
+    "load.r r0"->"fieldget <OrbitViewer: boolean[] OrbitDisplayDefault>";
+    "fieldget <OrbitViewer: boolean[] OrbitDisplayDefault>"->"load.i r5";
+    "arrayread.b"
+    "load.i r5"->"arrayread.b";
+    "arraywrite.b"
+    "arrayread.b"->"arraywrite.b";
+    "arraywrite.b"->"inc.i r5 1";
+    "inc.i r5 1"->"goto load.i r5";
+    "ifcmpge.i load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <OrbitViewer: OrbitCanvas orbitCanvas>";
+    "fieldget <OrbitViewer: OrbitCanvas orbitCanvas>"->"load.r r0";
+    "load.r r0"->"fieldget <OrbitViewer: boolean[] OrbitDisplay>";
+    "fieldget <OrbitViewer: boolean[] OrbitDisplay>"->"load.r r0";
+    "load.r r0"->"fieldget <OrbitViewer: int OrbitCount>";
+    "virtualinvoke <OrbitCanvas: void SelectOrbits(boolean[],int)>"
+    "fieldget <OrbitViewer: int OrbitCount>"->"virtualinvoke <OrbitCanvas: void SelectOrbits(boolean[],int)>";
+    "virtualinvoke <OrbitCanvas: void SelectOrbits(boolean[],int)>"->"load.r r0";
+    "new java.awt.Checkbox"
+    "load.r r0"->"new java.awt.Checkbox";
+    "new java.awt.Checkbox"->"dup1.r";
+    "push \"Date Label\""
+    "dup1.r"->"push \"Date Label\"";
+    "specialinvoke <java.awt.Checkbox: void <init>(java.lang.String)>"
+    "push \"Date Label\""->"specialinvoke <java.awt.Checkbox: void <init>(java.lang.String)>";
+    "fieldput <OrbitViewer: java.awt.Checkbox checkDateLabel>"
+    "specialinvoke <java.awt.Checkbox: void <init>(java.lang.String)>"->"fieldput <OrbitViewer: java.awt.Checkbox checkDateLabel>";
+    "fieldput <OrbitViewer: java.awt.Checkbox checkDateLabel>"->"load.r r0";
+    "fieldget <OrbitViewer: java.awt.Checkbox checkDateLabel>"
+    "load.r r0"->"fieldget <OrbitViewer: java.awt.Checkbox checkDateLabel>";
+    "fieldget <OrbitViewer: java.awt.Checkbox checkDateLabel>"->"push 1";
+    "virtualinvoke <java.awt.Checkbox: void setState(boolean)>"
+    "push 1"->"virtualinvoke <java.awt.Checkbox: void setState(boolean)>";
+    "virtualinvoke <java.awt.Checkbox: void setState(boolean)>"->"load.r r0";
+    "load.r r0"->"fieldget <OrbitViewer: java.awt.Checkbox checkDateLabel>";
+    "fieldget <OrbitViewer: java.awt.Checkbox checkDateLabel>"->"new java.awt.Font";
+    "new java.awt.Font"->"dup1.r";
+    "dup1.r"->"push \"Dialog\"";
+    "push \"Dialog\""->"push 0";
+    "push 0"->"push 16";
+    "push 16"->"specialinvoke <java.awt.Font: void <init>(java.lang.String,int,int)>";
+    "virtualinvoke <java.awt.Checkbox: void setFont(java.awt.Font)>"
+    "specialinvoke <java.awt.Font: void <init>(java.lang.String,int,int)>"->"virtualinvoke <java.awt.Checkbox: void setFont(java.awt.Font)>";
+    "virtualinvoke <java.awt.Checkbox: void setFont(java.awt.Font)>"->"load.r r4";
+    "push 6"
+    "load.r r4"->"push 6";
+    "push 6"->"fieldput <java.awt.GridBagConstraints: int gridx>";
+    "fieldput <java.awt.GridBagConstraints: int gridx>"->"load.r r4";
+    "load.r r4"->"push 0";
+    "push 0"->"fieldput <java.awt.GridBagConstraints: int gridy>";
+    "fieldput <java.awt.GridBagConstraints: int gridy>"->"load.r r4";
+    "load.r r4"->"push 0.0";
+    "push 0.0"->"fieldput <java.awt.GridBagConstraints: double weightx>";
+    "fieldput <java.awt.GridBagConstraints: double weightx>"->"load.r r4";
+    "load.r r4"->"push 0.0";
+    "push 0.0"->"fieldput <java.awt.GridBagConstraints: double weighty>";
+    "fieldput <java.awt.GridBagConstraints: double weighty>"->"load.r r4";
+    "load.r r4"->"push 1";
+    "push 1"->"fieldput <java.awt.GridBagConstraints: int gridwidth>";
+    "fieldput <java.awt.GridBagConstraints: int gridwidth>"->"load.r r4";
+    "load.r r4"->"push 1";
+    "push 1"->"fieldput <java.awt.GridBagConstraints: int gridheight>";
+    "fieldput <java.awt.GridBagConstraints: int gridheight>"->"load.r r4";
+    "load.r r4"->"new java.awt.Insets";
+    "new java.awt.Insets"->"dup1.r";
+    "dup1.r"->"push 0";
+    "push 0"->"push 12";
+    "push 12"->"push 0";
+    "push 0"->"push 0";
+    "push 0"->"specialinvoke <java.awt.Insets: void <init>(int,int,int,int)>";
+    "specialinvoke <java.awt.Insets: void <init>(int,int,int,int)>"->"fieldput <java.awt.GridBagConstraints: java.awt.Insets insets>";
+    "fieldput <java.awt.GridBagConstraints: java.awt.Insets insets>"->"load.r $r16";
+    "load.r $r16"->"load.r r0";
+    "load.r r0"->"fieldget <OrbitViewer: java.awt.Checkbox checkDateLabel>";
+    "fieldget <OrbitViewer: java.awt.Checkbox checkDateLabel>"->"load.r r4";
+    "load.r r4"->"virtualinvoke <java.awt.GridBagLayout: void setConstraints(java.awt.Component,java.awt.GridBagConstraints)>";
+    "virtualinvoke <java.awt.GridBagLayout: void setConstraints(java.awt.Component,java.awt.GridBagConstraints)>"->"load.r $r15";
+    "load.r $r15"->"load.r r0";
+    "load.r r0"->"fieldget <OrbitViewer: java.awt.Checkbox checkDateLabel>";
+    "fieldget <OrbitViewer: java.awt.Checkbox checkDateLabel>"->"virtualinvoke <java.awt.Panel: java.awt.Component add(java.awt.Component)>";
+    "virtualinvoke <java.awt.Panel: java.awt.Component add(java.awt.Component)>"->"pop";
+    "pop"->"load.r r0";
+    "load.r r0"->"fieldget <OrbitViewer: OrbitCanvas orbitCanvas>";
+    "fieldget <OrbitViewer: OrbitCanvas orbitCanvas>"->"load.r r0";
+    "load.r r0"->"fieldget <OrbitViewer: java.awt.Checkbox checkDateLabel>";
+    "virtualinvoke <java.awt.Checkbox: boolean getState()>"
+    "fieldget <OrbitViewer: java.awt.Checkbox checkDateLabel>"->"virtualinvoke <java.awt.Checkbox: boolean getState()>";
+    "virtualinvoke <OrbitCanvas: void switchPlanetName(boolean)>"
+    "virtualinvoke <java.awt.Checkbox: boolean getState()>"->"virtualinvoke <OrbitCanvas: void switchPlanetName(boolean)>";
+    "virtualinvoke <OrbitCanvas: void switchPlanetName(boolean)>"->"load.r r0";
+    "load.r r0"->"new java.awt.Checkbox";
+    "new java.awt.Checkbox"->"dup1.r";
+    "push \"Planet Labels\""
+    "dup1.r"->"push \"Planet Labels\"";
+    "push \"Planet Labels\""->"specialinvoke <java.awt.Checkbox: void <init>(java.lang.String)>";
+    "fieldput <OrbitViewer: java.awt.Checkbox checkPlanetName>"
+    "specialinvoke <java.awt.Checkbox: void <init>(java.lang.String)>"->"fieldput <OrbitViewer: java.awt.Checkbox checkPlanetName>";
+    "fieldput <OrbitViewer: java.awt.Checkbox checkPlanetName>"->"load.r r0";
+    "fieldget <OrbitViewer: java.awt.Checkbox checkPlanetName>"
+    "load.r r0"->"fieldget <OrbitViewer: java.awt.Checkbox checkPlanetName>";
+    "fieldget <OrbitViewer: java.awt.Checkbox checkPlanetName>"->"push 1";
+    "push 1"->"virtualinvoke <java.awt.Checkbox: void setState(boolean)>";
+    "virtualinvoke <java.awt.Checkbox: void setState(boolean)>"->"load.r r0";
+    "load.r r0"->"fieldget <OrbitViewer: java.awt.Checkbox checkPlanetName>";
+    "fieldget <OrbitViewer: java.awt.Checkbox checkPlanetName>"->"new java.awt.Font";
+    "new java.awt.Font"->"dup1.r";
+    "dup1.r"->"push \"Dialog\"";
+    "push \"Dialog\""->"push 0";
+    "push 0"->"push 16";
+    "push 16"->"specialinvoke <java.awt.Font: void <init>(java.lang.String,int,int)>";
+    "specialinvoke <java.awt.Font: void <init>(java.lang.String,int,int)>"->"virtualinvoke <java.awt.Checkbox: void setFont(java.awt.Font)>";
+    "virtualinvoke <java.awt.Checkbox: void setFont(java.awt.Font)>"->"load.r r4";
+    "push 7"
+    "load.r r4"->"push 7";
+    "push 7"->"fieldput <java.awt.GridBagConstraints: int gridx>";
+    "fieldput <java.awt.GridBagConstraints: int gridx>"->"load.r r4";
+    "load.r r4"->"push 0";
+    "push 0"->"fieldput <java.awt.GridBagConstraints: int gridy>";
+    "fieldput <java.awt.GridBagConstraints: int gridy>"->"load.r r4";
+    "load.r r4"->"push 0.0";
+    "push 0.0"->"fieldput <java.awt.GridBagConstraints: double weightx>";
+    "fieldput <java.awt.GridBagConstraints: double weightx>"->"load.r r4";
+    "load.r r4"->"push 0.0";
+    "push 0.0"->"fieldput <java.awt.GridBagConstraints: double weighty>";
+    "fieldput <java.awt.GridBagConstraints: double weighty>"->"load.r r4";
+    "load.r r4"->"push 1";
+    "push 1"->"fieldput <java.awt.GridBagConstraints: int gridwidth>";
+    "fieldput <java.awt.GridBagConstraints: int gridwidth>"->"load.r r4";
+    "load.r r4"->"push 1";
+    "push 1"->"fieldput <java.awt.GridBagConstraints: int gridheight>";
+    "fieldput <java.awt.GridBagConstraints: int gridheight>"->"load.r r4";
+    "load.r r4"->"new java.awt.Insets";
+    "new java.awt.Insets"->"dup1.r";
+    "dup1.r"->"push 0";
+    "push 0"->"push 12";
+    "push 12"->"push 0";
+    "push 0"->"push 0";
+    "push 0"->"specialinvoke <java.awt.Insets: void <init>(int,int,int,int)>";
+    "specialinvoke <java.awt.Insets: void <init>(int,int,int,int)>"->"fieldput <java.awt.GridBagConstraints: java.awt.Insets insets>";
+    "fieldput <java.awt.GridBagConstraints: java.awt.Insets insets>"->"load.r $r16";
+    "load.r $r16"->"load.r r0";
+    "load.r r0"->"fieldget <OrbitViewer: java.awt.Checkbox checkPlanetName>";
+    "fieldget <OrbitViewer: java.awt.Checkbox checkPlanetName>"->"load.r r4";
+    "load.r r4"->"virtualinvoke <java.awt.GridBagLayout: void setConstraints(java.awt.Component,java.awt.GridBagConstraints)>";
+    "virtualinvoke <java.awt.GridBagLayout: void setConstraints(java.awt.Component,java.awt.GridBagConstraints)>"->"load.r $r15";
+    "load.r $r15"->"load.r r0";
+    "load.r r0"->"fieldget <OrbitViewer: java.awt.Checkbox checkPlanetName>";
+    "fieldget <OrbitViewer: java.awt.Checkbox checkPlanetName>"->"virtualinvoke <java.awt.Panel: java.awt.Component add(java.awt.Component)>";
+    "virtualinvoke <java.awt.Panel: java.awt.Component add(java.awt.Component)>"->"pop";
+    "pop"->"load.r r0";
+    "load.r r0"->"fieldget <OrbitViewer: OrbitCanvas orbitCanvas>";
+    "fieldget <OrbitViewer: OrbitCanvas orbitCanvas>"->"load.r r0";
+    "load.r r0"->"fieldget <OrbitViewer: java.awt.Checkbox checkPlanetName>";
+    "fieldget <OrbitViewer: java.awt.Checkbox checkPlanetName>"->"virtualinvoke <java.awt.Checkbox: boolean getState()>";
+    "virtualinvoke <java.awt.Checkbox: boolean getState()>"->"virtualinvoke <OrbitCanvas: void switchPlanetName(boolean)>";
+    "virtualinvoke <OrbitCanvas: void switchPlanetName(boolean)>"->"load.r r0";
+    "load.r r0"->"new java.awt.Checkbox";
+    "new java.awt.Checkbox"->"dup1.r";
+    "push \"Distance\""
+    "dup1.r"->"push \"Distance\"";
+    "push \"Distance\""->"specialinvoke <java.awt.Checkbox: void <init>(java.lang.String)>";
+    "fieldput <OrbitViewer: java.awt.Checkbox checkDistanceLabel>"
+    "specialinvoke <java.awt.Checkbox: void <init>(java.lang.String)>"->"fieldput <OrbitViewer: java.awt.Checkbox checkDistanceLabel>";
+    "fieldput <OrbitViewer: java.awt.Checkbox checkDistanceLabel>"->"load.r r0";
+    "fieldget <OrbitViewer: java.awt.Checkbox checkDistanceLabel>"
+    "load.r r0"->"fieldget <OrbitViewer: java.awt.Checkbox checkDistanceLabel>";
+    "fieldget <OrbitViewer: java.awt.Checkbox checkDistanceLabel>"->"push 1";
+    "push 1"->"virtualinvoke <java.awt.Checkbox: void setState(boolean)>";
+    "virtualinvoke <java.awt.Checkbox: void setState(boolean)>"->"load.r r0";
+    "load.r r0"->"fieldget <OrbitViewer: java.awt.Checkbox checkDistanceLabel>";
+    "fieldget <OrbitViewer: java.awt.Checkbox checkDistanceLabel>"->"new java.awt.Font";
+    "new java.awt.Font"->"dup1.r";
+    "dup1.r"->"push \"Dialog\"";
+    "push \"Dialog\""->"push 0";
+    "push 0"->"push 16";
+    "push 16"->"specialinvoke <java.awt.Font: void <init>(java.lang.String,int,int)>";
+    "specialinvoke <java.awt.Font: void <init>(java.lang.String,int,int)>"->"virtualinvoke <java.awt.Checkbox: void setFont(java.awt.Font)>";
+    "virtualinvoke <java.awt.Checkbox: void setFont(java.awt.Font)>"->"load.r r4";
+    "load.r r4"->"push 6";
+    "push 6"->"fieldput <java.awt.GridBagConstraints: int gridx>";
+    "fieldput <java.awt.GridBagConstraints: int gridx>"->"load.r r4";
+    "load.r r4"->"push 1";
+    "push 1"->"fieldput <java.awt.GridBagConstraints: int gridy>";
+    "fieldput <java.awt.GridBagConstraints: int gridy>"->"load.r r4";
+    "load.r r4"->"push 0.0";
+    "push 0.0"->"fieldput <java.awt.GridBagConstraints: double weightx>";
+    "fieldput <java.awt.GridBagConstraints: double weightx>"->"load.r r4";
+    "load.r r4"->"push 0.0";
+    "push 0.0"->"fieldput <java.awt.GridBagConstraints: double weighty>";
+    "fieldput <java.awt.GridBagConstraints: double weighty>"->"load.r r4";
+    "load.r r4"->"push 1";
+    "push 1"->"fieldput <java.awt.GridBagConstraints: int gridwidth>";
+    "fieldput <java.awt.GridBagConstraints: int gridwidth>"->"load.r r4";
+    "load.r r4"->"push 1";
+    "push 1"->"fieldput <java.awt.GridBagConstraints: int gridheight>";
+    "fieldput <java.awt.GridBagConstraints: int gridheight>"->"load.r r4";
+    "load.r r4"->"new java.awt.Insets";
+    "new java.awt.Insets"->"dup1.r";
+    "dup1.r"->"push 0";
+    "push 0"->"push 12";
+    "push 12"->"push 0";
+    "push 0"->"push 0";
+    "push 0"->"specialinvoke <java.awt.Insets: void <init>(int,int,int,int)>";
+    "specialinvoke <java.awt.Insets: void <init>(int,int,int,int)>"->"fieldput <java.awt.GridBagConstraints: java.awt.Insets insets>";
+    "fieldput <java.awt.GridBagConstraints: java.awt.Insets insets>"->"load.r $r16";
+    "load.r $r16"->"load.r r0";
+    "load.r r0"->"fieldget <OrbitViewer: java.awt.Checkbox checkDistanceLabel>";
+    "fieldget <OrbitViewer: java.awt.Checkbox checkDistanceLabel>"->"load.r r4";
+    "load.r r4"->"virtualinvoke <java.awt.GridBagLayout: void setConstraints(java.awt.Component,java.awt.GridBagConstraints)>";
+    "virtualinvoke <java.awt.GridBagLayout: void setConstraints(java.awt.Component,java.awt.GridBagConstraints)>"->"load.r $r15";
+    "load.r $r15"->"load.r r0";
+    "load.r r0"->"fieldget <OrbitViewer: java.awt.Checkbox checkDistanceLabel>";
+    "fieldget <OrbitViewer: java.awt.Checkbox checkDistanceLabel>"->"virtualinvoke <java.awt.Panel: java.awt.Component add(java.awt.Component)>";
+    "virtualinvoke <java.awt.Panel: java.awt.Component add(java.awt.Component)>"->"pop";
+    "pop"->"load.r r0";
+    "load.r r0"->"fieldget <OrbitViewer: OrbitCanvas orbitCanvas>";
+    "fieldget <OrbitViewer: OrbitCanvas orbitCanvas>"->"load.r r0";
+    "load.r r0"->"fieldget <OrbitViewer: java.awt.Checkbox checkDistanceLabel>";
+    "fieldget <OrbitViewer: java.awt.Checkbox checkDistanceLabel>"->"virtualinvoke <java.awt.Checkbox: boolean getState()>";
+    "virtualinvoke <java.awt.Checkbox: boolean getState()>"->"virtualinvoke <OrbitCanvas: void switchPlanetName(boolean)>";
+    "virtualinvoke <OrbitCanvas: void switchPlanetName(boolean)>"->"load.r r0";
+    "load.r r0"->"new java.awt.Checkbox";
+    "new java.awt.Checkbox"->"dup1.r";
+    "push \"Object Label\""
+    "dup1.r"->"push \"Object Label\"";
+    "push \"Object Label\""->"specialinvoke <java.awt.Checkbox: void <init>(java.lang.String)>";
+    "fieldput <OrbitViewer: java.awt.Checkbox checkObjectName>"
+    "specialinvoke <java.awt.Checkbox: void <init>(java.lang.String)>"->"fieldput <OrbitViewer: java.awt.Checkbox checkObjectName>";
+    "fieldput <OrbitViewer: java.awt.Checkbox checkObjectName>"->"load.r r0";
+    "fieldget <OrbitViewer: java.awt.Checkbox checkObjectName>"
+    "load.r r0"->"fieldget <OrbitViewer: java.awt.Checkbox checkObjectName>";
+    "fieldget <OrbitViewer: java.awt.Checkbox checkObjectName>"->"push 1";
+    "push 1"->"virtualinvoke <java.awt.Checkbox: void setState(boolean)>";
+    "virtualinvoke <java.awt.Checkbox: void setState(boolean)>"->"load.r r0";
+    "load.r r0"->"fieldget <OrbitViewer: java.awt.Checkbox checkObjectName>";
+    "fieldget <OrbitViewer: java.awt.Checkbox checkObjectName>"->"new java.awt.Font";
+    "new java.awt.Font"->"dup1.r";
+    "dup1.r"->"push \"Dialog\"";
+    "push \"Dialog\""->"push 0";
+    "push 0"->"push 16";
+    "push 16"->"specialinvoke <java.awt.Font: void <init>(java.lang.String,int,int)>";
+    "specialinvoke <java.awt.Font: void <init>(java.lang.String,int,int)>"->"virtualinvoke <java.awt.Checkbox: void setFont(java.awt.Font)>";
+    "virtualinvoke <java.awt.Checkbox: void setFont(java.awt.Font)>"->"load.r r4";
+    "load.r r4"->"push 7";
+    "push 7"->"fieldput <java.awt.GridBagConstraints: int gridx>";
+    "fieldput <java.awt.GridBagConstraints: int gridx>"->"load.r r4";
+    "load.r r4"->"push 1";
+    "push 1"->"fieldput <java.awt.GridBagConstraints: int gridy>";
+    "fieldput <java.awt.GridBagConstraints: int gridy>"->"load.r r4";
+    "load.r r4"->"push 0.0";
+    "push 0.0"->"fieldput <java.awt.GridBagConstraints: double weightx>";
+    "fieldput <java.awt.GridBagConstraints: double weightx>"->"load.r r4";
+    "load.r r4"->"push 0.0";
+    "push 0.0"->"fieldput <java.awt.GridBagConstraints: double weighty>";
+    "fieldput <java.awt.GridBagConstraints: double weighty>"->"load.r r4";
+    "load.r r4"->"push 1";
+    "push 1"->"fieldput <java.awt.GridBagConstraints: int gridwidth>";
+    "fieldput <java.awt.GridBagConstraints: int gridwidth>"->"load.r r4";
+    "load.r r4"->"push 1";
+    "push 1"->"fieldput <java.awt.GridBagConstraints: int gridheight>";
+    "fieldput <java.awt.GridBagConstraints: int gridheight>"->"load.r r4";
+    "load.r r4"->"new java.awt.Insets";
+    "new java.awt.Insets"->"dup1.r";
+    "dup1.r"->"push 0";
+    "push 0"->"push 12";
+    "push 12"->"push 0";
+    "push 0"->"push 0";
+    "push 0"->"specialinvoke <java.awt.Insets: void <init>(int,int,int,int)>";
+    "specialinvoke <java.awt.Insets: void <init>(int,int,int,int)>"->"fieldput <java.awt.GridBagConstraints: java.awt.Insets insets>";
+    "fieldput <java.awt.GridBagConstraints: java.awt.Insets insets>"->"load.r $r16";
+    "load.r $r16"->"load.r r0";
+    "load.r r0"->"fieldget <OrbitViewer: java.awt.Checkbox checkObjectName>";
+    "fieldget <OrbitViewer: java.awt.Checkbox checkObjectName>"->"load.r r4";
+    "load.r r4"->"virtualinvoke <java.awt.GridBagLayout: void setConstraints(java.awt.Component,java.awt.GridBagConstraints)>";
+    "virtualinvoke <java.awt.GridBagLayout: void setConstraints(java.awt.Component,java.awt.GridBagConstraints)>"->"load.r $r15";
+    "load.r $r15"->"load.r r0";
+    "load.r r0"->"fieldget <OrbitViewer: java.awt.Checkbox checkObjectName>";
+    "fieldget <OrbitViewer: java.awt.Checkbox checkObjectName>"->"virtualinvoke <java.awt.Panel: java.awt.Component add(java.awt.Component)>";
+    "virtualinvoke <java.awt.Panel: java.awt.Component add(java.awt.Component)>"->"pop";
+    "pop"->"load.r r0";
+    "load.r r0"->"fieldget <OrbitViewer: OrbitCanvas orbitCanvas>";
+    "fieldget <OrbitViewer: OrbitCanvas orbitCanvas>"->"load.r r0";
+    "load.r r0"->"fieldget <OrbitViewer: java.awt.Checkbox checkObjectName>";
+    "fieldget <OrbitViewer: java.awt.Checkbox checkObjectName>"->"virtualinvoke <java.awt.Checkbox: boolean getState()>";
+    "virtualinvoke <OrbitCanvas: void switchObjectName(boolean)>"
+    "virtualinvoke <java.awt.Checkbox: boolean getState()>"->"virtualinvoke <OrbitCanvas: void switchObjectName(boolean)>";
+    "virtualinvoke <OrbitCanvas: void switchObjectName(boolean)>"->"new java.awt.Label";
+    "new java.awt.Label"->"store.r r5";
+    "store.r r5"->"load.r r5";
+    "push \"Zoom:\""
+    "load.r r5"->"push \"Zoom:\"";
+    "push \"Zoom:\""->"specialinvoke <java.awt.Label: void <init>(java.lang.String)>";
+    "specialinvoke <java.awt.Label: void <init>(java.lang.String)>"->"load.r r5";
+    "load.r r5"->"push 0";
+    "push 0"->"virtualinvoke <java.awt.Label: void setAlignment(int)>";
+    "virtualinvoke <java.awt.Label: void setAlignment(int)>"->"load.r r5";
+    "load.r r5"->"new java.awt.Font";
+    "new java.awt.Font"->"dup1.r";
+    "dup1.r"->"push \"Dialog\"";
+    "push \"Dialog\""->"push 0";
+    "push 0"->"push 16";
+    "push 16"->"specialinvoke <java.awt.Font: void <init>(java.lang.String,int,int)>";
+    "specialinvoke <java.awt.Font: void <init>(java.lang.String,int,int)>"->"virtualinvoke <java.awt.Label: void setFont(java.awt.Font)>";
+    "virtualinvoke <java.awt.Label: void setFont(java.awt.Font)>"->"load.r r4";
+    "load.r r4"->"push 6";
+    "push 6"->"fieldput <java.awt.GridBagConstraints: int gridx>";
+    "fieldput <java.awt.GridBagConstraints: int gridx>"->"load.r r4";
+    "load.r r4"->"push 2";
+    "push 2"->"fieldput <java.awt.GridBagConstraints: int gridy>";
+    "fieldput <java.awt.GridBagConstraints: int gridy>"->"load.r r4";
+    "load.r r4"->"push 0.0";
+    "push 0.0"->"fieldput <java.awt.GridBagConstraints: double weightx>";
+    "fieldput <java.awt.GridBagConstraints: double weightx>"->"load.r r4";
+    "load.r r4"->"push 1.0";
+    "push 1.0"->"fieldput <java.awt.GridBagConstraints: double weighty>";
+    "fieldput <java.awt.GridBagConstraints: double weighty>"->"load.r r4";
+    "load.r r4"->"push 2";
+    "push 2"->"fieldput <java.awt.GridBagConstraints: int gridwidth>";
+    "fieldput <java.awt.GridBagConstraints: int gridwidth>"->"load.r r4";
+    "load.r r4"->"push 1";
+    "push 1"->"fieldput <java.awt.GridBagConstraints: int gridheight>";
+    "fieldput <java.awt.GridBagConstraints: int gridheight>"->"load.r r4";
+    "load.r r4"->"new java.awt.Insets";
+    "new java.awt.Insets"->"dup1.r";
+    "push 10"
+    "dup1.r"->"push 10";
+    "push 10"->"push 12";
+    "push 12"->"push 0";
+    "push 0"->"push 0";
+    "push 0"->"specialinvoke <java.awt.Insets: void <init>(int,int,int,int)>";
+    "specialinvoke <java.awt.Insets: void <init>(int,int,int,int)>"->"fieldput <java.awt.GridBagConstraints: java.awt.Insets insets>";
+    "fieldput <java.awt.GridBagConstraints: java.awt.Insets insets>"->"load.r $r16";
+    "load.r $r16"->"load.r r5";
+    "load.r r5"->"load.r r4";
+    "load.r r4"->"virtualinvoke <java.awt.GridBagLayout: void setConstraints(java.awt.Component,java.awt.GridBagConstraints)>";
+    "virtualinvoke <java.awt.GridBagLayout: void setConstraints(java.awt.Component,java.awt.GridBagConstraints)>"->"load.r $r15";
+    "load.r $r15"->"load.r r5";
+    "load.r r5"->"virtualinvoke <java.awt.Panel: java.awt.Component add(java.awt.Component)>";
+    "virtualinvoke <java.awt.Panel: java.awt.Component add(java.awt.Component)>"->"pop";
+    "pop"->"load.r r0";
+    "load.r r0"->"new java.awt.Scrollbar";
+    "new java.awt.Scrollbar"->"dup1.r";
+    "dup1.r"->"push 0";
+    "push 67"
+    "push 0"->"push 67";
+    "push 67"->"push 15";
+    "push 15"->"push 5";
+    "push 450"
+    "push 5"->"push 450";
+    "push 450"->"specialinvoke <java.awt.Scrollbar: void <init>(int,int,int,int,int)>";
+    "fieldput <OrbitViewer: java.awt.Scrollbar scrollZoom>"
+    "specialinvoke <java.awt.Scrollbar: void <init>(int,int,int,int,int)>"->"fieldput <OrbitViewer: java.awt.Scrollbar scrollZoom>";
+    "fieldput <OrbitViewer: java.awt.Scrollbar scrollZoom>"->"load.r r4";
+    "load.r r4"->"push 6";
+    "push 6"->"fieldput <java.awt.GridBagConstraints: int gridx>";
+    "fieldput <java.awt.GridBagConstraints: int gridx>"->"load.r r4";
+    "load.r r4"->"push 3";
+    "push 3"->"fieldput <java.awt.GridBagConstraints: int gridy>";
+    "fieldput <java.awt.GridBagConstraints: int gridy>"->"load.r r4";
+    "load.r r4"->"push 1.0";
+    "push 1.0"->"fieldput <java.awt.GridBagConstraints: double weightx>";
+    "fieldput <java.awt.GridBagConstraints: double weightx>"->"load.r r4";
+    "load.r r4"->"push 1.0";
+    "push 1.0"->"fieldput <java.awt.GridBagConstraints: double weighty>";
+    "fieldput <java.awt.GridBagConstraints: double weighty>"->"load.r r4";
+    "load.r r4"->"push 2";
+    "push 2"->"fieldput <java.awt.GridBagConstraints: int gridwidth>";
+    "fieldput <java.awt.GridBagConstraints: int gridwidth>"->"load.r r4";
+    "load.r r4"->"push 1";
+    "push 1"->"fieldput <java.awt.GridBagConstraints: int gridheight>";
+    "fieldput <java.awt.GridBagConstraints: int gridheight>"->"load.r r4";
+    "load.r r4"->"new java.awt.Insets";
+    "new java.awt.Insets"->"dup1.r";
+    "dup1.r"->"push 0";
+    "push 0"->"push 12";
+    "push 12"->"push 6";
+    "push 6"->"push 2";
+    "push 2"->"specialinvoke <java.awt.Insets: void <init>(int,int,int,int)>";
+    "specialinvoke <java.awt.Insets: void <init>(int,int,int,int)>"->"fieldput <java.awt.GridBagConstraints: java.awt.Insets insets>";
+    "fieldput <java.awt.GridBagConstraints: java.awt.Insets insets>"->"load.r $r16";
+    "load.r $r16"->"load.r r0";
+    "fieldget <OrbitViewer: java.awt.Scrollbar scrollZoom>"
+    "load.r r0"->"fieldget <OrbitViewer: java.awt.Scrollbar scrollZoom>";
+    "fieldget <OrbitViewer: java.awt.Scrollbar scrollZoom>"->"load.r r4";
+    "load.r r4"->"virtualinvoke <java.awt.GridBagLayout: void setConstraints(java.awt.Component,java.awt.GridBagConstraints)>";
+    "virtualinvoke <java.awt.GridBagLayout: void setConstraints(java.awt.Component,java.awt.GridBagConstraints)>"->"load.r $r15";
+    "load.r $r15"->"load.r r0";
+    "load.r r0"->"fieldget <OrbitViewer: java.awt.Scrollbar scrollZoom>";
+    "fieldget <OrbitViewer: java.awt.Scrollbar scrollZoom>"->"virtualinvoke <java.awt.Panel: java.awt.Component add(java.awt.Component)>";
+    "virtualinvoke <java.awt.Panel: java.awt.Component add(java.awt.Component)>"->"pop";
+    "pop"->"load.r r0";
+    "load.r r0"->"fieldget <OrbitViewer: OrbitCanvas orbitCanvas>";
+    "fieldget <OrbitViewer: OrbitCanvas orbitCanvas>"->"load.r r0";
+    "load.r r0"->"fieldget <OrbitViewer: java.awt.Scrollbar scrollZoom>";
+    "fieldget <OrbitViewer: java.awt.Scrollbar scrollZoom>"->"virtualinvoke <java.awt.Scrollbar: int getValue()>";
+    "virtualinvoke <OrbitCanvas: void setZoom(int)>"
+    "virtualinvoke <java.awt.Scrollbar: int getValue()>"->"virtualinvoke <OrbitCanvas: void setZoom(int)>";
+    "virtualinvoke <OrbitCanvas: void setZoom(int)>"->"new java.awt.GridBagLayout";
+    "new java.awt.GridBagLayout"->"store.r $r16";
+    "store.r $r16"->"load.r $r16";
+    "load.r $r16"->"specialinvoke <java.awt.GridBagLayout: void <init>()>";
+    "specialinvoke <java.awt.GridBagLayout: void <init>()>"->"new java.awt.GridBagConstraints";
+    "new java.awt.GridBagConstraints"->"store.r r4";
+    "store.r r4"->"load.r r4";
+    "load.r r4"->"specialinvoke <java.awt.GridBagConstraints: void <init>()>";
+    "specialinvoke <java.awt.GridBagConstraints: void <init>()>"->"load.r r0";
+    "load.r r0"->"load.r $r16";
+    "virtualinvoke <OrbitViewer: void setLayout(java.awt.LayoutManager)>"
+    "load.r $r16"->"virtualinvoke <OrbitViewer: void setLayout(java.awt.LayoutManager)>";
+    "virtualinvoke <OrbitViewer: void setLayout(java.awt.LayoutManager)>"->"load.r r4";
+    "load.r r4"->"push 1";
+    "push 1"->"fieldput <java.awt.GridBagConstraints: int fill>";
+    "fieldput <java.awt.GridBagConstraints: int fill>"->"load.r r4";
+    "load.r r4"->"push 1.0";
+    "push 1.0"->"fieldput <java.awt.GridBagConstraints: double weightx>";
+    "fieldput <java.awt.GridBagConstraints: double weightx>"->"load.r r4";
+    "load.r r4"->"push 1.0";
+    "push 1.0"->"fieldput <java.awt.GridBagConstraints: double weighty>";
+    "fieldput <java.awt.GridBagConstraints: double weighty>"->"load.r r4";
+    "load.r r4"->"push 0";
+    "push 0"->"fieldput <java.awt.GridBagConstraints: int gridwidth>";
+    "fieldput <java.awt.GridBagConstraints: int gridwidth>"->"load.r $r16";
+    "load.r $r16"->"load.r $r14";
+    "load.r $r14"->"load.r r4";
+    "load.r r4"->"virtualinvoke <java.awt.GridBagLayout: void setConstraints(java.awt.Component,java.awt.GridBagConstraints)>";
+    "virtualinvoke <java.awt.GridBagLayout: void setConstraints(java.awt.Component,java.awt.GridBagConstraints)>"->"load.r r0";
+    "load.r r0"->"load.r $r14";
+    "virtualinvoke <OrbitViewer: java.awt.Component add(java.awt.Component)>"
+    "load.r $r14"->"virtualinvoke <OrbitViewer: java.awt.Component add(java.awt.Component)>";
+    "virtualinvoke <OrbitViewer: java.awt.Component add(java.awt.Component)>"->"pop";
+    "pop"->"load.r r4";
+    "load.r r4"->"push 1.0";
+    "push 1.0"->"fieldput <java.awt.GridBagConstraints: double weightx>";
+    "fieldput <java.awt.GridBagConstraints: double weightx>"->"load.r r4";
+    "load.r r4"->"push 0.0";
+    "push 0.0"->"fieldput <java.awt.GridBagConstraints: double weighty>";
+    "fieldput <java.awt.GridBagConstraints: double weighty>"->"load.r r4";
+    "load.r r4"->"push 0";
+    "push 0"->"fieldput <java.awt.GridBagConstraints: int gridwidth>";
+    "fieldput <java.awt.GridBagConstraints: int gridwidth>"->"load.r r4";
+    "load.r r4"->"push 0";
+    "push 0"->"fieldput <java.awt.GridBagConstraints: int gridheight>";
+    "fieldput <java.awt.GridBagConstraints: int gridheight>"->"load.r r4";
+    "load.r r4"->"new java.awt.Insets";
+    "new java.awt.Insets"->"dup1.r";
+    "dup1.r"->"push 6";
+    "push 6"->"push 0";
+    "push 0"->"push 0";
+    "push 0"->"push 0";
+    "push 0"->"specialinvoke <java.awt.Insets: void <init>(int,int,int,int)>";
+    "specialinvoke <java.awt.Insets: void <init>(int,int,int,int)>"->"fieldput <java.awt.GridBagConstraints: java.awt.Insets insets>";
+    "fieldput <java.awt.GridBagConstraints: java.awt.Insets insets>"->"load.r $r16";
+    "load.r $r16"->"load.r $r15";
+    "load.r $r15"->"load.r r4";
+    "load.r r4"->"virtualinvoke <java.awt.GridBagLayout: void setConstraints(java.awt.Component,java.awt.GridBagConstraints)>";
+    "virtualinvoke <java.awt.GridBagLayout: void setConstraints(java.awt.Component,java.awt.GridBagConstraints)>"->"load.r r0";
+    "load.r r0"->"load.r $r15";
+    "load.r $r15"->"virtualinvoke <OrbitViewer: java.awt.Component add(java.awt.Component)>";
+    "virtualinvoke <OrbitViewer: java.awt.Component add(java.awt.Component)>"->"pop";
+    "pop"->"load.r r0";
+    "new OrbitPlayer"
+    "load.r r0"->"new OrbitPlayer";
+    "new OrbitPlayer"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "specialinvoke <OrbitPlayer: void <init>(OrbitViewer)>"
+    "load.r r0"->"specialinvoke <OrbitPlayer: void <init>(OrbitViewer)>";
+    "fieldput <OrbitViewer: OrbitPlayer orbitPlayer>"
+    "specialinvoke <OrbitPlayer: void <init>(OrbitViewer)>"->"fieldput <OrbitViewer: OrbitPlayer orbitPlayer>";
+    "fieldput <OrbitViewer: OrbitPlayer orbitPlayer>"->"load.r r0";
+    "push null"
+    "load.r r0"->"push null";
+    "fieldput <OrbitViewer: java.lang.Thread playerThread>"
+    "push null"->"fieldput <OrbitViewer: java.lang.Thread playerThread>";
+    "return"
+    "fieldput <OrbitViewer: java.lang.Thread playerThread>"->"return";
+    "new java.util.Date"
+    "ifnull new java.util.Date"->"new java.util.Date";
+    "new java.util.Date"->"store.r $r17";
+    "store.r $r17"->"load.r $r17";
+    "specialinvoke <java.util.Date: void <init>()>"
+    "load.r $r17"->"specialinvoke <java.util.Date: void <init>()>";
+    "specialinvoke <java.util.Date: void <init>()>"->"load.r r0";
+    "new astro.ATime"
+    "load.r r0"->"new astro.ATime";
+    "new astro.ATime"->"dup1.r";
+    "dup1.r"->"load.r $r17";
+    "virtualinvoke <java.util.Date: int getYear()>"
+    "load.r $r17"->"virtualinvoke <java.util.Date: int getYear()>";
+    "push 1900"
+    "virtualinvoke <java.util.Date: int getYear()>"->"push 1900";
+    "add.i"
+    "push 1900"->"add.i";
+    "add.i"->"load.r $r17";
+    "virtualinvoke <java.util.Date: int getMonth()>"
+    "load.r $r17"->"virtualinvoke <java.util.Date: int getMonth()>";
+    "virtualinvoke <java.util.Date: int getMonth()>"->"push 1";
+    "push 1"->"add.i";
+    "add.i"->"load.r $r17";
+    "virtualinvoke <java.util.Date: int getDate()>"
+    "load.r $r17"->"virtualinvoke <java.util.Date: int getDate()>";
+    "i2d"
+    "virtualinvoke <java.util.Date: int getDate()>"->"i2d";
+    "i2d"->"push 0.0";
+    "specialinvoke <astro.ATime: void <init>(int,int,double,double)>"
+    "push 0.0"->"specialinvoke <astro.ATime: void <init>(int,int,double,double)>";
+    "specialinvoke <astro.ATime: void <init>(int,int,double,double)>"->"fieldput <OrbitViewer: astro.ATime atime>";
+}

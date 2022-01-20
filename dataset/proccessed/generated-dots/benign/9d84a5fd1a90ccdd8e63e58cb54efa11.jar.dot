@@ -1,0 +1,54 @@
+digraph "" {
+    "r0 := @this: Rosa2000"
+    "load.r r0"
+    "r0 := @this: Rosa2000"->"load.r r0";
+    "virtualinvoke <Rosa2000: void readDebugParam()>"
+    "load.r r0"->"virtualinvoke <Rosa2000: void readDebugParam()>";
+    "virtualinvoke <Rosa2000: void readDebugParam()>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "push \"LOADING_MSG\""
+    "load.r r0"->"push \"LOADING_MSG\"";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"
+    "push \"LOADING_MSG\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "fieldput <Rosa2000: java.lang.String m_strLoadingString>"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"fieldput <Rosa2000: java.lang.String m_strLoadingString>";
+    "fieldput <Rosa2000: java.lang.String m_strLoadingString>"->"load.r r0";
+    "fieldget <Rosa2000: java.lang.String m_strLoadingString>"
+    "load.r r0"->"fieldget <Rosa2000: java.lang.String m_strLoadingString>";
+    "ifnonnull load.r r0"
+    "fieldget <Rosa2000: java.lang.String m_strLoadingString>"->"ifnonnull load.r r0";
+    "ifnonnull load.r r0"->"load.r r0";
+    "push \"Loading map... Please wait.\""
+    "load.r r0"->"push \"Loading map... Please wait.\"";
+    "push \"Loading map... Please wait.\""->"fieldput <Rosa2000: java.lang.String m_strLoadingString>";
+    "fieldput <Rosa2000: java.lang.String m_strLoadingString>"->"load.r r0";
+    "push null"
+    "load.r r0"->"push null";
+    "virtualinvoke <java.awt.Container: void setLayout(java.awt.LayoutManager)>"
+    "push null"->"virtualinvoke <java.awt.Container: void setLayout(java.awt.LayoutManager)>";
+    "virtualinvoke <java.awt.Container: void setLayout(java.awt.LayoutManager)>"->"load.r r0";
+    "virtualinvoke <Rosa2000: void loadBackground()>"
+    "load.r r0"->"virtualinvoke <Rosa2000: void loadBackground()>";
+    "virtualinvoke <Rosa2000: void loadBackground()>"->"load.r r0";
+    "push 1"
+    "load.r r0"->"push 1";
+    "virtualinvoke <java.awt.Component: void setVisible(boolean)>"
+    "push 1"->"virtualinvoke <java.awt.Component: void setVisible(boolean)>";
+    "virtualinvoke <java.awt.Component: void setVisible(boolean)>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "virtualinvoke <java.awt.Component: java.awt.Graphics getGraphics()>"
+    "load.r r0"->"virtualinvoke <java.awt.Component: java.awt.Graphics getGraphics()>";
+    "virtualinvoke <Rosa2000: void paint(java.awt.Graphics)>"
+    "virtualinvoke <java.awt.Component: java.awt.Graphics getGraphics()>"->"virtualinvoke <Rosa2000: void paint(java.awt.Graphics)>";
+    "virtualinvoke <Rosa2000: void paint(java.awt.Graphics)>"->"load.r r0";
+    "push \"Loading Map...\""
+    "load.r r0"->"push \"Loading Map...\"";
+    "virtualinvoke <Rosa2000: void setLoadingMsg(java.lang.String)>"
+    "push \"Loading Map...\""->"virtualinvoke <Rosa2000: void setLoadingMsg(java.lang.String)>";
+    "virtualinvoke <Rosa2000: void setLoadingMsg(java.lang.String)>"->"load.r r0";
+    "load.r r0"->"push null";
+    "virtualinvoke <Rosa2000: void loadMap(java.lang.String)>"
+    "push null"->"virtualinvoke <Rosa2000: void loadMap(java.lang.String)>";
+    "return"
+    "virtualinvoke <Rosa2000: void loadMap(java.lang.String)>"->"return";
+}

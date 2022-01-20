@@ -1,0 +1,35 @@
+digraph "" {
+    "r0 := @this: ru.kryshen.graphg.Applet"
+    "load.r r0"
+    "r0 := @this: ru.kryshen.graphg.Applet"->"load.r r0";
+    "fieldget <ru.kryshen.graphg.Applet: ru.kryshen.graphg.Game game>"
+    "load.r r0"->"fieldget <ru.kryshen.graphg.Applet: ru.kryshen.graphg.Game game>";
+    "fieldget <ru.kryshen.graphg.Applet: ru.kryshen.graphg.Game game>"->"load.r r0";
+    "virtualinvoke <ru.kryshen.graphg.Game: void init(java.awt.Container)>"
+    "load.r r0"->"virtualinvoke <ru.kryshen.graphg.Game: void init(java.awt.Container)>";
+    "virtualinvoke <ru.kryshen.graphg.Game: void init(java.awt.Container)>"->"load.r r0";
+    "fieldget <ru.kryshen.graphg.Applet: boolean loaded>"
+    "load.r r0"->"fieldget <ru.kryshen.graphg.Applet: boolean loaded>";
+    "ifne return"
+    "fieldget <ru.kryshen.graphg.Applet: boolean loaded>"->"ifne return";
+    "ifne return"->"load.r r0";
+    "fieldget <ru.kryshen.graphg.Applet: boolean loading>"
+    "load.r r0"->"fieldget <ru.kryshen.graphg.Applet: boolean loading>";
+    "fieldget <ru.kryshen.graphg.Applet: boolean loading>"->"ifne return";
+    "ifne return"->"load.r r0";
+    "push 1"
+    "load.r r0"->"push 1";
+    "fieldput <ru.kryshen.graphg.Applet: boolean loading>"
+    "push 1"->"fieldput <ru.kryshen.graphg.Applet: boolean loading>";
+    "new ru.kryshen.graphg.Applet$1"
+    "fieldput <ru.kryshen.graphg.Applet: boolean loading>"->"new ru.kryshen.graphg.Applet$1";
+    "dup1.r"
+    "new ru.kryshen.graphg.Applet$1"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "specialinvoke <ru.kryshen.graphg.Applet$1: void <init>(ru.kryshen.graphg.Applet)>"
+    "load.r r0"->"specialinvoke <ru.kryshen.graphg.Applet$1: void <init>(ru.kryshen.graphg.Applet)>";
+    "virtualinvoke <java.lang.Thread: void start()>"
+    "specialinvoke <ru.kryshen.graphg.Applet$1: void <init>(ru.kryshen.graphg.Applet)>"->"virtualinvoke <java.lang.Thread: void start()>";
+    "return"
+    "virtualinvoke <java.lang.Thread: void start()>"->"return";
+}

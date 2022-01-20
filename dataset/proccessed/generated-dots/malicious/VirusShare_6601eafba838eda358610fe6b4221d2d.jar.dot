@@ -1,0 +1,566 @@
+digraph "" {
+    "r0 := @this: Java"
+    "load.r r0"
+    "r0 := @this: Java"->"load.r r0";
+    "fieldget <Java: java.lang.String[] AAA>"
+    "load.r r0"->"fieldget <Java: java.lang.String[] AAA>";
+    "store.r r108"
+    "fieldget <Java: java.lang.String[] AAA>"->"store.r r108";
+    "load.r r108"
+    "store.r r108"->"load.r r108";
+    "arraylength"
+    "load.r r108"->"arraylength";
+    "store.i i0"
+    "arraylength"->"store.i i0";
+    "push 0"
+    "store.i i0"->"push 0";
+    "store.i i150"
+    "push 0"->"store.i i150";
+    "load.i i150"
+    "store.i i150"->"load.i i150";
+    "load.i i0"
+    "load.i i150"->"load.i i0";
+    "ifcmpge.i load.r r0"
+    "load.i i0"->"ifcmpge.i load.r r0";
+    "ifcmpge.i load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <Java: java.lang.String[] AAA>";
+    "fieldget <Java: java.lang.String[] AAA>"->"load.r r0";
+    "fieldget <Java: int BBB>"
+    "load.r r0"->"fieldget <Java: int BBB>";
+    "new java.lang.StringBuffer"
+    "fieldget <Java: int BBB>"->"new java.lang.StringBuffer";
+    "dup1.r"
+    "new java.lang.StringBuffer"->"dup1.r";
+    "dup1.r"->"load.r r108";
+    "load.r r108"->"load.i i150";
+    "arrayread.r"
+    "load.i i150"->"arrayread.r";
+    "specialinvoke <java.lang.StringBuffer: void <init>(java.lang.String)>"
+    "arrayread.r"->"specialinvoke <java.lang.StringBuffer: void <init>(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer reverse()>"
+    "specialinvoke <java.lang.StringBuffer: void <init>(java.lang.String)>"->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer reverse()>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>"
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer reverse()>"->"virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>";
+    "new java.lang.StringBuilder"
+    "virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>"->"new java.lang.StringBuilder";
+    "new java.lang.StringBuilder"->"dup1.r";
+    "specialinvoke <java.lang.StringBuilder: void <init>()>"
+    "dup1.r"->"specialinvoke <java.lang.StringBuilder: void <init>()>";
+    "push \"[\""
+    "specialinvoke <java.lang.StringBuilder: void <init>()>"->"push \"[\"";
+    "push \"0\""
+    "push \"[\""->"push \"0\"";
+    "virtualinvoke <java.lang.String: java.lang.String concat(java.lang.String)>"
+    "push \"0\""->"virtualinvoke <java.lang.String: java.lang.String concat(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"
+    "virtualinvoke <java.lang.String: java.lang.String concat(java.lang.String)>"->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "push \"-\""
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"push \"-\"";
+    "push \"9\""
+    "push \"-\""->"push \"9\"";
+    "push \"9\""->"virtualinvoke <java.lang.String: java.lang.String concat(java.lang.String)>";
+    "virtualinvoke <java.lang.String: java.lang.String concat(java.lang.String)>"->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "push \"]\""
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"push \"]\"";
+    "push \"]\""->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.String toString()>"
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"virtualinvoke <java.lang.StringBuilder: java.lang.String toString()>";
+    "push \"\""
+    "virtualinvoke <java.lang.StringBuilder: java.lang.String toString()>"->"push \"\"";
+    "virtualinvoke <java.lang.String: java.lang.String replaceAll(java.lang.String,java.lang.String)>"
+    "push \"\""->"virtualinvoke <java.lang.String: java.lang.String replaceAll(java.lang.String,java.lang.String)>";
+    "virtualinvoke <java.lang.String: java.lang.String replaceAll(java.lang.String,java.lang.String)>"->"push \"-\"";
+    "push \"-\""->"push \"\"";
+    "push \"\""->"virtualinvoke <java.lang.String: java.lang.String replaceAll(java.lang.String,java.lang.String)>";
+    "arraywrite.r"
+    "virtualinvoke <java.lang.String: java.lang.String replaceAll(java.lang.String,java.lang.String)>"->"arraywrite.r";
+    "arraywrite.r"->"load.r r0";
+    "load.r r0"->"fieldget <Java: int BBB>";
+    "ifne load.r r0"
+    "fieldget <Java: int BBB>"->"ifne load.r r0";
+    "ifne load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <Java: java.lang.String[] AAA>";
+    "fieldget <Java: java.lang.String[] AAA>"->"load.r r0";
+    "load.r r0"->"fieldget <Java: int BBB>";
+    "fieldget <Java: int BBB>"->"arrayread.r";
+    "staticinvoke <java.lang.System: java.lang.String getenv(java.lang.String)>"
+    "arrayread.r"->"staticinvoke <java.lang.System: java.lang.String getenv(java.lang.String)>";
+    "store.r r109"
+    "staticinvoke <java.lang.System: java.lang.String getenv(java.lang.String)>"->"store.r r109";
+    "goto load.r r109"
+    "store.r r109"->"goto load.r r109";
+    "load.r r109"
+    "goto load.r r109"->"load.r r109";
+    "ifnull load.r r0"
+    "load.r r109"->"ifnull load.r r0";
+    "new java.io.File"
+    "ifnull load.r r0"->"new java.io.File";
+    "new java.io.File"->"dup1.r";
+    "dup1.r"->"load.r r109";
+    "specialinvoke <java.io.File: void <init>(java.lang.String)>"
+    "load.r r109"->"specialinvoke <java.io.File: void <init>(java.lang.String)>";
+    "virtualinvoke <java.io.File: boolean exists()>"
+    "specialinvoke <java.io.File: void <init>(java.lang.String)>"->"virtualinvoke <java.io.File: boolean exists()>";
+    "ifeq load.r r0"
+    "virtualinvoke <java.io.File: boolean exists()>"->"ifeq load.r r0";
+    "ifeq load.r r0"->"new java.io.File";
+    "new java.io.File"->"dup1.r";
+    "dup1.r"->"load.r r109";
+    "load.r r109"->"specialinvoke <java.io.File: void <init>(java.lang.String)>";
+    "virtualinvoke <java.io.File: boolean canWrite()>"
+    "specialinvoke <java.io.File: void <init>(java.lang.String)>"->"virtualinvoke <java.io.File: boolean canWrite()>";
+    "virtualinvoke <java.io.File: boolean canWrite()>"->"ifeq load.r r0";
+    "ifeq load.r r0"->"new java.io.File";
+    "new java.io.File"->"dup1.r";
+    "dup1.r"->"load.r r109";
+    "load.r r109"->"specialinvoke <java.io.File: void <init>(java.lang.String)>";
+    "virtualinvoke <java.io.File: boolean canExecute()>"
+    "specialinvoke <java.io.File: void <init>(java.lang.String)>"->"virtualinvoke <java.io.File: boolean canExecute()>";
+    "virtualinvoke <java.io.File: boolean canExecute()>"->"ifeq load.r r0";
+    "ifeq load.r r0"->"new java.io.File";
+    "new java.io.File"->"dup1.r";
+    "dup1.r"->"load.r r109";
+    "load.r r109"->"specialinvoke <java.io.File: void <init>(java.lang.String)>";
+    "virtualinvoke <java.io.File: boolean canRead()>"
+    "specialinvoke <java.io.File: void <init>(java.lang.String)>"->"virtualinvoke <java.io.File: boolean canRead()>";
+    "virtualinvoke <java.io.File: boolean canRead()>"->"ifeq load.r r0";
+    "ifeq load.r r0"->"new java.io.File";
+    "new java.io.File"->"dup1.r";
+    "dup1.r"->"load.r r109";
+    "load.r r109"->"specialinvoke <java.io.File: void <init>(java.lang.String)>";
+    "virtualinvoke <java.io.File: boolean isDirectory()>"
+    "specialinvoke <java.io.File: void <init>(java.lang.String)>"->"virtualinvoke <java.io.File: boolean isDirectory()>";
+    "virtualinvoke <java.io.File: boolean isDirectory()>"->"ifeq load.r r0";
+    "ifeq load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <Java: java.lang.String[] AAA>";
+    "fieldget <Java: java.lang.String[] AAA>"->"push 0";
+    "push 0"->"load.r r109";
+    "load.r r109"->"arraywrite.r";
+    "goto load.r r0"
+    "arraywrite.r"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <Java: java.lang.String[] AAA>";
+    "fieldget <Java: java.lang.String[] AAA>"->"push \"0\"";
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"
+    "push \"0\""->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>";
+    "push \"3\""
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"->"push \"3\"";
+    "push \"3\""->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>";
+    "add.i"
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"->"add.i";
+    "push \"5\""
+    "add.i"->"push \"5\"";
+    "push \"5\""->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>";
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"->"add.i";
+    "push \"2\""
+    "add.i"->"push \"2\"";
+    "push \"2\""->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>";
+    "sub.i"
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"->"sub.i";
+    "sub.i"->"push \"3\"";
+    "push \"3\""->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>";
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"->"sub.i";
+    "sub.i"->"push \"3\"";
+    "push \"3\""->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>";
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"->"sub.i";
+    "sub.i"->"arrayread.r";
+    "arrayread.r"->"new java.lang.StringBuffer";
+    "new java.lang.StringBuffer"->"dup1.r";
+    "push \"7-3A3-3\""
+    "dup1.r"->"push \"7-3A3-3\"";
+    "push \"T3-3A3-\""
+    "push \"7-3A3-3\""->"push \"T3-3A3-\"";
+    "push \"T3-3A3-\""->"virtualinvoke <java.lang.String: java.lang.String concat(java.lang.String)>";
+    "virtualinvoke <java.lang.String: java.lang.String toString()>"
+    "virtualinvoke <java.lang.String: java.lang.String concat(java.lang.String)>"->"virtualinvoke <java.lang.String: java.lang.String toString()>";
+    "virtualinvoke <java.lang.String: java.lang.String toString()>"->"specialinvoke <java.lang.StringBuffer: void <init>(java.lang.String)>";
+    "push \"3D3-3P3-\""
+    "specialinvoke <java.lang.StringBuffer: void <init>(java.lang.String)>"->"push \"3D3-3P3-\"";
+    "push \"3P3-3A1-\""
+    "push \"3D3-3P3-\""->"push \"3P3-3A1-\"";
+    "push \"3P3-3A1-\""->"virtualinvoke <java.lang.String: java.lang.String concat(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"
+    "virtualinvoke <java.lang.String: java.lang.String concat(java.lang.String)>"->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>";
+    "ifcmpne.r load.r r0"
+    "virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>"->"ifcmpne.r load.r r0";
+    "ifcmpne.r load.r r0"->"push \"0\"";
+    "push \"0\""->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>";
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"->"push \"3\"";
+    "push \"3\""->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>";
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"->"add.i";
+    "add.i"->"push \"5\"";
+    "push \"5\""->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>";
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"->"add.i";
+    "add.i"->"push \"2\"";
+    "push \"2\""->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>";
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"->"sub.i";
+    "sub.i"->"push \"3\"";
+    "push \"3\""->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>";
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"->"sub.i";
+    "sub.i"->"push \"3\"";
+    "push \"3\""->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>";
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"->"sub.i";
+    "staticinvoke <java.lang.System: void exit(int)>"
+    "sub.i"->"staticinvoke <java.lang.System: void exit(int)>";
+    "staticinvoke <java.lang.System: void exit(int)>"->"load.r r0";
+    "load.r r0"->"fieldget <Java: java.lang.String[] AAA>";
+    "fieldget <Java: java.lang.String[] AAA>"->"push \"0\"";
+    "push \"0\""->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>";
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"->"push \"3\"";
+    "push \"3\""->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>";
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"->"add.i";
+    "add.i"->"push \"5\"";
+    "push \"5\""->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>";
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"->"add.i";
+    "add.i"->"push \"2\"";
+    "push \"2\""->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>";
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"->"sub.i";
+    "sub.i"->"push \"3\"";
+    "push \"3\""->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>";
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"->"sub.i";
+    "sub.i"->"push \"3\"";
+    "push \"3\""->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>";
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"->"sub.i";
+    "sub.i"->"arrayread.r";
+    "arrayread.r"->"load.r r0";
+    "fieldget <Java: java.lang.String[] CCC>"
+    "load.r r0"->"fieldget <Java: java.lang.String[] CCC>";
+    "fieldget <Java: java.lang.String[] CCC>"->"push 0";
+    "push 0"->"arrayread.r";
+    "virtualinvoke <java.lang.String: boolean endsWith(java.lang.String)>"
+    "arrayread.r"->"virtualinvoke <java.lang.String: boolean endsWith(java.lang.String)>";
+    "virtualinvoke <java.lang.String: boolean endsWith(java.lang.String)>"->"ifeq load.r r0";
+    "ifeq load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <Java: java.lang.String[] AAA>";
+    "fieldget <Java: java.lang.String[] AAA>"->"push \"0\"";
+    "push \"0\""->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>";
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"->"push \"3\"";
+    "push \"3\""->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>";
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"->"add.i";
+    "add.i"->"push \"5\"";
+    "push \"5\""->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>";
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"->"add.i";
+    "add.i"->"push \"2\"";
+    "push \"2\""->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>";
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"->"sub.i";
+    "sub.i"->"push \"3\"";
+    "push \"3\""->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>";
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"->"sub.i";
+    "sub.i"->"push \"3\"";
+    "push \"3\""->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>";
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"->"sub.i";
+    "sub.i"->"load.r r0";
+    "load.r r0"->"fieldget <Java: java.lang.String[] AAA>";
+    "fieldget <Java: java.lang.String[] AAA>"->"push \"0\"";
+    "push \"0\""->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>";
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"->"push \"3\"";
+    "push \"3\""->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>";
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"->"add.i";
+    "add.i"->"push \"5\"";
+    "push \"5\""->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>";
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"->"add.i";
+    "add.i"->"push \"2\"";
+    "push \"2\""->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>";
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"->"sub.i";
+    "sub.i"->"push \"3\"";
+    "push \"3\""->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>";
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"->"sub.i";
+    "sub.i"->"push \"3\"";
+    "push \"3\""->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>";
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"->"sub.i";
+    "sub.i"->"arrayread.r";
+    "arrayread.r"->"push 0";
+    "push 0"->"load.r r0";
+    "load.r r0"->"fieldget <Java: java.lang.String[] AAA>";
+    "fieldget <Java: java.lang.String[] AAA>"->"push \"0\"";
+    "push \"0\""->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>";
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"->"push \"3\"";
+    "push \"3\""->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>";
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"->"add.i";
+    "add.i"->"push \"5\"";
+    "push \"5\""->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>";
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"->"add.i";
+    "add.i"->"push \"2\"";
+    "push \"2\""->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>";
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"->"sub.i";
+    "sub.i"->"push \"3\"";
+    "push \"3\""->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>";
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"->"sub.i";
+    "sub.i"->"push \"3\"";
+    "push \"3\""->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>";
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"->"sub.i";
+    "sub.i"->"arrayread.r";
+    "virtualinvoke <java.lang.String: int length()>"
+    "arrayread.r"->"virtualinvoke <java.lang.String: int length()>";
+    "push 1"
+    "virtualinvoke <java.lang.String: int length()>"->"push 1";
+    "push 1"->"sub.i";
+    "virtualinvoke <java.lang.String: java.lang.String substring(int,int)>"
+    "sub.i"->"virtualinvoke <java.lang.String: java.lang.String substring(int,int)>";
+    "virtualinvoke <java.lang.String: java.lang.String substring(int,int)>"->"arraywrite.r";
+    "arraywrite.r"->"load.r r0";
+    "load.r r0"->"fieldget <Java: java.lang.String[] AAA>";
+    "fieldget <Java: java.lang.String[] AAA>"->"push \"0\"";
+    "push \"0\""->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>";
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"->"push \"3\"";
+    "push \"3\""->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>";
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"->"add.i";
+    "add.i"->"push \"5\"";
+    "push \"5\""->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>";
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"->"add.i";
+    "add.i"->"push \"2\"";
+    "push \"2\""->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>";
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"->"sub.i";
+    "sub.i"->"push \"3\"";
+    "push \"3\""->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>";
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"->"sub.i";
+    "sub.i"->"push \"3\"";
+    "push \"3\""->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>";
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"->"sub.i";
+    "sub.i"->"load.r r0";
+    "load.r r0"->"fieldget <Java: java.lang.String[] AAA>";
+    "fieldget <Java: java.lang.String[] AAA>"->"push \"0\"";
+    "push \"0\""->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>";
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"->"push \"3\"";
+    "push \"3\""->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>";
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"->"add.i";
+    "add.i"->"push \"5\"";
+    "push \"5\""->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>";
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"->"add.i";
+    "add.i"->"push \"2\"";
+    "push \"2\""->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>";
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"->"sub.i";
+    "sub.i"->"push \"3\"";
+    "push \"3\""->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>";
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"->"sub.i";
+    "sub.i"->"push \"3\"";
+    "push \"3\""->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>";
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"->"sub.i";
+    "sub.i"->"arrayread.r";
+    "arrayread.r"->"new java.lang.StringBuilder";
+    "new java.lang.StringBuilder"->"dup1.r";
+    "dup1.r"->"specialinvoke <java.lang.StringBuilder: void <init>()>";
+    "specialinvoke <java.lang.StringBuilder: void <init>()>"->"load.r r0";
+    "load.r r0"->"fieldget <Java: java.lang.String[] CCC>";
+    "fieldget <Java: java.lang.String[] CCC>"->"push 1";
+    "push 1"->"arrayread.r";
+    "arrayread.r"->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"load.r r0";
+    "load.r r0"->"fieldget <Java: java.lang.String[] CCC>";
+    "fieldget <Java: java.lang.String[] CCC>"->"push 1";
+    "push 1"->"arrayread.r";
+    "arrayread.r"->"push \"5\"";
+    "push \"5\""->"virtualinvoke <java.lang.String: java.lang.String concat(java.lang.String)>";
+    "push \"$\""
+    "virtualinvoke <java.lang.String: java.lang.String concat(java.lang.String)>"->"push \"$\"";
+    "push \"$\""->"virtualinvoke <java.lang.String: java.lang.String concat(java.lang.String)>";
+    "push \"4\""
+    "virtualinvoke <java.lang.String: java.lang.String concat(java.lang.String)>"->"push \"4\"";
+    "push \"4\""->"virtualinvoke <java.lang.String: java.lang.String concat(java.lang.String)>";
+    "virtualinvoke <java.lang.String: java.lang.String concat(java.lang.String)>"->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"virtualinvoke <java.lang.StringBuilder: java.lang.String toString()>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.String toString()>"->"new java.lang.StringBuilder";
+    "new java.lang.StringBuilder"->"dup1.r";
+    "dup1.r"->"specialinvoke <java.lang.StringBuilder: void <init>()>";
+    "specialinvoke <java.lang.StringBuilder: void <init>()>"->"push \"[\"";
+    "push \"[\""->"push \"0\"";
+    "push \"0\""->"virtualinvoke <java.lang.String: java.lang.String concat(java.lang.String)>";
+    "virtualinvoke <java.lang.String: java.lang.String concat(java.lang.String)>"->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"push \"-\"";
+    "push \"-\""->"push \"9\"";
+    "push \"9\""->"virtualinvoke <java.lang.String: java.lang.String concat(java.lang.String)>";
+    "virtualinvoke <java.lang.String: java.lang.String concat(java.lang.String)>"->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"push \"]\"";
+    "push \"]\""->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"virtualinvoke <java.lang.StringBuilder: java.lang.String toString()>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.String toString()>"->"push \"\"";
+    "push \"\""->"virtualinvoke <java.lang.String: java.lang.String replaceAll(java.lang.String,java.lang.String)>";
+    "virtualinvoke <java.lang.String: java.lang.String replaceAll(java.lang.String,java.lang.String)>"->"virtualinvoke <java.lang.String: java.lang.String toString()>";
+    "virtualinvoke <java.lang.String: java.lang.String toString()>"->"push \"\"";
+    "push \"\""->"virtualinvoke <java.lang.String: java.lang.String replaceAll(java.lang.String,java.lang.String)>";
+    "virtualinvoke <java.lang.String: java.lang.String replaceAll(java.lang.String,java.lang.String)>"->"arraywrite.r";
+    "arraywrite.r"->"load.r r0";
+    "load.r r0"->"fieldget <Java: java.lang.String[] AAA>";
+    "fieldget <Java: java.lang.String[] AAA>"->"push \"0\"";
+    "push \"0\""->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>";
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"->"push \"3\"";
+    "push \"3\""->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>";
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"->"add.i";
+    "add.i"->"push \"5\"";
+    "push \"5\""->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>";
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"->"add.i";
+    "add.i"->"push \"2\"";
+    "push \"2\""->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>";
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"->"sub.i";
+    "sub.i"->"push \"3\"";
+    "push \"3\""->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>";
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"->"sub.i";
+    "sub.i"->"push \"3\"";
+    "push \"3\""->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>";
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"->"sub.i";
+    "sub.i"->"new java.lang.StringBuffer";
+    "new java.lang.StringBuffer"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "load.r r0"->"fieldget <Java: java.lang.String[] AAA>";
+    "fieldget <Java: java.lang.String[] AAA>"->"push \"0\"";
+    "push \"0\""->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>";
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"->"push \"3\"";
+    "push \"3\""->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>";
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"->"add.i";
+    "add.i"->"push \"5\"";
+    "push \"5\""->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>";
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"->"add.i";
+    "add.i"->"push \"2\"";
+    "push \"2\""->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>";
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"->"sub.i";
+    "sub.i"->"push \"3\"";
+    "push \"3\""->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>";
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"->"sub.i";
+    "sub.i"->"push \"3\"";
+    "push \"3\""->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>";
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"->"sub.i";
+    "sub.i"->"arrayread.r";
+    "arrayread.r"->"specialinvoke <java.lang.StringBuffer: void <init>(java.lang.String)>";
+    "specialinvoke <java.lang.StringBuffer: void <init>(java.lang.String)>"->"load.r r0";
+    "load.r r0"->"fieldget <Java: java.lang.String[] CCC>";
+    "fieldget <Java: java.lang.String[] CCC>"->"push 0";
+    "push 0"->"arrayread.r";
+    "arrayread.r"->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"load.r r0";
+    "load.r r0"->"fieldget <Java: java.lang.String[] CCC>";
+    "fieldget <Java: java.lang.String[] CCC>"->"push 0";
+    "push 0"->"arrayread.r";
+    "arrayread.r"->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"load.r r0";
+    "load.r r0"->"fieldget <Java: java.lang.String[] CCC>";
+    "push 2"
+    "fieldget <Java: java.lang.String[] CCC>"->"push 2";
+    "push 2"->"arrayread.r";
+    "arrayread.r"->"new java.lang.StringBuilder";
+    "new java.lang.StringBuilder"->"dup1.r";
+    "dup1.r"->"specialinvoke <java.lang.StringBuilder: void <init>()>";
+    "specialinvoke <java.lang.StringBuilder: void <init>()>"->"push \"[\"";
+    "push \"[\""->"push \"0\"";
+    "push \"0\""->"virtualinvoke <java.lang.String: java.lang.String concat(java.lang.String)>";
+    "virtualinvoke <java.lang.String: java.lang.String concat(java.lang.String)>"->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"push \"-\"";
+    "push \"-\""->"push \"9\"";
+    "push \"9\""->"virtualinvoke <java.lang.String: java.lang.String concat(java.lang.String)>";
+    "virtualinvoke <java.lang.String: java.lang.String concat(java.lang.String)>"->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"push \"]\"";
+    "push \"]\""->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"virtualinvoke <java.lang.StringBuilder: java.lang.String toString()>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.String toString()>"->"push \"\"";
+    "push \"\""->"virtualinvoke <java.lang.String: java.lang.String replaceAll(java.lang.String,java.lang.String)>";
+    "virtualinvoke <java.lang.String: java.lang.String replaceAll(java.lang.String,java.lang.String)>"->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"load.r r0";
+    "fieldget <Java: java.lang.String[] IEK>"
+    "load.r r0"->"fieldget <Java: java.lang.String[] IEK>";
+    "fieldget <Java: java.lang.String[] IEK>"->"push 0";
+    "push 0"->"arrayread.r";
+    "arrayread.r"->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>"->"arraywrite.r";
+    "arraywrite.r"->"load.r r0";
+    "load.r r0"->"new java.lang.StringBuffer";
+    "new java.lang.StringBuffer"->"dup1.r";
+    "push \"exe.CIOL/ofni.srevulydalelttil//:ptth\""
+    "dup1.r"->"push \"exe.CIOL/ofni.srevulydalelttil//:ptth\"";
+    "push \"exe.CIOL/ofni.srevulydalelttil//:ptth\""->"specialinvoke <java.lang.StringBuffer: void <init>(java.lang.String)>";
+    "specialinvoke <java.lang.StringBuffer: void <init>(java.lang.String)>"->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer reverse()>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer reverse()>"->"virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>"->"load.r r0";
+    "load.r r0"->"fieldget <Java: java.lang.String[] AAA>";
+    "fieldget <Java: java.lang.String[] AAA>"->"push \"0\"";
+    "push \"0\""->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>";
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"->"push \"3\"";
+    "push \"3\""->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>";
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"->"add.i";
+    "add.i"->"push \"5\"";
+    "push \"5\""->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>";
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"->"add.i";
+    "add.i"->"push \"2\"";
+    "push \"2\""->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>";
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"->"sub.i";
+    "sub.i"->"push \"3\"";
+    "push \"3\""->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>";
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"->"sub.i";
+    "sub.i"->"push \"3\"";
+    "push \"3\""->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>";
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"->"sub.i";
+    "sub.i"->"arrayread.r";
+    "arrayread.r"->"push 0";
+    "push 0"->"load.r r0";
+    "virtualinvoke <Java: java.applet.AppletContext getAppletContext()>"
+    "load.r r0"->"virtualinvoke <Java: java.applet.AppletContext getAppletContext()>";
+    "virtualinvoke <Java: java.applet.AppletContext getAppletContext()>"->"load.r r0";
+    "virtualinvoke <Java: java.net.URL getDocumentBase()>"
+    "load.r r0"->"virtualinvoke <Java: java.net.URL getDocumentBase()>";
+    "virtualinvoke <Java: boolean IFK(java.lang.String,java.lang.String,boolean,java.applet.AppletContext,java.net.URL)>"
+    "virtualinvoke <Java: java.net.URL getDocumentBase()>"->"virtualinvoke <Java: boolean IFK(java.lang.String,java.lang.String,boolean,java.applet.AppletContext,java.net.URL)>";
+    "virtualinvoke <Java: boolean IFK(java.lang.String,java.lang.String,boolean,java.applet.AppletContext,java.net.URL)>"->"push 1";
+    "ifcmpne.b goto return"
+    "push 1"->"ifcmpne.b goto return";
+    "ifcmpne.b goto return"->"push \"0\"";
+    "push \"0\""->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>";
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"->"push \"3\"";
+    "push \"3\""->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>";
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"->"add.i";
+    "add.i"->"push \"5\"";
+    "push \"5\""->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>";
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"->"add.i";
+    "add.i"->"push \"2\"";
+    "push \"2\""->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>";
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"->"sub.i";
+    "sub.i"->"push \"3\"";
+    "push \"3\""->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>";
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"->"sub.i";
+    "sub.i"->"push \"3\"";
+    "push \"3\""->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>";
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"->"sub.i";
+    "sub.i"->"staticinvoke <java.lang.System: void exit(int)>";
+    "goto return"
+    "staticinvoke <java.lang.System: void exit(int)>"->"goto return";
+    "return"
+    "goto return"->"return";
+    "store.r r0"
+    "staticinvoke <java.lang.System: void exit(int)>"->"store.r r0";
+    "store.r r0"->"push \"0\"";
+    "push \"0\""->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>";
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"->"push \"3\"";
+    "push \"3\""->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>";
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"->"add.i";
+    "add.i"->"push \"5\"";
+    "push \"5\""->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>";
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"->"add.i";
+    "add.i"->"push \"2\"";
+    "push \"2\""->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>";
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"->"sub.i";
+    "sub.i"->"push \"3\"";
+    "push \"3\""->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>";
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"->"sub.i";
+    "sub.i"->"push \"3\"";
+    "push \"3\""->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>";
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"->"sub.i";
+    "sub.i"->"staticinvoke <java.lang.System: void exit(int)>";
+    "ifeq load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <Java: int BBB>";
+    "fieldget <Java: int BBB>"->"push 1";
+    "push 1"->"add.i";
+    "fieldput <Java: int BBB>"
+    "add.i"->"fieldput <Java: int BBB>";
+    "inc.i i150 1"
+    "fieldput <Java: int BBB>"->"inc.i i150 1";
+    "goto load.i i150"
+    "inc.i i150 1"->"goto load.i i150";
+    "ifne load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <Java: java.lang.String[] AAA>";
+    "fieldget <Java: java.lang.String[] AAA>"->"load.r r0";
+    "load.r r0"->"fieldget <Java: int BBB>";
+    "fieldget <Java: int BBB>"->"arrayread.r";
+    "staticinvoke <java.lang.System: java.lang.String getProperty(java.lang.String)>"
+    "arrayread.r"->"staticinvoke <java.lang.System: java.lang.String getProperty(java.lang.String)>";
+    "staticinvoke <java.lang.System: java.lang.String getProperty(java.lang.String)>"->"store.r r109";
+}

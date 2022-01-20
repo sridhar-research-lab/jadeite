@@ -1,0 +1,79 @@
+digraph "" {
+    "r0 := @this: TTTapplet"
+    "load.r r0"
+    "r0 := @this: TTTapplet"->"load.r r0";
+    "push 9"
+    "load.r r0"->"push 9";
+    "newarray"
+    "push 9"->"newarray";
+    "fieldput <TTTapplet: char[] squares>"
+    "newarray"->"fieldput <TTTapplet: char[] squares>";
+    "fieldput <TTTapplet: char[] squares>"->"load.r r0";
+    "push 8"
+    "load.r r0"->"push 8";
+    "push 8"->"newarray";
+    "fieldput <TTTapplet: char[] win_Combo_States>"
+    "newarray"->"fieldput <TTTapplet: char[] win_Combo_States>";
+    "fieldput <TTTapplet: char[] win_Combo_States>"->"load.r r0";
+    "load.r r0"->"push 8";
+    "push 8"->"newarray";
+    "fieldput <TTTapplet: int[] win_Combo_Empty>"
+    "newarray"->"fieldput <TTTapplet: int[] win_Combo_Empty>";
+    "fieldput <TTTapplet: int[] win_Combo_Empty>"->"load.r r0";
+    "new java.awt.BorderLayout"
+    "load.r r0"->"new java.awt.BorderLayout";
+    "dup1.r"
+    "new java.awt.BorderLayout"->"dup1.r";
+    "specialinvoke <java.awt.BorderLayout: void <init>()>"
+    "dup1.r"->"specialinvoke <java.awt.BorderLayout: void <init>()>";
+    "virtualinvoke <java.awt.Container: void setLayout(java.awt.LayoutManager)>"
+    "specialinvoke <java.awt.BorderLayout: void <init>()>"->"virtualinvoke <java.awt.Container: void setLayout(java.awt.LayoutManager)>";
+    "virtualinvoke <java.awt.Container: void setLayout(java.awt.LayoutManager)>"->"load.r r0";
+    "new TGCanvas"
+    "load.r r0"->"new TGCanvas";
+    "new TGCanvas"->"dup1.r";
+    "push 600"
+    "dup1.r"->"push 600";
+    "push 400"
+    "push 600"->"push 400";
+    "specialinvoke <TGCanvas: void <init>(int,int)>"
+    "push 400"->"specialinvoke <TGCanvas: void <init>(int,int)>";
+    "fieldput <TTTapplet: TGCanvas canvas>"
+    "specialinvoke <TGCanvas: void <init>(int,int)>"->"fieldput <TTTapplet: TGCanvas canvas>";
+    "fieldput <TTTapplet: TGCanvas canvas>"->"load.r r0";
+    "fieldget <TTTapplet: TGCanvas canvas>"
+    "load.r r0"->"fieldget <TTTapplet: TGCanvas canvas>";
+    "staticget <java.awt.Color: java.awt.Color white>"
+    "fieldget <TTTapplet: TGCanvas canvas>"->"staticget <java.awt.Color: java.awt.Color white>";
+    "virtualinvoke <java.awt.Component: void setBackground(java.awt.Color)>"
+    "staticget <java.awt.Color: java.awt.Color white>"->"virtualinvoke <java.awt.Component: void setBackground(java.awt.Color)>";
+    "virtualinvoke <java.awt.Component: void setBackground(java.awt.Color)>"->"load.r r0";
+    "push \"Center\""
+    "load.r r0"->"push \"Center\"";
+    "push \"Center\""->"load.r r0";
+    "load.r r0"->"fieldget <TTTapplet: TGCanvas canvas>";
+    "virtualinvoke <java.awt.Container: java.awt.Component add(java.lang.String,java.awt.Component)>"
+    "fieldget <TTTapplet: TGCanvas canvas>"->"virtualinvoke <java.awt.Container: java.awt.Component add(java.lang.String,java.awt.Component)>";
+    "pop"
+    "virtualinvoke <java.awt.Container: java.awt.Component add(java.lang.String,java.awt.Component)>"->"pop";
+    "pop"->"load.r r0";
+    "load.r r0"->"fieldget <TTTapplet: TGCanvas canvas>";
+    "fieldget <TTTapplet: TGCanvas canvas>"->"load.r r0";
+    "virtualinvoke <TGCanvas: void addMouseHandler(TGMouseHandler)>"
+    "load.r r0"->"virtualinvoke <TGCanvas: void addMouseHandler(TGMouseHandler)>";
+    "virtualinvoke <TGCanvas: void addMouseHandler(TGMouseHandler)>"->"load.r r0";
+    "new Turtle"
+    "load.r r0"->"new Turtle";
+    "new Turtle"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "load.r r0"->"fieldget <TTTapplet: TGCanvas canvas>";
+    "specialinvoke <Turtle: void <init>(TGCanvas)>"
+    "fieldget <TTTapplet: TGCanvas canvas>"->"specialinvoke <Turtle: void <init>(TGCanvas)>";
+    "fieldput <TTTapplet: Turtle turtle>"
+    "specialinvoke <Turtle: void <init>(TGCanvas)>"->"fieldput <TTTapplet: Turtle turtle>";
+    "fieldput <TTTapplet: Turtle turtle>"->"load.r r0";
+    "specialinvoke <TTTapplet: void initialize()>"
+    "load.r r0"->"specialinvoke <TTTapplet: void initialize()>";
+    "return"
+    "specialinvoke <TTTapplet: void initialize()>"->"return";
+}

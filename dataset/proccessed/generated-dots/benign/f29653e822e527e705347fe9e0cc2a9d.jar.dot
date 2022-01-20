@@ -1,0 +1,123 @@
+digraph "" {
+    "r0 := @this: de.ts.applets.MultiBoard"
+    "load.r r0"
+    "r0 := @this: de.ts.applets.MultiBoard"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "virtualinvoke <java.awt.Component: void addMouseListener(java.awt.event.MouseListener)>"
+    "load.r r0"->"virtualinvoke <java.awt.Component: void addMouseListener(java.awt.event.MouseListener)>";
+    "virtualinvoke <java.awt.Component: void addMouseListener(java.awt.event.MouseListener)>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "virtualinvoke <java.awt.Component: void addMouseMotionListener(java.awt.event.MouseMotionListener)>"
+    "load.r r0"->"virtualinvoke <java.awt.Component: void addMouseMotionListener(java.awt.event.MouseMotionListener)>";
+    "virtualinvoke <java.awt.Component: void addMouseMotionListener(java.awt.event.MouseMotionListener)>"->"load.r r0";
+    "push \"KEY\""
+    "load.r r0"->"push \"KEY\"";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"
+    "push \"KEY\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "store.r r1"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"store.r r1";
+    "store.r r1"->"load.r r0";
+    "push \"LICENSE\""
+    "load.r r0"->"push \"LICENSE\"";
+    "push \"LICENSE\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "store.r r2"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"store.r r2";
+    "store.r r2"->"load.r r0";
+    "virtualinvoke <java.applet.Applet: java.net.URL getCodeBase()>"
+    "load.r r0"->"virtualinvoke <java.applet.Applet: java.net.URL getCodeBase()>";
+    "store.r r3"
+    "virtualinvoke <java.applet.Applet: java.net.URL getCodeBase()>"->"store.r r3";
+    "load.r r3"
+    "store.r r3"->"load.r r3";
+    "virtualinvoke <java.net.URL: java.lang.String getProtocol()>"
+    "load.r r3"->"virtualinvoke <java.net.URL: java.lang.String getProtocol()>";
+    "push \"file\""
+    "virtualinvoke <java.net.URL: java.lang.String getProtocol()>"->"push \"file\"";
+    "virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>"
+    "push \"file\""->"virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>";
+    "ifeq load.r r0"
+    "virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>"->"ifeq load.r r0";
+    "ifeq load.r r0"->"load.r r0";
+    "push 1"
+    "load.r r0"->"push 1";
+    "fieldput <de.ts.applets.MultiBoard: boolean s>"
+    "push 1"->"fieldput <de.ts.applets.MultiBoard: boolean s>";
+    "goto load.r r0"
+    "fieldput <de.ts.applets.MultiBoard: boolean s>"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "specialinvoke <de.ts.applets.MultiBoard: void do()>"
+    "load.r r0"->"specialinvoke <de.ts.applets.MultiBoard: void do()>";
+    "specialinvoke <de.ts.applets.MultiBoard: void do()>"->"load.r r0";
+    "fieldget <de.ts.applets.MultiBoard: int q>"
+    "load.r r0"->"fieldget <de.ts.applets.MultiBoard: int q>";
+    "ifne return"
+    "fieldget <de.ts.applets.MultiBoard: int q>"->"ifne return";
+    "ifne return"->"load.r r0";
+    "specialinvoke <de.ts.applets.MultiBoard: java.io.DataInputStream 'int'()>"
+    "load.r r0"->"specialinvoke <de.ts.applets.MultiBoard: java.io.DataInputStream 'int'()>";
+    "specialinvoke <de.ts.applets.MultiBoard: java.io.DataInputStream 'int'()>"->"store.r r1";
+    "load.r r1"
+    "store.r r1"->"load.r r1";
+    "ifnull load.r r0"
+    "load.r r1"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r r0";
+    "load.r r0"->"push 1";
+    "fieldput <de.ts.applets.MultiBoard: int q>"
+    "push 1"->"fieldput <de.ts.applets.MultiBoard: int q>";
+    "fieldput <de.ts.applets.MultiBoard: int q>"->"load.r r0";
+    "new de.ts.b.a.i"
+    "load.r r0"->"new de.ts.b.a.i";
+    "dup1.r"
+    "new de.ts.b.a.i"->"dup1.r";
+    "dup1.r"->"load.r r1";
+    "specialinvoke <de.ts.b.a.i: void <init>(java.io.DataInputStream)>"
+    "load.r r1"->"specialinvoke <de.ts.b.a.i: void <init>(java.io.DataInputStream)>";
+    "virtualinvoke <de.ts.b.a.i: java.util.Vector a()>"
+    "specialinvoke <de.ts.b.a.i: void <init>(java.io.DataInputStream)>"->"virtualinvoke <de.ts.b.a.i: java.util.Vector a()>";
+    "fieldput <de.ts.applets.MultiBoard: java.util.Vector do>"
+    "virtualinvoke <de.ts.b.a.i: java.util.Vector a()>"->"fieldput <de.ts.applets.MultiBoard: java.util.Vector do>";
+    "fieldput <de.ts.applets.MultiBoard: java.util.Vector do>"->"load.r r0";
+    "specialinvoke <de.ts.applets.MultiBoard: void 'if'()>"
+    "load.r r0"->"specialinvoke <de.ts.applets.MultiBoard: void 'if'()>";
+    "specialinvoke <de.ts.applets.MultiBoard: void 'if'()>"->"load.r r0";
+    "specialinvoke <de.ts.applets.MultiBoard: void for()>"
+    "load.r r0"->"specialinvoke <de.ts.applets.MultiBoard: void for()>";
+    "specialinvoke <de.ts.applets.MultiBoard: void for()>"->"load.r r0";
+    "specialinvoke <de.ts.applets.MultiBoard: void 'new'()>"
+    "load.r r0"->"specialinvoke <de.ts.applets.MultiBoard: void 'new'()>";
+    "goto return"
+    "specialinvoke <de.ts.applets.MultiBoard: void 'new'()>"->"goto return";
+    "return"
+    "goto return"->"return";
+    "ifnull load.r r0"->"load.r r0";
+    "push 2"
+    "load.r r0"->"push 2";
+    "push 2"->"fieldput <de.ts.applets.MultiBoard: int q>";
+    "ifeq load.r r0"->"load.r r0";
+    "push 0"
+    "load.r r0"->"push 0";
+    "fieldput <de.ts.applets.MultiBoard: boolean p>"
+    "push 0"->"fieldput <de.ts.applets.MultiBoard: boolean p>";
+    "fieldput <de.ts.applets.MultiBoard: boolean p>"->"load.r r0";
+    "new de.ts.a.a"
+    "load.r r0"->"new de.ts.a.a";
+    "new de.ts.a.a"->"dup1.r";
+    "push \"MB1\""
+    "dup1.r"->"push \"MB1\"";
+    "load.r r2"
+    "push \"MB1\""->"load.r r2";
+    "load.r r2"->"load.r r3";
+    "virtualinvoke <java.net.URL: java.lang.String getHost()>"
+    "load.r r3"->"virtualinvoke <java.net.URL: java.lang.String getHost()>";
+    "virtualinvoke <java.net.URL: java.lang.String getHost()>"->"load.r r3";
+    "virtualinvoke <java.net.URL: java.lang.String getFile()>"
+    "load.r r3"->"virtualinvoke <java.net.URL: java.lang.String getFile()>";
+    "specialinvoke <de.ts.a.a: void <init>(java.lang.String,java.lang.String,java.lang.String,java.lang.String)>"
+    "virtualinvoke <java.net.URL: java.lang.String getFile()>"->"specialinvoke <de.ts.a.a: void <init>(java.lang.String,java.lang.String,java.lang.String,java.lang.String)>";
+    "specialinvoke <de.ts.a.a: void <init>(java.lang.String,java.lang.String,java.lang.String,java.lang.String)>"->"load.r r0";
+    "load.r r0"->"load.r r2";
+    "load.r r2"->"load.r r1";
+    "virtualinvoke <de.ts.a.a: boolean a(java.applet.Applet,java.lang.String,java.lang.String)>"
+    "load.r r1"->"virtualinvoke <de.ts.a.a: boolean a(java.applet.Applet,java.lang.String,java.lang.String)>";
+    "virtualinvoke <de.ts.a.a: boolean a(java.applet.Applet,java.lang.String,java.lang.String)>"->"fieldput <de.ts.applets.MultiBoard: boolean s>";
+}

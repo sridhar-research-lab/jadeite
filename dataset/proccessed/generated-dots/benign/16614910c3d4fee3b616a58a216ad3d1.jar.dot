@@ -1,0 +1,134 @@
+digraph "" {
+    "r0 := @this: livevu"
+    "load.r r0"
+    "r0 := @this: livevu"->"load.r r0";
+    "push 1"
+    "load.r r0"->"push 1";
+    "fieldput <livevu: boolean m_isRunning>"
+    "push 1"->"fieldput <livevu: boolean m_isRunning>";
+    "fieldput <livevu: boolean m_isRunning>"->"load.r r0";
+    "push 0"
+    "load.r r0"->"push 0";
+    "fieldput <livevu: int m_index>"
+    "push 0"->"fieldput <livevu: int m_index>";
+    "fieldput <livevu: int m_index>"->"load.r r0";
+    "push null"
+    "load.r r0"->"push null";
+    "fieldput <livevu: java.lang.String m_errorMsg>"
+    "push null"->"fieldput <livevu: java.lang.String m_errorMsg>";
+    "fieldput <livevu: java.lang.String m_errorMsg>"->"load.r r0";
+    "load.r r0"->"push 0";
+    "fieldput <livevu: int query_string>"
+    "push 0"->"fieldput <livevu: int query_string>";
+    "fieldput <livevu: int query_string>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "push \"VIDEOSOURCE\""
+    "load.r r0"->"push \"VIDEOSOURCE\"";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"
+    "push \"VIDEOSOURCE\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "fieldput <livevu: java.lang.String m_video_source>"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"fieldput <livevu: java.lang.String m_video_source>";
+    "fieldput <livevu: java.lang.String m_video_source>"->"load.r r0";
+    "push \"HEIGHT\""
+    "load.r r0"->"push \"HEIGHT\"";
+    "push \"HEIGHT\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "store.r $r3"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"store.r $r3";
+    "load.r $r3"
+    "store.r $r3"->"load.r $r3";
+    "ifnull load.r r0"
+    "load.r $r3"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r r0";
+    "load.r r0"->"load.r $r3";
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"
+    "load.r $r3"->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>";
+    "fieldput <livevu: int m_height>"
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"->"fieldput <livevu: int m_height>";
+    "goto load.r r0"
+    "fieldput <livevu: int m_height>"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "push \"WIDTH\""
+    "load.r r0"->"push \"WIDTH\"";
+    "push \"WIDTH\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"store.r $r3";
+    "store.r $r3"->"load.r $r3";
+    "load.r $r3"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r r0";
+    "load.r r0"->"load.r $r3";
+    "load.r $r3"->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>";
+    "fieldput <livevu: int m_width>"
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"->"fieldput <livevu: int m_width>";
+    "fieldput <livevu: int m_width>"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "push \"INTERVAL\""
+    "load.r r0"->"push \"INTERVAL\"";
+    "push \"INTERVAL\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"store.r $r3";
+    "store.r $r3"->"load.r $r3";
+    "load.r $r3"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r r0";
+    "load.r r0"->"load.r $r3";
+    "load.r $r3"->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>";
+    "fieldput <livevu: int m_interval>"
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"->"fieldput <livevu: int m_interval>";
+    "fieldput <livevu: int m_interval>"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "fieldget <livevu: int m_width>"
+    "load.r r0"->"fieldget <livevu: int m_width>";
+    "fieldget <livevu: int m_width>"->"load.r r0";
+    "fieldget <livevu: int m_height>"
+    "load.r r0"->"fieldget <livevu: int m_height>";
+    "virtualinvoke <java.awt.Component: java.awt.Image createImage(int,int)>"
+    "fieldget <livevu: int m_height>"->"virtualinvoke <java.awt.Component: java.awt.Image createImage(int,int)>";
+    "fieldput <livevu: java.awt.Image m_offScreenImage>"
+    "virtualinvoke <java.awt.Component: java.awt.Image createImage(int,int)>"->"fieldput <livevu: java.awt.Image m_offScreenImage>";
+    "fieldput <livevu: java.awt.Image m_offScreenImage>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "fieldget <livevu: java.awt.Image m_offScreenImage>"
+    "load.r r0"->"fieldget <livevu: java.awt.Image m_offScreenImage>";
+    "virtualinvoke <java.awt.Image: java.awt.Graphics getGraphics()>"
+    "fieldget <livevu: java.awt.Image m_offScreenImage>"->"virtualinvoke <java.awt.Image: java.awt.Graphics getGraphics()>";
+    "fieldput <livevu: java.awt.Graphics m_offScreen>"
+    "virtualinvoke <java.awt.Image: java.awt.Graphics getGraphics()>"->"fieldput <livevu: java.awt.Graphics m_offScreen>";
+    "fieldput <livevu: java.awt.Graphics m_offScreen>"->"load.r r0";
+    "fieldget <livevu: java.awt.Image[] m_turbine>"
+    "load.r r0"->"fieldget <livevu: java.awt.Image[] m_turbine>";
+    "fieldget <livevu: java.awt.Image[] m_turbine>"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <livevu: java.awt.Image[] m_turbine>";
+    "fieldget <livevu: java.awt.Image[] m_turbine>"->"load.r r0";
+    "fieldget <livevu: int m_index>"
+    "load.r r0"->"fieldget <livevu: int m_index>";
+    "fieldget <livevu: int m_index>"->"push null";
+    "arraywrite.r"
+    "push null"->"arraywrite.r";
+    "arraywrite.r"->"load.r r0";
+    "virtualinvoke <livevu: void load_image()>"
+    "load.r r0"->"virtualinvoke <livevu: void load_image()>";
+    "return"
+    "virtualinvoke <livevu: void load_image()>"->"return";
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"->"store.r $r3";
+    "store.r $r3"->"load.r r0";
+    "load.r r0"->"push 0";
+    "push 0"->"fieldput <livevu: int m_interval>";
+    "fieldput <livevu: int m_interval>"->"goto load.r r0";
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"->"store.r $r3";
+    "store.r $r3"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "virtualinvoke <java.awt.Component: java.awt.Dimension getSize()>"
+    "load.r r0"->"virtualinvoke <java.awt.Component: java.awt.Dimension getSize()>";
+    "fieldget <java.awt.Dimension: int width>"
+    "virtualinvoke <java.awt.Component: java.awt.Dimension getSize()>"->"fieldget <java.awt.Dimension: int width>";
+    "fieldget <java.awt.Dimension: int width>"->"fieldput <livevu: int m_width>";
+    "fieldput <livevu: int m_width>"->"goto load.r r0";
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"->"store.r $r3";
+    "store.r $r3"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"virtualinvoke <java.awt.Component: java.awt.Dimension getSize()>";
+    "fieldget <java.awt.Dimension: int height>"
+    "virtualinvoke <java.awt.Component: java.awt.Dimension getSize()>"->"fieldget <java.awt.Dimension: int height>";
+    "fieldget <java.awt.Dimension: int height>"->"fieldput <livevu: int m_height>";
+    "fieldput <livevu: int m_height>"->"goto load.r r0";
+}

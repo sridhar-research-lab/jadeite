@@ -1,0 +1,211 @@
+digraph "" {
+    "r0 := @this: puzzle"
+    "load.r r0"
+    "r0 := @this: puzzle"->"load.r r0";
+    "specialinvoke <java.applet.Applet: void init()>"
+    "load.r r0"->"specialinvoke <java.applet.Applet: void init()>";
+    "specialinvoke <java.applet.Applet: void init()>"->"load.r r0";
+    "push \"Rows\""
+    "load.r r0"->"push \"Rows\"";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"
+    "push \"Rows\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "store.r $r4"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"store.r $r4";
+    "load.r $r4"
+    "store.r $r4"->"load.r $r4";
+    "ifnull load.r r0"
+    "load.r $r4"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r r0";
+    "load.r r0"->"load.r $r4";
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"
+    "load.r $r4"->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>";
+    "fieldput <puzzle: int rows>"
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"->"fieldput <puzzle: int rows>";
+    "goto load.r r0"
+    "fieldput <puzzle: int rows>"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "push \"Columns\""
+    "load.r r0"->"push \"Columns\"";
+    "push \"Columns\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"store.r $r4";
+    "store.r $r4"->"load.r $r4";
+    "load.r $r4"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r r0";
+    "load.r r0"->"load.r $r4";
+    "load.r $r4"->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>";
+    "fieldput <puzzle: int columns>"
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"->"fieldput <puzzle: int columns>";
+    "fieldput <puzzle: int columns>"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "push \"Image\""
+    "load.r r0"->"push \"Image\"";
+    "push \"Image\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"store.r $r4";
+    "store.r $r4"->"load.r $r4";
+    "load.r $r4"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "virtualinvoke <java.applet.Applet: java.net.URL getCodeBase()>"
+    "load.r r0"->"virtualinvoke <java.applet.Applet: java.net.URL getCodeBase()>";
+    "virtualinvoke <java.applet.Applet: java.net.URL getCodeBase()>"->"load.r $r4";
+    "virtualinvoke <java.applet.Applet: java.awt.Image getImage(java.net.URL,java.lang.String)>"
+    "load.r $r4"->"virtualinvoke <java.applet.Applet: java.awt.Image getImage(java.net.URL,java.lang.String)>";
+    "fieldput <puzzle: java.awt.Image origImage>"
+    "virtualinvoke <java.applet.Applet: java.awt.Image getImage(java.net.URL,java.lang.String)>"->"fieldput <puzzle: java.awt.Image origImage>";
+    "goto new java.awt.MediaTracker"
+    "fieldput <puzzle: java.awt.Image origImage>"->"goto new java.awt.MediaTracker";
+    "new java.awt.MediaTracker"
+    "goto new java.awt.MediaTracker"->"new java.awt.MediaTracker";
+    "new java.awt.MediaTracker"->"store.r $r4";
+    "store.r $r4"->"load.r $r4";
+    "load.r $r4"->"load.r r0";
+    "specialinvoke <java.awt.MediaTracker: void <init>(java.awt.Component)>"
+    "load.r r0"->"specialinvoke <java.awt.MediaTracker: void <init>(java.awt.Component)>";
+    "specialinvoke <java.awt.MediaTracker: void <init>(java.awt.Component)>"->"load.r $r4";
+    "load.r $r4"->"load.r r0";
+    "fieldget <puzzle: java.awt.Image origImage>"
+    "load.r r0"->"fieldget <puzzle: java.awt.Image origImage>";
+    "push 0"
+    "fieldget <puzzle: java.awt.Image origImage>"->"push 0";
+    "virtualinvoke <java.awt.MediaTracker: void addImage(java.awt.Image,int)>"
+    "push 0"->"virtualinvoke <java.awt.MediaTracker: void addImage(java.awt.Image,int)>";
+    "virtualinvoke <java.awt.MediaTracker: void addImage(java.awt.Image,int)>"->"load.r $r4";
+    "load.r $r4"->"push 0";
+    "virtualinvoke <java.awt.MediaTracker: void waitForID(int)>"
+    "push 0"->"virtualinvoke <java.awt.MediaTracker: void waitForID(int)>";
+    "virtualinvoke <java.awt.MediaTracker: void waitForID(int)>"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <puzzle: java.awt.Image origImage>";
+    "fieldget <puzzle: java.awt.Image origImage>"->"load.r r0";
+    "virtualinvoke <java.awt.Image: int getWidth(java.awt.image.ImageObserver)>"
+    "load.r r0"->"virtualinvoke <java.awt.Image: int getWidth(java.awt.image.ImageObserver)>";
+    "fieldput <puzzle: int imgWidth>"
+    "virtualinvoke <java.awt.Image: int getWidth(java.awt.image.ImageObserver)>"->"fieldput <puzzle: int imgWidth>";
+    "fieldput <puzzle: int imgWidth>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <puzzle: java.awt.Image origImage>";
+    "fieldget <puzzle: java.awt.Image origImage>"->"load.r r0";
+    "virtualinvoke <java.awt.Image: int getHeight(java.awt.image.ImageObserver)>"
+    "load.r r0"->"virtualinvoke <java.awt.Image: int getHeight(java.awt.image.ImageObserver)>";
+    "fieldput <puzzle: int imgHeight>"
+    "virtualinvoke <java.awt.Image: int getHeight(java.awt.image.ImageObserver)>"->"fieldput <puzzle: int imgHeight>";
+    "fieldput <puzzle: int imgHeight>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "fieldget <puzzle: int imgHeight>"
+    "load.r r0"->"fieldget <puzzle: int imgHeight>";
+    "fieldget <puzzle: int imgHeight>"->"load.r r0";
+    "fieldget <puzzle: int rows>"
+    "load.r r0"->"fieldget <puzzle: int rows>";
+    "div.i"
+    "fieldget <puzzle: int rows>"->"div.i";
+    "fieldput <puzzle: int sliceHeight>"
+    "div.i"->"fieldput <puzzle: int sliceHeight>";
+    "fieldput <puzzle: int sliceHeight>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "fieldget <puzzle: int imgWidth>"
+    "load.r r0"->"fieldget <puzzle: int imgWidth>";
+    "fieldget <puzzle: int imgWidth>"->"load.r r0";
+    "fieldget <puzzle: int columns>"
+    "load.r r0"->"fieldget <puzzle: int columns>";
+    "fieldget <puzzle: int columns>"->"div.i";
+    "fieldput <puzzle: int sliceWidth>"
+    "div.i"->"fieldput <puzzle: int sliceWidth>";
+    "fieldput <puzzle: int sliceWidth>"->"load.r r0";
+    "new java.util.Vector"
+    "load.r r0"->"new java.util.Vector";
+    "dup1.r"
+    "new java.util.Vector"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "load.r r0"->"fieldget <puzzle: int rows>";
+    "fieldget <puzzle: int rows>"->"load.r r0";
+    "load.r r0"->"fieldget <puzzle: int columns>";
+    "mul.i"
+    "fieldget <puzzle: int columns>"->"mul.i";
+    "specialinvoke <java.util.Vector: void <init>(int)>"
+    "mul.i"->"specialinvoke <java.util.Vector: void <init>(int)>";
+    "fieldput <puzzle: java.util.Vector puzzle>"
+    "specialinvoke <java.util.Vector: void <init>(int)>"->"fieldput <puzzle: java.util.Vector puzzle>";
+    "fieldput <puzzle: java.util.Vector puzzle>"->"load.r r0";
+    "push null"
+    "load.r r0"->"push null";
+    "virtualinvoke <java.awt.Container: void setLayout(java.awt.LayoutManager)>"
+    "push null"->"virtualinvoke <java.awt.Container: void setLayout(java.awt.LayoutManager)>";
+    "virtualinvoke <java.awt.Container: void setLayout(java.awt.LayoutManager)>"->"load.r r0";
+    "virtualinvoke <java.awt.Panel: void addNotify()>"
+    "load.r r0"->"virtualinvoke <java.awt.Panel: void addNotify()>";
+    "virtualinvoke <java.awt.Panel: void addNotify()>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <puzzle: int imgWidth>";
+    "fieldget <puzzle: int imgWidth>"->"load.r r0";
+    "load.r r0"->"fieldget <puzzle: int imgHeight>";
+    "virtualinvoke <java.applet.Applet: void resize(int,int)>"
+    "fieldget <puzzle: int imgHeight>"->"virtualinvoke <java.applet.Applet: void resize(int,int)>";
+    "virtualinvoke <java.applet.Applet: void resize(int,int)>"->"load.r r0";
+    "new java.awt.Canvas"
+    "load.r r0"->"new java.awt.Canvas";
+    "new java.awt.Canvas"->"dup1.r";
+    "specialinvoke <java.awt.Canvas: void <init>()>"
+    "dup1.r"->"specialinvoke <java.awt.Canvas: void <init>()>";
+    "fieldput <puzzle: java.awt.Canvas imgCanvas>"
+    "specialinvoke <java.awt.Canvas: void <init>()>"->"fieldput <puzzle: java.awt.Canvas imgCanvas>";
+    "fieldput <puzzle: java.awt.Canvas imgCanvas>"->"load.r r0";
+    "fieldget <puzzle: java.awt.Canvas imgCanvas>"
+    "load.r r0"->"fieldget <puzzle: java.awt.Canvas imgCanvas>";
+    "fieldget <puzzle: java.awt.Canvas imgCanvas>"->"push 0";
+    "push 0"->"push 0";
+    "push 0"->"load.r r0";
+    "load.r r0"->"fieldget <puzzle: int imgWidth>";
+    "fieldget <puzzle: int imgWidth>"->"load.r r0";
+    "load.r r0"->"fieldget <puzzle: int imgHeight>";
+    "virtualinvoke <java.awt.Component: void reshape(int,int,int,int)>"
+    "fieldget <puzzle: int imgHeight>"->"virtualinvoke <java.awt.Component: void reshape(int,int,int,int)>";
+    "virtualinvoke <java.awt.Component: void reshape(int,int,int,int)>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <puzzle: java.awt.Canvas imgCanvas>";
+    "virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>"
+    "fieldget <puzzle: java.awt.Canvas imgCanvas>"->"virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>";
+    "pop"
+    "virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>"->"pop";
+    "pop"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <puzzle: java.awt.Canvas imgCanvas>";
+    "virtualinvoke <java.awt.Component: java.awt.Graphics getGraphics()>"
+    "fieldget <puzzle: java.awt.Canvas imgCanvas>"->"virtualinvoke <java.awt.Component: java.awt.Graphics getGraphics()>";
+    "fieldput <puzzle: java.awt.Graphics cg>"
+    "virtualinvoke <java.awt.Component: java.awt.Graphics getGraphics()>"->"fieldput <puzzle: java.awt.Graphics cg>";
+    "fieldput <puzzle: java.awt.Graphics cg>"->"load.r r0";
+    "specialinvoke <puzzle: void setUpImages()>"
+    "load.r r0"->"specialinvoke <puzzle: void setUpImages()>";
+    "specialinvoke <puzzle: void setUpImages()>"->"load.r r0";
+    "staticinvoke <appletController: void setJigSaw(java.applet.Applet)>"
+    "load.r r0"->"staticinvoke <appletController: void setJigSaw(java.applet.Applet)>";
+    "staticinvoke <appletController: void setJigSaw(java.applet.Applet)>"->"load.r r0";
+    "staticinvoke <appletController: java.applet.Applet getController()>"
+    "load.r r0"->"staticinvoke <appletController: java.applet.Applet getController()>";
+    "fieldput <puzzle: java.applet.Applet controller>"
+    "staticinvoke <appletController: java.applet.Applet getController()>"->"fieldput <puzzle: java.applet.Applet controller>";
+    "fieldput <puzzle: java.applet.Applet controller>"->"load.r r0";
+    "virtualinvoke <java.awt.Component: void repaint()>"
+    "load.r r0"->"virtualinvoke <java.awt.Component: void repaint()>";
+    "return"
+    "virtualinvoke <java.awt.Component: void repaint()>"->"return";
+    "virtualinvoke <java.awt.MediaTracker: void waitForID(int)>"->"store.r $r4";
+    "ifnull load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"virtualinvoke <java.applet.Applet: java.net.URL getCodeBase()>";
+    "push \"gorilla2.gif\""
+    "virtualinvoke <java.applet.Applet: java.net.URL getCodeBase()>"->"push \"gorilla2.gif\"";
+    "push \"gorilla2.gif\""->"virtualinvoke <java.applet.Applet: java.awt.Image getImage(java.net.URL,java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.awt.Image getImage(java.net.URL,java.lang.String)>"->"fieldput <puzzle: java.awt.Image origImage>";
+    "ifnull load.r r0"->"load.r r0";
+    "push 3"
+    "load.r r0"->"push 3";
+    "push 3"->"fieldput <puzzle: int columns>";
+    "ifnull load.r r0"->"load.r r0";
+    "push 5"
+    "load.r r0"->"push 5";
+    "push 5"->"fieldput <puzzle: int rows>";
+}

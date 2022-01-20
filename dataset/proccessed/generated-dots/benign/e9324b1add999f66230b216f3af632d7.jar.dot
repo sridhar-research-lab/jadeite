@@ -1,0 +1,38 @@
+digraph "" {
+    "r0 := @this: ytdfriends.FriendsApplet"
+    "load.r r0"
+    "r0 := @this: ytdfriends.FriendsApplet"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "push \"uid\""
+    "load.r r0"->"push \"uid\"";
+    "virtualinvoke <ytdfriends.FriendsApplet: java.lang.String getParameter(java.lang.String)>"
+    "push \"uid\""->"virtualinvoke <ytdfriends.FriendsApplet: java.lang.String getParameter(java.lang.String)>";
+    "fieldput <ytdfriends.FriendsApplet: java.lang.String uid>"
+    "virtualinvoke <ytdfriends.FriendsApplet: java.lang.String getParameter(java.lang.String)>"->"fieldput <ytdfriends.FriendsApplet: java.lang.String uid>";
+    "fieldput <ytdfriends.FriendsApplet: java.lang.String uid>"->"load.r r0";
+    "new ytdfriends.FriendsPanel"
+    "load.r r0"->"new ytdfriends.FriendsPanel";
+    "dup1.r"
+    "new ytdfriends.FriendsPanel"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "specialinvoke <ytdfriends.FriendsPanel: void <init>(ytdfriends.FriendsApplet)>"
+    "load.r r0"->"specialinvoke <ytdfriends.FriendsPanel: void <init>(ytdfriends.FriendsApplet)>";
+    "fieldput <ytdfriends.FriendsApplet: ytdfriends.FriendsPanel fPanel>"
+    "specialinvoke <ytdfriends.FriendsPanel: void <init>(ytdfriends.FriendsApplet)>"->"fieldput <ytdfriends.FriendsApplet: ytdfriends.FriendsPanel fPanel>";
+    "fieldput <ytdfriends.FriendsApplet: ytdfriends.FriendsPanel fPanel>"->"load.r r0";
+    "fieldget <ytdfriends.FriendsApplet: ytdfriends.FriendsPanel fPanel>"
+    "load.r r0"->"fieldget <ytdfriends.FriendsApplet: ytdfriends.FriendsPanel fPanel>";
+    "push 1"
+    "fieldget <ytdfriends.FriendsApplet: ytdfriends.FriendsPanel fPanel>"->"push 1";
+    "virtualinvoke <ytdfriends.FriendsPanel: void setVisible(boolean)>"
+    "push 1"->"virtualinvoke <ytdfriends.FriendsPanel: void setVisible(boolean)>";
+    "virtualinvoke <ytdfriends.FriendsPanel: void setVisible(boolean)>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <ytdfriends.FriendsApplet: ytdfriends.FriendsPanel fPanel>";
+    "virtualinvoke <ytdfriends.FriendsApplet: java.awt.Component add(java.awt.Component)>"
+    "fieldget <ytdfriends.FriendsApplet: ytdfriends.FriendsPanel fPanel>"->"virtualinvoke <ytdfriends.FriendsApplet: java.awt.Component add(java.awt.Component)>";
+    "pop"
+    "virtualinvoke <ytdfriends.FriendsApplet: java.awt.Component add(java.awt.Component)>"->"pop";
+    "return"
+    "pop"->"return";
+}

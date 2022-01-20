@@ -1,0 +1,232 @@
+digraph "" {
+    "r0 := @this: ScrollWindow"
+    "load.r r0"
+    "r0 := @this: ScrollWindow"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "new java.awt.Font"
+    "load.r r0"->"new java.awt.Font";
+    "dup1.r"
+    "new java.awt.Font"->"dup1.r";
+    "push \"Helvetica\""
+    "dup1.r"->"push \"Helvetica\"";
+    "push 0"
+    "push \"Helvetica\""->"push 0";
+    "push 12"
+    "push 0"->"push 12";
+    "specialinvoke <java.awt.Font: void <init>(java.lang.String,int,int)>"
+    "push 12"->"specialinvoke <java.awt.Font: void <init>(java.lang.String,int,int)>";
+    "virtualinvoke <java.awt.Component: java.awt.FontMetrics getFontMetrics(java.awt.Font)>"
+    "specialinvoke <java.awt.Font: void <init>(java.lang.String,int,int)>"->"virtualinvoke <java.awt.Component: java.awt.FontMetrics getFontMetrics(java.awt.Font)>";
+    "virtualinvoke <java.awt.FontMetrics: int getHeight()>"
+    "virtualinvoke <java.awt.Component: java.awt.FontMetrics getFontMetrics(java.awt.Font)>"->"virtualinvoke <java.awt.FontMetrics: int getHeight()>";
+    "fieldput <ScrollWindow: int fmh>"
+    "virtualinvoke <java.awt.FontMetrics: int getHeight()>"->"fieldput <ScrollWindow: int fmh>";
+    "fieldput <ScrollWindow: int fmh>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "virtualinvoke <java.awt.Component: java.awt.Dimension getSize()>"
+    "load.r r0"->"virtualinvoke <java.awt.Component: java.awt.Dimension getSize()>";
+    "fieldget <java.awt.Dimension: int height>"
+    "virtualinvoke <java.awt.Component: java.awt.Dimension getSize()>"->"fieldget <java.awt.Dimension: int height>";
+    "push 26"
+    "fieldget <java.awt.Dimension: int height>"->"push 26";
+    "sub.i"
+    "push 26"->"sub.i";
+    "sub.i"->"load.r r0";
+    "fieldget <ScrollWindow: int fmh>"
+    "load.r r0"->"fieldget <ScrollWindow: int fmh>";
+    "div.i"
+    "fieldget <ScrollWindow: int fmh>"->"div.i";
+    "fieldput <ScrollWindow: int mlines>"
+    "div.i"->"fieldput <ScrollWindow: int mlines>";
+    "fieldput <ScrollWindow: int mlines>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"virtualinvoke <java.awt.Component: java.awt.Dimension getSize()>";
+    "fieldget <java.awt.Dimension: int width>"
+    "virtualinvoke <java.awt.Component: java.awt.Dimension getSize()>"->"fieldget <java.awt.Dimension: int width>";
+    "fieldget <java.awt.Dimension: int width>"->"load.r r0";
+    "load.r r0"->"virtualinvoke <java.awt.Component: java.awt.Dimension getSize()>";
+    "virtualinvoke <java.awt.Component: java.awt.Dimension getSize()>"->"fieldget <java.awt.Dimension: int height>";
+    "virtualinvoke <java.awt.Component: java.awt.Image createImage(int,int)>"
+    "fieldget <java.awt.Dimension: int height>"->"virtualinvoke <java.awt.Component: java.awt.Image createImage(int,int)>";
+    "fieldput <ScrollWindow: java.awt.Image winScratch>"
+    "virtualinvoke <java.awt.Component: java.awt.Image createImage(int,int)>"->"fieldput <ScrollWindow: java.awt.Image winScratch>";
+    "fieldput <ScrollWindow: java.awt.Image winScratch>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "fieldget <ScrollWindow: java.awt.Image winScratch>"
+    "load.r r0"->"fieldget <ScrollWindow: java.awt.Image winScratch>";
+    "virtualinvoke <java.awt.Image: java.awt.Graphics getGraphics()>"
+    "fieldget <ScrollWindow: java.awt.Image winScratch>"->"virtualinvoke <java.awt.Image: java.awt.Graphics getGraphics()>";
+    "fieldput <ScrollWindow: java.awt.Graphics gScratch>"
+    "virtualinvoke <java.awt.Image: java.awt.Graphics getGraphics()>"->"fieldput <ScrollWindow: java.awt.Graphics gScratch>";
+    "fieldput <ScrollWindow: java.awt.Graphics gScratch>"->"load.r r0";
+    "staticget <java.awt.Color: java.awt.Color white>"
+    "load.r r0"->"staticget <java.awt.Color: java.awt.Color white>";
+    "virtualinvoke <java.awt.Component: void setBackground(java.awt.Color)>"
+    "staticget <java.awt.Color: java.awt.Color white>"->"virtualinvoke <java.awt.Component: void setBackground(java.awt.Color)>";
+    "virtualinvoke <java.awt.Component: void setBackground(java.awt.Color)>"->"load.r r0";
+    "push \"delay\""
+    "load.r r0"->"push \"delay\"";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"
+    "push \"delay\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "store.r r23"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"store.r r23";
+    "load.r r23"
+    "store.r r23"->"load.r r23";
+    "ifnull load.r r0"
+    "load.r r23"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r23";
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"
+    "load.r r23"->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>";
+    "fieldput <ScrollWindow: int delay>"
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"->"fieldput <ScrollWindow: int delay>";
+    "goto load.r r0"
+    "fieldput <ScrollWindow: int delay>"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "push \"outerborder\""
+    "load.r r0"->"push \"outerborder\"";
+    "push \"outerborder\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"store.r r23";
+    "store.r r23"->"load.r r23";
+    "load.r r23"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r r0";
+    "new java.awt.Color"
+    "load.r r0"->"new java.awt.Color";
+    "new java.awt.Color"->"dup1.r";
+    "dup1.r"->"load.r r23";
+    "push 16"
+    "load.r r23"->"push 16";
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String,int)>"
+    "push 16"->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String,int)>";
+    "specialinvoke <java.awt.Color: void <init>(int)>"
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String,int)>"->"specialinvoke <java.awt.Color: void <init>(int)>";
+    "fieldput <ScrollWindow: java.awt.Color outerborder>"
+    "specialinvoke <java.awt.Color: void <init>(int)>"->"fieldput <ScrollWindow: java.awt.Color outerborder>";
+    "fieldput <ScrollWindow: java.awt.Color outerborder>"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "push \"middleborder\""
+    "load.r r0"->"push \"middleborder\"";
+    "push \"middleborder\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"store.r r23";
+    "store.r r23"->"load.r r23";
+    "load.r r23"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r r0";
+    "load.r r0"->"new java.awt.Color";
+    "new java.awt.Color"->"dup1.r";
+    "dup1.r"->"load.r r23";
+    "load.r r23"->"push 16";
+    "push 16"->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String,int)>";
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String,int)>"->"specialinvoke <java.awt.Color: void <init>(int)>";
+    "fieldput <ScrollWindow: java.awt.Color middleborder>"
+    "specialinvoke <java.awt.Color: void <init>(int)>"->"fieldput <ScrollWindow: java.awt.Color middleborder>";
+    "fieldput <ScrollWindow: java.awt.Color middleborder>"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "push \"innerborder\""
+    "load.r r0"->"push \"innerborder\"";
+    "push \"innerborder\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"store.r r23";
+    "store.r r23"->"load.r r23";
+    "load.r r23"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r r0";
+    "load.r r0"->"new java.awt.Color";
+    "new java.awt.Color"->"dup1.r";
+    "dup1.r"->"load.r r23";
+    "load.r r23"->"push 16";
+    "push 16"->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String,int)>";
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String,int)>"->"specialinvoke <java.awt.Color: void <init>(int)>";
+    "fieldput <ScrollWindow: java.awt.Color innerborder>"
+    "specialinvoke <java.awt.Color: void <init>(int)>"->"fieldput <ScrollWindow: java.awt.Color innerborder>";
+    "fieldput <ScrollWindow: java.awt.Color innerborder>"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "push \"textcolor\""
+    "load.r r0"->"push \"textcolor\"";
+    "push \"textcolor\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"store.r r23";
+    "store.r r23"->"load.r r23";
+    "load.r r23"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r r0";
+    "load.r r0"->"new java.awt.Color";
+    "new java.awt.Color"->"dup1.r";
+    "dup1.r"->"load.r r23";
+    "load.r r23"->"push 16";
+    "push 16"->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String,int)>";
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String,int)>"->"specialinvoke <java.awt.Color: void <init>(int)>";
+    "fieldput <ScrollWindow: java.awt.Color textcolor>"
+    "specialinvoke <java.awt.Color: void <init>(int)>"->"fieldput <ScrollWindow: java.awt.Color textcolor>";
+    "fieldput <ScrollWindow: java.awt.Color textcolor>"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "push \"textbackground\""
+    "load.r r0"->"push \"textbackground\"";
+    "push \"textbackground\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"store.r r23";
+    "store.r r23"->"load.r r23";
+    "ifnull push 0"
+    "load.r r23"->"ifnull push 0";
+    "ifnull push 0"->"load.r r0";
+    "load.r r0"->"new java.awt.Color";
+    "new java.awt.Color"->"dup1.r";
+    "dup1.r"->"load.r r23";
+    "load.r r23"->"push 16";
+    "push 16"->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String,int)>";
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String,int)>"->"specialinvoke <java.awt.Color: void <init>(int)>";
+    "fieldput <ScrollWindow: java.awt.Color textbackground>"
+    "specialinvoke <java.awt.Color: void <init>(int)>"->"fieldput <ScrollWindow: java.awt.Color textbackground>";
+    "goto push 0"
+    "fieldput <ScrollWindow: java.awt.Color textbackground>"->"goto push 0";
+    "goto push 0"->"push 0";
+    "store.i r23"
+    "push 0"->"store.i r23";
+    "load.i r23"
+    "store.i r23"->"load.i r23";
+    "push 1000"
+    "load.i r23"->"push 1000";
+    "ifcmpge.i load.r r0"
+    "push 1000"->"ifcmpge.i load.r r0";
+    "ifcmpge.i load.r r0"->"load.r r0";
+    "fieldget <ScrollWindow: java.lang.String[] lines>"
+    "load.r r0"->"fieldget <ScrollWindow: java.lang.String[] lines>";
+    "fieldget <ScrollWindow: java.lang.String[] lines>"->"load.i r23";
+    "load.i r23"->"load.r r0";
+    "new java.lang.StringBuffer"
+    "load.r r0"->"new java.lang.StringBuffer";
+    "new java.lang.StringBuffer"->"dup1.r";
+    "push \"line\""
+    "dup1.r"->"push \"line\"";
+    "specialinvoke <java.lang.StringBuffer: void <init>(java.lang.String)>"
+    "push \"line\""->"specialinvoke <java.lang.StringBuffer: void <init>(java.lang.String)>";
+    "specialinvoke <java.lang.StringBuffer: void <init>(java.lang.String)>"->"load.i r23";
+    "push 1"
+    "load.i r23"->"push 1";
+    "add.i"
+    "push 1"->"add.i";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(int)>"
+    "add.i"->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(int)>";
+    "staticinvoke <java.lang.String: java.lang.String valueOf(java.lang.Object)>"
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(int)>"->"staticinvoke <java.lang.String: java.lang.String valueOf(java.lang.Object)>";
+    "staticinvoke <java.lang.String: java.lang.String valueOf(java.lang.Object)>"->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "arraywrite.r"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"arraywrite.r";
+    "arraywrite.r"->"load.r r0";
+    "load.r r0"->"fieldget <ScrollWindow: java.lang.String[] lines>";
+    "fieldget <ScrollWindow: java.lang.String[] lines>"->"load.i r23";
+    "arrayread.r"
+    "load.i r23"->"arrayread.r";
+    "ifnonnull inc.i r23 1"
+    "arrayread.r"->"ifnonnull inc.i r23 1";
+    "ifnonnull inc.i r23 1"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "load.r r0"->"load.i r23";
+    "fieldput <ScrollWindow: int nlines>"
+    "load.i r23"->"fieldput <ScrollWindow: int nlines>";
+    "fieldput <ScrollWindow: int nlines>"->"load.r r0";
+    "load.r r0"->"push 0";
+    "fieldput <ScrollWindow: int topline>"
+    "push 0"->"fieldput <ScrollWindow: int topline>";
+    "return"
+    "fieldput <ScrollWindow: int topline>"->"return";
+    "inc.i r23 1"
+    "ifnonnull inc.i r23 1"->"inc.i r23 1";
+    "goto load.i r23"
+    "inc.i r23 1"->"goto load.i r23";
+}

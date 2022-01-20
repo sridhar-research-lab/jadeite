@@ -1,0 +1,21 @@
+digraph "" {
+    "r0 := @this: Antenna"
+    "load.r r0"
+    "r0 := @this: Antenna"->"load.r r0";
+    "new AntennaFrame"
+    "load.r r0"->"new AntennaFrame";
+    "dup1.r"
+    "new AntennaFrame"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "specialinvoke <AntennaFrame: void <init>(Antenna)>"
+    "load.r r0"->"specialinvoke <AntennaFrame: void <init>(Antenna)>";
+    "fieldput <Antenna: AntennaFrame ogf>"
+    "specialinvoke <AntennaFrame: void <init>(Antenna)>"->"fieldput <Antenna: AntennaFrame ogf>";
+    "fieldput <Antenna: AntennaFrame ogf>"->"load.r r0";
+    "fieldget <Antenna: AntennaFrame ogf>"
+    "load.r r0"->"fieldget <Antenna: AntennaFrame ogf>";
+    "virtualinvoke <AntennaFrame: void init()>"
+    "fieldget <Antenna: AntennaFrame ogf>"->"virtualinvoke <AntennaFrame: void init()>";
+    "return"
+    "virtualinvoke <AntennaFrame: void init()>"->"return";
+}

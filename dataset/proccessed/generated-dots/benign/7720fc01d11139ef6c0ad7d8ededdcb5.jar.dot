@@ -1,0 +1,15 @@
+digraph "" {
+    "r0 := @this: javaTest"
+    "load.r r0"
+    "r0 := @this: javaTest"->"load.r r0";
+    "push 800"
+    "load.r r0"->"push 800";
+    "push 400"
+    "push 800"->"push 400";
+    "virtualinvoke <java.awt.Component: void setSize(int,int)>"
+    "push 400"->"virtualinvoke <java.awt.Component: void setSize(int,int)>";
+    "staticinvoke <javaTest: void reset()>"
+    "virtualinvoke <java.awt.Component: void setSize(int,int)>"->"staticinvoke <javaTest: void reset()>";
+    "return"
+    "staticinvoke <javaTest: void reset()>"->"return";
+}

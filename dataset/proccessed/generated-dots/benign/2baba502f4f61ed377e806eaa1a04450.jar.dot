@@ -1,0 +1,44 @@
+digraph "" {
+    "r0 := @this: client"
+    "staticget <java.lang.System: java.io.PrintStream out>"
+    "r0 := @this: client"->"staticget <java.lang.System: java.io.PrintStream out>";
+    "push \"Rune-World is loading..\""
+    "staticget <java.lang.System: java.io.PrintStream out>"->"push \"Rune-World is loading..\"";
+    "virtualinvoke <java.io.PrintStream: void println(java.lang.String)>"
+    "push \"Rune-World is loading..\""->"virtualinvoke <java.io.PrintStream: void println(java.lang.String)>";
+    "push 10"
+    "virtualinvoke <java.io.PrintStream: void println(java.lang.String)>"->"push 10";
+    "staticput <client: int nodeID>"
+    "push 10"->"staticput <client: int nodeID>";
+    "push 0"
+    "staticput <client: int nodeID>"->"push 0";
+    "staticput <client: int portOff>"
+    "push 0"->"staticput <client: int portOff>";
+    "staticinvoke <client: void setHighMem()>"
+    "staticput <client: int portOff>"->"staticinvoke <client: void setHighMem()>";
+    "push 1"
+    "staticinvoke <client: void setHighMem()>"->"push 1";
+    "staticput <client: boolean isMembers>"
+    "push 1"->"staticput <client: boolean isMembers>";
+    "staticinvoke <java.net.InetAddress: java.net.InetAddress getLocalHost()>"
+    "staticput <client: boolean isMembers>"->"staticinvoke <java.net.InetAddress: java.net.InetAddress getLocalHost()>";
+    "staticinvoke <sign.signlink: void startpriv(java.net.InetAddress)>"
+    "staticinvoke <java.net.InetAddress: java.net.InetAddress getLocalHost()>"->"staticinvoke <sign.signlink: void startpriv(java.net.InetAddress)>";
+    "load.r r0"
+    "staticinvoke <sign.signlink: void startpriv(java.net.InetAddress)>"->"load.r r0";
+    "staticput <client: client instance>"
+    "load.r r0"->"staticput <client: client instance>";
+    "staticput <client: client instance>"->"load.r r0";
+    "push 503"
+    "load.r r0"->"push 503";
+    "push 765"
+    "push 503"->"push 765";
+    "virtualinvoke <client: void initClientFrame(int,int)>"
+    "push 765"->"virtualinvoke <client: void initClientFrame(int,int)>";
+    "goto return"
+    "virtualinvoke <client: void initClientFrame(int,int)>"->"goto return";
+    "return"
+    "goto return"->"return";
+    "virtualinvoke <java.lang.Exception: void printStackTrace()>"
+    "virtualinvoke <client: void initClientFrame(int,int)>"->"virtualinvoke <java.lang.Exception: void printStackTrace()>";
+}

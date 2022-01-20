@@ -1,0 +1,135 @@
+digraph "" {
+    "r0 := @this: FireWorks"
+    "load.r r0"
+    "r0 := @this: FireWorks"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "virtualinvoke <java.awt.Component: java.awt.Dimension size()>"
+    "load.r r0"->"virtualinvoke <java.awt.Component: java.awt.Dimension size()>";
+    "fieldput <FireWorks: java.awt.Dimension d>"
+    "virtualinvoke <java.awt.Component: java.awt.Dimension size()>"->"fieldput <FireWorks: java.awt.Dimension d>";
+    "fieldput <FireWorks: java.awt.Dimension d>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "virtualinvoke <java.awt.Component: java.awt.Graphics getGraphics()>"
+    "load.r r0"->"virtualinvoke <java.awt.Component: java.awt.Graphics getGraphics()>";
+    "dup1.r"
+    "virtualinvoke <java.awt.Component: java.awt.Graphics getGraphics()>"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "fieldget <FireWorks: java.awt.Font font>"
+    "load.r r0"->"fieldget <FireWorks: java.awt.Font font>";
+    "virtualinvoke <java.awt.Graphics: void setFont(java.awt.Font)>"
+    "fieldget <FireWorks: java.awt.Font font>"->"virtualinvoke <java.awt.Graphics: void setFont(java.awt.Font)>";
+    "virtualinvoke <java.awt.Graphics: java.awt.FontMetrics getFontMetrics()>"
+    "virtualinvoke <java.awt.Graphics: void setFont(java.awt.Font)>"->"virtualinvoke <java.awt.Graphics: java.awt.FontMetrics getFontMetrics()>";
+    "fieldput <FireWorks: java.awt.FontMetrics fm>"
+    "virtualinvoke <java.awt.Graphics: java.awt.FontMetrics getFontMetrics()>"->"fieldput <FireWorks: java.awt.FontMetrics fm>";
+    "fieldput <FireWorks: java.awt.FontMetrics fm>"->"load.r r0";
+    "push 128"
+    "load.r r0"->"push 128";
+    "newarray"
+    "push 128"->"newarray";
+    "fieldput <FireWorks: int[] xcoord>"
+    "newarray"->"fieldput <FireWorks: int[] xcoord>";
+    "fieldput <FireWorks: int[] xcoord>"->"load.r r0";
+    "load.r r0"->"push 128";
+    "push 128"->"newarray";
+    "fieldput <FireWorks: int[] ycoord>"
+    "newarray"->"fieldput <FireWorks: int[] ycoord>";
+    "fieldput <FireWorks: int[] ycoord>"->"load.r r0";
+    "load.r r0"->"push 128";
+    "push 128"->"newarray";
+    "fieldput <FireWorks: int[] xspeed>"
+    "newarray"->"fieldput <FireWorks: int[] xspeed>";
+    "fieldput <FireWorks: int[] xspeed>"->"load.r r0";
+    "load.r r0"->"push 128";
+    "push 128"->"newarray";
+    "fieldput <FireWorks: int[] yspeed>"
+    "newarray"->"fieldput <FireWorks: int[] yspeed>";
+    "fieldput <FireWorks: int[] yspeed>"->"load.r r0";
+    "push 8"
+    "load.r r0"->"push 8";
+    "push 8"->"newarray";
+    "fieldput <FireWorks: int[] count>"
+    "newarray"->"fieldput <FireWorks: int[] count>";
+    "fieldput <FireWorks: int[] count>"->"load.r r0";
+    "load.r r0"->"push 8";
+    "push 8"->"newarray";
+    "fieldput <FireWorks: boolean[] exploding>"
+    "newarray"->"fieldput <FireWorks: boolean[] exploding>";
+    "push 0"
+    "fieldput <FireWorks: boolean[] exploding>"->"push 0";
+    "store.i i2"
+    "push 0"->"store.i i2";
+    "goto load.i i2"
+    "store.i i2"->"goto load.i i2";
+    "load.i i2"
+    "goto load.i i2"->"load.i i2";
+    "load.i i2"->"push 128";
+    "ifcmplt.i load.r r0"
+    "push 128"->"ifcmplt.i load.r r0";
+    "ifcmplt.i load.r r0"->"push 0";
+    "push 0"->"store.i i2";
+    "store.i i2"->"goto load.i i2";
+    "goto load.i i2"->"load.i i2";
+    "load.i i2"->"push 8";
+    "push 8"->"ifcmplt.i load.r r0";
+    "ifcmplt.i load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "push \"Text\""
+    "load.r r0"->"push \"Text\"";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"
+    "push \"Text\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "fieldput <FireWorks: java.lang.String s>"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"fieldput <FireWorks: java.lang.String s>";
+    "return"
+    "fieldput <FireWorks: java.lang.String s>"->"return";
+    "ifcmplt.i load.r r0"->"load.r r0";
+    "fieldget <FireWorks: int[] count>"
+    "load.r r0"->"fieldget <FireWorks: int[] count>";
+    "fieldget <FireWorks: int[] count>"->"load.i i2";
+    "push 1"
+    "load.i i2"->"push 1";
+    "push 1"->"load.i i2";
+    "push 16"
+    "load.i i2"->"push 16";
+    "mul.i"
+    "push 16"->"mul.i";
+    "add.i"
+    "mul.i"->"add.i";
+    "arraywrite.i"
+    "add.i"->"arraywrite.i";
+    "arraywrite.i"->"load.r r0";
+    "fieldget <FireWorks: boolean[] exploding>"
+    "load.r r0"->"fieldget <FireWorks: boolean[] exploding>";
+    "fieldget <FireWorks: boolean[] exploding>"->"load.i i2";
+    "load.i i2"->"push 1";
+    "arraywrite.b"
+    "push 1"->"arraywrite.b";
+    "inc.i i2 1"
+    "arraywrite.b"->"inc.i i2 1";
+    "ifcmplt.i load.r r0"->"load.r r0";
+    "fieldget <FireWorks: int[] xcoord>"
+    "load.r r0"->"fieldget <FireWorks: int[] xcoord>";
+    "fieldget <FireWorks: int[] xcoord>"->"load.i i2";
+    "push -20000"
+    "load.i i2"->"push -20000";
+    "push -20000"->"arraywrite.i";
+    "arraywrite.i"->"load.r r0";
+    "fieldget <FireWorks: int[] ycoord>"
+    "load.r r0"->"fieldget <FireWorks: int[] ycoord>";
+    "fieldget <FireWorks: int[] ycoord>"->"load.i i2";
+    "load.i i2"->"push -20000";
+    "push -20000"->"arraywrite.i";
+    "arraywrite.i"->"load.r r0";
+    "fieldget <FireWorks: int[] xspeed>"
+    "load.r r0"->"fieldget <FireWorks: int[] xspeed>";
+    "fieldget <FireWorks: int[] xspeed>"->"load.i i2";
+    "load.i i2"->"push 0";
+    "push 0"->"arraywrite.i";
+    "arraywrite.i"->"load.r r0";
+    "fieldget <FireWorks: int[] yspeed>"
+    "load.r r0"->"fieldget <FireWorks: int[] yspeed>";
+    "fieldget <FireWorks: int[] yspeed>"->"load.i i2";
+    "load.i i2"->"push 0";
+    "push 0"->"arraywrite.i";
+    "arraywrite.i"->"inc.i i2 1";
+}

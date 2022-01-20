@@ -1,0 +1,275 @@
+digraph "" {
+    "r0 := @this: doppler.Doppler"
+    "load.r r0"
+    "r0 := @this: doppler.Doppler"->"load.r r0";
+    "push 0"
+    "load.r r0"->"push 0";
+    "fieldput <doppler.Doppler: boolean runOnStart>"
+    "push 0"->"fieldput <doppler.Doppler: boolean runOnStart>";
+    "fieldput <doppler.Doppler: boolean runOnStart>"->"load.r r0";
+    "fieldget <doppler.Doppler: boolean m_fStandAlone>"
+    "load.r r0"->"fieldget <doppler.Doppler: boolean m_fStandAlone>";
+    "ifne load.r r0"
+    "fieldget <doppler.Doppler: boolean m_fStandAlone>"->"ifne load.r r0";
+    "ifne load.r r0"->"load.r r0";
+    "push null"
+    "load.r r0"->"push null";
+    "virtualinvoke <doppler.Doppler: void GetParameters(java.lang.String[])>"
+    "push null"->"virtualinvoke <doppler.Doppler: void GetParameters(java.lang.String[])>";
+    "virtualinvoke <doppler.Doppler: void GetParameters(java.lang.String[])>"->"load.r r0";
+    "push 320"
+    "load.r r0"->"push 320";
+    "push 340"
+    "push 320"->"push 340";
+    "virtualinvoke <java.applet.Applet: void resize(int,int)>"
+    "push 340"->"virtualinvoke <java.applet.Applet: void resize(int,int)>";
+    "virtualinvoke <java.applet.Applet: void resize(int,int)>"->"load.r r0";
+    "push 1000"
+    "load.r r0"->"push 1000";
+    "push 1000"->"load.r r0";
+    "fieldget <doppler.Doppler: int m_fps>"
+    "load.r r0"->"fieldget <doppler.Doppler: int m_fps>";
+    "div.i"
+    "fieldget <doppler.Doppler: int m_fps>"->"div.i";
+    "fieldput <doppler.Doppler: int sleepTime>"
+    "div.i"->"fieldput <doppler.Doppler: int sleepTime>";
+    "fieldput <doppler.Doppler: int sleepTime>"->"load.r r0";
+    "new java.awt.BorderLayout"
+    "load.r r0"->"new java.awt.BorderLayout";
+    "dup1.r"
+    "new java.awt.BorderLayout"->"dup1.r";
+    "specialinvoke <java.awt.BorderLayout: void <init>()>"
+    "dup1.r"->"specialinvoke <java.awt.BorderLayout: void <init>()>";
+    "virtualinvoke <java.awt.Container: void setLayout(java.awt.LayoutManager)>"
+    "specialinvoke <java.awt.BorderLayout: void <init>()>"->"virtualinvoke <java.awt.Container: void setLayout(java.awt.LayoutManager)>";
+    "new java.awt.Panel"
+    "virtualinvoke <java.awt.Container: void setLayout(java.awt.LayoutManager)>"->"new java.awt.Panel";
+    "store.r $r5"
+    "new java.awt.Panel"->"store.r $r5";
+    "load.r $r5"
+    "store.r $r5"->"load.r $r5";
+    "specialinvoke <java.awt.Panel: void <init>()>"
+    "load.r $r5"->"specialinvoke <java.awt.Panel: void <init>()>";
+    "specialinvoke <java.awt.Panel: void <init>()>"->"load.r $r5";
+    "staticget <java.awt.Color: java.awt.Color lightGray>"
+    "load.r $r5"->"staticget <java.awt.Color: java.awt.Color lightGray>";
+    "virtualinvoke <java.awt.Component: void setBackground(java.awt.Color)>"
+    "staticget <java.awt.Color: java.awt.Color lightGray>"->"virtualinvoke <java.awt.Component: void setBackground(java.awt.Color)>";
+    "virtualinvoke <java.awt.Component: void setBackground(java.awt.Color)>"->"load.r $r5";
+    "load.r $r5"->"new java.awt.BorderLayout";
+    "new java.awt.BorderLayout"->"dup1.r";
+    "dup1.r"->"specialinvoke <java.awt.BorderLayout: void <init>()>";
+    "specialinvoke <java.awt.BorderLayout: void <init>()>"->"virtualinvoke <java.awt.Container: void setLayout(java.awt.LayoutManager)>";
+    "new java.awt.CheckboxGroup"
+    "virtualinvoke <java.awt.Container: void setLayout(java.awt.LayoutManager)>"->"new java.awt.CheckboxGroup";
+    "store.r $r8"
+    "new java.awt.CheckboxGroup"->"store.r $r8";
+    "load.r $r8"
+    "store.r $r8"->"load.r $r8";
+    "specialinvoke <java.awt.CheckboxGroup: void <init>()>"
+    "load.r $r8"->"specialinvoke <java.awt.CheckboxGroup: void <init>()>";
+    "specialinvoke <java.awt.CheckboxGroup: void <init>()>"->"new java.awt.Panel";
+    "store.r $r9"
+    "new java.awt.Panel"->"store.r $r9";
+    "load.r $r9"
+    "store.r $r9"->"load.r $r9";
+    "load.r $r9"->"specialinvoke <java.awt.Panel: void <init>()>";
+    "specialinvoke <java.awt.Panel: void <init>()>"->"load.r $r9";
+    "load.r $r9"->"staticget <java.awt.Color: java.awt.Color lightGray>";
+    "staticget <java.awt.Color: java.awt.Color lightGray>"->"virtualinvoke <java.awt.Component: void setBackground(java.awt.Color)>";
+    "virtualinvoke <java.awt.Component: void setBackground(java.awt.Color)>"->"load.r $r9";
+    "new java.awt.GridLayout"
+    "load.r $r9"->"new java.awt.GridLayout";
+    "new java.awt.GridLayout"->"dup1.r";
+    "push 1"
+    "dup1.r"->"push 1";
+    "push 2"
+    "push 1"->"push 2";
+    "push 4"
+    "push 2"->"push 4";
+    "push 4"->"push 4";
+    "specialinvoke <java.awt.GridLayout: void <init>(int,int,int,int)>"
+    "push 4"->"specialinvoke <java.awt.GridLayout: void <init>(int,int,int,int)>";
+    "specialinvoke <java.awt.GridLayout: void <init>(int,int,int,int)>"->"virtualinvoke <java.awt.Container: void setLayout(java.awt.LayoutManager)>";
+    "new java.awt.Checkbox"
+    "virtualinvoke <java.awt.Container: void setLayout(java.awt.LayoutManager)>"->"new java.awt.Checkbox";
+    "store.r $r12"
+    "new java.awt.Checkbox"->"store.r $r12";
+    "load.r $r12"
+    "store.r $r12"->"load.r $r12";
+    "push \"Classical\""
+    "load.r $r12"->"push \"Classical\"";
+    "push \"Classical\""->"load.r $r8";
+    "load.r $r8"->"push 1";
+    "specialinvoke <java.awt.Checkbox: void <init>(java.lang.String,java.awt.CheckboxGroup,boolean)>"
+    "push 1"->"specialinvoke <java.awt.Checkbox: void <init>(java.lang.String,java.awt.CheckboxGroup,boolean)>";
+    "specialinvoke <java.awt.Checkbox: void <init>(java.lang.String,java.awt.CheckboxGroup,boolean)>"->"load.r r0";
+    "load.r r0"->"load.r $r12";
+    "fieldput <doppler.Doppler: java.awt.Checkbox cCheck>"
+    "load.r $r12"->"fieldput <doppler.Doppler: java.awt.Checkbox cCheck>";
+    "fieldput <doppler.Doppler: java.awt.Checkbox cCheck>"->"load.r $r9";
+    "load.r $r9"->"load.r $r12";
+    "virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>"
+    "load.r $r12"->"virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>";
+    "pop"
+    "virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>"->"pop";
+    "pop"->"new java.awt.Checkbox";
+    "new java.awt.Checkbox"->"store.r $r12";
+    "store.r $r12"->"load.r $r12";
+    "push \"Relativistic\""
+    "load.r $r12"->"push \"Relativistic\"";
+    "push \"Relativistic\""->"load.r $r8";
+    "load.r $r8"->"push 0";
+    "push 0"->"specialinvoke <java.awt.Checkbox: void <init>(java.lang.String,java.awt.CheckboxGroup,boolean)>";
+    "specialinvoke <java.awt.Checkbox: void <init>(java.lang.String,java.awt.CheckboxGroup,boolean)>"->"load.r r0";
+    "load.r r0"->"load.r $r12";
+    "fieldput <doppler.Doppler: java.awt.Checkbox rCheck>"
+    "load.r $r12"->"fieldput <doppler.Doppler: java.awt.Checkbox rCheck>";
+    "fieldput <doppler.Doppler: java.awt.Checkbox rCheck>"->"load.r $r9";
+    "load.r $r9"->"load.r $r12";
+    "load.r $r12"->"virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>";
+    "virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>"->"pop";
+    "pop"->"load.r r0";
+    "fieldget <doppler.Doppler: boolean m_showButtons>"
+    "load.r r0"->"fieldget <doppler.Doppler: boolean m_showButtons>";
+    "ifeq load.r r0"
+    "fieldget <doppler.Doppler: boolean m_showButtons>"->"ifeq load.r r0";
+    "ifeq load.r r0"->"load.r $r5";
+    "push \"North\""
+    "load.r $r5"->"push \"North\"";
+    "push \"North\""->"load.r $r9";
+    "virtualinvoke <java.awt.Container: java.awt.Component add(java.lang.String,java.awt.Component)>"
+    "load.r $r9"->"virtualinvoke <java.awt.Container: java.awt.Component add(java.lang.String,java.awt.Component)>";
+    "virtualinvoke <java.awt.Container: java.awt.Component add(java.lang.String,java.awt.Component)>"->"pop";
+    "pop"->"load.r r0";
+    "fieldget <doppler.Doppler: boolean m_relativistic>"
+    "load.r r0"->"fieldget <doppler.Doppler: boolean m_relativistic>";
+    "fieldget <doppler.Doppler: boolean m_relativistic>"->"ifeq load.r r0";
+    "ifeq load.r r0"->"load.r r0";
+    "fieldget <doppler.Doppler: double m_speed>"
+    "load.r r0"->"fieldget <doppler.Doppler: double m_speed>";
+    "push 0.99"
+    "fieldget <doppler.Doppler: double m_speed>"->"push 0.99";
+    "cmpl.d"
+    "push 0.99"->"cmpl.d";
+    "ifle load.r r0"
+    "cmpl.d"->"ifle load.r r0";
+    "ifle load.r r0"->"load.r r0";
+    "load.r r0"->"push 0.99";
+    "fieldput <doppler.Doppler: double m_speed>"
+    "push 0.99"->"fieldput <doppler.Doppler: double m_speed>";
+    "fieldput <doppler.Doppler: double m_speed>"->"load.r r0";
+    "new doppler.VarScrollBar"
+    "load.r r0"->"new doppler.VarScrollBar";
+    "new doppler.VarScrollBar"->"dup1.r";
+    "push \"speed= \""
+    "dup1.r"->"push \"speed= \"";
+    "push \"speed= \""->"load.r r0";
+    "load.r r0"->"fieldget <doppler.Doppler: double m_speed>";
+    "push 0.0"
+    "fieldget <doppler.Doppler: double m_speed>"->"push 0.0";
+    "push 0.0"->"push 0.99";
+    "specialinvoke <doppler.VarScrollBar: void <init>(java.lang.String,double,double,double)>"
+    "push 0.99"->"specialinvoke <doppler.VarScrollBar: void <init>(java.lang.String,double,double,double)>";
+    "fieldput <doppler.Doppler: doppler.VarScrollBar speedBar>"
+    "specialinvoke <doppler.VarScrollBar: void <init>(java.lang.String,double,double,double)>"->"fieldput <doppler.Doppler: doppler.VarScrollBar speedBar>";
+    "goto load.r $r5"
+    "fieldput <doppler.Doppler: doppler.VarScrollBar speedBar>"->"goto load.r $r5";
+    "goto load.r $r5"->"load.r $r5";
+    "push \"Center\""
+    "load.r $r5"->"push \"Center\"";
+    "new edu.davidson.graphics.EtchedBorder"
+    "push \"Center\""->"new edu.davidson.graphics.EtchedBorder";
+    "new edu.davidson.graphics.EtchedBorder"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "fieldget <doppler.Doppler: doppler.VarScrollBar speedBar>"
+    "load.r r0"->"fieldget <doppler.Doppler: doppler.VarScrollBar speedBar>";
+    "specialinvoke <edu.davidson.graphics.EtchedBorder: void <init>(java.awt.Component)>"
+    "fieldget <doppler.Doppler: doppler.VarScrollBar speedBar>"->"specialinvoke <edu.davidson.graphics.EtchedBorder: void <init>(java.awt.Component)>";
+    "specialinvoke <edu.davidson.graphics.EtchedBorder: void <init>(java.awt.Component)>"->"virtualinvoke <java.awt.Container: java.awt.Component add(java.lang.String,java.awt.Component)>";
+    "virtualinvoke <java.awt.Container: java.awt.Component add(java.lang.String,java.awt.Component)>"->"pop";
+    "new doppler.SizedButton"
+    "pop"->"new doppler.SizedButton";
+    "new doppler.SizedButton"->"store.r $r8";
+    "store.r $r8"->"load.r $r8";
+    "push \"Run \""
+    "load.r $r8"->"push \"Run \"";
+    "specialinvoke <doppler.SizedButton: void <init>(java.lang.String)>"
+    "push \"Run \""->"specialinvoke <doppler.SizedButton: void <init>(java.lang.String)>";
+    "specialinvoke <doppler.SizedButton: void <init>(java.lang.String)>"->"load.r r0";
+    "load.r r0"->"load.r $r8";
+    "fieldput <doppler.Doppler: doppler.SizedButton runBtn>"
+    "load.r $r8"->"fieldput <doppler.Doppler: doppler.SizedButton runBtn>";
+    "fieldput <doppler.Doppler: doppler.SizedButton runBtn>"->"load.r $r5";
+    "push \"West\""
+    "load.r $r5"->"push \"West\"";
+    "push \"West\""->"load.r $r8";
+    "load.r $r8"->"virtualinvoke <java.awt.Container: java.awt.Component add(java.lang.String,java.awt.Component)>";
+    "virtualinvoke <java.awt.Container: java.awt.Component add(java.lang.String,java.awt.Component)>"->"pop";
+    "pop"->"load.r r0";
+    "fieldget <doppler.Doppler: boolean m_showControls>"
+    "load.r r0"->"fieldget <doppler.Doppler: boolean m_showControls>";
+    "fieldget <doppler.Doppler: boolean m_showControls>"->"ifeq load.r r0";
+    "ifeq load.r r0"->"load.r r0";
+    "push \"South\""
+    "load.r r0"->"push \"South\"";
+    "push \"South\""->"load.r $r5";
+    "load.r $r5"->"virtualinvoke <java.awt.Container: java.awt.Component add(java.lang.String,java.awt.Component)>";
+    "virtualinvoke <java.awt.Container: java.awt.Component add(java.lang.String,java.awt.Component)>"->"pop";
+    "pop"->"load.r r0";
+    "new doppler.DopplerCanvas"
+    "load.r r0"->"new doppler.DopplerCanvas";
+    "new doppler.DopplerCanvas"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "specialinvoke <doppler.DopplerCanvas: void <init>(java.applet.Applet)>"
+    "load.r r0"->"specialinvoke <doppler.DopplerCanvas: void <init>(java.applet.Applet)>";
+    "fieldput <doppler.Doppler: doppler.DopplerCanvas dc>"
+    "specialinvoke <doppler.DopplerCanvas: void <init>(java.applet.Applet)>"->"fieldput <doppler.Doppler: doppler.DopplerCanvas dc>";
+    "fieldput <doppler.Doppler: doppler.DopplerCanvas dc>"->"load.r r0";
+    "fieldget <doppler.Doppler: doppler.DopplerCanvas dc>"
+    "load.r r0"->"fieldget <doppler.Doppler: doppler.DopplerCanvas dc>";
+    "staticget <java.awt.Color: java.awt.Color white>"
+    "fieldget <doppler.Doppler: doppler.DopplerCanvas dc>"->"staticget <java.awt.Color: java.awt.Color white>";
+    "staticget <java.awt.Color: java.awt.Color white>"->"virtualinvoke <java.awt.Component: void setBackground(java.awt.Color)>";
+    "virtualinvoke <java.awt.Component: void setBackground(java.awt.Color)>"->"load.r r0";
+    "load.r r0"->"push \"Center\"";
+    "push \"Center\""->"load.r r0";
+    "load.r r0"->"fieldget <doppler.Doppler: doppler.DopplerCanvas dc>";
+    "fieldget <doppler.Doppler: doppler.DopplerCanvas dc>"->"virtualinvoke <java.awt.Container: java.awt.Component add(java.lang.String,java.awt.Component)>";
+    "virtualinvoke <java.awt.Container: java.awt.Component add(java.lang.String,java.awt.Component)>"->"pop";
+    "pop"->"load.r r0";
+    "load.r r0"->"fieldget <doppler.Doppler: doppler.DopplerCanvas dc>";
+    "fieldget <doppler.Doppler: doppler.DopplerCanvas dc>"->"load.r r0";
+    "load.r r0"->"fieldget <doppler.Doppler: double m_speed>";
+    "fieldget <doppler.Doppler: double m_speed>"->"push 0.0";
+    "virtualinvoke <doppler.DopplerCanvas: void setSpeed(double,double)>"
+    "push 0.0"->"virtualinvoke <doppler.DopplerCanvas: void setSpeed(double,double)>";
+    "virtualinvoke <doppler.DopplerCanvas: void setSpeed(double,double)>"->"load.r r0";
+    "load.r r0"->"fieldget <doppler.Doppler: doppler.DopplerCanvas dc>";
+    "fieldget <doppler.Doppler: doppler.DopplerCanvas dc>"->"load.r r0";
+    "load.r r0"->"fieldget <doppler.Doppler: boolean m_relativistic>";
+    "virtualinvoke <doppler.DopplerCanvas: void setRelativistic(boolean)>"
+    "fieldget <doppler.Doppler: boolean m_relativistic>"->"virtualinvoke <doppler.DopplerCanvas: void setRelativistic(boolean)>";
+    "return"
+    "virtualinvoke <doppler.DopplerCanvas: void setRelativistic(boolean)>"->"return";
+    "ifeq load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <doppler.Doppler: double m_speed>";
+    "push 2.0"
+    "fieldget <doppler.Doppler: double m_speed>"->"push 2.0";
+    "push 2.0"->"cmpl.d";
+    "cmpl.d"->"ifle load.r r0";
+    "ifle load.r r0"->"load.r r0";
+    "load.r r0"->"push 2.0";
+    "push 2.0"->"fieldput <doppler.Doppler: double m_speed>";
+    "fieldput <doppler.Doppler: double m_speed>"->"load.r r0";
+    "load.r r0"->"new doppler.VarScrollBar";
+    "new doppler.VarScrollBar"->"dup1.r";
+    "push \"speed\""
+    "dup1.r"->"push \"speed\"";
+    "push \"speed\""->"load.r r0";
+    "load.r r0"->"fieldget <doppler.Doppler: double m_speed>";
+    "fieldget <doppler.Doppler: double m_speed>"->"push 0.0";
+    "push 0.0"->"push 2.0";
+    "push 2.0"->"specialinvoke <doppler.VarScrollBar: void <init>(java.lang.String,double,double,double)>";
+    "specialinvoke <doppler.VarScrollBar: void <init>(java.lang.String,double,double,double)>"->"fieldput <doppler.Doppler: doppler.VarScrollBar speedBar>";
+}

@@ -1,0 +1,88 @@
+digraph "" {
+    "r0 := @this: Connect4"
+    "load.r r0"
+    "r0 := @this: Connect4"->"load.r r0";
+    "new Connect4Kernel"
+    "load.r r0"->"new Connect4Kernel";
+    "dup1.r"
+    "new Connect4Kernel"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "specialinvoke <Connect4Kernel: void <init>(Connect4)>"
+    "load.r r0"->"specialinvoke <Connect4Kernel: void <init>(Connect4)>";
+    "fieldput <Connect4: Connect4Kernel c4k>"
+    "specialinvoke <Connect4Kernel: void <init>(Connect4)>"->"fieldput <Connect4: Connect4Kernel c4k>";
+    "fieldput <Connect4: Connect4Kernel c4k>"->"load.r r0";
+    "fieldget <Connect4: int[] bestMove>"
+    "load.r r0"->"fieldget <Connect4: int[] bestMove>";
+    "push 0"
+    "fieldget <Connect4: int[] bestMove>"->"push 0";
+    "push 0"->"load.r r0";
+    "fieldget <Connect4: Connect4Kernel c4k>"
+    "load.r r0"->"fieldget <Connect4: Connect4Kernel c4k>";
+    "fieldget <Connect4: Connect4Kernel c4k>"->"push 0";
+    "push 0"->"push 0";
+    "virtualinvoke <Connect4Kernel: int Field(int,int)>"
+    "push 0"->"virtualinvoke <Connect4Kernel: int Field(int,int)>";
+    "arraywrite.i"
+    "virtualinvoke <Connect4Kernel: int Field(int,int)>"->"arraywrite.i";
+    "arraywrite.i"->"load.r r0";
+    "fieldget <Connect4: int[] value>"
+    "load.r r0"->"fieldget <Connect4: int[] value>";
+    "fieldget <Connect4: int[] value>"->"push 0";
+    "push 0"->"push 0";
+    "push 0"->"arraywrite.i";
+    "arraywrite.i"->"load.r r0";
+    "push 4"
+    "load.r r0"->"push 4";
+    "fieldput <Connect4: int level>"
+    "push 4"->"fieldput <Connect4: int level>";
+    "fieldput <Connect4: int level>"->"load.r r0";
+    "load.r r0"->"push 0";
+    "fieldput <Connect4: boolean levelEverDecreased>"
+    "push 0"->"fieldput <Connect4: boolean levelEverDecreased>";
+    "fieldput <Connect4: boolean levelEverDecreased>"->"load.r r0";
+    "load.r r0"->"push 0";
+    "fieldput <Connect4: int changeCnt>"
+    "push 0"->"fieldput <Connect4: int changeCnt>";
+    "fieldput <Connect4: int changeCnt>"->"load.r r0";
+    "push -1"
+    "load.r r0"->"push -1";
+    "fieldput <Connect4: int lastHumanArrowColumn>"
+    "push -1"->"fieldput <Connect4: int lastHumanArrowColumn>";
+    "fieldput <Connect4: int lastHumanArrowColumn>"->"load.r r0";
+    "load.r r0"->"push -1";
+    "fieldput <Connect4: int lastCompArrowColumn>"
+    "push -1"->"fieldput <Connect4: int lastCompArrowColumn>";
+    "fieldput <Connect4: int lastCompArrowColumn>"->"load.r r0";
+    "push 1"
+    "load.r r0"->"push 1";
+    "fieldput <Connect4: boolean lastHumanArrowEmpty>"
+    "push 1"->"fieldput <Connect4: boolean lastHumanArrowEmpty>";
+    "fieldput <Connect4: boolean lastHumanArrowEmpty>"->"load.r r0";
+    "new java.lang.StringBuffer"
+    "load.r r0"->"new java.lang.StringBuffer";
+    "new java.lang.StringBuffer"->"dup1.r";
+    "push \"Start your game!\""
+    "dup1.r"->"push \"Start your game!\"";
+    "specialinvoke <java.lang.StringBuffer: void <init>(java.lang.String)>"
+    "push \"Start your game!\""->"specialinvoke <java.lang.StringBuffer: void <init>(java.lang.String)>";
+    "fieldput <Connect4: java.lang.StringBuffer currStatus>"
+    "specialinvoke <java.lang.StringBuffer: void <init>(java.lang.String)>"->"fieldput <Connect4: java.lang.StringBuffer currStatus>";
+    "fieldput <Connect4: java.lang.StringBuffer currStatus>"->"load.r r0";
+    "fieldget <Connect4: java.awt.Graphics g>"
+    "load.r r0"->"fieldget <Connect4: java.awt.Graphics g>";
+    "ifnonnull load.r r0"
+    "fieldget <Connect4: java.awt.Graphics g>"->"ifnonnull load.r r0";
+    "ifnonnull load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "virtualinvoke <java.awt.Component: java.awt.Graphics getGraphics()>"
+    "load.r r0"->"virtualinvoke <java.awt.Component: java.awt.Graphics getGraphics()>";
+    "fieldput <Connect4: java.awt.Graphics g>"
+    "virtualinvoke <java.awt.Component: java.awt.Graphics getGraphics()>"->"fieldput <Connect4: java.awt.Graphics g>";
+    "fieldput <Connect4: java.awt.Graphics g>"->"load.r r0";
+    "load.r r0"->"push 0";
+    "virtualinvoke <Connect4: void SetMode(int)>"
+    "push 0"->"virtualinvoke <Connect4: void SetMode(int)>";
+    "return"
+    "virtualinvoke <Connect4: void SetMode(int)>"->"return";
+}

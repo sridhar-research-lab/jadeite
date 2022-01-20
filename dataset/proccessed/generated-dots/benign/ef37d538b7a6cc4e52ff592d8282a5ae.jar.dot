@@ -1,0 +1,278 @@
+digraph "" {
+    "r0 := @this: LVHues"
+    "load.r r0"
+    "r0 := @this: LVHues"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "push \"BgColor\""
+    "load.r r0"->"push \"BgColor\"";
+    "staticget <LVHues: java.awt.Color BACKGROUNDCOLOR>"
+    "push \"BgColor\""->"staticget <LVHues: java.awt.Color BACKGROUNDCOLOR>";
+    "virtualinvoke <LVHues: java.awt.Color readColorParameter(java.lang.String,java.awt.Color)>"
+    "staticget <LVHues: java.awt.Color BACKGROUNDCOLOR>"->"virtualinvoke <LVHues: java.awt.Color readColorParameter(java.lang.String,java.awt.Color)>";
+    "fieldput <LVHues: java.awt.Color backgroundColor>"
+    "virtualinvoke <LVHues: java.awt.Color readColorParameter(java.lang.String,java.awt.Color)>"->"fieldput <LVHues: java.awt.Color backgroundColor>";
+    "fieldput <LVHues: java.awt.Color backgroundColor>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "fieldget <LVHues: java.awt.Color backgroundColor>"
+    "load.r r0"->"fieldget <LVHues: java.awt.Color backgroundColor>";
+    "virtualinvoke <java.awt.Component: void setBackground(java.awt.Color)>"
+    "fieldget <LVHues: java.awt.Color backgroundColor>"->"virtualinvoke <java.awt.Component: void setBackground(java.awt.Color)>";
+    "virtualinvoke <java.awt.Component: void setBackground(java.awt.Color)>"->"load.r r0";
+    "virtualinvoke <java.awt.Component: java.awt.Container getParent()>"
+    "load.r r0"->"virtualinvoke <java.awt.Component: java.awt.Container getParent()>";
+    "virtualinvoke <java.awt.Component: java.awt.Container getParent()>"->"load.r r0";
+    "load.r r0"->"fieldget <LVHues: java.awt.Color backgroundColor>";
+    "fieldget <LVHues: java.awt.Color backgroundColor>"->"virtualinvoke <java.awt.Component: void setBackground(java.awt.Color)>";
+    "virtualinvoke <java.awt.Component: void setBackground(java.awt.Color)>"->"load.r r0";
+    "load.r r0"->"virtualinvoke <java.awt.Component: java.awt.Container getParent()>";
+    "virtualinvoke <java.awt.Component: void repaint()>"
+    "virtualinvoke <java.awt.Component: java.awt.Container getParent()>"->"virtualinvoke <java.awt.Component: void repaint()>";
+    "virtualinvoke <java.awt.Component: void repaint()>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "virtualinvoke <java.awt.Component: java.awt.Dimension size()>"
+    "load.r r0"->"virtualinvoke <java.awt.Component: java.awt.Dimension size()>";
+    "fieldget <java.awt.Dimension: int width>"
+    "virtualinvoke <java.awt.Component: java.awt.Dimension size()>"->"fieldget <java.awt.Dimension: int width>";
+    "fieldput <LVHues: int width>"
+    "fieldget <java.awt.Dimension: int width>"->"fieldput <LVHues: int width>";
+    "fieldput <LVHues: int width>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"virtualinvoke <java.awt.Component: java.awt.Dimension size()>";
+    "fieldget <java.awt.Dimension: int height>"
+    "virtualinvoke <java.awt.Component: java.awt.Dimension size()>"->"fieldget <java.awt.Dimension: int height>";
+    "fieldput <LVHues: int height>"
+    "fieldget <java.awt.Dimension: int height>"->"fieldput <LVHues: int height>";
+    "fieldput <LVHues: int height>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "push \"FgColor\""
+    "load.r r0"->"push \"FgColor\"";
+    "staticget <LVHues: java.awt.Color FOREGROUNDCOLOR>"
+    "push \"FgColor\""->"staticget <LVHues: java.awt.Color FOREGROUNDCOLOR>";
+    "staticget <LVHues: java.awt.Color FOREGROUNDCOLOR>"->"virtualinvoke <LVHues: java.awt.Color readColorParameter(java.lang.String,java.awt.Color)>";
+    "fieldput <LVHues: java.awt.Color foregroundColor>"
+    "virtualinvoke <LVHues: java.awt.Color readColorParameter(java.lang.String,java.awt.Color)>"->"fieldput <LVHues: java.awt.Color foregroundColor>";
+    "fieldput <LVHues: java.awt.Color foregroundColor>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "push \"Period\""
+    "load.r r0"->"push \"Period\"";
+    "push 15000"
+    "push \"Period\""->"push 15000";
+    "virtualinvoke <LVHues: int readIntParameter(java.lang.String,int)>"
+    "push 15000"->"virtualinvoke <LVHues: int readIntParameter(java.lang.String,int)>";
+    "store.i $i3"
+    "virtualinvoke <LVHues: int readIntParameter(java.lang.String,int)>"->"store.i $i3";
+    "load.i $i3"
+    "store.i $i3"->"load.i $i3";
+    "fieldput <LVHues: int period>"
+    "load.i $i3"->"fieldput <LVHues: int period>";
+    "fieldput <LVHues: int period>"->"load.i $i3";
+    "ifgt load.r r0"
+    "load.i $i3"->"ifgt load.r r0";
+    "ifgt load.r r0"->"load.r r0";
+    "load.r r0"->"push 15000";
+    "push 15000"->"fieldput <LVHues: int period>";
+    "fieldput <LVHues: int period>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "fieldget <LVHues: int period>"
+    "load.r r0"->"fieldget <LVHues: int period>";
+    "push 6"
+    "fieldget <LVHues: int period>"->"push 6";
+    "div.i"
+    "push 6"->"div.i";
+    "fieldput <LVHues: int step>"
+    "div.i"->"fieldput <LVHues: int step>";
+    "fieldput <LVHues: int step>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "push \"SleepTime\""
+    "load.r r0"->"push \"SleepTime\"";
+    "push 0"
+    "push \"SleepTime\""->"push 0";
+    "push 0"->"virtualinvoke <LVHues: int readIntParameter(java.lang.String,int)>";
+    "virtualinvoke <LVHues: int readIntParameter(java.lang.String,int)>"->"store.i $i3";
+    "store.i $i3"->"load.i $i3";
+    "fieldput <LVHues: int sleepTime>"
+    "load.i $i3"->"fieldput <LVHues: int sleepTime>";
+    "fieldput <LVHues: int sleepTime>"->"load.i $i3";
+    "ifge load.r r0"
+    "load.i $i3"->"ifge load.r r0";
+    "ifge load.r r0"->"load.r r0";
+    "load.r r0"->"push 0";
+    "push 0"->"fieldput <LVHues: int sleepTime>";
+    "fieldput <LVHues: int sleepTime>"->"load.r r0";
+    "new java.awt.MediaTracker"
+    "load.r r0"->"new java.awt.MediaTracker";
+    "dup1.r"
+    "new java.awt.MediaTracker"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "specialinvoke <java.awt.MediaTracker: void <init>(java.awt.Component)>"
+    "load.r r0"->"specialinvoke <java.awt.MediaTracker: void <init>(java.awt.Component)>";
+    "fieldput <LVHues: java.awt.MediaTracker mediaTracker>"
+    "specialinvoke <java.awt.MediaTracker: void <init>(java.awt.Component)>"->"fieldput <LVHues: java.awt.MediaTracker mediaTracker>";
+    "fieldput <LVHues: java.awt.MediaTracker mediaTracker>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "push \"Image\""
+    "load.r r0"->"push \"Image\"";
+    "push null"
+    "push \"Image\""->"push null";
+    "virtualinvoke <LVHues: java.lang.String readStringParameter(java.lang.String,java.lang.String)>"
+    "push null"->"virtualinvoke <LVHues: java.lang.String readStringParameter(java.lang.String,java.lang.String)>";
+    "store.r $i3"
+    "virtualinvoke <LVHues: java.lang.String readStringParameter(java.lang.String,java.lang.String)>"->"store.r $i3";
+    "load.r $i3"
+    "store.r $i3"->"load.r $i3";
+    "fieldput <LVHues: java.lang.String imageName>"
+    "load.r $i3"->"fieldput <LVHues: java.lang.String imageName>";
+    "fieldput <LVHues: java.lang.String imageName>"->"load.r $i3";
+    "ifnull load.r r0"
+    "load.r $i3"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "virtualinvoke <java.applet.Applet: java.net.URL getDocumentBase()>"
+    "load.r r0"->"virtualinvoke <java.applet.Applet: java.net.URL getDocumentBase()>";
+    "virtualinvoke <java.applet.Applet: java.net.URL getDocumentBase()>"->"load.r r0";
+    "fieldget <LVHues: java.lang.String imageName>"
+    "load.r r0"->"fieldget <LVHues: java.lang.String imageName>";
+    "virtualinvoke <java.applet.Applet: java.awt.Image getImage(java.net.URL,java.lang.String)>"
+    "fieldget <LVHues: java.lang.String imageName>"->"virtualinvoke <java.applet.Applet: java.awt.Image getImage(java.net.URL,java.lang.String)>";
+    "fieldput <LVHues: java.awt.Image image>"
+    "virtualinvoke <java.applet.Applet: java.awt.Image getImage(java.net.URL,java.lang.String)>"->"fieldput <LVHues: java.awt.Image image>";
+    "fieldput <LVHues: java.awt.Image image>"->"load.r r0";
+    "fieldget <LVHues: java.awt.MediaTracker mediaTracker>"
+    "load.r r0"->"fieldget <LVHues: java.awt.MediaTracker mediaTracker>";
+    "fieldget <LVHues: java.awt.MediaTracker mediaTracker>"->"load.r r0";
+    "fieldget <LVHues: java.awt.Image image>"
+    "load.r r0"->"fieldget <LVHues: java.awt.Image image>";
+    "fieldget <LVHues: java.awt.Image image>"->"push 0";
+    "virtualinvoke <java.awt.MediaTracker: void addImage(java.awt.Image,int)>"
+    "push 0"->"virtualinvoke <java.awt.MediaTracker: void addImage(java.awt.Image,int)>";
+    "virtualinvoke <java.awt.MediaTracker: void addImage(java.awt.Image,int)>"->"load.r r0";
+    "load.r r0"->"fieldget <LVHues: java.awt.MediaTracker mediaTracker>";
+    "fieldget <LVHues: java.awt.MediaTracker mediaTracker>"->"push 0";
+    "push 1"
+    "push 0"->"push 1";
+    "virtualinvoke <java.awt.MediaTracker: boolean checkID(int,boolean)>"
+    "push 1"->"virtualinvoke <java.awt.MediaTracker: boolean checkID(int,boolean)>";
+    "pop"
+    "virtualinvoke <java.awt.MediaTracker: boolean checkID(int,boolean)>"->"pop";
+    "pop"->"load.r r0";
+    "load.r r0"->"fieldget <LVHues: java.lang.String imageName>";
+    "virtualinvoke <java.lang.String: java.lang.String toLowerCase()>"
+    "fieldget <LVHues: java.lang.String imageName>"->"virtualinvoke <java.lang.String: java.lang.String toLowerCase()>";
+    "push \"jpg\""
+    "virtualinvoke <java.lang.String: java.lang.String toLowerCase()>"->"push \"jpg\"";
+    "virtualinvoke <java.lang.String: boolean endsWith(java.lang.String)>"
+    "push \"jpg\""->"virtualinvoke <java.lang.String: boolean endsWith(java.lang.String)>";
+    "ifeq push 0"
+    "virtualinvoke <java.lang.String: boolean endsWith(java.lang.String)>"->"ifeq push 0";
+    "push 3"
+    "ifeq push 0"->"push 3";
+    "store.b $i3"
+    "push 3"->"store.b $i3";
+    "goto load.r r0"
+    "store.b $i3"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "push \"MoreSpeed\""
+    "load.r r0"->"push \"MoreSpeed\"";
+    "load.b $i3"
+    "push \"MoreSpeed\""->"load.b $i3";
+    "load.b $i3"->"virtualinvoke <LVHues: int readIntParameter(java.lang.String,int)>";
+    "fieldput <LVHues: int boost>"
+    "virtualinvoke <LVHues: int readIntParameter(java.lang.String,int)>"->"fieldput <LVHues: int boost>";
+    "fieldput <LVHues: int boost>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "fieldget <LVHues: int boost>"
+    "load.r r0"->"fieldget <LVHues: int boost>";
+    "push 7"
+    "fieldget <LVHues: int boost>"->"push 7";
+    "staticinvoke <java.lang.Math: int min(int,int)>"
+    "push 7"->"staticinvoke <java.lang.Math: int min(int,int)>";
+    "push -7"
+    "staticinvoke <java.lang.Math: int min(int,int)>"->"push -7";
+    "staticinvoke <java.lang.Math: int max(int,int)>"
+    "push -7"->"staticinvoke <java.lang.Math: int max(int,int)>";
+    "staticinvoke <java.lang.Math: int max(int,int)>"->"fieldput <LVHues: int boost>";
+    "fieldput <LVHues: int boost>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "push \"Mask\""
+    "load.r r0"->"push \"Mask\"";
+    "push \"Mask\""->"push null";
+    "push null"->"virtualinvoke <LVHues: java.lang.String readStringParameter(java.lang.String,java.lang.String)>";
+    "virtualinvoke <LVHues: java.lang.String readStringParameter(java.lang.String,java.lang.String)>"->"store.r $i3";
+    "store.r $i3"->"load.r $i3";
+    "fieldput <LVHues: java.lang.String maskName>"
+    "load.r $i3"->"fieldput <LVHues: java.lang.String maskName>";
+    "fieldput <LVHues: java.lang.String maskName>"->"load.r $i3";
+    "load.r $i3"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r r0";
+    "load.r r0"->"push 1";
+    "fieldput <LVHues: boolean useMask>"
+    "push 1"->"fieldput <LVHues: boolean useMask>";
+    "fieldput <LVHues: boolean useMask>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"virtualinvoke <java.applet.Applet: java.net.URL getDocumentBase()>";
+    "virtualinvoke <java.applet.Applet: java.net.URL getDocumentBase()>"->"load.r r0";
+    "fieldget <LVHues: java.lang.String maskName>"
+    "load.r r0"->"fieldget <LVHues: java.lang.String maskName>";
+    "fieldget <LVHues: java.lang.String maskName>"->"virtualinvoke <java.applet.Applet: java.awt.Image getImage(java.net.URL,java.lang.String)>";
+    "fieldput <LVHues: java.awt.Image maskImage>"
+    "virtualinvoke <java.applet.Applet: java.awt.Image getImage(java.net.URL,java.lang.String)>"->"fieldput <LVHues: java.awt.Image maskImage>";
+    "fieldput <LVHues: java.awt.Image maskImage>"->"load.r r0";
+    "load.r r0"->"fieldget <LVHues: java.awt.MediaTracker mediaTracker>";
+    "fieldget <LVHues: java.awt.MediaTracker mediaTracker>"->"load.r r0";
+    "fieldget <LVHues: java.awt.Image maskImage>"
+    "load.r r0"->"fieldget <LVHues: java.awt.Image maskImage>";
+    "fieldget <LVHues: java.awt.Image maskImage>"->"push 1";
+    "push 1"->"virtualinvoke <java.awt.MediaTracker: void addImage(java.awt.Image,int)>";
+    "virtualinvoke <java.awt.MediaTracker: void addImage(java.awt.Image,int)>"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "push \"Message\""
+    "load.r r0"->"push \"Message\"";
+    "push \"Loading...\""
+    "push \"Message\""->"push \"Loading...\"";
+    "push \"Loading...\""->"virtualinvoke <LVHues: java.lang.String readStringParameter(java.lang.String,java.lang.String)>";
+    "fieldput <LVHues: java.lang.String message>"
+    "virtualinvoke <LVHues: java.lang.String readStringParameter(java.lang.String,java.lang.String)>"->"fieldput <LVHues: java.lang.String message>";
+    "fieldput <LVHues: java.lang.String message>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "push \"Font\""
+    "load.r r0"->"push \"Font\"";
+    "staticget <LVHues: java.awt.Font FONT>"
+    "push \"Font\""->"staticget <LVHues: java.awt.Font FONT>";
+    "virtualinvoke <LVHues: java.awt.Font readFontParameter(java.lang.String,java.awt.Font)>"
+    "staticget <LVHues: java.awt.Font FONT>"->"virtualinvoke <LVHues: java.awt.Font readFontParameter(java.lang.String,java.awt.Font)>";
+    "fieldput <LVHues: java.awt.Font font>"
+    "virtualinvoke <LVHues: java.awt.Font readFontParameter(java.lang.String,java.awt.Font)>"->"fieldput <LVHues: java.awt.Font font>";
+    "fieldput <LVHues: java.awt.Font font>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "push \"Link\""
+    "load.r r0"->"push \"Link\"";
+    "push \"Link\""->"push null";
+    "virtualinvoke <LVHues: java.net.URL readURLParameter(java.lang.String,java.net.URL)>"
+    "push null"->"virtualinvoke <LVHues: java.net.URL readURLParameter(java.lang.String,java.net.URL)>";
+    "fieldput <LVHues: java.net.URL url>"
+    "virtualinvoke <LVHues: java.net.URL readURLParameter(java.lang.String,java.net.URL)>"->"fieldput <LVHues: java.net.URL url>";
+    "fieldput <LVHues: java.net.URL url>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "push \"Target\""
+    "load.r r0"->"push \"Target\"";
+    "push \"_self\""
+    "push \"Target\""->"push \"_self\"";
+    "push \"_self\""->"virtualinvoke <LVHues: java.lang.String readStringParameter(java.lang.String,java.lang.String)>";
+    "fieldput <LVHues: java.lang.String target>"
+    "virtualinvoke <LVHues: java.lang.String readStringParameter(java.lang.String,java.lang.String)>"->"fieldput <LVHues: java.lang.String target>";
+    "fieldput <LVHues: java.lang.String target>"->"load.r r0";
+    "load.r r0"->"push 0";
+    "fieldput <LVHues: boolean loadedImage>"
+    "push 0"->"fieldput <LVHues: boolean loadedImage>";
+    "return"
+    "fieldput <LVHues: boolean loadedImage>"->"return";
+    "ifnull load.r r0"->"load.r r0";
+    "load.r r0"->"push 0";
+    "push 0"->"fieldput <LVHues: boolean useMask>";
+    "ifeq push 0"->"push 0";
+    "push 0"->"store.b $i3";
+}

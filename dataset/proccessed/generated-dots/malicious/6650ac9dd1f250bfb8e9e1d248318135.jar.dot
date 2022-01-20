@@ -1,0 +1,26 @@
+digraph "" {
+    "r0 := @this: Main"
+    "load.r r0"
+    "r0 := @this: Main"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "fieldput <Main: java.lang.Object m>"
+    "load.r r0"->"fieldput <Main: java.lang.Object m>";
+    "fieldput <Main: java.lang.Object m>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "fieldget <Main: java.lang.String h>"
+    "load.r r0"->"fieldget <Main: java.lang.String h>";
+    "virtualinvoke <Main: java.lang.Class b(java.lang.String)>"
+    "fieldget <Main: java.lang.String h>"->"virtualinvoke <Main: java.lang.Class b(java.lang.String)>";
+    "fieldput <Main: java.lang.Class a>"
+    "virtualinvoke <Main: java.lang.Class b(java.lang.String)>"->"fieldput <Main: java.lang.Class a>";
+    "goto load.r r0"
+    "fieldput <Main: java.lang.Class a>"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "specialinvoke <Main: void a()>"
+    "load.r r0"->"specialinvoke <Main: void a()>";
+    "return"
+    "specialinvoke <Main: void a()>"->"return";
+    "store.r $r4"
+    "virtualinvoke <Main: java.lang.Class b(java.lang.String)>"->"store.r $r4";
+}

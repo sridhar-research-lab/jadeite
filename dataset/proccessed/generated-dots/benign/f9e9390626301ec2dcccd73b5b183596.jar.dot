@@ -1,0 +1,199 @@
+digraph "" {
+    "r0 := @this: slideshow"
+    "load.r r0"
+    "r0 := @this: slideshow"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "push \"NUMBER\""
+    "load.r r0"->"push \"NUMBER\"";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"
+    "push \"NUMBER\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>";
+    "fieldput <slideshow: int num_of_pics>"
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"->"fieldput <slideshow: int num_of_pics>";
+    "fieldput <slideshow: int num_of_pics>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "fieldget <slideshow: int num_of_pics>"
+    "load.r r0"->"fieldget <slideshow: int num_of_pics>";
+    "newarray"
+    "fieldget <slideshow: int num_of_pics>"->"newarray";
+    "fieldput <slideshow: java.awt.Image[] pic_img>"
+    "newarray"->"fieldput <slideshow: java.awt.Image[] pic_img>";
+    "fieldput <slideshow: java.awt.Image[] pic_img>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <slideshow: int num_of_pics>";
+    "fieldget <slideshow: int num_of_pics>"->"newarray";
+    "fieldput <slideshow: java.lang.String[] pic_names>"
+    "newarray"->"fieldput <slideshow: java.lang.String[] pic_names>";
+    "fieldput <slideshow: java.lang.String[] pic_names>"->"load.r r0";
+    "new java.awt.MediaTracker"
+    "load.r r0"->"new java.awt.MediaTracker";
+    "dup1.r"
+    "new java.awt.MediaTracker"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "specialinvoke <java.awt.MediaTracker: void <init>(java.awt.Component)>"
+    "load.r r0"->"specialinvoke <java.awt.MediaTracker: void <init>(java.awt.Component)>";
+    "fieldput <slideshow: java.awt.MediaTracker trackin>"
+    "specialinvoke <java.awt.MediaTracker: void <init>(java.awt.Component)>"->"fieldput <slideshow: java.awt.MediaTracker trackin>";
+    "fieldput <slideshow: java.awt.MediaTracker trackin>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <slideshow: int num_of_pics>";
+    "fieldget <slideshow: int num_of_pics>"->"newarray";
+    "fieldput <slideshow: boolean[] got_da_pic>"
+    "newarray"->"fieldput <slideshow: boolean[] got_da_pic>";
+    "push 0"
+    "fieldput <slideshow: boolean[] got_da_pic>"->"push 0";
+    "store.i i13"
+    "push 0"->"store.i i13";
+    "goto load.i i13"
+    "store.i i13"->"goto load.i i13";
+    "load.i i13"
+    "goto load.i i13"->"load.i i13";
+    "load.i i13"->"load.r r0";
+    "load.r r0"->"fieldget <slideshow: int num_of_pics>";
+    "ifcmplt.i load.r r0"
+    "fieldget <slideshow: int num_of_pics>"->"ifcmplt.i load.r r0";
+    "ifcmplt.i load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "virtualinvoke <java.awt.Component: java.awt.Dimension getSize()>"
+    "load.r r0"->"virtualinvoke <java.awt.Component: java.awt.Dimension getSize()>";
+    "fieldget <java.awt.Dimension: int width>"
+    "virtualinvoke <java.awt.Component: java.awt.Dimension getSize()>"->"fieldget <java.awt.Dimension: int width>";
+    "fieldput <slideshow: int width>"
+    "fieldget <java.awt.Dimension: int width>"->"fieldput <slideshow: int width>";
+    "fieldput <slideshow: int width>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"virtualinvoke <java.awt.Component: java.awt.Dimension getSize()>";
+    "fieldget <java.awt.Dimension: int height>"
+    "virtualinvoke <java.awt.Component: java.awt.Dimension getSize()>"->"fieldget <java.awt.Dimension: int height>";
+    "fieldput <slideshow: int height>"
+    "fieldget <java.awt.Dimension: int height>"->"fieldput <slideshow: int height>";
+    "fieldput <slideshow: int height>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "fieldget <slideshow: int width>"
+    "load.r r0"->"fieldget <slideshow: int width>";
+    "fieldget <slideshow: int width>"->"load.r r0";
+    "fieldget <slideshow: int height>"
+    "load.r r0"->"fieldget <slideshow: int height>";
+    "virtualinvoke <java.awt.Component: java.awt.Image createImage(int,int)>"
+    "fieldget <slideshow: int height>"->"virtualinvoke <java.awt.Component: java.awt.Image createImage(int,int)>";
+    "fieldput <slideshow: java.awt.Image buffer>"
+    "virtualinvoke <java.awt.Component: java.awt.Image createImage(int,int)>"->"fieldput <slideshow: java.awt.Image buffer>";
+    "fieldput <slideshow: java.awt.Image buffer>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "fieldget <slideshow: java.awt.Image buffer>"
+    "load.r r0"->"fieldget <slideshow: java.awt.Image buffer>";
+    "virtualinvoke <java.awt.Image: java.awt.Graphics getGraphics()>"
+    "fieldget <slideshow: java.awt.Image buffer>"->"virtualinvoke <java.awt.Image: java.awt.Graphics getGraphics()>";
+    "fieldput <slideshow: java.awt.Graphics g_buffer>"
+    "virtualinvoke <java.awt.Image: java.awt.Graphics getGraphics()>"->"fieldput <slideshow: java.awt.Graphics g_buffer>";
+    "fieldput <slideshow: java.awt.Graphics g_buffer>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <slideshow: int width>";
+    "fieldget <slideshow: int width>"->"load.r r0";
+    "load.r r0"->"fieldget <slideshow: int height>";
+    "fieldget <slideshow: int height>"->"virtualinvoke <java.awt.Component: java.awt.Image createImage(int,int)>";
+    "fieldput <slideshow: java.awt.Image temp_img>"
+    "virtualinvoke <java.awt.Component: java.awt.Image createImage(int,int)>"->"fieldput <slideshow: java.awt.Image temp_img>";
+    "fieldput <slideshow: java.awt.Image temp_img>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "fieldget <slideshow: java.awt.Image temp_img>"
+    "load.r r0"->"fieldget <slideshow: java.awt.Image temp_img>";
+    "fieldget <slideshow: java.awt.Image temp_img>"->"virtualinvoke <java.awt.Image: java.awt.Graphics getGraphics()>";
+    "fieldput <slideshow: java.awt.Graphics g_temp>"
+    "virtualinvoke <java.awt.Image: java.awt.Graphics getGraphics()>"->"fieldput <slideshow: java.awt.Graphics g_temp>";
+    "fieldput <slideshow: java.awt.Graphics g_temp>"->"push 0";
+    "push 0"->"store.i i13";
+    "store.i i13"->"goto load.i i13";
+    "goto load.i i13"->"load.i i13";
+    "load.i i13"->"load.r r0";
+    "load.r r0"->"fieldget <slideshow: int num_of_pics>";
+    "fieldget <slideshow: int num_of_pics>"->"ifcmplt.i load.r r0";
+    "ifcmplt.i load.r r0"->"load.r r0";
+    "new pixelman"
+    "load.r r0"->"new pixelman";
+    "new pixelman"->"dup1.r";
+    "specialinvoke <pixelman: void <init>()>"
+    "dup1.r"->"specialinvoke <pixelman: void <init>()>";
+    "fieldput <slideshow: pixelman current>"
+    "specialinvoke <pixelman: void <init>()>"->"fieldput <slideshow: pixelman current>";
+    "fieldput <slideshow: pixelman current>"->"load.r r0";
+    "load.r r0"->"push 0";
+    "fieldput <slideshow: int current_pic>"
+    "push 0"->"fieldput <slideshow: int current_pic>";
+    "fieldput <slideshow: int current_pic>"->"load.r r0";
+    "push 0.0"
+    "load.r r0"->"push 0.0";
+    "fieldput <slideshow: double amplitude>"
+    "push 0.0"->"fieldput <slideshow: double amplitude>";
+    "fieldput <slideshow: double amplitude>"->"load.r r0";
+    "load.r r0"->"push 0.0";
+    "fieldput <slideshow: double wave_position>"
+    "push 0.0"->"fieldput <slideshow: double wave_position>";
+    "return"
+    "fieldput <slideshow: double wave_position>"->"return";
+    "ifcmplt.i load.r r0"->"load.r r0";
+    "fieldget <slideshow: java.awt.Image[] pic_img>"
+    "load.r r0"->"fieldget <slideshow: java.awt.Image[] pic_img>";
+    "fieldget <slideshow: java.awt.Image[] pic_img>"->"load.i i13";
+    "load.i i13"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "virtualinvoke <java.applet.Applet: java.net.URL getCodeBase()>"
+    "load.r r0"->"virtualinvoke <java.applet.Applet: java.net.URL getCodeBase()>";
+    "virtualinvoke <java.applet.Applet: java.net.URL getCodeBase()>"->"load.r r0";
+    "fieldget <slideshow: java.lang.String[] pic_names>"
+    "load.r r0"->"fieldget <slideshow: java.lang.String[] pic_names>";
+    "fieldget <slideshow: java.lang.String[] pic_names>"->"load.i i13";
+    "arrayread.r"
+    "load.i i13"->"arrayread.r";
+    "virtualinvoke <java.applet.Applet: java.awt.Image getImage(java.net.URL,java.lang.String)>"
+    "arrayread.r"->"virtualinvoke <java.applet.Applet: java.awt.Image getImage(java.net.URL,java.lang.String)>";
+    "arraywrite.r"
+    "virtualinvoke <java.applet.Applet: java.awt.Image getImage(java.net.URL,java.lang.String)>"->"arraywrite.r";
+    "arraywrite.r"->"load.r r0";
+    "fieldget <slideshow: java.awt.MediaTracker trackin>"
+    "load.r r0"->"fieldget <slideshow: java.awt.MediaTracker trackin>";
+    "fieldget <slideshow: java.awt.MediaTracker trackin>"->"load.r r0";
+    "load.r r0"->"fieldget <slideshow: java.awt.Image[] pic_img>";
+    "fieldget <slideshow: java.awt.Image[] pic_img>"->"load.i i13";
+    "load.i i13"->"arrayread.r";
+    "arrayread.r"->"load.i i13";
+    "virtualinvoke <java.awt.MediaTracker: void addImage(java.awt.Image,int)>"
+    "load.i i13"->"virtualinvoke <java.awt.MediaTracker: void addImage(java.awt.Image,int)>";
+    "virtualinvoke <java.awt.MediaTracker: void addImage(java.awt.Image,int)>"->"load.r r0";
+    "fieldget <slideshow: boolean[] got_da_pic>"
+    "load.r r0"->"fieldget <slideshow: boolean[] got_da_pic>";
+    "fieldget <slideshow: boolean[] got_da_pic>"->"load.i i13";
+    "load.i i13"->"push 0";
+    "arraywrite.b"
+    "push 0"->"arraywrite.b";
+    "inc.i i13 1"
+    "arraywrite.b"->"inc.i i13 1";
+    "ifcmplt.i load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <slideshow: java.lang.String[] pic_names>";
+    "fieldget <slideshow: java.lang.String[] pic_names>"->"load.i i13";
+    "load.i i13"->"load.r r0";
+    "new java.lang.StringBuffer"
+    "load.r r0"->"new java.lang.StringBuffer";
+    "new java.lang.StringBuffer"->"dup1.r";
+    "specialinvoke <java.lang.StringBuffer: void <init>()>"
+    "dup1.r"->"specialinvoke <java.lang.StringBuffer: void <init>()>";
+    "push \"PIC\""
+    "specialinvoke <java.lang.StringBuffer: void <init>()>"->"push \"PIC\"";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"
+    "push \"PIC\""->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"load.i i13";
+    "push 1"
+    "load.i i13"->"push 1";
+    "add.i"
+    "push 1"->"add.i";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(int)>"
+    "add.i"->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(int)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>"
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(int)>"->"virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>"->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"arraywrite.r";
+    "arraywrite.r"->"inc.i i13 1";
+}

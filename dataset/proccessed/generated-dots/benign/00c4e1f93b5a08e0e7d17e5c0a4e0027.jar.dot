@@ -1,0 +1,386 @@
+digraph "" {
+    "r0 := @this: slideways"
+    "load.r r0"
+    "r0 := @this: slideways"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "push \"width\""
+    "load.r r0"->"push \"width\"";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"
+    "push \"width\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "staticinvoke <java.lang.Integer: java.lang.Integer valueOf(java.lang.String)>"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"staticinvoke <java.lang.Integer: java.lang.Integer valueOf(java.lang.String)>";
+    "virtualinvoke <java.lang.Integer: int intValue()>"
+    "staticinvoke <java.lang.Integer: java.lang.Integer valueOf(java.lang.String)>"->"virtualinvoke <java.lang.Integer: int intValue()>";
+    "fieldput <slideways: int aWide>"
+    "virtualinvoke <java.lang.Integer: int intValue()>"->"fieldput <slideways: int aWide>";
+    "fieldput <slideways: int aWide>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "push \"height\""
+    "load.r r0"->"push \"height\"";
+    "push \"height\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"staticinvoke <java.lang.Integer: java.lang.Integer valueOf(java.lang.String)>";
+    "staticinvoke <java.lang.Integer: java.lang.Integer valueOf(java.lang.String)>"->"virtualinvoke <java.lang.Integer: int intValue()>";
+    "fieldput <slideways: int aHigh>"
+    "virtualinvoke <java.lang.Integer: int intValue()>"->"fieldput <slideways: int aHigh>";
+    "fieldput <slideways: int aHigh>"->"load.r r0";
+    "specialinvoke <slideways: void DoC()>"
+    "load.r r0"->"specialinvoke <slideways: void DoC()>";
+    "specialinvoke <slideways: void DoC()>"->"load.r r0";
+    "push \"SoundFile\""
+    "load.r r0"->"push \"SoundFile\"";
+    "push \"SoundFile\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "store.r $r25"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"store.r $r25";
+    "load.r $r25"
+    "store.r $r25"->"load.r $r25";
+    "ifnull load.r r0"
+    "load.r $r25"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "virtualinvoke <java.applet.Applet: java.net.URL getCodeBase()>"
+    "load.r r0"->"virtualinvoke <java.applet.Applet: java.net.URL getCodeBase()>";
+    "virtualinvoke <java.applet.Applet: java.net.URL getCodeBase()>"->"load.r $r25";
+    "virtualinvoke <java.applet.Applet: java.applet.AudioClip getAudioClip(java.net.URL,java.lang.String)>"
+    "load.r $r25"->"virtualinvoke <java.applet.Applet: java.applet.AudioClip getAudioClip(java.net.URL,java.lang.String)>";
+    "fieldput <slideways: java.applet.AudioClip A>"
+    "virtualinvoke <java.applet.Applet: java.applet.AudioClip getAudioClip(java.net.URL,java.lang.String)>"->"fieldput <slideways: java.applet.AudioClip A>";
+    "fieldput <slideways: java.applet.AudioClip A>"->"load.r r0";
+    "push \"Speed\""
+    "load.r r0"->"push \"Speed\"";
+    "push \"Speed\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"store.r $r25";
+    "store.r $r25"->"load.r $r25";
+    "load.r $r25"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r r0";
+    "load.r r0"->"load.r $r25";
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"
+    "load.r $r25"->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>";
+    "fieldput <slideways: int howFast>"
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"->"fieldput <slideways: int howFast>";
+    "fieldput <slideways: int howFast>"->"load.r r0";
+    "fieldget <slideways: int howFast>"
+    "load.r r0"->"fieldget <slideways: int howFast>";
+    "push 1"
+    "fieldget <slideways: int howFast>"->"push 1";
+    "ifcmpge.i load.r r0"
+    "push 1"->"ifcmpge.i load.r r0";
+    "ifcmpge.i load.r r0"->"load.r r0";
+    "load.r r0"->"push 1";
+    "push 1"->"fieldput <slideways: int howFast>";
+    "fieldput <slideways: int howFast>"->"load.r r0";
+    "push \"BackgroundColor\""
+    "load.r r0"->"push \"BackgroundColor\"";
+    "push \"BackgroundColor\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "store.r r49"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"store.r r49";
+    "load.r r49"
+    "store.r r49"->"load.r r49";
+    "load.r r49"->"ifnull load.r r0";
+    "new java.util.StringTokenizer"
+    "ifnull load.r r0"->"new java.util.StringTokenizer";
+    "new java.util.StringTokenizer"->"store.r $r25";
+    "store.r $r25"->"load.r $r25";
+    "load.r $r25"->"load.r r49";
+    "push \",\""
+    "load.r r49"->"push \",\"";
+    "specialinvoke <java.util.StringTokenizer: void <init>(java.lang.String,java.lang.String)>"
+    "push \",\""->"specialinvoke <java.util.StringTokenizer: void <init>(java.lang.String,java.lang.String)>";
+    "specialinvoke <java.util.StringTokenizer: void <init>(java.lang.String,java.lang.String)>"->"load.r r0";
+    "new java.awt.Color"
+    "load.r r0"->"new java.awt.Color";
+    "dup1.r"
+    "new java.awt.Color"->"dup1.r";
+    "dup1.r"->"load.r $r25";
+    "virtualinvoke <java.util.StringTokenizer: java.lang.String nextToken()>"
+    "load.r $r25"->"virtualinvoke <java.util.StringTokenizer: java.lang.String nextToken()>";
+    "virtualinvoke <java.util.StringTokenizer: java.lang.String nextToken()>"->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>";
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"->"load.r $r25";
+    "load.r $r25"->"virtualinvoke <java.util.StringTokenizer: java.lang.String nextToken()>";
+    "virtualinvoke <java.util.StringTokenizer: java.lang.String nextToken()>"->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>";
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"->"load.r $r25";
+    "load.r $r25"->"virtualinvoke <java.util.StringTokenizer: java.lang.String nextToken()>";
+    "virtualinvoke <java.util.StringTokenizer: java.lang.String nextToken()>"->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>";
+    "specialinvoke <java.awt.Color: void <init>(int,int,int)>"
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"->"specialinvoke <java.awt.Color: void <init>(int,int,int)>";
+    "fieldput <slideways: java.awt.Color bgColor>"
+    "specialinvoke <java.awt.Color: void <init>(int,int,int)>"->"fieldput <slideways: java.awt.Color bgColor>";
+    "fieldput <slideways: java.awt.Color bgColor>"->"load.r r0";
+    "push \"Direction\""
+    "load.r r0"->"push \"Direction\"";
+    "push \"Direction\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"store.r $r25";
+    "store.r $r25"->"load.r $r25";
+    "load.r $r25"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r r0";
+    "load.r r0"->"load.r $r25";
+    "load.r $r25"->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>";
+    "fieldput <slideways: int theDirection>"
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"->"fieldput <slideways: int theDirection>";
+    "fieldput <slideways: int theDirection>"->"load.r r0";
+    "fieldget <slideways: int theDirection>"
+    "load.r r0"->"fieldget <slideways: int theDirection>";
+    "iflt load.r r0"
+    "fieldget <slideways: int theDirection>"->"iflt load.r r0";
+    "iflt load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <slideways: int theDirection>";
+    "push 3"
+    "fieldget <slideways: int theDirection>"->"push 3";
+    "ifcmple.i load.r r0"
+    "push 3"->"ifcmple.i load.r r0";
+    "ifcmple.i load.r r0"->"load.r r0";
+    "push 0"
+    "load.r r0"->"push 0";
+    "push 0"->"fieldput <slideways: int theDirection>";
+    "fieldput <slideways: int theDirection>"->"load.r r0";
+    "push \"Justification\""
+    "load.r r0"->"push \"Justification\"";
+    "push \"Justification\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"store.r $r25";
+    "store.r $r25"->"load.r $r25";
+    "load.r $r25"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r r0";
+    "load.r r0"->"load.r $r25";
+    "load.r $r25"->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>";
+    "fieldput <slideways: int j_Mode>"
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"->"fieldput <slideways: int j_Mode>";
+    "fieldput <slideways: int j_Mode>"->"load.r r0";
+    "push \"FrameThickness\""
+    "load.r r0"->"push \"FrameThickness\"";
+    "push \"FrameThickness\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"store.r $r25";
+    "store.r $r25"->"load.r $r25";
+    "load.r $r25"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r r0";
+    "load.r r0"->"load.r $r25";
+    "load.r $r25"->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>";
+    "fieldput <slideways: int f_Thick>"
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"->"fieldput <slideways: int f_Thick>";
+    "fieldput <slideways: int f_Thick>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "fieldget <slideways: int f_Thick>"
+    "load.r r0"->"fieldget <slideways: int f_Thick>";
+    "fieldget <slideways: int f_Thick>"->"push 1";
+    "sub.i"
+    "push 1"->"sub.i";
+    "sub.i"->"fieldput <slideways: int f_Thick>";
+    "fieldput <slideways: int f_Thick>"->"load.r r0";
+    "push \"FrameColor\""
+    "load.r r0"->"push \"FrameColor\"";
+    "push \"FrameColor\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"store.r r49";
+    "store.r r49"->"load.r r49";
+    "load.r r49"->"ifnull load.r r0";
+    "ifnull load.r r0"->"new java.util.StringTokenizer";
+    "new java.util.StringTokenizer"->"store.r $r25";
+    "store.r $r25"->"load.r $r25";
+    "load.r $r25"->"load.r r49";
+    "load.r r49"->"push \",\"";
+    "push \",\""->"specialinvoke <java.util.StringTokenizer: void <init>(java.lang.String,java.lang.String)>";
+    "specialinvoke <java.util.StringTokenizer: void <init>(java.lang.String,java.lang.String)>"->"load.r r0";
+    "load.r r0"->"new java.awt.Color";
+    "new java.awt.Color"->"dup1.r";
+    "dup1.r"->"load.r $r25";
+    "load.r $r25"->"virtualinvoke <java.util.StringTokenizer: java.lang.String nextToken()>";
+    "virtualinvoke <java.util.StringTokenizer: java.lang.String nextToken()>"->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>";
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"->"load.r $r25";
+    "load.r $r25"->"virtualinvoke <java.util.StringTokenizer: java.lang.String nextToken()>";
+    "virtualinvoke <java.util.StringTokenizer: java.lang.String nextToken()>"->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>";
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"->"load.r $r25";
+    "load.r $r25"->"virtualinvoke <java.util.StringTokenizer: java.lang.String nextToken()>";
+    "virtualinvoke <java.util.StringTokenizer: java.lang.String nextToken()>"->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>";
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"->"specialinvoke <java.awt.Color: void <init>(int,int,int)>";
+    "fieldput <slideways: java.awt.Color f_Color>"
+    "specialinvoke <java.awt.Color: void <init>(int,int,int)>"->"fieldput <slideways: java.awt.Color f_Color>";
+    "fieldput <slideways: java.awt.Color f_Color>"->"load.r r0";
+    "push \"BorderThickness\""
+    "load.r r0"->"push \"BorderThickness\"";
+    "push \"BorderThickness\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"store.r $r25";
+    "store.r $r25"->"load.r $r25";
+    "load.r $r25"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r r0";
+    "load.r r0"->"load.r $r25";
+    "load.r $r25"->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>";
+    "fieldput <slideways: int b_Thick>"
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"->"fieldput <slideways: int b_Thick>";
+    "fieldput <slideways: int b_Thick>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "fieldget <slideways: int b_Thick>"
+    "load.r r0"->"fieldget <slideways: int b_Thick>";
+    "fieldget <slideways: int b_Thick>"->"push 1";
+    "push 1"->"sub.i";
+    "sub.i"->"fieldput <slideways: int b_Thick>";
+    "fieldput <slideways: int b_Thick>"->"load.r r0";
+    "push \"BorderColor\""
+    "load.r r0"->"push \"BorderColor\"";
+    "push \"BorderColor\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"store.r r49";
+    "store.r r49"->"load.r r49";
+    "load.r r49"->"ifnull load.r r0";
+    "ifnull load.r r0"->"new java.util.StringTokenizer";
+    "new java.util.StringTokenizer"->"store.r $r25";
+    "store.r $r25"->"load.r $r25";
+    "load.r $r25"->"load.r r49";
+    "load.r r49"->"push \",\"";
+    "push \",\""->"specialinvoke <java.util.StringTokenizer: void <init>(java.lang.String,java.lang.String)>";
+    "specialinvoke <java.util.StringTokenizer: void <init>(java.lang.String,java.lang.String)>"->"load.r r0";
+    "load.r r0"->"new java.awt.Color";
+    "new java.awt.Color"->"dup1.r";
+    "dup1.r"->"load.r $r25";
+    "load.r $r25"->"virtualinvoke <java.util.StringTokenizer: java.lang.String nextToken()>";
+    "virtualinvoke <java.util.StringTokenizer: java.lang.String nextToken()>"->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>";
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"->"load.r $r25";
+    "load.r $r25"->"virtualinvoke <java.util.StringTokenizer: java.lang.String nextToken()>";
+    "virtualinvoke <java.util.StringTokenizer: java.lang.String nextToken()>"->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>";
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"->"load.r $r25";
+    "load.r $r25"->"virtualinvoke <java.util.StringTokenizer: java.lang.String nextToken()>";
+    "virtualinvoke <java.util.StringTokenizer: java.lang.String nextToken()>"->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>";
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"->"specialinvoke <java.awt.Color: void <init>(int,int,int)>";
+    "fieldput <slideways: java.awt.Color b_Color>"
+    "specialinvoke <java.awt.Color: void <init>(int,int,int)>"->"fieldput <slideways: java.awt.Color b_Color>";
+    "fieldput <slideways: java.awt.Color b_Color>"->"load.r r0";
+    "push \"LinkMode\""
+    "load.r r0"->"push \"LinkMode\"";
+    "push \"LinkMode\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"store.r $r25";
+    "store.r $r25"->"load.r $r25";
+    "load.r $r25"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r r0";
+    "load.r r0"->"load.r $r25";
+    "load.r $r25"->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>";
+    "fieldput <slideways: int l_Mode>"
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"->"fieldput <slideways: int l_Mode>";
+    "fieldput <slideways: int l_Mode>"->"load.r r0";
+    "push \"LinkColor\""
+    "load.r r0"->"push \"LinkColor\"";
+    "push \"LinkColor\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"store.r r49";
+    "store.r r49"->"load.r r49";
+    "ifnull push 0"
+    "load.r r49"->"ifnull push 0";
+    "ifnull push 0"->"new java.util.StringTokenizer";
+    "new java.util.StringTokenizer"->"store.r $r25";
+    "store.r $r25"->"load.r $r25";
+    "load.r $r25"->"load.r r49";
+    "load.r r49"->"push \",\"";
+    "push \",\""->"specialinvoke <java.util.StringTokenizer: void <init>(java.lang.String,java.lang.String)>";
+    "specialinvoke <java.util.StringTokenizer: void <init>(java.lang.String,java.lang.String)>"->"load.r r0";
+    "load.r r0"->"new java.awt.Color";
+    "new java.awt.Color"->"dup1.r";
+    "dup1.r"->"load.r $r25";
+    "load.r $r25"->"virtualinvoke <java.util.StringTokenizer: java.lang.String nextToken()>";
+    "virtualinvoke <java.util.StringTokenizer: java.lang.String nextToken()>"->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>";
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"->"load.r $r25";
+    "load.r $r25"->"virtualinvoke <java.util.StringTokenizer: java.lang.String nextToken()>";
+    "virtualinvoke <java.util.StringTokenizer: java.lang.String nextToken()>"->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>";
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"->"load.r $r25";
+    "load.r $r25"->"virtualinvoke <java.util.StringTokenizer: java.lang.String nextToken()>";
+    "virtualinvoke <java.util.StringTokenizer: java.lang.String nextToken()>"->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>";
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"->"specialinvoke <java.awt.Color: void <init>(int,int,int)>";
+    "fieldput <slideways: java.awt.Color l_Color>"
+    "specialinvoke <java.awt.Color: void <init>(int,int,int)>"->"fieldput <slideways: java.awt.Color l_Color>";
+    "fieldput <slideways: java.awt.Color l_Color>"->"push 0";
+    "store.i $r25"
+    "push 0"->"store.i $r25";
+    "load.i $r25"
+    "store.i $r25"->"load.i $r25";
+    "push 100"
+    "load.i $r25"->"push 100";
+    "push 100"->"ifcmpge.i load.r r0";
+    "ifcmpge.i load.r r0"->"load.r r0";
+    "fieldget <slideways: java.lang.String[] i_File>"
+    "load.r r0"->"fieldget <slideways: java.lang.String[] i_File>";
+    "fieldget <slideways: java.lang.String[] i_File>"->"load.i $r25";
+    "load.i $r25"->"load.r r0";
+    "push \"Image\""
+    "load.r r0"->"push \"Image\"";
+    "staticinvoke <java.lang.String: java.lang.String valueOf(java.lang.Object)>"
+    "push \"Image\""->"staticinvoke <java.lang.String: java.lang.String valueOf(java.lang.Object)>";
+    "staticinvoke <java.lang.String: java.lang.String valueOf(java.lang.Object)>"->"load.i $r25";
+    "load.i $r25"->"push 1";
+    "add.i"
+    "push 1"->"add.i";
+    "staticinvoke <java.lang.String: java.lang.String valueOf(int)>"
+    "add.i"->"staticinvoke <java.lang.String: java.lang.String valueOf(int)>";
+    "virtualinvoke <java.lang.String: java.lang.String concat(java.lang.String)>"
+    "staticinvoke <java.lang.String: java.lang.String valueOf(int)>"->"virtualinvoke <java.lang.String: java.lang.String concat(java.lang.String)>";
+    "virtualinvoke <java.lang.String: java.lang.String concat(java.lang.String)>"->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "arraywrite.r"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"arraywrite.r";
+    "arraywrite.r"->"load.r r0";
+    "fieldget <slideways: java.lang.String[] Link>"
+    "load.r r0"->"fieldget <slideways: java.lang.String[] Link>";
+    "fieldget <slideways: java.lang.String[] Link>"->"load.i $r25";
+    "load.i $r25"->"load.r r0";
+    "push \"Link\""
+    "load.r r0"->"push \"Link\"";
+    "push \"Link\""->"staticinvoke <java.lang.String: java.lang.String valueOf(java.lang.Object)>";
+    "staticinvoke <java.lang.String: java.lang.String valueOf(java.lang.Object)>"->"load.i $r25";
+    "load.i $r25"->"push 1";
+    "push 1"->"add.i";
+    "add.i"->"staticinvoke <java.lang.String: java.lang.String valueOf(int)>";
+    "staticinvoke <java.lang.String: java.lang.String valueOf(int)>"->"virtualinvoke <java.lang.String: java.lang.String concat(java.lang.String)>";
+    "virtualinvoke <java.lang.String: java.lang.String concat(java.lang.String)>"->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"arraywrite.r";
+    "arraywrite.r"->"load.r r0";
+    "fieldget <slideways: java.lang.String[] Targ>"
+    "load.r r0"->"fieldget <slideways: java.lang.String[] Targ>";
+    "fieldget <slideways: java.lang.String[] Targ>"->"load.i $r25";
+    "load.i $r25"->"load.r r0";
+    "push \"Target\""
+    "load.r r0"->"push \"Target\"";
+    "push \"Target\""->"staticinvoke <java.lang.String: java.lang.String valueOf(java.lang.Object)>";
+    "staticinvoke <java.lang.String: java.lang.String valueOf(java.lang.Object)>"->"load.i $r25";
+    "load.i $r25"->"push 1";
+    "push 1"->"add.i";
+    "add.i"->"staticinvoke <java.lang.String: java.lang.String valueOf(int)>";
+    "staticinvoke <java.lang.String: java.lang.String valueOf(int)>"->"virtualinvoke <java.lang.String: java.lang.String concat(java.lang.String)>";
+    "virtualinvoke <java.lang.String: java.lang.String concat(java.lang.String)>"->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"arraywrite.r";
+    "arraywrite.r"->"load.r r0";
+    "load.r r0"->"fieldget <slideways: java.lang.String[] i_File>";
+    "fieldget <slideways: java.lang.String[] i_File>"->"load.i $r25";
+    "arrayread.r"
+    "load.i $r25"->"arrayread.r";
+    "ifnonnull load.r r0"
+    "arrayread.r"->"ifnonnull load.r r0";
+    "goto load.r r0"
+    "ifnonnull load.r r0"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "fieldget <slideways: int aWide>"
+    "load.r r0"->"fieldget <slideways: int aWide>";
+    "fieldget <slideways: int aWide>"->"push 1";
+    "push 1"->"add.i";
+    "add.i"->"load.r r0";
+    "fieldget <slideways: int aHigh>"
+    "load.r r0"->"fieldget <slideways: int aHigh>";
+    "virtualinvoke <java.awt.Component: java.awt.Image createImage(int,int)>"
+    "fieldget <slideways: int aHigh>"->"virtualinvoke <java.awt.Component: java.awt.Image createImage(int,int)>";
+    "fieldput <slideways: java.awt.Image i_Buff>"
+    "virtualinvoke <java.awt.Component: java.awt.Image createImage(int,int)>"->"fieldput <slideways: java.awt.Image i_Buff>";
+    "fieldput <slideways: java.awt.Image i_Buff>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "fieldget <slideways: java.awt.Image i_Buff>"
+    "load.r r0"->"fieldget <slideways: java.awt.Image i_Buff>";
+    "virtualinvoke <java.awt.Image: java.awt.Graphics getGraphics()>"
+    "fieldget <slideways: java.awt.Image i_Buff>"->"virtualinvoke <java.awt.Image: java.awt.Graphics getGraphics()>";
+    "fieldput <slideways: java.awt.Graphics g_Buff>"
+    "virtualinvoke <java.awt.Image: java.awt.Graphics getGraphics()>"->"fieldput <slideways: java.awt.Graphics g_Buff>";
+    "return"
+    "fieldput <slideways: java.awt.Graphics g_Buff>"->"return";
+    "ifnonnull load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "fieldget <slideways: int i_total>"
+    "load.r r0"->"fieldget <slideways: int i_total>";
+    "fieldget <slideways: int i_total>"->"push 1";
+    "push 1"->"add.i";
+    "fieldput <slideways: int i_total>"
+    "add.i"->"fieldput <slideways: int i_total>";
+    "inc.i $r25 1"
+    "fieldput <slideways: int i_total>"->"inc.i $r25 1";
+    "goto load.i $r25"
+    "inc.i $r25 1"->"goto load.i $r25";
+}

@@ -1,0 +1,16 @@
+digraph "" {
+    "r0 := @this: GraphingApplet"
+    "load.r r0"
+    "r0 := @this: GraphingApplet"->"load.r r0";
+    "new GraphingWindow"
+    "load.r r0"->"new GraphingWindow";
+    "dup1.r"
+    "new GraphingWindow"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "specialinvoke <GraphingWindow: void <init>(GraphingApplet)>"
+    "load.r r0"->"specialinvoke <GraphingWindow: void <init>(GraphingApplet)>";
+    "fieldput <GraphingApplet: GraphingWindow gw>"
+    "specialinvoke <GraphingWindow: void <init>(GraphingApplet)>"->"fieldput <GraphingApplet: GraphingWindow gw>";
+    "return"
+    "fieldput <GraphingApplet: GraphingWindow gw>"->"return";
+}

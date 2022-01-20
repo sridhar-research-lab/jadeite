@@ -1,0 +1,99 @@
+digraph "" {
+    "r0 := @this: planet"
+    "load.r r0"
+    "r0 := @this: planet"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "fieldget <planet: int a>"
+    "load.r r0"->"fieldget <planet: int a>";
+    "fieldget <planet: int a>"->"load.r r0";
+    "fieldget <planet: int b>"
+    "load.r r0"->"fieldget <planet: int b>";
+    "mul.i"
+    "fieldget <planet: int b>"->"mul.i";
+    "newarray"
+    "mul.i"->"newarray";
+    "fieldput <planet: int[] z>"
+    "newarray"->"fieldput <planet: int[] z>";
+    "fieldput <planet: int[] z>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <planet: int b>";
+    "fieldget <planet: int b>"->"newarray";
+    "fieldput <planet: int[] A>"
+    "newarray"->"fieldput <planet: int[] A>";
+    "fieldput <planet: int[] A>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <planet: int b>";
+    "fieldget <planet: int b>"->"newarray";
+    "fieldput <planet: int[] B>"
+    "newarray"->"fieldput <planet: int[] B>";
+    "fieldput <planet: int[] B>"->"load.r r0";
+    "new java.awt.image.DirectColorModel"
+    "load.r r0"->"new java.awt.image.DirectColorModel";
+    "dup1.r"
+    "new java.awt.image.DirectColorModel"->"dup1.r";
+    "push 32"
+    "dup1.r"->"push 32";
+    "push 16711680"
+    "push 32"->"push 16711680";
+    "push 65280"
+    "push 16711680"->"push 65280";
+    "push 255"
+    "push 65280"->"push 255";
+    "specialinvoke <java.awt.image.DirectColorModel: void <init>(int,int,int,int)>"
+    "push 255"->"specialinvoke <java.awt.image.DirectColorModel: void <init>(int,int,int,int)>";
+    "fieldput <planet: java.awt.image.DirectColorModel C>"
+    "specialinvoke <java.awt.image.DirectColorModel: void <init>(int,int,int,int)>"->"fieldput <planet: java.awt.image.DirectColorModel C>";
+    "fieldput <planet: java.awt.image.DirectColorModel C>"->"load.r r0";
+    "new java.awt.image.MemoryImageSource"
+    "load.r r0"->"new java.awt.image.MemoryImageSource";
+    "new java.awt.image.MemoryImageSource"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "load.r r0"->"fieldget <planet: int a>";
+    "fieldget <planet: int a>"->"load.r r0";
+    "load.r r0"->"fieldget <planet: int b>";
+    "fieldget <planet: int b>"->"load.r r0";
+    "fieldget <planet: int[] z>"
+    "load.r r0"->"fieldget <planet: int[] z>";
+    "push 0"
+    "fieldget <planet: int[] z>"->"push 0";
+    "push 0"->"load.r r0";
+    "load.r r0"->"fieldget <planet: int a>";
+    "specialinvoke <java.awt.image.MemoryImageSource: void <init>(int,int,int[],int,int)>"
+    "fieldget <planet: int a>"->"specialinvoke <java.awt.image.MemoryImageSource: void <init>(int,int,int[],int,int)>";
+    "fieldput <planet: java.awt.image.MemoryImageSource D>"
+    "specialinvoke <java.awt.image.MemoryImageSource: void <init>(int,int,int[],int,int)>"->"fieldput <planet: java.awt.image.MemoryImageSource D>";
+    "fieldput <planet: java.awt.image.MemoryImageSource D>"->"load.r r0";
+    "fieldget <planet: java.awt.image.MemoryImageSource D>"
+    "load.r r0"->"fieldget <planet: java.awt.image.MemoryImageSource D>";
+    "push 1"
+    "fieldget <planet: java.awt.image.MemoryImageSource D>"->"push 1";
+    "virtualinvoke <java.awt.image.MemoryImageSource: void setFullBufferUpdates(boolean)>"
+    "push 1"->"virtualinvoke <java.awt.image.MemoryImageSource: void setFullBufferUpdates(boolean)>";
+    "virtualinvoke <java.awt.image.MemoryImageSource: void setFullBufferUpdates(boolean)>"->"load.r r0";
+    "load.r r0"->"fieldget <planet: java.awt.image.MemoryImageSource D>";
+    "fieldget <planet: java.awt.image.MemoryImageSource D>"->"push 1";
+    "virtualinvoke <java.awt.image.MemoryImageSource: void setAnimated(boolean)>"
+    "push 1"->"virtualinvoke <java.awt.image.MemoryImageSource: void setAnimated(boolean)>";
+    "virtualinvoke <java.awt.image.MemoryImageSource: void setAnimated(boolean)>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <planet: java.awt.image.MemoryImageSource D>";
+    "virtualinvoke <java.awt.Component: java.awt.Image createImage(java.awt.image.ImageProducer)>"
+    "fieldget <planet: java.awt.image.MemoryImageSource D>"->"virtualinvoke <java.awt.Component: java.awt.Image createImage(java.awt.image.ImageProducer)>";
+    "fieldput <planet: java.awt.Image E>"
+    "virtualinvoke <java.awt.Component: java.awt.Image createImage(java.awt.image.ImageProducer)>"->"fieldput <planet: java.awt.Image E>";
+    "fieldput <planet: java.awt.Image E>"->"load.r r0";
+    "virtualinvoke <planet: void k()>"
+    "load.r r0"->"virtualinvoke <planet: void k()>";
+    "virtualinvoke <planet: void k()>"->"load.r r0";
+    "virtualinvoke <planet: void a()>"
+    "load.r r0"->"virtualinvoke <planet: void a()>";
+    "staticget <java.lang.System: java.io.PrintStream out>"
+    "virtualinvoke <planet: void a()>"->"staticget <java.lang.System: java.io.PrintStream out>";
+    "push \"Copyright(C) 2006 ha55ii, http://dan-ball.jp/\""
+    "staticget <java.lang.System: java.io.PrintStream out>"->"push \"Copyright(C) 2006 ha55ii, http://dan-ball.jp/\"";
+    "virtualinvoke <java.io.PrintStream: void println(java.lang.String)>"
+    "push \"Copyright(C) 2006 ha55ii, http://dan-ball.jp/\""->"virtualinvoke <java.io.PrintStream: void println(java.lang.String)>";
+    "return"
+    "virtualinvoke <java.io.PrintStream: void println(java.lang.String)>"->"return";
+}

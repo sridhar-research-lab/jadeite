@@ -1,0 +1,130 @@
+digraph "" {
+    "r0 := @this: goURL"
+    "load.r r0"
+    "r0 := @this: goURL"->"load.r r0";
+    "new java.awt.Choice"
+    "load.r r0"->"new java.awt.Choice";
+    "dup1.r"
+    "new java.awt.Choice"->"dup1.r";
+    "specialinvoke <java.awt.Choice: void <init>()>"
+    "dup1.r"->"specialinvoke <java.awt.Choice: void <init>()>";
+    "fieldput <goURL: java.awt.Choice page>"
+    "specialinvoke <java.awt.Choice: void <init>()>"->"fieldput <goURL: java.awt.Choice page>";
+    "fieldput <goURL: java.awt.Choice page>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "fieldget <goURL: int NUMBER_OF_URLS>"
+    "load.r r0"->"fieldget <goURL: int NUMBER_OF_URLS>";
+    "newarray"
+    "fieldget <goURL: int NUMBER_OF_URLS>"->"newarray";
+    "fieldput <goURL: java.lang.String[] holdPage>"
+    "newarray"->"fieldput <goURL: java.lang.String[] holdPage>";
+    "fieldput <goURL: java.lang.String[] holdPage>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <goURL: int NUMBER_OF_URLS>";
+    "fieldget <goURL: int NUMBER_OF_URLS>"->"newarray";
+    "fieldput <goURL: java.lang.String[] holdURL>"
+    "newarray"->"fieldput <goURL: java.lang.String[] holdURL>";
+    "fieldput <goURL: java.lang.String[] holdURL>"->"load.r r0";
+    "push 0"
+    "load.r r0"->"push 0";
+    "fieldput <goURL: int i>"
+    "push 0"->"fieldput <goURL: int i>";
+    "goto load.r r0"
+    "fieldput <goURL: int i>"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "fieldget <goURL: int i>"
+    "load.r r0"->"fieldget <goURL: int i>";
+    "fieldget <goURL: int i>"->"load.r r0";
+    "load.r r0"->"fieldget <goURL: int NUMBER_OF_URLS>";
+    "ifcmplt.i load.r r0"
+    "fieldget <goURL: int NUMBER_OF_URLS>"->"ifcmplt.i load.r r0";
+    "ifcmplt.i load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "fieldget <goURL: java.awt.Choice page>"
+    "load.r r0"->"fieldget <goURL: java.awt.Choice page>";
+    "virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>"
+    "fieldget <goURL: java.awt.Choice page>"->"virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>";
+    "pop"
+    "virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>"->"pop";
+    "return"
+    "pop"->"return";
+    "ifcmplt.i load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "new java.lang.StringBuffer"
+    "load.r r0"->"new java.lang.StringBuffer";
+    "new java.lang.StringBuffer"->"dup1.r";
+    "push \"page\""
+    "dup1.r"->"push \"page\"";
+    "specialinvoke <java.lang.StringBuffer: void <init>(java.lang.String)>"
+    "push \"page\""->"specialinvoke <java.lang.StringBuffer: void <init>(java.lang.String)>";
+    "specialinvoke <java.lang.StringBuffer: void <init>(java.lang.String)>"->"load.r r0";
+    "load.r r0"->"fieldget <goURL: int i>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(int)>"
+    "fieldget <goURL: int i>"->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(int)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>"
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(int)>"->"virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"
+    "virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>"->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "fieldput <goURL: java.lang.String webpage>"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"fieldput <goURL: java.lang.String webpage>";
+    "fieldput <goURL: java.lang.String webpage>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"new java.lang.StringBuffer";
+    "new java.lang.StringBuffer"->"dup1.r";
+    "push \"url\""
+    "dup1.r"->"push \"url\"";
+    "push \"url\""->"specialinvoke <java.lang.StringBuffer: void <init>(java.lang.String)>";
+    "specialinvoke <java.lang.StringBuffer: void <init>(java.lang.String)>"->"load.r r0";
+    "load.r r0"->"fieldget <goURL: int i>";
+    "fieldget <goURL: int i>"->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(int)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(int)>"->"virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>"->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "fieldput <goURL: java.lang.String pageURL>"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"fieldput <goURL: java.lang.String pageURL>";
+    "fieldput <goURL: java.lang.String pageURL>"->"load.r r0";
+    "fieldget <goURL: java.lang.String webpage>"
+    "load.r r0"->"fieldget <goURL: java.lang.String webpage>";
+    "ifnull load.r r0"
+    "fieldget <goURL: java.lang.String webpage>"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r r0";
+    "fieldget <goURL: java.lang.String pageURL>"
+    "load.r r0"->"fieldget <goURL: java.lang.String pageURL>";
+    "ifnonnull load.r r0"
+    "fieldget <goURL: java.lang.String pageURL>"->"ifnonnull load.r r0";
+    "ifnonnull load.r r0"->"goto load.r r0";
+    "ifnonnull load.r r0"->"load.r r0";
+    "fieldget <goURL: java.lang.String[] holdPage>"
+    "load.r r0"->"fieldget <goURL: java.lang.String[] holdPage>";
+    "fieldget <goURL: java.lang.String[] holdPage>"->"load.r r0";
+    "load.r r0"->"fieldget <goURL: int i>";
+    "fieldget <goURL: int i>"->"load.r r0";
+    "load.r r0"->"fieldget <goURL: java.lang.String webpage>";
+    "arraywrite.r"
+    "fieldget <goURL: java.lang.String webpage>"->"arraywrite.r";
+    "arraywrite.r"->"load.r r0";
+    "fieldget <goURL: java.lang.String[] holdURL>"
+    "load.r r0"->"fieldget <goURL: java.lang.String[] holdURL>";
+    "fieldget <goURL: java.lang.String[] holdURL>"->"load.r r0";
+    "load.r r0"->"fieldget <goURL: int i>";
+    "fieldget <goURL: int i>"->"load.r r0";
+    "load.r r0"->"fieldget <goURL: java.lang.String pageURL>";
+    "fieldget <goURL: java.lang.String pageURL>"->"arraywrite.r";
+    "arraywrite.r"->"load.r r0";
+    "load.r r0"->"fieldget <goURL: java.awt.Choice page>";
+    "fieldget <goURL: java.awt.Choice page>"->"load.r r0";
+    "load.r r0"->"fieldget <goURL: java.lang.String[] holdPage>";
+    "fieldget <goURL: java.lang.String[] holdPage>"->"load.r r0";
+    "load.r r0"->"fieldget <goURL: int i>";
+    "arrayread.r"
+    "fieldget <goURL: int i>"->"arrayread.r";
+    "virtualinvoke <java.awt.Choice: void addItem(java.lang.String)>"
+    "arrayread.r"->"virtualinvoke <java.awt.Choice: void addItem(java.lang.String)>";
+    "virtualinvoke <java.awt.Choice: void addItem(java.lang.String)>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <goURL: int i>";
+    "push 1"
+    "fieldget <goURL: int i>"->"push 1";
+    "add.i"
+    "push 1"->"add.i";
+    "add.i"->"fieldput <goURL: int i>";
+}

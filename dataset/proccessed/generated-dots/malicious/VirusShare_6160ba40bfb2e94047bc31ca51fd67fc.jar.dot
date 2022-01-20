@@ -1,0 +1,17 @@
+digraph "" {
+    "r0 := @this: Eeploit"
+    "load.r r0"
+    "r0 := @this: Eeploit"->"load.r r0";
+    "virtualinvoke <Eeploit: void disableSecurity()>"
+    "load.r r0"->"virtualinvoke <Eeploit: void disableSecurity()>";
+    "push null"
+    "virtualinvoke <Eeploit: void disableSecurity()>"->"push null";
+    "staticinvoke <matasploitaPayload: void main(java.lang.String[])>"
+    "push null"->"staticinvoke <matasploitaPayload: void main(java.lang.String[])>";
+    "goto return"
+    "staticinvoke <matasploitaPayload: void main(java.lang.String[])>"->"goto return";
+    "return"
+    "goto return"->"return";
+    "virtualinvoke <java.lang.Throwable: void printStackTrace()>"
+    "staticinvoke <matasploitaPayload: void main(java.lang.String[])>"->"virtualinvoke <java.lang.Throwable: void printStackTrace()>";
+}

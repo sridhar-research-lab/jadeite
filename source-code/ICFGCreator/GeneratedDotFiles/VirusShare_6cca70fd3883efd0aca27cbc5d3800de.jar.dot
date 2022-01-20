@@ -1,0 +1,29 @@
+digraph "" {
+    "r0 := @this: cve2012xxxx.Gondvv"
+    "load.r r0"
+    "r0 := @this: cve2012xxxx.Gondvv"->"load.r r0";
+    "virtualinvoke <cve2012xxxx.Gondvv: void disableSecurity()>"
+    "load.r r0"->"virtualinvoke <cve2012xxxx.Gondvv: void disableSecurity()>";
+    "staticinvoke <java.lang.Runtime: java.lang.Runtime getRuntime()>"
+    "virtualinvoke <cve2012xxxx.Gondvv: void disableSecurity()>"->"staticinvoke <java.lang.Runtime: java.lang.Runtime getRuntime()>";
+    "push \"exe.exe\""
+    "staticinvoke <java.lang.Runtime: java.lang.Runtime getRuntime()>"->"push \"exe.exe\"";
+    "virtualinvoke <java.lang.Runtime: java.lang.Process exec(java.lang.String)>"
+    "push \"exe.exe\""->"virtualinvoke <java.lang.Runtime: java.lang.Process exec(java.lang.String)>";
+    "store.r r0"
+    "virtualinvoke <java.lang.Runtime: java.lang.Process exec(java.lang.String)>"->"store.r r0";
+    "store.r r0"->"load.r r0";
+    "ifnull load.r r0"
+    "load.r r0"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r r0";
+    "virtualinvoke <java.lang.Process: int waitFor()>"
+    "load.r r0"->"virtualinvoke <java.lang.Process: int waitFor()>";
+    "pop"
+    "virtualinvoke <java.lang.Process: int waitFor()>"->"pop";
+    "goto return"
+    "pop"->"goto return";
+    "return"
+    "goto return"->"return";
+    "virtualinvoke <java.lang.Throwable: void printStackTrace()>"
+    "virtualinvoke <java.lang.Process: int waitFor()>"->"virtualinvoke <java.lang.Throwable: void printStackTrace()>";
+}

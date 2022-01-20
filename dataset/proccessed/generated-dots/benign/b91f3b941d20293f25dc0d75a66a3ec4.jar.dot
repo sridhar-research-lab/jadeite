@@ -1,0 +1,458 @@
+digraph "" {
+    "r0 := @this: lotus.notes.apps.editorapplet.EditorApplet"
+    "load.r r0"
+    "r0 := @this: lotus.notes.apps.editorapplet.EditorApplet"->"load.r r0";
+    "push \"browser\""
+    "load.r r0"->"push \"browser\"";
+    "staticinvoke <java.lang.System: java.lang.String getProperty(java.lang.String)>"
+    "push \"browser\""->"staticinvoke <java.lang.System: java.lang.String getProperty(java.lang.String)>";
+    "fieldput <lotus.notes.apps.editorapplet.EditorApplet: java.lang.String BrowserVendor>"
+    "staticinvoke <java.lang.System: java.lang.String getProperty(java.lang.String)>"->"fieldput <lotus.notes.apps.editorapplet.EditorApplet: java.lang.String BrowserVendor>";
+    "push 0"
+    "fieldput <lotus.notes.apps.editorapplet.EditorApplet: java.lang.String BrowserVendor>"->"push 0";
+    "store.b z3"
+    "push 0"->"store.b z3";
+    "store.b z3"->"load.r r0";
+    "fieldget <lotus.notes.apps.editorapplet.EditorApplet: java.lang.String BrowserVendor>"
+    "load.r r0"->"fieldget <lotus.notes.apps.editorapplet.EditorApplet: java.lang.String BrowserVendor>";
+    "ifnull load.r r0"
+    "fieldget <lotus.notes.apps.editorapplet.EditorApplet: java.lang.String BrowserVendor>"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <lotus.notes.apps.editorapplet.EditorApplet: java.lang.String BrowserVendor>";
+    "virtualinvoke <java.lang.String: int length()>"
+    "fieldget <lotus.notes.apps.editorapplet.EditorApplet: java.lang.String BrowserVendor>"->"virtualinvoke <java.lang.String: int length()>";
+    "ifle load.r r0"
+    "virtualinvoke <java.lang.String: int length()>"->"ifle load.r r0";
+    "ifle load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <lotus.notes.apps.editorapplet.EditorApplet: java.lang.String BrowserVendor>";
+    "virtualinvoke <java.lang.String: java.lang.String toLowerCase()>"
+    "fieldget <lotus.notes.apps.editorapplet.EditorApplet: java.lang.String BrowserVendor>"->"virtualinvoke <java.lang.String: java.lang.String toLowerCase()>";
+    "virtualinvoke <java.lang.String: java.lang.String toLowerCase()>"->"fieldput <lotus.notes.apps.editorapplet.EditorApplet: java.lang.String BrowserVendor>";
+    "fieldput <lotus.notes.apps.editorapplet.EditorApplet: java.lang.String BrowserVendor>"->"load.r r0";
+    "load.r r0"->"fieldget <lotus.notes.apps.editorapplet.EditorApplet: java.lang.String BrowserVendor>";
+    "push \"netscape\""
+    "fieldget <lotus.notes.apps.editorapplet.EditorApplet: java.lang.String BrowserVendor>"->"push \"netscape\"";
+    "virtualinvoke <java.lang.String: int indexOf(java.lang.String)>"
+    "push \"netscape\""->"virtualinvoke <java.lang.String: int indexOf(java.lang.String)>";
+    "push -1"
+    "virtualinvoke <java.lang.String: int indexOf(java.lang.String)>"->"push -1";
+    "ifcmpne.i push 1"
+    "push -1"->"ifcmpne.i push 1";
+    "ifcmpne.i push 1"->"load.r r0";
+    "load.r r0"->"fieldget <lotus.notes.apps.editorapplet.EditorApplet: java.lang.String BrowserVendor>";
+    "push \"lotus\""
+    "fieldget <lotus.notes.apps.editorapplet.EditorApplet: java.lang.String BrowserVendor>"->"push \"lotus\"";
+    "push \"lotus\""->"virtualinvoke <java.lang.String: int indexOf(java.lang.String)>";
+    "virtualinvoke <java.lang.String: int indexOf(java.lang.String)>"->"push -1";
+    "ifcmpeq.i load.r r0"
+    "push -1"->"ifcmpeq.i load.r r0";
+    "push 1"
+    "ifcmpeq.i load.r r0"->"push 1";
+    "push 1"->"store.b z3";
+    "store.b z3"->"load.r r0";
+    "load.r r0"->"fieldget <lotus.notes.apps.editorapplet.EditorApplet: java.lang.String BrowserVendor>";
+    "fieldget <lotus.notes.apps.editorapplet.EditorApplet: java.lang.String BrowserVendor>"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <lotus.notes.apps.editorapplet.EditorApplet: java.lang.String BrowserVendor>";
+    "push \"plugin\""
+    "fieldget <lotus.notes.apps.editorapplet.EditorApplet: java.lang.String BrowserVendor>"->"push \"plugin\"";
+    "push \"plugin\""->"virtualinvoke <java.lang.String: int indexOf(java.lang.String)>";
+    "virtualinvoke <java.lang.String: int indexOf(java.lang.String)>"->"push -1";
+    "ifcmpne.i load.r r0"
+    "push -1"->"ifcmpne.i load.r r0";
+    "ifcmpne.i load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <lotus.notes.apps.editorapplet.EditorApplet: java.lang.String BrowserVendor>";
+    "fieldget <lotus.notes.apps.editorapplet.EditorApplet: java.lang.String BrowserVendor>"->"push \"lotus\"";
+    "push \"lotus\""->"virtualinvoke <java.lang.String: int indexOf(java.lang.String)>";
+    "virtualinvoke <java.lang.String: int indexOf(java.lang.String)>"->"push -1";
+    "push -1"->"ifcmpne.i load.r r0";
+    "ifcmpne.i load.r r0"->"load.r r0";
+    "virtualinvoke <lotus.notes.apps.editorapplet.EditorApplet: boolean setInstalled()>"
+    "load.r r0"->"virtualinvoke <lotus.notes.apps.editorapplet.EditorApplet: boolean setInstalled()>";
+    "ifeq push 0"
+    "virtualinvoke <lotus.notes.apps.editorapplet.EditorApplet: boolean setInstalled()>"->"ifeq push 0";
+    "load.b z3"
+    "ifeq push 0"->"load.b z3";
+    "load.b z3"->"ifeq push 0";
+    "ifeq push 0"->"push 1";
+    "store.b r1"
+    "push 1"->"store.b r1";
+    "goto load.r r0"
+    "store.b r1"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "load.b r1"
+    "load.r r0"->"load.b r1";
+    "fieldput <lotus.notes.apps.editorapplet.EditorApplet: boolean bNeedsPriv>"
+    "load.b r1"->"fieldput <lotus.notes.apps.editorapplet.EditorApplet: boolean bNeedsPriv>";
+    "fieldput <lotus.notes.apps.editorapplet.EditorApplet: boolean bNeedsPriv>"->"load.r r0";
+    "push \"behavior\""
+    "load.r r0"->"push \"behavior\"";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"
+    "push \"behavior\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "store.r r1"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"store.r r1";
+    "load.r r1"
+    "store.r r1"->"load.r r1";
+    "load.r r1"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r r1";
+    "push \"Haiku\""
+    "load.r r1"->"push \"Haiku\"";
+    "virtualinvoke <java.lang.String: boolean equalsIgnoreCase(java.lang.String)>"
+    "push \"Haiku\""->"virtualinvoke <java.lang.String: boolean equalsIgnoreCase(java.lang.String)>";
+    "ifeq load.r r0"
+    "virtualinvoke <java.lang.String: boolean equalsIgnoreCase(java.lang.String)>"->"ifeq load.r r0";
+    "ifeq load.r r0"->"load.r r0";
+    "load.r r0"->"push 1";
+    "fieldput <lotus.notes.apps.editorapplet.EditorApplet: int behavior>"
+    "push 1"->"fieldput <lotus.notes.apps.editorapplet.EditorApplet: int behavior>";
+    "fieldput <lotus.notes.apps.editorapplet.EditorApplet: int behavior>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "push \"defaultBodyFont\""
+    "load.r r0"->"push \"defaultBodyFont\"";
+    "push \"defaultBodyFont\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "fieldput <lotus.notes.apps.editorapplet.EditorApplet: java.lang.String defaultBodyFont>"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"fieldput <lotus.notes.apps.editorapplet.EditorApplet: java.lang.String defaultBodyFont>";
+    "fieldput <lotus.notes.apps.editorapplet.EditorApplet: java.lang.String defaultBodyFont>"->"load.r r0";
+    "fieldget <lotus.notes.apps.editorapplet.EditorApplet: java.lang.String defaultBodyFont>"
+    "load.r r0"->"fieldget <lotus.notes.apps.editorapplet.EditorApplet: java.lang.String defaultBodyFont>";
+    "fieldget <lotus.notes.apps.editorapplet.EditorApplet: java.lang.String defaultBodyFont>"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <lotus.notes.apps.editorapplet.EditorApplet: java.lang.String defaultBodyFont>";
+    "fieldget <lotus.notes.apps.editorapplet.EditorApplet: java.lang.String defaultBodyFont>"->"virtualinvoke <java.lang.String: int length()>";
+    "ifne load.r r0"
+    "virtualinvoke <java.lang.String: int length()>"->"ifne load.r r0";
+    "ifne load.r r0"->"load.r r0";
+    "fieldget <lotus.notes.apps.editorapplet.EditorApplet: int behavior>"
+    "load.r r0"->"fieldget <lotus.notes.apps.editorapplet.EditorApplet: int behavior>";
+    "fieldget <lotus.notes.apps.editorapplet.EditorApplet: int behavior>"->"push 1";
+    "ifcmpne.i push \"\""
+    "push 1"->"ifcmpne.i push \"\"";
+    "ifcmpne.i push \"\""->"load.r r0";
+    "push \"serif,12\""
+    "load.r r0"->"push \"serif,12\"";
+    "push \"serif,12\""->"fieldput <lotus.notes.apps.editorapplet.EditorApplet: java.lang.String defaultBodyFont>";
+    "fieldput <lotus.notes.apps.editorapplet.EditorApplet: java.lang.String defaultBodyFont>"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "push \"defaultH1Font\""
+    "load.r r0"->"push \"defaultH1Font\"";
+    "push \"defaultH1Font\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "fieldput <lotus.notes.apps.editorapplet.EditorApplet: java.lang.String defaultH1Font>"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"fieldput <lotus.notes.apps.editorapplet.EditorApplet: java.lang.String defaultH1Font>";
+    "fieldput <lotus.notes.apps.editorapplet.EditorApplet: java.lang.String defaultH1Font>"->"load.r r0";
+    "push \"locale\""
+    "load.r r0"->"push \"locale\"";
+    "push \"locale\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"store.r r1";
+    "store.r r1"->"load.r r0";
+    "new lotus.notes.util.PropertyLoader"
+    "load.r r0"->"new lotus.notes.util.PropertyLoader";
+    "dup1.r"
+    "new lotus.notes.util.PropertyLoader"->"dup1.r";
+    "specialinvoke <lotus.notes.util.PropertyLoader: void <init>()>"
+    "dup1.r"->"specialinvoke <lotus.notes.util.PropertyLoader: void <init>()>";
+    "push \"editor\""
+    "specialinvoke <lotus.notes.util.PropertyLoader: void <init>()>"->"push \"editor\"";
+    "push \"editor\""->"load.r r1";
+    "new lotus.notes.apps.editorapplet.EnProperties"
+    "load.r r1"->"new lotus.notes.apps.editorapplet.EnProperties";
+    "new lotus.notes.apps.editorapplet.EnProperties"->"dup1.r";
+    "specialinvoke <lotus.notes.apps.editorapplet.EnProperties: void <init>()>"
+    "dup1.r"->"specialinvoke <lotus.notes.apps.editorapplet.EnProperties: void <init>()>";
+    "specialinvoke <lotus.notes.apps.editorapplet.EnProperties: void <init>()>"->"load.r r0";
+    "virtualinvoke <java.applet.Applet: java.net.URL getCodeBase()>"
+    "load.r r0"->"virtualinvoke <java.applet.Applet: java.net.URL getCodeBase()>";
+    "virtualinvoke <lotus.notes.util.PropertyLoader: java.util.Properties getProperties(java.lang.String,java.lang.String,java.util.Properties,java.net.URL)>"
+    "virtualinvoke <java.applet.Applet: java.net.URL getCodeBase()>"->"virtualinvoke <lotus.notes.util.PropertyLoader: java.util.Properties getProperties(java.lang.String,java.lang.String,java.util.Properties,java.net.URL)>";
+    "fieldput <lotus.notes.apps.editorapplet.EditorApplet: java.util.Properties localeProps>"
+    "virtualinvoke <lotus.notes.util.PropertyLoader: java.util.Properties getProperties(java.lang.String,java.lang.String,java.util.Properties,java.net.URL)>"->"fieldput <lotus.notes.apps.editorapplet.EditorApplet: java.util.Properties localeProps>";
+    "fieldput <lotus.notes.apps.editorapplet.EditorApplet: java.util.Properties localeProps>"->"load.r r0";
+    "push \"browserCode\""
+    "load.r r0"->"push \"browserCode\"";
+    "push \"browserCode\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "store.r r2"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"store.r r2";
+    "load.r r2"
+    "store.r r2"->"load.r r2";
+    "load.r r2"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r2";
+    "staticinvoke <java.lang.Integer: java.lang.Integer valueOf(java.lang.String)>"
+    "load.r r2"->"staticinvoke <java.lang.Integer: java.lang.Integer valueOf(java.lang.String)>";
+    "virtualinvoke <java.lang.Integer: int intValue()>"
+    "staticinvoke <java.lang.Integer: java.lang.Integer valueOf(java.lang.String)>"->"virtualinvoke <java.lang.Integer: int intValue()>";
+    "fieldput <lotus.notes.apps.editorapplet.EditorApplet: int browserCode>"
+    "virtualinvoke <java.lang.Integer: int intValue()>"->"fieldput <lotus.notes.apps.editorapplet.EditorApplet: int browserCode>";
+    "fieldput <lotus.notes.apps.editorapplet.EditorApplet: int browserCode>"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "push \"cache_id\""
+    "load.r r0"->"push \"cache_id\"";
+    "push \"cache_id\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"store.r r2";
+    "store.r r2"->"load.r r2";
+    "load.r r2"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r r2";
+    "load.r r2"->"virtualinvoke <java.lang.String: int length()>";
+    "virtualinvoke <java.lang.String: int length()>"->"ifle load.r r0";
+    "staticget <lotus.notes.apps.editorapplet.EditorApplet: java.util.Hashtable stateTable>"
+    "ifle load.r r0"->"staticget <lotus.notes.apps.editorapplet.EditorApplet: java.util.Hashtable stateTable>";
+    "staticget <lotus.notes.apps.editorapplet.EditorApplet: java.util.Hashtable stateTable>"->"load.r r2";
+    "virtualinvoke <java.util.Hashtable: java.lang.Object remove(java.lang.Object)>"
+    "load.r r2"->"virtualinvoke <java.util.Hashtable: java.lang.Object remove(java.lang.Object)>";
+    "checkcast"
+    "virtualinvoke <java.util.Hashtable: java.lang.Object remove(java.lang.Object)>"->"checkcast";
+    "checkcast"->"store.r r2";
+    "store.r r2"->"load.r r2";
+    "load.r r2"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r2";
+    "fieldget <lotus.notes.apps.editorapplet.EditState: lotus.notes.apps.editor.RTEdit editor>"
+    "load.r r2"->"fieldget <lotus.notes.apps.editorapplet.EditState: lotus.notes.apps.editor.RTEdit editor>";
+    "fieldput <lotus.notes.apps.editorapplet.EditorApplet: lotus.notes.apps.editor.RTEdit theEditor>"
+    "fieldget <lotus.notes.apps.editorapplet.EditState: lotus.notes.apps.editor.RTEdit editor>"->"fieldput <lotus.notes.apps.editorapplet.EditorApplet: lotus.notes.apps.editor.RTEdit theEditor>";
+    "fieldput <lotus.notes.apps.editorapplet.EditorApplet: lotus.notes.apps.editor.RTEdit theEditor>"->"load.r r0";
+    "load.r r0"->"load.r r2";
+    "fieldget <lotus.notes.apps.editorapplet.EditState: java.awt.Panel panel>"
+    "load.r r2"->"fieldget <lotus.notes.apps.editorapplet.EditState: java.awt.Panel panel>";
+    "fieldget <lotus.notes.apps.editorapplet.EditState: java.awt.Panel panel>"->"checkcast";
+    "fieldput <lotus.notes.apps.editorapplet.EditorApplet: lotus.notes.apps.editorpanel.EditorControls controls>"
+    "checkcast"->"fieldput <lotus.notes.apps.editorapplet.EditorApplet: lotus.notes.apps.editorpanel.EditorControls controls>";
+    "fieldput <lotus.notes.apps.editorapplet.EditorApplet: lotus.notes.apps.editorpanel.EditorControls controls>"->"load.r r0";
+    "fieldget <lotus.notes.apps.editorapplet.EditorApplet: lotus.notes.apps.editor.RTEdit theEditor>"
+    "load.r r0"->"fieldget <lotus.notes.apps.editorapplet.EditorApplet: lotus.notes.apps.editor.RTEdit theEditor>";
+    "ifnonnull load.r r0"
+    "fieldget <lotus.notes.apps.editorapplet.EditorApplet: lotus.notes.apps.editor.RTEdit theEditor>"->"ifnonnull load.r r0";
+    "ifnonnull load.r r0"->"load.r r0";
+    "specialinvoke <lotus.notes.apps.editorapplet.EditorApplet: void initEditor()>"
+    "load.r r0"->"specialinvoke <lotus.notes.apps.editorapplet.EditorApplet: void initEditor()>";
+    "specialinvoke <lotus.notes.apps.editorapplet.EditorApplet: void initEditor()>"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "new lotus.notes.apps.editorpanel.BorderedPanel"
+    "load.r r0"->"new lotus.notes.apps.editorpanel.BorderedPanel";
+    "new lotus.notes.apps.editorpanel.BorderedPanel"->"dup1.r";
+    "specialinvoke <lotus.notes.apps.editorpanel.BorderedPanel: void <init>()>"
+    "dup1.r"->"specialinvoke <lotus.notes.apps.editorpanel.BorderedPanel: void <init>()>";
+    "fieldput <lotus.notes.apps.editorapplet.EditorApplet: lotus.notes.apps.editorpanel.BorderedPanel editorPanel>"
+    "specialinvoke <lotus.notes.apps.editorpanel.BorderedPanel: void <init>()>"->"fieldput <lotus.notes.apps.editorapplet.EditorApplet: lotus.notes.apps.editorpanel.BorderedPanel editorPanel>";
+    "fieldput <lotus.notes.apps.editorapplet.EditorApplet: lotus.notes.apps.editorpanel.BorderedPanel editorPanel>"->"load.r r0";
+    "fieldget <lotus.notes.apps.editorapplet.EditorApplet: lotus.notes.apps.editorpanel.BorderedPanel editorPanel>"
+    "load.r r0"->"fieldget <lotus.notes.apps.editorapplet.EditorApplet: lotus.notes.apps.editorpanel.BorderedPanel editorPanel>";
+    "push \"Center\""
+    "fieldget <lotus.notes.apps.editorapplet.EditorApplet: lotus.notes.apps.editorpanel.BorderedPanel editorPanel>"->"push \"Center\"";
+    "push \"Center\""->"load.r r0";
+    "load.r r0"->"fieldget <lotus.notes.apps.editorapplet.EditorApplet: lotus.notes.apps.editor.RTEdit theEditor>";
+    "virtualinvoke <java.awt.Container: java.awt.Component add(java.lang.String,java.awt.Component)>"
+    "fieldget <lotus.notes.apps.editorapplet.EditorApplet: lotus.notes.apps.editor.RTEdit theEditor>"->"virtualinvoke <java.awt.Container: java.awt.Component add(java.lang.String,java.awt.Component)>";
+    "pop"
+    "virtualinvoke <java.awt.Container: java.awt.Component add(java.lang.String,java.awt.Component)>"->"pop";
+    "pop"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "specialinvoke <lotus.notes.apps.editorapplet.EditorApplet: lotus.notes.apps.editorpanel.ToolHost createToolHost()>"
+    "load.r r0"->"specialinvoke <lotus.notes.apps.editorapplet.EditorApplet: lotus.notes.apps.editorpanel.ToolHost createToolHost()>";
+    "fieldput <lotus.notes.apps.editorapplet.EditorApplet: lotus.notes.apps.editorpanel.ToolHost toolHost>"
+    "specialinvoke <lotus.notes.apps.editorapplet.EditorApplet: lotus.notes.apps.editorpanel.ToolHost createToolHost()>"->"fieldput <lotus.notes.apps.editorapplet.EditorApplet: lotus.notes.apps.editorpanel.ToolHost toolHost>";
+    "fieldput <lotus.notes.apps.editorapplet.EditorApplet: lotus.notes.apps.editorpanel.ToolHost toolHost>"->"load.r r0";
+    "fieldget <lotus.notes.apps.editorapplet.EditorApplet: lotus.notes.apps.editorpanel.ToolHost toolHost>"
+    "load.r r0"->"fieldget <lotus.notes.apps.editorapplet.EditorApplet: lotus.notes.apps.editorpanel.ToolHost toolHost>";
+    "new java.awt.BorderLayout"
+    "fieldget <lotus.notes.apps.editorapplet.EditorApplet: lotus.notes.apps.editorpanel.ToolHost toolHost>"->"new java.awt.BorderLayout";
+    "new java.awt.BorderLayout"->"dup1.r";
+    "specialinvoke <java.awt.BorderLayout: void <init>()>"
+    "dup1.r"->"specialinvoke <java.awt.BorderLayout: void <init>()>";
+    "virtualinvoke <java.awt.Container: void setLayout(java.awt.LayoutManager)>"
+    "specialinvoke <java.awt.BorderLayout: void <init>()>"->"virtualinvoke <java.awt.Container: void setLayout(java.awt.LayoutManager)>";
+    "virtualinvoke <java.awt.Container: void setLayout(java.awt.LayoutManager)>"->"load.r r0";
+    "load.r r0"->"fieldget <lotus.notes.apps.editorapplet.EditorApplet: lotus.notes.apps.editorpanel.ToolHost toolHost>";
+    "push \"North\""
+    "fieldget <lotus.notes.apps.editorapplet.EditorApplet: lotus.notes.apps.editorpanel.ToolHost toolHost>"->"push \"North\"";
+    "push \"North\""->"load.r r0";
+    "fieldget <lotus.notes.apps.editorapplet.EditorApplet: lotus.notes.apps.editorpanel.EditorControls controls>"
+    "load.r r0"->"fieldget <lotus.notes.apps.editorapplet.EditorApplet: lotus.notes.apps.editorpanel.EditorControls controls>";
+    "fieldget <lotus.notes.apps.editorapplet.EditorApplet: lotus.notes.apps.editorpanel.EditorControls controls>"->"virtualinvoke <java.awt.Container: java.awt.Component add(java.lang.String,java.awt.Component)>";
+    "virtualinvoke <java.awt.Container: java.awt.Component add(java.lang.String,java.awt.Component)>"->"pop";
+    "pop"->"load.r r0";
+    "load.r r0"->"fieldget <lotus.notes.apps.editorapplet.EditorApplet: lotus.notes.apps.editorpanel.ToolHost toolHost>";
+    "fieldget <lotus.notes.apps.editorapplet.EditorApplet: lotus.notes.apps.editorpanel.ToolHost toolHost>"->"push \"Center\"";
+    "push \"Center\""->"load.r r0";
+    "load.r r0"->"fieldget <lotus.notes.apps.editorapplet.EditorApplet: lotus.notes.apps.editorpanel.BorderedPanel editorPanel>";
+    "fieldget <lotus.notes.apps.editorapplet.EditorApplet: lotus.notes.apps.editorpanel.BorderedPanel editorPanel>"->"virtualinvoke <java.awt.Container: java.awt.Component add(java.lang.String,java.awt.Component)>";
+    "virtualinvoke <java.awt.Container: java.awt.Component add(java.lang.String,java.awt.Component)>"->"pop";
+    "pop"->"load.r r0";
+    "load.r r0"->"new java.awt.BorderLayout";
+    "new java.awt.BorderLayout"->"dup1.r";
+    "dup1.r"->"specialinvoke <java.awt.BorderLayout: void <init>()>";
+    "specialinvoke <java.awt.BorderLayout: void <init>()>"->"virtualinvoke <java.awt.Container: void setLayout(java.awt.LayoutManager)>";
+    "virtualinvoke <java.awt.Container: void setLayout(java.awt.LayoutManager)>"->"load.r r0";
+    "load.r r0"->"push \"Center\"";
+    "push \"Center\""->"load.r r0";
+    "load.r r0"->"fieldget <lotus.notes.apps.editorapplet.EditorApplet: lotus.notes.apps.editorpanel.ToolHost toolHost>";
+    "fieldget <lotus.notes.apps.editorapplet.EditorApplet: lotus.notes.apps.editorpanel.ToolHost toolHost>"->"virtualinvoke <java.awt.Container: java.awt.Component add(java.lang.String,java.awt.Component)>";
+    "virtualinvoke <java.awt.Container: java.awt.Component add(java.lang.String,java.awt.Component)>"->"pop";
+    "pop"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "virtualinvoke <java.awt.Component: java.awt.Dimension size()>"
+    "load.r r0"->"virtualinvoke <java.awt.Component: java.awt.Dimension size()>";
+    "virtualinvoke <java.awt.Component: java.awt.Dimension size()>"->"dup1.r";
+    "fieldget <java.awt.Dimension: int width>"
+    "dup1.r"->"fieldget <java.awt.Dimension: int width>";
+    "store.i r2"
+    "fieldget <java.awt.Dimension: int width>"->"store.i r2";
+    "store.i r2"->"load.r r0";
+    "load.i r2"
+    "load.r r0"->"load.i r2";
+    "fieldput <lotus.notes.apps.editorapplet.EditorApplet: int appWidth>"
+    "load.i r2"->"fieldput <lotus.notes.apps.editorapplet.EditorApplet: int appWidth>";
+    "fieldget <java.awt.Dimension: int height>"
+    "fieldput <lotus.notes.apps.editorapplet.EditorApplet: int appWidth>"->"fieldget <java.awt.Dimension: int height>";
+    "fieldput <lotus.notes.apps.editorapplet.EditorApplet: int appHeight>"
+    "fieldget <java.awt.Dimension: int height>"->"fieldput <lotus.notes.apps.editorapplet.EditorApplet: int appHeight>";
+    "fieldput <lotus.notes.apps.editorapplet.EditorApplet: int appHeight>"->"load.r r0";
+    "load.r r0"->"fieldget <lotus.notes.apps.editorapplet.EditorApplet: int behavior>";
+    "fieldget <lotus.notes.apps.editorapplet.EditorApplet: int behavior>"->"ifne load.r r0";
+    "ifne load.r r0"->"load.b z3";
+    "load.b z3"->"ifeq load.r r0";
+    "ifeq load.r r0"->"load.r r1";
+    "load.r r1"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r r1";
+    "load.r r1"->"virtualinvoke <java.lang.String: int length()>";
+    "virtualinvoke <java.lang.String: int length()>"->"ifle load.r r0";
+    "ifle load.r r0"->"load.r r1";
+    "load.r r1"->"virtualinvoke <java.lang.String: java.lang.String toLowerCase()>";
+    "store.r z3"
+    "virtualinvoke <java.lang.String: java.lang.String toLowerCase()>"->"store.r z3";
+    "store.r z3"->"push 0";
+    "store.i r1"
+    "push 0"->"store.i r1";
+    "load.i r1"
+    "store.i r1"->"load.i r1";
+    "staticget <lotus.notes.apps.editorapplet.EditorApplet: java.lang.String[] INTL_LANGS>"
+    "load.i r1"->"staticget <lotus.notes.apps.editorapplet.EditorApplet: java.lang.String[] INTL_LANGS>";
+    "arraylength"
+    "staticget <lotus.notes.apps.editorapplet.EditorApplet: java.lang.String[] INTL_LANGS>"->"arraylength";
+    "ifcmpge.i load.r r0"
+    "arraylength"->"ifcmpge.i load.r r0";
+    "load.r z3"
+    "ifcmpge.i load.r r0"->"load.r z3";
+    "load.r z3"->"staticget <lotus.notes.apps.editorapplet.EditorApplet: java.lang.String[] INTL_LANGS>";
+    "staticget <lotus.notes.apps.editorapplet.EditorApplet: java.lang.String[] INTL_LANGS>"->"load.i r1";
+    "arrayread.r"
+    "load.i r1"->"arrayread.r";
+    "arrayread.r"->"virtualinvoke <java.lang.String: int indexOf(java.lang.String)>";
+    "virtualinvoke <java.lang.String: int indexOf(java.lang.String)>"->"push -1";
+    "ifcmpeq.i inc.i r1 1"
+    "push -1"->"ifcmpeq.i inc.i r1 1";
+    "ifcmpeq.i inc.i r1 1"->"load.r r0";
+    "new java.awt.TextField"
+    "load.r r0"->"new java.awt.TextField";
+    "new java.awt.TextField"->"dup1.r";
+    "specialinvoke <java.awt.TextField: void <init>()>"
+    "dup1.r"->"specialinvoke <java.awt.TextField: void <init>()>";
+    "fieldput <lotus.notes.apps.editorapplet.EditorApplet: java.awt.TextField intlInput>"
+    "specialinvoke <java.awt.TextField: void <init>()>"->"fieldput <lotus.notes.apps.editorapplet.EditorApplet: java.awt.TextField intlInput>";
+    "fieldput <lotus.notes.apps.editorapplet.EditorApplet: java.awt.TextField intlInput>"->"load.r r0";
+    "push \"South\""
+    "load.r r0"->"push \"South\"";
+    "push \"South\""->"load.r r0";
+    "fieldget <lotus.notes.apps.editorapplet.EditorApplet: java.awt.TextField intlInput>"
+    "load.r r0"->"fieldget <lotus.notes.apps.editorapplet.EditorApplet: java.awt.TextField intlInput>";
+    "fieldget <lotus.notes.apps.editorapplet.EditorApplet: java.awt.TextField intlInput>"->"virtualinvoke <java.awt.Container: java.awt.Component add(java.lang.String,java.awt.Component)>";
+    "virtualinvoke <java.awt.Container: java.awt.Component add(java.lang.String,java.awt.Component)>"->"pop";
+    "pop"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <lotus.notes.apps.editorapplet.EditorApplet: lotus.notes.apps.editor.RTEdit theEditor>";
+    "fieldget <lotus.notes.apps.editorapplet.EditorApplet: lotus.notes.apps.editor.RTEdit theEditor>"->"load.r r0";
+    "virtualinvoke <lotus.notes.apps.editor.RTEdit: void addActionListener(java.awt.event.ActionListener)>"
+    "load.r r0"->"virtualinvoke <lotus.notes.apps.editor.RTEdit: void addActionListener(java.awt.event.ActionListener)>";
+    "virtualinvoke <lotus.notes.apps.editor.RTEdit: void addActionListener(java.awt.event.ActionListener)>"->"load.r r0";
+    "virtualinvoke <lotus.notes.apps.editorapplet.EditorApplet: void setFocus()>"
+    "load.r r0"->"virtualinvoke <lotus.notes.apps.editorapplet.EditorApplet: void setFocus()>";
+    "return"
+    "virtualinvoke <lotus.notes.apps.editorapplet.EditorApplet: void setFocus()>"->"return";
+    "inc.i r1 1"
+    "ifcmpeq.i inc.i r1 1"->"inc.i r1 1";
+    "goto load.i r1"
+    "inc.i r1 1"->"goto load.i r1";
+    "ifnonnull load.r r0"->"load.r r0";
+    "load.r r0"->"push 1";
+    "fieldput <lotus.notes.apps.editorapplet.EditorApplet: boolean textInitialized>"
+    "push 1"->"fieldput <lotus.notes.apps.editorapplet.EditorApplet: boolean textInitialized>";
+    "virtualinvoke <java.lang.Integer: int intValue()>"->"store.r r2";
+    "store.r r2"->"load.r r0";
+    "load.r r0"->"push 0";
+    "push 0"->"fieldput <lotus.notes.apps.editorapplet.EditorApplet: int browserCode>";
+    "push \"\""
+    "ifcmpne.i push \"\""->"push \"\"";
+    "push \"\""->"store.r r1";
+    "store.r r1"->"load.r r0";
+    "load.r r0"->"push \"\"";
+    "fieldput <lotus.notes.apps.editorapplet.EditorApplet: java.lang.String platform>"
+    "push \"\""->"fieldput <lotus.notes.apps.editorapplet.EditorApplet: java.lang.String platform>";
+    "fieldput <lotus.notes.apps.editorapplet.EditorApplet: java.lang.String platform>"->"load.r r0";
+    "virtualinvoke <java.applet.Applet: java.util.Locale getLocale()>"
+    "load.r r0"->"virtualinvoke <java.applet.Applet: java.util.Locale getLocale()>";
+    "virtualinvoke <java.util.Locale: java.lang.String getLanguage()>"
+    "virtualinvoke <java.applet.Applet: java.util.Locale getLocale()>"->"virtualinvoke <java.util.Locale: java.lang.String getLanguage()>";
+    "virtualinvoke <java.util.Locale: java.lang.String getLanguage()>"->"store.r r1";
+    "store.r r1"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "push \"os.name\""
+    "load.r r0"->"push \"os.name\"";
+    "push \"os.name\""->"staticinvoke <java.lang.System: java.lang.String getProperty(java.lang.String)>";
+    "staticinvoke <java.lang.System: java.lang.String getProperty(java.lang.String)>"->"fieldput <lotus.notes.apps.editorapplet.EditorApplet: java.lang.String platform>";
+    "goto load.r r1"
+    "fieldput <lotus.notes.apps.editorapplet.EditorApplet: java.lang.String platform>"->"goto load.r r1";
+    "goto load.r r1"->"load.r r1";
+    "ifnull push 0"
+    "load.r r1"->"ifnull push 0";
+    "ifnull push 0"->"load.r r1";
+    "load.r r1"->"virtualinvoke <java.lang.String: int length()>";
+    "ifle push 0"
+    "virtualinvoke <java.lang.String: int length()>"->"ifle push 0";
+    "ifle push 0"->"load.r r1";
+    "push \"th\""
+    "load.r r1"->"push \"th\"";
+    "virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>"
+    "push \"th\""->"virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>";
+    "virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>"->"ifeq push 0";
+    "ifeq push 0"->"load.r r0";
+    "fieldget <lotus.notes.apps.editorapplet.EditorApplet: java.lang.String platform>"
+    "load.r r0"->"fieldget <lotus.notes.apps.editorapplet.EditorApplet: java.lang.String platform>";
+    "fieldget <lotus.notes.apps.editorapplet.EditorApplet: java.lang.String platform>"->"ifnull push 0";
+    "ifnull push 0"->"load.r r0";
+    "load.r r0"->"fieldget <lotus.notes.apps.editorapplet.EditorApplet: java.lang.String platform>";
+    "push \"Win\""
+    "fieldget <lotus.notes.apps.editorapplet.EditorApplet: java.lang.String platform>"->"push \"Win\"";
+    "push \"Win\""->"virtualinvoke <java.lang.String: int indexOf(java.lang.String)>";
+    "virtualinvoke <java.lang.String: int indexOf(java.lang.String)>"->"push -1";
+    "ifcmpeq.i push 0"
+    "push -1"->"ifcmpeq.i push 0";
+    "ifcmpeq.i push 0"->"load.r r0";
+    "load.r r0"->"fieldget <lotus.notes.apps.editorapplet.EditorApplet: java.lang.String platform>";
+    "push \"98\""
+    "fieldget <lotus.notes.apps.editorapplet.EditorApplet: java.lang.String platform>"->"push \"98\"";
+    "push \"98\""->"virtualinvoke <java.lang.String: int indexOf(java.lang.String)>";
+    "virtualinvoke <java.lang.String: int indexOf(java.lang.String)>"->"push -1";
+    "push -1"->"ifcmpeq.i push 0";
+    "ifcmpeq.i push 0"->"push 1";
+    "push 1"->"store.b r1";
+    "goto load.b r1"
+    "store.b r1"->"goto load.b r1";
+    "goto load.b r1"->"load.b r1";
+    "load.b r1"->"ifeq load.r r0";
+    "ifeq load.r r0"->"load.r r0";
+    "push \"DialogInput,11\""
+    "load.r r0"->"push \"DialogInput,11\"";
+    "push \"DialogInput,11\""->"fieldput <lotus.notes.apps.editorapplet.EditorApplet: java.lang.String defaultBodyFont>";
+    "fieldput <lotus.notes.apps.editorapplet.EditorApplet: java.lang.String defaultBodyFont>"->"goto load.r r0";
+    "ifeq load.r r0"->"load.r r0";
+    "push \"sansserif,11\""
+    "load.r r0"->"push \"sansserif,11\"";
+    "push \"sansserif,11\""->"fieldput <lotus.notes.apps.editorapplet.EditorApplet: java.lang.String defaultBodyFont>";
+    "ifcmpeq.i push 0"->"push 0";
+    "push 0"->"store.b r1";
+    "staticinvoke <java.lang.System: java.lang.String getProperty(java.lang.String)>"->"store.r r2";
+    "virtualinvoke <java.util.Locale: java.lang.String getLanguage()>"->"store.r r2";
+    "ifeq push 0"->"push 0";
+    "push 0"->"store.b r1";
+}

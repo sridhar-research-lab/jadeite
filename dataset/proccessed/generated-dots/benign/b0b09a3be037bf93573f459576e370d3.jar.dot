@@ -1,0 +1,58 @@
+digraph "" {
+    "r0 := @this: ptmviewer"
+    "load.r r0"
+    "r0 := @this: ptmviewer"->"load.r r0";
+    "push \"file\""
+    "load.r r0"->"push \"file\"";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"
+    "push \"file\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "store.r $r1"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"store.r $r1";
+    "load.r $r1"
+    "store.r $r1"->"load.r $r1";
+    "ifnull load.r r0"
+    "load.r $r1"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r r0";
+    "load.r r0"->"load.r $r1";
+    "fieldput <ptmviewer: java.lang.String filename>"
+    "load.r $r1"->"fieldput <ptmviewer: java.lang.String filename>";
+    "fieldput <ptmviewer: java.lang.String filename>"->"load.r r0";
+    "push \"order\""
+    "load.r r0"->"push \"order\"";
+    "push \"order\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"store.r $r1";
+    "store.r $r1"->"load.r $r1";
+    "load.r $r1"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r r0";
+    "load.r r0"->"load.r $r1";
+    "fieldput <ptmviewer: java.lang.String order>"
+    "load.r $r1"->"fieldput <ptmviewer: java.lang.String order>";
+    "fieldput <ptmviewer: java.lang.String order>"->"load.r r0";
+    "push \"antialias\""
+    "load.r r0"->"push \"antialias\"";
+    "push \"antialias\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r r0";
+    "push 1"
+    "load.r r0"->"push 1";
+    "fieldput <ptmviewer: boolean antialias>"
+    "push 1"->"fieldput <ptmviewer: boolean antialias>";
+    "fieldput <ptmviewer: boolean antialias>"->"load.r r0";
+    "push \"oversampling\""
+    "load.r r0"->"push \"oversampling\"";
+    "push \"oversampling\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"store.r $r1";
+    "store.r $r1"->"load.r $r1";
+    "ifnull return"
+    "load.r $r1"->"ifnull return";
+    "ifnull return"->"load.r r0";
+    "load.r r0"->"load.r $r1";
+    "staticinvoke <java.lang.Double: java.lang.Double valueOf(java.lang.String)>"
+    "load.r $r1"->"staticinvoke <java.lang.Double: java.lang.Double valueOf(java.lang.String)>";
+    "virtualinvoke <java.lang.Double: double doubleValue()>"
+    "staticinvoke <java.lang.Double: java.lang.Double valueOf(java.lang.String)>"->"virtualinvoke <java.lang.Double: double doubleValue()>";
+    "fieldput <ptmviewer: double max_oversampling>"
+    "virtualinvoke <java.lang.Double: double doubleValue()>"->"fieldput <ptmviewer: double max_oversampling>";
+    "return"
+    "fieldput <ptmviewer: double max_oversampling>"->"return";
+}

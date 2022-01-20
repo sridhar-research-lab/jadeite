@@ -1,0 +1,116 @@
+digraph "" {
+    "r0 := @this: EyedMarquee"
+    "load.r r0"
+    "r0 := @this: EyedMarquee"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "virtualinvoke <java.awt.Component: java.awt.Rectangle bounds()>"
+    "load.r r0"->"virtualinvoke <java.awt.Component: java.awt.Rectangle bounds()>";
+    "fieldput <EyedMarquee: java.awt.Rectangle m_bounds>"
+    "virtualinvoke <java.awt.Component: java.awt.Rectangle bounds()>"->"fieldput <EyedMarquee: java.awt.Rectangle m_bounds>";
+    "fieldput <EyedMarquee: java.awt.Rectangle m_bounds>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "push \"text\""
+    "load.r r0"->"push \"text\"";
+    "push null"
+    "push \"text\""->"push null";
+    "virtualinvoke <EyedMarquee: java.lang.String getStringParameter(java.lang.String,java.lang.String)>"
+    "push null"->"virtualinvoke <EyedMarquee: java.lang.String getStringParameter(java.lang.String,java.lang.String)>";
+    "fieldput <EyedMarquee: java.lang.String m_text>"
+    "virtualinvoke <EyedMarquee: java.lang.String getStringParameter(java.lang.String,java.lang.String)>"->"fieldput <EyedMarquee: java.lang.String m_text>";
+    "fieldput <EyedMarquee: java.lang.String m_text>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "push \"textSpeed\""
+    "load.r r0"->"push \"textSpeed\"";
+    "push 4"
+    "push \"textSpeed\""->"push 4";
+    "virtualinvoke <EyedMarquee: int getIntParameter(java.lang.String,int)>"
+    "push 4"->"virtualinvoke <EyedMarquee: int getIntParameter(java.lang.String,int)>";
+    "fieldput <EyedMarquee: int m_textSpeed>"
+    "virtualinvoke <EyedMarquee: int getIntParameter(java.lang.String,int)>"->"fieldput <EyedMarquee: int m_textSpeed>";
+    "fieldput <EyedMarquee: int m_textSpeed>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "push \"textTop\""
+    "load.r r0"->"push \"textTop\"";
+    "push 2"
+    "push \"textTop\""->"push 2";
+    "push 2"->"load.r r0";
+    "fieldget <EyedMarquee: java.awt.Rectangle m_bounds>"
+    "load.r r0"->"fieldget <EyedMarquee: java.awt.Rectangle m_bounds>";
+    "fieldget <java.awt.Rectangle: int height>"
+    "fieldget <EyedMarquee: java.awt.Rectangle m_bounds>"->"fieldget <java.awt.Rectangle: int height>";
+    "push 3"
+    "fieldget <java.awt.Rectangle: int height>"->"push 3";
+    "div.i"
+    "push 3"->"div.i";
+    "mul.i"
+    "div.i"->"mul.i";
+    "mul.i"->"virtualinvoke <EyedMarquee: int getIntParameter(java.lang.String,int)>";
+    "fieldput <EyedMarquee: int m_textTop>"
+    "virtualinvoke <EyedMarquee: int getIntParameter(java.lang.String,int)>"->"fieldput <EyedMarquee: int m_textTop>";
+    "fieldput <EyedMarquee: int m_textTop>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "push \"textFont\""
+    "load.r r0"->"push \"textFont\"";
+    "push \"textFont\""->"push null";
+    "virtualinvoke <EyedMarquee: java.awt.Font getFontParameter(java.lang.String,java.awt.Font)>"
+    "push null"->"virtualinvoke <EyedMarquee: java.awt.Font getFontParameter(java.lang.String,java.awt.Font)>";
+    "fieldput <EyedMarquee: java.awt.Font m_textFont>"
+    "virtualinvoke <EyedMarquee: java.awt.Font getFontParameter(java.lang.String,java.awt.Font)>"->"fieldput <EyedMarquee: java.awt.Font m_textFont>";
+    "staticget <java.lang.System: java.io.PrintStream out>"
+    "fieldput <EyedMarquee: java.awt.Font m_textFont>"->"staticget <java.lang.System: java.io.PrintStream out>";
+    "new java.lang.StringBuffer"
+    "staticget <java.lang.System: java.io.PrintStream out>"->"new java.lang.StringBuffer";
+    "dup1.r"
+    "new java.lang.StringBuffer"->"dup1.r";
+    "push \"textFont: \""
+    "dup1.r"->"push \"textFont: \"";
+    "specialinvoke <java.lang.StringBuffer: void <init>(java.lang.String)>"
+    "push \"textFont: \""->"specialinvoke <java.lang.StringBuffer: void <init>(java.lang.String)>";
+    "specialinvoke <java.lang.StringBuffer: void <init>(java.lang.String)>"->"load.r r0";
+    "fieldget <EyedMarquee: java.awt.Font m_textFont>"
+    "load.r r0"->"fieldget <EyedMarquee: java.awt.Font m_textFont>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.Object)>"
+    "fieldget <EyedMarquee: java.awt.Font m_textFont>"->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.Object)>";
+    "push \"  (\""
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.Object)>"->"push \"  (\"";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"
+    "push \"  (\""->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"load.r r0";
+    "load.r r0"->"push \"textFont\"";
+    "push \"textFont\""->"push null";
+    "push null"->"virtualinvoke <EyedMarquee: java.lang.String getStringParameter(java.lang.String,java.lang.String)>";
+    "virtualinvoke <EyedMarquee: java.lang.String getStringParameter(java.lang.String,java.lang.String)>"->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "push \")\""
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"push \")\"";
+    "push \")\""->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>"
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>";
+    "virtualinvoke <java.io.PrintStream: void println(java.lang.String)>"
+    "virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>"->"virtualinvoke <java.io.PrintStream: void println(java.lang.String)>";
+    "virtualinvoke <java.io.PrintStream: void println(java.lang.String)>"->"load.r r0";
+    "load.r r0"->"fieldget <EyedMarquee: java.awt.Font m_textFont>";
+    "ifnonnull new java.lang.Thread"
+    "fieldget <EyedMarquee: java.awt.Font m_textFont>"->"ifnonnull new java.lang.Thread";
+    "ifnonnull new java.lang.Thread"->"load.r r0";
+    "new java.awt.Font"
+    "load.r r0"->"new java.awt.Font";
+    "new java.awt.Font"->"dup1.r";
+    "push \"\""
+    "dup1.r"->"push \"\"";
+    "push \"\""->"push 3";
+    "push 48"
+    "push 3"->"push 48";
+    "specialinvoke <java.awt.Font: void <init>(java.lang.String,int,int)>"
+    "push 48"->"specialinvoke <java.awt.Font: void <init>(java.lang.String,int,int)>";
+    "specialinvoke <java.awt.Font: void <init>(java.lang.String,int,int)>"->"fieldput <EyedMarquee: java.awt.Font m_textFont>";
+    "new java.lang.Thread"
+    "fieldput <EyedMarquee: java.awt.Font m_textFont>"->"new java.lang.Thread";
+    "new java.lang.Thread"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "specialinvoke <java.lang.Thread: void <init>(java.lang.Runnable)>"
+    "load.r r0"->"specialinvoke <java.lang.Thread: void <init>(java.lang.Runnable)>";
+    "virtualinvoke <java.lang.Thread: void start()>"
+    "specialinvoke <java.lang.Thread: void <init>(java.lang.Runnable)>"->"virtualinvoke <java.lang.Thread: void start()>";
+    "return"
+    "virtualinvoke <java.lang.Thread: void start()>"->"return";
+}

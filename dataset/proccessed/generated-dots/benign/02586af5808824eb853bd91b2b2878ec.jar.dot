@@ -1,0 +1,303 @@
+digraph "" {
+    "r0 := @this: Fader"
+    "load.r r0"
+    "r0 := @this: Fader"->"load.r r0";
+    "push \"bgcolor\""
+    "load.r r0"->"push \"bgcolor\"";
+    "virtualinvoke <Fader: java.awt.Color getColorParameter(java.lang.String)>"
+    "push \"bgcolor\""->"virtualinvoke <Fader: java.awt.Color getColorParameter(java.lang.String)>";
+    "store.r r2"
+    "virtualinvoke <Fader: java.awt.Color getColorParameter(java.lang.String)>"->"store.r r2";
+    "store.r r2"->"load.r r0";
+    "push \"fgcolor\""
+    "load.r r0"->"push \"fgcolor\"";
+    "push \"fgcolor\""->"virtualinvoke <Fader: java.awt.Color getColorParameter(java.lang.String)>";
+    "store.r r3"
+    "virtualinvoke <Fader: java.awt.Color getColorParameter(java.lang.String)>"->"store.r r3";
+    "store.r r3"->"load.r r0";
+    "virtualinvoke <Fader: void getStrings()>"
+    "load.r r0"->"virtualinvoke <Fader: void getStrings()>";
+    "virtualinvoke <Fader: void getStrings()>"->"load.r r0";
+    "push \"delay\""
+    "load.r r0"->"push \"delay\"";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"
+    "push \"delay\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "ifnull push \"40\""
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"ifnull push \"40\"";
+    "ifnull push \"40\""->"load.r r0";
+    "load.r r0"->"push \"delay\"";
+    "push \"delay\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "store.r r1"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"store.r r1";
+    "goto load.r r0"
+    "store.r r1"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "load.r r1"
+    "load.r r0"->"load.r r1";
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"
+    "load.r r1"->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>";
+    "fieldput <Fader: int delay>"
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"->"fieldput <Fader: int delay>";
+    "fieldput <Fader: int delay>"->"load.r r0";
+    "push \"stop\""
+    "load.r r0"->"push \"stop\"";
+    "push \"stop\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "ifnull push \"1000\""
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"ifnull push \"1000\"";
+    "ifnull push \"1000\""->"load.r r0";
+    "load.r r0"->"push \"stop\"";
+    "push \"stop\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"store.r r1";
+    "store.r r1"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r1";
+    "load.r r1"->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>";
+    "fieldput <Fader: int stop>"
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"->"fieldput <Fader: int stop>";
+    "fieldput <Fader: int stop>"->"load.r r0";
+    "push \"fontSize\""
+    "load.r r0"->"push \"fontSize\"";
+    "push \"fontSize\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "ifnull push \"24\""
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"ifnull push \"24\"";
+    "ifnull push \"24\""->"load.r r0";
+    "load.r r0"->"push \"fontSize\"";
+    "push \"fontSize\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"store.r r1";
+    "store.r r1"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r1";
+    "load.r r1"->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>";
+    "fieldput <Fader: int fontSize>"
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"->"fieldput <Fader: int fontSize>";
+    "fieldput <Fader: int fontSize>"->"load.r r0";
+    "push \"fontName\""
+    "load.r r0"->"push \"fontName\"";
+    "push \"fontName\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "ifnull push \"TimesRoman\""
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"ifnull push \"TimesRoman\"";
+    "ifnull push \"TimesRoman\""->"load.r r0";
+    "load.r r0"->"push \"fontName\"";
+    "push \"fontName\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"store.r r1";
+    "goto load.r r1"
+    "store.r r1"->"goto load.r r1";
+    "goto load.r r1"->"load.r r1";
+    "load.r r1"->"store.r r1";
+    "store.r r1"->"load.r r0";
+    "push \"fontStyle\""
+    "load.r r0"->"push \"fontStyle\"";
+    "push \"fontStyle\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "ifnull push \"0\""
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"ifnull push \"0\"";
+    "ifnull push \"0\""->"load.r r0";
+    "load.r r0"->"push \"fontStyle\"";
+    "push \"fontStyle\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "store.r i0"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"store.r i0";
+    "goto load.r i0"
+    "store.r i0"->"goto load.r i0";
+    "load.r i0"
+    "goto load.r i0"->"load.r i0";
+    "load.r i0"->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>";
+    "store.i i0"
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"->"store.i i0";
+    "store.i i0"->"load.r r0";
+    "push \"Highlight\""
+    "load.r r0"->"push \"Highlight\"";
+    "push \"Highlight\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "ifnull push \"FF0000\""
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"ifnull push \"FF0000\"";
+    "ifnull push \"FF0000\""->"load.r r0";
+    "load.r r0"->"push \"Highlight\"";
+    "push \"Highlight\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "store.r $r31"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"store.r $r31";
+    "store.r $r31"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "load.r $r31"
+    "load.r r0"->"load.r $r31";
+    "push 16"
+    "load.r $r31"->"push 16";
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String,int)>"
+    "push 16"->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String,int)>";
+    "fieldput <Fader: int Highlight>"
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String,int)>"->"fieldput <Fader: int Highlight>";
+    "fieldput <Fader: int Highlight>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "virtualinvoke <java.awt.Component: java.awt.Dimension getSize()>"
+    "load.r r0"->"virtualinvoke <java.awt.Component: java.awt.Dimension getSize()>";
+    "fieldget <java.awt.Dimension: int width>"
+    "virtualinvoke <java.awt.Component: java.awt.Dimension getSize()>"->"fieldget <java.awt.Dimension: int width>";
+    "fieldget <java.awt.Dimension: int width>"->"load.r r0";
+    "load.r r0"->"virtualinvoke <java.awt.Component: java.awt.Dimension getSize()>";
+    "fieldget <java.awt.Dimension: int height>"
+    "virtualinvoke <java.awt.Component: java.awt.Dimension getSize()>"->"fieldget <java.awt.Dimension: int height>";
+    "virtualinvoke <java.awt.Component: java.awt.Image createImage(int,int)>"
+    "fieldget <java.awt.Dimension: int height>"->"virtualinvoke <java.awt.Component: java.awt.Image createImage(int,int)>";
+    "fieldput <Fader: java.awt.Image im>"
+    "virtualinvoke <java.awt.Component: java.awt.Image createImage(int,int)>"->"fieldput <Fader: java.awt.Image im>";
+    "fieldput <Fader: java.awt.Image im>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "fieldget <Fader: java.awt.Image im>"
+    "load.r r0"->"fieldget <Fader: java.awt.Image im>";
+    "virtualinvoke <java.awt.Image: java.awt.Graphics getGraphics()>"
+    "fieldget <Fader: java.awt.Image im>"->"virtualinvoke <java.awt.Image: java.awt.Graphics getGraphics()>";
+    "fieldput <Fader: java.awt.Graphics offscreen>"
+    "virtualinvoke <java.awt.Image: java.awt.Graphics getGraphics()>"->"fieldput <Fader: java.awt.Graphics offscreen>";
+    "fieldput <Fader: java.awt.Graphics offscreen>"->"load.r r0";
+    "new java.awt.Font"
+    "load.r r0"->"new java.awt.Font";
+    "dup1.r"
+    "new java.awt.Font"->"dup1.r";
+    "dup1.r"->"load.r r1";
+    "load.i i0"
+    "load.r r1"->"load.i i0";
+    "load.i i0"->"load.r r0";
+    "fieldget <Fader: int fontSize>"
+    "load.r r0"->"fieldget <Fader: int fontSize>";
+    "specialinvoke <java.awt.Font: void <init>(java.lang.String,int,int)>"
+    "fieldget <Fader: int fontSize>"->"specialinvoke <java.awt.Font: void <init>(java.lang.String,int,int)>";
+    "fieldput <Fader: java.awt.Font f>"
+    "specialinvoke <java.awt.Font: void <init>(java.lang.String,int,int)>"->"fieldput <Fader: java.awt.Font f>";
+    "fieldput <Fader: java.awt.Font f>"->"load.r r0";
+    "fieldget <Fader: java.awt.Graphics offscreen>"
+    "load.r r0"->"fieldget <Fader: java.awt.Graphics offscreen>";
+    "fieldget <Fader: java.awt.Graphics offscreen>"->"load.r r0";
+    "fieldget <Fader: java.awt.Font f>"
+    "load.r r0"->"fieldget <Fader: java.awt.Font f>";
+    "virtualinvoke <java.awt.Graphics: void setFont(java.awt.Font)>"
+    "fieldget <Fader: java.awt.Font f>"->"virtualinvoke <java.awt.Graphics: void setFont(java.awt.Font)>";
+    "virtualinvoke <java.awt.Graphics: void setFont(java.awt.Font)>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"virtualinvoke <java.awt.Component: java.awt.Dimension getSize()>";
+    "virtualinvoke <java.awt.Component: java.awt.Dimension getSize()>"->"fieldget <java.awt.Dimension: int height>";
+    "fieldget <java.awt.Dimension: int height>"->"load.r r0";
+    "load.r r0"->"fieldget <Fader: int fontSize>";
+    "sub.i"
+    "fieldget <Fader: int fontSize>"->"sub.i";
+    "push 10"
+    "sub.i"->"push 10";
+    "div.i"
+    "push 10"->"div.i";
+    "push 30"
+    "div.i"->"push 30";
+    "add.i"
+    "push 30"->"add.i";
+    "fieldput <Fader: int steps>"
+    "add.i"->"fieldput <Fader: int steps>";
+    "fieldput <Fader: int steps>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "fieldget <Fader: int steps>"
+    "load.r r0"->"fieldget <Fader: int steps>";
+    "newarray"
+    "fieldget <Fader: int steps>"->"newarray";
+    "fieldput <Fader: java.awt.Color[] textColor>"
+    "newarray"->"fieldput <Fader: java.awt.Color[] textColor>";
+    "push 0"
+    "fieldput <Fader: java.awt.Color[] textColor>"->"push 0";
+    "store.i r1"
+    "push 0"->"store.i r1";
+    "goto load.i r1"
+    "store.i r1"->"goto load.i r1";
+    "load.i r1"
+    "goto load.i r1"->"load.i r1";
+    "load.i r1"->"load.r r0";
+    "load.r r0"->"fieldget <Fader: int steps>";
+    "ifcmplt.i load.r r0"
+    "fieldget <Fader: int steps>"->"ifcmplt.i load.r r0";
+    "ifcmplt.i load.r r0"->"load.r r0";
+    "load.r r2"
+    "load.r r0"->"load.r r2";
+    "virtualinvoke <java.awt.Component: void setBackground(java.awt.Color)>"
+    "load.r r2"->"virtualinvoke <java.awt.Component: void setBackground(java.awt.Color)>";
+    "virtualinvoke <java.awt.Component: void setBackground(java.awt.Color)>"->"load.r r0";
+    "load.r r3"
+    "load.r r0"->"load.r r3";
+    "virtualinvoke <java.awt.Component: void setForeground(java.awt.Color)>"
+    "load.r r3"->"virtualinvoke <java.awt.Component: void setForeground(java.awt.Color)>";
+    "virtualinvoke <java.awt.Component: void setForeground(java.awt.Color)>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "virtualinvoke <java.awt.Component: void addMouseListener(java.awt.event.MouseListener)>"
+    "load.r r0"->"virtualinvoke <java.awt.Component: void addMouseListener(java.awt.event.MouseListener)>";
+    "virtualinvoke <java.awt.Component: void addMouseListener(java.awt.event.MouseListener)>"->"load.r r0";
+    "virtualinvoke <Fader: void newfirst()>"
+    "load.r r0"->"virtualinvoke <Fader: void newfirst()>";
+    "return"
+    "virtualinvoke <Fader: void newfirst()>"->"return";
+    "ifcmplt.i load.r r0"->"load.r r0";
+    "fieldget <Fader: java.awt.Color[] textColor>"
+    "load.r r0"->"fieldget <Fader: java.awt.Color[] textColor>";
+    "fieldget <Fader: java.awt.Color[] textColor>"->"load.i r1";
+    "new java.awt.Color"
+    "load.i r1"->"new java.awt.Color";
+    "new java.awt.Color"->"dup1.r";
+    "dup1.r"->"load.r r2";
+    "virtualinvoke <java.awt.Color: int getRed()>"
+    "load.r r2"->"virtualinvoke <java.awt.Color: int getRed()>";
+    "virtualinvoke <java.awt.Color: int getRed()>"->"load.i r1";
+    "load.i r1"->"load.r r3";
+    "load.r r3"->"virtualinvoke <java.awt.Color: int getRed()>";
+    "virtualinvoke <java.awt.Color: int getRed()>"->"load.r r2";
+    "load.r r2"->"virtualinvoke <java.awt.Color: int getRed()>";
+    "virtualinvoke <java.awt.Color: int getRed()>"->"sub.i";
+    "mul.i"
+    "sub.i"->"mul.i";
+    "mul.i"->"load.r r0";
+    "load.r r0"->"fieldget <Fader: int steps>";
+    "fieldget <Fader: int steps>"->"div.i";
+    "div.i"->"add.i";
+    "add.i"->"load.r r2";
+    "virtualinvoke <java.awt.Color: int getGreen()>"
+    "load.r r2"->"virtualinvoke <java.awt.Color: int getGreen()>";
+    "virtualinvoke <java.awt.Color: int getGreen()>"->"load.i r1";
+    "load.i r1"->"load.r r3";
+    "load.r r3"->"virtualinvoke <java.awt.Color: int getGreen()>";
+    "virtualinvoke <java.awt.Color: int getGreen()>"->"load.r r2";
+    "load.r r2"->"virtualinvoke <java.awt.Color: int getGreen()>";
+    "virtualinvoke <java.awt.Color: int getGreen()>"->"sub.i";
+    "sub.i"->"mul.i";
+    "mul.i"->"load.r r0";
+    "load.r r0"->"fieldget <Fader: int steps>";
+    "fieldget <Fader: int steps>"->"div.i";
+    "div.i"->"add.i";
+    "add.i"->"load.r r2";
+    "virtualinvoke <java.awt.Color: int getBlue()>"
+    "load.r r2"->"virtualinvoke <java.awt.Color: int getBlue()>";
+    "virtualinvoke <java.awt.Color: int getBlue()>"->"load.i r1";
+    "load.i r1"->"load.r r3";
+    "load.r r3"->"virtualinvoke <java.awt.Color: int getBlue()>";
+    "virtualinvoke <java.awt.Color: int getBlue()>"->"load.r r2";
+    "load.r r2"->"virtualinvoke <java.awt.Color: int getBlue()>";
+    "virtualinvoke <java.awt.Color: int getBlue()>"->"sub.i";
+    "sub.i"->"mul.i";
+    "mul.i"->"load.r r0";
+    "load.r r0"->"fieldget <Fader: int steps>";
+    "fieldget <Fader: int steps>"->"div.i";
+    "div.i"->"add.i";
+    "specialinvoke <java.awt.Color: void <init>(int,int,int)>"
+    "add.i"->"specialinvoke <java.awt.Color: void <init>(int,int,int)>";
+    "arraywrite.r"
+    "specialinvoke <java.awt.Color: void <init>(int,int,int)>"->"arraywrite.r";
+    "inc.i r1 1"
+    "arraywrite.r"->"inc.i r1 1";
+    "push \"FF0000\""
+    "ifnull push \"FF0000\""->"push \"FF0000\"";
+    "push \"FF0000\""->"store.r $r31";
+    "push \"0\""
+    "ifnull push \"0\""->"push \"0\"";
+    "push \"0\""->"store.r i0";
+    "push \"TimesRoman\""
+    "ifnull push \"TimesRoman\""->"push \"TimesRoman\"";
+    "push \"TimesRoman\""->"store.r r1";
+    "push \"24\""
+    "ifnull push \"24\""->"push \"24\"";
+    "push \"24\""->"store.r r1";
+    "push \"1000\""
+    "ifnull push \"1000\""->"push \"1000\"";
+    "push \"1000\""->"store.r r1";
+    "push \"40\""
+    "ifnull push \"40\""->"push \"40\"";
+    "push \"40\""->"store.r r1";
+}

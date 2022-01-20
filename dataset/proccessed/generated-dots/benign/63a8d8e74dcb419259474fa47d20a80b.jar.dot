@@ -1,0 +1,80 @@
+digraph "" {
+    "r0 := @this: Finditapplet"
+    "load.r r0"
+    "r0 := @this: Finditapplet"->"load.r r0";
+    "push null"
+    "load.r r0"->"push null";
+    "virtualinvoke <java.awt.Container: void setLayout(java.awt.LayoutManager)>"
+    "push null"->"virtualinvoke <java.awt.Container: void setLayout(java.awt.LayoutManager)>";
+    "virtualinvoke <java.awt.Container: void setLayout(java.awt.LayoutManager)>"->"load.r r0";
+    "push \"autoload\""
+    "load.r r0"->"push \"autoload\"";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"
+    "push \"autoload\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "ifnonnull load.r r0"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"ifnonnull load.r r0";
+    "push 0"
+    "ifnonnull load.r r0"->"push 0";
+    "store.i $i2"
+    "push 0"->"store.i $i2";
+    "goto load.r r0"
+    "store.i $i2"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "load.i $i2"
+    "load.r r0"->"load.i $i2";
+    "fieldput <Finditapplet: int autoload>"
+    "load.i $i2"->"fieldput <Finditapplet: int autoload>";
+    "fieldput <Finditapplet: int autoload>"->"load.r r0";
+    "fieldget <Finditapplet: java.awt.Button ok1>"
+    "load.r r0"->"fieldget <Finditapplet: java.awt.Button ok1>";
+    "fieldget <Finditapplet: java.awt.Button ok1>"->"load.r r0";
+    "virtualinvoke <java.awt.Button: void addActionListener(java.awt.event.ActionListener)>"
+    "load.r r0"->"virtualinvoke <java.awt.Button: void addActionListener(java.awt.event.ActionListener)>";
+    "virtualinvoke <java.awt.Button: void addActionListener(java.awt.event.ActionListener)>"->"load.r r0";
+    "load.r r0"->"fieldget <Finditapplet: java.awt.Button ok1>";
+    "virtualinvoke <java.awt.Component: void requestFocus()>"
+    "fieldget <Finditapplet: java.awt.Button ok1>"->"virtualinvoke <java.awt.Component: void requestFocus()>";
+    "virtualinvoke <java.awt.Component: void requestFocus()>"->"load.r r0";
+    "virtualinvoke <java.awt.Component: java.awt.Dimension getSize()>"
+    "load.r r0"->"virtualinvoke <java.awt.Component: java.awt.Dimension getSize()>";
+    "dup1.r"
+    "virtualinvoke <java.awt.Component: java.awt.Dimension getSize()>"->"dup1.r";
+    "fieldget <java.awt.Dimension: int width>"
+    "dup1.r"->"fieldget <java.awt.Dimension: int width>";
+    "push 2"
+    "fieldget <java.awt.Dimension: int width>"->"push 2";
+    "sub.i"
+    "push 2"->"sub.i";
+    "store.i $i3"
+    "sub.i"->"store.i $i3";
+    "fieldget <java.awt.Dimension: int height>"
+    "store.i $i3"->"fieldget <java.awt.Dimension: int height>";
+    "fieldget <java.awt.Dimension: int height>"->"push 2";
+    "push 2"->"sub.i";
+    "sub.i"->"store.i $i2";
+    "store.i $i2"->"load.r r0";
+    "load.r r0"->"fieldget <Finditapplet: java.awt.Button ok1>";
+    "push 1"
+    "fieldget <Finditapplet: java.awt.Button ok1>"->"push 1";
+    "push 1"->"push 1";
+    "load.i $i3"
+    "push 1"->"load.i $i3";
+    "load.i $i3"->"load.i $i2";
+    "virtualinvoke <java.awt.Component: void setBounds(int,int,int,int)>"
+    "load.i $i2"->"virtualinvoke <java.awt.Component: void setBounds(int,int,int,int)>";
+    "virtualinvoke <java.awt.Component: void setBounds(int,int,int,int)>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <Finditapplet: java.awt.Button ok1>";
+    "virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>"
+    "fieldget <Finditapplet: java.awt.Button ok1>"->"virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>";
+    "pop"
+    "virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>"->"pop";
+    "return"
+    "pop"->"return";
+    "ifnonnull load.r r0"->"load.r r0";
+    "load.r r0"->"push \"autoload\"";
+    "push \"autoload\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>";
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"->"store.i $i2";
+}

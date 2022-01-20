@@ -1,0 +1,222 @@
+digraph "" {
+    "r0 := @this: co.gov.dian.muisca.arquitectura.general.seguridad.firma.DVerificadorSistemaApplet"
+    "push \"user.home\""
+    "r0 := @this: co.gov.dian.muisca.arquitectura.general.seguridad.firma.DVerificadorSistemaApplet"->"push \"user.home\"";
+    "staticinvoke <java.lang.System: java.lang.String getProperty(java.lang.String)>"
+    "push \"user.home\""->"staticinvoke <java.lang.System: java.lang.String getProperty(java.lang.String)>";
+    "store.r $r28"
+    "staticinvoke <java.lang.System: java.lang.String getProperty(java.lang.String)>"->"store.r $r28";
+    "load.r r0"
+    "store.r $r28"->"load.r r0";
+    "push \"java.version\""
+    "load.r r0"->"push \"java.version\"";
+    "push \"java.version\""->"staticinvoke <java.lang.System: java.lang.String getProperty(java.lang.String)>";
+    "fieldput <co.gov.dian.muisca.arquitectura.general.seguridad.firma.DVerificadorSistemaApplet: java.lang.String versionJava>"
+    "staticinvoke <java.lang.System: java.lang.String getProperty(java.lang.String)>"->"fieldput <co.gov.dian.muisca.arquitectura.general.seguridad.firma.DVerificadorSistemaApplet: java.lang.String versionJava>";
+    "staticget <java.lang.System: java.io.PrintStream out>"
+    "fieldput <co.gov.dian.muisca.arquitectura.general.seguridad.firma.DVerificadorSistemaApplet: java.lang.String versionJava>"->"staticget <java.lang.System: java.io.PrintStream out>";
+    "new java.lang.StringBuilder"
+    "staticget <java.lang.System: java.io.PrintStream out>"->"new java.lang.StringBuilder";
+    "dup1.r"
+    "new java.lang.StringBuilder"->"dup1.r";
+    "specialinvoke <java.lang.StringBuilder: void <init>()>"
+    "dup1.r"->"specialinvoke <java.lang.StringBuilder: void <init>()>";
+    "push \"version de java: \""
+    "specialinvoke <java.lang.StringBuilder: void <init>()>"->"push \"version de java: \"";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"
+    "push \"version de java: \""->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"load.r r0";
+    "fieldget <co.gov.dian.muisca.arquitectura.general.seguridad.firma.DVerificadorSistemaApplet: java.lang.String versionJava>"
+    "load.r r0"->"fieldget <co.gov.dian.muisca.arquitectura.general.seguridad.firma.DVerificadorSistemaApplet: java.lang.String versionJava>";
+    "fieldget <co.gov.dian.muisca.arquitectura.general.seguridad.firma.DVerificadorSistemaApplet: java.lang.String versionJava>"->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.String toString()>"
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"virtualinvoke <java.lang.StringBuilder: java.lang.String toString()>";
+    "virtualinvoke <java.io.PrintStream: void println(java.lang.String)>"
+    "virtualinvoke <java.lang.StringBuilder: java.lang.String toString()>"->"virtualinvoke <java.io.PrintStream: void println(java.lang.String)>";
+    "push class \"Lco/gov/dian/muisca/arquitectura/general/seguridad/firma/DVerificadorSistemaApplet;\""
+    "virtualinvoke <java.io.PrintStream: void println(java.lang.String)>"->"push class \"Lco/gov/dian/muisca/arquitectura/general/seguridad/firma/DVerificadorSistemaApplet;\"";
+    "push \"recursos/appletmuisca.properties\""
+    "push class \"Lco/gov/dian/muisca/arquitectura/general/seguridad/firma/DVerificadorSistemaApplet;\""->"push \"recursos/appletmuisca.properties\"";
+    "virtualinvoke <java.lang.Class: java.net.URL getResource(java.lang.String)>"
+    "push \"recursos/appletmuisca.properties\""->"virtualinvoke <java.lang.Class: java.net.URL getResource(java.lang.String)>";
+    "new java.io.File"
+    "virtualinvoke <java.lang.Class: java.net.URL getResource(java.lang.String)>"->"new java.io.File";
+    "store.r $r15"
+    "new java.io.File"->"store.r $r15";
+    "load.r $r15"
+    "store.r $r15"->"load.r $r15";
+    "load.r $r15"->"new java.lang.StringBuilder";
+    "new java.lang.StringBuilder"->"dup1.r";
+    "dup1.r"->"specialinvoke <java.lang.StringBuilder: void <init>()>";
+    "load.r $r28"
+    "specialinvoke <java.lang.StringBuilder: void <init>()>"->"load.r $r28";
+    "load.r $r28"->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "push \"/.appletmuisca\""
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"push \"/.appletmuisca\"";
+    "push \"/.appletmuisca\""->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"virtualinvoke <java.lang.StringBuilder: java.lang.String toString()>";
+    "specialinvoke <java.io.File: void <init>(java.lang.String)>"
+    "virtualinvoke <java.lang.StringBuilder: java.lang.String toString()>"->"specialinvoke <java.io.File: void <init>(java.lang.String)>";
+    "new java.io.BufferedInputStream"
+    "specialinvoke <java.io.File: void <init>(java.lang.String)>"->"new java.io.BufferedInputStream";
+    "store.r $r20"
+    "new java.io.BufferedInputStream"->"store.r $r20";
+    "virtualinvoke <java.net.URL: java.io.InputStream openStream()>"
+    "store.r $r20"->"virtualinvoke <java.net.URL: java.io.InputStream openStream()>";
+    "store.r $r21"
+    "virtualinvoke <java.net.URL: java.io.InputStream openStream()>"->"store.r $r21";
+    "load.r $r20"
+    "store.r $r21"->"load.r $r20";
+    "load.r $r21"
+    "load.r $r20"->"load.r $r21";
+    "specialinvoke <java.io.BufferedInputStream: void <init>(java.io.InputStream)>"
+    "load.r $r21"->"specialinvoke <java.io.BufferedInputStream: void <init>(java.io.InputStream)>";
+    "specialinvoke <java.io.BufferedInputStream: void <init>(java.io.InputStream)>"->"load.r $r15";
+    "virtualinvoke <java.io.File: long length()>"
+    "load.r $r15"->"virtualinvoke <java.io.File: long length()>";
+    "virtualinvoke <java.io.File: long length()>"->"load.r $r20";
+    "virtualinvoke <java.io.BufferedInputStream: int available()>"
+    "load.r $r20"->"virtualinvoke <java.io.BufferedInputStream: int available()>";
+    "i2l"
+    "virtualinvoke <java.io.BufferedInputStream: int available()>"->"i2l";
+    "cmp.l"
+    "i2l"->"cmp.l";
+    "ifeq push class \"Lco/gov/dian/muisca/arquitectura/general/seguridad/firma/DVerificadorSistemaApplet;\""
+    "cmp.l"->"ifeq push class \"Lco/gov/dian/muisca/arquitectura/general/seguridad/firma/DVerificadorSistemaApplet;\"";
+    "ifeq push class \"Lco/gov/dian/muisca/arquitectura/general/seguridad/firma/DVerificadorSistemaApplet;\""->"load.r $r15";
+    "virtualinvoke <java.io.File: boolean exists()>"
+    "load.r $r15"->"virtualinvoke <java.io.File: boolean exists()>";
+    "ifeq new java.io.FileOutputStream"
+    "virtualinvoke <java.io.File: boolean exists()>"->"ifeq new java.io.FileOutputStream";
+    "ifeq new java.io.FileOutputStream"->"load.r $r15";
+    "virtualinvoke <java.io.File: boolean delete()>"
+    "load.r $r15"->"virtualinvoke <java.io.File: boolean delete()>";
+    "pop"
+    "virtualinvoke <java.io.File: boolean delete()>"->"pop";
+    "new java.io.FileOutputStream"
+    "pop"->"new java.io.FileOutputStream";
+    "new java.io.FileOutputStream"->"store.r $r21";
+    "store.r $r21"->"load.r $r21";
+    "load.r $r21"->"load.r $r15";
+    "specialinvoke <java.io.FileOutputStream: void <init>(java.io.File)>"
+    "load.r $r15"->"specialinvoke <java.io.FileOutputStream: void <init>(java.io.File)>";
+    "specialinvoke <java.io.FileOutputStream: void <init>(java.io.File)>"->"load.r $r20";
+    "virtualinvoke <java.io.BufferedInputStream: int read()>"
+    "load.r $r20"->"virtualinvoke <java.io.BufferedInputStream: int read()>";
+    "store.i $r15"
+    "virtualinvoke <java.io.BufferedInputStream: int read()>"->"store.i $r15";
+    "load.i $r15"
+    "store.i $r15"->"load.i $r15";
+    "push -1"
+    "load.i $r15"->"push -1";
+    "ifcmpeq.i load.r $r21"
+    "push -1"->"ifcmpeq.i load.r $r21";
+    "ifcmpeq.i load.r $r21"->"load.r $r21";
+    "load.r $r21"->"load.i $r15";
+    "virtualinvoke <java.io.FileOutputStream: void write(int)>"
+    "load.i $r15"->"virtualinvoke <java.io.FileOutputStream: void write(int)>";
+    "goto load.r $r20"
+    "virtualinvoke <java.io.FileOutputStream: void write(int)>"->"goto load.r $r20";
+    "virtualinvoke <java.io.FileOutputStream: void write(int)>"->"dup1.r";
+    "virtualinvoke <java.io.IOException: java.lang.String getMessage()>"
+    "dup1.r"->"virtualinvoke <java.io.IOException: java.lang.String getMessage()>";
+    "virtualinvoke <java.io.IOException: java.lang.String getMessage()>"->"store.r $r20";
+    "store.r $r20"->"load.r r0";
+    "load.r r0"->"load.r $r20";
+    "fieldput <co.gov.dian.muisca.arquitectura.general.seguridad.firma.DVerificadorSistemaApplet: java.lang.String mensaje>"
+    "load.r $r20"->"fieldput <co.gov.dian.muisca.arquitectura.general.seguridad.firma.DVerificadorSistemaApplet: java.lang.String mensaje>";
+    "virtualinvoke <java.io.IOException: void printStackTrace()>"
+    "fieldput <co.gov.dian.muisca.arquitectura.general.seguridad.firma.DVerificadorSistemaApplet: java.lang.String mensaje>"->"virtualinvoke <java.io.IOException: void printStackTrace()>";
+    "return"
+    "virtualinvoke <java.io.IOException: void printStackTrace()>"->"return";
+    "ifcmpeq.i load.r $r21"->"load.r $r21";
+    "virtualinvoke <java.io.FileOutputStream: void flush()>"
+    "load.r $r21"->"virtualinvoke <java.io.FileOutputStream: void flush()>";
+    "virtualinvoke <java.io.FileOutputStream: void flush()>"->"load.r $r21";
+    "virtualinvoke <java.io.FileOutputStream: void close()>"
+    "load.r $r21"->"virtualinvoke <java.io.FileOutputStream: void close()>";
+    "virtualinvoke <java.io.FileOutputStream: void close()>"->"push class \"Lco/gov/dian/muisca/arquitectura/general/seguridad/firma/DVerificadorSistemaApplet;\"";
+    "push \"recursos/java.policy.properties\""
+    "push class \"Lco/gov/dian/muisca/arquitectura/general/seguridad/firma/DVerificadorSistemaApplet;\""->"push \"recursos/java.policy.properties\"";
+    "push \"recursos/java.policy.properties\""->"virtualinvoke <java.lang.Class: java.net.URL getResource(java.lang.String)>";
+    "virtualinvoke <java.lang.Class: java.net.URL getResource(java.lang.String)>"->"new java.io.File";
+    "new java.io.File"->"store.r $r15";
+    "store.r $r15"->"load.r $r15";
+    "load.r $r15"->"new java.lang.StringBuilder";
+    "new java.lang.StringBuilder"->"dup1.r";
+    "dup1.r"->"specialinvoke <java.lang.StringBuilder: void <init>()>";
+    "specialinvoke <java.lang.StringBuilder: void <init>()>"->"load.r $r28";
+    "load.r $r28"->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "push \"/.java.policy\""
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"push \"/.java.policy\"";
+    "push \"/.java.policy\""->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"virtualinvoke <java.lang.StringBuilder: java.lang.String toString()>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.String toString()>"->"specialinvoke <java.io.File: void <init>(java.lang.String)>";
+    "specialinvoke <java.io.File: void <init>(java.lang.String)>"->"new java.io.BufferedInputStream";
+    "new java.io.BufferedInputStream"->"store.r $r28";
+    "store.r $r28"->"virtualinvoke <java.net.URL: java.io.InputStream openStream()>";
+    "virtualinvoke <java.net.URL: java.io.InputStream openStream()>"->"store.r $r21";
+    "store.r $r21"->"load.r $r28";
+    "load.r $r28"->"load.r $r21";
+    "load.r $r21"->"specialinvoke <java.io.BufferedInputStream: void <init>(java.io.InputStream)>";
+    "specialinvoke <java.io.BufferedInputStream: void <init>(java.io.InputStream)>"->"load.r $r15";
+    "load.r $r15"->"virtualinvoke <java.io.File: long length()>";
+    "virtualinvoke <java.io.File: long length()>"->"load.r $r28";
+    "load.r $r28"->"virtualinvoke <java.io.BufferedInputStream: int available()>";
+    "virtualinvoke <java.io.BufferedInputStream: int available()>"->"i2l";
+    "i2l"->"cmp.l";
+    "ifeq load.r $r28"
+    "cmp.l"->"ifeq load.r $r28";
+    "ifeq load.r $r28"->"load.r $r15";
+    "load.r $r15"->"virtualinvoke <java.io.File: boolean exists()>";
+    "virtualinvoke <java.io.File: boolean exists()>"->"ifeq new java.io.FileOutputStream";
+    "ifeq new java.io.FileOutputStream"->"load.r $r15";
+    "load.r $r15"->"virtualinvoke <java.io.File: boolean delete()>";
+    "virtualinvoke <java.io.File: boolean delete()>"->"pop";
+    "pop"->"new java.io.FileOutputStream";
+    "new java.io.FileOutputStream"->"store.r $r21";
+    "store.r $r21"->"load.r $r21";
+    "load.r $r21"->"load.r $r15";
+    "load.r $r15"->"specialinvoke <java.io.FileOutputStream: void <init>(java.io.File)>";
+    "specialinvoke <java.io.FileOutputStream: void <init>(java.io.File)>"->"load.r $r28";
+    "load.r $r28"->"virtualinvoke <java.io.BufferedInputStream: int read()>";
+    "virtualinvoke <java.io.BufferedInputStream: int read()>"->"store.i $r15";
+    "store.i $r15"->"load.i $r15";
+    "load.i $r15"->"push -1";
+    "push -1"->"ifcmpeq.i load.r $r21";
+    "ifcmpeq.i load.r $r21"->"load.r $r21";
+    "load.r $r21"->"load.i $r15";
+    "load.i $r15"->"virtualinvoke <java.io.FileOutputStream: void write(int)>";
+    "goto load.r $r28"
+    "virtualinvoke <java.io.FileOutputStream: void write(int)>"->"goto load.r $r28";
+    "ifcmpeq.i load.r $r21"->"load.r $r21";
+    "load.r $r21"->"virtualinvoke <java.io.FileOutputStream: void flush()>";
+    "virtualinvoke <java.io.FileOutputStream: void flush()>"->"load.r $r21";
+    "load.r $r21"->"virtualinvoke <java.io.FileOutputStream: void close()>";
+    "virtualinvoke <java.io.FileOutputStream: void close()>"->"load.r $r28";
+    "virtualinvoke <java.io.BufferedInputStream: void close()>"
+    "load.r $r28"->"virtualinvoke <java.io.BufferedInputStream: void close()>";
+    "virtualinvoke <java.io.BufferedInputStream: void close()>"->"load.r $r20";
+    "load.r $r20"->"virtualinvoke <java.io.BufferedInputStream: void close()>";
+    "virtualinvoke <java.io.BufferedInputStream: void close()>"->"load.r r0";
+    "staticinvoke <netscape.javascript.JSObject: netscape.javascript.JSObject getWindow(java.applet.Applet)>"
+    "load.r r0"->"staticinvoke <netscape.javascript.JSObject: netscape.javascript.JSObject getWindow(java.applet.Applet)>";
+    "push \"cambiarImagen\""
+    "staticinvoke <netscape.javascript.JSObject: netscape.javascript.JSObject getWindow(java.applet.Applet)>"->"push \"cambiarImagen\"";
+    "push 1"
+    "push \"cambiarImagen\""->"push 1";
+    "newarray"
+    "push 1"->"newarray";
+    "newarray"->"dup1.r";
+    "push 0"
+    "dup1.r"->"push 0";
+    "push \"banner2.gif\""
+    "push 0"->"push \"banner2.gif\"";
+    "arraywrite.r"
+    "push \"banner2.gif\""->"arraywrite.r";
+    "virtualinvoke <netscape.javascript.JSObject: java.lang.Object call(java.lang.String,java.lang.Object[])>"
+    "arraywrite.r"->"virtualinvoke <netscape.javascript.JSObject: java.lang.Object call(java.lang.String,java.lang.Object[])>";
+    "virtualinvoke <netscape.javascript.JSObject: java.lang.Object call(java.lang.String,java.lang.Object[])>"->"pop";
+    "goto return"
+    "pop"->"goto return";
+}

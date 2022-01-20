@@ -1,0 +1,320 @@
+digraph "" {
+    "r0 := @this: link"
+    "load.r r0"
+    "r0 := @this: link"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "push \"bgColor\""
+    "load.r r0"->"push \"bgColor\"";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"
+    "push \"bgColor\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "fieldput <link: java.lang.String s>"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"fieldput <link: java.lang.String s>";
+    "fieldput <link: java.lang.String s>"->"load.r r0";
+    "fieldget <link: java.lang.String s>"
+    "load.r r0"->"fieldget <link: java.lang.String s>";
+    "ifnull load.r r0"
+    "fieldget <link: java.lang.String s>"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r r0";
+    "new java.util.StringTokenizer"
+    "load.r r0"->"new java.util.StringTokenizer";
+    "dup1.r"
+    "new java.util.StringTokenizer"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "load.r r0"->"fieldget <link: java.lang.String s>";
+    "fieldget <link: java.lang.String s>"->"load.r r0";
+    "fieldget <link: java.lang.String rgbDelimiter>"
+    "load.r r0"->"fieldget <link: java.lang.String rgbDelimiter>";
+    "specialinvoke <java.util.StringTokenizer: void <init>(java.lang.String,java.lang.String)>"
+    "fieldget <link: java.lang.String rgbDelimiter>"->"specialinvoke <java.util.StringTokenizer: void <init>(java.lang.String,java.lang.String)>";
+    "fieldput <link: java.util.StringTokenizer st>"
+    "specialinvoke <java.util.StringTokenizer: void <init>(java.lang.String,java.lang.String)>"->"fieldput <link: java.util.StringTokenizer st>";
+    "fieldput <link: java.util.StringTokenizer st>"->"load.r r0";
+    "load.r r0"->"fieldget <link: java.lang.String s>";
+    "ifnonnull load.r r0"
+    "fieldget <link: java.lang.String s>"->"ifnonnull load.r r0";
+    "ifnonnull load.r r0"->"load.r r0";
+    "staticget <java.awt.Color: java.awt.Color lightGray>"
+    "load.r r0"->"staticget <java.awt.Color: java.awt.Color lightGray>";
+    "fieldput <link: java.awt.Color bgColor>"
+    "staticget <java.awt.Color: java.awt.Color lightGray>"->"fieldput <link: java.awt.Color bgColor>";
+    "goto load.r r0"
+    "fieldput <link: java.awt.Color bgColor>"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "push \"target\""
+    "load.r r0"->"push \"target\"";
+    "push \"target\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "store.r $r15"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"store.r $r15";
+    "load.r $r15"
+    "store.r $r15"->"load.r $r15";
+    "load.r $r15"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r r0";
+    "load.r r0"->"load.r $r15";
+    "fieldput <link: java.lang.String targetFrame>"
+    "load.r $r15"->"fieldput <link: java.lang.String targetFrame>";
+    "fieldput <link: java.lang.String targetFrame>"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "push \"number\""
+    "load.r r0"->"push \"number\"";
+    "push \"number\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>";
+    "fieldput <link: int number>"
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"->"fieldput <link: int number>";
+    "new java.awt.Choice"
+    "fieldput <link: int number>"->"new java.awt.Choice";
+    "new java.awt.Choice"->"store.r $r15";
+    "store.r $r15"->"load.r $r15";
+    "specialinvoke <java.awt.Choice: void <init>()>"
+    "load.r $r15"->"specialinvoke <java.awt.Choice: void <init>()>";
+    "push 0"
+    "specialinvoke <java.awt.Choice: void <init>()>"->"push 0";
+    "store.i $r42"
+    "push 0"->"store.i $r42";
+    "goto load.i $r42"
+    "store.i $r42"->"goto load.i $r42";
+    "load.i $r42"
+    "goto load.i $r42"->"load.i $r42";
+    "load.i $r42"->"load.r r0";
+    "fieldget <link: int number>"
+    "load.r r0"->"fieldget <link: int number>";
+    "ifcmple.i load.r r0"
+    "fieldget <link: int number>"->"ifcmple.i load.r r0";
+    "ifcmple.i load.r r0"->"load.r r0";
+    "load.r r0"->"load.r $r15";
+    "virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>"
+    "load.r $r15"->"virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>";
+    "pop"
+    "virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>"->"pop";
+    "pop"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "fieldget <link: java.awt.Color bgColor>"
+    "load.r r0"->"fieldget <link: java.awt.Color bgColor>";
+    "virtualinvoke <java.awt.Component: void setBackground(java.awt.Color)>"
+    "fieldget <link: java.awt.Color bgColor>"->"virtualinvoke <java.awt.Component: void setBackground(java.awt.Color)>";
+    "return"
+    "virtualinvoke <java.awt.Component: void setBackground(java.awt.Color)>"->"return";
+    "ifcmple.i load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "new java.lang.StringBuffer"
+    "load.r r0"->"new java.lang.StringBuffer";
+    "new java.lang.StringBuffer"->"dup1.r";
+    "specialinvoke <java.lang.StringBuffer: void <init>()>"
+    "dup1.r"->"specialinvoke <java.lang.StringBuffer: void <init>()>";
+    "push \"link\""
+    "specialinvoke <java.lang.StringBuffer: void <init>()>"->"push \"link\"";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"
+    "push \"link\""->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"load.i $r42";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(int)>"
+    "load.i $r42"->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(int)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>"
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(int)>"->"virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>"->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "fieldput <link: java.lang.String at>"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"fieldput <link: java.lang.String at>";
+    "fieldput <link: java.lang.String at>"->"load.r r0";
+    "load.r r0"->"new java.util.StringTokenizer";
+    "new java.util.StringTokenizer"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "fieldget <link: java.lang.String at>"
+    "load.r r0"->"fieldget <link: java.lang.String at>";
+    "push \"\\\\""
+    "fieldget <link: java.lang.String at>"->"push \"\\\\"";
+    "push \"\\\\""->"specialinvoke <java.util.StringTokenizer: void <init>(java.lang.String,java.lang.String)>";
+    "fieldput <link: java.util.StringTokenizer str>"
+    "specialinvoke <java.util.StringTokenizer: void <init>(java.lang.String,java.lang.String)>"->"fieldput <link: java.util.StringTokenizer str>";
+    "fieldput <link: java.util.StringTokenizer str>"->"load.r r0";
+    "fieldget <link: java.util.Vector names>"
+    "load.r r0"->"fieldget <link: java.util.Vector names>";
+    "new java.lang.String"
+    "fieldget <link: java.util.Vector names>"->"new java.lang.String";
+    "new java.lang.String"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "fieldget <link: java.util.StringTokenizer str>"
+    "load.r r0"->"fieldget <link: java.util.StringTokenizer str>";
+    "virtualinvoke <java.util.StringTokenizer: java.lang.String nextToken()>"
+    "fieldget <link: java.util.StringTokenizer str>"->"virtualinvoke <java.util.StringTokenizer: java.lang.String nextToken()>";
+    "specialinvoke <java.lang.String: void <init>(java.lang.String)>"
+    "virtualinvoke <java.util.StringTokenizer: java.lang.String nextToken()>"->"specialinvoke <java.lang.String: void <init>(java.lang.String)>";
+    "virtualinvoke <java.util.Vector: void addElement(java.lang.Object)>"
+    "specialinvoke <java.lang.String: void <init>(java.lang.String)>"->"virtualinvoke <java.util.Vector: void addElement(java.lang.Object)>";
+    "virtualinvoke <java.util.Vector: void addElement(java.lang.Object)>"->"load.r r0";
+    "fieldget <link: java.util.Vector urls>"
+    "load.r r0"->"fieldget <link: java.util.Vector urls>";
+    "fieldget <link: java.util.Vector urls>"->"new java.lang.String";
+    "new java.lang.String"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "load.r r0"->"fieldget <link: java.util.StringTokenizer str>";
+    "fieldget <link: java.util.StringTokenizer str>"->"virtualinvoke <java.util.StringTokenizer: java.lang.String nextToken()>";
+    "virtualinvoke <java.util.StringTokenizer: java.lang.String nextToken()>"->"specialinvoke <java.lang.String: void <init>(java.lang.String)>";
+    "specialinvoke <java.lang.String: void <init>(java.lang.String)>"->"virtualinvoke <java.util.Vector: void addElement(java.lang.Object)>";
+    "virtualinvoke <java.util.Vector: void addElement(java.lang.Object)>"->"load.r $r15";
+    "load.r $r15"->"load.r r0";
+    "load.r r0"->"fieldget <link: java.util.Vector names>";
+    "fieldget <link: java.util.Vector names>"->"load.i $r42";
+    "virtualinvoke <java.util.Vector: java.lang.Object elementAt(int)>"
+    "load.i $r42"->"virtualinvoke <java.util.Vector: java.lang.Object elementAt(int)>";
+    "checkcast"
+    "virtualinvoke <java.util.Vector: java.lang.Object elementAt(int)>"->"checkcast";
+    "virtualinvoke <java.awt.Choice: void addItem(java.lang.String)>"
+    "checkcast"->"virtualinvoke <java.awt.Choice: void addItem(java.lang.String)>";
+    "inc.i $r42 1"
+    "virtualinvoke <java.awt.Choice: void addItem(java.lang.String)>"->"inc.i $r42 1";
+    "ifnull load.r r0"->"load.r r0";
+    "push \"_parent\""
+    "load.r r0"->"push \"_parent\"";
+    "push \"_parent\""->"fieldput <link: java.lang.String targetFrame>";
+    "ifnonnull load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <link: java.lang.String s>";
+    "push \"red\""
+    "fieldget <link: java.lang.String s>"->"push \"red\"";
+    "virtualinvoke <java.lang.String: boolean equalsIgnoreCase(java.lang.String)>"
+    "push \"red\""->"virtualinvoke <java.lang.String: boolean equalsIgnoreCase(java.lang.String)>";
+    "ifeq load.r r0"
+    "virtualinvoke <java.lang.String: boolean equalsIgnoreCase(java.lang.String)>"->"ifeq load.r r0";
+    "ifeq load.r r0"->"load.r r0";
+    "staticget <java.awt.Color: java.awt.Color red>"
+    "load.r r0"->"staticget <java.awt.Color: java.awt.Color red>";
+    "staticget <java.awt.Color: java.awt.Color red>"->"fieldput <link: java.awt.Color bgColor>";
+    "fieldput <link: java.awt.Color bgColor>"->"goto load.r r0";
+    "ifeq load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <link: java.lang.String s>";
+    "push \"blue\""
+    "fieldget <link: java.lang.String s>"->"push \"blue\"";
+    "push \"blue\""->"virtualinvoke <java.lang.String: boolean equalsIgnoreCase(java.lang.String)>";
+    "virtualinvoke <java.lang.String: boolean equalsIgnoreCase(java.lang.String)>"->"ifeq load.r r0";
+    "ifeq load.r r0"->"load.r r0";
+    "staticget <java.awt.Color: java.awt.Color blue>"
+    "load.r r0"->"staticget <java.awt.Color: java.awt.Color blue>";
+    "staticget <java.awt.Color: java.awt.Color blue>"->"fieldput <link: java.awt.Color bgColor>";
+    "fieldput <link: java.awt.Color bgColor>"->"goto load.r r0";
+    "ifeq load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <link: java.lang.String s>";
+    "push \"green\""
+    "fieldget <link: java.lang.String s>"->"push \"green\"";
+    "push \"green\""->"virtualinvoke <java.lang.String: boolean equalsIgnoreCase(java.lang.String)>";
+    "virtualinvoke <java.lang.String: boolean equalsIgnoreCase(java.lang.String)>"->"ifeq load.r r0";
+    "ifeq load.r r0"->"load.r r0";
+    "staticget <java.awt.Color: java.awt.Color green>"
+    "load.r r0"->"staticget <java.awt.Color: java.awt.Color green>";
+    "staticget <java.awt.Color: java.awt.Color green>"->"fieldput <link: java.awt.Color bgColor>";
+    "fieldput <link: java.awt.Color bgColor>"->"goto load.r r0";
+    "ifeq load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <link: java.lang.String s>";
+    "push \"yellow\""
+    "fieldget <link: java.lang.String s>"->"push \"yellow\"";
+    "push \"yellow\""->"virtualinvoke <java.lang.String: boolean equalsIgnoreCase(java.lang.String)>";
+    "virtualinvoke <java.lang.String: boolean equalsIgnoreCase(java.lang.String)>"->"ifeq load.r r0";
+    "ifeq load.r r0"->"load.r r0";
+    "staticget <java.awt.Color: java.awt.Color yellow>"
+    "load.r r0"->"staticget <java.awt.Color: java.awt.Color yellow>";
+    "staticget <java.awt.Color: java.awt.Color yellow>"->"fieldput <link: java.awt.Color bgColor>";
+    "fieldput <link: java.awt.Color bgColor>"->"goto load.r r0";
+    "ifeq load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <link: java.lang.String s>";
+    "push \"white\""
+    "fieldget <link: java.lang.String s>"->"push \"white\"";
+    "push \"white\""->"virtualinvoke <java.lang.String: boolean equalsIgnoreCase(java.lang.String)>";
+    "virtualinvoke <java.lang.String: boolean equalsIgnoreCase(java.lang.String)>"->"ifeq load.r r0";
+    "ifeq load.r r0"->"load.r r0";
+    "staticget <java.awt.Color: java.awt.Color white>"
+    "load.r r0"->"staticget <java.awt.Color: java.awt.Color white>";
+    "staticget <java.awt.Color: java.awt.Color white>"->"fieldput <link: java.awt.Color bgColor>";
+    "fieldput <link: java.awt.Color bgColor>"->"goto load.r r0";
+    "ifeq load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <link: java.lang.String s>";
+    "push \"orange\""
+    "fieldget <link: java.lang.String s>"->"push \"orange\"";
+    "push \"orange\""->"virtualinvoke <java.lang.String: boolean equalsIgnoreCase(java.lang.String)>";
+    "virtualinvoke <java.lang.String: boolean equalsIgnoreCase(java.lang.String)>"->"ifeq load.r r0";
+    "ifeq load.r r0"->"load.r r0";
+    "staticget <java.awt.Color: java.awt.Color orange>"
+    "load.r r0"->"staticget <java.awt.Color: java.awt.Color orange>";
+    "staticget <java.awt.Color: java.awt.Color orange>"->"fieldput <link: java.awt.Color bgColor>";
+    "fieldput <link: java.awt.Color bgColor>"->"goto load.r r0";
+    "ifeq load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <link: java.lang.String s>";
+    "push \"cyan\""
+    "fieldget <link: java.lang.String s>"->"push \"cyan\"";
+    "push \"cyan\""->"virtualinvoke <java.lang.String: boolean equalsIgnoreCase(java.lang.String)>";
+    "virtualinvoke <java.lang.String: boolean equalsIgnoreCase(java.lang.String)>"->"ifeq load.r r0";
+    "ifeq load.r r0"->"load.r r0";
+    "staticget <java.awt.Color: java.awt.Color cyan>"
+    "load.r r0"->"staticget <java.awt.Color: java.awt.Color cyan>";
+    "staticget <java.awt.Color: java.awt.Color cyan>"->"fieldput <link: java.awt.Color bgColor>";
+    "fieldput <link: java.awt.Color bgColor>"->"goto load.r r0";
+    "ifeq load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <link: java.lang.String s>";
+    "push \"magenta\""
+    "fieldget <link: java.lang.String s>"->"push \"magenta\"";
+    "push \"magenta\""->"virtualinvoke <java.lang.String: boolean equalsIgnoreCase(java.lang.String)>";
+    "virtualinvoke <java.lang.String: boolean equalsIgnoreCase(java.lang.String)>"->"ifeq load.r r0";
+    "ifeq load.r r0"->"load.r r0";
+    "staticget <java.awt.Color: java.awt.Color magenta>"
+    "load.r r0"->"staticget <java.awt.Color: java.awt.Color magenta>";
+    "staticget <java.awt.Color: java.awt.Color magenta>"->"fieldput <link: java.awt.Color bgColor>";
+    "fieldput <link: java.awt.Color bgColor>"->"goto load.r r0";
+    "ifeq load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <link: java.lang.String s>";
+    "push \"black\""
+    "fieldget <link: java.lang.String s>"->"push \"black\"";
+    "push \"black\""->"virtualinvoke <java.lang.String: boolean equalsIgnoreCase(java.lang.String)>";
+    "virtualinvoke <java.lang.String: boolean equalsIgnoreCase(java.lang.String)>"->"ifeq load.r r0";
+    "ifeq load.r r0"->"load.r r0";
+    "staticget <java.awt.Color: java.awt.Color black>"
+    "load.r r0"->"staticget <java.awt.Color: java.awt.Color black>";
+    "staticget <java.awt.Color: java.awt.Color black>"->"fieldput <link: java.awt.Color bgColor>";
+    "fieldput <link: java.awt.Color bgColor>"->"goto load.r r0";
+    "ifeq load.r r0"->"load.r r0";
+    "fieldget <link: java.util.StringTokenizer st>"
+    "load.r r0"->"fieldget <link: java.util.StringTokenizer st>";
+    "virtualinvoke <java.util.StringTokenizer: int countTokens()>"
+    "fieldget <link: java.util.StringTokenizer st>"->"virtualinvoke <java.util.StringTokenizer: int countTokens()>";
+    "push 3"
+    "virtualinvoke <java.util.StringTokenizer: int countTokens()>"->"push 3";
+    "ifcmpne.i load.r r0"
+    "push 3"->"ifcmpne.i load.r r0";
+    "ifcmpne.i load.r r0"->"load.r r0";
+    "new java.awt.Color"
+    "load.r r0"->"new java.awt.Color";
+    "new java.awt.Color"->"dup1.r";
+    "new java.lang.Integer"
+    "dup1.r"->"new java.lang.Integer";
+    "new java.lang.Integer"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "load.r r0"->"fieldget <link: java.util.StringTokenizer st>";
+    "fieldget <link: java.util.StringTokenizer st>"->"virtualinvoke <java.util.StringTokenizer: java.lang.String nextToken()>";
+    "specialinvoke <java.lang.Integer: void <init>(java.lang.String)>"
+    "virtualinvoke <java.util.StringTokenizer: java.lang.String nextToken()>"->"specialinvoke <java.lang.Integer: void <init>(java.lang.String)>";
+    "specialinvoke <java.lang.Integer: void <init>(java.lang.String)>"->"new java.lang.Integer";
+    "new java.lang.Integer"->"store.r $r15";
+    "store.r $r15"->"load.r $r15";
+    "load.r $r15"->"load.r r0";
+    "load.r r0"->"fieldget <link: java.util.StringTokenizer st>";
+    "fieldget <link: java.util.StringTokenizer st>"->"virtualinvoke <java.util.StringTokenizer: java.lang.String nextToken()>";
+    "virtualinvoke <java.util.StringTokenizer: java.lang.String nextToken()>"->"specialinvoke <java.lang.Integer: void <init>(java.lang.String)>";
+    "specialinvoke <java.lang.Integer: void <init>(java.lang.String)>"->"new java.lang.Integer";
+    "store.r $r42"
+    "new java.lang.Integer"->"store.r $r42";
+    "load.r $r42"
+    "store.r $r42"->"load.r $r42";
+    "load.r $r42"->"load.r r0";
+    "load.r r0"->"fieldget <link: java.util.StringTokenizer st>";
+    "fieldget <link: java.util.StringTokenizer st>"->"virtualinvoke <java.util.StringTokenizer: java.lang.String nextToken()>";
+    "virtualinvoke <java.util.StringTokenizer: java.lang.String nextToken()>"->"specialinvoke <java.lang.Integer: void <init>(java.lang.String)>";
+    "virtualinvoke <java.lang.Integer: int intValue()>"
+    "specialinvoke <java.lang.Integer: void <init>(java.lang.String)>"->"virtualinvoke <java.lang.Integer: int intValue()>";
+    "virtualinvoke <java.lang.Integer: int intValue()>"->"load.r $r15";
+    "load.r $r15"->"virtualinvoke <java.lang.Integer: int intValue()>";
+    "virtualinvoke <java.lang.Integer: int intValue()>"->"load.r $r42";
+    "load.r $r42"->"virtualinvoke <java.lang.Integer: int intValue()>";
+    "specialinvoke <java.awt.Color: void <init>(int,int,int)>"
+    "virtualinvoke <java.lang.Integer: int intValue()>"->"specialinvoke <java.awt.Color: void <init>(int,int,int)>";
+    "specialinvoke <java.awt.Color: void <init>(int,int,int)>"->"fieldput <link: java.awt.Color bgColor>";
+    "fieldput <link: java.awt.Color bgColor>"->"goto load.r r0";
+    "ifcmpne.i load.r r0"->"load.r r0";
+    "load.r r0"->"staticget <java.awt.Color: java.awt.Color lightGray>";
+    "staticget <java.awt.Color: java.awt.Color lightGray>"->"fieldput <link: java.awt.Color bgColor>";
+}

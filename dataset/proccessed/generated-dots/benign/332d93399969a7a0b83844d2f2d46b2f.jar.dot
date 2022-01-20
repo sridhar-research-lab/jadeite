@@ -1,0 +1,462 @@
+digraph "" {
+    "r0 := @this: VisualEffectStars"
+    "load.r r0"
+    "r0 := @this: VisualEffectStars"->"load.r r0";
+    "specialinvoke <java.applet.Applet: void init()>"
+    "load.r r0"->"specialinvoke <java.applet.Applet: void init()>";
+    "specialinvoke <java.applet.Applet: void init()>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "virtualinvoke <java.awt.Component: java.awt.Dimension size()>"
+    "load.r r0"->"virtualinvoke <java.awt.Component: java.awt.Dimension size()>";
+    "fieldget <java.awt.Dimension: int width>"
+    "virtualinvoke <java.awt.Component: java.awt.Dimension size()>"->"fieldget <java.awt.Dimension: int width>";
+    "fieldput <VisualEffectStars: int width>"
+    "fieldget <java.awt.Dimension: int width>"->"fieldput <VisualEffectStars: int width>";
+    "fieldput <VisualEffectStars: int width>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"virtualinvoke <java.awt.Component: java.awt.Dimension size()>";
+    "fieldget <java.awt.Dimension: int height>"
+    "virtualinvoke <java.awt.Component: java.awt.Dimension size()>"->"fieldget <java.awt.Dimension: int height>";
+    "fieldput <VisualEffectStars: int height>"
+    "fieldget <java.awt.Dimension: int height>"->"fieldput <VisualEffectStars: int height>";
+    "fieldput <VisualEffectStars: int height>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "fieldget <VisualEffectStars: int height>"
+    "load.r r0"->"fieldget <VisualEffectStars: int height>";
+    "push 2"
+    "fieldget <VisualEffectStars: int height>"->"push 2";
+    "div.i"
+    "push 2"->"div.i";
+    "fieldput <VisualEffectStars: int height2>"
+    "div.i"->"fieldput <VisualEffectStars: int height2>";
+    "fieldput <VisualEffectStars: int height2>"->"load.r r0";
+    "push \"regcode\""
+    "load.r r0"->"push \"regcode\"";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"
+    "push \"regcode\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "store.r r1"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"store.r r1";
+    "load.r r1"
+    "store.r r1"->"load.r r1";
+    "virtualinvoke <java.lang.String: java.lang.String trim()>"
+    "load.r r1"->"virtualinvoke <java.lang.String: java.lang.String trim()>";
+    "pop"
+    "virtualinvoke <java.lang.String: java.lang.String trim()>"->"pop";
+    "pop"->"load.r r1";
+    "virtualinvoke <java.lang.String: java.lang.String toUpperCase()>"
+    "load.r r1"->"virtualinvoke <java.lang.String: java.lang.String toUpperCase()>";
+    "virtualinvoke <java.lang.String: java.lang.String toUpperCase()>"->"pop";
+    "pop"->"load.r r1";
+    "load.r r1"->"load.r r1";
+    "virtualinvoke <java.lang.String: int length()>"
+    "load.r r1"->"virtualinvoke <java.lang.String: int length()>";
+    "push 1"
+    "virtualinvoke <java.lang.String: int length()>"->"push 1";
+    "sub.i"
+    "push 1"->"sub.i";
+    "virtualinvoke <java.lang.String: char charAt(int)>"
+    "sub.i"->"virtualinvoke <java.lang.String: char charAt(int)>";
+    "push 48"
+    "virtualinvoke <java.lang.String: char charAt(int)>"->"push 48";
+    "sub.c"
+    "push 48"->"sub.c";
+    "store.i i0"
+    "sub.c"->"store.i i0";
+    "load.i i0"
+    "store.i i0"->"load.i i0";
+    "push 4"
+    "load.i i0"->"push 4";
+    "add.i"
+    "push 4"->"add.i";
+    "add.i"->"load.r r1";
+    "load.r r1"->"virtualinvoke <java.lang.String: int length()>";
+    "ifcmpge.i load.r r0"
+    "virtualinvoke <java.lang.String: int length()>"->"ifcmpge.i load.r r0";
+    "new java.lang.Integer"
+    "ifcmpge.i load.r r0"->"new java.lang.Integer";
+    "dup1.r"
+    "new java.lang.Integer"->"dup1.r";
+    "dup1.r"->"load.r r1";
+    "load.r r1"->"load.i i0";
+    "load.i i0"->"load.i i0";
+    "push 3"
+    "load.i i0"->"push 3";
+    "push 3"->"add.i";
+    "virtualinvoke <java.lang.String: java.lang.String substring(int,int)>"
+    "add.i"->"virtualinvoke <java.lang.String: java.lang.String substring(int,int)>";
+    "specialinvoke <java.lang.Integer: void <init>(java.lang.String)>"
+    "virtualinvoke <java.lang.String: java.lang.String substring(int,int)>"->"specialinvoke <java.lang.Integer: void <init>(java.lang.String)>";
+    "virtualinvoke <java.lang.Integer: int intValue()>"
+    "specialinvoke <java.lang.Integer: void <init>(java.lang.String)>"->"virtualinvoke <java.lang.Integer: int intValue()>";
+    "virtualinvoke <java.lang.Integer: int intValue()>"->"store.i i0";
+    "store.i i0"->"new java.lang.Integer";
+    "new java.lang.Integer"->"dup1.r";
+    "dup1.r"->"load.r r1";
+    "load.r r1"->"load.r r1";
+    "load.r r1"->"virtualinvoke <java.lang.String: int length()>";
+    "virtualinvoke <java.lang.String: int length()>"->"push 4";
+    "push 4"->"sub.i";
+    "sub.i"->"load.r r1";
+    "load.r r1"->"virtualinvoke <java.lang.String: int length()>";
+    "virtualinvoke <java.lang.String: int length()>"->"push 1";
+    "push 1"->"sub.i";
+    "sub.i"->"virtualinvoke <java.lang.String: java.lang.String substring(int,int)>";
+    "virtualinvoke <java.lang.String: java.lang.String substring(int,int)>"->"specialinvoke <java.lang.Integer: void <init>(java.lang.String)>";
+    "specialinvoke <java.lang.Integer: void <init>(java.lang.String)>"->"virtualinvoke <java.lang.Integer: int intValue()>";
+    "store.i r1"
+    "virtualinvoke <java.lang.Integer: int intValue()>"->"store.i r1";
+    "store.i r1"->"load.r r0";
+    "virtualinvoke <java.applet.Applet: java.net.URL getDocumentBase()>"
+    "load.r r0"->"virtualinvoke <java.applet.Applet: java.net.URL getDocumentBase()>";
+    "virtualinvoke <java.net.URL: java.lang.String getHost()>"
+    "virtualinvoke <java.applet.Applet: java.net.URL getDocumentBase()>"->"virtualinvoke <java.net.URL: java.lang.String getHost()>";
+    "virtualinvoke <java.net.URL: java.lang.String getHost()>"->"virtualinvoke <java.lang.String: java.lang.String toUpperCase()>";
+    "store.r r15"
+    "virtualinvoke <java.lang.String: java.lang.String toUpperCase()>"->"store.r r15";
+    "push 0"
+    "store.r r15"->"push 0";
+    "store.i i52"
+    "push 0"->"store.i i52";
+    "store.i i52"->"push 0";
+    "store.i i53"
+    "push 0"->"store.i i53";
+    "load.r r15"
+    "store.i i53"->"load.r r15";
+    "load.r r15"->"virtualinvoke <java.lang.String: int length()>";
+    "ifle push 0"
+    "virtualinvoke <java.lang.String: int length()>"->"ifle push 0";
+    "ifle push 0"->"load.r r15";
+    "load.r r15"->"virtualinvoke <java.lang.String: int length()>";
+    "virtualinvoke <java.lang.String: int length()>"->"push 1";
+    "push 1"->"sub.i";
+    "store.i i54"
+    "sub.i"->"store.i i54";
+    "goto load.i i54"
+    "store.i i54"->"goto load.i i54";
+    "load.i i54"
+    "goto load.i i54"->"load.i i54";
+    "ifge load.r r15"
+    "load.i i54"->"ifge load.r r15";
+    "goto load.i i0"
+    "ifge load.r r15"->"goto load.i i0";
+    "goto load.i i0"->"load.i i0";
+    "push 444"
+    "load.i i0"->"push 444";
+    "ifcmpne.i load.r r0"
+    "push 444"->"ifcmpne.i load.r r0";
+    "load.i r1"
+    "ifcmpne.i load.r r0"->"load.i r1";
+    "load.i r1"->"load.i i0";
+    "load.i i52"
+    "load.i i0"->"load.i i52";
+    "mul.i"
+    "load.i i52"->"mul.i";
+    "push 1000"
+    "mul.i"->"push 1000";
+    "rem.i"
+    "push 1000"->"rem.i";
+    "rem.i"->"ifcmpne.i load.r r0";
+    "ifcmpne.i load.r r0"->"load.r r0";
+    "load.r r0"->"push 1";
+    "fieldput <VisualEffectStars: boolean registered>"
+    "push 1"->"fieldput <VisualEffectStars: boolean registered>";
+    "fieldput <VisualEffectStars: boolean registered>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "push \"image\""
+    "load.r r0"->"push \"image\"";
+    "push \"image\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "fieldput <VisualEffectStars: java.lang.String infile>"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"fieldput <VisualEffectStars: java.lang.String infile>";
+    "fieldput <VisualEffectStars: java.lang.String infile>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "push \"moon\""
+    "load.r r0"->"push \"moon\"";
+    "push \"moon\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "fieldput <VisualEffectStars: java.lang.String moonfile>"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"fieldput <VisualEffectStars: java.lang.String moonfile>";
+    "fieldput <VisualEffectStars: java.lang.String moonfile>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "push \"bg\""
+    "load.r r0"->"push \"bg\"";
+    "push \"bg\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "push \" \""
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"push \" \"";
+    "virtualinvoke <VisualEffectStars: int[] parseInt(java.lang.String,java.lang.String)>"
+    "push \" \""->"virtualinvoke <VisualEffectStars: int[] parseInt(java.lang.String,java.lang.String)>";
+    "store.r i0"
+    "virtualinvoke <VisualEffectStars: int[] parseInt(java.lang.String,java.lang.String)>"->"store.r i0";
+    "store.r i0"->"load.r r0";
+    "new java.awt.Color"
+    "load.r r0"->"new java.awt.Color";
+    "new java.awt.Color"->"dup1.r";
+    "load.r i0"
+    "dup1.r"->"load.r i0";
+    "load.r i0"->"push 0";
+    "arrayread.i"
+    "push 0"->"arrayread.i";
+    "arrayread.i"->"load.r i0";
+    "load.r i0"->"push 1";
+    "push 1"->"arrayread.i";
+    "arrayread.i"->"load.r i0";
+    "load.r i0"->"push 2";
+    "push 2"->"arrayread.i";
+    "specialinvoke <java.awt.Color: void <init>(int,int,int)>"
+    "arrayread.i"->"specialinvoke <java.awt.Color: void <init>(int,int,int)>";
+    "fieldput <VisualEffectStars: java.awt.Color bg>"
+    "specialinvoke <java.awt.Color: void <init>(int,int,int)>"->"fieldput <VisualEffectStars: java.awt.Color bg>";
+    "fieldput <VisualEffectStars: java.awt.Color bg>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "push \"moonloc\""
+    "load.r r0"->"push \"moonloc\"";
+    "push \"moonloc\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"push \" \"";
+    "push \" \""->"virtualinvoke <VisualEffectStars: int[] parseInt(java.lang.String,java.lang.String)>";
+    "virtualinvoke <VisualEffectStars: int[] parseInt(java.lang.String,java.lang.String)>"->"dup1.r";
+    "dup1.r"->"push 0";
+    "push 0"->"arrayread.i";
+    "arrayread.i"->"store.i i0";
+    "store.i i0"->"load.r r0";
+    "load.r r0"->"load.i i0";
+    "fieldput <VisualEffectStars: int moonx>"
+    "load.i i0"->"fieldput <VisualEffectStars: int moonx>";
+    "fieldput <VisualEffectStars: int moonx>"->"push 1";
+    "push 1"->"arrayread.i";
+    "fieldput <VisualEffectStars: int moony>"
+    "arrayread.i"->"fieldput <VisualEffectStars: int moony>";
+    "fieldput <VisualEffectStars: int moony>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "fieldget <VisualEffectStars: int moonx>"
+    "load.r r0"->"fieldget <VisualEffectStars: int moonx>";
+    "fieldput <VisualEffectStars: int mx>"
+    "fieldget <VisualEffectStars: int moonx>"->"fieldput <VisualEffectStars: int mx>";
+    "fieldput <VisualEffectStars: int mx>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "fieldget <VisualEffectStars: int moony>"
+    "load.r r0"->"fieldget <VisualEffectStars: int moony>";
+    "fieldput <VisualEffectStars: int my>"
+    "fieldget <VisualEffectStars: int moony>"->"fieldput <VisualEffectStars: int my>";
+    "fieldput <VisualEffectStars: int my>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "push \"loading\""
+    "load.r r0"->"push \"loading\"";
+    "push \"loading\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>";
+    "fieldput <VisualEffectStars: int loading>"
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"->"fieldput <VisualEffectStars: int loading>";
+    "fieldput <VisualEffectStars: int loading>"->"load.r r0";
+    "load.r r0"->"new java.lang.Integer";
+    "new java.lang.Integer"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "push \"delay\""
+    "load.r r0"->"push \"delay\"";
+    "push \"delay\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"specialinvoke <java.lang.Integer: void <init>(java.lang.String)>";
+    "specialinvoke <java.lang.Integer: void <init>(java.lang.String)>"->"virtualinvoke <java.lang.Integer: int intValue()>";
+    "fieldput <VisualEffectStars: int delay>"
+    "virtualinvoke <java.lang.Integer: int intValue()>"->"fieldput <VisualEffectStars: int delay>";
+    "fieldput <VisualEffectStars: int delay>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "push \"url\""
+    "load.r r0"->"push \"url\"";
+    "push \"url\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"virtualinvoke <java.lang.String: java.lang.String trim()>";
+    "fieldput <VisualEffectStars: java.lang.String url>"
+    "virtualinvoke <java.lang.String: java.lang.String trim()>"->"fieldput <VisualEffectStars: java.lang.String url>";
+    "fieldput <VisualEffectStars: java.lang.String url>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "push \"nstars\""
+    "load.r r0"->"push \"nstars\"";
+    "push \"nstars\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>";
+    "fieldput <VisualEffectStars: int nstars>"
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"->"fieldput <VisualEffectStars: int nstars>";
+    "fieldput <VisualEffectStars: int nstars>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "push \"maxsize\""
+    "load.r r0"->"push \"maxsize\"";
+    "push \"maxsize\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>";
+    "fieldput <VisualEffectStars: int maxsize>"
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"->"fieldput <VisualEffectStars: int maxsize>";
+    "fieldput <VisualEffectStars: int maxsize>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "push \"maxspeed\""
+    "load.r r0"->"push \"maxspeed\"";
+    "push \"maxspeed\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>";
+    "fieldput <VisualEffectStars: int maxspeed>"
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"->"fieldput <VisualEffectStars: int maxspeed>";
+    "fieldput <VisualEffectStars: int maxspeed>"->"load.r r0";
+    "fieldget <VisualEffectStars: int maxspeed>"
+    "load.r r0"->"fieldget <VisualEffectStars: int maxspeed>";
+    "ifge load.r r0"
+    "fieldget <VisualEffectStars: int maxspeed>"->"ifge load.r r0";
+    "ifge load.r r0"->"load.r r0";
+    "push -1"
+    "load.r r0"->"push -1";
+    "fieldput <VisualEffectStars: int dir>"
+    "push -1"->"fieldput <VisualEffectStars: int dir>";
+    "fieldput <VisualEffectStars: int dir>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <VisualEffectStars: int maxspeed>";
+    "neg.i"
+    "fieldget <VisualEffectStars: int maxspeed>"->"neg.i";
+    "neg.i"->"fieldput <VisualEffectStars: int maxspeed>";
+    "goto load.r r0"
+    "fieldput <VisualEffectStars: int maxspeed>"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "fieldget <VisualEffectStars: int width>"
+    "load.r r0"->"fieldget <VisualEffectStars: int width>";
+    "fieldget <VisualEffectStars: int width>"->"push 1";
+    "push 1"->"sub.i";
+    "fieldput <VisualEffectStars: int w>"
+    "sub.i"->"fieldput <VisualEffectStars: int w>";
+    "fieldput <VisualEffectStars: int w>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <VisualEffectStars: int height>";
+    "fieldget <VisualEffectStars: int height>"->"push 1";
+    "push 1"->"sub.i";
+    "fieldput <VisualEffectStars: int h>"
+    "sub.i"->"fieldput <VisualEffectStars: int h>";
+    "fieldput <VisualEffectStars: int h>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "fieldget <VisualEffectStars: int nstars>"
+    "load.r r0"->"fieldget <VisualEffectStars: int nstars>";
+    "newarray"
+    "fieldget <VisualEffectStars: int nstars>"->"newarray";
+    "fieldput <VisualEffectStars: VisualEffectStarsObj[] sobj>"
+    "newarray"->"fieldput <VisualEffectStars: VisualEffectStarsObj[] sobj>";
+    "fieldput <VisualEffectStars: VisualEffectStarsObj[] sobj>"->"load.r r0";
+    "load.r r0"->"push 0";
+    "fieldput <VisualEffectStars: int i>"
+    "push 0"->"fieldput <VisualEffectStars: int i>";
+    "fieldput <VisualEffectStars: int i>"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "fieldget <VisualEffectStars: int i>"
+    "load.r r0"->"fieldget <VisualEffectStars: int i>";
+    "fieldget <VisualEffectStars: int i>"->"load.r r0";
+    "load.r r0"->"fieldget <VisualEffectStars: int nstars>";
+    "ifcmplt.i load.r r0"
+    "fieldget <VisualEffectStars: int nstars>"->"ifcmplt.i load.r r0";
+    "return"
+    "ifcmplt.i load.r r0"->"return";
+    "ifcmplt.i load.r r0"->"load.r r0";
+    "fieldget <VisualEffectStars: VisualEffectStarsObj[] sobj>"
+    "load.r r0"->"fieldget <VisualEffectStars: VisualEffectStarsObj[] sobj>";
+    "fieldget <VisualEffectStars: VisualEffectStarsObj[] sobj>"->"load.r r0";
+    "load.r r0"->"fieldget <VisualEffectStars: int i>";
+    "new VisualEffectStarsObj"
+    "fieldget <VisualEffectStars: int i>"->"new VisualEffectStarsObj";
+    "new VisualEffectStarsObj"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "fieldget <VisualEffectStars: int w>"
+    "load.r r0"->"fieldget <VisualEffectStars: int w>";
+    "fieldget <VisualEffectStars: int w>"->"load.r r0";
+    "fieldget <VisualEffectStars: int h>"
+    "load.r r0"->"fieldget <VisualEffectStars: int h>";
+    "fieldget <VisualEffectStars: int h>"->"push 3";
+    "push 3"->"mul.i";
+    "mul.i"->"push 4";
+    "push 4"->"div.i";
+    "div.i"->"load.r r0";
+    "load.r r0"->"fieldget <VisualEffectStars: int maxspeed>";
+    "fieldget <VisualEffectStars: int maxspeed>"->"load.r r0";
+    "fieldget <VisualEffectStars: int dir>"
+    "load.r r0"->"fieldget <VisualEffectStars: int dir>";
+    "fieldget <VisualEffectStars: int dir>"->"load.r r0";
+    "fieldget <VisualEffectStars: int maxsize>"
+    "load.r r0"->"fieldget <VisualEffectStars: int maxsize>";
+    "specialinvoke <VisualEffectStarsObj: void <init>(int,int,int,int,int)>"
+    "fieldget <VisualEffectStars: int maxsize>"->"specialinvoke <VisualEffectStarsObj: void <init>(int,int,int,int,int)>";
+    "arraywrite.r"
+    "specialinvoke <VisualEffectStarsObj: void <init>(int,int,int,int,int)>"->"arraywrite.r";
+    "arraywrite.r"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <VisualEffectStars: int i>";
+    "fieldget <VisualEffectStars: int i>"->"push 1";
+    "push 1"->"add.i";
+    "add.i"->"fieldput <VisualEffectStars: int i>";
+    "ifge load.r r0"->"load.r r0";
+    "load.r r0"->"push 1";
+    "push 1"->"fieldput <VisualEffectStars: int dir>";
+    "ifge load.r r15"->"load.r r15";
+    "load.r r15"->"load.i i54";
+    "load.i i54"->"virtualinvoke <java.lang.String: char charAt(int)>";
+    "push 46"
+    "virtualinvoke <java.lang.String: char charAt(int)>"->"push 46";
+    "ifcmpne.c load.i i53"
+    "push 46"->"ifcmpne.c load.i i53";
+    "inc.i i53 1"
+    "ifcmpne.c load.i i53"->"inc.i i53 1";
+    "load.i i53"
+    "inc.i i53 1"->"load.i i53";
+    "load.i i53"->"push 1";
+    "ifcmple.i inc.i i54 -1"
+    "push 1"->"ifcmple.i inc.i i54 -1";
+    "ifcmple.i inc.i i54 -1"->"push -1";
+    "push -1"->"store.i i54";
+    "goto inc.i i54 -1"
+    "store.i i54"->"goto inc.i i54 -1";
+    "inc.i i54 -1"
+    "goto inc.i i54 -1"->"inc.i i54 -1";
+    "ifcmpne.c load.i i53"->"load.i i53";
+    "load.i i53"->"push 2";
+    "ifcmpge.i load.i i53"
+    "push 2"->"ifcmpge.i load.i i53";
+    "ifcmpge.i load.i i53"->"load.r r15";
+    "load.r r15"->"load.i i54";
+    "load.i i54"->"virtualinvoke <java.lang.String: char charAt(int)>";
+    "push 65"
+    "virtualinvoke <java.lang.String: char charAt(int)>"->"push 65";
+    "ifcmplt.c load.i i53"
+    "push 65"->"ifcmplt.c load.i i53";
+    "ifcmplt.c load.i i53"->"load.r r15";
+    "load.r r15"->"load.i i54";
+    "load.i i54"->"virtualinvoke <java.lang.String: char charAt(int)>";
+    "push 90"
+    "virtualinvoke <java.lang.String: char charAt(int)>"->"push 90";
+    "ifcmpgt.c load.i i53"
+    "push 90"->"ifcmpgt.c load.i i53";
+    "ifcmpgt.c load.i i53"->"load.i i52";
+    "load.i i52"->"load.r r15";
+    "load.r r15"->"load.i i54";
+    "load.i i54"->"virtualinvoke <java.lang.String: char charAt(int)>";
+    "virtualinvoke <java.lang.String: char charAt(int)>"->"push 65";
+    "push 65"->"sub.c";
+    "push 10"
+    "sub.c"->"push 10";
+    "push 10"->"add.i";
+    "add.i"->"add.i";
+    "add.i"->"store.i i52";
+    "store.i i52"->"goto inc.i i54 -1";
+    "ifcmpgt.c load.i i53"->"load.i i53";
+    "load.i i53"->"push 2";
+    "ifcmpge.i inc.i i54 -1"
+    "push 2"->"ifcmpge.i inc.i i54 -1";
+    "ifcmpge.i inc.i i54 -1"->"load.r r15";
+    "load.r r15"->"load.i i54";
+    "load.i i54"->"virtualinvoke <java.lang.String: char charAt(int)>";
+    "virtualinvoke <java.lang.String: char charAt(int)>"->"push 48";
+    "ifcmplt.c inc.i i54 -1"
+    "push 48"->"ifcmplt.c inc.i i54 -1";
+    "ifcmplt.c inc.i i54 -1"->"load.r r15";
+    "load.r r15"->"load.i i54";
+    "load.i i54"->"virtualinvoke <java.lang.String: char charAt(int)>";
+    "push 57"
+    "virtualinvoke <java.lang.String: char charAt(int)>"->"push 57";
+    "ifcmpgt.c inc.i i54 -1"
+    "push 57"->"ifcmpgt.c inc.i i54 -1";
+    "ifcmpgt.c inc.i i54 -1"->"load.i i52";
+    "load.i i52"->"load.r r15";
+    "load.r r15"->"load.i i54";
+    "load.i i54"->"virtualinvoke <java.lang.String: char charAt(int)>";
+    "virtualinvoke <java.lang.String: char charAt(int)>"->"push 48";
+    "push 48"->"sub.c";
+    "sub.c"->"add.i";
+    "add.i"->"store.i i52";
+    "ifle push 0"->"push 0";
+    "push 0"->"store.i r1";
+}

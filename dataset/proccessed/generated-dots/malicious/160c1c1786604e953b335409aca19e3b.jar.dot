@@ -1,0 +1,20 @@
+digraph "" {
+    "r0 := @this: vzaarviewer"
+    "new java.lang.Thread"
+    "r0 := @this: vzaarviewer"->"new java.lang.Thread";
+    "dup1.r"
+    "new java.lang.Thread"->"dup1.r";
+    "new vzaarviewer$1"
+    "dup1.r"->"new vzaarviewer$1";
+    "new vzaarviewer$1"->"dup1.r";
+    "load.r r0"
+    "dup1.r"->"load.r r0";
+    "specialinvoke <vzaarviewer$1: void <init>(vzaarviewer)>"
+    "load.r r0"->"specialinvoke <vzaarviewer$1: void <init>(vzaarviewer)>";
+    "specialinvoke <java.lang.Thread: void <init>(java.lang.Runnable)>"
+    "specialinvoke <vzaarviewer$1: void <init>(vzaarviewer)>"->"specialinvoke <java.lang.Thread: void <init>(java.lang.Runnable)>";
+    "virtualinvoke <java.lang.Thread: void start()>"
+    "specialinvoke <java.lang.Thread: void <init>(java.lang.Runnable)>"->"virtualinvoke <java.lang.Thread: void start()>";
+    "return"
+    "virtualinvoke <java.lang.Thread: void start()>"->"return";
+}

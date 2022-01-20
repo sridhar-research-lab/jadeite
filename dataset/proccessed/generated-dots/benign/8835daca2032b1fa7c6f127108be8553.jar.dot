@@ -1,0 +1,82 @@
+digraph "" {
+    "r0 := @this: ttt"
+    "load.r r0"
+    "r0 := @this: ttt"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "virtualinvoke <java.applet.Applet: java.net.URL getCodeBase()>"
+    "load.r r0"->"virtualinvoke <java.applet.Applet: java.net.URL getCodeBase()>";
+    "push \"backgrd.gif\""
+    "virtualinvoke <java.applet.Applet: java.net.URL getCodeBase()>"->"push \"backgrd.gif\"";
+    "virtualinvoke <java.applet.Applet: java.awt.Image getImage(java.net.URL,java.lang.String)>"
+    "push \"backgrd.gif\""->"virtualinvoke <java.applet.Applet: java.awt.Image getImage(java.net.URL,java.lang.String)>";
+    "fieldput <ttt: java.awt.Image backgrd>"
+    "virtualinvoke <java.applet.Applet: java.awt.Image getImage(java.net.URL,java.lang.String)>"->"fieldput <ttt: java.awt.Image backgrd>";
+    "fieldput <ttt: java.awt.Image backgrd>"->"load.r r0";
+    "fieldget <ttt: java.awt.GridBagConstraints c>"
+    "load.r r0"->"fieldget <ttt: java.awt.GridBagConstraints c>";
+    "push 1"
+    "fieldget <ttt: java.awt.GridBagConstraints c>"->"push 1";
+    "fieldput <java.awt.GridBagConstraints: int fill>"
+    "push 1"->"fieldput <java.awt.GridBagConstraints: int fill>";
+    "fieldput <java.awt.GridBagConstraints: int fill>"->"load.r r0";
+    "load.r r0"->"fieldget <ttt: java.awt.GridBagConstraints c>";
+    "push 12"
+    "fieldget <ttt: java.awt.GridBagConstraints c>"->"push 12";
+    "fieldput <java.awt.GridBagConstraints: int gridx>"
+    "push 12"->"fieldput <java.awt.GridBagConstraints: int gridx>";
+    "fieldput <java.awt.GridBagConstraints: int gridx>"->"load.r r0";
+    "load.r r0"->"fieldget <ttt: java.awt.GridBagConstraints c>";
+    "fieldget <ttt: java.awt.GridBagConstraints c>"->"push 1";
+    "fieldput <java.awt.GridBagConstraints: int gridy>"
+    "push 1"->"fieldput <java.awt.GridBagConstraints: int gridy>";
+    "fieldput <java.awt.GridBagConstraints: int gridy>"->"load.r r0";
+    "load.r r0"->"fieldget <ttt: java.awt.GridBagConstraints c>";
+    "fieldget <ttt: java.awt.GridBagConstraints c>"->"push 1";
+    "fieldput <java.awt.GridBagConstraints: int gridwidth>"
+    "push 1"->"fieldput <java.awt.GridBagConstraints: int gridwidth>";
+    "fieldput <java.awt.GridBagConstraints: int gridwidth>"->"load.r r0";
+    "load.r r0"->"fieldget <ttt: java.awt.GridBagConstraints c>";
+    "fieldget <ttt: java.awt.GridBagConstraints c>"->"push 1";
+    "fieldput <java.awt.GridBagConstraints: int gridheight>"
+    "push 1"->"fieldput <java.awt.GridBagConstraints: int gridheight>";
+    "new java.awt.Button"
+    "fieldput <java.awt.GridBagConstraints: int gridheight>"->"new java.awt.Button";
+    "store.r $r9"
+    "new java.awt.Button"->"store.r $r9";
+    "load.r $r9"
+    "store.r $r9"->"load.r $r9";
+    "push \"New game\""
+    "load.r $r9"->"push \"New game\"";
+    "specialinvoke <java.awt.Button: void <init>(java.lang.String)>"
+    "push \"New game\""->"specialinvoke <java.awt.Button: void <init>(java.lang.String)>";
+    "specialinvoke <java.awt.Button: void <init>(java.lang.String)>"->"load.r r0";
+    "fieldget <ttt: java.awt.GridBagLayout thisLayout>"
+    "load.r r0"->"fieldget <ttt: java.awt.GridBagLayout thisLayout>";
+    "fieldget <ttt: java.awt.GridBagLayout thisLayout>"->"load.r $r9";
+    "load.r $r9"->"load.r r0";
+    "load.r r0"->"fieldget <ttt: java.awt.GridBagConstraints c>";
+    "virtualinvoke <java.awt.GridBagLayout: void setConstraints(java.awt.Component,java.awt.GridBagConstraints)>"
+    "fieldget <ttt: java.awt.GridBagConstraints c>"->"virtualinvoke <java.awt.GridBagLayout: void setConstraints(java.awt.Component,java.awt.GridBagConstraints)>";
+    "virtualinvoke <java.awt.GridBagLayout: void setConstraints(java.awt.Component,java.awt.GridBagConstraints)>"->"load.r r0";
+    "load.r r0"->"load.r $r9";
+    "virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>"
+    "load.r $r9"->"virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>";
+    "pop"
+    "virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>"->"pop";
+    "pop"->"load.r r0";
+    "push \"No of wins for X:\""
+    "load.r r0"->"push \"No of wins for X:\"";
+    "fieldput <ttt: java.lang.String xwins>"
+    "push \"No of wins for X:\""->"fieldput <ttt: java.lang.String xwins>";
+    "fieldput <ttt: java.lang.String xwins>"->"load.r r0";
+    "push \"No of wins for O:\""
+    "load.r r0"->"push \"No of wins for O:\"";
+    "fieldput <ttt: java.lang.String ywins>"
+    "push \"No of wins for O:\""->"fieldput <ttt: java.lang.String ywins>";
+    "fieldput <ttt: java.lang.String ywins>"->"load.r r0";
+    "virtualinvoke <ttt: void reset()>"
+    "load.r r0"->"virtualinvoke <ttt: void reset()>";
+    "return"
+    "virtualinvoke <ttt: void reset()>"->"return";
+}

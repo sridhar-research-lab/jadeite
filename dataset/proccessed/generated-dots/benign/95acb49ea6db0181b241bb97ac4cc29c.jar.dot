@@ -1,0 +1,93 @@
+digraph "" {
+    "r0 := @this: tchart3"
+    "load.r r0"
+    "r0 := @this: tchart3"->"load.r r0";
+    "new java.awt.Font"
+    "load.r r0"->"new java.awt.Font";
+    "dup1.r"
+    "new java.awt.Font"->"dup1.r";
+    "push \"Helvetica\""
+    "dup1.r"->"push \"Helvetica\"";
+    "push 0"
+    "push \"Helvetica\""->"push 0";
+    "push 14"
+    "push 0"->"push 14";
+    "specialinvoke <java.awt.Font: void <init>(java.lang.String,int,int)>"
+    "push 14"->"specialinvoke <java.awt.Font: void <init>(java.lang.String,int,int)>";
+    "virtualinvoke <java.awt.Component: void setFont(java.awt.Font)>"
+    "specialinvoke <java.awt.Font: void <init>(java.lang.String,int,int)>"->"virtualinvoke <java.awt.Component: void setFont(java.awt.Font)>";
+    "virtualinvoke <java.awt.Component: void setFont(java.awt.Font)>"->"load.r r0";
+    "push null"
+    "load.r r0"->"push null";
+    "virtualinvoke <java.awt.Container: void setLayout(java.awt.LayoutManager)>"
+    "push null"->"virtualinvoke <java.awt.Container: void setLayout(java.awt.LayoutManager)>";
+    "virtualinvoke <java.awt.Container: void setLayout(java.awt.LayoutManager)>"->"load.r r0";
+    "push \"csep\""
+    "load.r r0"->"push \"csep\"";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"
+    "push \"csep\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "store.r r6"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"store.r r6";
+    "load.r r6"
+    "store.r r6"->"load.r r6";
+    "ifnull load.r r0"
+    "load.r r6"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r6";
+    "load.r r6"->"push 0";
+    "virtualinvoke <java.lang.String: char charAt(int)>"
+    "push 0"->"virtualinvoke <java.lang.String: char charAt(int)>";
+    "fieldput <tchart3: char cSep>"
+    "virtualinvoke <java.lang.String: char charAt(int)>"->"fieldput <tchart3: char cSep>";
+    "fieldput <tchart3: char cSep>"->"load.r r0";
+    "push \"file\""
+    "load.r r0"->"push \"file\"";
+    "push \"file\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"store.r r6";
+    "store.r r6"->"load.r r6";
+    "ifnonnull load.r r0"
+    "load.r r6"->"ifnonnull load.r r0";
+    "push \"file3.txt\""
+    "ifnonnull load.r r0"->"push \"file3.txt\"";
+    "push \"file3.txt\""->"store.r r6";
+    "store.r r6"->"load.r r0";
+    "fieldget <tchart3: boolean bReg>"
+    "load.r r0"->"fieldget <tchart3: boolean bReg>";
+    "ifne load.r r0"
+    "fieldget <tchart3: boolean bReg>"->"ifne load.r r0";
+    "ifne load.r r0"->"load.r r0";
+    "new java.awt.Button"
+    "load.r r0"->"new java.awt.Button";
+    "new java.awt.Button"->"dup1.r";
+    "push \"About\""
+    "dup1.r"->"push \"About\"";
+    "specialinvoke <java.awt.Button: void <init>(java.lang.String)>"
+    "push \"About\""->"specialinvoke <java.awt.Button: void <init>(java.lang.String)>";
+    "fieldput <tchart3: java.awt.Button b1>"
+    "specialinvoke <java.awt.Button: void <init>(java.lang.String)>"->"fieldput <tchart3: java.awt.Button b1>";
+    "fieldput <tchart3: java.awt.Button b1>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "fieldget <tchart3: java.awt.Button b1>"
+    "load.r r0"->"fieldget <tchart3: java.awt.Button b1>";
+    "virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>"
+    "fieldget <tchart3: java.awt.Button b1>"->"virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>";
+    "pop"
+    "virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>"->"pop";
+    "pop"->"load.r r0";
+    "load.r r0"->"fieldget <tchart3: java.awt.Button b1>";
+    "push 1"
+    "fieldget <tchart3: java.awt.Button b1>"->"push 1";
+    "push 1"->"push 1";
+    "push 100"
+    "push 1"->"push 100";
+    "push 22"
+    "push 100"->"push 22";
+    "virtualinvoke <java.awt.Component: void reshape(int,int,int,int)>"
+    "push 22"->"virtualinvoke <java.awt.Component: void reshape(int,int,int,int)>";
+    "virtualinvoke <java.awt.Component: void reshape(int,int,int,int)>"->"load.r r0";
+    "load.r r0"->"load.r r6";
+    "virtualinvoke <tchart3: void setFile(java.lang.String)>"
+    "load.r r6"->"virtualinvoke <tchart3: void setFile(java.lang.String)>";
+    "return"
+    "virtualinvoke <tchart3: void setFile(java.lang.String)>"->"return";
+}

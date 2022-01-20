@@ -1,0 +1,261 @@
+digraph "" {
+    "r0 := @this: StockGraphApplet"
+    "load.r r0"
+    "r0 := @this: StockGraphApplet"->"load.r r0";
+    "new StockGraphDataLoader"
+    "load.r r0"->"new StockGraphDataLoader";
+    "dup1.r"
+    "new StockGraphDataLoader"->"dup1.r";
+    "specialinvoke <StockGraphDataLoader: void <init>()>"
+    "dup1.r"->"specialinvoke <StockGraphDataLoader: void <init>()>";
+    "fieldput <StockGraphApplet: StockGraphDataLoader dataLoader>"
+    "specialinvoke <StockGraphDataLoader: void <init>()>"->"fieldput <StockGraphApplet: StockGraphDataLoader dataLoader>";
+    "fieldput <StockGraphApplet: StockGraphDataLoader dataLoader>"->"load.r r0";
+    "fieldget <StockGraphApplet: StockGraphDataLoader dataLoader>"
+    "load.r r0"->"fieldget <StockGraphApplet: StockGraphDataLoader dataLoader>";
+    "fieldget <StockGraphApplet: StockGraphDataLoader dataLoader>"->"load.r r0";
+    "push \"url\""
+    "load.r r0"->"push \"url\"";
+    "push \"\""
+    "push \"url\""->"push \"\"";
+    "specialinvoke <StockGraphApplet: java.lang.String getValue(java.lang.String,java.lang.String)>"
+    "push \"\""->"specialinvoke <StockGraphApplet: java.lang.String getValue(java.lang.String,java.lang.String)>";
+    "virtualinvoke <StockGraphDataLoader: void setURL(java.lang.String)>"
+    "specialinvoke <StockGraphApplet: java.lang.String getValue(java.lang.String,java.lang.String)>"->"virtualinvoke <StockGraphDataLoader: void setURL(java.lang.String)>";
+    "virtualinvoke <StockGraphDataLoader: void setURL(java.lang.String)>"->"load.r r0";
+    "load.r r0"->"fieldget <StockGraphApplet: StockGraphDataLoader dataLoader>";
+    "fieldget <StockGraphApplet: StockGraphDataLoader dataLoader>"->"load.r r0";
+    "push \"data\""
+    "load.r r0"->"push \"data\"";
+    "push \"JAN|1|2;\""
+    "push \"data\""->"push \"JAN|1|2;\"";
+    "push \"JAN|1|2;\""->"specialinvoke <StockGraphApplet: java.lang.String getValue(java.lang.String,java.lang.String)>";
+    "virtualinvoke <StockGraphDataLoader: void setDataStream(java.lang.String)>"
+    "specialinvoke <StockGraphApplet: java.lang.String getValue(java.lang.String,java.lang.String)>"->"virtualinvoke <StockGraphDataLoader: void setDataStream(java.lang.String)>";
+    "virtualinvoke <StockGraphDataLoader: void setDataStream(java.lang.String)>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "virtualinvoke <java.awt.Component: java.awt.Dimension getSize()>"
+    "load.r r0"->"virtualinvoke <java.awt.Component: java.awt.Dimension getSize()>";
+    "fieldget <java.awt.Dimension: int width>"
+    "virtualinvoke <java.awt.Component: java.awt.Dimension getSize()>"->"fieldget <java.awt.Dimension: int width>";
+    "fieldput <StockGraphApplet: int width>"
+    "fieldget <java.awt.Dimension: int width>"->"fieldput <StockGraphApplet: int width>";
+    "fieldput <StockGraphApplet: int width>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"virtualinvoke <java.awt.Component: java.awt.Dimension getSize()>";
+    "fieldget <java.awt.Dimension: int height>"
+    "virtualinvoke <java.awt.Component: java.awt.Dimension getSize()>"->"fieldget <java.awt.Dimension: int height>";
+    "fieldput <StockGraphApplet: int height>"
+    "fieldget <java.awt.Dimension: int height>"->"fieldput <StockGraphApplet: int height>";
+    "fieldput <StockGraphApplet: int height>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "push \"refreshTime\""
+    "load.r r0"->"push \"refreshTime\"";
+    "push \"5\""
+    "push \"refreshTime\""->"push \"5\"";
+    "push \"5\""->"specialinvoke <StockGraphApplet: java.lang.String getValue(java.lang.String,java.lang.String)>";
+    "staticinvoke <java.lang.Integer: java.lang.Integer valueOf(java.lang.String)>"
+    "specialinvoke <StockGraphApplet: java.lang.String getValue(java.lang.String,java.lang.String)>"->"staticinvoke <java.lang.Integer: java.lang.Integer valueOf(java.lang.String)>";
+    "virtualinvoke <java.lang.Integer: int intValue()>"
+    "staticinvoke <java.lang.Integer: java.lang.Integer valueOf(java.lang.String)>"->"virtualinvoke <java.lang.Integer: int intValue()>";
+    "push 1000"
+    "virtualinvoke <java.lang.Integer: int intValue()>"->"push 1000";
+    "mul.i"
+    "push 1000"->"mul.i";
+    "fieldput <StockGraphApplet: int refreshTime>"
+    "mul.i"->"fieldput <StockGraphApplet: int refreshTime>";
+    "fieldput <StockGraphApplet: int refreshTime>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "push \"subElements\""
+    "load.r r0"->"push \"subElements\"";
+    "push \"0\""
+    "push \"subElements\""->"push \"0\"";
+    "push \"0\""->"specialinvoke <StockGraphApplet: java.lang.String getValue(java.lang.String,java.lang.String)>";
+    "fieldput <StockGraphApplet: java.lang.String subElements>"
+    "specialinvoke <StockGraphApplet: java.lang.String getValue(java.lang.String,java.lang.String)>"->"fieldput <StockGraphApplet: java.lang.String subElements>";
+    "fieldput <StockGraphApplet: java.lang.String subElements>"->"load.r r0";
+    "new StockGraph"
+    "load.r r0"->"new StockGraph";
+    "new StockGraph"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "fieldget <StockGraphApplet: int width>"
+    "load.r r0"->"fieldget <StockGraphApplet: int width>";
+    "fieldget <StockGraphApplet: int width>"->"load.r r0";
+    "fieldget <StockGraphApplet: int height>"
+    "load.r r0"->"fieldget <StockGraphApplet: int height>";
+    "specialinvoke <StockGraph: void <init>(java.applet.Applet,int,int)>"
+    "fieldget <StockGraphApplet: int height>"->"specialinvoke <StockGraph: void <init>(java.applet.Applet,int,int)>";
+    "fieldput <StockGraphApplet: StockGraph graph>"
+    "specialinvoke <StockGraph: void <init>(java.applet.Applet,int,int)>"->"fieldput <StockGraphApplet: StockGraph graph>";
+    "fieldput <StockGraphApplet: StockGraph graph>"->"load.r r0";
+    "push \"origin2Zero\""
+    "load.r r0"->"push \"origin2Zero\"";
+    "push \"true\""
+    "push \"origin2Zero\""->"push \"true\"";
+    "push \"true\""->"specialinvoke <StockGraphApplet: java.lang.String getValue(java.lang.String,java.lang.String)>";
+    "virtualinvoke <java.lang.String: java.lang.String toUpperCase()>"
+    "specialinvoke <StockGraphApplet: java.lang.String getValue(java.lang.String,java.lang.String)>"->"virtualinvoke <java.lang.String: java.lang.String toUpperCase()>";
+    "virtualinvoke <java.lang.String: java.lang.String trim()>"
+    "virtualinvoke <java.lang.String: java.lang.String toUpperCase()>"->"virtualinvoke <java.lang.String: java.lang.String trim()>";
+    "store.r r1"
+    "virtualinvoke <java.lang.String: java.lang.String trim()>"->"store.r r1";
+    "store.r r1"->"load.r r0";
+    "fieldget <StockGraphApplet: StockGraph graph>"
+    "load.r r0"->"fieldget <StockGraphApplet: StockGraph graph>";
+    "load.r r1"
+    "fieldget <StockGraphApplet: StockGraph graph>"->"load.r r1";
+    "virtualinvoke <StockGraph: void setOrigin(java.lang.String)>"
+    "load.r r1"->"virtualinvoke <StockGraph: void setOrigin(java.lang.String)>";
+    "virtualinvoke <StockGraph: void setOrigin(java.lang.String)>"->"load.r r0";
+    "load.r r0"->"fieldget <StockGraphApplet: StockGraphDataLoader dataLoader>";
+    "fieldget <StockGraphApplet: StockGraphDataLoader dataLoader>"->"load.r r1";
+    "virtualinvoke <StockGraphDataLoader: void setOrigin(java.lang.String)>"
+    "load.r r1"->"virtualinvoke <StockGraphDataLoader: void setOrigin(java.lang.String)>";
+    "virtualinvoke <StockGraphDataLoader: void setOrigin(java.lang.String)>"->"load.r r0";
+    "load.r r0"->"fieldget <StockGraphApplet: StockGraph graph>";
+    "fieldget <StockGraphApplet: StockGraph graph>"->"load.r r0";
+    "push \"title\""
+    "load.r r0"->"push \"title\"";
+    "push \"title\""->"push \"\"";
+    "push \"\""->"specialinvoke <StockGraphApplet: java.lang.String getValue(java.lang.String,java.lang.String)>";
+    "specialinvoke <StockGraphApplet: java.lang.String getValue(java.lang.String,java.lang.String)>"->"load.r r0";
+    "push \"xCaption\""
+    "load.r r0"->"push \"xCaption\"";
+    "push \"xCaption\""->"push \"\"";
+    "push \"\""->"specialinvoke <StockGraphApplet: java.lang.String getValue(java.lang.String,java.lang.String)>";
+    "specialinvoke <StockGraphApplet: java.lang.String getValue(java.lang.String,java.lang.String)>"->"load.r r0";
+    "push \"yCaption\""
+    "load.r r0"->"push \"yCaption\"";
+    "push \"yCaption\""->"push \"\"";
+    "push \"\""->"specialinvoke <StockGraphApplet: java.lang.String getValue(java.lang.String,java.lang.String)>";
+    "specialinvoke <StockGraphApplet: java.lang.String getValue(java.lang.String,java.lang.String)>"->"load.r r0";
+    "push \"background\""
+    "load.r r0"->"push \"background\"";
+    "push \"background\""->"push \"\"";
+    "push \"\""->"specialinvoke <StockGraphApplet: java.lang.String getValue(java.lang.String,java.lang.String)>";
+    "specialinvoke <StockGraphApplet: java.lang.String getValue(java.lang.String,java.lang.String)>"->"load.r r0";
+    "push \"alignment\""
+    "load.r r0"->"push \"alignment\"";
+    "push \"center\""
+    "push \"alignment\""->"push \"center\"";
+    "specialinvoke <StockGraphApplet: java.lang.String getValueUpper(java.lang.String,java.lang.String)>"
+    "push \"center\""->"specialinvoke <StockGraphApplet: java.lang.String getValueUpper(java.lang.String,java.lang.String)>";
+    "virtualinvoke <StockGraph: void setImages(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)>"
+    "specialinvoke <StockGraphApplet: java.lang.String getValueUpper(java.lang.String,java.lang.String)>"->"virtualinvoke <StockGraph: void setImages(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)>";
+    "virtualinvoke <StockGraph: void setImages(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)>"->"load.r r0";
+    "load.r r0"->"fieldget <StockGraphApplet: StockGraph graph>";
+    "fieldget <StockGraphApplet: StockGraph graph>"->"load.r r0";
+    "push \"topMargin\""
+    "load.r r0"->"push \"topMargin\"";
+    "push \"topMargin\""->"push \"0\"";
+    "push \"0\""->"specialinvoke <StockGraphApplet: java.lang.String getValue(java.lang.String,java.lang.String)>";
+    "specialinvoke <StockGraphApplet: java.lang.String getValue(java.lang.String,java.lang.String)>"->"load.r r0";
+    "push \"leftMargin\""
+    "load.r r0"->"push \"leftMargin\"";
+    "push \"leftMargin\""->"push \"0\"";
+    "push \"0\""->"specialinvoke <StockGraphApplet: java.lang.String getValue(java.lang.String,java.lang.String)>";
+    "virtualinvoke <StockGraph: void setMargins(java.lang.String,java.lang.String)>"
+    "specialinvoke <StockGraphApplet: java.lang.String getValue(java.lang.String,java.lang.String)>"->"virtualinvoke <StockGraph: void setMargins(java.lang.String,java.lang.String)>";
+    "virtualinvoke <StockGraph: void setMargins(java.lang.String,java.lang.String)>"->"load.r r0";
+    "load.r r0"->"fieldget <StockGraphApplet: StockGraph graph>";
+    "fieldget <StockGraphApplet: StockGraph graph>"->"load.r r0";
+    "push \"chartAdjust\""
+    "load.r r0"->"push \"chartAdjust\"";
+    "push \"chartAdjust\""->"push \"0\"";
+    "push \"0\""->"specialinvoke <StockGraphApplet: java.lang.String getValue(java.lang.String,java.lang.String)>";
+    "virtualinvoke <StockGraph: void setchartAdjustment(java.lang.String)>"
+    "specialinvoke <StockGraphApplet: java.lang.String getValue(java.lang.String,java.lang.String)>"->"virtualinvoke <StockGraph: void setchartAdjustment(java.lang.String)>";
+    "virtualinvoke <StockGraph: void setchartAdjustment(java.lang.String)>"->"load.r r0";
+    "load.r r0"->"fieldget <StockGraphApplet: StockGraph graph>";
+    "fieldget <StockGraphApplet: StockGraph graph>"->"load.r r0";
+    "push \"divisions\""
+    "load.r r0"->"push \"divisions\"";
+    "push \"4\""
+    "push \"divisions\""->"push \"4\"";
+    "push \"4\""->"specialinvoke <StockGraphApplet: java.lang.String getValue(java.lang.String,java.lang.String)>";
+    "specialinvoke <StockGraphApplet: java.lang.String getValue(java.lang.String,java.lang.String)>"->"load.r r0";
+    "push \"subDivision1\""
+    "load.r r0"->"push \"subDivision1\"";
+    "push \"subDivision1\""->"push \"0\"";
+    "push \"0\""->"specialinvoke <StockGraphApplet: java.lang.String getValue(java.lang.String,java.lang.String)>";
+    "specialinvoke <StockGraphApplet: java.lang.String getValue(java.lang.String,java.lang.String)>"->"load.r r0";
+    "push \"subDivision2\""
+    "load.r r0"->"push \"subDivision2\"";
+    "push \"subDivision2\""->"push \"0\"";
+    "push \"0\""->"specialinvoke <StockGraphApplet: java.lang.String getValue(java.lang.String,java.lang.String)>";
+    "virtualinvoke <StockGraph: void setDivisions(java.lang.String,java.lang.String,java.lang.String)>"
+    "specialinvoke <StockGraphApplet: java.lang.String getValue(java.lang.String,java.lang.String)>"->"virtualinvoke <StockGraph: void setDivisions(java.lang.String,java.lang.String,java.lang.String)>";
+    "virtualinvoke <StockGraph: void setDivisions(java.lang.String,java.lang.String,java.lang.String)>"->"load.r r0";
+    "load.r r0"->"fieldget <StockGraphApplet: StockGraph graph>";
+    "fieldget <StockGraphApplet: StockGraph graph>"->"load.r r0";
+    "push \"margin3d\""
+    "load.r r0"->"push \"margin3d\"";
+    "push \"1\""
+    "push \"margin3d\""->"push \"1\"";
+    "push \"1\""->"specialinvoke <StockGraphApplet: java.lang.String getValue(java.lang.String,java.lang.String)>";
+    "specialinvoke <StockGraphApplet: java.lang.String getValue(java.lang.String,java.lang.String)>"->"load.r r0";
+    "push \"depth3d\""
+    "load.r r0"->"push \"depth3d\"";
+    "push \"10\""
+    "push \"depth3d\""->"push \"10\"";
+    "push \"10\""->"specialinvoke <StockGraphApplet: java.lang.String getValue(java.lang.String,java.lang.String)>";
+    "virtualinvoke <StockGraph: void set3dValues(java.lang.String,java.lang.String)>"
+    "specialinvoke <StockGraphApplet: java.lang.String getValue(java.lang.String,java.lang.String)>"->"virtualinvoke <StockGraph: void set3dValues(java.lang.String,java.lang.String)>";
+    "virtualinvoke <StockGraph: void set3dValues(java.lang.String,java.lang.String)>"->"load.r r0";
+    "load.r r0"->"fieldget <StockGraphApplet: StockGraph graph>";
+    "fieldget <StockGraphApplet: StockGraph graph>"->"load.r r0";
+    "push \"foreColor\""
+    "load.r r0"->"push \"foreColor\"";
+    "push \"black\""
+    "push \"foreColor\""->"push \"black\"";
+    "push \"black\""->"specialinvoke <StockGraphApplet: java.lang.String getValue(java.lang.String,java.lang.String)>";
+    "specialinvoke <StockGraphApplet: java.lang.String getValue(java.lang.String,java.lang.String)>"->"load.r r0";
+    "push \"backColor\""
+    "load.r r0"->"push \"backColor\"";
+    "push \"white\""
+    "push \"backColor\""->"push \"white\"";
+    "push \"white\""->"specialinvoke <StockGraphApplet: java.lang.String getValue(java.lang.String,java.lang.String)>";
+    "specialinvoke <StockGraphApplet: java.lang.String getValue(java.lang.String,java.lang.String)>"->"load.r r0";
+    "push \"lineColor\""
+    "load.r r0"->"push \"lineColor\"";
+    "push \"darkgray\""
+    "push \"lineColor\""->"push \"darkgray\"";
+    "push \"darkgray\""->"specialinvoke <StockGraphApplet: java.lang.String getValue(java.lang.String,java.lang.String)>";
+    "specialinvoke <StockGraphApplet: java.lang.String getValue(java.lang.String,java.lang.String)>"->"load.r r0";
+    "push \"subColor\""
+    "load.r r0"->"push \"subColor\"";
+    "push \"gray\""
+    "push \"subColor\""->"push \"gray\"";
+    "push \"gray\""->"specialinvoke <StockGraphApplet: java.lang.String getValue(java.lang.String,java.lang.String)>";
+    "specialinvoke <StockGraphApplet: java.lang.String getValue(java.lang.String,java.lang.String)>"->"load.r r0";
+    "push \"chartColor\""
+    "load.r r0"->"push \"chartColor\"";
+    "push \"chartColor\""->"push \"white\"";
+    "push \"white\""->"specialinvoke <StockGraphApplet: java.lang.String getValue(java.lang.String,java.lang.String)>";
+    "specialinvoke <StockGraphApplet: java.lang.String getValue(java.lang.String,java.lang.String)>"->"load.r r0";
+    "push \"lineGraph1Color\""
+    "load.r r0"->"push \"lineGraph1Color\"";
+    "push \"red\""
+    "push \"lineGraph1Color\""->"push \"red\"";
+    "push \"red\""->"specialinvoke <StockGraphApplet: java.lang.String getValue(java.lang.String,java.lang.String)>";
+    "virtualinvoke <StockGraph: void setColors(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)>"
+    "specialinvoke <StockGraphApplet: java.lang.String getValue(java.lang.String,java.lang.String)>"->"virtualinvoke <StockGraph: void setColors(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)>";
+    "virtualinvoke <StockGraph: void setColors(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)>"->"load.r r0";
+    "load.r r0"->"fieldget <StockGraphApplet: StockGraph graph>";
+    "fieldget <StockGraphApplet: StockGraph graph>"->"load.r r0";
+    "push \"font1\""
+    "load.r r0"->"push \"font1\"";
+    "push \"arial\""
+    "push \"font1\""->"push \"arial\"";
+    "push \"arial\""->"specialinvoke <StockGraphApplet: java.lang.String getValue(java.lang.String,java.lang.String)>";
+    "specialinvoke <StockGraphApplet: java.lang.String getValue(java.lang.String,java.lang.String)>"->"load.r r0";
+    "push \"fontSize\""
+    "load.r r0"->"push \"fontSize\"";
+    "push \"fontSize\""->"push \"10\"";
+    "push \"10\""->"specialinvoke <StockGraphApplet: java.lang.String getValue(java.lang.String,java.lang.String)>";
+    "virtualinvoke <StockGraph: void setFonts(java.lang.String,java.lang.String)>"
+    "specialinvoke <StockGraphApplet: java.lang.String getValue(java.lang.String,java.lang.String)>"->"virtualinvoke <StockGraph: void setFonts(java.lang.String,java.lang.String)>";
+    "return"
+    "virtualinvoke <StockGraph: void setFonts(java.lang.String,java.lang.String)>"->"return";
+}

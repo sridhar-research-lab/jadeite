@@ -1,0 +1,20 @@
+digraph "" {
+    "r0 := @this: DDoS_Booter"
+    "new java.lang.Thread"
+    "r0 := @this: DDoS_Booter"->"new java.lang.Thread";
+    "dup1.r"
+    "new java.lang.Thread"->"dup1.r";
+    "new DDoS_Booter$1"
+    "dup1.r"->"new DDoS_Booter$1";
+    "new DDoS_Booter$1"->"dup1.r";
+    "load.r r0"
+    "dup1.r"->"load.r r0";
+    "specialinvoke <DDoS_Booter$1: void <init>(DDoS_Booter)>"
+    "load.r r0"->"specialinvoke <DDoS_Booter$1: void <init>(DDoS_Booter)>";
+    "specialinvoke <java.lang.Thread: void <init>(java.lang.Runnable)>"
+    "specialinvoke <DDoS_Booter$1: void <init>(DDoS_Booter)>"->"specialinvoke <java.lang.Thread: void <init>(java.lang.Runnable)>";
+    "virtualinvoke <java.lang.Thread: void start()>"
+    "specialinvoke <java.lang.Thread: void <init>(java.lang.Runnable)>"->"virtualinvoke <java.lang.Thread: void start()>";
+    "return"
+    "virtualinvoke <java.lang.Thread: void start()>"->"return";
+}

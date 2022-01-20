@@ -1,0 +1,204 @@
+digraph "" {
+    "r0 := @this: imaging.ImageApplet"
+    "load.r r0"
+    "r0 := @this: imaging.ImageApplet"->"load.r r0";
+    "staticget <java.awt.Color: java.awt.Color lightGray>"
+    "load.r r0"->"staticget <java.awt.Color: java.awt.Color lightGray>";
+    "virtualinvoke <imaging.ImageApplet: void setBackground(java.awt.Color)>"
+    "staticget <java.awt.Color: java.awt.Color lightGray>"->"virtualinvoke <imaging.ImageApplet: void setBackground(java.awt.Color)>";
+    "virtualinvoke <imaging.ImageApplet: void setBackground(java.awt.Color)>"->"load.r r0";
+    "new java.awt.BorderLayout"
+    "load.r r0"->"new java.awt.BorderLayout";
+    "dup1.r"
+    "new java.awt.BorderLayout"->"dup1.r";
+    "specialinvoke <java.awt.BorderLayout: void <init>()>"
+    "dup1.r"->"specialinvoke <java.awt.BorderLayout: void <init>()>";
+    "virtualinvoke <imaging.ImageApplet: void setLayout(java.awt.LayoutManager)>"
+    "specialinvoke <java.awt.BorderLayout: void <init>()>"->"virtualinvoke <imaging.ImageApplet: void setLayout(java.awt.LayoutManager)>";
+    "virtualinvoke <imaging.ImageApplet: void setLayout(java.awt.LayoutManager)>"->"load.r r0";
+    "new imaging.CroppingCanvas"
+    "load.r r0"->"new imaging.CroppingCanvas";
+    "new imaging.CroppingCanvas"->"dup1.r";
+    "specialinvoke <imaging.CroppingCanvas: void <init>()>"
+    "dup1.r"->"specialinvoke <imaging.CroppingCanvas: void <init>()>";
+    "fieldput <imaging.ImageApplet: imaging.CroppingCanvas cropCanvas>"
+    "specialinvoke <imaging.CroppingCanvas: void <init>()>"->"fieldput <imaging.ImageApplet: imaging.CroppingCanvas cropCanvas>";
+    "fieldput <imaging.ImageApplet: imaging.CroppingCanvas cropCanvas>"->"load.r r0";
+    "new javax.swing.JPanel"
+    "load.r r0"->"new javax.swing.JPanel";
+    "new javax.swing.JPanel"->"dup1.r";
+    "specialinvoke <javax.swing.JPanel: void <init>()>"
+    "dup1.r"->"specialinvoke <javax.swing.JPanel: void <init>()>";
+    "fieldput <imaging.ImageApplet: javax.swing.JPanel instructions>"
+    "specialinvoke <javax.swing.JPanel: void <init>()>"->"fieldput <imaging.ImageApplet: javax.swing.JPanel instructions>";
+    "fieldput <imaging.ImageApplet: javax.swing.JPanel instructions>"->"load.r r0";
+    "fieldget <imaging.ImageApplet: javax.swing.JPanel instructions>"
+    "load.r r0"->"fieldget <imaging.ImageApplet: javax.swing.JPanel instructions>";
+    "new java.awt.GridLayout"
+    "fieldget <imaging.ImageApplet: javax.swing.JPanel instructions>"->"new java.awt.GridLayout";
+    "new java.awt.GridLayout"->"dup1.r";
+    "push 0"
+    "dup1.r"->"push 0";
+    "push 1"
+    "push 0"->"push 1";
+    "specialinvoke <java.awt.GridLayout: void <init>(int,int)>"
+    "push 1"->"specialinvoke <java.awt.GridLayout: void <init>(int,int)>";
+    "virtualinvoke <javax.swing.JPanel: void setLayout(java.awt.LayoutManager)>"
+    "specialinvoke <java.awt.GridLayout: void <init>(int,int)>"->"virtualinvoke <javax.swing.JPanel: void setLayout(java.awt.LayoutManager)>";
+    "virtualinvoke <javax.swing.JPanel: void setLayout(java.awt.LayoutManager)>"->"load.r r0";
+    "load.r r0"->"fieldget <imaging.ImageApplet: javax.swing.JPanel instructions>";
+    "new javax.swing.JLabel"
+    "fieldget <imaging.ImageApplet: javax.swing.JPanel instructions>"->"new javax.swing.JLabel";
+    "new javax.swing.JLabel"->"dup1.r";
+    "push \"To load an image to the screen to add paver, click on the \\\"Load Image\\\" button. \""
+    "dup1.r"->"push \"To load an image to the screen to add paver, click on the \\\"Load Image\\\" button. \"";
+    "specialinvoke <javax.swing.JLabel: void <init>(java.lang.String)>"
+    "push \"To load an image to the screen to add paver, click on the \\\"Load Image\\\" button. \""->"specialinvoke <javax.swing.JLabel: void <init>(java.lang.String)>";
+    "virtualinvoke <javax.swing.JPanel: java.awt.Component add(java.awt.Component)>"
+    "specialinvoke <javax.swing.JLabel: void <init>(java.lang.String)>"->"virtualinvoke <javax.swing.JPanel: java.awt.Component add(java.awt.Component)>";
+    "pop"
+    "virtualinvoke <javax.swing.JPanel: java.awt.Component add(java.awt.Component)>"->"pop";
+    "pop"->"load.r r0";
+    "load.r r0"->"fieldget <imaging.ImageApplet: javax.swing.JPanel instructions>";
+    "fieldget <imaging.ImageApplet: javax.swing.JPanel instructions>"->"new javax.swing.JLabel";
+    "new javax.swing.JLabel"->"dup1.r";
+    "push \"Navigate to the folder on your computer where you saved the image. \""
+    "dup1.r"->"push \"Navigate to the folder on your computer where you saved the image. \"";
+    "push \"Navigate to the folder on your computer where you saved the image. \""->"specialinvoke <javax.swing.JLabel: void <init>(java.lang.String)>";
+    "specialinvoke <javax.swing.JLabel: void <init>(java.lang.String)>"->"virtualinvoke <javax.swing.JPanel: java.awt.Component add(java.awt.Component)>";
+    "virtualinvoke <javax.swing.JPanel: java.awt.Component add(java.awt.Component)>"->"pop";
+    "pop"->"load.r r0";
+    "load.r r0"->"fieldget <imaging.ImageApplet: javax.swing.JPanel instructions>";
+    "fieldget <imaging.ImageApplet: javax.swing.JPanel instructions>"->"new javax.swing.JLabel";
+    "new javax.swing.JLabel"->"dup1.r";
+    "push \"Select the image file and click Open.\""
+    "dup1.r"->"push \"Select the image file and click Open.\"";
+    "push \"Select the image file and click Open.\""->"specialinvoke <javax.swing.JLabel: void <init>(java.lang.String)>";
+    "specialinvoke <javax.swing.JLabel: void <init>(java.lang.String)>"->"virtualinvoke <javax.swing.JPanel: java.awt.Component add(java.awt.Component)>";
+    "virtualinvoke <javax.swing.JPanel: java.awt.Component add(java.awt.Component)>"->"pop";
+    "pop"->"load.r r0";
+    "new imaging.AreaCanvas"
+    "load.r r0"->"new imaging.AreaCanvas";
+    "new imaging.AreaCanvas"->"dup1.r";
+    "specialinvoke <imaging.AreaCanvas: void <init>()>"
+    "dup1.r"->"specialinvoke <imaging.AreaCanvas: void <init>()>";
+    "fieldput <imaging.ImageApplet: imaging.AreaCanvas areaCanvas>"
+    "specialinvoke <imaging.AreaCanvas: void <init>()>"->"fieldput <imaging.ImageApplet: imaging.AreaCanvas areaCanvas>";
+    "fieldput <imaging.ImageApplet: imaging.AreaCanvas areaCanvas>"->"load.r r0";
+    "new java.awt.ScrollPane"
+    "load.r r0"->"new java.awt.ScrollPane";
+    "new java.awt.ScrollPane"->"dup1.r";
+    "dup1.r"->"push 0";
+    "specialinvoke <java.awt.ScrollPane: void <init>(int)>"
+    "push 0"->"specialinvoke <java.awt.ScrollPane: void <init>(int)>";
+    "fieldput <imaging.ImageApplet: java.awt.ScrollPane spane>"
+    "specialinvoke <java.awt.ScrollPane: void <init>(int)>"->"fieldput <imaging.ImageApplet: java.awt.ScrollPane spane>";
+    "fieldput <imaging.ImageApplet: java.awt.ScrollPane spane>"->"load.r r0";
+    "new imaging.ControlPanel"
+    "load.r r0"->"new imaging.ControlPanel";
+    "new imaging.ControlPanel"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "fieldget <imaging.ImageApplet: imaging.AreaCanvas areaCanvas>"
+    "load.r r0"->"fieldget <imaging.ImageApplet: imaging.AreaCanvas areaCanvas>";
+    "specialinvoke <imaging.ControlPanel: void <init>(imaging.AreaCanvas)>"
+    "fieldget <imaging.ImageApplet: imaging.AreaCanvas areaCanvas>"->"specialinvoke <imaging.ControlPanel: void <init>(imaging.AreaCanvas)>";
+    "fieldput <imaging.ImageApplet: imaging.ControlPanel cPanel>"
+    "specialinvoke <imaging.ControlPanel: void <init>(imaging.AreaCanvas)>"->"fieldput <imaging.ImageApplet: imaging.ControlPanel cPanel>";
+    "fieldput <imaging.ImageApplet: imaging.ControlPanel cPanel>"->"load.r r0";
+    "load.r r0"->"new javax.swing.JPanel";
+    "new javax.swing.JPanel"->"dup1.r";
+    "dup1.r"->"specialinvoke <javax.swing.JPanel: void <init>()>";
+    "fieldput <imaging.ImageApplet: javax.swing.JPanel controlContainer>"
+    "specialinvoke <javax.swing.JPanel: void <init>()>"->"fieldput <imaging.ImageApplet: javax.swing.JPanel controlContainer>";
+    "fieldput <imaging.ImageApplet: javax.swing.JPanel controlContainer>"->"load.r r0";
+    "fieldget <imaging.ImageApplet: javax.swing.JPanel controlContainer>"
+    "load.r r0"->"fieldget <imaging.ImageApplet: javax.swing.JPanel controlContainer>";
+    "fieldget <imaging.ImageApplet: javax.swing.JPanel controlContainer>"->"load.r r0";
+    "fieldget <imaging.ImageApplet: imaging.ControlPanel cPanel>"
+    "load.r r0"->"fieldget <imaging.ImageApplet: imaging.ControlPanel cPanel>";
+    "fieldget <imaging.ImageApplet: imaging.ControlPanel cPanel>"->"virtualinvoke <javax.swing.JPanel: java.awt.Component add(java.awt.Component)>";
+    "virtualinvoke <javax.swing.JPanel: java.awt.Component add(java.awt.Component)>"->"pop";
+    "pop"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "fieldget <imaging.ImageApplet: java.awt.ScrollPane spane>"
+    "load.r r0"->"fieldget <imaging.ImageApplet: java.awt.ScrollPane spane>";
+    "push \"Center\""
+    "fieldget <imaging.ImageApplet: java.awt.ScrollPane spane>"->"push \"Center\"";
+    "virtualinvoke <imaging.ImageApplet: void add(java.awt.Component,java.lang.Object)>"
+    "push \"Center\""->"virtualinvoke <imaging.ImageApplet: void add(java.awt.Component,java.lang.Object)>";
+    "staticget <java.lang.System: java.io.PrintStream out>"
+    "virtualinvoke <imaging.ImageApplet: void add(java.awt.Component,java.lang.Object)>"->"staticget <java.lang.System: java.io.PrintStream out>";
+    "new java.lang.StringBuilder"
+    "staticget <java.lang.System: java.io.PrintStream out>"->"new java.lang.StringBuilder";
+    "new java.lang.StringBuilder"->"dup1.r";
+    "push \"Crop Canvas sise : \""
+    "dup1.r"->"push \"Crop Canvas sise : \"";
+    "specialinvoke <java.lang.StringBuilder: void <init>(java.lang.String)>"
+    "push \"Crop Canvas sise : \""->"specialinvoke <java.lang.StringBuilder: void <init>(java.lang.String)>";
+    "specialinvoke <java.lang.StringBuilder: void <init>(java.lang.String)>"->"load.r r0";
+    "fieldget <imaging.ImageApplet: imaging.CroppingCanvas cropCanvas>"
+    "load.r r0"->"fieldget <imaging.ImageApplet: imaging.CroppingCanvas cropCanvas>";
+    "virtualinvoke <imaging.CroppingCanvas: int getWidth()>"
+    "fieldget <imaging.ImageApplet: imaging.CroppingCanvas cropCanvas>"->"virtualinvoke <imaging.CroppingCanvas: int getWidth()>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(int)>"
+    "virtualinvoke <imaging.CroppingCanvas: int getWidth()>"->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(int)>";
+    "push \",\""
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(int)>"->"push \",\"";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"
+    "push \",\""->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"load.r r0";
+    "load.r r0"->"fieldget <imaging.ImageApplet: imaging.CroppingCanvas cropCanvas>";
+    "virtualinvoke <imaging.CroppingCanvas: int getHeight()>"
+    "fieldget <imaging.ImageApplet: imaging.CroppingCanvas cropCanvas>"->"virtualinvoke <imaging.CroppingCanvas: int getHeight()>";
+    "virtualinvoke <imaging.CroppingCanvas: int getHeight()>"->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(int)>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.String toString()>"
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(int)>"->"virtualinvoke <java.lang.StringBuilder: java.lang.String toString()>";
+    "virtualinvoke <java.io.PrintStream: void println(java.lang.String)>"
+    "virtualinvoke <java.lang.StringBuilder: java.lang.String toString()>"->"virtualinvoke <java.io.PrintStream: void println(java.lang.String)>";
+    "virtualinvoke <java.io.PrintStream: void println(java.lang.String)>"->"load.r r0";
+    "load.r r0"->"fieldget <imaging.ImageApplet: java.awt.ScrollPane spane>";
+    "new java.awt.Dimension"
+    "fieldget <imaging.ImageApplet: java.awt.ScrollPane spane>"->"new java.awt.Dimension";
+    "new java.awt.Dimension"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "load.r r0"->"fieldget <imaging.ImageApplet: imaging.CroppingCanvas cropCanvas>";
+    "fieldget <imaging.ImageApplet: imaging.CroppingCanvas cropCanvas>"->"virtualinvoke <imaging.CroppingCanvas: int getWidth()>";
+    "virtualinvoke <imaging.CroppingCanvas: int getWidth()>"->"load.r r0";
+    "load.r r0"->"fieldget <imaging.ImageApplet: imaging.CroppingCanvas cropCanvas>";
+    "fieldget <imaging.ImageApplet: imaging.CroppingCanvas cropCanvas>"->"virtualinvoke <imaging.CroppingCanvas: int getHeight()>";
+    "specialinvoke <java.awt.Dimension: void <init>(int,int)>"
+    "virtualinvoke <imaging.CroppingCanvas: int getHeight()>"->"specialinvoke <java.awt.Dimension: void <init>(int,int)>";
+    "virtualinvoke <java.awt.ScrollPane: void setPreferredSize(java.awt.Dimension)>"
+    "specialinvoke <java.awt.Dimension: void <init>(int,int)>"->"virtualinvoke <java.awt.ScrollPane: void setPreferredSize(java.awt.Dimension)>";
+    "virtualinvoke <java.awt.ScrollPane: void setPreferredSize(java.awt.Dimension)>"->"load.r r0";
+    "load.r r0"->"fieldget <imaging.ImageApplet: java.awt.ScrollPane spane>";
+    "fieldget <imaging.ImageApplet: java.awt.ScrollPane spane>"->"load.r r0";
+    "load.r r0"->"fieldget <imaging.ImageApplet: imaging.CroppingCanvas cropCanvas>";
+    "fieldget <imaging.ImageApplet: imaging.CroppingCanvas cropCanvas>"->"virtualinvoke <imaging.CroppingCanvas: int getWidth()>";
+    "virtualinvoke <imaging.CroppingCanvas: int getWidth()>"->"load.r r0";
+    "load.r r0"->"fieldget <imaging.ImageApplet: imaging.CroppingCanvas cropCanvas>";
+    "fieldget <imaging.ImageApplet: imaging.CroppingCanvas cropCanvas>"->"virtualinvoke <imaging.CroppingCanvas: int getHeight()>";
+    "virtualinvoke <java.awt.ScrollPane: void setSize(int,int)>"
+    "virtualinvoke <imaging.CroppingCanvas: int getHeight()>"->"virtualinvoke <java.awt.ScrollPane: void setSize(int,int)>";
+    "virtualinvoke <java.awt.ScrollPane: void setSize(int,int)>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <imaging.ImageApplet: imaging.CroppingCanvas cropCanvas>";
+    "fieldget <imaging.ImageApplet: imaging.CroppingCanvas cropCanvas>"->"virtualinvoke <imaging.CroppingCanvas: int getWidth()>";
+    "virtualinvoke <imaging.CroppingCanvas: int getWidth()>"->"load.r r0";
+    "load.r r0"->"fieldget <imaging.ImageApplet: imaging.CroppingCanvas cropCanvas>";
+    "fieldget <imaging.ImageApplet: imaging.CroppingCanvas cropCanvas>"->"virtualinvoke <imaging.CroppingCanvas: int getHeight()>";
+    "virtualinvoke <imaging.ImageApplet: void setSize(int,int)>"
+    "virtualinvoke <imaging.CroppingCanvas: int getHeight()>"->"virtualinvoke <imaging.ImageApplet: void setSize(int,int)>";
+    "virtualinvoke <imaging.ImageApplet: void setSize(int,int)>"->"load.r r0";
+    "fieldget <imaging.ImageApplet: imaging.ImageApplet$CheckImageLoadEvent loadEvt>"
+    "load.r r0"->"fieldget <imaging.ImageApplet: imaging.ImageApplet$CheckImageLoadEvent loadEvt>";
+    "virtualinvoke <imaging.ImageApplet$CheckImageLoadEvent: void start()>"
+    "fieldget <imaging.ImageApplet: imaging.ImageApplet$CheckImageLoadEvent loadEvt>"->"virtualinvoke <imaging.ImageApplet$CheckImageLoadEvent: void start()>";
+    "virtualinvoke <imaging.ImageApplet$CheckImageLoadEvent: void start()>"->"load.r r0";
+    "fieldget <imaging.ImageApplet: imaging.ImageApplet$CheckKerbLoadEvent kevt>"
+    "load.r r0"->"fieldget <imaging.ImageApplet: imaging.ImageApplet$CheckKerbLoadEvent kevt>";
+    "virtualinvoke <imaging.ImageApplet$CheckKerbLoadEvent: void start()>"
+    "fieldget <imaging.ImageApplet: imaging.ImageApplet$CheckKerbLoadEvent kevt>"->"virtualinvoke <imaging.ImageApplet$CheckKerbLoadEvent: void start()>";
+    "return"
+    "virtualinvoke <imaging.ImageApplet$CheckKerbLoadEvent: void start()>"->"return";
+}

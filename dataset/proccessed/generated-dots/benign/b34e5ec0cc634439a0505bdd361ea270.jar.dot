@@ -1,0 +1,148 @@
+digraph "" {
+    "r0 := @this: ShadowText"
+    "load.r r0"
+    "r0 := @this: ShadowText"->"load.r r0";
+    "push \"text\""
+    "load.r r0"->"push \"text\"";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"
+    "push \"text\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "store.r r1"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"store.r r1";
+    "load.r r1"
+    "store.r r1"->"load.r r1";
+    "ifnull push \"Text\""
+    "load.r r1"->"ifnull push \"Text\"";
+    "ifnull push \"Text\""->"load.r r1";
+    "load.r r1"->"store.r r1";
+    "goto load.r r0"
+    "store.r r1"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r1";
+    "fieldput <ShadowText: java.lang.String text>"
+    "load.r r1"->"fieldput <ShadowText: java.lang.String text>";
+    "fieldput <ShadowText: java.lang.String text>"->"load.r r0";
+    "push \"bgcolor\""
+    "load.r r0"->"push \"bgcolor\"";
+    "push \"bgcolor\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"store.r r1";
+    "store.r r1"->"load.r r1";
+    "ifnull load.r r0"
+    "load.r r1"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r r0";
+    "new java.awt.Color"
+    "load.r r0"->"new java.awt.Color";
+    "dup1.r"
+    "new java.awt.Color"->"dup1.r";
+    "dup1.r"->"load.r r1";
+    "push 16"
+    "load.r r1"->"push 16";
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String,int)>"
+    "push 16"->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String,int)>";
+    "specialinvoke <java.awt.Color: void <init>(int)>"
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String,int)>"->"specialinvoke <java.awt.Color: void <init>(int)>";
+    "fieldput <ShadowText: java.awt.Color bgColor>"
+    "specialinvoke <java.awt.Color: void <init>(int)>"->"fieldput <ShadowText: java.awt.Color bgColor>";
+    "fieldput <ShadowText: java.awt.Color bgColor>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "fieldget <ShadowText: java.awt.Color bgColor>"
+    "load.r r0"->"fieldget <ShadowText: java.awt.Color bgColor>";
+    "virtualinvoke <java.awt.Component: void setBackground(java.awt.Color)>"
+    "fieldget <ShadowText: java.awt.Color bgColor>"->"virtualinvoke <java.awt.Component: void setBackground(java.awt.Color)>";
+    "virtualinvoke <java.awt.Component: void setBackground(java.awt.Color)>"->"load.r r0";
+    "push \"textcolor\""
+    "load.r r0"->"push \"textcolor\"";
+    "push \"textcolor\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"store.r r1";
+    "store.r r1"->"load.r r1";
+    "load.r r1"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r r0";
+    "load.r r0"->"new java.awt.Color";
+    "new java.awt.Color"->"dup1.r";
+    "dup1.r"->"load.r r1";
+    "load.r r1"->"push 16";
+    "push 16"->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String,int)>";
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String,int)>"->"specialinvoke <java.awt.Color: void <init>(int)>";
+    "fieldput <ShadowText: java.awt.Color fgColor>"
+    "specialinvoke <java.awt.Color: void <init>(int)>"->"fieldput <ShadowText: java.awt.Color fgColor>";
+    "fieldput <ShadowText: java.awt.Color fgColor>"->"load.r r0";
+    "push \"font\""
+    "load.r r0"->"push \"font\"";
+    "push \"font\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"store.r r1";
+    "store.r r1"->"load.r r1";
+    "ifnull push \"Times Roman\""
+    "load.r r1"->"ifnull push \"Times Roman\"";
+    "ifnull push \"Times Roman\""->"load.r r1";
+    "load.r r1"->"store.r r1";
+    "store.r r1"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r1";
+    "fieldput <ShadowText: java.lang.String font>"
+    "load.r r1"->"fieldput <ShadowText: java.lang.String font>";
+    "fieldput <ShadowText: java.lang.String font>"->"load.r r0";
+    "push \"size\""
+    "load.r r0"->"push \"size\"";
+    "push \"size\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"store.r r1";
+    "store.r r1"->"load.r r1";
+    "ifnull push 36"
+    "load.r r1"->"ifnull push 36";
+    "ifnull push 36"->"load.r r1";
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"
+    "load.r r1"->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>";
+    "store.i r1"
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"->"store.i r1";
+    "store.i r1"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "load.i r1"
+    "load.r r0"->"load.i r1";
+    "fieldput <ShadowText: int size>"
+    "load.i r1"->"fieldput <ShadowText: int size>";
+    "fieldput <ShadowText: int size>"->"load.r r0";
+    "push \"shadowX\""
+    "load.r r0"->"push \"shadowX\"";
+    "push \"shadowX\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"store.r r1";
+    "store.r r1"->"load.r r1";
+    "ifnull push 4"
+    "load.r r1"->"ifnull push 4";
+    "ifnull push 4"->"load.r r1";
+    "load.r r1"->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>";
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"->"store.i r1";
+    "store.i r1"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "load.r r0"->"load.i r1";
+    "fieldput <ShadowText: int shadowX>"
+    "load.i r1"->"fieldput <ShadowText: int shadowX>";
+    "fieldput <ShadowText: int shadowX>"->"load.r r0";
+    "push \"shadowY\""
+    "load.r r0"->"push \"shadowY\"";
+    "push \"shadowY\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"store.r r1";
+    "store.r r1"->"load.r r1";
+    "load.r r1"->"ifnull push 4";
+    "ifnull push 4"->"load.r r1";
+    "load.r r1"->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>";
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"->"store.i r1";
+    "store.i r1"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "load.r r0"->"load.i r1";
+    "fieldput <ShadowText: int shadowY>"
+    "load.i r1"->"fieldput <ShadowText: int shadowY>";
+    "return"
+    "fieldput <ShadowText: int shadowY>"->"return";
+    "push 4"
+    "ifnull push 4"->"push 4";
+    "push 4"->"store.i r1";
+    "ifnull push 4"->"push 4";
+    "push 4"->"store.i r1";
+    "push 36"
+    "ifnull push 36"->"push 36";
+    "push 36"->"store.i r1";
+    "push \"Times Roman\""
+    "ifnull push \"Times Roman\""->"push \"Times Roman\"";
+    "push \"Times Roman\""->"store.r r1";
+    "push \"Text\""
+    "ifnull push \"Text\""->"push \"Text\"";
+    "push \"Text\""->"store.r r1";
+}

@@ -1,0 +1,45 @@
+digraph "" {
+    "r0 := @this: SMapplet"
+    "load.r r0"
+    "r0 := @this: SMapplet"->"load.r r0";
+    "new java.awt.BorderLayout"
+    "load.r r0"->"new java.awt.BorderLayout";
+    "dup1.r"
+    "new java.awt.BorderLayout"->"dup1.r";
+    "specialinvoke <java.awt.BorderLayout: void <init>()>"
+    "dup1.r"->"specialinvoke <java.awt.BorderLayout: void <init>()>";
+    "virtualinvoke <java.awt.Container: void setLayout(java.awt.LayoutManager)>"
+    "specialinvoke <java.awt.BorderLayout: void <init>()>"->"virtualinvoke <java.awt.Container: void setLayout(java.awt.LayoutManager)>";
+    "virtualinvoke <java.awt.Container: void setLayout(java.awt.LayoutManager)>"->"load.r r0";
+    "new com.guyhaas.Intro_to_Programming.TurtleGraphics"
+    "load.r r0"->"new com.guyhaas.Intro_to_Programming.TurtleGraphics";
+    "new com.guyhaas.Intro_to_Programming.TurtleGraphics"->"dup1.r";
+    "push 200"
+    "dup1.r"->"push 200";
+    "push 200"->"push 200";
+    "specialinvoke <com.guyhaas.Intro_to_Programming.TurtleGraphics: void <init>(int,int)>"
+    "push 200"->"specialinvoke <com.guyhaas.Intro_to_Programming.TurtleGraphics: void <init>(int,int)>";
+    "fieldput <SMapplet: com.guyhaas.Intro_to_Programming.TurtleGraphics tgObj>"
+    "specialinvoke <com.guyhaas.Intro_to_Programming.TurtleGraphics: void <init>(int,int)>"->"fieldput <SMapplet: com.guyhaas.Intro_to_Programming.TurtleGraphics tgObj>";
+    "fieldput <SMapplet: com.guyhaas.Intro_to_Programming.TurtleGraphics tgObj>"->"load.r r0";
+    "fieldget <SMapplet: com.guyhaas.Intro_to_Programming.TurtleGraphics tgObj>"
+    "load.r r0"->"fieldget <SMapplet: com.guyhaas.Intro_to_Programming.TurtleGraphics tgObj>";
+    "staticget <java.awt.Color: java.awt.Color white>"
+    "fieldget <SMapplet: com.guyhaas.Intro_to_Programming.TurtleGraphics tgObj>"->"staticget <java.awt.Color: java.awt.Color white>";
+    "virtualinvoke <java.awt.Component: void setBackground(java.awt.Color)>"
+    "staticget <java.awt.Color: java.awt.Color white>"->"virtualinvoke <java.awt.Component: void setBackground(java.awt.Color)>";
+    "virtualinvoke <java.awt.Component: void setBackground(java.awt.Color)>"->"load.r r0";
+    "push \"Center\""
+    "load.r r0"->"push \"Center\"";
+    "push \"Center\""->"load.r r0";
+    "load.r r0"->"fieldget <SMapplet: com.guyhaas.Intro_to_Programming.TurtleGraphics tgObj>";
+    "virtualinvoke <java.awt.Container: java.awt.Component add(java.lang.String,java.awt.Component)>"
+    "fieldget <SMapplet: com.guyhaas.Intro_to_Programming.TurtleGraphics tgObj>"->"virtualinvoke <java.awt.Container: java.awt.Component add(java.lang.String,java.awt.Component)>";
+    "pop"
+    "virtualinvoke <java.awt.Container: java.awt.Component add(java.lang.String,java.awt.Component)>"->"pop";
+    "pop"->"load.r r0";
+    "virtualinvoke <SMapplet: void initialize()>"
+    "load.r r0"->"virtualinvoke <SMapplet: void initialize()>";
+    "return"
+    "virtualinvoke <SMapplet: void initialize()>"->"return";
+}

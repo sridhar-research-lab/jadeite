@@ -1,0 +1,165 @@
+digraph "" {
+    "r0 := @this: MandelbrotUI"
+    "load.r r0"
+    "r0 := @this: MandelbrotUI"->"load.r r0";
+    "specialinvoke <java.applet.Applet: void init()>"
+    "load.r r0"->"specialinvoke <java.applet.Applet: void init()>";
+    "specialinvoke <java.applet.Applet: void init()>"->"load.r r0";
+    "push \"MandelbrotUI\""
+    "load.r r0"->"push \"MandelbrotUI\"";
+    "virtualinvoke <MandelbrotUI: void setName(java.lang.String)>"
+    "push \"MandelbrotUI\""->"virtualinvoke <MandelbrotUI: void setName(java.lang.String)>";
+    "virtualinvoke <MandelbrotUI: void setName(java.lang.String)>"->"load.r r0";
+    "new java.awt.BorderLayout"
+    "load.r r0"->"new java.awt.BorderLayout";
+    "dup1.r"
+    "new java.awt.BorderLayout"->"dup1.r";
+    "specialinvoke <java.awt.BorderLayout: void <init>()>"
+    "dup1.r"->"specialinvoke <java.awt.BorderLayout: void <init>()>";
+    "virtualinvoke <MandelbrotUI: void setLayout(java.awt.LayoutManager)>"
+    "specialinvoke <java.awt.BorderLayout: void <init>()>"->"virtualinvoke <MandelbrotUI: void setLayout(java.awt.LayoutManager)>";
+    "virtualinvoke <MandelbrotUI: void setLayout(java.awt.LayoutManager)>"->"load.r r0";
+    "push 640"
+    "load.r r0"->"push 640";
+    "push 600"
+    "push 640"->"push 600";
+    "virtualinvoke <MandelbrotUI: void setSize(int,int)>"
+    "push 600"->"virtualinvoke <MandelbrotUI: void setSize(int,int)>";
+    "virtualinvoke <MandelbrotUI: void setSize(int,int)>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "specialinvoke <MandelbrotUI: java.awt.Panel getPanelMenu()>"
+    "load.r r0"->"specialinvoke <MandelbrotUI: java.awt.Panel getPanelMenu()>";
+    "push \"North\""
+    "specialinvoke <MandelbrotUI: java.awt.Panel getPanelMenu()>"->"push \"North\"";
+    "virtualinvoke <MandelbrotUI: void add(java.awt.Component,java.lang.Object)>"
+    "push \"North\""->"virtualinvoke <MandelbrotUI: void add(java.awt.Component,java.lang.Object)>";
+    "virtualinvoke <MandelbrotUI: void add(java.awt.Component,java.lang.Object)>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "specialinvoke <MandelbrotUI: java.awt.Panel getPanelBody()>"
+    "load.r r0"->"specialinvoke <MandelbrotUI: java.awt.Panel getPanelBody()>";
+    "push \"Center\""
+    "specialinvoke <MandelbrotUI: java.awt.Panel getPanelBody()>"->"push \"Center\"";
+    "push \"Center\""->"virtualinvoke <MandelbrotUI: void add(java.awt.Component,java.lang.Object)>";
+    "virtualinvoke <MandelbrotUI: void add(java.awt.Component,java.lang.Object)>"->"load.r r0";
+    "specialinvoke <MandelbrotUI: void initConnections()>"
+    "load.r r0"->"specialinvoke <MandelbrotUI: void initConnections()>";
+    "specialinvoke <MandelbrotUI: void initConnections()>"->"load.r r0";
+    "load.r r0"->"push 640";
+    "fieldput <MandelbrotUI: int maxCol>"
+    "push 640"->"fieldput <MandelbrotUI: int maxCol>";
+    "fieldput <MandelbrotUI: int maxCol>"->"load.r r0";
+    "push 480"
+    "load.r r0"->"push 480";
+    "fieldput <MandelbrotUI: int maxRow>"
+    "push 480"->"fieldput <MandelbrotUI: int maxRow>";
+    "fieldput <MandelbrotUI: int maxRow>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "fieldget <MandelbrotUI: int maxCol>"
+    "load.r r0"->"fieldget <MandelbrotUI: int maxCol>";
+    "fieldget <MandelbrotUI: int maxCol>"->"load.r r0";
+    "fieldget <MandelbrotUI: int maxRow>"
+    "load.r r0"->"fieldget <MandelbrotUI: int maxRow>";
+    "virtualinvoke <MandelbrotUI: java.awt.Image createImage(int,int)>"
+    "fieldget <MandelbrotUI: int maxRow>"->"virtualinvoke <MandelbrotUI: java.awt.Image createImage(int,int)>";
+    "fieldput <MandelbrotUI: java.awt.Image image>"
+    "virtualinvoke <MandelbrotUI: java.awt.Image createImage(int,int)>"->"fieldput <MandelbrotUI: java.awt.Image image>";
+    "fieldput <MandelbrotUI: java.awt.Image image>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "fieldget <MandelbrotUI: java.awt.Image image>"
+    "load.r r0"->"fieldget <MandelbrotUI: java.awt.Image image>";
+    "virtualinvoke <java.awt.Image: java.awt.Graphics getGraphics()>"
+    "fieldget <MandelbrotUI: java.awt.Image image>"->"virtualinvoke <java.awt.Image: java.awt.Graphics getGraphics()>";
+    "fieldput <MandelbrotUI: java.awt.Graphics myGraphics>"
+    "virtualinvoke <java.awt.Image: java.awt.Graphics getGraphics()>"->"fieldput <MandelbrotUI: java.awt.Graphics myGraphics>";
+    "fieldput <MandelbrotUI: java.awt.Graphics myGraphics>"->"load.r r0";
+    "specialinvoke <MandelbrotUI: java.awt.Label getLabelIterationsValue()>"
+    "load.r r0"->"specialinvoke <MandelbrotUI: java.awt.Label getLabelIterationsValue()>";
+    "new java.lang.StringBuffer"
+    "specialinvoke <MandelbrotUI: java.awt.Label getLabelIterationsValue()>"->"new java.lang.StringBuffer";
+    "new java.lang.StringBuffer"->"dup1.r";
+    "specialinvoke <java.lang.StringBuffer: void <init>()>"
+    "dup1.r"->"specialinvoke <java.lang.StringBuffer: void <init>()>";
+    "push \"\""
+    "specialinvoke <java.lang.StringBuffer: void <init>()>"->"push \"\"";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"
+    "push \"\""->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"load.r r0";
+    "fieldget <MandelbrotUI: int maxIterations>"
+    "load.r r0"->"fieldget <MandelbrotUI: int maxIterations>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(int)>"
+    "fieldget <MandelbrotUI: int maxIterations>"->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(int)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>"
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(int)>"->"virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>";
+    "virtualinvoke <java.awt.Label: void setText(java.lang.String)>"
+    "virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>"->"virtualinvoke <java.awt.Label: void setText(java.lang.String)>";
+    "virtualinvoke <java.awt.Label: void setText(java.lang.String)>"->"load.r r0";
+    "specialinvoke <MandelbrotUI: java.awt.TextField getTextFieldXMin()>"
+    "load.r r0"->"specialinvoke <MandelbrotUI: java.awt.TextField getTextFieldXMin()>";
+    "specialinvoke <MandelbrotUI: java.awt.TextField getTextFieldXMin()>"->"new java.lang.StringBuffer";
+    "new java.lang.StringBuffer"->"dup1.r";
+    "dup1.r"->"specialinvoke <java.lang.StringBuffer: void <init>()>";
+    "specialinvoke <java.lang.StringBuffer: void <init>()>"->"push \"\"";
+    "push \"\""->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"load.r r0";
+    "fieldget <MandelbrotUI: double XMin>"
+    "load.r r0"->"fieldget <MandelbrotUI: double XMin>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(double)>"
+    "fieldget <MandelbrotUI: double XMin>"->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(double)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(double)>"->"virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>";
+    "virtualinvoke <java.awt.TextField: void setText(java.lang.String)>"
+    "virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>"->"virtualinvoke <java.awt.TextField: void setText(java.lang.String)>";
+    "virtualinvoke <java.awt.TextField: void setText(java.lang.String)>"->"load.r r0";
+    "specialinvoke <MandelbrotUI: java.awt.TextField getTextFieldXMax()>"
+    "load.r r0"->"specialinvoke <MandelbrotUI: java.awt.TextField getTextFieldXMax()>";
+    "specialinvoke <MandelbrotUI: java.awt.TextField getTextFieldXMax()>"->"new java.lang.StringBuffer";
+    "new java.lang.StringBuffer"->"dup1.r";
+    "dup1.r"->"specialinvoke <java.lang.StringBuffer: void <init>()>";
+    "specialinvoke <java.lang.StringBuffer: void <init>()>"->"push \"\"";
+    "push \"\""->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"load.r r0";
+    "fieldget <MandelbrotUI: double XMax>"
+    "load.r r0"->"fieldget <MandelbrotUI: double XMax>";
+    "fieldget <MandelbrotUI: double XMax>"->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(double)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(double)>"->"virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>"->"virtualinvoke <java.awt.TextField: void setText(java.lang.String)>";
+    "virtualinvoke <java.awt.TextField: void setText(java.lang.String)>"->"load.r r0";
+    "specialinvoke <MandelbrotUI: java.awt.TextField getTextFieldYMin()>"
+    "load.r r0"->"specialinvoke <MandelbrotUI: java.awt.TextField getTextFieldYMin()>";
+    "specialinvoke <MandelbrotUI: java.awt.TextField getTextFieldYMin()>"->"new java.lang.StringBuffer";
+    "new java.lang.StringBuffer"->"dup1.r";
+    "dup1.r"->"specialinvoke <java.lang.StringBuffer: void <init>()>";
+    "specialinvoke <java.lang.StringBuffer: void <init>()>"->"push \"\"";
+    "push \"\""->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"load.r r0";
+    "fieldget <MandelbrotUI: double YMin>"
+    "load.r r0"->"fieldget <MandelbrotUI: double YMin>";
+    "fieldget <MandelbrotUI: double YMin>"->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(double)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(double)>"->"virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>"->"virtualinvoke <java.awt.TextField: void setText(java.lang.String)>";
+    "virtualinvoke <java.awt.TextField: void setText(java.lang.String)>"->"load.r r0";
+    "specialinvoke <MandelbrotUI: java.awt.TextField getTextFieldYMax()>"
+    "load.r r0"->"specialinvoke <MandelbrotUI: java.awt.TextField getTextFieldYMax()>";
+    "specialinvoke <MandelbrotUI: java.awt.TextField getTextFieldYMax()>"->"new java.lang.StringBuffer";
+    "new java.lang.StringBuffer"->"dup1.r";
+    "dup1.r"->"specialinvoke <java.lang.StringBuffer: void <init>()>";
+    "specialinvoke <java.lang.StringBuffer: void <init>()>"->"push \"\"";
+    "push \"\""->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"load.r r0";
+    "fieldget <MandelbrotUI: double YMax>"
+    "load.r r0"->"fieldget <MandelbrotUI: double YMax>";
+    "fieldget <MandelbrotUI: double YMax>"->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(double)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(double)>"->"virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>"->"virtualinvoke <java.awt.TextField: void setText(java.lang.String)>";
+    "goto return"
+    "virtualinvoke <java.awt.TextField: void setText(java.lang.String)>"->"goto return";
+    "return"
+    "goto return"->"return";
+    "store.r $r33"
+    "virtualinvoke <java.awt.TextField: void setText(java.lang.String)>"->"store.r $r33";
+    "store.r $r33"->"load.r r0";
+    "load.r $r33"
+    "load.r r0"->"load.r $r33";
+    "specialinvoke <MandelbrotUI: void handleException(java.lang.Throwable)>"
+    "load.r $r33"->"specialinvoke <MandelbrotUI: void handleException(java.lang.Throwable)>";
+}

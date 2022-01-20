@@ -1,0 +1,78 @@
+digraph "" {
+    "r0 := @this: DigitalScroller"
+    "load.r r0"
+    "r0 := @this: DigitalScroller"->"load.r r0";
+    "specialinvoke <DigitalScroller: java.awt.Image loadMagiLabel()>"
+    "load.r r0"->"specialinvoke <DigitalScroller: java.awt.Image loadMagiLabel()>";
+    "store.r r1"
+    "specialinvoke <DigitalScroller: java.awt.Image loadMagiLabel()>"->"store.r r1";
+    "store.r r1"->"load.r r0";
+    "virtualinvoke <DigitalScroller: void readHTMLparams()>"
+    "load.r r0"->"virtualinvoke <DigitalScroller: void readHTMLparams()>";
+    "virtualinvoke <DigitalScroller: void readHTMLparams()>"->"load.r r0";
+    "fieldget <DigitalScroller: DigitalPanel digi>"
+    "load.r r0"->"fieldget <DigitalScroller: DigitalPanel digi>";
+    "ifnonnull return"
+    "fieldget <DigitalScroller: DigitalPanel digi>"->"ifnonnull return";
+    "ifnonnull return"->"load.r r0";
+    "new DigitalPanel"
+    "load.r r0"->"new DigitalPanel";
+    "dup1.r"
+    "new DigitalPanel"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "specialinvoke <DigitalScroller: java.awt.Color getScrollerColour()>"
+    "load.r r0"->"specialinvoke <DigitalScroller: java.awt.Color getScrollerColour()>";
+    "specialinvoke <DigitalScroller: java.awt.Color getScrollerColour()>"->"load.r r0";
+    "fieldget <DigitalScroller: int left>"
+    "load.r r0"->"fieldget <DigitalScroller: int left>";
+    "fieldget <DigitalScroller: int left>"->"load.r r0";
+    "fieldget <DigitalScroller: int top>"
+    "load.r r0"->"fieldget <DigitalScroller: int top>";
+    "fieldget <DigitalScroller: int top>"->"load.r r0";
+    "fieldget <DigitalScroller: java.lang.String paramCells>"
+    "load.r r0"->"fieldget <DigitalScroller: java.lang.String paramCells>";
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"
+    "fieldget <DigitalScroller: java.lang.String paramCells>"->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>";
+    "load.r r1"
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"->"load.r r1";
+    "specialinvoke <DigitalPanel: void <init>(java.awt.Color,int,int,int,java.awt.Image)>"
+    "load.r r1"->"specialinvoke <DigitalPanel: void <init>(java.awt.Color,int,int,int,java.awt.Image)>";
+    "fieldput <DigitalScroller: DigitalPanel digi>"
+    "specialinvoke <DigitalPanel: void <init>(java.awt.Color,int,int,int,java.awt.Image)>"->"fieldput <DigitalScroller: DigitalPanel digi>";
+    "fieldput <DigitalScroller: DigitalPanel digi>"->"load.r r0";
+    "load.r r0"->"fieldget <DigitalScroller: DigitalPanel digi>";
+    "fieldget <DigitalScroller: DigitalPanel digi>"->"load.r r0";
+    "fieldget <DigitalScroller: java.lang.String paramScrollDelay>"
+    "load.r r0"->"fieldget <DigitalScroller: java.lang.String paramScrollDelay>";
+    "fieldget <DigitalScroller: java.lang.String paramScrollDelay>"->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>";
+    "i2l"
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"->"i2l";
+    "virtualinvoke <DigitalPanel: void setDelay(long)>"
+    "i2l"->"virtualinvoke <DigitalPanel: void setDelay(long)>";
+    "virtualinvoke <DigitalPanel: void setDelay(long)>"->"load.r r0";
+    "load.r r0"->"fieldget <DigitalScroller: DigitalPanel digi>";
+    "fieldget <DigitalScroller: DigitalPanel digi>"->"load.r r0";
+    "fieldget <DigitalScroller: java.lang.String paramLoopDelay>"
+    "load.r r0"->"fieldget <DigitalScroller: java.lang.String paramLoopDelay>";
+    "fieldget <DigitalScroller: java.lang.String paramLoopDelay>"->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>";
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"->"i2l";
+    "virtualinvoke <DigitalPanel: void loop(long)>"
+    "i2l"->"virtualinvoke <DigitalPanel: void loop(long)>";
+    "virtualinvoke <DigitalPanel: void loop(long)>"->"load.r r0";
+    "new java.awt.BorderLayout"
+    "load.r r0"->"new java.awt.BorderLayout";
+    "new java.awt.BorderLayout"->"dup1.r";
+    "specialinvoke <java.awt.BorderLayout: void <init>()>"
+    "dup1.r"->"specialinvoke <java.awt.BorderLayout: void <init>()>";
+    "virtualinvoke <java.awt.Container: void setLayout(java.awt.LayoutManager)>"
+    "specialinvoke <java.awt.BorderLayout: void <init>()>"->"virtualinvoke <java.awt.Container: void setLayout(java.awt.LayoutManager)>";
+    "virtualinvoke <java.awt.Container: void setLayout(java.awt.LayoutManager)>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <DigitalScroller: DigitalPanel digi>";
+    "push \"Center\""
+    "fieldget <DigitalScroller: DigitalPanel digi>"->"push \"Center\"";
+    "virtualinvoke <java.awt.Container: void add(java.awt.Component,java.lang.Object)>"
+    "push \"Center\""->"virtualinvoke <java.awt.Container: void add(java.awt.Component,java.lang.Object)>";
+    "return"
+    "virtualinvoke <java.awt.Container: void add(java.awt.Component,java.lang.Object)>"->"return";
+}

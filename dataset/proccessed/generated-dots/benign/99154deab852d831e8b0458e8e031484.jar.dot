@@ -1,0 +1,92 @@
+digraph "" {
+    "r0 := @this: scroller"
+    "load.r r0"
+    "r0 := @this: scroller"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "virtualinvoke <java.awt.Component: java.awt.Dimension getSize()>"
+    "load.r r0"->"virtualinvoke <java.awt.Component: java.awt.Dimension getSize()>";
+    "fieldget <java.awt.Dimension: int width>"
+    "virtualinvoke <java.awt.Component: java.awt.Dimension getSize()>"->"fieldget <java.awt.Dimension: int width>";
+    "fieldput <scroller: int w>"
+    "fieldget <java.awt.Dimension: int width>"->"fieldput <scroller: int w>";
+    "fieldput <scroller: int w>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"virtualinvoke <java.awt.Component: java.awt.Dimension getSize()>";
+    "fieldget <java.awt.Dimension: int height>"
+    "virtualinvoke <java.awt.Component: java.awt.Dimension getSize()>"->"fieldget <java.awt.Dimension: int height>";
+    "fieldput <scroller: int h>"
+    "fieldget <java.awt.Dimension: int height>"->"fieldput <scroller: int h>";
+    "fieldput <scroller: int h>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "fieldget <scroller: int w>"
+    "load.r r0"->"fieldget <scroller: int w>";
+    "fieldget <scroller: int w>"->"load.r r0";
+    "fieldget <scroller: int h>"
+    "load.r r0"->"fieldget <scroller: int h>";
+    "virtualinvoke <java.awt.Component: java.awt.Image createImage(int,int)>"
+    "fieldget <scroller: int h>"->"virtualinvoke <java.awt.Component: java.awt.Image createImage(int,int)>";
+    "fieldput <scroller: java.awt.Image offimage>"
+    "virtualinvoke <java.awt.Component: java.awt.Image createImage(int,int)>"->"fieldput <scroller: java.awt.Image offimage>";
+    "fieldput <scroller: java.awt.Image offimage>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "fieldget <scroller: java.awt.Image offimage>"
+    "load.r r0"->"fieldget <scroller: java.awt.Image offimage>";
+    "virtualinvoke <java.awt.Image: java.awt.Graphics getGraphics()>"
+    "fieldget <scroller: java.awt.Image offimage>"->"virtualinvoke <java.awt.Image: java.awt.Graphics getGraphics()>";
+    "fieldput <scroller: java.awt.Graphics offg>"
+    "virtualinvoke <java.awt.Image: java.awt.Graphics getGraphics()>"->"fieldput <scroller: java.awt.Graphics offg>";
+    "new java.awt.MediaTracker"
+    "fieldput <scroller: java.awt.Graphics offg>"->"new java.awt.MediaTracker";
+    "store.r $r8"
+    "new java.awt.MediaTracker"->"store.r $r8";
+    "load.r $r8"
+    "store.r $r8"->"load.r $r8";
+    "load.r $r8"->"load.r r0";
+    "specialinvoke <java.awt.MediaTracker: void <init>(java.awt.Component)>"
+    "load.r r0"->"specialinvoke <java.awt.MediaTracker: void <init>(java.awt.Component)>";
+    "specialinvoke <java.awt.MediaTracker: void <init>(java.awt.Component)>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "virtualinvoke <java.applet.Applet: java.net.URL getCodeBase()>"
+    "load.r r0"->"virtualinvoke <java.applet.Applet: java.net.URL getCodeBase()>";
+    "push \"bg.gif\""
+    "virtualinvoke <java.applet.Applet: java.net.URL getCodeBase()>"->"push \"bg.gif\"";
+    "virtualinvoke <java.applet.Applet: java.awt.Image getImage(java.net.URL,java.lang.String)>"
+    "push \"bg.gif\""->"virtualinvoke <java.applet.Applet: java.awt.Image getImage(java.net.URL,java.lang.String)>";
+    "fieldput <scroller: java.awt.Image talo>"
+    "virtualinvoke <java.applet.Applet: java.awt.Image getImage(java.net.URL,java.lang.String)>"->"fieldput <scroller: java.awt.Image talo>";
+    "fieldput <scroller: java.awt.Image talo>"->"load.r $r8";
+    "load.r $r8"->"load.r r0";
+    "fieldget <scroller: java.awt.Image talo>"
+    "load.r r0"->"fieldget <scroller: java.awt.Image talo>";
+    "push 0"
+    "fieldget <scroller: java.awt.Image talo>"->"push 0";
+    "virtualinvoke <java.awt.MediaTracker: void addImage(java.awt.Image,int)>"
+    "push 0"->"virtualinvoke <java.awt.MediaTracker: void addImage(java.awt.Image,int)>";
+    "virtualinvoke <java.awt.MediaTracker: void addImage(java.awt.Image,int)>"->"load.r $r8";
+    "load.r $r8"->"push 0";
+    "virtualinvoke <java.awt.MediaTracker: void waitForID(int)>"
+    "push 0"->"virtualinvoke <java.awt.MediaTracker: void waitForID(int)>";
+    "goto load.r r0"
+    "virtualinvoke <java.awt.MediaTracker: void waitForID(int)>"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "push \"TEKSTI\""
+    "load.r r0"->"push \"TEKSTI\"";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"
+    "push \"TEKSTI\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "ifnull load.r r0"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"push \"TEKSTI\"";
+    "push \"TEKSTI\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "fieldput <scroller: java.lang.String teksti>"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"fieldput <scroller: java.lang.String teksti>";
+    "fieldput <scroller: java.lang.String teksti>"->"load.r r0";
+    "virtualinvoke <scroller: void initFontit()>"
+    "load.r r0"->"virtualinvoke <scroller: void initFontit()>";
+    "return"
+    "virtualinvoke <scroller: void initFontit()>"->"return";
+    "virtualinvoke <java.awt.MediaTracker: void waitForID(int)>"->"store.r $r8";
+}

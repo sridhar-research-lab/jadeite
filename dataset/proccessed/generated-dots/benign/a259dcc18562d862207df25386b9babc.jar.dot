@@ -1,0 +1,44 @@
+digraph "" {
+    "r0 := @this: DFIELD"
+    "new java.awt.Font"
+    "r0 := @this: DFIELD"->"new java.awt.Font";
+    "store.r $r3"
+    "new java.awt.Font"->"store.r $r3";
+    "load.r $r3"
+    "store.r $r3"->"load.r $r3";
+    "push \"SansSerif\""
+    "load.r $r3"->"push \"SansSerif\"";
+    "push 1"
+    "push \"SansSerif\""->"push 1";
+    "push 24"
+    "push 1"->"push 24";
+    "specialinvoke <java.awt.Font: void <init>(java.lang.String,int,int)>"
+    "push 24"->"specialinvoke <java.awt.Font: void <init>(java.lang.String,int,int)>";
+    "new java.awt.Button"
+    "specialinvoke <java.awt.Font: void <init>(java.lang.String,int,int)>"->"new java.awt.Button";
+    "store.r $r4"
+    "new java.awt.Button"->"store.r $r4";
+    "load.r $r4"
+    "store.r $r4"->"load.r $r4";
+    "push \"DFIELD 2002.2\""
+    "load.r $r4"->"push \"DFIELD 2002.2\"";
+    "specialinvoke <java.awt.Button: void <init>(java.lang.String)>"
+    "push \"DFIELD 2002.2\""->"specialinvoke <java.awt.Button: void <init>(java.lang.String)>";
+    "specialinvoke <java.awt.Button: void <init>(java.lang.String)>"->"load.r $r4";
+    "load.r $r4"->"load.r $r3";
+    "virtualinvoke <java.awt.Component: void setFont(java.awt.Font)>"
+    "load.r $r3"->"virtualinvoke <java.awt.Component: void setFont(java.awt.Font)>";
+    "load.r r0"
+    "virtualinvoke <java.awt.Component: void setFont(java.awt.Font)>"->"load.r r0";
+    "load.r r0"->"load.r $r4";
+    "virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>"
+    "load.r $r4"->"virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>";
+    "pop"
+    "virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>"->"pop";
+    "pop"->"load.r $r4";
+    "load.r $r4"->"load.r r0";
+    "virtualinvoke <java.awt.Button: void addActionListener(java.awt.event.ActionListener)>"
+    "load.r r0"->"virtualinvoke <java.awt.Button: void addActionListener(java.awt.event.ActionListener)>";
+    "return"
+    "virtualinvoke <java.awt.Button: void addActionListener(java.awt.event.ActionListener)>"->"return";
+}

@@ -1,0 +1,30 @@
+digraph "" {
+    "r0 := @this: PetQuotes"
+    "load.r r0"
+    "r0 := @this: PetQuotes"->"load.r r0";
+    "store.r $r1"
+    "load.r r0"->"store.r $r1";
+    "push 1"
+    "store.r $r1"->"push 1";
+    "staticinvoke <java.lang.System: void exit(int)>"
+    "push 1"->"staticinvoke <java.lang.System: void exit(int)>";
+    "goto load.r r0"
+    "staticinvoke <java.lang.System: void exit(int)>"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "virtualinvoke <PetQuotes: void color()>"
+    "load.r r0"->"virtualinvoke <PetQuotes: void color()>";
+    "virtualinvoke <PetQuotes: void color()>"->"load.r r0";
+    "virtualinvoke <PetQuotes: void bgColor()>"
+    "load.r r0"->"virtualinvoke <PetQuotes: void bgColor()>";
+    "virtualinvoke <PetQuotes: void bgColor()>"->"load.r r0";
+    "virtualinvoke <PetQuotes: void font()>"
+    "load.r r0"->"virtualinvoke <PetQuotes: void font()>";
+    "return"
+    "virtualinvoke <PetQuotes: void font()>"->"return";
+    "load.r r0"->"store.r $r1";
+    "store.r $r1"->"push 1";
+    "push 1"->"staticinvoke <java.lang.System: void exit(int)>";
+    "specialinvoke <PetQuotes: void readQuotes()>"
+    "load.r r0"->"specialinvoke <PetQuotes: void readQuotes()>";
+    "specialinvoke <PetQuotes: void readQuotes()>"->"goto load.r r0";
+}

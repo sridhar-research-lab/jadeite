@@ -1,0 +1,235 @@
+digraph "" {
+    "r0 := @this: Ticker"
+    "new java.awt.Color"
+    "r0 := @this: Ticker"->"new java.awt.Color";
+    "store.r $r1"
+    "new java.awt.Color"->"store.r $r1";
+    "load.r $r1"
+    "store.r $r1"->"load.r $r1";
+    "push 0"
+    "load.r $r1"->"push 0";
+    "specialinvoke <java.awt.Color: void <init>(int)>"
+    "push 0"->"specialinvoke <java.awt.Color: void <init>(int)>";
+    "specialinvoke <java.awt.Color: void <init>(int)>"->"new java.awt.Color";
+    "store.r $r2"
+    "new java.awt.Color"->"store.r $r2";
+    "load.r $r2"
+    "store.r $r2"->"load.r $r2";
+    "push 16777215"
+    "load.r $r2"->"push 16777215";
+    "push 16777215"->"specialinvoke <java.awt.Color: void <init>(int)>";
+    "load.r r0"
+    "specialinvoke <java.awt.Color: void <init>(int)>"->"load.r r0";
+    "fieldget <Ticker: java.lang.String c>"
+    "load.r r0"->"fieldget <Ticker: java.lang.String c>";
+    "new java.lang.String"
+    "fieldget <Ticker: java.lang.String c>"->"new java.lang.String";
+    "dup1.r"
+    "new java.lang.String"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "fieldget <Ticker: byte[] d>"
+    "load.r r0"->"fieldget <Ticker: byte[] d>";
+    "specialinvoke <java.lang.String: void <init>(byte[])>"
+    "fieldget <Ticker: byte[] d>"->"specialinvoke <java.lang.String: void <init>(byte[])>";
+    "virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>"
+    "specialinvoke <java.lang.String: void <init>(byte[])>"->"virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>";
+    "ifne staticget <java.lang.System: java.io.PrintStream out>"
+    "virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>"->"ifne staticget <java.lang.System: java.io.PrintStream out>";
+    "return"
+    "ifne staticget <java.lang.System: java.io.PrintStream out>"->"return";
+    "staticget <java.lang.System: java.io.PrintStream out>"
+    "ifne staticget <java.lang.System: java.io.PrintStream out>"->"staticget <java.lang.System: java.io.PrintStream out>";
+    "staticget <java.lang.System: java.io.PrintStream out>"->"load.r r0";
+    "fieldget <Ticker: java.lang.String a>"
+    "load.r r0"->"fieldget <Ticker: java.lang.String a>";
+    "virtualinvoke <java.io.PrintStream: void println(java.lang.String)>"
+    "fieldget <Ticker: java.lang.String a>"->"virtualinvoke <java.io.PrintStream: void println(java.lang.String)>";
+    "virtualinvoke <java.io.PrintStream: void println(java.lang.String)>"->"load.r r0";
+    "push \"Author\""
+    "load.r r0"->"push \"Author\"";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"
+    "push \"Author\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "store.r r21"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"store.r r21";
+    "load.r r21"
+    "store.r r21"->"load.r r21";
+    "ifnull return"
+    "load.r r21"->"ifnull return";
+    "ifnull return"->"load.r r21";
+    "push 105"
+    "load.r r21"->"push 105";
+    "push 73"
+    "push 105"->"push 73";
+    "virtualinvoke <java.lang.String: java.lang.String replace(char,char)>"
+    "push 73"->"virtualinvoke <java.lang.String: java.lang.String replace(char,char)>";
+    "virtualinvoke <java.lang.String: java.lang.String toUpperCase()>"
+    "virtualinvoke <java.lang.String: java.lang.String replace(char,char)>"->"virtualinvoke <java.lang.String: java.lang.String toUpperCase()>";
+    "virtualinvoke <java.lang.String: java.lang.String toUpperCase()>"->"load.r r0";
+    "fieldget <Ticker: java.lang.String 'goto'>"
+    "load.r r0"->"fieldget <Ticker: java.lang.String 'goto'>";
+    "fieldget <Ticker: java.lang.String 'goto'>"->"push 105";
+    "push 105"->"push 73";
+    "push 73"->"virtualinvoke <java.lang.String: java.lang.String replace(char,char)>";
+    "virtualinvoke <java.lang.String: java.lang.String replace(char,char)>"->"virtualinvoke <java.lang.String: java.lang.String toUpperCase()>";
+    "virtualinvoke <java.lang.String: java.lang.String toUpperCase()>"->"virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>";
+    "ifne load.r r0"
+    "virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>"->"ifne load.r r0";
+    "ifne load.r r0"->"return";
+    "ifne load.r r0"->"load.r r0";
+    "push \"LoadingMessage\""
+    "load.r r0"->"push \"LoadingMessage\"";
+    "push \"LoadingMessage\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"store.r r21";
+    "store.r r21"->"load.r r0";
+    "push \"LoadingBGColor\""
+    "load.r r0"->"push \"LoadingBGColor\"";
+    "push \"LoadingBGColor\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"load.r $r1";
+    "staticinvoke <h: java.awt.Color a(java.lang.String,java.awt.Color)>"
+    "load.r $r1"->"staticinvoke <h: java.awt.Color a(java.lang.String,java.awt.Color)>";
+    "staticinvoke <h: java.awt.Color a(java.lang.String,java.awt.Color)>"->"store.r $r1";
+    "store.r $r1"->"load.r r0";
+    "push \"LoadingTextColor\""
+    "load.r r0"->"push \"LoadingTextColor\"";
+    "push \"LoadingTextColor\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"load.r $r2";
+    "load.r $r2"->"staticinvoke <h: java.awt.Color a(java.lang.String,java.awt.Color)>";
+    "staticinvoke <h: java.awt.Color a(java.lang.String,java.awt.Color)>"->"store.r $r2";
+    "store.r $r2"->"load.r r0";
+    "push \"ContextCursor\""
+    "load.r r0"->"push \"ContextCursor\"";
+    "push \"ContextCursor\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "store.r r25"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"store.r r25";
+    "load.r r25"
+    "store.r r25"->"load.r r25";
+    "ifnull load.r r0"
+    "load.r r25"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r r25";
+    "virtualinvoke <java.lang.String: java.lang.String trim()>"
+    "load.r r25"->"virtualinvoke <java.lang.String: java.lang.String trim()>";
+    "virtualinvoke <java.lang.String: int length()>"
+    "virtualinvoke <java.lang.String: java.lang.String trim()>"->"virtualinvoke <java.lang.String: int length()>";
+    "ifle load.r r0"
+    "virtualinvoke <java.lang.String: int length()>"->"ifle load.r r0";
+    "ifle load.r r0"->"load.r r25";
+    "load.r r25"->"virtualinvoke <java.lang.String: java.lang.String trim()>";
+    "virtualinvoke <java.lang.String: java.lang.String trim()>"->"push 105";
+    "push 105"->"push 73";
+    "push 73"->"virtualinvoke <java.lang.String: java.lang.String replace(char,char)>";
+    "virtualinvoke <java.lang.String: java.lang.String replace(char,char)>"->"virtualinvoke <java.lang.String: java.lang.String toUpperCase()>";
+    "virtualinvoke <java.lang.String: java.lang.String toUpperCase()>"->"store.r r25";
+    "store.r r25"->"load.r r25";
+    "push \"NO\""
+    "load.r r25"->"push \"NO\"";
+    "push \"NO\""->"virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>";
+    "virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>"->"ifne load.r r0";
+    "ifne load.r r0"->"load.r r25";
+    "push \"OFF\""
+    "load.r r25"->"push \"OFF\"";
+    "push \"OFF\""->"virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>";
+    "virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>"->"ifne load.r r0";
+    "ifne load.r r0"->"load.r r25";
+    "push \"FALSE\""
+    "load.r r25"->"push \"FALSE\"";
+    "push \"FALSE\""->"virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>";
+    "ifeq load.r r25"
+    "virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>"->"ifeq load.r r25";
+    "ifeq load.r r25"->"load.r r0";
+    "push 30"
+    "load.r r0"->"push 30";
+    "fieldput <Ticker: int do>"
+    "push 30"->"fieldput <Ticker: int do>";
+    "goto load.r r0"
+    "fieldput <Ticker: int do>"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "new o"
+    "load.r r0"->"new o";
+    "new o"->"dup1.r";
+    "specialinvoke <o: void <init>()>"
+    "dup1.r"->"specialinvoke <o: void <init>()>";
+    "fieldput <Ticker: o 'if'>"
+    "specialinvoke <o: void <init>()>"->"fieldput <Ticker: o 'if'>";
+    "fieldput <Ticker: o 'if'>"->"load.r r0";
+    "fieldget <Ticker: o 'if'>"
+    "load.r r0"->"fieldget <Ticker: o 'if'>";
+    "fieldget <Ticker: o 'if'>"->"load.r r0";
+    "virtualinvoke <o: void a(w)>"
+    "load.r r0"->"virtualinvoke <o: void a(w)>";
+    "virtualinvoke <o: void a(w)>"->"load.r r0";
+    "load.r r0"->"fieldget <Ticker: o 'if'>";
+    "fieldget <Ticker: o 'if'>"->"load.r r21";
+    "load.r r21"->"load.r $r1";
+    "load.r $r1"->"load.r $r2";
+    "virtualinvoke <o: void a(java.lang.String,java.awt.Color,java.awt.Color)>"
+    "load.r $r2"->"virtualinvoke <o: void a(java.lang.String,java.awt.Color,java.awt.Color)>";
+    "virtualinvoke <o: void a(java.lang.String,java.awt.Color,java.awt.Color)>"->"load.r r0";
+    "new java.awt.BorderLayout"
+    "load.r r0"->"new java.awt.BorderLayout";
+    "new java.awt.BorderLayout"->"dup1.r";
+    "specialinvoke <java.awt.BorderLayout: void <init>()>"
+    "dup1.r"->"specialinvoke <java.awt.BorderLayout: void <init>()>";
+    "virtualinvoke <java.awt.Container: void setLayout(java.awt.LayoutManager)>"
+    "specialinvoke <java.awt.BorderLayout: void <init>()>"->"virtualinvoke <java.awt.Container: void setLayout(java.awt.LayoutManager)>";
+    "virtualinvoke <java.awt.Container: void setLayout(java.awt.LayoutManager)>"->"load.r r0";
+    "load.r r0"->"fieldget <Ticker: o 'if'>";
+    "fieldget <Ticker: o 'if'>"->"load.r r0";
+    "virtualinvoke <java.awt.Component: void addMouseListener(java.awt.event.MouseListener)>"
+    "load.r r0"->"virtualinvoke <java.awt.Component: void addMouseListener(java.awt.event.MouseListener)>";
+    "virtualinvoke <java.awt.Component: void addMouseListener(java.awt.event.MouseListener)>"->"load.r r0";
+    "load.r r0"->"fieldget <Ticker: o 'if'>";
+    "fieldget <Ticker: o 'if'>"->"load.r r0";
+    "virtualinvoke <java.awt.Component: void addMouseMotionListener(java.awt.event.MouseMotionListener)>"
+    "load.r r0"->"virtualinvoke <java.awt.Component: void addMouseMotionListener(java.awt.event.MouseMotionListener)>";
+    "virtualinvoke <java.awt.Component: void addMouseMotionListener(java.awt.event.MouseMotionListener)>"->"load.r r0";
+    "push \"Center\""
+    "load.r r0"->"push \"Center\"";
+    "push \"Center\""->"load.r r0";
+    "load.r r0"->"fieldget <Ticker: o 'if'>";
+    "virtualinvoke <java.awt.Container: java.awt.Component add(java.lang.String,java.awt.Component)>"
+    "fieldget <Ticker: o 'if'>"->"virtualinvoke <java.awt.Container: java.awt.Component add(java.lang.String,java.awt.Component)>";
+    "pop"
+    "virtualinvoke <java.awt.Container: java.awt.Component add(java.lang.String,java.awt.Component)>"->"pop";
+    "pop"->"load.r r0";
+    "virtualinvoke <java.awt.Container: void validate()>"
+    "load.r r0"->"virtualinvoke <java.awt.Container: void validate()>";
+    "virtualinvoke <java.awt.Container: void validate()>"->"load.r r0";
+    "load.r r0"->"fieldget <Ticker: o 'if'>";
+    "virtualinvoke <o: void try()>"
+    "fieldget <Ticker: o 'if'>"->"virtualinvoke <o: void try()>";
+    "virtualinvoke <o: void try()>"->"load.r r0";
+    "fieldget <Ticker: int do>"
+    "load.r r0"->"fieldget <Ticker: int do>";
+    "push 10"
+    "fieldget <Ticker: int do>"->"push 10";
+    "ifcmpne.i load.r r0"
+    "push 10"->"ifcmpne.i load.r r0";
+    "ifcmpne.i load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "fieldget <Ticker: int f>"
+    "load.r r0"->"fieldget <Ticker: int f>";
+    "specialinvoke <Ticker: void 'if'(int)>"
+    "fieldget <Ticker: int f>"->"specialinvoke <Ticker: void 'if'(int)>";
+    "specialinvoke <Ticker: void 'if'(int)>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "push \"ProjectFile\""
+    "load.r r0"->"push \"ProjectFile\"";
+    "push \"ProjectFile\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <Ticker: void a(java.lang.String)>"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"virtualinvoke <Ticker: void a(java.lang.String)>";
+    "virtualinvoke <Ticker: void a(java.lang.String)>"->"return";
+    "ifeq load.r r25"->"load.r r25";
+    "push \"ALL\""
+    "load.r r25"->"push \"ALL\"";
+    "push \"ALL\""->"virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>";
+    "ifeq load.r r0"
+    "virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>"->"ifeq load.r r0";
+    "ifeq load.r r0"->"load.r r0";
+    "load.r r0"->"push 10";
+    "push 10"->"fieldput <Ticker: int do>";
+    "fieldput <Ticker: int do>"->"goto load.r r0";
+    "ifeq load.r r0"->"load.r r0";
+    "push 20"
+    "load.r r0"->"push 20";
+    "push 20"->"fieldput <Ticker: int do>";
+}

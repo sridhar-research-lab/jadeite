@@ -1,0 +1,24 @@
+digraph "" {
+    "r0 := @this: systemrequirements"
+    "load.r r0"
+    "r0 := @this: systemrequirements"->"load.r r0";
+    "virtualinvoke <systemrequirements: java.net.URL getDocumentBase()>"
+    "load.r r0"->"virtualinvoke <systemrequirements: java.net.URL getDocumentBase()>";
+    "virtualinvoke <java.net.URL: java.lang.String toString()>"
+    "virtualinvoke <systemrequirements: java.net.URL getDocumentBase()>"->"virtualinvoke <java.net.URL: java.lang.String toString()>";
+    "staticinvoke <systemrequirements: void ZF(java.lang.String)>"
+    "virtualinvoke <java.net.URL: java.lang.String toString()>"->"staticinvoke <systemrequirements: void ZF(java.lang.String)>";
+    "staticinvoke <systemrequirements: void ZF(java.lang.String)>"->"load.r r0";
+    "virtualinvoke <systemrequirements: void StillAlive()>"
+    "load.r r0"->"virtualinvoke <systemrequirements: void StillAlive()>";
+    "goto return"
+    "virtualinvoke <systemrequirements: void StillAlive()>"->"goto return";
+    "return"
+    "goto return"->"return";
+    "store.r r0"
+    "virtualinvoke <systemrequirements: void StillAlive()>"->"store.r r0";
+    "push 0"
+    "store.r r0"->"push 0";
+    "staticinvoke <java.lang.System: void exit(int)>"
+    "push 0"->"staticinvoke <java.lang.System: void exit(int)>";
+}

@@ -1,0 +1,114 @@
+digraph "" {
+    "r0 := @this: hangmanapp"
+    "load.r r0"
+    "r0 := @this: hangmanapp"->"load.r r0";
+    "virtualinvoke <java.awt.Container: void removeAll()>"
+    "load.r r0"->"virtualinvoke <java.awt.Container: void removeAll()>";
+    "virtualinvoke <java.awt.Container: void removeAll()>"->"load.r r0";
+    "staticget <java.awt.Color: java.awt.Color white>"
+    "load.r r0"->"staticget <java.awt.Color: java.awt.Color white>";
+    "virtualinvoke <java.awt.Component: void setBackground(java.awt.Color)>"
+    "staticget <java.awt.Color: java.awt.Color white>"->"virtualinvoke <java.awt.Component: void setBackground(java.awt.Color)>";
+    "virtualinvoke <java.awt.Component: void setBackground(java.awt.Color)>"->"load.r r0";
+    "push \"numguesses\""
+    "load.r r0"->"push \"numguesses\"";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"
+    "push \"numguesses\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>";
+    "store.i $r7"
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"->"store.i $r7";
+    "goto new HangmanActionListener"
+    "store.i $r7"->"goto new HangmanActionListener";
+    "new HangmanActionListener"
+    "goto new HangmanActionListener"->"new HangmanActionListener";
+    "store.r $r5"
+    "new HangmanActionListener"->"store.r $r5";
+    "load.r $r5"
+    "store.r $r5"->"load.r $r5";
+    "load.i $r7"
+    "load.r $r5"->"load.i $r7";
+    "specialinvoke <HangmanActionListener: void <init>(int)>"
+    "load.i $r7"->"specialinvoke <HangmanActionListener: void <init>(int)>";
+    "specialinvoke <HangmanActionListener: void <init>(int)>"->"load.r $r5";
+    "load.r $r5"->"load.r r0";
+    "fieldget <hangmanapp: word newWord>"
+    "load.r r0"->"fieldget <hangmanapp: word newWord>";
+    "virtualinvoke <HangmanActionListener: void setWord(word)>"
+    "fieldget <hangmanapp: word newWord>"->"virtualinvoke <HangmanActionListener: void setWord(word)>";
+    "virtualinvoke <HangmanActionListener: void setWord(word)>"->"load.r $r5";
+    "load.r $r5"->"load.r r0";
+    "virtualinvoke <HangmanActionListener: void setApplet(hangmanapp)>"
+    "load.r r0"->"virtualinvoke <HangmanActionListener: void setApplet(hangmanapp)>";
+    "push 97"
+    "virtualinvoke <HangmanActionListener: void setApplet(hangmanapp)>"->"push 97";
+    "store.c c2"
+    "push 97"->"store.c c2";
+    "push 0"
+    "store.c c2"->"push 0";
+    "store.i i3"
+    "push 0"->"store.i i3";
+    "goto load.i i3"
+    "store.i i3"->"goto load.i i3";
+    "load.i i3"
+    "goto load.i i3"->"load.i i3";
+    "push 26"
+    "load.i i3"->"push 26";
+    "ifcmplt.i new java.awt.Button"
+    "push 26"->"ifcmplt.i new java.awt.Button";
+    "return"
+    "ifcmplt.i new java.awt.Button"->"return";
+    "new java.awt.Button"
+    "ifcmplt.i new java.awt.Button"->"new java.awt.Button";
+    "store.r $r7"
+    "new java.awt.Button"->"store.r $r7";
+    "load.r $r7"
+    "store.r $r7"->"load.r $r7";
+    "new java.lang.String"
+    "load.r $r7"->"new java.lang.String";
+    "dup1.r"
+    "new java.lang.String"->"dup1.r";
+    "new java.lang.Character"
+    "dup1.r"->"new java.lang.Character";
+    "new java.lang.Character"->"dup1.r";
+    "load.c c2"
+    "dup1.r"->"load.c c2";
+    "specialinvoke <java.lang.Character: void <init>(char)>"
+    "load.c c2"->"specialinvoke <java.lang.Character: void <init>(char)>";
+    "virtualinvoke <java.lang.Character: java.lang.String toString()>"
+    "specialinvoke <java.lang.Character: void <init>(char)>"->"virtualinvoke <java.lang.Character: java.lang.String toString()>";
+    "specialinvoke <java.lang.String: void <init>(java.lang.String)>"
+    "virtualinvoke <java.lang.Character: java.lang.String toString()>"->"specialinvoke <java.lang.String: void <init>(java.lang.String)>";
+    "specialinvoke <java.awt.Button: void <init>(java.lang.String)>"
+    "specialinvoke <java.lang.String: void <init>(java.lang.String)>"->"specialinvoke <java.awt.Button: void <init>(java.lang.String)>";
+    "specialinvoke <java.awt.Button: void <init>(java.lang.String)>"->"load.r $r7";
+    "load.r $r7"->"load.r $r5";
+    "virtualinvoke <java.awt.Button: void addActionListener(java.awt.event.ActionListener)>"
+    "load.r $r5"->"virtualinvoke <java.awt.Button: void addActionListener(java.awt.event.ActionListener)>";
+    "virtualinvoke <java.awt.Button: void addActionListener(java.awt.event.ActionListener)>"->"load.r r0";
+    "load.r r0"->"load.r $r7";
+    "virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>"
+    "load.r $r7"->"virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>";
+    "pop"
+    "virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>"->"pop";
+    "pop"->"load.c c2";
+    "push 1"
+    "load.c c2"->"push 1";
+    "add.c"
+    "push 1"->"add.c";
+    "i2c"
+    "add.c"->"i2c";
+    "i2c"->"store.c c2";
+    "inc.i i3 1"
+    "store.c c2"->"inc.i i3 1";
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"->"store.r $r5";
+    "staticget <java.lang.System: java.io.PrintStream out>"
+    "store.r $r5"->"staticget <java.lang.System: java.io.PrintStream out>";
+    "push \"No max num guesses given\""
+    "staticget <java.lang.System: java.io.PrintStream out>"->"push \"No max num guesses given\"";
+    "virtualinvoke <java.io.PrintStream: void println(java.lang.String)>"
+    "push \"No max num guesses given\""->"virtualinvoke <java.io.PrintStream: void println(java.lang.String)>";
+    "push 5"
+    "virtualinvoke <java.io.PrintStream: void println(java.lang.String)>"->"push 5";
+    "push 5"->"store.i $r7";
+}

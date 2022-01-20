@@ -1,0 +1,58 @@
+digraph "" {
+    "r0 := @this: SerifMarquee"
+    "load.r r0"
+    "r0 := @this: SerifMarquee"->"load.r r0";
+    "virtualinvoke <java.awt.Component: java.awt.Rectangle bounds()>"
+    "load.r r0"->"virtualinvoke <java.awt.Component: java.awt.Rectangle bounds()>";
+    "store.r r1"
+    "virtualinvoke <java.awt.Component: java.awt.Rectangle bounds()>"->"store.r r1";
+    "store.r r1"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r1"
+    "load.r r0"->"load.r r1";
+    "fieldget <java.awt.Rectangle: int width>"
+    "load.r r1"->"fieldget <java.awt.Rectangle: int width>";
+    "fieldget <java.awt.Rectangle: int width>"->"load.r r1";
+    "fieldget <java.awt.Rectangle: int height>"
+    "load.r r1"->"fieldget <java.awt.Rectangle: int height>";
+    "virtualinvoke <java.awt.Component: java.awt.Image createImage(int,int)>"
+    "fieldget <java.awt.Rectangle: int height>"->"virtualinvoke <java.awt.Component: java.awt.Image createImage(int,int)>";
+    "fieldput <SerifMarquee: java.awt.Image m_backBuffer>"
+    "virtualinvoke <java.awt.Component: java.awt.Image createImage(int,int)>"->"fieldput <SerifMarquee: java.awt.Image m_backBuffer>";
+    "fieldput <SerifMarquee: java.awt.Image m_backBuffer>"->"load.r r0";
+    "fieldget <SerifMarquee: Animation m_animation>"
+    "load.r r0"->"fieldget <SerifMarquee: Animation m_animation>";
+    "fieldget <SerifMarquee: Animation m_animation>"->"load.r r1";
+    "virtualinvoke <Animation: void setSize(java.awt.Rectangle)>"
+    "load.r r1"->"virtualinvoke <Animation: void setSize(java.awt.Rectangle)>";
+    "virtualinvoke <Animation: void setSize(java.awt.Rectangle)>"->"load.r r0";
+    "push \"Global\""
+    "load.r r0"->"push \"Global\"";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"
+    "push \"Global\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"store.r r1";
+    "store.r r1"->"load.r r1";
+    "ifnull load.r r0"
+    "load.r r1"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r1";
+    "fieldput <SerifMarquee: java.lang.String m_Global>"
+    "load.r r1"->"fieldput <SerifMarquee: java.lang.String m_Global>";
+    "fieldput <SerifMarquee: java.lang.String m_Global>"->"load.r r0";
+    "load.r r0"->"fieldget <SerifMarquee: Animation m_animation>";
+    "fieldget <SerifMarquee: Animation m_animation>"->"load.r r1";
+    "virtualinvoke <Animation: void initFromParams(java.lang.String)>"
+    "load.r r1"->"virtualinvoke <Animation: void initFromParams(java.lang.String)>";
+    "virtualinvoke <Animation: void initFromParams(java.lang.String)>"->"load.r r0";
+    "virtualinvoke <SerifMarquee: void initEvents()>"
+    "load.r r0"->"virtualinvoke <SerifMarquee: void initEvents()>";
+    "virtualinvoke <SerifMarquee: void initEvents()>"->"load.r r0";
+    "load.r r0"->"fieldget <SerifMarquee: Animation m_animation>";
+    "fieldget <SerifMarquee: Animation m_animation>"->"load.r r0";
+    "fieldget <SerifMarquee: java.awt.Image m_backBuffer>"
+    "load.r r0"->"fieldget <SerifMarquee: java.awt.Image m_backBuffer>";
+    "virtualinvoke <Animation: void drawFrame(java.awt.Image)>"
+    "fieldget <SerifMarquee: java.awt.Image m_backBuffer>"->"virtualinvoke <Animation: void drawFrame(java.awt.Image)>";
+    "return"
+    "virtualinvoke <Animation: void drawFrame(java.awt.Image)>"->"return";
+}

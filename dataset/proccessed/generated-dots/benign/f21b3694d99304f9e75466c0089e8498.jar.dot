@@ -1,0 +1,162 @@
+digraph "" {
+    "r0 := @this: JavaChart"
+    "load.r r0"
+    "r0 := @this: JavaChart"->"load.r r0";
+    "push \"chartType\""
+    "load.r r0"->"push \"chartType\"";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"
+    "push \"chartType\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "ifnull load.r r0"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r r0";
+    "new ChartContainer"
+    "load.r r0"->"new ChartContainer";
+    "dup1.r"
+    "new ChartContainer"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "push 1"
+    "load.r r0"->"push 1";
+    "specialinvoke <ChartContainer: void <init>(java.applet.Applet,java.awt.Component,boolean)>"
+    "push 1"->"specialinvoke <ChartContainer: void <init>(java.applet.Applet,java.awt.Component,boolean)>";
+    "fieldput <JavaChart: ChartContainer cc>"
+    "specialinvoke <ChartContainer: void <init>(java.applet.Applet,java.awt.Component,boolean)>"->"fieldput <JavaChart: ChartContainer cc>";
+    "goto load.r r0"
+    "fieldput <JavaChart: ChartContainer cc>"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "push \"hht\""
+    "load.r r0"->"push \"hht\"";
+    "push \"hht\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "fieldput <JavaChart: java.lang.String rs>"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"fieldput <JavaChart: java.lang.String rs>";
+    "fieldput <JavaChart: java.lang.String rs>"->"load.r r0";
+    "new java.awt.GridLayout"
+    "load.r r0"->"new java.awt.GridLayout";
+    "new java.awt.GridLayout"->"dup1.r";
+    "dup1.r"->"push 1";
+    "push 1"->"push 1";
+    "specialinvoke <java.awt.GridLayout: void <init>(int,int)>"
+    "push 1"->"specialinvoke <java.awt.GridLayout: void <init>(int,int)>";
+    "virtualinvoke <java.awt.Container: void setLayout(java.awt.LayoutManager)>"
+    "specialinvoke <java.awt.GridLayout: void <init>(int,int)>"->"virtualinvoke <java.awt.Container: void setLayout(java.awt.LayoutManager)>";
+    "virtualinvoke <java.awt.Container: void setLayout(java.awt.LayoutManager)>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "fieldget <JavaChart: ChartContainer cc>"
+    "load.r r0"->"fieldget <JavaChart: ChartContainer cc>";
+    "virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>"
+    "fieldget <JavaChart: ChartContainer cc>"->"virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>";
+    "pop"
+    "virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>"->"pop";
+    "pop"->"load.r r0";
+    "load.r r0"->"fieldget <JavaChart: ChartContainer cc>";
+    "fieldget <ChartContainer: java.awt.TextField txtSymbol>"
+    "fieldget <JavaChart: ChartContainer cc>"->"fieldget <ChartContainer: java.awt.TextField txtSymbol>";
+    "virtualinvoke <java.awt.Component: void requestFocus()>"
+    "fieldget <ChartContainer: java.awt.TextField txtSymbol>"->"virtualinvoke <java.awt.Component: void requestFocus()>";
+    "staticget <java.lang.System: java.io.PrintStream out>"
+    "virtualinvoke <java.awt.Component: void requestFocus()>"->"staticget <java.lang.System: java.io.PrintStream out>";
+    "push \"Running From: \""
+    "staticget <java.lang.System: java.io.PrintStream out>"->"push \"Running From: \"";
+    "staticinvoke <java.lang.String: java.lang.String valueOf(java.lang.Object)>"
+    "push \"Running From: \""->"staticinvoke <java.lang.String: java.lang.String valueOf(java.lang.Object)>";
+    "staticinvoke <java.lang.String: java.lang.String valueOf(java.lang.Object)>"->"load.r r0";
+    "virtualinvoke <java.applet.Applet: java.net.URL getDocumentBase()>"
+    "load.r r0"->"virtualinvoke <java.applet.Applet: java.net.URL getDocumentBase()>";
+    "virtualinvoke <java.net.URL: java.lang.String getHost()>"
+    "virtualinvoke <java.applet.Applet: java.net.URL getDocumentBase()>"->"virtualinvoke <java.net.URL: java.lang.String getHost()>";
+    "virtualinvoke <java.net.URL: java.lang.String getHost()>"->"staticinvoke <java.lang.String: java.lang.String valueOf(java.lang.Object)>";
+    "virtualinvoke <java.lang.String: java.lang.String concat(java.lang.String)>"
+    "staticinvoke <java.lang.String: java.lang.String valueOf(java.lang.Object)>"->"virtualinvoke <java.lang.String: java.lang.String concat(java.lang.String)>";
+    "virtualinvoke <java.io.PrintStream: void println(java.lang.String)>"
+    "virtualinvoke <java.lang.String: java.lang.String concat(java.lang.String)>"->"virtualinvoke <java.io.PrintStream: void println(java.lang.String)>";
+    "virtualinvoke <java.io.PrintStream: void println(java.lang.String)>"->"staticget <java.lang.System: java.io.PrintStream out>";
+    "push \"Operating System: \""
+    "staticget <java.lang.System: java.io.PrintStream out>"->"push \"Operating System: \"";
+    "push \"Operating System: \""->"staticinvoke <java.lang.String: java.lang.String valueOf(java.lang.Object)>";
+    "push \"os.name\""
+    "staticinvoke <java.lang.String: java.lang.String valueOf(java.lang.Object)>"->"push \"os.name\"";
+    "staticinvoke <java.lang.System: java.lang.String getProperty(java.lang.String)>"
+    "push \"os.name\""->"staticinvoke <java.lang.System: java.lang.String getProperty(java.lang.String)>";
+    "staticinvoke <java.lang.System: java.lang.String getProperty(java.lang.String)>"->"staticinvoke <java.lang.String: java.lang.String valueOf(java.lang.Object)>";
+    "staticinvoke <java.lang.String: java.lang.String valueOf(java.lang.Object)>"->"virtualinvoke <java.lang.String: java.lang.String concat(java.lang.String)>";
+    "virtualinvoke <java.lang.String: java.lang.String concat(java.lang.String)>"->"virtualinvoke <java.io.PrintStream: void println(java.lang.String)>";
+    "virtualinvoke <java.io.PrintStream: void println(java.lang.String)>"->"staticget <java.lang.System: java.io.PrintStream out>";
+    "push \"OS Version: \""
+    "staticget <java.lang.System: java.io.PrintStream out>"->"push \"OS Version: \"";
+    "push \"OS Version: \""->"staticinvoke <java.lang.String: java.lang.String valueOf(java.lang.Object)>";
+    "push \"os.version\""
+    "staticinvoke <java.lang.String: java.lang.String valueOf(java.lang.Object)>"->"push \"os.version\"";
+    "push \"os.version\""->"staticinvoke <java.lang.System: java.lang.String getProperty(java.lang.String)>";
+    "staticinvoke <java.lang.System: java.lang.String getProperty(java.lang.String)>"->"staticinvoke <java.lang.String: java.lang.String valueOf(java.lang.Object)>";
+    "staticinvoke <java.lang.String: java.lang.String valueOf(java.lang.Object)>"->"virtualinvoke <java.lang.String: java.lang.String concat(java.lang.String)>";
+    "virtualinvoke <java.lang.String: java.lang.String concat(java.lang.String)>"->"virtualinvoke <java.io.PrintStream: void println(java.lang.String)>";
+    "virtualinvoke <java.io.PrintStream: void println(java.lang.String)>"->"staticget <java.lang.System: java.io.PrintStream out>";
+    "push \"Java Version: \""
+    "staticget <java.lang.System: java.io.PrintStream out>"->"push \"Java Version: \"";
+    "push \"Java Version: \""->"staticinvoke <java.lang.String: java.lang.String valueOf(java.lang.Object)>";
+    "push \"java.version\""
+    "staticinvoke <java.lang.String: java.lang.String valueOf(java.lang.Object)>"->"push \"java.version\"";
+    "push \"java.version\""->"staticinvoke <java.lang.System: java.lang.String getProperty(java.lang.String)>";
+    "staticinvoke <java.lang.System: java.lang.String getProperty(java.lang.String)>"->"staticinvoke <java.lang.String: java.lang.String valueOf(java.lang.Object)>";
+    "staticinvoke <java.lang.String: java.lang.String valueOf(java.lang.Object)>"->"virtualinvoke <java.lang.String: java.lang.String concat(java.lang.String)>";
+    "virtualinvoke <java.lang.String: java.lang.String concat(java.lang.String)>"->"virtualinvoke <java.io.PrintStream: void println(java.lang.String)>";
+    "virtualinvoke <java.io.PrintStream: void println(java.lang.String)>"->"staticget <java.lang.System: java.io.PrintStream out>";
+    "push \"Java Vendor: \""
+    "staticget <java.lang.System: java.io.PrintStream out>"->"push \"Java Vendor: \"";
+    "push \"Java Vendor: \""->"staticinvoke <java.lang.String: java.lang.String valueOf(java.lang.Object)>";
+    "push \"java.vendor\""
+    "staticinvoke <java.lang.String: java.lang.String valueOf(java.lang.Object)>"->"push \"java.vendor\"";
+    "push \"java.vendor\""->"staticinvoke <java.lang.System: java.lang.String getProperty(java.lang.String)>";
+    "staticinvoke <java.lang.System: java.lang.String getProperty(java.lang.String)>"->"staticinvoke <java.lang.String: java.lang.String valueOf(java.lang.Object)>";
+    "staticinvoke <java.lang.String: java.lang.String valueOf(java.lang.Object)>"->"virtualinvoke <java.lang.String: java.lang.String concat(java.lang.String)>";
+    "virtualinvoke <java.lang.String: java.lang.String concat(java.lang.String)>"->"virtualinvoke <java.io.PrintStream: void println(java.lang.String)>";
+    "virtualinvoke <java.io.PrintStream: void println(java.lang.String)>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "push \"bannerTimeout\""
+    "load.r r0"->"push \"bannerTimeout\"";
+    "push \"bannerTimeout\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "push -1"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"push -1";
+    "virtualinvoke <JavaChart: int getInt(java.lang.String,int)>"
+    "push -1"->"virtualinvoke <JavaChart: int getInt(java.lang.String,int)>";
+    "fieldput <JavaChart: int bannerTimeout>"
+    "virtualinvoke <JavaChart: int getInt(java.lang.String,int)>"->"fieldput <JavaChart: int bannerTimeout>";
+    "fieldput <JavaChart: int bannerTimeout>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "push \"stock\""
+    "load.r r0"->"push \"stock\"";
+    "push \"stock\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"fieldput <JavaChart: java.lang.String rs>";
+    "fieldput <JavaChart: java.lang.String rs>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "fieldget <JavaChart: java.lang.String rs>"
+    "load.r r0"->"fieldget <JavaChart: java.lang.String rs>";
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"
+    "fieldget <JavaChart: java.lang.String rs>"->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>";
+    "fieldput <JavaChart: int stockexchange>"
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"->"fieldput <JavaChart: int stockexchange>";
+    "fieldput <JavaChart: int stockexchange>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "push \"status\""
+    "load.r r0"->"push \"status\"";
+    "push \"status\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"fieldput <JavaChart: java.lang.String rs>";
+    "fieldput <JavaChart: java.lang.String rs>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <JavaChart: java.lang.String rs>";
+    "fieldget <JavaChart: java.lang.String rs>"->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>";
+    "fieldput <JavaChart: int tablestatus>"
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"->"fieldput <JavaChart: int tablestatus>";
+    "return"
+    "fieldput <JavaChart: int tablestatus>"->"return";
+    "ifnull load.r r0"->"load.r r0";
+    "load.r r0"->"new ChartContainer";
+    "new ChartContainer"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"push 1";
+    "push 1"->"specialinvoke <ChartContainer: void <init>(java.applet.Applet,java.awt.Component,boolean)>";
+    "specialinvoke <ChartContainer: void <init>(java.applet.Applet,java.awt.Component,boolean)>"->"fieldput <JavaChart: ChartContainer cc>";
+}

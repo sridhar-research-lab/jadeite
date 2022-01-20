@@ -1,0 +1,20 @@
+digraph "" {
+    "r0 := @this: BlogTV"
+    "new java.lang.Thread"
+    "r0 := @this: BlogTV"->"new java.lang.Thread";
+    "dup1.r"
+    "new java.lang.Thread"->"dup1.r";
+    "new BlogTV$1"
+    "dup1.r"->"new BlogTV$1";
+    "new BlogTV$1"->"dup1.r";
+    "load.r r0"
+    "dup1.r"->"load.r r0";
+    "specialinvoke <BlogTV$1: void <init>(BlogTV)>"
+    "load.r r0"->"specialinvoke <BlogTV$1: void <init>(BlogTV)>";
+    "specialinvoke <java.lang.Thread: void <init>(java.lang.Runnable)>"
+    "specialinvoke <BlogTV$1: void <init>(BlogTV)>"->"specialinvoke <java.lang.Thread: void <init>(java.lang.Runnable)>";
+    "virtualinvoke <java.lang.Thread: void start()>"
+    "specialinvoke <java.lang.Thread: void <init>(java.lang.Runnable)>"->"virtualinvoke <java.lang.Thread: void start()>";
+    "return"
+    "virtualinvoke <java.lang.Thread: void start()>"->"return";
+}

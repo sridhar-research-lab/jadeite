@@ -1,0 +1,78 @@
+digraph "" {
+    "r0 := @this: vmain"
+    "load.r r0"
+    "r0 := @this: vmain"->"load.r r0";
+    "staticget <vmain: java.lang.String[] e>"
+    "load.r r0"->"staticget <vmain: java.lang.String[] e>";
+    "push 1"
+    "staticget <vmain: java.lang.String[] e>"->"push 1";
+    "arrayread.r"
+    "push 1"->"arrayread.r";
+    "staticinvoke <vload: java.lang.String b(java.lang.String)>"
+    "arrayread.r"->"staticinvoke <vload: java.lang.String b(java.lang.String)>";
+    "virtualinvoke <vmain: java.lang.String getParameter(java.lang.String)>"
+    "staticinvoke <vload: java.lang.String b(java.lang.String)>"->"virtualinvoke <vmain: java.lang.String getParameter(java.lang.String)>";
+    "store.r r24"
+    "virtualinvoke <vmain: java.lang.String getParameter(java.lang.String)>"->"store.r r24";
+    "store.r r24"->"load.r r0";
+    "load.r r0"->"staticget <vmain: java.lang.String[] e>";
+    "push 0"
+    "staticget <vmain: java.lang.String[] e>"->"push 0";
+    "push 0"->"arrayread.r";
+    "arrayread.r"->"staticinvoke <vload: java.lang.String b(java.lang.String)>";
+    "staticinvoke <vload: java.lang.String b(java.lang.String)>"->"virtualinvoke <vmain: java.lang.String getParameter(java.lang.String)>";
+    "store.r r0"
+    "virtualinvoke <vmain: java.lang.String getParameter(java.lang.String)>"->"store.r r0";
+    "new java.io.ByteArrayInputStream"
+    "store.r r0"->"new java.io.ByteArrayInputStream";
+    "store.r $r9"
+    "new java.io.ByteArrayInputStream"->"store.r $r9";
+    "load.r $r9"
+    "store.r $r9"->"load.r $r9";
+    "new java.lang.StringBuffer"
+    "load.r $r9"->"new java.lang.StringBuffer";
+    "dup1.r"
+    "new java.lang.StringBuffer"->"dup1.r";
+    "staticget <vmain: java.lang.String a>"
+    "dup1.r"->"staticget <vmain: java.lang.String a>";
+    "specialinvoke <java.lang.StringBuffer: void <init>(java.lang.String)>"
+    "staticget <vmain: java.lang.String a>"->"specialinvoke <java.lang.StringBuffer: void <init>(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer reverse()>"
+    "specialinvoke <java.lang.StringBuffer: void <init>(java.lang.String)>"->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer reverse()>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>"
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer reverse()>"->"virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>";
+    "staticinvoke <vload: byte[] c(java.lang.String)>"
+    "virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>"->"staticinvoke <vload: byte[] c(java.lang.String)>";
+    "specialinvoke <java.io.ByteArrayInputStream: void <init>(byte[])>"
+    "staticinvoke <vload: byte[] c(java.lang.String)>"->"specialinvoke <java.io.ByteArrayInputStream: void <init>(byte[])>";
+    "new java.io.ObjectInputStream"
+    "specialinvoke <java.io.ByteArrayInputStream: void <init>(byte[])>"->"new java.io.ObjectInputStream";
+    "new java.io.ObjectInputStream"->"dup1.r";
+    "dup1.r"->"load.r $r9";
+    "specialinvoke <java.io.ObjectInputStream: void <init>(java.io.InputStream)>"
+    "load.r $r9"->"specialinvoke <java.io.ObjectInputStream: void <init>(java.io.InputStream)>";
+    "virtualinvoke <java.io.ObjectInputStream: java.lang.Object readObject()>"
+    "specialinvoke <java.io.ObjectInputStream: void <init>(java.io.InputStream)>"->"virtualinvoke <java.io.ObjectInputStream: java.lang.Object readObject()>";
+    "ifnull goto return"
+    "virtualinvoke <java.io.ObjectInputStream: java.lang.Object readObject()>"->"ifnull goto return";
+    "staticget <vload: vload a>"
+    "ifnull goto return"->"staticget <vload: vload a>";
+    "staticget <vload: vload a>"->"ifnull goto return";
+    "ifnull goto return"->"staticget <vload: vload a>";
+    "load.r r24"
+    "staticget <vload: vload a>"->"load.r r24";
+    "load.r r24"->"load.r r0";
+    "staticget <vmain: java.lang.String c>"
+    "load.r r0"->"staticget <vmain: java.lang.String c>";
+    "staticget <vmain: java.lang.String c>"->"staticinvoke <vload: byte[] c(java.lang.String)>";
+    "staticget <vmain: java.lang.String b>"
+    "staticinvoke <vload: byte[] c(java.lang.String)>"->"staticget <vmain: java.lang.String b>";
+    "staticget <vmain: java.lang.String b>"->"staticinvoke <vload: byte[] c(java.lang.String)>";
+    "virtualinvoke <vload: void a(java.lang.String,java.lang.String,byte[],byte[])>"
+    "staticinvoke <vload: byte[] c(java.lang.String)>"->"virtualinvoke <vload: void a(java.lang.String,java.lang.String,byte[],byte[])>";
+    "goto return"
+    "virtualinvoke <vload: void a(java.lang.String,java.lang.String,byte[],byte[])>"->"goto return";
+    "return"
+    "goto return"->"return";
+    "virtualinvoke <vload: void a(java.lang.String,java.lang.String,byte[],byte[])>"->"store.r r0";
+}

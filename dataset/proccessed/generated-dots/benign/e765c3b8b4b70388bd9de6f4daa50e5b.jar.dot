@@ -1,0 +1,21 @@
+digraph "" {
+    "r0 := @this: Vivace"
+    "load.r r0"
+    "r0 := @this: Vivace"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "push \"uLaw8000AU\""
+    "load.r r0"->"push \"uLaw8000AU\"";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"
+    "push \"uLaw8000AU\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "store.r r2"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"store.r r2";
+    "store.r r2"->"load.r r0";
+    "virtualinvoke <java.applet.Applet: java.net.URL getCodeBase()>"
+    "load.r r0"->"virtualinvoke <java.applet.Applet: java.net.URL getCodeBase()>";
+    "load.r r2"
+    "virtualinvoke <java.applet.Applet: java.net.URL getCodeBase()>"->"load.r r2";
+    "virtualinvoke <java.applet.Applet: void play(java.net.URL,java.lang.String)>"
+    "load.r r2"->"virtualinvoke <java.applet.Applet: void play(java.net.URL,java.lang.String)>";
+    "return"
+    "virtualinvoke <java.applet.Applet: void play(java.net.URL,java.lang.String)>"->"return";
+}

@@ -1,0 +1,93 @@
+digraph "" {
+    "r0 := @this: Driver"
+    "load.r r0"
+    "r0 := @this: Driver"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "fieldget <Driver: int WIDTH>"
+    "load.r r0"->"fieldget <Driver: int WIDTH>";
+    "fieldget <Driver: int WIDTH>"->"load.r r0";
+    "fieldget <Driver: int HEIGHT>"
+    "load.r r0"->"fieldget <Driver: int HEIGHT>";
+    "virtualinvoke <java.awt.Component: java.awt.Image createImage(int,int)>"
+    "fieldget <Driver: int HEIGHT>"->"virtualinvoke <java.awt.Component: java.awt.Image createImage(int,int)>";
+    "fieldput <Driver: java.awt.Image memImage>"
+    "virtualinvoke <java.awt.Component: java.awt.Image createImage(int,int)>"->"fieldput <Driver: java.awt.Image memImage>";
+    "fieldput <Driver: java.awt.Image memImage>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "fieldget <Driver: java.awt.Image memImage>"
+    "load.r r0"->"fieldget <Driver: java.awt.Image memImage>";
+    "virtualinvoke <java.awt.Image: java.awt.Graphics getGraphics()>"
+    "fieldget <Driver: java.awt.Image memImage>"->"virtualinvoke <java.awt.Image: java.awt.Graphics getGraphics()>";
+    "fieldput <Driver: java.awt.Graphics memScreen>"
+    "virtualinvoke <java.awt.Image: java.awt.Graphics getGraphics()>"->"fieldput <Driver: java.awt.Graphics memScreen>";
+    "fieldput <Driver: java.awt.Graphics memScreen>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "fieldget <Driver: int NUM_BOIDS>"
+    "load.r r0"->"fieldget <Driver: int NUM_BOIDS>";
+    "newarray"
+    "fieldget <Driver: int NUM_BOIDS>"->"newarray";
+    "fieldput <Driver: Particle[] p>"
+    "newarray"->"fieldput <Driver: Particle[] p>";
+    "push 0"
+    "fieldput <Driver: Particle[] p>"->"push 0";
+    "store.i i8"
+    "push 0"->"store.i i8";
+    "goto load.i i8"
+    "store.i i8"->"goto load.i i8";
+    "load.i i8"
+    "goto load.i i8"->"load.i i8";
+    "load.i i8"->"load.r r0";
+    "load.r r0"->"fieldget <Driver: int NUM_BOIDS>";
+    "ifcmplt.i load.r r0"
+    "fieldget <Driver: int NUM_BOIDS>"->"ifcmplt.i load.r r0";
+    "ifcmplt.i load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "virtualinvoke <java.awt.Component: void addMouseMotionListener(java.awt.event.MouseMotionListener)>"
+    "load.r r0"->"virtualinvoke <java.awt.Component: void addMouseMotionListener(java.awt.event.MouseMotionListener)>";
+    "virtualinvoke <java.awt.Component: void addMouseMotionListener(java.awt.event.MouseMotionListener)>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "virtualinvoke <java.awt.Component: void addMouseListener(java.awt.event.MouseListener)>"
+    "load.r r0"->"virtualinvoke <java.awt.Component: void addMouseListener(java.awt.event.MouseListener)>";
+    "new java.lang.Thread"
+    "virtualinvoke <java.awt.Component: void addMouseListener(java.awt.event.MouseListener)>"->"new java.lang.Thread";
+    "dup1.r"
+    "new java.lang.Thread"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "specialinvoke <java.lang.Thread: void <init>(java.lang.Runnable)>"
+    "load.r r0"->"specialinvoke <java.lang.Thread: void <init>(java.lang.Runnable)>";
+    "virtualinvoke <java.lang.Thread: void start()>"
+    "specialinvoke <java.lang.Thread: void <init>(java.lang.Runnable)>"->"virtualinvoke <java.lang.Thread: void start()>";
+    "return"
+    "virtualinvoke <java.lang.Thread: void start()>"->"return";
+    "ifcmplt.i load.r r0"->"load.r r0";
+    "fieldget <Driver: Particle[] p>"
+    "load.r r0"->"fieldget <Driver: Particle[] p>";
+    "fieldget <Driver: Particle[] p>"->"load.i i8";
+    "new Particle"
+    "load.i i8"->"new Particle";
+    "new Particle"->"dup1.r";
+    "specialinvoke <Particle: void <init>()>"
+    "dup1.r"->"specialinvoke <Particle: void <init>()>";
+    "arraywrite.r"
+    "specialinvoke <Particle: void <init>()>"->"arraywrite.r";
+    "arraywrite.r"->"load.r r0";
+    "load.r r0"->"fieldget <Driver: Particle[] p>";
+    "fieldget <Driver: Particle[] p>"->"load.i i8";
+    "arrayread.r"
+    "load.i i8"->"arrayread.r";
+    "arrayread.r"->"load.r r0";
+    "load.r r0"->"fieldget <Driver: int WIDTH>";
+    "push 2"
+    "fieldget <Driver: int WIDTH>"->"push 2";
+    "div.i"
+    "push 2"->"div.i";
+    "div.i"->"load.r r0";
+    "load.r r0"->"fieldget <Driver: int HEIGHT>";
+    "fieldget <Driver: int HEIGHT>"->"push 2";
+    "push 2"->"div.i";
+    "virtualinvoke <Particle: void initialize(int,int)>"
+    "div.i"->"virtualinvoke <Particle: void initialize(int,int)>";
+    "inc.i i8 1"
+    "virtualinvoke <Particle: void initialize(int,int)>"->"inc.i i8 1";
+}

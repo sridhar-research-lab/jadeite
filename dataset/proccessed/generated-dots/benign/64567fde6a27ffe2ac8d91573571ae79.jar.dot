@@ -1,0 +1,93 @@
+digraph "" {
+    "r0 := @this: Breakout"
+    "load.r r0"
+    "r0 := @this: Breakout"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "virtualinvoke <java.awt.Component: java.awt.Dimension size()>"
+    "load.r r0"->"virtualinvoke <java.awt.Component: java.awt.Dimension size()>";
+    "fieldput <Breakout: java.awt.Dimension d>"
+    "virtualinvoke <java.awt.Component: java.awt.Dimension size()>"->"fieldput <Breakout: java.awt.Dimension d>";
+    "fieldput <Breakout: java.awt.Dimension d>"->"load.r r0";
+    "new java.awt.Color"
+    "load.r r0"->"new java.awt.Color";
+    "dup1.r"
+    "new java.awt.Color"->"dup1.r";
+    "push 1056832"
+    "dup1.r"->"push 1056832";
+    "specialinvoke <java.awt.Color: void <init>(int)>"
+    "push 1056832"->"specialinvoke <java.awt.Color: void <init>(int)>";
+    "virtualinvoke <java.awt.Component: void setBackground(java.awt.Color)>"
+    "specialinvoke <java.awt.Color: void <init>(int)>"->"virtualinvoke <java.awt.Component: void setBackground(java.awt.Color)>";
+    "virtualinvoke <java.awt.Component: void setBackground(java.awt.Color)>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "fieldget <Breakout: java.awt.Dimension d>"
+    "load.r r0"->"fieldget <Breakout: java.awt.Dimension d>";
+    "fieldget <java.awt.Dimension: int width>"
+    "fieldget <Breakout: java.awt.Dimension d>"->"fieldget <java.awt.Dimension: int width>";
+    "push 10"
+    "fieldget <java.awt.Dimension: int width>"->"push 10";
+    "sub.i"
+    "push 10"->"sub.i";
+    "push 17"
+    "sub.i"->"push 17";
+    "div.i"
+    "push 17"->"div.i";
+    "fieldput <Breakout: int bricksperline>"
+    "div.i"->"fieldput <Breakout: int bricksperline>";
+    "fieldput <Breakout: int bricksperline>"->"load.r r0";
+    "load.r r0"->"fieldget <Breakout: java.awt.Dimension d>";
+    "fieldget <Breakout: java.awt.Dimension d>"->"load.r r0";
+    "fieldget <Breakout: int bricksperline>"
+    "load.r r0"->"fieldget <Breakout: int bricksperline>";
+    "fieldget <Breakout: int bricksperline>"->"push 17";
+    "mul.i"
+    "push 17"->"mul.i";
+    "mul.i"->"push 10";
+    "add.i"
+    "push 10"->"add.i";
+    "fieldput <java.awt.Dimension: int width>"
+    "add.i"->"fieldput <java.awt.Dimension: int width>";
+    "fieldput <java.awt.Dimension: int width>"->"load.r r0";
+    "virtualinvoke <java.awt.Component: java.awt.Graphics getGraphics()>"
+    "load.r r0"->"virtualinvoke <java.awt.Component: java.awt.Graphics getGraphics()>";
+    "store.r r1"
+    "virtualinvoke <java.awt.Component: java.awt.Graphics getGraphics()>"->"store.r r1";
+    "load.r r1"
+    "store.r r1"->"load.r r1";
+    "load.r r1"->"load.r r0";
+    "fieldget <Breakout: java.awt.Font smallfont>"
+    "load.r r0"->"fieldget <Breakout: java.awt.Font smallfont>";
+    "virtualinvoke <java.awt.Graphics: void setFont(java.awt.Font)>"
+    "fieldget <Breakout: java.awt.Font smallfont>"->"virtualinvoke <java.awt.Graphics: void setFont(java.awt.Font)>";
+    "virtualinvoke <java.awt.Graphics: void setFont(java.awt.Font)>"->"load.r r0";
+    "load.r r0"->"load.r r1";
+    "virtualinvoke <java.awt.Graphics: java.awt.FontMetrics getFontMetrics()>"
+    "load.r r1"->"virtualinvoke <java.awt.Graphics: java.awt.FontMetrics getFontMetrics()>";
+    "fieldput <Breakout: java.awt.FontMetrics fmsmall>"
+    "virtualinvoke <java.awt.Graphics: java.awt.FontMetrics getFontMetrics()>"->"fieldput <Breakout: java.awt.FontMetrics fmsmall>";
+    "fieldput <Breakout: java.awt.FontMetrics fmsmall>"->"load.r r1";
+    "load.r r1"->"load.r r0";
+    "fieldget <Breakout: java.awt.Font largefont>"
+    "load.r r0"->"fieldget <Breakout: java.awt.Font largefont>";
+    "fieldget <Breakout: java.awt.Font largefont>"->"virtualinvoke <java.awt.Graphics: void setFont(java.awt.Font)>";
+    "virtualinvoke <java.awt.Graphics: void setFont(java.awt.Font)>"->"load.r r0";
+    "load.r r0"->"load.r r1";
+    "load.r r1"->"virtualinvoke <java.awt.Graphics: java.awt.FontMetrics getFontMetrics()>";
+    "fieldput <Breakout: java.awt.FontMetrics fmlarge>"
+    "virtualinvoke <java.awt.Graphics: java.awt.FontMetrics getFontMetrics()>"->"fieldput <Breakout: java.awt.FontMetrics fmlarge>";
+    "fieldput <Breakout: java.awt.FontMetrics fmlarge>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <Breakout: int bricksperline>";
+    "push 4"
+    "fieldget <Breakout: int bricksperline>"->"push 4";
+    "push 4"->"mul.i";
+    "newarray"
+    "mul.i"->"newarray";
+    "fieldput <Breakout: boolean[] showbrick>"
+    "newarray"->"fieldput <Breakout: boolean[] showbrick>";
+    "fieldput <Breakout: boolean[] showbrick>"->"load.r r0";
+    "virtualinvoke <Breakout: void GameInit()>"
+    "load.r r0"->"virtualinvoke <Breakout: void GameInit()>";
+    "return"
+    "virtualinvoke <Breakout: void GameInit()>"->"return";
+}

@@ -1,0 +1,693 @@
+digraph "" {
+    "r0 := @this: ISCUpScroll"
+    "load.r r0"
+    "r0 := @this: ISCUpScroll"->"load.r r0";
+    "push null"
+    "load.r r0"->"push null";
+    "virtualinvoke <java.awt.Container: void setLayout(java.awt.LayoutManager)>"
+    "push null"->"virtualinvoke <java.awt.Container: void setLayout(java.awt.LayoutManager)>";
+    "virtualinvoke <java.awt.Container: void setLayout(java.awt.LayoutManager)>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "virtualinvoke <java.awt.Component: java.awt.Dimension size()>"
+    "load.r r0"->"virtualinvoke <java.awt.Component: java.awt.Dimension size()>";
+    "fieldget <java.awt.Dimension: int width>"
+    "virtualinvoke <java.awt.Component: java.awt.Dimension size()>"->"fieldget <java.awt.Dimension: int width>";
+    "fieldput <ISCUpScroll: int width>"
+    "fieldget <java.awt.Dimension: int width>"->"fieldput <ISCUpScroll: int width>";
+    "fieldput <ISCUpScroll: int width>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"virtualinvoke <java.awt.Component: java.awt.Dimension size()>";
+    "fieldget <java.awt.Dimension: int height>"
+    "virtualinvoke <java.awt.Component: java.awt.Dimension size()>"->"fieldget <java.awt.Dimension: int height>";
+    "fieldput <ISCUpScroll: int height>"
+    "fieldget <java.awt.Dimension: int height>"->"fieldput <ISCUpScroll: int height>";
+    "fieldput <ISCUpScroll: int height>"->"load.r r0";
+    "new java.awt.MediaTracker"
+    "load.r r0"->"new java.awt.MediaTracker";
+    "dup1.r"
+    "new java.awt.MediaTracker"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "specialinvoke <java.awt.MediaTracker: void <init>(java.awt.Component)>"
+    "load.r r0"->"specialinvoke <java.awt.MediaTracker: void <init>(java.awt.Component)>";
+    "fieldput <ISCUpScroll: java.awt.MediaTracker tracker>"
+    "specialinvoke <java.awt.MediaTracker: void <init>(java.awt.Component)>"->"fieldput <ISCUpScroll: java.awt.MediaTracker tracker>";
+    "fieldput <ISCUpScroll: java.awt.MediaTracker tracker>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "push \"FRAME_NAME\""
+    "load.r r0"->"push \"FRAME_NAME\"";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"
+    "push \"FRAME_NAME\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "fieldput <ISCUpScroll: java.lang.String frame_name>"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"fieldput <ISCUpScroll: java.lang.String frame_name>";
+    "fieldput <ISCUpScroll: java.lang.String frame_name>"->"load.r r0";
+    "fieldget <ISCUpScroll: java.lang.String frame_name>"
+    "load.r r0"->"fieldget <ISCUpScroll: java.lang.String frame_name>";
+    "ifnonnull load.r r0"
+    "fieldget <ISCUpScroll: java.lang.String frame_name>"->"ifnonnull load.r r0";
+    "ifnonnull load.r r0"->"load.r r0";
+    "push \"_top\""
+    "load.r r0"->"push \"_top\"";
+    "push \"_top\""->"fieldput <ISCUpScroll: java.lang.String frame_name>";
+    "fieldput <ISCUpScroll: java.lang.String frame_name>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "push \"CLIP_WIDTH\""
+    "load.r r0"->"push \"CLIP_WIDTH\"";
+    "push \"CLIP_WIDTH\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "staticinvoke <java.lang.Integer: java.lang.Integer valueOf(java.lang.String)>"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"staticinvoke <java.lang.Integer: java.lang.Integer valueOf(java.lang.String)>";
+    "virtualinvoke <java.lang.Integer: int intValue()>"
+    "staticinvoke <java.lang.Integer: java.lang.Integer valueOf(java.lang.String)>"->"virtualinvoke <java.lang.Integer: int intValue()>";
+    "fieldput <ISCUpScroll: int clip>"
+    "virtualinvoke <java.lang.Integer: int intValue()>"->"fieldput <ISCUpScroll: int clip>";
+    "goto load.r r0"
+    "fieldput <ISCUpScroll: int clip>"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "new java.awt.Scrollbar"
+    "load.r r0"->"new java.awt.Scrollbar";
+    "new java.awt.Scrollbar"->"dup1.r";
+    "push 1"
+    "dup1.r"->"push 1";
+    "push 1"->"load.r r0";
+    "fieldget <ISCUpScroll: int height>"
+    "load.r r0"->"fieldget <ISCUpScroll: int height>";
+    "fieldget <ISCUpScroll: int height>"->"load.r r0";
+    "fieldget <ISCUpScroll: int clip>"
+    "load.r r0"->"fieldget <ISCUpScroll: int clip>";
+    "push 2"
+    "fieldget <ISCUpScroll: int clip>"->"push 2";
+    "mul.i"
+    "push 2"->"mul.i";
+    "sub.i"
+    "mul.i"->"sub.i";
+    "sub.i"->"push 1";
+    "push 0"
+    "push 1"->"push 0";
+    "push 0"->"load.r r0";
+    "load.r r0"->"fieldget <ISCUpScroll: int height>";
+    "fieldget <ISCUpScroll: int height>"->"load.r r0";
+    "load.r r0"->"fieldget <ISCUpScroll: int clip>";
+    "fieldget <ISCUpScroll: int clip>"->"push 2";
+    "push 2"->"mul.i";
+    "mul.i"->"sub.i";
+    "specialinvoke <java.awt.Scrollbar: void <init>(int,int,int,int,int)>"
+    "sub.i"->"specialinvoke <java.awt.Scrollbar: void <init>(int,int,int,int,int)>";
+    "fieldput <ISCUpScroll: java.awt.Scrollbar sb>"
+    "specialinvoke <java.awt.Scrollbar: void <init>(int,int,int,int,int)>"->"fieldput <ISCUpScroll: java.awt.Scrollbar sb>";
+    "fieldput <ISCUpScroll: java.awt.Scrollbar sb>"->"load.r r0";
+    "fieldget <ISCUpScroll: java.awt.Scrollbar sb>"
+    "load.r r0"->"fieldget <ISCUpScroll: java.awt.Scrollbar sb>";
+    "fieldget <ISCUpScroll: java.awt.Scrollbar sb>"->"load.r r0";
+    "fieldget <ISCUpScroll: int width>"
+    "load.r r0"->"fieldget <ISCUpScroll: int width>";
+    "fieldget <ISCUpScroll: int width>"->"load.r r0";
+    "fieldget <ISCUpScroll: int sb_size>"
+    "load.r r0"->"fieldget <ISCUpScroll: int sb_size>";
+    "fieldget <ISCUpScroll: int sb_size>"->"sub.i";
+    "sub.i"->"load.r r0";
+    "load.r r0"->"fieldget <ISCUpScroll: int clip>";
+    "fieldget <ISCUpScroll: int clip>"->"push 2";
+    "push 2"->"mul.i";
+    "mul.i"->"sub.i";
+    "sub.i"->"load.r r0";
+    "load.r r0"->"fieldget <ISCUpScroll: int clip>";
+    "fieldget <ISCUpScroll: int clip>"->"load.r r0";
+    "load.r r0"->"fieldget <ISCUpScroll: int sb_size>";
+    "fieldget <ISCUpScroll: int sb_size>"->"load.r r0";
+    "load.r r0"->"fieldget <ISCUpScroll: int clip>";
+    "add.i"
+    "fieldget <ISCUpScroll: int clip>"->"add.i";
+    "add.i"->"load.r r0";
+    "load.r r0"->"fieldget <ISCUpScroll: int height>";
+    "fieldget <ISCUpScroll: int height>"->"load.r r0";
+    "load.r r0"->"fieldget <ISCUpScroll: int clip>";
+    "fieldget <ISCUpScroll: int clip>"->"push 2";
+    "push 2"->"mul.i";
+    "mul.i"->"sub.i";
+    "virtualinvoke <java.awt.Component: void reshape(int,int,int,int)>"
+    "sub.i"->"virtualinvoke <java.awt.Component: void reshape(int,int,int,int)>";
+    "virtualinvoke <java.awt.Component: void reshape(int,int,int,int)>"->"load.r r0";
+    "push \"SCROLLBAR\""
+    "load.r r0"->"push \"SCROLLBAR\"";
+    "push \"SCROLLBAR\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "store.r r1"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"store.r r1";
+    "load.r r1"
+    "store.r r1"->"load.r r1";
+    "ifnull load.r r0"
+    "load.r r1"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r r1";
+    "push \"TRUE\""
+    "load.r r1"->"push \"TRUE\"";
+    "virtualinvoke <java.lang.String: boolean equalsIgnoreCase(java.lang.String)>"
+    "push \"TRUE\""->"virtualinvoke <java.lang.String: boolean equalsIgnoreCase(java.lang.String)>";
+    "ifeq load.r r0"
+    "virtualinvoke <java.lang.String: boolean equalsIgnoreCase(java.lang.String)>"->"ifeq load.r r0";
+    "ifeq load.r r0"->"load.r r0";
+    "load.r r0"->"push 1";
+    "fieldput <ISCUpScroll: boolean scrollbar>"
+    "push 1"->"fieldput <ISCUpScroll: boolean scrollbar>";
+    "fieldput <ISCUpScroll: boolean scrollbar>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <ISCUpScroll: int width>";
+    "fieldget <ISCUpScroll: int width>"->"load.r r0";
+    "load.r r0"->"fieldget <ISCUpScroll: int sb_size>";
+    "fieldget <ISCUpScroll: int sb_size>"->"sub.i";
+    "sub.i"->"fieldput <ISCUpScroll: int width>";
+    "fieldput <ISCUpScroll: int width>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <ISCUpScroll: java.awt.Scrollbar sb>";
+    "virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>"
+    "fieldget <ISCUpScroll: java.awt.Scrollbar sb>"->"virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>";
+    "pop"
+    "virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>"->"pop";
+    "pop"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "push \"DELAY\""
+    "load.r r0"->"push \"DELAY\"";
+    "push \"DELAY\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "staticinvoke <java.lang.Long: java.lang.Long valueOf(java.lang.String)>"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"staticinvoke <java.lang.Long: java.lang.Long valueOf(java.lang.String)>";
+    "virtualinvoke <java.lang.Long: long longValue()>"
+    "staticinvoke <java.lang.Long: java.lang.Long valueOf(java.lang.String)>"->"virtualinvoke <java.lang.Long: long longValue()>";
+    "fieldput <ISCUpScroll: long delay>"
+    "virtualinvoke <java.lang.Long: long longValue()>"->"fieldput <ISCUpScroll: long delay>";
+    "fieldput <ISCUpScroll: long delay>"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "push \"PAUSE\""
+    "load.r r0"->"push \"PAUSE\"";
+    "push \"PAUSE\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"staticinvoke <java.lang.Long: java.lang.Long valueOf(java.lang.String)>";
+    "staticinvoke <java.lang.Long: java.lang.Long valueOf(java.lang.String)>"->"virtualinvoke <java.lang.Long: long longValue()>";
+    "fieldput <ISCUpScroll: long pause>"
+    "virtualinvoke <java.lang.Long: long longValue()>"->"fieldput <ISCUpScroll: long pause>";
+    "fieldput <ISCUpScroll: long pause>"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "push \"STEP\""
+    "load.r r0"->"push \"STEP\"";
+    "push \"STEP\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"staticinvoke <java.lang.Integer: java.lang.Integer valueOf(java.lang.String)>";
+    "staticinvoke <java.lang.Integer: java.lang.Integer valueOf(java.lang.String)>"->"virtualinvoke <java.lang.Integer: int intValue()>";
+    "store.i r1"
+    "virtualinvoke <java.lang.Integer: int intValue()>"->"store.i r1";
+    "load.i r1"
+    "store.i r1"->"load.i r1";
+    "fieldput <ISCUpScroll: int step>"
+    "load.i r1"->"fieldput <ISCUpScroll: int step>";
+    "fieldput <ISCUpScroll: int step>"->"load.i r1";
+    "fieldput <ISCUpScroll: int _step>"
+    "load.i r1"->"fieldput <ISCUpScroll: int _step>";
+    "fieldput <ISCUpScroll: int _step>"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "push \"DELIMITER\""
+    "load.r r0"->"push \"DELIMITER\"";
+    "push \"DELIMITER\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"ifnonnull load.r r0";
+    "push \"|\""
+    "ifnonnull load.r r0"->"push \"|\"";
+    "push \"|\""->"store.r r1";
+    "store.r r1"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r1";
+    "fieldput <ISCUpScroll: java.lang.String deli>"
+    "load.r r1"->"fieldput <ISCUpScroll: java.lang.String deli>";
+    "fieldput <ISCUpScroll: java.lang.String deli>"->"load.r r0";
+    "push \"BACK_IMAGE\""
+    "load.r r0"->"push \"BACK_IMAGE\"";
+    "push \"BACK_IMAGE\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"store.r r1";
+    "store.r r1"->"load.r r1";
+    "load.r r1"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "virtualinvoke <java.applet.Applet: java.net.URL getCodeBase()>"
+    "load.r r0"->"virtualinvoke <java.applet.Applet: java.net.URL getCodeBase()>";
+    "virtualinvoke <java.applet.Applet: java.net.URL getCodeBase()>"->"load.r r1";
+    "virtualinvoke <java.applet.Applet: java.awt.Image getImage(java.net.URL,java.lang.String)>"
+    "load.r r1"->"virtualinvoke <java.applet.Applet: java.awt.Image getImage(java.net.URL,java.lang.String)>";
+    "fieldput <ISCUpScroll: java.awt.Image back_image>"
+    "virtualinvoke <java.applet.Applet: java.awt.Image getImage(java.net.URL,java.lang.String)>"->"fieldput <ISCUpScroll: java.awt.Image back_image>";
+    "fieldput <ISCUpScroll: java.awt.Image back_image>"->"load.r r0";
+    "fieldget <ISCUpScroll: java.awt.MediaTracker tracker>"
+    "load.r r0"->"fieldget <ISCUpScroll: java.awt.MediaTracker tracker>";
+    "fieldget <ISCUpScroll: java.awt.MediaTracker tracker>"->"load.r r0";
+    "fieldget <ISCUpScroll: java.awt.Image back_image>"
+    "load.r r0"->"fieldget <ISCUpScroll: java.awt.Image back_image>";
+    "fieldget <ISCUpScroll: java.awt.Image back_image>"->"push 0";
+    "virtualinvoke <java.awt.MediaTracker: void addImage(java.awt.Image,int)>"
+    "push 0"->"virtualinvoke <java.awt.MediaTracker: void addImage(java.awt.Image,int)>";
+    "virtualinvoke <java.awt.MediaTracker: void addImage(java.awt.Image,int)>"->"load.r r0";
+    "load.r r0"->"fieldget <ISCUpScroll: java.awt.MediaTracker tracker>";
+    "push 30000L"
+    "fieldget <ISCUpScroll: java.awt.MediaTracker tracker>"->"push 30000L";
+    "virtualinvoke <java.awt.MediaTracker: boolean waitForAll(long)>"
+    "push 30000L"->"virtualinvoke <java.awt.MediaTracker: boolean waitForAll(long)>";
+    "virtualinvoke <java.awt.MediaTracker: boolean waitForAll(long)>"->"pop";
+    "pop"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <ISCUpScroll: java.awt.MediaTracker tracker>";
+    "fieldget <ISCUpScroll: java.awt.MediaTracker tracker>"->"push 0";
+    "virtualinvoke <java.awt.MediaTracker: int statusAll(boolean)>"
+    "push 0"->"virtualinvoke <java.awt.MediaTracker: int statusAll(boolean)>";
+    "push 4"
+    "virtualinvoke <java.awt.MediaTracker: int statusAll(boolean)>"->"push 4";
+    "and.i"
+    "push 4"->"and.i";
+    "and.i"->"ifeq load.r r0";
+    "ifeq load.r r0"->"load.r r0";
+    "load.r r0"->"push null";
+    "push null"->"fieldput <ISCUpScroll: java.awt.Image back_image>";
+    "fieldput <ISCUpScroll: java.awt.Image back_image>"->"load.r r0";
+    "push \"BACK_COLOR\""
+    "load.r r0"->"push \"BACK_COLOR\"";
+    "virtualinvoke <ISCUpScroll: java.awt.Color getColorParameter(java.lang.String)>"
+    "push \"BACK_COLOR\""->"virtualinvoke <ISCUpScroll: java.awt.Color getColorParameter(java.lang.String)>";
+    "virtualinvoke <ISCUpScroll: java.awt.Color getColorParameter(java.lang.String)>"->"ifnonnull load.r r0";
+    "ifnonnull load.r r0"->"load.r r0";
+    "staticget <java.awt.Color: java.awt.Color white>"
+    "load.r r0"->"staticget <java.awt.Color: java.awt.Color white>";
+    "fieldput <ISCUpScroll: java.awt.Color back_color>"
+    "staticget <java.awt.Color: java.awt.Color white>"->"fieldput <ISCUpScroll: java.awt.Color back_color>";
+    "fieldput <ISCUpScroll: java.awt.Color back_color>"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "push \"LINK_COLOR\""
+    "load.r r0"->"push \"LINK_COLOR\"";
+    "push \"LINK_COLOR\""->"virtualinvoke <ISCUpScroll: java.awt.Color getColorParameter(java.lang.String)>";
+    "virtualinvoke <ISCUpScroll: java.awt.Color getColorParameter(java.lang.String)>"->"ifnonnull load.r r0";
+    "ifnonnull load.r r0"->"load.r r0";
+    "staticget <java.awt.Color: java.awt.Color red>"
+    "load.r r0"->"staticget <java.awt.Color: java.awt.Color red>";
+    "fieldput <ISCUpScroll: java.awt.Color link_color>"
+    "staticget <java.awt.Color: java.awt.Color red>"->"fieldput <ISCUpScroll: java.awt.Color link_color>";
+    "goto push 0"
+    "fieldput <ISCUpScroll: java.awt.Color link_color>"->"goto push 0";
+    "goto push 0"->"push 0";
+    "push 0"->"store.i r1";
+    "store.i r1"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "new java.lang.StringBuffer"
+    "load.r r0"->"new java.lang.StringBuffer";
+    "new java.lang.StringBuffer"->"dup1.r";
+    "push \"TEXT\""
+    "dup1.r"->"push \"TEXT\"";
+    "specialinvoke <java.lang.StringBuffer: void <init>(java.lang.String)>"
+    "push \"TEXT\""->"specialinvoke <java.lang.StringBuffer: void <init>(java.lang.String)>";
+    "specialinvoke <java.lang.StringBuffer: void <init>(java.lang.String)>"->"load.i r1";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(int)>"
+    "load.i r1"->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(int)>";
+    "push \"0\""
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(int)>"->"push \"0\"";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"
+    "push \"0\""->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>"
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>"->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "ifnonnull inc.i r1 1"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"ifnonnull inc.i r1 1";
+    "ifnonnull inc.i r1 1"->"load.r r0";
+    "load.r r0"->"load.i r1";
+    "push 20"
+    "load.i r1"->"push 20";
+    "newmultiarray 2"
+    "push 20"->"newmultiarray 2";
+    "fieldput <ISCUpScroll: java.lang.String[][] text>"
+    "newmultiarray 2"->"fieldput <ISCUpScroll: java.lang.String[][] text>";
+    "fieldput <ISCUpScroll: java.lang.String[][] text>"->"load.r r0";
+    "load.r r0"->"load.i r1";
+    "load.i r1"->"push 20";
+    "push 20"->"newmultiarray 2";
+    "fieldput <ISCUpScroll: java.awt.Color[][] text_color>"
+    "newmultiarray 2"->"fieldput <ISCUpScroll: java.awt.Color[][] text_color>";
+    "fieldput <ISCUpScroll: java.awt.Color[][] text_color>"->"load.r r0";
+    "load.r r0"->"load.i r1";
+    "load.i r1"->"push 20";
+    "push 20"->"newmultiarray 2";
+    "fieldput <ISCUpScroll: java.lang.String[][] align>"
+    "newmultiarray 2"->"fieldput <ISCUpScroll: java.lang.String[][] align>";
+    "fieldput <ISCUpScroll: java.lang.String[][] align>"->"load.r r0";
+    "load.r r0"->"load.i r1";
+    "load.i r1"->"push 20";
+    "push 20"->"newmultiarray 2";
+    "fieldput <ISCUpScroll: int[][] font_size>"
+    "newmultiarray 2"->"fieldput <ISCUpScroll: int[][] font_size>";
+    "fieldput <ISCUpScroll: int[][] font_size>"->"load.r r0";
+    "load.r r0"->"load.i r1";
+    "load.i r1"->"push 20";
+    "push 20"->"newmultiarray 2";
+    "fieldput <ISCUpScroll: java.lang.String[][] url>"
+    "newmultiarray 2"->"fieldput <ISCUpScroll: java.lang.String[][] url>";
+    "fieldput <ISCUpScroll: java.lang.String[][] url>"->"load.r r0";
+    "load.r r0"->"load.i r1";
+    "newarray"
+    "load.i r1"->"newarray";
+    "fieldput <ISCUpScroll: int[] total_height>"
+    "newarray"->"fieldput <ISCUpScroll: int[] total_height>";
+    "staticget <java.awt.Color: java.awt.Color black>"
+    "fieldput <ISCUpScroll: int[] total_height>"->"staticget <java.awt.Color: java.awt.Color black>";
+    "staticget <java.awt.Color: java.awt.Color black>"->"store.r r1";
+    "push \"CENTER\""
+    "store.r r1"->"push \"CENTER\"";
+    "store.r r105"
+    "push \"CENTER\""->"store.r r105";
+    "store.r r105"->"push 0";
+    "store.i i47"
+    "push 0"->"store.i i47";
+    "goto load.i i47"
+    "store.i i47"->"goto load.i i47";
+    "load.i i47"
+    "goto load.i i47"->"load.i i47";
+    "load.i i47"->"load.r r0";
+    "fieldget <ISCUpScroll: java.lang.String[][] text>"
+    "load.r r0"->"fieldget <ISCUpScroll: java.lang.String[][] text>";
+    "arraylength"
+    "fieldget <ISCUpScroll: java.lang.String[][] text>"->"arraylength";
+    "ifcmplt.i push 0"
+    "arraylength"->"ifcmplt.i push 0";
+    "ifcmplt.i push 0"->"push 0";
+    "push 0"->"store.i r1";
+    "goto load.i r1"
+    "store.i r1"->"goto load.i r1";
+    "goto load.i r1"->"load.i r1";
+    "load.i r1"->"load.r r0";
+    "fieldget <ISCUpScroll: int[] total_height>"
+    "load.r r0"->"fieldget <ISCUpScroll: int[] total_height>";
+    "fieldget <ISCUpScroll: int[] total_height>"->"arraylength";
+    "arraylength"->"ifcmplt.i push 0";
+    "ifcmplt.i push 0"->"load.r r0";
+    "new java.awt.Font"
+    "load.r r0"->"new java.awt.Font";
+    "new java.awt.Font"->"dup1.r";
+    "push \"Helvetica\""
+    "dup1.r"->"push \"Helvetica\"";
+    "push \"Helvetica\""->"push 1";
+    "push 1"->"load.r r0";
+    "fieldget <ISCUpScroll: int[][] font_size>"
+    "load.r r0"->"fieldget <ISCUpScroll: int[][] font_size>";
+    "fieldget <ISCUpScroll: int[][] font_size>"->"push 0";
+    "arrayread.r"
+    "push 0"->"arrayread.r";
+    "arrayread.r"->"push 0";
+    "arrayread.i"
+    "push 0"->"arrayread.i";
+    "specialinvoke <java.awt.Font: void <init>(java.lang.String,int,int)>"
+    "arrayread.i"->"specialinvoke <java.awt.Font: void <init>(java.lang.String,int,int)>";
+    "fieldput <ISCUpScroll: java.awt.Font f>"
+    "specialinvoke <java.awt.Font: void <init>(java.lang.String,int,int)>"->"fieldput <ISCUpScroll: java.awt.Font f>";
+    "fieldput <ISCUpScroll: java.awt.Font f>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <ISCUpScroll: int height>";
+    "fieldget <ISCUpScroll: int height>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "fieldget <ISCUpScroll: java.awt.Font f>"
+    "load.r r0"->"fieldget <ISCUpScroll: java.awt.Font f>";
+    "virtualinvoke <java.awt.Component: java.awt.FontMetrics getFontMetrics(java.awt.Font)>"
+    "fieldget <ISCUpScroll: java.awt.Font f>"->"virtualinvoke <java.awt.Component: java.awt.FontMetrics getFontMetrics(java.awt.Font)>";
+    "virtualinvoke <java.awt.FontMetrics: int getHeight()>"
+    "virtualinvoke <java.awt.Component: java.awt.FontMetrics getFontMetrics(java.awt.Font)>"->"virtualinvoke <java.awt.FontMetrics: int getHeight()>";
+    "virtualinvoke <java.awt.FontMetrics: int getHeight()>"->"add.i";
+    "fieldput <ISCUpScroll: int pos>"
+    "add.i"->"fieldput <ISCUpScroll: int pos>";
+    "return"
+    "fieldput <ISCUpScroll: int pos>"->"return";
+    "ifcmplt.i push 0"->"push 0";
+    "store.i r105"
+    "push 0"->"store.i r105";
+    "store.i r105"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <ISCUpScroll: java.lang.String[][] text>";
+    "fieldget <ISCUpScroll: java.lang.String[][] text>"->"load.i r1";
+    "load.i r1"->"arrayread.r";
+    "load.i r105"
+    "arrayread.r"->"load.i r105";
+    "load.i r105"->"arrayread.r";
+    "arrayread.r"->"ifnonnull load.r r0";
+    "inc.i r1 1"
+    "ifnonnull load.r r0"->"inc.i r1 1";
+    "ifnonnull load.r r0"->"load.r r0";
+    "load.r r0"->"new java.awt.Font";
+    "new java.awt.Font"->"dup1.r";
+    "dup1.r"->"push \"Helvetica\"";
+    "push \"Helvetica\""->"push 1";
+    "push 1"->"load.r r0";
+    "load.r r0"->"fieldget <ISCUpScroll: int[][] font_size>";
+    "fieldget <ISCUpScroll: int[][] font_size>"->"load.r r0";
+    "fieldget <ISCUpScroll: int t>"
+    "load.r r0"->"fieldget <ISCUpScroll: int t>";
+    "fieldget <ISCUpScroll: int t>"->"arrayread.r";
+    "arrayread.r"->"load.i r105";
+    "load.i r105"->"arrayread.i";
+    "arrayread.i"->"specialinvoke <java.awt.Font: void <init>(java.lang.String,int,int)>";
+    "specialinvoke <java.awt.Font: void <init>(java.lang.String,int,int)>"->"fieldput <ISCUpScroll: java.awt.Font f>";
+    "fieldput <ISCUpScroll: java.awt.Font f>"->"load.r r0";
+    "load.r r0"->"fieldget <ISCUpScroll: int[] total_height>";
+    "fieldget <ISCUpScroll: int[] total_height>"->"load.i r1";
+    "load.i r1"->"load.r r0";
+    "load.r r0"->"fieldget <ISCUpScroll: int[] total_height>";
+    "fieldget <ISCUpScroll: int[] total_height>"->"load.i r1";
+    "load.i r1"->"arrayread.i";
+    "arrayread.i"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <ISCUpScroll: java.awt.Font f>";
+    "fieldget <ISCUpScroll: java.awt.Font f>"->"virtualinvoke <java.awt.Component: java.awt.FontMetrics getFontMetrics(java.awt.Font)>";
+    "virtualinvoke <java.awt.Component: java.awt.FontMetrics getFontMetrics(java.awt.Font)>"->"virtualinvoke <java.awt.FontMetrics: int getHeight()>";
+    "virtualinvoke <java.awt.FontMetrics: int getHeight()>"->"add.i";
+    "arraywrite.i"
+    "add.i"->"arraywrite.i";
+    "inc.i r105 1"
+    "arraywrite.i"->"inc.i r105 1";
+    "ifcmplt.i push 0"->"push 0";
+    "store.i i48"
+    "push 0"->"store.i i48";
+    "goto load.i i48"
+    "store.i i48"->"goto load.i i48";
+    "load.i i48"
+    "goto load.i i48"->"load.i i48";
+    "load.i i48"->"push 20";
+    "ifcmplt.i push 5"
+    "push 20"->"ifcmplt.i push 5";
+    "ifcmplt.i push 5"->"load.r r0";
+    "load.r r0"->"fieldget <ISCUpScroll: java.lang.String[][] text>";
+    "fieldget <ISCUpScroll: java.lang.String[][] text>"->"load.i i47";
+    "load.i i47"->"arrayread.r";
+    "arrayread.r"->"push 0";
+    "push 0"->"arrayread.r";
+    "ifnonnull inc.i i47 1"
+    "arrayread.r"->"ifnonnull inc.i i47 1";
+    "ifnonnull inc.i i47 1"->"goto push 0";
+    "inc.i i47 1"
+    "ifnonnull inc.i i47 1"->"inc.i i47 1";
+    "push 5"
+    "ifcmplt.i push 5"->"push 5";
+    "push 5"->"newarray";
+    "store.r r3"
+    "newarray"->"store.r r3";
+    "store.r r3"->"load.r r0";
+    "load.r r0"->"new java.lang.StringBuffer";
+    "new java.lang.StringBuffer"->"dup1.r";
+    "dup1.r"->"push \"TEXT\"";
+    "push \"TEXT\""->"specialinvoke <java.lang.StringBuffer: void <init>(java.lang.String)>";
+    "specialinvoke <java.lang.StringBuffer: void <init>(java.lang.String)>"->"load.i i47";
+    "load.i i47"->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(int)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(int)>"->"load.i i48";
+    "load.i i48"->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(int)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(int)>"->"virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>"->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"store.r r3";
+    "load.r r3"
+    "store.r r3"->"load.r r3";
+    "load.r r3"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r3";
+    "load.r r3"->"load.r r0";
+    "fieldget <ISCUpScroll: java.lang.String deli>"
+    "load.r r0"->"fieldget <ISCUpScroll: java.lang.String deli>";
+    "virtualinvoke <ISCUpScroll: java.lang.String[] parseParam(java.lang.String,java.lang.String)>"
+    "fieldget <ISCUpScroll: java.lang.String deli>"->"virtualinvoke <ISCUpScroll: java.lang.String[] parseParam(java.lang.String,java.lang.String)>";
+    "virtualinvoke <ISCUpScroll: java.lang.String[] parseParam(java.lang.String,java.lang.String)>"->"store.r r3";
+    "store.r r3"->"load.r r0";
+    "load.r r0"->"fieldget <ISCUpScroll: java.lang.String[][] text>";
+    "fieldget <ISCUpScroll: java.lang.String[][] text>"->"load.i i47";
+    "load.i i47"->"arrayread.r";
+    "store.r $r60"
+    "arrayread.r"->"store.r $r60";
+    "store.r $r60"->"load.i i48";
+    "store.i $i38"
+    "load.i i48"->"store.i $i38";
+    "store.i $i38"->"load.r r3";
+    "load.r r3"->"push 0";
+    "push 0"->"arrayread.r";
+    "ifnonnull load.r r3"
+    "arrayread.r"->"ifnonnull load.r r3";
+    "push \"\""
+    "ifnonnull load.r r3"->"push \"\"";
+    "store.r $r108"
+    "push \"\""->"store.r $r108";
+    "goto load.r $r60"
+    "store.r $r108"->"goto load.r $r60";
+    "load.r $r60"
+    "goto load.r $r60"->"load.r $r60";
+    "load.i $i38"
+    "load.r $r60"->"load.i $i38";
+    "load.r $r108"
+    "load.i $i38"->"load.r $r108";
+    "arraywrite.r"
+    "load.r $r108"->"arraywrite.r";
+    "arraywrite.r"->"load.r r3";
+    "load.r r3"->"push 1";
+    "push 1"->"arrayread.r";
+    "arrayread.r"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r r3";
+    "load.r r3"->"push 1";
+    "push 1"->"arrayread.r";
+    "push \" \""
+    "arrayread.r"->"push \" \"";
+    "ifcmpeq.r load.r r0"
+    "push \" \""->"ifcmpeq.r load.r r0";
+    "ifcmpeq.r load.r r0"->"load.r r0";
+    "fieldget <ISCUpScroll: java.awt.Color[][] text_color>"
+    "load.r r0"->"fieldget <ISCUpScroll: java.awt.Color[][] text_color>";
+    "fieldget <ISCUpScroll: java.awt.Color[][] text_color>"->"load.i i47";
+    "load.i i47"->"arrayread.r";
+    "arrayread.r"->"load.i i48";
+    "load.i i48"->"load.r r0";
+    "load.r r0"->"load.r r3";
+    "load.r r3"->"push 1";
+    "push 1"->"arrayread.r";
+    "virtualinvoke <ISCUpScroll: java.awt.Color getColor(java.lang.String)>"
+    "arrayread.r"->"virtualinvoke <ISCUpScroll: java.awt.Color getColor(java.lang.String)>";
+    "virtualinvoke <ISCUpScroll: java.awt.Color getColor(java.lang.String)>"->"arraywrite.r";
+    "arraywrite.r"->"load.r r0";
+    "load.r r0"->"fieldget <ISCUpScroll: java.awt.Color[][] text_color>";
+    "fieldget <ISCUpScroll: java.awt.Color[][] text_color>"->"load.i i47";
+    "load.i i47"->"arrayread.r";
+    "arrayread.r"->"load.i i48";
+    "load.i i48"->"arrayread.r";
+    "arrayread.r"->"store.r r1";
+    "goto load.r r3"
+    "store.r r1"->"goto load.r r3";
+    "goto load.r r3"->"load.r r3";
+    "load.r r3"->"push 2";
+    "push 2"->"arrayread.r";
+    "arrayread.r"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r r3";
+    "load.r r3"->"push 1";
+    "push 1"->"arrayread.r";
+    "arrayread.r"->"push \" \"";
+    "push \" \""->"ifcmpeq.r load.r r0";
+    "ifcmpeq.r load.r r0"->"load.r r0";
+    "fieldget <ISCUpScroll: java.lang.String[][] align>"
+    "load.r r0"->"fieldget <ISCUpScroll: java.lang.String[][] align>";
+    "fieldget <ISCUpScroll: java.lang.String[][] align>"->"load.i i47";
+    "load.i i47"->"arrayread.r";
+    "arrayread.r"->"load.i i48";
+    "load.i i48"->"load.r r3";
+    "load.r r3"->"push 2";
+    "push 2"->"arrayread.r";
+    "arrayread.r"->"arraywrite.r";
+    "arraywrite.r"->"load.r r0";
+    "load.r r0"->"fieldget <ISCUpScroll: java.lang.String[][] align>";
+    "fieldget <ISCUpScroll: java.lang.String[][] align>"->"load.i i47";
+    "load.i i47"->"arrayread.r";
+    "arrayread.r"->"load.i i48";
+    "load.i i48"->"arrayread.r";
+    "arrayread.r"->"store.r r105";
+    "store.r r105"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <ISCUpScroll: int[][] font_size>";
+    "fieldget <ISCUpScroll: int[][] font_size>"->"load.i i47";
+    "load.i i47"->"arrayread.r";
+    "arrayread.r"->"load.i i48";
+    "load.i i48"->"load.r r3";
+    "push 3"
+    "load.r r3"->"push 3";
+    "push 3"->"arrayread.r";
+    "arrayread.r"->"staticinvoke <java.lang.Integer: java.lang.Integer valueOf(java.lang.String)>";
+    "staticinvoke <java.lang.Integer: java.lang.Integer valueOf(java.lang.String)>"->"virtualinvoke <java.lang.Integer: int intValue()>";
+    "virtualinvoke <java.lang.Integer: int intValue()>"->"arraywrite.i";
+    "arraywrite.i"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "fieldget <ISCUpScroll: java.lang.String[][] url>"
+    "load.r r0"->"fieldget <ISCUpScroll: java.lang.String[][] url>";
+    "fieldget <ISCUpScroll: java.lang.String[][] url>"->"load.i i47";
+    "load.i i47"->"arrayread.r";
+    "arrayread.r"->"load.i i48";
+    "load.i i48"->"load.r r3";
+    "load.r r3"->"push 4";
+    "push 4"->"arrayread.r";
+    "arrayread.r"->"arraywrite.r";
+    "inc.i i48 1"
+    "arraywrite.r"->"inc.i i48 1";
+    "virtualinvoke <java.lang.Integer: int intValue()>"->"store.r $r60";
+    "store.r $r60"->"load.r r0";
+    "load.r r0"->"fieldget <ISCUpScroll: int[][] font_size>";
+    "fieldget <ISCUpScroll: int[][] font_size>"->"load.i i47";
+    "load.i i47"->"arrayread.r";
+    "arrayread.r"->"load.i i48";
+    "push 12"
+    "load.i i48"->"push 12";
+    "push 12"->"arraywrite.i";
+    "ifcmpeq.r load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <ISCUpScroll: java.lang.String[][] align>";
+    "fieldget <ISCUpScroll: java.lang.String[][] align>"->"load.i i47";
+    "load.i i47"->"arrayread.r";
+    "arrayread.r"->"load.i i48";
+    "load.r r105"
+    "load.i i48"->"load.r r105";
+    "load.r r105"->"arraywrite.r";
+    "ifcmpeq.r load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <ISCUpScroll: java.awt.Color[][] text_color>";
+    "fieldget <ISCUpScroll: java.awt.Color[][] text_color>"->"load.i i47";
+    "load.i i47"->"arrayread.r";
+    "arrayread.r"->"load.i i48";
+    "load.i i48"->"load.r r1";
+    "load.r r1"->"arraywrite.r";
+    "ifnonnull load.r r3"->"load.r r3";
+    "load.r r3"->"push 0";
+    "push 0"->"arrayread.r";
+    "arrayread.r"->"store.r $r108";
+    "ifnonnull inc.i r1 1"->"inc.i r1 1";
+    "ifnonnull load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"push \"LINK_COLOR\"";
+    "push \"LINK_COLOR\""->"virtualinvoke <ISCUpScroll: java.awt.Color getColorParameter(java.lang.String)>";
+    "virtualinvoke <ISCUpScroll: java.awt.Color getColorParameter(java.lang.String)>"->"fieldput <ISCUpScroll: java.awt.Color link_color>";
+    "ifnonnull load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"push \"BACK_COLOR\"";
+    "push \"BACK_COLOR\""->"virtualinvoke <ISCUpScroll: java.awt.Color getColorParameter(java.lang.String)>";
+    "virtualinvoke <ISCUpScroll: java.awt.Color getColorParameter(java.lang.String)>"->"fieldput <ISCUpScroll: java.awt.Color back_color>";
+    "virtualinvoke <java.awt.MediaTracker: boolean waitForAll(long)>"->"store.r r1";
+    "store.r r1"->"goto load.r r0";
+    "ifnonnull load.r r0"->"load.r r0";
+    "load.r r0"->"push \"DELIMITER\"";
+    "push \"DELIMITER\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"store.r r1";
+    "virtualinvoke <java.lang.Integer: int intValue()>"->"store.r r1";
+    "store.r r1"->"load.r r0";
+    "load.r r0"->"push 5";
+    "push 5"->"fieldput <ISCUpScroll: int step>";
+    "fieldput <ISCUpScroll: int step>"->"load.r r0";
+    "load.r r0"->"push 5";
+    "push 5"->"fieldput <ISCUpScroll: int _step>";
+    "virtualinvoke <java.lang.Long: long longValue()>"->"store.r r1";
+    "store.r r1"->"load.r r0";
+    "push 1000L"
+    "load.r r0"->"push 1000L";
+    "push 1000L"->"fieldput <ISCUpScroll: long pause>";
+    "virtualinvoke <java.lang.Long: long longValue()>"->"store.r r1";
+    "store.r r1"->"load.r r0";
+    "push 100L"
+    "load.r r0"->"push 100L";
+    "push 100L"->"fieldput <ISCUpScroll: long delay>";
+    "ifeq load.r r0"->"load.r r0";
+    "load.r r0"->"push 0";
+    "push 0"->"fieldput <ISCUpScroll: boolean scrollbar>";
+    "virtualinvoke <java.lang.Integer: int intValue()>"->"store.r r1";
+    "store.r r1"->"load.r r0";
+    "load.r r0"->"push 0";
+    "push 0"->"fieldput <ISCUpScroll: int clip>";
+}

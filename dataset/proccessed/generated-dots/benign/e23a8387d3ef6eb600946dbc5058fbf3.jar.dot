@@ -1,0 +1,51 @@
+digraph "" {
+    "r0 := @this: ShapesApplet"
+    "load.r r0"
+    "r0 := @this: ShapesApplet"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "fieldget <ShapesApplet: int W>"
+    "load.r r0"->"fieldget <ShapesApplet: int W>";
+    "fieldget <ShapesApplet: int W>"->"load.r r0";
+    "fieldget <ShapesApplet: int H>"
+    "load.r r0"->"fieldget <ShapesApplet: int H>";
+    "virtualinvoke <java.applet.Applet: void resize(int,int)>"
+    "fieldget <ShapesApplet: int H>"->"virtualinvoke <java.applet.Applet: void resize(int,int)>";
+    "virtualinvoke <java.applet.Applet: void resize(int,int)>"->"load.r r0";
+    "new java.util.Random"
+    "load.r r0"->"new java.util.Random";
+    "dup1.r"
+    "new java.util.Random"->"dup1.r";
+    "staticinvoke <java.lang.System: long currentTimeMillis()>"
+    "dup1.r"->"staticinvoke <java.lang.System: long currentTimeMillis()>";
+    "specialinvoke <java.util.Random: void <init>(long)>"
+    "staticinvoke <java.lang.System: long currentTimeMillis()>"->"specialinvoke <java.util.Random: void <init>(long)>";
+    "fieldput <ShapesApplet: java.util.Random rand>"
+    "specialinvoke <java.util.Random: void <init>(long)>"->"fieldput <ShapesApplet: java.util.Random rand>";
+    "fieldput <ShapesApplet: java.util.Random rand>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <ShapesApplet: int W>";
+    "fieldget <ShapesApplet: int W>"->"load.r r0";
+    "load.r r0"->"fieldget <ShapesApplet: int H>";
+    "virtualinvoke <java.awt.Component: java.awt.Image createImage(int,int)>"
+    "fieldget <ShapesApplet: int H>"->"virtualinvoke <java.awt.Component: java.awt.Image createImage(int,int)>";
+    "fieldput <ShapesApplet: java.awt.Image im>"
+    "virtualinvoke <java.awt.Component: java.awt.Image createImage(int,int)>"->"fieldput <ShapesApplet: java.awt.Image im>";
+    "fieldput <ShapesApplet: java.awt.Image im>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "fieldget <ShapesApplet: java.awt.Image im>"
+    "load.r r0"->"fieldget <ShapesApplet: java.awt.Image im>";
+    "virtualinvoke <java.awt.Image: java.awt.Graphics getGraphics()>"
+    "fieldget <ShapesApplet: java.awt.Image im>"->"virtualinvoke <java.awt.Image: java.awt.Graphics getGraphics()>";
+    "fieldput <ShapesApplet: java.awt.Graphics offscreen>"
+    "virtualinvoke <java.awt.Image: java.awt.Graphics getGraphics()>"->"fieldput <ShapesApplet: java.awt.Graphics offscreen>";
+    "return"
+    "fieldput <ShapesApplet: java.awt.Graphics offscreen>"->"return";
+    "store.r $r5"
+    "virtualinvoke <java.awt.Image: java.awt.Graphics getGraphics()>"->"store.r $r5";
+    "store.r $r5"->"load.r r0";
+    "push null"
+    "load.r r0"->"push null";
+    "push null"->"fieldput <ShapesApplet: java.awt.Graphics offscreen>";
+    "fieldput <ShapesApplet: java.awt.Graphics offscreen>"->"return";
+}

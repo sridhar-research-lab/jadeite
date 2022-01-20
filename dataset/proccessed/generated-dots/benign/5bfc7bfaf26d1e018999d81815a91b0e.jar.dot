@@ -1,0 +1,100 @@
+digraph "" {
+    "r0 := @this: BJ2"
+    "load.r r0"
+    "r0 := @this: BJ2"->"load.r r0";
+    "push \"lang\""
+    "load.r r0"->"push \"lang\"";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"
+    "push \"lang\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "store.r r1"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"store.r r1";
+    "load.r r1"
+    "store.r r1"->"load.r r1";
+    "ifnull load.r r0"
+    "load.r r1"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r1";
+    "push \"english\""
+    "load.r r1"->"push \"english\"";
+    "virtualinvoke <java.lang.String: boolean equalsIgnoreCase(java.lang.String)>"
+    "push \"english\""->"virtualinvoke <java.lang.String: boolean equalsIgnoreCase(java.lang.String)>";
+    "fieldput <BJ2: boolean englishLang>"
+    "virtualinvoke <java.lang.String: boolean equalsIgnoreCase(java.lang.String)>"->"fieldput <BJ2: boolean englishLang>";
+    "fieldput <BJ2: boolean englishLang>"->"load.r r0";
+    "virtualinvoke <java.awt.Component: java.awt.Dimension getSize()>"
+    "load.r r0"->"virtualinvoke <java.awt.Component: java.awt.Dimension getSize()>";
+    "dup1.r"
+    "virtualinvoke <java.awt.Component: java.awt.Dimension getSize()>"->"dup1.r";
+    "fieldget <java.awt.Dimension: int width>"
+    "dup1.r"->"fieldget <java.awt.Dimension: int width>";
+    "store.i r1"
+    "fieldget <java.awt.Dimension: int width>"->"store.i r1";
+    "fieldget <java.awt.Dimension: int height>"
+    "store.i r1"->"fieldget <java.awt.Dimension: int height>";
+    "store.i i1"
+    "fieldget <java.awt.Dimension: int height>"->"store.i i1";
+    "load.i r1"
+    "store.i i1"->"load.i r1";
+    "load.i r1"->"load.r r0";
+    "fieldget <BJ2: int WIDTH>"
+    "load.r r0"->"fieldget <BJ2: int WIDTH>";
+    "ifcmpne.i load.r r0"
+    "fieldget <BJ2: int WIDTH>"->"ifcmpne.i load.r r0";
+    "load.i i1"
+    "ifcmpne.i load.r r0"->"load.i i1";
+    "load.i i1"->"load.r r0";
+    "fieldget <BJ2: int HEIGHT>"
+    "load.r r0"->"fieldget <BJ2: int HEIGHT>";
+    "fieldget <BJ2: int HEIGHT>"->"ifcmpne.i load.r r0";
+    "ifcmpne.i load.r r0"->"load.r r0";
+    "new BJ2$Game"
+    "load.r r0"->"new BJ2$Game";
+    "new BJ2$Game"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "specialinvoke <BJ2$Game: void <init>(BJ2)>"
+    "load.r r0"->"specialinvoke <BJ2$Game: void <init>(BJ2)>";
+    "fieldput <BJ2: BJ2$State game>"
+    "specialinvoke <BJ2$Game: void <init>(BJ2)>"->"fieldput <BJ2: BJ2$State game>";
+    "fieldput <BJ2: BJ2$State game>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "fieldget <BJ2: java.awt.Color BACKGROUND>"
+    "load.r r0"->"fieldget <BJ2: java.awt.Color BACKGROUND>";
+    "virtualinvoke <java.awt.Component: void setBackground(java.awt.Color)>"
+    "fieldget <BJ2: java.awt.Color BACKGROUND>"->"virtualinvoke <java.awt.Component: void setBackground(java.awt.Color)>";
+    "virtualinvoke <java.awt.Component: void setBackground(java.awt.Color)>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "fieldget <BJ2: java.awt.Font normalFont>"
+    "load.r r0"->"fieldget <BJ2: java.awt.Font normalFont>";
+    "virtualinvoke <java.awt.Container: void setFont(java.awt.Font)>"
+    "fieldget <BJ2: java.awt.Font normalFont>"->"virtualinvoke <java.awt.Container: void setFont(java.awt.Font)>";
+    "virtualinvoke <java.awt.Container: void setFont(java.awt.Font)>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <BJ2: int WIDTH>";
+    "fieldget <BJ2: int WIDTH>"->"load.r r0";
+    "load.r r0"->"fieldget <BJ2: int HEIGHT>";
+    "virtualinvoke <java.awt.Component: java.awt.Image createImage(int,int)>"
+    "fieldget <BJ2: int HEIGHT>"->"virtualinvoke <java.awt.Component: java.awt.Image createImage(int,int)>";
+    "fieldput <BJ2: java.awt.Image doubleBuffer>"
+    "virtualinvoke <java.awt.Component: java.awt.Image createImage(int,int)>"->"fieldput <BJ2: java.awt.Image doubleBuffer>";
+    "fieldput <BJ2: java.awt.Image doubleBuffer>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "fieldget <BJ2: java.awt.Image doubleBuffer>"
+    "load.r r0"->"fieldget <BJ2: java.awt.Image doubleBuffer>";
+    "virtualinvoke <java.awt.Image: java.awt.Graphics getGraphics()>"
+    "fieldget <BJ2: java.awt.Image doubleBuffer>"->"virtualinvoke <java.awt.Image: java.awt.Graphics getGraphics()>";
+    "fieldput <BJ2: java.awt.Graphics doubleBufferG>"
+    "virtualinvoke <java.awt.Image: java.awt.Graphics getGraphics()>"->"fieldput <BJ2: java.awt.Graphics doubleBufferG>";
+    "goto load.r r0"
+    "fieldput <BJ2: java.awt.Graphics doubleBufferG>"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "specialinvoke <BJ2: void jbInit()>"
+    "load.r r0"->"specialinvoke <BJ2: void jbInit()>";
+    "goto return"
+    "specialinvoke <BJ2: void jbInit()>"->"goto return";
+    "return"
+    "goto return"->"return";
+    "virtualinvoke <java.lang.Throwable: void printStackTrace()>"
+    "specialinvoke <BJ2: void jbInit()>"->"virtualinvoke <java.lang.Throwable: void printStackTrace()>";
+    "virtualinvoke <java.awt.Image: java.awt.Graphics getGraphics()>"->"store.r r1";
+}

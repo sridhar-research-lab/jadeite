@@ -1,0 +1,156 @@
+digraph "" {
+    "r0 := @this: Julia"
+    "load.r r0"
+    "r0 := @this: Julia"->"load.r r0";
+    "push 600"
+    "load.r r0"->"push 600";
+    "push 330"
+    "push 600"->"push 330";
+    "virtualinvoke <java.applet.Applet: void resize(int,int)>"
+    "push 330"->"virtualinvoke <java.applet.Applet: void resize(int,int)>";
+    "virtualinvoke <java.applet.Applet: void resize(int,int)>"->"load.r r0";
+    "new java.awt.Font"
+    "load.r r0"->"new java.awt.Font";
+    "dup1.r"
+    "new java.awt.Font"->"dup1.r";
+    "push \"TimesRoman\""
+    "dup1.r"->"push \"TimesRoman\"";
+    "push 0"
+    "push \"TimesRoman\""->"push 0";
+    "push 12"
+    "push 0"->"push 12";
+    "specialinvoke <java.awt.Font: void <init>(java.lang.String,int,int)>"
+    "push 12"->"specialinvoke <java.awt.Font: void <init>(java.lang.String,int,int)>";
+    "virtualinvoke <java.awt.Component: void setFont(java.awt.Font)>"
+    "specialinvoke <java.awt.Font: void <init>(java.lang.String,int,int)>"->"virtualinvoke <java.awt.Component: void setFont(java.awt.Font)>";
+    "virtualinvoke <java.awt.Component: void setFont(java.awt.Font)>"->"load.r r0";
+    "staticget <java.awt.Color: java.awt.Color white>"
+    "load.r r0"->"staticget <java.awt.Color: java.awt.Color white>";
+    "virtualinvoke <java.awt.Component: void setBackground(java.awt.Color)>"
+    "staticget <java.awt.Color: java.awt.Color white>"->"virtualinvoke <java.awt.Component: void setBackground(java.awt.Color)>";
+    "virtualinvoke <java.awt.Component: void setBackground(java.awt.Color)>"->"load.r r0";
+    "staticget <java.awt.Color: java.awt.Color black>"
+    "load.r r0"->"staticget <java.awt.Color: java.awt.Color black>";
+    "virtualinvoke <java.awt.Component: void setForeground(java.awt.Color)>"
+    "staticget <java.awt.Color: java.awt.Color black>"->"virtualinvoke <java.awt.Component: void setForeground(java.awt.Color)>";
+    "virtualinvoke <java.awt.Component: void setForeground(java.awt.Color)>"->"load.r r0";
+    "new java.awt.BorderLayout"
+    "load.r r0"->"new java.awt.BorderLayout";
+    "new java.awt.BorderLayout"->"dup1.r";
+    "specialinvoke <java.awt.BorderLayout: void <init>()>"
+    "dup1.r"->"specialinvoke <java.awt.BorderLayout: void <init>()>";
+    "virtualinvoke <java.awt.Container: void setLayout(java.awt.LayoutManager)>"
+    "specialinvoke <java.awt.BorderLayout: void <init>()>"->"virtualinvoke <java.awt.Container: void setLayout(java.awt.LayoutManager)>";
+    "virtualinvoke <java.awt.Container: void setLayout(java.awt.LayoutManager)>"->"load.r r0";
+    "new JuliaCanvas"
+    "load.r r0"->"new JuliaCanvas";
+    "new JuliaCanvas"->"dup1.r";
+    "push 300"
+    "dup1.r"->"push 300";
+    "specialinvoke <JuliaCanvas: void <init>(int)>"
+    "push 300"->"specialinvoke <JuliaCanvas: void <init>(int)>";
+    "fieldput <Julia: JuliaCanvas juliaCanvas>"
+    "specialinvoke <JuliaCanvas: void <init>(int)>"->"fieldput <Julia: JuliaCanvas juliaCanvas>";
+    "fieldput <Julia: JuliaCanvas juliaCanvas>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "virtualinvoke <java.applet.Applet: java.net.URL getCodeBase()>"
+    "load.r r0"->"virtualinvoke <java.applet.Applet: java.net.URL getCodeBase()>";
+    "push \"mandel.gif\""
+    "virtualinvoke <java.applet.Applet: java.net.URL getCodeBase()>"->"push \"mandel.gif\"";
+    "virtualinvoke <java.applet.Applet: java.awt.Image getImage(java.net.URL,java.lang.String)>"
+    "push \"mandel.gif\""->"virtualinvoke <java.applet.Applet: java.awt.Image getImage(java.net.URL,java.lang.String)>";
+    "fieldput <Julia: java.awt.Image mandel_img>"
+    "virtualinvoke <java.applet.Applet: java.awt.Image getImage(java.net.URL,java.lang.String)>"->"fieldput <Julia: java.awt.Image mandel_img>";
+    "fieldput <Julia: java.awt.Image mandel_img>"->"load.r r0";
+    "new MandelCanvas"
+    "load.r r0"->"new MandelCanvas";
+    "new MandelCanvas"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "fieldget <Julia: java.awt.Image mandel_img>"
+    "load.r r0"->"fieldget <Julia: java.awt.Image mandel_img>";
+    "fieldget <Julia: java.awt.Image mandel_img>"->"load.r r0";
+    "fieldget <Julia: JuliaCanvas juliaCanvas>"
+    "load.r r0"->"fieldget <Julia: JuliaCanvas juliaCanvas>";
+    "fieldget <Julia: JuliaCanvas juliaCanvas>"->"load.r r0";
+    "fieldget <Julia: ControlPanel p>"
+    "load.r r0"->"fieldget <Julia: ControlPanel p>";
+    "fieldget <Julia: ControlPanel p>"->"push 300";
+    "specialinvoke <MandelCanvas: void <init>(java.awt.Image,JuliaCanvas,ControlPanel,int)>"
+    "push 300"->"specialinvoke <MandelCanvas: void <init>(java.awt.Image,JuliaCanvas,ControlPanel,int)>";
+    "fieldput <Julia: MandelCanvas mandelCanvas>"
+    "specialinvoke <MandelCanvas: void <init>(java.awt.Image,JuliaCanvas,ControlPanel,int)>"->"fieldput <Julia: MandelCanvas mandelCanvas>";
+    "new java.awt.Panel"
+    "fieldput <Julia: MandelCanvas mandelCanvas>"->"new java.awt.Panel";
+    "store.r $r13"
+    "new java.awt.Panel"->"store.r $r13";
+    "load.r $r13"
+    "store.r $r13"->"load.r $r13";
+    "specialinvoke <java.awt.Panel: void <init>()>"
+    "load.r $r13"->"specialinvoke <java.awt.Panel: void <init>()>";
+    "specialinvoke <java.awt.Panel: void <init>()>"->"load.r r0";
+    "push \"Center\""
+    "load.r r0"->"push \"Center\"";
+    "push \"Center\""->"load.r $r13";
+    "virtualinvoke <java.awt.Container: java.awt.Component add(java.lang.String,java.awt.Component)>"
+    "load.r $r13"->"virtualinvoke <java.awt.Container: java.awt.Component add(java.lang.String,java.awt.Component)>";
+    "pop"
+    "virtualinvoke <java.awt.Container: java.awt.Component add(java.lang.String,java.awt.Component)>"->"pop";
+    "pop"->"load.r $r13";
+    "new java.awt.GridLayout"
+    "load.r $r13"->"new java.awt.GridLayout";
+    "new java.awt.GridLayout"->"dup1.r";
+    "push 1"
+    "dup1.r"->"push 1";
+    "push 2"
+    "push 1"->"push 2";
+    "push 2"->"push 2";
+    "push 2"->"push 2";
+    "specialinvoke <java.awt.GridLayout: void <init>(int,int,int,int)>"
+    "push 2"->"specialinvoke <java.awt.GridLayout: void <init>(int,int,int,int)>";
+    "specialinvoke <java.awt.GridLayout: void <init>(int,int,int,int)>"->"virtualinvoke <java.awt.Container: void setLayout(java.awt.LayoutManager)>";
+    "virtualinvoke <java.awt.Container: void setLayout(java.awt.LayoutManager)>"->"load.r $r13";
+    "load.r $r13"->"load.r r0";
+    "fieldget <Julia: MandelCanvas mandelCanvas>"
+    "load.r r0"->"fieldget <Julia: MandelCanvas mandelCanvas>";
+    "virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>"
+    "fieldget <Julia: MandelCanvas mandelCanvas>"->"virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>";
+    "virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>"->"pop";
+    "pop"->"load.r $r13";
+    "load.r $r13"->"load.r r0";
+    "load.r r0"->"fieldget <Julia: JuliaCanvas juliaCanvas>";
+    "fieldget <Julia: JuliaCanvas juliaCanvas>"->"virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>";
+    "virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>"->"pop";
+    "pop"->"load.r r0";
+    "new ControlPanel"
+    "load.r r0"->"new ControlPanel";
+    "new ControlPanel"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "load.r r0"->"fieldget <Julia: JuliaCanvas juliaCanvas>";
+    "fieldget <Julia: JuliaCanvas juliaCanvas>"->"load.r r0";
+    "load.r r0"->"fieldget <Julia: MandelCanvas mandelCanvas>";
+    "specialinvoke <ControlPanel: void <init>(JuliaCanvas,MandelCanvas)>"
+    "fieldget <Julia: MandelCanvas mandelCanvas>"->"specialinvoke <ControlPanel: void <init>(JuliaCanvas,MandelCanvas)>";
+    "fieldput <Julia: ControlPanel p>"
+    "specialinvoke <ControlPanel: void <init>(JuliaCanvas,MandelCanvas)>"->"fieldput <Julia: ControlPanel p>";
+    "fieldput <Julia: ControlPanel p>"->"load.r r0";
+    "load.r r0"->"fieldget <Julia: ControlPanel p>";
+    "push 400"
+    "fieldget <Julia: ControlPanel p>"->"push 400";
+    "push 30"
+    "push 400"->"push 30";
+    "virtualinvoke <java.awt.Component: void resize(int,int)>"
+    "push 30"->"virtualinvoke <java.awt.Component: void resize(int,int)>";
+    "virtualinvoke <java.awt.Component: void resize(int,int)>"->"load.r r0";
+    "push \"South\""
+    "load.r r0"->"push \"South\"";
+    "push \"South\""->"load.r r0";
+    "load.r r0"->"fieldget <Julia: ControlPanel p>";
+    "fieldget <Julia: ControlPanel p>"->"virtualinvoke <java.awt.Container: java.awt.Component add(java.lang.String,java.awt.Component)>";
+    "virtualinvoke <java.awt.Container: java.awt.Component add(java.lang.String,java.awt.Component)>"->"pop";
+    "pop"->"load.r r0";
+    "virtualinvoke <java.awt.Component: void show()>"
+    "load.r r0"->"virtualinvoke <java.awt.Component: void show()>";
+    "return"
+    "virtualinvoke <java.awt.Component: void show()>"->"return";
+}

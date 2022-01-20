@@ -1,0 +1,76 @@
+digraph "" {
+    "r0 := @this: calendar"
+    "load.r r0"
+    "r0 := @this: calendar"->"load.r r0";
+    "new java.awt.Font"
+    "load.r r0"->"new java.awt.Font";
+    "dup1.r"
+    "new java.awt.Font"->"dup1.r";
+    "push \"Arial\""
+    "dup1.r"->"push \"Arial\"";
+    "push 0"
+    "push \"Arial\""->"push 0";
+    "push 12"
+    "push 0"->"push 12";
+    "specialinvoke <java.awt.Font: void <init>(java.lang.String,int,int)>"
+    "push 12"->"specialinvoke <java.awt.Font: void <init>(java.lang.String,int,int)>";
+    "virtualinvoke <java.awt.Container: void setFont(java.awt.Font)>"
+    "specialinvoke <java.awt.Font: void <init>(java.lang.String,int,int)>"->"virtualinvoke <java.awt.Container: void setFont(java.awt.Font)>";
+    "virtualinvoke <java.awt.Container: void setFont(java.awt.Font)>"->"load.r r0";
+    "fieldget <calendar: java.awt.Frame frame>"
+    "load.r r0"->"fieldget <calendar: java.awt.Frame frame>";
+    "virtualinvoke <java.awt.Window: void pack()>"
+    "fieldget <calendar: java.awt.Frame frame>"->"virtualinvoke <java.awt.Window: void pack()>";
+    "virtualinvoke <java.awt.Window: void pack()>"->"load.r r0";
+    "load.r r0"->"fieldget <calendar: java.awt.Frame frame>";
+    "virtualinvoke <java.awt.Window: void show()>"
+    "fieldget <calendar: java.awt.Frame frame>"->"virtualinvoke <java.awt.Window: void show()>";
+    "virtualinvoke <java.awt.Window: void show()>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "virtualinvoke <java.awt.Component: java.awt.Dimension getSize()>"
+    "load.r r0"->"virtualinvoke <java.awt.Component: java.awt.Dimension getSize()>";
+    "virtualinvoke <java.awt.Component: java.awt.Dimension getSize()>"->"dup1.r";
+    "fieldget <java.awt.Dimension: int width>"
+    "dup1.r"->"fieldget <java.awt.Dimension: int width>";
+    "store.i $i0"
+    "fieldget <java.awt.Dimension: int width>"->"store.i $i0";
+    "store.i $i0"->"load.r r0";
+    "load.i $i0"
+    "load.r r0"->"load.i $i0";
+    "fieldput <calendar: int wid>"
+    "load.i $i0"->"fieldput <calendar: int wid>";
+    "fieldget <java.awt.Dimension: int height>"
+    "fieldput <calendar: int wid>"->"fieldget <java.awt.Dimension: int height>";
+    "fieldput <calendar: int ht>"
+    "fieldget <java.awt.Dimension: int height>"->"fieldput <calendar: int ht>";
+    "fieldput <calendar: int ht>"->"load.r r0";
+    "new java.net.URL"
+    "load.r r0"->"new java.net.URL";
+    "new java.net.URL"->"dup1.r";
+    "push \"http://www.pratyush.net\""
+    "dup1.r"->"push \"http://www.pratyush.net\"";
+    "specialinvoke <java.net.URL: void <init>(java.lang.String)>"
+    "push \"http://www.pratyush.net\""->"specialinvoke <java.net.URL: void <init>(java.lang.String)>";
+    "fieldput <calendar: java.net.URL url>"
+    "specialinvoke <java.net.URL: void <init>(java.lang.String)>"->"fieldput <calendar: java.net.URL url>";
+    "fieldput <calendar: java.net.URL url>"->"load.r r0";
+    "load.r r0"->"new java.net.URL";
+    "new java.net.URL"->"dup1.r";
+    "push \"mailto:pankaj@pratyush.net\""
+    "dup1.r"->"push \"mailto:pankaj@pratyush.net\"";
+    "push \"mailto:pankaj@pratyush.net\""->"specialinvoke <java.net.URL: void <init>(java.lang.String)>";
+    "fieldput <calendar: java.net.URL mail>"
+    "specialinvoke <java.net.URL: void <init>(java.lang.String)>"->"fieldput <calendar: java.net.URL mail>";
+    "goto return"
+    "fieldput <calendar: java.net.URL mail>"->"goto return";
+    "return"
+    "goto return"->"return";
+    "store.r r0"
+    "specialinvoke <java.net.URL: void <init>(java.lang.String)>"->"store.r r0";
+    "staticget <java.lang.System: java.io.PrintStream out>"
+    "store.r r0"->"staticget <java.lang.System: java.io.PrintStream out>";
+    "push \"malformed URL\""
+    "staticget <java.lang.System: java.io.PrintStream out>"->"push \"malformed URL\"";
+    "virtualinvoke <java.io.PrintStream: void println(java.lang.String)>"
+    "push \"malformed URL\""->"virtualinvoke <java.io.PrintStream: void println(java.lang.String)>";
+}

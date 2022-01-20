@@ -1,0 +1,86 @@
+digraph "" {
+    "r0 := @this: Remote"
+    "load.r r0"
+    "r0 := @this: Remote"->"load.r r0";
+    "push \"main\""
+    "load.r r0"->"push \"main\"";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"
+    "push \"main\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "store.r $r8"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"store.r $r8";
+    "load.r $r8"
+    "store.r $r8"->"load.r $r8";
+    "ifnull push \"main\""
+    "load.r $r8"->"ifnull push \"main\"";
+    "ifnull push \"main\""->"load.r $r8";
+    "load.r $r8"->"store.r $r8";
+    "goto load.r r0"
+    "store.r $r8"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "load.r r0"->"load.r $r8";
+    "fieldput <Remote: java.lang.String mainName>"
+    "load.r $r8"->"fieldput <Remote: java.lang.String mainName>";
+    "fieldput <Remote: java.lang.String mainName>"->"load.r r0";
+    "push \"background\""
+    "load.r r0"->"push \"background\"";
+    "push \"background\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"store.r $r8";
+    "store.r $r8"->"load.r $r8";
+    "ifnull load.r r0"
+    "load.r $r8"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"load.r $r8";
+    "virtualinvoke <Remote: java.awt.Color parseColor(java.lang.String)>"
+    "load.r $r8"->"virtualinvoke <Remote: java.awt.Color parseColor(java.lang.String)>";
+    "fieldput <Remote: java.awt.Color background>"
+    "virtualinvoke <Remote: java.awt.Color parseColor(java.lang.String)>"->"fieldput <Remote: java.awt.Color background>";
+    "fieldput <Remote: java.awt.Color background>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "fieldget <Remote: java.awt.Color background>"
+    "load.r r0"->"fieldget <Remote: java.awt.Color background>";
+    "virtualinvoke <java.awt.Component: void setBackground(java.awt.Color)>"
+    "fieldget <Remote: java.awt.Color background>"->"virtualinvoke <java.awt.Component: void setBackground(java.awt.Color)>";
+    "virtualinvoke <java.awt.Component: void setBackground(java.awt.Color)>"->"load.r r0";
+    "push \"stage\""
+    "load.r r0"->"push \"stage\"";
+    "push \"stage\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"store.r $r8";
+    "store.r $r8"->"load.r $r8";
+    "ifnonnull load.r $r8"
+    "load.r $r8"->"ifnonnull load.r $r8";
+    "push 2147483647"
+    "ifnonnull load.r $r8"->"push 2147483647";
+    "store.i $r8"
+    "push 2147483647"->"store.i $r8";
+    "store.i $r8"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "load.i $r8"
+    "load.r r0"->"load.i $r8";
+    "fieldput <Remote: int stage>"
+    "load.i $r8"->"fieldput <Remote: int stage>";
+    "fieldput <Remote: int stage>"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "virtualinvoke <java.applet.Applet: java.applet.AppletContext getAppletContext()>"
+    "load.r r0"->"virtualinvoke <java.applet.Applet: java.applet.AppletContext getAppletContext()>";
+    "virtualinvoke <java.applet.Applet: java.applet.AppletContext getAppletContext()>"->"load.r r0";
+    "fieldget <Remote: java.lang.String mainName>"
+    "load.r r0"->"fieldget <Remote: java.lang.String mainName>";
+    "interfaceinvoke <java.applet.AppletContext: java.applet.Applet getApplet(java.lang.String)> 1"
+    "fieldget <Remote: java.lang.String mainName>"->"interfaceinvoke <java.applet.AppletContext: java.applet.Applet getApplet(java.lang.String)> 1";
+    "fieldput <Remote: java.applet.Applet main>"
+    "interfaceinvoke <java.applet.AppletContext: java.applet.Applet getApplet(java.lang.String)> 1"->"fieldput <Remote: java.applet.Applet main>";
+    "return"
+    "fieldput <Remote: java.applet.Applet main>"->"return";
+    "ifnonnull load.r $r8"->"load.r $r8";
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"
+    "load.r $r8"->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>";
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"->"store.i $r8";
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"->"store.r $r8";
+    "store.r $r8"->"load.r r0";
+    "load.r r0"->"push 2147483647";
+    "push 2147483647"->"fieldput <Remote: int stage>";
+    "ifnull push \"main\""->"push \"main\"";
+    "push \"main\""->"store.r $r8";
+}

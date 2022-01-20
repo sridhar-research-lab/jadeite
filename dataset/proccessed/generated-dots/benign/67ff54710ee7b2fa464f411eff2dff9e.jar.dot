@@ -1,0 +1,21 @@
+digraph "" {
+    "r0 := @this: EMStatic"
+    "load.r r0"
+    "r0 := @this: EMStatic"->"load.r r0";
+    "new EMStaticFrame"
+    "load.r r0"->"new EMStaticFrame";
+    "dup1.r"
+    "new EMStaticFrame"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "specialinvoke <EMStaticFrame: void <init>(EMStatic)>"
+    "load.r r0"->"specialinvoke <EMStaticFrame: void <init>(EMStatic)>";
+    "fieldput <EMStatic: EMStaticFrame ogf>"
+    "specialinvoke <EMStaticFrame: void <init>(EMStatic)>"->"fieldput <EMStatic: EMStaticFrame ogf>";
+    "fieldput <EMStatic: EMStaticFrame ogf>"->"load.r r0";
+    "fieldget <EMStatic: EMStaticFrame ogf>"
+    "load.r r0"->"fieldget <EMStatic: EMStaticFrame ogf>";
+    "virtualinvoke <EMStaticFrame: void init()>"
+    "fieldget <EMStatic: EMStaticFrame ogf>"->"virtualinvoke <EMStaticFrame: void init()>";
+    "return"
+    "virtualinvoke <EMStaticFrame: void init()>"->"return";
+}

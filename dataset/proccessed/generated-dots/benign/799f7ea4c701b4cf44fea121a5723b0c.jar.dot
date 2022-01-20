@@ -1,0 +1,27 @@
+digraph "" {
+    "r0 := @this: org.xidget.swing.Applet"
+    "new org.xidget.swing.Applet$1"
+    "r0 := @this: org.xidget.swing.Applet"->"new org.xidget.swing.Applet$1";
+    "dup1.r"
+    "new org.xidget.swing.Applet$1"->"dup1.r";
+    "load.r r0"
+    "dup1.r"->"load.r r0";
+    "specialinvoke <org.xidget.swing.Applet$1: void <init>(org.xidget.swing.Applet)>"
+    "load.r r0"->"specialinvoke <org.xidget.swing.Applet$1: void <init>(org.xidget.swing.Applet)>";
+    "staticinvoke <javax.swing.SwingUtilities: void invokeAndWait(java.lang.Runnable)>"
+    "specialinvoke <org.xidget.swing.Applet$1: void <init>(org.xidget.swing.Applet)>"->"staticinvoke <javax.swing.SwingUtilities: void invokeAndWait(java.lang.Runnable)>";
+    "goto return"
+    "staticinvoke <javax.swing.SwingUtilities: void invokeAndWait(java.lang.Runnable)>"->"goto return";
+    "return"
+    "goto return"->"return";
+    "store.r r0"
+    "staticinvoke <javax.swing.SwingUtilities: void invokeAndWait(java.lang.Runnable)>"->"store.r r0";
+    "new java.lang.RuntimeException"
+    "store.r r0"->"new java.lang.RuntimeException";
+    "new java.lang.RuntimeException"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "specialinvoke <java.lang.RuntimeException: void <init>(java.lang.Throwable)>"
+    "load.r r0"->"specialinvoke <java.lang.RuntimeException: void <init>(java.lang.Throwable)>";
+    "athrow"
+    "specialinvoke <java.lang.RuntimeException: void <init>(java.lang.Throwable)>"->"athrow";
+}

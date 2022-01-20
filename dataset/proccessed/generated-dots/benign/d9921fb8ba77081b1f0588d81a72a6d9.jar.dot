@@ -1,0 +1,364 @@
+digraph "" {
+    "r0 := @this: sprites"
+    "load.r r0"
+    "r0 := @this: sprites"->"load.r r0";
+    "specialinvoke <java.applet.Applet: void init()>"
+    "load.r r0"->"specialinvoke <java.applet.Applet: void init()>";
+    "new java.lang.Integer"
+    "specialinvoke <java.applet.Applet: void init()>"->"new java.lang.Integer";
+    "dup1.r"
+    "new java.lang.Integer"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "push \"regcode\""
+    "load.r r0"->"push \"regcode\"";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"
+    "push \"regcode\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "specialinvoke <java.lang.Integer: void <init>(java.lang.String)>"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"specialinvoke <java.lang.Integer: void <init>(java.lang.String)>";
+    "virtualinvoke <java.lang.Integer: int intValue()>"
+    "specialinvoke <java.lang.Integer: void <init>(java.lang.String)>"->"virtualinvoke <java.lang.Integer: int intValue()>";
+    "store.i i0"
+    "virtualinvoke <java.lang.Integer: int intValue()>"->"store.i i0";
+    "load.i i0"
+    "store.i i0"->"load.i i0";
+    "push 100000"
+    "load.i i0"->"push 100000";
+    "div.i"
+    "push 100000"->"div.i";
+    "store.i i1"
+    "div.i"->"store.i i1";
+    "store.i i1"->"load.i i0";
+    "push 10"
+    "load.i i0"->"push 10";
+    "push 10"->"div.i";
+    "load.i i1"
+    "div.i"->"load.i i1";
+    "push 10000"
+    "load.i i1"->"push 10000";
+    "mul.i"
+    "push 10000"->"mul.i";
+    "sub.i"
+    "mul.i"->"sub.i";
+    "store.i i2"
+    "sub.i"->"store.i i2";
+    "store.i i2"->"load.i i0";
+    "load.i i0"->"push 10";
+    "rem.i"
+    "push 10"->"rem.i";
+    "rem.i"->"store.i i0";
+    "store.i i0"->"load.i i1";
+    "push 747"
+    "load.i i1"->"push 747";
+    "ifcmpne.i load.r r0"
+    "push 747"->"ifcmpne.i load.r r0";
+    "ifcmpne.i load.r r0"->"load.i i0";
+    "load.i i0"->"load.i i1";
+    "load.i i2"
+    "load.i i1"->"load.i i2";
+    "load.i i2"->"mul.i";
+    "mul.i"->"push 10";
+    "push 10"->"rem.i";
+    "rem.i"->"ifcmpne.i load.r r0";
+    "ifcmpne.i load.r r0"->"load.r r0";
+    "push 1"
+    "load.r r0"->"push 1";
+    "fieldput <sprites: boolean registered>"
+    "push 1"->"fieldput <sprites: boolean registered>";
+    "fieldput <sprites: boolean registered>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "virtualinvoke <java.awt.Component: java.awt.Dimension size()>"
+    "load.r r0"->"virtualinvoke <java.awt.Component: java.awt.Dimension size()>";
+    "fieldput <sprites: java.awt.Dimension d>"
+    "virtualinvoke <java.awt.Component: java.awt.Dimension size()>"->"fieldput <sprites: java.awt.Dimension d>";
+    "fieldput <sprites: java.awt.Dimension d>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "fieldget <sprites: java.awt.Dimension d>"
+    "load.r r0"->"fieldget <sprites: java.awt.Dimension d>";
+    "fieldget <java.awt.Dimension: int width>"
+    "fieldget <sprites: java.awt.Dimension d>"->"fieldget <java.awt.Dimension: int width>";
+    "fieldput <sprites: int width>"
+    "fieldget <java.awt.Dimension: int width>"->"fieldput <sprites: int width>";
+    "fieldput <sprites: int width>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <sprites: java.awt.Dimension d>";
+    "fieldget <java.awt.Dimension: int height>"
+    "fieldget <sprites: java.awt.Dimension d>"->"fieldget <java.awt.Dimension: int height>";
+    "fieldput <sprites: int height>"
+    "fieldget <java.awt.Dimension: int height>"->"fieldput <sprites: int height>";
+    "fieldput <sprites: int height>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "fieldget <sprites: int width>"
+    "load.r r0"->"fieldget <sprites: int width>";
+    "fieldget <sprites: int width>"->"load.r r0";
+    "fieldget <sprites: int height>"
+    "load.r r0"->"fieldget <sprites: int height>";
+    "virtualinvoke <java.applet.Applet: void resize(int,int)>"
+    "fieldget <sprites: int height>"->"virtualinvoke <java.applet.Applet: void resize(int,int)>";
+    "virtualinvoke <java.applet.Applet: void resize(int,int)>"->"load.r r0";
+    "load.r r0"->"new java.lang.Integer";
+    "new java.lang.Integer"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "push \"fps\""
+    "load.r r0"->"push \"fps\"";
+    "push \"fps\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"specialinvoke <java.lang.Integer: void <init>(java.lang.String)>";
+    "specialinvoke <java.lang.Integer: void <init>(java.lang.String)>"->"virtualinvoke <java.lang.Integer: int intValue()>";
+    "fieldput <sprites: int fps>"
+    "virtualinvoke <java.lang.Integer: int intValue()>"->"fieldput <sprites: int fps>";
+    "fieldput <sprites: int fps>"->"load.r r0";
+    "fieldget <sprites: int fps>"
+    "load.r r0"->"fieldget <sprites: int fps>";
+    "ifle push 50"
+    "fieldget <sprites: int fps>"->"ifle push 50";
+    "push 1000"
+    "ifle push 50"->"push 1000";
+    "push 1000"->"load.r r0";
+    "load.r r0"->"fieldget <sprites: int fps>";
+    "fieldget <sprites: int fps>"->"div.i";
+    "div.i"->"store.i i1";
+    "goto load.r r0"
+    "store.i i1"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "load.r r0"->"load.i i1";
+    "fieldput <sprites: int delay>"
+    "load.i i1"->"fieldput <sprites: int delay>";
+    "fieldput <sprites: int delay>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "push \"bgcolor\""
+    "load.r r0"->"push \"bgcolor\"";
+    "push \"bgcolor\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <sprites: int[] parseInt(java.lang.String)>"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"virtualinvoke <sprites: int[] parseInt(java.lang.String)>";
+    "store.r i1"
+    "virtualinvoke <sprites: int[] parseInt(java.lang.String)>"->"store.r i1";
+    "store.r i1"->"load.r r0";
+    "load.r i1"
+    "load.r r0"->"load.r i1";
+    "push 0"
+    "load.r i1"->"push 0";
+    "arrayread.i"
+    "push 0"->"arrayread.i";
+    "fieldput <sprites: int R>"
+    "arrayread.i"->"fieldput <sprites: int R>";
+    "fieldput <sprites: int R>"->"load.r r0";
+    "load.r r0"->"load.r i1";
+    "load.r i1"->"push 1";
+    "push 1"->"arrayread.i";
+    "fieldput <sprites: int G>"
+    "arrayread.i"->"fieldput <sprites: int G>";
+    "fieldput <sprites: int G>"->"load.r r0";
+    "load.r r0"->"load.r i1";
+    "push 2"
+    "load.r i1"->"push 2";
+    "push 2"->"arrayread.i";
+    "fieldput <sprites: int B>"
+    "arrayread.i"->"fieldput <sprites: int B>";
+    "fieldput <sprites: int B>"->"load.r r0";
+    "load.r r0"->"new java.lang.Integer";
+    "new java.lang.Integer"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "push \"border\""
+    "load.r r0"->"push \"border\"";
+    "push \"border\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"specialinvoke <java.lang.Integer: void <init>(java.lang.String)>";
+    "specialinvoke <java.lang.Integer: void <init>(java.lang.String)>"->"virtualinvoke <java.lang.Integer: int intValue()>";
+    "fieldput <sprites: int border>"
+    "virtualinvoke <java.lang.Integer: int intValue()>"->"fieldput <sprites: int border>";
+    "fieldput <sprites: int border>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "push \"url\""
+    "load.r r0"->"push \"url\"";
+    "push \"url\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "fieldput <sprites: java.lang.String urllink>"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"fieldput <sprites: java.lang.String urllink>";
+    "fieldput <sprites: java.lang.String urllink>"->"load.r r0";
+    "load.r r0"->"new java.lang.Integer";
+    "new java.lang.Integer"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "push \"total\""
+    "load.r r0"->"push \"total\"";
+    "push \"total\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"specialinvoke <java.lang.Integer: void <init>(java.lang.String)>";
+    "specialinvoke <java.lang.Integer: void <init>(java.lang.String)>"->"virtualinvoke <java.lang.Integer: int intValue()>";
+    "fieldput <sprites: int total>"
+    "virtualinvoke <java.lang.Integer: int intValue()>"->"fieldput <sprites: int total>";
+    "fieldput <sprites: int total>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "fieldget <sprites: int total>"
+    "load.r r0"->"fieldget <sprites: int total>";
+    "newarray"
+    "fieldget <sprites: int total>"->"newarray";
+    "fieldput <sprites: java.lang.String[] file>"
+    "newarray"->"fieldput <sprites: java.lang.String[] file>";
+    "fieldput <sprites: java.lang.String[] file>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <sprites: int total>";
+    "fieldget <sprites: int total>"->"newarray";
+    "fieldput <sprites: java.awt.Image[] p>"
+    "newarray"->"fieldput <sprites: java.awt.Image[] p>";
+    "fieldput <sprites: java.awt.Image[] p>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <sprites: int total>";
+    "fieldget <sprites: int total>"->"newarray";
+    "fieldput <sprites: int[] w>"
+    "newarray"->"fieldput <sprites: int[] w>";
+    "fieldput <sprites: int[] w>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <sprites: int total>";
+    "fieldget <sprites: int total>"->"newarray";
+    "fieldput <sprites: int[] h>"
+    "newarray"->"fieldput <sprites: int[] h>";
+    "fieldput <sprites: int[] h>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <sprites: int total>";
+    "fieldget <sprites: int total>"->"newarray";
+    "fieldput <sprites: int[] xx>"
+    "newarray"->"fieldput <sprites: int[] xx>";
+    "fieldput <sprites: int[] xx>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <sprites: int total>";
+    "fieldget <sprites: int total>"->"newarray";
+    "fieldput <sprites: int[] yy>"
+    "newarray"->"fieldput <sprites: int[] yy>";
+    "fieldput <sprites: int[] yy>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <sprites: int total>";
+    "fieldget <sprites: int total>"->"newarray";
+    "fieldput <sprites: int[] dx>"
+    "newarray"->"fieldput <sprites: int[] dx>";
+    "fieldput <sprites: int[] dx>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <sprites: int total>";
+    "fieldget <sprites: int total>"->"newarray";
+    "fieldput <sprites: int[] dy>"
+    "newarray"->"fieldput <sprites: int[] dy>";
+    "fieldput <sprites: int[] dy>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <sprites: int total>";
+    "fieldget <sprites: int total>"->"newarray";
+    "fieldput <sprites: int[] wrap>"
+    "newarray"->"fieldput <sprites: int[] wrap>";
+    "fieldput <sprites: int[] wrap>"->"push 0";
+    "push 0"->"store.i i1";
+    "goto load.i i1"
+    "store.i i1"->"goto load.i i1";
+    "goto load.i i1"->"load.i i1";
+    "load.i i1"->"load.r r0";
+    "load.r r0"->"fieldget <sprites: int total>";
+    "ifcmplt.i load.r r0"
+    "fieldget <sprites: int total>"->"ifcmplt.i load.r r0";
+    "return"
+    "ifcmplt.i load.r r0"->"return";
+    "ifcmplt.i load.r r0"->"load.r r0";
+    "fieldget <sprites: int[] w>"
+    "load.r r0"->"fieldget <sprites: int[] w>";
+    "fieldget <sprites: int[] w>"->"load.r r0";
+    "fieldget <sprites: int[] h>"
+    "load.r r0"->"fieldget <sprites: int[] h>";
+    "fieldget <sprites: int[] h>"->"load.i i1";
+    "push -1"
+    "load.i i1"->"push -1";
+    "arraywrite.i"
+    "push -1"->"arraywrite.i";
+    "arraywrite.i"->"load.i i1";
+    "load.i i1"->"push -1";
+    "push -1"->"arraywrite.i";
+    "arraywrite.i"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "new java.lang.StringBuffer"
+    "load.r r0"->"new java.lang.StringBuffer";
+    "new java.lang.StringBuffer"->"dup1.r";
+    "push \"menu\""
+    "dup1.r"->"push \"menu\"";
+    "specialinvoke <java.lang.StringBuffer: void <init>(java.lang.String)>"
+    "push \"menu\""->"specialinvoke <java.lang.StringBuffer: void <init>(java.lang.String)>";
+    "specialinvoke <java.lang.StringBuffer: void <init>(java.lang.String)>"->"load.i i1";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(int)>"
+    "load.i i1"->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(int)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>"
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(int)>"->"virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>"->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <sprites: java.lang.String[] parse(java.lang.String)>"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"virtualinvoke <sprites: java.lang.String[] parse(java.lang.String)>";
+    "store.r i2"
+    "virtualinvoke <sprites: java.lang.String[] parse(java.lang.String)>"->"store.r i2";
+    "store.r i2"->"load.r r0";
+    "fieldget <sprites: java.lang.String[] file>"
+    "load.r r0"->"fieldget <sprites: java.lang.String[] file>";
+    "fieldget <sprites: java.lang.String[] file>"->"load.i i1";
+    "load.r i2"
+    "load.i i1"->"load.r i2";
+    "load.r i2"->"push 0";
+    "arrayread.r"
+    "push 0"->"arrayread.r";
+    "arraywrite.r"
+    "arrayread.r"->"arraywrite.r";
+    "arraywrite.r"->"load.r r0";
+    "load.r r0"->"load.r i2";
+    "load.r i2"->"push 1";
+    "push 1"->"arrayread.r";
+    "arrayread.r"->"virtualinvoke <sprites: int[] parseInt(java.lang.String)>";
+    "virtualinvoke <sprites: int[] parseInt(java.lang.String)>"->"dup1.r";
+    "dup1.r"->"push 0";
+    "push 0"->"arrayread.i";
+    "arrayread.i"->"store.i i0";
+    "store.i i0"->"load.r r0";
+    "fieldget <sprites: int[] xx>"
+    "load.r r0"->"fieldget <sprites: int[] xx>";
+    "fieldget <sprites: int[] xx>"->"load.i i1";
+    "load.i i1"->"load.i i0";
+    "load.i i0"->"arraywrite.i";
+    "arraywrite.i"->"push 1";
+    "push 1"->"arrayread.i";
+    "arrayread.i"->"store.i i0";
+    "store.i i0"->"load.r r0";
+    "fieldget <sprites: int[] yy>"
+    "load.r r0"->"fieldget <sprites: int[] yy>";
+    "fieldget <sprites: int[] yy>"->"load.i i1";
+    "load.i i1"->"load.i i0";
+    "load.i i0"->"arraywrite.i";
+    "arraywrite.i"->"load.r r0";
+    "load.r r0"->"load.r i2";
+    "load.r i2"->"push 2";
+    "push 2"->"arrayread.r";
+    "arrayread.r"->"virtualinvoke <sprites: int[] parseInt(java.lang.String)>";
+    "virtualinvoke <sprites: int[] parseInt(java.lang.String)>"->"dup1.r";
+    "dup1.r"->"push 0";
+    "push 0"->"arrayread.i";
+    "arrayread.i"->"store.i i0";
+    "store.i i0"->"load.r r0";
+    "fieldget <sprites: int[] dx>"
+    "load.r r0"->"fieldget <sprites: int[] dx>";
+    "fieldget <sprites: int[] dx>"->"load.i i1";
+    "load.i i1"->"load.i i0";
+    "load.i i0"->"arraywrite.i";
+    "arraywrite.i"->"push 1";
+    "push 1"->"arrayread.i";
+    "arrayread.i"->"store.i i0";
+    "store.i i0"->"load.r r0";
+    "fieldget <sprites: int[] dy>"
+    "load.r r0"->"fieldget <sprites: int[] dy>";
+    "fieldget <sprites: int[] dy>"->"load.i i1";
+    "load.i i1"->"load.i i0";
+    "load.i i0"->"arraywrite.i";
+    "arraywrite.i"->"load.r r0";
+    "load.r r0"->"load.r i2";
+    "push 3"
+    "load.r i2"->"push 3";
+    "push 3"->"arrayread.r";
+    "arrayread.r"->"virtualinvoke <sprites: int[] parseInt(java.lang.String)>";
+    "virtualinvoke <sprites: int[] parseInt(java.lang.String)>"->"push 0";
+    "push 0"->"arrayread.i";
+    "arrayread.i"->"store.i i2";
+    "store.i i2"->"load.r r0";
+    "fieldget <sprites: int[] wrap>"
+    "load.r r0"->"fieldget <sprites: int[] wrap>";
+    "fieldget <sprites: int[] wrap>"->"load.i i1";
+    "load.i i1"->"load.i i2";
+    "load.i i2"->"arraywrite.i";
+    "inc.i i1 1"
+    "arraywrite.i"->"inc.i i1 1";
+    "push 50"
+    "ifle push 50"->"push 50";
+    "push 50"->"store.i i1";
+}

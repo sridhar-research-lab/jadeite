@@ -1,0 +1,18 @@
+digraph "" {
+    "r0 := @this: outa.outc"
+    "load.r r0"
+    "r0 := @this: outa.outc"->"load.r r0";
+    "push \"b\""
+    "load.r r0"->"push \"b\"";
+    "virtualinvoke <outa.outc: java.lang.String getParameter(java.lang.String)>"
+    "push \"b\""->"virtualinvoke <outa.outc: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <outa.outc: java.lang.String getParameter(java.lang.String)>"->"load.r r0";
+    "virtualinvoke <java.lang.Object: java.lang.Class getClass()>"
+    "load.r r0"->"virtualinvoke <java.lang.Object: java.lang.Class getClass()>";
+    "virtualinvoke <java.lang.Class: java.lang.ClassLoader getClassLoader()>"
+    "virtualinvoke <java.lang.Object: java.lang.Class getClass()>"->"virtualinvoke <java.lang.Class: java.lang.ClassLoader getClassLoader()>";
+    "staticinvoke <outa.outa: void outa(java.lang.String,java.lang.Object)>"
+    "virtualinvoke <java.lang.Class: java.lang.ClassLoader getClassLoader()>"->"staticinvoke <outa.outa: void outa(java.lang.String,java.lang.Object)>";
+    "return"
+    "staticinvoke <outa.outa: void outa(java.lang.String,java.lang.Object)>"->"return";
+}

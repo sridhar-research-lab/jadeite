@@ -1,0 +1,59 @@
+digraph "" {
+    "r0 := @this: DCL.util.CompatibilityTest2"
+    "push 0"
+    "r0 := @this: DCL.util.CompatibilityTest2"->"push 0";
+    "store.b z0"
+    "push 0"->"store.b z0";
+    "push \"CT: init() entry\""
+    "store.b z0"->"push \"CT: init() entry\"";
+    "staticinvoke <DCL.util.CompatibilityTest2: void a(java.lang.String)>"
+    "push \"CT: init() entry\""->"staticinvoke <DCL.util.CompatibilityTest2: void a(java.lang.String)>";
+    "load.r r0"
+    "staticinvoke <DCL.util.CompatibilityTest2: void a(java.lang.String)>"->"load.r r0";
+    "push \"isMac\""
+    "load.r r0"->"push \"isMac\"";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"
+    "push \"isMac\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "ifnull push \"java.vendor\""
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"ifnull push \"java.vendor\"";
+    "push 1"
+    "ifnull push \"java.vendor\""->"push 1";
+    "push 1"->"store.b z0";
+    "push \"java.vendor\""
+    "store.b z0"->"push \"java.vendor\"";
+    "staticinvoke <java.lang.System: java.lang.String getProperty(java.lang.String)>"
+    "push \"java.vendor\""->"staticinvoke <java.lang.System: java.lang.String getProperty(java.lang.String)>";
+    "push \"Microsoft\""
+    "staticinvoke <java.lang.System: java.lang.String getProperty(java.lang.String)>"->"push \"Microsoft\"";
+    "virtualinvoke <java.lang.String: int indexOf(java.lang.String)>"
+    "push \"Microsoft\""->"virtualinvoke <java.lang.String: int indexOf(java.lang.String)>";
+    "push -1"
+    "virtualinvoke <java.lang.String: int indexOf(java.lang.String)>"->"push -1";
+    "ifcmpeq.i load.r r0"
+    "push -1"->"ifcmpeq.i load.r r0";
+    "ifcmpeq.i load.r r0"->"push 1";
+    "push 1"->"store.b z0";
+    "store.b z0"->"load.r r0";
+    "push \"scriptingOff\""
+    "load.r r0"->"push \"scriptingOff\"";
+    "push \"scriptingOff\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "ifnull load.b z0"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"ifnull load.b z0";
+    "push \"CT: Run test now with no scripting\""
+    "ifnull load.b z0"->"push \"CT: Run test now with no scripting\"";
+    "push \"CT: Run test now with no scripting\""->"staticinvoke <DCL.util.CompatibilityTest2: void a(java.lang.String)>";
+    "staticinvoke <DCL.util.CompatibilityTest2: void a(java.lang.String)>"->"push 1";
+    "push 1"->"store.b z0";
+    "load.b z0"
+    "store.b z0"->"load.b z0";
+    "ifeq push \"CT: init() exit\""
+    "load.b z0"->"ifeq push \"CT: init() exit\"";
+    "ifeq push \"CT: init() exit\""->"load.r r0";
+    "virtualinvoke <DCL.util.CompatibilityTest2: void runTest()>"
+    "load.r r0"->"virtualinvoke <DCL.util.CompatibilityTest2: void runTest()>";
+    "push \"CT: init() exit\""
+    "virtualinvoke <DCL.util.CompatibilityTest2: void runTest()>"->"push \"CT: init() exit\"";
+    "push \"CT: init() exit\""->"staticinvoke <DCL.util.CompatibilityTest2: void a(java.lang.String)>";
+    "return"
+    "staticinvoke <DCL.util.CompatibilityTest2: void a(java.lang.String)>"->"return";
+}

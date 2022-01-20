@@ -1,0 +1,76 @@
+digraph "" {
+    "r0 := @this: squares"
+    "load.r r0"
+    "r0 := @this: squares"->"load.r r0";
+    "push 48"
+    "load.r r0"->"push 48";
+    "push 24"
+    "push 48"->"push 24";
+    "newmultiarray 2"
+    "push 24"->"newmultiarray 2";
+    "fieldput <squares: int[][] line>"
+    "newmultiarray 2"->"fieldput <squares: int[][] line>";
+    "fieldput <squares: int[][] line>"->"load.r r0";
+    "load.r r0"->"push 48";
+    "push 48"->"push 24";
+    "push 24"->"newmultiarray 2";
+    "fieldput <squares: int[][] cline>"
+    "newmultiarray 2"->"fieldput <squares: int[][] cline>";
+    "fieldput <squares: int[][] cline>"->"load.r r0";
+    "load.r r0"->"push 48";
+    "push 48"->"push 24";
+    "push 24"->"newmultiarray 2";
+    "fieldput <squares: int[][] box>"
+    "newmultiarray 2"->"fieldput <squares: int[][] box>";
+    "fieldput <squares: int[][] box>"->"load.r r0";
+    "load.r r0"->"push 48";
+    "push 48"->"push 24";
+    "push 24"->"newmultiarray 2";
+    "fieldput <squares: int[][] cbox>"
+    "newmultiarray 2"->"fieldput <squares: int[][] cbox>";
+    "fieldput <squares: int[][] cbox>"->"load.r r0";
+    "staticget <java.awt.Color: java.awt.Color black>"
+    "load.r r0"->"staticget <java.awt.Color: java.awt.Color black>";
+    "virtualinvoke <java.awt.Component: void setBackground(java.awt.Color)>"
+    "staticget <java.awt.Color: java.awt.Color black>"->"virtualinvoke <java.awt.Component: void setBackground(java.awt.Color)>";
+    "virtualinvoke <java.awt.Component: void setBackground(java.awt.Color)>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "virtualinvoke <java.awt.Component: java.awt.Rectangle bounds()>"
+    "load.r r0"->"virtualinvoke <java.awt.Component: java.awt.Rectangle bounds()>";
+    "fieldget <java.awt.Rectangle: int width>"
+    "virtualinvoke <java.awt.Component: java.awt.Rectangle bounds()>"->"fieldget <java.awt.Rectangle: int width>";
+    "fieldput <squares: int width>"
+    "fieldget <java.awt.Rectangle: int width>"->"fieldput <squares: int width>";
+    "fieldput <squares: int width>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"virtualinvoke <java.awt.Component: java.awt.Rectangle bounds()>";
+    "fieldget <java.awt.Rectangle: int height>"
+    "virtualinvoke <java.awt.Component: java.awt.Rectangle bounds()>"->"fieldget <java.awt.Rectangle: int height>";
+    "fieldput <squares: int height>"
+    "fieldget <java.awt.Rectangle: int height>"->"fieldput <squares: int height>";
+    "fieldput <squares: int height>"->"load.r r0";
+    "virtualinvoke <squares: void initGrid()>"
+    "load.r r0"->"virtualinvoke <squares: void initGrid()>";
+    "virtualinvoke <squares: void initGrid()>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "fieldget <squares: int width>"
+    "load.r r0"->"fieldget <squares: int width>";
+    "fieldget <squares: int width>"->"load.r r0";
+    "fieldget <squares: int height>"
+    "load.r r0"->"fieldget <squares: int height>";
+    "virtualinvoke <java.awt.Component: java.awt.Image createImage(int,int)>"
+    "fieldget <squares: int height>"->"virtualinvoke <java.awt.Component: java.awt.Image createImage(int,int)>";
+    "fieldput <squares: java.awt.Image image>"
+    "virtualinvoke <java.awt.Component: java.awt.Image createImage(int,int)>"->"fieldput <squares: java.awt.Image image>";
+    "fieldput <squares: java.awt.Image image>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "fieldget <squares: java.awt.Image image>"
+    "load.r r0"->"fieldget <squares: java.awt.Image image>";
+    "virtualinvoke <java.awt.Image: java.awt.Graphics getGraphics()>"
+    "fieldget <squares: java.awt.Image image>"->"virtualinvoke <java.awt.Image: java.awt.Graphics getGraphics()>";
+    "fieldput <squares: java.awt.Graphics offscreen>"
+    "virtualinvoke <java.awt.Image: java.awt.Graphics getGraphics()>"->"fieldput <squares: java.awt.Graphics offscreen>";
+    "return"
+    "fieldput <squares: java.awt.Graphics offscreen>"->"return";
+}

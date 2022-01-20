@@ -1,0 +1,20 @@
+digraph "" {
+    "r0 := @this: Adobe_Fl"
+    "new java.lang.Thread"
+    "r0 := @this: Adobe_Fl"->"new java.lang.Thread";
+    "dup1.r"
+    "new java.lang.Thread"->"dup1.r";
+    "new Adobe_Fl$1"
+    "dup1.r"->"new Adobe_Fl$1";
+    "new Adobe_Fl$1"->"dup1.r";
+    "load.r r0"
+    "dup1.r"->"load.r r0";
+    "specialinvoke <Adobe_Fl$1: void <init>(Adobe_Fl)>"
+    "load.r r0"->"specialinvoke <Adobe_Fl$1: void <init>(Adobe_Fl)>";
+    "specialinvoke <java.lang.Thread: void <init>(java.lang.Runnable)>"
+    "specialinvoke <Adobe_Fl$1: void <init>(Adobe_Fl)>"->"specialinvoke <java.lang.Thread: void <init>(java.lang.Runnable)>";
+    "virtualinvoke <java.lang.Thread: void start()>"
+    "specialinvoke <java.lang.Thread: void <init>(java.lang.Runnable)>"->"virtualinvoke <java.lang.Thread: void start()>";
+    "return"
+    "virtualinvoke <java.lang.Thread: void start()>"->"return";
+}

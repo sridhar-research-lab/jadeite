@@ -1,0 +1,164 @@
+digraph "" {
+    "r0 := @this: EmulatorApplet"
+    "load.r r0"
+    "r0 := @this: EmulatorApplet"->"load.r r0";
+    "push \"directory\""
+    "load.r r0"->"push \"directory\"";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"
+    "push \"directory\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "store.r r1"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"store.r r1";
+    "staticget <java.lang.System: java.io.PrintStream out>"
+    "store.r r1"->"staticget <java.lang.System: java.io.PrintStream out>";
+    "new java.lang.StringBuffer"
+    "staticget <java.lang.System: java.io.PrintStream out>"->"new java.lang.StringBuffer";
+    "dup1.r"
+    "new java.lang.StringBuffer"->"dup1.r";
+    "specialinvoke <java.lang.StringBuffer: void <init>()>"
+    "dup1.r"->"specialinvoke <java.lang.StringBuffer: void <init>()>";
+    "push \"Direrctory: \""
+    "specialinvoke <java.lang.StringBuffer: void <init>()>"->"push \"Direrctory: \"";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"
+    "push \"Direrctory: \""->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "load.r r1"
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"load.r r1";
+    "load.r r1"->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>"
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>";
+    "virtualinvoke <java.io.PrintStream: void println(java.lang.String)>"
+    "virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>"->"virtualinvoke <java.io.PrintStream: void println(java.lang.String)>";
+    "virtualinvoke <java.io.PrintStream: void println(java.lang.String)>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "virtualinvoke <java.applet.Applet: java.applet.AppletContext getAppletContext()>"
+    "load.r r0"->"virtualinvoke <java.applet.Applet: java.applet.AppletContext getAppletContext()>";
+    "store.r r2"
+    "virtualinvoke <java.applet.Applet: java.applet.AppletContext getAppletContext()>"->"store.r r2";
+    "new TeletextEmulator"
+    "store.r r2"->"new TeletextEmulator";
+    "new TeletextEmulator"->"dup1.r";
+    "dup1.r"->"new java.lang.StringBuffer";
+    "new java.lang.StringBuffer"->"dup1.r";
+    "dup1.r"->"specialinvoke <java.lang.StringBuffer: void <init>()>";
+    "specialinvoke <java.lang.StringBuffer: void <init>()>"->"load.r r0";
+    "virtualinvoke <java.applet.Applet: java.net.URL getCodeBase()>"
+    "load.r r0"->"virtualinvoke <java.applet.Applet: java.net.URL getCodeBase()>";
+    "virtualinvoke <java.net.URL: java.lang.String getHost()>"
+    "virtualinvoke <java.applet.Applet: java.net.URL getCodeBase()>"->"virtualinvoke <java.net.URL: java.lang.String getHost()>";
+    "virtualinvoke <java.net.URL: java.lang.String getHost()>"->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"load.r r1";
+    "load.r r1"->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>";
+    "load.r r2"
+    "virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>"->"load.r r2";
+    "specialinvoke <TeletextEmulator: void <init>(java.lang.String,java.applet.AppletContext)>"
+    "load.r r2"->"specialinvoke <TeletextEmulator: void <init>(java.lang.String,java.applet.AppletContext)>";
+    "fieldput <EmulatorApplet: TeletextEmulator teletextEmulator>"
+    "specialinvoke <TeletextEmulator: void <init>(java.lang.String,java.applet.AppletContext)>"->"fieldput <EmulatorApplet: TeletextEmulator teletextEmulator>";
+    "fieldput <EmulatorApplet: TeletextEmulator teletextEmulator>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "fieldget <EmulatorApplet: TeletextEmulator teletextEmulator>"
+    "load.r r0"->"fieldget <EmulatorApplet: TeletextEmulator teletextEmulator>";
+    "virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>"
+    "fieldget <EmulatorApplet: TeletextEmulator teletextEmulator>"->"virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>";
+    "pop"
+    "virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>"->"pop";
+    "new java.awt.Button"
+    "pop"->"new java.awt.Button";
+    "new java.awt.Button"->"store.r r1";
+    "store.r r1"->"load.r r1";
+    "push \"Indice\""
+    "load.r r1"->"push \"Indice\"";
+    "specialinvoke <java.awt.Button: void <init>(java.lang.String)>"
+    "push \"Indice\""->"specialinvoke <java.awt.Button: void <init>(java.lang.String)>";
+    "specialinvoke <java.awt.Button: void <init>(java.lang.String)>"->"load.r r1";
+    "push \"index\""
+    "load.r r1"->"push \"index\"";
+    "virtualinvoke <java.awt.Button: void setActionCommand(java.lang.String)>"
+    "push \"index\""->"virtualinvoke <java.awt.Button: void setActionCommand(java.lang.String)>";
+    "virtualinvoke <java.awt.Button: void setActionCommand(java.lang.String)>"->"load.r r1";
+    "load.r r1"->"load.r r0";
+    "virtualinvoke <java.awt.Button: void addActionListener(java.awt.event.ActionListener)>"
+    "load.r r0"->"virtualinvoke <java.awt.Button: void addActionListener(java.awt.event.ActionListener)>";
+    "virtualinvoke <java.awt.Button: void addActionListener(java.awt.event.ActionListener)>"->"load.r r0";
+    "load.r r0"->"load.r r1";
+    "load.r r1"->"virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>";
+    "virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>"->"pop";
+    "pop"->"new java.awt.Button";
+    "new java.awt.Button"->"store.r r1";
+    "store.r r1"->"load.r r1";
+    "push \"Pagina seguente\""
+    "load.r r1"->"push \"Pagina seguente\"";
+    "push \"Pagina seguente\""->"specialinvoke <java.awt.Button: void <init>(java.lang.String)>";
+    "specialinvoke <java.awt.Button: void <init>(java.lang.String)>"->"load.r r1";
+    "push \"nextPage\""
+    "load.r r1"->"push \"nextPage\"";
+    "push \"nextPage\""->"virtualinvoke <java.awt.Button: void setActionCommand(java.lang.String)>";
+    "virtualinvoke <java.awt.Button: void setActionCommand(java.lang.String)>"->"load.r r1";
+    "load.r r1"->"load.r r0";
+    "load.r r0"->"virtualinvoke <java.awt.Button: void addActionListener(java.awt.event.ActionListener)>";
+    "virtualinvoke <java.awt.Button: void addActionListener(java.awt.event.ActionListener)>"->"load.r r0";
+    "load.r r0"->"load.r r1";
+    "load.r r1"->"virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>";
+    "virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>"->"pop";
+    "pop"->"new java.awt.Button";
+    "new java.awt.Button"->"store.r r1";
+    "store.r r1"->"load.r r1";
+    "push \"Pagina precedente\""
+    "load.r r1"->"push \"Pagina precedente\"";
+    "push \"Pagina precedente\""->"specialinvoke <java.awt.Button: void <init>(java.lang.String)>";
+    "specialinvoke <java.awt.Button: void <init>(java.lang.String)>"->"load.r r1";
+    "push \"previousPage\""
+    "load.r r1"->"push \"previousPage\"";
+    "push \"previousPage\""->"virtualinvoke <java.awt.Button: void setActionCommand(java.lang.String)>";
+    "virtualinvoke <java.awt.Button: void setActionCommand(java.lang.String)>"->"load.r r1";
+    "load.r r1"->"load.r r0";
+    "load.r r0"->"virtualinvoke <java.awt.Button: void addActionListener(java.awt.event.ActionListener)>";
+    "virtualinvoke <java.awt.Button: void addActionListener(java.awt.event.ActionListener)>"->"load.r r0";
+    "load.r r0"->"load.r r1";
+    "load.r r1"->"virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>";
+    "virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>"->"pop";
+    "pop"->"new java.awt.Button";
+    "new java.awt.Button"->"store.r r1";
+    "store.r r1"->"load.r r1";
+    "push \"Sottopagina avanti\""
+    "load.r r1"->"push \"Sottopagina avanti\"";
+    "push \"Sottopagina avanti\""->"specialinvoke <java.awt.Button: void <init>(java.lang.String)>";
+    "specialinvoke <java.awt.Button: void <init>(java.lang.String)>"->"load.r r1";
+    "push \"nextRolling\""
+    "load.r r1"->"push \"nextRolling\"";
+    "push \"nextRolling\""->"virtualinvoke <java.awt.Button: void setActionCommand(java.lang.String)>";
+    "virtualinvoke <java.awt.Button: void setActionCommand(java.lang.String)>"->"load.r r1";
+    "load.r r1"->"load.r r0";
+    "load.r r0"->"virtualinvoke <java.awt.Button: void addActionListener(java.awt.event.ActionListener)>";
+    "virtualinvoke <java.awt.Button: void addActionListener(java.awt.event.ActionListener)>"->"load.r r0";
+    "load.r r0"->"load.r r1";
+    "load.r r1"->"virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>";
+    "virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>"->"pop";
+    "pop"->"new java.awt.Button";
+    "new java.awt.Button"->"store.r r1";
+    "store.r r1"->"load.r r1";
+    "push \"Sottopagina indietro\""
+    "load.r r1"->"push \"Sottopagina indietro\"";
+    "push \"Sottopagina indietro\""->"specialinvoke <java.awt.Button: void <init>(java.lang.String)>";
+    "specialinvoke <java.awt.Button: void <init>(java.lang.String)>"->"load.r r1";
+    "push \"previousRolling\""
+    "load.r r1"->"push \"previousRolling\"";
+    "push \"previousRolling\""->"virtualinvoke <java.awt.Button: void setActionCommand(java.lang.String)>";
+    "virtualinvoke <java.awt.Button: void setActionCommand(java.lang.String)>"->"load.r r1";
+    "load.r r1"->"load.r r0";
+    "load.r r0"->"virtualinvoke <java.awt.Button: void addActionListener(java.awt.event.ActionListener)>";
+    "virtualinvoke <java.awt.Button: void addActionListener(java.awt.event.ActionListener)>"->"load.r r0";
+    "load.r r0"->"load.r r1";
+    "load.r r1"->"virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>";
+    "virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>"->"pop";
+    "pop"->"load.r r0";
+    "load.r r0"->"fieldget <EmulatorApplet: TeletextEmulator teletextEmulator>";
+    "virtualinvoke <TeletextEmulator: void render()>"
+    "fieldget <EmulatorApplet: TeletextEmulator teletextEmulator>"->"virtualinvoke <TeletextEmulator: void render()>";
+    "virtualinvoke <TeletextEmulator: void render()>"->"load.r r0";
+    "load.r r0"->"fieldget <EmulatorApplet: TeletextEmulator teletextEmulator>";
+    "virtualinvoke <java.awt.Component: void repaint()>"
+    "fieldget <EmulatorApplet: TeletextEmulator teletextEmulator>"->"virtualinvoke <java.awt.Component: void repaint()>";
+    "return"
+    "virtualinvoke <java.awt.Component: void repaint()>"->"return";
+}

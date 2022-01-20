@@ -1,0 +1,143 @@
+digraph "" {
+    "r0 := @this: GoEarDownloader"
+    "staticget <java.lang.System: java.io.PrintStream out>"
+    "r0 := @this: GoEarDownloader"->"staticget <java.lang.System: java.io.PrintStream out>";
+    "push \"Loaded\""
+    "staticget <java.lang.System: java.io.PrintStream out>"->"push \"Loaded\"";
+    "virtualinvoke <java.io.PrintStream: void println(java.lang.String)>"
+    "push \"Loaded\""->"virtualinvoke <java.io.PrintStream: void println(java.lang.String)>";
+    "new java.io.InputStreamReader"
+    "virtualinvoke <java.io.PrintStream: void println(java.lang.String)>"->"new java.io.InputStreamReader";
+    "store.r $r12"
+    "new java.io.InputStreamReader"->"store.r $r12";
+    "load.r $r12"
+    "store.r $r12"->"load.r $r12";
+    "new java.net.URL"
+    "load.r $r12"->"new java.net.URL";
+    "dup1.r"
+    "new java.net.URL"->"dup1.r";
+    "new java.lang.StringBuffer"
+    "dup1.r"->"new java.lang.StringBuffer";
+    "new java.lang.StringBuffer"->"dup1.r";
+    "push \"http://www.goear.com/tracker758.php?f=\""
+    "dup1.r"->"push \"http://www.goear.com/tracker758.php?f=\"";
+    "specialinvoke <java.lang.StringBuffer: void <init>(java.lang.String)>"
+    "push \"http://www.goear.com/tracker758.php?f=\""->"specialinvoke <java.lang.StringBuffer: void <init>(java.lang.String)>";
+    "load.r r0"
+    "specialinvoke <java.lang.StringBuffer: void <init>(java.lang.String)>"->"load.r r0";
+    "push \"FilesMapGoearMp3Id\""
+    "load.r r0"->"push \"FilesMapGoearMp3Id\"";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"
+    "push \"FilesMapGoearMp3Id\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>"
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>";
+    "specialinvoke <java.net.URL: void <init>(java.lang.String)>"
+    "virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>"->"specialinvoke <java.net.URL: void <init>(java.lang.String)>";
+    "virtualinvoke <java.net.URL: java.net.URLConnection openConnection()>"
+    "specialinvoke <java.net.URL: void <init>(java.lang.String)>"->"virtualinvoke <java.net.URL: java.net.URLConnection openConnection()>";
+    "virtualinvoke <java.net.URL: java.net.URLConnection openConnection()>"->"dup1.r";
+    "push \"User-Agent\""
+    "dup1.r"->"push \"User-Agent\"";
+    "push \"User-Agent\""->"load.r r0";
+    "push \"ua\""
+    "load.r r0"->"push \"ua\"";
+    "push \"ua\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.net.URLConnection: void setRequestProperty(java.lang.String,java.lang.String)>"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"virtualinvoke <java.net.URLConnection: void setRequestProperty(java.lang.String,java.lang.String)>";
+    "new java.io.BufferedReader"
+    "virtualinvoke <java.net.URLConnection: void setRequestProperty(java.lang.String,java.lang.String)>"->"new java.io.BufferedReader";
+    "store.r $r11"
+    "new java.io.BufferedReader"->"store.r $r11";
+    "virtualinvoke <java.net.URLConnection: java.io.InputStream getInputStream()>"
+    "store.r $r11"->"virtualinvoke <java.net.URLConnection: java.io.InputStream getInputStream()>";
+    "specialinvoke <java.io.InputStreamReader: void <init>(java.io.InputStream)>"
+    "virtualinvoke <java.net.URLConnection: java.io.InputStream getInputStream()>"->"specialinvoke <java.io.InputStreamReader: void <init>(java.io.InputStream)>";
+    "load.r $r11"
+    "specialinvoke <java.io.InputStreamReader: void <init>(java.io.InputStream)>"->"load.r $r11";
+    "load.r $r11"->"load.r $r12";
+    "specialinvoke <java.io.BufferedReader: void <init>(java.io.Reader)>"
+    "load.r $r12"->"specialinvoke <java.io.BufferedReader: void <init>(java.io.Reader)>";
+    "push \"\""
+    "specialinvoke <java.io.BufferedReader: void <init>(java.io.Reader)>"->"push \"\"";
+    "store.r r31"
+    "push \"\""->"store.r r31";
+    "goto load.r $r11"
+    "store.r r31"->"goto load.r $r11";
+    "goto load.r $r11"->"load.r $r11";
+    "virtualinvoke <java.io.BufferedReader: java.lang.String readLine()>"
+    "load.r $r11"->"virtualinvoke <java.io.BufferedReader: java.lang.String readLine()>";
+    "virtualinvoke <java.io.BufferedReader: java.lang.String readLine()>"->"store.r $r12";
+    "store.r $r12"->"load.r $r12";
+    "ifnonnull new java.lang.StringBuffer"
+    "load.r $r12"->"ifnonnull new java.lang.StringBuffer";
+    "ifnonnull new java.lang.StringBuffer"->"load.r $r11";
+    "virtualinvoke <java.io.BufferedReader: void close()>"
+    "load.r $r11"->"virtualinvoke <java.io.BufferedReader: void close()>";
+    "virtualinvoke <java.io.BufferedReader: void close()>"->"load.r r0";
+    "load.r r31"
+    "load.r r0"->"load.r r31";
+    "push \"<song path=\\\"\""
+    "load.r r31"->"push \"<song path=\\\"\"";
+    "push \"\\\"\""
+    "push \"<song path=\\\"\""->"push \"\\\"\"";
+    "specialinvoke <GoEarDownloader: java.lang.String inbtwn(java.lang.String,java.lang.String,java.lang.String)>"
+    "push \"\\\"\""->"specialinvoke <GoEarDownloader: java.lang.String inbtwn(java.lang.String,java.lang.String,java.lang.String)>";
+    "specialinvoke <GoEarDownloader: java.lang.String inbtwn(java.lang.String,java.lang.String,java.lang.String)>"->"store.r $r11";
+    "store.r $r11"->"load.r $r11";
+    "ifnull staticget <java.lang.System: java.io.PrintStream out>"
+    "load.r $r11"->"ifnull staticget <java.lang.System: java.io.PrintStream out>";
+    "ifnull staticget <java.lang.System: java.io.PrintStream out>"->"load.r r0";
+    "virtualinvoke <java.applet.Applet: java.applet.AppletContext getAppletContext()>"
+    "load.r r0"->"virtualinvoke <java.applet.Applet: java.applet.AppletContext getAppletContext()>";
+    "virtualinvoke <java.applet.Applet: java.applet.AppletContext getAppletContext()>"->"new java.net.URL";
+    "new java.net.URL"->"dup1.r";
+    "dup1.r"->"new java.lang.StringBuffer";
+    "new java.lang.StringBuffer"->"dup1.r";
+    "push \"javascript:DownloadGoear(\\\"\""
+    "dup1.r"->"push \"javascript:DownloadGoear(\\\"\"";
+    "push \"javascript:DownloadGoear(\\\"\""->"specialinvoke <java.lang.StringBuffer: void <init>(java.lang.String)>";
+    "specialinvoke <java.lang.StringBuffer: void <init>(java.lang.String)>"->"load.r $r11";
+    "load.r $r11"->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "push \"\\\");\""
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"push \"\\\");\"";
+    "push \"\\\");\""->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>"->"specialinvoke <java.net.URL: void <init>(java.lang.String)>";
+    "interfaceinvoke <java.applet.AppletContext: void showDocument(java.net.URL)> 1"
+    "specialinvoke <java.net.URL: void <init>(java.lang.String)>"->"interfaceinvoke <java.applet.AppletContext: void showDocument(java.net.URL)> 1";
+    "goto return"
+    "interfaceinvoke <java.applet.AppletContext: void showDocument(java.net.URL)> 1"->"goto return";
+    "return"
+    "goto return"->"return";
+    "store.r r0"
+    "interfaceinvoke <java.applet.AppletContext: void showDocument(java.net.URL)> 1"->"store.r r0";
+    "store.r r0"->"staticget <java.lang.System: java.io.PrintStream out>";
+    "push \"sordek Whoops!!\""
+    "staticget <java.lang.System: java.io.PrintStream out>"->"push \"sordek Whoops!!\"";
+    "push \"sordek Whoops!!\""->"virtualinvoke <java.io.PrintStream: void println(java.lang.String)>";
+    "ifnull staticget <java.lang.System: java.io.PrintStream out>"->"staticget <java.lang.System: java.io.PrintStream out>";
+    "push \"File not found\""
+    "staticget <java.lang.System: java.io.PrintStream out>"->"push \"File not found\"";
+    "push \"File not found\""->"virtualinvoke <java.io.PrintStream: void println(java.lang.String)>";
+    "virtualinvoke <java.io.PrintStream: void println(java.lang.String)>"->"load.r r0";
+    "load.r r0"->"virtualinvoke <java.applet.Applet: java.applet.AppletContext getAppletContext()>";
+    "virtualinvoke <java.applet.Applet: java.applet.AppletContext getAppletContext()>"->"new java.net.URL";
+    "new java.net.URL"->"dup1.r";
+    "push \"javascript:FileNotFound();\""
+    "dup1.r"->"push \"javascript:FileNotFound();\"";
+    "push \"javascript:FileNotFound();\""->"specialinvoke <java.net.URL: void <init>(java.lang.String)>";
+    "specialinvoke <java.net.URL: void <init>(java.lang.String)>"->"interfaceinvoke <java.applet.AppletContext: void showDocument(java.net.URL)> 1";
+    "interfaceinvoke <java.applet.AppletContext: void showDocument(java.net.URL)> 1"->"goto return";
+    "ifnonnull new java.lang.StringBuffer"->"new java.lang.StringBuffer";
+    "new java.lang.StringBuffer"->"dup1.r";
+    "dup1.r"->"load.r r31";
+    "staticinvoke <java.lang.String: java.lang.String valueOf(java.lang.Object)>"
+    "load.r r31"->"staticinvoke <java.lang.String: java.lang.String valueOf(java.lang.Object)>";
+    "staticinvoke <java.lang.String: java.lang.String valueOf(java.lang.Object)>"->"specialinvoke <java.lang.StringBuffer: void <init>(java.lang.String)>";
+    "specialinvoke <java.lang.StringBuffer: void <init>(java.lang.String)>"->"load.r $r12";
+    "load.r $r12"->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>"->"store.r r31";
+}

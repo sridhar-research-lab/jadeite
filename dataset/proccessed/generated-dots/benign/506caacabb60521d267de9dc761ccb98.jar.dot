@@ -1,0 +1,342 @@
+digraph "" {
+    "r0 := @this: org.pscode.tool.applet.VersionCheck"
+    "load.r r0"
+    "r0 := @this: org.pscode.tool.applet.VersionCheck"->"load.r r0";
+    "virtualinvoke <java.applet.Applet: java.net.URL getDocumentBase()>"
+    "load.r r0"->"virtualinvoke <java.applet.Applet: java.net.URL getDocumentBase()>";
+    "virtualinvoke <java.net.URL: java.lang.String toString()>"
+    "virtualinvoke <java.applet.Applet: java.net.URL getDocumentBase()>"->"virtualinvoke <java.net.URL: java.lang.String toString()>";
+    "pop"
+    "virtualinvoke <java.net.URL: java.lang.String toString()>"->"pop";
+    "pop"->"load.r r0";
+    "push \"targetVersion\""
+    "load.r r0"->"push \"targetVersion\"";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"
+    "push \"targetVersion\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "store.r r2"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"store.r r2";
+    "store.r r2"->"load.r r0";
+    "push 9999"
+    "load.r r0"->"push 9999";
+    "fieldput <org.pscode.tool.applet.VersionCheck: int targetVersion>"
+    "push 9999"->"fieldput <org.pscode.tool.applet.VersionCheck: int targetVersion>";
+    "load.r r2"
+    "fieldput <org.pscode.tool.applet.VersionCheck: int targetVersion>"->"load.r r2";
+    "ifnull load.r r0"
+    "load.r r2"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r r0";
+    "new java.lang.Float"
+    "load.r r0"->"new java.lang.Float";
+    "dup1.r"
+    "new java.lang.Float"->"dup1.r";
+    "dup1.r"->"load.r r2";
+    "specialinvoke <java.lang.Float: void <init>(java.lang.String)>"
+    "load.r r2"->"specialinvoke <java.lang.Float: void <init>(java.lang.String)>";
+    "virtualinvoke <java.lang.Float: float floatValue()>"
+    "specialinvoke <java.lang.Float: void <init>(java.lang.String)>"->"virtualinvoke <java.lang.Float: float floatValue()>";
+    "push 10.0F"
+    "virtualinvoke <java.lang.Float: float floatValue()>"->"push 10.0F";
+    "mul.f"
+    "push 10.0F"->"mul.f";
+    "f2i"
+    "mul.f"->"f2i";
+    "f2i"->"fieldput <org.pscode.tool.applet.VersionCheck: int targetVersion>";
+    "goto load.r r0"
+    "fieldput <org.pscode.tool.applet.VersionCheck: int targetVersion>"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "push \"redirect\""
+    "load.r r0"->"push \"redirect\"";
+    "push \"redirect\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"store.r r2";
+    "store.r r2"->"load.r r0";
+    "push null"
+    "load.r r0"->"push null";
+    "fieldput <org.pscode.tool.applet.VersionCheck: java.net.URL redirect>"
+    "push null"->"fieldput <org.pscode.tool.applet.VersionCheck: java.net.URL redirect>";
+    "fieldput <org.pscode.tool.applet.VersionCheck: java.net.URL redirect>"->"load.r r2";
+    "ifnonnull load.r r0"
+    "load.r r2"->"ifnonnull load.r r0";
+    "ifnonnull load.r r0"->"load.r r0";
+    "push \"Parameter Missing!\""
+    "load.r r0"->"push \"Parameter Missing!\"";
+    "push \"The redirect URL must be given in the applet parameters.  E.G.\n<PARAM NAME=\'redirect\' VALUE=\'javaversion.html\'>\""
+    "push \"Parameter Missing!\""->"push \"The redirect URL must be given in the applet parameters.  E.G.\n<PARAM NAME=\'redirect\' VALUE=\'javaversion.html\'>\"";
+    "virtualinvoke <org.pscode.tool.applet.VersionCheck: void popDialog(java.lang.String,java.lang.String)>"
+    "push \"The redirect URL must be given in the applet parameters.  E.G.\n<PARAM NAME=\'redirect\' VALUE=\'javaversion.html\'>\""->"virtualinvoke <org.pscode.tool.applet.VersionCheck: void popDialog(java.lang.String,java.lang.String)>";
+    "virtualinvoke <org.pscode.tool.applet.VersionCheck: void popDialog(java.lang.String,java.lang.String)>"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "load.r r0"->"push null";
+    "fieldput <org.pscode.tool.applet.VersionCheck: java.net.URL applet>"
+    "push null"->"fieldput <org.pscode.tool.applet.VersionCheck: java.net.URL applet>";
+    "fieldput <org.pscode.tool.applet.VersionCheck: java.net.URL applet>"->"load.r r0";
+    "push \"applet\""
+    "load.r r0"->"push \"applet\"";
+    "push \"applet\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"store.r r2";
+    "store.r r2"->"load.r r2";
+    "load.r r2"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r r0";
+    "new java.net.URL"
+    "load.r r0"->"new java.net.URL";
+    "new java.net.URL"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "virtualinvoke <java.applet.Applet: java.net.URL getCodeBase()>"
+    "load.r r0"->"virtualinvoke <java.applet.Applet: java.net.URL getCodeBase()>";
+    "virtualinvoke <java.applet.Applet: java.net.URL getCodeBase()>"->"load.r r0";
+    "load.r r0"->"load.r r2";
+    "virtualinvoke <org.pscode.tool.applet.VersionCheck: java.lang.String urlEncode(java.lang.String)>"
+    "load.r r2"->"virtualinvoke <org.pscode.tool.applet.VersionCheck: java.lang.String urlEncode(java.lang.String)>";
+    "specialinvoke <java.net.URL: void <init>(java.net.URL,java.lang.String)>"
+    "virtualinvoke <org.pscode.tool.applet.VersionCheck: java.lang.String urlEncode(java.lang.String)>"->"specialinvoke <java.net.URL: void <init>(java.net.URL,java.lang.String)>";
+    "specialinvoke <java.net.URL: void <init>(java.net.URL,java.lang.String)>"->"fieldput <org.pscode.tool.applet.VersionCheck: java.net.URL applet>";
+    "fieldput <org.pscode.tool.applet.VersionCheck: java.net.URL applet>"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "push \"failDelay\""
+    "load.r r0"->"push \"failDelay\"";
+    "push \"failDelay\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"store.r r2";
+    "store.r r2"->"load.r r2";
+    "load.r r2"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r r0";
+    "new java.lang.Integer"
+    "load.r r0"->"new java.lang.Integer";
+    "new java.lang.Integer"->"dup1.r";
+    "dup1.r"->"load.r r2";
+    "specialinvoke <java.lang.Integer: void <init>(java.lang.String)>"
+    "load.r r2"->"specialinvoke <java.lang.Integer: void <init>(java.lang.String)>";
+    "virtualinvoke <java.lang.Integer: int intValue()>"
+    "specialinvoke <java.lang.Integer: void <init>(java.lang.String)>"->"virtualinvoke <java.lang.Integer: int intValue()>";
+    "push 1000"
+    "virtualinvoke <java.lang.Integer: int intValue()>"->"push 1000";
+    "mul.i"
+    "push 1000"->"mul.i";
+    "fieldput <org.pscode.tool.applet.VersionCheck: int failSafeDelay>"
+    "mul.i"->"fieldput <org.pscode.tool.applet.VersionCheck: int failSafeDelay>";
+    "fieldput <org.pscode.tool.applet.VersionCheck: int failSafeDelay>"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "push \"bouncer\""
+    "load.r r0"->"push \"bouncer\"";
+    "push \"bouncer\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"store.r r2";
+    "store.r r2"->"load.r r0";
+    "load.r r0"->"push null";
+    "fieldput <org.pscode.tool.applet.VersionCheck: java.net.URL bouncer>"
+    "push null"->"fieldput <org.pscode.tool.applet.VersionCheck: java.net.URL bouncer>";
+    "fieldput <org.pscode.tool.applet.VersionCheck: java.net.URL bouncer>"->"load.r r2";
+    "load.r r2"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r r0";
+    "load.r r0"->"new java.net.URL";
+    "new java.net.URL"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "load.r r0"->"virtualinvoke <java.applet.Applet: java.net.URL getCodeBase()>";
+    "virtualinvoke <java.applet.Applet: java.net.URL getCodeBase()>"->"load.r r0";
+    "load.r r0"->"load.r r2";
+    "load.r r2"->"virtualinvoke <org.pscode.tool.applet.VersionCheck: java.lang.String urlEncode(java.lang.String)>";
+    "virtualinvoke <org.pscode.tool.applet.VersionCheck: java.lang.String urlEncode(java.lang.String)>"->"specialinvoke <java.net.URL: void <init>(java.net.URL,java.lang.String)>";
+    "specialinvoke <java.net.URL: void <init>(java.net.URL,java.lang.String)>"->"fieldput <org.pscode.tool.applet.VersionCheck: java.net.URL bouncer>";
+    "fieldput <org.pscode.tool.applet.VersionCheck: java.net.URL bouncer>"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "virtualinvoke <org.pscode.tool.applet.VersionCheck: int getVersionAsInt()>"
+    "load.r r0"->"virtualinvoke <org.pscode.tool.applet.VersionCheck: int getVersionAsInt()>";
+    "fieldput <org.pscode.tool.applet.VersionCheck: int version>"
+    "virtualinvoke <org.pscode.tool.applet.VersionCheck: int getVersionAsInt()>"->"fieldput <org.pscode.tool.applet.VersionCheck: int version>";
+    "push \"java.version\""
+    "fieldput <org.pscode.tool.applet.VersionCheck: int version>"->"push \"java.version\"";
+    "staticinvoke <java.lang.System: java.lang.String getProperty(java.lang.String)>"
+    "push \"java.version\""->"staticinvoke <java.lang.System: java.lang.String getProperty(java.lang.String)>";
+    "staticinvoke <java.lang.System: java.lang.String getProperty(java.lang.String)>"->"store.r r2";
+    "store.r r2"->"load.r r0";
+    "fieldget <org.pscode.tool.applet.VersionCheck: int version>"
+    "load.r r0"->"fieldget <org.pscode.tool.applet.VersionCheck: int version>";
+    "fieldget <org.pscode.tool.applet.VersionCheck: int version>"->"load.r r0";
+    "fieldget <org.pscode.tool.applet.VersionCheck: int targetVersion>"
+    "load.r r0"->"fieldget <org.pscode.tool.applet.VersionCheck: int targetVersion>";
+    "ifcmpge.i load.r r0"
+    "fieldget <org.pscode.tool.applet.VersionCheck: int targetVersion>"->"ifcmpge.i load.r r0";
+    "ifcmpge.i load.r r0"->"load.r r0";
+    "new java.awt.Label"
+    "load.r r0"->"new java.awt.Label";
+    "new java.awt.Label"->"dup1.r";
+    "new java.lang.StringBuffer"
+    "dup1.r"->"new java.lang.StringBuffer";
+    "new java.lang.StringBuffer"->"dup1.r";
+    "specialinvoke <java.lang.StringBuffer: void <init>()>"
+    "dup1.r"->"specialinvoke <java.lang.StringBuffer: void <init>()>";
+    "push \"Java version \""
+    "specialinvoke <java.lang.StringBuffer: void <init>()>"->"push \"Java version \"";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"
+    "push \"Java version \""->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"load.r r2";
+    "load.r r2"->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "push \" too low!\""
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"push \" too low!\"";
+    "push \" too low!\""->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>"
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>";
+    "specialinvoke <java.awt.Label: void <init>(java.lang.String)>"
+    "virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>"->"specialinvoke <java.awt.Label: void <init>(java.lang.String)>";
+    "virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>"
+    "specialinvoke <java.awt.Label: void <init>(java.lang.String)>"->"virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>";
+    "virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>"->"pop";
+    "pop"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "fieldget <org.pscode.tool.applet.VersionCheck: java.net.URL redirect>"
+    "load.r r0"->"fieldget <org.pscode.tool.applet.VersionCheck: java.net.URL redirect>";
+    "fieldput <org.pscode.tool.applet.VersionCheck: java.net.URL jumpto>"
+    "fieldget <org.pscode.tool.applet.VersionCheck: java.net.URL redirect>"->"fieldput <org.pscode.tool.applet.VersionCheck: java.net.URL jumpto>";
+    "fieldput <org.pscode.tool.applet.VersionCheck: java.net.URL jumpto>"->"load.r r0";
+    "push \"Java version is too low to run the applet.\nFor help, visit..\n\""
+    "load.r r0"->"push \"Java version is too low to run the applet.\nFor help, visit..\n\"";
+    "fieldput <org.pscode.tool.applet.VersionCheck: java.lang.String redirectMessage>"
+    "push \"Java version is too low to run the applet.\nFor help, visit..\n\""->"fieldput <org.pscode.tool.applet.VersionCheck: java.lang.String redirectMessage>";
+    "fieldput <org.pscode.tool.applet.VersionCheck: java.lang.String redirectMessage>"->"load.r r0";
+    "virtualinvoke <org.pscode.tool.applet.VersionCheck: void redirect()>"
+    "load.r r0"->"virtualinvoke <org.pscode.tool.applet.VersionCheck: void redirect()>";
+    "goto return"
+    "virtualinvoke <org.pscode.tool.applet.VersionCheck: void redirect()>"->"goto return";
+    "return"
+    "goto return"->"return";
+    "ifcmpge.i load.r r0"->"load.r r0";
+    "load.r r0"->"new java.awt.Label";
+    "new java.awt.Label"->"dup1.r";
+    "dup1.r"->"new java.lang.StringBuffer";
+    "new java.lang.StringBuffer"->"dup1.r";
+    "dup1.r"->"specialinvoke <java.lang.StringBuffer: void <init>()>";
+    "push \"Java version\""
+    "specialinvoke <java.lang.StringBuffer: void <init>()>"->"push \"Java version\"";
+    "push \"Java version\""->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"load.r r2";
+    "load.r r2"->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "push \" OK!\""
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"push \" OK!\"";
+    "push \" OK!\""->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>"->"specialinvoke <java.awt.Label: void <init>(java.lang.String)>";
+    "specialinvoke <java.awt.Label: void <init>(java.lang.String)>"->"virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>";
+    "virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>"->"pop";
+    "pop"->"load.r r0";
+    "fieldget <org.pscode.tool.applet.VersionCheck: java.net.URL applet>"
+    "load.r r0"->"fieldget <org.pscode.tool.applet.VersionCheck: java.net.URL applet>";
+    "ifnull return"
+    "fieldget <org.pscode.tool.applet.VersionCheck: java.net.URL applet>"->"ifnull return";
+    "ifnull return"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <org.pscode.tool.applet.VersionCheck: java.net.URL applet>";
+    "fieldget <org.pscode.tool.applet.VersionCheck: java.net.URL applet>"->"fieldput <org.pscode.tool.applet.VersionCheck: java.net.URL jumpto>";
+    "fieldput <org.pscode.tool.applet.VersionCheck: java.net.URL jumpto>"->"load.r r0";
+    "push \"To use the applet, visit..\n\""
+    "load.r r0"->"push \"To use the applet, visit..\n\"";
+    "push \"To use the applet, visit..\n\""->"fieldput <org.pscode.tool.applet.VersionCheck: java.lang.String redirectMessage>";
+    "fieldput <org.pscode.tool.applet.VersionCheck: java.lang.String redirectMessage>"->"load.r r0";
+    "load.r r0"->"virtualinvoke <org.pscode.tool.applet.VersionCheck: void redirect()>";
+    "store.r $r37"
+    "specialinvoke <java.net.URL: void <init>(java.net.URL,java.lang.String)>"->"store.r $r37";
+    "store.r $r37"->"load.r r0";
+    "push \"Malformed URL!\""
+    "load.r r0"->"push \"Malformed URL!\"";
+    "push \"Malformed URL!\""->"new java.lang.StringBuffer";
+    "new java.lang.StringBuffer"->"dup1.r";
+    "dup1.r"->"specialinvoke <java.lang.StringBuffer: void <init>()>";
+    "push \"Could not recognise redirect URL \'\""
+    "specialinvoke <java.lang.StringBuffer: void <init>()>"->"push \"Could not recognise redirect URL \'\"";
+    "push \"Could not recognise redirect URL \'\""->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"load.r r2";
+    "load.r r2"->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "push \"\'\""
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"push \"\'\"";
+    "push \"\'\""->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>"->"virtualinvoke <org.pscode.tool.applet.VersionCheck: void popDialog(java.lang.String,java.lang.String)>";
+    "virtualinvoke <java.lang.Integer: int intValue()>"->"store.r $r37";
+    "store.r $r37"->"load.r r0";
+    "push \"Parameter Malformed!\""
+    "load.r r0"->"push \"Parameter Malformed!\"";
+    "push \"Parameter Malformed!\""->"new java.lang.StringBuffer";
+    "new java.lang.StringBuffer"->"dup1.r";
+    "dup1.r"->"specialinvoke <java.lang.StringBuffer: void <init>()>";
+    "push \"The failDelay \""
+    "specialinvoke <java.lang.StringBuffer: void <init>()>"->"push \"The failDelay \"";
+    "push \"The failDelay \""->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"load.r r2";
+    "load.r r2"->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "push \" cannot be recognised as an integer!\""
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"push \" cannot be recognised as an integer!\"";
+    "push \" cannot be recognised as an integer!\""->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>"->"virtualinvoke <org.pscode.tool.applet.VersionCheck: void popDialog(java.lang.String,java.lang.String)>";
+    "specialinvoke <java.net.URL: void <init>(java.net.URL,java.lang.String)>"->"store.r $r37";
+    "store.r $r37"->"load.r r0";
+    "load.r r0"->"push \"Malformed URL!\"";
+    "push \"Malformed URL!\""->"new java.lang.StringBuffer";
+    "new java.lang.StringBuffer"->"dup1.r";
+    "dup1.r"->"specialinvoke <java.lang.StringBuffer: void <init>()>";
+    "push \"Could not recognise applet URL \'\""
+    "specialinvoke <java.lang.StringBuffer: void <init>()>"->"push \"Could not recognise applet URL \'\"";
+    "push \"Could not recognise applet URL \'\""->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"load.r r2";
+    "load.r r2"->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"push \"\'\"";
+    "push \"\'\""->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>"->"virtualinvoke <org.pscode.tool.applet.VersionCheck: void popDialog(java.lang.String,java.lang.String)>";
+    "ifnonnull load.r r0"->"load.r r0";
+    "load.r r0"->"new java.net.URL";
+    "new java.net.URL"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "load.r r0"->"virtualinvoke <java.applet.Applet: java.net.URL getCodeBase()>";
+    "virtualinvoke <java.applet.Applet: java.net.URL getCodeBase()>"->"new java.lang.StringBuffer";
+    "new java.lang.StringBuffer"->"dup1.r";
+    "dup1.r"->"specialinvoke <java.lang.StringBuffer: void <init>()>";
+    "specialinvoke <java.lang.StringBuffer: void <init>()>"->"load.r r0";
+    "load.r r0"->"load.r r2";
+    "load.r r2"->"virtualinvoke <org.pscode.tool.applet.VersionCheck: java.lang.String urlEncode(java.lang.String)>";
+    "virtualinvoke <org.pscode.tool.applet.VersionCheck: java.lang.String urlEncode(java.lang.String)>"->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "push \"?targetVersion=\""
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"push \"?targetVersion=\"";
+    "push \"?targetVersion=\""->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"load.r r0";
+    "load.r r0"->"fieldget <org.pscode.tool.applet.VersionCheck: int targetVersion>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(int)>"
+    "fieldget <org.pscode.tool.applet.VersionCheck: int targetVersion>"->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(int)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(int)>"->"virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>"->"specialinvoke <java.net.URL: void <init>(java.net.URL,java.lang.String)>";
+    "specialinvoke <java.net.URL: void <init>(java.net.URL,java.lang.String)>"->"fieldput <org.pscode.tool.applet.VersionCheck: java.net.URL redirect>";
+    "fieldput <org.pscode.tool.applet.VersionCheck: java.net.URL redirect>"->"goto load.r r0";
+    "specialinvoke <java.net.URL: void <init>(java.net.URL,java.lang.String)>"->"store.r $r37";
+    "store.r $r37"->"load.r r0";
+    "load.r r0"->"push \"Malformed URL!\"";
+    "push \"Malformed URL!\""->"new java.lang.StringBuffer";
+    "new java.lang.StringBuffer"->"dup1.r";
+    "dup1.r"->"specialinvoke <java.lang.StringBuffer: void <init>()>";
+    "specialinvoke <java.lang.StringBuffer: void <init>()>"->"push \"Could not recognise redirect URL \'\"";
+    "push \"Could not recognise redirect URL \'\""->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"load.r r2";
+    "load.r r2"->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"push \"\'\"";
+    "push \"\'\""->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>"->"virtualinvoke <org.pscode.tool.applet.VersionCheck: void popDialog(java.lang.String,java.lang.String)>";
+    "virtualinvoke <java.lang.Float: float floatValue()>"->"store.r $r37";
+    "store.r $r37"->"load.r r0";
+    "load.r r0"->"push \"Parameter Malformed!\"";
+    "push \"Parameter Malformed!\""->"new java.lang.StringBuffer";
+    "new java.lang.StringBuffer"->"dup1.r";
+    "dup1.r"->"specialinvoke <java.lang.StringBuffer: void <init>()>";
+    "push \"The Java version \""
+    "specialinvoke <java.lang.StringBuffer: void <init>()>"->"push \"The Java version \"";
+    "push \"The Java version \""->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"load.r r2";
+    "load.r r2"->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "push \" cannot be recognised as a number!\""
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"push \" cannot be recognised as a number!\"";
+    "push \" cannot be recognised as a number!\""->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>"->"virtualinvoke <org.pscode.tool.applet.VersionCheck: void popDialog(java.lang.String,java.lang.String)>";
+    "virtualinvoke <org.pscode.tool.applet.VersionCheck: void popDialog(java.lang.String,java.lang.String)>"->"goto load.r r0";
+    "ifnull load.r r0"->"load.r r0";
+    "load.r r0"->"push \"Parameter Missing!\"";
+    "push \"Java target version must be specified in the applet parameters.  E.G.\n<PARAM NAME=\'targetVersion\' VALUE=\'1.7\'>\""
+    "push \"Parameter Missing!\""->"push \"Java target version must be specified in the applet parameters.  E.G.\n<PARAM NAME=\'targetVersion\' VALUE=\'1.7\'>\"";
+    "push \"Java target version must be specified in the applet parameters.  E.G.\n<PARAM NAME=\'targetVersion\' VALUE=\'1.7\'>\""->"virtualinvoke <org.pscode.tool.applet.VersionCheck: void popDialog(java.lang.String,java.lang.String)>";
+}

@@ -1,0 +1,45 @@
+digraph "" {
+    "r0 := @this: SpotlightV2"
+    "load.r r0"
+    "r0 := @this: SpotlightV2"->"load.r r0";
+    "push 48L"
+    "load.r r0"->"push 48L";
+    "virtualinvoke <java.awt.Component: void enableEvents(long)>"
+    "push 48L"->"virtualinvoke <java.awt.Component: void enableEvents(long)>";
+    "virtualinvoke <java.awt.Component: void enableEvents(long)>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "virtualinvoke <java.applet.Applet: java.net.URL getDocumentBase()>"
+    "load.r r0"->"virtualinvoke <java.applet.Applet: java.net.URL getDocumentBase()>";
+    "virtualinvoke <java.applet.Applet: java.net.URL getDocumentBase()>"->"load.r r0";
+    "new java.awt.MediaTracker"
+    "load.r r0"->"new java.awt.MediaTracker";
+    "dup1.r"
+    "new java.awt.MediaTracker"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "specialinvoke <java.awt.MediaTracker: void <init>(java.awt.Component)>"
+    "load.r r0"->"specialinvoke <java.awt.MediaTracker: void <init>(java.awt.Component)>";
+    "fieldput <SpotlightV2: java.awt.MediaTracker mt>"
+    "specialinvoke <java.awt.MediaTracker: void <init>(java.awt.Component)>"->"fieldput <SpotlightV2: java.awt.MediaTracker mt>";
+    "fieldput <SpotlightV2: java.awt.MediaTracker mt>"->"load.r r0";
+    "push \"image\""
+    "load.r r0"->"push \"image\"";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"
+    "push \"image\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.awt.Image getImage(java.net.URL,java.lang.String)>"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"virtualinvoke <java.applet.Applet: java.awt.Image getImage(java.net.URL,java.lang.String)>";
+    "fieldput <SpotlightV2: java.awt.Image the_pic>"
+    "virtualinvoke <java.applet.Applet: java.awt.Image getImage(java.net.URL,java.lang.String)>"->"fieldput <SpotlightV2: java.awt.Image the_pic>";
+    "fieldput <SpotlightV2: java.awt.Image the_pic>"->"load.r r0";
+    "fieldget <SpotlightV2: java.awt.MediaTracker mt>"
+    "load.r r0"->"fieldget <SpotlightV2: java.awt.MediaTracker mt>";
+    "fieldget <SpotlightV2: java.awt.MediaTracker mt>"->"load.r r0";
+    "fieldget <SpotlightV2: java.awt.Image the_pic>"
+    "load.r r0"->"fieldget <SpotlightV2: java.awt.Image the_pic>";
+    "push 0"
+    "fieldget <SpotlightV2: java.awt.Image the_pic>"->"push 0";
+    "virtualinvoke <java.awt.MediaTracker: void addImage(java.awt.Image,int)>"
+    "push 0"->"virtualinvoke <java.awt.MediaTracker: void addImage(java.awt.Image,int)>";
+    "return"
+    "virtualinvoke <java.awt.MediaTracker: void addImage(java.awt.Image,int)>"->"return";
+}

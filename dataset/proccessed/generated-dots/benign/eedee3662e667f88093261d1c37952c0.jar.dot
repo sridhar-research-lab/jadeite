@@ -1,0 +1,76 @@
+digraph "" {
+    "r0 := @this: PictureButton"
+    "load.r r0"
+    "r0 := @this: PictureButton"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "push \"LinkUrl\""
+    "load.r r0"->"push \"LinkUrl\"";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"
+    "push \"LinkUrl\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "fieldput <PictureButton: java.lang.String linkUrl>"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"fieldput <PictureButton: java.lang.String linkUrl>";
+    "fieldput <PictureButton: java.lang.String linkUrl>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "push \"LinkTarget\""
+    "load.r r0"->"push \"LinkTarget\"";
+    "push \"LinkTarget\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "fieldput <PictureButton: java.lang.String linkTarget>"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"fieldput <PictureButton: java.lang.String linkTarget>";
+    "fieldput <PictureButton: java.lang.String linkTarget>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "push \"LinkApplet\""
+    "load.r r0"->"push \"LinkApplet\"";
+    "push \"LinkApplet\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "fieldput <PictureButton: java.lang.String linkApplet>"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"fieldput <PictureButton: java.lang.String linkApplet>";
+    "fieldput <PictureButton: java.lang.String linkApplet>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "push \"LinkMessage\""
+    "load.r r0"->"push \"LinkMessage\"";
+    "push \"LinkMessage\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "fieldput <PictureButton: java.lang.String linkMessage>"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"fieldput <PictureButton: java.lang.String linkMessage>";
+    "fieldput <PictureButton: java.lang.String linkMessage>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "push \"LinkDelay\""
+    "load.r r0"->"push \"LinkDelay\"";
+    "push 100"
+    "push \"LinkDelay\""->"push 100";
+    "specialinvoke <PictureButton: int getIntegerParameter(java.lang.String,int)>"
+    "push 100"->"specialinvoke <PictureButton: int getIntegerParameter(java.lang.String,int)>";
+    "fieldput <PictureButton: int linkDelay>"
+    "specialinvoke <PictureButton: int getIntegerParameter(java.lang.String,int)>"->"fieldput <PictureButton: int linkDelay>";
+    "fieldput <PictureButton: int linkDelay>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "push \"LinkArea\""
+    "load.r r0"->"push \"LinkArea\"";
+    "specialinvoke <PictureButton: java.awt.Polygon getPolygonParameter(java.lang.String)>"
+    "push \"LinkArea\""->"specialinvoke <PictureButton: java.awt.Polygon getPolygonParameter(java.lang.String)>";
+    "fieldput <PictureButton: java.awt.Polygon linkArea>"
+    "specialinvoke <PictureButton: java.awt.Polygon getPolygonParameter(java.lang.String)>"->"fieldput <PictureButton: java.awt.Polygon linkArea>";
+    "fieldput <PictureButton: java.awt.Polygon linkArea>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "push \"ImagePosition\""
+    "load.r r0"->"push \"ImagePosition\"";
+    "specialinvoke <PictureButton: java.awt.Point getPointParameter(java.lang.String)>"
+    "push \"ImagePosition\""->"specialinvoke <PictureButton: java.awt.Point getPointParameter(java.lang.String)>";
+    "fieldput <PictureButton: java.awt.Point imagePosition>"
+    "specialinvoke <PictureButton: java.awt.Point getPointParameter(java.lang.String)>"->"fieldput <PictureButton: java.awt.Point imagePosition>";
+    "fieldput <PictureButton: java.awt.Point imagePosition>"->"load.r r0";
+    "push \"BackgroundColor\""
+    "load.r r0"->"push \"BackgroundColor\"";
+    "specialinvoke <PictureButton: java.awt.Color getColorParameter(java.lang.String)>"
+    "push \"BackgroundColor\""->"specialinvoke <PictureButton: java.awt.Color getColorParameter(java.lang.String)>";
+    "store.r r1"
+    "specialinvoke <PictureButton: java.awt.Color getColorParameter(java.lang.String)>"->"store.r r1";
+    "load.r r1"
+    "store.r r1"->"load.r r1";
+    "ifnull return"
+    "load.r r1"->"ifnull return";
+    "ifnull return"->"load.r r0";
+    "load.r r0"->"load.r r1";
+    "virtualinvoke <java.awt.Component: void setBackground(java.awt.Color)>"
+    "load.r r1"->"virtualinvoke <java.awt.Component: void setBackground(java.awt.Color)>";
+    "return"
+    "virtualinvoke <java.awt.Component: void setBackground(java.awt.Color)>"->"return";
+}

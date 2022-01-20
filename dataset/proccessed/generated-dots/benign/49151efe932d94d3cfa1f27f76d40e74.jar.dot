@@ -1,0 +1,1123 @@
+digraph "" {
+    "r0 := @this: twoRowTicker"
+    "load.r r0"
+    "r0 := @this: twoRowTicker"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "virtualinvoke <java.applet.Applet: java.net.URL getCodeBase()>"
+    "load.r r0"->"virtualinvoke <java.applet.Applet: java.net.URL getCodeBase()>";
+    "fieldput <twoRowTicker: java.net.URL homeUrl>"
+    "virtualinvoke <java.applet.Applet: java.net.URL getCodeBase()>"->"fieldput <twoRowTicker: java.net.URL homeUrl>";
+    "fieldput <twoRowTicker: java.net.URL homeUrl>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "virtualinvoke <java.applet.Applet: java.net.URL getDocumentBase()>"
+    "load.r r0"->"virtualinvoke <java.applet.Applet: java.net.URL getDocumentBase()>";
+    "fieldput <twoRowTicker: java.net.URL docUrl>"
+    "virtualinvoke <java.applet.Applet: java.net.URL getDocumentBase()>"->"fieldput <twoRowTicker: java.net.URL docUrl>";
+    "fieldput <twoRowTicker: java.net.URL docUrl>"->"load.r r0";
+    "fieldget <twoRowTicker: boolean localTest>"
+    "load.r r0"->"fieldget <twoRowTicker: boolean localTest>";
+    "ifeq load.r r0"
+    "fieldget <twoRowTicker: boolean localTest>"->"ifeq load.r r0";
+    "ifeq load.r r0"->"load.r r0";
+    "push \"http://dev.quotemedia.com/\""
+    "load.r r0"->"push \"http://dev.quotemedia.com/\"";
+    "fieldput <twoRowTicker: java.lang.String baseUrl>"
+    "push \"http://dev.quotemedia.com/\""->"fieldput <twoRowTicker: java.lang.String baseUrl>";
+    "goto load.r r0"
+    "fieldput <twoRowTicker: java.lang.String baseUrl>"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "push \"links\""
+    "load.r r0"->"push \"links\"";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"
+    "push \"links\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "ifnull load.r r0"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"push \"links\"";
+    "push \"links\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "fieldput <twoRowTicker: java.lang.String links>"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"fieldput <twoRowTicker: java.lang.String links>";
+    "fieldput <twoRowTicker: java.lang.String links>"->"load.r r0";
+    "push \"indices\""
+    "load.r r0"->"push \"indices\"";
+    "push \"indices\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"push \"indices\"";
+    "push \"indices\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "fieldput <twoRowTicker: java.lang.String indices>"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"fieldput <twoRowTicker: java.lang.String indices>";
+    "fieldput <twoRowTicker: java.lang.String indices>"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "new java.lang.StringBuffer"
+    "load.r r0"->"new java.lang.StringBuffer";
+    "dup1.r"
+    "new java.lang.StringBuffer"->"dup1.r";
+    "specialinvoke <java.lang.StringBuffer: void <init>()>"
+    "dup1.r"->"specialinvoke <java.lang.StringBuffer: void <init>()>";
+    "specialinvoke <java.lang.StringBuffer: void <init>()>"->"load.r r0";
+    "fieldget <twoRowTicker: java.lang.String baseUrl>"
+    "load.r r0"->"fieldget <twoRowTicker: java.lang.String baseUrl>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"
+    "fieldget <twoRowTicker: java.lang.String baseUrl>"->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "push \"quotetools/getTickerQuotes.csv?host=\""
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"push \"quotetools/getTickerQuotes.csv?host=\"";
+    "push \"quotetools/getTickerQuotes.csv?host=\""->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"load.r r0";
+    "fieldget <twoRowTicker: java.net.URL docUrl>"
+    "load.r r0"->"fieldget <twoRowTicker: java.net.URL docUrl>";
+    "virtualinvoke <java.net.URL: java.lang.String getHost()>"
+    "fieldget <twoRowTicker: java.net.URL docUrl>"->"virtualinvoke <java.net.URL: java.lang.String getHost()>";
+    "virtualinvoke <java.net.URL: java.lang.String getHost()>"->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "push \"&\""
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"push \"&\"";
+    "push \"&\""->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>"
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>";
+    "fieldput <twoRowTicker: java.lang.String baseDataUrl>"
+    "virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>"->"fieldput <twoRowTicker: java.lang.String baseDataUrl>";
+    "fieldput <twoRowTicker: java.lang.String baseDataUrl>"->"load.r r0";
+    "push \"webmasterId\""
+    "load.r r0"->"push \"webmasterId\"";
+    "push \"webmasterId\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"push \"webmasterId\"";
+    "push \"webmasterId\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "fieldput <twoRowTicker: java.lang.String wmid>"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"fieldput <twoRowTicker: java.lang.String wmid>";
+    "fieldput <twoRowTicker: java.lang.String wmid>"->"load.r r0";
+    "load.r r0"->"new java.lang.StringBuffer";
+    "new java.lang.StringBuffer"->"dup1.r";
+    "dup1.r"->"specialinvoke <java.lang.StringBuffer: void <init>()>";
+    "specialinvoke <java.lang.StringBuffer: void <init>()>"->"load.r r0";
+    "fieldget <twoRowTicker: java.lang.String baseDataUrl>"
+    "load.r r0"->"fieldget <twoRowTicker: java.lang.String baseDataUrl>";
+    "fieldget <twoRowTicker: java.lang.String baseDataUrl>"->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "push \"webmasterId=\""
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"push \"webmasterId=\"";
+    "push \"webmasterId=\""->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"load.r r0";
+    "fieldget <twoRowTicker: java.lang.String wmid>"
+    "load.r r0"->"fieldget <twoRowTicker: java.lang.String wmid>";
+    "fieldget <twoRowTicker: java.lang.String wmid>"->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"push \"&\"";
+    "push \"&\""->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>"->"fieldput <twoRowTicker: java.lang.String baseDataUrl>";
+    "fieldput <twoRowTicker: java.lang.String baseDataUrl>"->"load.r r0";
+    "push \"targetsym\""
+    "load.r r0"->"push \"targetsym\"";
+    "push \"targetsym\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"push \"targetsym\"";
+    "push \"targetsym\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "fieldput <twoRowTicker: java.lang.String targetsym>"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"fieldput <twoRowTicker: java.lang.String targetsym>";
+    "fieldput <twoRowTicker: java.lang.String targetsym>"->"load.r r0";
+    "push \"dispMode\""
+    "load.r r0"->"push \"dispMode\"";
+    "push \"dispMode\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"push \"dispMode\"";
+    "push \"dispMode\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "fieldput <twoRowTicker: java.lang.String mode>"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"fieldput <twoRowTicker: java.lang.String mode>";
+    "fieldput <twoRowTicker: java.lang.String mode>"->"load.r r0";
+    "push \"symbolsfontsize\""
+    "load.r r0"->"push \"symbolsfontsize\"";
+    "push \"symbolsfontsize\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "ifnull push 1"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"ifnull push 1";
+    "ifnull push 1"->"load.r r0";
+    "new java.lang.Integer"
+    "load.r r0"->"new java.lang.Integer";
+    "new java.lang.Integer"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "load.r r0"->"push \"symbolsfontsize\"";
+    "push \"symbolsfontsize\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "specialinvoke <java.lang.Integer: void <init>(java.lang.String)>"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"specialinvoke <java.lang.Integer: void <init>(java.lang.String)>";
+    "virtualinvoke <java.lang.Integer: int intValue()>"
+    "specialinvoke <java.lang.Integer: void <init>(java.lang.String)>"->"virtualinvoke <java.lang.Integer: int intValue()>";
+    "fieldput <twoRowTicker: int fontsize>"
+    "virtualinvoke <java.lang.Integer: int intValue()>"->"fieldput <twoRowTicker: int fontsize>";
+    "push 1"
+    "fieldput <twoRowTicker: int fontsize>"->"push 1";
+    "store.b $r68"
+    "push 1"->"store.b $r68";
+    "store.b $r68"->"load.r r0";
+    "push \"disclaimer\""
+    "load.r r0"->"push \"disclaimer\"";
+    "push \"disclaimer\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "ifnull push 0"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"ifnull push 0";
+    "ifnull push 0"->"load.r r0";
+    "load.r r0"->"push \"disclaimer\"";
+    "push \"disclaimer\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "push \"off\""
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"push \"off\"";
+    "virtualinvoke <java.lang.String: boolean equalsIgnoreCase(java.lang.String)>"
+    "push \"off\""->"virtualinvoke <java.lang.String: boolean equalsIgnoreCase(java.lang.String)>";
+    "ifeq push 0"
+    "virtualinvoke <java.lang.String: boolean equalsIgnoreCase(java.lang.String)>"->"ifeq push 0";
+    "push 0"
+    "ifeq push 0"->"push 0";
+    "push 0"->"store.b $r68";
+    "store.b $r68"->"push 0";
+    "store.b $r166"
+    "push 0"->"store.b $r166";
+    "store.b $r166"->"load.r r0";
+    "push \"boldsymbol\""
+    "load.r r0"->"push \"boldsymbol\"";
+    "push \"boldsymbol\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r r0";
+    "load.r r0"->"push \"boldsymbol\"";
+    "push \"boldsymbol\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "push \"yes\""
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"push \"yes\"";
+    "push \"yes\""->"virtualinvoke <java.lang.String: boolean equalsIgnoreCase(java.lang.String)>";
+    "virtualinvoke <java.lang.String: boolean equalsIgnoreCase(java.lang.String)>"->"ifeq load.r r0";
+    "ifeq load.r r0"->"push 1";
+    "push 1"->"store.b $r166";
+    "store.b $r166"->"load.r r0";
+    "new twoRowHandle"
+    "load.r r0"->"new twoRowHandle";
+    "new twoRowHandle"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "fieldget <twoRowTicker: int fontsize>"
+    "load.r r0"->"fieldget <twoRowTicker: int fontsize>";
+    "fieldget <twoRowTicker: int fontsize>"->"load.r r0";
+    "virtualinvoke <java.awt.Component: java.awt.Dimension getSize()>"
+    "load.r r0"->"virtualinvoke <java.awt.Component: java.awt.Dimension getSize()>";
+    "fieldget <java.awt.Dimension: int height>"
+    "virtualinvoke <java.awt.Component: java.awt.Dimension getSize()>"->"fieldget <java.awt.Dimension: int height>";
+    "push 2"
+    "fieldget <java.awt.Dimension: int height>"->"push 2";
+    "div.i"
+    "push 2"->"div.i";
+    "div.i"->"load.r r0";
+    "load.r r0"->"virtualinvoke <java.awt.Component: java.awt.Dimension getSize()>";
+    "fieldget <java.awt.Dimension: int width>"
+    "virtualinvoke <java.awt.Component: java.awt.Dimension getSize()>"->"fieldget <java.awt.Dimension: int width>";
+    "load.b $r166"
+    "fieldget <java.awt.Dimension: int width>"->"load.b $r166";
+    "load.b $r68"
+    "load.b $r166"->"load.b $r68";
+    "specialinvoke <twoRowHandle: void <init>(useHandleInterface,int,int,int,boolean,boolean)>"
+    "load.b $r68"->"specialinvoke <twoRowHandle: void <init>(useHandleInterface,int,int,int,boolean,boolean)>";
+    "fieldput <twoRowTicker: twoRowHandle eq>"
+    "specialinvoke <twoRowHandle: void <init>(useHandleInterface,int,int,int,boolean,boolean)>"->"fieldput <twoRowTicker: twoRowHandle eq>";
+    "fieldput <twoRowTicker: twoRowHandle eq>"->"load.r r0";
+    "push \"indicesfontsize\""
+    "load.r r0"->"push \"indicesfontsize\"";
+    "push \"indicesfontsize\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r r0";
+    "load.r r0"->"new java.lang.Integer";
+    "new java.lang.Integer"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "load.r r0"->"push \"indicesfontsize\"";
+    "push \"indicesfontsize\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"specialinvoke <java.lang.Integer: void <init>(java.lang.String)>";
+    "specialinvoke <java.lang.Integer: void <init>(java.lang.String)>"->"virtualinvoke <java.lang.Integer: int intValue()>";
+    "virtualinvoke <java.lang.Integer: int intValue()>"->"fieldput <twoRowTicker: int fontsize>";
+    "fieldput <twoRowTicker: int fontsize>"->"load.r r0";
+    "load.r r0"->"new twoRowHandle";
+    "new twoRowHandle"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <twoRowTicker: int fontsize>";
+    "fieldget <twoRowTicker: int fontsize>"->"load.r r0";
+    "load.r r0"->"virtualinvoke <java.awt.Component: java.awt.Dimension getSize()>";
+    "virtualinvoke <java.awt.Component: java.awt.Dimension getSize()>"->"fieldget <java.awt.Dimension: int height>";
+    "fieldget <java.awt.Dimension: int height>"->"push 2";
+    "push 2"->"div.i";
+    "div.i"->"load.r r0";
+    "load.r r0"->"virtualinvoke <java.awt.Component: java.awt.Dimension getSize()>";
+    "virtualinvoke <java.awt.Component: java.awt.Dimension getSize()>"->"fieldget <java.awt.Dimension: int width>";
+    "fieldget <java.awt.Dimension: int width>"->"load.b $r166";
+    "load.b $r166"->"load.b $r68";
+    "load.b $r68"->"specialinvoke <twoRowHandle: void <init>(useHandleInterface,int,int,int,boolean,boolean)>";
+    "fieldput <twoRowTicker: twoRowHandle eq1>"
+    "specialinvoke <twoRowHandle: void <init>(useHandleInterface,int,int,int,boolean,boolean)>"->"fieldput <twoRowTicker: twoRowHandle eq1>";
+    "fieldput <twoRowTicker: twoRowHandle eq1>"->"load.r r0";
+    "fieldget <twoRowTicker: twoRowHandle eq>"
+    "load.r r0"->"fieldget <twoRowTicker: twoRowHandle eq>";
+    "fieldget <twoRowTicker: twoRowHandle eq>"->"load.r r0";
+    "fieldget <twoRowTicker: java.lang.String mode>"
+    "load.r r0"->"fieldget <twoRowTicker: java.lang.String mode>";
+    "virtualinvoke <twoRowHandle: void setDisplayMode(java.lang.String)>"
+    "fieldget <twoRowTicker: java.lang.String mode>"->"virtualinvoke <twoRowHandle: void setDisplayMode(java.lang.String)>";
+    "virtualinvoke <twoRowHandle: void setDisplayMode(java.lang.String)>"->"load.r r0";
+    "fieldget <twoRowTicker: twoRowHandle eq1>"
+    "load.r r0"->"fieldget <twoRowTicker: twoRowHandle eq1>";
+    "fieldget <twoRowTicker: twoRowHandle eq1>"->"load.r r0";
+    "load.r r0"->"fieldget <twoRowTicker: java.lang.String mode>";
+    "fieldget <twoRowTicker: java.lang.String mode>"->"virtualinvoke <twoRowHandle: void setDisplayMode(java.lang.String)>";
+    "virtualinvoke <twoRowHandle: void setDisplayMode(java.lang.String)>"->"load.r r0";
+    "push \"showCurrency\""
+    "load.r r0"->"push \"showCurrency\"";
+    "push \"showCurrency\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "ifnull push \"false\""
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"ifnull push \"false\"";
+    "ifnull push \"false\""->"load.r r0";
+    "load.r r0"->"push \"showCurrency\"";
+    "push \"showCurrency\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "store.r $r68"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"store.r $r68";
+    "store.r $r68"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "load.r $r68"
+    "load.r r0"->"load.r $r68";
+    "fieldput <twoRowTicker: java.lang.String displayCurrency>"
+    "load.r $r68"->"fieldput <twoRowTicker: java.lang.String displayCurrency>";
+    "fieldput <twoRowTicker: java.lang.String displayCurrency>"->"load.r r0";
+    "push \"speedtop\""
+    "load.r r0"->"push \"speedtop\"";
+    "push \"speedtop\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <twoRowTicker: twoRowHandle eq>";
+    "fieldget <twoRowTicker: twoRowHandle eq>"->"new java.lang.Integer";
+    "new java.lang.Integer"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "load.r r0"->"push \"speedtop\"";
+    "push \"speedtop\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"specialinvoke <java.lang.Integer: void <init>(java.lang.String)>";
+    "specialinvoke <java.lang.Integer: void <init>(java.lang.String)>"->"virtualinvoke <java.lang.Integer: int intValue()>";
+    "fieldput <twoRowHandle: int delay>"
+    "virtualinvoke <java.lang.Integer: int intValue()>"->"fieldput <twoRowHandle: int delay>";
+    "fieldput <twoRowHandle: int delay>"->"load.r r0";
+    "push \"speedbottom\""
+    "load.r r0"->"push \"speedbottom\"";
+    "push \"speedbottom\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <twoRowTicker: twoRowHandle eq1>";
+    "fieldget <twoRowTicker: twoRowHandle eq1>"->"new java.lang.Integer";
+    "new java.lang.Integer"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "load.r r0"->"push \"speedbottom\"";
+    "push \"speedbottom\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"specialinvoke <java.lang.Integer: void <init>(java.lang.String)>";
+    "specialinvoke <java.lang.Integer: void <init>(java.lang.String)>"->"virtualinvoke <java.lang.Integer: int intValue()>";
+    "virtualinvoke <java.lang.Integer: int intValue()>"->"fieldput <twoRowHandle: int delay>";
+    "fieldput <twoRowHandle: int delay>"->"load.r r0";
+    "push \"uparrowcolor\""
+    "load.r r0"->"push \"uparrowcolor\"";
+    "push \"uparrowcolor\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <twoRowTicker: twoRowHandle eq>";
+    "fieldget <twoRowTicker: twoRowHandle eq>"->"load.r r0";
+    "load.r r0"->"push \"uparrowcolor\"";
+    "push \"uparrowcolor\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "staticinvoke <java.awt.Color: java.awt.Color decode(java.lang.String)>"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"staticinvoke <java.awt.Color: java.awt.Color decode(java.lang.String)>";
+    "fieldput <twoRowHandle: java.awt.Color qup>"
+    "staticinvoke <java.awt.Color: java.awt.Color decode(java.lang.String)>"->"fieldput <twoRowHandle: java.awt.Color qup>";
+    "fieldput <twoRowHandle: java.awt.Color qup>"->"load.r r0";
+    "load.r r0"->"fieldget <twoRowTicker: twoRowHandle eq1>";
+    "fieldget <twoRowTicker: twoRowHandle eq1>"->"load.r r0";
+    "load.r r0"->"push \"uparrowcolor\"";
+    "push \"uparrowcolor\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"staticinvoke <java.awt.Color: java.awt.Color decode(java.lang.String)>";
+    "staticinvoke <java.awt.Color: java.awt.Color decode(java.lang.String)>"->"fieldput <twoRowHandle: java.awt.Color qup>";
+    "fieldput <twoRowHandle: java.awt.Color qup>"->"load.r r0";
+    "push \"downarrowcolor\""
+    "load.r r0"->"push \"downarrowcolor\"";
+    "push \"downarrowcolor\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <twoRowTicker: twoRowHandle eq>";
+    "fieldget <twoRowTicker: twoRowHandle eq>"->"load.r r0";
+    "load.r r0"->"push \"downarrowcolor\"";
+    "push \"downarrowcolor\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"staticinvoke <java.awt.Color: java.awt.Color decode(java.lang.String)>";
+    "fieldput <twoRowHandle: java.awt.Color qdown>"
+    "staticinvoke <java.awt.Color: java.awt.Color decode(java.lang.String)>"->"fieldput <twoRowHandle: java.awt.Color qdown>";
+    "fieldput <twoRowHandle: java.awt.Color qdown>"->"load.r r0";
+    "load.r r0"->"fieldget <twoRowTicker: twoRowHandle eq1>";
+    "fieldget <twoRowTicker: twoRowHandle eq1>"->"load.r r0";
+    "load.r r0"->"push \"downarrowcolor\"";
+    "push \"downarrowcolor\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"staticinvoke <java.awt.Color: java.awt.Color decode(java.lang.String)>";
+    "staticinvoke <java.awt.Color: java.awt.Color decode(java.lang.String)>"->"fieldput <twoRowHandle: java.awt.Color qdown>";
+    "fieldput <twoRowHandle: java.awt.Color qdown>"->"load.r r0";
+    "push \"symbols\""
+    "load.r r0"->"push \"symbols\"";
+    "push \"symbols\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"push \"symbols\"";
+    "push \"symbols\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.lang.String: java.lang.String toUpperCase()>"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"virtualinvoke <java.lang.String: java.lang.String toUpperCase()>";
+    "fieldput <twoRowTicker: java.lang.String paramsymbol>"
+    "virtualinvoke <java.lang.String: java.lang.String toUpperCase()>"->"fieldput <twoRowTicker: java.lang.String paramsymbol>";
+    "fieldput <twoRowTicker: java.lang.String paramsymbol>"->"load.r r0";
+    "push \"excludeExchanges\""
+    "load.r r0"->"push \"excludeExchanges\"";
+    "push \"excludeExchanges\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"push \"excludeExchanges\"";
+    "push \"excludeExchanges\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"virtualinvoke <java.lang.String: java.lang.String toUpperCase()>";
+    "fieldput <twoRowTicker: java.lang.String excludeExchanges>"
+    "virtualinvoke <java.lang.String: java.lang.String toUpperCase()>"->"fieldput <twoRowTicker: java.lang.String excludeExchanges>";
+    "fieldput <twoRowTicker: java.lang.String excludeExchanges>"->"load.r r0";
+    "push \"direction\""
+    "load.r r0"->"push \"direction\"";
+    "push \"direction\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"push \"direction\"";
+    "push \"direction\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "fieldput <twoRowTicker: java.lang.String direction>"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"fieldput <twoRowTicker: java.lang.String direction>";
+    "fieldput <twoRowTicker: java.lang.String direction>"->"load.r r0";
+    "load.r r0"->"fieldget <twoRowTicker: twoRowHandle eq>";
+    "fieldget <twoRowTicker: twoRowHandle eq>"->"load.r r0";
+    "fieldget <twoRowTicker: java.lang.String direction>"
+    "load.r r0"->"fieldget <twoRowTicker: java.lang.String direction>";
+    "fieldget <twoRowTicker: java.lang.String direction>"->"virtualinvoke <java.lang.String: java.lang.String toUpperCase()>";
+    "fieldput <twoRowHandle: java.lang.String direction>"
+    "virtualinvoke <java.lang.String: java.lang.String toUpperCase()>"->"fieldput <twoRowHandle: java.lang.String direction>";
+    "fieldput <twoRowHandle: java.lang.String direction>"->"load.r r0";
+    "load.r r0"->"fieldget <twoRowTicker: twoRowHandle eq1>";
+    "fieldget <twoRowTicker: twoRowHandle eq1>"->"load.r r0";
+    "load.r r0"->"fieldget <twoRowTicker: java.lang.String direction>";
+    "fieldget <twoRowTicker: java.lang.String direction>"->"virtualinvoke <java.lang.String: java.lang.String toUpperCase()>";
+    "virtualinvoke <java.lang.String: java.lang.String toUpperCase()>"->"fieldput <twoRowHandle: java.lang.String direction>";
+    "fieldput <twoRowHandle: java.lang.String direction>"->"load.r r0";
+    "push \"topHighlight\""
+    "load.r r0"->"push \"topHighlight\"";
+    "push \"topHighlight\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <twoRowTicker: twoRowHandle eq>";
+    "fieldget <twoRowTicker: twoRowHandle eq>"->"load.r r0";
+    "load.r r0"->"push \"topHighlight\"";
+    "push \"topHighlight\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"staticinvoke <java.awt.Color: java.awt.Color decode(java.lang.String)>";
+    "fieldput <twoRowHandle: java.awt.Color highlight>"
+    "staticinvoke <java.awt.Color: java.awt.Color decode(java.lang.String)>"->"fieldput <twoRowHandle: java.awt.Color highlight>";
+    "fieldput <twoRowHandle: java.awt.Color highlight>"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "push \"bottomHighlight\""
+    "load.r r0"->"push \"bottomHighlight\"";
+    "push \"bottomHighlight\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <twoRowTicker: twoRowHandle eq1>";
+    "fieldget <twoRowTicker: twoRowHandle eq1>"->"load.r r0";
+    "load.r r0"->"push \"bottomHighlight\"";
+    "push \"bottomHighlight\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"staticinvoke <java.awt.Color: java.awt.Color decode(java.lang.String)>";
+    "staticinvoke <java.awt.Color: java.awt.Color decode(java.lang.String)>"->"fieldput <twoRowHandle: java.awt.Color highlight>";
+    "fieldput <twoRowHandle: java.awt.Color highlight>"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "push \"bgtop\""
+    "load.r r0"->"push \"bgtop\"";
+    "push \"bgtop\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"push \"bgtop\"";
+    "push \"bgtop\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"staticinvoke <java.awt.Color: java.awt.Color decode(java.lang.String)>";
+    "fieldput <twoRowTicker: java.awt.Color bgtop>"
+    "staticinvoke <java.awt.Color: java.awt.Color decode(java.lang.String)>"->"fieldput <twoRowTicker: java.awt.Color bgtop>";
+    "fieldput <twoRowTicker: java.awt.Color bgtop>"->"load.r r0";
+    "push \"fgtop\""
+    "load.r r0"->"push \"fgtop\"";
+    "push \"fgtop\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"push \"fgtop\"";
+    "push \"fgtop\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"staticinvoke <java.awt.Color: java.awt.Color decode(java.lang.String)>";
+    "fieldput <twoRowTicker: java.awt.Color fgtop>"
+    "staticinvoke <java.awt.Color: java.awt.Color decode(java.lang.String)>"->"fieldput <twoRowTicker: java.awt.Color fgtop>";
+    "fieldput <twoRowTicker: java.awt.Color fgtop>"->"load.r r0";
+    "push \"bgbottom\""
+    "load.r r0"->"push \"bgbottom\"";
+    "push \"bgbottom\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"push \"bgbottom\"";
+    "push \"bgbottom\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"staticinvoke <java.awt.Color: java.awt.Color decode(java.lang.String)>";
+    "fieldput <twoRowTicker: java.awt.Color bgbottom>"
+    "staticinvoke <java.awt.Color: java.awt.Color decode(java.lang.String)>"->"fieldput <twoRowTicker: java.awt.Color bgbottom>";
+    "fieldput <twoRowTicker: java.awt.Color bgbottom>"->"load.r r0";
+    "push \"fgbottom\""
+    "load.r r0"->"push \"fgbottom\"";
+    "push \"fgbottom\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"push \"fgbottom\"";
+    "push \"fgbottom\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"staticinvoke <java.awt.Color: java.awt.Color decode(java.lang.String)>";
+    "fieldput <twoRowTicker: java.awt.Color fgbottom>"
+    "staticinvoke <java.awt.Color: java.awt.Color decode(java.lang.String)>"->"fieldput <twoRowTicker: java.awt.Color fgbottom>";
+    "fieldput <twoRowTicker: java.awt.Color fgbottom>"->"load.r r0";
+    "push \"bgeast\""
+    "load.r r0"->"push \"bgeast\"";
+    "push \"bgeast\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"push \"bgeast\"";
+    "push \"bgeast\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"staticinvoke <java.awt.Color: java.awt.Color decode(java.lang.String)>";
+    "fieldput <twoRowTicker: java.awt.Color bgeast>"
+    "staticinvoke <java.awt.Color: java.awt.Color decode(java.lang.String)>"->"fieldput <twoRowTicker: java.awt.Color bgeast>";
+    "fieldput <twoRowTicker: java.awt.Color bgeast>"->"load.r r0";
+    "push \"bgwest\""
+    "load.r r0"->"push \"bgwest\"";
+    "push \"bgwest\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"push \"bgwest\"";
+    "push \"bgwest\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"staticinvoke <java.awt.Color: java.awt.Color decode(java.lang.String)>";
+    "fieldput <twoRowTicker: java.awt.Color bgwest>"
+    "staticinvoke <java.awt.Color: java.awt.Color decode(java.lang.String)>"->"fieldput <twoRowTicker: java.awt.Color bgwest>";
+    "fieldput <twoRowTicker: java.awt.Color bgwest>"->"load.r r0";
+    "push \"bgbtn\""
+    "load.r r0"->"push \"bgbtn\"";
+    "push \"bgbtn\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"push \"bgbtn\"";
+    "push \"bgbtn\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"staticinvoke <java.awt.Color: java.awt.Color decode(java.lang.String)>";
+    "fieldput <twoRowTicker: java.awt.Color bgbtn>"
+    "staticinvoke <java.awt.Color: java.awt.Color decode(java.lang.String)>"->"fieldput <twoRowTicker: java.awt.Color bgbtn>";
+    "fieldput <twoRowTicker: java.awt.Color bgbtn>"->"load.r r0";
+    "push \"fgbtn\""
+    "load.r r0"->"push \"fgbtn\"";
+    "push \"fgbtn\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"push \"fgbtn\"";
+    "push \"fgbtn\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"staticinvoke <java.awt.Color: java.awt.Color decode(java.lang.String)>";
+    "fieldput <twoRowTicker: java.awt.Color fgbtn>"
+    "staticinvoke <java.awt.Color: java.awt.Color decode(java.lang.String)>"->"fieldput <twoRowTicker: java.awt.Color fgbtn>";
+    "fieldput <twoRowTicker: java.awt.Color fgbtn>"->"load.r r0";
+    "load.r r0"->"fieldget <twoRowTicker: twoRowHandle eq>";
+    "fieldget <twoRowTicker: twoRowHandle eq>"->"load.r r0";
+    "fieldget <twoRowTicker: java.awt.Color bgtop>"
+    "load.r r0"->"fieldget <twoRowTicker: java.awt.Color bgtop>";
+    "fieldput <twoRowHandle: java.awt.Color bg>"
+    "fieldget <twoRowTicker: java.awt.Color bgtop>"->"fieldput <twoRowHandle: java.awt.Color bg>";
+    "fieldput <twoRowHandle: java.awt.Color bg>"->"load.r r0";
+    "load.r r0"->"fieldget <twoRowTicker: twoRowHandle eq>";
+    "fieldget <twoRowTicker: twoRowHandle eq>"->"load.r r0";
+    "fieldget <twoRowTicker: java.awt.Color fgtop>"
+    "load.r r0"->"fieldget <twoRowTicker: java.awt.Color fgtop>";
+    "fieldput <twoRowHandle: java.awt.Color fg>"
+    "fieldget <twoRowTicker: java.awt.Color fgtop>"->"fieldput <twoRowHandle: java.awt.Color fg>";
+    "fieldput <twoRowHandle: java.awt.Color fg>"->"load.r r0";
+    "load.r r0"->"fieldget <twoRowTicker: twoRowHandle eq1>";
+    "fieldget <twoRowTicker: twoRowHandle eq1>"->"load.r r0";
+    "fieldget <twoRowTicker: java.awt.Color bgbottom>"
+    "load.r r0"->"fieldget <twoRowTicker: java.awt.Color bgbottom>";
+    "fieldget <twoRowTicker: java.awt.Color bgbottom>"->"fieldput <twoRowHandle: java.awt.Color bg>";
+    "fieldput <twoRowHandle: java.awt.Color bg>"->"load.r r0";
+    "load.r r0"->"fieldget <twoRowTicker: twoRowHandle eq1>";
+    "fieldget <twoRowTicker: twoRowHandle eq1>"->"load.r r0";
+    "fieldget <twoRowTicker: java.awt.Color fgbottom>"
+    "load.r r0"->"fieldget <twoRowTicker: java.awt.Color fgbottom>";
+    "fieldget <twoRowTicker: java.awt.Color fgbottom>"->"fieldput <twoRowHandle: java.awt.Color fg>";
+    "fieldput <twoRowHandle: java.awt.Color fg>"->"load.r r0";
+    "load.r r0"->"fieldget <twoRowTicker: twoRowHandle eq1>";
+    "fieldget <twoRowTicker: twoRowHandle eq1>"->"load.r r0";
+    "load.r r0"->"fieldget <twoRowTicker: java.awt.Color bgbottom>";
+    "virtualinvoke <java.awt.Component: void setBackground(java.awt.Color)>"
+    "fieldget <twoRowTicker: java.awt.Color bgbottom>"->"virtualinvoke <java.awt.Component: void setBackground(java.awt.Color)>";
+    "virtualinvoke <java.awt.Component: void setBackground(java.awt.Color)>"->"load.r r0";
+    "load.r r0"->"fieldget <twoRowTicker: twoRowHandle eq>";
+    "fieldget <twoRowTicker: twoRowHandle eq>"->"load.r r0";
+    "load.r r0"->"fieldget <twoRowTicker: java.awt.Color bgtop>";
+    "fieldget <twoRowTicker: java.awt.Color bgtop>"->"virtualinvoke <java.awt.Component: void setBackground(java.awt.Color)>";
+    "virtualinvoke <java.awt.Component: void setBackground(java.awt.Color)>"->"load.r r0";
+    "new java.awt.BorderLayout"
+    "load.r r0"->"new java.awt.BorderLayout";
+    "new java.awt.BorderLayout"->"dup1.r";
+    "specialinvoke <java.awt.BorderLayout: void <init>()>"
+    "dup1.r"->"specialinvoke <java.awt.BorderLayout: void <init>()>";
+    "virtualinvoke <java.awt.Container: void setLayout(java.awt.LayoutManager)>"
+    "specialinvoke <java.awt.BorderLayout: void <init>()>"->"virtualinvoke <java.awt.Container: void setLayout(java.awt.LayoutManager)>";
+    "new java.net.URL"
+    "virtualinvoke <java.awt.Container: void setLayout(java.awt.LayoutManager)>"->"new java.net.URL";
+    "new java.net.URL"->"store.r $r68";
+    "store.r $r68"->"load.r $r68";
+    "load.r $r68"->"new java.lang.StringBuffer";
+    "new java.lang.StringBuffer"->"dup1.r";
+    "dup1.r"->"specialinvoke <java.lang.StringBuffer: void <init>()>";
+    "specialinvoke <java.lang.StringBuffer: void <init>()>"->"load.r r0";
+    "load.r r0"->"fieldget <twoRowTicker: java.lang.String baseUrl>";
+    "fieldget <twoRowTicker: java.lang.String baseUrl>"->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "push \"quotetools/applet/images/\""
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"push \"quotetools/applet/images/\"";
+    "push \"quotetools/applet/images/\""->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>";
+    "specialinvoke <java.net.URL: void <init>(java.lang.String)>"
+    "virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>"->"specialinvoke <java.net.URL: void <init>(java.lang.String)>";
+    "specialinvoke <java.net.URL: void <init>(java.lang.String)>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"load.r $r68";
+    "push \"rl.gif\""
+    "load.r $r68"->"push \"rl.gif\"";
+    "virtualinvoke <java.applet.Applet: java.awt.Image getImage(java.net.URL,java.lang.String)>"
+    "push \"rl.gif\""->"virtualinvoke <java.applet.Applet: java.awt.Image getImage(java.net.URL,java.lang.String)>";
+    "fieldput <twoRowTicker: java.awt.Image rt>"
+    "virtualinvoke <java.applet.Applet: java.awt.Image getImage(java.net.URL,java.lang.String)>"->"fieldput <twoRowTicker: java.awt.Image rt>";
+    "fieldput <twoRowTicker: java.awt.Image rt>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"load.r $r68";
+    "push \"ed.gif\""
+    "load.r $r68"->"push \"ed.gif\"";
+    "push \"ed.gif\""->"virtualinvoke <java.applet.Applet: java.awt.Image getImage(java.net.URL,java.lang.String)>";
+    "fieldput <twoRowTicker: java.awt.Image eod>"
+    "virtualinvoke <java.applet.Applet: java.awt.Image getImage(java.net.URL,java.lang.String)>"->"fieldput <twoRowTicker: java.awt.Image eod>";
+    "fieldput <twoRowTicker: java.awt.Image eod>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"load.r $r68";
+    "push \"pd.gif\""
+    "load.r $r68"->"push \"pd.gif\"";
+    "push \"pd.gif\""->"virtualinvoke <java.applet.Applet: java.awt.Image getImage(java.net.URL,java.lang.String)>";
+    "fieldput <twoRowTicker: java.awt.Image pd>"
+    "virtualinvoke <java.applet.Applet: java.awt.Image getImage(java.net.URL,java.lang.String)>"->"fieldput <twoRowTicker: java.awt.Image pd>";
+    "new java.awt.MediaTracker"
+    "fieldput <twoRowTicker: java.awt.Image pd>"->"new java.awt.MediaTracker";
+    "new java.awt.MediaTracker"->"store.r $r68";
+    "store.r $r68"->"load.r $r68";
+    "load.r $r68"->"load.r r0";
+    "specialinvoke <java.awt.MediaTracker: void <init>(java.awt.Component)>"
+    "load.r r0"->"specialinvoke <java.awt.MediaTracker: void <init>(java.awt.Component)>";
+    "specialinvoke <java.awt.MediaTracker: void <init>(java.awt.Component)>"->"load.r $r68";
+    "load.r $r68"->"load.r r0";
+    "fieldget <twoRowTicker: java.awt.Image rt>"
+    "load.r r0"->"fieldget <twoRowTicker: java.awt.Image rt>";
+    "fieldget <twoRowTicker: java.awt.Image rt>"->"push 1";
+    "virtualinvoke <java.awt.MediaTracker: void addImage(java.awt.Image,int)>"
+    "push 1"->"virtualinvoke <java.awt.MediaTracker: void addImage(java.awt.Image,int)>";
+    "virtualinvoke <java.awt.MediaTracker: void addImage(java.awt.Image,int)>"->"load.r $r68";
+    "load.r $r68"->"load.r r0";
+    "fieldget <twoRowTicker: java.awt.Image eod>"
+    "load.r r0"->"fieldget <twoRowTicker: java.awt.Image eod>";
+    "fieldget <twoRowTicker: java.awt.Image eod>"->"push 2";
+    "push 2"->"virtualinvoke <java.awt.MediaTracker: void addImage(java.awt.Image,int)>";
+    "virtualinvoke <java.awt.MediaTracker: void addImage(java.awt.Image,int)>"->"load.r $r68";
+    "load.r $r68"->"load.r r0";
+    "fieldget <twoRowTicker: java.awt.Image pd>"
+    "load.r r0"->"fieldget <twoRowTicker: java.awt.Image pd>";
+    "push 3"
+    "fieldget <twoRowTicker: java.awt.Image pd>"->"push 3";
+    "push 3"->"virtualinvoke <java.awt.MediaTracker: void addImage(java.awt.Image,int)>";
+    "virtualinvoke <java.awt.MediaTracker: void addImage(java.awt.Image,int)>"->"load.r $r68";
+    "virtualinvoke <java.awt.MediaTracker: void waitForAll()>"
+    "load.r $r68"->"virtualinvoke <java.awt.MediaTracker: void waitForAll()>";
+    "virtualinvoke <java.awt.MediaTracker: void waitForAll()>"->"load.r r0";
+    "load.r r0"->"fieldget <twoRowTicker: twoRowHandle eq>";
+    "fieldget <twoRowTicker: twoRowHandle eq>"->"load.r r0";
+    "load.r r0"->"fieldget <twoRowTicker: java.awt.Image rt>";
+    "fieldput <twoRowHandle: java.awt.Image rt>"
+    "fieldget <twoRowTicker: java.awt.Image rt>"->"fieldput <twoRowHandle: java.awt.Image rt>";
+    "fieldput <twoRowHandle: java.awt.Image rt>"->"load.r r0";
+    "load.r r0"->"fieldget <twoRowTicker: twoRowHandle eq>";
+    "fieldget <twoRowTicker: twoRowHandle eq>"->"load.r r0";
+    "load.r r0"->"fieldget <twoRowTicker: java.awt.Image eod>";
+    "fieldput <twoRowHandle: java.awt.Image eod>"
+    "fieldget <twoRowTicker: java.awt.Image eod>"->"fieldput <twoRowHandle: java.awt.Image eod>";
+    "fieldput <twoRowHandle: java.awt.Image eod>"->"load.r r0";
+    "load.r r0"->"fieldget <twoRowTicker: twoRowHandle eq>";
+    "fieldget <twoRowTicker: twoRowHandle eq>"->"load.r r0";
+    "load.r r0"->"fieldget <twoRowTicker: java.awt.Image pd>";
+    "fieldput <twoRowHandle: java.awt.Image pd>"
+    "fieldget <twoRowTicker: java.awt.Image pd>"->"fieldput <twoRowHandle: java.awt.Image pd>";
+    "fieldput <twoRowHandle: java.awt.Image pd>"->"load.r r0";
+    "load.r r0"->"fieldget <twoRowTicker: twoRowHandle eq1>";
+    "fieldget <twoRowTicker: twoRowHandle eq1>"->"load.r r0";
+    "load.r r0"->"fieldget <twoRowTicker: java.awt.Image rt>";
+    "fieldget <twoRowTicker: java.awt.Image rt>"->"fieldput <twoRowHandle: java.awt.Image rt>";
+    "fieldput <twoRowHandle: java.awt.Image rt>"->"load.r r0";
+    "load.r r0"->"fieldget <twoRowTicker: twoRowHandle eq1>";
+    "fieldget <twoRowTicker: twoRowHandle eq1>"->"load.r r0";
+    "load.r r0"->"fieldget <twoRowTicker: java.awt.Image eod>";
+    "fieldget <twoRowTicker: java.awt.Image eod>"->"fieldput <twoRowHandle: java.awt.Image eod>";
+    "fieldput <twoRowHandle: java.awt.Image eod>"->"load.r r0";
+    "load.r r0"->"fieldget <twoRowTicker: twoRowHandle eq1>";
+    "fieldget <twoRowTicker: twoRowHandle eq1>"->"load.r r0";
+    "load.r r0"->"fieldget <twoRowTicker: java.awt.Image pd>";
+    "fieldget <twoRowTicker: java.awt.Image pd>"->"fieldput <twoRowHandle: java.awt.Image pd>";
+    "fieldput <twoRowHandle: java.awt.Image pd>"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "push \"eastbutton\""
+    "load.r r0"->"push \"eastbutton\"";
+    "push \"eastbutton\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"push \"eastbutton\"";
+    "push \"eastbutton\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "fieldput <twoRowTicker: java.lang.String buttoneast>"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"fieldput <twoRowTicker: java.lang.String buttoneast>";
+    "fieldput <twoRowTicker: java.lang.String buttoneast>"->"load.r r0";
+    "push \"westbutton\""
+    "load.r r0"->"push \"westbutton\"";
+    "push \"westbutton\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"push \"westbutton\"";
+    "push \"westbutton\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "fieldput <twoRowTicker: java.lang.String buttonwest>"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"fieldput <twoRowTicker: java.lang.String buttonwest>";
+    "fieldput <twoRowTicker: java.lang.String buttonwest>"->"load.r r0";
+    "push \"buttonfontsize\""
+    "load.r r0"->"push \"buttonfontsize\"";
+    "push \"buttonfontsize\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r r0";
+    "load.r r0"->"new java.lang.Integer";
+    "new java.lang.Integer"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "load.r r0"->"push \"buttonfontsize\"";
+    "push \"buttonfontsize\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"specialinvoke <java.lang.Integer: void <init>(java.lang.String)>";
+    "specialinvoke <java.lang.Integer: void <init>(java.lang.String)>"->"virtualinvoke <java.lang.Integer: int intValue()>";
+    "virtualinvoke <java.lang.Integer: int intValue()>"->"fieldput <twoRowTicker: int fontsize>";
+    "fieldput <twoRowTicker: int fontsize>"->"load.r r0";
+    "load.r r0"->"fieldget <twoRowTicker: twoRowHandle eq>";
+    "fieldget <twoRowTicker: twoRowHandle eq>"->"load.r r0";
+    "load.r r0"->"virtualinvoke <java.awt.Component: java.awt.Dimension getSize()>";
+    "virtualinvoke <java.awt.Component: java.awt.Dimension getSize()>"->"fieldget <java.awt.Dimension: int width>";
+    "push 100"
+    "fieldget <java.awt.Dimension: int width>"->"push 100";
+    "sub.i"
+    "push 100"->"sub.i";
+    "push 16"
+    "sub.i"->"push 16";
+    "virtualinvoke <java.awt.Component: void setSize(int,int)>"
+    "push 16"->"virtualinvoke <java.awt.Component: void setSize(int,int)>";
+    "virtualinvoke <java.awt.Component: void setSize(int,int)>"->"load.r r0";
+    "load.r r0"->"fieldget <twoRowTicker: twoRowHandle eq1>";
+    "fieldget <twoRowTicker: twoRowHandle eq1>"->"load.r r0";
+    "load.r r0"->"virtualinvoke <java.awt.Component: java.awt.Dimension getSize()>";
+    "virtualinvoke <java.awt.Component: java.awt.Dimension getSize()>"->"fieldget <java.awt.Dimension: int width>";
+    "fieldget <java.awt.Dimension: int width>"->"push 100";
+    "push 100"->"sub.i";
+    "sub.i"->"push 16";
+    "push 16"->"virtualinvoke <java.awt.Component: void setSize(int,int)>";
+    "virtualinvoke <java.awt.Component: void setSize(int,int)>"->"load.r r0";
+    "load.r r0"->"fieldget <twoRowTicker: twoRowHandle eq1>";
+    "fieldget <twoRowTicker: twoRowHandle eq1>"->"push 1";
+    "fieldput <twoRowHandle: boolean marketcanvas>"
+    "push 1"->"fieldput <twoRowHandle: boolean marketcanvas>";
+    "fieldput <twoRowHandle: boolean marketcanvas>"->"load.r r0";
+    "fieldget <twoRowTicker: java.lang.String buttoneast>"
+    "load.r r0"->"fieldget <twoRowTicker: java.lang.String buttoneast>";
+    "push \"YES\""
+    "fieldget <twoRowTicker: java.lang.String buttoneast>"->"push \"YES\"";
+    "push \"YES\""->"virtualinvoke <java.lang.String: boolean equalsIgnoreCase(java.lang.String)>";
+    "ifeq new java.awt.Panel"
+    "virtualinvoke <java.lang.String: boolean equalsIgnoreCase(java.lang.String)>"->"ifeq new java.awt.Panel";
+    "ifeq new java.awt.Panel"->"load.r r0";
+    "new java.awt.Button"
+    "load.r r0"->"new java.awt.Button";
+    "new java.awt.Button"->"dup1.r";
+    "push \"Refresh\""
+    "dup1.r"->"push \"Refresh\"";
+    "specialinvoke <java.awt.Button: void <init>(java.lang.String)>"
+    "push \"Refresh\""->"specialinvoke <java.awt.Button: void <init>(java.lang.String)>";
+    "fieldput <twoRowTicker: java.awt.Button refresh>"
+    "specialinvoke <java.awt.Button: void <init>(java.lang.String)>"->"fieldput <twoRowTicker: java.awt.Button refresh>";
+    "fieldput <twoRowTicker: java.awt.Button refresh>"->"load.r r0";
+    "fieldget <twoRowTicker: java.awt.Button refresh>"
+    "load.r r0"->"fieldget <twoRowTicker: java.awt.Button refresh>";
+    "fieldget <twoRowTicker: java.awt.Button refresh>"->"load.r r0";
+    "fieldget <twoRowTicker: java.awt.Color bgbtn>"
+    "load.r r0"->"fieldget <twoRowTicker: java.awt.Color bgbtn>";
+    "fieldget <twoRowTicker: java.awt.Color bgbtn>"->"virtualinvoke <java.awt.Component: void setBackground(java.awt.Color)>";
+    "virtualinvoke <java.awt.Component: void setBackground(java.awt.Color)>"->"load.r r0";
+    "load.r r0"->"fieldget <twoRowTicker: java.awt.Button refresh>";
+    "fieldget <twoRowTicker: java.awt.Button refresh>"->"load.r r0";
+    "fieldget <twoRowTicker: java.awt.Color fgbtn>"
+    "load.r r0"->"fieldget <twoRowTicker: java.awt.Color fgbtn>";
+    "virtualinvoke <java.awt.Component: void setForeground(java.awt.Color)>"
+    "fieldget <twoRowTicker: java.awt.Color fgbtn>"->"virtualinvoke <java.awt.Component: void setForeground(java.awt.Color)>";
+    "virtualinvoke <java.awt.Component: void setForeground(java.awt.Color)>"->"load.r r0";
+    "load.r r0"->"fieldget <twoRowTicker: java.awt.Button refresh>";
+    "fieldget <twoRowTicker: java.awt.Button refresh>"->"load.r r0";
+    "virtualinvoke <java.awt.Button: void addActionListener(java.awt.event.ActionListener)>"
+    "load.r r0"->"virtualinvoke <java.awt.Button: void addActionListener(java.awt.event.ActionListener)>";
+    "virtualinvoke <java.awt.Button: void addActionListener(java.awt.event.ActionListener)>"->"load.r r0";
+    "load.r r0"->"fieldget <twoRowTicker: java.awt.Button refresh>";
+    "new java.awt.Font"
+    "fieldget <twoRowTicker: java.awt.Button refresh>"->"new java.awt.Font";
+    "new java.awt.Font"->"dup1.r";
+    "push \"Helvetica\""
+    "dup1.r"->"push \"Helvetica\"";
+    "push \"Helvetica\""->"push 0";
+    "push 0"->"load.r r0";
+    "load.r r0"->"fieldget <twoRowTicker: int fontsize>";
+    "specialinvoke <java.awt.Font: void <init>(java.lang.String,int,int)>"
+    "fieldget <twoRowTicker: int fontsize>"->"specialinvoke <java.awt.Font: void <init>(java.lang.String,int,int)>";
+    "virtualinvoke <java.awt.Component: void setFont(java.awt.Font)>"
+    "specialinvoke <java.awt.Font: void <init>(java.lang.String,int,int)>"->"virtualinvoke <java.awt.Component: void setFont(java.awt.Font)>";
+    "virtualinvoke <java.awt.Component: void setFont(java.awt.Font)>"->"load.r r0";
+    "load.r r0"->"new java.awt.Button";
+    "new java.awt.Button"->"dup1.r";
+    "push \"Edit\""
+    "dup1.r"->"push \"Edit\"";
+    "push \"Edit\""->"specialinvoke <java.awt.Button: void <init>(java.lang.String)>";
+    "fieldput <twoRowTicker: java.awt.Button edit>"
+    "specialinvoke <java.awt.Button: void <init>(java.lang.String)>"->"fieldput <twoRowTicker: java.awt.Button edit>";
+    "fieldput <twoRowTicker: java.awt.Button edit>"->"load.r r0";
+    "fieldget <twoRowTicker: java.awt.Button edit>"
+    "load.r r0"->"fieldget <twoRowTicker: java.awt.Button edit>";
+    "fieldget <twoRowTicker: java.awt.Button edit>"->"load.r r0";
+    "load.r r0"->"fieldget <twoRowTicker: java.awt.Color bgbtn>";
+    "fieldget <twoRowTicker: java.awt.Color bgbtn>"->"virtualinvoke <java.awt.Component: void setBackground(java.awt.Color)>";
+    "virtualinvoke <java.awt.Component: void setBackground(java.awt.Color)>"->"load.r r0";
+    "load.r r0"->"fieldget <twoRowTicker: java.awt.Button edit>";
+    "fieldget <twoRowTicker: java.awt.Button edit>"->"load.r r0";
+    "load.r r0"->"fieldget <twoRowTicker: java.awt.Color fgbtn>";
+    "fieldget <twoRowTicker: java.awt.Color fgbtn>"->"virtualinvoke <java.awt.Component: void setForeground(java.awt.Color)>";
+    "virtualinvoke <java.awt.Component: void setForeground(java.awt.Color)>"->"load.r r0";
+    "load.r r0"->"fieldget <twoRowTicker: java.awt.Button edit>";
+    "fieldget <twoRowTicker: java.awt.Button edit>"->"load.r r0";
+    "load.r r0"->"virtualinvoke <java.awt.Button: void addActionListener(java.awt.event.ActionListener)>";
+    "virtualinvoke <java.awt.Button: void addActionListener(java.awt.event.ActionListener)>"->"load.r r0";
+    "load.r r0"->"fieldget <twoRowTicker: java.awt.Button edit>";
+    "fieldget <twoRowTicker: java.awt.Button edit>"->"new java.awt.Font";
+    "new java.awt.Font"->"dup1.r";
+    "dup1.r"->"push \"Helvetica\"";
+    "push \"Helvetica\""->"push 0";
+    "push 0"->"load.r r0";
+    "load.r r0"->"fieldget <twoRowTicker: int fontsize>";
+    "fieldget <twoRowTicker: int fontsize>"->"specialinvoke <java.awt.Font: void <init>(java.lang.String,int,int)>";
+    "specialinvoke <java.awt.Font: void <init>(java.lang.String,int,int)>"->"virtualinvoke <java.awt.Component: void setFont(java.awt.Font)>";
+    "new java.awt.Panel"
+    "virtualinvoke <java.awt.Component: void setFont(java.awt.Font)>"->"new java.awt.Panel";
+    "new java.awt.Panel"->"store.r $r68";
+    "store.r $r68"->"load.r $r68";
+    "specialinvoke <java.awt.Panel: void <init>()>"
+    "load.r $r68"->"specialinvoke <java.awt.Panel: void <init>()>";
+    "specialinvoke <java.awt.Panel: void <init>()>"->"load.r $r68";
+    "new java.awt.GridLayout"
+    "load.r $r68"->"new java.awt.GridLayout";
+    "new java.awt.GridLayout"->"dup1.r";
+    "dup1.r"->"push 2";
+    "push 2"->"push 1";
+    "specialinvoke <java.awt.GridLayout: void <init>(int,int)>"
+    "push 1"->"specialinvoke <java.awt.GridLayout: void <init>(int,int)>";
+    "specialinvoke <java.awt.GridLayout: void <init>(int,int)>"->"virtualinvoke <java.awt.Container: void setLayout(java.awt.LayoutManager)>";
+    "virtualinvoke <java.awt.Container: void setLayout(java.awt.LayoutManager)>"->"load.r $r68";
+    "load.r $r68"->"load.r r0";
+    "load.r r0"->"fieldget <twoRowTicker: java.awt.Button refresh>";
+    "virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>"
+    "fieldget <twoRowTicker: java.awt.Button refresh>"->"virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>";
+    "pop"
+    "virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>"->"pop";
+    "pop"->"load.r $r68";
+    "load.r $r68"->"load.r r0";
+    "load.r r0"->"fieldget <twoRowTicker: java.awt.Button edit>";
+    "fieldget <twoRowTicker: java.awt.Button edit>"->"virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>";
+    "virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>"->"pop";
+    "pop"->"new java.awt.Panel";
+    "store.r $r166"
+    "new java.awt.Panel"->"store.r $r166";
+    "load.r $r166"
+    "store.r $r166"->"load.r $r166";
+    "load.r $r166"->"specialinvoke <java.awt.Panel: void <init>()>";
+    "specialinvoke <java.awt.Panel: void <init>()>"->"load.r $r166";
+    "load.r $r166"->"new java.awt.BorderLayout";
+    "new java.awt.BorderLayout"->"dup1.r";
+    "dup1.r"->"specialinvoke <java.awt.BorderLayout: void <init>()>";
+    "specialinvoke <java.awt.BorderLayout: void <init>()>"->"virtualinvoke <java.awt.Container: void setLayout(java.awt.LayoutManager)>";
+    "virtualinvoke <java.awt.Container: void setLayout(java.awt.LayoutManager)>"->"load.r $r166";
+    "push \"East\""
+    "load.r $r166"->"push \"East\"";
+    "push \"East\""->"load.r $r68";
+    "virtualinvoke <java.awt.Container: java.awt.Component add(java.lang.String,java.awt.Component)>"
+    "load.r $r68"->"virtualinvoke <java.awt.Container: java.awt.Component add(java.lang.String,java.awt.Component)>";
+    "virtualinvoke <java.awt.Container: java.awt.Component add(java.lang.String,java.awt.Component)>"->"pop";
+    "pop"->"load.r $r166";
+    "load.r $r166"->"load.r r0";
+    "fieldget <twoRowTicker: java.awt.Color bgeast>"
+    "load.r r0"->"fieldget <twoRowTicker: java.awt.Color bgeast>";
+    "fieldget <twoRowTicker: java.awt.Color bgeast>"->"virtualinvoke <java.awt.Component: void setBackground(java.awt.Color)>";
+    "virtualinvoke <java.awt.Component: void setBackground(java.awt.Color)>"->"load.r r0";
+    "load.r r0"->"push \"East\"";
+    "push \"East\""->"load.r $r166";
+    "load.r $r166"->"virtualinvoke <java.awt.Container: java.awt.Component add(java.lang.String,java.awt.Component)>";
+    "virtualinvoke <java.awt.Container: java.awt.Component add(java.lang.String,java.awt.Component)>"->"pop";
+    "pop"->"new java.awt.Panel";
+    "new java.awt.Panel"->"store.r $r68";
+    "store.r $r68"->"load.r $r68";
+    "load.r $r68"->"specialinvoke <java.awt.Panel: void <init>()>";
+    "specialinvoke <java.awt.Panel: void <init>()>"->"load.r $r68";
+    "load.r $r68"->"new java.awt.GridLayout";
+    "new java.awt.GridLayout"->"dup1.r";
+    "dup1.r"->"push 2";
+    "push 2"->"push 1";
+    "push 1"->"specialinvoke <java.awt.GridLayout: void <init>(int,int)>";
+    "specialinvoke <java.awt.GridLayout: void <init>(int,int)>"->"virtualinvoke <java.awt.Container: void setLayout(java.awt.LayoutManager)>";
+    "virtualinvoke <java.awt.Container: void setLayout(java.awt.LayoutManager)>"->"load.r $r68";
+    "load.r $r68"->"load.r r0";
+    "load.r r0"->"fieldget <twoRowTicker: twoRowHandle eq>";
+    "fieldget <twoRowTicker: twoRowHandle eq>"->"virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>";
+    "virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>"->"pop";
+    "pop"->"load.r $r68";
+    "load.r $r68"->"load.r r0";
+    "load.r r0"->"fieldget <twoRowTicker: twoRowHandle eq1>";
+    "fieldget <twoRowTicker: twoRowHandle eq1>"->"virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>";
+    "virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>"->"pop";
+    "pop"->"load.r r0";
+    "push \"Center\""
+    "load.r r0"->"push \"Center\"";
+    "push \"Center\""->"load.r $r68";
+    "load.r $r68"->"virtualinvoke <java.awt.Container: java.awt.Component add(java.lang.String,java.awt.Component)>";
+    "virtualinvoke <java.awt.Container: java.awt.Component add(java.lang.String,java.awt.Component)>"->"pop";
+    "pop"->"load.r r0";
+    "fieldget <twoRowTicker: java.lang.String buttonwest>"
+    "load.r r0"->"fieldget <twoRowTicker: java.lang.String buttonwest>";
+    "fieldget <twoRowTicker: java.lang.String buttonwest>"->"push \"YES\"";
+    "push \"YES\""->"virtualinvoke <java.lang.String: boolean equalsIgnoreCase(java.lang.String)>";
+    "virtualinvoke <java.lang.String: boolean equalsIgnoreCase(java.lang.String)>"->"ifeq load.r r0";
+    "ifeq load.r r0"->"load.r r0";
+    "load.r r0"->"new java.awt.Button";
+    "new java.awt.Button"->"dup1.r";
+    "push \">\""
+    "dup1.r"->"push \">\"";
+    "push \">\""->"specialinvoke <java.awt.Button: void <init>(java.lang.String)>";
+    "fieldput <twoRowTicker: java.awt.Button lefttoright>"
+    "specialinvoke <java.awt.Button: void <init>(java.lang.String)>"->"fieldput <twoRowTicker: java.awt.Button lefttoright>";
+    "fieldput <twoRowTicker: java.awt.Button lefttoright>"->"load.r r0";
+    "fieldget <twoRowTicker: java.awt.Button lefttoright>"
+    "load.r r0"->"fieldget <twoRowTicker: java.awt.Button lefttoright>";
+    "fieldget <twoRowTicker: java.awt.Button lefttoright>"->"load.r r0";
+    "load.r r0"->"fieldget <twoRowTicker: java.awt.Color bgbtn>";
+    "fieldget <twoRowTicker: java.awt.Color bgbtn>"->"virtualinvoke <java.awt.Component: void setBackground(java.awt.Color)>";
+    "virtualinvoke <java.awt.Component: void setBackground(java.awt.Color)>"->"load.r r0";
+    "load.r r0"->"fieldget <twoRowTicker: java.awt.Button lefttoright>";
+    "fieldget <twoRowTicker: java.awt.Button lefttoright>"->"load.r r0";
+    "load.r r0"->"fieldget <twoRowTicker: java.awt.Color fgbtn>";
+    "fieldget <twoRowTicker: java.awt.Color fgbtn>"->"virtualinvoke <java.awt.Component: void setForeground(java.awt.Color)>";
+    "virtualinvoke <java.awt.Component: void setForeground(java.awt.Color)>"->"load.r r0";
+    "load.r r0"->"fieldget <twoRowTicker: java.awt.Button lefttoright>";
+    "fieldget <twoRowTicker: java.awt.Button lefttoright>"->"load.r r0";
+    "load.r r0"->"virtualinvoke <java.awt.Button: void addActionListener(java.awt.event.ActionListener)>";
+    "virtualinvoke <java.awt.Button: void addActionListener(java.awt.event.ActionListener)>"->"load.r r0";
+    "load.r r0"->"fieldget <twoRowTicker: java.awt.Button lefttoright>";
+    "fieldget <twoRowTicker: java.awt.Button lefttoright>"->"new java.awt.Font";
+    "new java.awt.Font"->"dup1.r";
+    "dup1.r"->"push \"Helvetica\"";
+    "push \"Helvetica\""->"push 1";
+    "push 1"->"load.r r0";
+    "load.r r0"->"fieldget <twoRowTicker: int fontsize>";
+    "fieldget <twoRowTicker: int fontsize>"->"push 1";
+    "add.i"
+    "push 1"->"add.i";
+    "add.i"->"specialinvoke <java.awt.Font: void <init>(java.lang.String,int,int)>";
+    "specialinvoke <java.awt.Font: void <init>(java.lang.String,int,int)>"->"virtualinvoke <java.awt.Component: void setFont(java.awt.Font)>";
+    "virtualinvoke <java.awt.Component: void setFont(java.awt.Font)>"->"load.r r0";
+    "load.r r0"->"new java.awt.Button";
+    "new java.awt.Button"->"dup1.r";
+    "push \"<\""
+    "dup1.r"->"push \"<\"";
+    "push \"<\""->"specialinvoke <java.awt.Button: void <init>(java.lang.String)>";
+    "fieldput <twoRowTicker: java.awt.Button righttoleft>"
+    "specialinvoke <java.awt.Button: void <init>(java.lang.String)>"->"fieldput <twoRowTicker: java.awt.Button righttoleft>";
+    "fieldput <twoRowTicker: java.awt.Button righttoleft>"->"load.r r0";
+    "fieldget <twoRowTicker: java.awt.Button righttoleft>"
+    "load.r r0"->"fieldget <twoRowTicker: java.awt.Button righttoleft>";
+    "fieldget <twoRowTicker: java.awt.Button righttoleft>"->"load.r r0";
+    "load.r r0"->"fieldget <twoRowTicker: java.awt.Color bgbtn>";
+    "fieldget <twoRowTicker: java.awt.Color bgbtn>"->"virtualinvoke <java.awt.Component: void setBackground(java.awt.Color)>";
+    "virtualinvoke <java.awt.Component: void setBackground(java.awt.Color)>"->"load.r r0";
+    "load.r r0"->"fieldget <twoRowTicker: java.awt.Button righttoleft>";
+    "fieldget <twoRowTicker: java.awt.Button righttoleft>"->"load.r r0";
+    "load.r r0"->"fieldget <twoRowTicker: java.awt.Color fgbtn>";
+    "fieldget <twoRowTicker: java.awt.Color fgbtn>"->"virtualinvoke <java.awt.Component: void setForeground(java.awt.Color)>";
+    "virtualinvoke <java.awt.Component: void setForeground(java.awt.Color)>"->"load.r r0";
+    "load.r r0"->"fieldget <twoRowTicker: java.awt.Button righttoleft>";
+    "fieldget <twoRowTicker: java.awt.Button righttoleft>"->"load.r r0";
+    "load.r r0"->"virtualinvoke <java.awt.Button: void addActionListener(java.awt.event.ActionListener)>";
+    "virtualinvoke <java.awt.Button: void addActionListener(java.awt.event.ActionListener)>"->"load.r r0";
+    "load.r r0"->"fieldget <twoRowTicker: java.awt.Button righttoleft>";
+    "fieldget <twoRowTicker: java.awt.Button righttoleft>"->"new java.awt.Font";
+    "new java.awt.Font"->"dup1.r";
+    "dup1.r"->"push \"Helvetica\"";
+    "push \"Helvetica\""->"push 1";
+    "push 1"->"load.r r0";
+    "load.r r0"->"fieldget <twoRowTicker: int fontsize>";
+    "fieldget <twoRowTicker: int fontsize>"->"push 1";
+    "push 1"->"add.i";
+    "add.i"->"specialinvoke <java.awt.Font: void <init>(java.lang.String,int,int)>";
+    "specialinvoke <java.awt.Font: void <init>(java.lang.String,int,int)>"->"virtualinvoke <java.awt.Component: void setFont(java.awt.Font)>";
+    "virtualinvoke <java.awt.Component: void setFont(java.awt.Font)>"->"new java.awt.Panel";
+    "new java.awt.Panel"->"store.r $r68";
+    "store.r $r68"->"load.r $r68";
+    "load.r $r68"->"specialinvoke <java.awt.Panel: void <init>()>";
+    "specialinvoke <java.awt.Panel: void <init>()>"->"load.r $r68";
+    "load.r $r68"->"new java.awt.GridLayout";
+    "new java.awt.GridLayout"->"dup1.r";
+    "dup1.r"->"push 2";
+    "push 2"->"push 1";
+    "push 1"->"specialinvoke <java.awt.GridLayout: void <init>(int,int)>";
+    "specialinvoke <java.awt.GridLayout: void <init>(int,int)>"->"virtualinvoke <java.awt.Container: void setLayout(java.awt.LayoutManager)>";
+    "virtualinvoke <java.awt.Container: void setLayout(java.awt.LayoutManager)>"->"load.r $r68";
+    "load.r $r68"->"load.r r0";
+    "load.r r0"->"fieldget <twoRowTicker: java.awt.Button righttoleft>";
+    "fieldget <twoRowTicker: java.awt.Button righttoleft>"->"virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>";
+    "virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>"->"pop";
+    "pop"->"load.r $r68";
+    "load.r $r68"->"load.r r0";
+    "load.r r0"->"fieldget <twoRowTicker: java.awt.Button lefttoright>";
+    "fieldget <twoRowTicker: java.awt.Button lefttoright>"->"virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>";
+    "virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>"->"pop";
+    "pop"->"load.r r0";
+    "push \"West\""
+    "load.r r0"->"push \"West\"";
+    "push \"West\""->"load.r $r68";
+    "load.r $r68"->"virtualinvoke <java.awt.Container: java.awt.Component add(java.lang.String,java.awt.Component)>";
+    "virtualinvoke <java.awt.Container: java.awt.Component add(java.lang.String,java.awt.Component)>"->"pop";
+    "pop"->"load.r r0";
+    "load.r r0"->"fieldget <twoRowTicker: twoRowHandle eq>";
+    "fieldget <twoRowTicker: twoRowHandle eq>"->"load.r r0";
+    "virtualinvoke <java.awt.Component: void addMouseListener(java.awt.event.MouseListener)>"
+    "load.r r0"->"virtualinvoke <java.awt.Component: void addMouseListener(java.awt.event.MouseListener)>";
+    "virtualinvoke <java.awt.Component: void addMouseListener(java.awt.event.MouseListener)>"->"load.r r0";
+    "load.r r0"->"fieldget <twoRowTicker: twoRowHandle eq>";
+    "fieldget <twoRowTicker: twoRowHandle eq>"->"load.r r0";
+    "virtualinvoke <java.awt.Component: void addMouseMotionListener(java.awt.event.MouseMotionListener)>"
+    "load.r r0"->"virtualinvoke <java.awt.Component: void addMouseMotionListener(java.awt.event.MouseMotionListener)>";
+    "virtualinvoke <java.awt.Component: void addMouseMotionListener(java.awt.event.MouseMotionListener)>"->"load.r r0";
+    "load.r r0"->"fieldget <twoRowTicker: twoRowHandle eq1>";
+    "fieldget <twoRowTicker: twoRowHandle eq1>"->"load.r r0";
+    "load.r r0"->"virtualinvoke <java.awt.Component: void addMouseListener(java.awt.event.MouseListener)>";
+    "virtualinvoke <java.awt.Component: void addMouseListener(java.awt.event.MouseListener)>"->"load.r r0";
+    "load.r r0"->"fieldget <twoRowTicker: twoRowHandle eq1>";
+    "fieldget <twoRowTicker: twoRowHandle eq1>"->"load.r r0";
+    "load.r r0"->"virtualinvoke <java.awt.Component: void addMouseMotionListener(java.awt.event.MouseMotionListener)>";
+    "staticget <java.lang.System: java.io.PrintStream out>"
+    "virtualinvoke <java.awt.Component: void addMouseMotionListener(java.awt.event.MouseMotionListener)>"->"staticget <java.lang.System: java.io.PrintStream out>";
+    "push \"TwoRowTicker Version 3.1.2\""
+    "staticget <java.lang.System: java.io.PrintStream out>"->"push \"TwoRowTicker Version 3.1.2\"";
+    "virtualinvoke <java.io.PrintStream: void println(java.lang.String)>"
+    "push \"TwoRowTicker Version 3.1.2\""->"virtualinvoke <java.io.PrintStream: void println(java.lang.String)>";
+    "virtualinvoke <java.io.PrintStream: void println(java.lang.String)>"->"push 0";
+    "store.i $r68"
+    "push 0"->"store.i $r68";
+    "load.i $r68"
+    "store.i $r68"->"load.i $r68";
+    "load.i $r68"->"load.r r0";
+    "fieldget <twoRowTicker: java.lang.String[] allIndices>"
+    "load.r r0"->"fieldget <twoRowTicker: java.lang.String[] allIndices>";
+    "arraylength"
+    "fieldget <twoRowTicker: java.lang.String[] allIndices>"->"arraylength";
+    "ifcmpge.i return"
+    "arraylength"->"ifcmpge.i return";
+    "ifcmpge.i return"->"load.r r0";
+    "fieldget <twoRowTicker: java.util.HashMap allIndicesMap>"
+    "load.r r0"->"fieldget <twoRowTicker: java.util.HashMap allIndicesMap>";
+    "fieldget <twoRowTicker: java.util.HashMap allIndicesMap>"->"load.r r0";
+    "load.r r0"->"fieldget <twoRowTicker: java.lang.String[] allIndices>";
+    "fieldget <twoRowTicker: java.lang.String[] allIndices>"->"load.i $r68";
+    "arrayread.r"
+    "load.i $r68"->"arrayread.r";
+    "arrayread.r"->"load.r r0";
+    "load.r r0"->"fieldget <twoRowTicker: java.lang.String[] allIndices>";
+    "fieldget <twoRowTicker: java.lang.String[] allIndices>"->"load.i $r68";
+    "load.i $r68"->"arrayread.r";
+    "virtualinvoke <java.util.HashMap: java.lang.Object put(java.lang.Object,java.lang.Object)>"
+    "arrayread.r"->"virtualinvoke <java.util.HashMap: java.lang.Object put(java.lang.Object,java.lang.Object)>";
+    "virtualinvoke <java.util.HashMap: java.lang.Object put(java.lang.Object,java.lang.Object)>"->"pop";
+    "inc.i $r68 1"
+    "pop"->"inc.i $r68 1";
+    "goto load.i $r68"
+    "inc.i $r68 1"->"goto load.i $r68";
+    "return"
+    "ifcmpge.i return"->"return";
+    "fieldget <twoRowTicker: java.awt.Image pd>"->"store.r $r68";
+    "ifnull load.r r0"->"load.r r0";
+    "push \"highlightcolor\""
+    "load.r r0"->"push \"highlightcolor\"";
+    "push \"highlightcolor\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <twoRowTicker: twoRowHandle eq1>";
+    "fieldget <twoRowTicker: twoRowHandle eq1>"->"load.r r0";
+    "load.r r0"->"push \"highlightcolor\"";
+    "push \"highlightcolor\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"staticinvoke <java.awt.Color: java.awt.Color decode(java.lang.String)>";
+    "staticinvoke <java.awt.Color: java.awt.Color decode(java.lang.String)>"->"fieldput <twoRowHandle: java.awt.Color highlight>";
+    "ifnull load.r r0"->"load.r r0";
+    "load.r r0"->"push \"highlightcolor\"";
+    "push \"highlightcolor\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <twoRowTicker: twoRowHandle eq>";
+    "fieldget <twoRowTicker: twoRowHandle eq>"->"load.r r0";
+    "load.r r0"->"push \"highlightcolor\"";
+    "push \"highlightcolor\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"staticinvoke <java.awt.Color: java.awt.Color decode(java.lang.String)>";
+    "staticinvoke <java.awt.Color: java.awt.Color decode(java.lang.String)>"->"fieldput <twoRowHandle: java.awt.Color highlight>";
+    "push \"false\""
+    "ifnull push \"false\""->"push \"false\"";
+    "push \"false\""->"store.r $r68";
+    "ifnull load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "fieldget <twoRowTicker: java.lang.String defaultIndices>"
+    "load.r r0"->"fieldget <twoRowTicker: java.lang.String defaultIndices>";
+    "fieldget <twoRowTicker: java.lang.String defaultIndices>"->"fieldput <twoRowTicker: java.lang.String indices>";
+    "ifeq load.r r0"->"load.r r0";
+    "load.r r0"->"new java.lang.StringBuffer";
+    "new java.lang.StringBuffer"->"dup1.r";
+    "dup1.r"->"specialinvoke <java.lang.StringBuffer: void <init>()>";
+    "specialinvoke <java.lang.StringBuffer: void <init>()>"->"load.r r0";
+    "fieldget <twoRowTicker: java.net.URL homeUrl>"
+    "load.r r0"->"fieldget <twoRowTicker: java.net.URL homeUrl>";
+    "virtualinvoke <java.net.URL: java.lang.String getProtocol()>"
+    "fieldget <twoRowTicker: java.net.URL homeUrl>"->"virtualinvoke <java.net.URL: java.lang.String getProtocol()>";
+    "virtualinvoke <java.net.URL: java.lang.String getProtocol()>"->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "push \"://\""
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"push \"://\"";
+    "push \"://\""->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"load.r r0";
+    "load.r r0"->"fieldget <twoRowTicker: java.net.URL homeUrl>";
+    "fieldget <twoRowTicker: java.net.URL homeUrl>"->"virtualinvoke <java.net.URL: java.lang.String getHost()>";
+    "virtualinvoke <java.net.URL: java.lang.String getHost()>"->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "push \"/\""
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"push \"/\"";
+    "push \"/\""->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>"->"fieldput <twoRowTicker: java.lang.String baseUrl>";
+}

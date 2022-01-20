@@ -1,0 +1,195 @@
+digraph "" {
+    "r0 := @this: animateButton"
+    "load.r r0"
+    "r0 := @this: animateButton"->"load.r r0";
+    "push \"nframe\""
+    "load.r r0"->"push \"nframe\"";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"
+    "push \"nframe\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "store.r $r23"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"store.r $r23";
+    "load.r $r23"
+    "store.r $r23"->"load.r $r23";
+    "ifnonnull load.r r0"
+    "load.r $r23"->"ifnonnull load.r r0";
+    "staticget <java.lang.System: java.io.PrintStream out>"
+    "ifnonnull load.r r0"->"staticget <java.lang.System: java.io.PrintStream out>";
+    "push \"Error: invalid parameter: nframe\""
+    "staticget <java.lang.System: java.io.PrintStream out>"->"push \"Error: invalid parameter: nframe\"";
+    "virtualinvoke <java.io.PrintStream: void println(java.lang.String)>"
+    "push \"Error: invalid parameter: nframe\""->"virtualinvoke <java.io.PrintStream: void println(java.lang.String)>";
+    "goto load.r r0"
+    "virtualinvoke <java.io.PrintStream: void println(java.lang.String)>"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "fieldget <animateButton: int nframe>"
+    "load.r r0"->"fieldget <animateButton: int nframe>";
+    "newarray"
+    "fieldget <animateButton: int nframe>"->"newarray";
+    "fieldput <animateButton: java.awt.Image[] image>"
+    "newarray"->"fieldput <animateButton: java.awt.Image[] image>";
+    "fieldput <animateButton: java.awt.Image[] image>"->"load.r r0";
+    "new java.awt.MediaTracker"
+    "load.r r0"->"new java.awt.MediaTracker";
+    "dup1.r"
+    "new java.awt.MediaTracker"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "specialinvoke <java.awt.MediaTracker: void <init>(java.awt.Component)>"
+    "load.r r0"->"specialinvoke <java.awt.MediaTracker: void <init>(java.awt.Component)>";
+    "fieldput <animateButton: java.awt.MediaTracker tracker>"
+    "specialinvoke <java.awt.MediaTracker: void <init>(java.awt.Component)>"->"fieldput <animateButton: java.awt.MediaTracker tracker>";
+    "push 0"
+    "fieldput <animateButton: java.awt.MediaTracker tracker>"->"push 0";
+    "store.i $r23"
+    "push 0"->"store.i $r23";
+    "goto load.i $r23"
+    "store.i $r23"->"goto load.i $r23";
+    "load.i $r23"
+    "goto load.i $r23"->"load.i $r23";
+    "load.i $r23"->"load.r r0";
+    "load.r r0"->"fieldget <animateButton: int nframe>";
+    "ifcmplt.i load.r r0"
+    "fieldget <animateButton: int nframe>"->"ifcmplt.i load.r r0";
+    "ifcmplt.i load.r r0"->"load.r r0";
+    "fieldget <animateButton: java.awt.MediaTracker tracker>"
+    "load.r r0"->"fieldget <animateButton: java.awt.MediaTracker tracker>";
+    "virtualinvoke <java.awt.MediaTracker: void waitForAll()>"
+    "fieldget <animateButton: java.awt.MediaTracker tracker>"->"virtualinvoke <java.awt.MediaTracker: void waitForAll()>";
+    "virtualinvoke <java.awt.MediaTracker: void waitForAll()>"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "push \"audio\""
+    "load.r r0"->"push \"audio\"";
+    "push \"audio\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"store.r $r23";
+    "store.r $r23"->"load.r $r23";
+    "ifnull load.r r0"
+    "load.r $r23"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "virtualinvoke <java.applet.Applet: java.net.URL getDocumentBase()>"
+    "load.r r0"->"virtualinvoke <java.applet.Applet: java.net.URL getDocumentBase()>";
+    "virtualinvoke <java.applet.Applet: java.net.URL getDocumentBase()>"->"load.r $r23";
+    "virtualinvoke <java.applet.Applet: java.applet.AudioClip getAudioClip(java.net.URL,java.lang.String)>"
+    "load.r $r23"->"virtualinvoke <java.applet.Applet: java.applet.AudioClip getAudioClip(java.net.URL,java.lang.String)>";
+    "fieldput <animateButton: java.applet.AudioClip audio>"
+    "virtualinvoke <java.applet.Applet: java.applet.AudioClip getAudioClip(java.net.URL,java.lang.String)>"->"fieldput <animateButton: java.applet.AudioClip audio>";
+    "fieldput <animateButton: java.applet.AudioClip audio>"->"load.r r0";
+    "push \"url\""
+    "load.r r0"->"push \"url\"";
+    "push \"url\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"store.r $r23";
+    "store.r $r23"->"load.r $r23";
+    "load.r $r23"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r r0";
+    "new java.net.URL"
+    "load.r r0"->"new java.net.URL";
+    "new java.net.URL"->"dup1.r";
+    "dup1.r"->"load.r $r23";
+    "specialinvoke <java.net.URL: void <init>(java.lang.String)>"
+    "load.r $r23"->"specialinvoke <java.net.URL: void <init>(java.lang.String)>";
+    "fieldput <animateButton: java.net.URL url>"
+    "specialinvoke <java.net.URL: void <init>(java.lang.String)>"->"fieldput <animateButton: java.net.URL url>";
+    "fieldput <animateButton: java.net.URL url>"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "push \"target\""
+    "load.r r0"->"push \"target\"";
+    "push \"target\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "fieldput <animateButton: java.lang.String target>"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"fieldput <animateButton: java.lang.String target>";
+    "fieldput <animateButton: java.lang.String target>"->"load.r r0";
+    "push \"sleeptime\""
+    "load.r r0"->"push \"sleeptime\"";
+    "push \"sleeptime\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"store.r $r23";
+    "store.r $r23"->"load.r $r23";
+    "load.r $r23"->"ifnonnull load.r r0";
+    "ifnonnull load.r r0"->"load.r r0";
+    "push 1000"
+    "load.r r0"->"push 1000";
+    "fieldput <animateButton: int sleeptime>"
+    "push 1000"->"fieldput <animateButton: int sleeptime>";
+    "return"
+    "fieldput <animateButton: int sleeptime>"->"return";
+    "ifnonnull load.r r0"->"load.r r0";
+    "load.r r0"->"load.r $r23";
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"
+    "load.r $r23"->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>";
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"->"fieldput <animateButton: int sleeptime>";
+    "fieldput <animateButton: int sleeptime>"->"return";
+    "specialinvoke <java.net.URL: void <init>(java.lang.String)>"->"store.r $r23";
+    "store.r $r23"->"staticget <java.lang.System: java.io.PrintStream out>";
+    "push \"Error locating URL address.\""
+    "staticget <java.lang.System: java.io.PrintStream out>"->"push \"Error locating URL address.\"";
+    "push \"Error locating URL address.\""->"virtualinvoke <java.io.PrintStream: void println(java.lang.String)>";
+    "virtualinvoke <java.io.PrintStream: void println(java.lang.String)>"->"goto load.r r0";
+    "virtualinvoke <java.awt.MediaTracker: void waitForAll()>"->"store.r $r23";
+    "store.r $r23"->"staticget <java.lang.System: java.io.PrintStream out>";
+    "push \"Error waiting for image to load.\""
+    "staticget <java.lang.System: java.io.PrintStream out>"->"push \"Error waiting for image to load.\"";
+    "push \"Error waiting for image to load.\""->"virtualinvoke <java.io.PrintStream: void println(java.lang.String)>";
+    "ifcmplt.i load.r r0"->"load.r r0";
+    "new java.lang.StringBuffer"
+    "load.r r0"->"new java.lang.StringBuffer";
+    "new java.lang.StringBuffer"->"dup1.r";
+    "specialinvoke <java.lang.StringBuffer: void <init>()>"
+    "dup1.r"->"specialinvoke <java.lang.StringBuffer: void <init>()>";
+    "push \"image\""
+    "specialinvoke <java.lang.StringBuffer: void <init>()>"->"push \"image\"";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"
+    "push \"image\""->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"load.i $r23";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(int)>"
+    "load.i $r23"->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(int)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>"
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(int)>"->"virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>"->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "store.r r28"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"store.r r28";
+    "load.r r28"
+    "store.r r28"->"load.r r28";
+    "load.r r28"->"ifnonnull load.r r0";
+    "ifnonnull load.r r0"->"staticget <java.lang.System: java.io.PrintStream out>";
+    "staticget <java.lang.System: java.io.PrintStream out>"->"new java.lang.StringBuffer";
+    "new java.lang.StringBuffer"->"dup1.r";
+    "dup1.r"->"specialinvoke <java.lang.StringBuffer: void <init>()>";
+    "push \"Error: invalid parameter: image\""
+    "specialinvoke <java.lang.StringBuffer: void <init>()>"->"push \"Error: invalid parameter: image\"";
+    "push \"Error: invalid parameter: image\""->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"load.i $r23";
+    "load.i $r23"->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(int)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(int)>"->"virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>"->"virtualinvoke <java.io.PrintStream: void println(java.lang.String)>";
+    "goto inc.i $r23 1"
+    "virtualinvoke <java.io.PrintStream: void println(java.lang.String)>"->"goto inc.i $r23 1";
+    "inc.i $r23 1"
+    "goto inc.i $r23 1"->"inc.i $r23 1";
+    "ifnonnull load.r r0"->"load.r r0";
+    "fieldget <animateButton: java.awt.Image[] image>"
+    "load.r r0"->"fieldget <animateButton: java.awt.Image[] image>";
+    "fieldget <animateButton: java.awt.Image[] image>"->"load.i $r23";
+    "load.i $r23"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"virtualinvoke <java.applet.Applet: java.net.URL getDocumentBase()>";
+    "virtualinvoke <java.applet.Applet: java.net.URL getDocumentBase()>"->"load.r r28";
+    "virtualinvoke <java.applet.Applet: java.awt.Image getImage(java.net.URL,java.lang.String)>"
+    "load.r r28"->"virtualinvoke <java.applet.Applet: java.awt.Image getImage(java.net.URL,java.lang.String)>";
+    "arraywrite.r"
+    "virtualinvoke <java.applet.Applet: java.awt.Image getImage(java.net.URL,java.lang.String)>"->"arraywrite.r";
+    "arraywrite.r"->"load.r r0";
+    "load.r r0"->"fieldget <animateButton: java.awt.MediaTracker tracker>";
+    "fieldget <animateButton: java.awt.MediaTracker tracker>"->"load.r r0";
+    "load.r r0"->"fieldget <animateButton: java.awt.Image[] image>";
+    "fieldget <animateButton: java.awt.Image[] image>"->"load.i $r23";
+    "arrayread.r"
+    "load.i $r23"->"arrayread.r";
+    "arrayread.r"->"load.i $r23";
+    "virtualinvoke <java.awt.MediaTracker: void addImage(java.awt.Image,int)>"
+    "load.i $r23"->"virtualinvoke <java.awt.MediaTracker: void addImage(java.awt.Image,int)>";
+    "ifnonnull load.r r0"->"load.r r0";
+    "load.r r0"->"load.r $r23";
+    "load.r $r23"->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>";
+    "fieldput <animateButton: int nframe>"
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"->"fieldput <animateButton: int nframe>";
+}

@@ -1,0 +1,214 @@
+digraph "" {
+    "r0 := @this: CountDown"
+    "new ImageProvider"
+    "r0 := @this: CountDown"->"new ImageProvider";
+    "store.r $r2"
+    "new ImageProvider"->"store.r $r2";
+    "load.r $r2"
+    "store.r $r2"->"load.r $r2";
+    "load.r r0"
+    "load.r $r2"->"load.r r0";
+    "specialinvoke <ImageProvider: void <init>(java.applet.Applet)>"
+    "load.r r0"->"specialinvoke <ImageProvider: void <init>(java.applet.Applet)>";
+    "specialinvoke <ImageProvider: void <init>(java.applet.Applet)>"->"load.r r0";
+    "push \"date\""
+    "load.r r0"->"push \"date\"";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"
+    "push \"date\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "store.r $r3"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"store.r $r3";
+    "load.r $r3"
+    "store.r $r3"->"load.r $r3";
+    "ifnull load.r r0"
+    "load.r $r3"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r r0";
+    "push 0L"
+    "load.r r0"->"push 0L";
+    "new java.util.Date"
+    "push 0L"->"new java.util.Date";
+    "dup1.r"
+    "new java.util.Date"->"dup1.r";
+    "dup1.r"->"load.r $r3";
+    "specialinvoke <java.util.Date: void <init>(java.lang.String)>"
+    "load.r $r3"->"specialinvoke <java.util.Date: void <init>(java.lang.String)>";
+    "virtualinvoke <java.util.Date: long getTime()>"
+    "specialinvoke <java.util.Date: void <init>(java.lang.String)>"->"virtualinvoke <java.util.Date: long getTime()>";
+    "virtualinvoke <java.util.Date: long getTime()>"->"new java.util.Date";
+    "new java.util.Date"->"dup1.r";
+    "specialinvoke <java.util.Date: void <init>()>"
+    "dup1.r"->"specialinvoke <java.util.Date: void <init>()>";
+    "specialinvoke <java.util.Date: void <init>()>"->"virtualinvoke <java.util.Date: long getTime()>";
+    "sub.l"
+    "virtualinvoke <java.util.Date: long getTime()>"->"sub.l";
+    "push 86400000L"
+    "sub.l"->"push 86400000L";
+    "div.l"
+    "push 86400000L"->"div.l";
+    "push 1L"
+    "div.l"->"push 1L";
+    "add.l"
+    "push 1L"->"add.l";
+    "staticinvoke <java.lang.Math: long max(long,long)>"
+    "add.l"->"staticinvoke <java.lang.Math: long max(long,long)>";
+    "staticinvoke <java.lang.String: java.lang.String valueOf(long)>"
+    "staticinvoke <java.lang.Math: long max(long,long)>"->"staticinvoke <java.lang.String: java.lang.String valueOf(long)>";
+    "fieldput <CountDown: java.lang.String outputString>"
+    "staticinvoke <java.lang.String: java.lang.String valueOf(long)>"->"fieldput <CountDown: java.lang.String outputString>";
+    "goto load.r r0"
+    "fieldput <CountDown: java.lang.String outputString>"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "push \"bgcolor\""
+    "load.r r0"->"push \"bgcolor\"";
+    "push \"bgcolor\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"store.r $r3";
+    "store.r $r3"->"load.r $r3";
+    "load.r $r3"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r r0";
+    "new java.awt.Color"
+    "load.r r0"->"new java.awt.Color";
+    "new java.awt.Color"->"dup1.r";
+    "dup1.r"->"load.r $r3";
+    "push 16"
+    "load.r $r3"->"push 16";
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String,int)>"
+    "push 16"->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String,int)>";
+    "specialinvoke <java.awt.Color: void <init>(int)>"
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String,int)>"->"specialinvoke <java.awt.Color: void <init>(int)>";
+    "virtualinvoke <java.awt.Component: void setBackground(java.awt.Color)>"
+    "specialinvoke <java.awt.Color: void <init>(int)>"->"virtualinvoke <java.awt.Component: void setBackground(java.awt.Color)>";
+    "virtualinvoke <java.awt.Component: void setBackground(java.awt.Color)>"->"load.r r0";
+    "load.r r0"->"load.r $r2";
+    "staticget <CountDown: java.lang.String[] digitImageFile>"
+    "load.r $r2"->"staticget <CountDown: java.lang.String[] digitImageFile>";
+    "virtualinvoke <ImageProvider: java.awt.Image[] get(java.lang.String[])>"
+    "staticget <CountDown: java.lang.String[] digitImageFile>"->"virtualinvoke <ImageProvider: java.awt.Image[] get(java.lang.String[])>";
+    "fieldput <CountDown: java.awt.Image[] digitImage>"
+    "virtualinvoke <ImageProvider: java.awt.Image[] get(java.lang.String[])>"->"fieldput <CountDown: java.awt.Image[] digitImage>";
+    "fieldput <CountDown: java.awt.Image[] digitImage>"->"load.r r0";
+    "push \"background\""
+    "load.r r0"->"push \"background\"";
+    "push \"background\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"store.r $r3";
+    "store.r $r3"->"load.r $r3";
+    "load.r $r3"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r r0";
+    "load.r r0"->"load.r $r2";
+    "load.r $r2"->"load.r $r3";
+    "virtualinvoke <ImageProvider: java.awt.Image get(java.lang.String)>"
+    "load.r $r3"->"virtualinvoke <ImageProvider: java.awt.Image get(java.lang.String)>";
+    "fieldput <CountDown: java.awt.Image backgroundImage>"
+    "virtualinvoke <ImageProvider: java.awt.Image get(java.lang.String)>"->"fieldput <CountDown: java.awt.Image backgroundImage>";
+    "fieldput <CountDown: java.awt.Image backgroundImage>"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "push \"space\""
+    "load.r r0"->"push \"space\"";
+    "push \"space\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"store.r $r2";
+    "store.r $r2"->"load.r $r2";
+    "load.r $r2"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r r0";
+    "load.r r0"->"load.r $r2";
+    "push 10"
+    "load.r $r2"->"push 10";
+    "push 10"->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String,int)>";
+    "fieldput <CountDown: int space>"
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String,int)>"->"fieldput <CountDown: int space>";
+    "fieldput <CountDown: int space>"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "virtualinvoke <java.awt.Component: java.awt.Dimension size()>"
+    "load.r r0"->"virtualinvoke <java.awt.Component: java.awt.Dimension size()>";
+    "virtualinvoke <java.awt.Component: java.awt.Dimension size()>"->"store.r $r2";
+    "store.r $r2"->"load.r r0";
+    "load.r r0"->"load.r $r2";
+    "fieldget <java.awt.Dimension: int height>"
+    "load.r $r2"->"fieldget <java.awt.Dimension: int height>";
+    "push 26"
+    "fieldget <java.awt.Dimension: int height>"->"push 26";
+    "sub.i"
+    "push 26"->"sub.i";
+    "push 2"
+    "sub.i"->"push 2";
+    "div.i"
+    "push 2"->"div.i";
+    "fieldput <CountDown: int y>"
+    "div.i"->"fieldput <CountDown: int y>";
+    "fieldput <CountDown: int y>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "fieldget <CountDown: int space>"
+    "load.r r0"->"fieldget <CountDown: int space>";
+    "neg.i"
+    "fieldget <CountDown: int space>"->"neg.i";
+    "fieldput <CountDown: int x>"
+    "neg.i"->"fieldput <CountDown: int x>";
+    "push 0"
+    "fieldput <CountDown: int x>"->"push 0";
+    "store.i $r3"
+    "push 0"->"store.i $r3";
+    "goto load.i $r3"
+    "store.i $r3"->"goto load.i $r3";
+    "load.i $r3"
+    "goto load.i $r3"->"load.i $r3";
+    "load.i $r3"->"load.r r0";
+    "fieldget <CountDown: java.lang.String outputString>"
+    "load.r r0"->"fieldget <CountDown: java.lang.String outputString>";
+    "virtualinvoke <java.lang.String: int length()>"
+    "fieldget <CountDown: java.lang.String outputString>"->"virtualinvoke <java.lang.String: int length()>";
+    "ifcmplt.i load.r r0"
+    "virtualinvoke <java.lang.String: int length()>"->"ifcmplt.i load.r r0";
+    "ifcmplt.i load.r r0"->"load.r r0";
+    "load.r r0"->"load.r $r2";
+    "fieldget <java.awt.Dimension: int width>"
+    "load.r $r2"->"fieldget <java.awt.Dimension: int width>";
+    "fieldget <java.awt.Dimension: int width>"->"load.r r0";
+    "fieldget <CountDown: int x>"
+    "load.r r0"->"fieldget <CountDown: int x>";
+    "fieldget <CountDown: int x>"->"sub.i";
+    "sub.i"->"push 2";
+    "push 2"->"div.i";
+    "div.i"->"fieldput <CountDown: int x>";
+    "return"
+    "fieldput <CountDown: int x>"->"return";
+    "ifcmplt.i load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <CountDown: int x>";
+    "fieldget <CountDown: int x>"->"load.r r0";
+    "fieldget <CountDown: java.awt.Image[] digitImage>"
+    "load.r r0"->"fieldget <CountDown: java.awt.Image[] digitImage>";
+    "fieldget <CountDown: java.awt.Image[] digitImage>"->"load.r r0";
+    "load.r r0"->"fieldget <CountDown: java.lang.String outputString>";
+    "fieldget <CountDown: java.lang.String outputString>"->"load.i $r3";
+    "virtualinvoke <java.lang.String: char charAt(int)>"
+    "load.i $r3"->"virtualinvoke <java.lang.String: char charAt(int)>";
+    "push 48"
+    "virtualinvoke <java.lang.String: char charAt(int)>"->"push 48";
+    "sub.c"
+    "push 48"->"sub.c";
+    "arrayread.r"
+    "sub.c"->"arrayread.r";
+    "push null"
+    "arrayread.r"->"push null";
+    "virtualinvoke <java.awt.Image: int getWidth(java.awt.image.ImageObserver)>"
+    "push null"->"virtualinvoke <java.awt.Image: int getWidth(java.awt.image.ImageObserver)>";
+    "virtualinvoke <java.awt.Image: int getWidth(java.awt.image.ImageObserver)>"->"load.r r0";
+    "load.r r0"->"fieldget <CountDown: int space>";
+    "add.i"
+    "fieldget <CountDown: int space>"->"add.i";
+    "add.i"->"add.i";
+    "add.i"->"fieldput <CountDown: int x>";
+    "inc.i $r3 1"
+    "fieldput <CountDown: int x>"->"inc.i $r3 1";
+    "ifnull load.r r0"->"load.r r0";
+    "push 1"
+    "load.r r0"->"push 1";
+    "push 1"->"fieldput <CountDown: int space>";
+    "virtualinvoke <ImageProvider: java.awt.Image get(java.lang.String)>"->"store.r $r2";
+    "staticget <java.lang.System: java.io.PrintStream err>"
+    "store.r $r2"->"staticget <java.lang.System: java.io.PrintStream err>";
+    "staticget <java.lang.System: java.io.PrintStream err>"->"load.r $r2";
+    "virtualinvoke <java.io.PrintStream: void println(java.lang.Object)>"
+    "load.r $r2"->"virtualinvoke <java.io.PrintStream: void println(java.lang.Object)>";
+    "ifnull load.r r0"->"load.r r0";
+    "push \"666\""
+    "load.r r0"->"push \"666\"";
+    "push \"666\""->"fieldput <CountDown: java.lang.String outputString>";
+}

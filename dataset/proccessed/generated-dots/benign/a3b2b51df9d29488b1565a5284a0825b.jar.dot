@@ -1,0 +1,620 @@
+digraph "" {
+    "r0 := @this: PieChart"
+    "load.r r0"
+    "r0 := @this: PieChart"->"load.r r0";
+    "new java.awt.Font"
+    "load.r r0"->"new java.awt.Font";
+    "dup1.r"
+    "new java.awt.Font"->"dup1.r";
+    "push \"Sanserif\""
+    "dup1.r"->"push \"Sanserif\"";
+    "push 1"
+    "push \"Sanserif\""->"push 1";
+    "push 12"
+    "push 1"->"push 12";
+    "specialinvoke <java.awt.Font: void <init>(java.lang.String,int,int)>"
+    "push 12"->"specialinvoke <java.awt.Font: void <init>(java.lang.String,int,int)>";
+    "fieldput <PieChart: java.awt.Font font>"
+    "specialinvoke <java.awt.Font: void <init>(java.lang.String,int,int)>"->"fieldput <PieChart: java.awt.Font font>";
+    "fieldput <PieChart: java.awt.Font font>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "fieldget <PieChart: java.awt.Font font>"
+    "load.r r0"->"fieldget <PieChart: java.awt.Font font>";
+    "virtualinvoke <java.awt.Component: java.awt.FontMetrics getFontMetrics(java.awt.Font)>"
+    "fieldget <PieChart: java.awt.Font font>"->"virtualinvoke <java.awt.Component: java.awt.FontMetrics getFontMetrics(java.awt.Font)>";
+    "fieldput <PieChart: java.awt.FontMetrics fontMetrics>"
+    "virtualinvoke <java.awt.Component: java.awt.FontMetrics getFontMetrics(java.awt.Font)>"->"fieldput <PieChart: java.awt.FontMetrics fontMetrics>";
+    "fieldput <PieChart: java.awt.FontMetrics fontMetrics>"->"load.r r0";
+    "push \"bgcolor\""
+    "load.r r0"->"push \"bgcolor\"";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"
+    "push \"bgcolor\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "store.r r1"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"store.r r1";
+    "load.r r1"
+    "store.r r1"->"load.r r1";
+    "ifnonnull load.r r1"
+    "load.r r1"->"ifnonnull load.r r1";
+    "ifnonnull load.r r1"->"load.r r0";
+    "staticget <java.awt.Color: java.awt.Color white>"
+    "load.r r0"->"staticget <java.awt.Color: java.awt.Color white>";
+    "virtualinvoke <java.awt.Component: void setBackground(java.awt.Color)>"
+    "staticget <java.awt.Color: java.awt.Color white>"->"virtualinvoke <java.awt.Component: void setBackground(java.awt.Color)>";
+    "goto load.r r0"
+    "virtualinvoke <java.awt.Component: void setBackground(java.awt.Color)>"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "push \"title\""
+    "load.r r0"->"push \"title\"";
+    "push \"title\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "fieldput <PieChart: java.lang.String title>"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"fieldput <PieChart: java.lang.String title>";
+    "fieldput <PieChart: java.lang.String title>"->"load.r r0";
+    "fieldget <PieChart: java.lang.String title>"
+    "load.r r0"->"fieldget <PieChart: java.lang.String title>";
+    "ifnonnull load.r r0"
+    "fieldget <PieChart: java.lang.String title>"->"ifnonnull load.r r0";
+    "ifnonnull load.r r0"->"load.r r0";
+    "push \"Pie Chart\""
+    "load.r r0"->"push \"Pie Chart\"";
+    "push \"Pie Chart\""->"fieldput <PieChart: java.lang.String title>";
+    "fieldput <PieChart: java.lang.String title>"->"load.r r0";
+    "push \"columns\""
+    "load.r r0"->"push \"columns\"";
+    "push \"columns\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"store.r r1";
+    "store.r r1"->"load.r r1";
+    "load.r r1"->"ifnonnull load.r r0";
+    "ifnonnull load.r r0"->"load.r r0";
+    "push 5"
+    "load.r r0"->"push 5";
+    "fieldput <PieChart: int columns>"
+    "push 5"->"fieldput <PieChart: int columns>";
+    "fieldput <PieChart: int columns>"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "push \"showlabel\""
+    "load.r r0"->"push \"showlabel\"";
+    "push \"showlabel\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"store.r r1";
+    "store.r r1"->"load.r r1";
+    "load.r r1"->"ifnonnull load.r r1";
+    "ifnonnull load.r r1"->"load.r r0";
+    "load.r r0"->"push 1";
+    "fieldput <PieChart: boolean showLabel>"
+    "push 1"->"fieldput <PieChart: boolean showLabel>";
+    "fieldput <PieChart: boolean showLabel>"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "push \"showpercent\""
+    "load.r r0"->"push \"showpercent\"";
+    "push \"showpercent\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"store.r r1";
+    "store.r r1"->"load.r r1";
+    "load.r r1"->"ifnonnull load.r r1";
+    "ifnonnull load.r r1"->"load.r r0";
+    "load.r r0"->"push 1";
+    "fieldput <PieChart: boolean showPercent>"
+    "push 1"->"fieldput <PieChart: boolean showPercent>";
+    "fieldput <PieChart: boolean showPercent>"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "fieldget <PieChart: int columns>"
+    "load.r r0"->"fieldget <PieChart: int columns>";
+    "newarray"
+    "fieldget <PieChart: int columns>"->"newarray";
+    "fieldput <PieChart: int[] values>"
+    "newarray"->"fieldput <PieChart: int[] values>";
+    "fieldput <PieChart: int[] values>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <PieChart: int columns>";
+    "fieldget <PieChart: int columns>"->"newarray";
+    "fieldput <PieChart: java.awt.Color[] colors>"
+    "newarray"->"fieldput <PieChart: java.awt.Color[] colors>";
+    "fieldput <PieChart: java.awt.Color[] colors>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <PieChart: int columns>";
+    "fieldget <PieChart: int columns>"->"newarray";
+    "fieldput <PieChart: java.lang.String[] labels>"
+    "newarray"->"fieldput <PieChart: java.lang.String[] labels>";
+    "fieldput <PieChart: java.lang.String[] labels>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <PieChart: int columns>";
+    "fieldget <PieChart: int columns>"->"newarray";
+    "fieldput <PieChart: float[] percent>"
+    "newarray"->"fieldput <PieChart: float[] percent>";
+    "fieldput <PieChart: float[] percent>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <PieChart: int columns>";
+    "fieldget <PieChart: int columns>"->"newarray";
+    "fieldput <PieChart: float[] angle>"
+    "newarray"->"fieldput <PieChart: float[] angle>";
+    "push 0.0F"
+    "fieldput <PieChart: float[] angle>"->"push 0.0F";
+    "store.f r1"
+    "push 0.0F"->"store.f r1";
+    "push 0"
+    "store.f r1"->"push 0";
+    "store.i i17"
+    "push 0"->"store.i i17";
+    "goto load.i i17"
+    "store.i i17"->"goto load.i i17";
+    "load.i i17"
+    "goto load.i i17"->"load.i i17";
+    "load.i i17"->"load.r r0";
+    "load.r r0"->"fieldget <PieChart: int columns>";
+    "ifcmplt.i load.r r0"
+    "fieldget <PieChart: int columns>"->"ifcmplt.i load.r r0";
+    "push 100.0F"
+    "ifcmplt.i load.r r0"->"push 100.0F";
+    "load.f r1"
+    "push 100.0F"->"load.f r1";
+    "div.f"
+    "load.f r1"->"div.f";
+    "div.f"->"store.f r1";
+    "store.f r1"->"push 0";
+    "push 0"->"store.i i17";
+    "store.i i17"->"goto load.i i17";
+    "goto load.i i17"->"load.i i17";
+    "load.i i17"->"load.r r0";
+    "load.r r0"->"fieldget <PieChart: int columns>";
+    "fieldget <PieChart: int columns>"->"ifcmplt.i load.r r0";
+    "return"
+    "ifcmplt.i load.r r0"->"return";
+    "ifcmplt.i load.r r0"->"load.r r0";
+    "fieldget <PieChart: float[] percent>"
+    "load.r r0"->"fieldget <PieChart: float[] percent>";
+    "fieldget <PieChart: float[] percent>"->"load.i i17";
+    "load.i i17"->"load.r r0";
+    "fieldget <PieChart: int[] values>"
+    "load.r r0"->"fieldget <PieChart: int[] values>";
+    "fieldget <PieChart: int[] values>"->"load.i i17";
+    "arrayread.i"
+    "load.i i17"->"arrayread.i";
+    "i2f"
+    "arrayread.i"->"i2f";
+    "i2f"->"load.f r1";
+    "mul.f"
+    "load.f r1"->"mul.f";
+    "arraywrite.f"
+    "mul.f"->"arraywrite.f";
+    "arraywrite.f"->"load.r r0";
+    "fieldget <PieChart: float[] angle>"
+    "load.r r0"->"fieldget <PieChart: float[] angle>";
+    "fieldget <PieChart: float[] angle>"->"load.i i17";
+    "load.i i17"->"load.r r0";
+    "load.r r0"->"fieldget <PieChart: float[] percent>";
+    "fieldget <PieChart: float[] percent>"->"load.i i17";
+    "arrayread.f"
+    "load.i i17"->"arrayread.f";
+    "f2d"
+    "arrayread.f"->"f2d";
+    "push 3.6"
+    "f2d"->"push 3.6";
+    "mul.d"
+    "push 3.6"->"mul.d";
+    "d2f"
+    "mul.d"->"d2f";
+    "d2f"->"arraywrite.f";
+    "inc.i i17 1"
+    "arraywrite.f"->"inc.i i17 1";
+    "ifcmplt.i load.r r0"->"load.r r0";
+    "new java.lang.StringBuffer"
+    "load.r r0"->"new java.lang.StringBuffer";
+    "new java.lang.StringBuffer"->"dup1.r";
+    "push \"Pvalue\""
+    "dup1.r"->"push \"Pvalue\"";
+    "specialinvoke <java.lang.StringBuffer: void <init>(java.lang.String)>"
+    "push \"Pvalue\""->"specialinvoke <java.lang.StringBuffer: void <init>(java.lang.String)>";
+    "specialinvoke <java.lang.StringBuffer: void <init>(java.lang.String)>"->"load.i i17";
+    "load.i i17"->"push 1";
+    "add.i"
+    "push 1"->"add.i";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(int)>"
+    "add.i"->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(int)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>"
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(int)>"->"virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>"->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "store.r $r12"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"store.r $r12";
+    "load.r $r12"
+    "store.r $r12"->"load.r $r12";
+    "ifnull load.f r1"
+    "load.r $r12"->"ifnull load.f r1";
+    "ifnull load.f r1"->"load.r r0";
+    "load.r r0"->"fieldget <PieChart: int[] values>";
+    "fieldget <PieChart: int[] values>"->"load.i i17";
+    "load.i i17"->"load.r $r12";
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"
+    "load.r $r12"->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>";
+    "arraywrite.i"
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"->"arraywrite.i";
+    "goto load.f r1"
+    "arraywrite.i"->"goto load.f r1";
+    "goto load.f r1"->"load.f r1";
+    "load.f r1"->"load.r r0";
+    "load.r r0"->"fieldget <PieChart: int[] values>";
+    "fieldget <PieChart: int[] values>"->"load.i i17";
+    "load.i i17"->"arrayread.i";
+    "arrayread.i"->"i2f";
+    "add.f"
+    "i2f"->"add.f";
+    "add.f"->"store.f r1";
+    "store.f r1"->"load.r r0";
+    "load.r r0"->"fieldget <PieChart: int[] values>";
+    "fieldget <PieChart: int[] values>"->"load.i i17";
+    "load.i i17"->"arrayread.i";
+    "arrayread.i"->"load.r r0";
+    "fieldget <PieChart: int max>"
+    "load.r r0"->"fieldget <PieChart: int max>";
+    "ifcmple.i load.r r0"
+    "fieldget <PieChart: int max>"->"ifcmple.i load.r r0";
+    "ifcmple.i load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <PieChart: int[] values>";
+    "fieldget <PieChart: int[] values>"->"load.i i17";
+    "load.i i17"->"arrayread.i";
+    "fieldput <PieChart: int max>"
+    "arrayread.i"->"fieldput <PieChart: int max>";
+    "fieldput <PieChart: int max>"->"load.r r0";
+    "load.r r0"->"new java.lang.StringBuffer";
+    "new java.lang.StringBuffer"->"dup1.r";
+    "push \"Plabel\""
+    "dup1.r"->"push \"Plabel\"";
+    "push \"Plabel\""->"specialinvoke <java.lang.StringBuffer: void <init>(java.lang.String)>";
+    "specialinvoke <java.lang.StringBuffer: void <init>(java.lang.String)>"->"load.i i17";
+    "load.i i17"->"push 1";
+    "push 1"->"add.i";
+    "add.i"->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(int)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(int)>"->"virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>"->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "store.r r78"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"store.r r78";
+    "store.r r78"->"load.r r0";
+    "fieldget <PieChart: java.lang.String[] labels>"
+    "load.r r0"->"fieldget <PieChart: java.lang.String[] labels>";
+    "fieldget <PieChart: java.lang.String[] labels>"->"store.r $r12";
+    "store.r $r12"->"load.i i17";
+    "store.i $i7"
+    "load.i i17"->"store.i $i7";
+    "load.r r78"
+    "store.i $i7"->"load.r r78";
+    "ifnonnull load.r r78"
+    "load.r r78"->"ifnonnull load.r r78";
+    "push \"\""
+    "ifnonnull load.r r78"->"push \"\"";
+    "push \"\""->"store.r r78";
+    "goto load.r $r12"
+    "store.r r78"->"goto load.r $r12";
+    "goto load.r $r12"->"load.r $r12";
+    "load.i $i7"
+    "load.r $r12"->"load.i $i7";
+    "load.i $i7"->"load.r r78";
+    "arraywrite.r"
+    "load.r r78"->"arraywrite.r";
+    "arraywrite.r"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "fieldget <PieChart: java.awt.FontMetrics fontMetrics>"
+    "load.r r0"->"fieldget <PieChart: java.awt.FontMetrics fontMetrics>";
+    "fieldget <PieChart: java.awt.FontMetrics fontMetrics>"->"load.r r0";
+    "load.r r0"->"fieldget <PieChart: java.lang.String[] labels>";
+    "fieldget <PieChart: java.lang.String[] labels>"->"load.i i17";
+    "arrayread.r"
+    "load.i i17"->"arrayread.r";
+    "virtualinvoke <java.awt.FontMetrics: int stringWidth(java.lang.String)>"
+    "arrayread.r"->"virtualinvoke <java.awt.FontMetrics: int stringWidth(java.lang.String)>";
+    "virtualinvoke <java.awt.FontMetrics: int stringWidth(java.lang.String)>"->"load.r r0";
+    "fieldget <PieChart: int maxLabelWidth>"
+    "load.r r0"->"fieldget <PieChart: int maxLabelWidth>";
+    "staticinvoke <java.lang.Math: int max(int,int)>"
+    "fieldget <PieChart: int maxLabelWidth>"->"staticinvoke <java.lang.Math: int max(int,int)>";
+    "fieldput <PieChart: int maxLabelWidth>"
+    "staticinvoke <java.lang.Math: int max(int,int)>"->"fieldput <PieChart: int maxLabelWidth>";
+    "fieldput <PieChart: int maxLabelWidth>"->"load.r r0";
+    "load.r r0"->"new java.lang.StringBuffer";
+    "new java.lang.StringBuffer"->"dup1.r";
+    "push \"Pcolor\""
+    "dup1.r"->"push \"Pcolor\"";
+    "push \"Pcolor\""->"specialinvoke <java.lang.StringBuffer: void <init>(java.lang.String)>";
+    "specialinvoke <java.lang.StringBuffer: void <init>(java.lang.String)>"->"load.i i17";
+    "load.i i17"->"push 1";
+    "push 1"->"add.i";
+    "add.i"->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(int)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(int)>"->"virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>"->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"store.r $r12";
+    "store.r $r12"->"load.r $r12";
+    "ifnull load.r r0"
+    "load.r $r12"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r $r12";
+    "push \"red\""
+    "load.r $r12"->"push \"red\"";
+    "virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>"
+    "push \"red\""->"virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>";
+    "ifeq load.r $r12"
+    "virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>"->"ifeq load.r $r12";
+    "ifeq load.r $r12"->"load.r r0";
+    "fieldget <PieChart: java.awt.Color[] colors>"
+    "load.r r0"->"fieldget <PieChart: java.awt.Color[] colors>";
+    "fieldget <PieChart: java.awt.Color[] colors>"->"load.i i17";
+    "staticget <java.awt.Color: java.awt.Color red>"
+    "load.i i17"->"staticget <java.awt.Color: java.awt.Color red>";
+    "staticget <java.awt.Color: java.awt.Color red>"->"arraywrite.r";
+    "goto inc.i i17 1"
+    "arraywrite.r"->"goto inc.i i17 1";
+    "goto inc.i i17 1"->"inc.i i17 1";
+    "ifeq load.r $r12"->"load.r $r12";
+    "push \"green\""
+    "load.r $r12"->"push \"green\"";
+    "push \"green\""->"virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>";
+    "virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>"->"ifeq load.r $r12";
+    "ifeq load.r $r12"->"load.r r0";
+    "load.r r0"->"fieldget <PieChart: java.awt.Color[] colors>";
+    "fieldget <PieChart: java.awt.Color[] colors>"->"load.i i17";
+    "staticget <java.awt.Color: java.awt.Color green>"
+    "load.i i17"->"staticget <java.awt.Color: java.awt.Color green>";
+    "staticget <java.awt.Color: java.awt.Color green>"->"arraywrite.r";
+    "arraywrite.r"->"goto inc.i i17 1";
+    "ifeq load.r $r12"->"load.r $r12";
+    "push \"blue\""
+    "load.r $r12"->"push \"blue\"";
+    "push \"blue\""->"virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>";
+    "virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>"->"ifeq load.r $r12";
+    "ifeq load.r $r12"->"load.r r0";
+    "load.r r0"->"fieldget <PieChart: java.awt.Color[] colors>";
+    "fieldget <PieChart: java.awt.Color[] colors>"->"load.i i17";
+    "staticget <java.awt.Color: java.awt.Color blue>"
+    "load.i i17"->"staticget <java.awt.Color: java.awt.Color blue>";
+    "staticget <java.awt.Color: java.awt.Color blue>"->"arraywrite.r";
+    "arraywrite.r"->"goto inc.i i17 1";
+    "ifeq load.r $r12"->"load.r $r12";
+    "push \"pink\""
+    "load.r $r12"->"push \"pink\"";
+    "push \"pink\""->"virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>";
+    "virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>"->"ifeq load.r $r12";
+    "ifeq load.r $r12"->"load.r r0";
+    "load.r r0"->"fieldget <PieChart: java.awt.Color[] colors>";
+    "fieldget <PieChart: java.awt.Color[] colors>"->"load.i i17";
+    "staticget <java.awt.Color: java.awt.Color pink>"
+    "load.i i17"->"staticget <java.awt.Color: java.awt.Color pink>";
+    "staticget <java.awt.Color: java.awt.Color pink>"->"arraywrite.r";
+    "arraywrite.r"->"goto inc.i i17 1";
+    "ifeq load.r $r12"->"load.r $r12";
+    "push \"orange\""
+    "load.r $r12"->"push \"orange\"";
+    "push \"orange\""->"virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>";
+    "virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>"->"ifeq load.r $r12";
+    "ifeq load.r $r12"->"load.r r0";
+    "load.r r0"->"fieldget <PieChart: java.awt.Color[] colors>";
+    "fieldget <PieChart: java.awt.Color[] colors>"->"load.i i17";
+    "staticget <java.awt.Color: java.awt.Color orange>"
+    "load.i i17"->"staticget <java.awt.Color: java.awt.Color orange>";
+    "staticget <java.awt.Color: java.awt.Color orange>"->"arraywrite.r";
+    "arraywrite.r"->"goto inc.i i17 1";
+    "ifeq load.r $r12"->"load.r $r12";
+    "push \"magenta\""
+    "load.r $r12"->"push \"magenta\"";
+    "push \"magenta\""->"virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>";
+    "virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>"->"ifeq load.r $r12";
+    "ifeq load.r $r12"->"load.r r0";
+    "load.r r0"->"fieldget <PieChart: java.awt.Color[] colors>";
+    "fieldget <PieChart: java.awt.Color[] colors>"->"load.i i17";
+    "staticget <java.awt.Color: java.awt.Color magenta>"
+    "load.i i17"->"staticget <java.awt.Color: java.awt.Color magenta>";
+    "staticget <java.awt.Color: java.awt.Color magenta>"->"arraywrite.r";
+    "arraywrite.r"->"goto inc.i i17 1";
+    "ifeq load.r $r12"->"load.r $r12";
+    "push \"cyan\""
+    "load.r $r12"->"push \"cyan\"";
+    "push \"cyan\""->"virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>";
+    "virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>"->"ifeq load.r $r12";
+    "ifeq load.r $r12"->"load.r r0";
+    "load.r r0"->"fieldget <PieChart: java.awt.Color[] colors>";
+    "fieldget <PieChart: java.awt.Color[] colors>"->"load.i i17";
+    "staticget <java.awt.Color: java.awt.Color cyan>"
+    "load.i i17"->"staticget <java.awt.Color: java.awt.Color cyan>";
+    "staticget <java.awt.Color: java.awt.Color cyan>"->"arraywrite.r";
+    "arraywrite.r"->"goto inc.i i17 1";
+    "ifeq load.r $r12"->"load.r $r12";
+    "push \"white\""
+    "load.r $r12"->"push \"white\"";
+    "push \"white\""->"virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>";
+    "virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>"->"ifeq load.r $r12";
+    "ifeq load.r $r12"->"load.r r0";
+    "load.r r0"->"fieldget <PieChart: java.awt.Color[] colors>";
+    "fieldget <PieChart: java.awt.Color[] colors>"->"load.i i17";
+    "load.i i17"->"staticget <java.awt.Color: java.awt.Color white>";
+    "staticget <java.awt.Color: java.awt.Color white>"->"arraywrite.r";
+    "arraywrite.r"->"goto inc.i i17 1";
+    "ifeq load.r $r12"->"load.r $r12";
+    "push \"yellow\""
+    "load.r $r12"->"push \"yellow\"";
+    "push \"yellow\""->"virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>";
+    "virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>"->"ifeq load.r $r12";
+    "ifeq load.r $r12"->"load.r r0";
+    "load.r r0"->"fieldget <PieChart: java.awt.Color[] colors>";
+    "fieldget <PieChart: java.awt.Color[] colors>"->"load.i i17";
+    "staticget <java.awt.Color: java.awt.Color yellow>"
+    "load.i i17"->"staticget <java.awt.Color: java.awt.Color yellow>";
+    "staticget <java.awt.Color: java.awt.Color yellow>"->"arraywrite.r";
+    "arraywrite.r"->"goto inc.i i17 1";
+    "ifeq load.r $r12"->"load.r $r12";
+    "push \"gray\""
+    "load.r $r12"->"push \"gray\"";
+    "push \"gray\""->"virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>";
+    "virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>"->"ifeq load.r $r12";
+    "ifeq load.r $r12"->"load.r r0";
+    "load.r r0"->"fieldget <PieChart: java.awt.Color[] colors>";
+    "fieldget <PieChart: java.awt.Color[] colors>"->"load.i i17";
+    "staticget <java.awt.Color: java.awt.Color gray>"
+    "load.i i17"->"staticget <java.awt.Color: java.awt.Color gray>";
+    "staticget <java.awt.Color: java.awt.Color gray>"->"arraywrite.r";
+    "arraywrite.r"->"goto inc.i i17 1";
+    "ifeq load.r $r12"->"load.r $r12";
+    "push \"darkGray\""
+    "load.r $r12"->"push \"darkGray\"";
+    "push \"darkGray\""->"virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>";
+    "ifeq load.r r0"
+    "virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>"->"ifeq load.r r0";
+    "ifeq load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <PieChart: java.awt.Color[] colors>";
+    "fieldget <PieChart: java.awt.Color[] colors>"->"load.i i17";
+    "staticget <java.awt.Color: java.awt.Color darkGray>"
+    "load.i i17"->"staticget <java.awt.Color: java.awt.Color darkGray>";
+    "staticget <java.awt.Color: java.awt.Color darkGray>"->"arraywrite.r";
+    "arraywrite.r"->"goto inc.i i17 1";
+    "ifeq load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <PieChart: java.awt.Color[] colors>";
+    "fieldget <PieChart: java.awt.Color[] colors>"->"load.i i17";
+    "load.i i17"->"staticget <java.awt.Color: java.awt.Color gray>";
+    "staticget <java.awt.Color: java.awt.Color gray>"->"arraywrite.r";
+    "arraywrite.r"->"goto inc.i i17 1";
+    "ifnull load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <PieChart: java.awt.Color[] colors>";
+    "fieldget <PieChart: java.awt.Color[] colors>"->"load.i i17";
+    "load.i i17"->"staticget <java.awt.Color: java.awt.Color gray>";
+    "staticget <java.awt.Color: java.awt.Color gray>"->"arraywrite.r";
+    "ifnonnull load.r r78"->"load.r r78";
+    "load.r r78"->"store.r r78";
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"->"store.r $r12";
+    "store.r $r12"->"load.r r0";
+    "load.r r0"->"fieldget <PieChart: int[] values>";
+    "fieldget <PieChart: int[] values>"->"load.i i17";
+    "load.i i17"->"push 0";
+    "push 0"->"arraywrite.i";
+    "arraywrite.i"->"goto load.f r1";
+    "ifnonnull load.r r1"->"load.r r1";
+    "push \"YES\""
+    "load.r r1"->"push \"YES\"";
+    "virtualinvoke <java.lang.String: boolean equalsIgnoreCase(java.lang.String)>"
+    "push \"YES\""->"virtualinvoke <java.lang.String: boolean equalsIgnoreCase(java.lang.String)>";
+    "ifeq load.r r1"
+    "virtualinvoke <java.lang.String: boolean equalsIgnoreCase(java.lang.String)>"->"ifeq load.r r1";
+    "ifeq load.r r1"->"load.r r0";
+    "load.r r0"->"push 1";
+    "push 1"->"fieldput <PieChart: boolean showPercent>";
+    "fieldput <PieChart: boolean showPercent>"->"load.r r1";
+    "push \"NO\""
+    "load.r r1"->"push \"NO\"";
+    "push \"NO\""->"virtualinvoke <java.lang.String: boolean equalsIgnoreCase(java.lang.String)>";
+    "virtualinvoke <java.lang.String: boolean equalsIgnoreCase(java.lang.String)>"->"ifeq load.r r0";
+    "ifeq load.r r0"->"load.r r0";
+    "load.r r0"->"push 0";
+    "push 0"->"fieldput <PieChart: boolean showPercent>";
+    "fieldput <PieChart: boolean showPercent>"->"goto load.r r0";
+    "ifeq load.r r0"->"load.r r0";
+    "load.r r0"->"push 1";
+    "push 1"->"fieldput <PieChart: boolean showPercent>";
+    "ifnonnull load.r r1"->"load.r r1";
+    "load.r r1"->"push \"YES\"";
+    "push \"YES\""->"virtualinvoke <java.lang.String: boolean equalsIgnoreCase(java.lang.String)>";
+    "virtualinvoke <java.lang.String: boolean equalsIgnoreCase(java.lang.String)>"->"ifeq load.r r1";
+    "ifeq load.r r1"->"load.r r0";
+    "load.r r0"->"push 1";
+    "push 1"->"fieldput <PieChart: boolean showLabel>";
+    "fieldput <PieChart: boolean showLabel>"->"load.r r1";
+    "load.r r1"->"push \"NO\"";
+    "push \"NO\""->"virtualinvoke <java.lang.String: boolean equalsIgnoreCase(java.lang.String)>";
+    "virtualinvoke <java.lang.String: boolean equalsIgnoreCase(java.lang.String)>"->"ifeq load.r r0";
+    "ifeq load.r r0"->"load.r r0";
+    "load.r r0"->"push 0";
+    "push 0"->"fieldput <PieChart: boolean showLabel>";
+    "fieldput <PieChart: boolean showLabel>"->"goto load.r r0";
+    "ifeq load.r r0"->"load.r r0";
+    "load.r r0"->"push 1";
+    "push 1"->"fieldput <PieChart: boolean showLabel>";
+    "ifnonnull load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r1";
+    "load.r r1"->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>";
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"->"fieldput <PieChart: int columns>";
+    "ifnonnull load.r r1"->"load.r r1";
+    "load.r r1"->"push \"red\"";
+    "push \"red\""->"virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>";
+    "virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>"->"ifeq load.r r1";
+    "ifeq load.r r1"->"load.r r0";
+    "load.r r0"->"staticget <java.awt.Color: java.awt.Color red>";
+    "staticget <java.awt.Color: java.awt.Color red>"->"virtualinvoke <java.awt.Component: void setBackground(java.awt.Color)>";
+    "virtualinvoke <java.awt.Component: void setBackground(java.awt.Color)>"->"goto load.r r0";
+    "ifeq load.r r1"->"load.r r1";
+    "load.r r1"->"push \"green\"";
+    "push \"green\""->"virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>";
+    "virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>"->"ifeq load.r r1";
+    "ifeq load.r r1"->"load.r r0";
+    "load.r r0"->"staticget <java.awt.Color: java.awt.Color green>";
+    "staticget <java.awt.Color: java.awt.Color green>"->"virtualinvoke <java.awt.Component: void setBackground(java.awt.Color)>";
+    "virtualinvoke <java.awt.Component: void setBackground(java.awt.Color)>"->"goto load.r r0";
+    "ifeq load.r r1"->"load.r r1";
+    "load.r r1"->"push \"blue\"";
+    "push \"blue\""->"virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>";
+    "virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>"->"ifeq load.r r1";
+    "ifeq load.r r1"->"load.r r0";
+    "load.r r0"->"staticget <java.awt.Color: java.awt.Color blue>";
+    "staticget <java.awt.Color: java.awt.Color blue>"->"virtualinvoke <java.awt.Component: void setBackground(java.awt.Color)>";
+    "virtualinvoke <java.awt.Component: void setBackground(java.awt.Color)>"->"goto load.r r0";
+    "ifeq load.r r1"->"load.r r1";
+    "load.r r1"->"push \"pink\"";
+    "push \"pink\""->"virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>";
+    "virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>"->"ifeq load.r r1";
+    "ifeq load.r r1"->"load.r r0";
+    "load.r r0"->"staticget <java.awt.Color: java.awt.Color pink>";
+    "staticget <java.awt.Color: java.awt.Color pink>"->"virtualinvoke <java.awt.Component: void setBackground(java.awt.Color)>";
+    "virtualinvoke <java.awt.Component: void setBackground(java.awt.Color)>"->"goto load.r r0";
+    "ifeq load.r r1"->"load.r r1";
+    "load.r r1"->"push \"orange\"";
+    "push \"orange\""->"virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>";
+    "virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>"->"ifeq load.r r1";
+    "ifeq load.r r1"->"load.r r0";
+    "load.r r0"->"staticget <java.awt.Color: java.awt.Color orange>";
+    "staticget <java.awt.Color: java.awt.Color orange>"->"virtualinvoke <java.awt.Component: void setBackground(java.awt.Color)>";
+    "virtualinvoke <java.awt.Component: void setBackground(java.awt.Color)>"->"goto load.r r0";
+    "ifeq load.r r1"->"load.r r1";
+    "load.r r1"->"push \"magenta\"";
+    "push \"magenta\""->"virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>";
+    "virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>"->"ifeq load.r r1";
+    "ifeq load.r r1"->"load.r r0";
+    "load.r r0"->"staticget <java.awt.Color: java.awt.Color magenta>";
+    "staticget <java.awt.Color: java.awt.Color magenta>"->"virtualinvoke <java.awt.Component: void setBackground(java.awt.Color)>";
+    "virtualinvoke <java.awt.Component: void setBackground(java.awt.Color)>"->"goto load.r r0";
+    "ifeq load.r r1"->"load.r r1";
+    "load.r r1"->"push \"cyan\"";
+    "push \"cyan\""->"virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>";
+    "virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>"->"ifeq load.r r1";
+    "ifeq load.r r1"->"load.r r0";
+    "load.r r0"->"staticget <java.awt.Color: java.awt.Color cyan>";
+    "staticget <java.awt.Color: java.awt.Color cyan>"->"virtualinvoke <java.awt.Component: void setBackground(java.awt.Color)>";
+    "virtualinvoke <java.awt.Component: void setBackground(java.awt.Color)>"->"goto load.r r0";
+    "ifeq load.r r1"->"load.r r1";
+    "load.r r1"->"push \"white\"";
+    "push \"white\""->"virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>";
+    "virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>"->"ifeq load.r r1";
+    "ifeq load.r r1"->"load.r r0";
+    "load.r r0"->"staticget <java.awt.Color: java.awt.Color white>";
+    "staticget <java.awt.Color: java.awt.Color white>"->"virtualinvoke <java.awt.Component: void setBackground(java.awt.Color)>";
+    "virtualinvoke <java.awt.Component: void setBackground(java.awt.Color)>"->"goto load.r r0";
+    "ifeq load.r r1"->"load.r r1";
+    "load.r r1"->"push \"yellow\"";
+    "push \"yellow\""->"virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>";
+    "virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>"->"ifeq load.r r1";
+    "ifeq load.r r1"->"load.r r0";
+    "load.r r0"->"staticget <java.awt.Color: java.awt.Color yellow>";
+    "staticget <java.awt.Color: java.awt.Color yellow>"->"virtualinvoke <java.awt.Component: void setBackground(java.awt.Color)>";
+    "virtualinvoke <java.awt.Component: void setBackground(java.awt.Color)>"->"goto load.r r0";
+    "ifeq load.r r1"->"load.r r1";
+    "load.r r1"->"push \"gray\"";
+    "push \"gray\""->"virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>";
+    "virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>"->"ifeq load.r r1";
+    "ifeq load.r r1"->"load.r r0";
+    "load.r r0"->"staticget <java.awt.Color: java.awt.Color gray>";
+    "staticget <java.awt.Color: java.awt.Color gray>"->"virtualinvoke <java.awt.Component: void setBackground(java.awt.Color)>";
+    "virtualinvoke <java.awt.Component: void setBackground(java.awt.Color)>"->"goto load.r r0";
+    "ifeq load.r r1"->"load.r r1";
+    "load.r r1"->"push \"darkGray\"";
+    "push \"darkGray\""->"virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>";
+    "virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>"->"ifeq load.r r0";
+    "ifeq load.r r0"->"load.r r0";
+    "load.r r0"->"staticget <java.awt.Color: java.awt.Color darkGray>";
+    "staticget <java.awt.Color: java.awt.Color darkGray>"->"virtualinvoke <java.awt.Component: void setBackground(java.awt.Color)>";
+    "virtualinvoke <java.awt.Component: void setBackground(java.awt.Color)>"->"goto load.r r0";
+    "ifeq load.r r0"->"load.r r0";
+    "load.r r0"->"staticget <java.awt.Color: java.awt.Color white>";
+    "staticget <java.awt.Color: java.awt.Color white>"->"virtualinvoke <java.awt.Component: void setBackground(java.awt.Color)>";
+}

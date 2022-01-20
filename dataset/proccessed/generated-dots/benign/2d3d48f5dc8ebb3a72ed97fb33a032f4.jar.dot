@@ -1,0 +1,170 @@
+digraph "" {
+    "r0 := @this: org.bitstorm.gameoflife.GameOfLife"
+    "load.r r0"
+    "r0 := @this: org.bitstorm.gameoflife.GameOfLife"->"load.r r0";
+    "virtualinvoke <org.bitstorm.gameoflife.GameOfLife: void getParams()>"
+    "load.r r0"->"virtualinvoke <org.bitstorm.gameoflife.GameOfLife: void getParams()>";
+    "virtualinvoke <org.bitstorm.gameoflife.GameOfLife: void getParams()>"->"load.r r0";
+    "new java.awt.Color"
+    "load.r r0"->"new java.awt.Color";
+    "dup1.r"
+    "new java.awt.Color"->"dup1.r";
+    "push 10066329"
+    "dup1.r"->"push 10066329";
+    "specialinvoke <java.awt.Color: void <init>(int)>"
+    "push 10066329"->"specialinvoke <java.awt.Color: void <init>(int)>";
+    "virtualinvoke <java.awt.Component: void setBackground(java.awt.Color)>"
+    "specialinvoke <java.awt.Color: void <init>(int)>"->"virtualinvoke <java.awt.Component: void setBackground(java.awt.Color)>";
+    "virtualinvoke <java.awt.Component: void setBackground(java.awt.Color)>"->"load.r r0";
+    "new org.bitstorm.gameoflife.GameOfLifeGrid"
+    "load.r r0"->"new org.bitstorm.gameoflife.GameOfLifeGrid";
+    "new org.bitstorm.gameoflife.GameOfLifeGrid"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "fieldget <org.bitstorm.gameoflife.GameOfLife: int cellCols>"
+    "load.r r0"->"fieldget <org.bitstorm.gameoflife.GameOfLife: int cellCols>";
+    "fieldget <org.bitstorm.gameoflife.GameOfLife: int cellCols>"->"load.r r0";
+    "fieldget <org.bitstorm.gameoflife.GameOfLife: int cellRows>"
+    "load.r r0"->"fieldget <org.bitstorm.gameoflife.GameOfLife: int cellRows>";
+    "specialinvoke <org.bitstorm.gameoflife.GameOfLifeGrid: void <init>(int,int)>"
+    "fieldget <org.bitstorm.gameoflife.GameOfLife: int cellRows>"->"specialinvoke <org.bitstorm.gameoflife.GameOfLifeGrid: void <init>(int,int)>";
+    "fieldput <org.bitstorm.gameoflife.GameOfLife: org.bitstorm.gameoflife.GameOfLifeGrid gameOfLifeGrid>"
+    "specialinvoke <org.bitstorm.gameoflife.GameOfLifeGrid: void <init>(int,int)>"->"fieldput <org.bitstorm.gameoflife.GameOfLife: org.bitstorm.gameoflife.GameOfLifeGrid gameOfLifeGrid>";
+    "fieldput <org.bitstorm.gameoflife.GameOfLife: org.bitstorm.gameoflife.GameOfLifeGrid gameOfLifeGrid>"->"load.r r0";
+    "fieldget <org.bitstorm.gameoflife.GameOfLife: org.bitstorm.gameoflife.GameOfLifeGrid gameOfLifeGrid>"
+    "load.r r0"->"fieldget <org.bitstorm.gameoflife.GameOfLife: org.bitstorm.gameoflife.GameOfLifeGrid gameOfLifeGrid>";
+    "virtualinvoke <org.bitstorm.gameoflife.GameOfLifeGrid: void clear()>"
+    "fieldget <org.bitstorm.gameoflife.GameOfLife: org.bitstorm.gameoflife.GameOfLifeGrid gameOfLifeGrid>"->"virtualinvoke <org.bitstorm.gameoflife.GameOfLifeGrid: void clear()>";
+    "virtualinvoke <org.bitstorm.gameoflife.GameOfLifeGrid: void clear()>"->"load.r r0";
+    "new org.bitstorm.gameoflife.CellGridCanvas"
+    "load.r r0"->"new org.bitstorm.gameoflife.CellGridCanvas";
+    "new org.bitstorm.gameoflife.CellGridCanvas"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "load.r r0"->"fieldget <org.bitstorm.gameoflife.GameOfLife: org.bitstorm.gameoflife.GameOfLifeGrid gameOfLifeGrid>";
+    "fieldget <org.bitstorm.gameoflife.GameOfLife: org.bitstorm.gameoflife.GameOfLifeGrid gameOfLifeGrid>"->"load.r r0";
+    "fieldget <org.bitstorm.gameoflife.GameOfLife: int cellSize>"
+    "load.r r0"->"fieldget <org.bitstorm.gameoflife.GameOfLife: int cellSize>";
+    "specialinvoke <org.bitstorm.gameoflife.CellGridCanvas: void <init>(org.bitstorm.gameoflife.CellGrid,int)>"
+    "fieldget <org.bitstorm.gameoflife.GameOfLife: int cellSize>"->"specialinvoke <org.bitstorm.gameoflife.CellGridCanvas: void <init>(org.bitstorm.gameoflife.CellGrid,int)>";
+    "fieldput <org.bitstorm.gameoflife.GameOfLife: org.bitstorm.gameoflife.CellGridCanvas gameOfLifeCanvas>"
+    "specialinvoke <org.bitstorm.gameoflife.CellGridCanvas: void <init>(org.bitstorm.gameoflife.CellGrid,int)>"->"fieldput <org.bitstorm.gameoflife.GameOfLife: org.bitstorm.gameoflife.CellGridCanvas gameOfLifeCanvas>";
+    "fieldput <org.bitstorm.gameoflife.GameOfLife: org.bitstorm.gameoflife.CellGridCanvas gameOfLifeCanvas>"->"load.r r0";
+    "new org.bitstorm.gameoflife.GameOfLifeControls"
+    "load.r r0"->"new org.bitstorm.gameoflife.GameOfLifeControls";
+    "new org.bitstorm.gameoflife.GameOfLifeControls"->"dup1.r";
+    "specialinvoke <org.bitstorm.gameoflife.GameOfLifeControls: void <init>()>"
+    "dup1.r"->"specialinvoke <org.bitstorm.gameoflife.GameOfLifeControls: void <init>()>";
+    "fieldput <org.bitstorm.gameoflife.GameOfLife: org.bitstorm.gameoflife.GameOfLifeControls controls>"
+    "specialinvoke <org.bitstorm.gameoflife.GameOfLifeControls: void <init>()>"->"fieldput <org.bitstorm.gameoflife.GameOfLife: org.bitstorm.gameoflife.GameOfLifeControls controls>";
+    "fieldput <org.bitstorm.gameoflife.GameOfLife: org.bitstorm.gameoflife.GameOfLifeControls controls>"->"load.r r0";
+    "fieldget <org.bitstorm.gameoflife.GameOfLife: org.bitstorm.gameoflife.GameOfLifeControls controls>"
+    "load.r r0"->"fieldget <org.bitstorm.gameoflife.GameOfLife: org.bitstorm.gameoflife.GameOfLifeControls controls>";
+    "fieldget <org.bitstorm.gameoflife.GameOfLife: org.bitstorm.gameoflife.GameOfLifeControls controls>"->"load.r r0";
+    "virtualinvoke <org.bitstorm.gameoflife.GameOfLifeControls: void addGameOfLifeControlsListener(org.bitstorm.gameoflife.GameOfLifeControlsListener)>"
+    "load.r r0"->"virtualinvoke <org.bitstorm.gameoflife.GameOfLifeControls: void addGameOfLifeControlsListener(org.bitstorm.gameoflife.GameOfLifeControlsListener)>";
+    "new java.awt.GridBagLayout"
+    "virtualinvoke <org.bitstorm.gameoflife.GameOfLifeControls: void addGameOfLifeControlsListener(org.bitstorm.gameoflife.GameOfLifeControlsListener)>"->"new java.awt.GridBagLayout";
+    "store.r $r12"
+    "new java.awt.GridBagLayout"->"store.r $r12";
+    "load.r $r12"
+    "store.r $r12"->"load.r $r12";
+    "specialinvoke <java.awt.GridBagLayout: void <init>()>"
+    "load.r $r12"->"specialinvoke <java.awt.GridBagLayout: void <init>()>";
+    "specialinvoke <java.awt.GridBagLayout: void <init>()>"->"load.r r0";
+    "load.r r0"->"load.r $r12";
+    "virtualinvoke <java.awt.Container: void setLayout(java.awt.LayoutManager)>"
+    "load.r $r12"->"virtualinvoke <java.awt.Container: void setLayout(java.awt.LayoutManager)>";
+    "new java.awt.GridBagConstraints"
+    "virtualinvoke <java.awt.Container: void setLayout(java.awt.LayoutManager)>"->"new java.awt.GridBagConstraints";
+    "store.r $r13"
+    "new java.awt.GridBagConstraints"->"store.r $r13";
+    "load.r $r13"
+    "store.r $r13"->"load.r $r13";
+    "specialinvoke <java.awt.GridBagConstraints: void <init>()>"
+    "load.r $r13"->"specialinvoke <java.awt.GridBagConstraints: void <init>()>";
+    "specialinvoke <java.awt.GridBagConstraints: void <init>()>"->"load.r $r13";
+    "push 1"
+    "load.r $r13"->"push 1";
+    "fieldput <java.awt.GridBagConstraints: int fill>"
+    "push 1"->"fieldput <java.awt.GridBagConstraints: int fill>";
+    "fieldput <java.awt.GridBagConstraints: int fill>"->"load.r $r13";
+    "push 0"
+    "load.r $r13"->"push 0";
+    "fieldput <java.awt.GridBagConstraints: int gridx>"
+    "push 0"->"fieldput <java.awt.GridBagConstraints: int gridx>";
+    "fieldput <java.awt.GridBagConstraints: int gridx>"->"load.r $r13";
+    "load.r $r13"->"push 0";
+    "fieldput <java.awt.GridBagConstraints: int gridy>"
+    "push 0"->"fieldput <java.awt.GridBagConstraints: int gridy>";
+    "fieldput <java.awt.GridBagConstraints: int gridy>"->"load.r $r13";
+    "push 1.0"
+    "load.r $r13"->"push 1.0";
+    "fieldput <java.awt.GridBagConstraints: double weightx>"
+    "push 1.0"->"fieldput <java.awt.GridBagConstraints: double weightx>";
+    "fieldput <java.awt.GridBagConstraints: double weightx>"->"load.r $r13";
+    "load.r $r13"->"push 1.0";
+    "fieldput <java.awt.GridBagConstraints: double weighty>"
+    "push 1.0"->"fieldput <java.awt.GridBagConstraints: double weighty>";
+    "fieldput <java.awt.GridBagConstraints: double weighty>"->"load.r $r13";
+    "push 10"
+    "load.r $r13"->"push 10";
+    "fieldput <java.awt.GridBagConstraints: int anchor>"
+    "push 10"->"fieldput <java.awt.GridBagConstraints: int anchor>";
+    "fieldput <java.awt.GridBagConstraints: int anchor>"->"load.r $r12";
+    "load.r $r12"->"load.r r0";
+    "fieldget <org.bitstorm.gameoflife.GameOfLife: org.bitstorm.gameoflife.CellGridCanvas gameOfLifeCanvas>"
+    "load.r r0"->"fieldget <org.bitstorm.gameoflife.GameOfLife: org.bitstorm.gameoflife.CellGridCanvas gameOfLifeCanvas>";
+    "fieldget <org.bitstorm.gameoflife.GameOfLife: org.bitstorm.gameoflife.CellGridCanvas gameOfLifeCanvas>"->"load.r $r13";
+    "virtualinvoke <java.awt.GridBagLayout: void setConstraints(java.awt.Component,java.awt.GridBagConstraints)>"
+    "load.r $r13"->"virtualinvoke <java.awt.GridBagLayout: void setConstraints(java.awt.Component,java.awt.GridBagConstraints)>";
+    "virtualinvoke <java.awt.GridBagLayout: void setConstraints(java.awt.Component,java.awt.GridBagConstraints)>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <org.bitstorm.gameoflife.GameOfLife: org.bitstorm.gameoflife.CellGridCanvas gameOfLifeCanvas>";
+    "virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>"
+    "fieldget <org.bitstorm.gameoflife.GameOfLife: org.bitstorm.gameoflife.CellGridCanvas gameOfLifeCanvas>"->"virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>";
+    "pop"
+    "virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>"->"pop";
+    "pop"->"new java.awt.GridBagConstraints";
+    "store.r $r17"
+    "new java.awt.GridBagConstraints"->"store.r $r17";
+    "load.r $r17"
+    "store.r $r17"->"load.r $r17";
+    "load.r $r17"->"specialinvoke <java.awt.GridBagConstraints: void <init>()>";
+    "specialinvoke <java.awt.GridBagConstraints: void <init>()>"->"load.r $r13";
+    "load.r $r13"->"push 1";
+    "push 1"->"fieldput <java.awt.GridBagConstraints: int gridy>";
+    "fieldput <java.awt.GridBagConstraints: int gridy>"->"load.r $r13";
+    "load.r $r13"->"push 0";
+    "push 0"->"fieldput <java.awt.GridBagConstraints: int gridx>";
+    "fieldput <java.awt.GridBagConstraints: int gridx>"->"load.r $r17";
+    "load.r $r17"->"push 0";
+    "push 0"->"fieldput <java.awt.GridBagConstraints: int gridx>";
+    "fieldput <java.awt.GridBagConstraints: int gridx>"->"load.r $r12";
+    "load.r $r12"->"load.r r0";
+    "load.r r0"->"fieldget <org.bitstorm.gameoflife.GameOfLife: org.bitstorm.gameoflife.GameOfLifeControls controls>";
+    "fieldget <org.bitstorm.gameoflife.GameOfLife: org.bitstorm.gameoflife.GameOfLifeControls controls>"->"load.r $r17";
+    "load.r $r17"->"virtualinvoke <java.awt.GridBagLayout: void setConstraints(java.awt.Component,java.awt.GridBagConstraints)>";
+    "virtualinvoke <java.awt.GridBagLayout: void setConstraints(java.awt.Component,java.awt.GridBagConstraints)>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <org.bitstorm.gameoflife.GameOfLife: org.bitstorm.gameoflife.GameOfLifeControls controls>";
+    "fieldget <org.bitstorm.gameoflife.GameOfLife: org.bitstorm.gameoflife.GameOfLifeControls controls>"->"virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>";
+    "virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>"->"pop";
+    "pop"->"load.r r0";
+    "push \"Glider\""
+    "load.r r0"->"push \"Glider\"";
+    "staticinvoke <org.bitstorm.gameoflife.ShapeCollection: org.bitstorm.gameoflife.Shape getShapeByName(java.lang.String)>"
+    "push \"Glider\""->"staticinvoke <org.bitstorm.gameoflife.ShapeCollection: org.bitstorm.gameoflife.Shape getShapeByName(java.lang.String)>";
+    "virtualinvoke <org.bitstorm.gameoflife.GameOfLife: void setShape(org.bitstorm.gameoflife.Shape)>"
+    "staticinvoke <org.bitstorm.gameoflife.ShapeCollection: org.bitstorm.gameoflife.Shape getShapeByName(java.lang.String)>"->"virtualinvoke <org.bitstorm.gameoflife.GameOfLife: void setShape(org.bitstorm.gameoflife.Shape)>";
+    "goto load.r r0"
+    "virtualinvoke <org.bitstorm.gameoflife.GameOfLife: void setShape(org.bitstorm.gameoflife.Shape)>"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "load.r r0"->"push 1";
+    "virtualinvoke <java.awt.Component: void setVisible(boolean)>"
+    "push 1"->"virtualinvoke <java.awt.Component: void setVisible(boolean)>";
+    "virtualinvoke <java.awt.Component: void setVisible(boolean)>"->"load.r r0";
+    "virtualinvoke <java.awt.Container: void validate()>"
+    "load.r r0"->"virtualinvoke <java.awt.Container: void validate()>";
+    "return"
+    "virtualinvoke <java.awt.Container: void validate()>"->"return";
+    "virtualinvoke <org.bitstorm.gameoflife.GameOfLife: void setShape(org.bitstorm.gameoflife.Shape)>"->"store.r $r12";
+}

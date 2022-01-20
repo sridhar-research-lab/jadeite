@@ -1,0 +1,127 @@
+digraph "" {
+    "r0 := @this: BallDrop"
+    "load.r r0"
+    "r0 := @this: BallDrop"->"load.r r0";
+    "virtualinvoke <java.awt.Component: java.awt.Dimension size()>"
+    "load.r r0"->"virtualinvoke <java.awt.Component: java.awt.Dimension size()>";
+    "store.r r1"
+    "virtualinvoke <java.awt.Component: java.awt.Dimension size()>"->"store.r r1";
+    "store.r r1"->"load.r r0";
+    "new java.awt.MediaTracker"
+    "load.r r0"->"new java.awt.MediaTracker";
+    "dup1.r"
+    "new java.awt.MediaTracker"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "specialinvoke <java.awt.MediaTracker: void <init>(java.awt.Component)>"
+    "load.r r0"->"specialinvoke <java.awt.MediaTracker: void <init>(java.awt.Component)>";
+    "fieldput <BallDrop: java.awt.MediaTracker itsTracker>"
+    "specialinvoke <java.awt.MediaTracker: void <init>(java.awt.Component)>"->"fieldput <BallDrop: java.awt.MediaTracker itsTracker>";
+    "fieldput <BallDrop: java.awt.MediaTracker itsTracker>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "virtualinvoke <java.applet.Applet: java.net.URL getDocumentBase()>"
+    "load.r r0"->"virtualinvoke <java.applet.Applet: java.net.URL getDocumentBase()>";
+    "push \"smallball.gif\""
+    "virtualinvoke <java.applet.Applet: java.net.URL getDocumentBase()>"->"push \"smallball.gif\"";
+    "virtualinvoke <java.applet.Applet: java.awt.Image getImage(java.net.URL,java.lang.String)>"
+    "push \"smallball.gif\""->"virtualinvoke <java.applet.Applet: java.awt.Image getImage(java.net.URL,java.lang.String)>";
+    "fieldput <BallDrop: java.awt.Image ball>"
+    "virtualinvoke <java.applet.Applet: java.awt.Image getImage(java.net.URL,java.lang.String)>"->"fieldput <BallDrop: java.awt.Image ball>";
+    "fieldput <BallDrop: java.awt.Image ball>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"virtualinvoke <java.applet.Applet: java.net.URL getDocumentBase()>";
+    "push \"smallpin.gif\""
+    "virtualinvoke <java.applet.Applet: java.net.URL getDocumentBase()>"->"push \"smallpin.gif\"";
+    "push \"smallpin.gif\""->"virtualinvoke <java.applet.Applet: java.awt.Image getImage(java.net.URL,java.lang.String)>";
+    "fieldput <BallDrop: java.awt.Image pin>"
+    "virtualinvoke <java.applet.Applet: java.awt.Image getImage(java.net.URL,java.lang.String)>"->"fieldput <BallDrop: java.awt.Image pin>";
+    "fieldput <BallDrop: java.awt.Image pin>"->"load.r r0";
+    "fieldget <BallDrop: java.awt.MediaTracker itsTracker>"
+    "load.r r0"->"fieldget <BallDrop: java.awt.MediaTracker itsTracker>";
+    "fieldget <BallDrop: java.awt.MediaTracker itsTracker>"->"load.r r0";
+    "fieldget <BallDrop: java.awt.Image ball>"
+    "load.r r0"->"fieldget <BallDrop: java.awt.Image ball>";
+    "push 0"
+    "fieldget <BallDrop: java.awt.Image ball>"->"push 0";
+    "virtualinvoke <java.awt.MediaTracker: void addImage(java.awt.Image,int)>"
+    "push 0"->"virtualinvoke <java.awt.MediaTracker: void addImage(java.awt.Image,int)>";
+    "virtualinvoke <java.awt.MediaTracker: void addImage(java.awt.Image,int)>"->"load.r r0";
+    "load.r r0"->"fieldget <BallDrop: java.awt.MediaTracker itsTracker>";
+    "fieldget <BallDrop: java.awt.MediaTracker itsTracker>"->"load.r r0";
+    "fieldget <BallDrop: java.awt.Image pin>"
+    "load.r r0"->"fieldget <BallDrop: java.awt.Image pin>";
+    "fieldget <BallDrop: java.awt.Image pin>"->"push 0";
+    "push 0"->"virtualinvoke <java.awt.MediaTracker: void addImage(java.awt.Image,int)>";
+    "virtualinvoke <java.awt.MediaTracker: void addImage(java.awt.Image,int)>"->"load.r r0";
+    "load.r r0"->"fieldget <BallDrop: java.awt.MediaTracker itsTracker>";
+    "virtualinvoke <java.awt.MediaTracker: void waitForAll()>"
+    "fieldget <BallDrop: java.awt.MediaTracker itsTracker>"->"virtualinvoke <java.awt.MediaTracker: void waitForAll()>";
+    "goto load.r r0"
+    "virtualinvoke <java.awt.MediaTracker: void waitForAll()>"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "new java.util.Vector"
+    "load.r r0"->"new java.util.Vector";
+    "new java.util.Vector"->"dup1.r";
+    "specialinvoke <java.util.Vector: void <init>()>"
+    "dup1.r"->"specialinvoke <java.util.Vector: void <init>()>";
+    "fieldput <BallDrop: java.util.Vector itsBalls>"
+    "specialinvoke <java.util.Vector: void <init>()>"->"fieldput <BallDrop: java.util.Vector itsBalls>";
+    "fieldput <BallDrop: java.util.Vector itsBalls>"->"push 0";
+    "store.i i2"
+    "push 0"->"store.i i2";
+    "goto load.i i2"
+    "store.i i2"->"goto load.i i2";
+    "load.i i2"
+    "goto load.i i2"->"load.i i2";
+    "push 10"
+    "load.i i2"->"push 10";
+    "ifcmplt.i new Ball"
+    "push 10"->"ifcmplt.i new Ball";
+    "return"
+    "ifcmplt.i new Ball"->"return";
+    "new Ball"
+    "ifcmplt.i new Ball"->"new Ball";
+    "store.r $r14"
+    "new Ball"->"store.r $r14";
+    "load.r $r14"
+    "store.r $r14"->"load.r $r14";
+    "load.r r1"
+    "load.r $r14"->"load.r r1";
+    "fieldget <java.awt.Dimension: int width>"
+    "load.r r1"->"fieldget <java.awt.Dimension: int width>";
+    "push 2"
+    "fieldget <java.awt.Dimension: int width>"->"push 2";
+    "div.i"
+    "push 2"->"div.i";
+    "i2d"
+    "div.i"->"i2d";
+    "push 0.0"
+    "i2d"->"push 0.0";
+    "specialinvoke <Ball: void <init>(double,double)>"
+    "push 0.0"->"specialinvoke <Ball: void <init>(double,double)>";
+    "specialinvoke <Ball: void <init>(double,double)>"->"load.r $r14";
+    "staticinvoke <java.lang.Math: double random()>"
+    "load.r $r14"->"staticinvoke <java.lang.Math: double random()>";
+    "push 0.5"
+    "staticinvoke <java.lang.Math: double random()>"->"push 0.5";
+    "sub.d"
+    "push 0.5"->"sub.d";
+    "sub.d"->"push 0.5";
+    "mul.d"
+    "push 0.5"->"mul.d";
+    "mul.d"->"push 0.0";
+    "virtualinvoke <Ball: void Accelerate(double,double)>"
+    "push 0.0"->"virtualinvoke <Ball: void Accelerate(double,double)>";
+    "virtualinvoke <Ball: void Accelerate(double,double)>"->"load.r r0";
+    "fieldget <BallDrop: java.util.Vector itsBalls>"
+    "load.r r0"->"fieldget <BallDrop: java.util.Vector itsBalls>";
+    "fieldget <BallDrop: java.util.Vector itsBalls>"->"load.r $r14";
+    "virtualinvoke <java.util.Vector: void addElement(java.lang.Object)>"
+    "load.r $r14"->"virtualinvoke <java.util.Vector: void addElement(java.lang.Object)>";
+    "inc.i i2 1"
+    "virtualinvoke <java.util.Vector: void addElement(java.lang.Object)>"->"inc.i i2 1";
+    "store.r r0"
+    "virtualinvoke <java.awt.MediaTracker: void waitForAll()>"->"store.r r0";
+    "store.r r0"->"return";
+}

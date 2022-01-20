@@ -1,0 +1,380 @@
+digraph "" {
+    "r0 := @this: testvm2.Main"
+    "load.r r0"
+    "r0 := @this: testvm2.Main"->"load.r r0";
+    "push 500"
+    "load.r r0"->"push 500";
+    "push 340"
+    "push 500"->"push 340";
+    "virtualinvoke <testvm2.Main: void setSize(int,int)>"
+    "push 340"->"virtualinvoke <testvm2.Main: void setSize(int,int)>";
+    "virtualinvoke <testvm2.Main: void setSize(int,int)>"->"load.r r0";
+    "virtualinvoke <testvm2.Main: java.applet.AppletContext getAppletContext()>"
+    "load.r r0"->"virtualinvoke <testvm2.Main: java.applet.AppletContext getAppletContext()>";
+    "staticput <testvm2.Main: java.applet.AppletContext appletContext>"
+    "virtualinvoke <testvm2.Main: java.applet.AppletContext getAppletContext()>"->"staticput <testvm2.Main: java.applet.AppletContext appletContext>";
+    "push \"java.vendor.url\""
+    "staticput <testvm2.Main: java.applet.AppletContext appletContext>"->"push \"java.vendor.url\"";
+    "staticinvoke <java.lang.System: java.lang.String getProperty(java.lang.String)>"
+    "push \"java.vendor.url\""->"staticinvoke <java.lang.System: java.lang.String getProperty(java.lang.String)>";
+    "staticput <testvm2.Main: java.lang.String javaVendorURL>"
+    "staticinvoke <java.lang.System: java.lang.String getProperty(java.lang.String)>"->"staticput <testvm2.Main: java.lang.String javaVendorURL>";
+    "staticget <testvm2.Main: java.lang.String javaVendorURL>"
+    "staticput <testvm2.Main: java.lang.String javaVendorURL>"->"staticget <testvm2.Main: java.lang.String javaVendorURL>";
+    "push \"http://java.sun.com/\""
+    "staticget <testvm2.Main: java.lang.String javaVendorURL>"->"push \"http://java.sun.com/\"";
+    "virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>"
+    "push \"http://java.sun.com/\""->"virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>";
+    "ifeq load.r r0"
+    "virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>"->"ifeq load.r r0";
+    "push \"http://www.java.com/\""
+    "ifeq load.r r0"->"push \"http://www.java.com/\"";
+    "push \"http://www.java.com/\""->"staticput <testvm2.Main: java.lang.String javaVendorURL>";
+    "staticput <testvm2.Main: java.lang.String javaVendorURL>"->"load.r r0";
+    "new java.lang.Integer"
+    "load.r r0"->"new java.lang.Integer";
+    "dup1.r"
+    "new java.lang.Integer"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "push \"subtitleSize\""
+    "load.r r0"->"push \"subtitleSize\"";
+    "virtualinvoke <testvm2.Main: java.lang.String getParameter(java.lang.String)>"
+    "push \"subtitleSize\""->"virtualinvoke <testvm2.Main: java.lang.String getParameter(java.lang.String)>";
+    "specialinvoke <java.lang.Integer: void <init>(java.lang.String)>"
+    "virtualinvoke <testvm2.Main: java.lang.String getParameter(java.lang.String)>"->"specialinvoke <java.lang.Integer: void <init>(java.lang.String)>";
+    "virtualinvoke <java.lang.Integer: int intValue()>"
+    "specialinvoke <java.lang.Integer: void <init>(java.lang.String)>"->"virtualinvoke <java.lang.Integer: int intValue()>";
+    "fieldput <testvm2.Main: int subtitleSize>"
+    "virtualinvoke <java.lang.Integer: int intValue()>"->"fieldput <testvm2.Main: int subtitleSize>";
+    "fieldput <testvm2.Main: int subtitleSize>"->"load.r r0";
+    "push \"locale\""
+    "load.r r0"->"push \"locale\"";
+    "push \"locale\""->"virtualinvoke <testvm2.Main: java.lang.String getParameter(java.lang.String)>";
+    "store.r r1"
+    "virtualinvoke <testvm2.Main: java.lang.String getParameter(java.lang.String)>"->"store.r r1";
+    "load.r r1"
+    "store.r r1"->"load.r r1";
+    "virtualinvoke <java.lang.String: int length()>"
+    "load.r r1"->"virtualinvoke <java.lang.String: int length()>";
+    "push 2"
+    "virtualinvoke <java.lang.String: int length()>"->"push 2";
+    "ifcmpne.i new java.util.Locale"
+    "push 2"->"ifcmpne.i new java.util.Locale";
+    "new java.util.Locale"
+    "ifcmpne.i new java.util.Locale"->"new java.util.Locale";
+    "new java.util.Locale"->"dup1.r";
+    "dup1.r"->"load.r r1";
+    "specialinvoke <java.util.Locale: void <init>(java.lang.String)>"
+    "load.r r1"->"specialinvoke <java.util.Locale: void <init>(java.lang.String)>";
+    "specialinvoke <java.util.Locale: void <init>(java.lang.String)>"->"store.r r1";
+    "goto load.r r0"
+    "store.r r1"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "push \"testVM\""
+    "load.r r0"->"push \"testVM\"";
+    "push \"testVM\""->"load.r r1";
+    "staticinvoke <java.util.ResourceBundle: java.util.ResourceBundle getBundle(java.lang.String,java.util.Locale)>"
+    "load.r r1"->"staticinvoke <java.util.ResourceBundle: java.util.ResourceBundle getBundle(java.lang.String,java.util.Locale)>";
+    "fieldput <testvm2.Main: java.util.ResourceBundle resourceBundle>"
+    "staticinvoke <java.util.ResourceBundle: java.util.ResourceBundle getBundle(java.lang.String,java.util.Locale)>"->"fieldput <testvm2.Main: java.util.ResourceBundle resourceBundle>";
+    "fieldput <testvm2.Main: java.util.ResourceBundle resourceBundle>"->"load.r r0";
+    "fieldget <testvm2.Main: java.lang.String[] sysPropertiesString>"
+    "load.r r0"->"fieldget <testvm2.Main: java.lang.String[] sysPropertiesString>";
+    "push 0"
+    "fieldget <testvm2.Main: java.lang.String[] sysPropertiesString>"->"push 0";
+    "push 0"->"load.r r0";
+    "fieldget <testvm2.Main: java.util.ResourceBundle resourceBundle>"
+    "load.r r0"->"fieldget <testvm2.Main: java.util.ResourceBundle resourceBundle>";
+    "push \"config\""
+    "fieldget <testvm2.Main: java.util.ResourceBundle resourceBundle>"->"push \"config\"";
+    "virtualinvoke <java.util.ResourceBundle: java.lang.String getString(java.lang.String)>"
+    "push \"config\""->"virtualinvoke <java.util.ResourceBundle: java.lang.String getString(java.lang.String)>";
+    "arraywrite.r"
+    "virtualinvoke <java.util.ResourceBundle: java.lang.String getString(java.lang.String)>"->"arraywrite.r";
+    "arraywrite.r"->"load.r r0";
+    "load.r r0"->"fieldget <testvm2.Main: java.lang.String[] sysPropertiesString>";
+    "push 1"
+    "fieldget <testvm2.Main: java.lang.String[] sysPropertiesString>"->"push 1";
+    "push \"\""
+    "push 1"->"push \"\"";
+    "push \"\""->"arraywrite.r";
+    "arraywrite.r"->"load.r r0";
+    "load.r r0"->"fieldget <testvm2.Main: java.lang.String[] sysPropertiesString>";
+    "fieldget <testvm2.Main: java.lang.String[] sysPropertiesString>"->"push 2";
+    "push 2"->"load.r r0";
+    "load.r r0"->"fieldget <testvm2.Main: java.util.ResourceBundle resourceBundle>";
+    "push \"vendor\""
+    "fieldget <testvm2.Main: java.util.ResourceBundle resourceBundle>"->"push \"vendor\"";
+    "push \"vendor\""->"virtualinvoke <java.util.ResourceBundle: java.lang.String getString(java.lang.String)>";
+    "virtualinvoke <java.util.ResourceBundle: java.lang.String getString(java.lang.String)>"->"arraywrite.r";
+    "arraywrite.r"->"load.r r0";
+    "load.r r0"->"fieldget <testvm2.Main: java.lang.String[] sysPropertiesString>";
+    "push 3"
+    "fieldget <testvm2.Main: java.lang.String[] sysPropertiesString>"->"push 3";
+    "push 3"->"load.r r0";
+    "load.r r0"->"fieldget <testvm2.Main: java.util.ResourceBundle resourceBundle>";
+    "push \"version\""
+    "fieldget <testvm2.Main: java.util.ResourceBundle resourceBundle>"->"push \"version\"";
+    "push \"version\""->"virtualinvoke <java.util.ResourceBundle: java.lang.String getString(java.lang.String)>";
+    "virtualinvoke <java.util.ResourceBundle: java.lang.String getString(java.lang.String)>"->"arraywrite.r";
+    "arraywrite.r"->"load.r r0";
+    "load.r r0"->"fieldget <testvm2.Main: java.lang.String[] sysPropertiesString>";
+    "push 4"
+    "fieldget <testvm2.Main: java.lang.String[] sysPropertiesString>"->"push 4";
+    "push 4"->"load.r r0";
+    "load.r r0"->"fieldget <testvm2.Main: java.util.ResourceBundle resourceBundle>";
+    "push \"os\""
+    "fieldget <testvm2.Main: java.util.ResourceBundle resourceBundle>"->"push \"os\"";
+    "push \"os\""->"virtualinvoke <java.util.ResourceBundle: java.lang.String getString(java.lang.String)>";
+    "virtualinvoke <java.util.ResourceBundle: java.lang.String getString(java.lang.String)>"->"arraywrite.r";
+    "arraywrite.r"->"load.r r0";
+    "load.r r0"->"fieldget <testvm2.Main: java.lang.String[] sysPropertiesString>";
+    "push 5"
+    "fieldget <testvm2.Main: java.lang.String[] sysPropertiesString>"->"push 5";
+    "push 5"->"load.r r0";
+    "load.r r0"->"fieldget <testvm2.Main: java.util.ResourceBundle resourceBundle>";
+    "push \"arch\""
+    "fieldget <testvm2.Main: java.util.ResourceBundle resourceBundle>"->"push \"arch\"";
+    "push \"arch\""->"virtualinvoke <java.util.ResourceBundle: java.lang.String getString(java.lang.String)>";
+    "virtualinvoke <java.util.ResourceBundle: java.lang.String getString(java.lang.String)>"->"arraywrite.r";
+    "arraywrite.r"->"load.r r0";
+    "load.r r0"->"fieldget <testvm2.Main: java.lang.String[] sysPropertiesString>";
+    "push 6"
+    "fieldget <testvm2.Main: java.lang.String[] sysPropertiesString>"->"push 6";
+    "push 6"->"push \"\"";
+    "push \"\""->"arraywrite.r";
+    "arraywrite.r"->"load.r r0";
+    "load.r r0"->"fieldget <testvm2.Main: java.lang.String[] sysPropertiesString>";
+    "push 7"
+    "fieldget <testvm2.Main: java.lang.String[] sysPropertiesString>"->"push 7";
+    "push 7"->"push \"\"";
+    "push \"\""->"arraywrite.r";
+    "arraywrite.r"->"load.r r0";
+    "load.r r0"->"fieldget <testvm2.Main: java.lang.String[] sysPropertiesString>";
+    "push 8"
+    "fieldget <testvm2.Main: java.lang.String[] sysPropertiesString>"->"push 8";
+    "push \"java.vendor\""
+    "push 8"->"push \"java.vendor\"";
+    "push \"java.vendor\""->"staticinvoke <java.lang.System: java.lang.String getProperty(java.lang.String)>";
+    "staticinvoke <java.lang.System: java.lang.String getProperty(java.lang.String)>"->"arraywrite.r";
+    "arraywrite.r"->"load.r r0";
+    "push \"java.version\""
+    "load.r r0"->"push \"java.version\"";
+    "push \"java.version\""->"staticinvoke <java.lang.System: java.lang.String getProperty(java.lang.String)>";
+    "fieldput <testvm2.Main: java.lang.String javaVersion>"
+    "staticinvoke <java.lang.System: java.lang.String getProperty(java.lang.String)>"->"fieldput <testvm2.Main: java.lang.String javaVersion>";
+    "fieldput <testvm2.Main: java.lang.String javaVersion>"->"load.r r0";
+    "fieldget <testvm2.Main: java.lang.String javaVersion>"
+    "load.r r0"->"fieldget <testvm2.Main: java.lang.String javaVersion>";
+    "fieldget <testvm2.Main: java.lang.String javaVersion>"->"push 0";
+    "push 0"->"push 5";
+    "virtualinvoke <java.lang.String: java.lang.String substring(int,int)>"
+    "push 5"->"virtualinvoke <java.lang.String: java.lang.String substring(int,int)>";
+    "virtualinvoke <java.lang.String: java.lang.String substring(int,int)>"->"store.r r1";
+    "store.r r1"->"push \"\"";
+    "store.r r80"
+    "push \"\""->"store.r r80";
+    "store.r r80"->"load.r r0";
+    "load.r r0"->"fieldget <testvm2.Main: java.lang.String javaVersion>";
+    "fieldget <testvm2.Main: java.lang.String javaVersion>"->"virtualinvoke <java.lang.String: int length()>";
+    "virtualinvoke <java.lang.String: int length()>"->"push 5";
+    "ifcmple.i load.r r1"
+    "push 5"->"ifcmple.i load.r r1";
+    "ifcmple.i load.r r1"->"load.r r0";
+    "load.r r0"->"fieldget <testvm2.Main: java.lang.String javaVersion>";
+    "fieldget <testvm2.Main: java.lang.String javaVersion>"->"virtualinvoke <java.lang.String: int length()>";
+    "push 9"
+    "virtualinvoke <java.lang.String: int length()>"->"push 9";
+    "ifcmpge.i load.r r1"
+    "push 9"->"ifcmpge.i load.r r1";
+    "ifcmpge.i load.r r1"->"load.r r0";
+    "load.r r0"->"fieldget <testvm2.Main: java.lang.String javaVersion>";
+    "fieldget <testvm2.Main: java.lang.String javaVersion>"->"push 6";
+    "push 6"->"push 8";
+    "push 8"->"virtualinvoke <java.lang.String: java.lang.String substring(int,int)>";
+    "virtualinvoke <java.lang.String: java.lang.String substring(int,int)>"->"store.r r80";
+    "store.r r80"->"load.r r1";
+    "push \"1.5.0\""
+    "load.r r1"->"push \"1.5.0\"";
+    "virtualinvoke <java.lang.String: int compareTo(java.lang.String)>"
+    "push \"1.5.0\""->"virtualinvoke <java.lang.String: int compareTo(java.lang.String)>";
+    "iflt load.r r0"
+    "virtualinvoke <java.lang.String: int compareTo(java.lang.String)>"->"iflt load.r r0";
+    "iflt load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <testvm2.Main: java.lang.String[] sysPropertiesString>";
+    "fieldget <testvm2.Main: java.lang.String[] sysPropertiesString>"->"push 9";
+    "new java.lang.StringBuffer"
+    "push 9"->"new java.lang.StringBuffer";
+    "new java.lang.StringBuffer"->"dup1.r";
+    "specialinvoke <java.lang.StringBuffer: void <init>()>"
+    "dup1.r"->"specialinvoke <java.lang.StringBuffer: void <init>()>";
+    "push \"Java \""
+    "specialinvoke <java.lang.StringBuffer: void <init>()>"->"push \"Java \"";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"
+    "push \"Java \""->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"load.r r1";
+    "load.r r1"->"push 2";
+    "push 2"->"push 3";
+    "push 3"->"virtualinvoke <java.lang.String: java.lang.String substring(int,int)>";
+    "virtualinvoke <java.lang.String: java.lang.String substring(int,int)>"->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "push \" Update \""
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"push \" Update \"";
+    "push \" Update \""->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "load.r r80"
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"load.r r80";
+    "load.r r80"->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>"
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>"->"arraywrite.r";
+    "arraywrite.r"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <testvm2.Main: java.lang.String[] sysPropertiesString>";
+    "push 10"
+    "fieldget <testvm2.Main: java.lang.String[] sysPropertiesString>"->"push 10";
+    "push 10"->"new java.lang.StringBuffer";
+    "new java.lang.StringBuffer"->"dup1.r";
+    "dup1.r"->"specialinvoke <java.lang.StringBuffer: void <init>()>";
+    "push \"os.name\""
+    "specialinvoke <java.lang.StringBuffer: void <init>()>"->"push \"os.name\"";
+    "push \"os.name\""->"staticinvoke <java.lang.System: java.lang.String getProperty(java.lang.String)>";
+    "staticinvoke <java.lang.System: java.lang.String getProperty(java.lang.String)>"->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "push \" \""
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"push \" \"";
+    "push \" \""->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "push \"os.version\""
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"push \"os.version\"";
+    "push \"os.version\""->"staticinvoke <java.lang.System: java.lang.String getProperty(java.lang.String)>";
+    "staticinvoke <java.lang.System: java.lang.String getProperty(java.lang.String)>"->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>"->"arraywrite.r";
+    "arraywrite.r"->"load.r r0";
+    "load.r r0"->"fieldget <testvm2.Main: java.lang.String[] sysPropertiesString>";
+    "push 11"
+    "fieldget <testvm2.Main: java.lang.String[] sysPropertiesString>"->"push 11";
+    "push \"os.arch\""
+    "push 11"->"push \"os.arch\"";
+    "push \"os.arch\""->"staticinvoke <java.lang.System: java.lang.String getProperty(java.lang.String)>";
+    "staticinvoke <java.lang.System: java.lang.String getProperty(java.lang.String)>"->"arraywrite.r";
+    "arraywrite.r"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <testvm2.Main: java.util.ResourceBundle resourceBundle>";
+    "push \"working\""
+    "fieldget <testvm2.Main: java.util.ResourceBundle resourceBundle>"->"push \"working\"";
+    "push \"working\""->"virtualinvoke <java.util.ResourceBundle: java.lang.String getString(java.lang.String)>";
+    "fieldput <testvm2.Main: java.lang.String title>"
+    "virtualinvoke <java.util.ResourceBundle: java.lang.String getString(java.lang.String)>"->"fieldput <testvm2.Main: java.lang.String title>";
+    "new java.io.BufferedInputStream"
+    "fieldput <testvm2.Main: java.lang.String title>"->"new java.io.BufferedInputStream";
+    "store.r $r56"
+    "new java.io.BufferedInputStream"->"store.r $r56";
+    "load.r $r56"
+    "store.r $r56"->"load.r $r56";
+    "load.r $r56"->"load.r r0";
+    "virtualinvoke <java.lang.Object: java.lang.Class getClass()>"
+    "load.r r0"->"virtualinvoke <java.lang.Object: java.lang.Class getClass()>";
+    "virtualinvoke <java.lang.Class: java.lang.ClassLoader getClassLoader()>"
+    "virtualinvoke <java.lang.Object: java.lang.Class getClass()>"->"virtualinvoke <java.lang.Class: java.lang.ClassLoader getClassLoader()>";
+    "push \"animation.gif\""
+    "virtualinvoke <java.lang.Class: java.lang.ClassLoader getClassLoader()>"->"push \"animation.gif\"";
+    "virtualinvoke <java.lang.ClassLoader: java.io.InputStream getResourceAsStream(java.lang.String)>"
+    "push \"animation.gif\""->"virtualinvoke <java.lang.ClassLoader: java.io.InputStream getResourceAsStream(java.lang.String)>";
+    "specialinvoke <java.io.BufferedInputStream: void <init>(java.io.InputStream)>"
+    "virtualinvoke <java.lang.ClassLoader: java.io.InputStream getResourceAsStream(java.lang.String)>"->"specialinvoke <java.io.BufferedInputStream: void <init>(java.io.InputStream)>";
+    "specialinvoke <java.io.BufferedInputStream: void <init>(java.io.InputStream)>"->"push 0";
+    "store.i r1"
+    "push 0"->"store.i r1";
+    "store.i r1"->"load.r $r56";
+    "ifnull new testvm2.Main$1"
+    "load.r $r56"->"ifnull new testvm2.Main$1";
+    "push 50000"
+    "ifnull new testvm2.Main$1"->"push 50000";
+    "newarray"
+    "push 50000"->"newarray";
+    "newarray"->"store.r r80";
+    "store.r r80"->"load.r $r56";
+    "load.r $r56"->"load.r r80";
+    "virtualinvoke <java.io.BufferedInputStream: int read(byte[])>"
+    "load.r r80"->"virtualinvoke <java.io.BufferedInputStream: int read(byte[])>";
+    "virtualinvoke <java.io.BufferedInputStream: int read(byte[])>"->"store.i r1";
+    "store.i r1"->"load.r $r56";
+    "virtualinvoke <java.io.BufferedInputStream: void close()>"
+    "load.r $r56"->"virtualinvoke <java.io.BufferedInputStream: void close()>";
+    "goto load.i r1"
+    "virtualinvoke <java.io.BufferedInputStream: void close()>"->"goto load.i r1";
+    "load.i r1"
+    "goto load.i r1"->"load.i r1";
+    "ifgt load.r r0"
+    "load.i r1"->"ifgt load.r r0";
+    "staticget <java.lang.System: java.io.PrintStream err>"
+    "ifgt load.r r0"->"staticget <java.lang.System: java.io.PrintStream err>";
+    "push \"Empty file\""
+    "staticget <java.lang.System: java.io.PrintStream err>"->"push \"Empty file\"";
+    "virtualinvoke <java.io.PrintStream: void println(java.lang.String)>"
+    "push \"Empty file\""->"virtualinvoke <java.io.PrintStream: void println(java.lang.String)>";
+    "virtualinvoke <java.io.PrintStream: void println(java.lang.String)>"->"load.r r0";
+    "new javax.swing.ImageIcon"
+    "load.r r0"->"new javax.swing.ImageIcon";
+    "new javax.swing.ImageIcon"->"dup1.r";
+    "staticinvoke <java.awt.Toolkit: java.awt.Toolkit getDefaultToolkit()>"
+    "dup1.r"->"staticinvoke <java.awt.Toolkit: java.awt.Toolkit getDefaultToolkit()>";
+    "staticinvoke <java.awt.Toolkit: java.awt.Toolkit getDefaultToolkit()>"->"load.r r80";
+    "virtualinvoke <java.awt.Toolkit: java.awt.Image createImage(byte[])>"
+    "load.r r80"->"virtualinvoke <java.awt.Toolkit: java.awt.Image createImage(byte[])>";
+    "specialinvoke <javax.swing.ImageIcon: void <init>(java.awt.Image)>"
+    "virtualinvoke <java.awt.Toolkit: java.awt.Image createImage(byte[])>"->"specialinvoke <javax.swing.ImageIcon: void <init>(java.awt.Image)>";
+    "fieldput <testvm2.Main: javax.swing.ImageIcon imgIcon>"
+    "specialinvoke <javax.swing.ImageIcon: void <init>(java.awt.Image)>"->"fieldput <testvm2.Main: javax.swing.ImageIcon imgIcon>";
+    "new testvm2.Main$1"
+    "fieldput <testvm2.Main: javax.swing.ImageIcon imgIcon>"->"new testvm2.Main$1";
+    "new testvm2.Main$1"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "specialinvoke <testvm2.Main$1: void <init>(testvm2.Main)>"
+    "load.r r0"->"specialinvoke <testvm2.Main$1: void <init>(testvm2.Main)>";
+    "staticinvoke <javax.swing.SwingUtilities: void invokeAndWait(java.lang.Runnable)>"
+    "specialinvoke <testvm2.Main$1: void <init>(testvm2.Main)>"->"staticinvoke <javax.swing.SwingUtilities: void invokeAndWait(java.lang.Runnable)>";
+    "goto return"
+    "staticinvoke <javax.swing.SwingUtilities: void invokeAndWait(java.lang.Runnable)>"->"goto return";
+    "return"
+    "goto return"->"return";
+    "staticget <java.lang.System: java.io.PrintStream out>"
+    "staticinvoke <javax.swing.SwingUtilities: void invokeAndWait(java.lang.Runnable)>"->"staticget <java.lang.System: java.io.PrintStream out>";
+    "push \"Cannot create GUI\""
+    "staticget <java.lang.System: java.io.PrintStream out>"->"push \"Cannot create GUI\"";
+    "push \"Cannot create GUI\""->"virtualinvoke <java.io.PrintStream: void println(java.lang.String)>";
+    "virtualinvoke <java.lang.Exception: void printStackTrace()>"
+    "virtualinvoke <java.io.PrintStream: void println(java.lang.String)>"->"virtualinvoke <java.lang.Exception: void printStackTrace()>";
+    "virtualinvoke <java.io.BufferedInputStream: void close()>"->"store.r $r56";
+    "store.r $r56"->"staticget <java.lang.System: java.io.PrintStream err>";
+    "push \"Cannot read animated file\""
+    "staticget <java.lang.System: java.io.PrintStream err>"->"push \"Cannot read animated file\"";
+    "push \"Cannot read animated file\""->"virtualinvoke <java.io.PrintStream: void println(java.lang.String)>";
+    "iflt load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <testvm2.Main: java.lang.String[] sysPropertiesString>";
+    "fieldget <testvm2.Main: java.lang.String[] sysPropertiesString>"->"push 9";
+    "push 9"->"new java.lang.StringBuffer";
+    "new java.lang.StringBuffer"->"dup1.r";
+    "dup1.r"->"specialinvoke <java.lang.StringBuffer: void <init>()>";
+    "specialinvoke <java.lang.StringBuffer: void <init>()>"->"push \"Java \"";
+    "push \"Java \""->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"load.r r1";
+    "load.r r1"->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"push \" Update \"";
+    "push \" Update \""->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"load.r r80";
+    "load.r r80"->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>"->"arraywrite.r";
+    "ifcmpne.i new java.util.Locale"->"new java.util.Locale";
+    "new java.util.Locale"->"dup1.r";
+    "dup1.r"->"load.r r1";
+    "load.r r1"->"push 0";
+    "push 0"->"push 2";
+    "push 2"->"virtualinvoke <java.lang.String: java.lang.String substring(int,int)>";
+    "virtualinvoke <java.lang.String: java.lang.String substring(int,int)>"->"load.r r1";
+    "load.r r1"->"push 3";
+    "virtualinvoke <java.lang.String: java.lang.String substring(int)>"
+    "push 3"->"virtualinvoke <java.lang.String: java.lang.String substring(int)>";
+    "specialinvoke <java.util.Locale: void <init>(java.lang.String,java.lang.String)>"
+    "virtualinvoke <java.lang.String: java.lang.String substring(int)>"->"specialinvoke <java.util.Locale: void <init>(java.lang.String,java.lang.String)>";
+    "specialinvoke <java.util.Locale: void <init>(java.lang.String,java.lang.String)>"->"store.r r1";
+}

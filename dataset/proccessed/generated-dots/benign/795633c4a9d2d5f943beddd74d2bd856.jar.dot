@@ -1,0 +1,13 @@
+digraph "" {
+    "r0 := @this: xpl.XplApplet"
+    "load.r r0"
+    "r0 := @this: xpl.XplApplet"->"load.r r0";
+    "specialinvoke <xpl.XplApplet: void jbInit()>"
+    "load.r r0"->"specialinvoke <xpl.XplApplet: void jbInit()>";
+    "goto return"
+    "specialinvoke <xpl.XplApplet: void jbInit()>"->"goto return";
+    "return"
+    "goto return"->"return";
+    "virtualinvoke <java.lang.Throwable: void printStackTrace()>"
+    "specialinvoke <xpl.XplApplet: void jbInit()>"->"virtualinvoke <java.lang.Throwable: void printStackTrace()>";
+}

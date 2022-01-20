@@ -1,0 +1,20 @@
+digraph "" {
+    "r0 := @this: GeoWeb"
+    "load.r r0"
+    "r0 := @this: GeoWeb"->"load.r r0";
+    "staticget <java.awt.Color: java.awt.Color white>"
+    "load.r r0"->"staticget <java.awt.Color: java.awt.Color white>";
+    "virtualinvoke <java.awt.Component: void setBackground(java.awt.Color)>"
+    "staticget <java.awt.Color: java.awt.Color white>"->"virtualinvoke <java.awt.Component: void setBackground(java.awt.Color)>";
+    "virtualinvoke <java.awt.Component: void setBackground(java.awt.Color)>"->"load.r r0";
+    "new Geo"
+    "load.r r0"->"new Geo";
+    "dup1.r"
+    "new Geo"->"dup1.r";
+    "specialinvoke <Geo: void <init>()>"
+    "dup1.r"->"specialinvoke <Geo: void <init>()>";
+    "fieldput <GeoWeb: Geo f>"
+    "specialinvoke <Geo: void <init>()>"->"fieldput <GeoWeb: Geo f>";
+    "return"
+    "fieldput <GeoWeb: Geo f>"->"return";
+}

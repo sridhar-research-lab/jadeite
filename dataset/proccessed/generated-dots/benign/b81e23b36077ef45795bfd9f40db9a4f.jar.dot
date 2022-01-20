@@ -1,0 +1,57 @@
+digraph "" {
+    "r0 := @this: AutoSound1ech"
+    "load.r r0"
+    "r0 := @this: AutoSound1ech"->"load.r r0";
+    "push \"ENTER.LOOP\""
+    "load.r r0"->"push \"ENTER.LOOP\"";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"
+    "push \"ENTER.LOOP\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "store.r $r1"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"store.r $r1";
+    "load.r $r1"
+    "store.r $r1"->"load.r $r1";
+    "ifnull load.r r0"
+    "load.r $r1"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r r0";
+    "new java.lang.Boolean"
+    "load.r r0"->"new java.lang.Boolean";
+    "dup1.r"
+    "new java.lang.Boolean"->"dup1.r";
+    "dup1.r"->"load.r $r1";
+    "specialinvoke <java.lang.Boolean: void <init>(java.lang.String)>"
+    "load.r $r1"->"specialinvoke <java.lang.Boolean: void <init>(java.lang.String)>";
+    "virtualinvoke <java.lang.Boolean: boolean booleanValue()>"
+    "specialinvoke <java.lang.Boolean: void <init>(java.lang.String)>"->"virtualinvoke <java.lang.Boolean: boolean booleanValue()>";
+    "fieldput <AutoSound1ech: boolean loop>"
+    "virtualinvoke <java.lang.Boolean: boolean booleanValue()>"->"fieldput <AutoSound1ech: boolean loop>";
+    "fieldput <AutoSound1ech: boolean loop>"->"load.r r0";
+    "push \"SOUNDS.ENTER\""
+    "load.r r0"->"push \"SOUNDS.ENTER\"";
+    "push \"SOUNDS.ENTER\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"store.r $r1";
+    "store.r $r1"->"load.r $r1";
+    "load.r $r1"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"load.r $r1";
+    "virtualinvoke <AutoSound1ech: java.lang.String[] parseSounds(java.lang.String)>"
+    "load.r $r1"->"virtualinvoke <AutoSound1ech: java.lang.String[] parseSounds(java.lang.String)>";
+    "fieldput <AutoSound1ech: java.lang.String[] enter_sounds>"
+    "virtualinvoke <AutoSound1ech: java.lang.String[] parseSounds(java.lang.String)>"->"fieldput <AutoSound1ech: java.lang.String[] enter_sounds>";
+    "fieldput <AutoSound1ech: java.lang.String[] enter_sounds>"->"load.r r0";
+    "push \"SOUNDS.EXIT\""
+    "load.r r0"->"push \"SOUNDS.EXIT\"";
+    "push \"SOUNDS.EXIT\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"store.r $r1";
+    "store.r $r1"->"load.r $r1";
+    "ifnull return"
+    "load.r $r1"->"ifnull return";
+    "ifnull return"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"load.r $r1";
+    "load.r $r1"->"virtualinvoke <AutoSound1ech: java.lang.String[] parseSounds(java.lang.String)>";
+    "fieldput <AutoSound1ech: java.lang.String[] exit_sounds>"
+    "virtualinvoke <AutoSound1ech: java.lang.String[] parseSounds(java.lang.String)>"->"fieldput <AutoSound1ech: java.lang.String[] exit_sounds>";
+    "return"
+    "fieldput <AutoSound1ech: java.lang.String[] exit_sounds>"->"return";
+}

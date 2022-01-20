@@ -1,0 +1,15 @@
+digraph "" {
+    "r0 := @this: xul"
+    "load.r r0"
+    "r0 := @this: xul"->"load.r r0";
+    "specialinvoke <xul: boolean a()>"
+    "load.r r0"->"specialinvoke <xul: boolean a()>";
+    "ifne return"
+    "specialinvoke <xul: boolean a()>"->"ifne return";
+    "ifne return"->"load.r r0";
+    "load.r r0"->"specialinvoke <xul: boolean a()>";
+    "pop"
+    "specialinvoke <xul: boolean a()>"->"pop";
+    "return"
+    "pop"->"return";
+}

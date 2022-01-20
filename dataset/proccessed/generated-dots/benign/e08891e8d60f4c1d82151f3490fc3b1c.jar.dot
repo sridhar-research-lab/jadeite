@@ -1,0 +1,94 @@
+digraph "" {
+    "r0 := @this: HTTPClient.doc.HTTPClientExample"
+    "load.r r0"
+    "r0 := @this: HTTPClient.doc.HTTPClientExample"->"load.r r0";
+    "new java.awt.BorderLayout"
+    "load.r r0"->"new java.awt.BorderLayout";
+    "dup1.r"
+    "new java.awt.BorderLayout"->"dup1.r";
+    "specialinvoke <java.awt.BorderLayout: void <init>()>"
+    "dup1.r"->"specialinvoke <java.awt.BorderLayout: void <init>()>";
+    "virtualinvoke <java.awt.Container: void setLayout(java.awt.LayoutManager)>"
+    "specialinvoke <java.awt.BorderLayout: void <init>()>"->"virtualinvoke <java.awt.Container: void setLayout(java.awt.LayoutManager)>";
+    "new java.awt.TextArea"
+    "virtualinvoke <java.awt.Container: void setLayout(java.awt.LayoutManager)>"->"new java.awt.TextArea";
+    "store.r $r4"
+    "new java.awt.TextArea"->"store.r $r4";
+    "load.r $r4"
+    "store.r $r4"->"load.r $r4";
+    "push 60"
+    "load.r $r4"->"push 60";
+    "push 60"->"push 60";
+    "specialinvoke <java.awt.TextArea: void <init>(int,int)>"
+    "push 60"->"specialinvoke <java.awt.TextArea: void <init>(int,int)>";
+    "specialinvoke <java.awt.TextArea: void <init>(int,int)>"->"load.r r0";
+    "load.r r0"->"load.r $r4";
+    "fieldput <HTTPClient.doc.HTTPClientExample: java.awt.TextArea text>"
+    "load.r $r4"->"fieldput <HTTPClient.doc.HTTPClientExample: java.awt.TextArea text>";
+    "fieldput <HTTPClient.doc.HTTPClientExample: java.awt.TextArea text>"->"load.r r0";
+    "push \"Center\""
+    "load.r r0"->"push \"Center\"";
+    "push \"Center\""->"load.r $r4";
+    "virtualinvoke <java.awt.Container: java.awt.Component add(java.lang.String,java.awt.Component)>"
+    "load.r $r4"->"virtualinvoke <java.awt.Container: java.awt.Component add(java.lang.String,java.awt.Component)>";
+    "pop"
+    "virtualinvoke <java.awt.Container: java.awt.Component add(java.lang.String,java.awt.Component)>"->"pop";
+    "pop"->"load.r r0";
+    "fieldget <HTTPClient.doc.HTTPClientExample: java.awt.TextArea text>"
+    "load.r r0"->"fieldget <HTTPClient.doc.HTTPClientExample: java.awt.TextArea text>";
+    "push 0"
+    "fieldget <HTTPClient.doc.HTTPClientExample: java.awt.TextArea text>"->"push 0";
+    "virtualinvoke <java.awt.TextComponent: void setEditable(boolean)>"
+    "push 0"->"virtualinvoke <java.awt.TextComponent: void setEditable(boolean)>";
+    "new java.awt.Button"
+    "virtualinvoke <java.awt.TextComponent: void setEditable(boolean)>"->"new java.awt.Button";
+    "new java.awt.Button"->"store.r $r4";
+    "store.r $r4"->"load.r $r4";
+    "push \"Doit\""
+    "load.r $r4"->"push \"Doit\"";
+    "specialinvoke <java.awt.Button: void <init>(java.lang.String)>"
+    "push \"Doit\""->"specialinvoke <java.awt.Button: void <init>(java.lang.String)>";
+    "specialinvoke <java.awt.Button: void <init>(java.lang.String)>"->"load.r $r4";
+    "load.r $r4"->"load.r r0";
+    "virtualinvoke <java.awt.Button: void addActionListener(java.awt.event.ActionListener)>"
+    "load.r r0"->"virtualinvoke <java.awt.Button: void addActionListener(java.awt.event.ActionListener)>";
+    "virtualinvoke <java.awt.Button: void addActionListener(java.awt.event.ActionListener)>"->"load.r r0";
+    "push \"South\""
+    "load.r r0"->"push \"South\"";
+    "push \"South\""->"load.r $r4";
+    "load.r $r4"->"virtualinvoke <java.awt.Container: java.awt.Component add(java.lang.String,java.awt.Component)>";
+    "virtualinvoke <java.awt.Container: java.awt.Component add(java.lang.String,java.awt.Component)>"->"pop";
+    "pop"->"load.r r0";
+    "new HTTPClient.HTTPConnection"
+    "load.r r0"->"new HTTPClient.HTTPConnection";
+    "new HTTPClient.HTTPConnection"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "virtualinvoke <java.applet.Applet: java.net.URL getCodeBase()>"
+    "load.r r0"->"virtualinvoke <java.applet.Applet: java.net.URL getCodeBase()>";
+    "specialinvoke <HTTPClient.HTTPConnection: void <init>(java.net.URL)>"
+    "virtualinvoke <java.applet.Applet: java.net.URL getCodeBase()>"->"specialinvoke <HTTPClient.HTTPConnection: void <init>(java.net.URL)>";
+    "fieldput <HTTPClient.doc.HTTPClientExample: HTTPClient.HTTPConnection con>"
+    "specialinvoke <HTTPClient.HTTPConnection: void <init>(java.net.URL)>"->"fieldput <HTTPClient.doc.HTTPClientExample: HTTPClient.HTTPConnection con>";
+    "return"
+    "fieldput <HTTPClient.doc.HTTPClientExample: HTTPClient.HTTPConnection con>"->"return";
+    "specialinvoke <HTTPClient.HTTPConnection: void <init>(java.net.URL)>"->"store.r $r4";
+    "store.r $r4"->"load.r r0";
+    "new java.lang.StringBuffer"
+    "load.r r0"->"new java.lang.StringBuffer";
+    "new java.lang.StringBuffer"->"dup1.r";
+    "push \"Error creating HTTPConnection:\n\""
+    "dup1.r"->"push \"Error creating HTTPConnection:\n\"";
+    "specialinvoke <java.lang.StringBuffer: void <init>(java.lang.String)>"
+    "push \"Error creating HTTPConnection:\n\""->"specialinvoke <java.lang.StringBuffer: void <init>(java.lang.String)>";
+    "specialinvoke <java.lang.StringBuffer: void <init>(java.lang.String)>"->"load.r $r4";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.Object)>"
+    "load.r $r4"->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.Object)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>"
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.Object)>"->"virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>";
+    "fieldput <HTTPClient.doc.HTTPClientExample: java.lang.String disp>"
+    "virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>"->"fieldput <HTTPClient.doc.HTTPClientExample: java.lang.String disp>";
+    "fieldput <HTTPClient.doc.HTTPClientExample: java.lang.String disp>"->"load.r r0";
+    "virtualinvoke <java.awt.Component: void repaint()>"
+    "load.r r0"->"virtualinvoke <java.awt.Component: void repaint()>";
+    "virtualinvoke <java.awt.Component: void repaint()>"->"return";
+}

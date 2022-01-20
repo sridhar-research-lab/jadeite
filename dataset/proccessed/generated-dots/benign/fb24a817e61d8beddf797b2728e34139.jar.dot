@@ -1,0 +1,103 @@
+digraph "" {
+    "r0 := @this: SoundButton"
+    "load.r r0"
+    "r0 := @this: SoundButton"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "push \"onMessage\""
+    "load.r r0"->"push \"onMessage\"";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"
+    "push \"onMessage\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "fieldput <SoundButton: java.lang.String onMessage>"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"fieldput <SoundButton: java.lang.String onMessage>";
+    "fieldput <SoundButton: java.lang.String onMessage>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "push \"offMessage\""
+    "load.r r0"->"push \"offMessage\"";
+    "push \"offMessage\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "fieldput <SoundButton: java.lang.String offMessage>"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"fieldput <SoundButton: java.lang.String offMessage>";
+    "new java.util.StringTokenizer"
+    "fieldput <SoundButton: java.lang.String offMessage>"->"new java.util.StringTokenizer";
+    "store.r r2"
+    "new java.util.StringTokenizer"->"store.r r2";
+    "load.r r2"
+    "store.r r2"->"load.r r2";
+    "load.r r2"->"load.r r0";
+    "push \"BackgroundColor\""
+    "load.r r0"->"push \"BackgroundColor\"";
+    "push \"BackgroundColor\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "push \",\""
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"push \",\"";
+    "specialinvoke <java.util.StringTokenizer: void <init>(java.lang.String,java.lang.String)>"
+    "push \",\""->"specialinvoke <java.util.StringTokenizer: void <init>(java.lang.String,java.lang.String)>";
+    "specialinvoke <java.util.StringTokenizer: void <init>(java.lang.String,java.lang.String)>"->"load.r r2";
+    "virtualinvoke <java.util.StringTokenizer: int countTokens()>"
+    "load.r r2"->"virtualinvoke <java.util.StringTokenizer: int countTokens()>";
+    "push 1"
+    "virtualinvoke <java.util.StringTokenizer: int countTokens()>"->"push 1";
+    "ifcmpne.i load.r r0"
+    "push 1"->"ifcmpne.i load.r r0";
+    "ifcmpne.i load.r r0"->"load.r r2";
+    "virtualinvoke <java.util.StringTokenizer: java.lang.String nextToken()>"
+    "load.r r2"->"virtualinvoke <java.util.StringTokenizer: java.lang.String nextToken()>";
+    "virtualinvoke <java.lang.String: java.lang.String trim()>"
+    "virtualinvoke <java.util.StringTokenizer: java.lang.String nextToken()>"->"virtualinvoke <java.lang.String: java.lang.String trim()>";
+    "virtualinvoke <java.lang.String: java.lang.String trim()>"->"store.r r2";
+    "store.r r2"->"load.r r0";
+    "new java.awt.Color"
+    "load.r r0"->"new java.awt.Color";
+    "dup1.r"
+    "new java.awt.Color"->"dup1.r";
+    "dup1.r"->"load.r r2";
+    "load.r r2"->"push 1";
+    "push 3"
+    "push 1"->"push 3";
+    "virtualinvoke <java.lang.String: java.lang.String substring(int,int)>"
+    "push 3"->"virtualinvoke <java.lang.String: java.lang.String substring(int,int)>";
+    "push 16"
+    "virtualinvoke <java.lang.String: java.lang.String substring(int,int)>"->"push 16";
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String,int)>"
+    "push 16"->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String,int)>";
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String,int)>"->"load.r r2";
+    "load.r r2"->"push 3";
+    "push 5"
+    "push 3"->"push 5";
+    "push 5"->"virtualinvoke <java.lang.String: java.lang.String substring(int,int)>";
+    "virtualinvoke <java.lang.String: java.lang.String substring(int,int)>"->"push 16";
+    "push 16"->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String,int)>";
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String,int)>"->"load.r r2";
+    "load.r r2"->"push 5";
+    "push 7"
+    "push 5"->"push 7";
+    "push 7"->"virtualinvoke <java.lang.String: java.lang.String substring(int,int)>";
+    "virtualinvoke <java.lang.String: java.lang.String substring(int,int)>"->"push 16";
+    "push 16"->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String,int)>";
+    "specialinvoke <java.awt.Color: void <init>(int,int,int)>"
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String,int)>"->"specialinvoke <java.awt.Color: void <init>(int,int,int)>";
+    "virtualinvoke <java.awt.Component: void setBackground(java.awt.Color)>"
+    "specialinvoke <java.awt.Color: void <init>(int,int,int)>"->"virtualinvoke <java.awt.Component: void setBackground(java.awt.Color)>";
+    "return"
+    "virtualinvoke <java.awt.Component: void setBackground(java.awt.Color)>"->"return";
+    "store.r r0"
+    "virtualinvoke <java.awt.Component: void setBackground(java.awt.Color)>"->"store.r r0";
+    "store.r r0"->"return";
+    "ifcmpne.i load.r r0"->"load.r r0";
+    "load.r r0"->"new java.awt.Color";
+    "new java.awt.Color"->"dup1.r";
+    "dup1.r"->"load.r r2";
+    "load.r r2"->"virtualinvoke <java.util.StringTokenizer: java.lang.String nextToken()>";
+    "virtualinvoke <java.util.StringTokenizer: java.lang.String nextToken()>"->"virtualinvoke <java.lang.String: java.lang.String trim()>";
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"
+    "virtualinvoke <java.lang.String: java.lang.String trim()>"->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>";
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"->"load.r r2";
+    "load.r r2"->"virtualinvoke <java.util.StringTokenizer: java.lang.String nextToken()>";
+    "virtualinvoke <java.util.StringTokenizer: java.lang.String nextToken()>"->"virtualinvoke <java.lang.String: java.lang.String trim()>";
+    "virtualinvoke <java.lang.String: java.lang.String trim()>"->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>";
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"->"load.r r2";
+    "load.r r2"->"virtualinvoke <java.util.StringTokenizer: java.lang.String nextToken()>";
+    "virtualinvoke <java.util.StringTokenizer: java.lang.String nextToken()>"->"virtualinvoke <java.lang.String: java.lang.String trim()>";
+    "virtualinvoke <java.lang.String: java.lang.String trim()>"->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>";
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"->"specialinvoke <java.awt.Color: void <init>(int,int,int)>";
+    "specialinvoke <java.awt.Color: void <init>(int,int,int)>"->"virtualinvoke <java.awt.Component: void setBackground(java.awt.Color)>";
+    "virtualinvoke <java.awt.Component: void setBackground(java.awt.Color)>"->"return";
+}

@@ -1,0 +1,76 @@
+digraph "" {
+    "r0 := @this: Mandel"
+    "load.r r0"
+    "r0 := @this: Mandel"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "fieldget <Mandel: int nw>"
+    "load.r r0"->"fieldget <Mandel: int nw>";
+    "fieldget <Mandel: int nw>"->"load.r r0";
+    "fieldget <Mandel: int nh>"
+    "load.r r0"->"fieldget <Mandel: int nh>";
+    "mul.i"
+    "fieldget <Mandel: int nh>"->"mul.i";
+    "newarray"
+    "mul.i"->"newarray";
+    "fieldput <Mandel: int[] pixel>"
+    "newarray"->"fieldput <Mandel: int[] pixel>";
+    "fieldput <Mandel: int[] pixel>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <Mandel: int nw>";
+    "fieldget <Mandel: int nw>"->"load.r r0";
+    "load.r r0"->"fieldget <Mandel: int nh>";
+    "virtualinvoke <java.awt.Component: java.awt.Image createImage(int,int)>"
+    "fieldget <Mandel: int nh>"->"virtualinvoke <java.awt.Component: java.awt.Image createImage(int,int)>";
+    "fieldput <Mandel: java.awt.Image bb>"
+    "virtualinvoke <java.awt.Component: java.awt.Image createImage(int,int)>"->"fieldput <Mandel: java.awt.Image bb>";
+    "fieldput <Mandel: java.awt.Image bb>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <Mandel: int nw>";
+    "fieldget <Mandel: int nw>"->"load.r r0";
+    "load.r r0"->"fieldget <Mandel: int nh>";
+    "fieldget <Mandel: int nh>"->"virtualinvoke <java.awt.Component: java.awt.Image createImage(int,int)>";
+    "fieldput <Mandel: java.awt.Image fractimg>"
+    "virtualinvoke <java.awt.Component: java.awt.Image createImage(int,int)>"->"fieldput <Mandel: java.awt.Image fractimg>";
+    "fieldput <Mandel: java.awt.Image fractimg>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "fieldget <Mandel: java.awt.Image bb>"
+    "load.r r0"->"fieldget <Mandel: java.awt.Image bb>";
+    "virtualinvoke <java.awt.Image: java.awt.Graphics getGraphics()>"
+    "fieldget <Mandel: java.awt.Image bb>"->"virtualinvoke <java.awt.Image: java.awt.Graphics getGraphics()>";
+    "fieldput <Mandel: java.awt.Graphics bbg>"
+    "virtualinvoke <java.awt.Image: java.awt.Graphics getGraphics()>"->"fieldput <Mandel: java.awt.Graphics bbg>";
+    "fieldput <Mandel: java.awt.Graphics bbg>"->"load.r r0";
+    "virtualinvoke <Mandel: void initPal()>"
+    "load.r r0"->"virtualinvoke <Mandel: void initPal()>";
+    "virtualinvoke <Mandel: void initPal()>"->"load.r r0";
+    "virtualinvoke <Mandel: void calcMandel()>"
+    "load.r r0"->"virtualinvoke <Mandel: void calcMandel()>";
+    "virtualinvoke <Mandel: void calcMandel()>"->"load.r r0";
+    "staticget <java.awt.Color: java.awt.Color black>"
+    "load.r r0"->"staticget <java.awt.Color: java.awt.Color black>";
+    "virtualinvoke <java.awt.Component: void setBackground(java.awt.Color)>"
+    "staticget <java.awt.Color: java.awt.Color black>"->"virtualinvoke <java.awt.Component: void setBackground(java.awt.Color)>";
+    "virtualinvoke <java.awt.Component: void setBackground(java.awt.Color)>"->"load.r r0";
+    "fieldget <Mandel: java.lang.Thread mainthread>"
+    "load.r r0"->"fieldget <Mandel: java.lang.Thread mainthread>";
+    "ifnull return"
+    "fieldget <Mandel: java.lang.Thread mainthread>"->"ifnull return";
+    "ifnull return"->"load.r r0";
+    "new java.lang.Thread"
+    "load.r r0"->"new java.lang.Thread";
+    "dup1.r"
+    "new java.lang.Thread"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "specialinvoke <java.lang.Thread: void <init>(java.lang.Runnable)>"
+    "load.r r0"->"specialinvoke <java.lang.Thread: void <init>(java.lang.Runnable)>";
+    "fieldput <Mandel: java.lang.Thread mainthread>"
+    "specialinvoke <java.lang.Thread: void <init>(java.lang.Runnable)>"->"fieldput <Mandel: java.lang.Thread mainthread>";
+    "fieldput <Mandel: java.lang.Thread mainthread>"->"load.r r0";
+    "load.r r0"->"fieldget <Mandel: java.lang.Thread mainthread>";
+    "virtualinvoke <java.lang.Thread: void start()>"
+    "fieldget <Mandel: java.lang.Thread mainthread>"->"virtualinvoke <java.lang.Thread: void start()>";
+    "return"
+    "virtualinvoke <java.lang.Thread: void start()>"->"return";
+}

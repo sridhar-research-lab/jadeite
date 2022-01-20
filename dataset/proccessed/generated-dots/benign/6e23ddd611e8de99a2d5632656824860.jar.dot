@@ -1,0 +1,708 @@
+digraph "" {
+    "r0 := @this: ImageRing"
+    "load.r r0"
+    "r0 := @this: ImageRing"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "virtualinvoke <java.awt.Component: java.awt.Dimension size()>"
+    "load.r r0"->"virtualinvoke <java.awt.Component: java.awt.Dimension size()>";
+    "fieldget <java.awt.Dimension: int width>"
+    "virtualinvoke <java.awt.Component: java.awt.Dimension size()>"->"fieldget <java.awt.Dimension: int width>";
+    "fieldget <java.awt.Dimension: int width>"->"load.r r0";
+    "load.r r0"->"virtualinvoke <java.awt.Component: java.awt.Dimension size()>";
+    "fieldget <java.awt.Dimension: int height>"
+    "virtualinvoke <java.awt.Component: java.awt.Dimension size()>"->"fieldget <java.awt.Dimension: int height>";
+    "virtualinvoke <java.awt.Component: java.awt.Image createImage(int,int)>"
+    "fieldget <java.awt.Dimension: int height>"->"virtualinvoke <java.awt.Component: java.awt.Image createImage(int,int)>";
+    "fieldput <ImageRing: java.awt.Image a312>"
+    "virtualinvoke <java.awt.Component: java.awt.Image createImage(int,int)>"->"fieldput <ImageRing: java.awt.Image a312>";
+    "fieldput <ImageRing: java.awt.Image a312>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "fieldget <ImageRing: java.awt.Image a312>"
+    "load.r r0"->"fieldget <ImageRing: java.awt.Image a312>";
+    "virtualinvoke <java.awt.Image: java.awt.Graphics getGraphics()>"
+    "fieldget <ImageRing: java.awt.Image a312>"->"virtualinvoke <java.awt.Image: java.awt.Graphics getGraphics()>";
+    "fieldput <ImageRing: java.awt.Graphics a332>"
+    "virtualinvoke <java.awt.Image: java.awt.Graphics getGraphics()>"->"fieldput <ImageRing: java.awt.Graphics a332>";
+    "staticget <java.lang.System: java.io.PrintStream out>"
+    "fieldput <ImageRing: java.awt.Graphics a332>"->"staticget <java.lang.System: java.io.PrintStream out>";
+    "staticget <java.lang.System: java.io.PrintStream out>"->"load.r r0";
+    "fieldget <ImageRing: java.lang.String INFO>"
+    "load.r r0"->"fieldget <ImageRing: java.lang.String INFO>";
+    "virtualinvoke <java.io.PrintStream: void println(java.lang.String)>"
+    "fieldget <ImageRing: java.lang.String INFO>"->"virtualinvoke <java.io.PrintStream: void println(java.lang.String)>";
+    "virtualinvoke <java.io.PrintStream: void println(java.lang.String)>"->"load.r r0";
+    "virtualinvoke <java.applet.Applet: java.net.URL getDocumentBase()>"
+    "load.r r0"->"virtualinvoke <java.applet.Applet: java.net.URL getDocumentBase()>";
+    "virtualinvoke <java.net.URL: java.lang.String getHost()>"
+    "virtualinvoke <java.applet.Applet: java.net.URL getDocumentBase()>"->"virtualinvoke <java.net.URL: java.lang.String getHost()>";
+    "virtualinvoke <java.lang.String: java.lang.String toLowerCase()>"
+    "virtualinvoke <java.net.URL: java.lang.String getHost()>"->"virtualinvoke <java.lang.String: java.lang.String toLowerCase()>";
+    "store.r r1"
+    "virtualinvoke <java.lang.String: java.lang.String toLowerCase()>"->"store.r r1";
+    "load.r r1"
+    "store.r r1"->"load.r r1";
+    "ifnull load.r r0"
+    "load.r r1"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r r1";
+    "push \"localhost\""
+    "load.r r1"->"push \"localhost\"";
+    "virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>"
+    "push \"localhost\""->"virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>";
+    "ifne load.r r0"
+    "virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>"->"ifne load.r r0";
+    "ifne load.r r0"->"load.r r1";
+    "push \"127.0.0.1\""
+    "load.r r1"->"push \"127.0.0.1\"";
+    "push \"127.0.0.1\""->"virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>";
+    "virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>"->"ifne load.r r0";
+    "ifne load.r r0"->"load.r r1";
+    "push \"\""
+    "load.r r1"->"push \"\"";
+    "push \"\""->"virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>";
+    "ifeq load.r r0"
+    "virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>"->"ifeq load.r r0";
+    "ifeq load.r r0"->"load.r r0";
+    "push 0"
+    "load.r r0"->"push 0";
+    "fieldput <ImageRing: boolean a32>"
+    "push 0"->"fieldput <ImageRing: boolean a32>";
+    "fieldput <ImageRing: boolean a32>"->"load.r r0";
+    "push \"key\""
+    "load.r r0"->"push \"key\"";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"
+    "push \"key\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r1";
+    "virtualinvoke <ImageRing: java.lang.String a98(java.lang.String)>"
+    "load.r r1"->"virtualinvoke <ImageRing: java.lang.String a98(java.lang.String)>";
+    "store.r r84"
+    "virtualinvoke <ImageRing: java.lang.String a98(java.lang.String)>"->"store.r r84";
+    "store.r r84"->"load.r r0";
+    "load.r r0"->"push \"key\"";
+    "push \"key\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "store.r r85"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"store.r r85";
+    "goto load.r r0"
+    "store.r r85"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "fieldget <ImageRing: boolean a32>"
+    "load.r r0"->"fieldget <ImageRing: boolean a32>";
+    "fieldget <ImageRing: boolean a32>"->"ifeq load.r r0";
+    "load.r r85"
+    "ifeq load.r r0"->"load.r r85";
+    "push 32"
+    "load.r r85"->"push 32";
+    "virtualinvoke <java.lang.String: int indexOf(int)>"
+    "push 32"->"virtualinvoke <java.lang.String: int indexOf(int)>";
+    "ifgt load.r r85"
+    "virtualinvoke <java.lang.String: int indexOf(int)>"->"ifgt load.r r85";
+    "ifgt load.r r85"->"load.r r0";
+    "load.r r0"->"fieldget <ImageRing: boolean a32>";
+    "fieldget <ImageRing: boolean a32>"->"ifeq load.r r0";
+    "ifeq load.r r0"->"load.r r85";
+    "load.r r84"
+    "load.r r85"->"load.r r84";
+    "load.r r84"->"virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>";
+    "ifeq push 1"
+    "virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>"->"ifeq push 1";
+    "ifeq push 1"->"push 0";
+    "store.b r84"
+    "push 0"->"store.b r84";
+    "store.b r84"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "load.b r84"
+    "load.r r0"->"load.b r84";
+    "load.b r84"->"fieldput <ImageRing: boolean a32>";
+    "fieldput <ImageRing: boolean a32>"->"load.r r0";
+    "load.r r0"->"fieldget <ImageRing: boolean a32>";
+    "fieldget <ImageRing: boolean a32>"->"ifeq load.r r0";
+    "ifeq load.r r0"->"load.r r0";
+    "push \"host\""
+    "load.r r0"->"push \"host\"";
+    "push \"host\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r r0";
+    "load.r r0"->"push \"host\"";
+    "push \"host\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.lang.String: int length()>"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"virtualinvoke <java.lang.String: int length()>";
+    "push 4"
+    "virtualinvoke <java.lang.String: int length()>"->"push 4";
+    "ifcmple.i load.r r0"
+    "push 4"->"ifcmple.i load.r r0";
+    "ifcmple.i load.r r0"->"load.r r1";
+    "load.r r1"->"load.r r0";
+    "load.r r0"->"push \"host\"";
+    "push \"host\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.lang.String: int indexOf(java.lang.String)>"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"virtualinvoke <java.lang.String: int indexOf(java.lang.String)>";
+    "push -1"
+    "virtualinvoke <java.lang.String: int indexOf(java.lang.String)>"->"push -1";
+    "push -1"->"ifcmple.i load.r r0";
+    "ifcmple.i load.r r0"->"load.r r0";
+    "load.r r0"->"push \"key\"";
+    "push \"key\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"push \"host\"";
+    "push \"host\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"virtualinvoke <ImageRing: java.lang.String a98(java.lang.String)>";
+    "virtualinvoke <ImageRing: java.lang.String a98(java.lang.String)>"->"virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>";
+    "virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>"->"ifeq load.r r0";
+    "ifeq load.r r0"->"load.r r0";
+    "load.r r0"->"push 0";
+    "push 0"->"fieldput <ImageRing: boolean a32>";
+    "fieldput <ImageRing: boolean a32>"->"load.r r0";
+    "fieldget <ImageRing: java.awt.Graphics a332>"
+    "load.r r0"->"fieldget <ImageRing: java.awt.Graphics a332>";
+    "new java.awt.Font"
+    "fieldget <ImageRing: java.awt.Graphics a332>"->"new java.awt.Font";
+    "dup1.r"
+    "new java.awt.Font"->"dup1.r";
+    "push \"Times\""
+    "dup1.r"->"push \"Times\"";
+    "push \"Times\""->"push 0";
+    "push 9"
+    "push 0"->"push 9";
+    "specialinvoke <java.awt.Font: void <init>(java.lang.String,int,int)>"
+    "push 9"->"specialinvoke <java.awt.Font: void <init>(java.lang.String,int,int)>";
+    "virtualinvoke <java.awt.Graphics: void setFont(java.awt.Font)>"
+    "specialinvoke <java.awt.Font: void <init>(java.lang.String,int,int)>"->"virtualinvoke <java.awt.Graphics: void setFont(java.awt.Font)>";
+    "virtualinvoke <java.awt.Graphics: void setFont(java.awt.Font)>"->"load.r r0";
+    "push \"images\""
+    "load.r r0"->"push \"images\"";
+    "push \"images\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"store.r r84";
+    "store.r r84"->"push -1";
+    "store.i r1"
+    "push -1"->"store.i r1";
+    "store.i r1"->"push 0";
+    "store.i r85"
+    "push 0"->"store.i r85";
+    "goto load.i r85"
+    "store.i r85"->"goto load.i r85";
+    "load.i r85"
+    "goto load.i r85"->"load.i r85";
+    "ifge load.r r84"
+    "load.i r85"->"ifge load.r r84";
+    "ifge load.r r84"->"load.r r0";
+    "load.i r1"
+    "load.r r0"->"load.i r1";
+    "push 3"
+    "load.i r1"->"push 3";
+    "newmultiarray 2"
+    "push 3"->"newmultiarray 2";
+    "fieldput <ImageRing: java.lang.String[][] menu>"
+    "newmultiarray 2"->"fieldput <ImageRing: java.lang.String[][] menu>";
+    "fieldput <ImageRing: java.lang.String[][] menu>"->"push 0";
+    "push 0"->"store.i r85";
+    "store.i r85"->"push 0";
+    "store.i $z8"
+    "push 0"->"store.i $z8";
+    "goto load.i $z8"
+    "store.i $z8"->"goto load.i $z8";
+    "load.i $z8"
+    "goto load.i $z8"->"load.i $z8";
+    "load.i $z8"->"load.i r1";
+    "ifcmplt.i load.r r84"
+    "load.i r1"->"ifcmplt.i load.r r84";
+    "ifcmplt.i load.r r84"->"load.r r0";
+    "push \"AppletHomePage\""
+    "load.r r0"->"push \"AppletHomePage\"";
+    "push \"AppletHomePage\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r r0";
+    "load.r r0"->"push \"AppletHomePage\"";
+    "push \"AppletHomePage\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "push \"http://go.to/javabase\""
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"push \"http://go.to/javabase\"";
+    "push \"http://go.to/javabase\""->"virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>";
+    "virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>"->"ifne load.r r0";
+    "ifne load.r r0"->"load.r r0";
+    "fieldget <ImageRing: java.lang.String[][] menu>"
+    "load.r r0"->"fieldget <ImageRing: java.lang.String[][] menu>";
+    "fieldget <ImageRing: java.lang.String[][] menu>"->"push 0";
+    "arrayread.r"
+    "push 0"->"arrayread.r";
+    "arrayread.r"->"push 0";
+    "push \"AppletHomePage required\""
+    "push 0"->"push \"AppletHomePage required\"";
+    "arraywrite.r"
+    "push \"AppletHomePage required\""->"arraywrite.r";
+    "arraywrite.r"->"load.r r0";
+    "load.r r0"->"load.i r1";
+    "newarray"
+    "load.i r1"->"newarray";
+    "fieldput <ImageRing: java.awt.Image[] a362>"
+    "newarray"->"fieldput <ImageRing: java.awt.Image[] a362>";
+    "fieldput <ImageRing: java.awt.Image[] a362>"->"load.r r0";
+    "load.r r0"->"load.i r1";
+    "push 1"
+    "load.i r1"->"push 1";
+    "add.i"
+    "push 1"->"add.i";
+    "add.i"->"newarray";
+    "fieldput <ImageRing: double[] a191>"
+    "newarray"->"fieldput <ImageRing: double[] a191>";
+    "new java.awt.MediaTracker"
+    "fieldput <ImageRing: double[] a191>"->"new java.awt.MediaTracker";
+    "new java.awt.MediaTracker"->"store.r r84";
+    "store.r r84"->"load.r r84";
+    "load.r r84"->"load.r r0";
+    "specialinvoke <java.awt.MediaTracker: void <init>(java.awt.Component)>"
+    "load.r r0"->"specialinvoke <java.awt.MediaTracker: void <init>(java.awt.Component)>";
+    "specialinvoke <java.awt.MediaTracker: void <init>(java.awt.Component)>"->"push 0";
+    "push 0"->"store.i r85";
+    "store.i r85"->"goto load.i r85";
+    "goto load.i r85"->"load.i r85";
+    "load.i r85"->"load.i r1";
+    "ifcmplt.i staticget <java.lang.System: java.io.PrintStream out>"
+    "load.i r1"->"ifcmplt.i staticget <java.lang.System: java.io.PrintStream out>";
+    "ifcmplt.i staticget <java.lang.System: java.io.PrintStream out>"->"load.r r84";
+    "virtualinvoke <java.awt.MediaTracker: void waitForAll()>"
+    "load.r r84"->"virtualinvoke <java.awt.MediaTracker: void waitForAll()>";
+    "goto staticget <java.lang.System: java.io.PrintStream out>"
+    "virtualinvoke <java.awt.MediaTracker: void waitForAll()>"->"goto staticget <java.lang.System: java.io.PrintStream out>";
+    "goto staticget <java.lang.System: java.io.PrintStream out>"->"staticget <java.lang.System: java.io.PrintStream out>";
+    "virtualinvoke <java.io.PrintStream: void flush()>"
+    "staticget <java.lang.System: java.io.PrintStream out>"->"virtualinvoke <java.io.PrintStream: void flush()>";
+    "virtualinvoke <java.io.PrintStream: void flush()>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "push \"bgCol\""
+    "load.r r0"->"push \"bgCol\"";
+    "staticget <java.awt.Color: java.awt.Color black>"
+    "push \"bgCol\""->"staticget <java.awt.Color: java.awt.Color black>";
+    "virtualinvoke <ImageRing: java.awt.Color a50(java.lang.String,java.awt.Color)>"
+    "staticget <java.awt.Color: java.awt.Color black>"->"virtualinvoke <ImageRing: java.awt.Color a50(java.lang.String,java.awt.Color)>";
+    "fieldput <ImageRing: java.awt.Color a213>"
+    "virtualinvoke <ImageRing: java.awt.Color a50(java.lang.String,java.awt.Color)>"->"fieldput <ImageRing: java.awt.Color a213>";
+    "fieldput <ImageRing: java.awt.Color a213>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "push \"highlightCol\""
+    "load.r r0"->"push \"highlightCol\"";
+    "push \"highlightCol\""->"staticget <java.awt.Color: java.awt.Color black>";
+    "staticget <java.awt.Color: java.awt.Color black>"->"virtualinvoke <ImageRing: java.awt.Color a50(java.lang.String,java.awt.Color)>";
+    "fieldput <ImageRing: java.awt.Color a363>"
+    "virtualinvoke <ImageRing: java.awt.Color a50(java.lang.String,java.awt.Color)>"->"fieldput <ImageRing: java.awt.Color a363>";
+    "fieldput <ImageRing: java.awt.Color a363>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "push \"sleep\""
+    "load.r r0"->"push \"sleep\"";
+    "push 50"
+    "push \"sleep\""->"push 50";
+    "virtualinvoke <ImageRing: int a47(java.lang.String,int)>"
+    "push 50"->"virtualinvoke <ImageRing: int a47(java.lang.String,int)>";
+    "fieldput <ImageRing: int a368>"
+    "virtualinvoke <ImageRing: int a47(java.lang.String,int)>"->"fieldput <ImageRing: int a368>";
+    "fieldput <ImageRing: int a368>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "push \"speed\""
+    "load.r r0"->"push \"speed\"";
+    "push \"speed\""->"push 50";
+    "push 50"->"virtualinvoke <ImageRing: int a47(java.lang.String,int)>";
+    "fieldput <ImageRing: int a370>"
+    "virtualinvoke <ImageRing: int a47(java.lang.String,int)>"->"fieldput <ImageRing: int a370>";
+    "fieldput <ImageRing: int a370>"->"load.r r0";
+    "push 0.0"
+    "load.r r0"->"push 0.0";
+    "fieldput <ImageRing: double a89>"
+    "push 0.0"->"fieldput <ImageRing: double a89>";
+    "fieldput <ImageRing: double a89>"->"push 0";
+    "push 0"->"store.i r1";
+    "goto load.i r1"
+    "store.i r1"->"goto load.i r1";
+    "goto load.i r1"->"load.i r1";
+    "load.i r1"->"load.r r0";
+    "fieldget <ImageRing: java.awt.Image[] a362>"
+    "load.r r0"->"fieldget <ImageRing: java.awt.Image[] a362>";
+    "arraylength"
+    "fieldget <ImageRing: java.awt.Image[] a362>"->"arraylength";
+    "ifcmplt.i load.r r0"
+    "arraylength"->"ifcmplt.i load.r r0";
+    "ifcmplt.i load.r r0"->"load.r r0";
+    "push 3.141592653589793"
+    "load.r r0"->"push 3.141592653589793";
+    "push 3.141592653589793"->"load.r r0";
+    "load.r r0"->"virtualinvoke <java.awt.Component: java.awt.Dimension size()>";
+    "virtualinvoke <java.awt.Component: java.awt.Dimension size()>"->"fieldget <java.awt.Dimension: int width>";
+    "i2d"
+    "fieldget <java.awt.Dimension: int width>"->"i2d";
+    "mul.d"
+    "i2d"->"mul.d";
+    "mul.d"->"load.r r0";
+    "fieldget <ImageRing: double a89>"
+    "load.r r0"->"fieldget <ImageRing: double a89>";
+    "div.d"
+    "fieldget <ImageRing: double a89>"->"div.d";
+    "d2i"
+    "div.d"->"d2i";
+    "fieldput <ImageRing: int height>"
+    "d2i"->"fieldput <ImageRing: int height>";
+    "fieldput <ImageRing: int height>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"virtualinvoke <java.awt.Component: java.awt.Dimension size()>";
+    "virtualinvoke <java.awt.Component: java.awt.Dimension size()>"->"fieldget <java.awt.Dimension: int height>";
+    "fieldget <java.awt.Dimension: int height>"->"load.r r0";
+    "fieldget <ImageRing: int height>"
+    "load.r r0"->"fieldget <ImageRing: int height>";
+    "sub.i"
+    "fieldget <ImageRing: int height>"->"sub.i";
+    "push 2"
+    "sub.i"->"push 2";
+    "push 2"->"load.r r0";
+    "fieldget <ImageRing: int a369>"
+    "load.r r0"->"fieldget <ImageRing: int a369>";
+    "mul.i"
+    "fieldget <ImageRing: int a369>"->"mul.i";
+    "mul.i"->"sub.i";
+    "sub.i"->"i2d";
+    "i2d"->"load.r r0";
+    "load.r r0"->"virtualinvoke <java.awt.Component: java.awt.Dimension size()>";
+    "virtualinvoke <java.awt.Component: java.awt.Dimension size()>"->"fieldget <java.awt.Dimension: int width>";
+    "fieldget <java.awt.Dimension: int width>"->"i2d";
+    "i2d"->"div.d";
+    "fieldput <ImageRing: double a365>"
+    "div.d"->"fieldput <ImageRing: double a365>";
+    "fieldput <ImageRing: double a365>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "fieldget <ImageRing: double a365>"
+    "load.r r0"->"fieldget <ImageRing: double a365>";
+    "fieldget <ImageRing: double a365>"->"load.r r0";
+    "load.r r0"->"virtualinvoke <java.awt.Component: java.awt.Dimension size()>";
+    "virtualinvoke <java.awt.Component: java.awt.Dimension size()>"->"fieldget <java.awt.Dimension: int width>";
+    "fieldget <java.awt.Dimension: int width>"->"i2d";
+    "i2d"->"mul.d";
+    "push 2.0"
+    "mul.d"->"push 2.0";
+    "push 2.0"->"div.d";
+    "div.d"->"d2i";
+    "fieldput <ImageRing: int a364>"
+    "d2i"->"fieldput <ImageRing: int a364>";
+    "fieldput <ImageRing: int a364>"->"load.r r0";
+    "fieldget <ImageRing: double[] a191>"
+    "load.r r0"->"fieldget <ImageRing: double[] a191>";
+    "fieldget <ImageRing: double[] a191>"->"push 0";
+    "push 0"->"push 0.0";
+    "arraywrite.d"
+    "push 0.0"->"arraywrite.d";
+    "arraywrite.d"->"push 1";
+    "push 1"->"store.i r1";
+    "store.i r1"->"goto load.i r1";
+    "goto load.i r1"->"load.i r1";
+    "load.i r1"->"load.r r0";
+    "load.r r0"->"fieldget <ImageRing: java.awt.Image[] a362>";
+    "fieldget <ImageRing: java.awt.Image[] a362>"->"arraylength";
+    "arraylength"->"ifcmplt.i load.r r0";
+    "ifcmplt.i load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <ImageRing: double[] a191>";
+    "fieldget <ImageRing: double[] a191>"->"load.r r0";
+    "load.r r0"->"fieldget <ImageRing: java.awt.Image[] a362>";
+    "fieldget <ImageRing: java.awt.Image[] a362>"->"arraylength";
+    "push 6.283185307179586"
+    "arraylength"->"push 6.283185307179586";
+    "push 6.283185307179586"->"arraywrite.d";
+    "arraywrite.d"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"virtualinvoke <java.awt.Component: java.awt.Dimension size()>";
+    "virtualinvoke <java.awt.Component: java.awt.Dimension size()>"->"fieldget <java.awt.Dimension: int width>";
+    "fieldget <java.awt.Dimension: int width>"->"push 2";
+    "div.i"
+    "push 2"->"div.i";
+    "div.i"->"i2d";
+    "fieldput <ImageRing: double a277>"
+    "i2d"->"fieldput <ImageRing: double a277>";
+    "fieldput <ImageRing: double a277>"->"load.r r0";
+    "new java.lang.Thread"
+    "load.r r0"->"new java.lang.Thread";
+    "new java.lang.Thread"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "specialinvoke <java.lang.Thread: void <init>(java.lang.Runnable)>"
+    "load.r r0"->"specialinvoke <java.lang.Thread: void <init>(java.lang.Runnable)>";
+    "fieldput <ImageRing: java.lang.Thread a367>"
+    "specialinvoke <java.lang.Thread: void <init>(java.lang.Runnable)>"->"fieldput <ImageRing: java.lang.Thread a367>";
+    "fieldput <ImageRing: java.lang.Thread a367>"->"load.r r0";
+    "fieldget <ImageRing: java.lang.Thread a367>"
+    "load.r r0"->"fieldget <ImageRing: java.lang.Thread a367>";
+    "virtualinvoke <java.lang.Thread: void start()>"
+    "fieldget <ImageRing: java.lang.Thread a367>"->"virtualinvoke <java.lang.Thread: void start()>";
+    "return"
+    "virtualinvoke <java.lang.Thread: void start()>"->"return";
+    "ifcmplt.i load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <ImageRing: double[] a191>";
+    "fieldget <ImageRing: double[] a191>"->"load.i r1";
+    "load.i r1"->"load.r r0";
+    "load.r r0"->"fieldget <ImageRing: double[] a191>";
+    "fieldget <ImageRing: double[] a191>"->"load.i r1";
+    "load.i r1"->"push 1";
+    "push 1"->"sub.i";
+    "arrayread.d"
+    "sub.i"->"arrayread.d";
+    "arrayread.d"->"load.r r0";
+    "load.r r0"->"fieldget <ImageRing: java.awt.Image[] a362>";
+    "fieldget <ImageRing: java.awt.Image[] a362>"->"load.i r1";
+    "load.i r1"->"push 1";
+    "push 1"->"sub.i";
+    "sub.i"->"arrayread.r";
+    "arrayread.r"->"load.r r0";
+    "virtualinvoke <java.awt.Image: int getWidth(java.awt.image.ImageObserver)>"
+    "load.r r0"->"virtualinvoke <java.awt.Image: int getWidth(java.awt.image.ImageObserver)>";
+    "virtualinvoke <java.awt.Image: int getWidth(java.awt.image.ImageObserver)>"->"i2d";
+    "i2d"->"load.r r0";
+    "load.r r0"->"fieldget <ImageRing: java.awt.Image[] a362>";
+    "fieldget <ImageRing: java.awt.Image[] a362>"->"load.i r1";
+    "load.i r1"->"push 1";
+    "push 1"->"sub.i";
+    "sub.i"->"arrayread.r";
+    "arrayread.r"->"load.r r0";
+    "virtualinvoke <java.awt.Image: int getHeight(java.awt.image.ImageObserver)>"
+    "load.r r0"->"virtualinvoke <java.awt.Image: int getHeight(java.awt.image.ImageObserver)>";
+    "virtualinvoke <java.awt.Image: int getHeight(java.awt.image.ImageObserver)>"->"i2d";
+    "i2d"->"div.d";
+    "div.d"->"push 2.0";
+    "push 2.0"->"mul.d";
+    "mul.d"->"push 3.141592653589793";
+    "push 3.141592653589793"->"mul.d";
+    "mul.d"->"load.r r0";
+    "load.r r0"->"fieldget <ImageRing: double a89>";
+    "fieldget <ImageRing: double a89>"->"div.d";
+    "add.d"
+    "div.d"->"add.d";
+    "add.d"->"arraywrite.d";
+    "arraywrite.d"->"staticget <java.lang.System: java.io.PrintStream out>";
+    "new java.lang.StringBuffer"
+    "staticget <java.lang.System: java.io.PrintStream out>"->"new java.lang.StringBuffer";
+    "new java.lang.StringBuffer"->"dup1.r";
+    "push \"angle\""
+    "dup1.r"->"push \"angle\"";
+    "specialinvoke <java.lang.StringBuffer: void <init>(java.lang.String)>"
+    "push \"angle\""->"specialinvoke <java.lang.StringBuffer: void <init>(java.lang.String)>";
+    "specialinvoke <java.lang.StringBuffer: void <init>(java.lang.String)>"->"load.i r1";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(int)>"
+    "load.i r1"->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(int)>";
+    "push \" \""
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(int)>"->"push \" \"";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"
+    "push \" \""->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"load.r r0";
+    "load.r r0"->"fieldget <ImageRing: double[] a191>";
+    "fieldget <ImageRing: double[] a191>"->"load.i r1";
+    "load.i r1"->"arrayread.d";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(double)>"
+    "arrayread.d"->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(double)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(double)>"->"push \" \"";
+    "push \" \""->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"load.r r0";
+    "load.r r0"->"fieldget <ImageRing: java.awt.Image[] a362>";
+    "fieldget <ImageRing: java.awt.Image[] a362>"->"load.i r1";
+    "load.i r1"->"push 1";
+    "push 1"->"sub.i";
+    "sub.i"->"arrayread.r";
+    "arrayread.r"->"load.r r0";
+    "load.r r0"->"virtualinvoke <java.awt.Image: int getWidth(java.awt.image.ImageObserver)>";
+    "virtualinvoke <java.awt.Image: int getWidth(java.awt.image.ImageObserver)>"->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(int)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>"
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(int)>"->"virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>"->"virtualinvoke <java.io.PrintStream: void println(java.lang.String)>";
+    "inc.i r1 1"
+    "virtualinvoke <java.io.PrintStream: void println(java.lang.String)>"->"inc.i r1 1";
+    "ifcmplt.i load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <ImageRing: double a89>";
+    "fieldget <ImageRing: double a89>"->"load.r r0";
+    "load.r r0"->"fieldget <ImageRing: java.awt.Image[] a362>";
+    "fieldget <ImageRing: java.awt.Image[] a362>"->"load.i r1";
+    "load.i r1"->"arrayread.r";
+    "arrayread.r"->"load.r r0";
+    "load.r r0"->"virtualinvoke <java.awt.Image: int getWidth(java.awt.image.ImageObserver)>";
+    "virtualinvoke <java.awt.Image: int getWidth(java.awt.image.ImageObserver)>"->"i2d";
+    "i2d"->"load.r r0";
+    "load.r r0"->"fieldget <ImageRing: java.awt.Image[] a362>";
+    "fieldget <ImageRing: java.awt.Image[] a362>"->"load.i r1";
+    "load.i r1"->"arrayread.r";
+    "arrayread.r"->"load.r r0";
+    "load.r r0"->"virtualinvoke <java.awt.Image: int getHeight(java.awt.image.ImageObserver)>";
+    "virtualinvoke <java.awt.Image: int getHeight(java.awt.image.ImageObserver)>"->"i2d";
+    "i2d"->"div.d";
+    "div.d"->"add.d";
+    "add.d"->"fieldput <ImageRing: double a89>";
+    "fieldput <ImageRing: double a89>"->"inc.i r1 1";
+    "virtualinvoke <java.awt.MediaTracker: void waitForAll()>"->"store.r r1";
+    "ifcmplt.i staticget <java.lang.System: java.io.PrintStream out>"->"staticget <java.lang.System: java.io.PrintStream out>";
+    "staticget <java.lang.System: java.io.PrintStream out>"->"load.r r0";
+    "load.r r0"->"fieldget <ImageRing: java.lang.String[][] menu>";
+    "fieldget <ImageRing: java.lang.String[][] menu>"->"load.i r85";
+    "load.i r85"->"arrayread.r";
+    "arrayread.r"->"push 0";
+    "push 0"->"arrayread.r";
+    "arrayread.r"->"virtualinvoke <java.io.PrintStream: void println(java.lang.String)>";
+    "virtualinvoke <java.io.PrintStream: void println(java.lang.String)>"->"load.r r0";
+    "load.r r0"->"fieldget <ImageRing: java.awt.Image[] a362>";
+    "fieldget <ImageRing: java.awt.Image[] a362>"->"load.i r85";
+    "load.i r85"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"virtualinvoke <java.applet.Applet: java.net.URL getDocumentBase()>";
+    "virtualinvoke <java.applet.Applet: java.net.URL getDocumentBase()>"->"load.r r0";
+    "load.r r0"->"fieldget <ImageRing: java.lang.String[][] menu>";
+    "fieldget <ImageRing: java.lang.String[][] menu>"->"load.i r85";
+    "load.i r85"->"arrayread.r";
+    "arrayread.r"->"push 0";
+    "push 0"->"arrayread.r";
+    "virtualinvoke <java.applet.Applet: java.awt.Image getImage(java.net.URL,java.lang.String)>"
+    "arrayread.r"->"virtualinvoke <java.applet.Applet: java.awt.Image getImage(java.net.URL,java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.awt.Image getImage(java.net.URL,java.lang.String)>"->"arraywrite.r";
+    "arraywrite.r"->"load.r r84";
+    "load.r r84"->"load.r r0";
+    "load.r r0"->"fieldget <ImageRing: java.awt.Image[] a362>";
+    "fieldget <ImageRing: java.awt.Image[] a362>"->"load.i r85";
+    "load.i r85"->"arrayread.r";
+    "arrayread.r"->"load.i r85";
+    "virtualinvoke <java.awt.MediaTracker: void addImage(java.awt.Image,int)>"
+    "load.i r85"->"virtualinvoke <java.awt.MediaTracker: void addImage(java.awt.Image,int)>";
+    "inc.i r85 1"
+    "virtualinvoke <java.awt.MediaTracker: void addImage(java.awt.Image,int)>"->"inc.i r85 1";
+    "ifcmplt.i load.r r84"->"load.r r84";
+    "push 125"
+    "load.r r84"->"push 125";
+    "push 125"->"load.r r84";
+    "push 123"
+    "load.r r84"->"push 123";
+    "push 123"->"load.i r85";
+    "virtualinvoke <java.lang.String: int indexOf(int,int)>"
+    "load.i r85"->"virtualinvoke <java.lang.String: int indexOf(int,int)>";
+    "virtualinvoke <java.lang.String: int indexOf(int,int)>"->"push 1";
+    "push 1"->"add.i";
+    "store.i $r14"
+    "add.i"->"store.i $r14";
+    "load.i $r14"
+    "store.i $r14"->"load.i $r14";
+    "load.i $r14"->"virtualinvoke <java.lang.String: int indexOf(int,int)>";
+    "virtualinvoke <java.lang.String: int indexOf(int,int)>"->"store.i r85";
+    "store.i r85"->"load.r r84";
+    "load.r r84"->"load.i $r14";
+    "load.i $r14"->"load.i r85";
+    "virtualinvoke <java.lang.String: java.lang.String substring(int,int)>"
+    "load.i r85"->"virtualinvoke <java.lang.String: java.lang.String substring(int,int)>";
+    "store.r r89"
+    "virtualinvoke <java.lang.String: java.lang.String substring(int,int)>"->"store.r r89";
+    "store.r r89"->"staticget <java.lang.System: java.io.PrintStream out>";
+    "load.r r89"
+    "staticget <java.lang.System: java.io.PrintStream out>"->"load.r r89";
+    "load.r r89"->"virtualinvoke <java.io.PrintStream: void println(java.lang.String)>";
+    "virtualinvoke <java.io.PrintStream: void println(java.lang.String)>"->"push -1";
+    "store.i i45"
+    "push -1"->"store.i i45";
+    "store.i i45"->"push 0";
+    "store.i i46"
+    "push 0"->"store.i i46";
+    "goto load.i i46"
+    "store.i i46"->"goto load.i i46";
+    "load.i i46"
+    "goto load.i i46"->"load.i i46";
+    "load.i i46"->"push 3";
+    "ifcmplt.i load.i i45"
+    "push 3"->"ifcmplt.i load.i i45";
+    "inc.i $z8 1"
+    "ifcmplt.i load.i i45"->"inc.i $z8 1";
+    "load.i i45"
+    "ifcmplt.i load.i i45"->"load.i i45";
+    "load.i i45"->"push 1";
+    "push 1"->"add.i";
+    "store.i i47"
+    "add.i"->"store.i i47";
+    "store.i i47"->"load.r r89";
+    "push 44"
+    "load.r r89"->"push 44";
+    "load.i i47"
+    "push 44"->"load.i i47";
+    "load.i i47"->"virtualinvoke <java.lang.String: int indexOf(int,int)>";
+    "virtualinvoke <java.lang.String: int indexOf(int,int)>"->"store.i i45";
+    "store.i i45"->"load.r r0";
+    "load.r r0"->"fieldget <ImageRing: java.lang.String[][] menu>";
+    "fieldget <ImageRing: java.lang.String[][] menu>"->"load.i $z8";
+    "load.i $z8"->"arrayread.r";
+    "store.r $r14"
+    "arrayread.r"->"store.r $r14";
+    "store.r $r14"->"load.i i46";
+    "store.i $i5"
+    "load.i i46"->"store.i $i5";
+    "store.i $i5"->"load.i i45";
+    "ifge load.i i45"
+    "load.i i45"->"ifge load.i i45";
+    "ifge load.i i45"->"load.r r89";
+    "load.r r89"->"virtualinvoke <java.lang.String: int length()>";
+    "store.i $i48"
+    "virtualinvoke <java.lang.String: int length()>"->"store.i $i48";
+    "goto load.r $r14"
+    "store.i $i48"->"goto load.r $r14";
+    "load.r $r14"
+    "goto load.r $r14"->"load.r $r14";
+    "load.i $i5"
+    "load.r $r14"->"load.i $i5";
+    "load.i $i5"->"load.r r89";
+    "load.r r89"->"load.i i47";
+    "load.i $i48"
+    "load.i i47"->"load.i $i48";
+    "load.i $i48"->"virtualinvoke <java.lang.String: java.lang.String substring(int,int)>";
+    "virtualinvoke <java.lang.String: java.lang.String substring(int,int)>"->"arraywrite.r";
+    "arraywrite.r"->"load.i i45";
+    "ifge inc.i i46 1"
+    "load.i i45"->"ifge inc.i i46 1";
+    "inc.i i46 1"
+    "ifge inc.i i46 1"->"inc.i i46 1";
+    "inc.i i46 1"->"goto load.i i46";
+    "goto load.i i46"->"load.i i46";
+    "load.i i46"->"push 3";
+    "push 3"->"ifcmplt.i load.r r0";
+    "ifcmplt.i load.r r0"->"inc.i i46 1";
+    "ifcmplt.i load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <ImageRing: java.lang.String[][] menu>";
+    "fieldget <ImageRing: java.lang.String[][] menu>"->"load.i $z8";
+    "load.i $z8"->"arrayread.r";
+    "arrayread.r"->"load.i i46";
+    "load.i i46"->"push \"\"";
+    "push \"\""->"arraywrite.r";
+    "arraywrite.r"->"inc.i i46 1";
+    "ifge load.i i45"->"load.i i45";
+    "load.i i45"->"store.i $i48";
+    "ifge load.r r84"->"load.r r84";
+    "load.r r84"->"push 125";
+    "push 125"->"load.i r85";
+    "load.i r85"->"push 1";
+    "push 1"->"add.i";
+    "add.i"->"virtualinvoke <java.lang.String: int indexOf(int,int)>";
+    "virtualinvoke <java.lang.String: int indexOf(int,int)>"->"store.i r85";
+    "store.i r85"->"inc.i r1 1";
+    "ifeq push 1"->"push 1";
+    "push 1"->"store.b r84";
+    "ifgt load.r r85"->"load.r r85";
+    "load.r r85"->"push 0";
+    "push 0"->"load.r r85";
+    "load.r r85"->"push 32";
+    "push 32"->"virtualinvoke <java.lang.String: int indexOf(int)>";
+    "virtualinvoke <java.lang.String: int indexOf(int)>"->"virtualinvoke <java.lang.String: java.lang.String substring(int,int)>";
+    "virtualinvoke <java.lang.String: java.lang.String substring(int,int)>"->"load.r r84";
+    "load.r r84"->"virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>";
+    "virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>"->"ifeq push 1";
+    "ifeq push 1"->"push 0";
+    "store.b $z8"
+    "push 0"->"store.b $z8";
+    "store.b $z8"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "load.b $z8"
+    "load.r r0"->"load.b $z8";
+    "load.b $z8"->"fieldput <ImageRing: boolean a32>";
+    "fieldput <ImageRing: boolean a32>"->"load.r r85";
+    "load.r r85"->"load.r r85";
+    "load.r r85"->"push 32";
+    "push 32"->"virtualinvoke <java.lang.String: int indexOf(int)>";
+    "virtualinvoke <java.lang.String: int indexOf(int)>"->"push 1";
+    "push 1"->"add.i";
+    "add.i"->"load.r r85";
+    "load.r r85"->"virtualinvoke <java.lang.String: int length()>";
+    "virtualinvoke <java.lang.String: int length()>"->"virtualinvoke <java.lang.String: java.lang.String substring(int,int)>";
+    "virtualinvoke <java.lang.String: java.lang.String substring(int,int)>"->"store.r r85";
+    "ifeq push 1"->"push 1";
+    "push 1"->"store.b $z8";
+}

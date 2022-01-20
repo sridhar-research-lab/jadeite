@@ -1,0 +1,34 @@
+digraph "" {
+    "r0 := @this: org.wordsmith.anagram.AnagramApplet"
+    "load.r r0"
+    "r0 := @this: org.wordsmith.anagram.AnagramApplet"->"load.r r0";
+    "specialinvoke <java.applet.Applet: void init()>"
+    "load.r r0"->"specialinvoke <java.applet.Applet: void init()>";
+    "specialinvoke <java.applet.Applet: void init()>"->"load.r r0";
+    "new org.wordsmith.anagram.ConfigurationImpl"
+    "load.r r0"->"new org.wordsmith.anagram.ConfigurationImpl";
+    "dup1.r"
+    "new org.wordsmith.anagram.ConfigurationImpl"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "specialinvoke <org.wordsmith.anagram.ConfigurationImpl: void <init>(org.wordsmith.anagram.ConfigurationGate)>"
+    "load.r r0"->"specialinvoke <org.wordsmith.anagram.ConfigurationImpl: void <init>(org.wordsmith.anagram.ConfigurationGate)>";
+    "fieldput <org.wordsmith.anagram.AnagramApplet: org.wordsmith.anagram.Configuration myConfiguration>"
+    "specialinvoke <org.wordsmith.anagram.ConfigurationImpl: void <init>(org.wordsmith.anagram.ConfigurationGate)>"->"fieldput <org.wordsmith.anagram.AnagramApplet: org.wordsmith.anagram.Configuration myConfiguration>";
+    "fieldput <org.wordsmith.anagram.AnagramApplet: org.wordsmith.anagram.Configuration myConfiguration>"->"load.r r0";
+    "virtualinvoke <org.wordsmith.anagram.AnagramApplet: boolean isAuthorized()>"
+    "load.r r0"->"virtualinvoke <org.wordsmith.anagram.AnagramApplet: boolean isAuthorized()>";
+    "ifne return"
+    "virtualinvoke <org.wordsmith.anagram.AnagramApplet: boolean isAuthorized()>"->"ifne return";
+    "ifne return"->"load.r r0";
+    "new java.awt.Cursor"
+    "load.r r0"->"new java.awt.Cursor";
+    "new java.awt.Cursor"->"dup1.r";
+    "push 12"
+    "dup1.r"->"push 12";
+    "specialinvoke <java.awt.Cursor: void <init>(int)>"
+    "push 12"->"specialinvoke <java.awt.Cursor: void <init>(int)>";
+    "virtualinvoke <org.wordsmith.anagram.AnagramApplet: void setCursor(java.awt.Cursor)>"
+    "specialinvoke <java.awt.Cursor: void <init>(int)>"->"virtualinvoke <org.wordsmith.anagram.AnagramApplet: void setCursor(java.awt.Cursor)>";
+    "return"
+    "virtualinvoke <org.wordsmith.anagram.AnagramApplet: void setCursor(java.awt.Cursor)>"->"return";
+}

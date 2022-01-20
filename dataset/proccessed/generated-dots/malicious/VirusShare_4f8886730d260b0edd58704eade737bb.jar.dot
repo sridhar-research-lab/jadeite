@@ -1,0 +1,126 @@
+digraph "" {
+    "r0 := @this: a"
+    "new java.io.ObjectInputStream"
+    "r0 := @this: a"->"new java.io.ObjectInputStream";
+    "store.r r3"
+    "new java.io.ObjectInputStream"->"store.r r3";
+    "load.r r3"
+    "store.r r3"->"load.r r3";
+    "new java.io.ByteArrayInputStream"
+    "load.r r3"->"new java.io.ByteArrayInputStream";
+    "dup1.r"
+    "new java.io.ByteArrayInputStream"->"dup1.r";
+    "load.r r0"
+    "dup1.r"->"load.r r0";
+    "virtualinvoke <java.lang.Object: java.lang.Class getClass()>"
+    "load.r r0"->"virtualinvoke <java.lang.Object: java.lang.Class getClass()>";
+    "push \"0\""
+    "virtualinvoke <java.lang.Object: java.lang.Class getClass()>"->"push \"0\"";
+    "staticinvoke <a: byte[] a(java.lang.Class,java.lang.String)>"
+    "push \"0\""->"staticinvoke <a: byte[] a(java.lang.Class,java.lang.String)>";
+    "specialinvoke <java.io.ByteArrayInputStream: void <init>(byte[])>"
+    "staticinvoke <a: byte[] a(java.lang.Class,java.lang.String)>"->"specialinvoke <java.io.ByteArrayInputStream: void <init>(byte[])>";
+    "specialinvoke <java.io.ObjectInputStream: void <init>(java.io.InputStream)>"
+    "specialinvoke <java.io.ByteArrayInputStream: void <init>(byte[])>"->"specialinvoke <java.io.ObjectInputStream: void <init>(java.io.InputStream)>";
+    "specialinvoke <java.io.ObjectInputStream: void <init>(java.io.InputStream)>"->"load.r r3";
+    "virtualinvoke <java.io.ObjectInputStream: java.lang.Object readObject()>"
+    "load.r r3"->"virtualinvoke <java.io.ObjectInputStream: java.lang.Object readObject()>";
+    "checkcast"
+    "virtualinvoke <java.io.ObjectInputStream: java.lang.Object readObject()>"->"checkcast";
+    "checkcast"->"checkcast";
+    "checkcast"->"load.r r3";
+    "load.r r3"->"virtualinvoke <java.io.ObjectInputStream: java.lang.Object readObject()>";
+    "virtualinvoke <java.io.ObjectInputStream: java.lang.Object readObject()>"->"checkcast";
+    "push 0"
+    "checkcast"->"push 0";
+    "push 0"->"load.r r0";
+    "load.r r0"->"virtualinvoke <java.lang.Object: java.lang.Class getClass()>";
+    "virtualinvoke <java.lang.Class: java.lang.ClassLoader getClassLoader()>"
+    "virtualinvoke <java.lang.Object: java.lang.Class getClass()>"->"virtualinvoke <java.lang.Class: java.lang.ClassLoader getClassLoader()>";
+    "virtualinvoke <java.util.concurrent.atomic.AtomicReferenceArray: void set(int,java.lang.Object)>"
+    "virtualinvoke <java.lang.Class: java.lang.ClassLoader getClassLoader()>"->"virtualinvoke <java.util.concurrent.atomic.AtomicReferenceArray: void set(int,java.lang.Object)>";
+    "virtualinvoke <java.util.concurrent.atomic.AtomicReferenceArray: void set(int,java.lang.Object)>"->"push 0";
+    "arrayread.r"
+    "push 0"->"arrayread.r";
+    "arrayread.r"->"store.r r3";
+    "store.r r3"->"load.r r3";
+    "ifnonnull new java.security.Permissions"
+    "load.r r3"->"ifnonnull new java.security.Permissions";
+    "return"
+    "ifnonnull new java.security.Permissions"->"return";
+    "new java.security.Permissions"
+    "ifnonnull new java.security.Permissions"->"new java.security.Permissions";
+    "store.r $r16"
+    "new java.security.Permissions"->"store.r $r16";
+    "load.r $r16"
+    "store.r $r16"->"load.r $r16";
+    "specialinvoke <java.security.Permissions: void <init>()>"
+    "load.r $r16"->"specialinvoke <java.security.Permissions: void <init>()>";
+    "specialinvoke <java.security.Permissions: void <init>()>"->"load.r $r16";
+    "new java.security.AllPermission"
+    "load.r $r16"->"new java.security.AllPermission";
+    "new java.security.AllPermission"->"dup1.r";
+    "specialinvoke <java.security.AllPermission: void <init>()>"
+    "dup1.r"->"specialinvoke <java.security.AllPermission: void <init>()>";
+    "virtualinvoke <java.security.Permissions: void add(java.security.Permission)>"
+    "specialinvoke <java.security.AllPermission: void <init>()>"->"virtualinvoke <java.security.Permissions: void add(java.security.Permission)>";
+    "new java.security.ProtectionDomain"
+    "virtualinvoke <java.security.Permissions: void add(java.security.Permission)>"->"new java.security.ProtectionDomain";
+    "store.r $r18"
+    "new java.security.ProtectionDomain"->"store.r $r18";
+    "load.r $r18"
+    "store.r $r18"->"load.r $r18";
+    "new java.security.CodeSource"
+    "load.r $r18"->"new java.security.CodeSource";
+    "new java.security.CodeSource"->"dup1.r";
+    "push null"
+    "dup1.r"->"push null";
+    "push null"->"checkcast";
+    "checkcast"->"push null";
+    "push null"->"checkcast";
+    "specialinvoke <java.security.CodeSource: void <init>(java.net.URL,java.security.cert.Certificate[])>"
+    "checkcast"->"specialinvoke <java.security.CodeSource: void <init>(java.net.URL,java.security.cert.Certificate[])>";
+    "specialinvoke <java.security.CodeSource: void <init>(java.net.URL,java.security.cert.Certificate[])>"->"load.r $r16";
+    "specialinvoke <java.security.ProtectionDomain: void <init>(java.security.CodeSource,java.security.PermissionCollection)>"
+    "load.r $r16"->"specialinvoke <java.security.ProtectionDomain: void <init>(java.security.CodeSource,java.security.PermissionCollection)>";
+    "specialinvoke <java.security.ProtectionDomain: void <init>(java.security.CodeSource,java.security.PermissionCollection)>"->"load.r r0";
+    "load.r r0"->"virtualinvoke <java.lang.Object: java.lang.Class getClass()>";
+    "push \"c.class\""
+    "virtualinvoke <java.lang.Object: java.lang.Class getClass()>"->"push \"c.class\"";
+    "push \"c.class\""->"staticinvoke <a: byte[] a(java.lang.Class,java.lang.String)>";
+    "store.r r0"
+    "staticinvoke <a: byte[] a(java.lang.Class,java.lang.String)>"->"store.r r0";
+    "store.r r0"->"load.r r0";
+    "ifnonnull load.r r3"
+    "load.r r0"->"ifnonnull load.r r3";
+    "ifnonnull load.r r3"->"return";
+    "ifnonnull load.r r3"->"load.r r3";
+    "push \"c\""
+    "load.r r3"->"push \"c\"";
+    "push \"c\""->"load.r r0";
+    "load.r r0"->"push 0";
+    "push 0"->"load.r r0";
+    "arraylength"
+    "load.r r0"->"arraylength";
+    "arraylength"->"load.r $r18";
+    "load.r $r18"->"push 0";
+    "staticinvoke <b: java.lang.Class a(b,java.lang.String,byte[],int,int,java.security.ProtectionDomain,boolean)>"
+    "push 0"->"staticinvoke <b: java.lang.Class a(b,java.lang.String,byte[],int,int,java.security.ProtectionDomain,boolean)>";
+    "push \"a\""
+    "staticinvoke <b: java.lang.Class a(b,java.lang.String,byte[],int,int,java.security.ProtectionDomain,boolean)>"->"push \"a\"";
+    "push \"a\""->"push null";
+    "push null"->"checkcast";
+    "virtualinvoke <java.lang.Class: java.lang.reflect.Method getDeclaredMethod(java.lang.String,java.lang.Class[])>"
+    "checkcast"->"virtualinvoke <java.lang.Class: java.lang.reflect.Method getDeclaredMethod(java.lang.String,java.lang.Class[])>";
+    "virtualinvoke <java.lang.Class: java.lang.reflect.Method getDeclaredMethod(java.lang.String,java.lang.Class[])>"->"push null";
+    "push null"->"push null";
+    "push null"->"checkcast";
+    "virtualinvoke <java.lang.reflect.Method: java.lang.Object invoke(java.lang.Object,java.lang.Object[])>"
+    "checkcast"->"virtualinvoke <java.lang.reflect.Method: java.lang.Object invoke(java.lang.Object,java.lang.Object[])>";
+    "pop"
+    "virtualinvoke <java.lang.reflect.Method: java.lang.Object invoke(java.lang.Object,java.lang.Object[])>"->"pop";
+    "goto return"
+    "pop"->"goto return";
+    "goto return"->"return";
+    "virtualinvoke <java.lang.reflect.Method: java.lang.Object invoke(java.lang.Object,java.lang.Object[])>"->"store.r r0";
+}

@@ -1,0 +1,318 @@
+digraph "" {
+    "r0 := @this: YMENU"
+    "load.r r0"
+    "r0 := @this: YMENU"->"load.r r0";
+    "virtualinvoke <java.applet.Applet: java.net.URL getCodeBase()>"
+    "load.r r0"->"virtualinvoke <java.applet.Applet: java.net.URL getCodeBase()>";
+    "store.r r1"
+    "virtualinvoke <java.applet.Applet: java.net.URL getCodeBase()>"->"store.r r1";
+    "store.r r1"->"load.r r0";
+    "push \"DISABLE\""
+    "load.r r0"->"push \"DISABLE\"";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"
+    "push \"DISABLE\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "ifnull load.r r0"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r r0";
+    "push 1"
+    "load.r r0"->"push 1";
+    "fieldput <YMENU: int Uab>"
+    "push 1"->"fieldput <YMENU: int Uab>";
+    "fieldput <YMENU: int Uab>"->"load.r r0";
+    "new java.awt.Color"
+    "load.r r0"->"new java.awt.Color";
+    "dup1.r"
+    "new java.awt.Color"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "push \"BGCOLOR\""
+    "load.r r0"->"push \"BGCOLOR\"";
+    "push \"BGCOLOR\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "push 16"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"push 16";
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String,int)>"
+    "push 16"->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String,int)>";
+    "specialinvoke <java.awt.Color: void <init>(int)>"
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String,int)>"->"specialinvoke <java.awt.Color: void <init>(int)>";
+    "virtualinvoke <java.awt.Component: void setBackground(java.awt.Color)>"
+    "specialinvoke <java.awt.Color: void <init>(int)>"->"virtualinvoke <java.awt.Component: void setBackground(java.awt.Color)>";
+    "virtualinvoke <java.awt.Component: void setBackground(java.awt.Color)>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r1"
+    "load.r r0"->"load.r r1";
+    "load.r r1"->"load.r r0";
+    "push \"IMG0\""
+    "load.r r0"->"push \"IMG0\"";
+    "push \"IMG0\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.awt.Image getImage(java.net.URL,java.lang.String)>"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"virtualinvoke <java.applet.Applet: java.awt.Image getImage(java.net.URL,java.lang.String)>";
+    "fieldput <YMENU: java.awt.Image imgLst>"
+    "virtualinvoke <java.applet.Applet: java.awt.Image getImage(java.net.URL,java.lang.String)>"->"fieldput <YMENU: java.awt.Image imgLst>";
+    "fieldput <YMENU: java.awt.Image imgLst>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "push \"IMGY\""
+    "load.r r0"->"push \"IMGY\"";
+    "push \"IMGY\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>";
+    "fieldput <YMENU: int iBtnY>"
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"->"fieldput <YMENU: int iBtnY>";
+    "fieldput <YMENU: int iBtnY>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "push \"IMGS\""
+    "load.r r0"->"push \"IMGS\"";
+    "push \"IMGS\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "push \",\""
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"push \",\"";
+    "virtualinvoke <YMENU: java.lang.String[] parse(java.lang.String,java.lang.String)>"
+    "push \",\""->"virtualinvoke <YMENU: java.lang.String[] parse(java.lang.String,java.lang.String)>";
+    "fieldput <YMENU: java.lang.String[] sBtn>"
+    "virtualinvoke <YMENU: java.lang.String[] parse(java.lang.String,java.lang.String)>"->"fieldput <YMENU: java.lang.String[] sBtn>";
+    "fieldput <YMENU: java.lang.String[] sBtn>"->"load.r r0";
+    "push \"IMGM\""
+    "load.r r0"->"push \"IMGM\"";
+    "push \"IMGM\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"push \"IMGM\"";
+    "push \"IMGM\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"push \",\"";
+    "push \",\""->"virtualinvoke <YMENU: java.lang.String[] parse(java.lang.String,java.lang.String)>";
+    "fieldput <YMENU: java.lang.String[] sMoveBtn>"
+    "virtualinvoke <YMENU: java.lang.String[] parse(java.lang.String,java.lang.String)>"->"fieldput <YMENU: java.lang.String[] sMoveBtn>";
+    "fieldput <YMENU: java.lang.String[] sMoveBtn>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "push \"IMGX\""
+    "load.r r0"->"push \"IMGX\"";
+    "push \"IMGX\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"push \",\"";
+    "virtualinvoke <YMENU: int[] parseI(java.lang.String,java.lang.String)>"
+    "push \",\""->"virtualinvoke <YMENU: int[] parseI(java.lang.String,java.lang.String)>";
+    "fieldput <YMENU: int[] iBtnX>"
+    "virtualinvoke <YMENU: int[] parseI(java.lang.String,java.lang.String)>"->"fieldput <YMENU: int[] iBtnX>";
+    "fieldput <YMENU: int[] iBtnX>"->"load.r r0";
+    "specialinvoke <YMENU: void calcBtn()>"
+    "load.r r0"->"specialinvoke <YMENU: void calcBtn()>";
+    "specialinvoke <YMENU: void calcBtn()>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "fieldget <YMENU: java.lang.String[] sBtn>"
+    "load.r r0"->"fieldget <YMENU: java.lang.String[] sBtn>";
+    "arraylength"
+    "fieldget <YMENU: java.lang.String[] sBtn>"->"arraylength";
+    "newarray"
+    "arraylength"->"newarray";
+    "fieldput <YMENU: java.awt.Image[] imgBtn>"
+    "newarray"->"fieldput <YMENU: java.awt.Image[] imgBtn>";
+    "fieldput <YMENU: java.awt.Image[] imgBtn>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <YMENU: java.lang.String[] sBtn>";
+    "fieldget <YMENU: java.lang.String[] sBtn>"->"arraylength";
+    "arraylength"->"newarray";
+    "fieldput <YMENU: java.awt.Image[] imgMoveBtn>"
+    "newarray"->"fieldput <YMENU: java.awt.Image[] imgMoveBtn>";
+    "fieldput <YMENU: java.awt.Image[] imgMoveBtn>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <YMENU: java.lang.String[] sBtn>";
+    "fieldget <YMENU: java.lang.String[] sBtn>"->"arraylength";
+    "arraylength"->"newarray";
+    "fieldput <YMENU: java.awt.PopupMenu[] bPop>"
+    "newarray"->"fieldput <YMENU: java.awt.PopupMenu[] bPop>";
+    "fieldput <YMENU: java.awt.PopupMenu[] bPop>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <YMENU: java.lang.String[] sBtn>";
+    "fieldget <YMENU: java.lang.String[] sBtn>"->"arraylength";
+    "arraylength"->"newarray";
+    "fieldput <YMENU: java.lang.String[] bLink>"
+    "newarray"->"fieldput <YMENU: java.lang.String[] bLink>";
+    "fieldput <YMENU: java.lang.String[] bLink>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <YMENU: java.lang.String[] sBtn>";
+    "fieldget <YMENU: java.lang.String[] sBtn>"->"arraylength";
+    "arraylength"->"newarray";
+    "fieldput <YMENU: java.lang.String[][] iName>"
+    "newarray"->"fieldput <YMENU: java.lang.String[][] iName>";
+    "fieldput <YMENU: java.lang.String[][] iName>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <YMENU: java.lang.String[] sBtn>";
+    "fieldget <YMENU: java.lang.String[] sBtn>"->"arraylength";
+    "arraylength"->"newarray";
+    "fieldput <YMENU: java.lang.String[][] iLink>"
+    "newarray"->"fieldput <YMENU: java.lang.String[][] iLink>";
+    "fieldput <YMENU: java.lang.String[][] iLink>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "virtualinvoke <java.awt.Component: java.awt.Graphics getGraphics()>"
+    "load.r r0"->"virtualinvoke <java.awt.Component: java.awt.Graphics getGraphics()>";
+    "fieldput <YMENU: java.awt.Graphics myG>"
+    "virtualinvoke <java.awt.Component: java.awt.Graphics getGraphics()>"->"fieldput <YMENU: java.awt.Graphics myG>";
+    "fieldput <YMENU: java.awt.Graphics myG>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "push \"REPL\""
+    "load.r r0"->"push \"REPL\"";
+    "push \"REPL\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"push \",\"";
+    "push \",\""->"virtualinvoke <YMENU: java.lang.String[] parse(java.lang.String,java.lang.String)>";
+    "fieldput <YMENU: java.lang.String[] sId>"
+    "virtualinvoke <YMENU: java.lang.String[] parse(java.lang.String,java.lang.String)>"->"fieldput <YMENU: java.lang.String[] sId>";
+    "push 0"
+    "fieldput <YMENU: java.lang.String[] sId>"->"push 0";
+    "store.i i15"
+    "push 0"->"store.i i15";
+    "goto load.i i15"
+    "store.i i15"->"goto load.i i15";
+    "load.i i15"
+    "goto load.i i15"->"load.i i15";
+    "load.i i15"->"load.r r0";
+    "load.r r0"->"fieldget <YMENU: java.lang.String[] sBtn>";
+    "fieldget <YMENU: java.lang.String[] sBtn>"->"arraylength";
+    "ifcmplt.i new java.util.StringTokenizer"
+    "arraylength"->"ifcmplt.i new java.util.StringTokenizer";
+    "ifcmplt.i new java.util.StringTokenizer"->"load.r r0";
+    "new java.awt.Cursor"
+    "load.r r0"->"new java.awt.Cursor";
+    "new java.awt.Cursor"->"dup1.r";
+    "push 12"
+    "dup1.r"->"push 12";
+    "specialinvoke <java.awt.Cursor: void <init>(int)>"
+    "push 12"->"specialinvoke <java.awt.Cursor: void <init>(int)>";
+    "virtualinvoke <java.awt.Component: void setCursor(java.awt.Cursor)>"
+    "specialinvoke <java.awt.Cursor: void <init>(int)>"->"virtualinvoke <java.awt.Component: void setCursor(java.awt.Cursor)>";
+    "virtualinvoke <java.awt.Component: void setCursor(java.awt.Cursor)>"->"load.r r0";
+    "specialinvoke <YMENU: void notifyLoaded()>"
+    "load.r r0"->"specialinvoke <YMENU: void notifyLoaded()>";
+    "return"
+    "specialinvoke <YMENU: void notifyLoaded()>"->"return";
+    "new java.util.StringTokenizer"
+    "ifcmplt.i new java.util.StringTokenizer"->"new java.util.StringTokenizer";
+    "store.r $r30"
+    "new java.util.StringTokenizer"->"store.r $r30";
+    "load.r $r30"
+    "store.r $r30"->"load.r $r30";
+    "load.r $r30"->"load.r r0";
+    "new java.lang.StringBuffer"
+    "load.r r0"->"new java.lang.StringBuffer";
+    "new java.lang.StringBuffer"->"dup1.r";
+    "specialinvoke <java.lang.StringBuffer: void <init>()>"
+    "dup1.r"->"specialinvoke <java.lang.StringBuffer: void <init>()>";
+    "push \"POP\""
+    "specialinvoke <java.lang.StringBuffer: void <init>()>"->"push \"POP\"";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"
+    "push \"POP\""->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"load.i i15";
+    "load.i i15"->"push 1";
+    "add.i"
+    "push 1"->"add.i";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(int)>"
+    "add.i"->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(int)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>"
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(int)>"->"virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>"->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"push \",\"";
+    "specialinvoke <java.util.StringTokenizer: void <init>(java.lang.String,java.lang.String)>"
+    "push \",\""->"specialinvoke <java.util.StringTokenizer: void <init>(java.lang.String,java.lang.String)>";
+    "specialinvoke <java.util.StringTokenizer: void <init>(java.lang.String,java.lang.String)>"->"load.r $r30";
+    "virtualinvoke <java.util.StringTokenizer: int countTokens()>"
+    "load.r $r30"->"virtualinvoke <java.util.StringTokenizer: int countTokens()>";
+    "store.i i0"
+    "virtualinvoke <java.util.StringTokenizer: int countTokens()>"->"store.i i0";
+    "store.i i0"->"load.r r0";
+    "fieldget <YMENU: java.awt.Image[] imgBtn>"
+    "load.r r0"->"fieldget <YMENU: java.awt.Image[] imgBtn>";
+    "fieldget <YMENU: java.awt.Image[] imgBtn>"->"load.i i15";
+    "load.i i15"->"load.r r0";
+    "load.r r0"->"load.r r1";
+    "load.r r1"->"load.r r0";
+    "load.r r0"->"fieldget <YMENU: java.lang.String[] sBtn>";
+    "fieldget <YMENU: java.lang.String[] sBtn>"->"load.i i15";
+    "arrayread.r"
+    "load.i i15"->"arrayread.r";
+    "arrayread.r"->"virtualinvoke <java.applet.Applet: java.awt.Image getImage(java.net.URL,java.lang.String)>";
+    "arraywrite.r"
+    "virtualinvoke <java.applet.Applet: java.awt.Image getImage(java.net.URL,java.lang.String)>"->"arraywrite.r";
+    "arraywrite.r"->"load.r r0";
+    "fieldget <YMENU: java.lang.String[] sMoveBtn>"
+    "load.r r0"->"fieldget <YMENU: java.lang.String[] sMoveBtn>";
+    "fieldget <YMENU: java.lang.String[] sMoveBtn>"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r r0";
+    "fieldget <YMENU: java.awt.Image[] imgMoveBtn>"
+    "load.r r0"->"fieldget <YMENU: java.awt.Image[] imgMoveBtn>";
+    "fieldget <YMENU: java.awt.Image[] imgMoveBtn>"->"load.i i15";
+    "load.i i15"->"load.r r0";
+    "load.r r0"->"load.r r1";
+    "load.r r1"->"load.r r0";
+    "load.r r0"->"fieldget <YMENU: java.lang.String[] sMoveBtn>";
+    "fieldget <YMENU: java.lang.String[] sMoveBtn>"->"load.i i15";
+    "load.i i15"->"arrayread.r";
+    "arrayread.r"->"virtualinvoke <java.applet.Applet: java.awt.Image getImage(java.net.URL,java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.awt.Image getImage(java.net.URL,java.lang.String)>"->"arraywrite.r";
+    "goto load.r $r30"
+    "arraywrite.r"->"goto load.r $r30";
+    "goto load.r $r30"->"load.r $r30";
+    "virtualinvoke <java.util.StringTokenizer: java.lang.String nextToken()>"
+    "load.r $r30"->"virtualinvoke <java.util.StringTokenizer: java.lang.String nextToken()>";
+    "store.r r3"
+    "virtualinvoke <java.util.StringTokenizer: java.lang.String nextToken()>"->"store.r r3";
+    "load.r r3"
+    "store.r r3"->"load.r r3";
+    "virtualinvoke <java.lang.String: int length()>"
+    "load.r r3"->"virtualinvoke <java.lang.String: int length()>";
+    "virtualinvoke <java.lang.String: int length()>"->"push 1";
+    "ifcmple.i load.r r0"
+    "push 1"->"ifcmple.i load.r r0";
+    "ifcmple.i load.r r0"->"load.r r0";
+    "fieldget <YMENU: java.lang.String[] bLink>"
+    "load.r r0"->"fieldget <YMENU: java.lang.String[] bLink>";
+    "fieldget <YMENU: java.lang.String[] bLink>"->"load.i i15";
+    "load.i i15"->"load.r r3";
+    "load.r r3"->"push 1";
+    "virtualinvoke <java.lang.String: java.lang.String substring(int)>"
+    "push 1"->"virtualinvoke <java.lang.String: java.lang.String substring(int)>";
+    "virtualinvoke <java.lang.String: java.lang.String substring(int)>"->"arraywrite.r";
+    "arraywrite.r"->"load.r r0";
+    "fieldget <YMENU: java.lang.String[][] iName>"
+    "load.r r0"->"fieldget <YMENU: java.lang.String[][] iName>";
+    "fieldget <YMENU: java.lang.String[][] iName>"->"load.i i15";
+    "load.i i0"
+    "load.i i15"->"load.i i0";
+    "load.i i0"->"push 1";
+    "sub.i"
+    "push 1"->"sub.i";
+    "push 2"
+    "sub.i"->"push 2";
+    "div.i"
+    "push 2"->"div.i";
+    "div.i"->"newarray";
+    "newarray"->"arraywrite.r";
+    "arraywrite.r"->"load.r r0";
+    "fieldget <YMENU: java.lang.String[][] iLink>"
+    "load.r r0"->"fieldget <YMENU: java.lang.String[][] iLink>";
+    "fieldget <YMENU: java.lang.String[][] iLink>"->"load.i i15";
+    "load.i i15"->"load.i i0";
+    "load.i i0"->"push 1";
+    "push 1"->"sub.i";
+    "sub.i"->"push 2";
+    "push 2"->"div.i";
+    "div.i"->"newarray";
+    "newarray"->"arraywrite.r";
+    "arraywrite.r"->"load.r r0";
+    "load.r r0"->"load.i i15";
+    "load.i i15"->"load.r $r30";
+    "virtualinvoke <YMENU: void parseMenu(int,java.util.StringTokenizer)>"
+    "load.r $r30"->"virtualinvoke <YMENU: void parseMenu(int,java.util.StringTokenizer)>";
+    "inc.i i15 1"
+    "virtualinvoke <YMENU: void parseMenu(int,java.util.StringTokenizer)>"->"inc.i i15 1";
+    "ifnull load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <YMENU: java.awt.Image[] imgMoveBtn>";
+    "fieldget <YMENU: java.awt.Image[] imgMoveBtn>"->"load.i i15";
+    "load.i i15"->"load.r r0";
+    "load.r r0"->"load.r r1";
+    "load.r r1"->"load.r r0";
+    "load.r r0"->"fieldget <YMENU: java.lang.String[] sBtn>";
+    "fieldget <YMENU: java.lang.String[] sBtn>"->"load.i i15";
+    "load.i i15"->"arrayread.r";
+    "arrayread.r"->"virtualinvoke <java.applet.Applet: java.awt.Image getImage(java.net.URL,java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.awt.Image getImage(java.net.URL,java.lang.String)>"->"arraywrite.r";
+}

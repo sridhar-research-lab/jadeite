@@ -1,0 +1,183 @@
+digraph "" {
+    "r0 := @this: org.chaingang.game.imageshuffle.Main"
+    "new org.chaingang.common.AboutBox"
+    "r0 := @this: org.chaingang.game.imageshuffle.Main"->"new org.chaingang.common.AboutBox";
+    "store.r $r4"
+    "new org.chaingang.common.AboutBox"->"store.r $r4";
+    "load.r r0"
+    "store.r $r4"->"load.r r0";
+    "fieldget <org.chaingang.game.imageshuffle.Main: boolean isAppletContext>"
+    "load.r r0"->"fieldget <org.chaingang.game.imageshuffle.Main: boolean isAppletContext>";
+    "ifeq push null"
+    "fieldget <org.chaingang.game.imageshuffle.Main: boolean isAppletContext>"->"ifeq push null";
+    "ifeq push null"->"load.r r0";
+    "store.r $r39"
+    "load.r r0"->"store.r $r39";
+    "goto load.r $r4"
+    "store.r $r39"->"goto load.r $r4";
+    "load.r $r4"
+    "goto load.r $r4"->"load.r $r4";
+    "push \"Image Puzzle\""
+    "load.r $r4"->"push \"Image Puzzle\"";
+    "push \"Copyleft (c) 2002 brett@chaingang.org\""
+    "push \"Image Puzzle\""->"push \"Copyleft (c) 2002 brett@chaingang.org\"";
+    "push \"http://www.chaingang.org/code/game/\""
+    "push \"Copyleft (c) 2002 brett@chaingang.org\""->"push \"http://www.chaingang.org/code/game/\"";
+    "load.r $r39"
+    "push \"http://www.chaingang.org/code/game/\""->"load.r $r39";
+    "specialinvoke <org.chaingang.common.AboutBox: void <init>(java.lang.String,java.lang.String,java.lang.String,java.applet.Applet)>"
+    "load.r $r39"->"specialinvoke <org.chaingang.common.AboutBox: void <init>(java.lang.String,java.lang.String,java.lang.String,java.applet.Applet)>";
+    "specialinvoke <org.chaingang.common.AboutBox: void <init>(java.lang.String,java.lang.String,java.lang.String,java.applet.Applet)>"->"load.r r0";
+    "load.r r0"->"load.r $r4";
+    "fieldput <org.chaingang.game.imageshuffle.Main: org.chaingang.common.AboutBox aboutbox>"
+    "load.r $r4"->"fieldput <org.chaingang.game.imageshuffle.Main: org.chaingang.common.AboutBox aboutbox>";
+    "fieldput <org.chaingang.game.imageshuffle.Main: org.chaingang.common.AboutBox aboutbox>"->"load.r r0";
+    "new org.chaingang.common.AppProperties"
+    "load.r r0"->"new org.chaingang.common.AppProperties";
+    "dup1.r"
+    "new org.chaingang.common.AppProperties"->"dup1.r";
+    "specialinvoke <org.chaingang.common.AppProperties: void <init>()>"
+    "dup1.r"->"specialinvoke <org.chaingang.common.AppProperties: void <init>()>";
+    "fieldput <org.chaingang.game.imageshuffle.Main: org.chaingang.common.AppProperties ap>"
+    "specialinvoke <org.chaingang.common.AppProperties: void <init>()>"->"fieldput <org.chaingang.game.imageshuffle.Main: org.chaingang.common.AppProperties ap>";
+    "fieldput <org.chaingang.game.imageshuffle.Main: org.chaingang.common.AppProperties ap>"->"load.r r0";
+    "new java.awt.MediaTracker"
+    "load.r r0"->"new java.awt.MediaTracker";
+    "new java.awt.MediaTracker"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "specialinvoke <java.awt.MediaTracker: void <init>(java.awt.Component)>"
+    "load.r r0"->"specialinvoke <java.awt.MediaTracker: void <init>(java.awt.Component)>";
+    "fieldput <org.chaingang.game.imageshuffle.Main: java.awt.MediaTracker mt>"
+    "specialinvoke <java.awt.MediaTracker: void <init>(java.awt.Component)>"->"fieldput <org.chaingang.game.imageshuffle.Main: java.awt.MediaTracker mt>";
+    "fieldput <org.chaingang.game.imageshuffle.Main: java.awt.MediaTracker mt>"->"load.r r0";
+    "specialinvoke <org.chaingang.game.imageshuffle.Main: void loadParms()>"
+    "load.r r0"->"specialinvoke <org.chaingang.game.imageshuffle.Main: void loadParms()>";
+    "specialinvoke <org.chaingang.game.imageshuffle.Main: void loadParms()>"->"load.r r0";
+    "new org.chaingang.game.imageshuffle.Puzzle"
+    "load.r r0"->"new org.chaingang.game.imageshuffle.Puzzle";
+    "new org.chaingang.game.imageshuffle.Puzzle"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "specialinvoke <org.chaingang.game.imageshuffle.Main: java.awt.Image getImageUrl()>"
+    "load.r r0"->"specialinvoke <org.chaingang.game.imageshuffle.Main: java.awt.Image getImageUrl()>";
+    "specialinvoke <org.chaingang.game.imageshuffle.Main: java.awt.Image getImageUrl()>"->"load.r r0";
+    "fieldget <org.chaingang.game.imageshuffle.Main: org.chaingang.common.AppProperties ap>"
+    "load.r r0"->"fieldget <org.chaingang.game.imageshuffle.Main: org.chaingang.common.AppProperties ap>";
+    "push \"cols\""
+    "fieldget <org.chaingang.game.imageshuffle.Main: org.chaingang.common.AppProperties ap>"->"push \"cols\"";
+    "virtualinvoke <org.chaingang.common.AppProperties: java.lang.Object get(java.lang.String)>"
+    "push \"cols\""->"virtualinvoke <org.chaingang.common.AppProperties: java.lang.Object get(java.lang.String)>";
+    "checkcast"
+    "virtualinvoke <org.chaingang.common.AppProperties: java.lang.Object get(java.lang.String)>"->"checkcast";
+    "virtualinvoke <java.lang.Integer: int intValue()>"
+    "checkcast"->"virtualinvoke <java.lang.Integer: int intValue()>";
+    "virtualinvoke <java.lang.Integer: int intValue()>"->"load.r r0";
+    "load.r r0"->"fieldget <org.chaingang.game.imageshuffle.Main: org.chaingang.common.AppProperties ap>";
+    "push \"rows\""
+    "fieldget <org.chaingang.game.imageshuffle.Main: org.chaingang.common.AppProperties ap>"->"push \"rows\"";
+    "push \"rows\""->"virtualinvoke <org.chaingang.common.AppProperties: java.lang.Object get(java.lang.String)>";
+    "virtualinvoke <org.chaingang.common.AppProperties: java.lang.Object get(java.lang.String)>"->"checkcast";
+    "checkcast"->"virtualinvoke <java.lang.Integer: int intValue()>";
+    "virtualinvoke <java.lang.Integer: int intValue()>"->"load.r r0";
+    "load.r r0"->"fieldget <org.chaingang.game.imageshuffle.Main: org.chaingang.common.AppProperties ap>";
+    "push \"color.empty\""
+    "fieldget <org.chaingang.game.imageshuffle.Main: org.chaingang.common.AppProperties ap>"->"push \"color.empty\"";
+    "push \"color.empty\""->"virtualinvoke <org.chaingang.common.AppProperties: java.lang.Object get(java.lang.String)>";
+    "virtualinvoke <org.chaingang.common.AppProperties: java.lang.Object get(java.lang.String)>"->"checkcast";
+    "checkcast"->"load.r r0";
+    "load.r r0"->"fieldget <org.chaingang.game.imageshuffle.Main: org.chaingang.common.AppProperties ap>";
+    "push \"color.puzzle\""
+    "fieldget <org.chaingang.game.imageshuffle.Main: org.chaingang.common.AppProperties ap>"->"push \"color.puzzle\"";
+    "push \"color.puzzle\""->"virtualinvoke <org.chaingang.common.AppProperties: java.lang.Object get(java.lang.String)>";
+    "virtualinvoke <org.chaingang.common.AppProperties: java.lang.Object get(java.lang.String)>"->"checkcast";
+    "specialinvoke <org.chaingang.game.imageshuffle.Puzzle: void <init>(java.awt.event.ActionListener,java.awt.Image,int,int,java.awt.Color,java.awt.Color)>"
+    "checkcast"->"specialinvoke <org.chaingang.game.imageshuffle.Puzzle: void <init>(java.awt.event.ActionListener,java.awt.Image,int,int,java.awt.Color,java.awt.Color)>";
+    "fieldput <org.chaingang.game.imageshuffle.Main: org.chaingang.game.imageshuffle.Puzzle canvas>"
+    "specialinvoke <org.chaingang.game.imageshuffle.Puzzle: void <init>(java.awt.event.ActionListener,java.awt.Image,int,int,java.awt.Color,java.awt.Color)>"->"fieldput <org.chaingang.game.imageshuffle.Main: org.chaingang.game.imageshuffle.Puzzle canvas>";
+    "fieldput <org.chaingang.game.imageshuffle.Main: org.chaingang.game.imageshuffle.Puzzle canvas>"->"load.r r0";
+    "virtualinvoke <org.chaingang.game.imageshuffle.Main: java.awt.Container getContentPane()>"
+    "load.r r0"->"virtualinvoke <org.chaingang.game.imageshuffle.Main: java.awt.Container getContentPane()>";
+    "virtualinvoke <org.chaingang.game.imageshuffle.Main: java.awt.Container getContentPane()>"->"dup1.r";
+    "new java.awt.BorderLayout"
+    "dup1.r"->"new java.awt.BorderLayout";
+    "new java.awt.BorderLayout"->"dup1.r";
+    "specialinvoke <java.awt.BorderLayout: void <init>()>"
+    "dup1.r"->"specialinvoke <java.awt.BorderLayout: void <init>()>";
+    "virtualinvoke <java.awt.Container: void setLayout(java.awt.LayoutManager)>"
+    "specialinvoke <java.awt.BorderLayout: void <init>()>"->"virtualinvoke <java.awt.Container: void setLayout(java.awt.LayoutManager)>";
+    "new javax.swing.JPanel"
+    "virtualinvoke <java.awt.Container: void setLayout(java.awt.LayoutManager)>"->"new javax.swing.JPanel";
+    "new javax.swing.JPanel"->"store.r $r4";
+    "store.r $r4"->"load.r $r4";
+    "specialinvoke <javax.swing.JPanel: void <init>()>"
+    "load.r $r4"->"specialinvoke <javax.swing.JPanel: void <init>()>";
+    "specialinvoke <javax.swing.JPanel: void <init>()>"->"load.r $r4";
+    "load.r $r4"->"load.r r0";
+    "load.r r0"->"fieldget <org.chaingang.game.imageshuffle.Main: org.chaingang.common.AppProperties ap>";
+    "push \"color.background\""
+    "fieldget <org.chaingang.game.imageshuffle.Main: org.chaingang.common.AppProperties ap>"->"push \"color.background\"";
+    "push \"color.background\""->"virtualinvoke <org.chaingang.common.AppProperties: java.lang.Object get(java.lang.String)>";
+    "virtualinvoke <org.chaingang.common.AppProperties: java.lang.Object get(java.lang.String)>"->"checkcast";
+    "virtualinvoke <javax.swing.JPanel: void setBackground(java.awt.Color)>"
+    "checkcast"->"virtualinvoke <javax.swing.JPanel: void setBackground(java.awt.Color)>";
+    "virtualinvoke <javax.swing.JPanel: void setBackground(java.awt.Color)>"->"load.r $r4";
+    "new javax.swing.BoxLayout"
+    "load.r $r4"->"new javax.swing.BoxLayout";
+    "new javax.swing.BoxLayout"->"dup1.r";
+    "dup1.r"->"load.r $r4";
+    "push 0"
+    "load.r $r4"->"push 0";
+    "specialinvoke <javax.swing.BoxLayout: void <init>(java.awt.Container,int)>"
+    "push 0"->"specialinvoke <javax.swing.BoxLayout: void <init>(java.awt.Container,int)>";
+    "virtualinvoke <javax.swing.JPanel: void setLayout(java.awt.LayoutManager)>"
+    "specialinvoke <javax.swing.BoxLayout: void <init>(java.awt.Container,int)>"->"virtualinvoke <javax.swing.JPanel: void setLayout(java.awt.LayoutManager)>";
+    "virtualinvoke <javax.swing.JPanel: void setLayout(java.awt.LayoutManager)>"->"load.r $r4";
+    "staticinvoke <javax.swing.Box: java.awt.Component createHorizontalGlue()>"
+    "load.r $r4"->"staticinvoke <javax.swing.Box: java.awt.Component createHorizontalGlue()>";
+    "virtualinvoke <javax.swing.JPanel: java.awt.Component add(java.awt.Component)>"
+    "staticinvoke <javax.swing.Box: java.awt.Component createHorizontalGlue()>"->"virtualinvoke <javax.swing.JPanel: java.awt.Component add(java.awt.Component)>";
+    "pop"
+    "virtualinvoke <javax.swing.JPanel: java.awt.Component add(java.awt.Component)>"->"pop";
+    "pop"->"load.r $r4";
+    "load.r $r4"->"load.r r0";
+    "fieldget <org.chaingang.game.imageshuffle.Main: org.chaingang.game.imageshuffle.Puzzle canvas>"
+    "load.r r0"->"fieldget <org.chaingang.game.imageshuffle.Main: org.chaingang.game.imageshuffle.Puzzle canvas>";
+    "fieldget <org.chaingang.game.imageshuffle.Main: org.chaingang.game.imageshuffle.Puzzle canvas>"->"virtualinvoke <javax.swing.JPanel: java.awt.Component add(java.awt.Component)>";
+    "virtualinvoke <javax.swing.JPanel: java.awt.Component add(java.awt.Component)>"->"pop";
+    "pop"->"load.r $r4";
+    "load.r $r4"->"staticinvoke <javax.swing.Box: java.awt.Component createHorizontalGlue()>";
+    "staticinvoke <javax.swing.Box: java.awt.Component createHorizontalGlue()>"->"virtualinvoke <javax.swing.JPanel: java.awt.Component add(java.awt.Component)>";
+    "virtualinvoke <javax.swing.JPanel: java.awt.Component add(java.awt.Component)>"->"pop";
+    "pop"->"load.r $r4";
+    "push \"Center\""
+    "load.r $r4"->"push \"Center\"";
+    "virtualinvoke <java.awt.Container: void add(java.awt.Component,java.lang.Object)>"
+    "push \"Center\""->"virtualinvoke <java.awt.Container: void add(java.awt.Component,java.lang.Object)>";
+    "virtualinvoke <java.awt.Container: void add(java.awt.Component,java.lang.Object)>"->"load.r r0";
+    "new org.chaingang.game.imageshuffle.PopUp"
+    "load.r r0"->"new org.chaingang.game.imageshuffle.PopUp";
+    "new org.chaingang.game.imageshuffle.PopUp"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "specialinvoke <org.chaingang.game.imageshuffle.PopUp: void <init>(java.awt.event.ActionListener)>"
+    "load.r r0"->"specialinvoke <org.chaingang.game.imageshuffle.PopUp: void <init>(java.awt.event.ActionListener)>";
+    "fieldput <org.chaingang.game.imageshuffle.Main: org.chaingang.game.imageshuffle.PopUp popup>"
+    "specialinvoke <org.chaingang.game.imageshuffle.PopUp: void <init>(java.awt.event.ActionListener)>"->"fieldput <org.chaingang.game.imageshuffle.Main: org.chaingang.game.imageshuffle.PopUp popup>";
+    "fieldput <org.chaingang.game.imageshuffle.Main: org.chaingang.game.imageshuffle.PopUp popup>"->"load.r r0";
+    "load.r r0"->"fieldget <org.chaingang.game.imageshuffle.Main: org.chaingang.game.imageshuffle.Puzzle canvas>";
+    "new org.chaingang.game.imageshuffle.Main$1"
+    "fieldget <org.chaingang.game.imageshuffle.Main: org.chaingang.game.imageshuffle.Puzzle canvas>"->"new org.chaingang.game.imageshuffle.Main$1";
+    "new org.chaingang.game.imageshuffle.Main$1"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "specialinvoke <org.chaingang.game.imageshuffle.Main$1: void <init>(org.chaingang.game.imageshuffle.Main)>"
+    "load.r r0"->"specialinvoke <org.chaingang.game.imageshuffle.Main$1: void <init>(org.chaingang.game.imageshuffle.Main)>";
+    "virtualinvoke <org.chaingang.game.imageshuffle.Puzzle: void addMouseListener(java.awt.event.MouseListener)>"
+    "specialinvoke <org.chaingang.game.imageshuffle.Main$1: void <init>(org.chaingang.game.imageshuffle.Main)>"->"virtualinvoke <org.chaingang.game.imageshuffle.Puzzle: void addMouseListener(java.awt.event.MouseListener)>";
+    "virtualinvoke <org.chaingang.game.imageshuffle.Puzzle: void addMouseListener(java.awt.event.MouseListener)>"->"load.r r0";
+    "virtualinvoke <org.chaingang.game.imageshuffle.Main: void validate()>"
+    "load.r r0"->"virtualinvoke <org.chaingang.game.imageshuffle.Main: void validate()>";
+    "return"
+    "virtualinvoke <org.chaingang.game.imageshuffle.Main: void validate()>"->"return";
+    "push null"
+    "ifeq push null"->"push null";
+    "push null"->"store.r $r39";
+}

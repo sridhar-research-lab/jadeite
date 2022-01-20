@@ -1,0 +1,3428 @@
+digraph "" {
+    "r0 := @this: QuizShow"
+    "load.r r0"
+    "r0 := @this: QuizShow"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "push 395"
+    "load.r r0"->"push 395";
+    "push 195"
+    "push 395"->"push 195";
+    "virtualinvoke <java.awt.Component: java.awt.Image createImage(int,int)>"
+    "push 195"->"virtualinvoke <java.awt.Component: java.awt.Image createImage(int,int)>";
+    "fieldput <QuizShow: java.awt.Image offI>"
+    "virtualinvoke <java.awt.Component: java.awt.Image createImage(int,int)>"->"fieldput <QuizShow: java.awt.Image offI>";
+    "fieldput <QuizShow: java.awt.Image offI>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "fieldget <QuizShow: java.awt.Image offI>"
+    "load.r r0"->"fieldget <QuizShow: java.awt.Image offI>";
+    "virtualinvoke <java.awt.Image: java.awt.Graphics getGraphics()>"
+    "fieldget <QuizShow: java.awt.Image offI>"->"virtualinvoke <java.awt.Image: java.awt.Graphics getGraphics()>";
+    "fieldput <QuizShow: java.awt.Graphics offG>"
+    "virtualinvoke <java.awt.Image: java.awt.Graphics getGraphics()>"->"fieldput <QuizShow: java.awt.Graphics offG>";
+    "fieldput <QuizShow: java.awt.Graphics offG>"->"load.r r0";
+    "new java.awt.MediaTracker"
+    "load.r r0"->"new java.awt.MediaTracker";
+    "dup1.r"
+    "new java.awt.MediaTracker"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "specialinvoke <java.awt.MediaTracker: void <init>(java.awt.Component)>"
+    "load.r r0"->"specialinvoke <java.awt.MediaTracker: void <init>(java.awt.Component)>";
+    "fieldput <QuizShow: java.awt.MediaTracker tracker>"
+    "specialinvoke <java.awt.MediaTracker: void <init>(java.awt.Component)>"->"fieldput <QuizShow: java.awt.MediaTracker tracker>";
+    "fieldput <QuizShow: java.awt.MediaTracker tracker>"->"load.r r0";
+    "push 4"
+    "load.r r0"->"push 4";
+    "newarray"
+    "push 4"->"newarray";
+    "fieldput <QuizShow: java.applet.AudioClip[] buzzerSounds>"
+    "newarray"->"fieldput <QuizShow: java.applet.AudioClip[] buzzerSounds>";
+    "fieldput <QuizShow: java.applet.AudioClip[] buzzerSounds>"->"load.r r0";
+    "push 3"
+    "load.r r0"->"push 3";
+    "push 3"->"newarray";
+    "fieldput <QuizShow: java.applet.AudioClip[] rightAnswerSounds>"
+    "newarray"->"fieldput <QuizShow: java.applet.AudioClip[] rightAnswerSounds>";
+    "fieldput <QuizShow: java.applet.AudioClip[] rightAnswerSounds>"->"load.r r0";
+    "load.r r0"->"push 3";
+    "push 3"->"newarray";
+    "fieldput <QuizShow: java.applet.AudioClip[] wrongAnswerSounds>"
+    "newarray"->"fieldput <QuizShow: java.applet.AudioClip[] wrongAnswerSounds>";
+    "fieldput <QuizShow: java.applet.AudioClip[] wrongAnswerSounds>"->"load.r r0";
+    "push \"file\""
+    "load.r r0"->"push \"file\"";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"
+    "push \"file\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"dup1.r";
+    "store.r r1"
+    "dup1.r"->"store.r r1";
+    "ifnonnull load.r r0"
+    "store.r r1"->"ifnonnull load.r r0";
+    "push \"questions.dat\""
+    "ifnonnull load.r r0"->"push \"questions.dat\"";
+    "push \"questions.dat\""->"store.r r1";
+    "store.r r1"->"load.r r0";
+    "new java.net.URL"
+    "load.r r0"->"new java.net.URL";
+    "new java.net.URL"->"dup1.r";
+    "new java.lang.StringBuffer"
+    "dup1.r"->"new java.lang.StringBuffer";
+    "new java.lang.StringBuffer"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "virtualinvoke <java.applet.Applet: java.net.URL getDocumentBase()>"
+    "load.r r0"->"virtualinvoke <java.applet.Applet: java.net.URL getDocumentBase()>";
+    "virtualinvoke <java.net.URL: java.lang.String toString()>"
+    "virtualinvoke <java.applet.Applet: java.net.URL getDocumentBase()>"->"virtualinvoke <java.net.URL: java.lang.String toString()>";
+    "push 0"
+    "virtualinvoke <java.net.URL: java.lang.String toString()>"->"push 0";
+    "push 0"->"load.r r0";
+    "load.r r0"->"virtualinvoke <java.applet.Applet: java.net.URL getDocumentBase()>";
+    "virtualinvoke <java.applet.Applet: java.net.URL getDocumentBase()>"->"virtualinvoke <java.net.URL: java.lang.String toString()>";
+    "push 47"
+    "virtualinvoke <java.net.URL: java.lang.String toString()>"->"push 47";
+    "virtualinvoke <java.lang.String: int lastIndexOf(int)>"
+    "push 47"->"virtualinvoke <java.lang.String: int lastIndexOf(int)>";
+    "push 1"
+    "virtualinvoke <java.lang.String: int lastIndexOf(int)>"->"push 1";
+    "add.i"
+    "push 1"->"add.i";
+    "virtualinvoke <java.lang.String: java.lang.String substring(int,int)>"
+    "add.i"->"virtualinvoke <java.lang.String: java.lang.String substring(int,int)>";
+    "staticinvoke <java.lang.String: java.lang.String valueOf(java.lang.Object)>"
+    "virtualinvoke <java.lang.String: java.lang.String substring(int,int)>"->"staticinvoke <java.lang.String: java.lang.String valueOf(java.lang.Object)>";
+    "specialinvoke <java.lang.StringBuffer: void <init>(java.lang.String)>"
+    "staticinvoke <java.lang.String: java.lang.String valueOf(java.lang.Object)>"->"specialinvoke <java.lang.StringBuffer: void <init>(java.lang.String)>";
+    "load.r r1"
+    "specialinvoke <java.lang.StringBuffer: void <init>(java.lang.String)>"->"load.r r1";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"
+    "load.r r1"->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>"
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>";
+    "specialinvoke <java.net.URL: void <init>(java.lang.String)>"
+    "virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>"->"specialinvoke <java.net.URL: void <init>(java.lang.String)>";
+    "fieldput <QuizShow: java.net.URL questionsURL>"
+    "specialinvoke <java.net.URL: void <init>(java.lang.String)>"->"fieldput <QuizShow: java.net.URL questionsURL>";
+    "goto load.r r0"
+    "fieldput <QuizShow: java.net.URL questionsURL>"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "push \"random\""
+    "load.r r0"->"push \"random\"";
+    "push \"random\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"push 0";
+    "virtualinvoke <java.lang.String: char charAt(int)>"
+    "push 0"->"virtualinvoke <java.lang.String: char charAt(int)>";
+    "push 111"
+    "virtualinvoke <java.lang.String: char charAt(int)>"->"push 111";
+    "ifcmpeq.c push 1"
+    "push 111"->"ifcmpeq.c push 1";
+    "ifcmpeq.c push 1"->"load.r r0";
+    "load.r r0"->"push \"random\"";
+    "push \"random\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"push 0";
+    "push 0"->"virtualinvoke <java.lang.String: char charAt(int)>";
+    "push 79"
+    "virtualinvoke <java.lang.String: char charAt(int)>"->"push 79";
+    "push 79"->"ifcmpeq.c push 1";
+    "ifcmpeq.c push 1"->"push 0";
+    "store.b r1"
+    "push 0"->"store.b r1";
+    "store.b r1"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "load.b r1"
+    "load.r r0"->"load.b r1";
+    "fieldput <QuizShow: boolean randomQuestions>"
+    "load.b r1"->"fieldput <QuizShow: boolean randomQuestions>";
+    "fieldput <QuizShow: boolean randomQuestions>"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "new java.util.Vector"
+    "load.r r0"->"new java.util.Vector";
+    "new java.util.Vector"->"dup1.r";
+    "specialinvoke <java.util.Vector: void <init>()>"
+    "dup1.r"->"specialinvoke <java.util.Vector: void <init>()>";
+    "fieldput <QuizShow: java.util.Vector questionList>"
+    "specialinvoke <java.util.Vector: void <init>()>"->"fieldput <QuizShow: java.util.Vector questionList>";
+    "fieldput <QuizShow: java.util.Vector questionList>"->"load.r r0";
+    "load.r r0"->"new java.util.Vector";
+    "new java.util.Vector"->"dup1.r";
+    "dup1.r"->"specialinvoke <java.util.Vector: void <init>()>";
+    "fieldput <QuizShow: java.util.Vector masterQuestionList>"
+    "specialinvoke <java.util.Vector: void <init>()>"->"fieldput <QuizShow: java.util.Vector masterQuestionList>";
+    "fieldput <QuizShow: java.util.Vector masterQuestionList>"->"load.r r0";
+    "load.r r0"->"new java.util.Vector";
+    "new java.util.Vector"->"dup1.r";
+    "dup1.r"->"specialinvoke <java.util.Vector: void <init>()>";
+    "fieldput <QuizShow: java.util.Vector spriteList>"
+    "specialinvoke <java.util.Vector: void <init>()>"->"fieldput <QuizShow: java.util.Vector spriteList>";
+    "fieldput <QuizShow: java.util.Vector spriteList>"->"load.r r0";
+    "load.r r0"->"new java.util.Vector";
+    "new java.util.Vector"->"dup1.r";
+    "dup1.r"->"specialinvoke <java.util.Vector: void <init>()>";
+    "fieldput <QuizShow: java.util.Vector gameInfo>"
+    "specialinvoke <java.util.Vector: void <init>()>"->"fieldput <QuizShow: java.util.Vector gameInfo>";
+    "fieldput <QuizShow: java.util.Vector gameInfo>"->"load.r r0";
+    "load.r r0"->"push 4";
+    "push 4"->"newarray";
+    "fieldput <QuizShow: boolean[] buzzIn>"
+    "newarray"->"fieldput <QuizShow: boolean[] buzzIn>";
+    "fieldput <QuizShow: boolean[] buzzIn>"->"load.r r0";
+    "new Text"
+    "load.r r0"->"new Text";
+    "new Text"->"dup1.r";
+    "specialinvoke <Text: void <init>()>"
+    "dup1.r"->"specialinvoke <Text: void <init>()>";
+    "fieldput <QuizShow: Text message>"
+    "specialinvoke <Text: void <init>()>"->"fieldput <QuizShow: Text message>";
+    "fieldput <QuizShow: Text message>"->"load.r r0";
+    "fieldget <QuizShow: Text message>"
+    "load.r r0"->"fieldget <QuizShow: Text message>";
+    "fieldget <QuizShow: Text message>"->"push 4";
+    "push 4"->"newarray";
+    "newarray"->"store.r r1";
+    "store.r r1"->"load.r r1";
+    "load.r r1"->"push 0";
+    "push 0"->"push 1";
+    "arraywrite.i"
+    "push 1"->"arraywrite.i";
+    "arraywrite.i"->"load.r r1";
+    "load.r r1"->"push 1";
+    "push 2"
+    "push 1"->"push 2";
+    "push 2"->"arraywrite.i";
+    "arraywrite.i"->"load.r r1";
+    "load.r r1"->"push 2";
+    "push 16"
+    "push 2"->"push 16";
+    "push 16"->"arraywrite.i";
+    "arraywrite.i"->"load.r r1";
+    "load.r r1"->"push 3";
+    "push 14"
+    "push 3"->"push 14";
+    "push 14"->"arraywrite.i";
+    "arraywrite.i"->"push 4";
+    "push 4"->"newarray";
+    "store.r $r28"
+    "newarray"->"store.r $r28";
+    "load.r $r28"
+    "store.r $r28"->"load.r $r28";
+    "load.r $r28"->"push 0";
+    "new java.lang.Integer"
+    "push 0"->"new java.lang.Integer";
+    "new java.lang.Integer"->"dup1.r";
+    "push 97"
+    "dup1.r"->"push 97";
+    "specialinvoke <java.lang.Integer: void <init>(int)>"
+    "push 97"->"specialinvoke <java.lang.Integer: void <init>(int)>";
+    "arraywrite.r"
+    "specialinvoke <java.lang.Integer: void <init>(int)>"->"arraywrite.r";
+    "arraywrite.r"->"load.r $r28";
+    "load.r $r28"->"push 1";
+    "push 1"->"new java.lang.Integer";
+    "new java.lang.Integer"->"dup1.r";
+    "dup1.r"->"push 395";
+    "push 395"->"specialinvoke <java.lang.Integer: void <init>(int)>";
+    "specialinvoke <java.lang.Integer: void <init>(int)>"->"arraywrite.r";
+    "arraywrite.r"->"load.r $r28";
+    "load.r $r28"->"push 2";
+    "staticget <Sprite: java.lang.Integer ONE>"
+    "push 2"->"staticget <Sprite: java.lang.Integer ONE>";
+    "staticget <Sprite: java.lang.Integer ONE>"->"arraywrite.r";
+    "arraywrite.r"->"load.r $r28";
+    "load.r $r28"->"push 3";
+    "staticget <Text: java.awt.Font PT20>"
+    "push 3"->"staticget <Text: java.awt.Font PT20>";
+    "staticget <Text: java.awt.Font PT20>"->"arraywrite.r";
+    "arraywrite.r"->"load.r r1";
+    "load.r r1"->"load.r $r28";
+    "virtualinvoke <Sprite: void set(int[],java.lang.Object[])>"
+    "load.r $r28"->"virtualinvoke <Sprite: void set(int[],java.lang.Object[])>";
+    "virtualinvoke <Sprite: void set(int[],java.lang.Object[])>"->"load.r r0";
+    "new Shape"
+    "load.r r0"->"new Shape";
+    "new Shape"->"dup1.r";
+    "specialinvoke <Shape: void <init>()>"
+    "dup1.r"->"specialinvoke <Shape: void <init>()>";
+    "fieldput <QuizShow: Shape messageRect1>"
+    "specialinvoke <Shape: void <init>()>"->"fieldput <QuizShow: Shape messageRect1>";
+    "fieldput <QuizShow: Shape messageRect1>"->"load.r r0";
+    "fieldget <QuizShow: Shape messageRect1>"
+    "load.r r0"->"fieldget <QuizShow: Shape messageRect1>";
+    "push 5"
+    "fieldget <QuizShow: Shape messageRect1>"->"push 5";
+    "push 5"->"newarray";
+    "newarray"->"store.r r1";
+    "store.r r1"->"load.r r1";
+    "load.r r1"->"push 1";
+    "push 1"->"push 1";
+    "push 1"->"arraywrite.i";
+    "arraywrite.i"->"load.r r1";
+    "load.r r1"->"push 2";
+    "push 2"->"push 2";
+    "push 2"->"arraywrite.i";
+    "arraywrite.i"->"load.r r1";
+    "load.r r1"->"push 3";
+    "push 3"->"push 3";
+    "push 3"->"arraywrite.i";
+    "arraywrite.i"->"load.r r1";
+    "load.r r1"->"push 4";
+    "push 13"
+    "push 4"->"push 13";
+    "push 13"->"arraywrite.i";
+    "arraywrite.i"->"push 5";
+    "push 5"->"newarray";
+    "newarray"->"store.r $r28";
+    "store.r $r28"->"load.r $r28";
+    "load.r $r28"->"push 0";
+    "push 0"->"new java.lang.Integer";
+    "new java.lang.Integer"->"dup1.r";
+    "push 40"
+    "dup1.r"->"push 40";
+    "push 40"->"specialinvoke <java.lang.Integer: void <init>(int)>";
+    "specialinvoke <java.lang.Integer: void <init>(int)>"->"arraywrite.r";
+    "arraywrite.r"->"load.r $r28";
+    "load.r $r28"->"push 1";
+    "push 1"->"new java.lang.Integer";
+    "new java.lang.Integer"->"dup1.r";
+    "push 80"
+    "dup1.r"->"push 80";
+    "push 80"->"specialinvoke <java.lang.Integer: void <init>(int)>";
+    "specialinvoke <java.lang.Integer: void <init>(int)>"->"arraywrite.r";
+    "arraywrite.r"->"load.r $r28";
+    "load.r $r28"->"push 2";
+    "push 2"->"new java.lang.Integer";
+    "new java.lang.Integer"->"dup1.r";
+    "push 320"
+    "dup1.r"->"push 320";
+    "push 320"->"specialinvoke <java.lang.Integer: void <init>(int)>";
+    "specialinvoke <java.lang.Integer: void <init>(int)>"->"arraywrite.r";
+    "arraywrite.r"->"load.r $r28";
+    "load.r $r28"->"push 3";
+    "push 3"->"new java.lang.Integer";
+    "new java.lang.Integer"->"dup1.r";
+    "dup1.r"->"push 40";
+    "push 40"->"specialinvoke <java.lang.Integer: void <init>(int)>";
+    "specialinvoke <java.lang.Integer: void <init>(int)>"->"arraywrite.r";
+    "arraywrite.r"->"load.r $r28";
+    "load.r $r28"->"push 4";
+    "staticget <Shape: java.lang.Integer RECTANGLE>"
+    "push 4"->"staticget <Shape: java.lang.Integer RECTANGLE>";
+    "staticget <Shape: java.lang.Integer RECTANGLE>"->"arraywrite.r";
+    "arraywrite.r"->"load.r r1";
+    "load.r r1"->"load.r $r28";
+    "load.r $r28"->"virtualinvoke <Sprite: void set(int[],java.lang.Object[])>";
+    "virtualinvoke <Sprite: void set(int[],java.lang.Object[])>"->"load.r r0";
+    "load.r r0"->"new Shape";
+    "new Shape"->"dup1.r";
+    "dup1.r"->"specialinvoke <Shape: void <init>()>";
+    "fieldput <QuizShow: Shape messageRect2>"
+    "specialinvoke <Shape: void <init>()>"->"fieldput <QuizShow: Shape messageRect2>";
+    "fieldput <QuizShow: Shape messageRect2>"->"load.r r0";
+    "fieldget <QuizShow: Shape messageRect2>"
+    "load.r r0"->"fieldget <QuizShow: Shape messageRect2>";
+    "push 6"
+    "fieldget <QuizShow: Shape messageRect2>"->"push 6";
+    "push 6"->"newarray";
+    "newarray"->"store.r r1";
+    "store.r r1"->"load.r r1";
+    "load.r r1"->"push 1";
+    "push 1"->"push 1";
+    "push 1"->"arraywrite.i";
+    "arraywrite.i"->"load.r r1";
+    "load.r r1"->"push 2";
+    "push 2"->"push 2";
+    "push 2"->"arraywrite.i";
+    "arraywrite.i"->"load.r r1";
+    "load.r r1"->"push 3";
+    "push 3"->"push 3";
+    "push 3"->"arraywrite.i";
+    "arraywrite.i"->"load.r r1";
+    "load.r r1"->"push 4";
+    "push 4"->"push 13";
+    "push 13"->"arraywrite.i";
+    "arraywrite.i"->"load.r r1";
+    "load.r r1"->"push 5";
+    "push 5"->"push 14";
+    "push 14"->"arraywrite.i";
+    "arraywrite.i"->"push 6";
+    "push 6"->"newarray";
+    "newarray"->"store.r $r28";
+    "store.r $r28"->"load.r $r28";
+    "load.r $r28"->"push 0";
+    "push 0"->"new java.lang.Integer";
+    "new java.lang.Integer"->"dup1.r";
+    "push 45"
+    "dup1.r"->"push 45";
+    "push 45"->"specialinvoke <java.lang.Integer: void <init>(int)>";
+    "specialinvoke <java.lang.Integer: void <init>(int)>"->"arraywrite.r";
+    "arraywrite.r"->"load.r $r28";
+    "load.r $r28"->"push 1";
+    "push 1"->"new java.lang.Integer";
+    "new java.lang.Integer"->"dup1.r";
+    "push 85"
+    "dup1.r"->"push 85";
+    "push 85"->"specialinvoke <java.lang.Integer: void <init>(int)>";
+    "specialinvoke <java.lang.Integer: void <init>(int)>"->"arraywrite.r";
+    "arraywrite.r"->"load.r $r28";
+    "load.r $r28"->"push 2";
+    "push 2"->"new java.lang.Integer";
+    "new java.lang.Integer"->"dup1.r";
+    "dup1.r"->"push 320";
+    "push 320"->"specialinvoke <java.lang.Integer: void <init>(int)>";
+    "specialinvoke <java.lang.Integer: void <init>(int)>"->"arraywrite.r";
+    "arraywrite.r"->"load.r $r28";
+    "load.r $r28"->"push 3";
+    "push 3"->"new java.lang.Integer";
+    "new java.lang.Integer"->"dup1.r";
+    "dup1.r"->"push 40";
+    "push 40"->"specialinvoke <java.lang.Integer: void <init>(int)>";
+    "specialinvoke <java.lang.Integer: void <init>(int)>"->"arraywrite.r";
+    "arraywrite.r"->"load.r $r28";
+    "load.r $r28"->"push 4";
+    "push 4"->"staticget <Shape: java.lang.Integer RECTANGLE>";
+    "staticget <Shape: java.lang.Integer RECTANGLE>"->"arraywrite.r";
+    "arraywrite.r"->"load.r $r28";
+    "load.r $r28"->"push 5";
+    "staticget <java.awt.Color: java.awt.Color black>"
+    "push 5"->"staticget <java.awt.Color: java.awt.Color black>";
+    "staticget <java.awt.Color: java.awt.Color black>"->"arraywrite.r";
+    "arraywrite.r"->"load.r r1";
+    "load.r r1"->"load.r $r28";
+    "load.r $r28"->"virtualinvoke <Sprite: void set(int[],java.lang.Object[])>";
+    "virtualinvoke <Sprite: void set(int[],java.lang.Object[])>"->"load.r r0";
+    "load.r r0"->"new Text";
+    "new Text"->"dup1.r";
+    "dup1.r"->"specialinvoke <Text: void <init>()>";
+    "fieldput <QuizShow: Text siteText>"
+    "specialinvoke <Text: void <init>()>"->"fieldput <QuizShow: Text siteText>";
+    "fieldput <QuizShow: Text siteText>"->"load.r r0";
+    "fieldget <QuizShow: Text siteText>"
+    "load.r r0"->"fieldget <QuizShow: Text siteText>";
+    "fieldget <QuizShow: Text siteText>"->"push 6";
+    "push 6"->"newarray";
+    "newarray"->"store.r r1";
+    "store.r r1"->"load.r r1";
+    "load.r r1"->"push 0";
+    "push 0"->"push 1";
+    "push 1"->"arraywrite.i";
+    "arraywrite.i"->"load.r r1";
+    "load.r r1"->"push 1";
+    "push 1"->"push 2";
+    "push 2"->"arraywrite.i";
+    "arraywrite.i"->"load.r r1";
+    "load.r r1"->"push 2";
+    "push 7"
+    "push 2"->"push 7";
+    "push 7"->"arraywrite.i";
+    "arraywrite.i"->"load.r r1";
+    "load.r r1"->"push 3";
+    "push 11"
+    "push 3"->"push 11";
+    "push 11"->"arraywrite.i";
+    "arraywrite.i"->"load.r r1";
+    "load.r r1"->"push 4";
+    "push 4"->"push 13";
+    "push 13"->"arraywrite.i";
+    "arraywrite.i"->"load.r r1";
+    "load.r r1"->"push 5";
+    "push 5"->"push 16";
+    "push 16"->"arraywrite.i";
+    "arraywrite.i"->"push 6";
+    "push 6"->"newarray";
+    "newarray"->"store.r $r28";
+    "store.r $r28"->"load.r $r28";
+    "load.r $r28"->"push 0";
+    "push 0"->"new java.lang.Integer";
+    "new java.lang.Integer"->"dup1.r";
+    "push 175"
+    "dup1.r"->"push 175";
+    "push 175"->"specialinvoke <java.lang.Integer: void <init>(int)>";
+    "specialinvoke <java.lang.Integer: void <init>(int)>"->"arraywrite.r";
+    "arraywrite.r"->"load.r $r28";
+    "load.r $r28"->"push 1";
+    "push 1"->"new java.lang.Integer";
+    "new java.lang.Integer"->"dup1.r";
+    "dup1.r"->"push 395";
+    "push 395"->"specialinvoke <java.lang.Integer: void <init>(int)>";
+    "specialinvoke <java.lang.Integer: void <init>(int)>"->"arraywrite.r";
+    "arraywrite.r"->"load.r $r28";
+    "load.r $r28"->"push 2";
+    "staticget <Sprite: java.lang.Boolean TRUE>"
+    "push 2"->"staticget <Sprite: java.lang.Boolean TRUE>";
+    "staticget <Sprite: java.lang.Boolean TRUE>"->"arraywrite.r";
+    "arraywrite.r"->"load.r $r28";
+    "load.r $r28"->"push 3";
+    "staticget <Sprite: java.lang.Integer SOUTH>"
+    "push 3"->"staticget <Sprite: java.lang.Integer SOUTH>";
+    "staticget <Sprite: java.lang.Integer SOUTH>"->"arraywrite.r";
+    "arraywrite.r"->"load.r $r28";
+    "load.r $r28"->"push 4";
+    "push \"www.javaplayground.com\""
+    "push 4"->"push \"www.javaplayground.com\"";
+    "push \"www.javaplayground.com\""->"arraywrite.r";
+    "arraywrite.r"->"load.r $r28";
+    "load.r $r28"->"push 5";
+    "push 5"->"staticget <Sprite: java.lang.Integer ONE>";
+    "staticget <Sprite: java.lang.Integer ONE>"->"arraywrite.r";
+    "arraywrite.r"->"load.r r1";
+    "load.r r1"->"load.r $r28";
+    "load.r $r28"->"virtualinvoke <Sprite: void set(int[],java.lang.Object[])>";
+    "virtualinvoke <Sprite: void set(int[],java.lang.Object[])>"->"load.r r0";
+    "load.r r0"->"new Shape";
+    "new Shape"->"dup1.r";
+    "dup1.r"->"specialinvoke <Shape: void <init>()>";
+    "fieldput <QuizShow: Shape loadRect1>"
+    "specialinvoke <Shape: void <init>()>"->"fieldput <QuizShow: Shape loadRect1>";
+    "fieldput <QuizShow: Shape loadRect1>"->"load.r r0";
+    "fieldget <QuizShow: Shape loadRect1>"
+    "load.r r0"->"fieldget <QuizShow: Shape loadRect1>";
+    "push 8"
+    "fieldget <QuizShow: Shape loadRect1>"->"push 8";
+    "push 8"->"newarray";
+    "newarray"->"store.r r1";
+    "store.r r1"->"load.r r1";
+    "load.r r1"->"push 1";
+    "push 1"->"push 1";
+    "push 1"->"arraywrite.i";
+    "arraywrite.i"->"load.r r1";
+    "load.r r1"->"push 2";
+    "push 2"->"push 2";
+    "push 2"->"arraywrite.i";
+    "arraywrite.i"->"load.r r1";
+    "load.r r1"->"push 3";
+    "push 3"->"push 3";
+    "push 3"->"arraywrite.i";
+    "arraywrite.i"->"load.r r1";
+    "load.r r1"->"push 4";
+    "push 4"->"push 7";
+    "push 7"->"arraywrite.i";
+    "arraywrite.i"->"load.r r1";
+    "load.r r1"->"push 5";
+    "push 5"->"push 13";
+    "push 13"->"arraywrite.i";
+    "arraywrite.i"->"load.r r1";
+    "load.r r1"->"push 6";
+    "push 6"->"push 14";
+    "push 14"->"arraywrite.i";
+    "arraywrite.i"->"load.r r1";
+    "load.r r1"->"push 7";
+    "push 15"
+    "push 7"->"push 15";
+    "push 15"->"arraywrite.i";
+    "arraywrite.i"->"push 8";
+    "push 8"->"newarray";
+    "newarray"->"store.r $r28";
+    "store.r $r28"->"load.r $r28";
+    "load.r $r28"->"push 0";
+    "push 0"->"new java.lang.Integer";
+    "new java.lang.Integer"->"dup1.r";
+    "push 10"
+    "dup1.r"->"push 10";
+    "push 10"->"specialinvoke <java.lang.Integer: void <init>(int)>";
+    "specialinvoke <java.lang.Integer: void <init>(int)>"->"arraywrite.r";
+    "arraywrite.r"->"load.r $r28";
+    "load.r $r28"->"push 1";
+    "push 1"->"new java.lang.Integer";
+    "new java.lang.Integer"->"dup1.r";
+    "dup1.r"->"push 10";
+    "push 10"->"specialinvoke <java.lang.Integer: void <init>(int)>";
+    "specialinvoke <java.lang.Integer: void <init>(int)>"->"arraywrite.r";
+    "arraywrite.r"->"load.r $r28";
+    "load.r $r28"->"push 2";
+    "push 2"->"new java.lang.Integer";
+    "new java.lang.Integer"->"dup1.r";
+    "push 375"
+    "dup1.r"->"push 375";
+    "push 375"->"specialinvoke <java.lang.Integer: void <init>(int)>";
+    "specialinvoke <java.lang.Integer: void <init>(int)>"->"arraywrite.r";
+    "arraywrite.r"->"load.r $r28";
+    "load.r $r28"->"push 3";
+    "push 3"->"new java.lang.Integer";
+    "new java.lang.Integer"->"dup1.r";
+    "push 20"
+    "dup1.r"->"push 20";
+    "push 20"->"specialinvoke <java.lang.Integer: void <init>(int)>";
+    "specialinvoke <java.lang.Integer: void <init>(int)>"->"arraywrite.r";
+    "arraywrite.r"->"load.r $r28";
+    "load.r $r28"->"push 4";
+    "push 4"->"staticget <Sprite: java.lang.Boolean TRUE>";
+    "staticget <Sprite: java.lang.Boolean TRUE>"->"arraywrite.r";
+    "arraywrite.r"->"load.r $r28";
+    "load.r $r28"->"push 5";
+    "push 5"->"staticget <Shape: java.lang.Integer RECTANGLE>";
+    "staticget <Shape: java.lang.Integer RECTANGLE>"->"arraywrite.r";
+    "arraywrite.r"->"load.r $r28";
+    "load.r $r28"->"push 6";
+    "staticget <java.awt.Color: java.awt.Color green>"
+    "push 6"->"staticget <java.awt.Color: java.awt.Color green>";
+    "staticget <java.awt.Color: java.awt.Color green>"->"arraywrite.r";
+    "arraywrite.r"->"load.r $r28";
+    "load.r $r28"->"push 7";
+    "staticget <Sprite: java.lang.Boolean FALSE>"
+    "push 7"->"staticget <Sprite: java.lang.Boolean FALSE>";
+    "staticget <Sprite: java.lang.Boolean FALSE>"->"arraywrite.r";
+    "arraywrite.r"->"load.r r1";
+    "load.r r1"->"load.r $r28";
+    "load.r $r28"->"virtualinvoke <Sprite: void set(int[],java.lang.Object[])>";
+    "virtualinvoke <Sprite: void set(int[],java.lang.Object[])>"->"load.r r0";
+    "load.r r0"->"new Shape";
+    "new Shape"->"dup1.r";
+    "dup1.r"->"specialinvoke <Shape: void <init>()>";
+    "fieldput <QuizShow: Shape loadRect2>"
+    "specialinvoke <Shape: void <init>()>"->"fieldput <QuizShow: Shape loadRect2>";
+    "fieldput <QuizShow: Shape loadRect2>"->"load.r r0";
+    "fieldget <QuizShow: Shape loadRect2>"
+    "load.r r0"->"fieldget <QuizShow: Shape loadRect2>";
+    "fieldget <QuizShow: Shape loadRect2>"->"push 6";
+    "push 6"->"newarray";
+    "newarray"->"store.r r1";
+    "store.r r1"->"load.r r1";
+    "load.r r1"->"push 1";
+    "push 1"->"push 1";
+    "push 1"->"arraywrite.i";
+    "arraywrite.i"->"load.r r1";
+    "load.r r1"->"push 2";
+    "push 2"->"push 3";
+    "push 3"->"arraywrite.i";
+    "arraywrite.i"->"load.r r1";
+    "load.r r1"->"push 3";
+    "push 3"->"push 7";
+    "push 7"->"arraywrite.i";
+    "arraywrite.i"->"load.r r1";
+    "load.r r1"->"push 4";
+    "push 4"->"push 13";
+    "push 13"->"arraywrite.i";
+    "arraywrite.i"->"load.r r1";
+    "load.r r1"->"push 5";
+    "push 5"->"push 14";
+    "push 14"->"arraywrite.i";
+    "arraywrite.i"->"push 6";
+    "push 6"->"newarray";
+    "newarray"->"store.r $r28";
+    "store.r $r28"->"load.r $r28";
+    "load.r $r28"->"push 0";
+    "push 0"->"new java.lang.Integer";
+    "new java.lang.Integer"->"dup1.r";
+    "dup1.r"->"push 10";
+    "push 10"->"specialinvoke <java.lang.Integer: void <init>(int)>";
+    "specialinvoke <java.lang.Integer: void <init>(int)>"->"arraywrite.r";
+    "arraywrite.r"->"load.r $r28";
+    "load.r $r28"->"push 1";
+    "push 1"->"new java.lang.Integer";
+    "new java.lang.Integer"->"dup1.r";
+    "dup1.r"->"push 10";
+    "push 10"->"specialinvoke <java.lang.Integer: void <init>(int)>";
+    "specialinvoke <java.lang.Integer: void <init>(int)>"->"arraywrite.r";
+    "arraywrite.r"->"load.r $r28";
+    "load.r $r28"->"push 2";
+    "push 2"->"new java.lang.Integer";
+    "new java.lang.Integer"->"dup1.r";
+    "dup1.r"->"push 20";
+    "push 20"->"specialinvoke <java.lang.Integer: void <init>(int)>";
+    "specialinvoke <java.lang.Integer: void <init>(int)>"->"arraywrite.r";
+    "arraywrite.r"->"load.r $r28";
+    "load.r $r28"->"push 3";
+    "push 3"->"staticget <Sprite: java.lang.Boolean TRUE>";
+    "staticget <Sprite: java.lang.Boolean TRUE>"->"arraywrite.r";
+    "arraywrite.r"->"load.r $r28";
+    "load.r $r28"->"push 4";
+    "push 4"->"staticget <Shape: java.lang.Integer RECTANGLE>";
+    "staticget <Shape: java.lang.Integer RECTANGLE>"->"arraywrite.r";
+    "arraywrite.r"->"load.r $r28";
+    "load.r $r28"->"push 5";
+    "push 5"->"staticget <java.awt.Color: java.awt.Color green>";
+    "staticget <java.awt.Color: java.awt.Color green>"->"arraywrite.r";
+    "arraywrite.r"->"load.r r1";
+    "load.r r1"->"load.r $r28";
+    "load.r $r28"->"virtualinvoke <Sprite: void set(int[],java.lang.Object[])>";
+    "virtualinvoke <Sprite: void set(int[],java.lang.Object[])>"->"load.r r0";
+    "load.r r0"->"new Text";
+    "new Text"->"dup1.r";
+    "dup1.r"->"specialinvoke <Text: void <init>()>";
+    "fieldput <QuizShow: Text loadText>"
+    "specialinvoke <Text: void <init>()>"->"fieldput <QuizShow: Text loadText>";
+    "fieldput <QuizShow: Text loadText>"->"load.r r0";
+    "fieldget <QuizShow: Text loadText>"
+    "load.r r0"->"fieldget <QuizShow: Text loadText>";
+    "fieldget <QuizShow: Text loadText>"->"push 4";
+    "push 4"->"newarray";
+    "newarray"->"store.r r1";
+    "store.r r1"->"load.r r1";
+    "load.r r1"->"push 0";
+    "push 0"->"push 1";
+    "push 1"->"arraywrite.i";
+    "arraywrite.i"->"load.r r1";
+    "load.r r1"->"push 1";
+    "push 1"->"push 2";
+    "push 2"->"arraywrite.i";
+    "arraywrite.i"->"load.r r1";
+    "load.r r1"->"push 2";
+    "push 2"->"push 7";
+    "push 7"->"arraywrite.i";
+    "arraywrite.i"->"load.r r1";
+    "load.r r1"->"push 3";
+    "push 3"->"push 16";
+    "push 16"->"arraywrite.i";
+    "arraywrite.i"->"push 4";
+    "push 4"->"newarray";
+    "newarray"->"store.r $r28";
+    "store.r $r28"->"load.r $r28";
+    "load.r $r28"->"push 0";
+    "push 0"->"new java.lang.Integer";
+    "new java.lang.Integer"->"dup1.r";
+    "dup1.r"->"push 20";
+    "push 20"->"specialinvoke <java.lang.Integer: void <init>(int)>";
+    "specialinvoke <java.lang.Integer: void <init>(int)>"->"arraywrite.r";
+    "arraywrite.r"->"load.r $r28";
+    "load.r $r28"->"push 1";
+    "push 1"->"new java.lang.Integer";
+    "new java.lang.Integer"->"dup1.r";
+    "dup1.r"->"push 395";
+    "push 395"->"specialinvoke <java.lang.Integer: void <init>(int)>";
+    "specialinvoke <java.lang.Integer: void <init>(int)>"->"arraywrite.r";
+    "arraywrite.r"->"load.r $r28";
+    "load.r $r28"->"push 2";
+    "push 2"->"staticget <Sprite: java.lang.Boolean TRUE>";
+    "staticget <Sprite: java.lang.Boolean TRUE>"->"arraywrite.r";
+    "arraywrite.r"->"load.r $r28";
+    "load.r $r28"->"push 3";
+    "push 3"->"staticget <Sprite: java.lang.Integer ONE>";
+    "staticget <Sprite: java.lang.Integer ONE>"->"arraywrite.r";
+    "arraywrite.r"->"load.r r1";
+    "load.r r1"->"load.r $r28";
+    "load.r $r28"->"virtualinvoke <Sprite: void set(int[],java.lang.Object[])>";
+    "virtualinvoke <Sprite: void set(int[],java.lang.Object[])>"->"load.r r0";
+    "load.r r0"->"new Shape";
+    "new Shape"->"dup1.r";
+    "dup1.r"->"specialinvoke <Shape: void <init>()>";
+    "fieldput <QuizShow: Shape background>"
+    "specialinvoke <Shape: void <init>()>"->"fieldput <QuizShow: Shape background>";
+    "fieldput <QuizShow: Shape background>"->"load.r r0";
+    "fieldget <QuizShow: Shape background>"
+    "load.r r0"->"fieldget <QuizShow: Shape background>";
+    "fieldget <QuizShow: Shape background>"->"push 5";
+    "push 5"->"newarray";
+    "newarray"->"store.r r1";
+    "store.r r1"->"load.r r1";
+    "load.r r1"->"push 0";
+    "push 0"->"push 7";
+    "push 7"->"arraywrite.i";
+    "arraywrite.i"->"load.r r1";
+    "load.r r1"->"push 1";
+    "push 1"->"push 2";
+    "push 2"->"arraywrite.i";
+    "arraywrite.i"->"load.r r1";
+    "load.r r1"->"push 2";
+    "push 2"->"push 3";
+    "push 3"->"arraywrite.i";
+    "arraywrite.i"->"load.r r1";
+    "load.r r1"->"push 3";
+    "push 3"->"push 13";
+    "push 13"->"arraywrite.i";
+    "arraywrite.i"->"load.r r1";
+    "load.r r1"->"push 4";
+    "push 4"->"push 14";
+    "push 14"->"arraywrite.i";
+    "arraywrite.i"->"push 5";
+    "push 5"->"newarray";
+    "newarray"->"store.r $r28";
+    "store.r $r28"->"load.r $r28";
+    "load.r $r28"->"push 0";
+    "push 0"->"staticget <Sprite: java.lang.Boolean TRUE>";
+    "staticget <Sprite: java.lang.Boolean TRUE>"->"arraywrite.r";
+    "arraywrite.r"->"load.r $r28";
+    "load.r $r28"->"push 1";
+    "push 1"->"new java.lang.Integer";
+    "new java.lang.Integer"->"dup1.r";
+    "dup1.r"->"push 395";
+    "push 395"->"specialinvoke <java.lang.Integer: void <init>(int)>";
+    "specialinvoke <java.lang.Integer: void <init>(int)>"->"arraywrite.r";
+    "arraywrite.r"->"load.r $r28";
+    "load.r $r28"->"push 2";
+    "push 2"->"new java.lang.Integer";
+    "new java.lang.Integer"->"dup1.r";
+    "dup1.r"->"push 195";
+    "push 195"->"specialinvoke <java.lang.Integer: void <init>(int)>";
+    "specialinvoke <java.lang.Integer: void <init>(int)>"->"arraywrite.r";
+    "arraywrite.r"->"load.r $r28";
+    "load.r $r28"->"push 3";
+    "push 3"->"staticget <Shape: java.lang.Integer RECTANGLE>";
+    "staticget <Shape: java.lang.Integer RECTANGLE>"->"arraywrite.r";
+    "arraywrite.r"->"load.r $r28";
+    "load.r $r28"->"push 4";
+    "push 4"->"staticget <java.awt.Color: java.awt.Color black>";
+    "staticget <java.awt.Color: java.awt.Color black>"->"arraywrite.r";
+    "arraywrite.r"->"load.r r1";
+    "load.r r1"->"load.r $r28";
+    "load.r $r28"->"virtualinvoke <Sprite: void set(int[],java.lang.Object[])>";
+    "virtualinvoke <Sprite: void set(int[],java.lang.Object[])>"->"load.r r0";
+    "new Graphic"
+    "load.r r0"->"new Graphic";
+    "new Graphic"->"dup1.r";
+    "specialinvoke <Graphic: void <init>()>"
+    "dup1.r"->"specialinvoke <Graphic: void <init>()>";
+    "fieldput <QuizShow: Graphic titleImage>"
+    "specialinvoke <Graphic: void <init>()>"->"fieldput <QuizShow: Graphic titleImage>";
+    "fieldput <QuizShow: Graphic titleImage>"->"load.r r0";
+    "fieldget <QuizShow: Graphic titleImage>"
+    "load.r r0"->"fieldget <QuizShow: Graphic titleImage>";
+    "fieldget <QuizShow: Graphic titleImage>"->"push 3";
+    "push 3"->"newarray";
+    "newarray"->"store.r r1";
+    "store.r r1"->"load.r r1";
+    "load.r r1"->"push 0";
+    "push 0"->"push 2";
+    "push 2"->"arraywrite.i";
+    "arraywrite.i"->"load.r r1";
+    "load.r r1"->"push 1";
+    "push 1"->"push 3";
+    "push 3"->"arraywrite.i";
+    "arraywrite.i"->"load.r r1";
+    "load.r r1"->"push 2";
+    "push 2"->"push 7";
+    "push 7"->"arraywrite.i";
+    "arraywrite.i"->"push 3";
+    "push 3"->"newarray";
+    "newarray"->"store.r $r28";
+    "store.r $r28"->"load.r $r28";
+    "load.r $r28"->"push 0";
+    "push 0"->"new java.lang.Integer";
+    "new java.lang.Integer"->"dup1.r";
+    "dup1.r"->"push 395";
+    "push 395"->"specialinvoke <java.lang.Integer: void <init>(int)>";
+    "specialinvoke <java.lang.Integer: void <init>(int)>"->"arraywrite.r";
+    "arraywrite.r"->"load.r $r28";
+    "load.r $r28"->"push 1";
+    "push 1"->"new java.lang.Integer";
+    "new java.lang.Integer"->"dup1.r";
+    "dup1.r"->"push 195";
+    "push 195"->"specialinvoke <java.lang.Integer: void <init>(int)>";
+    "specialinvoke <java.lang.Integer: void <init>(int)>"->"arraywrite.r";
+    "arraywrite.r"->"load.r $r28";
+    "load.r $r28"->"push 2";
+    "push 2"->"staticget <Sprite: java.lang.Boolean TRUE>";
+    "staticget <Sprite: java.lang.Boolean TRUE>"->"arraywrite.r";
+    "arraywrite.r"->"load.r r1";
+    "load.r r1"->"load.r $r28";
+    "load.r $r28"->"virtualinvoke <Sprite: void set(int[],java.lang.Object[])>";
+    "push \"Quiz Show\""
+    "virtualinvoke <Sprite: void set(int[],java.lang.Object[])>"->"push \"Quiz Show\"";
+    "push \"Quiz Show\""->"store.r r1";
+    "store.r r1"->"load.r r0";
+    "load.r r0"->"load.r r1";
+    "virtualinvoke <java.lang.String: int length()>"
+    "load.r r1"->"virtualinvoke <java.lang.String: int length()>";
+    "virtualinvoke <java.lang.String: int length()>"->"newarray";
+    "fieldput <QuizShow: Text[] titleText>"
+    "newarray"->"fieldput <QuizShow: Text[] titleText>";
+    "fieldput <QuizShow: Text[] titleText>"->"push 0";
+    "store.i i68"
+    "push 0"->"store.i i68";
+    "goto load.i i68"
+    "store.i i68"->"goto load.i i68";
+    "load.i i68"
+    "goto load.i i68"->"load.i i68";
+    "load.i i68"->"load.r r0";
+    "fieldget <QuizShow: Text[] titleText>"
+    "load.r r0"->"fieldget <QuizShow: Text[] titleText>";
+    "arraylength"
+    "fieldget <QuizShow: Text[] titleText>"->"arraylength";
+    "ifcmplt.i load.r r0"
+    "arraylength"->"ifcmplt.i load.r r0";
+    "ifcmplt.i load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <QuizShow: Text[] titleText>";
+    "fieldget <QuizShow: Text[] titleText>"->"push 0";
+    "arrayread.r"
+    "push 0"->"arrayread.r";
+    "staticget <Sprite: java.lang.Integer WEST>"
+    "arrayread.r"->"staticget <Sprite: java.lang.Integer WEST>";
+    "virtualinvoke <java.lang.Integer: int intValue()>"
+    "staticget <Sprite: java.lang.Integer WEST>"->"virtualinvoke <java.lang.Integer: int intValue()>";
+    "fieldput <Sprite: int xAnchor>"
+    "virtualinvoke <java.lang.Integer: int intValue()>"->"fieldput <Sprite: int xAnchor>";
+    "fieldput <Sprite: int xAnchor>"->"load.r r0";
+    "load.r r0"->"fieldget <QuizShow: Text[] titleText>";
+    "fieldget <QuizShow: Text[] titleText>"->"load.r r0";
+    "load.r r0"->"fieldget <QuizShow: Text[] titleText>";
+    "fieldget <QuizShow: Text[] titleText>"->"arraylength";
+    "arraylength"->"push 1";
+    "sub.i"
+    "push 1"->"sub.i";
+    "sub.i"->"arrayread.r";
+    "arrayread.r"->"push 2";
+    "push 2"->"newarray";
+    "newarray"->"dup1.r";
+    "dup1.r"->"push 1";
+    "push 1"->"push 10";
+    "push 10"->"arraywrite.i";
+    "arraywrite.i"->"push 2";
+    "push 2"->"newarray";
+    "newarray"->"store.r r1";
+    "store.r r1"->"load.r r1";
+    "load.r r1"->"push 0";
+    "push 0"->"new java.lang.Integer";
+    "new java.lang.Integer"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "load.r r0"->"fieldget <QuizShow: Text[] titleText>";
+    "fieldget <QuizShow: Text[] titleText>"->"load.r r0";
+    "load.r r0"->"fieldget <QuizShow: Text[] titleText>";
+    "fieldget <QuizShow: Text[] titleText>"->"arraylength";
+    "arraylength"->"push 1";
+    "push 1"->"sub.i";
+    "sub.i"->"arrayread.r";
+    "fieldget <Sprite: int x>"
+    "arrayread.r"->"fieldget <Sprite: int x>";
+    "fieldget <Sprite: int x>"->"push 5";
+    "push 5"->"sub.i";
+    "sub.i"->"specialinvoke <java.lang.Integer: void <init>(int)>";
+    "specialinvoke <java.lang.Integer: void <init>(int)>"->"arraywrite.r";
+    "arraywrite.r"->"load.r r1";
+    "load.r r1"->"push 1";
+    "staticget <Sprite: java.lang.Integer EAST>"
+    "push 1"->"staticget <Sprite: java.lang.Integer EAST>";
+    "staticget <Sprite: java.lang.Integer EAST>"->"arraywrite.r";
+    "arraywrite.r"->"load.r r1";
+    "load.r r1"->"virtualinvoke <Sprite: void set(int[],java.lang.Object[])>";
+    "virtualinvoke <Sprite: void set(int[],java.lang.Object[])>"->"load.r r0";
+    "push 44"
+    "load.r r0"->"push 44";
+    "push 44"->"newarray";
+    "fieldput <QuizShow: Graphic[] lightImages>"
+    "newarray"->"fieldput <QuizShow: Graphic[] lightImages>";
+    "fieldput <QuizShow: Graphic[] lightImages>"->"push 0";
+    "store.i $r113"
+    "push 0"->"store.i $r113";
+    "goto load.i $r113"
+    "store.i $r113"->"goto load.i $r113";
+    "load.i $r113"
+    "goto load.i $r113"->"load.i $r113";
+    "load.i $r113"->"load.r r0";
+    "fieldget <QuizShow: Graphic[] lightImages>"
+    "load.r r0"->"fieldget <QuizShow: Graphic[] lightImages>";
+    "fieldget <QuizShow: Graphic[] lightImages>"->"arraylength";
+    "arraylength"->"ifcmplt.i load.r r0";
+    "ifcmplt.i load.r r0"->"load.r r0";
+    "new Lights"
+    "load.r r0"->"new Lights";
+    "new Lights"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "load.r r0"->"fieldget <QuizShow: Graphic[] lightImages>";
+    "specialinvoke <Lights: void <init>(Graphic[])>"
+    "fieldget <QuizShow: Graphic[] lightImages>"->"specialinvoke <Lights: void <init>(Graphic[])>";
+    "fieldput <QuizShow: Lights lights>"
+    "specialinvoke <Lights: void <init>(Graphic[])>"->"fieldput <QuizShow: Lights lights>";
+    "fieldput <QuizShow: Lights lights>"->"load.r r0";
+    "load.r r0"->"new Text";
+    "new Text"->"dup1.r";
+    "dup1.r"->"specialinvoke <Text: void <init>()>";
+    "fieldput <QuizShow: Text numPlayersText>"
+    "specialinvoke <Text: void <init>()>"->"fieldput <QuizShow: Text numPlayersText>";
+    "fieldput <QuizShow: Text numPlayersText>"->"load.r r0";
+    "fieldget <QuizShow: Text numPlayersText>"
+    "load.r r0"->"fieldget <QuizShow: Text numPlayersText>";
+    "fieldget <QuizShow: Text numPlayersText>"->"push 7";
+    "push 7"->"newarray";
+    "newarray"->"store.r r1";
+    "store.r r1"->"load.r r1";
+    "load.r r1"->"push 1";
+    "push 1"->"push 1";
+    "push 1"->"arraywrite.i";
+    "arraywrite.i"->"load.r r1";
+    "load.r r1"->"push 2";
+    "push 2"->"push 2";
+    "push 2"->"arraywrite.i";
+    "arraywrite.i"->"load.r r1";
+    "load.r r1"->"push 3";
+    "push 3"->"push 11";
+    "push 11"->"arraywrite.i";
+    "arraywrite.i"->"load.r r1";
+    "load.r r1"->"push 4";
+    "push 4"->"push 7";
+    "push 7"->"arraywrite.i";
+    "arraywrite.i"->"load.r r1";
+    "load.r r1"->"push 5";
+    "push 5"->"push 13";
+    "push 13"->"arraywrite.i";
+    "arraywrite.i"->"load.r r1";
+    "load.r r1"->"push 6";
+    "push 6"->"push 15";
+    "push 15"->"arraywrite.i";
+    "arraywrite.i"->"push 7";
+    "push 7"->"newarray";
+    "newarray"->"store.r $r28";
+    "store.r $r28"->"load.r $r28";
+    "load.r $r28"->"push 0";
+    "push 0"->"new java.lang.Integer";
+    "new java.lang.Integer"->"dup1.r";
+    "dup1.r"->"push 40";
+    "push 40"->"specialinvoke <java.lang.Integer: void <init>(int)>";
+    "specialinvoke <java.lang.Integer: void <init>(int)>"->"arraywrite.r";
+    "arraywrite.r"->"load.r $r28";
+    "load.r $r28"->"push 1";
+    "push 1"->"new java.lang.Integer";
+    "new java.lang.Integer"->"dup1.r";
+    "dup1.r"->"push 20";
+    "push 20"->"specialinvoke <java.lang.Integer: void <init>(int)>";
+    "specialinvoke <java.lang.Integer: void <init>(int)>"->"arraywrite.r";
+    "arraywrite.r"->"load.r $r28";
+    "load.r $r28"->"push 2";
+    "push 2"->"new java.lang.Integer";
+    "new java.lang.Integer"->"dup1.r";
+    "dup1.r"->"push 40";
+    "push 40"->"specialinvoke <java.lang.Integer: void <init>(int)>";
+    "specialinvoke <java.lang.Integer: void <init>(int)>"->"arraywrite.r";
+    "arraywrite.r"->"load.r $r28";
+    "load.r $r28"->"push 3";
+    "staticget <Sprite: java.lang.Integer NORTH>"
+    "push 3"->"staticget <Sprite: java.lang.Integer NORTH>";
+    "staticget <Sprite: java.lang.Integer NORTH>"->"arraywrite.r";
+    "arraywrite.r"->"load.r $r28";
+    "load.r $r28"->"push 4";
+    "push 4"->"staticget <Sprite: java.lang.Boolean TRUE>";
+    "staticget <Sprite: java.lang.Boolean TRUE>"->"arraywrite.r";
+    "arraywrite.r"->"load.r $r28";
+    "load.r $r28"->"push 5";
+    "push \"# of Players\""
+    "push 5"->"push \"# of Players\"";
+    "push \"# of Players\""->"arraywrite.r";
+    "arraywrite.r"->"load.r $r28";
+    "load.r $r28"->"push 6";
+    "staticget <java.awt.Color: java.awt.Color red>"
+    "push 6"->"staticget <java.awt.Color: java.awt.Color red>";
+    "staticget <java.awt.Color: java.awt.Color red>"->"arraywrite.r";
+    "arraywrite.r"->"load.r r1";
+    "load.r r1"->"load.r $r28";
+    "load.r $r28"->"virtualinvoke <Sprite: void set(int[],java.lang.Object[])>";
+    "virtualinvoke <Sprite: void set(int[],java.lang.Object[])>"->"load.r r0";
+    "new java.awt.CheckboxGroup"
+    "load.r r0"->"new java.awt.CheckboxGroup";
+    "new java.awt.CheckboxGroup"->"dup1.r";
+    "specialinvoke <java.awt.CheckboxGroup: void <init>()>"
+    "dup1.r"->"specialinvoke <java.awt.CheckboxGroup: void <init>()>";
+    "fieldput <QuizShow: java.awt.CheckboxGroup numPlayers>"
+    "specialinvoke <java.awt.CheckboxGroup: void <init>()>"->"fieldput <QuizShow: java.awt.CheckboxGroup numPlayers>";
+    "fieldput <QuizShow: java.awt.CheckboxGroup numPlayers>"->"load.r r0";
+    "load.r r0"->"push 4";
+    "push 4"->"newarray";
+    "fieldput <QuizShow: java.awt.Checkbox[] numPlayersC>"
+    "newarray"->"fieldput <QuizShow: java.awt.Checkbox[] numPlayersC>";
+    "fieldput <QuizShow: java.awt.Checkbox[] numPlayersC>"->"push 0";
+    "store.i r1"
+    "push 0"->"store.i r1";
+    "goto load.i r1"
+    "store.i r1"->"goto load.i r1";
+    "load.i r1"
+    "goto load.i r1"->"load.i r1";
+    "load.i r1"->"load.r r0";
+    "fieldget <QuizShow: java.awt.Checkbox[] numPlayersC>"
+    "load.r r0"->"fieldget <QuizShow: java.awt.Checkbox[] numPlayersC>";
+    "fieldget <QuizShow: java.awt.Checkbox[] numPlayersC>"->"arraylength";
+    "arraylength"->"ifcmplt.i load.r r0";
+    "ifcmplt.i load.r r0"->"load.r r0";
+    "load.r r0"->"push 1";
+    "fieldput <QuizShow: int numPlayersValue>"
+    "push 1"->"fieldput <QuizShow: int numPlayersValue>";
+    "fieldput <QuizShow: int numPlayersValue>"->"load.r r0";
+    "load.r r0"->"new Text";
+    "new Text"->"dup1.r";
+    "dup1.r"->"specialinvoke <Text: void <init>()>";
+    "fieldput <QuizShow: Text namesText>"
+    "specialinvoke <Text: void <init>()>"->"fieldput <QuizShow: Text namesText>";
+    "fieldput <QuizShow: Text namesText>"->"load.r r0";
+    "fieldget <QuizShow: Text namesText>"
+    "load.r r0"->"fieldget <QuizShow: Text namesText>";
+    "fieldget <QuizShow: Text namesText>"->"push 7";
+    "push 7"->"newarray";
+    "newarray"->"store.r r1";
+    "store.r r1"->"load.r r1";
+    "load.r r1"->"push 1";
+    "push 1"->"push 1";
+    "push 1"->"arraywrite.i";
+    "arraywrite.i"->"load.r r1";
+    "load.r r1"->"push 2";
+    "push 2"->"push 2";
+    "push 2"->"arraywrite.i";
+    "arraywrite.i"->"load.r r1";
+    "load.r r1"->"push 3";
+    "push 3"->"push 11";
+    "push 11"->"arraywrite.i";
+    "arraywrite.i"->"load.r r1";
+    "load.r r1"->"push 4";
+    "push 4"->"push 7";
+    "push 7"->"arraywrite.i";
+    "arraywrite.i"->"load.r r1";
+    "load.r r1"->"push 5";
+    "push 5"->"push 13";
+    "push 13"->"arraywrite.i";
+    "arraywrite.i"->"load.r r1";
+    "load.r r1"->"push 6";
+    "push 6"->"push 15";
+    "push 15"->"arraywrite.i";
+    "arraywrite.i"->"push 7";
+    "push 7"->"newarray";
+    "newarray"->"store.r $r28";
+    "store.r $r28"->"load.r $r28";
+    "load.r $r28"->"push 0";
+    "push 0"->"new java.lang.Integer";
+    "new java.lang.Integer"->"dup1.r";
+    "push 100"
+    "dup1.r"->"push 100";
+    "push 100"->"specialinvoke <java.lang.Integer: void <init>(int)>";
+    "specialinvoke <java.lang.Integer: void <init>(int)>"->"arraywrite.r";
+    "arraywrite.r"->"load.r $r28";
+    "load.r $r28"->"push 1";
+    "push 1"->"new java.lang.Integer";
+    "new java.lang.Integer"->"dup1.r";
+    "dup1.r"->"push 20";
+    "push 20"->"specialinvoke <java.lang.Integer: void <init>(int)>";
+    "specialinvoke <java.lang.Integer: void <init>(int)>"->"arraywrite.r";
+    "arraywrite.r"->"load.r $r28";
+    "load.r $r28"->"push 2";
+    "push 2"->"new java.lang.Integer";
+    "new java.lang.Integer"->"dup1.r";
+    "push 150"
+    "dup1.r"->"push 150";
+    "push 150"->"specialinvoke <java.lang.Integer: void <init>(int)>";
+    "specialinvoke <java.lang.Integer: void <init>(int)>"->"arraywrite.r";
+    "arraywrite.r"->"load.r $r28";
+    "load.r $r28"->"push 3";
+    "push 3"->"staticget <Sprite: java.lang.Integer NORTH>";
+    "staticget <Sprite: java.lang.Integer NORTH>"->"arraywrite.r";
+    "arraywrite.r"->"load.r $r28";
+    "load.r $r28"->"push 4";
+    "push 4"->"staticget <Sprite: java.lang.Boolean TRUE>";
+    "staticget <Sprite: java.lang.Boolean TRUE>"->"arraywrite.r";
+    "arraywrite.r"->"load.r $r28";
+    "load.r $r28"->"push 5";
+    "push \"Player\'s Names\""
+    "push 5"->"push \"Player\'s Names\"";
+    "push \"Player\'s Names\""->"arraywrite.r";
+    "arraywrite.r"->"load.r $r28";
+    "load.r $r28"->"push 6";
+    "push 6"->"staticget <java.awt.Color: java.awt.Color red>";
+    "staticget <java.awt.Color: java.awt.Color red>"->"arraywrite.r";
+    "arraywrite.r"->"load.r r1";
+    "load.r r1"->"load.r $r28";
+    "load.r $r28"->"virtualinvoke <Sprite: void set(int[],java.lang.Object[])>";
+    "virtualinvoke <Sprite: void set(int[],java.lang.Object[])>"->"load.r r0";
+    "load.r r0"->"push 4";
+    "push 4"->"newarray";
+    "fieldput <QuizShow: java.awt.TextField[] names>"
+    "newarray"->"fieldput <QuizShow: java.awt.TextField[] names>";
+    "fieldput <QuizShow: java.awt.TextField[] names>"->"push 0";
+    "push 0"->"store.i r1";
+    "store.i r1"->"goto load.i r1";
+    "goto load.i r1"->"load.i r1";
+    "load.i r1"->"load.r r0";
+    "fieldget <QuizShow: java.awt.TextField[] names>"
+    "load.r r0"->"fieldget <QuizShow: java.awt.TextField[] names>";
+    "fieldget <QuizShow: java.awt.TextField[] names>"->"arraylength";
+    "arraylength"->"ifcmplt.i load.r r0";
+    "ifcmplt.i load.r r0"->"load.r r0";
+    "load.r r0"->"new Text";
+    "new Text"->"dup1.r";
+    "dup1.r"->"specialinvoke <Text: void <init>()>";
+    "fieldput <QuizShow: Text buzzersText>"
+    "specialinvoke <Text: void <init>()>"->"fieldput <QuizShow: Text buzzersText>";
+    "fieldput <QuizShow: Text buzzersText>"->"load.r r0";
+    "fieldget <QuizShow: Text buzzersText>"
+    "load.r r0"->"fieldget <QuizShow: Text buzzersText>";
+    "fieldget <QuizShow: Text buzzersText>"->"push 7";
+    "push 7"->"newarray";
+    "newarray"->"store.r r1";
+    "store.r r1"->"load.r r1";
+    "load.r r1"->"push 1";
+    "push 1"->"push 1";
+    "push 1"->"arraywrite.i";
+    "arraywrite.i"->"load.r r1";
+    "load.r r1"->"push 2";
+    "push 2"->"push 2";
+    "push 2"->"arraywrite.i";
+    "arraywrite.i"->"load.r r1";
+    "load.r r1"->"push 3";
+    "push 3"->"push 11";
+    "push 11"->"arraywrite.i";
+    "arraywrite.i"->"load.r r1";
+    "load.r r1"->"push 4";
+    "push 4"->"push 7";
+    "push 7"->"arraywrite.i";
+    "arraywrite.i"->"load.r r1";
+    "load.r r1"->"push 5";
+    "push 5"->"push 13";
+    "push 13"->"arraywrite.i";
+    "arraywrite.i"->"load.r r1";
+    "load.r r1"->"push 6";
+    "push 6"->"push 15";
+    "push 15"->"arraywrite.i";
+    "arraywrite.i"->"push 7";
+    "push 7"->"newarray";
+    "newarray"->"store.r $r28";
+    "store.r $r28"->"load.r $r28";
+    "load.r $r28"->"push 0";
+    "push 0"->"new java.lang.Integer";
+    "new java.lang.Integer"->"dup1.r";
+    "push 270"
+    "dup1.r"->"push 270";
+    "push 270"->"specialinvoke <java.lang.Integer: void <init>(int)>";
+    "specialinvoke <java.lang.Integer: void <init>(int)>"->"arraywrite.r";
+    "arraywrite.r"->"load.r $r28";
+    "load.r $r28"->"push 1";
+    "push 1"->"new java.lang.Integer";
+    "new java.lang.Integer"->"dup1.r";
+    "dup1.r"->"push 20";
+    "push 20"->"specialinvoke <java.lang.Integer: void <init>(int)>";
+    "specialinvoke <java.lang.Integer: void <init>(int)>"->"arraywrite.r";
+    "arraywrite.r"->"load.r $r28";
+    "load.r $r28"->"push 2";
+    "push 2"->"new java.lang.Integer";
+    "new java.lang.Integer"->"dup1.r";
+    "push 90"
+    "dup1.r"->"push 90";
+    "push 90"->"specialinvoke <java.lang.Integer: void <init>(int)>";
+    "specialinvoke <java.lang.Integer: void <init>(int)>"->"arraywrite.r";
+    "arraywrite.r"->"load.r $r28";
+    "load.r $r28"->"push 3";
+    "push 3"->"staticget <Sprite: java.lang.Integer NORTH>";
+    "staticget <Sprite: java.lang.Integer NORTH>"->"arraywrite.r";
+    "arraywrite.r"->"load.r $r28";
+    "load.r $r28"->"push 4";
+    "push 4"->"staticget <Sprite: java.lang.Boolean TRUE>";
+    "staticget <Sprite: java.lang.Boolean TRUE>"->"arraywrite.r";
+    "arraywrite.r"->"load.r $r28";
+    "load.r $r28"->"push 5";
+    "push \"Buzzer Key\""
+    "push 5"->"push \"Buzzer Key\"";
+    "push \"Buzzer Key\""->"arraywrite.r";
+    "arraywrite.r"->"load.r $r28";
+    "load.r $r28"->"push 6";
+    "push 6"->"staticget <java.awt.Color: java.awt.Color red>";
+    "staticget <java.awt.Color: java.awt.Color red>"->"arraywrite.r";
+    "arraywrite.r"->"load.r r1";
+    "load.r r1"->"load.r $r28";
+    "load.r $r28"->"virtualinvoke <Sprite: void set(int[],java.lang.Object[])>";
+    "virtualinvoke <Sprite: void set(int[],java.lang.Object[])>"->"load.r r0";
+    "load.r r0"->"push 4";
+    "push 4"->"newarray";
+    "fieldput <QuizShow: int[] buzzers>"
+    "newarray"->"fieldput <QuizShow: int[] buzzers>";
+    "fieldput <QuizShow: int[] buzzers>"->"load.r r0";
+    "fieldget <QuizShow: int[] buzzers>"
+    "load.r r0"->"fieldget <QuizShow: int[] buzzers>";
+    "fieldget <QuizShow: int[] buzzers>"->"push 0";
+    "push 65"
+    "push 0"->"push 65";
+    "push 65"->"arraywrite.i";
+    "arraywrite.i"->"load.r r0";
+    "load.r r0"->"fieldget <QuizShow: int[] buzzers>";
+    "fieldget <QuizShow: int[] buzzers>"->"push 1";
+    "push 32"
+    "push 1"->"push 32";
+    "push 32"->"arraywrite.i";
+    "arraywrite.i"->"load.r r0";
+    "load.r r0"->"fieldget <QuizShow: int[] buzzers>";
+    "fieldget <QuizShow: int[] buzzers>"->"push 2";
+    "push 2"->"push 40";
+    "push 40"->"arraywrite.i";
+    "arraywrite.i"->"load.r r0";
+    "load.r r0"->"fieldget <QuizShow: int[] buzzers>";
+    "fieldget <QuizShow: int[] buzzers>"->"push 3";
+    "push 96"
+    "push 3"->"push 96";
+    "push 96"->"arraywrite.i";
+    "arraywrite.i"->"load.r r0";
+    "load.r r0"->"push 4";
+    "push 4"->"newarray";
+    "fieldput <QuizShow: Text[] buzzersKeyText>"
+    "newarray"->"fieldput <QuizShow: Text[] buzzersKeyText>";
+    "fieldput <QuizShow: Text[] buzzersKeyText>"->"push 0";
+    "push 0"->"store.i $r113";
+    "store.i $r113"->"goto load.i $r113";
+    "goto load.i $r113"->"load.i $r113";
+    "load.i $r113"->"load.r r0";
+    "fieldget <QuizShow: Text[] buzzersKeyText>"
+    "load.r r0"->"fieldget <QuizShow: Text[] buzzersKeyText>";
+    "fieldget <QuizShow: Text[] buzzersKeyText>"->"arraylength";
+    "arraylength"->"ifcmplt.i load.r r0";
+    "ifcmplt.i load.r r0"->"load.r r0";
+    "virtualinvoke <QuizShow: void setBuzzerText()>"
+    "load.r r0"->"virtualinvoke <QuizShow: void setBuzzerText()>";
+    "virtualinvoke <QuizShow: void setBuzzerText()>"->"load.r r0";
+    "new java.awt.Button"
+    "load.r r0"->"new java.awt.Button";
+    "new java.awt.Button"->"dup1.r";
+    "push \"Play!\""
+    "dup1.r"->"push \"Play!\"";
+    "specialinvoke <java.awt.Button: void <init>(java.lang.String)>"
+    "push \"Play!\""->"specialinvoke <java.awt.Button: void <init>(java.lang.String)>";
+    "fieldput <QuizShow: java.awt.Button startB>"
+    "specialinvoke <java.awt.Button: void <init>(java.lang.String)>"->"fieldput <QuizShow: java.awt.Button startB>";
+    "fieldput <QuizShow: java.awt.Button startB>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "fieldget <QuizShow: java.awt.Button startB>"
+    "load.r r0"->"fieldget <QuizShow: java.awt.Button startB>";
+    "staticget <QuizShow: java.awt.Color darkGreen>"
+    "fieldget <QuizShow: java.awt.Button startB>"->"staticget <QuizShow: java.awt.Color darkGreen>";
+    "staticget <java.awt.Color: java.awt.Color white>"
+    "staticget <QuizShow: java.awt.Color darkGreen>"->"staticget <java.awt.Color: java.awt.Color white>";
+    "staticget <java.awt.Color: java.awt.Color white>"->"staticget <Text: java.awt.Font PT20>";
+    "staticget <Text: java.awt.Font PT20>"->"push 4";
+    "push 4"->"newarray";
+    "newarray"->"store.r r1";
+    "store.r r1"->"load.r r1";
+    "load.r r1"->"push 0";
+    "push 0"->"push 150";
+    "push 150"->"arraywrite.i";
+    "arraywrite.i"->"load.r r1";
+    "load.r r1"->"push 1";
+    "push 130"
+    "push 1"->"push 130";
+    "push 130"->"arraywrite.i";
+    "arraywrite.i"->"load.r r1";
+    "load.r r1"->"push 2";
+    "push 2"->"push 100";
+    "push 100"->"arraywrite.i";
+    "arraywrite.i"->"load.r r1";
+    "load.r r1"->"push 3";
+    "push 3"->"push 40";
+    "push 40"->"arraywrite.i";
+    "arraywrite.i"->"load.r r1";
+    "virtualinvoke <QuizShow: void setComponent(java.awt.Component,java.awt.Color,java.awt.Color,java.awt.Font,int[])>"
+    "load.r r1"->"virtualinvoke <QuizShow: void setComponent(java.awt.Component,java.awt.Color,java.awt.Color,java.awt.Font,int[])>";
+    "virtualinvoke <QuizShow: void setComponent(java.awt.Component,java.awt.Color,java.awt.Color,java.awt.Font,int[])>"->"load.r r0";
+    "load.r r0"->"fieldget <QuizShow: java.awt.Button startB>";
+    "push \"p\""
+    "fieldget <QuizShow: java.awt.Button startB>"->"push \"p\"";
+    "virtualinvoke <java.awt.Button: void setActionCommand(java.lang.String)>"
+    "push \"p\""->"virtualinvoke <java.awt.Button: void setActionCommand(java.lang.String)>";
+    "virtualinvoke <java.awt.Button: void setActionCommand(java.lang.String)>"->"load.r r0";
+    "load.r r0"->"fieldget <QuizShow: java.awt.Button startB>";
+    "fieldget <QuizShow: java.awt.Button startB>"->"load.r r0";
+    "virtualinvoke <java.awt.Button: void addActionListener(java.awt.event.ActionListener)>"
+    "load.r r0"->"virtualinvoke <java.awt.Button: void addActionListener(java.awt.event.ActionListener)>";
+    "virtualinvoke <java.awt.Button: void addActionListener(java.awt.event.ActionListener)>"->"load.r r0";
+    "load.r r0"->"push 4";
+    "push 4"->"newarray";
+    "fieldput <QuizShow: Text[] questionsText>"
+    "newarray"->"fieldput <QuizShow: Text[] questionsText>";
+    "fieldput <QuizShow: Text[] questionsText>"->"push 0";
+    "push 0"->"store.i $r113";
+    "store.i $r113"->"goto load.i $r113";
+    "goto load.i $r113"->"load.i $r113";
+    "load.i $r113"->"load.r r0";
+    "fieldget <QuizShow: Text[] questionsText>"
+    "load.r r0"->"fieldget <QuizShow: Text[] questionsText>";
+    "fieldget <QuizShow: Text[] questionsText>"->"arraylength";
+    "arraylength"->"ifcmplt.i load.r r0";
+    "ifcmplt.i load.r r0"->"load.r r0";
+    "load.r r0"->"push 8";
+    "push 8"->"newarray";
+    "fieldput <QuizShow: Text[] choicesText>"
+    "newarray"->"fieldput <QuizShow: Text[] choicesText>";
+    "fieldput <QuizShow: Text[] choicesText>"->"push 0";
+    "store.i $r116"
+    "push 0"->"store.i $r116";
+    "goto load.i $r116"
+    "store.i $r116"->"goto load.i $r116";
+    "load.i $r116"
+    "goto load.i $r116"->"load.i $r116";
+    "load.i $r116"->"load.r r0";
+    "fieldget <QuizShow: Text[] choicesText>"
+    "load.r r0"->"fieldget <QuizShow: Text[] choicesText>";
+    "fieldget <QuizShow: Text[] choicesText>"->"arraylength";
+    "arraylength"->"ifcmplt.i load.r r0";
+    "ifcmplt.i load.r r0"->"load.r r0";
+    "load.r r0"->"push 4";
+    "push 4"->"newarray";
+    "fieldput <QuizShow: char[] answers>"
+    "newarray"->"fieldput <QuizShow: char[] answers>";
+    "fieldput <QuizShow: char[] answers>"->"load.r r0";
+    "load.r r0"->"new Text";
+    "new Text"->"dup1.r";
+    "dup1.r"->"specialinvoke <Text: void <init>()>";
+    "fieldput <QuizShow: Text questionNumberText>"
+    "specialinvoke <Text: void <init>()>"->"fieldput <QuizShow: Text questionNumberText>";
+    "fieldput <QuizShow: Text questionNumberText>"->"load.r r0";
+    "fieldget <QuizShow: Text questionNumberText>"
+    "load.r r0"->"fieldget <QuizShow: Text questionNumberText>";
+    "fieldget <QuizShow: Text questionNumberText>"->"push 7";
+    "push 7"->"newarray";
+    "newarray"->"store.r r1";
+    "store.r r1"->"load.r r1";
+    "load.r r1"->"push 1";
+    "push 1"->"push 1";
+    "push 1"->"arraywrite.i";
+    "arraywrite.i"->"load.r r1";
+    "load.r r1"->"push 2";
+    "push 2"->"push 10";
+    "push 10"->"arraywrite.i";
+    "arraywrite.i"->"load.r r1";
+    "load.r r1"->"push 3";
+    "push 3"->"push 11";
+    "push 11"->"arraywrite.i";
+    "arraywrite.i"->"load.r r1";
+    "load.r r1"->"push 4";
+    "push 4"->"push 7";
+    "push 7"->"arraywrite.i";
+    "arraywrite.i"->"load.r r1";
+    "load.r r1"->"push 5";
+    "push 5"->"push 16";
+    "push 16"->"arraywrite.i";
+    "arraywrite.i"->"load.r r1";
+    "load.r r1"->"push 6";
+    "push 6"->"push 15";
+    "push 15"->"arraywrite.i";
+    "arraywrite.i"->"push 7";
+    "push 7"->"newarray";
+    "newarray"->"store.r $r28";
+    "store.r $r28"->"load.r $r28";
+    "load.r $r28"->"push 0";
+    "push 0"->"new java.lang.Integer";
+    "new java.lang.Integer"->"dup1.r";
+    "dup1.r"->"push 40";
+    "push 40"->"specialinvoke <java.lang.Integer: void <init>(int)>";
+    "specialinvoke <java.lang.Integer: void <init>(int)>"->"arraywrite.r";
+    "arraywrite.r"->"load.r $r28";
+    "load.r $r28"->"push 1";
+    "push 1"->"new java.lang.Integer";
+    "new java.lang.Integer"->"dup1.r";
+    "push 50"
+    "dup1.r"->"push 50";
+    "push 50"->"specialinvoke <java.lang.Integer: void <init>(int)>";
+    "specialinvoke <java.lang.Integer: void <init>(int)>"->"arraywrite.r";
+    "arraywrite.r"->"load.r $r28";
+    "load.r $r28"->"push 2";
+    "push 2"->"staticget <Sprite: java.lang.Integer WEST>";
+    "staticget <Sprite: java.lang.Integer WEST>"->"arraywrite.r";
+    "arraywrite.r"->"load.r $r28";
+    "load.r $r28"->"push 3";
+    "push 3"->"staticget <Sprite: java.lang.Integer SOUTH>";
+    "staticget <Sprite: java.lang.Integer SOUTH>"->"arraywrite.r";
+    "arraywrite.r"->"load.r $r28";
+    "load.r $r28"->"push 4";
+    "push 4"->"staticget <Sprite: java.lang.Boolean TRUE>";
+    "staticget <Sprite: java.lang.Boolean TRUE>"->"arraywrite.r";
+    "arraywrite.r"->"load.r $r28";
+    "load.r $r28"->"push 5";
+    "push 5"->"staticget <Sprite: java.lang.Integer ONE>";
+    "staticget <Sprite: java.lang.Integer ONE>"->"arraywrite.r";
+    "arraywrite.r"->"load.r $r28";
+    "load.r $r28"->"push 6";
+    "push 6"->"staticget <java.awt.Color: java.awt.Color red>";
+    "staticget <java.awt.Color: java.awt.Color red>"->"arraywrite.r";
+    "arraywrite.r"->"load.r r1";
+    "load.r r1"->"load.r $r28";
+    "load.r $r28"->"virtualinvoke <Sprite: void set(int[],java.lang.Object[])>";
+    "virtualinvoke <Sprite: void set(int[],java.lang.Object[])>"->"load.r r0";
+    "new Counter"
+    "load.r r0"->"new Counter";
+    "new Counter"->"dup1.r";
+    "specialinvoke <Counter: void <init>()>"
+    "dup1.r"->"specialinvoke <Counter: void <init>()>";
+    "fieldput <QuizShow: Counter timer>"
+    "specialinvoke <Counter: void <init>()>"->"fieldput <QuizShow: Counter timer>";
+    "fieldput <QuizShow: Counter timer>"->"load.r r0";
+    "load.r r0"->"push 2";
+    "push 2"->"newarray";
+    "fieldput <QuizShow: Shape[] timerArc>"
+    "newarray"->"fieldput <QuizShow: Shape[] timerArc>";
+    "fieldput <QuizShow: Shape[] timerArc>"->"push 0";
+    "store.i $r115"
+    "push 0"->"store.i $r115";
+    "goto load.i $r115"
+    "store.i $r115"->"goto load.i $r115";
+    "load.i $r115"
+    "goto load.i $r115"->"load.i $r115";
+    "load.i $r115"->"load.r r0";
+    "fieldget <QuizShow: Shape[] timerArc>"
+    "load.r r0"->"fieldget <QuizShow: Shape[] timerArc>";
+    "fieldget <QuizShow: Shape[] timerArc>"->"arraylength";
+    "arraylength"->"ifcmplt.i load.r r0";
+    "ifcmplt.i load.r r0"->"load.r r0";
+    "load.r r0"->"new Text";
+    "new Text"->"dup1.r";
+    "dup1.r"->"specialinvoke <Text: void <init>()>";
+    "fieldput <QuizShow: Text timerCountText>"
+    "specialinvoke <Text: void <init>()>"->"fieldput <QuizShow: Text timerCountText>";
+    "fieldput <QuizShow: Text timerCountText>"->"load.r r0";
+    "fieldget <QuizShow: Text timerCountText>"
+    "load.r r0"->"fieldget <QuizShow: Text timerCountText>";
+    "fieldget <QuizShow: Text timerCountText>"->"push 6";
+    "push 6"->"newarray";
+    "newarray"->"store.r r1";
+    "store.r r1"->"load.r r1";
+    "load.r r1"->"push 1";
+    "push 1"->"push 1";
+    "push 1"->"arraywrite.i";
+    "arraywrite.i"->"load.r r1";
+    "load.r r1"->"push 2";
+    "push 2"->"push 2";
+    "push 2"->"arraywrite.i";
+    "arraywrite.i"->"load.r r1";
+    "load.r r1"->"push 3";
+    "push 3"->"push 7";
+    "push 7"->"arraywrite.i";
+    "arraywrite.i"->"load.r r1";
+    "load.r r1"->"push 4";
+    "push 4"->"push 14";
+    "push 14"->"arraywrite.i";
+    "arraywrite.i"->"load.r r1";
+    "load.r r1"->"push 5";
+    "push 5"->"push 16";
+    "push 16"->"arraywrite.i";
+    "arraywrite.i"->"push 6";
+    "push 6"->"newarray";
+    "newarray"->"store.r $r28";
+    "store.r $r28"->"load.r $r28";
+    "load.r $r28"->"push 0";
+    "push 0"->"new java.lang.Integer";
+    "new java.lang.Integer"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "load.r r0"->"fieldget <QuizShow: Shape[] timerArc>";
+    "fieldget <QuizShow: Shape[] timerArc>"->"push 0";
+    "push 0"->"arrayread.r";
+    "arrayread.r"->"fieldget <Sprite: int x>";
+    "fieldget <Sprite: int x>"->"specialinvoke <java.lang.Integer: void <init>(int)>";
+    "specialinvoke <java.lang.Integer: void <init>(int)>"->"arraywrite.r";
+    "arraywrite.r"->"load.r $r28";
+    "load.r $r28"->"push 1";
+    "push 1"->"new java.lang.Integer";
+    "new java.lang.Integer"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "load.r r0"->"fieldget <QuizShow: Shape[] timerArc>";
+    "fieldget <QuizShow: Shape[] timerArc>"->"push 0";
+    "push 0"->"arrayread.r";
+    "fieldget <Sprite: int y>"
+    "arrayread.r"->"fieldget <Sprite: int y>";
+    "fieldget <Sprite: int y>"->"load.r r0";
+    "load.r r0"->"fieldget <QuizShow: Shape[] timerArc>";
+    "fieldget <QuizShow: Shape[] timerArc>"->"push 0";
+    "push 0"->"arrayread.r";
+    "fieldget <Sprite: int height>"
+    "arrayread.r"->"fieldget <Sprite: int height>";
+    "fieldget <Sprite: int height>"->"push 3";
+    "div.i"
+    "push 3"->"div.i";
+    "div.i"->"add.i";
+    "add.i"->"specialinvoke <java.lang.Integer: void <init>(int)>";
+    "specialinvoke <java.lang.Integer: void <init>(int)>"->"arraywrite.r";
+    "arraywrite.r"->"load.r $r28";
+    "load.r $r28"->"push 2";
+    "push 2"->"new java.lang.Integer";
+    "new java.lang.Integer"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "load.r r0"->"fieldget <QuizShow: Shape[] timerArc>";
+    "fieldget <QuizShow: Shape[] timerArc>"->"push 0";
+    "push 0"->"arrayread.r";
+    "fieldget <Sprite: int width>"
+    "arrayread.r"->"fieldget <Sprite: int width>";
+    "fieldget <Sprite: int width>"->"specialinvoke <java.lang.Integer: void <init>(int)>";
+    "specialinvoke <java.lang.Integer: void <init>(int)>"->"arraywrite.r";
+    "arraywrite.r"->"load.r $r28";
+    "load.r $r28"->"push 3";
+    "push 3"->"staticget <Sprite: java.lang.Boolean TRUE>";
+    "staticget <Sprite: java.lang.Boolean TRUE>"->"arraywrite.r";
+    "arraywrite.r"->"load.r $r28";
+    "load.r $r28"->"push 4";
+    "staticget <Text: java.awt.Font PT40>"
+    "push 4"->"staticget <Text: java.awt.Font PT40>";
+    "staticget <Text: java.awt.Font PT40>"->"arraywrite.r";
+    "arraywrite.r"->"load.r $r28";
+    "load.r $r28"->"push 5";
+    "staticget <Sprite: java.lang.Integer TWO>"
+    "push 5"->"staticget <Sprite: java.lang.Integer TWO>";
+    "staticget <Sprite: java.lang.Integer TWO>"->"arraywrite.r";
+    "arraywrite.r"->"load.r r1";
+    "load.r r1"->"load.r $r28";
+    "load.r $r28"->"virtualinvoke <Sprite: void set(int[],java.lang.Object[])>";
+    "virtualinvoke <Sprite: void set(int[],java.lang.Object[])>"->"load.r r0";
+    "load.r r0"->"push 6";
+    "push 6"->"newarray";
+    "fieldput <QuizShow: Shape[] questionGrid>"
+    "newarray"->"fieldput <QuizShow: Shape[] questionGrid>";
+    "fieldput <QuizShow: Shape[] questionGrid>"->"push 0";
+    "push 0"->"store.i r1";
+    "store.i r1"->"goto load.i r1";
+    "goto load.i r1"->"load.i r1";
+    "load.i r1"->"load.r r0";
+    "fieldget <QuizShow: Shape[] questionGrid>"
+    "load.r r0"->"fieldget <QuizShow: Shape[] questionGrid>";
+    "fieldget <QuizShow: Shape[] questionGrid>"->"arraylength";
+    "arraylength"->"ifcmplt.i load.r r0";
+    "ifcmplt.i load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <QuizShow: Shape[] questionGrid>";
+    "fieldget <QuizShow: Shape[] questionGrid>"->"push 0";
+    "push 0"->"arrayread.r";
+    "arrayread.r"->"push 8";
+    "push 8"->"newarray";
+    "newarray"->"store.r r1";
+    "store.r r1"->"load.r r1";
+    "load.r r1"->"push 1";
+    "push 1"->"push 1";
+    "push 1"->"arraywrite.i";
+    "arraywrite.i"->"load.r r1";
+    "load.r r1"->"push 2";
+    "push 2"->"push 2";
+    "push 2"->"arraywrite.i";
+    "arraywrite.i"->"load.r r1";
+    "load.r r1"->"push 3";
+    "push 3"->"push 3";
+    "push 3"->"arraywrite.i";
+    "arraywrite.i"->"load.r r1";
+    "load.r r1"->"push 4";
+    "push 4"->"push 7";
+    "push 7"->"arraywrite.i";
+    "arraywrite.i"->"load.r r1";
+    "load.r r1"->"push 5";
+    "push 5"->"push 13";
+    "push 13"->"arraywrite.i";
+    "arraywrite.i"->"load.r r1";
+    "load.r r1"->"push 6";
+    "push 6"->"push 15";
+    "push 15"->"arraywrite.i";
+    "arraywrite.i"->"load.r r1";
+    "load.r r1"->"push 7";
+    "push 7"->"push 14";
+    "push 14"->"arraywrite.i";
+    "arraywrite.i"->"push 8";
+    "push 8"->"newarray";
+    "newarray"->"store.r $r28";
+    "store.r $r28"->"load.r $r28";
+    "load.r $r28"->"push 0";
+    "push 0"->"new java.lang.Integer";
+    "new java.lang.Integer"->"dup1.r";
+    "dup1.r"->"push 20";
+    "push 20"->"specialinvoke <java.lang.Integer: void <init>(int)>";
+    "specialinvoke <java.lang.Integer: void <init>(int)>"->"arraywrite.r";
+    "arraywrite.r"->"load.r $r28";
+    "load.r $r28"->"push 1";
+    "push 1"->"new java.lang.Integer";
+    "new java.lang.Integer"->"dup1.r";
+    "dup1.r"->"push 20";
+    "push 20"->"specialinvoke <java.lang.Integer: void <init>(int)>";
+    "specialinvoke <java.lang.Integer: void <init>(int)>"->"arraywrite.r";
+    "arraywrite.r"->"load.r $r28";
+    "load.r $r28"->"push 2";
+    "push 2"->"new java.lang.Integer";
+    "new java.lang.Integer"->"dup1.r";
+    "push 355"
+    "dup1.r"->"push 355";
+    "push 355"->"specialinvoke <java.lang.Integer: void <init>(int)>";
+    "specialinvoke <java.lang.Integer: void <init>(int)>"->"arraywrite.r";
+    "arraywrite.r"->"load.r $r28";
+    "load.r $r28"->"push 3";
+    "push 3"->"new java.lang.Integer";
+    "new java.lang.Integer"->"dup1.r";
+    "push 155"
+    "dup1.r"->"push 155";
+    "push 155"->"specialinvoke <java.lang.Integer: void <init>(int)>";
+    "specialinvoke <java.lang.Integer: void <init>(int)>"->"arraywrite.r";
+    "arraywrite.r"->"load.r $r28";
+    "load.r $r28"->"push 4";
+    "push 4"->"staticget <Sprite: java.lang.Boolean TRUE>";
+    "staticget <Sprite: java.lang.Boolean TRUE>"->"arraywrite.r";
+    "arraywrite.r"->"load.r $r28";
+    "load.r $r28"->"push 5";
+    "push 5"->"staticget <Shape: java.lang.Integer RECTANGLE>";
+    "staticget <Shape: java.lang.Integer RECTANGLE>"->"arraywrite.r";
+    "arraywrite.r"->"load.r $r28";
+    "load.r $r28"->"push 6";
+    "push 6"->"staticget <Sprite: java.lang.Boolean FALSE>";
+    "staticget <Sprite: java.lang.Boolean FALSE>"->"arraywrite.r";
+    "arraywrite.r"->"load.r $r28";
+    "load.r $r28"->"push 7";
+    "push 7"->"staticget <java.awt.Color: java.awt.Color white>";
+    "staticget <java.awt.Color: java.awt.Color white>"->"arraywrite.r";
+    "arraywrite.r"->"load.r r1";
+    "load.r r1"->"load.r $r28";
+    "load.r $r28"->"virtualinvoke <Sprite: void set(int[],java.lang.Object[])>";
+    "virtualinvoke <Sprite: void set(int[],java.lang.Object[])>"->"load.r r0";
+    "load.r r0"->"fieldget <QuizShow: Shape[] questionGrid>";
+    "fieldget <QuizShow: Shape[] questionGrid>"->"push 1";
+    "push 1"->"arrayread.r";
+    "arrayread.r"->"push 6";
+    "push 6"->"newarray";
+    "newarray"->"store.r r1";
+    "store.r r1"->"load.r r1";
+    "load.r r1"->"push 1";
+    "push 1"->"push 1";
+    "push 1"->"arraywrite.i";
+    "arraywrite.i"->"load.r r1";
+    "load.r r1"->"push 2";
+    "push 2"->"push 2";
+    "push 2"->"arraywrite.i";
+    "arraywrite.i"->"load.r r1";
+    "load.r r1"->"push 3";
+    "push 3"->"push 7";
+    "push 7"->"arraywrite.i";
+    "arraywrite.i"->"load.r r1";
+    "load.r r1"->"push 4";
+    "push 4"->"push 13";
+    "push 13"->"arraywrite.i";
+    "arraywrite.i"->"load.r r1";
+    "load.r r1"->"push 5";
+    "push 5"->"push 14";
+    "push 14"->"arraywrite.i";
+    "arraywrite.i"->"push 6";
+    "push 6"->"newarray";
+    "newarray"->"store.r $r28";
+    "store.r $r28"->"load.r $r28";
+    "load.r $r28"->"push 0";
+    "push 0"->"new java.lang.Integer";
+    "new java.lang.Integer"->"dup1.r";
+    "dup1.r"->"push 20";
+    "push 20"->"specialinvoke <java.lang.Integer: void <init>(int)>";
+    "specialinvoke <java.lang.Integer: void <init>(int)>"->"arraywrite.r";
+    "arraywrite.r"->"load.r $r28";
+    "load.r $r28"->"push 1";
+    "push 1"->"new java.lang.Integer";
+    "new java.lang.Integer"->"dup1.r";
+    "push 95"
+    "dup1.r"->"push 95";
+    "push 95"->"specialinvoke <java.lang.Integer: void <init>(int)>";
+    "specialinvoke <java.lang.Integer: void <init>(int)>"->"arraywrite.r";
+    "arraywrite.r"->"load.r $r28";
+    "load.r $r28"->"push 2";
+    "push 2"->"new java.lang.Integer";
+    "new java.lang.Integer"->"dup1.r";
+    "dup1.r"->"push 355";
+    "push 355"->"specialinvoke <java.lang.Integer: void <init>(int)>";
+    "specialinvoke <java.lang.Integer: void <init>(int)>"->"arraywrite.r";
+    "arraywrite.r"->"load.r $r28";
+    "load.r $r28"->"push 3";
+    "push 3"->"staticget <Sprite: java.lang.Boolean TRUE>";
+    "staticget <Sprite: java.lang.Boolean TRUE>"->"arraywrite.r";
+    "arraywrite.r"->"load.r $r28";
+    "load.r $r28"->"push 4";
+    "staticget <Shape: java.lang.Integer LINE>"
+    "push 4"->"staticget <Shape: java.lang.Integer LINE>";
+    "staticget <Shape: java.lang.Integer LINE>"->"arraywrite.r";
+    "arraywrite.r"->"load.r $r28";
+    "load.r $r28"->"push 5";
+    "push 5"->"staticget <java.awt.Color: java.awt.Color white>";
+    "staticget <java.awt.Color: java.awt.Color white>"->"arraywrite.r";
+    "arraywrite.r"->"load.r r1";
+    "load.r r1"->"load.r $r28";
+    "load.r $r28"->"virtualinvoke <Sprite: void set(int[],java.lang.Object[])>";
+    "virtualinvoke <Sprite: void set(int[],java.lang.Object[])>"->"load.r r0";
+    "load.r r0"->"fieldget <QuizShow: Shape[] questionGrid>";
+    "fieldget <QuizShow: Shape[] questionGrid>"->"push 2";
+    "push 2"->"arrayread.r";
+    "arrayread.r"->"push 6";
+    "push 6"->"newarray";
+    "newarray"->"store.r r1";
+    "store.r r1"->"load.r r1";
+    "load.r r1"->"push 1";
+    "push 1"->"push 1";
+    "push 1"->"arraywrite.i";
+    "arraywrite.i"->"load.r r1";
+    "load.r r1"->"push 2";
+    "push 2"->"push 2";
+    "push 2"->"arraywrite.i";
+    "arraywrite.i"->"load.r r1";
+    "load.r r1"->"push 3";
+    "push 3"->"push 7";
+    "push 7"->"arraywrite.i";
+    "arraywrite.i"->"load.r r1";
+    "load.r r1"->"push 4";
+    "push 4"->"push 13";
+    "push 13"->"arraywrite.i";
+    "arraywrite.i"->"load.r r1";
+    "load.r r1"->"push 5";
+    "push 5"->"push 14";
+    "push 14"->"arraywrite.i";
+    "arraywrite.i"->"push 6";
+    "push 6"->"newarray";
+    "newarray"->"store.r $r28";
+    "store.r $r28"->"load.r $r28";
+    "load.r $r28"->"push 0";
+    "push 0"->"new java.lang.Integer";
+    "new java.lang.Integer"->"dup1.r";
+    "dup1.r"->"push 20";
+    "push 20"->"specialinvoke <java.lang.Integer: void <init>(int)>";
+    "specialinvoke <java.lang.Integer: void <init>(int)>"->"arraywrite.r";
+    "arraywrite.r"->"load.r $r28";
+    "load.r $r28"->"push 1";
+    "push 1"->"new java.lang.Integer";
+    "new java.lang.Integer"->"dup1.r";
+    "push 115"
+    "dup1.r"->"push 115";
+    "push 115"->"specialinvoke <java.lang.Integer: void <init>(int)>";
+    "specialinvoke <java.lang.Integer: void <init>(int)>"->"arraywrite.r";
+    "arraywrite.r"->"load.r $r28";
+    "load.r $r28"->"push 2";
+    "push 2"->"new java.lang.Integer";
+    "new java.lang.Integer"->"dup1.r";
+    "dup1.r"->"push 355";
+    "push 355"->"specialinvoke <java.lang.Integer: void <init>(int)>";
+    "specialinvoke <java.lang.Integer: void <init>(int)>"->"arraywrite.r";
+    "arraywrite.r"->"load.r $r28";
+    "load.r $r28"->"push 3";
+    "push 3"->"staticget <Sprite: java.lang.Boolean TRUE>";
+    "staticget <Sprite: java.lang.Boolean TRUE>"->"arraywrite.r";
+    "arraywrite.r"->"load.r $r28";
+    "load.r $r28"->"push 4";
+    "push 4"->"staticget <Shape: java.lang.Integer LINE>";
+    "staticget <Shape: java.lang.Integer LINE>"->"arraywrite.r";
+    "arraywrite.r"->"load.r $r28";
+    "load.r $r28"->"push 5";
+    "push 5"->"staticget <java.awt.Color: java.awt.Color white>";
+    "staticget <java.awt.Color: java.awt.Color white>"->"arraywrite.r";
+    "arraywrite.r"->"load.r r1";
+    "load.r r1"->"load.r $r28";
+    "load.r $r28"->"virtualinvoke <Sprite: void set(int[],java.lang.Object[])>";
+    "virtualinvoke <Sprite: void set(int[],java.lang.Object[])>"->"load.r r0";
+    "load.r r0"->"fieldget <QuizShow: Shape[] questionGrid>";
+    "fieldget <QuizShow: Shape[] questionGrid>"->"push 3";
+    "push 3"->"arrayread.r";
+    "arrayread.r"->"push 6";
+    "push 6"->"newarray";
+    "newarray"->"store.r r1";
+    "store.r r1"->"load.r r1";
+    "load.r r1"->"push 1";
+    "push 1"->"push 1";
+    "push 1"->"arraywrite.i";
+    "arraywrite.i"->"load.r r1";
+    "load.r r1"->"push 2";
+    "push 2"->"push 2";
+    "push 2"->"arraywrite.i";
+    "arraywrite.i"->"load.r r1";
+    "load.r r1"->"push 3";
+    "push 3"->"push 7";
+    "push 7"->"arraywrite.i";
+    "arraywrite.i"->"load.r r1";
+    "load.r r1"->"push 4";
+    "push 4"->"push 13";
+    "push 13"->"arraywrite.i";
+    "arraywrite.i"->"load.r r1";
+    "load.r r1"->"push 5";
+    "push 5"->"push 14";
+    "push 14"->"arraywrite.i";
+    "arraywrite.i"->"push 6";
+    "push 6"->"newarray";
+    "newarray"->"store.r $r28";
+    "store.r $r28"->"load.r $r28";
+    "load.r $r28"->"push 0";
+    "push 0"->"new java.lang.Integer";
+    "new java.lang.Integer"->"dup1.r";
+    "dup1.r"->"push 20";
+    "push 20"->"specialinvoke <java.lang.Integer: void <init>(int)>";
+    "specialinvoke <java.lang.Integer: void <init>(int)>"->"arraywrite.r";
+    "arraywrite.r"->"load.r $r28";
+    "load.r $r28"->"push 1";
+    "push 1"->"new java.lang.Integer";
+    "new java.lang.Integer"->"dup1.r";
+    "push 135"
+    "dup1.r"->"push 135";
+    "push 135"->"specialinvoke <java.lang.Integer: void <init>(int)>";
+    "specialinvoke <java.lang.Integer: void <init>(int)>"->"arraywrite.r";
+    "arraywrite.r"->"load.r $r28";
+    "load.r $r28"->"push 2";
+    "push 2"->"new java.lang.Integer";
+    "new java.lang.Integer"->"dup1.r";
+    "dup1.r"->"push 355";
+    "push 355"->"specialinvoke <java.lang.Integer: void <init>(int)>";
+    "specialinvoke <java.lang.Integer: void <init>(int)>"->"arraywrite.r";
+    "arraywrite.r"->"load.r $r28";
+    "load.r $r28"->"push 3";
+    "push 3"->"staticget <Sprite: java.lang.Boolean TRUE>";
+    "staticget <Sprite: java.lang.Boolean TRUE>"->"arraywrite.r";
+    "arraywrite.r"->"load.r $r28";
+    "load.r $r28"->"push 4";
+    "push 4"->"staticget <Shape: java.lang.Integer LINE>";
+    "staticget <Shape: java.lang.Integer LINE>"->"arraywrite.r";
+    "arraywrite.r"->"load.r $r28";
+    "load.r $r28"->"push 5";
+    "push 5"->"staticget <java.awt.Color: java.awt.Color white>";
+    "staticget <java.awt.Color: java.awt.Color white>"->"arraywrite.r";
+    "arraywrite.r"->"load.r r1";
+    "load.r r1"->"load.r $r28";
+    "load.r $r28"->"virtualinvoke <Sprite: void set(int[],java.lang.Object[])>";
+    "virtualinvoke <Sprite: void set(int[],java.lang.Object[])>"->"load.r r0";
+    "load.r r0"->"fieldget <QuizShow: Shape[] questionGrid>";
+    "fieldget <QuizShow: Shape[] questionGrid>"->"push 4";
+    "push 4"->"arrayread.r";
+    "arrayread.r"->"push 6";
+    "push 6"->"newarray";
+    "newarray"->"store.r r1";
+    "store.r r1"->"load.r r1";
+    "load.r r1"->"push 1";
+    "push 1"->"push 1";
+    "push 1"->"arraywrite.i";
+    "arraywrite.i"->"load.r r1";
+    "load.r r1"->"push 2";
+    "push 2"->"push 2";
+    "push 2"->"arraywrite.i";
+    "arraywrite.i"->"load.r r1";
+    "load.r r1"->"push 3";
+    "push 3"->"push 7";
+    "push 7"->"arraywrite.i";
+    "arraywrite.i"->"load.r r1";
+    "load.r r1"->"push 4";
+    "push 4"->"push 13";
+    "push 13"->"arraywrite.i";
+    "arraywrite.i"->"load.r r1";
+    "load.r r1"->"push 5";
+    "push 5"->"push 14";
+    "push 14"->"arraywrite.i";
+    "arraywrite.i"->"push 6";
+    "push 6"->"newarray";
+    "newarray"->"store.r $r28";
+    "store.r $r28"->"load.r $r28";
+    "load.r $r28"->"push 0";
+    "push 0"->"new java.lang.Integer";
+    "new java.lang.Integer"->"dup1.r";
+    "dup1.r"->"push 20";
+    "push 20"->"specialinvoke <java.lang.Integer: void <init>(int)>";
+    "specialinvoke <java.lang.Integer: void <init>(int)>"->"arraywrite.r";
+    "arraywrite.r"->"load.r $r28";
+    "load.r $r28"->"push 1";
+    "push 1"->"new java.lang.Integer";
+    "new java.lang.Integer"->"dup1.r";
+    "dup1.r"->"push 155";
+    "push 155"->"specialinvoke <java.lang.Integer: void <init>(int)>";
+    "specialinvoke <java.lang.Integer: void <init>(int)>"->"arraywrite.r";
+    "arraywrite.r"->"load.r $r28";
+    "load.r $r28"->"push 2";
+    "push 2"->"new java.lang.Integer";
+    "new java.lang.Integer"->"dup1.r";
+    "dup1.r"->"push 355";
+    "push 355"->"specialinvoke <java.lang.Integer: void <init>(int)>";
+    "specialinvoke <java.lang.Integer: void <init>(int)>"->"arraywrite.r";
+    "arraywrite.r"->"load.r $r28";
+    "load.r $r28"->"push 3";
+    "push 3"->"staticget <Sprite: java.lang.Boolean TRUE>";
+    "staticget <Sprite: java.lang.Boolean TRUE>"->"arraywrite.r";
+    "arraywrite.r"->"load.r $r28";
+    "load.r $r28"->"push 4";
+    "push 4"->"staticget <Shape: java.lang.Integer LINE>";
+    "staticget <Shape: java.lang.Integer LINE>"->"arraywrite.r";
+    "arraywrite.r"->"load.r $r28";
+    "load.r $r28"->"push 5";
+    "push 5"->"staticget <java.awt.Color: java.awt.Color white>";
+    "staticget <java.awt.Color: java.awt.Color white>"->"arraywrite.r";
+    "arraywrite.r"->"load.r r1";
+    "load.r r1"->"load.r $r28";
+    "load.r $r28"->"virtualinvoke <Sprite: void set(int[],java.lang.Object[])>";
+    "virtualinvoke <Sprite: void set(int[],java.lang.Object[])>"->"load.r r0";
+    "load.r r0"->"fieldget <QuizShow: Shape[] questionGrid>";
+    "fieldget <QuizShow: Shape[] questionGrid>"->"push 5";
+    "push 5"->"arrayread.r";
+    "arrayread.r"->"push 6";
+    "push 6"->"newarray";
+    "newarray"->"store.r r1";
+    "store.r r1"->"load.r r1";
+    "load.r r1"->"push 1";
+    "push 1"->"push 1";
+    "push 1"->"arraywrite.i";
+    "arraywrite.i"->"load.r r1";
+    "load.r r1"->"push 2";
+    "push 2"->"push 3";
+    "push 3"->"arraywrite.i";
+    "arraywrite.i"->"load.r r1";
+    "load.r r1"->"push 3";
+    "push 3"->"push 7";
+    "push 7"->"arraywrite.i";
+    "arraywrite.i"->"load.r r1";
+    "load.r r1"->"push 4";
+    "push 4"->"push 13";
+    "push 13"->"arraywrite.i";
+    "arraywrite.i"->"load.r r1";
+    "load.r r1"->"push 5";
+    "push 5"->"push 14";
+    "push 14"->"arraywrite.i";
+    "arraywrite.i"->"push 6";
+    "push 6"->"newarray";
+    "newarray"->"store.r $r28";
+    "store.r $r28"->"load.r $r28";
+    "load.r $r28"->"push 0";
+    "push 0"->"new java.lang.Integer";
+    "new java.lang.Integer"->"dup1.r";
+    "push 200"
+    "dup1.r"->"push 200";
+    "push 200"->"specialinvoke <java.lang.Integer: void <init>(int)>";
+    "specialinvoke <java.lang.Integer: void <init>(int)>"->"arraywrite.r";
+    "arraywrite.r"->"load.r $r28";
+    "load.r $r28"->"push 1";
+    "push 1"->"new java.lang.Integer";
+    "new java.lang.Integer"->"dup1.r";
+    "dup1.r"->"push 95";
+    "push 95"->"specialinvoke <java.lang.Integer: void <init>(int)>";
+    "specialinvoke <java.lang.Integer: void <init>(int)>"->"arraywrite.r";
+    "arraywrite.r"->"load.r $r28";
+    "load.r $r28"->"push 2";
+    "push 2"->"new java.lang.Integer";
+    "new java.lang.Integer"->"dup1.r";
+    "dup1.r"->"push 80";
+    "push 80"->"specialinvoke <java.lang.Integer: void <init>(int)>";
+    "specialinvoke <java.lang.Integer: void <init>(int)>"->"arraywrite.r";
+    "arraywrite.r"->"load.r $r28";
+    "load.r $r28"->"push 3";
+    "push 3"->"staticget <Sprite: java.lang.Boolean TRUE>";
+    "staticget <Sprite: java.lang.Boolean TRUE>"->"arraywrite.r";
+    "arraywrite.r"->"load.r $r28";
+    "load.r $r28"->"push 4";
+    "push 4"->"staticget <Shape: java.lang.Integer LINE>";
+    "staticget <Shape: java.lang.Integer LINE>"->"arraywrite.r";
+    "arraywrite.r"->"load.r $r28";
+    "load.r $r28"->"push 5";
+    "push 5"->"staticget <java.awt.Color: java.awt.Color white>";
+    "staticget <java.awt.Color: java.awt.Color white>"->"arraywrite.r";
+    "arraywrite.r"->"load.r r1";
+    "load.r r1"->"load.r $r28";
+    "load.r $r28"->"virtualinvoke <Sprite: void set(int[],java.lang.Object[])>";
+    "virtualinvoke <Sprite: void set(int[],java.lang.Object[])>"->"load.r r0";
+    "load.r r0"->"push 8";
+    "push 8"->"newarray";
+    "fieldput <QuizShow: Shape[] answerGrid>"
+    "newarray"->"fieldput <QuizShow: Shape[] answerGrid>";
+    "fieldput <QuizShow: Shape[] answerGrid>"->"push 0";
+    "push 0"->"store.i $r115";
+    "store.i $r115"->"goto load.i $r115";
+    "goto load.i $r115"->"load.i $r115";
+    "load.i $r115"->"load.r r0";
+    "fieldget <QuizShow: Shape[] answerGrid>"
+    "load.r r0"->"fieldget <QuizShow: Shape[] answerGrid>";
+    "fieldget <QuizShow: Shape[] answerGrid>"->"arraylength";
+    "arraylength"->"ifcmplt.i load.r r0";
+    "ifcmplt.i load.r r0"->"load.r r0";
+    "new java.util.Random"
+    "load.r r0"->"new java.util.Random";
+    "new java.util.Random"->"dup1.r";
+    "specialinvoke <java.util.Random: void <init>()>"
+    "dup1.r"->"specialinvoke <java.util.Random: void <init>()>";
+    "fieldput <QuizShow: java.util.Random random>"
+    "specialinvoke <java.util.Random: void <init>()>"->"fieldput <QuizShow: java.util.Random random>";
+    "fieldput <QuizShow: java.util.Random random>"->"load.r r0";
+    "load.r r0"->"push 4";
+    "push 4"->"newarray";
+    "fieldput <QuizShow: int[] scores>"
+    "newarray"->"fieldput <QuizShow: int[] scores>";
+    "fieldput <QuizShow: int[] scores>"->"load.r r0";
+    "load.r r0"->"push 2";
+    "push 2"->"newarray";
+    "fieldput <QuizShow: Text[] scoreScreenText>"
+    "newarray"->"fieldput <QuizShow: Text[] scoreScreenText>";
+    "fieldput <QuizShow: Text[] scoreScreenText>"->"load.r r0";
+    "fieldget <QuizShow: Text[] scoreScreenText>"
+    "load.r r0"->"fieldget <QuizShow: Text[] scoreScreenText>";
+    "fieldget <QuizShow: Text[] scoreScreenText>"->"push 0";
+    "push 0"->"new Text";
+    "new Text"->"dup1.r";
+    "dup1.r"->"specialinvoke <Text: void <init>()>";
+    "specialinvoke <Text: void <init>()>"->"arraywrite.r";
+    "arraywrite.r"->"load.r r0";
+    "load.r r0"->"fieldget <QuizShow: Text[] scoreScreenText>";
+    "fieldget <QuizShow: Text[] scoreScreenText>"->"push 0";
+    "push 0"->"arrayread.r";
+    "arrayread.r"->"push 6";
+    "push 6"->"newarray";
+    "newarray"->"store.r r1";
+    "store.r r1"->"load.r r1";
+    "load.r r1"->"push 1";
+    "push 1"->"push 1";
+    "push 1"->"arraywrite.i";
+    "arraywrite.i"->"load.r r1";
+    "load.r r1"->"push 2";
+    "push 2"->"push 2";
+    "push 2"->"arraywrite.i";
+    "arraywrite.i"->"load.r r1";
+    "load.r r1"->"push 3";
+    "push 3"->"push 7";
+    "push 7"->"arraywrite.i";
+    "arraywrite.i"->"load.r r1";
+    "load.r r1"->"push 4";
+    "push 4"->"push 13";
+    "push 13"->"arraywrite.i";
+    "arraywrite.i"->"load.r r1";
+    "load.r r1"->"push 5";
+    "push 5"->"push 14";
+    "push 14"->"arraywrite.i";
+    "arraywrite.i"->"push 6";
+    "push 6"->"newarray";
+    "newarray"->"store.r $r28";
+    "store.r $r28"->"load.r $r28";
+    "load.r $r28"->"push 0";
+    "push 0"->"new java.lang.Integer";
+    "new java.lang.Integer"->"dup1.r";
+    "dup1.r"->"push 20";
+    "push 20"->"specialinvoke <java.lang.Integer: void <init>(int)>";
+    "specialinvoke <java.lang.Integer: void <init>(int)>"->"arraywrite.r";
+    "arraywrite.r"->"load.r $r28";
+    "load.r $r28"->"push 1";
+    "push 1"->"new java.lang.Integer";
+    "new java.lang.Integer"->"dup1.r";
+    "push 60"
+    "dup1.r"->"push 60";
+    "push 60"->"specialinvoke <java.lang.Integer: void <init>(int)>";
+    "specialinvoke <java.lang.Integer: void <init>(int)>"->"arraywrite.r";
+    "arraywrite.r"->"load.r $r28";
+    "load.r $r28"->"push 2";
+    "push 2"->"new java.lang.Integer";
+    "new java.lang.Integer"->"dup1.r";
+    "push 180"
+    "dup1.r"->"push 180";
+    "push 180"->"specialinvoke <java.lang.Integer: void <init>(int)>";
+    "specialinvoke <java.lang.Integer: void <init>(int)>"->"arraywrite.r";
+    "arraywrite.r"->"load.r $r28";
+    "load.r $r28"->"push 3";
+    "push 3"->"staticget <Sprite: java.lang.Boolean TRUE>";
+    "staticget <Sprite: java.lang.Boolean TRUE>"->"arraywrite.r";
+    "arraywrite.r"->"load.r $r28";
+    "load.r $r28"->"push 4";
+    "push \"Player\""
+    "push 4"->"push \"Player\"";
+    "push \"Player\""->"arraywrite.r";
+    "arraywrite.r"->"load.r $r28";
+    "load.r $r28"->"push 5";
+    "push 5"->"staticget <Text: java.awt.Font PT20>";
+    "staticget <Text: java.awt.Font PT20>"->"arraywrite.r";
+    "arraywrite.r"->"load.r r1";
+    "load.r r1"->"load.r $r28";
+    "load.r $r28"->"virtualinvoke <Sprite: void set(int[],java.lang.Object[])>";
+    "virtualinvoke <Sprite: void set(int[],java.lang.Object[])>"->"load.r r0";
+    "load.r r0"->"fieldget <QuizShow: Text[] scoreScreenText>";
+    "fieldget <QuizShow: Text[] scoreScreenText>"->"push 1";
+    "push 1"->"new Text";
+    "new Text"->"dup1.r";
+    "dup1.r"->"specialinvoke <Text: void <init>()>";
+    "specialinvoke <Text: void <init>()>"->"arraywrite.r";
+    "arraywrite.r"->"load.r r0";
+    "load.r r0"->"fieldget <QuizShow: Text[] scoreScreenText>";
+    "fieldget <QuizShow: Text[] scoreScreenText>"->"push 1";
+    "push 1"->"arrayread.r";
+    "arrayread.r"->"push 7";
+    "push 7"->"newarray";
+    "newarray"->"store.r r1";
+    "store.r r1"->"load.r r1";
+    "load.r r1"->"push 1";
+    "push 1"->"push 1";
+    "push 1"->"arraywrite.i";
+    "arraywrite.i"->"load.r r1";
+    "load.r r1"->"push 2";
+    "push 2"->"push 2";
+    "push 2"->"arraywrite.i";
+    "arraywrite.i"->"load.r r1";
+    "load.r r1"->"push 3";
+    "push 3"->"push 7";
+    "push 7"->"arraywrite.i";
+    "arraywrite.i"->"load.r r1";
+    "load.r r1"->"push 4";
+    "push 4"->"push 13";
+    "push 13"->"arraywrite.i";
+    "arraywrite.i"->"load.r r1";
+    "load.r r1"->"push 5";
+    "push 5"->"push 14";
+    "push 14"->"arraywrite.i";
+    "arraywrite.i"->"load.r r1";
+    "load.r r1"->"push 6";
+    "push 6"->"push 15";
+    "push 15"->"arraywrite.i";
+    "arraywrite.i"->"push 7";
+    "push 7"->"newarray";
+    "newarray"->"store.r $r28";
+    "store.r $r28"->"load.r $r28";
+    "load.r $r28"->"push 0";
+    "push 0"->"new java.lang.Integer";
+    "new java.lang.Integer"->"dup1.r";
+    "dup1.r"->"push 200";
+    "push 200"->"specialinvoke <java.lang.Integer: void <init>(int)>";
+    "specialinvoke <java.lang.Integer: void <init>(int)>"->"arraywrite.r";
+    "arraywrite.r"->"load.r $r28";
+    "load.r $r28"->"push 1";
+    "push 1"->"new java.lang.Integer";
+    "new java.lang.Integer"->"dup1.r";
+    "dup1.r"->"push 60";
+    "push 60"->"specialinvoke <java.lang.Integer: void <init>(int)>";
+    "specialinvoke <java.lang.Integer: void <init>(int)>"->"arraywrite.r";
+    "arraywrite.r"->"load.r $r28";
+    "load.r $r28"->"push 2";
+    "push 2"->"new java.lang.Integer";
+    "new java.lang.Integer"->"dup1.r";
+    "dup1.r"->"push 180";
+    "push 180"->"specialinvoke <java.lang.Integer: void <init>(int)>";
+    "specialinvoke <java.lang.Integer: void <init>(int)>"->"arraywrite.r";
+    "arraywrite.r"->"load.r $r28";
+    "load.r $r28"->"push 3";
+    "push 3"->"staticget <Sprite: java.lang.Boolean TRUE>";
+    "staticget <Sprite: java.lang.Boolean TRUE>"->"arraywrite.r";
+    "arraywrite.r"->"load.r $r28";
+    "load.r $r28"->"push 4";
+    "push \"Score\""
+    "push 4"->"push \"Score\"";
+    "push \"Score\""->"arraywrite.r";
+    "arraywrite.r"->"load.r $r28";
+    "load.r $r28"->"push 5";
+    "push 5"->"staticget <Text: java.awt.Font PT20>";
+    "staticget <Text: java.awt.Font PT20>"->"arraywrite.r";
+    "arraywrite.r"->"load.r $r28";
+    "load.r $r28"->"push 6";
+    "push 6"->"staticget <java.awt.Color: java.awt.Color red>";
+    "staticget <java.awt.Color: java.awt.Color red>"->"arraywrite.r";
+    "arraywrite.r"->"load.r r1";
+    "load.r r1"->"load.r $r28";
+    "load.r $r28"->"virtualinvoke <Sprite: void set(int[],java.lang.Object[])>";
+    "virtualinvoke <Sprite: void set(int[],java.lang.Object[])>"->"load.r r0";
+    "load.r r0"->"push 4";
+    "push 4"->"newarray";
+    "fieldput <QuizShow: Text[] nameText>"
+    "newarray"->"fieldput <QuizShow: Text[] nameText>";
+    "fieldput <QuizShow: Text[] nameText>"->"push 0";
+    "push 0"->"store.i $r113";
+    "store.i $r113"->"goto load.i $r113";
+    "goto load.i $r113"->"load.i $r113";
+    "load.i $r113"->"load.r r0";
+    "fieldget <QuizShow: Text[] nameText>"
+    "load.r r0"->"fieldget <QuizShow: Text[] nameText>";
+    "fieldget <QuizShow: Text[] nameText>"->"arraylength";
+    "arraylength"->"ifcmplt.i load.r r0";
+    "ifcmplt.i load.r r0"->"load.r r0";
+    "load.r r0"->"push 4";
+    "push 4"->"newarray";
+    "fieldput <QuizShow: Text[] scoreText>"
+    "newarray"->"fieldput <QuizShow: Text[] scoreText>";
+    "fieldput <QuizShow: Text[] scoreText>"->"push 0";
+    "push 0"->"store.i $r113";
+    "store.i $r113"->"goto load.i $r113";
+    "goto load.i $r113"->"load.i $r113";
+    "load.i $r113"->"load.r r0";
+    "fieldget <QuizShow: Text[] scoreText>"
+    "load.r r0"->"fieldget <QuizShow: Text[] scoreText>";
+    "fieldget <QuizShow: Text[] scoreText>"->"arraylength";
+    "arraylength"->"ifcmplt.i load.r r0";
+    "ifcmplt.i load.r r0"->"load.r r0";
+    "load.r r0"->"new java.util.Vector";
+    "new java.util.Vector"->"dup1.r";
+    "dup1.r"->"push 3";
+    "specialinvoke <java.util.Vector: void <init>(int)>"
+    "push 3"->"specialinvoke <java.util.Vector: void <init>(int)>";
+    "fieldput <QuizShow: java.util.Vector startGame>"
+    "specialinvoke <java.util.Vector: void <init>(int)>"->"fieldput <QuizShow: java.util.Vector startGame>";
+    "fieldput <QuizShow: java.util.Vector startGame>"->"load.r r0";
+    "fieldget <QuizShow: java.util.Vector startGame>"
+    "load.r r0"->"fieldget <QuizShow: java.util.Vector startGame>";
+    "push \"Let\'s get ready to rumble!\""
+    "fieldget <QuizShow: java.util.Vector startGame>"->"push \"Let\'s get ready to rumble!\"";
+    "virtualinvoke <java.util.Vector: void addElement(java.lang.Object)>"
+    "push \"Let\'s get ready to rumble!\""->"virtualinvoke <java.util.Vector: void addElement(java.lang.Object)>";
+    "virtualinvoke <java.util.Vector: void addElement(java.lang.Object)>"->"load.r r0";
+    "load.r r0"->"fieldget <QuizShow: java.util.Vector startGame>";
+    "push \"Are you ready?\""
+    "fieldget <QuizShow: java.util.Vector startGame>"->"push \"Are you ready?\"";
+    "push \"Are you ready?\""->"virtualinvoke <java.util.Vector: void addElement(java.lang.Object)>";
+    "virtualinvoke <java.util.Vector: void addElement(java.lang.Object)>"->"load.r r0";
+    "load.r r0"->"fieldget <QuizShow: java.util.Vector startGame>";
+    "push \"Welcome to Quiz Show!\""
+    "fieldget <QuizShow: java.util.Vector startGame>"->"push \"Welcome to Quiz Show!\"";
+    "push \"Welcome to Quiz Show!\""->"virtualinvoke <java.util.Vector: void addElement(java.lang.Object)>";
+    "virtualinvoke <java.util.Vector: void addElement(java.lang.Object)>"->"load.r r0";
+    "load.r r0"->"new java.util.Vector";
+    "new java.util.Vector"->"dup1.r";
+    "dup1.r"->"push 3";
+    "push 3"->"specialinvoke <java.util.Vector: void <init>(int)>";
+    "fieldput <QuizShow: java.util.Vector buzzedIn>"
+    "specialinvoke <java.util.Vector: void <init>(int)>"->"fieldput <QuizShow: java.util.Vector buzzedIn>";
+    "fieldput <QuizShow: java.util.Vector buzzedIn>"->"load.r r0";
+    "fieldget <QuizShow: java.util.Vector buzzedIn>"
+    "load.r r0"->"fieldget <QuizShow: java.util.Vector buzzedIn>";
+    "push \"NAME can use the buzzer!\""
+    "fieldget <QuizShow: java.util.Vector buzzedIn>"->"push \"NAME can use the buzzer!\"";
+    "push \"NAME can use the buzzer!\""->"virtualinvoke <java.util.Vector: void addElement(java.lang.Object)>";
+    "virtualinvoke <java.util.Vector: void addElement(java.lang.Object)>"->"load.r r0";
+    "load.r r0"->"fieldget <QuizShow: java.util.Vector buzzedIn>";
+    "push \"NAME is the quickest.\""
+    "fieldget <QuizShow: java.util.Vector buzzedIn>"->"push \"NAME is the quickest.\"";
+    "push \"NAME is the quickest.\""->"virtualinvoke <java.util.Vector: void addElement(java.lang.Object)>";
+    "virtualinvoke <java.util.Vector: void addElement(java.lang.Object)>"->"load.r r0";
+    "load.r r0"->"fieldget <QuizShow: java.util.Vector buzzedIn>";
+    "push \"NAME get\'s the jump...\""
+    "fieldget <QuizShow: java.util.Vector buzzedIn>"->"push \"NAME get\'s the jump...\"";
+    "push \"NAME get\'s the jump...\""->"virtualinvoke <java.util.Vector: void addElement(java.lang.Object)>";
+    "virtualinvoke <java.util.Vector: void addElement(java.lang.Object)>"->"load.r r0";
+    "load.r r0"->"new java.util.Vector";
+    "new java.util.Vector"->"dup1.r";
+    "dup1.r"->"push 3";
+    "push 3"->"specialinvoke <java.util.Vector: void <init>(int)>";
+    "fieldput <QuizShow: java.util.Vector checkAnswer>"
+    "specialinvoke <java.util.Vector: void <init>(int)>"->"fieldput <QuizShow: java.util.Vector checkAnswer>";
+    "fieldput <QuizShow: java.util.Vector checkAnswer>"->"load.r r0";
+    "fieldget <QuizShow: java.util.Vector checkAnswer>"
+    "load.r r0"->"fieldget <QuizShow: java.util.Vector checkAnswer>";
+    "push \"Survey says...\""
+    "fieldget <QuizShow: java.util.Vector checkAnswer>"->"push \"Survey says...\"";
+    "push \"Survey says...\""->"virtualinvoke <java.util.Vector: void addElement(java.lang.Object)>";
+    "virtualinvoke <java.util.Vector: void addElement(java.lang.Object)>"->"load.r r0";
+    "load.r r0"->"fieldget <QuizShow: java.util.Vector checkAnswer>";
+    "push \"The results are in.\""
+    "fieldget <QuizShow: java.util.Vector checkAnswer>"->"push \"The results are in.\"";
+    "push \"The results are in.\""->"virtualinvoke <java.util.Vector: void addElement(java.lang.Object)>";
+    "virtualinvoke <java.util.Vector: void addElement(java.lang.Object)>"->"load.r r0";
+    "load.r r0"->"fieldget <QuizShow: java.util.Vector checkAnswer>";
+    "push \"What say you jury?\""
+    "fieldget <QuizShow: java.util.Vector checkAnswer>"->"push \"What say you jury?\"";
+    "push \"What say you jury?\""->"virtualinvoke <java.util.Vector: void addElement(java.lang.Object)>";
+    "virtualinvoke <java.util.Vector: void addElement(java.lang.Object)>"->"load.r r0";
+    "load.r r0"->"new java.util.Vector";
+    "new java.util.Vector"->"dup1.r";
+    "dup1.r"->"push 3";
+    "push 3"->"specialinvoke <java.util.Vector: void <init>(int)>";
+    "fieldput <QuizShow: java.util.Vector wrongAnswer>"
+    "specialinvoke <java.util.Vector: void <init>(int)>"->"fieldput <QuizShow: java.util.Vector wrongAnswer>";
+    "fieldput <QuizShow: java.util.Vector wrongAnswer>"->"load.r r0";
+    "fieldget <QuizShow: java.util.Vector wrongAnswer>"
+    "load.r r0"->"fieldget <QuizShow: java.util.Vector wrongAnswer>";
+    "push \"Oooh, not even close NAME...\""
+    "fieldget <QuizShow: java.util.Vector wrongAnswer>"->"push \"Oooh, not even close NAME...\"";
+    "push \"Oooh, not even close NAME...\""->"virtualinvoke <java.util.Vector: void addElement(java.lang.Object)>";
+    "virtualinvoke <java.util.Vector: void addElement(java.lang.Object)>"->"load.r r0";
+    "load.r r0"->"fieldget <QuizShow: java.util.Vector wrongAnswer>";
+    "push \"NAME, you must be kidding.\""
+    "fieldget <QuizShow: java.util.Vector wrongAnswer>"->"push \"NAME, you must be kidding.\"";
+    "push \"NAME, you must be kidding.\""->"virtualinvoke <java.util.Vector: void addElement(java.lang.Object)>";
+    "virtualinvoke <java.util.Vector: void addElement(java.lang.Object)>"->"load.r r0";
+    "load.r r0"->"fieldget <QuizShow: java.util.Vector wrongAnswer>";
+    "push \"Stop wasting my time NAME.\""
+    "fieldget <QuizShow: java.util.Vector wrongAnswer>"->"push \"Stop wasting my time NAME.\"";
+    "push \"Stop wasting my time NAME.\""->"virtualinvoke <java.util.Vector: void addElement(java.lang.Object)>";
+    "virtualinvoke <java.util.Vector: void addElement(java.lang.Object)>"->"load.r r0";
+    "load.r r0"->"new java.util.Vector";
+    "new java.util.Vector"->"dup1.r";
+    "dup1.r"->"push 3";
+    "push 3"->"specialinvoke <java.util.Vector: void <init>(int)>";
+    "fieldput <QuizShow: java.util.Vector rightAnswer>"
+    "specialinvoke <java.util.Vector: void <init>(int)>"->"fieldput <QuizShow: java.util.Vector rightAnswer>";
+    "fieldput <QuizShow: java.util.Vector rightAnswer>"->"load.r r0";
+    "fieldget <QuizShow: java.util.Vector rightAnswer>"
+    "load.r r0"->"fieldget <QuizShow: java.util.Vector rightAnswer>";
+    "push \"Look at the big brain on NAME!\""
+    "fieldget <QuizShow: java.util.Vector rightAnswer>"->"push \"Look at the big brain on NAME!\"";
+    "push \"Look at the big brain on NAME!\""->"virtualinvoke <java.util.Vector: void addElement(java.lang.Object)>";
+    "virtualinvoke <java.util.Vector: void addElement(java.lang.Object)>"->"load.r r0";
+    "load.r r0"->"fieldget <QuizShow: java.util.Vector rightAnswer>";
+    "push \"Gee, you\'re so smart NAME.\""
+    "fieldget <QuizShow: java.util.Vector rightAnswer>"->"push \"Gee, you\'re so smart NAME.\"";
+    "push \"Gee, you\'re so smart NAME.\""->"virtualinvoke <java.util.Vector: void addElement(java.lang.Object)>";
+    "virtualinvoke <java.util.Vector: void addElement(java.lang.Object)>"->"load.r r0";
+    "load.r r0"->"fieldget <QuizShow: java.util.Vector rightAnswer>";
+    "push \"How do you do it NAME?\""
+    "fieldget <QuizShow: java.util.Vector rightAnswer>"->"push \"How do you do it NAME?\"";
+    "push \"How do you do it NAME?\""->"virtualinvoke <java.util.Vector: void addElement(java.lang.Object)>";
+    "virtualinvoke <java.util.Vector: void addElement(java.lang.Object)>"->"load.r r0";
+    "load.r r0"->"new java.util.Vector";
+    "new java.util.Vector"->"dup1.r";
+    "dup1.r"->"push 3";
+    "push 3"->"specialinvoke <java.util.Vector: void <init>(int)>";
+    "fieldput <QuizShow: java.util.Vector noOneBuzzed>"
+    "specialinvoke <java.util.Vector: void <init>(int)>"->"fieldput <QuizShow: java.util.Vector noOneBuzzed>";
+    "fieldput <QuizShow: java.util.Vector noOneBuzzed>"->"load.r r0";
+    "fieldget <QuizShow: java.util.Vector noOneBuzzed>"
+    "load.r r0"->"fieldget <QuizShow: java.util.Vector noOneBuzzed>";
+    "push \"Are we all still awake?\""
+    "fieldget <QuizShow: java.util.Vector noOneBuzzed>"->"push \"Are we all still awake?\"";
+    "push \"Are we all still awake?\""->"virtualinvoke <java.util.Vector: void addElement(java.lang.Object)>";
+    "virtualinvoke <java.util.Vector: void addElement(java.lang.Object)>"->"load.r r0";
+    "load.r r0"->"fieldget <QuizShow: java.util.Vector noOneBuzzed>";
+    "push \"Duh, hello?\""
+    "fieldget <QuizShow: java.util.Vector noOneBuzzed>"->"push \"Duh, hello?\"";
+    "push \"Duh, hello?\""->"virtualinvoke <java.util.Vector: void addElement(java.lang.Object)>";
+    "virtualinvoke <java.util.Vector: void addElement(java.lang.Object)>"->"load.r r0";
+    "load.r r0"->"fieldget <QuizShow: java.util.Vector noOneBuzzed>";
+    "push \"Stop picking your noses!\""
+    "fieldget <QuizShow: java.util.Vector noOneBuzzed>"->"push \"Stop picking your noses!\"";
+    "push \"Stop picking your noses!\""->"virtualinvoke <java.util.Vector: void addElement(java.lang.Object)>";
+    "virtualinvoke <java.util.Vector: void addElement(java.lang.Object)>"->"load.r r0";
+    "load.r r0"->"new java.util.Vector";
+    "new java.util.Vector"->"dup1.r";
+    "dup1.r"->"push 3";
+    "push 3"->"specialinvoke <java.util.Vector: void <init>(int)>";
+    "fieldput <QuizShow: java.util.Vector outOfTime>"
+    "specialinvoke <java.util.Vector: void <init>(int)>"->"fieldput <QuizShow: java.util.Vector outOfTime>";
+    "fieldput <QuizShow: java.util.Vector outOfTime>"->"load.r r0";
+    "fieldget <QuizShow: java.util.Vector outOfTime>"
+    "load.r r0"->"fieldget <QuizShow: java.util.Vector outOfTime>";
+    "push \"Way to be on the ball NAME.\""
+    "fieldget <QuizShow: java.util.Vector outOfTime>"->"push \"Way to be on the ball NAME.\"";
+    "push \"Way to be on the ball NAME.\""->"virtualinvoke <java.util.Vector: void addElement(java.lang.Object)>";
+    "virtualinvoke <java.util.Vector: void addElement(java.lang.Object)>"->"load.r r0";
+    "load.r r0"->"fieldget <QuizShow: java.util.Vector outOfTime>";
+    "push \"NAME needs a pill.\""
+    "fieldget <QuizShow: java.util.Vector outOfTime>"->"push \"NAME needs a pill.\"";
+    "push \"NAME needs a pill.\""->"virtualinvoke <java.util.Vector: void addElement(java.lang.Object)>";
+    "virtualinvoke <java.util.Vector: void addElement(java.lang.Object)>"->"load.r r0";
+    "load.r r0"->"fieldget <QuizShow: java.util.Vector outOfTime>";
+    "push \"Somebody wake up NAME\""
+    "fieldget <QuizShow: java.util.Vector outOfTime>"->"push \"Somebody wake up NAME\"";
+    "push \"Somebody wake up NAME\""->"virtualinvoke <java.util.Vector: void addElement(java.lang.Object)>";
+    "virtualinvoke <java.util.Vector: void addElement(java.lang.Object)>"->"load.r r0";
+    "load.r r0"->"new java.util.Vector";
+    "new java.util.Vector"->"dup1.r";
+    "dup1.r"->"push 3";
+    "push 3"->"specialinvoke <java.util.Vector: void <init>(int)>";
+    "fieldput <QuizShow: java.util.Vector gameOver>"
+    "specialinvoke <java.util.Vector: void <init>(int)>"->"fieldput <QuizShow: java.util.Vector gameOver>";
+    "fieldput <QuizShow: java.util.Vector gameOver>"->"load.r r0";
+    "fieldget <QuizShow: java.util.Vector gameOver>"
+    "load.r r0"->"fieldget <QuizShow: java.util.Vector gameOver>";
+    "push \"Well, uh, that was fun...\""
+    "fieldget <QuizShow: java.util.Vector gameOver>"->"push \"Well, uh, that was fun...\"";
+    "push \"Well, uh, that was fun...\""->"virtualinvoke <java.util.Vector: void addElement(java.lang.Object)>";
+    "virtualinvoke <java.util.Vector: void addElement(java.lang.Object)>"->"load.r r0";
+    "load.r r0"->"fieldget <QuizShow: java.util.Vector gameOver>";
+    "push \"That\'s all she wrote.\""
+    "fieldget <QuizShow: java.util.Vector gameOver>"->"push \"That\'s all she wrote.\"";
+    "push \"That\'s all she wrote.\""->"virtualinvoke <java.util.Vector: void addElement(java.lang.Object)>";
+    "virtualinvoke <java.util.Vector: void addElement(java.lang.Object)>"->"load.r r0";
+    "load.r r0"->"fieldget <QuizShow: java.util.Vector gameOver>";
+    "push \"The fat lady has sung...\""
+    "fieldget <QuizShow: java.util.Vector gameOver>"->"push \"The fat lady has sung...\"";
+    "push \"The fat lady has sung...\""->"virtualinvoke <java.util.Vector: void addElement(java.lang.Object)>";
+    "virtualinvoke <java.util.Vector: void addElement(java.lang.Object)>"->"load.r r0";
+    "load.r r0"->"new java.util.Vector";
+    "new java.util.Vector"->"dup1.r";
+    "dup1.r"->"push 3";
+    "push 3"->"specialinvoke <java.util.Vector: void <init>(int)>";
+    "fieldput <QuizShow: java.util.Vector winner>"
+    "specialinvoke <java.util.Vector: void <init>(int)>"->"fieldput <QuizShow: java.util.Vector winner>";
+    "fieldput <QuizShow: java.util.Vector winner>"->"load.r r0";
+    "fieldget <QuizShow: java.util.Vector winner>"
+    "load.r r0"->"fieldget <QuizShow: java.util.Vector winner>";
+    "push \"NAME is the champion!\""
+    "fieldget <QuizShow: java.util.Vector winner>"->"push \"NAME is the champion!\"";
+    "push \"NAME is the champion!\""->"virtualinvoke <java.util.Vector: void addElement(java.lang.Object)>";
+    "virtualinvoke <java.util.Vector: void addElement(java.lang.Object)>"->"load.r r0";
+    "load.r r0"->"fieldget <QuizShow: java.util.Vector winner>";
+    "push \"NAME rules the world!\""
+    "fieldget <QuizShow: java.util.Vector winner>"->"push \"NAME rules the world!\"";
+    "push \"NAME rules the world!\""->"virtualinvoke <java.util.Vector: void addElement(java.lang.Object)>";
+    "virtualinvoke <java.util.Vector: void addElement(java.lang.Object)>"->"load.r r0";
+    "load.r r0"->"fieldget <QuizShow: java.util.Vector winner>";
+    "push \"Bow to NAME!\""
+    "fieldget <QuizShow: java.util.Vector winner>"->"push \"Bow to NAME!\"";
+    "push \"Bow to NAME!\""->"virtualinvoke <java.util.Vector: void addElement(java.lang.Object)>";
+    "return"
+    "virtualinvoke <java.util.Vector: void addElement(java.lang.Object)>"->"return";
+    "ifcmplt.i load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <QuizShow: Text[] scoreText>";
+    "fieldget <QuizShow: Text[] scoreText>"->"load.i $r113";
+    "load.i $r113"->"new Text";
+    "new Text"->"dup1.r";
+    "dup1.r"->"specialinvoke <Text: void <init>()>";
+    "specialinvoke <Text: void <init>()>"->"arraywrite.r";
+    "arraywrite.r"->"load.r r0";
+    "load.r r0"->"fieldget <QuizShow: Text[] scoreText>";
+    "fieldget <QuizShow: Text[] scoreText>"->"load.i $r113";
+    "load.i $r113"->"arrayread.r";
+    "arrayread.r"->"push 4";
+    "push 4"->"newarray";
+    "newarray"->"store.r r1";
+    "store.r r1"->"load.r r1";
+    "load.r r1"->"push 1";
+    "push 1"->"push 1";
+    "push 1"->"arraywrite.i";
+    "arraywrite.i"->"load.r r1";
+    "load.r r1"->"push 2";
+    "push 2"->"push 2";
+    "push 2"->"arraywrite.i";
+    "arraywrite.i"->"load.r r1";
+    "load.r r1"->"push 3";
+    "push 3"->"push 15";
+    "push 15"->"arraywrite.i";
+    "arraywrite.i"->"push 4";
+    "push 4"->"newarray";
+    "newarray"->"store.r $r28";
+    "store.r $r28"->"load.r $r28";
+    "load.r $r28"->"push 0";
+    "push 0"->"new java.lang.Integer";
+    "new java.lang.Integer"->"dup1.r";
+    "dup1.r"->"push 200";
+    "push 200"->"specialinvoke <java.lang.Integer: void <init>(int)>";
+    "specialinvoke <java.lang.Integer: void <init>(int)>"->"arraywrite.r";
+    "arraywrite.r"->"load.r $r28";
+    "load.r $r28"->"push 1";
+    "push 1"->"new java.lang.Integer";
+    "new java.lang.Integer"->"dup1.r";
+    "dup1.r"->"load.i $r113";
+    "load.i $r113"->"push 20";
+    "mul.i"
+    "push 20"->"mul.i";
+    "mul.i"->"push 80";
+    "push 80"->"add.i";
+    "add.i"->"specialinvoke <java.lang.Integer: void <init>(int)>";
+    "specialinvoke <java.lang.Integer: void <init>(int)>"->"arraywrite.r";
+    "arraywrite.r"->"load.r $r28";
+    "load.r $r28"->"push 2";
+    "push 2"->"new java.lang.Integer";
+    "new java.lang.Integer"->"dup1.r";
+    "dup1.r"->"push 180";
+    "push 180"->"specialinvoke <java.lang.Integer: void <init>(int)>";
+    "specialinvoke <java.lang.Integer: void <init>(int)>"->"arraywrite.r";
+    "arraywrite.r"->"load.r $r28";
+    "load.r $r28"->"push 3";
+    "push 3"->"staticget <java.awt.Color: java.awt.Color red>";
+    "staticget <java.awt.Color: java.awt.Color red>"->"arraywrite.r";
+    "arraywrite.r"->"load.r r1";
+    "load.r r1"->"load.r $r28";
+    "load.r $r28"->"virtualinvoke <Sprite: void set(int[],java.lang.Object[])>";
+    "inc.i $r113 1"
+    "virtualinvoke <Sprite: void set(int[],java.lang.Object[])>"->"inc.i $r113 1";
+    "ifcmplt.i load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <QuizShow: Text[] nameText>";
+    "fieldget <QuizShow: Text[] nameText>"->"load.i $r113";
+    "load.i $r113"->"new Text";
+    "new Text"->"dup1.r";
+    "dup1.r"->"specialinvoke <Text: void <init>()>";
+    "specialinvoke <Text: void <init>()>"->"arraywrite.r";
+    "arraywrite.r"->"load.r r0";
+    "load.r r0"->"fieldget <QuizShow: Text[] nameText>";
+    "fieldget <QuizShow: Text[] nameText>"->"load.i $r113";
+    "load.i $r113"->"arrayread.r";
+    "arrayread.r"->"push 3";
+    "push 3"->"newarray";
+    "newarray"->"store.r r1";
+    "store.r r1"->"load.r r1";
+    "load.r r1"->"push 1";
+    "push 1"->"push 1";
+    "push 1"->"arraywrite.i";
+    "arraywrite.i"->"load.r r1";
+    "load.r r1"->"push 2";
+    "push 2"->"push 10";
+    "push 10"->"arraywrite.i";
+    "arraywrite.i"->"push 3";
+    "push 3"->"newarray";
+    "newarray"->"store.r $r28";
+    "store.r $r28"->"load.r $r28";
+    "load.r $r28"->"push 0";
+    "push 0"->"new java.lang.Integer";
+    "new java.lang.Integer"->"dup1.r";
+    "dup1.r"->"push 40";
+    "push 40"->"specialinvoke <java.lang.Integer: void <init>(int)>";
+    "specialinvoke <java.lang.Integer: void <init>(int)>"->"arraywrite.r";
+    "arraywrite.r"->"load.r $r28";
+    "load.r $r28"->"push 1";
+    "push 1"->"new java.lang.Integer";
+    "new java.lang.Integer"->"dup1.r";
+    "dup1.r"->"load.i $r113";
+    "load.i $r113"->"push 20";
+    "push 20"->"mul.i";
+    "mul.i"->"push 80";
+    "push 80"->"add.i";
+    "add.i"->"specialinvoke <java.lang.Integer: void <init>(int)>";
+    "specialinvoke <java.lang.Integer: void <init>(int)>"->"arraywrite.r";
+    "arraywrite.r"->"load.r $r28";
+    "load.r $r28"->"push 2";
+    "push 2"->"staticget <Sprite: java.lang.Integer WEST>";
+    "staticget <Sprite: java.lang.Integer WEST>"->"arraywrite.r";
+    "arraywrite.r"->"load.r r1";
+    "load.r r1"->"load.r $r28";
+    "load.r $r28"->"virtualinvoke <Sprite: void set(int[],java.lang.Object[])>";
+    "virtualinvoke <Sprite: void set(int[],java.lang.Object[])>"->"inc.i $r113 1";
+    "ifcmplt.i load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <QuizShow: Shape[] answerGrid>";
+    "fieldget <QuizShow: Shape[] answerGrid>"->"load.i $r115";
+    "load.i $r115"->"new Shape";
+    "new Shape"->"dup1.r";
+    "dup1.r"->"specialinvoke <Shape: void <init>()>";
+    "specialinvoke <Shape: void <init>()>"->"arraywrite.r";
+    "arraywrite.r"->"load.r r0";
+    "load.r r0"->"fieldget <QuizShow: Shape[] answerGrid>";
+    "fieldget <QuizShow: Shape[] answerGrid>"->"load.i $r115";
+    "load.i $r115"->"arrayread.r";
+    "store.r $r113"
+    "arrayread.r"->"store.r $r113";
+    "store.r $r113"->"push 6";
+    "push 6"->"newarray";
+    "newarray"->"store.r r1";
+    "store.r r1"->"load.r r1";
+    "load.r r1"->"push 1";
+    "push 1"->"push 1";
+    "push 1"->"arraywrite.i";
+    "arraywrite.i"->"load.r r1";
+    "load.r r1"->"push 2";
+    "push 2"->"push 2";
+    "push 2"->"arraywrite.i";
+    "arraywrite.i"->"load.r r1";
+    "load.r r1"->"push 3";
+    "push 3"->"push 3";
+    "push 3"->"arraywrite.i";
+    "arraywrite.i"->"load.r r1";
+    "load.r r1"->"push 4";
+    "push 4"->"push 13";
+    "push 13"->"arraywrite.i";
+    "arraywrite.i"->"load.r r1";
+    "load.r r1"->"push 5";
+    "push 5"->"push 14";
+    "push 14"->"arraywrite.i";
+    "arraywrite.i"->"push 6";
+    "push 6"->"newarray";
+    "newarray"->"store.r $r28";
+    "store.r $r28"->"new java.lang.Integer";
+    "store.r $r116"
+    "new java.lang.Integer"->"store.r $r116";
+    "store.r $r116"->"load.i $r115";
+    "load.i $r115"->"push 2";
+    "rem.i"
+    "push 2"->"rem.i";
+    "ifne push 200"
+    "rem.i"->"ifne push 200";
+    "ifne push 200"->"push 20";
+    "store.s i68"
+    "push 20"->"store.s i68";
+    "goto load.r $r116"
+    "store.s i68"->"goto load.r $r116";
+    "load.r $r116"
+    "goto load.r $r116"->"load.r $r116";
+    "load.s i68"
+    "load.r $r116"->"load.s i68";
+    "load.s i68"->"specialinvoke <java.lang.Integer: void <init>(int)>";
+    "specialinvoke <java.lang.Integer: void <init>(int)>"->"load.r $r28";
+    "load.r $r28"->"push 0";
+    "push 0"->"load.r $r116";
+    "load.r $r116"->"arraywrite.r";
+    "arraywrite.r"->"load.r $r28";
+    "load.r $r28"->"push 1";
+    "push 1"->"new java.lang.Integer";
+    "new java.lang.Integer"->"dup1.r";
+    "dup1.r"->"load.i $r115";
+    "load.i $r115"->"push 2";
+    "push 2"->"div.i";
+    "div.i"->"push 20";
+    "push 20"->"mul.i";
+    "mul.i"->"push 95";
+    "push 95"->"add.i";
+    "add.i"->"specialinvoke <java.lang.Integer: void <init>(int)>";
+    "specialinvoke <java.lang.Integer: void <init>(int)>"->"arraywrite.r";
+    "arraywrite.r"->"new java.lang.Integer";
+    "new java.lang.Integer"->"store.r $r116";
+    "store.r $r116"->"load.i $r115";
+    "load.i $r115"->"push 2";
+    "push 2"->"rem.i";
+    "ifne push 175"
+    "rem.i"->"ifne push 175";
+    "ifne push 175"->"push 180";
+    "push 180"->"store.s i68";
+    "store.s i68"->"goto load.r $r116";
+    "goto load.r $r116"->"load.r $r116";
+    "load.r $r116"->"load.s i68";
+    "load.s i68"->"specialinvoke <java.lang.Integer: void <init>(int)>";
+    "specialinvoke <java.lang.Integer: void <init>(int)>"->"load.r $r28";
+    "load.r $r28"->"push 2";
+    "push 2"->"load.r $r116";
+    "load.r $r116"->"arraywrite.r";
+    "arraywrite.r"->"load.r $r28";
+    "load.r $r28"->"push 3";
+    "push 3"->"new java.lang.Integer";
+    "new java.lang.Integer"->"dup1.r";
+    "dup1.r"->"push 20";
+    "push 20"->"specialinvoke <java.lang.Integer: void <init>(int)>";
+    "specialinvoke <java.lang.Integer: void <init>(int)>"->"arraywrite.r";
+    "arraywrite.r"->"load.r $r28";
+    "load.r $r28"->"push 4";
+    "push 4"->"staticget <Shape: java.lang.Integer RECTANGLE>";
+    "staticget <Shape: java.lang.Integer RECTANGLE>"->"arraywrite.r";
+    "arraywrite.r"->"load.r $r28";
+    "load.r $r28"->"push 5";
+    "staticget <java.awt.Color: java.awt.Color blue>"
+    "push 5"->"staticget <java.awt.Color: java.awt.Color blue>";
+    "staticget <java.awt.Color: java.awt.Color blue>"->"arraywrite.r";
+    "load.r $r113"
+    "arraywrite.r"->"load.r $r113";
+    "load.r $r113"->"load.r r1";
+    "load.r r1"->"load.r $r28";
+    "load.r $r28"->"virtualinvoke <Sprite: void set(int[],java.lang.Object[])>";
+    "inc.i $r115 1"
+    "virtualinvoke <Sprite: void set(int[],java.lang.Object[])>"->"inc.i $r115 1";
+    "ifne push 175"->"push 175";
+    "push 175"->"store.s i68";
+    "ifne push 200"->"push 200";
+    "push 200"->"store.s i68";
+    "ifcmplt.i load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <QuizShow: Shape[] questionGrid>";
+    "fieldget <QuizShow: Shape[] questionGrid>"->"load.i r1";
+    "load.i r1"->"new Shape";
+    "new Shape"->"dup1.r";
+    "dup1.r"->"specialinvoke <Shape: void <init>()>";
+    "specialinvoke <Shape: void <init>()>"->"arraywrite.r";
+    "inc.i r1 1"
+    "arraywrite.r"->"inc.i r1 1";
+    "ifcmplt.i load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <QuizShow: Shape[] timerArc>";
+    "fieldget <QuizShow: Shape[] timerArc>"->"load.i $r115";
+    "load.i $r115"->"new Shape";
+    "new Shape"->"dup1.r";
+    "dup1.r"->"specialinvoke <Shape: void <init>()>";
+    "specialinvoke <Shape: void <init>()>"->"arraywrite.r";
+    "arraywrite.r"->"load.r r0";
+    "load.r r0"->"fieldget <QuizShow: Shape[] timerArc>";
+    "fieldget <QuizShow: Shape[] timerArc>"->"load.i $r115";
+    "load.i $r115"->"arrayread.r";
+    "arrayread.r"->"store.r $r113";
+    "store.r $r113"->"push 8";
+    "push 8"->"newarray";
+    "newarray"->"store.r r1";
+    "store.r r1"->"load.r r1";
+    "load.r r1"->"push 1";
+    "push 1"->"push 1";
+    "push 1"->"arraywrite.i";
+    "arraywrite.i"->"load.r r1";
+    "load.r r1"->"push 2";
+    "push 2"->"push 2";
+    "push 2"->"arraywrite.i";
+    "arraywrite.i"->"load.r r1";
+    "load.r r1"->"push 3";
+    "push 3"->"push 3";
+    "push 3"->"arraywrite.i";
+    "arraywrite.i"->"load.r r1";
+    "load.r r1"->"push 4";
+    "push 4"->"push 7";
+    "push 7"->"arraywrite.i";
+    "arraywrite.i"->"load.r r1";
+    "load.r r1"->"push 5";
+    "push 5"->"push 13";
+    "push 13"->"arraywrite.i";
+    "arraywrite.i"->"load.r r1";
+    "load.r r1"->"push 6";
+    "push 6"->"push 14";
+    "push 14"->"arraywrite.i";
+    "arraywrite.i"->"load.r r1";
+    "load.r r1"->"push 7";
+    "push 7"->"push 15";
+    "push 15"->"arraywrite.i";
+    "arraywrite.i"->"push 8";
+    "push 8"->"newarray";
+    "newarray"->"store.r $r28";
+    "store.r $r28"->"load.r $r28";
+    "load.r $r28"->"push 0";
+    "push 0"->"new java.lang.Integer";
+    "new java.lang.Integer"->"dup1.r";
+    "push 335"
+    "dup1.r"->"push 335";
+    "push 335"->"specialinvoke <java.lang.Integer: void <init>(int)>";
+    "specialinvoke <java.lang.Integer: void <init>(int)>"->"arraywrite.r";
+    "arraywrite.r"->"load.r $r28";
+    "load.r $r28"->"push 1";
+    "push 1"->"new java.lang.Integer";
+    "new java.lang.Integer"->"dup1.r";
+    "dup1.r"->"push 0";
+    "push 0"->"specialinvoke <java.lang.Integer: void <init>(int)>";
+    "specialinvoke <java.lang.Integer: void <init>(int)>"->"arraywrite.r";
+    "arraywrite.r"->"load.r $r28";
+    "load.r $r28"->"push 2";
+    "push 2"->"new java.lang.Integer";
+    "new java.lang.Integer"->"dup1.r";
+    "dup1.r"->"push 40";
+    "push 40"->"specialinvoke <java.lang.Integer: void <init>(int)>";
+    "specialinvoke <java.lang.Integer: void <init>(int)>"->"arraywrite.r";
+    "arraywrite.r"->"load.r $r28";
+    "load.r $r28"->"push 3";
+    "push 3"->"new java.lang.Integer";
+    "new java.lang.Integer"->"dup1.r";
+    "dup1.r"->"push 40";
+    "push 40"->"specialinvoke <java.lang.Integer: void <init>(int)>";
+    "specialinvoke <java.lang.Integer: void <init>(int)>"->"arraywrite.r";
+    "arraywrite.r"->"load.r $r28";
+    "load.r $r28"->"push 4";
+    "push 4"->"staticget <Sprite: java.lang.Boolean TRUE>";
+    "staticget <Sprite: java.lang.Boolean TRUE>"->"arraywrite.r";
+    "arraywrite.r"->"load.r $r28";
+    "load.r $r28"->"push 5";
+    "staticget <Shape: java.lang.Integer ARC>"
+    "push 5"->"staticget <Shape: java.lang.Integer ARC>";
+    "staticget <Shape: java.lang.Integer ARC>"->"arraywrite.r";
+    "arraywrite.r"->"load.i $r115";
+    "ifne staticget <java.awt.Color: java.awt.Color black>"
+    "load.i $r115"->"ifne staticget <java.awt.Color: java.awt.Color black>";
+    "staticget <java.awt.Color: java.awt.Color yellow>"
+    "ifne staticget <java.awt.Color: java.awt.Color black>"->"staticget <java.awt.Color: java.awt.Color yellow>";
+    "staticget <java.awt.Color: java.awt.Color yellow>"->"store.r $r116";
+    "goto load.r $r28"
+    "store.r $r116"->"goto load.r $r28";
+    "goto load.r $r28"->"load.r $r28";
+    "load.r $r28"->"push 6";
+    "push 6"->"load.r $r116";
+    "load.r $r116"->"arraywrite.r";
+    "arraywrite.r"->"load.i $r115";
+    "ifne staticget <Sprite: java.lang.Boolean FALSE>"
+    "load.i $r115"->"ifne staticget <Sprite: java.lang.Boolean FALSE>";
+    "ifne staticget <Sprite: java.lang.Boolean FALSE>"->"staticget <Sprite: java.lang.Boolean TRUE>";
+    "staticget <Sprite: java.lang.Boolean TRUE>"->"store.r $r116";
+    "store.r $r116"->"goto load.r $r28";
+    "goto load.r $r28"->"load.r $r28";
+    "load.r $r28"->"push 7";
+    "push 7"->"load.r $r116";
+    "load.r $r116"->"arraywrite.r";
+    "arraywrite.r"->"load.r $r113";
+    "load.r $r113"->"load.r r1";
+    "load.r r1"->"load.r $r28";
+    "load.r $r28"->"virtualinvoke <Sprite: void set(int[],java.lang.Object[])>";
+    "virtualinvoke <Sprite: void set(int[],java.lang.Object[])>"->"inc.i $r115 1";
+    "ifne staticget <Sprite: java.lang.Boolean FALSE>"->"staticget <Sprite: java.lang.Boolean FALSE>";
+    "staticget <Sprite: java.lang.Boolean FALSE>"->"store.r $r116";
+    "ifne staticget <java.awt.Color: java.awt.Color black>"->"staticget <java.awt.Color: java.awt.Color black>";
+    "staticget <java.awt.Color: java.awt.Color black>"->"store.r $r116";
+    "ifcmplt.i load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <QuizShow: Text[] choicesText>";
+    "fieldget <QuizShow: Text[] choicesText>"->"load.i $r116";
+    "load.i $r116"->"new Text";
+    "new Text"->"dup1.r";
+    "dup1.r"->"specialinvoke <Text: void <init>()>";
+    "specialinvoke <Text: void <init>()>"->"arraywrite.r";
+    "arraywrite.r"->"load.r r0";
+    "load.r r0"->"fieldget <QuizShow: Text[] choicesText>";
+    "fieldget <QuizShow: Text[] choicesText>"->"load.i $r116";
+    "load.i $r116"->"arrayread.r";
+    "store.r $r115"
+    "arrayread.r"->"store.r $r115";
+    "store.r $r115"->"push 6";
+    "push 6"->"newarray";
+    "newarray"->"store.r r1";
+    "store.r r1"->"load.r r1";
+    "load.r r1"->"push 1";
+    "push 1"->"push 1";
+    "push 1"->"arraywrite.i";
+    "arraywrite.i"->"load.r r1";
+    "load.r r1"->"push 2";
+    "push 2"->"push 10";
+    "push 10"->"arraywrite.i";
+    "arraywrite.i"->"load.r r1";
+    "load.r r1"->"push 3";
+    "push 3"->"push 11";
+    "push 11"->"arraywrite.i";
+    "arraywrite.i"->"load.r r1";
+    "load.r r1"->"push 4";
+    "push 4"->"push 7";
+    "push 7"->"arraywrite.i";
+    "arraywrite.i"->"load.r r1";
+    "load.r r1"->"push 5";
+    "push 5"->"push 16";
+    "push 16"->"arraywrite.i";
+    "arraywrite.i"->"push 6";
+    "push 6"->"newarray";
+    "newarray"->"store.r $r28";
+    "store.r $r28"->"new java.lang.Integer";
+    "new java.lang.Integer"->"store.r $r113";
+    "store.r $r113"->"load.i $r116";
+    "load.i $r116"->"push 2";
+    "push 2"->"rem.i";
+    "ifne push 205"
+    "rem.i"->"ifne push 205";
+    "push 25"
+    "ifne push 205"->"push 25";
+    "push 25"->"store.s i68";
+    "goto load.r $r113"
+    "store.s i68"->"goto load.r $r113";
+    "goto load.r $r113"->"load.r $r113";
+    "load.r $r113"->"load.s i68";
+    "load.s i68"->"specialinvoke <java.lang.Integer: void <init>(int)>";
+    "specialinvoke <java.lang.Integer: void <init>(int)>"->"load.r $r28";
+    "load.r $r28"->"push 0";
+    "push 0"->"load.r $r113";
+    "load.r $r113"->"arraywrite.r";
+    "arraywrite.r"->"load.r $r28";
+    "load.r $r28"->"push 1";
+    "push 1"->"new java.lang.Integer";
+    "new java.lang.Integer"->"dup1.r";
+    "push 122"
+    "dup1.r"->"push 122";
+    "push 122"->"load.i $r116";
+    "load.i $r116"->"push 2";
+    "push 2"->"div.i";
+    "div.i"->"push 20";
+    "push 20"->"mul.i";
+    "mul.i"->"add.i";
+    "add.i"->"specialinvoke <java.lang.Integer: void <init>(int)>";
+    "specialinvoke <java.lang.Integer: void <init>(int)>"->"arraywrite.r";
+    "arraywrite.r"->"load.r $r28";
+    "load.r $r28"->"push 2";
+    "push 2"->"staticget <Sprite: java.lang.Integer WEST>";
+    "staticget <Sprite: java.lang.Integer WEST>"->"arraywrite.r";
+    "arraywrite.r"->"load.r $r28";
+    "load.r $r28"->"push 3";
+    "push 3"->"staticget <Sprite: java.lang.Integer SOUTH>";
+    "staticget <Sprite: java.lang.Integer SOUTH>"->"arraywrite.r";
+    "arraywrite.r"->"load.r $r28";
+    "load.r $r28"->"push 4";
+    "push 4"->"staticget <Sprite: java.lang.Boolean TRUE>";
+    "staticget <Sprite: java.lang.Boolean TRUE>"->"arraywrite.r";
+    "arraywrite.r"->"load.r $r28";
+    "load.r $r28"->"push 5";
+    "push 5"->"staticget <Sprite: java.lang.Integer ONE>";
+    "staticget <Sprite: java.lang.Integer ONE>"->"arraywrite.r";
+    "load.r $r115"
+    "arraywrite.r"->"load.r $r115";
+    "load.r $r115"->"load.r r1";
+    "load.r r1"->"load.r $r28";
+    "load.r $r28"->"virtualinvoke <Sprite: void set(int[],java.lang.Object[])>";
+    "inc.i $r116 1"
+    "virtualinvoke <Sprite: void set(int[],java.lang.Object[])>"->"inc.i $r116 1";
+    "push 205"
+    "ifne push 205"->"push 205";
+    "push 205"->"store.s i68";
+    "ifcmplt.i load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <QuizShow: Text[] questionsText>";
+    "fieldget <QuizShow: Text[] questionsText>"->"load.i $r113";
+    "load.i $r113"->"new Text";
+    "new Text"->"dup1.r";
+    "dup1.r"->"specialinvoke <Text: void <init>()>";
+    "specialinvoke <Text: void <init>()>"->"arraywrite.r";
+    "arraywrite.r"->"load.r r0";
+    "load.r r0"->"fieldget <QuizShow: Text[] questionsText>";
+    "fieldget <QuizShow: Text[] questionsText>"->"load.i $r113";
+    "load.i $r113"->"arrayread.r";
+    "arrayread.r"->"push 6";
+    "push 6"->"newarray";
+    "newarray"->"store.r r1";
+    "store.r r1"->"load.r r1";
+    "load.r r1"->"push 1";
+    "push 1"->"push 1";
+    "push 1"->"arraywrite.i";
+    "arraywrite.i"->"load.r r1";
+    "load.r r1"->"push 2";
+    "push 2"->"push 10";
+    "push 10"->"arraywrite.i";
+    "arraywrite.i"->"load.r r1";
+    "load.r r1"->"push 3";
+    "push 3"->"push 11";
+    "push 11"->"arraywrite.i";
+    "arraywrite.i"->"load.r r1";
+    "load.r r1"->"push 4";
+    "push 4"->"push 7";
+    "push 7"->"arraywrite.i";
+    "arraywrite.i"->"load.r r1";
+    "load.r r1"->"push 5";
+    "push 5"->"push 16";
+    "push 16"->"arraywrite.i";
+    "arraywrite.i"->"push 6";
+    "push 6"->"newarray";
+    "newarray"->"store.r $r28";
+    "store.r $r28"->"load.r $r28";
+    "load.r $r28"->"push 0";
+    "push 0"->"new java.lang.Integer";
+    "new java.lang.Integer"->"dup1.r";
+    "dup1.r"->"push 40";
+    "push 40"->"specialinvoke <java.lang.Integer: void <init>(int)>";
+    "specialinvoke <java.lang.Integer: void <init>(int)>"->"arraywrite.r";
+    "arraywrite.r"->"load.r $r28";
+    "load.r $r28"->"push 1";
+    "push 1"->"new java.lang.Integer";
+    "new java.lang.Integer"->"dup1.r";
+    "push 70"
+    "dup1.r"->"push 70";
+    "push 70"->"load.i $r113";
+    "push 12"
+    "load.i $r113"->"push 12";
+    "push 12"->"mul.i";
+    "mul.i"->"add.i";
+    "add.i"->"specialinvoke <java.lang.Integer: void <init>(int)>";
+    "specialinvoke <java.lang.Integer: void <init>(int)>"->"arraywrite.r";
+    "arraywrite.r"->"load.r $r28";
+    "load.r $r28"->"push 2";
+    "push 2"->"staticget <Sprite: java.lang.Integer WEST>";
+    "staticget <Sprite: java.lang.Integer WEST>"->"arraywrite.r";
+    "arraywrite.r"->"load.r $r28";
+    "load.r $r28"->"push 3";
+    "push 3"->"staticget <Sprite: java.lang.Integer SOUTH>";
+    "staticget <Sprite: java.lang.Integer SOUTH>"->"arraywrite.r";
+    "arraywrite.r"->"load.r $r28";
+    "load.r $r28"->"push 4";
+    "push 4"->"staticget <Sprite: java.lang.Boolean TRUE>";
+    "staticget <Sprite: java.lang.Boolean TRUE>"->"arraywrite.r";
+    "arraywrite.r"->"load.r $r28";
+    "load.r $r28"->"push 5";
+    "push 5"->"staticget <Sprite: java.lang.Integer ONE>";
+    "staticget <Sprite: java.lang.Integer ONE>"->"arraywrite.r";
+    "arraywrite.r"->"load.r r1";
+    "load.r r1"->"load.r $r28";
+    "load.r $r28"->"virtualinvoke <Sprite: void set(int[],java.lang.Object[])>";
+    "virtualinvoke <Sprite: void set(int[],java.lang.Object[])>"->"inc.i $r113 1";
+    "ifcmplt.i load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <QuizShow: Text[] buzzersKeyText>";
+    "fieldget <QuizShow: Text[] buzzersKeyText>"->"load.i $r113";
+    "load.i $r113"->"new Text";
+    "new Text"->"dup1.r";
+    "dup1.r"->"specialinvoke <Text: void <init>()>";
+    "specialinvoke <Text: void <init>()>"->"arraywrite.r";
+    "arraywrite.r"->"load.r r0";
+    "load.r r0"->"fieldget <QuizShow: Text[] buzzersKeyText>";
+    "fieldget <QuizShow: Text[] buzzersKeyText>"->"load.i $r113";
+    "load.i $r113"->"arrayread.r";
+    "arrayread.r"->"push 7";
+    "push 7"->"newarray";
+    "newarray"->"store.r r1";
+    "store.r r1"->"load.r r1";
+    "load.r r1"->"push 1";
+    "push 1"->"push 1";
+    "push 1"->"arraywrite.i";
+    "arraywrite.i"->"load.r r1";
+    "load.r r1"->"push 2";
+    "push 2"->"push 2";
+    "push 2"->"arraywrite.i";
+    "arraywrite.i"->"load.r r1";
+    "load.r r1"->"push 3";
+    "push 3"->"push 7";
+    "push 7"->"arraywrite.i";
+    "arraywrite.i"->"load.r r1";
+    "load.r r1"->"push 4";
+    "push 4"->"push 11";
+    "push 11"->"arraywrite.i";
+    "arraywrite.i"->"load.r r1";
+    "load.r r1"->"push 5";
+    "push 5"->"push 15";
+    "push 15"->"arraywrite.i";
+    "arraywrite.i"->"load.r r1";
+    "load.r r1"->"push 6";
+    "push 6"->"push 16";
+    "push 16"->"arraywrite.i";
+    "arraywrite.i"->"push 7";
+    "push 7"->"newarray";
+    "newarray"->"store.r $r28";
+    "store.r $r28"->"load.r $r28";
+    "load.r $r28"->"push 0";
+    "push 0"->"new java.lang.Integer";
+    "new java.lang.Integer"->"dup1.r";
+    "dup1.r"->"push 270";
+    "push 270"->"specialinvoke <java.lang.Integer: void <init>(int)>";
+    "specialinvoke <java.lang.Integer: void <init>(int)>"->"arraywrite.r";
+    "arraywrite.r"->"load.r $r28";
+    "load.r $r28"->"push 1";
+    "push 1"->"new java.lang.Integer";
+    "new java.lang.Integer"->"dup1.r";
+    "dup1.r"->"push 40";
+    "push 40"->"load.i $r113";
+    "load.i $r113"->"push 20";
+    "push 20"->"mul.i";
+    "mul.i"->"add.i";
+    "add.i"->"specialinvoke <java.lang.Integer: void <init>(int)>";
+    "specialinvoke <java.lang.Integer: void <init>(int)>"->"arraywrite.r";
+    "arraywrite.r"->"load.r $r28";
+    "load.r $r28"->"push 2";
+    "push 2"->"new java.lang.Integer";
+    "new java.lang.Integer"->"dup1.r";
+    "dup1.r"->"push 90";
+    "push 90"->"specialinvoke <java.lang.Integer: void <init>(int)>";
+    "specialinvoke <java.lang.Integer: void <init>(int)>"->"arraywrite.r";
+    "arraywrite.r"->"load.r $r28";
+    "load.r $r28"->"push 3";
+    "push 3"->"staticget <Sprite: java.lang.Boolean TRUE>";
+    "staticget <Sprite: java.lang.Boolean TRUE>"->"arraywrite.r";
+    "arraywrite.r"->"load.r $r28";
+    "load.r $r28"->"push 4";
+    "push 4"->"staticget <Sprite: java.lang.Integer NORTH>";
+    "staticget <Sprite: java.lang.Integer NORTH>"->"arraywrite.r";
+    "arraywrite.r"->"load.r $r28";
+    "load.r $r28"->"push 5";
+    "push 5"->"staticget <java.awt.Color: java.awt.Color white>";
+    "staticget <java.awt.Color: java.awt.Color white>"->"arraywrite.r";
+    "arraywrite.r"->"load.r $r28";
+    "load.r $r28"->"push 6";
+    "push 6"->"staticget <Sprite: java.lang.Integer ONE>";
+    "staticget <Sprite: java.lang.Integer ONE>"->"arraywrite.r";
+    "arraywrite.r"->"load.r r1";
+    "load.r r1"->"load.r $r28";
+    "load.r $r28"->"virtualinvoke <Sprite: void set(int[],java.lang.Object[])>";
+    "virtualinvoke <Sprite: void set(int[],java.lang.Object[])>"->"inc.i $r113 1";
+    "ifcmplt.i load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <QuizShow: java.awt.TextField[] names>";
+    "fieldget <QuizShow: java.awt.TextField[] names>"->"load.i r1";
+    "new java.awt.TextField"
+    "load.i r1"->"new java.awt.TextField";
+    "new java.awt.TextField"->"dup1.r";
+    "dup1.r"->"new java.lang.StringBuffer";
+    "new java.lang.StringBuffer"->"dup1.r";
+    "push \"Player \""
+    "dup1.r"->"push \"Player \"";
+    "push \"Player \""->"specialinvoke <java.lang.StringBuffer: void <init>(java.lang.String)>";
+    "specialinvoke <java.lang.StringBuffer: void <init>(java.lang.String)>"->"load.i r1";
+    "load.i r1"->"push 1";
+    "push 1"->"add.i";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(int)>"
+    "add.i"->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(int)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(int)>"->"virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>";
+    "specialinvoke <java.awt.TextField: void <init>(java.lang.String)>"
+    "virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>"->"specialinvoke <java.awt.TextField: void <init>(java.lang.String)>";
+    "specialinvoke <java.awt.TextField: void <init>(java.lang.String)>"->"arraywrite.r";
+    "arraywrite.r"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <QuizShow: java.awt.TextField[] names>";
+    "fieldget <QuizShow: java.awt.TextField[] names>"->"load.i r1";
+    "load.i r1"->"arrayread.r";
+    "arrayread.r"->"staticget <java.awt.Color: java.awt.Color white>";
+    "staticget <java.awt.Color: java.awt.Color white>"->"staticget <java.awt.Color: java.awt.Color blue>";
+    "staticget <Text: java.awt.Font PT12>"
+    "staticget <java.awt.Color: java.awt.Color blue>"->"staticget <Text: java.awt.Font PT12>";
+    "staticget <Text: java.awt.Font PT12>"->"push 4";
+    "push 4"->"newarray";
+    "newarray"->"store.r $r28";
+    "store.r $r28"->"load.r $r28";
+    "load.r $r28"->"push 0";
+    "push 0"->"push 100";
+    "push 100"->"arraywrite.i";
+    "arraywrite.i"->"load.r $r28";
+    "load.r $r28"->"push 1";
+    "push 1"->"push 40";
+    "push 40"->"load.i r1";
+    "load.i r1"->"push 20";
+    "push 20"->"mul.i";
+    "mul.i"->"add.i";
+    "add.i"->"arraywrite.i";
+    "arraywrite.i"->"load.r $r28";
+    "load.r $r28"->"push 2";
+    "push 2"->"push 150";
+    "push 150"->"arraywrite.i";
+    "arraywrite.i"->"load.r $r28";
+    "load.r $r28"->"push 3";
+    "push 3"->"push 20";
+    "push 20"->"arraywrite.i";
+    "arraywrite.i"->"load.r $r28";
+    "load.r $r28"->"virtualinvoke <QuizShow: void setComponent(java.awt.Component,java.awt.Color,java.awt.Color,java.awt.Font,int[])>";
+    "virtualinvoke <QuizShow: void setComponent(java.awt.Component,java.awt.Color,java.awt.Color,java.awt.Font,int[])>"->"load.r r0";
+    "load.r r0"->"fieldget <QuizShow: java.awt.TextField[] names>";
+    "fieldget <QuizShow: java.awt.TextField[] names>"->"load.i r1";
+    "load.i r1"->"arrayread.r";
+    "arrayread.r"->"load.r r0";
+    "virtualinvoke <java.awt.TextComponent: void addTextListener(java.awt.event.TextListener)>"
+    "load.r r0"->"virtualinvoke <java.awt.TextComponent: void addTextListener(java.awt.event.TextListener)>";
+    "virtualinvoke <java.awt.TextComponent: void addTextListener(java.awt.event.TextListener)>"->"load.r r0";
+    "load.r r0"->"fieldget <QuizShow: java.awt.TextField[] names>";
+    "fieldget <QuizShow: java.awt.TextField[] names>"->"load.i r1";
+    "load.i r1"->"arrayread.r";
+    "arrayread.r"->"store.r $r28";
+    "store.r $r28"->"load.i r1";
+    "ifeq push 1"
+    "load.i r1"->"ifeq push 1";
+    "ifeq push 1"->"push 0";
+    "store.b $r113"
+    "push 0"->"store.b $r113";
+    "store.b $r113"->"goto load.r $r28";
+    "goto load.r $r28"->"load.r $r28";
+    "load.b $r113"
+    "load.r $r28"->"load.b $r113";
+    "virtualinvoke <java.awt.Component: void setEnabled(boolean)>"
+    "load.b $r113"->"virtualinvoke <java.awt.Component: void setEnabled(boolean)>";
+    "virtualinvoke <java.awt.Component: void setEnabled(boolean)>"->"inc.i r1 1";
+    "ifeq push 1"->"push 1";
+    "push 1"->"store.b $r113";
+    "ifcmplt.i load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <QuizShow: java.awt.Checkbox[] numPlayersC>";
+    "fieldget <QuizShow: java.awt.Checkbox[] numPlayersC>"->"store.r $r113";
+    "store.r $r113"->"load.i r1";
+    "load.i r1"->"store.i $r116";
+    "new java.awt.Checkbox"
+    "store.i $r116"->"new java.awt.Checkbox";
+    "new java.awt.Checkbox"->"store.r $r28";
+    "store.r $r28"->"load.i r1";
+    "load.i r1"->"push 1";
+    "push 1"->"add.i";
+    "staticinvoke <java.lang.String: java.lang.String valueOf(int)>"
+    "add.i"->"staticinvoke <java.lang.String: java.lang.String valueOf(int)>";
+    "staticinvoke <java.lang.String: java.lang.String valueOf(int)>"->"store.r $r115";
+    "store.r $r115"->"load.i r1";
+    "load.i r1"->"ifeq push 1";
+    "ifeq push 1"->"push 0";
+    "store.b i68"
+    "push 0"->"store.b i68";
+    "store.b i68"->"goto load.r $r28";
+    "goto load.r $r28"->"load.r $r28";
+    "load.r $r28"->"load.r $r115";
+    "load.b i68"
+    "load.r $r115"->"load.b i68";
+    "load.b i68"->"load.r r0";
+    "fieldget <QuizShow: java.awt.CheckboxGroup numPlayers>"
+    "load.r r0"->"fieldget <QuizShow: java.awt.CheckboxGroup numPlayers>";
+    "specialinvoke <java.awt.Checkbox: void <init>(java.lang.String,boolean,java.awt.CheckboxGroup)>"
+    "fieldget <QuizShow: java.awt.CheckboxGroup numPlayers>"->"specialinvoke <java.awt.Checkbox: void <init>(java.lang.String,boolean,java.awt.CheckboxGroup)>";
+    "specialinvoke <java.awt.Checkbox: void <init>(java.lang.String,boolean,java.awt.CheckboxGroup)>"->"load.r $r113";
+    "load.r $r113"->"load.i $r116";
+    "load.i $r116"->"load.r $r28";
+    "load.r $r28"->"arraywrite.r";
+    "arraywrite.r"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <QuizShow: java.awt.Checkbox[] numPlayersC>";
+    "fieldget <QuizShow: java.awt.Checkbox[] numPlayersC>"->"load.i r1";
+    "load.i r1"->"arrayread.r";
+    "arrayread.r"->"staticget <java.awt.Color: java.awt.Color black>";
+    "staticget <java.awt.Color: java.awt.Color black>"->"staticget <java.awt.Color: java.awt.Color white>";
+    "staticget <java.awt.Color: java.awt.Color white>"->"staticget <Text: java.awt.Font PT12>";
+    "staticget <Text: java.awt.Font PT12>"->"push 4";
+    "push 4"->"newarray";
+    "newarray"->"store.r $r28";
+    "store.r $r28"->"load.r $r28";
+    "load.r $r28"->"push 0";
+    "push 0"->"push 40";
+    "push 40"->"arraywrite.i";
+    "arraywrite.i"->"load.r $r28";
+    "load.r $r28"->"push 1";
+    "push 1"->"push 40";
+    "push 40"->"load.i r1";
+    "load.i r1"->"push 20";
+    "push 20"->"mul.i";
+    "mul.i"->"add.i";
+    "add.i"->"arraywrite.i";
+    "arraywrite.i"->"load.r $r28";
+    "load.r $r28"->"push 2";
+    "push 2"->"push 40";
+    "push 40"->"arraywrite.i";
+    "arraywrite.i"->"load.r $r28";
+    "load.r $r28"->"push 3";
+    "push 3"->"push 20";
+    "push 20"->"arraywrite.i";
+    "arraywrite.i"->"load.r $r28";
+    "load.r $r28"->"virtualinvoke <QuizShow: void setComponent(java.awt.Component,java.awt.Color,java.awt.Color,java.awt.Font,int[])>";
+    "virtualinvoke <QuizShow: void setComponent(java.awt.Component,java.awt.Color,java.awt.Color,java.awt.Font,int[])>"->"load.r r0";
+    "load.r r0"->"fieldget <QuizShow: java.awt.Checkbox[] numPlayersC>";
+    "fieldget <QuizShow: java.awt.Checkbox[] numPlayersC>"->"load.i r1";
+    "load.i r1"->"arrayread.r";
+    "arrayread.r"->"load.r r0";
+    "virtualinvoke <java.awt.Checkbox: void addItemListener(java.awt.event.ItemListener)>"
+    "load.r r0"->"virtualinvoke <java.awt.Checkbox: void addItemListener(java.awt.event.ItemListener)>";
+    "virtualinvoke <java.awt.Checkbox: void addItemListener(java.awt.event.ItemListener)>"->"inc.i r1 1";
+    "ifeq push 1"->"push 1";
+    "push 1"->"store.b i68";
+    "ifcmplt.i load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <QuizShow: Graphic[] lightImages>";
+    "fieldget <QuizShow: Graphic[] lightImages>"->"load.i $r113";
+    "load.i $r113"->"new Graphic";
+    "new Graphic"->"dup1.r";
+    "dup1.r"->"specialinvoke <Graphic: void <init>()>";
+    "specialinvoke <Graphic: void <init>()>"->"arraywrite.r";
+    "arraywrite.r"->"load.r r0";
+    "load.r r0"->"fieldget <QuizShow: Graphic[] lightImages>";
+    "fieldget <QuizShow: Graphic[] lightImages>"->"load.i $r113";
+    "load.i $r113"->"arrayread.r";
+    "arrayread.r"->"push 3";
+    "push 3"->"newarray";
+    "newarray"->"store.r r1";
+    "store.r r1"->"load.r r1";
+    "load.r r1"->"push 0";
+    "push 0"->"push 2";
+    "push 2"->"arraywrite.i";
+    "arraywrite.i"->"load.r r1";
+    "load.r r1"->"push 1";
+    "push 1"->"push 3";
+    "push 3"->"arraywrite.i";
+    "arraywrite.i"->"load.r r1";
+    "load.r r1"->"push 2";
+    "push 2"->"push 7";
+    "push 7"->"arraywrite.i";
+    "arraywrite.i"->"push 3";
+    "push 3"->"newarray";
+    "newarray"->"store.r $r28";
+    "store.r $r28"->"load.r $r28";
+    "load.r $r28"->"push 0";
+    "push 0"->"new java.lang.Integer";
+    "new java.lang.Integer"->"dup1.r";
+    "dup1.r"->"push 20";
+    "push 20"->"specialinvoke <java.lang.Integer: void <init>(int)>";
+    "specialinvoke <java.lang.Integer: void <init>(int)>"->"arraywrite.r";
+    "arraywrite.r"->"load.r $r28";
+    "load.r $r28"->"push 1";
+    "push 1"->"new java.lang.Integer";
+    "new java.lang.Integer"->"dup1.r";
+    "dup1.r"->"push 20";
+    "push 20"->"specialinvoke <java.lang.Integer: void <init>(int)>";
+    "specialinvoke <java.lang.Integer: void <init>(int)>"->"arraywrite.r";
+    "arraywrite.r"->"load.r $r28";
+    "load.r $r28"->"push 2";
+    "push 2"->"staticget <Sprite: java.lang.Boolean TRUE>";
+    "staticget <Sprite: java.lang.Boolean TRUE>"->"arraywrite.r";
+    "arraywrite.r"->"load.r r1";
+    "load.r r1"->"load.r $r28";
+    "load.r $r28"->"virtualinvoke <Sprite: void set(int[],java.lang.Object[])>";
+    "virtualinvoke <Sprite: void set(int[],java.lang.Object[])>"->"load.i $r113";
+    "load.i $r113"->"push 8";
+    "ifcmpge.i load.i $r113"
+    "push 8"->"ifcmpge.i load.i $r113";
+    "ifcmpge.i load.i $r113"->"load.r r0";
+    "load.r r0"->"fieldget <QuizShow: Graphic[] lightImages>";
+    "fieldget <QuizShow: Graphic[] lightImages>"->"load.i $r113";
+    "load.i $r113"->"arrayread.r";
+    "arrayread.r"->"push 7";
+    "push 7"->"load.i $r113";
+    "load.i $r113"->"sub.i";
+    "sub.i"->"push 25";
+    "push 25"->"mul.i";
+    "fieldput <Sprite: int y>"
+    "mul.i"->"fieldput <Sprite: int y>";
+    "goto inc.i $r113 1"
+    "fieldput <Sprite: int y>"->"goto inc.i $r113 1";
+    "goto inc.i $r113 1"->"inc.i $r113 1";
+    "ifcmpge.i load.i $r113"->"load.i $r113";
+    "push 22"
+    "load.i $r113"->"push 22";
+    "push 22"->"ifcmpge.i load.i $r113";
+    "ifcmpge.i load.i $r113"->"load.r r0";
+    "load.r r0"->"fieldget <QuizShow: Graphic[] lightImages>";
+    "fieldget <QuizShow: Graphic[] lightImages>"->"load.i $r113";
+    "load.i $r113"->"arrayread.r";
+    "arrayread.r"->"load.i $r113";
+    "load.i $r113"->"push 8";
+    "push 8"->"sub.i";
+    "sub.i"->"push 25";
+    "push 25"->"mul.i";
+    "mul.i"->"push 25";
+    "push 25"->"add.i";
+    "fieldput <Sprite: int x>"
+    "add.i"->"fieldput <Sprite: int x>";
+    "fieldput <Sprite: int x>"->"goto inc.i $r113 1";
+    "ifcmpge.i load.i $r113"->"load.i $r113";
+    "push 30"
+    "load.i $r113"->"push 30";
+    "ifcmpge.i load.r r0"
+    "push 30"->"ifcmpge.i load.r r0";
+    "ifcmpge.i load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <QuizShow: Graphic[] lightImages>";
+    "fieldget <QuizShow: Graphic[] lightImages>"->"load.i $r113";
+    "load.i $r113"->"arrayread.r";
+    "arrayread.r"->"push 375";
+    "push 375"->"fieldput <Sprite: int x>";
+    "fieldput <Sprite: int x>"->"load.r r0";
+    "load.r r0"->"fieldget <QuizShow: Graphic[] lightImages>";
+    "fieldget <QuizShow: Graphic[] lightImages>"->"load.i $r113";
+    "load.i $r113"->"arrayread.r";
+    "arrayread.r"->"load.i $r113";
+    "load.i $r113"->"push 22";
+    "push 22"->"sub.i";
+    "sub.i"->"push 25";
+    "push 25"->"mul.i";
+    "mul.i"->"fieldput <Sprite: int y>";
+    "fieldput <Sprite: int y>"->"goto inc.i $r113 1";
+    "ifcmpge.i load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <QuizShow: Graphic[] lightImages>";
+    "fieldget <QuizShow: Graphic[] lightImages>"->"load.i $r113";
+    "load.i $r113"->"arrayread.r";
+    "arrayread.r"->"push 13";
+    "push 13"->"load.i $r113";
+    "load.i $r113"->"push 30";
+    "push 30"->"sub.i";
+    "sub.i"->"sub.i";
+    "sub.i"->"push 25";
+    "push 25"->"mul.i";
+    "mul.i"->"push 25";
+    "push 25"->"add.i";
+    "add.i"->"fieldput <Sprite: int x>";
+    "fieldput <Sprite: int x>"->"load.r r0";
+    "load.r r0"->"fieldget <QuizShow: Graphic[] lightImages>";
+    "fieldget <QuizShow: Graphic[] lightImages>"->"load.i $r113";
+    "load.i $r113"->"arrayread.r";
+    "arrayread.r"->"push 175";
+    "push 175"->"fieldput <Sprite: int y>";
+    "ifcmplt.i load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <QuizShow: Text[] titleText>";
+    "fieldget <QuizShow: Text[] titleText>"->"load.i i68";
+    "load.i i68"->"new Text";
+    "new Text"->"dup1.r";
+    "dup1.r"->"specialinvoke <Text: void <init>()>";
+    "specialinvoke <Text: void <init>()>"->"arraywrite.r";
+    "arraywrite.r"->"load.r r0";
+    "load.r r0"->"fieldget <QuizShow: Text[] titleText>";
+    "fieldget <QuizShow: Text[] titleText>"->"load.i i68";
+    "load.i i68"->"arrayread.r";
+    "arrayread.r"->"store.r $r115";
+    "store.r $r115"->"push 8";
+    "push 8"->"newarray";
+    "newarray"->"store.r $r28";
+    "store.r $r28"->"load.r $r28";
+    "load.r $r28"->"push 1";
+    "push 1"->"push 1";
+    "push 1"->"arraywrite.i";
+    "arraywrite.i"->"load.r $r28";
+    "load.r $r28"->"push 2";
+    "push 2"->"push 2";
+    "push 2"->"arraywrite.i";
+    "arraywrite.i"->"load.r $r28";
+    "load.r $r28"->"push 3";
+    "push 3"->"push 7";
+    "push 7"->"arraywrite.i";
+    "arraywrite.i"->"load.r $r28";
+    "load.r $r28"->"push 4";
+    "push 4"->"push 14";
+    "push 14"->"arraywrite.i";
+    "arraywrite.i"->"load.r $r28";
+    "load.r $r28"->"push 5";
+    "push 5"->"push 13";
+    "push 13"->"arraywrite.i";
+    "arraywrite.i"->"load.r $r28";
+    "load.r $r28"->"push 6";
+    "push 6"->"push 15";
+    "push 15"->"arraywrite.i";
+    "arraywrite.i"->"load.r $r28";
+    "load.r $r28"->"push 7";
+    "push 7"->"push 16";
+    "push 16"->"arraywrite.i";
+    "arraywrite.i"->"push 8";
+    "push 8"->"newarray";
+    "newarray"->"store.r $r113";
+    "store.r $r113"->"load.r $r113";
+    "load.r $r113"->"push 0";
+    "push 0"->"new java.lang.Integer";
+    "new java.lang.Integer"->"dup1.r";
+    "dup1.r"->"load.i i68";
+    "load.i i68"->"push 40";
+    "push 40"->"mul.i";
+    "mul.i"->"push 20";
+    "push 20"->"add.i";
+    "add.i"->"specialinvoke <java.lang.Integer: void <init>(int)>";
+    "specialinvoke <java.lang.Integer: void <init>(int)>"->"arraywrite.r";
+    "arraywrite.r"->"new java.lang.Integer";
+    "new java.lang.Integer"->"store.r $r116";
+    "store.r $r116"->"load.i i68";
+    "load.i i68"->"push 2";
+    "push 2"->"rem.i";
+    "ifne push 97"
+    "rem.i"->"ifne push 97";
+    "push 77"
+    "ifne push 97"->"push 77";
+    "store.b $b69"
+    "push 77"->"store.b $b69";
+    "store.b $b69"->"goto load.r $r116";
+    "goto load.r $r116"->"load.r $r116";
+    "load.b $b69"
+    "load.r $r116"->"load.b $b69";
+    "load.b $b69"->"specialinvoke <java.lang.Integer: void <init>(int)>";
+    "specialinvoke <java.lang.Integer: void <init>(int)>"->"load.r $r113";
+    "load.r $r113"->"push 1";
+    "push 1"->"load.r $r116";
+    "load.r $r116"->"arraywrite.r";
+    "arraywrite.r"->"load.r $r113";
+    "load.r $r113"->"push 2";
+    "push 2"->"new java.lang.Integer";
+    "new java.lang.Integer"->"dup1.r";
+    "dup1.r"->"push 40";
+    "push 40"->"specialinvoke <java.lang.Integer: void <init>(int)>";
+    "specialinvoke <java.lang.Integer: void <init>(int)>"->"arraywrite.r";
+    "arraywrite.r"->"load.r $r113";
+    "load.r $r113"->"push 3";
+    "push 3"->"staticget <Sprite: java.lang.Boolean TRUE>";
+    "staticget <Sprite: java.lang.Boolean TRUE>"->"arraywrite.r";
+    "arraywrite.r"->"load.r $r113";
+    "load.r $r113"->"push 4";
+    "staticget <Text: java.awt.Font PT80>"
+    "push 4"->"staticget <Text: java.awt.Font PT80>";
+    "staticget <Text: java.awt.Font PT80>"->"arraywrite.r";
+    "arraywrite.r"->"load.r $r113";
+    "load.r $r113"->"push 5";
+    "push 5"->"load.r r1";
+    "load.r r1"->"load.i i68";
+    "load.i i68"->"virtualinvoke <java.lang.String: char charAt(int)>";
+    "staticinvoke <java.lang.String: java.lang.String valueOf(char)>"
+    "virtualinvoke <java.lang.String: char charAt(int)>"->"staticinvoke <java.lang.String: java.lang.String valueOf(char)>";
+    "staticinvoke <java.lang.String: java.lang.String valueOf(char)>"->"arraywrite.r";
+    "arraywrite.r"->"load.r $r113";
+    "load.r $r113"->"push 6";
+    "push 6"->"staticget <java.awt.Color: java.awt.Color red>";
+    "staticget <java.awt.Color: java.awt.Color red>"->"arraywrite.r";
+    "arraywrite.r"->"load.r $r113";
+    "load.r $r113"->"push 7";
+    "push 7"->"staticget <Sprite: java.lang.Integer TWO>";
+    "staticget <Sprite: java.lang.Integer TWO>"->"arraywrite.r";
+    "arraywrite.r"->"load.r $r115";
+    "load.r $r115"->"load.r $r28";
+    "load.r $r28"->"load.r $r113";
+    "load.r $r113"->"virtualinvoke <Sprite: void set(int[],java.lang.Object[])>";
+    "inc.i i68 1"
+    "virtualinvoke <Sprite: void set(int[],java.lang.Object[])>"->"inc.i i68 1";
+    "ifne push 97"->"push 97";
+    "push 97"->"store.b $b69";
+    "load.b r1"->"store.r r1";
+    "store.r r1"->"load.r r0";
+    "load.r r0"->"push 0";
+    "push 0"->"fieldput <QuizShow: boolean randomQuestions>";
+    "ifcmpeq.c push 1"->"push 1";
+    "push 1"->"store.b r1";
+    "specialinvoke <java.net.URL: void <init>(java.lang.String)>"->"store.r r1";
+}

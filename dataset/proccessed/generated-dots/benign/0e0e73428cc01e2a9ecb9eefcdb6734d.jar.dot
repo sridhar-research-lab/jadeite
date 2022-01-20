@@ -1,0 +1,200 @@
+digraph "" {
+    "r0 := @this: TickerTape"
+    "load.r r0"
+    "r0 := @this: TickerTape"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "new java.awt.Font"
+    "load.r r0"->"new java.awt.Font";
+    "dup1.r"
+    "new java.awt.Font"->"dup1.r";
+    "push \"Helvetica\""
+    "dup1.r"->"push \"Helvetica\"";
+    "push 0"
+    "push \"Helvetica\""->"push 0";
+    "push 12"
+    "push 0"->"push 12";
+    "specialinvoke <java.awt.Font: void <init>(java.lang.String,int,int)>"
+    "push 12"->"specialinvoke <java.awt.Font: void <init>(java.lang.String,int,int)>";
+    "virtualinvoke <java.awt.Component: java.awt.FontMetrics getFontMetrics(java.awt.Font)>"
+    "specialinvoke <java.awt.Font: void <init>(java.lang.String,int,int)>"->"virtualinvoke <java.awt.Component: java.awt.FontMetrics getFontMetrics(java.awt.Font)>";
+    "fieldput <TickerTape: java.awt.FontMetrics fm>"
+    "virtualinvoke <java.awt.Component: java.awt.FontMetrics getFontMetrics(java.awt.Font)>"->"fieldput <TickerTape: java.awt.FontMetrics fm>";
+    "fieldput <TickerTape: java.awt.FontMetrics fm>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "fieldget <TickerTape: java.awt.FontMetrics fm>"
+    "load.r r0"->"fieldget <TickerTape: java.awt.FontMetrics fm>";
+    "virtualinvoke <java.awt.FontMetrics: int getHeight()>"
+    "fieldget <TickerTape: java.awt.FontMetrics fm>"->"virtualinvoke <java.awt.FontMetrics: int getHeight()>";
+    "fieldput <TickerTape: int fmh>"
+    "virtualinvoke <java.awt.FontMetrics: int getHeight()>"->"fieldput <TickerTape: int fmh>";
+    "fieldput <TickerTape: int fmh>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "virtualinvoke <java.awt.Component: java.awt.Dimension getSize()>"
+    "load.r r0"->"virtualinvoke <java.awt.Component: java.awt.Dimension getSize()>";
+    "fieldget <java.awt.Dimension: int width>"
+    "virtualinvoke <java.awt.Component: java.awt.Dimension getSize()>"->"fieldget <java.awt.Dimension: int width>";
+    "push 26"
+    "fieldget <java.awt.Dimension: int width>"->"push 26";
+    "sub.i"
+    "push 26"->"sub.i";
+    "fieldput <TickerTape: int mchars>"
+    "sub.i"->"fieldput <TickerTape: int mchars>";
+    "fieldput <TickerTape: int mchars>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"virtualinvoke <java.awt.Component: java.awt.Dimension getSize()>";
+    "virtualinvoke <java.awt.Component: java.awt.Dimension getSize()>"->"fieldget <java.awt.Dimension: int width>";
+    "fieldget <java.awt.Dimension: int width>"->"load.r r0";
+    "load.r r0"->"virtualinvoke <java.awt.Component: java.awt.Dimension getSize()>";
+    "fieldget <java.awt.Dimension: int height>"
+    "virtualinvoke <java.awt.Component: java.awt.Dimension getSize()>"->"fieldget <java.awt.Dimension: int height>";
+    "virtualinvoke <java.awt.Component: java.awt.Image createImage(int,int)>"
+    "fieldget <java.awt.Dimension: int height>"->"virtualinvoke <java.awt.Component: java.awt.Image createImage(int,int)>";
+    "fieldput <TickerTape: java.awt.Image winScratch>"
+    "virtualinvoke <java.awt.Component: java.awt.Image createImage(int,int)>"->"fieldput <TickerTape: java.awt.Image winScratch>";
+    "fieldput <TickerTape: java.awt.Image winScratch>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "fieldget <TickerTape: java.awt.Image winScratch>"
+    "load.r r0"->"fieldget <TickerTape: java.awt.Image winScratch>";
+    "virtualinvoke <java.awt.Image: java.awt.Graphics getGraphics()>"
+    "fieldget <TickerTape: java.awt.Image winScratch>"->"virtualinvoke <java.awt.Image: java.awt.Graphics getGraphics()>";
+    "fieldput <TickerTape: java.awt.Graphics gScratch>"
+    "virtualinvoke <java.awt.Image: java.awt.Graphics getGraphics()>"->"fieldput <TickerTape: java.awt.Graphics gScratch>";
+    "fieldput <TickerTape: java.awt.Graphics gScratch>"->"load.r r0";
+    "staticget <java.awt.Color: java.awt.Color white>"
+    "load.r r0"->"staticget <java.awt.Color: java.awt.Color white>";
+    "virtualinvoke <java.awt.Component: void setBackground(java.awt.Color)>"
+    "staticget <java.awt.Color: java.awt.Color white>"->"virtualinvoke <java.awt.Component: void setBackground(java.awt.Color)>";
+    "virtualinvoke <java.awt.Component: void setBackground(java.awt.Color)>"->"load.r r0";
+    "push \"delay\""
+    "load.r r0"->"push \"delay\"";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"
+    "push \"delay\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "store.r r20"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"store.r r20";
+    "load.r r20"
+    "store.r r20"->"load.r r20";
+    "ifnull load.r r0"
+    "load.r r20"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r20";
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"
+    "load.r r20"->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>";
+    "fieldput <TickerTape: int delay>"
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"->"fieldput <TickerTape: int delay>";
+    "goto load.r r0"
+    "fieldput <TickerTape: int delay>"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "push \"outborder\""
+    "load.r r0"->"push \"outborder\"";
+    "push \"outborder\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"store.r r20";
+    "store.r r20"->"load.r r20";
+    "load.r r20"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r r0";
+    "new java.awt.Color"
+    "load.r r0"->"new java.awt.Color";
+    "new java.awt.Color"->"dup1.r";
+    "dup1.r"->"load.r r20";
+    "push 16"
+    "load.r r20"->"push 16";
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String,int)>"
+    "push 16"->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String,int)>";
+    "specialinvoke <java.awt.Color: void <init>(int)>"
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String,int)>"->"specialinvoke <java.awt.Color: void <init>(int)>";
+    "fieldput <TickerTape: java.awt.Color outerborder>"
+    "specialinvoke <java.awt.Color: void <init>(int)>"->"fieldput <TickerTape: java.awt.Color outerborder>";
+    "fieldput <TickerTape: java.awt.Color outerborder>"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "push \"middleborder\""
+    "load.r r0"->"push \"middleborder\"";
+    "push \"middleborder\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"store.r r20";
+    "store.r r20"->"load.r r20";
+    "load.r r20"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r r0";
+    "load.r r0"->"new java.awt.Color";
+    "new java.awt.Color"->"dup1.r";
+    "dup1.r"->"load.r r20";
+    "load.r r20"->"push 16";
+    "push 16"->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String,int)>";
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String,int)>"->"specialinvoke <java.awt.Color: void <init>(int)>";
+    "fieldput <TickerTape: java.awt.Color middleborder>"
+    "specialinvoke <java.awt.Color: void <init>(int)>"->"fieldput <TickerTape: java.awt.Color middleborder>";
+    "fieldput <TickerTape: java.awt.Color middleborder>"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "push \"innerborder\""
+    "load.r r0"->"push \"innerborder\"";
+    "push \"innerborder\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"store.r r20";
+    "store.r r20"->"load.r r20";
+    "load.r r20"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r r0";
+    "load.r r0"->"new java.awt.Color";
+    "new java.awt.Color"->"dup1.r";
+    "dup1.r"->"load.r r20";
+    "load.r r20"->"push 16";
+    "push 16"->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String,int)>";
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String,int)>"->"specialinvoke <java.awt.Color: void <init>(int)>";
+    "fieldput <TickerTape: java.awt.Color innerborder>"
+    "specialinvoke <java.awt.Color: void <init>(int)>"->"fieldput <TickerTape: java.awt.Color innerborder>";
+    "fieldput <TickerTape: java.awt.Color innerborder>"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "push \"textcolor\""
+    "load.r r0"->"push \"textcolor\"";
+    "push \"textcolor\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"store.r r20";
+    "store.r r20"->"load.r r20";
+    "load.r r20"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r r0";
+    "load.r r0"->"new java.awt.Color";
+    "new java.awt.Color"->"dup1.r";
+    "dup1.r"->"load.r r20";
+    "load.r r20"->"push 16";
+    "push 16"->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String,int)>";
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String,int)>"->"specialinvoke <java.awt.Color: void <init>(int)>";
+    "fieldput <TickerTape: java.awt.Color textcolor>"
+    "specialinvoke <java.awt.Color: void <init>(int)>"->"fieldput <TickerTape: java.awt.Color textcolor>";
+    "fieldput <TickerTape: java.awt.Color textcolor>"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "push \"textbackground\""
+    "load.r r0"->"push \"textbackground\"";
+    "push \"textbackground\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"store.r r20";
+    "store.r r20"->"load.r r20";
+    "load.r r20"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r r0";
+    "load.r r0"->"new java.awt.Color";
+    "new java.awt.Color"->"dup1.r";
+    "dup1.r"->"load.r r20";
+    "load.r r20"->"push 16";
+    "push 16"->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String,int)>";
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String,int)>"->"specialinvoke <java.awt.Color: void <init>(int)>";
+    "fieldput <TickerTape: java.awt.Color textbackground>"
+    "specialinvoke <java.awt.Color: void <init>(int)>"->"fieldput <TickerTape: java.awt.Color textbackground>";
+    "fieldput <TickerTape: java.awt.Color textbackground>"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "push \"tickerline\""
+    "load.r r0"->"push \"tickerline\"";
+    "push \"tickerline\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "fieldput <TickerTape: java.lang.String tickerline>"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"fieldput <TickerTape: java.lang.String tickerline>";
+    "fieldput <TickerTape: java.lang.String tickerline>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "fieldget <TickerTape: java.lang.String tickerline>"
+    "load.r r0"->"fieldget <TickerTape: java.lang.String tickerline>";
+    "fieldget <TickerTape: java.lang.String tickerline>"->"push 0";
+    "push 1"
+    "push 0"->"push 1";
+    "virtualinvoke <java.lang.String: java.lang.String substring(int,int)>"
+    "push 1"->"virtualinvoke <java.lang.String: java.lang.String substring(int,int)>";
+    "fieldput <TickerTape: java.lang.String displaystring>"
+    "virtualinvoke <java.lang.String: java.lang.String substring(int,int)>"->"fieldput <TickerTape: java.lang.String displaystring>";
+    "fieldput <TickerTape: java.lang.String displaystring>"->"load.r r0";
+    "load.r r0"->"push 1";
+    "fieldput <TickerTape: int cnt>"
+    "push 1"->"fieldput <TickerTape: int cnt>";
+    "return"
+    "fieldput <TickerTape: int cnt>"->"return";
+}

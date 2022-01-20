@@ -1,0 +1,54 @@
+digraph "" {
+    "r0 := @this: JungleRunner"
+    "load.r r0"
+    "r0 := @this: JungleRunner"->"load.r r0";
+    "push null"
+    "load.r r0"->"push null";
+    "virtualinvoke <java.awt.Container: void setLayout(java.awt.LayoutManager)>"
+    "push null"->"virtualinvoke <java.awt.Container: void setLayout(java.awt.LayoutManager)>";
+    "virtualinvoke <java.awt.Container: void setLayout(java.awt.LayoutManager)>"->"load.r r0";
+    "push 600"
+    "load.r r0"->"push 600";
+    "push 400"
+    "push 600"->"push 400";
+    "virtualinvoke <java.awt.Component: void setSize(int,int)>"
+    "push 400"->"virtualinvoke <java.awt.Component: void setSize(int,int)>";
+    "virtualinvoke <java.awt.Component: void setSize(int,int)>"->"load.r r0";
+    "new JungleCanvas"
+    "load.r r0"->"new JungleCanvas";
+    "dup1.r"
+    "new JungleCanvas"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "specialinvoke <JungleCanvas: void <init>(JungleRunner)>"
+    "load.r r0"->"specialinvoke <JungleCanvas: void <init>(JungleRunner)>";
+    "fieldput <JungleRunner: JungleCanvas canvas1>"
+    "specialinvoke <JungleCanvas: void <init>(JungleRunner)>"->"fieldput <JungleRunner: JungleCanvas canvas1>";
+    "fieldput <JungleRunner: JungleCanvas canvas1>"->"load.r r0";
+    "fieldget <JungleRunner: JungleCanvas canvas1>"
+    "load.r r0"->"fieldget <JungleRunner: JungleCanvas canvas1>";
+    "push 0"
+    "fieldget <JungleRunner: JungleCanvas canvas1>"->"push 0";
+    "push 0"->"push 0";
+    "push 0"->"push 600";
+    "push 600"->"push 400";
+    "virtualinvoke <java.awt.Component: void setBounds(int,int,int,int)>"
+    "push 400"->"virtualinvoke <java.awt.Component: void setBounds(int,int,int,int)>";
+    "virtualinvoke <java.awt.Component: void setBounds(int,int,int,int)>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <JungleRunner: JungleCanvas canvas1>";
+    "virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>"
+    "fieldget <JungleRunner: JungleCanvas canvas1>"->"virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>";
+    "pop"
+    "virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>"->"pop";
+    "new java.lang.Thread"
+    "pop"->"new java.lang.Thread";
+    "new java.lang.Thread"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "load.r r0"->"fieldget <JungleRunner: JungleCanvas canvas1>";
+    "specialinvoke <java.lang.Thread: void <init>(java.lang.Runnable)>"
+    "fieldget <JungleRunner: JungleCanvas canvas1>"->"specialinvoke <java.lang.Thread: void <init>(java.lang.Runnable)>";
+    "virtualinvoke <java.lang.Thread: void start()>"
+    "specialinvoke <java.lang.Thread: void <init>(java.lang.Runnable)>"->"virtualinvoke <java.lang.Thread: void start()>";
+    "return"
+    "virtualinvoke <java.lang.Thread: void start()>"->"return";
+}

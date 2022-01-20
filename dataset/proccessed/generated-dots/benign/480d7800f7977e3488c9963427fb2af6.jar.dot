@@ -1,0 +1,86 @@
+digraph "" {
+    "r0 := @this: MagicButton"
+    "load.r r0"
+    "r0 := @this: MagicButton"->"load.r r0";
+    "push null"
+    "load.r r0"->"push null";
+    "virtualinvoke <java.awt.Container: void setLayout(java.awt.LayoutManager)>"
+    "push null"->"virtualinvoke <java.awt.Container: void setLayout(java.awt.LayoutManager)>";
+    "virtualinvoke <java.awt.Container: void setLayout(java.awt.LayoutManager)>"->"load.r r0";
+    "virtualinvoke <MagicButton: void PrepareA()>"
+    "load.r r0"->"virtualinvoke <MagicButton: void PrepareA()>";
+    "virtualinvoke <MagicButton: void PrepareA()>"->"load.r r0";
+    "fieldget <MagicButton: boolean CV>"
+    "load.r r0"->"fieldget <MagicButton: boolean CV>";
+    "ifeq return"
+    "fieldget <MagicButton: boolean CV>"->"ifeq return";
+    "ifeq return"->"load.r r0";
+    "virtualinvoke <java.applet.Applet: java.net.URL getCodeBase()>"
+    "load.r r0"->"virtualinvoke <java.applet.Applet: java.net.URL getCodeBase()>";
+    "virtualinvoke <java.net.URL: java.lang.String getProtocol()>"
+    "virtualinvoke <java.applet.Applet: java.net.URL getCodeBase()>"->"virtualinvoke <java.net.URL: java.lang.String getProtocol()>";
+    "push \"file\""
+    "virtualinvoke <java.net.URL: java.lang.String getProtocol()>"->"push \"file\"";
+    "virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>"
+    "push \"file\""->"virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>";
+    "ifeq load.r r0"
+    "virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>"->"ifeq load.r r0";
+    "goto return"
+    "ifeq load.r r0"->"goto return";
+    "return"
+    "goto return"->"return";
+    "ifeq load.r r0"->"load.r r0";
+    "new java.awt.Button"
+    "load.r r0"->"new java.awt.Button";
+    "dup1.r"
+    "new java.awt.Button"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "fieldget <MagicButton: java.lang.String sREG>"
+    "load.r r0"->"fieldget <MagicButton: java.lang.String sREG>";
+    "specialinvoke <java.awt.Button: void <init>(java.lang.String)>"
+    "fieldget <MagicButton: java.lang.String sREG>"->"specialinvoke <java.awt.Button: void <init>(java.lang.String)>";
+    "fieldput <MagicButton: java.awt.Button myB>"
+    "specialinvoke <java.awt.Button: void <init>(java.lang.String)>"->"fieldput <MagicButton: java.awt.Button myB>";
+    "fieldput <MagicButton: java.awt.Button myB>"->"load.r r0";
+    "fieldget <MagicButton: java.awt.Button myB>"
+    "load.r r0"->"fieldget <MagicButton: java.awt.Button myB>";
+    "fieldget <MagicButton: java.awt.Button myB>"->"load.r r0";
+    "virtualinvoke <java.awt.Component: java.awt.Dimension size()>"
+    "load.r r0"->"virtualinvoke <java.awt.Component: java.awt.Dimension size()>";
+    "fieldget <java.awt.Dimension: int width>"
+    "virtualinvoke <java.awt.Component: java.awt.Dimension size()>"->"fieldget <java.awt.Dimension: int width>";
+    "push 2"
+    "fieldget <java.awt.Dimension: int width>"->"push 2";
+    "div.i"
+    "push 2"->"div.i";
+    "push 60"
+    "div.i"->"push 60";
+    "sub.i"
+    "push 60"->"sub.i";
+    "sub.i"->"load.r r0";
+    "load.r r0"->"virtualinvoke <java.awt.Component: java.awt.Dimension size()>";
+    "fieldget <java.awt.Dimension: int height>"
+    "virtualinvoke <java.awt.Component: java.awt.Dimension size()>"->"fieldget <java.awt.Dimension: int height>";
+    "fieldget <java.awt.Dimension: int height>"->"push 2";
+    "push 2"->"div.i";
+    "push 20"
+    "div.i"->"push 20";
+    "push 20"->"sub.i";
+    "push 120"
+    "sub.i"->"push 120";
+    "push 40"
+    "push 120"->"push 40";
+    "virtualinvoke <java.awt.Component: void reshape(int,int,int,int)>"
+    "push 40"->"virtualinvoke <java.awt.Component: void reshape(int,int,int,int)>";
+    "virtualinvoke <java.awt.Component: void reshape(int,int,int,int)>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <MagicButton: java.awt.Button myB>";
+    "virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>"
+    "fieldget <MagicButton: java.awt.Button myB>"->"virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>";
+    "pop"
+    "virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>"->"pop";
+    "pop"->"load.r r0";
+    "load.r r0"->"fieldget <MagicButton: java.awt.Button myB>";
+    "virtualinvoke <java.awt.Component: void show()>"
+    "fieldget <MagicButton: java.awt.Button myB>"->"virtualinvoke <java.awt.Component: void show()>";
+}

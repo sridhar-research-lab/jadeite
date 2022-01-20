@@ -1,0 +1,125 @@
+digraph "" {
+    "r0 := @this: KJEgui.GraphApplet"
+    "load.r r0"
+    "r0 := @this: KJEgui.GraphApplet"->"load.r r0";
+    "push \"APPLET_ID\""
+    "load.r r0"->"push \"APPLET_ID\"";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"
+    "push \"APPLET_ID\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "store.r r1"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"store.r r1";
+    "load.r r1"
+    "store.r r1"->"load.r r1";
+    "ifnull return"
+    "load.r r1"->"ifnull return";
+    "ifnull return"->"load.r r0";
+    "virtualinvoke <java.applet.Applet: java.applet.AppletContext getAppletContext()>"
+    "load.r r0"->"virtualinvoke <java.applet.Applet: java.applet.AppletContext getAppletContext()>";
+    "interfaceinvoke <java.applet.AppletContext: java.util.Enumeration getApplets()> 0"
+    "virtualinvoke <java.applet.Applet: java.applet.AppletContext getAppletContext()>"->"interfaceinvoke <java.applet.AppletContext: java.util.Enumeration getApplets()> 0";
+    "store.r r2"
+    "interfaceinvoke <java.applet.AppletContext: java.util.Enumeration getApplets()> 0"->"store.r r2";
+    "goto load.r r2"
+    "store.r r2"->"goto load.r r2";
+    "load.r r2"
+    "goto load.r r2"->"load.r r2";
+    "interfaceinvoke <java.util.Enumeration: boolean hasMoreElements()> 0"
+    "load.r r2"->"interfaceinvoke <java.util.Enumeration: boolean hasMoreElements()> 0";
+    "ifne load.r r2"
+    "interfaceinvoke <java.util.Enumeration: boolean hasMoreElements()> 0"->"ifne load.r r2";
+    "return"
+    "ifne load.r r2"->"return";
+    "ifne load.r r2"->"load.r r2";
+    "interfaceinvoke <java.util.Enumeration: java.lang.Object nextElement()> 0"
+    "load.r r2"->"interfaceinvoke <java.util.Enumeration: java.lang.Object nextElement()> 0";
+    "store.r r3"
+    "interfaceinvoke <java.util.Enumeration: java.lang.Object nextElement()> 0"->"store.r r3";
+    "load.r r3"
+    "store.r r3"->"load.r r3";
+    "instanceof"
+    "load.r r3"->"instanceof";
+    "ifeq load.r r2"
+    "instanceof"->"ifeq load.r r2";
+    "ifeq load.r r2"->"load.r r3";
+    "checkcast"
+    "load.r r3"->"checkcast";
+    "checkcast"->"store.r r3";
+    "store.r r3"->"load.r r1";
+    "load.r r1"->"load.r r3";
+    "virtualinvoke <KJEgui.CalculatorApplet: java.lang.String getAppletID()>"
+    "load.r r3"->"virtualinvoke <KJEgui.CalculatorApplet: java.lang.String getAppletID()>";
+    "virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>"
+    "virtualinvoke <KJEgui.CalculatorApplet: java.lang.String getAppletID()>"->"virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>";
+    "virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>"->"ifeq load.r r2";
+    "ifeq load.r r2"->"load.r r3";
+    "virtualinvoke <KJEgui.CalculatorApplet: KJEgraph.Graph[] getGraph()>"
+    "load.r r3"->"virtualinvoke <KJEgui.CalculatorApplet: KJEgraph.Graph[] getGraph()>";
+    "virtualinvoke <KJEgui.CalculatorApplet: KJEgraph.Graph[] getGraph()>"->"store.r r3";
+    "store.r r3"->"load.r r3";
+    "ifnull load.r r2"
+    "load.r r3"->"ifnull load.r r2";
+    "ifnull load.r r2"->"load.r r0";
+    "push \"GRAPH_ID\""
+    "load.r r0"->"push \"GRAPH_ID\"";
+    "push \"GRAPH_ID\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>";
+    "store.i i0"
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"->"store.i i0";
+    "store.i i0"->"load.r r3";
+    "load.i i0"
+    "load.r r3"->"load.i i0";
+    "arrayread.r"
+    "load.i i0"->"arrayread.r";
+    "arrayread.r"->"ifnull load.r r2";
+    "ifnull load.r r2"->"load.r r0";
+    "load.r r0"->"load.r r3";
+    "load.r r3"->"load.i i0";
+    "load.i i0"->"arrayread.r";
+    "arrayread.r"->"load.r r0";
+    "virtualinvoke <java.awt.Component: int getWidth()>"
+    "load.r r0"->"virtualinvoke <java.awt.Component: int getWidth()>";
+    "virtualinvoke <java.awt.Component: int getWidth()>"->"load.r r0";
+    "virtualinvoke <java.awt.Component: int getHeight()>"
+    "load.r r0"->"virtualinvoke <java.awt.Component: int getHeight()>";
+    "virtualinvoke <java.awt.Component: int getHeight()>"->"load.r r0";
+    "push \"PAGEBACKGROUND_COLOR\""
+    "load.r r0"->"push \"PAGEBACKGROUND_COLOR\"";
+    "push \"PAGEBACKGROUND_COLOR\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "staticinvoke <KJEgraph.AutoColor: java.awt.Color getColor(java.lang.String)>"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"staticinvoke <KJEgraph.AutoColor: java.awt.Color getColor(java.lang.String)>";
+    "virtualinvoke <KJEgraph.Graph: java.awt.Image getImage(int,int,java.awt.Color)>"
+    "staticinvoke <KJEgraph.AutoColor: java.awt.Color getColor(java.lang.String)>"->"virtualinvoke <KJEgraph.Graph: java.awt.Image getImage(int,int,java.awt.Color)>";
+    "fieldput <KJEgui.GraphApplet: java.awt.Image gImage>"
+    "virtualinvoke <KJEgraph.Graph: java.awt.Image getImage(int,int,java.awt.Color)>"->"fieldput <KJEgui.GraphApplet: java.awt.Image gImage>";
+    "fieldput <KJEgui.GraphApplet: java.awt.Image gImage>"->"load.r r3";
+    "load.r r3"->"load.i i0";
+    "load.i i0"->"arrayread.r";
+    "push 1"
+    "arrayread.r"->"push 1";
+    "virtualinvoke <KJEgraph.Graph: void dataChanged(boolean)>"
+    "push 1"->"virtualinvoke <KJEgraph.Graph: void dataChanged(boolean)>";
+    "virtualinvoke <KJEgraph.Graph: void dataChanged(boolean)>"->"load.r r0";
+    "virtualinvoke <javax.swing.JApplet: java.awt.Container getContentPane()>"
+    "load.r r0"->"virtualinvoke <javax.swing.JApplet: java.awt.Container getContentPane()>";
+    "push \"Center\""
+    "virtualinvoke <javax.swing.JApplet: java.awt.Container getContentPane()>"->"push \"Center\"";
+    "new javax.swing.JLabel"
+    "push \"Center\""->"new javax.swing.JLabel";
+    "dup1.r"
+    "new javax.swing.JLabel"->"dup1.r";
+    "new javax.swing.ImageIcon"
+    "dup1.r"->"new javax.swing.ImageIcon";
+    "new javax.swing.ImageIcon"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "fieldget <KJEgui.GraphApplet: java.awt.Image gImage>"
+    "load.r r0"->"fieldget <KJEgui.GraphApplet: java.awt.Image gImage>";
+    "specialinvoke <javax.swing.ImageIcon: void <init>(java.awt.Image)>"
+    "fieldget <KJEgui.GraphApplet: java.awt.Image gImage>"->"specialinvoke <javax.swing.ImageIcon: void <init>(java.awt.Image)>";
+    "specialinvoke <javax.swing.JLabel: void <init>(javax.swing.Icon)>"
+    "specialinvoke <javax.swing.ImageIcon: void <init>(java.awt.Image)>"->"specialinvoke <javax.swing.JLabel: void <init>(javax.swing.Icon)>";
+    "virtualinvoke <java.awt.Container: java.awt.Component add(java.lang.String,java.awt.Component)>"
+    "specialinvoke <javax.swing.JLabel: void <init>(javax.swing.Icon)>"->"virtualinvoke <java.awt.Container: java.awt.Component add(java.lang.String,java.awt.Component)>";
+    "pop"
+    "virtualinvoke <java.awt.Container: java.awt.Component add(java.lang.String,java.awt.Component)>"->"pop";
+}

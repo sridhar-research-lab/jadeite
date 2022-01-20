@@ -1,0 +1,17 @@
+digraph "" {
+    "r0 := @this: abacusApplet"
+    "load.r r0"
+    "r0 := @this: abacusApplet"->"load.r r0";
+    "new Abacus"
+    "load.r r0"->"new Abacus";
+    "dup1.r"
+    "new Abacus"->"dup1.r";
+    "specialinvoke <Abacus: void <init>()>"
+    "dup1.r"->"specialinvoke <Abacus: void <init>()>";
+    "virtualinvoke <abacusApplet: java.awt.Component add(java.awt.Component)>"
+    "specialinvoke <Abacus: void <init>()>"->"virtualinvoke <abacusApplet: java.awt.Component add(java.awt.Component)>";
+    "pop"
+    "virtualinvoke <abacusApplet: java.awt.Component add(java.awt.Component)>"->"pop";
+    "return"
+    "pop"->"return";
+}

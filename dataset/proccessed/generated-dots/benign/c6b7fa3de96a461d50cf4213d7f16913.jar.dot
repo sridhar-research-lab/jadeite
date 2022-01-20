@@ -1,0 +1,334 @@
+digraph "" {
+    "r0 := @this: BirthdayCalendar"
+    "load.r r0"
+    "r0 := @this: BirthdayCalendar"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "virtualinvoke <java.awt.Component: java.awt.Dimension size()>"
+    "load.r r0"->"virtualinvoke <java.awt.Component: java.awt.Dimension size()>";
+    "fieldget <java.awt.Dimension: int width>"
+    "virtualinvoke <java.awt.Component: java.awt.Dimension size()>"->"fieldget <java.awt.Dimension: int width>";
+    "fieldput <BirthdayCalendar: int width>"
+    "fieldget <java.awt.Dimension: int width>"->"fieldput <BirthdayCalendar: int width>";
+    "fieldput <BirthdayCalendar: int width>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"virtualinvoke <java.awt.Component: java.awt.Dimension size()>";
+    "fieldget <java.awt.Dimension: int height>"
+    "virtualinvoke <java.awt.Component: java.awt.Dimension size()>"->"fieldget <java.awt.Dimension: int height>";
+    "fieldput <BirthdayCalendar: int height>"
+    "fieldget <java.awt.Dimension: int height>"->"fieldput <BirthdayCalendar: int height>";
+    "push 0"
+    "fieldput <BirthdayCalendar: int height>"->"push 0";
+    "store.i i15"
+    "push 0"->"store.i i15";
+    "store.i i15"->"load.r r0";
+    "new java.lang.StringBuffer"
+    "load.r r0"->"new java.lang.StringBuffer";
+    "dup1.r"
+    "new java.lang.StringBuffer"->"dup1.r";
+    "specialinvoke <java.lang.StringBuffer: void <init>()>"
+    "dup1.r"->"specialinvoke <java.lang.StringBuffer: void <init>()>";
+    "load.i i15"
+    "specialinvoke <java.lang.StringBuffer: void <init>()>"->"load.i i15";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(int)>"
+    "load.i i15"->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(int)>";
+    "push \"\""
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(int)>"->"push \"\"";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"
+    "push \"\""->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>"
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"
+    "virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>"->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "ifnull load.r r0"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "fieldget <BirthdayCalendar: int dataCount>"
+    "load.r r0"->"fieldget <BirthdayCalendar: int dataCount>";
+    "push 1"
+    "fieldget <BirthdayCalendar: int dataCount>"->"push 1";
+    "add.i"
+    "push 1"->"add.i";
+    "fieldput <BirthdayCalendar: int dataCount>"
+    "add.i"->"fieldput <BirthdayCalendar: int dataCount>";
+    "inc.i i15 1"
+    "fieldput <BirthdayCalendar: int dataCount>"->"inc.i i15 1";
+    "goto load.r r0"
+    "inc.i i15 1"->"goto load.r r0";
+    "ifnull load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <BirthdayCalendar: int dataCount>";
+    "newarray"
+    "fieldget <BirthdayCalendar: int dataCount>"->"newarray";
+    "fieldput <BirthdayCalendar: java.lang.String[] navn>"
+    "newarray"->"fieldput <BirthdayCalendar: java.lang.String[] navn>";
+    "fieldput <BirthdayCalendar: java.lang.String[] navn>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <BirthdayCalendar: int dataCount>";
+    "fieldget <BirthdayCalendar: int dataCount>"->"newarray";
+    "fieldput <BirthdayCalendar: java.util.Date[] data>"
+    "newarray"->"fieldput <BirthdayCalendar: java.util.Date[] data>";
+    "fieldput <BirthdayCalendar: java.util.Date[] data>"->"load.r r0";
+    "push \"font\""
+    "load.r r0"->"push \"font\"";
+    "push \"font\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"push \"font\"";
+    "push \"font\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "fieldput <BirthdayCalendar: java.lang.String strFont>"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"fieldput <BirthdayCalendar: java.lang.String strFont>";
+    "fieldput <BirthdayCalendar: java.lang.String strFont>"->"load.r r0";
+    "push \"language\""
+    "load.r r0"->"push \"language\"";
+    "push \"language\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "push \"uk\""
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"push \"uk\"";
+    "virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>"
+    "push \"uk\""->"virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>";
+    "ifeq push 0"
+    "virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>"->"ifeq push 0";
+    "ifeq push 0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "fieldget <BirthdayCalendar: java.lang.String[] arrMonthsUk>"
+    "load.r r0"->"fieldget <BirthdayCalendar: java.lang.String[] arrMonthsUk>";
+    "fieldput <BirthdayCalendar: java.lang.String[] arrMonths>"
+    "fieldget <BirthdayCalendar: java.lang.String[] arrMonthsUk>"->"fieldput <BirthdayCalendar: java.lang.String[] arrMonths>";
+    "fieldput <BirthdayCalendar: java.lang.String[] arrMonths>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "fieldget <BirthdayCalendar: java.lang.String[] arrDaysUk>"
+    "load.r r0"->"fieldget <BirthdayCalendar: java.lang.String[] arrDaysUk>";
+    "fieldput <BirthdayCalendar: java.lang.String[] arrDays>"
+    "fieldget <BirthdayCalendar: java.lang.String[] arrDaysUk>"->"fieldput <BirthdayCalendar: java.lang.String[] arrDays>";
+    "fieldput <BirthdayCalendar: java.lang.String[] arrDays>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "fieldget <BirthdayCalendar: java.lang.String strYearUk>"
+    "load.r r0"->"fieldget <BirthdayCalendar: java.lang.String strYearUk>";
+    "fieldput <BirthdayCalendar: java.lang.String strYear>"
+    "fieldget <BirthdayCalendar: java.lang.String strYearUk>"->"fieldput <BirthdayCalendar: java.lang.String strYear>";
+    "fieldput <BirthdayCalendar: java.lang.String strYear>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "fieldget <BirthdayCalendar: java.lang.String strChooseUk>"
+    "load.r r0"->"fieldget <BirthdayCalendar: java.lang.String strChooseUk>";
+    "fieldput <BirthdayCalendar: java.lang.String strChoose>"
+    "fieldget <BirthdayCalendar: java.lang.String strChooseUk>"->"fieldput <BirthdayCalendar: java.lang.String strChoose>";
+    "fieldput <BirthdayCalendar: java.lang.String strChoose>"->"push 0";
+    "push 0"->"store.i i15";
+    "store.i i15"->"load.i i15";
+    "load.i i15"->"load.r r0";
+    "load.r r0"->"fieldget <BirthdayCalendar: int dataCount>";
+    "ifcmpge.i load.r r0"
+    "fieldget <BirthdayCalendar: int dataCount>"->"ifcmpge.i load.r r0";
+    "ifcmpge.i load.r r0"->"load.r r0";
+    "load.r r0"->"new java.lang.StringBuffer";
+    "new java.lang.StringBuffer"->"dup1.r";
+    "dup1.r"->"specialinvoke <java.lang.StringBuffer: void <init>()>";
+    "specialinvoke <java.lang.StringBuffer: void <init>()>"->"load.i i15";
+    "load.i i15"->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(int)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(int)>"->"push \"\"";
+    "push \"\""->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>"->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "store.r r1"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"store.r r1";
+    "load.r r1"
+    "store.r r1"->"load.r r1";
+    "ifnonnull new java.util.StringTokenizer"
+    "load.r r1"->"ifnonnull new java.util.StringTokenizer";
+    "ifnonnull new java.util.StringTokenizer"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "fieldget <BirthdayCalendar: java.awt.Choice navnVALG>"
+    "load.r r0"->"fieldget <BirthdayCalendar: java.awt.Choice navnVALG>";
+    "fieldget <BirthdayCalendar: java.awt.Choice navnVALG>"->"load.r r0";
+    "fieldget <BirthdayCalendar: java.lang.String strChoose>"
+    "load.r r0"->"fieldget <BirthdayCalendar: java.lang.String strChoose>";
+    "virtualinvoke <java.awt.Choice: void addItem(java.lang.String)>"
+    "fieldget <BirthdayCalendar: java.lang.String strChoose>"->"virtualinvoke <java.awt.Choice: void addItem(java.lang.String)>";
+    "virtualinvoke <java.awt.Choice: void addItem(java.lang.String)>"->"push 0";
+    "push 0"->"store.i i15";
+    "store.i i15"->"load.i i15";
+    "load.i i15"->"load.r r0";
+    "load.r r0"->"fieldget <BirthdayCalendar: int dataCount>";
+    "fieldget <BirthdayCalendar: int dataCount>"->"ifcmpge.i load.r r0";
+    "ifcmpge.i load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <BirthdayCalendar: java.awt.Choice navnVALG>";
+    "fieldget <BirthdayCalendar: java.awt.Choice navnVALG>"->"load.r r0";
+    "fieldget <BirthdayCalendar: java.lang.String[] navn>"
+    "load.r r0"->"fieldget <BirthdayCalendar: java.lang.String[] navn>";
+    "fieldget <BirthdayCalendar: java.lang.String[] navn>"->"load.i i15";
+    "arrayread.r"
+    "load.i i15"->"arrayread.r";
+    "arrayread.r"->"virtualinvoke <java.awt.Choice: void addItem(java.lang.String)>";
+    "virtualinvoke <java.awt.Choice: void addItem(java.lang.String)>"->"inc.i i15 1";
+    "goto load.i i15"
+    "inc.i i15 1"->"goto load.i i15";
+    "ifcmpge.i load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <BirthdayCalendar: java.awt.Choice navnVALG>";
+    "virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>"
+    "fieldget <BirthdayCalendar: java.awt.Choice navnVALG>"->"virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>";
+    "pop"
+    "virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>"->"pop";
+    "pop"->"load.r r0";
+    "load.r r0"->"fieldget <BirthdayCalendar: java.awt.Choice navnVALG>";
+    "push 100"
+    "fieldget <BirthdayCalendar: java.awt.Choice navnVALG>"->"push 100";
+    "push 5"
+    "push 100"->"push 5";
+    "push 200"
+    "push 5"->"push 200";
+    "push 30"
+    "push 200"->"push 30";
+    "virtualinvoke <java.awt.Component: void reshape(int,int,int,int)>"
+    "push 30"->"virtualinvoke <java.awt.Component: void reshape(int,int,int,int)>";
+    "virtualinvoke <java.awt.Component: void reshape(int,int,int,int)>"->"push 0";
+    "push 0"->"store.i i15";
+    "store.i i15"->"load.i i15";
+    "push 12"
+    "load.i i15"->"push 12";
+    "push 12"->"ifcmpge.i load.r r0";
+    "ifcmpge.i load.r r0"->"load.r r0";
+    "fieldget <BirthdayCalendar: java.awt.Choice valg>"
+    "load.r r0"->"fieldget <BirthdayCalendar: java.awt.Choice valg>";
+    "fieldget <BirthdayCalendar: java.awt.Choice valg>"->"load.r r0";
+    "fieldget <BirthdayCalendar: java.lang.String[] arrMonths>"
+    "load.r r0"->"fieldget <BirthdayCalendar: java.lang.String[] arrMonths>";
+    "fieldget <BirthdayCalendar: java.lang.String[] arrMonths>"->"load.i i15";
+    "load.i i15"->"arrayread.r";
+    "arrayread.r"->"virtualinvoke <java.awt.Choice: void addItem(java.lang.String)>";
+    "virtualinvoke <java.awt.Choice: void addItem(java.lang.String)>"->"inc.i i15 1";
+    "inc.i i15 1"->"goto load.i i15";
+    "ifcmpge.i load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <BirthdayCalendar: java.awt.Choice valg>";
+    "fieldget <BirthdayCalendar: java.awt.Choice valg>"->"virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>";
+    "virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>"->"pop";
+    "pop"->"load.r r0";
+    "load.r r0"->"fieldget <BirthdayCalendar: java.awt.Choice valg>";
+    "push 302"
+    "fieldget <BirthdayCalendar: java.awt.Choice valg>"->"push 302";
+    "push 302"->"push 5";
+    "push 85"
+    "push 5"->"push 85";
+    "push 85"->"push 30";
+    "push 30"->"virtualinvoke <java.awt.Component: void reshape(int,int,int,int)>";
+    "virtualinvoke <java.awt.Component: void reshape(int,int,int,int)>"->"load.r r0";
+    "push null"
+    "load.r r0"->"push null";
+    "virtualinvoke <java.awt.Container: void setLayout(java.awt.LayoutManager)>"
+    "push null"->"virtualinvoke <java.awt.Container: void setLayout(java.awt.LayoutManager)>";
+    "virtualinvoke <java.awt.Container: void setLayout(java.awt.LayoutManager)>"->"load.r r0";
+    "new java.util.Date"
+    "load.r r0"->"new java.util.Date";
+    "new java.util.Date"->"dup1.r";
+    "specialinvoke <java.util.Date: void <init>()>"
+    "dup1.r"->"specialinvoke <java.util.Date: void <init>()>";
+    "virtualinvoke <java.util.Date: int getMonth()>"
+    "specialinvoke <java.util.Date: void <init>()>"->"virtualinvoke <java.util.Date: int getMonth()>";
+    "virtualinvoke <java.util.Date: int getMonth()>"->"push 1";
+    "push 1"->"add.i";
+    "fieldput <BirthdayCalendar: int maanedVIS>"
+    "add.i"->"fieldput <BirthdayCalendar: int maanedVIS>";
+    "fieldput <BirthdayCalendar: int maanedVIS>"->"load.r r0";
+    "load.r r0"->"fieldget <BirthdayCalendar: java.awt.Choice valg>";
+    "fieldget <BirthdayCalendar: java.awt.Choice valg>"->"load.r r0";
+    "fieldget <BirthdayCalendar: int maanedVIS>"
+    "load.r r0"->"fieldget <BirthdayCalendar: int maanedVIS>";
+    "fieldget <BirthdayCalendar: int maanedVIS>"->"push 1";
+    "sub.i"
+    "push 1"->"sub.i";
+    "virtualinvoke <java.awt.Choice: void select(int)>"
+    "sub.i"->"virtualinvoke <java.awt.Choice: void select(int)>";
+    "virtualinvoke <java.awt.Choice: void select(int)>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "push 400"
+    "load.r r0"->"push 400";
+    "push 800"
+    "push 400"->"push 800";
+    "virtualinvoke <java.awt.Component: java.awt.Image createImage(int,int)>"
+    "push 800"->"virtualinvoke <java.awt.Component: java.awt.Image createImage(int,int)>";
+    "fieldput <BirthdayCalendar: java.awt.Image offimage>"
+    "virtualinvoke <java.awt.Component: java.awt.Image createImage(int,int)>"->"fieldput <BirthdayCalendar: java.awt.Image offimage>";
+    "fieldput <BirthdayCalendar: java.awt.Image offimage>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "fieldget <BirthdayCalendar: java.awt.Image offimage>"
+    "load.r r0"->"fieldget <BirthdayCalendar: java.awt.Image offimage>";
+    "virtualinvoke <java.awt.Image: java.awt.Graphics getGraphics()>"
+    "fieldget <BirthdayCalendar: java.awt.Image offimage>"->"virtualinvoke <java.awt.Image: java.awt.Graphics getGraphics()>";
+    "fieldput <BirthdayCalendar: java.awt.Graphics off>"
+    "virtualinvoke <java.awt.Image: java.awt.Graphics getGraphics()>"->"fieldput <BirthdayCalendar: java.awt.Graphics off>";
+    "fieldput <BirthdayCalendar: java.awt.Graphics off>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "virtualinvoke <java.applet.Applet: java.net.URL getCodeBase()>"
+    "load.r r0"->"virtualinvoke <java.applet.Applet: java.net.URL getCodeBase()>";
+    "push \"flag.gif\""
+    "virtualinvoke <java.applet.Applet: java.net.URL getCodeBase()>"->"push \"flag.gif\"";
+    "virtualinvoke <java.applet.Applet: java.awt.Image getImage(java.net.URL,java.lang.String)>"
+    "push \"flag.gif\""->"virtualinvoke <java.applet.Applet: java.awt.Image getImage(java.net.URL,java.lang.String)>";
+    "fieldput <BirthdayCalendar: java.awt.Image flag>"
+    "virtualinvoke <java.applet.Applet: java.awt.Image getImage(java.net.URL,java.lang.String)>"->"fieldput <BirthdayCalendar: java.awt.Image flag>";
+    "return"
+    "fieldput <BirthdayCalendar: java.awt.Image flag>"->"return";
+    "new java.util.StringTokenizer"
+    "ifnonnull new java.util.StringTokenizer"->"new java.util.StringTokenizer";
+    "store.r $r38"
+    "new java.util.StringTokenizer"->"store.r $r38";
+    "load.r $r38"
+    "store.r $r38"->"load.r $r38";
+    "load.r $r38"->"load.r r1";
+    "push \",\""
+    "load.r r1"->"push \",\"";
+    "specialinvoke <java.util.StringTokenizer: void <init>(java.lang.String,java.lang.String)>"
+    "push \",\""->"specialinvoke <java.util.StringTokenizer: void <init>(java.lang.String,java.lang.String)>";
+    "specialinvoke <java.util.StringTokenizer: void <init>(java.lang.String,java.lang.String)>"->"load.r $r38";
+    "virtualinvoke <java.util.StringTokenizer: java.lang.String nextToken()>"
+    "load.r $r38"->"virtualinvoke <java.util.StringTokenizer: java.lang.String nextToken()>";
+    "virtualinvoke <java.util.StringTokenizer: java.lang.String nextToken()>"->"store.r r1";
+    "store.r r1"->"load.r r0";
+    "load.r r0"->"fieldget <BirthdayCalendar: java.lang.String[] navn>";
+    "fieldget <BirthdayCalendar: java.lang.String[] navn>"->"load.i i15";
+    "load.i i15"->"load.r r1";
+    "arraywrite.r"
+    "load.r r1"->"arraywrite.r";
+    "arraywrite.r"->"load.r $r38";
+    "load.r $r38"->"virtualinvoke <java.util.StringTokenizer: java.lang.String nextToken()>";
+    "virtualinvoke <java.util.StringTokenizer: java.lang.String nextToken()>"->"store.r $r38";
+    "store.r $r38"->"load.r r0";
+    "fieldget <BirthdayCalendar: java.util.Date[] data>"
+    "load.r r0"->"fieldget <BirthdayCalendar: java.util.Date[] data>";
+    "fieldget <BirthdayCalendar: java.util.Date[] data>"->"load.i i15";
+    "load.i i15"->"new java.util.Date";
+    "new java.util.Date"->"dup1.r";
+    "dup1.r"->"load.r $r38";
+    "push 4"
+    "load.r $r38"->"push 4";
+    "push 8"
+    "push 4"->"push 8";
+    "virtualinvoke <java.lang.String: java.lang.String substring(int,int)>"
+    "push 8"->"virtualinvoke <java.lang.String: java.lang.String substring(int,int)>";
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"
+    "virtualinvoke <java.lang.String: java.lang.String substring(int,int)>"->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>";
+    "push 1900"
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"->"push 1900";
+    "push 1900"->"sub.i";
+    "sub.i"->"load.r $r38";
+    "push 2"
+    "load.r $r38"->"push 2";
+    "push 2"->"push 4";
+    "push 4"->"virtualinvoke <java.lang.String: java.lang.String substring(int,int)>";
+    "virtualinvoke <java.lang.String: java.lang.String substring(int,int)>"->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>";
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"->"push 1";
+    "push 1"->"sub.i";
+    "sub.i"->"load.r $r38";
+    "load.r $r38"->"push 0";
+    "push 0"->"push 2";
+    "push 2"->"virtualinvoke <java.lang.String: java.lang.String substring(int,int)>";
+    "virtualinvoke <java.lang.String: java.lang.String substring(int,int)>"->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>";
+    "specialinvoke <java.util.Date: void <init>(int,int,int)>"
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"->"specialinvoke <java.util.Date: void <init>(int,int,int)>";
+    "specialinvoke <java.util.Date: void <init>(int,int,int)>"->"arraywrite.r";
+    "arraywrite.r"->"inc.i i15 1";
+    "inc.i i15 1"->"goto load.i i15";
+}

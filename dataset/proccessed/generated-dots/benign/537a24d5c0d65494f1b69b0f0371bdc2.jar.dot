@@ -1,0 +1,28 @@
+digraph "" {
+    "r0 := @this: GameSparker"
+    "load.r r0"
+    "r0 := @this: GameSparker"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "push 550"
+    "load.r r0"->"push 550";
+    "push 400"
+    "push 550"->"push 400";
+    "virtualinvoke <java.awt.Component: java.awt.Image createImage(int,int)>"
+    "push 400"->"virtualinvoke <java.awt.Component: java.awt.Image createImage(int,int)>";
+    "fieldput <GameSparker: java.awt.Image offImage>"
+    "virtualinvoke <java.awt.Component: java.awt.Image createImage(int,int)>"->"fieldput <GameSparker: java.awt.Image offImage>";
+    "fieldput <GameSparker: java.awt.Image offImage>"->"load.r r0";
+    "fieldget <GameSparker: java.awt.Image offImage>"
+    "load.r r0"->"fieldget <GameSparker: java.awt.Image offImage>";
+    "ifnull return"
+    "fieldget <GameSparker: java.awt.Image offImage>"->"ifnull return";
+    "ifnull return"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <GameSparker: java.awt.Image offImage>";
+    "virtualinvoke <java.awt.Image: java.awt.Graphics getGraphics()>"
+    "fieldget <GameSparker: java.awt.Image offImage>"->"virtualinvoke <java.awt.Image: java.awt.Graphics getGraphics()>";
+    "fieldput <GameSparker: java.awt.Graphics rd>"
+    "virtualinvoke <java.awt.Image: java.awt.Graphics getGraphics()>"->"fieldput <GameSparker: java.awt.Graphics rd>";
+    "return"
+    "fieldput <GameSparker: java.awt.Graphics rd>"->"return";
+}

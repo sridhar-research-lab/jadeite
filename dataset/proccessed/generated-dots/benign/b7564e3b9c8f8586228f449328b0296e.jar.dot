@@ -1,0 +1,209 @@
+digraph "" {
+    "r0 := @this: OSAdemo"
+    "load.r r0"
+    "r0 := @this: OSAdemo"->"load.r r0";
+    "push \"North\""
+    "load.r r0"->"push \"North\"";
+    "new java.awt.Label"
+    "push \"North\""->"new java.awt.Label";
+    "dup1.r"
+    "new java.awt.Label"->"dup1.r";
+    "push \"OSA-UCS Full-Step Set Demonstration\""
+    "dup1.r"->"push \"OSA-UCS Full-Step Set Demonstration\"";
+    "specialinvoke <java.awt.Label: void <init>(java.lang.String)>"
+    "push \"OSA-UCS Full-Step Set Demonstration\""->"specialinvoke <java.awt.Label: void <init>(java.lang.String)>";
+    "virtualinvoke <java.awt.Container: java.awt.Component add(java.lang.String,java.awt.Component)>"
+    "specialinvoke <java.awt.Label: void <init>(java.lang.String)>"->"virtualinvoke <java.awt.Container: java.awt.Component add(java.lang.String,java.awt.Component)>";
+    "pop"
+    "virtualinvoke <java.awt.Container: java.awt.Component add(java.lang.String,java.awt.Component)>"->"pop";
+    "pop"->"load.r r0";
+    "staticget <java.awt.Color: java.awt.Color white>"
+    "load.r r0"->"staticget <java.awt.Color: java.awt.Color white>";
+    "virtualinvoke <java.awt.Component: void setBackground(java.awt.Color)>"
+    "staticget <java.awt.Color: java.awt.Color white>"->"virtualinvoke <java.awt.Component: void setBackground(java.awt.Color)>";
+    "new OSApane"
+    "virtualinvoke <java.awt.Component: void setBackground(java.awt.Color)>"->"new OSApane";
+    "new OSApane"->"dup1.r";
+    "specialinvoke <OSApane: void <init>()>"
+    "dup1.r"->"specialinvoke <OSApane: void <init>()>";
+    "staticput <OSAdemo: OSApane colorOSA>"
+    "specialinvoke <OSApane: void <init>()>"->"staticput <OSAdemo: OSApane colorOSA>";
+    "staticget <OSAdemo: OSApane colorOSA>"
+    "staticput <OSAdemo: OSApane colorOSA>"->"staticget <OSAdemo: OSApane colorOSA>";
+    "staticget <OSAdemo: OSApane colorOSA>"->"load.r r0";
+    "specialinvoke <OSAdemo: OSApaneListener PaneListener()>"
+    "load.r r0"->"specialinvoke <OSAdemo: OSApaneListener PaneListener()>";
+    "virtualinvoke <OSApane: void addOSApaneListener(OSApaneListener)>"
+    "specialinvoke <OSAdemo: OSApaneListener PaneListener()>"->"virtualinvoke <OSApane: void addOSApaneListener(OSApaneListener)>";
+    "virtualinvoke <OSApane: void addOSApaneListener(OSApaneListener)>"->"load.r r0";
+    "push \"Center\""
+    "load.r r0"->"push \"Center\"";
+    "push \"Center\""->"staticget <OSAdemo: OSApane colorOSA>";
+    "staticget <OSAdemo: OSApane colorOSA>"->"virtualinvoke <java.awt.Container: java.awt.Component add(java.lang.String,java.awt.Component)>";
+    "virtualinvoke <java.awt.Container: java.awt.Component add(java.lang.String,java.awt.Component)>"->"pop";
+    "pop"->"load.r r0";
+    "new java.awt.Button"
+    "load.r r0"->"new java.awt.Button";
+    "new java.awt.Button"->"dup1.r";
+    "push \"tilt\""
+    "dup1.r"->"push \"tilt\"";
+    "specialinvoke <java.awt.Button: void <init>(java.lang.String)>"
+    "push \"tilt\""->"specialinvoke <java.awt.Button: void <init>(java.lang.String)>";
+    "fieldput <OSAdemo: java.awt.Button tiltButton>"
+    "specialinvoke <java.awt.Button: void <init>(java.lang.String)>"->"fieldput <OSAdemo: java.awt.Button tiltButton>";
+    "fieldput <OSAdemo: java.awt.Button tiltButton>"->"load.r r0";
+    "fieldget <OSAdemo: java.awt.Button tiltButton>"
+    "load.r r0"->"fieldget <OSAdemo: java.awt.Button tiltButton>";
+    "staticinvoke <OSAdemo: java.awt.event.ActionListener TiltButtonListener()>"
+    "fieldget <OSAdemo: java.awt.Button tiltButton>"->"staticinvoke <OSAdemo: java.awt.event.ActionListener TiltButtonListener()>";
+    "virtualinvoke <java.awt.Button: void addActionListener(java.awt.event.ActionListener)>"
+    "staticinvoke <OSAdemo: java.awt.event.ActionListener TiltButtonListener()>"->"virtualinvoke <java.awt.Button: void addActionListener(java.awt.event.ActionListener)>";
+    "virtualinvoke <java.awt.Button: void addActionListener(java.awt.event.ActionListener)>"->"load.r r0";
+    "push \"East\""
+    "load.r r0"->"push \"East\"";
+    "push \"East\""->"load.r r0";
+    "load.r r0"->"fieldget <OSAdemo: java.awt.Button tiltButton>";
+    "fieldget <OSAdemo: java.awt.Button tiltButton>"->"virtualinvoke <java.awt.Container: java.awt.Component add(java.lang.String,java.awt.Component)>";
+    "virtualinvoke <java.awt.Container: java.awt.Component add(java.lang.String,java.awt.Component)>"->"pop";
+    "pop"->"load.r r0";
+    "load.r r0"->"new java.awt.Button";
+    "new java.awt.Button"->"dup1.r";
+    "push \"increase\""
+    "dup1.r"->"push \"increase\"";
+    "push \"increase\""->"specialinvoke <java.awt.Button: void <init>(java.lang.String)>";
+    "fieldput <OSAdemo: java.awt.Button incButton>"
+    "specialinvoke <java.awt.Button: void <init>(java.lang.String)>"->"fieldput <OSAdemo: java.awt.Button incButton>";
+    "fieldput <OSAdemo: java.awt.Button incButton>"->"load.r r0";
+    "fieldget <OSAdemo: java.awt.Button incButton>"
+    "load.r r0"->"fieldget <OSAdemo: java.awt.Button incButton>";
+    "staticinvoke <OSAdemo: java.awt.event.ActionListener IncButtonListener()>"
+    "fieldget <OSAdemo: java.awt.Button incButton>"->"staticinvoke <OSAdemo: java.awt.event.ActionListener IncButtonListener()>";
+    "staticinvoke <OSAdemo: java.awt.event.ActionListener IncButtonListener()>"->"virtualinvoke <java.awt.Button: void addActionListener(java.awt.event.ActionListener)>";
+    "virtualinvoke <java.awt.Button: void addActionListener(java.awt.event.ActionListener)>"->"load.r r0";
+    "load.r r0"->"push \"East\"";
+    "push \"East\""->"load.r r0";
+    "load.r r0"->"fieldget <OSAdemo: java.awt.Button incButton>";
+    "fieldget <OSAdemo: java.awt.Button incButton>"->"virtualinvoke <java.awt.Container: java.awt.Component add(java.lang.String,java.awt.Component)>";
+    "virtualinvoke <java.awt.Container: java.awt.Component add(java.lang.String,java.awt.Component)>"->"pop";
+    "pop"->"load.r r0";
+    "load.r r0"->"new java.awt.Button";
+    "new java.awt.Button"->"dup1.r";
+    "push \"decrease\""
+    "dup1.r"->"push \"decrease\"";
+    "push \"decrease\""->"specialinvoke <java.awt.Button: void <init>(java.lang.String)>";
+    "fieldput <OSAdemo: java.awt.Button decButton>"
+    "specialinvoke <java.awt.Button: void <init>(java.lang.String)>"->"fieldput <OSAdemo: java.awt.Button decButton>";
+    "fieldput <OSAdemo: java.awt.Button decButton>"->"load.r r0";
+    "fieldget <OSAdemo: java.awt.Button decButton>"
+    "load.r r0"->"fieldget <OSAdemo: java.awt.Button decButton>";
+    "staticinvoke <OSAdemo: java.awt.event.ActionListener DecButtonListener()>"
+    "fieldget <OSAdemo: java.awt.Button decButton>"->"staticinvoke <OSAdemo: java.awt.event.ActionListener DecButtonListener()>";
+    "staticinvoke <OSAdemo: java.awt.event.ActionListener DecButtonListener()>"->"virtualinvoke <java.awt.Button: void addActionListener(java.awt.event.ActionListener)>";
+    "virtualinvoke <java.awt.Button: void addActionListener(java.awt.event.ActionListener)>"->"load.r r0";
+    "load.r r0"->"push \"East\"";
+    "push \"East\""->"load.r r0";
+    "load.r r0"->"fieldget <OSAdemo: java.awt.Button decButton>";
+    "fieldget <OSAdemo: java.awt.Button decButton>"->"virtualinvoke <java.awt.Container: java.awt.Component add(java.lang.String,java.awt.Component)>";
+    "virtualinvoke <java.awt.Container: java.awt.Component add(java.lang.String,java.awt.Component)>"->"pop";
+    "pop"->"load.r r0";
+    "load.r r0"->"new java.awt.Label";
+    "new java.awt.Label"->"dup1.r";
+    "new java.lang.StringBuffer"
+    "dup1.r"->"new java.lang.StringBuffer";
+    "new java.lang.StringBuffer"->"dup1.r";
+    "dup1.r"->"staticget <OSAdemo: OSApane colorOSA>";
+    "virtualinvoke <OSApane: java.lang.String getPlaneDesc()>"
+    "staticget <OSAdemo: OSApane colorOSA>"->"virtualinvoke <OSApane: java.lang.String getPlaneDesc()>";
+    "staticinvoke <java.lang.String: java.lang.String valueOf(java.lang.Object)>"
+    "virtualinvoke <OSApane: java.lang.String getPlaneDesc()>"->"staticinvoke <java.lang.String: java.lang.String valueOf(java.lang.Object)>";
+    "specialinvoke <java.lang.StringBuffer: void <init>(java.lang.String)>"
+    "staticinvoke <java.lang.String: java.lang.String valueOf(java.lang.Object)>"->"specialinvoke <java.lang.StringBuffer: void <init>(java.lang.String)>";
+    "push \"    \""
+    "specialinvoke <java.lang.StringBuffer: void <init>(java.lang.String)>"->"push \"    \"";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"
+    "push \"    \""->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>"
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>"->"specialinvoke <java.awt.Label: void <init>(java.lang.String)>";
+    "fieldput <OSAdemo: java.awt.Label planeDesc>"
+    "specialinvoke <java.awt.Label: void <init>(java.lang.String)>"->"fieldput <OSAdemo: java.awt.Label planeDesc>";
+    "fieldput <OSAdemo: java.awt.Label planeDesc>"->"load.r r0";
+    "load.r r0"->"push \"East\"";
+    "push \"East\""->"load.r r0";
+    "fieldget <OSAdemo: java.awt.Label planeDesc>"
+    "load.r r0"->"fieldget <OSAdemo: java.awt.Label planeDesc>";
+    "fieldget <OSAdemo: java.awt.Label planeDesc>"->"virtualinvoke <java.awt.Container: java.awt.Component add(java.lang.String,java.awt.Component)>";
+    "virtualinvoke <java.awt.Container: java.awt.Component add(java.lang.String,java.awt.Component)>"->"pop";
+    "pop"->"load.r r0";
+    "load.r r0"->"new java.awt.Button";
+    "new java.awt.Button"->"dup1.r";
+    "push \"rotate X +90deg\""
+    "dup1.r"->"push \"rotate X +90deg\"";
+    "push \"rotate X +90deg\""->"specialinvoke <java.awt.Button: void <init>(java.lang.String)>";
+    "fieldput <OSAdemo: java.awt.Button rotXButton>"
+    "specialinvoke <java.awt.Button: void <init>(java.lang.String)>"->"fieldput <OSAdemo: java.awt.Button rotXButton>";
+    "fieldput <OSAdemo: java.awt.Button rotXButton>"->"load.r r0";
+    "fieldget <OSAdemo: java.awt.Button rotXButton>"
+    "load.r r0"->"fieldget <OSAdemo: java.awt.Button rotXButton>";
+    "staticinvoke <OSAdemo: java.awt.event.ActionListener RotXButtonListener()>"
+    "fieldget <OSAdemo: java.awt.Button rotXButton>"->"staticinvoke <OSAdemo: java.awt.event.ActionListener RotXButtonListener()>";
+    "staticinvoke <OSAdemo: java.awt.event.ActionListener RotXButtonListener()>"->"virtualinvoke <java.awt.Button: void addActionListener(java.awt.event.ActionListener)>";
+    "virtualinvoke <java.awt.Button: void addActionListener(java.awt.event.ActionListener)>"->"load.r r0";
+    "load.r r0"->"push \"East\"";
+    "push \"East\""->"load.r r0";
+    "load.r r0"->"fieldget <OSAdemo: java.awt.Button rotXButton>";
+    "fieldget <OSAdemo: java.awt.Button rotXButton>"->"virtualinvoke <java.awt.Container: java.awt.Component add(java.lang.String,java.awt.Component)>";
+    "virtualinvoke <java.awt.Container: java.awt.Component add(java.lang.String,java.awt.Component)>"->"pop";
+    "pop"->"load.r r0";
+    "load.r r0"->"new java.awt.Button";
+    "new java.awt.Button"->"dup1.r";
+    "push \"rotate Y +90deg\""
+    "dup1.r"->"push \"rotate Y +90deg\"";
+    "push \"rotate Y +90deg\""->"specialinvoke <java.awt.Button: void <init>(java.lang.String)>";
+    "fieldput <OSAdemo: java.awt.Button rotYButton>"
+    "specialinvoke <java.awt.Button: void <init>(java.lang.String)>"->"fieldput <OSAdemo: java.awt.Button rotYButton>";
+    "fieldput <OSAdemo: java.awt.Button rotYButton>"->"load.r r0";
+    "fieldget <OSAdemo: java.awt.Button rotYButton>"
+    "load.r r0"->"fieldget <OSAdemo: java.awt.Button rotYButton>";
+    "staticinvoke <OSAdemo: java.awt.event.ActionListener RotYButtonListener()>"
+    "fieldget <OSAdemo: java.awt.Button rotYButton>"->"staticinvoke <OSAdemo: java.awt.event.ActionListener RotYButtonListener()>";
+    "staticinvoke <OSAdemo: java.awt.event.ActionListener RotYButtonListener()>"->"virtualinvoke <java.awt.Button: void addActionListener(java.awt.event.ActionListener)>";
+    "virtualinvoke <java.awt.Button: void addActionListener(java.awt.event.ActionListener)>"->"load.r r0";
+    "load.r r0"->"push \"East\"";
+    "push \"East\""->"load.r r0";
+    "load.r r0"->"fieldget <OSAdemo: java.awt.Button rotYButton>";
+    "fieldget <OSAdemo: java.awt.Button rotYButton>"->"virtualinvoke <java.awt.Container: java.awt.Component add(java.lang.String,java.awt.Component)>";
+    "virtualinvoke <java.awt.Container: java.awt.Component add(java.lang.String,java.awt.Component)>"->"pop";
+    "pop"->"load.r r0";
+    "load.r r0"->"new java.awt.Button";
+    "new java.awt.Button"->"dup1.r";
+    "push \"rotate Z +90deg\""
+    "dup1.r"->"push \"rotate Z +90deg\"";
+    "push \"rotate Z +90deg\""->"specialinvoke <java.awt.Button: void <init>(java.lang.String)>";
+    "fieldput <OSAdemo: java.awt.Button rotZButton>"
+    "specialinvoke <java.awt.Button: void <init>(java.lang.String)>"->"fieldput <OSAdemo: java.awt.Button rotZButton>";
+    "fieldput <OSAdemo: java.awt.Button rotZButton>"->"load.r r0";
+    "fieldget <OSAdemo: java.awt.Button rotZButton>"
+    "load.r r0"->"fieldget <OSAdemo: java.awt.Button rotZButton>";
+    "staticinvoke <OSAdemo: java.awt.event.ActionListener RotZButtonListener()>"
+    "fieldget <OSAdemo: java.awt.Button rotZButton>"->"staticinvoke <OSAdemo: java.awt.event.ActionListener RotZButtonListener()>";
+    "staticinvoke <OSAdemo: java.awt.event.ActionListener RotZButtonListener()>"->"virtualinvoke <java.awt.Button: void addActionListener(java.awt.event.ActionListener)>";
+    "virtualinvoke <java.awt.Button: void addActionListener(java.awt.event.ActionListener)>"->"load.r r0";
+    "load.r r0"->"push \"East\"";
+    "push \"East\""->"load.r r0";
+    "load.r r0"->"fieldget <OSAdemo: java.awt.Button rotZButton>";
+    "fieldget <OSAdemo: java.awt.Button rotZButton>"->"virtualinvoke <java.awt.Container: java.awt.Component add(java.lang.String,java.awt.Component)>";
+    "virtualinvoke <java.awt.Container: java.awt.Component add(java.lang.String,java.awt.Component)>"->"pop";
+    "pop"->"load.r r0";
+    "push \"South\""
+    "load.r r0"->"push \"South\"";
+    "push \"South\""->"new java.awt.Label";
+    "new java.awt.Label"->"dup1.r";
+    "push \"Copyright 1989-2000 Jim W. Lai\""
+    "dup1.r"->"push \"Copyright 1989-2000 Jim W. Lai\"";
+    "push \"Copyright 1989-2000 Jim W. Lai\""->"specialinvoke <java.awt.Label: void <init>(java.lang.String)>";
+    "specialinvoke <java.awt.Label: void <init>(java.lang.String)>"->"virtualinvoke <java.awt.Container: java.awt.Component add(java.lang.String,java.awt.Component)>";
+    "virtualinvoke <java.awt.Container: java.awt.Component add(java.lang.String,java.awt.Component)>"->"pop";
+    "return"
+    "pop"->"return";
+}

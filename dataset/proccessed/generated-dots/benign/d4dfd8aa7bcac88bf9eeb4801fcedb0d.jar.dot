@@ -1,0 +1,35 @@
+digraph "" {
+    "r0 := @this: ZoomChart"
+    "load.r r0"
+    "r0 := @this: ZoomChart"->"load.r r0";
+    "specialinvoke <java.applet.Applet: void init()>"
+    "load.r r0"->"specialinvoke <java.applet.Applet: void init()>";
+    "specialinvoke <java.applet.Applet: void init()>"->"load.r r0";
+    "push \"copyright\""
+    "load.r r0"->"push \"copyright\"";
+    "push \"\""
+    "push \"copyright\""->"push \"\"";
+    "specialinvoke <ZoomChart: java.lang.String ReadString(java.lang.String,java.lang.String)>"
+    "push \"\""->"specialinvoke <ZoomChart: java.lang.String ReadString(java.lang.String,java.lang.String)>";
+    "push \"http://www.uralbeacon.co.uk\""
+    "specialinvoke <ZoomChart: java.lang.String ReadString(java.lang.String,java.lang.String)>"->"push \"http://www.uralbeacon.co.uk\"";
+    "virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>"
+    "push \"http://www.uralbeacon.co.uk\""->"virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>";
+    "ifne load.r r0"
+    "virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>"->"ifne load.r r0";
+    "ifne load.r r0"->"load.r r0";
+    "push 1"
+    "load.r r0"->"push 1";
+    "fieldput <ZoomChart: boolean m_NoCopyright>"
+    "push 1"->"fieldput <ZoomChart: boolean m_NoCopyright>";
+    "return"
+    "fieldput <ZoomChart: boolean m_NoCopyright>"->"return";
+    "ifne load.r r0"->"load.r r0";
+    "push 0"
+    "load.r r0"->"push 0";
+    "push 0"->"fieldput <ZoomChart: boolean m_NoCopyright>";
+    "fieldput <ZoomChart: boolean m_NoCopyright>"->"load.r r0";
+    "specialinvoke <ZoomChart: void initApplet2()>"
+    "load.r r0"->"specialinvoke <ZoomChart: void initApplet2()>";
+    "specialinvoke <ZoomChart: void initApplet2()>"->"return";
+}

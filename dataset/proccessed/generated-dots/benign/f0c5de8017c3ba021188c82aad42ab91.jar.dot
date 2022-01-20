@@ -1,0 +1,525 @@
+digraph "" {
+    "r0 := @this: com.is_teledata.livehtml.LHTML"
+    "staticget <com.is_teledata.livehtml.LHTML: java.lang.Object monitor>"
+    "r0 := @this: com.is_teledata.livehtml.LHTML"->"staticget <com.is_teledata.livehtml.LHTML: java.lang.Object monitor>";
+    "store.r r1"
+    "staticget <com.is_teledata.livehtml.LHTML: java.lang.Object monitor>"->"store.r r1";
+    "load.r r1"
+    "store.r r1"->"load.r r1";
+    "entermonitor"
+    "load.r r1"->"entermonitor";
+    "staticget <com.is_teledata.livehtml.LHTML: boolean printed_version>"
+    "entermonitor"->"staticget <com.is_teledata.livehtml.LHTML: boolean printed_version>";
+    "ifne staticget <es: java.lang.String c>"
+    "staticget <com.is_teledata.livehtml.LHTML: boolean printed_version>"->"ifne staticget <es: java.lang.String c>";
+    "staticget <java.lang.System: java.io.PrintStream out>"
+    "ifne staticget <es: java.lang.String c>"->"staticget <java.lang.System: java.io.PrintStream out>";
+    "new java.lang.StringBuffer"
+    "staticget <java.lang.System: java.io.PrintStream out>"->"new java.lang.StringBuffer";
+    "dup1.r"
+    "new java.lang.StringBuffer"->"dup1.r";
+    "specialinvoke <java.lang.StringBuffer: void <init>()>"
+    "dup1.r"->"specialinvoke <java.lang.StringBuffer: void <init>()>";
+    "staticget <es: java.lang.String d>"
+    "specialinvoke <java.lang.StringBuffer: void <init>()>"->"staticget <es: java.lang.String d>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"
+    "staticget <es: java.lang.String d>"->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "push \"!*mmt@\'\""
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"push \"!*mmt@\'\"";
+    "staticinvoke <com.is_teledata.livehtml.LHTML: java.lang.String A_B_C_D(java.lang.String)>"
+    "push \"!*mmt@\'\""->"staticinvoke <com.is_teledata.livehtml.LHTML: java.lang.String A_B_C_D(java.lang.String)>";
+    "staticinvoke <com.is_teledata.livehtml.LHTML: java.lang.String A_B_C_D(java.lang.String)>"->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "new java.util.Date"
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"new java.util.Date";
+    "new java.util.Date"->"dup1.r";
+    "staticinvoke <java.lang.System: long currentTimeMillis()>"
+    "dup1.r"->"staticinvoke <java.lang.System: long currentTimeMillis()>";
+    "specialinvoke <java.util.Date: void <init>(long)>"
+    "staticinvoke <java.lang.System: long currentTimeMillis()>"->"specialinvoke <java.util.Date: void <init>(long)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.Object)>"
+    "specialinvoke <java.util.Date: void <init>(long)>"->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.Object)>";
+    "push \"*\""
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.Object)>"->"push \"*\"";
+    "push \"*\""->"staticinvoke <com.is_teledata.livehtml.LHTML: java.lang.String A_B_C_D(java.lang.String)>";
+    "staticinvoke <com.is_teledata.livehtml.LHTML: java.lang.String A_B_C_D(java.lang.String)>"->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>"
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>";
+    "virtualinvoke <java.io.PrintStream: void println(java.lang.String)>"
+    "virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>"->"virtualinvoke <java.io.PrintStream: void println(java.lang.String)>";
+    "push 1"
+    "virtualinvoke <java.io.PrintStream: void println(java.lang.String)>"->"push 1";
+    "staticput <com.is_teledata.livehtml.LHTML: boolean printed_version>"
+    "push 1"->"staticput <com.is_teledata.livehtml.LHTML: boolean printed_version>";
+    "staticget <es: java.lang.String c>"
+    "staticput <com.is_teledata.livehtml.LHTML: boolean printed_version>"->"staticget <es: java.lang.String c>";
+    "push \"+\""
+    "staticget <es: java.lang.String c>"->"push \"+\"";
+    "push \"+\""->"staticinvoke <com.is_teledata.livehtml.LHTML: java.lang.String A_B_C_D(java.lang.String)>";
+    "virtualinvoke <java.lang.String: boolean equalsIgnoreCase(java.lang.String)>"
+    "staticinvoke <com.is_teledata.livehtml.LHTML: java.lang.String A_B_C_D(java.lang.String)>"->"virtualinvoke <java.lang.String: boolean equalsIgnoreCase(java.lang.String)>";
+    "ifne load.r r0"
+    "virtualinvoke <java.lang.String: boolean equalsIgnoreCase(java.lang.String)>"->"ifne load.r r0";
+    "load.r r0"
+    "ifne load.r r0"->"load.r r0";
+    "virtualinvoke <java.applet.Applet: java.net.URL getDocumentBase()>"
+    "load.r r0"->"virtualinvoke <java.applet.Applet: java.net.URL getDocumentBase()>";
+    "virtualinvoke <java.net.URL: java.lang.String getHost()>"
+    "virtualinvoke <java.applet.Applet: java.net.URL getDocumentBase()>"->"virtualinvoke <java.net.URL: java.lang.String getHost()>";
+    "virtualinvoke <java.net.URL: java.lang.String getHost()>"->"staticget <es: java.lang.String c>";
+    "virtualinvoke <java.lang.String: int indexOf(java.lang.String)>"
+    "staticget <es: java.lang.String c>"->"virtualinvoke <java.lang.String: int indexOf(java.lang.String)>";
+    "ifge load.r r0"
+    "virtualinvoke <java.lang.String: int indexOf(java.lang.String)>"->"ifge load.r r0";
+    "staticget <d: f a>"
+    "ifge load.r r0"->"staticget <d: f a>";
+    "virtualinvoke <f: boolean f()>"
+    "staticget <d: f a>"->"virtualinvoke <f: boolean f()>";
+    "ifeq load.r r1"
+    "virtualinvoke <f: boolean f()>"->"ifeq load.r r1";
+    "ifeq load.r r1"->"staticget <d: f a>";
+    "push \"MiugMRLL)az,ie~os~xx5tzf9nssp>{qNALN\u000b\""
+    "staticget <d: f a>"->"push \"MiugMRLL)az,ie~os~xx5tzf9nssp>{qNALN\u000b\"";
+    "push \"MiugMRLL)az,ie~os~xx5tzf9nssp>{qNALN\u000b\""->"staticinvoke <com.is_teledata.livehtml.LHTML: java.lang.String A_B_C_D(java.lang.String)>";
+    "virtualinvoke <f: void c(java.lang.String)>"
+    "staticinvoke <com.is_teledata.livehtml.LHTML: java.lang.String A_B_C_D(java.lang.String)>"->"virtualinvoke <f: void c(java.lang.String)>";
+    "virtualinvoke <f: void c(java.lang.String)>"->"load.r r1";
+    "exitmonitor"
+    "load.r r1"->"exitmonitor";
+    "return"
+    "exitmonitor"->"return";
+    "exitmonitor"->"load.r r1";
+    "load.r r1"->"exitmonitor";
+    "athrow"
+    "exitmonitor"->"athrow";
+    "ifge load.r r0"->"load.r r0";
+    "load.r r0"->"new java.lang.StringBuffer";
+    "new java.lang.StringBuffer"->"dup1.r";
+    "dup1.r"->"specialinvoke <java.lang.StringBuffer: void <init>()>";
+    "push \"JS-Xbjddj~l,\\\".Cggu[hzz7\""
+    "specialinvoke <java.lang.StringBuffer: void <init>()>"->"push \"JS-Xbjddj~l,\\\".Cggu[hzz7\"";
+    "push \"JS-Xbjddj~l,\\\".Cggu[hzz7\""->"staticinvoke <com.is_teledata.livehtml.LHTML: java.lang.String A_B_C_D(java.lang.String)>";
+    "staticinvoke <com.is_teledata.livehtml.LHTML: java.lang.String A_B_C_D(java.lang.String)>"->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "staticget <com.is_teledata.livehtml.LHTML: int n>"
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"staticget <com.is_teledata.livehtml.LHTML: int n>";
+    "dup1.i"
+    "staticget <com.is_teledata.livehtml.LHTML: int n>"->"dup1.i";
+    "dup1.i"->"push 1";
+    "add.i"
+    "push 1"->"add.i";
+    "staticput <com.is_teledata.livehtml.LHTML: int n>"
+    "add.i"->"staticput <com.is_teledata.livehtml.LHTML: int n>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(int)>"
+    "staticput <com.is_teledata.livehtml.LHTML: int n>"->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(int)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(int)>"->"virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>";
+    "virtualinvoke <java.awt.Component: void setName(java.lang.String)>"
+    "virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>"->"virtualinvoke <java.awt.Component: void setName(java.lang.String)>";
+    "virtualinvoke <java.awt.Component: void setName(java.lang.String)>"->"load.r r0";
+    "specialinvoke <com.is_teledata.livehtml.LHTML: void d()>"
+    "load.r r0"->"specialinvoke <com.is_teledata.livehtml.LHTML: void d()>";
+    "push 2"
+    "specialinvoke <com.is_teledata.livehtml.LHTML: void d()>"->"push 2";
+    "newarray"
+    "push 2"->"newarray";
+    "store.r r3"
+    "newarray"->"store.r r3";
+    "load.r r3"
+    "store.r r3"->"load.r r3";
+    "push 0"
+    "load.r r3"->"push 0";
+    "push \"MJWOI[FIGPDMTLHDV\""
+    "push 0"->"push \"MJWOI[FIGPDMTLHDV\"";
+    "push \"MJWOI[FIGPDMTLHDV\""->"staticinvoke <com.is_teledata.livehtml.LHTML: java.lang.String A_B_C_D(java.lang.String)>";
+    "arraywrite.r"
+    "staticinvoke <com.is_teledata.livehtml.LHTML: java.lang.String A_B_C_D(java.lang.String)>"->"arraywrite.r";
+    "arraywrite.r"->"load.r r3";
+    "load.r r3"->"push 1";
+    "push \"NFF]HKIBBOVNFBL\""
+    "push 1"->"push \"NFF]HKIBBOVNFBL\"";
+    "push \"NFF]HKIBBOVNFBL\""->"staticinvoke <com.is_teledata.livehtml.LHTML: java.lang.String A_B_C_D(java.lang.String)>";
+    "staticinvoke <com.is_teledata.livehtml.LHTML: java.lang.String A_B_C_D(java.lang.String)>"->"arraywrite.r";
+    "arraywrite.r"->"load.r r0";
+    "push \"MJWOI\""
+    "load.r r0"->"push \"MJWOI\"";
+    "push \"MJWOI\""->"staticinvoke <com.is_teledata.livehtml.LHTML: java.lang.String A_B_C_D(java.lang.String)>";
+    "staticinvoke <com.is_teledata.livehtml.LHTML: java.lang.String A_B_C_D(java.lang.String)>"->"push 1";
+    "push 1"->"newarray";
+    "newarray"->"dup1.r";
+    "dup1.r"->"push 0";
+    "staticinvoke <r: en a()>"
+    "push 0"->"staticinvoke <r: en a()>";
+    "staticinvoke <r: en a()>"->"arraywrite.r";
+    "arraywrite.r"->"load.r r3";
+    "staticinvoke <s: t a(java.applet.Applet,java.lang.String,en[],java.lang.String[])>"
+    "load.r r3"->"staticinvoke <s: t a(java.applet.Applet,java.lang.String,en[],java.lang.String[])>";
+    "staticinvoke <s: t a(java.applet.Applet,java.lang.String,en[],java.lang.String[])>"->"store.r r3";
+    "store.r r3"->"load.r r3";
+    "push \"MJWOI[HXYMEPJ`\""
+    "load.r r3"->"push \"MJWOI[HXYMEPJ`\"";
+    "push \"MJWOI[HXYMEPJ`\""->"staticinvoke <com.is_teledata.livehtml.LHTML: java.lang.String A_B_C_D(java.lang.String)>";
+    "virtualinvoke <t: java.lang.Object b(java.lang.String)>"
+    "staticinvoke <com.is_teledata.livehtml.LHTML: java.lang.String A_B_C_D(java.lang.String)>"->"virtualinvoke <t: java.lang.Object b(java.lang.String)>";
+    "ifnull load.r r3"
+    "virtualinvoke <t: java.lang.Object b(java.lang.String)>"->"ifnull load.r r3";
+    "ifnull load.r r3"->"load.r r3";
+    "load.r r3"->"push \"MJWOI[HXYMEPJ`\"";
+    "push \"MJWOI[HXYMEPJ`\""->"staticinvoke <com.is_teledata.livehtml.LHTML: java.lang.String A_B_C_D(java.lang.String)>";
+    "virtualinvoke <t: java.lang.String g(java.lang.String)>"
+    "staticinvoke <com.is_teledata.livehtml.LHTML: java.lang.String A_B_C_D(java.lang.String)>"->"virtualinvoke <t: java.lang.String g(java.lang.String)>";
+    "staticinvoke <y: boolean c(java.lang.String)>"
+    "virtualinvoke <t: java.lang.String g(java.lang.String)>"->"staticinvoke <y: boolean c(java.lang.String)>";
+    "pop"
+    "staticinvoke <y: boolean c(java.lang.String)>"->"pop";
+    "pop"->"load.r r3";
+    "push \"MJWOI[JRXE`C\""
+    "load.r r3"->"push \"MJWOI[JRXE`C\"";
+    "push \"MJWOI[JRXE`C\""->"staticinvoke <com.is_teledata.livehtml.LHTML: java.lang.String A_B_C_D(java.lang.String)>";
+    "staticinvoke <com.is_teledata.livehtml.LHTML: java.lang.String A_B_C_D(java.lang.String)>"->"virtualinvoke <t: java.lang.Object b(java.lang.String)>";
+    "virtualinvoke <t: java.lang.Object b(java.lang.String)>"->"ifnull load.r r3";
+    "ifnull load.r r3"->"load.r r0";
+    "load.r r0"->"load.r r3";
+    "load.r r3"->"push \"MJWOI[JRXE`C\"";
+    "push \"MJWOI[JRXE`C\""->"staticinvoke <com.is_teledata.livehtml.LHTML: java.lang.String A_B_C_D(java.lang.String)>";
+    "virtualinvoke <t: java.lang.Integer d(java.lang.String)>"
+    "staticinvoke <com.is_teledata.livehtml.LHTML: java.lang.String A_B_C_D(java.lang.String)>"->"virtualinvoke <t: java.lang.Integer d(java.lang.String)>";
+    "virtualinvoke <java.lang.Integer: int intValue()>"
+    "virtualinvoke <t: java.lang.Integer d(java.lang.String)>"->"virtualinvoke <java.lang.Integer: int intValue()>";
+    "fieldput <com.is_teledata.livehtml.LHTML: int m>"
+    "virtualinvoke <java.lang.Integer: int intValue()>"->"fieldput <com.is_teledata.livehtml.LHTML: int m>";
+    "fieldput <com.is_teledata.livehtml.LHTML: int m>"->"load.r r3";
+    "push \"MJWOI[CO\\IIHJS^KDC\\][\""
+    "load.r r3"->"push \"MJWOI[CO\\IIHJS^KDC\\][\"";
+    "push \"MJWOI[CO\\IIHJS^KDC\\][\""->"staticinvoke <com.is_teledata.livehtml.LHTML: java.lang.String A_B_C_D(java.lang.String)>";
+    "virtualinvoke <t: boolean i(java.lang.String)>"
+    "staticinvoke <com.is_teledata.livehtml.LHTML: java.lang.String A_B_C_D(java.lang.String)>"->"virtualinvoke <t: boolean i(java.lang.String)>";
+    "ifeq load.r r0"
+    "virtualinvoke <t: boolean i(java.lang.String)>"->"ifeq load.r r0";
+    "ifeq load.r r0"->"staticget <java.lang.System: java.io.PrintStream out>";
+    "push \"\""
+    "staticget <java.lang.System: java.io.PrintStream out>"->"push \"\"";
+    "push \"\""->"staticinvoke <com.is_teledata.livehtml.LHTML: java.lang.String A_B_C_D(java.lang.String)>";
+    "staticinvoke <com.is_teledata.livehtml.LHTML: java.lang.String A_B_C_D(java.lang.String)>"->"virtualinvoke <java.io.PrintStream: void println(java.lang.String)>";
+    "virtualinvoke <java.io.PrintStream: void println(java.lang.String)>"->"staticget <d: f a>";
+    "push \"MJWOI)Vc|{dec.h}1v|avx{s}\""
+    "staticget <d: f a>"->"push \"MJWOI)Vc|{dec.h}1v|avx{s}\"";
+    "push \"MJWOI)Vc|{dec.h}1v|avx{s}\""->"staticinvoke <com.is_teledata.livehtml.LHTML: java.lang.String A_B_C_D(java.lang.String)>";
+    "virtualinvoke <f: void g(java.lang.String)>"
+    "staticinvoke <com.is_teledata.livehtml.LHTML: java.lang.String A_B_C_D(java.lang.String)>"->"virtualinvoke <f: void g(java.lang.String)>";
+    "virtualinvoke <f: void g(java.lang.String)>"->"load.r r0";
+    "load.r r0"->"load.r r3";
+    "store.r r0"
+    "load.r r3"->"store.r r0";
+    "store.r r0"->"staticget <d: f a>";
+    "staticget <d: f a>"->"virtualinvoke <f: boolean f()>";
+    "virtualinvoke <f: boolean f()>"->"ifeq load.r r0";
+    "ifeq load.r r0"->"staticget <d: f a>";
+    "staticget <d: f a>"->"new java.lang.StringBuffer";
+    "new java.lang.StringBuffer"->"dup1.r";
+    "dup1.r"->"specialinvoke <java.lang.StringBuffer: void <init>()>";
+    "push \"MJWOI&pjb~dkaeuoey~~5tx\u007fu}\u007f<lukx\u0001\""
+    "specialinvoke <java.lang.StringBuffer: void <init>()>"->"push \"MJWOI&pjb~dkaeuoey~~5tx\u007fu}\u007f<lukx\u0001\"";
+    "push \"MJWOI&pjb~dkaeuoey~~5tx\u007fu}\u007f<lukx\u0001\""->"staticinvoke <com.is_teledata.livehtml.LHTML: java.lang.String A_B_C_D(java.lang.String)>";
+    "staticinvoke <com.is_teledata.livehtml.LHTML: java.lang.String A_B_C_D(java.lang.String)>"->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"load.r r0";
+    "load.r r0"->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.Object)>";
+    "push \";\f\""
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.Object)>"->"push \";\f\"";
+    "push \";\f\""->"staticinvoke <com.is_teledata.livehtml.LHTML: java.lang.String A_B_C_D(java.lang.String)>";
+    "staticinvoke <com.is_teledata.livehtml.LHTML: java.lang.String A_B_C_D(java.lang.String)>"->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"load.r r0";
+    "virtualinvoke <java.lang.Throwable: java.lang.String getMessage()>"
+    "load.r r0"->"virtualinvoke <java.lang.Throwable: java.lang.String getMessage()>";
+    "virtualinvoke <java.lang.Throwable: java.lang.String getMessage()>"->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>"->"virtualinvoke <f: void c(java.lang.String)>";
+    "virtualinvoke <f: void c(java.lang.String)>"->"load.r r0";
+    "virtualinvoke <java.lang.Throwable: void printStackTrace()>"
+    "load.r r0"->"virtualinvoke <java.lang.Throwable: void printStackTrace()>";
+    "virtualinvoke <java.lang.Throwable: void printStackTrace()>"->"load.r r1";
+    "load.r r1"->"exitmonitor";
+    "exitmonitor"->"return";
+    "staticinvoke <as: as b(v)>"
+    "load.r r3"->"staticinvoke <as: as b(v)>";
+    "fieldput <com.is_teledata.livehtml.LHTML: as f>"
+    "staticinvoke <as: as b(v)>"->"fieldput <com.is_teledata.livehtml.LHTML: as f>";
+    "goto load.r r0"
+    "fieldput <com.is_teledata.livehtml.LHTML: as f>"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "load.r r0"->"push 1";
+    "fieldput <com.is_teledata.livehtml.LHTML: boolean l>"
+    "push 1"->"fieldput <com.is_teledata.livehtml.LHTML: boolean l>";
+    "fieldput <com.is_teledata.livehtml.LHTML: boolean l>"->"load.r r0";
+    "load.r r0"->"push 1";
+    "fieldput <com.is_teledata.livehtml.LHTML: boolean k>"
+    "push 1"->"fieldput <com.is_teledata.livehtml.LHTML: boolean k>";
+    "goto load.r r3"
+    "fieldput <com.is_teledata.livehtml.LHTML: boolean k>"->"goto load.r r3";
+    "goto load.r r3"->"load.r r3";
+    "push \"MJWOI[]IFLDOTOGKT[N[[BTFOYW\""
+    "load.r r3"->"push \"MJWOI[]IFLDOTOGKT[N[[BTFOYW\"";
+    "push \"MJWOI[]IFLDOTOGKT[N[[BTFOYW\""->"staticinvoke <com.is_teledata.livehtml.LHTML: java.lang.String A_B_C_D(java.lang.String)>";
+    "staticinvoke <com.is_teledata.livehtml.LHTML: java.lang.String A_B_C_D(java.lang.String)>"->"virtualinvoke <t: java.lang.Integer d(java.lang.String)>";
+    "store.r $r117"
+    "virtualinvoke <t: java.lang.Integer d(java.lang.String)>"->"store.r $r117";
+    "load.r $r117"
+    "store.r $r117"->"load.r $r117";
+    "load.r $r117"->"ifnull load.r r3";
+    "ifnull load.r r3"->"load.r r0";
+    "load.r r0"->"load.r $r117";
+    "load.r $r117"->"virtualinvoke <java.lang.Integer: int intValue()>";
+    "i2l"
+    "virtualinvoke <java.lang.Integer: int intValue()>"->"i2l";
+    "fieldput <com.is_teledata.livehtml.LHTML: long q>"
+    "i2l"->"fieldput <com.is_teledata.livehtml.LHTML: long q>";
+    "fieldput <com.is_teledata.livehtml.LHTML: long q>"->"load.r r3";
+    "push \"MJWOI[]IFLDOTZHCV_HH\""
+    "load.r r3"->"push \"MJWOI[]IFLDOTZHCV_HH\"";
+    "push \"MJWOI[]IFLDOTZHCV_HH\""->"staticinvoke <com.is_teledata.livehtml.LHTML: java.lang.String A_B_C_D(java.lang.String)>";
+    "staticinvoke <com.is_teledata.livehtml.LHTML: java.lang.String A_B_C_D(java.lang.String)>"->"virtualinvoke <t: java.lang.Integer d(java.lang.String)>";
+    "virtualinvoke <t: java.lang.Integer d(java.lang.String)>"->"store.r $r117";
+    "store.r $r117"->"load.r $r117";
+    "ifnull staticget <d: f a>"
+    "load.r $r117"->"ifnull staticget <d: f a>";
+    "ifnull staticget <d: f a>"->"load.r r0";
+    "load.r r0"->"load.r $r117";
+    "load.r $r117"->"virtualinvoke <java.lang.Integer: int intValue()>";
+    "virtualinvoke <java.lang.Integer: int intValue()>"->"i2l";
+    "fieldput <com.is_teledata.livehtml.LHTML: long r>"
+    "i2l"->"fieldput <com.is_teledata.livehtml.LHTML: long r>";
+    "fieldput <com.is_teledata.livehtml.LHTML: long r>"->"staticget <d: f a>";
+    "virtualinvoke <f: boolean j()>"
+    "staticget <d: f a>"->"virtualinvoke <f: boolean j()>";
+    "ifeq load.r r3"
+    "virtualinvoke <f: boolean j()>"->"ifeq load.r r3";
+    "ifeq load.r r3"->"staticget <d: f a>";
+    "staticget <d: f a>"->"new java.lang.StringBuffer";
+    "new java.lang.StringBuffer"->"dup1.r";
+    "dup1.r"->"specialinvoke <java.lang.StringBuffer: void <init>()>";
+    "push \"djhapmia)tfgoel0dfthr6tb~ld<\""
+    "specialinvoke <java.lang.StringBuffer: void <init>()>"->"push \"djhapmia)tfgoel0dfthr6tb~ld<\"";
+    "push \"djhapmia)tfgoel0dfthr6tb~ld<\""->"staticinvoke <com.is_teledata.livehtml.LHTML: java.lang.String A_B_C_D(java.lang.String)>";
+    "staticinvoke <com.is_teledata.livehtml.LHTML: java.lang.String A_B_C_D(java.lang.String)>"->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"load.r r0";
+    "fieldget <com.is_teledata.livehtml.LHTML: long q>"
+    "load.r r0"->"fieldget <com.is_teledata.livehtml.LHTML: long q>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(long)>"
+    "fieldget <com.is_teledata.livehtml.LHTML: long q>"->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(long)>";
+    "push \"ns:$\u007fklfbm+cczl~gq\u007f4~g7e~n;pt>\""
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(long)>"->"push \"ns:$\u007fklfbm+cczl~gq\u007f4~g7e~n;pt>\"";
+    "push \"ns:$\u007fklfbm+cczl~gq\u007f4~g7e~n;pt>\""->"staticinvoke <com.is_teledata.livehtml.LHTML: java.lang.String A_B_C_D(java.lang.String)>";
+    "staticinvoke <com.is_teledata.livehtml.LHTML: java.lang.String A_B_C_D(java.lang.String)>"->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"load.r r0";
+    "fieldget <com.is_teledata.livehtml.LHTML: long r>"
+    "load.r r0"->"fieldget <com.is_teledata.livehtml.LHTML: long r>";
+    "fieldget <com.is_teledata.livehtml.LHTML: long r>"->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(long)>";
+    "push \"ns\""
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(long)>"->"push \"ns\"";
+    "push \"ns\""->"staticinvoke <com.is_teledata.livehtml.LHTML: java.lang.String A_B_C_D(java.lang.String)>";
+    "staticinvoke <com.is_teledata.livehtml.LHTML: java.lang.String A_B_C_D(java.lang.String)>"->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>";
+    "virtualinvoke <f: void h(java.lang.String)>"
+    "virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>"->"virtualinvoke <f: void h(java.lang.String)>";
+    "virtualinvoke <f: void h(java.lang.String)>"->"load.r r3";
+    "push \"SEOMFBZTBEPEZZ\""
+    "load.r r3"->"push \"SEOMFBZTBEPEZZ\"";
+    "push \"SEOMFBZTBEPEZZ\""->"staticget <java.lang.System: java.io.PrintStream out>";
+    "staticget <java.lang.System: java.io.PrintStream out>"->"store.r r3";
+    "store.r r3"->"new java.lang.StringBuffer";
+    "new java.lang.StringBuffer"->"dup1.r";
+    "dup1.r"->"specialinvoke <java.lang.StringBuffer: void <init>()>";
+    "push \"hewPllbC{|fz7.\""
+    "specialinvoke <java.lang.StringBuffer: void <init>()>"->"push \"hewPllbC{|fz7.\"";
+    "push \"hewPllbC{|fz7.\""->"staticinvoke <com.is_teledata.livehtml.LHTML: java.lang.String A_B_C_D(java.lang.String)>";
+    "staticinvoke <com.is_teledata.livehtml.LHTML: java.lang.String A_B_C_D(java.lang.String)>"->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"store.r $r117";
+    "store.r $r117"->"virtualinvoke <java.lang.Throwable: java.lang.String getMessage()>";
+    "store.r $r118"
+    "virtualinvoke <java.lang.Throwable: java.lang.String getMessage()>"->"store.r $r118";
+    "store.r $r118"->"load.r r3";
+    "load.r r3"->"load.r $r117";
+    "load.r $r118"
+    "load.r $r117"->"load.r $r118";
+    "load.r $r118"->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>"->"virtualinvoke <java.io.PrintStream: void println(java.lang.String)>";
+    "virtualinvoke <java.io.PrintStream: void println(java.lang.String)>"->"load.r r0";
+    "fieldget <com.is_teledata.livehtml.LHTML: ax g>"
+    "load.r r0"->"fieldget <com.is_teledata.livehtml.LHTML: ax g>";
+    "ifnull load.r r1"
+    "fieldget <com.is_teledata.livehtml.LHTML: ax g>"->"ifnull load.r r1";
+    "ifnull load.r r1"->"load.r r0";
+    "load.r r0"->"fieldget <com.is_teledata.livehtml.LHTML: ax g>";
+    "virtualinvoke <az: cb at()>"
+    "fieldget <com.is_teledata.livehtml.LHTML: ax g>"->"virtualinvoke <az: cb at()>";
+    "virtualinvoke <az: cb at()>"->"load.r r0";
+    "load.r r0"->"staticinvoke <java.lang.System: long currentTimeMillis()>";
+    "staticinvoke <java.lang.System: long currentTimeMillis()>"->"load.r r0";
+    "load.r r0"->"fieldget <com.is_teledata.livehtml.LHTML: long q>";
+    "add.l"
+    "fieldget <com.is_teledata.livehtml.LHTML: long q>"->"add.l";
+    "virtualinvoke <cb: java.lang.Long a(e,long)>"
+    "add.l"->"virtualinvoke <cb: java.lang.Long a(e,long)>";
+    "virtualinvoke <cb: java.lang.Long a(e,long)>"->"pop";
+    "pop"->"load.r r1";
+    "load.r r1"->"exitmonitor";
+    "goto return"
+    "exitmonitor"->"goto return";
+    "goto return"->"return";
+    "push \"SEOMFBZTBEPEZZ\""->"staticinvoke <com.is_teledata.livehtml.LHTML: java.lang.String A_B_C_D(java.lang.String)>";
+    "virtualinvoke <t: java.lang.Long e(java.lang.String)>"
+    "staticinvoke <com.is_teledata.livehtml.LHTML: java.lang.String A_B_C_D(java.lang.String)>"->"virtualinvoke <t: java.lang.Long e(java.lang.String)>";
+    "virtualinvoke <t: java.lang.Long e(java.lang.String)>"->"store.r r3";
+    "store.r r3"->"load.r r3";
+    "ifnull goto load.r r0"
+    "load.r r3"->"ifnull goto load.r r0";
+    "ifnull goto load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r3";
+    "virtualinvoke <java.lang.Long: long longValue()>"
+    "load.r r3"->"virtualinvoke <java.lang.Long: long longValue()>";
+    "fieldput <com.is_teledata.livehtml.LHTML: long t>"
+    "virtualinvoke <java.lang.Long: long longValue()>"->"fieldput <com.is_teledata.livehtml.LHTML: long t>";
+    "fieldput <com.is_teledata.livehtml.LHTML: long t>"->"load.r r0";
+    "fieldget <com.is_teledata.livehtml.LHTML: long t>"
+    "load.r r0"->"fieldget <com.is_teledata.livehtml.LHTML: long t>";
+    "push 0L"
+    "fieldget <com.is_teledata.livehtml.LHTML: long t>"->"push 0L";
+    "cmp.l"
+    "push 0L"->"cmp.l";
+    "ifle staticget <d: f a>"
+    "cmp.l"->"ifle staticget <d: f a>";
+    "ifle staticget <d: f a>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <com.is_teledata.livehtml.LHTML: long t>";
+    "fieldget <com.is_teledata.livehtml.LHTML: long t>"->"staticinvoke <java.lang.System: long currentTimeMillis()>";
+    "staticinvoke <java.lang.System: long currentTimeMillis()>"->"add.l";
+    "add.l"->"fieldput <com.is_teledata.livehtml.LHTML: long t>";
+    "fieldput <com.is_teledata.livehtml.LHTML: long t>"->"staticget <d: f a>";
+    "virtualinvoke <f: boolean i()>"
+    "staticget <d: f a>"->"virtualinvoke <f: boolean i()>";
+    "ifeq goto load.r r0"
+    "virtualinvoke <f: boolean i()>"->"ifeq goto load.r r0";
+    "ifeq goto load.r r0"->"staticget <d: f a>";
+    "staticget <d: f a>"->"new java.lang.StringBuffer";
+    "new java.lang.StringBuffer"->"dup1.r";
+    "dup1.r"->"specialinvoke <java.lang.StringBuffer: void <init>()>";
+    "push \"ut|$qk\'vnffki.hb1\""
+    "specialinvoke <java.lang.StringBuffer: void <init>()>"->"push \"ut|$qk\'vnffki.hb1\"";
+    "push \"ut|$qk\'vnffki.hb1\""->"staticinvoke <com.is_teledata.livehtml.LHTML: java.lang.String A_B_C_D(java.lang.String)>";
+    "staticinvoke <com.is_teledata.livehtml.LHTML: java.lang.String A_B_C_D(java.lang.String)>"->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"load.r r3";
+    "load.r r3"->"virtualinvoke <java.lang.Long: long longValue()>";
+    "virtualinvoke <java.lang.Long: long longValue()>"->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(long)>";
+    "push \"!mr$fr\'\""
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(long)>"->"push \"!mr$fr\'\"";
+    "push \"!mr$fr\'\""->"staticinvoke <com.is_teledata.livehtml.LHTML: java.lang.String A_B_C_D(java.lang.String)>";
+    "staticinvoke <com.is_teledata.livehtml.LHTML: java.lang.String A_B_C_D(java.lang.String)>"->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"new java.util.Date";
+    "new java.util.Date"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "load.r r0"->"fieldget <com.is_teledata.livehtml.LHTML: long t>";
+    "fieldget <com.is_teledata.livehtml.LHTML: long t>"->"specialinvoke <java.util.Date: void <init>(long)>";
+    "specialinvoke <java.util.Date: void <init>(long)>"->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.Object)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.Object)>"->"virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>"->"virtualinvoke <f: void g(java.lang.String)>";
+    "goto goto load.r r0"
+    "virtualinvoke <f: void g(java.lang.String)>"->"goto goto load.r r0";
+    "goto goto load.r r0"->"goto load.r r0";
+    "ifle staticget <d: f a>"->"staticget <d: f a>";
+    "staticget <d: f a>"->"virtualinvoke <f: boolean i()>";
+    "virtualinvoke <f: boolean i()>"->"ifeq goto load.r r0";
+    "ifeq goto load.r r0"->"staticget <d: f a>";
+    "push \"Seomfb\'o|*oc\u0080mmdvv4\""
+    "staticget <d: f a>"->"push \"Seomfb\'o|*oc\u0080mmdvv4\"";
+    "push \"Seomfb\'o|*oc\u0080mmdvv4\""->"staticinvoke <com.is_teledata.livehtml.LHTML: java.lang.String A_B_C_D(java.lang.String)>";
+    "staticinvoke <com.is_teledata.livehtml.LHTML: java.lang.String A_B_C_D(java.lang.String)>"->"virtualinvoke <f: void g(java.lang.String)>";
+    "ifeq load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r3";
+    "load.r r3"->"store.r r0";
+    "store.r r0"->"staticget <java.lang.System: java.io.PrintStream out>";
+    "staticget <java.lang.System: java.io.PrintStream out>"->"push \"\"";
+    "push \"\""->"staticinvoke <com.is_teledata.livehtml.LHTML: java.lang.String A_B_C_D(java.lang.String)>";
+    "staticinvoke <com.is_teledata.livehtml.LHTML: java.lang.String A_B_C_D(java.lang.String)>"->"virtualinvoke <java.io.PrintStream: void println(java.lang.String)>";
+    "virtualinvoke <java.io.PrintStream: void println(java.lang.String)>"->"staticget <d: f a>";
+    "staticget <d: f a>"->"virtualinvoke <f: boolean f()>";
+    "virtualinvoke <f: boolean f()>"->"ifeq load.r r0";
+    "ifeq load.r r0"->"staticget <d: f a>";
+    "staticget <d: f a>"->"new java.lang.StringBuffer";
+    "new java.lang.StringBuffer"->"dup1.r";
+    "dup1.r"->"specialinvoke <java.lang.StringBuffer: void <init>()>";
+    "specialinvoke <java.lang.StringBuffer: void <init>()>"->"push \"MJWOI&pjb~dkaeuoey~~5tx\u007fu}\u007f<lukx\u0001\"";
+    "push \"MJWOI&pjb~dkaeuoey~~5tx\u007fu}\u007f<lukx\u0001\""->"staticinvoke <com.is_teledata.livehtml.LHTML: java.lang.String A_B_C_D(java.lang.String)>";
+    "staticinvoke <com.is_teledata.livehtml.LHTML: java.lang.String A_B_C_D(java.lang.String)>"->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"load.r r0";
+    "load.r r0"->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.Object)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.Object)>"->"push \";\f\"";
+    "push \";\f\""->"staticinvoke <com.is_teledata.livehtml.LHTML: java.lang.String A_B_C_D(java.lang.String)>";
+    "staticinvoke <com.is_teledata.livehtml.LHTML: java.lang.String A_B_C_D(java.lang.String)>"->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"load.r r0";
+    "load.r r0"->"virtualinvoke <java.lang.Throwable: java.lang.String getMessage()>";
+    "virtualinvoke <java.lang.Throwable: java.lang.String getMessage()>"->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>"->"virtualinvoke <f: void c(java.lang.String)>";
+    "virtualinvoke <f: void c(java.lang.String)>"->"load.r r0";
+    "load.r r0"->"virtualinvoke <java.lang.Throwable: void printStackTrace()>";
+    "virtualinvoke <java.lang.Throwable: void printStackTrace()>"->"load.r r1";
+    "load.r r1"->"exitmonitor";
+    "exitmonitor"->"return";
+    "load.r r3"->"staticinvoke <as: as b(v)>";
+    "staticinvoke <as: as b(v)>"->"fieldput <com.is_teledata.livehtml.LHTML: as f>";
+    "fieldput <com.is_teledata.livehtml.LHTML: as f>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "fieldget <com.is_teledata.livehtml.LHTML: as f>"
+    "load.r r0"->"fieldget <com.is_teledata.livehtml.LHTML: as f>";
+    "staticinvoke <ax: ax a(as)>"
+    "fieldget <com.is_teledata.livehtml.LHTML: as f>"->"staticinvoke <ax: ax a(as)>";
+    "fieldput <com.is_teledata.livehtml.LHTML: ax g>"
+    "staticinvoke <ax: ax a(as)>"->"fieldput <com.is_teledata.livehtml.LHTML: ax g>";
+    "goto staticget <java.lang.System: java.io.PrintStream out>"
+    "fieldput <com.is_teledata.livehtml.LHTML: ax g>"->"goto staticget <java.lang.System: java.io.PrintStream out>";
+    "goto staticget <java.lang.System: java.io.PrintStream out>"->"staticget <java.lang.System: java.io.PrintStream out>";
+    "staticget <java.lang.System: java.io.PrintStream out>"->"new java.lang.StringBuffer";
+    "new java.lang.StringBuffer"->"dup1.r";
+    "dup1.r"->"specialinvoke <java.lang.StringBuffer: void <init>()>";
+    "push \"MJWOI&fighpiyik0hyg|5\""
+    "specialinvoke <java.lang.StringBuffer: void <init>()>"->"push \"MJWOI&fighpiyik0hyg|5\"";
+    "push \"MJWOI&fighpiyik0hyg|5\""->"staticinvoke <com.is_teledata.livehtml.LHTML: java.lang.String A_B_C_D(java.lang.String)>";
+    "staticinvoke <com.is_teledata.livehtml.LHTML: java.lang.String A_B_C_D(java.lang.String)>"->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"load.r r0";
+    "load.r r0"->"fieldget <com.is_teledata.livehtml.LHTML: ax g>";
+    "virtualinvoke <ax: java.lang.String ae()>"
+    "fieldget <com.is_teledata.livehtml.LHTML: ax g>"->"virtualinvoke <ax: java.lang.String ae()>";
+    "virtualinvoke <ax: java.lang.String ae()>"->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>"->"virtualinvoke <java.io.PrintStream: void println(java.lang.String)>";
+    "virtualinvoke <java.io.PrintStream: void println(java.lang.String)>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <com.is_teledata.livehtml.LHTML: ax g>";
+    "virtualinvoke <ax: java.lang.String l()>"
+    "fieldget <com.is_teledata.livehtml.LHTML: ax g>"->"virtualinvoke <ax: java.lang.String l()>";
+    "push 67108864"
+    "virtualinvoke <ax: java.lang.String l()>"->"push 67108864";
+    "specialinvoke <com.is_teledata.livehtml.LHTML: void a(java.lang.String,int)>"
+    "push 67108864"->"specialinvoke <com.is_teledata.livehtml.LHTML: void a(java.lang.String,int)>";
+    "specialinvoke <com.is_teledata.livehtml.LHTML: void a(java.lang.String,int)>"->"load.r r0";
+    "load.r r0"->"fieldget <com.is_teledata.livehtml.LHTML: ax g>";
+    "fieldget <com.is_teledata.livehtml.LHTML: ax g>"->"load.r r0";
+    "virtualinvoke <ax: void a(c)>"
+    "load.r r0"->"virtualinvoke <ax: void a(c)>";
+    "virtualinvoke <ax: void a(c)>"->"load.r r0";
+    "specialinvoke <com.is_teledata.livehtml.LHTML: void e()>"
+    "load.r r0"->"specialinvoke <com.is_teledata.livehtml.LHTML: void e()>";
+    "specialinvoke <com.is_teledata.livehtml.LHTML: void e()>"->"load.r r0";
+    "load.r r0"->"load.r r3";
+    "push \"CABIDXJSGN\""
+    "load.r r3"->"push \"CABIDXJSGN\"";
+    "push \"CABIDXJSGN\""->"staticinvoke <com.is_teledata.livehtml.LHTML: java.lang.String A_B_C_D(java.lang.String)>";
+    "virtualinvoke <t: java.awt.Color l(java.lang.String)>"
+    "staticinvoke <com.is_teledata.livehtml.LHTML: java.lang.String A_B_C_D(java.lang.String)>"->"virtualinvoke <t: java.awt.Color l(java.lang.String)>";
+    "virtualinvoke <java.awt.Component: void setBackground(java.awt.Color)>"
+    "virtualinvoke <t: java.awt.Color l(java.lang.String)>"->"virtualinvoke <java.awt.Component: void setBackground(java.awt.Color)>";
+    "virtualinvoke <java.awt.Component: void setBackground(java.awt.Color)>"->"load.r r0";
+    "load.r r0"->"fieldget <com.is_teledata.livehtml.LHTML: ax g>";
+    "fieldget <com.is_teledata.livehtml.LHTML: ax g>"->"ifnull load.r r3";
+    "ifnull load.r r3"->"load.r r0";
+    "load.r r0"->"push 1";
+    "push 1"->"fieldput <com.is_teledata.livehtml.LHTML: boolean k>";
+}

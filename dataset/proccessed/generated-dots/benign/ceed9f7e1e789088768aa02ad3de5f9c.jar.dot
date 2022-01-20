@@ -1,0 +1,73 @@
+digraph "" {
+    "r0 := @this: ticker.TickerApplet"
+    "load.r r0"
+    "r0 := @this: ticker.TickerApplet"->"load.r r0";
+    "virtualinvoke <ticker.TickerApplet: void initParametres()>"
+    "load.r r0"->"virtualinvoke <ticker.TickerApplet: void initParametres()>";
+    "virtualinvoke <ticker.TickerApplet: void initParametres()>"->"load.r r0";
+    "new ticker.TitresDataBase"
+    "load.r r0"->"new ticker.TitresDataBase";
+    "dup1.r"
+    "new ticker.TitresDataBase"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "virtualinvoke <ticker.TickerApplet: java.net.URL getDocumentBase()>"
+    "load.r r0"->"virtualinvoke <ticker.TickerApplet: java.net.URL getDocumentBase()>";
+    "virtualinvoke <ticker.TickerApplet: java.net.URL getDocumentBase()>"->"load.r r0";
+    "virtualinvoke <ticker.TickerApplet: java.net.URL getCodeBase()>"
+    "load.r r0"->"virtualinvoke <ticker.TickerApplet: java.net.URL getCodeBase()>";
+    "new java.lang.StringBuffer"
+    "virtualinvoke <ticker.TickerApplet: java.net.URL getCodeBase()>"->"new java.lang.StringBuffer";
+    "new java.lang.StringBuffer"->"dup1.r";
+    "specialinvoke <java.lang.StringBuffer: void <init>()>"
+    "dup1.r"->"specialinvoke <java.lang.StringBuffer: void <init>()>";
+    "push \"cgi\""
+    "specialinvoke <java.lang.StringBuffer: void <init>()>"->"push \"cgi\"";
+    "staticinvoke <ticker.Parametres: java.lang.String getParamStr(java.lang.String)>"
+    "push \"cgi\""->"staticinvoke <ticker.Parametres: java.lang.String getParamStr(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"
+    "staticinvoke <ticker.Parametres: java.lang.String getParamStr(java.lang.String)>"->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "push \"?genre=ticker\""
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"push \"?genre=ticker\"";
+    "push \"?genre=ticker\""->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>"
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>";
+    "push \"cgi_frequence_ms\""
+    "virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>"->"push \"cgi_frequence_ms\"";
+    "staticinvoke <ticker.Parametres: int getParamInt(java.lang.String)>"
+    "push \"cgi_frequence_ms\""->"staticinvoke <ticker.Parametres: int getParamInt(java.lang.String)>";
+    "specialinvoke <ticker.TitresDataBase: void <init>(java.net.URL,java.net.URL,java.lang.String,int)>"
+    "staticinvoke <ticker.Parametres: int getParamInt(java.lang.String)>"->"specialinvoke <ticker.TitresDataBase: void <init>(java.net.URL,java.net.URL,java.lang.String,int)>";
+    "fieldput <ticker.TickerApplet: ticker.TitresDataBase database>"
+    "specialinvoke <ticker.TitresDataBase: void <init>(java.net.URL,java.net.URL,java.lang.String,int)>"->"fieldput <ticker.TickerApplet: ticker.TitresDataBase database>";
+    "fieldput <ticker.TickerApplet: ticker.TitresDataBase database>"->"load.r r0";
+    "new ticker.Defile"
+    "load.r r0"->"new ticker.Defile";
+    "new ticker.Defile"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "fieldget <ticker.TickerApplet: ticker.TitresDataBase database>"
+    "load.r r0"->"fieldget <ticker.TickerApplet: ticker.TitresDataBase database>";
+    "specialinvoke <ticker.Defile: void <init>(ticker.TitresDataBase)>"
+    "fieldget <ticker.TickerApplet: ticker.TitresDataBase database>"->"specialinvoke <ticker.Defile: void <init>(ticker.TitresDataBase)>";
+    "fieldput <ticker.TickerApplet: ticker.Defile def>"
+    "specialinvoke <ticker.Defile: void <init>(ticker.TitresDataBase)>"->"fieldput <ticker.TickerApplet: ticker.Defile def>";
+    "fieldput <ticker.TickerApplet: ticker.Defile def>"->"load.r r0";
+    "new java.awt.BorderLayout"
+    "load.r r0"->"new java.awt.BorderLayout";
+    "new java.awt.BorderLayout"->"dup1.r";
+    "specialinvoke <java.awt.BorderLayout: void <init>()>"
+    "dup1.r"->"specialinvoke <java.awt.BorderLayout: void <init>()>";
+    "virtualinvoke <ticker.TickerApplet: void setLayout(java.awt.LayoutManager)>"
+    "specialinvoke <java.awt.BorderLayout: void <init>()>"->"virtualinvoke <ticker.TickerApplet: void setLayout(java.awt.LayoutManager)>";
+    "virtualinvoke <ticker.TickerApplet: void setLayout(java.awt.LayoutManager)>"->"load.r r0";
+    "push \"Center\""
+    "load.r r0"->"push \"Center\"";
+    "push \"Center\""->"load.r r0";
+    "fieldget <ticker.TickerApplet: ticker.Defile def>"
+    "load.r r0"->"fieldget <ticker.TickerApplet: ticker.Defile def>";
+    "virtualinvoke <ticker.TickerApplet: java.awt.Component add(java.lang.String,java.awt.Component)>"
+    "fieldget <ticker.TickerApplet: ticker.Defile def>"->"virtualinvoke <ticker.TickerApplet: java.awt.Component add(java.lang.String,java.awt.Component)>";
+    "pop"
+    "virtualinvoke <ticker.TickerApplet: java.awt.Component add(java.lang.String,java.awt.Component)>"->"pop";
+    "return"
+    "pop"->"return";
+}

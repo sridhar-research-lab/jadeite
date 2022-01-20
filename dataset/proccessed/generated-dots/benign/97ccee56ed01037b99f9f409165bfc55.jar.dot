@@ -1,0 +1,57 @@
+digraph "" {
+    "r0 := @this: components.TumbleItem"
+    "load.r r0"
+    "r0 := @this: components.TumbleItem"->"load.r r0";
+    "virtualinvoke <components.TumbleItem: void loadAppletParameters()>"
+    "load.r r0"->"virtualinvoke <components.TumbleItem: void loadAppletParameters()>";
+    "new components.TumbleItem$2"
+    "virtualinvoke <components.TumbleItem: void loadAppletParameters()>"->"new components.TumbleItem$2";
+    "dup1.r"
+    "new components.TumbleItem$2"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "specialinvoke <components.TumbleItem$2: void <init>(components.TumbleItem)>"
+    "load.r r0"->"specialinvoke <components.TumbleItem$2: void <init>(components.TumbleItem)>";
+    "staticinvoke <javax.swing.SwingUtilities: void invokeAndWait(java.lang.Runnable)>"
+    "specialinvoke <components.TumbleItem$2: void <init>(components.TumbleItem)>"->"staticinvoke <javax.swing.SwingUtilities: void invokeAndWait(java.lang.Runnable)>";
+    "goto load.r r0"
+    "staticinvoke <javax.swing.SwingUtilities: void invokeAndWait(java.lang.Runnable)>"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "new javax.swing.Timer"
+    "load.r r0"->"new javax.swing.Timer";
+    "new javax.swing.Timer"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "fieldget <components.TumbleItem: int speed>"
+    "load.r r0"->"fieldget <components.TumbleItem: int speed>";
+    "fieldget <components.TumbleItem: int speed>"->"load.r r0";
+    "specialinvoke <javax.swing.Timer: void <init>(int,java.awt.event.ActionListener)>"
+    "load.r r0"->"specialinvoke <javax.swing.Timer: void <init>(int,java.awt.event.ActionListener)>";
+    "fieldput <components.TumbleItem: javax.swing.Timer timer>"
+    "specialinvoke <javax.swing.Timer: void <init>(int,java.awt.event.ActionListener)>"->"fieldput <components.TumbleItem: javax.swing.Timer timer>";
+    "fieldput <components.TumbleItem: javax.swing.Timer timer>"->"load.r r0";
+    "fieldget <components.TumbleItem: javax.swing.Timer timer>"
+    "load.r r0"->"fieldget <components.TumbleItem: javax.swing.Timer timer>";
+    "fieldget <components.TumbleItem: javax.swing.Timer timer>"->"load.r r0";
+    "fieldget <components.TumbleItem: int pause>"
+    "load.r r0"->"fieldget <components.TumbleItem: int pause>";
+    "virtualinvoke <javax.swing.Timer: void setInitialDelay(int)>"
+    "fieldget <components.TumbleItem: int pause>"->"virtualinvoke <javax.swing.Timer: void setInitialDelay(int)>";
+    "virtualinvoke <javax.swing.Timer: void setInitialDelay(int)>"->"load.r r0";
+    "load.r r0"->"fieldget <components.TumbleItem: javax.swing.Timer timer>";
+    "virtualinvoke <javax.swing.Timer: void start()>"
+    "fieldget <components.TumbleItem: javax.swing.Timer timer>"->"virtualinvoke <javax.swing.Timer: void start()>";
+    "virtualinvoke <javax.swing.Timer: void start()>"->"load.r r0";
+    "fieldget <components.TumbleItem: javax.swing.SwingWorker worker>"
+    "load.r r0"->"fieldget <components.TumbleItem: javax.swing.SwingWorker worker>";
+    "virtualinvoke <javax.swing.SwingWorker: void execute()>"
+    "fieldget <components.TumbleItem: javax.swing.SwingWorker worker>"->"virtualinvoke <javax.swing.SwingWorker: void execute()>";
+    "return"
+    "virtualinvoke <javax.swing.SwingWorker: void execute()>"->"return";
+    "store.r $r7"
+    "staticinvoke <javax.swing.SwingUtilities: void invokeAndWait(java.lang.Runnable)>"->"store.r $r7";
+    "staticget <java.lang.System: java.io.PrintStream err>"
+    "store.r $r7"->"staticget <java.lang.System: java.io.PrintStream err>";
+    "push \"createGUI didn\'t successfully complete\""
+    "staticget <java.lang.System: java.io.PrintStream err>"->"push \"createGUI didn\'t successfully complete\"";
+    "virtualinvoke <java.io.PrintStream: void println(java.lang.String)>"
+    "push \"createGUI didn\'t successfully complete\""->"virtualinvoke <java.io.PrintStream: void println(java.lang.String)>";
+}

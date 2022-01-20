@@ -1,0 +1,47 @@
+digraph "" {
+    "r0 := @this: money"
+    "load.r r0"
+    "r0 := @this: money"->"load.r r0";
+    "new Interface"
+    "load.r r0"->"new Interface";
+    "dup1.r"
+    "new Interface"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "specialinvoke <Interface: void <init>(java.applet.Applet)>"
+    "load.r r0"->"specialinvoke <Interface: void <init>(java.applet.Applet)>";
+    "fieldput <money: Interface myInterface>"
+    "specialinvoke <Interface: void <init>(java.applet.Applet)>"->"fieldput <money: Interface myInterface>";
+    "fieldput <money: Interface myInterface>"->"load.r r0";
+    "new MML"
+    "load.r r0"->"new MML";
+    "new MML"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "fieldget <money: Interface myInterface>"
+    "load.r r0"->"fieldget <money: Interface myInterface>";
+    "specialinvoke <MML: void <init>(Interface)>"
+    "fieldget <money: Interface myInterface>"->"specialinvoke <MML: void <init>(Interface)>";
+    "fieldput <money: MML mml>"
+    "specialinvoke <MML: void <init>(Interface)>"->"fieldput <money: MML mml>";
+    "fieldput <money: MML mml>"->"load.r r0";
+    "new ML"
+    "load.r r0"->"new ML";
+    "new ML"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "load.r r0"->"fieldget <money: Interface myInterface>";
+    "specialinvoke <ML: void <init>(Interface)>"
+    "fieldget <money: Interface myInterface>"->"specialinvoke <ML: void <init>(Interface)>";
+    "fieldput <money: ML ml>"
+    "specialinvoke <ML: void <init>(Interface)>"->"fieldput <money: ML ml>";
+    "fieldput <money: ML ml>"->"load.r r0";
+    "new java.awt.Cursor"
+    "load.r r0"->"new java.awt.Cursor";
+    "new java.awt.Cursor"->"dup1.r";
+    "push 12"
+    "dup1.r"->"push 12";
+    "specialinvoke <java.awt.Cursor: void <init>(int)>"
+    "push 12"->"specialinvoke <java.awt.Cursor: void <init>(int)>";
+    "virtualinvoke <java.awt.Component: void setCursor(java.awt.Cursor)>"
+    "specialinvoke <java.awt.Cursor: void <init>(int)>"->"virtualinvoke <java.awt.Component: void setCursor(java.awt.Cursor)>";
+    "return"
+    "virtualinvoke <java.awt.Component: void setCursor(java.awt.Cursor)>"->"return";
+}

@@ -1,0 +1,63 @@
+digraph "" {
+    "r0 := @this: Seiche2"
+    "load.r r0"
+    "r0 := @this: Seiche2"->"load.r r0";
+    "new java.awt.BorderLayout"
+    "load.r r0"->"new java.awt.BorderLayout";
+    "dup1.r"
+    "new java.awt.BorderLayout"->"dup1.r";
+    "specialinvoke <java.awt.BorderLayout: void <init>()>"
+    "dup1.r"->"specialinvoke <java.awt.BorderLayout: void <init>()>";
+    "virtualinvoke <java.awt.Container: void setLayout(java.awt.LayoutManager)>"
+    "specialinvoke <java.awt.BorderLayout: void <init>()>"->"virtualinvoke <java.awt.Container: void setLayout(java.awt.LayoutManager)>";
+    "virtualinvoke <java.awt.Container: void setLayout(java.awt.LayoutManager)>"->"load.r r0";
+    "push \"North\""
+    "load.r r0"->"push \"North\"";
+    "new java.awt.Label"
+    "push \"North\""->"new java.awt.Label";
+    "new java.awt.Label"->"dup1.r";
+    "push \"           Two Coupled Basins   \""
+    "dup1.r"->"push \"           Two Coupled Basins   \"";
+    "specialinvoke <java.awt.Label: void <init>(java.lang.String)>"
+    "push \"           Two Coupled Basins   \""->"specialinvoke <java.awt.Label: void <init>(java.lang.String)>";
+    "virtualinvoke <java.awt.Container: java.awt.Component add(java.lang.String,java.awt.Component)>"
+    "specialinvoke <java.awt.Label: void <init>(java.lang.String)>"->"virtualinvoke <java.awt.Container: java.awt.Component add(java.lang.String,java.awt.Component)>";
+    "pop"
+    "virtualinvoke <java.awt.Container: java.awt.Component add(java.lang.String,java.awt.Component)>"->"pop";
+    "pop"->"load.r r0";
+    "new PlotS2Panel"
+    "load.r r0"->"new PlotS2Panel";
+    "new PlotS2Panel"->"dup1.r";
+    "specialinvoke <PlotS2Panel: void <init>()>"
+    "dup1.r"->"specialinvoke <PlotS2Panel: void <init>()>";
+    "fieldput <Seiche2: PlotS2Panel graph1>"
+    "specialinvoke <PlotS2Panel: void <init>()>"->"fieldput <Seiche2: PlotS2Panel graph1>";
+    "fieldput <Seiche2: PlotS2Panel graph1>"->"load.r r0";
+    "push \"Center\""
+    "load.r r0"->"push \"Center\"";
+    "push \"Center\""->"load.r r0";
+    "fieldget <Seiche2: PlotS2Panel graph1>"
+    "load.r r0"->"fieldget <Seiche2: PlotS2Panel graph1>";
+    "fieldget <Seiche2: PlotS2Panel graph1>"->"virtualinvoke <java.awt.Container: java.awt.Component add(java.lang.String,java.awt.Component)>";
+    "virtualinvoke <java.awt.Container: java.awt.Component add(java.lang.String,java.awt.Component)>"->"pop";
+    "pop"->"load.r r0";
+    "new InputS2Panel"
+    "load.r r0"->"new InputS2Panel";
+    "new InputS2Panel"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "load.r r0"->"fieldget <Seiche2: PlotS2Panel graph1>";
+    "specialinvoke <InputS2Panel: void <init>(PlotS2Panel)>"
+    "fieldget <Seiche2: PlotS2Panel graph1>"->"specialinvoke <InputS2Panel: void <init>(PlotS2Panel)>";
+    "fieldput <Seiche2: InputS2Panel panel1>"
+    "specialinvoke <InputS2Panel: void <init>(PlotS2Panel)>"->"fieldput <Seiche2: InputS2Panel panel1>";
+    "fieldput <Seiche2: InputS2Panel panel1>"->"load.r r0";
+    "push \"West\""
+    "load.r r0"->"push \"West\"";
+    "push \"West\""->"load.r r0";
+    "fieldget <Seiche2: InputS2Panel panel1>"
+    "load.r r0"->"fieldget <Seiche2: InputS2Panel panel1>";
+    "fieldget <Seiche2: InputS2Panel panel1>"->"virtualinvoke <java.awt.Container: java.awt.Component add(java.lang.String,java.awt.Component)>";
+    "virtualinvoke <java.awt.Container: java.awt.Component add(java.lang.String,java.awt.Component)>"->"pop";
+    "return"
+    "pop"->"return";
+}

@@ -1,0 +1,127 @@
+digraph "" {
+    "r0 := @this: JavaBanner"
+    "load.r r0"
+    "r0 := @this: JavaBanner"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "virtualinvoke <java.awt.Component: java.awt.Dimension size()>"
+    "load.r r0"->"virtualinvoke <java.awt.Component: java.awt.Dimension size()>";
+    "fieldput <JavaBanner: java.awt.Dimension size>"
+    "virtualinvoke <java.awt.Component: java.awt.Dimension size()>"->"fieldput <JavaBanner: java.awt.Dimension size>";
+    "fieldput <JavaBanner: java.awt.Dimension size>"->"load.r r0";
+    "push \"bgcolor\""
+    "load.r r0"->"push \"bgcolor\"";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"
+    "push \"bgcolor\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "store.r r13"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"store.r r13";
+    "load.r r13"
+    "store.r r13"->"load.r r13";
+    "ifnull load.r r0"
+    "load.r r13"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r r0";
+    "new java.awt.Color"
+    "load.r r0"->"new java.awt.Color";
+    "dup1.r"
+    "new java.awt.Color"->"dup1.r";
+    "dup1.r"->"load.r r13";
+    "push 16"
+    "load.r r13"->"push 16";
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String,int)>"
+    "push 16"->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String,int)>";
+    "specialinvoke <java.awt.Color: void <init>(int)>"
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String,int)>"->"specialinvoke <java.awt.Color: void <init>(int)>";
+    "fieldput <JavaBanner: java.awt.Color bgcolor>"
+    "specialinvoke <java.awt.Color: void <init>(int)>"->"fieldput <JavaBanner: java.awt.Color bgcolor>";
+    "goto load.r r0"
+    "fieldput <JavaBanner: java.awt.Color bgcolor>"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "fieldget <JavaBanner: java.awt.Color bgcolor>"
+    "load.r r0"->"fieldget <JavaBanner: java.awt.Color bgcolor>";
+    "virtualinvoke <java.awt.Component: void setBackground(java.awt.Color)>"
+    "fieldget <JavaBanner: java.awt.Color bgcolor>"->"virtualinvoke <java.awt.Component: void setBackground(java.awt.Color)>";
+    "virtualinvoke <java.awt.Component: void setBackground(java.awt.Color)>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "fieldget <JavaBanner: java.awt.Dimension size>"
+    "load.r r0"->"fieldget <JavaBanner: java.awt.Dimension size>";
+    "fieldget <java.awt.Dimension: int width>"
+    "fieldget <JavaBanner: java.awt.Dimension size>"->"fieldget <java.awt.Dimension: int width>";
+    "fieldget <java.awt.Dimension: int width>"->"load.r r0";
+    "load.r r0"->"fieldget <JavaBanner: java.awt.Dimension size>";
+    "fieldget <java.awt.Dimension: int height>"
+    "fieldget <JavaBanner: java.awt.Dimension size>"->"fieldget <java.awt.Dimension: int height>";
+    "virtualinvoke <java.awt.Component: java.awt.Image createImage(int,int)>"
+    "fieldget <java.awt.Dimension: int height>"->"virtualinvoke <java.awt.Component: java.awt.Image createImage(int,int)>";
+    "fieldput <JavaBanner: java.awt.Image offImage>"
+    "virtualinvoke <java.awt.Component: java.awt.Image createImage(int,int)>"->"fieldput <JavaBanner: java.awt.Image offImage>";
+    "fieldput <JavaBanner: java.awt.Image offImage>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "fieldget <JavaBanner: java.awt.Image offImage>"
+    "load.r r0"->"fieldget <JavaBanner: java.awt.Image offImage>";
+    "virtualinvoke <java.awt.Image: java.awt.Graphics getGraphics()>"
+    "fieldget <JavaBanner: java.awt.Image offImage>"->"virtualinvoke <java.awt.Image: java.awt.Graphics getGraphics()>";
+    "fieldput <JavaBanner: java.awt.Graphics offG>"
+    "virtualinvoke <java.awt.Image: java.awt.Graphics getGraphics()>"->"fieldput <JavaBanner: java.awt.Graphics offG>";
+    "fieldput <JavaBanner: java.awt.Graphics offG>"->"load.r r0";
+    "push \"delay\""
+    "load.r r0"->"push \"delay\"";
+    "push \"delay\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"store.r r13";
+    "store.r r13"->"load.r r13";
+    "load.r r13"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r13";
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"
+    "load.r r13"->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>";
+    "i2l"
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"->"i2l";
+    "fieldput <JavaBanner: long delay>"
+    "i2l"->"fieldput <JavaBanner: long delay>";
+    "fieldput <JavaBanner: long delay>"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "push \"target\""
+    "load.r r0"->"push \"target\"";
+    "push \"target\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"store.r r13";
+    "store.r r13"->"load.r r13";
+    "load.r r13"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r r0";
+    "new java.lang.String"
+    "load.r r0"->"new java.lang.String";
+    "new java.lang.String"->"dup1.r";
+    "dup1.r"->"load.r r13";
+    "specialinvoke <java.lang.String: void <init>(java.lang.String)>"
+    "load.r r13"->"specialinvoke <java.lang.String: void <init>(java.lang.String)>";
+    "fieldput <JavaBanner: java.lang.String target>"
+    "specialinvoke <java.lang.String: void <init>(java.lang.String)>"->"fieldput <JavaBanner: java.lang.String target>";
+    "fieldput <JavaBanner: java.lang.String target>"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "new ImageList"
+    "load.r r0"->"new ImageList";
+    "new ImageList"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "specialinvoke <ImageList: void <init>(java.applet.Applet)>"
+    "load.r r0"->"specialinvoke <ImageList: void <init>(java.applet.Applet)>";
+    "fieldput <JavaBanner: ImageList list>"
+    "specialinvoke <ImageList: void <init>(java.applet.Applet)>"->"fieldput <JavaBanner: ImageList list>";
+    "fieldput <JavaBanner: ImageList list>"->"load.r r0";
+    "fieldget <JavaBanner: ImageList list>"
+    "load.r r0"->"fieldget <JavaBanner: ImageList list>";
+    "virtualinvoke <ImageList: void loadImages()>"
+    "fieldget <JavaBanner: ImageList list>"->"virtualinvoke <ImageList: void loadImages()>";
+    "return"
+    "virtualinvoke <ImageList: void loadImages()>"->"return";
+    "ifnull load.r r0"->"load.r r0";
+    "push \"_self\""
+    "load.r r0"->"push \"_self\"";
+    "push \"_self\""->"fieldput <JavaBanner: java.lang.String target>";
+    "ifnull load.r r0"->"load.r r0";
+    "push 100L"
+    "load.r r0"->"push 100L";
+    "push 100L"->"fieldput <JavaBanner: long delay>";
+    "ifnull load.r r0"->"load.r r0";
+    "staticget <java.awt.Color: java.awt.Color white>"
+    "load.r r0"->"staticget <java.awt.Color: java.awt.Color white>";
+    "staticget <java.awt.Color: java.awt.Color white>"->"fieldput <JavaBanner: java.awt.Color bgcolor>";
+}

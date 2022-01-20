@@ -1,0 +1,353 @@
+digraph "" {
+    "r0 := @this: NoticeboardTrial"
+    "load.r r0"
+    "r0 := @this: NoticeboardTrial"->"load.r r0";
+    "push \"NoticeClickable\""
+    "load.r r0"->"push \"NoticeClickable\"";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"
+    "push \"NoticeClickable\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.lang.String: java.lang.String trim()>"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"virtualinvoke <java.lang.String: java.lang.String trim()>";
+    "virtualinvoke <java.lang.String: java.lang.String toUpperCase()>"
+    "virtualinvoke <java.lang.String: java.lang.String trim()>"->"virtualinvoke <java.lang.String: java.lang.String toUpperCase()>";
+    "push \"Y\""
+    "virtualinvoke <java.lang.String: java.lang.String toUpperCase()>"->"push \"Y\"";
+    "virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>"
+    "push \"Y\""->"virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>";
+    "ifeq push 6"
+    "virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>"->"ifeq push 6";
+    "ifeq push 6"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "push \"NoticePage\""
+    "load.r r0"->"push \"NoticePage\"";
+    "push \"NoticePage\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "fieldput <NoticeboardTrial: java.lang.String Noticepage>"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"fieldput <NoticeboardTrial: java.lang.String Noticepage>";
+    "fieldput <NoticeboardTrial: java.lang.String Noticepage>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "push \"Target\""
+    "load.r r0"->"push \"Target\"";
+    "push \"Target\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "store.r r1"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"store.r r1";
+    "load.r r1"
+    "store.r r1"->"load.r r1";
+    "fieldput <NoticeboardTrial: java.lang.String Target>"
+    "load.r r1"->"fieldput <NoticeboardTrial: java.lang.String Target>";
+    "fieldput <NoticeboardTrial: java.lang.String Target>"->"load.r r1";
+    "ifnonnull load.r r0"
+    "load.r r1"->"ifnonnull load.r r0";
+    "ifnonnull load.r r0"->"load.r r0";
+    "push 0"
+    "load.r r0"->"push 0";
+    "fieldput <NoticeboardTrial: boolean frame>"
+    "push 0"->"fieldput <NoticeboardTrial: boolean frame>";
+    "fieldput <NoticeboardTrial: boolean frame>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "virtualinvoke <java.applet.Applet: java.applet.AppletContext getAppletContext()>"
+    "load.r r0"->"virtualinvoke <java.applet.Applet: java.applet.AppletContext getAppletContext()>";
+    "fieldput <NoticeboardTrial: java.applet.AppletContext ac>"
+    "virtualinvoke <java.applet.Applet: java.applet.AppletContext getAppletContext()>"->"fieldput <NoticeboardTrial: java.applet.AppletContext ac>";
+    "push 6"
+    "fieldput <NoticeboardTrial: java.applet.AppletContext ac>"->"push 6";
+    "newarray"
+    "push 6"->"newarray";
+    "newarray"->"store.r r1";
+    "new java.util.StringTokenizer"
+    "store.r r1"->"new java.util.StringTokenizer";
+    "store.r $r12"
+    "new java.util.StringTokenizer"->"store.r $r12";
+    "load.r $r12"
+    "store.r $r12"->"load.r $r12";
+    "load.r $r12"->"load.r r0";
+    "push \"NormalBorder\""
+    "load.r r0"->"push \"NormalBorder\"";
+    "push \"NormalBorder\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "push \"|\""
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"push \"|\"";
+    "specialinvoke <java.util.StringTokenizer: void <init>(java.lang.String,java.lang.String)>"
+    "push \"|\""->"specialinvoke <java.util.StringTokenizer: void <init>(java.lang.String,java.lang.String)>";
+    "specialinvoke <java.util.StringTokenizer: void <init>(java.lang.String,java.lang.String)>"->"load.r r1";
+    "load.r r1"->"push 0";
+    "push 0"->"load.r $r12";
+    "virtualinvoke <java.util.StringTokenizer: java.lang.String nextToken()>"
+    "load.r $r12"->"virtualinvoke <java.util.StringTokenizer: java.lang.String nextToken()>";
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"
+    "virtualinvoke <java.util.StringTokenizer: java.lang.String nextToken()>"->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>";
+    "arraywrite.i"
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"->"arraywrite.i";
+    "arraywrite.i"->"load.r r1";
+    "push 1"
+    "load.r r1"->"push 1";
+    "push 1"->"load.r $r12";
+    "load.r $r12"->"virtualinvoke <java.util.StringTokenizer: java.lang.String nextToken()>";
+    "virtualinvoke <java.util.StringTokenizer: java.lang.String nextToken()>"->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>";
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"->"arraywrite.i";
+    "arraywrite.i"->"load.r r1";
+    "push 2"
+    "load.r r1"->"push 2";
+    "push 2"->"load.r $r12";
+    "load.r $r12"->"virtualinvoke <java.util.StringTokenizer: java.lang.String nextToken()>";
+    "virtualinvoke <java.util.StringTokenizer: java.lang.String nextToken()>"->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>";
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"->"arraywrite.i";
+    "arraywrite.i"->"load.r r0";
+    "new java.awt.Color"
+    "load.r r0"->"new java.awt.Color";
+    "dup1.r"
+    "new java.awt.Color"->"dup1.r";
+    "dup1.r"->"load.r r1";
+    "load.r r1"->"push 0";
+    "arrayread.i"
+    "push 0"->"arrayread.i";
+    "arrayread.i"->"load.r r1";
+    "load.r r1"->"push 1";
+    "push 1"->"arrayread.i";
+    "arrayread.i"->"load.r r1";
+    "load.r r1"->"push 2";
+    "push 2"->"arrayread.i";
+    "specialinvoke <java.awt.Color: void <init>(int,int,int)>"
+    "arrayread.i"->"specialinvoke <java.awt.Color: void <init>(int,int,int)>";
+    "fieldput <NoticeboardTrial: java.awt.Color normalborder>"
+    "specialinvoke <java.awt.Color: void <init>(int,int,int)>"->"fieldput <NoticeboardTrial: java.awt.Color normalborder>";
+    "fieldput <NoticeboardTrial: java.awt.Color normalborder>"->"new java.util.StringTokenizer";
+    "new java.util.StringTokenizer"->"store.r $r12";
+    "store.r $r12"->"load.r $r12";
+    "load.r $r12"->"load.r r0";
+    "push \"MouseOverBorder\""
+    "load.r r0"->"push \"MouseOverBorder\"";
+    "push \"MouseOverBorder\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"push \"|\"";
+    "push \"|\""->"specialinvoke <java.util.StringTokenizer: void <init>(java.lang.String,java.lang.String)>";
+    "specialinvoke <java.util.StringTokenizer: void <init>(java.lang.String,java.lang.String)>"->"load.r r1";
+    "push 3"
+    "load.r r1"->"push 3";
+    "push 3"->"load.r $r12";
+    "load.r $r12"->"virtualinvoke <java.util.StringTokenizer: java.lang.String nextToken()>";
+    "virtualinvoke <java.util.StringTokenizer: java.lang.String nextToken()>"->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>";
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"->"arraywrite.i";
+    "arraywrite.i"->"load.r r1";
+    "push 4"
+    "load.r r1"->"push 4";
+    "push 4"->"load.r $r12";
+    "load.r $r12"->"virtualinvoke <java.util.StringTokenizer: java.lang.String nextToken()>";
+    "virtualinvoke <java.util.StringTokenizer: java.lang.String nextToken()>"->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>";
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"->"arraywrite.i";
+    "arraywrite.i"->"load.r r1";
+    "push 5"
+    "load.r r1"->"push 5";
+    "push 5"->"load.r $r12";
+    "load.r $r12"->"virtualinvoke <java.util.StringTokenizer: java.lang.String nextToken()>";
+    "virtualinvoke <java.util.StringTokenizer: java.lang.String nextToken()>"->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>";
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"->"arraywrite.i";
+    "arraywrite.i"->"load.r r0";
+    "load.r r0"->"new java.awt.Color";
+    "new java.awt.Color"->"dup1.r";
+    "dup1.r"->"load.r r1";
+    "load.r r1"->"push 3";
+    "push 3"->"arrayread.i";
+    "arrayread.i"->"load.r r1";
+    "load.r r1"->"push 4";
+    "push 4"->"arrayread.i";
+    "arrayread.i"->"load.r r1";
+    "load.r r1"->"push 5";
+    "push 5"->"arrayread.i";
+    "arrayread.i"->"specialinvoke <java.awt.Color: void <init>(int,int,int)>";
+    "fieldput <NoticeboardTrial: java.awt.Color mouseoverborder>"
+    "specialinvoke <java.awt.Color: void <init>(int,int,int)>"->"fieldput <NoticeboardTrial: java.awt.Color mouseoverborder>";
+    "fieldput <NoticeboardTrial: java.awt.Color mouseoverborder>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "fieldget <NoticeboardTrial: java.awt.Color normalborder>"
+    "load.r r0"->"fieldget <NoticeboardTrial: java.awt.Color normalborder>";
+    "fieldput <NoticeboardTrial: java.awt.Color bordercolor>"
+    "fieldget <NoticeboardTrial: java.awt.Color normalborder>"->"fieldput <NoticeboardTrial: java.awt.Color bordercolor>";
+    "fieldput <NoticeboardTrial: java.awt.Color bordercolor>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "push \"News\""
+    "load.r r0"->"push \"News\"";
+    "push \"News\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "fieldput <NoticeboardTrial: java.lang.String paramnews>"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"fieldput <NoticeboardTrial: java.lang.String paramnews>";
+    "fieldput <NoticeboardTrial: java.lang.String paramnews>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "virtualinvoke <java.awt.Component: java.awt.Dimension size()>"
+    "load.r r0"->"virtualinvoke <java.awt.Component: java.awt.Dimension size()>";
+    "fieldget <java.awt.Dimension: int height>"
+    "virtualinvoke <java.awt.Component: java.awt.Dimension size()>"->"fieldget <java.awt.Dimension: int height>";
+    "fieldput <NoticeboardTrial: int Height>"
+    "fieldget <java.awt.Dimension: int height>"->"fieldput <NoticeboardTrial: int Height>";
+    "fieldput <NoticeboardTrial: int Height>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"virtualinvoke <java.awt.Component: java.awt.Dimension size()>";
+    "fieldget <java.awt.Dimension: int width>"
+    "virtualinvoke <java.awt.Component: java.awt.Dimension size()>"->"fieldget <java.awt.Dimension: int width>";
+    "fieldput <NoticeboardTrial: int Width>"
+    "fieldget <java.awt.Dimension: int width>"->"fieldput <NoticeboardTrial: int Width>";
+    "fieldput <NoticeboardTrial: int Width>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "push \"Speed\""
+    "load.r r0"->"push \"Speed\"";
+    "push \"Speed\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>";
+    "fieldput <NoticeboardTrial: int speed>"
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"->"fieldput <NoticeboardTrial: int speed>";
+    "fieldput <NoticeboardTrial: int speed>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "push \"TimeDelay\""
+    "load.r r0"->"push \"TimeDelay\"";
+    "push \"TimeDelay\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>";
+    "fieldput <NoticeboardTrial: int timedelay>"
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"->"fieldput <NoticeboardTrial: int timedelay>";
+    "fieldput <NoticeboardTrial: int timedelay>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "push \"Style\""
+    "load.r r0"->"push \"Style\"";
+    "push \"Style\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>";
+    "fieldput <NoticeboardTrial: int style>"
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"->"fieldput <NoticeboardTrial: int style>";
+    "fieldput <NoticeboardTrial: int style>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "push \"Displaytype\""
+    "load.r r0"->"push \"Displaytype\"";
+    "push \"Displaytype\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>";
+    "fieldput <NoticeboardTrial: int displaytype>"
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"->"fieldput <NoticeboardTrial: int displaytype>";
+    "fieldput <NoticeboardTrial: int displaytype>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "push \"Pointsize\""
+    "load.r r0"->"push \"Pointsize\"";
+    "push \"Pointsize\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>";
+    "fieldput <NoticeboardTrial: int pointsize>"
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"->"fieldput <NoticeboardTrial: int pointsize>";
+    "fieldput <NoticeboardTrial: int pointsize>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "push \"Font\""
+    "load.r r0"->"push \"Font\"";
+    "push \"Font\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "fieldput <NoticeboardTrial: java.lang.String fonttype>"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"fieldput <NoticeboardTrial: java.lang.String fonttype>";
+    "fieldput <NoticeboardTrial: java.lang.String fonttype>"->"load.r r0";
+    "new java.awt.Font"
+    "load.r r0"->"new java.awt.Font";
+    "new java.awt.Font"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "fieldget <NoticeboardTrial: java.lang.String fonttype>"
+    "load.r r0"->"fieldget <NoticeboardTrial: java.lang.String fonttype>";
+    "fieldget <NoticeboardTrial: java.lang.String fonttype>"->"load.r r0";
+    "fieldget <NoticeboardTrial: int style>"
+    "load.r r0"->"fieldget <NoticeboardTrial: int style>";
+    "fieldget <NoticeboardTrial: int style>"->"load.r r0";
+    "fieldget <NoticeboardTrial: int pointsize>"
+    "load.r r0"->"fieldget <NoticeboardTrial: int pointsize>";
+    "specialinvoke <java.awt.Font: void <init>(java.lang.String,int,int)>"
+    "fieldget <NoticeboardTrial: int pointsize>"->"specialinvoke <java.awt.Font: void <init>(java.lang.String,int,int)>";
+    "fieldput <NoticeboardTrial: java.awt.Font font>"
+    "specialinvoke <java.awt.Font: void <init>(java.lang.String,int,int)>"->"fieldput <NoticeboardTrial: java.awt.Font font>";
+    "fieldput <NoticeboardTrial: java.awt.Font font>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "fieldget <NoticeboardTrial: java.awt.Font font>"
+    "load.r r0"->"fieldget <NoticeboardTrial: java.awt.Font font>";
+    "virtualinvoke <java.awt.Component: java.awt.FontMetrics getFontMetrics(java.awt.Font)>"
+    "fieldget <NoticeboardTrial: java.awt.Font font>"->"virtualinvoke <java.awt.Component: java.awt.FontMetrics getFontMetrics(java.awt.Font)>";
+    "fieldput <NoticeboardTrial: java.awt.FontMetrics fontmet>"
+    "virtualinvoke <java.awt.Component: java.awt.FontMetrics getFontMetrics(java.awt.Font)>"->"fieldput <NoticeboardTrial: java.awt.FontMetrics fontmet>";
+    "fieldput <NoticeboardTrial: java.awt.FontMetrics fontmet>"->"push 6";
+    "push 6"->"newarray";
+    "newarray"->"store.r r1";
+    "store.r r1"->"new java.util.StringTokenizer";
+    "new java.util.StringTokenizer"->"store.r $r12";
+    "store.r $r12"->"load.r $r12";
+    "load.r $r12"->"load.r r0";
+    "push \"TextColor\""
+    "load.r r0"->"push \"TextColor\"";
+    "push \"TextColor\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"push \"|\"";
+    "push \"|\""->"specialinvoke <java.util.StringTokenizer: void <init>(java.lang.String,java.lang.String)>";
+    "specialinvoke <java.util.StringTokenizer: void <init>(java.lang.String,java.lang.String)>"->"load.r r1";
+    "load.r r1"->"push 0";
+    "push 0"->"load.r $r12";
+    "load.r $r12"->"virtualinvoke <java.util.StringTokenizer: java.lang.String nextToken()>";
+    "virtualinvoke <java.util.StringTokenizer: java.lang.String nextToken()>"->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>";
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"->"arraywrite.i";
+    "arraywrite.i"->"load.r r1";
+    "load.r r1"->"push 1";
+    "push 1"->"load.r $r12";
+    "load.r $r12"->"virtualinvoke <java.util.StringTokenizer: java.lang.String nextToken()>";
+    "virtualinvoke <java.util.StringTokenizer: java.lang.String nextToken()>"->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>";
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"->"arraywrite.i";
+    "arraywrite.i"->"load.r r1";
+    "load.r r1"->"push 2";
+    "push 2"->"load.r $r12";
+    "load.r $r12"->"virtualinvoke <java.util.StringTokenizer: java.lang.String nextToken()>";
+    "virtualinvoke <java.util.StringTokenizer: java.lang.String nextToken()>"->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>";
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"->"arraywrite.i";
+    "arraywrite.i"->"load.r r0";
+    "load.r r0"->"new java.awt.Color";
+    "new java.awt.Color"->"dup1.r";
+    "dup1.r"->"load.r r1";
+    "load.r r1"->"push 0";
+    "push 0"->"arrayread.i";
+    "arrayread.i"->"load.r r1";
+    "load.r r1"->"push 1";
+    "push 1"->"arrayread.i";
+    "arrayread.i"->"load.r r1";
+    "load.r r1"->"push 2";
+    "push 2"->"arrayread.i";
+    "arrayread.i"->"specialinvoke <java.awt.Color: void <init>(int,int,int)>";
+    "fieldput <NoticeboardTrial: java.awt.Color text>"
+    "specialinvoke <java.awt.Color: void <init>(int,int,int)>"->"fieldput <NoticeboardTrial: java.awt.Color text>";
+    "fieldput <NoticeboardTrial: java.awt.Color text>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "fieldget <NoticeboardTrial: java.awt.Color text>"
+    "load.r r0"->"fieldget <NoticeboardTrial: java.awt.Color text>";
+    "virtualinvoke <java.awt.Component: void setForeground(java.awt.Color)>"
+    "fieldget <NoticeboardTrial: java.awt.Color text>"->"virtualinvoke <java.awt.Component: void setForeground(java.awt.Color)>";
+    "virtualinvoke <java.awt.Component: void setForeground(java.awt.Color)>"->"new java.util.StringTokenizer";
+    "new java.util.StringTokenizer"->"store.r $r12";
+    "store.r $r12"->"load.r $r12";
+    "load.r $r12"->"load.r r0";
+    "push \"BackColor\""
+    "load.r r0"->"push \"BackColor\"";
+    "push \"BackColor\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"push \"|\"";
+    "push \"|\""->"specialinvoke <java.util.StringTokenizer: void <init>(java.lang.String,java.lang.String)>";
+    "specialinvoke <java.util.StringTokenizer: void <init>(java.lang.String,java.lang.String)>"->"load.r r1";
+    "load.r r1"->"push 3";
+    "push 3"->"load.r $r12";
+    "load.r $r12"->"virtualinvoke <java.util.StringTokenizer: java.lang.String nextToken()>";
+    "virtualinvoke <java.util.StringTokenizer: java.lang.String nextToken()>"->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>";
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"->"arraywrite.i";
+    "arraywrite.i"->"load.r r1";
+    "load.r r1"->"push 4";
+    "push 4"->"load.r $r12";
+    "load.r $r12"->"virtualinvoke <java.util.StringTokenizer: java.lang.String nextToken()>";
+    "virtualinvoke <java.util.StringTokenizer: java.lang.String nextToken()>"->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>";
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"->"arraywrite.i";
+    "arraywrite.i"->"load.r r1";
+    "load.r r1"->"push 5";
+    "push 5"->"load.r $r12";
+    "load.r $r12"->"virtualinvoke <java.util.StringTokenizer: java.lang.String nextToken()>";
+    "virtualinvoke <java.util.StringTokenizer: java.lang.String nextToken()>"->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>";
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"->"arraywrite.i";
+    "arraywrite.i"->"load.r r0";
+    "load.r r0"->"new java.awt.Color";
+    "new java.awt.Color"->"dup1.r";
+    "dup1.r"->"load.r r1";
+    "load.r r1"->"push 3";
+    "push 3"->"arrayread.i";
+    "arrayread.i"->"load.r r1";
+    "load.r r1"->"push 4";
+    "push 4"->"arrayread.i";
+    "arrayread.i"->"load.r r1";
+    "load.r r1"->"push 5";
+    "push 5"->"arrayread.i";
+    "arrayread.i"->"specialinvoke <java.awt.Color: void <init>(int,int,int)>";
+    "virtualinvoke <java.awt.Component: void setBackground(java.awt.Color)>"
+    "specialinvoke <java.awt.Color: void <init>(int,int,int)>"->"virtualinvoke <java.awt.Component: void setBackground(java.awt.Color)>";
+    "return"
+    "virtualinvoke <java.awt.Component: void setBackground(java.awt.Color)>"->"return";
+}

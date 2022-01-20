@@ -1,0 +1,21 @@
+digraph "" {
+    "r0 := @this: WebCam"
+    "load.r r0"
+    "r0 := @this: WebCam"->"load.r r0";
+    "specialinvoke <WebCam: void dataInit()>"
+    "load.r r0"->"specialinvoke <WebCam: void dataInit()>";
+    "specialinvoke <WebCam: void dataInit()>"->"load.r r0";
+    "fieldget <WebCam: boolean boolControlPanel>"
+    "load.r r0"->"fieldget <WebCam: boolean boolControlPanel>";
+    "ifeq goto return"
+    "fieldget <WebCam: boolean boolControlPanel>"->"ifeq goto return";
+    "ifeq goto return"->"load.r r0";
+    "specialinvoke <WebCam: void uiInit()>"
+    "load.r r0"->"specialinvoke <WebCam: void uiInit()>";
+    "goto return"
+    "specialinvoke <WebCam: void uiInit()>"->"goto return";
+    "return"
+    "goto return"->"return";
+    "virtualinvoke <java.lang.Throwable: void printStackTrace()>"
+    "specialinvoke <WebCam: void uiInit()>"->"virtualinvoke <java.lang.Throwable: void printStackTrace()>";
+}

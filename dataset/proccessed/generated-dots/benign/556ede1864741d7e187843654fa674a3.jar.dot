@@ -1,0 +1,979 @@
+digraph "" {
+    "r0 := @this: mflip"
+    "load.r r0"
+    "r0 := @this: mflip"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "virtualinvoke <java.awt.Component: java.awt.Dimension size()>"
+    "load.r r0"->"virtualinvoke <java.awt.Component: java.awt.Dimension size()>";
+    "fieldput <mflip: java.awt.Dimension d>"
+    "virtualinvoke <java.awt.Component: java.awt.Dimension size()>"->"fieldput <mflip: java.awt.Dimension d>";
+    "push 0"
+    "fieldput <mflip: java.awt.Dimension d>"->"push 0";
+    "store.i i32"
+    "push 0"->"store.i i32";
+    "store.i i32"->"push 0";
+    "store.i i33"
+    "push 0"->"store.i i33";
+    "store.i i33"->"load.r r0";
+    "push \"Notice\""
+    "load.r r0"->"push \"Notice\"";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"
+    "push \"Notice\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "store.r $r11"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"store.r $r11";
+    "load.r $r11"
+    "store.r $r11"->"load.r $r11";
+    "ifnull load.r r0"
+    "load.r $r11"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r $r11";
+    "load.r $r11"->"load.r r0";
+    "virtualinvoke <java.applet.Applet: java.net.URL getDocumentBase()>"
+    "load.r r0"->"virtualinvoke <java.applet.Applet: java.net.URL getDocumentBase()>";
+    "staticinvoke <evalkey: java.lang.String getKey(java.lang.String,java.net.URL)>"
+    "virtualinvoke <java.applet.Applet: java.net.URL getDocumentBase()>"->"staticinvoke <evalkey: java.lang.String getKey(java.lang.String,java.net.URL)>";
+    "store.r r2"
+    "staticinvoke <evalkey: java.lang.String getKey(java.lang.String,java.net.URL)>"->"store.r r2";
+    "load.r r2"
+    "store.r r2"->"load.r r2";
+    "push \"Message Flipper (Developer Version), Copyright (c) 2000, OpenCube Inc.\""
+    "load.r r2"->"push \"Message Flipper (Developer Version), Copyright (c) 2000, OpenCube Inc.\"";
+    "virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>"
+    "push \"Message Flipper (Developer Version), Copyright (c) 2000, OpenCube Inc.\""->"virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>";
+    "ifne load.r r0"
+    "virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>"->"ifne load.r r0";
+    "ifne load.r r0"->"load.r r2";
+    "push \"-1\""
+    "load.r r2"->"push \"-1\"";
+    "push \"-1\""->"virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>";
+    "ifeq load.r r0"
+    "virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>"->"ifeq load.r r0";
+    "ifeq load.r r0"->"load.r r0";
+    "push \"Licence Error: Invalid URL\""
+    "load.r r0"->"push \"Licence Error: Invalid URL\"";
+    "fieldput <mflip: java.lang.String m_onsbtext>"
+    "push \"Licence Error: Invalid URL\""->"fieldput <mflip: java.lang.String m_onsbtext>";
+    "fieldput <mflip: java.lang.String m_onsbtext>"->"load.r r0";
+    "load.r r0"->"push \"Licence Error: Invalid URL\"";
+    "fieldput <mflip: java.lang.String m_offsbtext>"
+    "push \"Licence Error: Invalid URL\""->"fieldput <mflip: java.lang.String m_offsbtext>";
+    "return"
+    "fieldput <mflip: java.lang.String m_offsbtext>"->"return";
+    "ifeq load.r r0"->"load.r r0";
+    "push \"Incorrect Copyright Notice in \'Notice\' tag\""
+    "load.r r0"->"push \"Incorrect Copyright Notice in \'Notice\' tag\"";
+    "push \"Incorrect Copyright Notice in \'Notice\' tag\""->"fieldput <mflip: java.lang.String m_onsbtext>";
+    "fieldput <mflip: java.lang.String m_onsbtext>"->"load.r r0";
+    "load.r r0"->"push \"Incorrect Copyright Notice in \'Notice\' tag\"";
+    "push \"Incorrect Copyright Notice in \'Notice\' tag\""->"fieldput <mflip: java.lang.String m_offsbtext>";
+    "fieldput <mflip: java.lang.String m_offsbtext>"->"return";
+    "ifne load.r r0"->"load.r r0";
+    "push 1"
+    "load.r r0"->"push 1";
+    "fieldput <mflip: boolean tag>"
+    "push 1"->"fieldput <mflip: boolean tag>";
+    "goto new java.util.Properties"
+    "fieldput <mflip: boolean tag>"->"goto new java.util.Properties";
+    "new java.util.Properties"
+    "goto new java.util.Properties"->"new java.util.Properties";
+    "new java.util.Properties"->"store.r r2";
+    "store.r r2"->"load.r r2";
+    "specialinvoke <java.util.Properties: void <init>()>"
+    "load.r r2"->"specialinvoke <java.util.Properties: void <init>()>";
+    "specialinvoke <java.util.Properties: void <init>()>"->"load.r r0";
+    "push \"filelocation\""
+    "load.r r0"->"push \"filelocation\"";
+    "push \"filelocation\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"store.r $r11";
+    "store.r $r11"->"load.r $r11";
+    "ifnonnull load.r r2"
+    "load.r $r11"->"ifnonnull load.r r2";
+    "ifnonnull load.r r2"->"load.r r0";
+    "push \"Missing \\\"filelocation\\\" parameter\""
+    "load.r r0"->"push \"Missing \\\"filelocation\\\" parameter\"";
+    "push \"Missing \\\"filelocation\\\" parameter\""->"fieldput <mflip: java.lang.String m_onsbtext>";
+    "fieldput <mflip: java.lang.String m_onsbtext>"->"load.r r0";
+    "load.r r0"->"push 0";
+    "push 0"->"fieldput <mflip: boolean tag>";
+    "fieldput <mflip: boolean tag>"->"return";
+    "fieldput <mflip: boolean tag>"->"store.r r2";
+    "store.r r2"->"load.r r0";
+    "new java.lang.StringBuffer"
+    "load.r r0"->"new java.lang.StringBuffer";
+    "dup1.r"
+    "new java.lang.StringBuffer"->"dup1.r";
+    "push \"Error loading param file: \\\"\""
+    "dup1.r"->"push \"Error loading param file: \\\"\"";
+    "specialinvoke <java.lang.StringBuffer: void <init>(java.lang.String)>"
+    "push \"Error loading param file: \\\"\""->"specialinvoke <java.lang.StringBuffer: void <init>(java.lang.String)>";
+    "specialinvoke <java.lang.StringBuffer: void <init>(java.lang.String)>"->"load.r $r11";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"
+    "load.r $r11"->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "push \"\\\"\""
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"push \"\\\"\"";
+    "push \"\\\"\""->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>"
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>"->"fieldput <mflip: java.lang.String m_onsbtext>";
+    "fieldput <mflip: java.lang.String m_onsbtext>"->"load.r r0";
+    "load.r r0"->"push 0";
+    "push 0"->"fieldput <mflip: boolean tag>";
+    "fieldput <mflip: boolean tag>"->"return";
+    "ifnonnull load.r r2"->"load.r r2";
+    "new java.net.URL"
+    "load.r r2"->"new java.net.URL";
+    "new java.net.URL"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "load.r r0"->"virtualinvoke <java.applet.Applet: java.net.URL getDocumentBase()>";
+    "virtualinvoke <java.applet.Applet: java.net.URL getDocumentBase()>"->"load.r $r11";
+    "specialinvoke <java.net.URL: void <init>(java.net.URL,java.lang.String)>"
+    "load.r $r11"->"specialinvoke <java.net.URL: void <init>(java.net.URL,java.lang.String)>";
+    "virtualinvoke <java.net.URL: java.io.InputStream openStream()>"
+    "specialinvoke <java.net.URL: void <init>(java.net.URL,java.lang.String)>"->"virtualinvoke <java.net.URL: java.io.InputStream openStream()>";
+    "store.r r4"
+    "virtualinvoke <java.net.URL: java.io.InputStream openStream()>"->"store.r r4";
+    "load.r r4"
+    "store.r r4"->"load.r r4";
+    "virtualinvoke <java.util.Properties: void load(java.io.InputStream)>"
+    "load.r r4"->"virtualinvoke <java.util.Properties: void load(java.io.InputStream)>";
+    "virtualinvoke <java.util.Properties: void load(java.io.InputStream)>"->"load.r r4";
+    "virtualinvoke <java.io.InputStream: void close()>"
+    "load.r r4"->"virtualinvoke <java.io.InputStream: void close()>";
+    "goto load.r r2"
+    "virtualinvoke <java.io.InputStream: void close()>"->"goto load.r r2";
+    "goto load.r r2"->"load.r r2";
+    "push \"msgbgcolor\""
+    "load.r r2"->"push \"msgbgcolor\"";
+    "virtualinvoke <java.util.Properties: java.lang.String getProperty(java.lang.String)>"
+    "push \"msgbgcolor\""->"virtualinvoke <java.util.Properties: java.lang.String getProperty(java.lang.String)>";
+    "virtualinvoke <java.util.Properties: java.lang.String getProperty(java.lang.String)>"->"store.r $r11";
+    "store.r $r11"->"load.r $r11";
+    "load.r $r11"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r r0";
+    "load.r r0"->"load.r $r11";
+    "staticinvoke <occcolor: java.awt.Color ConvertColor(java.lang.String)>"
+    "load.r $r11"->"staticinvoke <occcolor: java.awt.Color ConvertColor(java.lang.String)>";
+    "fieldput <mflip: java.awt.Color m_bgcolor>"
+    "staticinvoke <occcolor: java.awt.Color ConvertColor(java.lang.String)>"->"fieldput <mflip: java.awt.Color m_bgcolor>";
+    "fieldput <mflip: java.awt.Color m_bgcolor>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "fieldget <mflip: java.awt.Color m_bgcolor>"
+    "load.r r0"->"fieldget <mflip: java.awt.Color m_bgcolor>";
+    "virtualinvoke <java.awt.Component: void setBackground(java.awt.Color)>"
+    "fieldget <mflip: java.awt.Color m_bgcolor>"->"virtualinvoke <java.awt.Component: void setBackground(java.awt.Color)>";
+    "virtualinvoke <java.awt.Component: void setBackground(java.awt.Color)>"->"load.r r2";
+    "push \"showhand\""
+    "load.r r2"->"push \"showhand\"";
+    "push \"showhand\""->"virtualinvoke <java.util.Properties: java.lang.String getProperty(java.lang.String)>";
+    "virtualinvoke <java.util.Properties: java.lang.String getProperty(java.lang.String)>"->"store.r $r11";
+    "store.r $r11"->"load.r $r11";
+    "ifnull load.r r2"
+    "load.r $r11"->"ifnull load.r r2";
+    "ifnull load.r r2"->"load.r r0";
+    "load.r r0"->"load.r $r11";
+    "staticinvoke <java.lang.Boolean: java.lang.Boolean valueOf(java.lang.String)>"
+    "load.r $r11"->"staticinvoke <java.lang.Boolean: java.lang.Boolean valueOf(java.lang.String)>";
+    "virtualinvoke <java.lang.Boolean: boolean booleanValue()>"
+    "staticinvoke <java.lang.Boolean: java.lang.Boolean valueOf(java.lang.String)>"->"virtualinvoke <java.lang.Boolean: boolean booleanValue()>";
+    "fieldput <mflip: boolean m_showhand>"
+    "virtualinvoke <java.lang.Boolean: boolean booleanValue()>"->"fieldput <mflip: boolean m_showhand>";
+    "fieldput <mflip: boolean m_showhand>"->"load.r r2";
+    "push \"bordersize\""
+    "load.r r2"->"push \"bordersize\"";
+    "push \"bordersize\""->"virtualinvoke <java.util.Properties: java.lang.String getProperty(java.lang.String)>";
+    "virtualinvoke <java.util.Properties: java.lang.String getProperty(java.lang.String)>"->"store.r $r11";
+    "store.r $r11"->"load.r $r11";
+    "load.r $r11"->"ifnull load.r r2";
+    "ifnull load.r r2"->"load.r r0";
+    "load.r r0"->"load.r $r11";
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"
+    "load.r $r11"->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>";
+    "fieldput <mflip: int m_border_size>"
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"->"fieldput <mflip: int m_border_size>";
+    "fieldput <mflip: int m_border_size>"->"load.r r2";
+    "push \"msgtextcolor\""
+    "load.r r2"->"push \"msgtextcolor\"";
+    "push \"msgtextcolor\""->"virtualinvoke <java.util.Properties: java.lang.String getProperty(java.lang.String)>";
+    "virtualinvoke <java.util.Properties: java.lang.String getProperty(java.lang.String)>"->"store.r $r11";
+    "store.r $r11"->"load.r $r11";
+    "load.r $r11"->"ifnull load.r r2";
+    "ifnull load.r r2"->"load.r r0";
+    "load.r r0"->"load.r $r11";
+    "load.r $r11"->"staticinvoke <occcolor: java.awt.Color ConvertColor(java.lang.String)>";
+    "fieldput <mflip: java.awt.Color m_msg_textcolor>"
+    "staticinvoke <occcolor: java.awt.Color ConvertColor(java.lang.String)>"->"fieldput <mflip: java.awt.Color m_msg_textcolor>";
+    "fieldput <mflip: java.awt.Color m_msg_textcolor>"->"load.r r2";
+    "push \"hdhlcolor\""
+    "load.r r2"->"push \"hdhlcolor\"";
+    "push \"hdhlcolor\""->"virtualinvoke <java.util.Properties: java.lang.String getProperty(java.lang.String)>";
+    "virtualinvoke <java.util.Properties: java.lang.String getProperty(java.lang.String)>"->"store.r $r11";
+    "store.r $r11"->"load.r $r11";
+    "load.r $r11"->"ifnull load.r r2";
+    "ifnull load.r r2"->"load.r r0";
+    "load.r r0"->"load.r $r11";
+    "load.r $r11"->"staticinvoke <occcolor: java.awt.Color ConvertColor(java.lang.String)>";
+    "fieldput <mflip: java.awt.Color m_hdhl>"
+    "staticinvoke <occcolor: java.awt.Color ConvertColor(java.lang.String)>"->"fieldput <mflip: java.awt.Color m_hdhl>";
+    "fieldput <mflip: java.awt.Color m_hdhl>"->"load.r r2";
+    "push \"msghlcolor\""
+    "load.r r2"->"push \"msghlcolor\"";
+    "push \"msghlcolor\""->"virtualinvoke <java.util.Properties: java.lang.String getProperty(java.lang.String)>";
+    "virtualinvoke <java.util.Properties: java.lang.String getProperty(java.lang.String)>"->"store.r $r11";
+    "store.r $r11"->"load.r $r11";
+    "load.r $r11"->"ifnull load.r r2";
+    "ifnull load.r r2"->"load.r r0";
+    "load.r r0"->"load.r $r11";
+    "load.r $r11"->"staticinvoke <occcolor: java.awt.Color ConvertColor(java.lang.String)>";
+    "fieldput <mflip: java.awt.Color m_msghl>"
+    "staticinvoke <occcolor: java.awt.Color ConvertColor(java.lang.String)>"->"fieldput <mflip: java.awt.Color m_msghl>";
+    "fieldput <mflip: java.awt.Color m_msghl>"->"load.r r2";
+    "push \"loadwhere\""
+    "load.r r2"->"push \"loadwhere\"";
+    "push \"loadwhere\""->"virtualinvoke <java.util.Properties: java.lang.String getProperty(java.lang.String)>";
+    "virtualinvoke <java.util.Properties: java.lang.String getProperty(java.lang.String)>"->"store.r $r11";
+    "store.r $r11"->"load.r $r11";
+    "load.r $r11"->"ifnull load.r r2";
+    "ifnull load.r r2"->"load.r r0";
+    "load.r r0"->"load.r $r11";
+    "fieldput <mflip: java.lang.String m_loadwhere>"
+    "load.r $r11"->"fieldput <mflip: java.lang.String m_loadwhere>";
+    "fieldput <mflip: java.lang.String m_loadwhere>"->"load.r r2";
+    "push \"hdbgcolor\""
+    "load.r r2"->"push \"hdbgcolor\"";
+    "push \"hdbgcolor\""->"virtualinvoke <java.util.Properties: java.lang.String getProperty(java.lang.String)>";
+    "virtualinvoke <java.util.Properties: java.lang.String getProperty(java.lang.String)>"->"store.r $r11";
+    "store.r $r11"->"load.r $r11";
+    "load.r $r11"->"ifnull load.r r2";
+    "ifnull load.r r2"->"load.r r0";
+    "load.r r0"->"load.r $r11";
+    "load.r $r11"->"staticinvoke <occcolor: java.awt.Color ConvertColor(java.lang.String)>";
+    "fieldput <mflip: java.awt.Color m_hdbgcolor>"
+    "staticinvoke <occcolor: java.awt.Color ConvertColor(java.lang.String)>"->"fieldput <mflip: java.awt.Color m_hdbgcolor>";
+    "fieldput <mflip: java.awt.Color m_hdbgcolor>"->"load.r r2";
+    "push \"hdtextcolor\""
+    "load.r r2"->"push \"hdtextcolor\"";
+    "push \"hdtextcolor\""->"virtualinvoke <java.util.Properties: java.lang.String getProperty(java.lang.String)>";
+    "virtualinvoke <java.util.Properties: java.lang.String getProperty(java.lang.String)>"->"store.r $r11";
+    "store.r $r11"->"load.r $r11";
+    "load.r $r11"->"ifnull load.r r2";
+    "ifnull load.r r2"->"load.r r0";
+    "load.r r0"->"load.r $r11";
+    "load.r $r11"->"staticinvoke <occcolor: java.awt.Color ConvertColor(java.lang.String)>";
+    "fieldput <mflip: java.awt.Color m_hd_textcolor>"
+    "staticinvoke <occcolor: java.awt.Color ConvertColor(java.lang.String)>"->"fieldput <mflip: java.awt.Color m_hd_textcolor>";
+    "fieldput <mflip: java.awt.Color m_hd_textcolor>"->"load.r r2";
+    "push \"bordercolor\""
+    "load.r r2"->"push \"bordercolor\"";
+    "push \"bordercolor\""->"virtualinvoke <java.util.Properties: java.lang.String getProperty(java.lang.String)>";
+    "virtualinvoke <java.util.Properties: java.lang.String getProperty(java.lang.String)>"->"store.r $r11";
+    "store.r $r11"->"load.r $r11";
+    "load.r $r11"->"ifnull load.r r2";
+    "ifnull load.r r2"->"load.r r0";
+    "load.r r0"->"load.r $r11";
+    "load.r $r11"->"staticinvoke <occcolor: java.awt.Color ConvertColor(java.lang.String)>";
+    "fieldput <mflip: java.awt.Color m_border_color>"
+    "staticinvoke <occcolor: java.awt.Color ConvertColor(java.lang.String)>"->"fieldput <mflip: java.awt.Color m_border_color>";
+    "fieldput <mflip: java.awt.Color m_border_color>"->"load.r r2";
+    "push \"borderhlcolor\""
+    "load.r r2"->"push \"borderhlcolor\"";
+    "push \"borderhlcolor\""->"virtualinvoke <java.util.Properties: java.lang.String getProperty(java.lang.String)>";
+    "virtualinvoke <java.util.Properties: java.lang.String getProperty(java.lang.String)>"->"store.r $r11";
+    "store.r $r11"->"load.r $r11";
+    "load.r $r11"->"ifnull load.r r2";
+    "ifnull load.r r2"->"load.r r0";
+    "load.r r0"->"load.r $r11";
+    "load.r $r11"->"staticinvoke <occcolor: java.awt.Color ConvertColor(java.lang.String)>";
+    "fieldput <mflip: java.awt.Color m_border_hlcolor>"
+    "staticinvoke <occcolor: java.awt.Color ConvertColor(java.lang.String)>"->"fieldput <mflip: java.awt.Color m_border_hlcolor>";
+    "fieldput <mflip: java.awt.Color m_border_hlcolor>"->"load.r r2";
+    "push \"hdwidth\""
+    "load.r r2"->"push \"hdwidth\"";
+    "push \"hdwidth\""->"virtualinvoke <java.util.Properties: java.lang.String getProperty(java.lang.String)>";
+    "virtualinvoke <java.util.Properties: java.lang.String getProperty(java.lang.String)>"->"store.r $r11";
+    "store.r $r11"->"load.r $r11";
+    "load.r $r11"->"ifnull load.r r2";
+    "ifnull load.r r2"->"load.r r0";
+    "load.r r0"->"load.r $r11";
+    "load.r $r11"->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>";
+    "fieldput <mflip: int m_hdwidth>"
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"->"fieldput <mflip: int m_hdwidth>";
+    "fieldput <mflip: int m_hdwidth>"->"load.r r2";
+    "push \"yoffset\""
+    "load.r r2"->"push \"yoffset\"";
+    "push \"yoffset\""->"virtualinvoke <java.util.Properties: java.lang.String getProperty(java.lang.String)>";
+    "virtualinvoke <java.util.Properties: java.lang.String getProperty(java.lang.String)>"->"store.r $r11";
+    "store.r $r11"->"load.r $r11";
+    "load.r $r11"->"ifnull load.r r2";
+    "ifnull load.r r2"->"load.r r0";
+    "load.r r0"->"load.r $r11";
+    "load.r $r11"->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>";
+    "fieldput <mflip: int m_yoffset>"
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"->"fieldput <mflip: int m_yoffset>";
+    "fieldput <mflip: int m_yoffset>"->"load.r r2";
+    "push \"scrolldelay\""
+    "load.r r2"->"push \"scrolldelay\"";
+    "push \"scrolldelay\""->"virtualinvoke <java.util.Properties: java.lang.String getProperty(java.lang.String)>";
+    "virtualinvoke <java.util.Properties: java.lang.String getProperty(java.lang.String)>"->"store.r $r11";
+    "store.r $r11"->"load.r $r11";
+    "load.r $r11"->"ifnull load.r r2";
+    "ifnull load.r r2"->"load.r r0";
+    "load.r r0"->"load.r $r11";
+    "load.r $r11"->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>";
+    "fieldput <mflip: int m_scroll_delay>"
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"->"fieldput <mflip: int m_scroll_delay>";
+    "fieldput <mflip: int m_scroll_delay>"->"load.r r2";
+    "push \"jumpsize\""
+    "load.r r2"->"push \"jumpsize\"";
+    "push \"jumpsize\""->"virtualinvoke <java.util.Properties: java.lang.String getProperty(java.lang.String)>";
+    "virtualinvoke <java.util.Properties: java.lang.String getProperty(java.lang.String)>"->"store.r $r11";
+    "store.r $r11"->"load.r $r11";
+    "load.r $r11"->"ifnull load.r r2";
+    "ifnull load.r r2"->"load.r r0";
+    "load.r r0"->"load.r $r11";
+    "load.r $r11"->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>";
+    "fieldput <mflip: int m_jump_size>"
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"->"fieldput <mflip: int m_jump_size>";
+    "fieldput <mflip: int m_jump_size>"->"load.r r2";
+    "push \"pausetime\""
+    "load.r r2"->"push \"pausetime\"";
+    "push \"pausetime\""->"virtualinvoke <java.util.Properties: java.lang.String getProperty(java.lang.String)>";
+    "virtualinvoke <java.util.Properties: java.lang.String getProperty(java.lang.String)>"->"store.r $r11";
+    "store.r $r11"->"load.r $r11";
+    "load.r $r11"->"ifnull load.r r2";
+    "ifnull load.r r2"->"load.r r0";
+    "load.r r0"->"load.r $r11";
+    "load.r $r11"->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>";
+    "fieldput <mflip: int m_delay_time>"
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"->"fieldput <mflip: int m_delay_time>";
+    "fieldput <mflip: int m_delay_time>"->"load.r r2";
+    "push \"mousepausetime\""
+    "load.r r2"->"push \"mousepausetime\"";
+    "push \"mousepausetime\""->"virtualinvoke <java.util.Properties: java.lang.String getProperty(java.lang.String)>";
+    "virtualinvoke <java.util.Properties: java.lang.String getProperty(java.lang.String)>"->"store.r $r11";
+    "store.r $r11"->"load.r $r11";
+    "load.r $r11"->"ifnull load.r r2";
+    "ifnull load.r r2"->"load.r r0";
+    "load.r r0"->"load.r $r11";
+    "load.r $r11"->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>";
+    "fieldput <mflip: int m_mouse_delay_time>"
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"->"fieldput <mflip: int m_mouse_delay_time>";
+    "fieldput <mflip: int m_mouse_delay_time>"->"load.r r2";
+    "push \"hdmargin\""
+    "load.r r2"->"push \"hdmargin\"";
+    "push \"hdmargin\""->"virtualinvoke <java.util.Properties: java.lang.String getProperty(java.lang.String)>";
+    "virtualinvoke <java.util.Properties: java.lang.String getProperty(java.lang.String)>"->"store.r $r11";
+    "store.r $r11"->"load.r $r11";
+    "load.r $r11"->"ifnull load.r r2";
+    "ifnull load.r r2"->"load.r r0";
+    "load.r r0"->"load.r $r11";
+    "load.r $r11"->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>";
+    "fieldput <mflip: int m_hdmargin>"
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"->"fieldput <mflip: int m_hdmargin>";
+    "fieldput <mflip: int m_hdmargin>"->"load.r r2";
+    "push \"msgmargin\""
+    "load.r r2"->"push \"msgmargin\"";
+    "push \"msgmargin\""->"virtualinvoke <java.util.Properties: java.lang.String getProperty(java.lang.String)>";
+    "virtualinvoke <java.util.Properties: java.lang.String getProperty(java.lang.String)>"->"store.r $r11";
+    "store.r $r11"->"load.r $r11";
+    "load.r $r11"->"ifnull load.r r2";
+    "ifnull load.r r2"->"load.r r0";
+    "load.r r0"->"load.r $r11";
+    "load.r $r11"->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>";
+    "fieldput <mflip: int m_msgmargin>"
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"->"fieldput <mflip: int m_msgmargin>";
+    "fieldput <mflip: int m_msgmargin>"->"load.r r2";
+    "push \"hdfont\""
+    "load.r r2"->"push \"hdfont\"";
+    "push \"hdfont\""->"virtualinvoke <java.util.Properties: java.lang.String getProperty(java.lang.String)>";
+    "virtualinvoke <java.util.Properties: java.lang.String getProperty(java.lang.String)>"->"store.r $r11";
+    "store.r $r11"->"load.r $r11";
+    "load.r $r11"->"ifnull load.r r2";
+    "ifnull load.r r2"->"load.r r0";
+    "load.r r0"->"load.r $r11";
+    "push \",\""
+    "load.r $r11"->"push \",\"";
+    "staticinvoke <ocfontc: java.awt.Font getFontSD(java.lang.String,java.lang.String)>"
+    "push \",\""->"staticinvoke <ocfontc: java.awt.Font getFontSD(java.lang.String,java.lang.String)>";
+    "fieldput <mflip: java.awt.Font m_hdfont>"
+    "staticinvoke <ocfontc: java.awt.Font getFontSD(java.lang.String,java.lang.String)>"->"fieldput <mflip: java.awt.Font m_hdfont>";
+    "fieldput <mflip: java.awt.Font m_hdfont>"->"load.r r2";
+    "push \"msgfont\""
+    "load.r r2"->"push \"msgfont\"";
+    "push \"msgfont\""->"virtualinvoke <java.util.Properties: java.lang.String getProperty(java.lang.String)>";
+    "virtualinvoke <java.util.Properties: java.lang.String getProperty(java.lang.String)>"->"store.r $r11";
+    "store.r $r11"->"load.r $r11";
+    "load.r $r11"->"ifnull load.r r2";
+    "ifnull load.r r2"->"load.r r0";
+    "load.r r0"->"load.r $r11";
+    "load.r $r11"->"push \",\"";
+    "push \",\""->"staticinvoke <ocfontc: java.awt.Font getFontSD(java.lang.String,java.lang.String)>";
+    "fieldput <mflip: java.awt.Font m_msgfont>"
+    "staticinvoke <ocfontc: java.awt.Font getFontSD(java.lang.String,java.lang.String)>"->"fieldput <mflip: java.awt.Font m_msgfont>";
+    "fieldput <mflip: java.awt.Font m_msgfont>"->"load.r r2";
+    "push \"startshowing\""
+    "load.r r2"->"push \"startshowing\"";
+    "push \"startshowing\""->"virtualinvoke <java.util.Properties: java.lang.String getProperty(java.lang.String)>";
+    "virtualinvoke <java.util.Properties: java.lang.String getProperty(java.lang.String)>"->"store.r $r11";
+    "store.r $r11"->"load.r $r11";
+    "load.r $r11"->"ifnull load.r r2";
+    "ifnull load.r r2"->"load.r r0";
+    "load.r r0"->"load.r $r11";
+    "load.r $r11"->"staticinvoke <java.lang.Boolean: java.lang.Boolean valueOf(java.lang.String)>";
+    "staticinvoke <java.lang.Boolean: java.lang.Boolean valueOf(java.lang.String)>"->"virtualinvoke <java.lang.Boolean: boolean booleanValue()>";
+    "fieldput <mflip: boolean m_start_showing>"
+    "virtualinvoke <java.lang.Boolean: boolean booleanValue()>"->"fieldput <mflip: boolean m_start_showing>";
+    "fieldput <mflip: boolean m_start_showing>"->"load.r r2";
+    "push \"hlunderline\""
+    "load.r r2"->"push \"hlunderline\"";
+    "push \"hlunderline\""->"virtualinvoke <java.util.Properties: java.lang.String getProperty(java.lang.String)>";
+    "virtualinvoke <java.util.Properties: java.lang.String getProperty(java.lang.String)>"->"store.r $r11";
+    "store.r $r11"->"load.r $r11";
+    "load.r $r11"->"ifnull load.r r2";
+    "ifnull load.r r2"->"load.r r0";
+    "load.r r0"->"load.r $r11";
+    "load.r $r11"->"staticinvoke <java.lang.Boolean: java.lang.Boolean valueOf(java.lang.String)>";
+    "staticinvoke <java.lang.Boolean: java.lang.Boolean valueOf(java.lang.String)>"->"virtualinvoke <java.lang.Boolean: boolean booleanValue()>";
+    "fieldput <mflip: boolean m_hlunderline>"
+    "virtualinvoke <java.lang.Boolean: boolean booleanValue()>"->"fieldput <mflip: boolean m_hlunderline>";
+    "fieldput <mflip: boolean m_hlunderline>"->"load.r r2";
+    "push \"hdunderline\""
+    "load.r r2"->"push \"hdunderline\"";
+    "push \"hdunderline\""->"virtualinvoke <java.util.Properties: java.lang.String getProperty(java.lang.String)>";
+    "virtualinvoke <java.util.Properties: java.lang.String getProperty(java.lang.String)>"->"store.r $r11";
+    "store.r $r11"->"load.r $r11";
+    "load.r $r11"->"ifnull load.r r2";
+    "ifnull load.r r2"->"load.r r0";
+    "load.r r0"->"load.r $r11";
+    "load.r $r11"->"staticinvoke <java.lang.Boolean: java.lang.Boolean valueOf(java.lang.String)>";
+    "staticinvoke <java.lang.Boolean: java.lang.Boolean valueOf(java.lang.String)>"->"virtualinvoke <java.lang.Boolean: boolean booleanValue()>";
+    "fieldput <mflip: boolean m_unhd>"
+    "virtualinvoke <java.lang.Boolean: boolean booleanValue()>"->"fieldput <mflip: boolean m_unhd>";
+    "fieldput <mflip: boolean m_unhd>"->"load.r r2";
+    "push \"msgunderline\""
+    "load.r r2"->"push \"msgunderline\"";
+    "push \"msgunderline\""->"virtualinvoke <java.util.Properties: java.lang.String getProperty(java.lang.String)>";
+    "virtualinvoke <java.util.Properties: java.lang.String getProperty(java.lang.String)>"->"store.r $r11";
+    "store.r $r11"->"load.r $r11";
+    "ifnull new java.util.Vector"
+    "load.r $r11"->"ifnull new java.util.Vector";
+    "ifnull new java.util.Vector"->"load.r r0";
+    "load.r r0"->"load.r $r11";
+    "load.r $r11"->"staticinvoke <java.lang.Boolean: java.lang.Boolean valueOf(java.lang.String)>";
+    "staticinvoke <java.lang.Boolean: java.lang.Boolean valueOf(java.lang.String)>"->"virtualinvoke <java.lang.Boolean: boolean booleanValue()>";
+    "fieldput <mflip: boolean m_unmsg>"
+    "virtualinvoke <java.lang.Boolean: boolean booleanValue()>"->"fieldput <mflip: boolean m_unmsg>";
+    "new java.util.Vector"
+    "fieldput <mflip: boolean m_unmsg>"->"new java.util.Vector";
+    "new java.util.Vector"->"store.r $r11";
+    "store.r $r11"->"load.r $r11";
+    "specialinvoke <java.util.Vector: void <init>()>"
+    "load.r $r11"->"specialinvoke <java.util.Vector: void <init>()>";
+    "specialinvoke <java.util.Vector: void <init>()>"->"goto load.r r2";
+    "goto load.r r2"->"load.r r2";
+    "load.r r2"->"new java.lang.StringBuffer";
+    "new java.lang.StringBuffer"->"dup1.r";
+    "push \"heading\""
+    "dup1.r"->"push \"heading\"";
+    "push \"heading\""->"specialinvoke <java.lang.StringBuffer: void <init>(java.lang.String)>";
+    "load.i i32"
+    "specialinvoke <java.lang.StringBuffer: void <init>(java.lang.String)>"->"load.i i32";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(int)>"
+    "load.i i32"->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(int)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(int)>"->"virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>"->"virtualinvoke <java.util.Properties: java.lang.String getProperty(java.lang.String)>";
+    "virtualinvoke <java.util.Properties: java.lang.String getProperty(java.lang.String)>"->"ifnonnull load.r r2";
+    "ifnonnull load.r r2"->"load.r r0";
+    "load.r r0"->"load.i i32";
+    "fieldput <mflip: int num_headings>"
+    "load.i i32"->"fieldput <mflip: int num_headings>";
+    "fieldput <mflip: int num_headings>"->"load.r r0";
+    "load.r r0"->"load.i i32";
+    "newarray"
+    "load.i i32"->"newarray";
+    "fieldput <mflip: int[] num_messages>"
+    "newarray"->"fieldput <mflip: int[] num_messages>";
+    "fieldput <mflip: int[] num_messages>"->"push 0";
+    "push 0"->"store.i i32";
+    "goto load.i i32"
+    "store.i i32"->"goto load.i i32";
+    "goto load.i i32"->"load.i i32";
+    "load.i i32"->"load.r r0";
+    "fieldget <mflip: int[] num_messages>"
+    "load.r r0"->"fieldget <mflip: int[] num_messages>";
+    "arraylength"
+    "fieldget <mflip: int[] num_messages>"->"arraylength";
+    "ifcmplt.i load.r r0"
+    "arraylength"->"ifcmplt.i load.r r0";
+    "ifcmplt.i load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "fieldget <mflip: int num_headings>"
+    "load.r r0"->"fieldget <mflip: int num_headings>";
+    "fieldget <mflip: int num_headings>"->"newarray";
+    "fieldput <mflip: java.lang.String[] m_heading>"
+    "newarray"->"fieldput <mflip: java.lang.String[] m_heading>";
+    "fieldput <mflip: java.lang.String[] m_heading>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <mflip: int num_headings>";
+    "fieldget <mflip: int num_headings>"->"newarray";
+    "fieldput <mflip: java.awt.Color[] m_cur_hdbgcolor>"
+    "newarray"->"fieldput <mflip: java.awt.Color[] m_cur_hdbgcolor>";
+    "fieldput <mflip: java.awt.Color[] m_cur_hdbgcolor>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <mflip: int num_headings>";
+    "fieldget <mflip: int num_headings>"->"newarray";
+    "fieldput <mflip: java.awt.Color[] m_curhd_textcolor>"
+    "newarray"->"fieldput <mflip: java.awt.Color[] m_curhd_textcolor>";
+    "fieldput <mflip: java.awt.Color[] m_curhd_textcolor>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <mflip: int num_headings>";
+    "fieldget <mflip: int num_headings>"->"newarray";
+    "fieldput <mflip: java.awt.Color[] m_curmsg_textcolor>"
+    "newarray"->"fieldput <mflip: java.awt.Color[] m_curmsg_textcolor>";
+    "fieldput <mflip: java.awt.Color[] m_curmsg_textcolor>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <mflip: int num_headings>";
+    "fieldget <mflip: int num_headings>"->"newarray";
+    "fieldput <mflip: java.awt.Color[] m_cur_msgbgcolor>"
+    "newarray"->"fieldput <mflip: java.awt.Color[] m_cur_msgbgcolor>";
+    "fieldput <mflip: java.awt.Color[] m_cur_msgbgcolor>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <mflip: int num_headings>";
+    "fieldget <mflip: int num_headings>"->"newarray";
+    "fieldput <mflip: java.lang.String[] m_hddesturl>"
+    "newarray"->"fieldput <mflip: java.lang.String[] m_hddesturl>";
+    "fieldput <mflip: java.lang.String[] m_hddesturl>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <mflip: int num_headings>";
+    "fieldget <mflip: int num_headings>"->"newarray";
+    "fieldput <mflip: java.lang.String[] m_hdloadwhere>"
+    "newarray"->"fieldput <mflip: java.lang.String[] m_hdloadwhere>";
+    "fieldput <mflip: java.lang.String[] m_hdloadwhere>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <mflip: int num_headings>";
+    "fieldget <mflip: int num_headings>"->"newarray";
+    "fieldput <mflip: int[] m_hd_coord>"
+    "newarray"->"fieldput <mflip: int[] m_hd_coord>";
+    "fieldput <mflip: int[] m_hd_coord>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <mflip: int num_headings>";
+    "fieldget <mflip: int num_headings>"->"load.r r0";
+    "fieldget <mflip: int max_messages>"
+    "load.r r0"->"fieldget <mflip: int max_messages>";
+    "newmultiarray 2"
+    "fieldget <mflip: int max_messages>"->"newmultiarray 2";
+    "fieldput <mflip: java.lang.String[][] m_message>"
+    "newmultiarray 2"->"fieldput <mflip: java.lang.String[][] m_message>";
+    "fieldput <mflip: java.lang.String[][] m_message>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <mflip: int num_headings>";
+    "fieldget <mflip: int num_headings>"->"load.r r0";
+    "load.r r0"->"fieldget <mflip: int max_messages>";
+    "fieldget <mflip: int max_messages>"->"newmultiarray 2";
+    "fieldput <mflip: java.lang.String[][] m_desturl>"
+    "newmultiarray 2"->"fieldput <mflip: java.lang.String[][] m_desturl>";
+    "fieldput <mflip: java.lang.String[][] m_desturl>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <mflip: int num_headings>";
+    "fieldget <mflip: int num_headings>"->"load.r r0";
+    "load.r r0"->"fieldget <mflip: int max_messages>";
+    "fieldget <mflip: int max_messages>"->"newmultiarray 2";
+    "fieldput <mflip: java.lang.String[][] m_cur_loadwhere>"
+    "newmultiarray 2"->"fieldput <mflip: java.lang.String[][] m_cur_loadwhere>";
+    "fieldput <mflip: java.lang.String[][] m_cur_loadwhere>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <mflip: int num_headings>";
+    "fieldget <mflip: int num_headings>"->"load.r r0";
+    "load.r r0"->"fieldget <mflip: int max_messages>";
+    "fieldget <mflip: int max_messages>"->"newmultiarray 2";
+    "fieldput <mflip: int[][] m_msg_coord>"
+    "newmultiarray 2"->"fieldput <mflip: int[][] m_msg_coord>";
+    "fieldput <mflip: int[][] m_msg_coord>"->"push 0";
+    "push 0"->"store.i i32";
+    "store.i i32"->"goto load.i i32";
+    "goto load.i i32"->"load.i i32";
+    "load.i i32"->"load.r r0";
+    "load.r r0"->"fieldget <mflip: int num_headings>";
+    "ifcmplt.i load.r r2"
+    "fieldget <mflip: int num_headings>"->"ifcmplt.i load.r r2";
+    "ifcmplt.i load.r r2"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "fieldget <mflip: int m_hdmargin>"
+    "load.r r0"->"fieldget <mflip: int m_hdmargin>";
+    "fieldget <mflip: int m_hdmargin>"->"load.r r0";
+    "fieldget <mflip: int m_border_size>"
+    "load.r r0"->"fieldget <mflip: int m_border_size>";
+    "add.i"
+    "fieldget <mflip: int m_border_size>"->"add.i";
+    "add.i"->"fieldput <mflip: int m_hdmargin>";
+    "fieldput <mflip: int m_hdmargin>"->"return";
+    "ifcmplt.i load.r r2"->"load.r r2";
+    "load.r r2"->"new java.lang.StringBuffer";
+    "new java.lang.StringBuffer"->"dup1.r";
+    "dup1.r"->"push \"heading\"";
+    "push \"heading\""->"specialinvoke <java.lang.StringBuffer: void <init>(java.lang.String)>";
+    "specialinvoke <java.lang.StringBuffer: void <init>(java.lang.String)>"->"load.i i32";
+    "load.i i32"->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(int)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(int)>"->"virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>"->"virtualinvoke <java.util.Properties: java.lang.String getProperty(java.lang.String)>";
+    "store.r i33"
+    "virtualinvoke <java.util.Properties: java.lang.String getProperty(java.lang.String)>"->"store.r i33";
+    "load.r i33"
+    "store.r i33"->"load.r i33";
+    "load.r i33"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r r0";
+    "fieldget <mflip: java.lang.String[] m_heading>"
+    "load.r r0"->"fieldget <mflip: java.lang.String[] m_heading>";
+    "fieldget <mflip: java.lang.String[] m_heading>"->"load.i i32";
+    "load.i i32"->"load.r i33";
+    "arraywrite.r"
+    "load.r i33"->"arraywrite.r";
+    "arraywrite.r"->"goto load.r r2";
+    "goto load.r r2"->"load.r r2";
+    "load.r r2"->"new java.lang.StringBuffer";
+    "new java.lang.StringBuffer"->"dup1.r";
+    "push \"hddesturl\""
+    "dup1.r"->"push \"hddesturl\"";
+    "push \"hddesturl\""->"specialinvoke <java.lang.StringBuffer: void <init>(java.lang.String)>";
+    "specialinvoke <java.lang.StringBuffer: void <init>(java.lang.String)>"->"load.i i32";
+    "load.i i32"->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(int)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(int)>"->"virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>"->"virtualinvoke <java.util.Properties: java.lang.String getProperty(java.lang.String)>";
+    "virtualinvoke <java.util.Properties: java.lang.String getProperty(java.lang.String)>"->"store.r i33";
+    "store.r i33"->"load.r i33";
+    "load.r i33"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r r0";
+    "fieldget <mflip: java.lang.String[] m_hddesturl>"
+    "load.r r0"->"fieldget <mflip: java.lang.String[] m_hddesturl>";
+    "fieldget <mflip: java.lang.String[] m_hddesturl>"->"load.i i32";
+    "load.i i32"->"load.r i33";
+    "load.r i33"->"arraywrite.r";
+    "arraywrite.r"->"goto load.r r2";
+    "goto load.r r2"->"load.r r2";
+    "load.r r2"->"new java.lang.StringBuffer";
+    "new java.lang.StringBuffer"->"dup1.r";
+    "push \"hdloadwhere\""
+    "dup1.r"->"push \"hdloadwhere\"";
+    "push \"hdloadwhere\""->"specialinvoke <java.lang.StringBuffer: void <init>(java.lang.String)>";
+    "specialinvoke <java.lang.StringBuffer: void <init>(java.lang.String)>"->"load.i i32";
+    "load.i i32"->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(int)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(int)>"->"virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>"->"virtualinvoke <java.util.Properties: java.lang.String getProperty(java.lang.String)>";
+    "virtualinvoke <java.util.Properties: java.lang.String getProperty(java.lang.String)>"->"store.r i33";
+    "store.r i33"->"load.r i33";
+    "load.r i33"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r r0";
+    "fieldget <mflip: java.lang.String[] m_hdloadwhere>"
+    "load.r r0"->"fieldget <mflip: java.lang.String[] m_hdloadwhere>";
+    "fieldget <mflip: java.lang.String[] m_hdloadwhere>"->"load.i i32";
+    "load.i i32"->"load.r i33";
+    "load.r i33"->"arraywrite.r";
+    "arraywrite.r"->"goto load.r r2";
+    "goto load.r r2"->"load.r r2";
+    "load.r r2"->"new java.lang.StringBuffer";
+    "new java.lang.StringBuffer"->"dup1.r";
+    "dup1.r"->"push \"hdbgcolor\"";
+    "push \"hdbgcolor\""->"specialinvoke <java.lang.StringBuffer: void <init>(java.lang.String)>";
+    "specialinvoke <java.lang.StringBuffer: void <init>(java.lang.String)>"->"load.i i32";
+    "load.i i32"->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(int)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(int)>"->"virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>"->"virtualinvoke <java.util.Properties: java.lang.String getProperty(java.lang.String)>";
+    "virtualinvoke <java.util.Properties: java.lang.String getProperty(java.lang.String)>"->"store.r i33";
+    "store.r i33"->"load.r i33";
+    "load.r i33"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r r0";
+    "fieldget <mflip: java.awt.Color[] m_cur_hdbgcolor>"
+    "load.r r0"->"fieldget <mflip: java.awt.Color[] m_cur_hdbgcolor>";
+    "fieldget <mflip: java.awt.Color[] m_cur_hdbgcolor>"->"load.i i32";
+    "load.i i32"->"load.r i33";
+    "load.r i33"->"staticinvoke <occcolor: java.awt.Color ConvertColor(java.lang.String)>";
+    "staticinvoke <occcolor: java.awt.Color ConvertColor(java.lang.String)>"->"arraywrite.r";
+    "arraywrite.r"->"goto load.r r2";
+    "goto load.r r2"->"load.r r2";
+    "load.r r2"->"new java.lang.StringBuffer";
+    "new java.lang.StringBuffer"->"dup1.r";
+    "dup1.r"->"push \"msgbgcolor\"";
+    "push \"msgbgcolor\""->"specialinvoke <java.lang.StringBuffer: void <init>(java.lang.String)>";
+    "specialinvoke <java.lang.StringBuffer: void <init>(java.lang.String)>"->"load.i i32";
+    "load.i i32"->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(int)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(int)>"->"virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>"->"virtualinvoke <java.util.Properties: java.lang.String getProperty(java.lang.String)>";
+    "virtualinvoke <java.util.Properties: java.lang.String getProperty(java.lang.String)>"->"store.r i33";
+    "store.r i33"->"load.r i33";
+    "load.r i33"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r r0";
+    "fieldget <mflip: java.awt.Color[] m_cur_msgbgcolor>"
+    "load.r r0"->"fieldget <mflip: java.awt.Color[] m_cur_msgbgcolor>";
+    "fieldget <mflip: java.awt.Color[] m_cur_msgbgcolor>"->"load.i i32";
+    "load.i i32"->"load.r i33";
+    "load.r i33"->"staticinvoke <occcolor: java.awt.Color ConvertColor(java.lang.String)>";
+    "staticinvoke <occcolor: java.awt.Color ConvertColor(java.lang.String)>"->"arraywrite.r";
+    "arraywrite.r"->"goto load.r r2";
+    "goto load.r r2"->"load.r r2";
+    "load.r r2"->"new java.lang.StringBuffer";
+    "new java.lang.StringBuffer"->"dup1.r";
+    "dup1.r"->"push \"hdtextcolor\"";
+    "push \"hdtextcolor\""->"specialinvoke <java.lang.StringBuffer: void <init>(java.lang.String)>";
+    "specialinvoke <java.lang.StringBuffer: void <init>(java.lang.String)>"->"load.i i32";
+    "load.i i32"->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(int)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(int)>"->"virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>"->"virtualinvoke <java.util.Properties: java.lang.String getProperty(java.lang.String)>";
+    "virtualinvoke <java.util.Properties: java.lang.String getProperty(java.lang.String)>"->"store.r i33";
+    "store.r i33"->"load.r i33";
+    "load.r i33"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r r0";
+    "fieldget <mflip: java.awt.Color[] m_curhd_textcolor>"
+    "load.r r0"->"fieldget <mflip: java.awt.Color[] m_curhd_textcolor>";
+    "fieldget <mflip: java.awt.Color[] m_curhd_textcolor>"->"load.i i32";
+    "load.i i32"->"load.r i33";
+    "load.r i33"->"staticinvoke <occcolor: java.awt.Color ConvertColor(java.lang.String)>";
+    "staticinvoke <occcolor: java.awt.Color ConvertColor(java.lang.String)>"->"arraywrite.r";
+    "arraywrite.r"->"goto load.r r2";
+    "goto load.r r2"->"load.r r2";
+    "load.r r2"->"new java.lang.StringBuffer";
+    "new java.lang.StringBuffer"->"dup1.r";
+    "dup1.r"->"push \"msgtextcolor\"";
+    "push \"msgtextcolor\""->"specialinvoke <java.lang.StringBuffer: void <init>(java.lang.String)>";
+    "specialinvoke <java.lang.StringBuffer: void <init>(java.lang.String)>"->"load.i i32";
+    "load.i i32"->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(int)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(int)>"->"virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>"->"virtualinvoke <java.util.Properties: java.lang.String getProperty(java.lang.String)>";
+    "virtualinvoke <java.util.Properties: java.lang.String getProperty(java.lang.String)>"->"store.r i33";
+    "store.r i33"->"load.r i33";
+    "load.r i33"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r r0";
+    "fieldget <mflip: java.awt.Color[] m_curmsg_textcolor>"
+    "load.r r0"->"fieldget <mflip: java.awt.Color[] m_curmsg_textcolor>";
+    "fieldget <mflip: java.awt.Color[] m_curmsg_textcolor>"->"load.i i32";
+    "load.i i32"->"load.r i33";
+    "load.r i33"->"staticinvoke <occcolor: java.awt.Color ConvertColor(java.lang.String)>";
+    "staticinvoke <occcolor: java.awt.Color ConvertColor(java.lang.String)>"->"arraywrite.r";
+    "goto push 0"
+    "arraywrite.r"->"goto push 0";
+    "goto push 0"->"push 0";
+    "push 0"->"store.i i33";
+    "goto load.i i33"
+    "store.i i33"->"goto load.i i33";
+    "load.i i33"
+    "goto load.i i33"->"load.i i33";
+    "load.i i33"->"load.r r0";
+    "load.r r0"->"fieldget <mflip: int[] num_messages>";
+    "fieldget <mflip: int[] num_messages>"->"load.i i32";
+    "arrayread.i"
+    "load.i i32"->"arrayread.i";
+    "arrayread.i"->"ifcmplt.i load.r r2";
+    "inc.i i32 1"
+    "ifcmplt.i load.r r2"->"inc.i i32 1";
+    "ifcmplt.i load.r r2"->"load.r r2";
+    "load.r r2"->"new java.lang.StringBuffer";
+    "new java.lang.StringBuffer"->"dup1.r";
+    "push \"msg\""
+    "dup1.r"->"push \"msg\"";
+    "push \"msg\""->"specialinvoke <java.lang.StringBuffer: void <init>(java.lang.String)>";
+    "specialinvoke <java.lang.StringBuffer: void <init>(java.lang.String)>"->"load.i i32";
+    "load.i i32"->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(int)>";
+    "push \"-\""
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(int)>"->"push \"-\"";
+    "push \"-\""->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"load.i i33";
+    "load.i i33"->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(int)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(int)>"->"virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>"->"virtualinvoke <java.util.Properties: java.lang.String getProperty(java.lang.String)>";
+    "virtualinvoke <java.util.Properties: java.lang.String getProperty(java.lang.String)>"->"store.r $r11";
+    "store.r $r11"->"load.r $r11";
+    "load.r $r11"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r r0";
+    "fieldget <mflip: java.lang.String[][] m_message>"
+    "load.r r0"->"fieldget <mflip: java.lang.String[][] m_message>";
+    "fieldget <mflip: java.lang.String[][] m_message>"->"load.i i32";
+    "arrayread.r"
+    "load.i i32"->"arrayread.r";
+    "arrayread.r"->"load.i i33";
+    "load.i i33"->"load.r $r11";
+    "load.r $r11"->"arraywrite.r";
+    "arraywrite.r"->"goto load.r r2";
+    "goto load.r r2"->"load.r r2";
+    "load.r r2"->"new java.lang.StringBuffer";
+    "new java.lang.StringBuffer"->"dup1.r";
+    "push \"msgdesturl\""
+    "dup1.r"->"push \"msgdesturl\"";
+    "push \"msgdesturl\""->"specialinvoke <java.lang.StringBuffer: void <init>(java.lang.String)>";
+    "specialinvoke <java.lang.StringBuffer: void <init>(java.lang.String)>"->"load.i i32";
+    "load.i i32"->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(int)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(int)>"->"push \"-\"";
+    "push \"-\""->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"load.i i33";
+    "load.i i33"->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(int)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(int)>"->"virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>"->"virtualinvoke <java.util.Properties: java.lang.String getProperty(java.lang.String)>";
+    "virtualinvoke <java.util.Properties: java.lang.String getProperty(java.lang.String)>"->"store.r $r11";
+    "store.r $r11"->"load.r $r11";
+    "load.r $r11"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r r0";
+    "fieldget <mflip: java.lang.String[][] m_desturl>"
+    "load.r r0"->"fieldget <mflip: java.lang.String[][] m_desturl>";
+    "fieldget <mflip: java.lang.String[][] m_desturl>"->"load.i i32";
+    "load.i i32"->"arrayread.r";
+    "arrayread.r"->"load.i i33";
+    "load.i i33"->"load.r $r11";
+    "load.r $r11"->"arraywrite.r";
+    "arraywrite.r"->"goto load.r r2";
+    "goto load.r r2"->"load.r r2";
+    "load.r r2"->"new java.lang.StringBuffer";
+    "new java.lang.StringBuffer"->"dup1.r";
+    "push \"msgloadwhere\""
+    "dup1.r"->"push \"msgloadwhere\"";
+    "push \"msgloadwhere\""->"specialinvoke <java.lang.StringBuffer: void <init>(java.lang.String)>";
+    "specialinvoke <java.lang.StringBuffer: void <init>(java.lang.String)>"->"load.i i32";
+    "load.i i32"->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(int)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(int)>"->"push \"-\"";
+    "push \"-\""->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"load.i i33";
+    "load.i i33"->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(int)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(int)>"->"virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>"->"virtualinvoke <java.util.Properties: java.lang.String getProperty(java.lang.String)>";
+    "virtualinvoke <java.util.Properties: java.lang.String getProperty(java.lang.String)>"->"store.r $r11";
+    "store.r $r11"->"load.r $r11";
+    "load.r $r11"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r r0";
+    "fieldget <mflip: java.lang.String[][] m_cur_loadwhere>"
+    "load.r r0"->"fieldget <mflip: java.lang.String[][] m_cur_loadwhere>";
+    "fieldget <mflip: java.lang.String[][] m_cur_loadwhere>"->"load.i i32";
+    "load.i i32"->"arrayread.r";
+    "arrayread.r"->"load.i i33";
+    "load.i i33"->"load.r $r11";
+    "load.r $r11"->"arraywrite.r";
+    "goto inc.i i33 1"
+    "arraywrite.r"->"goto inc.i i33 1";
+    "inc.i i33 1"
+    "goto inc.i i33 1"->"inc.i i33 1";
+    "ifnull load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <mflip: java.lang.String[][] m_cur_loadwhere>";
+    "fieldget <mflip: java.lang.String[][] m_cur_loadwhere>"->"load.i i32";
+    "load.i i32"->"arrayread.r";
+    "arrayread.r"->"load.i i33";
+    "load.i i33"->"load.r r0";
+    "fieldget <mflip: java.lang.String m_loadwhere>"
+    "load.r r0"->"fieldget <mflip: java.lang.String m_loadwhere>";
+    "fieldget <mflip: java.lang.String m_loadwhere>"->"arraywrite.r";
+    "ifnull load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <mflip: java.lang.String[][] m_desturl>";
+    "fieldget <mflip: java.lang.String[][] m_desturl>"->"load.i i32";
+    "load.i i32"->"arrayread.r";
+    "arrayread.r"->"load.i i33";
+    "load.i i33"->"push \"-1\"";
+    "push \"-1\""->"arraywrite.r";
+    "ifnull load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <mflip: java.lang.String[][] m_message>";
+    "fieldget <mflip: java.lang.String[][] m_message>"->"load.i i32";
+    "load.i i32"->"arrayread.r";
+    "arrayread.r"->"load.i i33";
+    "push \" \""
+    "load.i i33"->"push \" \"";
+    "push \" \""->"arraywrite.r";
+    "ifnull load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <mflip: java.awt.Color[] m_curmsg_textcolor>";
+    "fieldget <mflip: java.awt.Color[] m_curmsg_textcolor>"->"load.i i32";
+    "load.i i32"->"load.r r0";
+    "fieldget <mflip: java.awt.Color m_msg_textcolor>"
+    "load.r r0"->"fieldget <mflip: java.awt.Color m_msg_textcolor>";
+    "fieldget <mflip: java.awt.Color m_msg_textcolor>"->"arraywrite.r";
+    "ifnull load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <mflip: java.awt.Color[] m_curhd_textcolor>";
+    "fieldget <mflip: java.awt.Color[] m_curhd_textcolor>"->"load.i i32";
+    "load.i i32"->"load.r r0";
+    "fieldget <mflip: java.awt.Color m_hd_textcolor>"
+    "load.r r0"->"fieldget <mflip: java.awt.Color m_hd_textcolor>";
+    "fieldget <mflip: java.awt.Color m_hd_textcolor>"->"arraywrite.r";
+    "ifnull load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <mflip: java.awt.Color[] m_cur_msgbgcolor>";
+    "fieldget <mflip: java.awt.Color[] m_cur_msgbgcolor>"->"load.i i32";
+    "load.i i32"->"load.r r0";
+    "load.r r0"->"fieldget <mflip: java.awt.Color m_bgcolor>";
+    "fieldget <mflip: java.awt.Color m_bgcolor>"->"arraywrite.r";
+    "ifnull load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <mflip: java.awt.Color[] m_cur_hdbgcolor>";
+    "fieldget <mflip: java.awt.Color[] m_cur_hdbgcolor>"->"load.i i32";
+    "load.i i32"->"load.r r0";
+    "fieldget <mflip: java.awt.Color m_hdbgcolor>"
+    "load.r r0"->"fieldget <mflip: java.awt.Color m_hdbgcolor>";
+    "fieldget <mflip: java.awt.Color m_hdbgcolor>"->"arraywrite.r";
+    "ifnull load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <mflip: java.lang.String[] m_hdloadwhere>";
+    "fieldget <mflip: java.lang.String[] m_hdloadwhere>"->"load.i i32";
+    "load.i i32"->"load.r r0";
+    "load.r r0"->"fieldget <mflip: java.lang.String m_loadwhere>";
+    "fieldget <mflip: java.lang.String m_loadwhere>"->"arraywrite.r";
+    "ifnull load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <mflip: java.lang.String[] m_hddesturl>";
+    "fieldget <mflip: java.lang.String[] m_hddesturl>"->"load.i i32";
+    "load.i i32"->"push \"-1\"";
+    "push \"-1\""->"arraywrite.r";
+    "ifnull load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <mflip: java.lang.String[] m_heading>";
+    "fieldget <mflip: java.lang.String[] m_heading>"->"load.i i32";
+    "load.i i32"->"push \" \"";
+    "push \" \""->"arraywrite.r";
+    "ifcmplt.i load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <mflip: int[] num_messages>";
+    "fieldget <mflip: int[] num_messages>"->"load.i i32";
+    "load.i i32"->"load.r $r11";
+    "load.r $r11"->"load.i i32";
+    "virtualinvoke <java.util.Vector: java.lang.Object elementAt(int)>"
+    "load.i i32"->"virtualinvoke <java.util.Vector: java.lang.Object elementAt(int)>";
+    "checkcast"
+    "virtualinvoke <java.util.Vector: java.lang.Object elementAt(int)>"->"checkcast";
+    "virtualinvoke <java.lang.Integer: int intValue()>"
+    "checkcast"->"virtualinvoke <java.lang.Integer: int intValue()>";
+    "arraywrite.i"
+    "virtualinvoke <java.lang.Integer: int intValue()>"->"arraywrite.i";
+    "arraywrite.i"->"inc.i i32 1";
+    "ifnonnull load.r r2"->"load.r r2";
+    "load.r r2"->"new java.lang.StringBuffer";
+    "new java.lang.StringBuffer"->"dup1.r";
+    "dup1.r"->"push \"msg\"";
+    "push \"msg\""->"specialinvoke <java.lang.StringBuffer: void <init>(java.lang.String)>";
+    "specialinvoke <java.lang.StringBuffer: void <init>(java.lang.String)>"->"load.i i32";
+    "load.i i32"->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(int)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(int)>"->"push \"-\"";
+    "push \"-\""->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"load.i i33";
+    "load.i i33"->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(int)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(int)>"->"virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>"->"virtualinvoke <java.util.Properties: java.lang.String getProperty(java.lang.String)>";
+    "ifnonnull inc.i i33 1"
+    "virtualinvoke <java.util.Properties: java.lang.String getProperty(java.lang.String)>"->"ifnonnull inc.i i33 1";
+    "ifnonnull inc.i i33 1"->"load.i i33";
+    "ifne load.r $r11"
+    "load.i i33"->"ifne load.r $r11";
+    "ifne load.r $r11"->"push 1";
+    "push 1"->"store.i i33";
+    "store.i i33"->"load.r $r11";
+    "new java.lang.Integer"
+    "load.r $r11"->"new java.lang.Integer";
+    "new java.lang.Integer"->"dup1.r";
+    "dup1.r"->"load.i i33";
+    "specialinvoke <java.lang.Integer: void <init>(int)>"
+    "load.i i33"->"specialinvoke <java.lang.Integer: void <init>(int)>";
+    "virtualinvoke <java.util.Vector: void addElement(java.lang.Object)>"
+    "specialinvoke <java.lang.Integer: void <init>(int)>"->"virtualinvoke <java.util.Vector: void addElement(java.lang.Object)>";
+    "virtualinvoke <java.util.Vector: void addElement(java.lang.Object)>"->"load.i i33";
+    "load.i i33"->"load.r r0";
+    "load.r r0"->"fieldget <mflip: int max_messages>";
+    "ifcmple.i push 0"
+    "fieldget <mflip: int max_messages>"->"ifcmple.i push 0";
+    "ifcmple.i push 0"->"load.r r0";
+    "load.r r0"->"load.i i33";
+    "fieldput <mflip: int max_messages>"
+    "load.i i33"->"fieldput <mflip: int max_messages>";
+    "fieldput <mflip: int max_messages>"->"push 0";
+    "push 0"->"store.i i33";
+    "store.i i33"->"inc.i i32 1";
+    "ifnonnull inc.i i33 1"->"inc.i i33 1";
+    "ifnull load.r r0"->"load.r r0";
+    "push \"Missing \'Notice\' Tag\""
+    "load.r r0"->"push \"Missing \'Notice\' Tag\"";
+    "push \"Missing \'Notice\' Tag\""->"fieldput <mflip: java.lang.String m_onsbtext>";
+    "fieldput <mflip: java.lang.String m_onsbtext>"->"load.r r0";
+    "load.r r0"->"push \"Missing \'Notice\' Tag\"";
+    "push \"Missing \'Notice\' Tag\""->"fieldput <mflip: java.lang.String m_offsbtext>";
+    "fieldput <mflip: java.lang.String m_offsbtext>"->"return";
+}

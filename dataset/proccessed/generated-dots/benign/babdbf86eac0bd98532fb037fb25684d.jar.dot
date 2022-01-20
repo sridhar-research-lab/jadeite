@@ -1,0 +1,56 @@
+digraph "" {
+    "r0 := @this: PopScroll"
+    "load.r r0"
+    "r0 := @this: PopScroll"->"load.r r0";
+    "fieldget <PopScroll: boolean m_fStandAlone>"
+    "load.r r0"->"fieldget <PopScroll: boolean m_fStandAlone>";
+    "ifne load.r r0"
+    "fieldget <PopScroll: boolean m_fStandAlone>"->"ifne load.r r0";
+    "ifne load.r r0"->"load.r r0";
+    "push null"
+    "load.r r0"->"push null";
+    "virtualinvoke <PopScroll: void GetParameters(java.lang.String[])>"
+    "push null"->"virtualinvoke <PopScroll: void GetParameters(java.lang.String[])>";
+    "virtualinvoke <PopScroll: void GetParameters(java.lang.String[])>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "virtualinvoke <java.awt.Component: java.awt.Dimension size()>"
+    "load.r r0"->"virtualinvoke <java.awt.Component: java.awt.Dimension size()>";
+    "fieldget <java.awt.Dimension: int width>"
+    "virtualinvoke <java.awt.Component: java.awt.Dimension size()>"->"fieldget <java.awt.Dimension: int width>";
+    "store.i $i0"
+    "fieldget <java.awt.Dimension: int width>"->"store.i $i0";
+    "load.i $i0"
+    "store.i $i0"->"load.i $i0";
+    "fieldput <PopScroll: int screen_W>"
+    "load.i $i0"->"fieldput <PopScroll: int screen_W>";
+    "fieldput <PopScroll: int screen_W>"->"load.i $i0";
+    "load.i $i0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"virtualinvoke <java.awt.Component: java.awt.Dimension size()>";
+    "fieldget <java.awt.Dimension: int height>"
+    "virtualinvoke <java.awt.Component: java.awt.Dimension size()>"->"fieldget <java.awt.Dimension: int height>";
+    "fieldget <java.awt.Dimension: int height>"->"store.i $i0";
+    "store.i $i0"->"load.i $i0";
+    "fieldput <PopScroll: int screen_H>"
+    "load.i $i0"->"fieldput <PopScroll: int screen_H>";
+    "fieldput <PopScroll: int screen_H>"->"load.i $i0";
+    "virtualinvoke <java.awt.Component: java.awt.Image createImage(int,int)>"
+    "load.i $i0"->"virtualinvoke <java.awt.Component: java.awt.Image createImage(int,int)>";
+    "fieldput <PopScroll: java.awt.Image buf>"
+    "virtualinvoke <java.awt.Component: java.awt.Image createImage(int,int)>"->"fieldput <PopScroll: java.awt.Image buf>";
+    "fieldput <PopScroll: java.awt.Image buf>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "fieldget <PopScroll: java.awt.Image buf>"
+    "load.r r0"->"fieldget <PopScroll: java.awt.Image buf>";
+    "virtualinvoke <java.awt.Image: java.awt.Graphics getGraphics()>"
+    "fieldget <PopScroll: java.awt.Image buf>"->"virtualinvoke <java.awt.Image: java.awt.Graphics getGraphics()>";
+    "fieldput <PopScroll: java.awt.Graphics gbuf>"
+    "virtualinvoke <java.awt.Image: java.awt.Graphics getGraphics()>"->"fieldput <PopScroll: java.awt.Graphics gbuf>";
+    "fieldput <PopScroll: java.awt.Graphics gbuf>"->"load.r r0";
+    "virtualinvoke <PopScroll: void getParams()>"
+    "load.r r0"->"virtualinvoke <PopScroll: void getParams()>";
+    "return"
+    "virtualinvoke <PopScroll: void getParams()>"->"return";
+}

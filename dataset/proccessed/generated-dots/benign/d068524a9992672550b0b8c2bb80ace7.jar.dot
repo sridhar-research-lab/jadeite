@@ -1,0 +1,194 @@
+digraph "" {
+    "r0 := @this: Qcam"
+    "load.r r0"
+    "r0 := @this: Qcam"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "virtualinvoke <Qcam: java.awt.Dimension getSize()>"
+    "load.r r0"->"virtualinvoke <Qcam: java.awt.Dimension getSize()>";
+    "fieldput <Qcam: java.awt.Dimension sz>"
+    "virtualinvoke <Qcam: java.awt.Dimension getSize()>"->"fieldput <Qcam: java.awt.Dimension sz>";
+    "fieldput <Qcam: java.awt.Dimension sz>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "fieldget <Qcam: java.awt.Dimension sz>"
+    "load.r r0"->"fieldget <Qcam: java.awt.Dimension sz>";
+    "fieldget <java.awt.Dimension: int width>"
+    "fieldget <Qcam: java.awt.Dimension sz>"->"fieldget <java.awt.Dimension: int width>";
+    "fieldget <java.awt.Dimension: int width>"->"load.r r0";
+    "load.r r0"->"fieldget <Qcam: java.awt.Dimension sz>";
+    "fieldget <java.awt.Dimension: int height>"
+    "fieldget <Qcam: java.awt.Dimension sz>"->"fieldget <java.awt.Dimension: int height>";
+    "virtualinvoke <Qcam: java.awt.Image createImage(int,int)>"
+    "fieldget <java.awt.Dimension: int height>"->"virtualinvoke <Qcam: java.awt.Image createImage(int,int)>";
+    "fieldput <Qcam: java.awt.Image im>"
+    "virtualinvoke <Qcam: java.awt.Image createImage(int,int)>"->"fieldput <Qcam: java.awt.Image im>";
+    "fieldput <Qcam: java.awt.Image im>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "fieldget <Qcam: java.awt.Image im>"
+    "load.r r0"->"fieldget <Qcam: java.awt.Image im>";
+    "virtualinvoke <java.awt.Image: java.awt.Graphics getGraphics()>"
+    "fieldget <Qcam: java.awt.Image im>"->"virtualinvoke <java.awt.Image: java.awt.Graphics getGraphics()>";
+    "fieldput <Qcam: java.awt.Graphics sc>"
+    "virtualinvoke <java.awt.Image: java.awt.Graphics getGraphics()>"->"fieldput <Qcam: java.awt.Graphics sc>";
+    "fieldput <Qcam: java.awt.Graphics sc>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "push \"image\""
+    "load.r r0"->"push \"image\"";
+    "virtualinvoke <Qcam: java.lang.String getParameter(java.lang.String)>"
+    "push \"image\""->"virtualinvoke <Qcam: java.lang.String getParameter(java.lang.String)>";
+    "fieldput <Qcam: java.lang.String s>"
+    "virtualinvoke <Qcam: java.lang.String getParameter(java.lang.String)>"->"fieldput <Qcam: java.lang.String s>";
+    "fieldput <Qcam: java.lang.String s>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "virtualinvoke <Qcam: java.net.URL getDocumentBase()>"
+    "load.r r0"->"virtualinvoke <Qcam: java.net.URL getDocumentBase()>";
+    "virtualinvoke <Qcam: java.net.URL getDocumentBase()>"->"load.r r0";
+    "fieldget <Qcam: java.lang.String s>"
+    "load.r r0"->"fieldget <Qcam: java.lang.String s>";
+    "virtualinvoke <Qcam: java.awt.Image getImage(java.net.URL,java.lang.String)>"
+    "fieldget <Qcam: java.lang.String s>"->"virtualinvoke <Qcam: java.awt.Image getImage(java.net.URL,java.lang.String)>";
+    "fieldput <Qcam: java.awt.Image pc>"
+    "virtualinvoke <Qcam: java.awt.Image getImage(java.net.URL,java.lang.String)>"->"fieldput <Qcam: java.awt.Image pc>";
+    "fieldput <Qcam: java.awt.Image pc>"->"load.r r0";
+    "new java.awt.Color"
+    "load.r r0"->"new java.awt.Color";
+    "dup1.r"
+    "new java.awt.Color"->"dup1.r";
+    "push 192"
+    "dup1.r"->"push 192";
+    "push 192"->"push 192";
+    "push 192"->"push 192";
+    "specialinvoke <java.awt.Color: void <init>(int,int,int)>"
+    "push 192"->"specialinvoke <java.awt.Color: void <init>(int,int,int)>";
+    "fieldput <Qcam: java.awt.Color bc>"
+    "specialinvoke <java.awt.Color: void <init>(int,int,int)>"->"fieldput <Qcam: java.awt.Color bc>";
+    "fieldput <Qcam: java.awt.Color bc>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "push \"fadeRate\""
+    "load.r r0"->"push \"fadeRate\"";
+    "push \"fadeRate\""->"virtualinvoke <Qcam: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <Qcam: java.lang.String getParameter(java.lang.String)>"->"fieldput <Qcam: java.lang.String s>";
+    "fieldput <Qcam: java.lang.String s>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <Qcam: java.lang.String s>";
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"
+    "fieldget <Qcam: java.lang.String s>"->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>";
+    "fieldput <Qcam: int fr>"
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"->"fieldput <Qcam: int fr>";
+    "fieldput <Qcam: int fr>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "push \"panSpeed\""
+    "load.r r0"->"push \"panSpeed\"";
+    "push \"panSpeed\""->"virtualinvoke <Qcam: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <Qcam: java.lang.String getParameter(java.lang.String)>"->"fieldput <Qcam: java.lang.String s>";
+    "fieldput <Qcam: java.lang.String s>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <Qcam: java.lang.String s>";
+    "fieldget <Qcam: java.lang.String s>"->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>";
+    "fieldput <Qcam: int ps>"
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"->"fieldput <Qcam: int ps>";
+    "fieldput <Qcam: int ps>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "push \"titleFont\""
+    "load.r r0"->"push \"titleFont\"";
+    "push \"titleFont\""->"virtualinvoke <Qcam: java.lang.String getParameter(java.lang.String)>";
+    "push \"Times Roman\""
+    "virtualinvoke <Qcam: java.lang.String getParameter(java.lang.String)>"->"push \"Times Roman\"";
+    "push 3"
+    "push \"Times Roman\""->"push 3";
+    "push 48"
+    "push 3"->"push 48";
+    "virtualinvoke <Qcam: java.awt.Font getFont(java.lang.String,java.lang.String,int,int)>"
+    "push 48"->"virtualinvoke <Qcam: java.awt.Font getFont(java.lang.String,java.lang.String,int,int)>";
+    "fieldput <Qcam: java.awt.Font lfont>"
+    "virtualinvoke <Qcam: java.awt.Font getFont(java.lang.String,java.lang.String,int,int)>"->"fieldput <Qcam: java.awt.Font lfont>";
+    "fieldput <Qcam: java.awt.Font lfont>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "fieldget <Qcam: java.awt.Font lfont>"
+    "load.r r0"->"fieldget <Qcam: java.awt.Font lfont>";
+    "virtualinvoke <Qcam: java.awt.FontMetrics getFontMetrics(java.awt.Font)>"
+    "fieldget <Qcam: java.awt.Font lfont>"->"virtualinvoke <Qcam: java.awt.FontMetrics getFontMetrics(java.awt.Font)>";
+    "store.r r1"
+    "virtualinvoke <Qcam: java.awt.FontMetrics getFontMetrics(java.awt.Font)>"->"store.r r1";
+    "store.r r1"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "push \"title\""
+    "load.r r0"->"push \"title\"";
+    "push \"title\""->"virtualinvoke <Qcam: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <Qcam: java.lang.String getParameter(java.lang.String)>"->"fieldput <Qcam: java.lang.String s>";
+    "fieldput <Qcam: java.lang.String s>"->"load.r r0";
+    "load.r r0"->"fieldget <Qcam: java.lang.String s>";
+    "ifnull load.r r0"
+    "fieldget <Qcam: java.lang.String s>"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r r0";
+    "load.r r1"
+    "load.r r0"->"load.r r1";
+    "load.r r1"->"load.r r0";
+    "load.r r0"->"fieldget <Qcam: java.lang.String s>";
+    "virtualinvoke <java.awt.FontMetrics: int stringWidth(java.lang.String)>"
+    "fieldget <Qcam: java.lang.String s>"->"virtualinvoke <java.awt.FontMetrics: int stringWidth(java.lang.String)>";
+    "store.i i0"
+    "virtualinvoke <java.awt.FontMetrics: int stringWidth(java.lang.String)>"->"store.i i0";
+    "store.i i0"->"load.r r1";
+    "virtualinvoke <java.awt.FontMetrics: int getAscent()>"
+    "load.r r1"->"virtualinvoke <java.awt.FontMetrics: int getAscent()>";
+    "virtualinvoke <java.awt.FontMetrics: int getAscent()>"->"load.r r1";
+    "virtualinvoke <java.awt.FontMetrics: int getDescent()>"
+    "load.r r1"->"virtualinvoke <java.awt.FontMetrics: int getDescent()>";
+    "sub.i"
+    "virtualinvoke <java.awt.FontMetrics: int getDescent()>"->"sub.i";
+    "store.i r1"
+    "sub.i"->"store.i r1";
+    "new Qtil"
+    "store.i r1"->"new Qtil";
+    "new Qtil"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "load.r r0"->"fieldget <Qcam: java.lang.String s>";
+    "fieldget <Qcam: java.lang.String s>"->"load.r r0";
+    "load.r r0"->"fieldget <Qcam: java.awt.Dimension sz>";
+    "new java.awt.Dimension"
+    "fieldget <Qcam: java.awt.Dimension sz>"->"new java.awt.Dimension";
+    "new java.awt.Dimension"->"dup1.r";
+    "load.i i0"
+    "dup1.r"->"load.i i0";
+    "load.i r1"
+    "load.i i0"->"load.i r1";
+    "specialinvoke <java.awt.Dimension: void <init>(int,int)>"
+    "load.i r1"->"specialinvoke <java.awt.Dimension: void <init>(int,int)>";
+    "specialinvoke <java.awt.Dimension: void <init>(int,int)>"->"load.r r0";
+    "fieldget <Qcam: java.awt.Color bc>"
+    "load.r r0"->"fieldget <Qcam: java.awt.Color bc>";
+    "fieldget <Qcam: java.awt.Color bc>"->"load.r r0";
+    "fieldget <Qcam: java.awt.Color altColor>"
+    "load.r r0"->"fieldget <Qcam: java.awt.Color altColor>";
+    "fieldget <Qcam: java.awt.Color altColor>"->"load.r r0";
+    "fieldget <Qcam: int fr>"
+    "load.r r0"->"fieldget <Qcam: int fr>";
+    "specialinvoke <Qtil: void <init>(java.lang.String,java.awt.Dimension,java.awt.Dimension,java.awt.Color,java.awt.Color,int)>"
+    "fieldget <Qcam: int fr>"->"specialinvoke <Qtil: void <init>(java.lang.String,java.awt.Dimension,java.awt.Dimension,java.awt.Color,java.awt.Color,int)>";
+    "fieldput <Qcam: Qtil title>"
+    "specialinvoke <Qtil: void <init>(java.lang.String,java.awt.Dimension,java.awt.Dimension,java.awt.Color,java.awt.Color,int)>"->"fieldput <Qcam: Qtil title>";
+    "fieldput <Qcam: Qtil title>"->"load.r r0";
+    "new java.awt.MediaTracker"
+    "load.r r0"->"new java.awt.MediaTracker";
+    "new java.awt.MediaTracker"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "specialinvoke <java.awt.MediaTracker: void <init>(java.awt.Component)>"
+    "load.r r0"->"specialinvoke <java.awt.MediaTracker: void <init>(java.awt.Component)>";
+    "fieldput <Qcam: java.awt.MediaTracker tracker>"
+    "specialinvoke <java.awt.MediaTracker: void <init>(java.awt.Component)>"->"fieldput <Qcam: java.awt.MediaTracker tracker>";
+    "fieldput <Qcam: java.awt.MediaTracker tracker>"->"load.r r0";
+    "fieldget <Qcam: java.awt.MediaTracker tracker>"
+    "load.r r0"->"fieldget <Qcam: java.awt.MediaTracker tracker>";
+    "fieldget <Qcam: java.awt.MediaTracker tracker>"->"load.r r0";
+    "fieldget <Qcam: java.awt.Image pc>"
+    "load.r r0"->"fieldget <Qcam: java.awt.Image pc>";
+    "push 0"
+    "fieldget <Qcam: java.awt.Image pc>"->"push 0";
+    "virtualinvoke <java.awt.MediaTracker: void addImage(java.awt.Image,int)>"
+    "push 0"->"virtualinvoke <java.awt.MediaTracker: void addImage(java.awt.Image,int)>";
+    "return"
+    "virtualinvoke <java.awt.MediaTracker: void addImage(java.awt.Image,int)>"->"return";
+}

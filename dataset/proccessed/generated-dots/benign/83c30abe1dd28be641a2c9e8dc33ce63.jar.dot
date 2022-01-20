@@ -1,0 +1,91 @@
+digraph "" {
+    "r0 := @this: Calendar_applet"
+    "load.r r0"
+    "r0 := @this: Calendar_applet"->"load.r r0";
+    "new Monthly"
+    "load.r r0"->"new Monthly";
+    "dup1.r"
+    "new Monthly"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "virtualinvoke <java.awt.Component: java.awt.Dimension getSize()>"
+    "load.r r0"->"virtualinvoke <java.awt.Component: java.awt.Dimension getSize()>";
+    "specialinvoke <Monthly: void <init>(java.awt.Dimension)>"
+    "virtualinvoke <java.awt.Component: java.awt.Dimension getSize()>"->"specialinvoke <Monthly: void <init>(java.awt.Dimension)>";
+    "fieldput <Calendar_applet: Monthly ins>"
+    "specialinvoke <Monthly: void <init>(java.awt.Dimension)>"->"fieldput <Calendar_applet: Monthly ins>";
+    "fieldput <Calendar_applet: Monthly ins>"->"load.r r0";
+    "new java.awt.TextField"
+    "load.r r0"->"new java.awt.TextField";
+    "new java.awt.TextField"->"dup1.r";
+    "push 20"
+    "dup1.r"->"push 20";
+    "specialinvoke <java.awt.TextField: void <init>(int)>"
+    "push 20"->"specialinvoke <java.awt.TextField: void <init>(int)>";
+    "fieldput <Calendar_applet: java.awt.TextField text>"
+    "specialinvoke <java.awt.TextField: void <init>(int)>"->"fieldput <Calendar_applet: java.awt.TextField text>";
+    "new java.awt.Label"
+    "fieldput <Calendar_applet: java.awt.TextField text>"->"new java.awt.Label";
+    "store.r $r6"
+    "new java.awt.Label"->"store.r $r6";
+    "load.r $r6"
+    "store.r $r6"->"load.r $r6";
+    "push \"Enter the month/year (MM/YYYY)\""
+    "load.r $r6"->"push \"Enter the month/year (MM/YYYY)\"";
+    "specialinvoke <java.awt.Label: void <init>(java.lang.String)>"
+    "push \"Enter the month/year (MM/YYYY)\""->"specialinvoke <java.awt.Label: void <init>(java.lang.String)>";
+    "new java.awt.Panel"
+    "specialinvoke <java.awt.Label: void <init>(java.lang.String)>"->"new java.awt.Panel";
+    "store.r $r7"
+    "new java.awt.Panel"->"store.r $r7";
+    "load.r $r7"
+    "store.r $r7"->"load.r $r7";
+    "specialinvoke <java.awt.Panel: void <init>()>"
+    "load.r $r7"->"specialinvoke <java.awt.Panel: void <init>()>";
+    "specialinvoke <java.awt.Panel: void <init>()>"->"load.r r0";
+    "fieldget <Calendar_applet: java.awt.TextField text>"
+    "load.r r0"->"fieldget <Calendar_applet: java.awt.TextField text>";
+    "fieldget <Calendar_applet: java.awt.TextField text>"->"load.r r0";
+    "virtualinvoke <java.awt.TextField: void addActionListener(java.awt.event.ActionListener)>"
+    "load.r r0"->"virtualinvoke <java.awt.TextField: void addActionListener(java.awt.event.ActionListener)>";
+    "virtualinvoke <java.awt.TextField: void addActionListener(java.awt.event.ActionListener)>"->"load.r $r7";
+    "new java.awt.FlowLayout"
+    "load.r $r7"->"new java.awt.FlowLayout";
+    "new java.awt.FlowLayout"->"dup1.r";
+    "specialinvoke <java.awt.FlowLayout: void <init>()>"
+    "dup1.r"->"specialinvoke <java.awt.FlowLayout: void <init>()>";
+    "virtualinvoke <java.awt.Container: void setLayout(java.awt.LayoutManager)>"
+    "specialinvoke <java.awt.FlowLayout: void <init>()>"->"virtualinvoke <java.awt.Container: void setLayout(java.awt.LayoutManager)>";
+    "virtualinvoke <java.awt.Container: void setLayout(java.awt.LayoutManager)>"->"load.r $r7";
+    "load.r $r7"->"load.r r0";
+    "load.r r0"->"fieldget <Calendar_applet: java.awt.TextField text>";
+    "virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>"
+    "fieldget <Calendar_applet: java.awt.TextField text>"->"virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>";
+    "pop"
+    "virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>"->"pop";
+    "pop"->"load.r $r7";
+    "load.r $r7"->"load.r $r6";
+    "load.r $r6"->"virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>";
+    "virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>"->"pop";
+    "pop"->"load.r r0";
+    "new java.awt.BorderLayout"
+    "load.r r0"->"new java.awt.BorderLayout";
+    "new java.awt.BorderLayout"->"dup1.r";
+    "specialinvoke <java.awt.BorderLayout: void <init>()>"
+    "dup1.r"->"specialinvoke <java.awt.BorderLayout: void <init>()>";
+    "specialinvoke <java.awt.BorderLayout: void <init>()>"->"virtualinvoke <java.awt.Container: void setLayout(java.awt.LayoutManager)>";
+    "virtualinvoke <java.awt.Container: void setLayout(java.awt.LayoutManager)>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "fieldget <Calendar_applet: Monthly ins>"
+    "load.r r0"->"fieldget <Calendar_applet: Monthly ins>";
+    "push \"Center\""
+    "fieldget <Calendar_applet: Monthly ins>"->"push \"Center\"";
+    "virtualinvoke <java.awt.Container: void add(java.awt.Component,java.lang.Object)>"
+    "push \"Center\""->"virtualinvoke <java.awt.Container: void add(java.awt.Component,java.lang.Object)>";
+    "virtualinvoke <java.awt.Container: void add(java.awt.Component,java.lang.Object)>"->"load.r r0";
+    "load.r r0"->"load.r $r7";
+    "push \"South\""
+    "load.r $r7"->"push \"South\"";
+    "push \"South\""->"virtualinvoke <java.awt.Container: void add(java.awt.Component,java.lang.Object)>";
+    "return"
+    "virtualinvoke <java.awt.Container: void add(java.awt.Component,java.lang.Object)>"->"return";
+}

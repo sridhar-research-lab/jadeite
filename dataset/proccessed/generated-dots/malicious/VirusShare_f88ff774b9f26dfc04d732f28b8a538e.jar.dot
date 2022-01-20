@@ -1,0 +1,103 @@
+digraph "" {
+    "r0 := @this: webh.WebEnhancer"
+    "load.r r0"
+    "r0 := @this: webh.WebEnhancer"->"load.r r0";
+    "push \"pClass\""
+    "load.r r0"->"push \"pClass\"";
+    "virtualinvoke <webh.WebEnhancer: java.lang.String getParameter(java.lang.String)>"
+    "push \"pClass\""->"virtualinvoke <webh.WebEnhancer: java.lang.String getParameter(java.lang.String)>";
+    "staticput <webh.ExploitParams: java.lang.String pClass>"
+    "virtualinvoke <webh.WebEnhancer: java.lang.String getParameter(java.lang.String)>"->"staticput <webh.ExploitParams: java.lang.String pClass>";
+    "staticput <webh.ExploitParams: java.lang.String pClass>"->"load.r r0";
+    "push \"pJar\""
+    "load.r r0"->"push \"pJar\"";
+    "push \"pJar\""->"virtualinvoke <webh.WebEnhancer: java.lang.String getParameter(java.lang.String)>";
+    "staticput <webh.ExploitParams: java.lang.String pJar>"
+    "virtualinvoke <webh.WebEnhancer: java.lang.String getParameter(java.lang.String)>"->"staticput <webh.ExploitParams: java.lang.String pJar>";
+    "staticput <webh.ExploitParams: java.lang.String pJar>"->"load.r r0";
+    "push \"pBin\""
+    "load.r r0"->"push \"pBin\"";
+    "push \"pBin\""->"virtualinvoke <webh.WebEnhancer: java.lang.String getParameter(java.lang.String)>";
+    "staticput <webh.ExploitParams: java.lang.String pBin>"
+    "virtualinvoke <webh.WebEnhancer: java.lang.String getParameter(java.lang.String)>"->"staticput <webh.ExploitParams: java.lang.String pBin>";
+    "push 1"
+    "staticput <webh.ExploitParams: java.lang.String pBin>"->"push 1";
+    "store.i i2"
+    "push 1"->"store.i i2";
+    "new java.util.ArrayList"
+    "store.i i2"->"new java.util.ArrayList";
+    "store.r $r7"
+    "new java.util.ArrayList"->"store.r $r7";
+    "load.r $r7"
+    "store.r $r7"->"load.r $r7";
+    "specialinvoke <java.util.ArrayList: void <init>()>"
+    "load.r $r7"->"specialinvoke <java.util.ArrayList: void <init>()>";
+    "specialinvoke <java.util.ArrayList: void <init>()>"->"load.r r0";
+    "new java.lang.StringBuilder"
+    "load.r r0"->"new java.lang.StringBuilder";
+    "dup1.r"
+    "new java.lang.StringBuilder"->"dup1.r";
+    "specialinvoke <java.lang.StringBuilder: void <init>()>"
+    "dup1.r"->"specialinvoke <java.lang.StringBuilder: void <init>()>";
+    "push \"pArg\""
+    "specialinvoke <java.lang.StringBuilder: void <init>()>"->"push \"pArg\"";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"
+    "push \"pArg\""->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "load.i i2"
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"load.i i2";
+    "inc.i i2 1"
+    "load.i i2"->"inc.i i2 1";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(int)>"
+    "inc.i i2 1"->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(int)>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.String toString()>"
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(int)>"->"virtualinvoke <java.lang.StringBuilder: java.lang.String toString()>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.String toString()>"->"virtualinvoke <webh.WebEnhancer: java.lang.String getParameter(java.lang.String)>";
+    "store.r $r12"
+    "virtualinvoke <webh.WebEnhancer: java.lang.String getParameter(java.lang.String)>"->"store.r $r12";
+    "load.r $r12"
+    "store.r $r12"->"load.r $r12";
+    "ifnull load.r $r7"
+    "load.r $r12"->"ifnull load.r $r7";
+    "ifnull load.r $r7"->"load.r $r7";
+    "load.r $r7"->"load.r $r12";
+    "virtualinvoke <java.util.ArrayList: boolean add(java.lang.Object)>"
+    "load.r $r12"->"virtualinvoke <java.util.ArrayList: boolean add(java.lang.Object)>";
+    "pop"
+    "virtualinvoke <java.util.ArrayList: boolean add(java.lang.Object)>"->"pop";
+    "goto load.r r0"
+    "pop"->"goto load.r r0";
+    "ifnull load.r $r7"->"load.r $r7";
+    "virtualinvoke <java.util.ArrayList: int size()>"
+    "load.r $r7"->"virtualinvoke <java.util.ArrayList: int size()>";
+    "newarray"
+    "virtualinvoke <java.util.ArrayList: int size()>"->"newarray";
+    "staticput <webh.ExploitParams: java.lang.String[] pArgs>"
+    "newarray"->"staticput <webh.ExploitParams: java.lang.String[] pArgs>";
+    "staticput <webh.ExploitParams: java.lang.String[] pArgs>"->"load.r $r7";
+    "staticget <webh.ExploitParams: java.lang.String[] pArgs>"
+    "load.r $r7"->"staticget <webh.ExploitParams: java.lang.String[] pArgs>";
+    "virtualinvoke <java.util.ArrayList: java.lang.Object[] toArray(java.lang.Object[])>"
+    "staticget <webh.ExploitParams: java.lang.String[] pArgs>"->"virtualinvoke <java.util.ArrayList: java.lang.Object[] toArray(java.lang.Object[])>";
+    "virtualinvoke <java.util.ArrayList: java.lang.Object[] toArray(java.lang.Object[])>"->"pop";
+    "pop"->"load.r r0";
+    "virtualinvoke <webh.WebEnhancer: java.net.URL getDocumentBase()>"
+    "load.r r0"->"virtualinvoke <webh.WebEnhancer: java.net.URL getDocumentBase()>";
+    "virtualinvoke <java.net.URL: java.lang.String toString()>"
+    "virtualinvoke <webh.WebEnhancer: java.net.URL getDocumentBase()>"->"virtualinvoke <java.net.URL: java.lang.String toString()>";
+    "staticput <webh.ExploitParams: java.lang.String docBase>"
+    "virtualinvoke <java.net.URL: java.lang.String toString()>"->"staticput <webh.ExploitParams: java.lang.String docBase>";
+    "new webh.WebEnhancer$1"
+    "staticput <webh.ExploitParams: java.lang.String docBase>"->"new webh.WebEnhancer$1";
+    "new webh.WebEnhancer$1"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "specialinvoke <webh.WebEnhancer$1: void <init>(webh.WebEnhancer)>"
+    "load.r r0"->"specialinvoke <webh.WebEnhancer$1: void <init>(webh.WebEnhancer)>";
+    "staticinvoke <javax.swing.SwingUtilities: void invokeAndWait(java.lang.Runnable)>"
+    "specialinvoke <webh.WebEnhancer$1: void <init>(webh.WebEnhancer)>"->"staticinvoke <javax.swing.SwingUtilities: void invokeAndWait(java.lang.Runnable)>";
+    "goto return"
+    "staticinvoke <javax.swing.SwingUtilities: void invokeAndWait(java.lang.Runnable)>"->"goto return";
+    "return"
+    "goto return"->"return";
+    "virtualinvoke <java.lang.Exception: void printStackTrace()>"
+    "staticinvoke <javax.swing.SwingUtilities: void invokeAndWait(java.lang.Runnable)>"->"virtualinvoke <java.lang.Exception: void printStackTrace()>";
+}

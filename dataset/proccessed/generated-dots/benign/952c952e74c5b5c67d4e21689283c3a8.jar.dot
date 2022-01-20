@@ -1,0 +1,325 @@
+digraph "" {
+    "r0 := @this: LittleMan"
+    "load.r r0"
+    "r0 := @this: LittleMan"->"load.r r0";
+    "new ProducerConsumer"
+    "load.r r0"->"new ProducerConsumer";
+    "dup1.r"
+    "new ProducerConsumer"->"dup1.r";
+    "specialinvoke <ProducerConsumer: void <init>()>"
+    "dup1.r"->"specialinvoke <ProducerConsumer: void <init>()>";
+    "fieldput <LittleMan: ProducerConsumer counter>"
+    "specialinvoke <ProducerConsumer: void <init>()>"->"fieldput <LittleMan: ProducerConsumer counter>";
+    "fieldput <LittleMan: ProducerConsumer counter>"->"load.r r0";
+    "new MessageBox"
+    "load.r r0"->"new MessageBox";
+    "new MessageBox"->"dup1.r";
+    "specialinvoke <MessageBox: void <init>()>"
+    "dup1.r"->"specialinvoke <MessageBox: void <init>()>";
+    "fieldput <LittleMan: MessageBox messenger>"
+    "specialinvoke <MessageBox: void <init>()>"->"fieldput <LittleMan: MessageBox messenger>";
+    "fieldput <LittleMan: MessageBox messenger>"->"load.r r0";
+    "new Memory"
+    "load.r r0"->"new Memory";
+    "new Memory"->"dup1.r";
+    "push 100"
+    "dup1.r"->"push 100";
+    "push 100"->"load.r r0";
+    "fieldget <LittleMan: MessageBox messenger>"
+    "load.r r0"->"fieldget <LittleMan: MessageBox messenger>";
+    "specialinvoke <Memory: void <init>(int,Messenger)>"
+    "fieldget <LittleMan: MessageBox messenger>"->"specialinvoke <Memory: void <init>(int,Messenger)>";
+    "fieldput <LittleMan: Memory memory>"
+    "specialinvoke <Memory: void <init>(int,Messenger)>"->"fieldput <LittleMan: Memory memory>";
+    "fieldput <LittleMan: Memory memory>"->"load.r r0";
+    "new RunMode"
+    "load.r r0"->"new RunMode";
+    "new RunMode"->"dup1.r";
+    "specialinvoke <RunMode: void <init>()>"
+    "dup1.r"->"specialinvoke <RunMode: void <init>()>";
+    "fieldput <LittleMan: RunMode mode>"
+    "specialinvoke <RunMode: void <init>()>"->"fieldput <LittleMan: RunMode mode>";
+    "fieldput <LittleMan: RunMode mode>"->"load.r r0";
+    "fieldget <LittleMan: RunMode mode>"
+    "load.r r0"->"fieldget <LittleMan: RunMode mode>";
+    "push -1"
+    "fieldget <LittleMan: RunMode mode>"->"push -1";
+    "virtualinvoke <RunMode: void setMode(int)>"
+    "push -1"->"virtualinvoke <RunMode: void setMode(int)>";
+    "virtualinvoke <RunMode: void setMode(int)>"->"load.r r0";
+    "new Registers"
+    "load.r r0"->"new Registers";
+    "new Registers"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "fieldget <LittleMan: ProducerConsumer counter>"
+    "load.r r0"->"fieldget <LittleMan: ProducerConsumer counter>";
+    "specialinvoke <Registers: void <init>(ProducerConsumer)>"
+    "fieldget <LittleMan: ProducerConsumer counter>"->"specialinvoke <Registers: void <init>(ProducerConsumer)>";
+    "fieldput <LittleMan: Registers registers>"
+    "specialinvoke <Registers: void <init>(ProducerConsumer)>"->"fieldput <LittleMan: Registers registers>";
+    "fieldput <LittleMan: Registers registers>"->"load.r r0";
+    "new LittleManCompiler"
+    "load.r r0"->"new LittleManCompiler";
+    "new LittleManCompiler"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "fieldget <LittleMan: Memory memory>"
+    "load.r r0"->"fieldget <LittleMan: Memory memory>";
+    "fieldget <LittleMan: Memory memory>"->"load.r r0";
+    "load.r r0"->"fieldget <LittleMan: MessageBox messenger>";
+    "specialinvoke <LittleManCompiler: void <init>(Memory,Messenger)>"
+    "fieldget <LittleMan: MessageBox messenger>"->"specialinvoke <LittleManCompiler: void <init>(Memory,Messenger)>";
+    "fieldput <LittleMan: LittleManCompiler compiler>"
+    "specialinvoke <LittleManCompiler: void <init>(Memory,Messenger)>"->"fieldput <LittleMan: LittleManCompiler compiler>";
+    "fieldput <LittleMan: LittleManCompiler compiler>"->"load.r r0";
+    "load.r r0"->"fieldget <LittleMan: MessageBox messenger>";
+    "fieldget <LittleMan: MessageBox messenger>"->"load.r r0";
+    "fieldget <LittleMan: LittleManCompiler compiler>"
+    "load.r r0"->"fieldget <LittleMan: LittleManCompiler compiler>";
+    "virtualinvoke <MessageBox: void registerCompiler(LittleManCompiler)>"
+    "fieldget <LittleMan: LittleManCompiler compiler>"->"virtualinvoke <MessageBox: void registerCompiler(LittleManCompiler)>";
+    "virtualinvoke <MessageBox: void registerCompiler(LittleManCompiler)>"->"load.r r0";
+    "new LittleManComputer"
+    "load.r r0"->"new LittleManComputer";
+    "new LittleManComputer"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "load.r r0"->"fieldget <LittleMan: Memory memory>";
+    "fieldget <LittleMan: Memory memory>"->"load.r r0";
+    "load.r r0"->"fieldget <LittleMan: MessageBox messenger>";
+    "fieldget <LittleMan: MessageBox messenger>"->"load.r r0";
+    "load.r r0"->"fieldget <LittleMan: ProducerConsumer counter>";
+    "fieldget <LittleMan: ProducerConsumer counter>"->"load.r r0";
+    "load.r r0"->"fieldget <LittleMan: RunMode mode>";
+    "fieldget <LittleMan: RunMode mode>"->"load.r r0";
+    "fieldget <LittleMan: Registers registers>"
+    "load.r r0"->"fieldget <LittleMan: Registers registers>";
+    "specialinvoke <LittleManComputer: void <init>(Memory,Messenger,ProducerConsumer,RunMode,Registers)>"
+    "fieldget <LittleMan: Registers registers>"->"specialinvoke <LittleManComputer: void <init>(Memory,Messenger,ProducerConsumer,RunMode,Registers)>";
+    "fieldput <LittleMan: LittleManComputer processor>"
+    "specialinvoke <LittleManComputer: void <init>(Memory,Messenger,ProducerConsumer,RunMode,Registers)>"->"fieldput <LittleMan: LittleManComputer processor>";
+    "fieldput <LittleMan: LittleManComputer processor>"->"load.r r0";
+    "new java.lang.Thread"
+    "load.r r0"->"new java.lang.Thread";
+    "new java.lang.Thread"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "fieldget <LittleMan: LittleManComputer processor>"
+    "load.r r0"->"fieldget <LittleMan: LittleManComputer processor>";
+    "specialinvoke <java.lang.Thread: void <init>(java.lang.Runnable)>"
+    "fieldget <LittleMan: LittleManComputer processor>"->"specialinvoke <java.lang.Thread: void <init>(java.lang.Runnable)>";
+    "fieldput <LittleMan: java.lang.Thread processorThread>"
+    "specialinvoke <java.lang.Thread: void <init>(java.lang.Runnable)>"->"fieldput <LittleMan: java.lang.Thread processorThread>";
+    "fieldput <LittleMan: java.lang.Thread processorThread>"->"load.r r0";
+    "new java.awt.Panel"
+    "load.r r0"->"new java.awt.Panel";
+    "new java.awt.Panel"->"dup1.r";
+    "specialinvoke <java.awt.Panel: void <init>()>"
+    "dup1.r"->"specialinvoke <java.awt.Panel: void <init>()>";
+    "fieldput <LittleMan: java.awt.Panel leftPanel>"
+    "specialinvoke <java.awt.Panel: void <init>()>"->"fieldput <LittleMan: java.awt.Panel leftPanel>";
+    "fieldput <LittleMan: java.awt.Panel leftPanel>"->"load.r r0";
+    "fieldget <LittleMan: java.awt.Panel leftPanel>"
+    "load.r r0"->"fieldget <LittleMan: java.awt.Panel leftPanel>";
+    "new java.awt.BorderLayout"
+    "fieldget <LittleMan: java.awt.Panel leftPanel>"->"new java.awt.BorderLayout";
+    "new java.awt.BorderLayout"->"dup1.r";
+    "specialinvoke <java.awt.BorderLayout: void <init>()>"
+    "dup1.r"->"specialinvoke <java.awt.BorderLayout: void <init>()>";
+    "virtualinvoke <java.awt.Panel: void setLayout(java.awt.LayoutManager)>"
+    "specialinvoke <java.awt.BorderLayout: void <init>()>"->"virtualinvoke <java.awt.Panel: void setLayout(java.awt.LayoutManager)>";
+    "virtualinvoke <java.awt.Panel: void setLayout(java.awt.LayoutManager)>"->"load.r r0";
+    "load.r r0"->"fieldget <LittleMan: java.awt.Panel leftPanel>";
+    "staticget <LittleMan: java.awt.Color LIGHT_PINK>"
+    "fieldget <LittleMan: java.awt.Panel leftPanel>"->"staticget <LittleMan: java.awt.Color LIGHT_PINK>";
+    "virtualinvoke <java.awt.Panel: void setBackground(java.awt.Color)>"
+    "staticget <LittleMan: java.awt.Color LIGHT_PINK>"->"virtualinvoke <java.awt.Panel: void setBackground(java.awt.Color)>";
+    "virtualinvoke <java.awt.Panel: void setBackground(java.awt.Color)>"->"load.r r0";
+    "load.r r0"->"fieldget <LittleMan: java.awt.Panel leftPanel>";
+    "new java.awt.Label"
+    "fieldget <LittleMan: java.awt.Panel leftPanel>"->"new java.awt.Label";
+    "new java.awt.Label"->"dup1.r";
+    "push \"Little Man Computer Memory:\""
+    "dup1.r"->"push \"Little Man Computer Memory:\"";
+    "specialinvoke <java.awt.Label: void <init>(java.lang.String)>"
+    "push \"Little Man Computer Memory:\""->"specialinvoke <java.awt.Label: void <init>(java.lang.String)>";
+    "push \"North\""
+    "specialinvoke <java.awt.Label: void <init>(java.lang.String)>"->"push \"North\"";
+    "virtualinvoke <java.awt.Panel: void add(java.awt.Component,java.lang.Object)>"
+    "push \"North\""->"virtualinvoke <java.awt.Panel: void add(java.awt.Component,java.lang.Object)>";
+    "virtualinvoke <java.awt.Panel: void add(java.awt.Component,java.lang.Object)>"->"load.r r0";
+    "load.r r0"->"fieldget <LittleMan: java.awt.Panel leftPanel>";
+    "fieldget <LittleMan: java.awt.Panel leftPanel>"->"load.r r0";
+    "load.r r0"->"fieldget <LittleMan: Memory memory>";
+    "push \"West\""
+    "fieldget <LittleMan: Memory memory>"->"push \"West\"";
+    "push \"West\""->"virtualinvoke <java.awt.Panel: void add(java.awt.Component,java.lang.Object)>";
+    "virtualinvoke <java.awt.Panel: void add(java.awt.Component,java.lang.Object)>"->"new java.awt.Panel";
+    "store.r $r32"
+    "new java.awt.Panel"->"store.r $r32";
+    "load.r $r32"
+    "store.r $r32"->"load.r $r32";
+    "load.r $r32"->"specialinvoke <java.awt.Panel: void <init>()>";
+    "specialinvoke <java.awt.Panel: void <init>()>"->"load.r $r32";
+    "load.r $r32"->"new java.awt.BorderLayout";
+    "new java.awt.BorderLayout"->"dup1.r";
+    "dup1.r"->"specialinvoke <java.awt.BorderLayout: void <init>()>";
+    "specialinvoke <java.awt.BorderLayout: void <init>()>"->"virtualinvoke <java.awt.Panel: void setLayout(java.awt.LayoutManager)>";
+    "virtualinvoke <java.awt.Panel: void setLayout(java.awt.LayoutManager)>"->"load.r $r32";
+    "load.r $r32"->"load.r r0";
+    "load.r r0"->"fieldget <LittleMan: MessageBox messenger>";
+    "push \"Center\""
+    "fieldget <LittleMan: MessageBox messenger>"->"push \"Center\"";
+    "push \"Center\""->"virtualinvoke <java.awt.Panel: void add(java.awt.Component,java.lang.Object)>";
+    "virtualinvoke <java.awt.Panel: void add(java.awt.Component,java.lang.Object)>"->"load.r $r32";
+    "load.r $r32"->"load.r r0";
+    "load.r r0"->"fieldget <LittleMan: Registers registers>";
+    "push \"South\""
+    "fieldget <LittleMan: Registers registers>"->"push \"South\"";
+    "push \"South\""->"virtualinvoke <java.awt.Panel: void add(java.awt.Component,java.lang.Object)>";
+    "virtualinvoke <java.awt.Panel: void add(java.awt.Component,java.lang.Object)>"->"load.r r0";
+    "load.r r0"->"new java.awt.Panel";
+    "new java.awt.Panel"->"dup1.r";
+    "dup1.r"->"specialinvoke <java.awt.Panel: void <init>()>";
+    "fieldput <LittleMan: java.awt.Panel buttonPanel>"
+    "specialinvoke <java.awt.Panel: void <init>()>"->"fieldput <LittleMan: java.awt.Panel buttonPanel>";
+    "fieldput <LittleMan: java.awt.Panel buttonPanel>"->"load.r r0";
+    "fieldget <LittleMan: java.awt.Panel buttonPanel>"
+    "load.r r0"->"fieldget <LittleMan: java.awt.Panel buttonPanel>";
+    "new java.awt.FlowLayout"
+    "fieldget <LittleMan: java.awt.Panel buttonPanel>"->"new java.awt.FlowLayout";
+    "new java.awt.FlowLayout"->"dup1.r";
+    "specialinvoke <java.awt.FlowLayout: void <init>()>"
+    "dup1.r"->"specialinvoke <java.awt.FlowLayout: void <init>()>";
+    "specialinvoke <java.awt.FlowLayout: void <init>()>"->"virtualinvoke <java.awt.Panel: void setLayout(java.awt.LayoutManager)>";
+    "virtualinvoke <java.awt.Panel: void setLayout(java.awt.LayoutManager)>"->"load.r r0";
+    "load.r r0"->"fieldget <LittleMan: java.awt.Panel buttonPanel>";
+    "staticget <LittleMan: java.awt.Color LIGHT_GREEN>"
+    "fieldget <LittleMan: java.awt.Panel buttonPanel>"->"staticget <LittleMan: java.awt.Color LIGHT_GREEN>";
+    "staticget <LittleMan: java.awt.Color LIGHT_GREEN>"->"virtualinvoke <java.awt.Panel: void setBackground(java.awt.Color)>";
+    "virtualinvoke <java.awt.Panel: void setBackground(java.awt.Color)>"->"load.r r0";
+    "push 6"
+    "load.r r0"->"push 6";
+    "newarray"
+    "push 6"->"newarray";
+    "fieldput <LittleMan: java.awt.Button[] buttons>"
+    "newarray"->"fieldput <LittleMan: java.awt.Button[] buttons>";
+    "fieldput <LittleMan: java.awt.Button[] buttons>"->"load.r r0";
+    "fieldget <LittleMan: java.awt.Button[] buttons>"
+    "load.r r0"->"fieldget <LittleMan: java.awt.Button[] buttons>";
+    "push 0"
+    "fieldget <LittleMan: java.awt.Button[] buttons>"->"push 0";
+    "new java.awt.Button"
+    "push 0"->"new java.awt.Button";
+    "new java.awt.Button"->"dup1.r";
+    "push \"Clear\""
+    "dup1.r"->"push \"Clear\"";
+    "specialinvoke <java.awt.Button: void <init>(java.lang.String)>"
+    "push \"Clear\""->"specialinvoke <java.awt.Button: void <init>(java.lang.String)>";
+    "arraywrite.r"
+    "specialinvoke <java.awt.Button: void <init>(java.lang.String)>"->"arraywrite.r";
+    "arraywrite.r"->"load.r r0";
+    "load.r r0"->"fieldget <LittleMan: java.awt.Button[] buttons>";
+    "push 1"
+    "fieldget <LittleMan: java.awt.Button[] buttons>"->"push 1";
+    "push 1"->"new java.awt.Button";
+    "new java.awt.Button"->"dup1.r";
+    "push \"Reset\""
+    "dup1.r"->"push \"Reset\"";
+    "push \"Reset\""->"specialinvoke <java.awt.Button: void <init>(java.lang.String)>";
+    "specialinvoke <java.awt.Button: void <init>(java.lang.String)>"->"arraywrite.r";
+    "arraywrite.r"->"load.r r0";
+    "load.r r0"->"fieldget <LittleMan: java.awt.Button[] buttons>";
+    "push 2"
+    "fieldget <LittleMan: java.awt.Button[] buttons>"->"push 2";
+    "push 2"->"new java.awt.Button";
+    "new java.awt.Button"->"dup1.r";
+    "push \"Run\""
+    "dup1.r"->"push \"Run\"";
+    "push \"Run\""->"specialinvoke <java.awt.Button: void <init>(java.lang.String)>";
+    "specialinvoke <java.awt.Button: void <init>(java.lang.String)>"->"arraywrite.r";
+    "arraywrite.r"->"load.r r0";
+    "load.r r0"->"fieldget <LittleMan: java.awt.Button[] buttons>";
+    "push 3"
+    "fieldget <LittleMan: java.awt.Button[] buttons>"->"push 3";
+    "push 3"->"new java.awt.Button";
+    "new java.awt.Button"->"dup1.r";
+    "push \"Slow\""
+    "dup1.r"->"push \"Slow\"";
+    "push \"Slow\""->"specialinvoke <java.awt.Button: void <init>(java.lang.String)>";
+    "specialinvoke <java.awt.Button: void <init>(java.lang.String)>"->"arraywrite.r";
+    "arraywrite.r"->"load.r r0";
+    "load.r r0"->"fieldget <LittleMan: java.awt.Button[] buttons>";
+    "push 4"
+    "fieldget <LittleMan: java.awt.Button[] buttons>"->"push 4";
+    "push 4"->"new java.awt.Button";
+    "new java.awt.Button"->"dup1.r";
+    "push \"Step\""
+    "dup1.r"->"push \"Step\"";
+    "push \"Step\""->"specialinvoke <java.awt.Button: void <init>(java.lang.String)>";
+    "specialinvoke <java.awt.Button: void <init>(java.lang.String)>"->"arraywrite.r";
+    "arraywrite.r"->"load.r r0";
+    "load.r r0"->"fieldget <LittleMan: java.awt.Button[] buttons>";
+    "push 5"
+    "fieldget <LittleMan: java.awt.Button[] buttons>"->"push 5";
+    "push 5"->"new java.awt.Button";
+    "new java.awt.Button"->"dup1.r";
+    "push \"Halt\""
+    "dup1.r"->"push \"Halt\"";
+    "push \"Halt\""->"specialinvoke <java.awt.Button: void <init>(java.lang.String)>";
+    "specialinvoke <java.awt.Button: void <init>(java.lang.String)>"->"arraywrite.r";
+    "arraywrite.r"->"push 0";
+    "store.i i0"
+    "push 0"->"store.i i0";
+    "goto load.i i0"
+    "store.i i0"->"goto load.i i0";
+    "load.i i0"
+    "goto load.i i0"->"load.i i0";
+    "load.i i0"->"push 6";
+    "ifcmplt.i load.r r0"
+    "push 6"->"ifcmplt.i load.r r0";
+    "ifcmplt.i load.r r0"->"load.r r0";
+    "load.r r0"->"new java.awt.BorderLayout";
+    "new java.awt.BorderLayout"->"dup1.r";
+    "dup1.r"->"specialinvoke <java.awt.BorderLayout: void <init>()>";
+    "virtualinvoke <LittleMan: void setLayout(java.awt.LayoutManager)>"
+    "specialinvoke <java.awt.BorderLayout: void <init>()>"->"virtualinvoke <LittleMan: void setLayout(java.awt.LayoutManager)>";
+    "virtualinvoke <LittleMan: void setLayout(java.awt.LayoutManager)>"->"load.r r0";
+    "load.r r0"->"staticget <LittleMan: java.awt.Color LIGHT_GREEN>";
+    "virtualinvoke <LittleMan: void setBackground(java.awt.Color)>"
+    "staticget <LittleMan: java.awt.Color LIGHT_GREEN>"->"virtualinvoke <LittleMan: void setBackground(java.awt.Color)>";
+    "virtualinvoke <LittleMan: void setBackground(java.awt.Color)>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <LittleMan: java.awt.Panel leftPanel>";
+    "fieldget <LittleMan: java.awt.Panel leftPanel>"->"push \"West\"";
+    "virtualinvoke <LittleMan: void add(java.awt.Component,java.lang.Object)>"
+    "push \"West\""->"virtualinvoke <LittleMan: void add(java.awt.Component,java.lang.Object)>";
+    "virtualinvoke <LittleMan: void add(java.awt.Component,java.lang.Object)>"->"load.r r0";
+    "load.r r0"->"load.r $r32";
+    "load.r $r32"->"push \"Center\"";
+    "push \"Center\""->"virtualinvoke <LittleMan: void add(java.awt.Component,java.lang.Object)>";
+    "virtualinvoke <LittleMan: void add(java.awt.Component,java.lang.Object)>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <LittleMan: java.awt.Panel buttonPanel>";
+    "fieldget <LittleMan: java.awt.Panel buttonPanel>"->"push \"South\"";
+    "push \"South\""->"virtualinvoke <LittleMan: void add(java.awt.Component,java.lang.Object)>";
+    "return"
+    "virtualinvoke <LittleMan: void add(java.awt.Component,java.lang.Object)>"->"return";
+    "ifcmplt.i load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <LittleMan: java.awt.Button[] buttons>";
+    "fieldget <LittleMan: java.awt.Button[] buttons>"->"load.i i0";
+    "arrayread.r"
+    "load.i i0"->"arrayread.r";
+    "arrayread.r"->"load.r r0";
+    "virtualinvoke <java.awt.Button: void addActionListener(java.awt.event.ActionListener)>"
+    "load.r r0"->"virtualinvoke <java.awt.Button: void addActionListener(java.awt.event.ActionListener)>";
+    "virtualinvoke <java.awt.Button: void addActionListener(java.awt.event.ActionListener)>"->"load.r r0";
+    "load.r r0"->"fieldget <LittleMan: java.awt.Panel buttonPanel>";
+    "fieldget <LittleMan: java.awt.Panel buttonPanel>"->"load.r r0";
+    "load.r r0"->"fieldget <LittleMan: java.awt.Button[] buttons>";
+    "fieldget <LittleMan: java.awt.Button[] buttons>"->"load.i i0";
+    "load.i i0"->"arrayread.r";
+    "virtualinvoke <java.awt.Panel: java.awt.Component add(java.awt.Component)>"
+    "arrayread.r"->"virtualinvoke <java.awt.Panel: java.awt.Component add(java.awt.Component)>";
+    "pop"
+    "virtualinvoke <java.awt.Panel: java.awt.Component add(java.awt.Component)>"->"pop";
+    "inc.i i0 1"
+    "pop"->"inc.i i0 1";
+}

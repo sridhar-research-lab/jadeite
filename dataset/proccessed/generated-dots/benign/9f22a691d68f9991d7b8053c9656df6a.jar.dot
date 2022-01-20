@@ -1,0 +1,135 @@
+digraph "" {
+    "r0 := @this: VncViewer"
+    "load.r r0"
+    "r0 := @this: VncViewer"->"load.r r0";
+    "virtualinvoke <VncViewer: void readParameters()>"
+    "load.r r0"->"virtualinvoke <VncViewer: void readParameters()>";
+    "virtualinvoke <VncViewer: void readParameters()>"->"load.r r0";
+    "staticput <VncViewer: java.applet.Applet refApplet>"
+    "load.r r0"->"staticput <VncViewer: java.applet.Applet refApplet>";
+    "staticput <VncViewer: java.applet.Applet refApplet>"->"load.r r0";
+    "fieldget <VncViewer: boolean inSeparateFrame>"
+    "load.r r0"->"fieldget <VncViewer: boolean inSeparateFrame>";
+    "ifeq load.r r0"
+    "fieldget <VncViewer: boolean inSeparateFrame>"->"ifeq load.r r0";
+    "ifeq load.r r0"->"load.r r0";
+    "new java.awt.Frame"
+    "load.r r0"->"new java.awt.Frame";
+    "dup1.r"
+    "new java.awt.Frame"->"dup1.r";
+    "push \"TightVNC\""
+    "dup1.r"->"push \"TightVNC\"";
+    "specialinvoke <java.awt.Frame: void <init>(java.lang.String)>"
+    "push \"TightVNC\""->"specialinvoke <java.awt.Frame: void <init>(java.lang.String)>";
+    "fieldput <VncViewer: java.awt.Frame vncFrame>"
+    "specialinvoke <java.awt.Frame: void <init>(java.lang.String)>"->"fieldput <VncViewer: java.awt.Frame vncFrame>";
+    "fieldput <VncViewer: java.awt.Frame vncFrame>"->"load.r r0";
+    "fieldget <VncViewer: boolean inAnApplet>"
+    "load.r r0"->"fieldget <VncViewer: boolean inAnApplet>";
+    "ifne load.r r0"
+    "fieldget <VncViewer: boolean inAnApplet>"->"ifne load.r r0";
+    "ifne load.r r0"->"load.r r0";
+    "fieldget <VncViewer: java.awt.Frame vncFrame>"
+    "load.r r0"->"fieldget <VncViewer: java.awt.Frame vncFrame>";
+    "push \"Center\""
+    "fieldget <VncViewer: java.awt.Frame vncFrame>"->"push \"Center\"";
+    "push \"Center\""->"load.r r0";
+    "virtualinvoke <java.awt.Container: java.awt.Component add(java.lang.String,java.awt.Component)>"
+    "load.r r0"->"virtualinvoke <java.awt.Container: java.awt.Component add(java.lang.String,java.awt.Component)>";
+    "pop"
+    "virtualinvoke <java.awt.Container: java.awt.Component add(java.lang.String,java.awt.Component)>"->"pop";
+    "pop"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <VncViewer: java.awt.Frame vncFrame>";
+    "fieldput <VncViewer: java.awt.Container vncContainer>"
+    "fieldget <VncViewer: java.awt.Frame vncFrame>"->"fieldput <VncViewer: java.awt.Container vncContainer>";
+    "goto load.r r0"
+    "fieldput <VncViewer: java.awt.Container vncContainer>"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "new java.lang.Object"
+    "load.r r0"->"new java.lang.Object";
+    "new java.lang.Object"->"dup1.r";
+    "specialinvoke <java.lang.Object: void <init>()>"
+    "dup1.r"->"specialinvoke <java.lang.Object: void <init>()>";
+    "fieldput <VncViewer: java.lang.Object recordingSync>"
+    "specialinvoke <java.lang.Object: void <init>()>"->"fieldput <VncViewer: java.lang.Object recordingSync>";
+    "fieldput <VncViewer: java.lang.Object recordingSync>"->"load.r r0";
+    "new OptionsFrame"
+    "load.r r0"->"new OptionsFrame";
+    "new OptionsFrame"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "specialinvoke <OptionsFrame: void <init>(VncViewer)>"
+    "load.r r0"->"specialinvoke <OptionsFrame: void <init>(VncViewer)>";
+    "fieldput <VncViewer: OptionsFrame options>"
+    "specialinvoke <OptionsFrame: void <init>(VncViewer)>"->"fieldput <VncViewer: OptionsFrame options>";
+    "fieldput <VncViewer: OptionsFrame options>"->"load.r r0";
+    "new ClipboardFrame"
+    "load.r r0"->"new ClipboardFrame";
+    "new ClipboardFrame"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "specialinvoke <ClipboardFrame: void <init>(VncViewer)>"
+    "load.r r0"->"specialinvoke <ClipboardFrame: void <init>(VncViewer)>";
+    "fieldput <VncViewer: ClipboardFrame clipboard>"
+    "specialinvoke <ClipboardFrame: void <init>(VncViewer)>"->"fieldput <VncViewer: ClipboardFrame clipboard>";
+    "staticinvoke <RecordingFrame: boolean checkSecurity()>"
+    "fieldput <VncViewer: ClipboardFrame clipboard>"->"staticinvoke <RecordingFrame: boolean checkSecurity()>";
+    "staticinvoke <RecordingFrame: boolean checkSecurity()>"->"ifeq load.r r0";
+    "ifeq load.r r0"->"load.r r0";
+    "new RecordingFrame"
+    "load.r r0"->"new RecordingFrame";
+    "new RecordingFrame"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "specialinvoke <RecordingFrame: void <init>(VncViewer)>"
+    "load.r r0"->"specialinvoke <RecordingFrame: void <init>(VncViewer)>";
+    "fieldput <VncViewer: RecordingFrame rec>"
+    "specialinvoke <RecordingFrame: void <init>(VncViewer)>"->"fieldput <VncViewer: RecordingFrame rec>";
+    "fieldput <VncViewer: RecordingFrame rec>"->"load.r r0";
+    "push null"
+    "load.r r0"->"push null";
+    "fieldput <VncViewer: java.lang.String sessionFileName>"
+    "push null"->"fieldput <VncViewer: java.lang.String sessionFileName>";
+    "fieldput <VncViewer: java.lang.String sessionFileName>"->"load.r r0";
+    "push 0"
+    "load.r r0"->"push 0";
+    "fieldput <VncViewer: boolean recordingActive>"
+    "push 0"->"fieldput <VncViewer: boolean recordingActive>";
+    "fieldput <VncViewer: boolean recordingActive>"->"load.r r0";
+    "load.r r0"->"push 0";
+    "fieldput <VncViewer: boolean recordingStatusChanged>"
+    "push 0"->"fieldput <VncViewer: boolean recordingStatusChanged>";
+    "fieldput <VncViewer: boolean recordingStatusChanged>"->"load.r r0";
+    "load.r r0"->"push null";
+    "fieldput <VncViewer: java.lang.String cursorUpdatesDef>"
+    "push null"->"fieldput <VncViewer: java.lang.String cursorUpdatesDef>";
+    "fieldput <VncViewer: java.lang.String cursorUpdatesDef>"->"load.r r0";
+    "load.r r0"->"push null";
+    "fieldput <VncViewer: java.lang.String eightBitColorsDef>"
+    "push null"->"fieldput <VncViewer: java.lang.String eightBitColorsDef>";
+    "fieldput <VncViewer: java.lang.String eightBitColorsDef>"->"load.r r0";
+    "load.r r0"->"fieldget <VncViewer: boolean inSeparateFrame>";
+    "fieldget <VncViewer: boolean inSeparateFrame>"->"ifeq load.r r0";
+    "ifeq load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <VncViewer: java.awt.Frame vncFrame>";
+    "fieldget <VncViewer: java.awt.Frame vncFrame>"->"load.r r0";
+    "virtualinvoke <java.awt.Window: void addWindowListener(java.awt.event.WindowListener)>"
+    "load.r r0"->"virtualinvoke <java.awt.Window: void addWindowListener(java.awt.event.WindowListener)>";
+    "virtualinvoke <java.awt.Window: void addWindowListener(java.awt.event.WindowListener)>"->"load.r r0";
+    "new java.lang.Thread"
+    "load.r r0"->"new java.lang.Thread";
+    "new java.lang.Thread"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "specialinvoke <java.lang.Thread: void <init>(java.lang.Runnable)>"
+    "load.r r0"->"specialinvoke <java.lang.Thread: void <init>(java.lang.Runnable)>";
+    "fieldput <VncViewer: java.lang.Thread rfbThread>"
+    "specialinvoke <java.lang.Thread: void <init>(java.lang.Runnable)>"->"fieldput <VncViewer: java.lang.Thread rfbThread>";
+    "fieldput <VncViewer: java.lang.Thread rfbThread>"->"load.r r0";
+    "fieldget <VncViewer: java.lang.Thread rfbThread>"
+    "load.r r0"->"fieldget <VncViewer: java.lang.Thread rfbThread>";
+    "virtualinvoke <java.lang.Thread: void start()>"
+    "fieldget <VncViewer: java.lang.Thread rfbThread>"->"virtualinvoke <java.lang.Thread: void start()>";
+    "return"
+    "virtualinvoke <java.lang.Thread: void start()>"->"return";
+    "ifeq load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"fieldput <VncViewer: java.awt.Container vncContainer>";
+}

@@ -1,0 +1,238 @@
+digraph "" {
+    "r0 := @this: ImageFader"
+    "load.r r0"
+    "r0 := @this: ImageFader"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "virtualinvoke <java.awt.Component: java.awt.Dimension size()>"
+    "load.r r0"->"virtualinvoke <java.awt.Component: java.awt.Dimension size()>";
+    "fieldget <java.awt.Dimension: int width>"
+    "virtualinvoke <java.awt.Component: java.awt.Dimension size()>"->"fieldget <java.awt.Dimension: int width>";
+    "fieldput <ImageFader: int w>"
+    "fieldget <java.awt.Dimension: int width>"->"fieldput <ImageFader: int w>";
+    "fieldput <ImageFader: int w>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"virtualinvoke <java.awt.Component: java.awt.Dimension size()>";
+    "fieldget <java.awt.Dimension: int height>"
+    "virtualinvoke <java.awt.Component: java.awt.Dimension size()>"->"fieldget <java.awt.Dimension: int height>";
+    "fieldput <ImageFader: int h>"
+    "fieldget <java.awt.Dimension: int height>"->"fieldput <ImageFader: int h>";
+    "staticget <java.lang.System: java.io.PrintStream out>"
+    "fieldput <ImageFader: int h>"->"staticget <java.lang.System: java.io.PrintStream out>";
+    "staticget <java.lang.System: java.io.PrintStream out>"->"load.r r0";
+    "virtualinvoke <ImageFader: java.lang.String getAppletInfo()>"
+    "load.r r0"->"virtualinvoke <ImageFader: java.lang.String getAppletInfo()>";
+    "virtualinvoke <java.io.PrintStream: void println(java.lang.String)>"
+    "virtualinvoke <ImageFader: java.lang.String getAppletInfo()>"->"virtualinvoke <java.io.PrintStream: void println(java.lang.String)>";
+    "push 10"
+    "virtualinvoke <java.io.PrintStream: void println(java.lang.String)>"->"push 10";
+    "newarray"
+    "push 10"->"newarray";
+    "store.r $r42"
+    "newarray"->"store.r $r42";
+    "push 0"
+    "store.r $r42"->"push 0";
+    "store.i i11"
+    "push 0"->"store.i i11";
+    "store.i i11"->"load.r r0";
+    "new java.awt.MediaTracker"
+    "load.r r0"->"new java.awt.MediaTracker";
+    "dup1.r"
+    "new java.awt.MediaTracker"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "specialinvoke <java.awt.MediaTracker: void <init>(java.awt.Component)>"
+    "load.r r0"->"specialinvoke <java.awt.MediaTracker: void <init>(java.awt.Component)>";
+    "fieldput <ImageFader: java.awt.MediaTracker t>"
+    "specialinvoke <java.awt.MediaTracker: void <init>(java.awt.Component)>"->"fieldput <ImageFader: java.awt.MediaTracker t>";
+    "inc.i i11 1"
+    "fieldput <ImageFader: java.awt.MediaTracker t>"->"inc.i i11 1";
+    "load.r $r42"
+    "inc.i i11 1"->"load.r $r42";
+    "load.i i11"
+    "load.r $r42"->"load.i i11";
+    "push 1"
+    "load.i i11"->"push 1";
+    "sub.i"
+    "push 1"->"sub.i";
+    "sub.i"->"load.r r0";
+    "new java.lang.StringBuffer"
+    "load.r r0"->"new java.lang.StringBuffer";
+    "new java.lang.StringBuffer"->"dup1.r";
+    "specialinvoke <java.lang.StringBuffer: void <init>()>"
+    "dup1.r"->"specialinvoke <java.lang.StringBuffer: void <init>()>";
+    "push \"logo\""
+    "specialinvoke <java.lang.StringBuffer: void <init>()>"->"push \"logo\"";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"
+    "push \"logo\""->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"load.i i11";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(int)>"
+    "load.i i11"->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(int)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>"
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(int)>"->"virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"
+    "virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>"->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "arraywrite.r"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"arraywrite.r";
+    "arraywrite.r"->"staticget <java.lang.System: java.io.PrintStream out>";
+    "staticget <java.lang.System: java.io.PrintStream out>"->"new java.lang.StringBuffer";
+    "new java.lang.StringBuffer"->"dup1.r";
+    "dup1.r"->"specialinvoke <java.lang.StringBuffer: void <init>()>";
+    "push \">\""
+    "specialinvoke <java.lang.StringBuffer: void <init>()>"->"push \">\"";
+    "push \">\""->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"load.r $r42";
+    "load.r $r42"->"load.i i11";
+    "load.i i11"->"push 1";
+    "push 1"->"sub.i";
+    "arrayread.r"
+    "sub.i"->"arrayread.r";
+    "arrayread.r"->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>"->"virtualinvoke <java.io.PrintStream: void println(java.lang.String)>";
+    "virtualinvoke <java.io.PrintStream: void println(java.lang.String)>"->"load.r $r42";
+    "load.r $r42"->"load.i i11";
+    "load.i i11"->"push 1";
+    "push 1"->"sub.i";
+    "sub.i"->"arrayread.r";
+    "ifnull load.r r0"
+    "arrayread.r"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.i i11";
+    "load.i i11"->"push 10";
+    "ifcmplt.i inc.i i11 1"
+    "push 10"->"ifcmplt.i inc.i i11 1";
+    "ifcmplt.i inc.i i11 1"->"load.r r0";
+    "push \"fade\""
+    "load.r r0"->"push \"fade\"";
+    "push \"fade\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "store.r i11"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"store.r i11";
+    "store.r i11"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "new java.net.URL"
+    "load.r r0"->"new java.net.URL";
+    "new java.net.URL"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "virtualinvoke <java.applet.Applet: java.net.URL getDocumentBase()>"
+    "load.r r0"->"virtualinvoke <java.applet.Applet: java.net.URL getDocumentBase()>";
+    "virtualinvoke <java.applet.Applet: java.net.URL getDocumentBase()>"->"load.r $r42";
+    "load.r $r42"->"push 0";
+    "push 0"->"arrayread.r";
+    "specialinvoke <java.net.URL: void <init>(java.net.URL,java.lang.String)>"
+    "arrayread.r"->"specialinvoke <java.net.URL: void <init>(java.net.URL,java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.awt.Image getImage(java.net.URL)>"
+    "specialinvoke <java.net.URL: void <init>(java.net.URL,java.lang.String)>"->"virtualinvoke <java.applet.Applet: java.awt.Image getImage(java.net.URL)>";
+    "fieldput <ImageFader: java.awt.Image textureImg>"
+    "virtualinvoke <java.applet.Applet: java.awt.Image getImage(java.net.URL)>"->"fieldput <ImageFader: java.awt.Image textureImg>";
+    "fieldput <ImageFader: java.awt.Image textureImg>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"new java.net.URL";
+    "new java.net.URL"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "load.r r0"->"virtualinvoke <java.applet.Applet: java.net.URL getDocumentBase()>";
+    "virtualinvoke <java.applet.Applet: java.net.URL getDocumentBase()>"->"load.r $r42";
+    "load.r $r42"->"push 1";
+    "push 1"->"arrayread.r";
+    "arrayread.r"->"specialinvoke <java.net.URL: void <init>(java.net.URL,java.lang.String)>";
+    "specialinvoke <java.net.URL: void <init>(java.net.URL,java.lang.String)>"->"virtualinvoke <java.applet.Applet: java.awt.Image getImage(java.net.URL)>";
+    "fieldput <ImageFader: java.awt.Image texture2Img>"
+    "virtualinvoke <java.applet.Applet: java.awt.Image getImage(java.net.URL)>"->"fieldput <ImageFader: java.awt.Image texture2Img>";
+    "fieldput <ImageFader: java.awt.Image texture2Img>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"new java.net.URL";
+    "new java.net.URL"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "load.r r0"->"virtualinvoke <java.applet.Applet: java.net.URL getDocumentBase()>";
+    "load.r i11"
+    "virtualinvoke <java.applet.Applet: java.net.URL getDocumentBase()>"->"load.r i11";
+    "load.r i11"->"specialinvoke <java.net.URL: void <init>(java.net.URL,java.lang.String)>";
+    "specialinvoke <java.net.URL: void <init>(java.net.URL,java.lang.String)>"->"virtualinvoke <java.applet.Applet: java.awt.Image getImage(java.net.URL)>";
+    "fieldput <ImageFader: java.awt.Image fadeImg>"
+    "virtualinvoke <java.applet.Applet: java.awt.Image getImage(java.net.URL)>"->"fieldput <ImageFader: java.awt.Image fadeImg>";
+    "goto load.r r0"
+    "fieldput <ImageFader: java.awt.Image fadeImg>"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "fieldget <ImageFader: java.awt.MediaTracker t>"
+    "load.r r0"->"fieldget <ImageFader: java.awt.MediaTracker t>";
+    "fieldget <ImageFader: java.awt.MediaTracker t>"->"load.r r0";
+    "fieldget <ImageFader: java.awt.Image textureImg>"
+    "load.r r0"->"fieldget <ImageFader: java.awt.Image textureImg>";
+    "fieldget <ImageFader: java.awt.Image textureImg>"->"push 1";
+    "virtualinvoke <java.awt.MediaTracker: void addImage(java.awt.Image,int)>"
+    "push 1"->"virtualinvoke <java.awt.MediaTracker: void addImage(java.awt.Image,int)>";
+    "virtualinvoke <java.awt.MediaTracker: void addImage(java.awt.Image,int)>"->"load.r r0";
+    "load.r r0"->"fieldget <ImageFader: java.awt.MediaTracker t>";
+    "fieldget <ImageFader: java.awt.MediaTracker t>"->"load.r r0";
+    "fieldget <ImageFader: java.awt.Image texture2Img>"
+    "load.r r0"->"fieldget <ImageFader: java.awt.Image texture2Img>";
+    "fieldget <ImageFader: java.awt.Image texture2Img>"->"push 1";
+    "push 1"->"virtualinvoke <java.awt.MediaTracker: void addImage(java.awt.Image,int)>";
+    "virtualinvoke <java.awt.MediaTracker: void addImage(java.awt.Image,int)>"->"load.r r0";
+    "load.r r0"->"fieldget <ImageFader: java.awt.MediaTracker t>";
+    "fieldget <ImageFader: java.awt.MediaTracker t>"->"load.r r0";
+    "fieldget <ImageFader: java.awt.Image fadeImg>"
+    "load.r r0"->"fieldget <ImageFader: java.awt.Image fadeImg>";
+    "fieldget <ImageFader: java.awt.Image fadeImg>"->"push 1";
+    "push 1"->"virtualinvoke <java.awt.MediaTracker: void addImage(java.awt.Image,int)>";
+    "virtualinvoke <java.awt.MediaTracker: void addImage(java.awt.Image,int)>"->"load.r r0";
+    "push 256"
+    "load.r r0"->"push 256";
+    "push 256"->"newarray";
+    "fieldput <ImageFader: int[] light>"
+    "newarray"->"fieldput <ImageFader: int[] light>";
+    "fieldput <ImageFader: int[] light>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "fieldget <ImageFader: int w>"
+    "load.r r0"->"fieldget <ImageFader: int w>";
+    "fieldget <ImageFader: int w>"->"load.r r0";
+    "fieldget <ImageFader: int h>"
+    "load.r r0"->"fieldget <ImageFader: int h>";
+    "mul.i"
+    "fieldget <ImageFader: int h>"->"mul.i";
+    "mul.i"->"newarray";
+    "fieldput <ImageFader: int[] Screen>"
+    "newarray"->"fieldput <ImageFader: int[] Screen>";
+    "fieldput <ImageFader: int[] Screen>"->"load.r r0";
+    "new java.awt.image.DirectColorModel"
+    "load.r r0"->"new java.awt.image.DirectColorModel";
+    "new java.awt.image.DirectColorModel"->"dup1.r";
+    "push 32"
+    "dup1.r"->"push 32";
+    "push 16711680"
+    "push 32"->"push 16711680";
+    "push 65280"
+    "push 16711680"->"push 65280";
+    "push 255"
+    "push 65280"->"push 255";
+    "push -16777216"
+    "push 255"->"push -16777216";
+    "specialinvoke <java.awt.image.DirectColorModel: void <init>(int,int,int,int,int)>"
+    "push -16777216"->"specialinvoke <java.awt.image.DirectColorModel: void <init>(int,int,int,int,int)>";
+    "fieldput <ImageFader: java.awt.image.ColorModel model>"
+    "specialinvoke <java.awt.image.DirectColorModel: void <init>(int,int,int,int,int)>"->"fieldput <ImageFader: java.awt.image.ColorModel model>";
+    "fieldput <ImageFader: java.awt.image.ColorModel model>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "new java.awt.image.MemoryImageSource"
+    "load.r r0"->"new java.awt.image.MemoryImageSource";
+    "new java.awt.image.MemoryImageSource"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "load.r r0"->"fieldget <ImageFader: int w>";
+    "fieldget <ImageFader: int w>"->"load.r r0";
+    "load.r r0"->"fieldget <ImageFader: int h>";
+    "fieldget <ImageFader: int h>"->"load.r r0";
+    "fieldget <ImageFader: java.awt.image.ColorModel model>"
+    "load.r r0"->"fieldget <ImageFader: java.awt.image.ColorModel model>";
+    "fieldget <ImageFader: java.awt.image.ColorModel model>"->"load.r r0";
+    "fieldget <ImageFader: int[] Screen>"
+    "load.r r0"->"fieldget <ImageFader: int[] Screen>";
+    "fieldget <ImageFader: int[] Screen>"->"push 0";
+    "push 0"->"load.r r0";
+    "load.r r0"->"fieldget <ImageFader: int w>";
+    "specialinvoke <java.awt.image.MemoryImageSource: void <init>(int,int,java.awt.image.ColorModel,int[],int,int)>"
+    "fieldget <ImageFader: int w>"->"specialinvoke <java.awt.image.MemoryImageSource: void <init>(int,int,java.awt.image.ColorModel,int[],int,int)>";
+    "virtualinvoke <java.awt.Component: java.awt.Image createImage(java.awt.image.ImageProducer)>"
+    "specialinvoke <java.awt.image.MemoryImageSource: void <init>(int,int,java.awt.image.ColorModel,int[],int,int)>"->"virtualinvoke <java.awt.Component: java.awt.Image createImage(java.awt.image.ImageProducer)>";
+    "fieldput <ImageFader: java.awt.Image img>"
+    "virtualinvoke <java.awt.Component: java.awt.Image createImage(java.awt.image.ImageProducer)>"->"fieldput <ImageFader: java.awt.Image img>";
+    "return"
+    "fieldput <ImageFader: java.awt.Image img>"->"return";
+    "virtualinvoke <java.applet.Applet: java.awt.Image getImage(java.net.URL)>"->"store.r $r42";
+}

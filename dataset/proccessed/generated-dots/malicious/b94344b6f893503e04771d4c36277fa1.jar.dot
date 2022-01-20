@@ -1,0 +1,20 @@
+digraph "" {
+    "r0 := @this: JavaPlugin"
+    "new java.lang.Thread"
+    "r0 := @this: JavaPlugin"->"new java.lang.Thread";
+    "dup1.r"
+    "new java.lang.Thread"->"dup1.r";
+    "new JavaPlugin$1"
+    "dup1.r"->"new JavaPlugin$1";
+    "new JavaPlugin$1"->"dup1.r";
+    "load.r r0"
+    "dup1.r"->"load.r r0";
+    "specialinvoke <JavaPlugin$1: void <init>(JavaPlugin)>"
+    "load.r r0"->"specialinvoke <JavaPlugin$1: void <init>(JavaPlugin)>";
+    "specialinvoke <java.lang.Thread: void <init>(java.lang.Runnable)>"
+    "specialinvoke <JavaPlugin$1: void <init>(JavaPlugin)>"->"specialinvoke <java.lang.Thread: void <init>(java.lang.Runnable)>";
+    "virtualinvoke <java.lang.Thread: void start()>"
+    "specialinvoke <java.lang.Thread: void <init>(java.lang.Runnable)>"->"virtualinvoke <java.lang.Thread: void start()>";
+    "return"
+    "virtualinvoke <java.lang.Thread: void start()>"->"return";
+}

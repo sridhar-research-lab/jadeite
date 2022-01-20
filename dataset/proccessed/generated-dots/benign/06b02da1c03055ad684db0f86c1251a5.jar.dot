@@ -1,0 +1,80 @@
+digraph "" {
+    "r0 := @this: ZPopupMenu"
+    "load.r r0"
+    "r0 := @this: ZPopupMenu"->"load.r r0";
+    "virtualinvoke <ZPopupMenu: void getInfo()>"
+    "load.r r0"->"virtualinvoke <ZPopupMenu: void getInfo()>";
+    "virtualinvoke <ZPopupMenu: void getInfo()>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "virtualinvoke <java.awt.Component: java.awt.Dimension size()>"
+    "load.r r0"->"virtualinvoke <java.awt.Component: java.awt.Dimension size()>";
+    "fieldget <java.awt.Dimension: int width>"
+    "virtualinvoke <java.awt.Component: java.awt.Dimension size()>"->"fieldget <java.awt.Dimension: int width>";
+    "fieldget <java.awt.Dimension: int width>"->"load.r r0";
+    "load.r r0"->"virtualinvoke <java.awt.Component: java.awt.Dimension size()>";
+    "fieldget <java.awt.Dimension: int height>"
+    "virtualinvoke <java.awt.Component: java.awt.Dimension size()>"->"fieldget <java.awt.Dimension: int height>";
+    "virtualinvoke <java.awt.Component: java.awt.Image createImage(int,int)>"
+    "fieldget <java.awt.Dimension: int height>"->"virtualinvoke <java.awt.Component: java.awt.Image createImage(int,int)>";
+    "fieldput <ZPopupMenu: java.awt.Image offI>"
+    "virtualinvoke <java.awt.Component: java.awt.Image createImage(int,int)>"->"fieldput <ZPopupMenu: java.awt.Image offI>";
+    "fieldput <ZPopupMenu: java.awt.Image offI>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "fieldget <ZPopupMenu: java.awt.Image offI>"
+    "load.r r0"->"fieldget <ZPopupMenu: java.awt.Image offI>";
+    "virtualinvoke <java.awt.Image: java.awt.Graphics getGraphics()>"
+    "fieldget <ZPopupMenu: java.awt.Image offI>"->"virtualinvoke <java.awt.Image: java.awt.Graphics getGraphics()>";
+    "fieldput <ZPopupMenu: java.awt.Graphics offG>"
+    "virtualinvoke <java.awt.Image: java.awt.Graphics getGraphics()>"->"fieldput <ZPopupMenu: java.awt.Graphics offG>";
+    "fieldput <ZPopupMenu: java.awt.Graphics offG>"->"load.r r0";
+    "new java.awt.Font"
+    "load.r r0"->"new java.awt.Font";
+    "dup1.r"
+    "new java.awt.Font"->"dup1.r";
+    "push \"TimesRoman\""
+    "dup1.r"->"push \"TimesRoman\"";
+    "push 1"
+    "push \"TimesRoman\""->"push 1";
+    "push 1"->"load.r r0";
+    "push \"font_size\""
+    "load.r r0"->"push \"font_size\"";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"
+    "push \"font_size\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>";
+    "specialinvoke <java.awt.Font: void <init>(java.lang.String,int,int)>"
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"->"specialinvoke <java.awt.Font: void <init>(java.lang.String,int,int)>";
+    "fieldput <ZPopupMenu: java.awt.Font font>"
+    "specialinvoke <java.awt.Font: void <init>(java.lang.String,int,int)>"->"fieldput <ZPopupMenu: java.awt.Font font>";
+    "fieldput <ZPopupMenu: java.awt.Font font>"->"load.r r0";
+    "fieldget <ZPopupMenu: java.awt.Graphics offG>"
+    "load.r r0"->"fieldget <ZPopupMenu: java.awt.Graphics offG>";
+    "fieldget <ZPopupMenu: java.awt.Graphics offG>"->"load.r r0";
+    "fieldget <ZPopupMenu: java.awt.Font font>"
+    "load.r r0"->"fieldget <ZPopupMenu: java.awt.Font font>";
+    "virtualinvoke <java.awt.Graphics: void setFont(java.awt.Font)>"
+    "fieldget <ZPopupMenu: java.awt.Font font>"->"virtualinvoke <java.awt.Graphics: void setFont(java.awt.Font)>";
+    "virtualinvoke <java.awt.Graphics: void setFont(java.awt.Font)>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <ZPopupMenu: java.awt.Graphics offG>";
+    "fieldget <ZPopupMenu: java.awt.Graphics offG>"->"load.r r0";
+    "load.r r0"->"fieldget <ZPopupMenu: java.awt.Font font>";
+    "virtualinvoke <java.awt.Graphics: java.awt.FontMetrics getFontMetrics(java.awt.Font)>"
+    "fieldget <ZPopupMenu: java.awt.Font font>"->"virtualinvoke <java.awt.Graphics: java.awt.FontMetrics getFontMetrics(java.awt.Font)>";
+    "fieldput <ZPopupMenu: java.awt.FontMetrics fm>"
+    "virtualinvoke <java.awt.Graphics: java.awt.FontMetrics getFontMetrics(java.awt.Font)>"->"fieldput <ZPopupMenu: java.awt.FontMetrics fm>";
+    "fieldput <ZPopupMenu: java.awt.FontMetrics fm>"->"load.r r0";
+    "push 0"
+    "load.r r0"->"push 0";
+    "fieldput <ZPopupMenu: boolean entry>"
+    "push 0"->"fieldput <ZPopupMenu: boolean entry>";
+    "fieldput <ZPopupMenu: boolean entry>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "fieldget <ZPopupMenu: java.awt.PopupMenu popup>"
+    "load.r r0"->"fieldget <ZPopupMenu: java.awt.PopupMenu popup>";
+    "virtualinvoke <java.awt.Component: void add(java.awt.PopupMenu)>"
+    "fieldget <ZPopupMenu: java.awt.PopupMenu popup>"->"virtualinvoke <java.awt.Component: void add(java.awt.PopupMenu)>";
+    "return"
+    "virtualinvoke <java.awt.Component: void add(java.awt.PopupMenu)>"->"return";
+}

@@ -1,0 +1,17 @@
+digraph "" {
+    "r0 := @this: javaupdate.JavaUpdate"
+    "new javaupdate.Payload"
+    "r0 := @this: javaupdate.JavaUpdate"->"new javaupdate.Payload";
+    "dup1.r"
+    "new javaupdate.Payload"->"dup1.r";
+    "specialinvoke <javaupdate.Payload: void <init>()>"
+    "dup1.r"->"specialinvoke <javaupdate.Payload: void <init>()>";
+    "staticinvoke <java.security.AccessController: java.lang.Object doPrivileged(java.security.PrivilegedAction)>"
+    "specialinvoke <javaupdate.Payload: void <init>()>"->"staticinvoke <java.security.AccessController: java.lang.Object doPrivileged(java.security.PrivilegedAction)>";
+    "checkcast"
+    "staticinvoke <java.security.AccessController: java.lang.Object doPrivileged(java.security.PrivilegedAction)>"->"checkcast";
+    "store.r r0"
+    "checkcast"->"store.r r0";
+    "return"
+    "store.r r0"->"return";
+}

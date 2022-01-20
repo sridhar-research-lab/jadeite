@@ -1,0 +1,158 @@
+digraph "" {
+    "r0 := @this: xpl.xplii"
+    "load.r r0"
+    "r0 := @this: xpl.xplii"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "push \"percentX\""
+    "load.r r0"->"push \"percentX\"";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"
+    "push \"percentX\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>";
+    "fieldput <xpl.xplii: int pX>"
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"->"fieldput <xpl.xplii: int pX>";
+    "fieldput <xpl.xplii: int pX>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "push \"percentY\""
+    "load.r r0"->"push \"percentY\"";
+    "push \"percentY\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>";
+    "fieldput <xpl.xplii: int pY>"
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"->"fieldput <xpl.xplii: int pY>";
+    "fieldput <xpl.xplii: int pY>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "push \"preset\""
+    "load.r r0"->"push \"preset\"";
+    "push \"preset\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>";
+    "fieldput <xpl.xplii: int extPreset>"
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"->"fieldput <xpl.xplii: int extPreset>";
+    "fieldput <xpl.xplii: int extPreset>"->"load.r r0";
+    "push 10"
+    "load.r r0"->"push 10";
+    "push 10"->"load.r r0";
+    "fieldget <xpl.xplii: int pX>"
+    "load.r r0"->"fieldget <xpl.xplii: int pX>";
+    "push 100"
+    "fieldget <xpl.xplii: int pX>"->"push 100";
+    "staticinvoke <java.lang.Math: int min(int,int)>"
+    "push 100"->"staticinvoke <java.lang.Math: int min(int,int)>";
+    "staticinvoke <java.lang.Math: int max(int,int)>"
+    "staticinvoke <java.lang.Math: int min(int,int)>"->"staticinvoke <java.lang.Math: int max(int,int)>";
+    "staticinvoke <java.lang.Math: int max(int,int)>"->"fieldput <xpl.xplii: int pX>";
+    "fieldput <xpl.xplii: int pX>"->"load.r r0";
+    "load.r r0"->"push 10";
+    "push 10"->"load.r r0";
+    "fieldget <xpl.xplii: int pY>"
+    "load.r r0"->"fieldget <xpl.xplii: int pY>";
+    "fieldget <xpl.xplii: int pY>"->"push 100";
+    "push 100"->"staticinvoke <java.lang.Math: int min(int,int)>";
+    "staticinvoke <java.lang.Math: int min(int,int)>"->"staticinvoke <java.lang.Math: int max(int,int)>";
+    "staticinvoke <java.lang.Math: int max(int,int)>"->"fieldput <xpl.xplii: int pY>";
+    "goto load.r r0"
+    "fieldput <xpl.xplii: int pY>"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "specialinvoke <xpl.xplii: void jbInit()>"
+    "load.r r0"->"specialinvoke <xpl.xplii: void jbInit()>";
+    "specialinvoke <xpl.xplii: void jbInit()>"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "fieldget <xpl.xplii: xpl.XplView xpv>"
+    "load.r r0"->"fieldget <xpl.xplii: xpl.XplView xpv>";
+    "ifnull load.r r0"
+    "fieldget <xpl.xplii: xpl.XplView xpv>"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <xpl.xplii: xpl.XplView xpv>";
+    "virtualinvoke <xpl.XplView: void stop()>"
+    "fieldget <xpl.xplii: xpl.XplView xpv>"->"virtualinvoke <xpl.XplView: void stop()>";
+    "virtualinvoke <xpl.XplView: void stop()>"->"load.r r0";
+    "load.r r0"->"fieldget <xpl.xplii: xpl.XplView xpv>";
+    "fieldget <xpl.xplii: xpl.XplView xpv>"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r r0";
+    "push null"
+    "load.r r0"->"push null";
+    "fieldput <xpl.xplii: xpl.XplView xpv>"
+    "push null"->"fieldput <xpl.xplii: xpl.XplView xpv>";
+    "fieldput <xpl.xplii: xpl.XplView xpv>"->"load.r r0";
+    "new xpl.XplView"
+    "load.r r0"->"new xpl.XplView";
+    "dup1.r"
+    "new xpl.XplView"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "push 2"
+    "load.r r0"->"push 2";
+    "push 2"->"push 2";
+    "push 2"->"load.r r0";
+    "fieldget <xpl.xplii: int appW>"
+    "load.r r0"->"fieldget <xpl.xplii: int appW>";
+    "push 4"
+    "fieldget <xpl.xplii: int appW>"->"push 4";
+    "sub.i"
+    "push 4"->"sub.i";
+    "sub.i"->"load.r r0";
+    "load.r r0"->"fieldget <xpl.xplii: int pX>";
+    "mul.i"
+    "fieldget <xpl.xplii: int pX>"->"mul.i";
+    "i2d"
+    "mul.i"->"i2d";
+    "push 100.0"
+    "i2d"->"push 100.0";
+    "div.d"
+    "push 100.0"->"div.d";
+    "d2i"
+    "div.d"->"d2i";
+    "d2i"->"load.r r0";
+    "fieldget <xpl.xplii: int appH>"
+    "load.r r0"->"fieldget <xpl.xplii: int appH>";
+    "fieldget <xpl.xplii: int appH>"->"push 4";
+    "push 4"->"sub.i";
+    "sub.i"->"load.r r0";
+    "load.r r0"->"fieldget <xpl.xplii: int pY>";
+    "fieldget <xpl.xplii: int pY>"->"mul.i";
+    "mul.i"->"i2d";
+    "i2d"->"push 100.0";
+    "push 100.0"->"div.d";
+    "div.d"->"d2i";
+    "d2i"->"load.r r0";
+    "load.r r0"->"fieldget <xpl.xplii: int appW>";
+    "fieldget <xpl.xplii: int appW>"->"push 4";
+    "push 4"->"sub.i";
+    "sub.i"->"load.r r0";
+    "load.r r0"->"fieldget <xpl.xplii: int appH>";
+    "fieldget <xpl.xplii: int appH>"->"push 4";
+    "push 4"->"sub.i";
+    "specialinvoke <xpl.XplView: void <init>(java.applet.Applet,int,int,int,int,int,int)>"
+    "sub.i"->"specialinvoke <xpl.XplView: void <init>(java.applet.Applet,int,int,int,int,int,int)>";
+    "specialinvoke <xpl.XplView: void <init>(java.applet.Applet,int,int,int,int,int,int)>"->"fieldput <xpl.xplii: xpl.XplView xpv>";
+    "fieldput <xpl.xplii: xpl.XplView xpv>"->"load.r r0";
+    "load.r r0"->"fieldget <xpl.xplii: xpl.XplView xpv>";
+    "push 1"
+    "fieldget <xpl.xplii: xpl.XplView xpv>"->"push 1";
+    "fieldput <xpl.XplView: boolean callStart>"
+    "push 1"->"fieldput <xpl.XplView: boolean callStart>";
+    "fieldput <xpl.XplView: boolean callStart>"->"load.r r0";
+    "load.r r0"->"fieldget <xpl.xplii: xpl.XplView xpv>";
+    "push 0"
+    "fieldget <xpl.xplii: xpl.XplView xpv>"->"push 0";
+    "fieldput <xpl.XplView: int stepsBeforeNew>"
+    "push 0"->"fieldput <xpl.XplView: int stepsBeforeNew>";
+    "fieldput <xpl.XplView: int stepsBeforeNew>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "fieldget <xpl.xplii: java.lang.String[] paramsStr>"
+    "load.r r0"->"fieldget <xpl.xplii: java.lang.String[] paramsStr>";
+    "fieldget <xpl.xplii: java.lang.String[] paramsStr>"->"load.r r0";
+    "fieldget <xpl.xplii: int presetId>"
+    "load.r r0"->"fieldget <xpl.xplii: int presetId>";
+    "arrayread.r"
+    "fieldget <xpl.xplii: int presetId>"->"arrayread.r";
+    "virtualinvoke <xpl.xplii: void initByStr(java.lang.String)>"
+    "arrayread.r"->"virtualinvoke <xpl.xplii: void initByStr(java.lang.String)>";
+    "virtualinvoke <xpl.xplii: void initByStr(java.lang.String)>"->"load.r r0";
+    "load.r r0"->"fieldget <xpl.xplii: xpl.XplView xpv>";
+    "virtualinvoke <xpl.XplView: void start()>"
+    "fieldget <xpl.xplii: xpl.XplView xpv>"->"virtualinvoke <xpl.XplView: void start()>";
+    "return"
+    "virtualinvoke <xpl.XplView: void start()>"->"return";
+    "store.r $r13"
+    "specialinvoke <xpl.xplii: void jbInit()>"->"store.r $r13";
+    "staticinvoke <java.lang.Math: int max(int,int)>"->"store.r $r13";
+}

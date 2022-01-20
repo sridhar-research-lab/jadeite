@@ -1,0 +1,40 @@
+digraph "" {
+    "r0 := @this: Esia"
+    "new java.lang.String"
+    "r0 := @this: Esia"->"new java.lang.String";
+    "specialinvoke <java.lang.String: void <init>()>"
+    "new java.lang.String"->"specialinvoke <java.lang.String: void <init>()>";
+    "new Mol"
+    "specialinvoke <java.lang.String: void <init>()>"->"new Mol";
+    "specialinvoke <Mol: void <init>()>"
+    "new Mol"->"specialinvoke <Mol: void <init>()>";
+    "new Bar"
+    "specialinvoke <Mol: void <init>()>"->"new Bar";
+    "dup1.r"
+    "new Bar"->"dup1.r";
+    "specialinvoke <Bar: void <init>()>"
+    "dup1.r"->"specialinvoke <Bar: void <init>()>";
+    "virtualinvoke <Bar: void Bar()>"
+    "specialinvoke <Bar: void <init>()>"->"virtualinvoke <Bar: void Bar()>";
+    "load.r r0"
+    "virtualinvoke <Bar: void Bar()>"->"load.r r0";
+    "new javax.swing.JList"
+    "load.r r0"->"new javax.swing.JList";
+    "new javax.swing.JList"->"dup1.r";
+    "staticinvoke <Mol: java.lang.Object[] Oeri()>"
+    "dup1.r"->"staticinvoke <Mol: java.lang.Object[] Oeri()>";
+    "specialinvoke <javax.swing.JList: void <init>(java.lang.Object[])>"
+    "staticinvoke <Mol: java.lang.Object[] Oeri()>"->"specialinvoke <javax.swing.JList: void <init>(java.lang.Object[])>";
+    "fieldput <Esia: javax.swing.JList opnnf>"
+    "specialinvoke <javax.swing.JList: void <init>(java.lang.Object[])>"->"fieldput <Esia: javax.swing.JList opnnf>";
+    "fieldput <Esia: javax.swing.JList opnnf>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "fieldget <Esia: javax.swing.JList opnnf>"
+    "load.r r0"->"fieldget <Esia: javax.swing.JList opnnf>";
+    "virtualinvoke <Esia: java.awt.Component add(java.awt.Component)>"
+    "fieldget <Esia: javax.swing.JList opnnf>"->"virtualinvoke <Esia: java.awt.Component add(java.awt.Component)>";
+    "pop"
+    "virtualinvoke <Esia: java.awt.Component add(java.awt.Component)>"->"pop";
+    "return"
+    "pop"->"return";
+}

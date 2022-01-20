@@ -1,0 +1,425 @@
+digraph "" {
+    "r0 := @this: recover"
+    "load.r r0"
+    "r0 := @this: recover"->"load.r r0";
+    "specialinvoke <java.applet.Applet: void init()>"
+    "load.r r0"->"specialinvoke <java.applet.Applet: void init()>";
+    "specialinvoke <java.applet.Applet: void init()>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "virtualinvoke <java.awt.Component: java.awt.Dimension size()>"
+    "load.r r0"->"virtualinvoke <java.awt.Component: java.awt.Dimension size()>";
+    "fieldget <java.awt.Dimension: int width>"
+    "virtualinvoke <java.awt.Component: java.awt.Dimension size()>"->"fieldget <java.awt.Dimension: int width>";
+    "fieldput <recover: int width>"
+    "fieldget <java.awt.Dimension: int width>"->"fieldput <recover: int width>";
+    "fieldput <recover: int width>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"virtualinvoke <java.awt.Component: java.awt.Dimension size()>";
+    "fieldget <java.awt.Dimension: int height>"
+    "virtualinvoke <java.awt.Component: java.awt.Dimension size()>"->"fieldget <java.awt.Dimension: int height>";
+    "fieldput <recover: int height>"
+    "fieldget <java.awt.Dimension: int height>"->"fieldput <recover: int height>";
+    "new java.lang.Integer"
+    "fieldput <recover: int height>"->"new java.lang.Integer";
+    "dup1.r"
+    "new java.lang.Integer"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "push \"regcode\""
+    "load.r r0"->"push \"regcode\"";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"
+    "push \"regcode\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "specialinvoke <java.lang.Integer: void <init>(java.lang.String)>"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"specialinvoke <java.lang.Integer: void <init>(java.lang.String)>";
+    "virtualinvoke <java.lang.Integer: int intValue()>"
+    "specialinvoke <java.lang.Integer: void <init>(java.lang.String)>"->"virtualinvoke <java.lang.Integer: int intValue()>";
+    "store.i i0"
+    "virtualinvoke <java.lang.Integer: int intValue()>"->"store.i i0";
+    "load.i i0"
+    "store.i i0"->"load.i i0";
+    "push 100000"
+    "load.i i0"->"push 100000";
+    "div.i"
+    "push 100000"->"div.i";
+    "store.i i1"
+    "div.i"->"store.i i1";
+    "store.i i1"->"load.i i0";
+    "push 10"
+    "load.i i0"->"push 10";
+    "push 10"->"div.i";
+    "load.i i1"
+    "div.i"->"load.i i1";
+    "push 10000"
+    "load.i i1"->"push 10000";
+    "mul.i"
+    "push 10000"->"mul.i";
+    "sub.i"
+    "mul.i"->"sub.i";
+    "store.i i2"
+    "sub.i"->"store.i i2";
+    "store.i i2"->"load.i i0";
+    "load.i i0"->"push 10";
+    "rem.i"
+    "push 10"->"rem.i";
+    "rem.i"->"store.i i0";
+    "store.i i0"->"load.i i1";
+    "push 808"
+    "load.i i1"->"push 808";
+    "ifcmpne.i load.r r0"
+    "push 808"->"ifcmpne.i load.r r0";
+    "ifcmpne.i load.r r0"->"load.i i0";
+    "load.i i0"->"load.i i1";
+    "load.i i2"
+    "load.i i1"->"load.i i2";
+    "load.i i2"->"mul.i";
+    "mul.i"->"push 10";
+    "push 10"->"rem.i";
+    "rem.i"->"ifcmpne.i load.r r0";
+    "ifcmpne.i load.r r0"->"load.r r0";
+    "push 1"
+    "load.r r0"->"push 1";
+    "fieldput <recover: boolean registered>"
+    "push 1"->"fieldput <recover: boolean registered>";
+    "fieldput <recover: boolean registered>"->"load.r r0";
+    "load.r r0"->"new java.lang.Integer";
+    "new java.lang.Integer"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "push \"delay\""
+    "load.r r0"->"push \"delay\"";
+    "push \"delay\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"specialinvoke <java.lang.Integer: void <init>(java.lang.String)>";
+    "specialinvoke <java.lang.Integer: void <init>(java.lang.String)>"->"virtualinvoke <java.lang.Integer: int intValue()>";
+    "fieldput <recover: int delay>"
+    "virtualinvoke <java.lang.Integer: int intValue()>"->"fieldput <recover: int delay>";
+    "fieldput <recover: int delay>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "push \"photo\""
+    "load.r r0"->"push \"photo\"";
+    "push \"photo\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "fieldput <recover: java.lang.String picfile>"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"fieldput <recover: java.lang.String picfile>";
+    "fieldput <recover: java.lang.String picfile>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "push \"winfile\""
+    "load.r r0"->"push \"winfile\"";
+    "push \"winfile\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "fieldput <recover: java.lang.String winfile>"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"fieldput <recover: java.lang.String winfile>";
+    "fieldput <recover: java.lang.String winfile>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "push \"movefile\""
+    "load.r r0"->"push \"movefile\"";
+    "push \"movefile\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "fieldput <recover: java.lang.String movefile>"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"fieldput <recover: java.lang.String movefile>";
+    "fieldput <recover: java.lang.String movefile>"->"load.r r0";
+    "load.r r0"->"new java.lang.Integer";
+    "new java.lang.Integer"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "push \"row\""
+    "load.r r0"->"push \"row\"";
+    "push \"row\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"specialinvoke <java.lang.Integer: void <init>(java.lang.String)>";
+    "specialinvoke <java.lang.Integer: void <init>(java.lang.String)>"->"virtualinvoke <java.lang.Integer: int intValue()>";
+    "fieldput <recover: int row>"
+    "virtualinvoke <java.lang.Integer: int intValue()>"->"fieldput <recover: int row>";
+    "fieldput <recover: int row>"->"load.r r0";
+    "load.r r0"->"new java.lang.Integer";
+    "new java.lang.Integer"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "push \"col\""
+    "load.r r0"->"push \"col\"";
+    "push \"col\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"specialinvoke <java.lang.Integer: void <init>(java.lang.String)>";
+    "specialinvoke <java.lang.Integer: void <init>(java.lang.String)>"->"virtualinvoke <java.lang.Integer: int intValue()>";
+    "fieldput <recover: int col>"
+    "virtualinvoke <java.lang.Integer: int intValue()>"->"fieldput <recover: int col>";
+    "fieldput <recover: int col>"->"load.r r0";
+    "new java.awt.TextField"
+    "load.r r0"->"new java.awt.TextField";
+    "new java.awt.TextField"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "fieldget <recover: int row>"
+    "load.r r0"->"fieldget <recover: int row>";
+    "staticinvoke <java.lang.String: java.lang.String valueOf(int)>"
+    "fieldget <recover: int row>"->"staticinvoke <java.lang.String: java.lang.String valueOf(int)>";
+    "specialinvoke <java.awt.TextField: void <init>(java.lang.String)>"
+    "staticinvoke <java.lang.String: java.lang.String valueOf(int)>"->"specialinvoke <java.awt.TextField: void <init>(java.lang.String)>";
+    "fieldput <recover: java.awt.TextField tfrow>"
+    "specialinvoke <java.awt.TextField: void <init>(java.lang.String)>"->"fieldput <recover: java.awt.TextField tfrow>";
+    "fieldput <recover: java.awt.TextField tfrow>"->"load.r r0";
+    "load.r r0"->"new java.awt.TextField";
+    "new java.awt.TextField"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "fieldget <recover: int col>"
+    "load.r r0"->"fieldget <recover: int col>";
+    "fieldget <recover: int col>"->"staticinvoke <java.lang.String: java.lang.String valueOf(int)>";
+    "staticinvoke <java.lang.String: java.lang.String valueOf(int)>"->"specialinvoke <java.awt.TextField: void <init>(java.lang.String)>";
+    "fieldput <recover: java.awt.TextField tfcol>"
+    "specialinvoke <java.awt.TextField: void <init>(java.lang.String)>"->"fieldput <recover: java.awt.TextField tfcol>";
+    "fieldput <recover: java.awt.TextField tfcol>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "virtualinvoke <java.applet.Applet: java.net.URL getDocumentBase()>"
+    "load.r r0"->"virtualinvoke <java.applet.Applet: java.net.URL getDocumentBase()>";
+    "virtualinvoke <java.applet.Applet: java.net.URL getDocumentBase()>"->"load.r r0";
+    "fieldget <recover: java.lang.String winfile>"
+    "load.r r0"->"fieldget <recover: java.lang.String winfile>";
+    "virtualinvoke <java.applet.Applet: java.applet.AudioClip getAudioClip(java.net.URL,java.lang.String)>"
+    "fieldget <recover: java.lang.String winfile>"->"virtualinvoke <java.applet.Applet: java.applet.AudioClip getAudioClip(java.net.URL,java.lang.String)>";
+    "fieldput <recover: java.applet.AudioClip winaudio>"
+    "virtualinvoke <java.applet.Applet: java.applet.AudioClip getAudioClip(java.net.URL,java.lang.String)>"->"fieldput <recover: java.applet.AudioClip winaudio>";
+    "fieldput <recover: java.applet.AudioClip winaudio>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"virtualinvoke <java.applet.Applet: java.net.URL getDocumentBase()>";
+    "virtualinvoke <java.applet.Applet: java.net.URL getDocumentBase()>"->"load.r r0";
+    "fieldget <recover: java.lang.String movefile>"
+    "load.r r0"->"fieldget <recover: java.lang.String movefile>";
+    "fieldget <recover: java.lang.String movefile>"->"virtualinvoke <java.applet.Applet: java.applet.AudioClip getAudioClip(java.net.URL,java.lang.String)>";
+    "fieldput <recover: java.applet.AudioClip moveaudio>"
+    "virtualinvoke <java.applet.Applet: java.applet.AudioClip getAudioClip(java.net.URL,java.lang.String)>"->"fieldput <recover: java.applet.AudioClip moveaudio>";
+    "fieldput <recover: java.applet.AudioClip moveaudio>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "fieldget <recover: java.lang.String picfile>"
+    "load.r r0"->"fieldget <recover: java.lang.String picfile>";
+    "virtualinvoke <recover: void readPhoto(java.lang.String)>"
+    "fieldget <recover: java.lang.String picfile>"->"virtualinvoke <recover: void readPhoto(java.lang.String)>";
+    "virtualinvoke <recover: void readPhoto(java.lang.String)>"->"load.r r0";
+    "new recoverphoto"
+    "load.r r0"->"new recoverphoto";
+    "new recoverphoto"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "fieldget <recover: java.awt.Image photo>"
+    "load.r r0"->"fieldget <recover: java.awt.Image photo>";
+    "fieldget <recover: java.awt.Image photo>"->"load.r r0";
+    "fieldget <recover: int picwidth>"
+    "load.r r0"->"fieldget <recover: int picwidth>";
+    "fieldget <recover: int picwidth>"->"load.r r0";
+    "fieldget <recover: int picheight>"
+    "load.r r0"->"fieldget <recover: int picheight>";
+    "fieldget <recover: int picheight>"->"load.r r0";
+    "load.r r0"->"fieldget <recover: int row>";
+    "fieldget <recover: int row>"->"load.r r0";
+    "load.r r0"->"fieldget <recover: int col>";
+    "fieldget <recover: int col>"->"load.r r0";
+    "specialinvoke <recoverphoto: void <init>(java.awt.Image,int,int,int,int,java.applet.Applet)>"
+    "load.r r0"->"specialinvoke <recoverphoto: void <init>(java.awt.Image,int,int,int,int,java.applet.Applet)>";
+    "fieldput <recover: recoverphoto rp>"
+    "specialinvoke <recoverphoto: void <init>(java.awt.Image,int,int,int,int,java.applet.Applet)>"->"fieldput <recover: recoverphoto rp>";
+    "fieldput <recover: recoverphoto rp>"->"load.r r0";
+    "fieldget <recover: recoverphoto rp>"
+    "load.r r0"->"fieldget <recover: recoverphoto rp>";
+    "fieldget <recover: recoverphoto rp>"->"load.r r0";
+    "fieldget <recover: boolean registered>"
+    "load.r r0"->"fieldget <recover: boolean registered>";
+    "fieldput <recoverphoto: boolean registered>"
+    "fieldget <recover: boolean registered>"->"fieldput <recoverphoto: boolean registered>";
+    "fieldput <recoverphoto: boolean registered>"->"load.r r0";
+    "load.r r0"->"fieldget <recover: recoverphoto rp>";
+    "fieldget <recover: recoverphoto rp>"->"load.r r0";
+    "fieldget <recover: java.awt.Color bg>"
+    "load.r r0"->"fieldget <recover: java.awt.Color bg>";
+    "fieldput <recoverphoto: java.awt.Color bg>"
+    "fieldget <recover: java.awt.Color bg>"->"fieldput <recoverphoto: java.awt.Color bg>";
+    "fieldput <recoverphoto: java.awt.Color bg>"->"load.r r0";
+    "load.r r0"->"fieldget <recover: recoverphoto rp>";
+    "fieldget <recover: recoverphoto rp>"->"load.r r0";
+    "fieldget <recover: java.applet.AudioClip winaudio>"
+    "load.r r0"->"fieldget <recover: java.applet.AudioClip winaudio>";
+    "fieldput <recoverphoto: java.applet.AudioClip winaudio>"
+    "fieldget <recover: java.applet.AudioClip winaudio>"->"fieldput <recoverphoto: java.applet.AudioClip winaudio>";
+    "fieldput <recoverphoto: java.applet.AudioClip winaudio>"->"load.r r0";
+    "load.r r0"->"fieldget <recover: recoverphoto rp>";
+    "fieldget <recover: recoverphoto rp>"->"load.r r0";
+    "fieldget <recover: java.applet.AudioClip moveaudio>"
+    "load.r r0"->"fieldget <recover: java.applet.AudioClip moveaudio>";
+    "fieldput <recoverphoto: java.applet.AudioClip moveaudio>"
+    "fieldget <recover: java.applet.AudioClip moveaudio>"->"fieldput <recoverphoto: java.applet.AudioClip moveaudio>";
+    "fieldput <recoverphoto: java.applet.AudioClip moveaudio>"->"load.r r0";
+    "load.r r0"->"fieldget <recover: recoverphoto rp>";
+    "fieldget <recover: recoverphoto rp>"->"load.r r0";
+    "fieldget <recover: boolean gameover>"
+    "load.r r0"->"fieldget <recover: boolean gameover>";
+    "fieldput <recoverphoto: boolean gameover>"
+    "fieldget <recover: boolean gameover>"->"fieldput <recoverphoto: boolean gameover>";
+    "fieldput <recoverphoto: boolean gameover>"->"load.r r0";
+    "load.r r0"->"fieldget <recover: recoverphoto rp>";
+    "virtualinvoke <java.awt.Component: void repaint()>"
+    "fieldget <recover: recoverphoto rp>"->"virtualinvoke <java.awt.Component: void repaint()>";
+    "virtualinvoke <java.awt.Component: void repaint()>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <recover: java.awt.Color bg>";
+    "virtualinvoke <java.awt.Component: void setBackground(java.awt.Color)>"
+    "fieldget <recover: java.awt.Color bg>"->"virtualinvoke <java.awt.Component: void setBackground(java.awt.Color)>";
+    "virtualinvoke <java.awt.Component: void setBackground(java.awt.Color)>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "fieldget <recover: java.awt.Color fg>"
+    "load.r r0"->"fieldget <recover: java.awt.Color fg>";
+    "virtualinvoke <java.awt.Component: void setForeground(java.awt.Color)>"
+    "fieldget <recover: java.awt.Color fg>"->"virtualinvoke <java.awt.Component: void setForeground(java.awt.Color)>";
+    "new java.awt.GridBagLayout"
+    "virtualinvoke <java.awt.Component: void setForeground(java.awt.Color)>"->"new java.awt.GridBagLayout";
+    "store.r i1"
+    "new java.awt.GridBagLayout"->"store.r i1";
+    "load.r i1"
+    "store.r i1"->"load.r i1";
+    "specialinvoke <java.awt.GridBagLayout: void <init>()>"
+    "load.r i1"->"specialinvoke <java.awt.GridBagLayout: void <init>()>";
+    "new java.awt.GridBagConstraints"
+    "specialinvoke <java.awt.GridBagLayout: void <init>()>"->"new java.awt.GridBagConstraints";
+    "store.r i2"
+    "new java.awt.GridBagConstraints"->"store.r i2";
+    "load.r i2"
+    "store.r i2"->"load.r i2";
+    "specialinvoke <java.awt.GridBagConstraints: void <init>()>"
+    "load.r i2"->"specialinvoke <java.awt.GridBagConstraints: void <init>()>";
+    "specialinvoke <java.awt.GridBagConstraints: void <init>()>"->"load.r i2";
+    "push 0"
+    "load.r i2"->"push 0";
+    "fieldput <java.awt.GridBagConstraints: int fill>"
+    "push 0"->"fieldput <java.awt.GridBagConstraints: int fill>";
+    "fieldput <java.awt.GridBagConstraints: int fill>"->"load.r i2";
+    "load.r i2"->"push 0";
+    "fieldput <java.awt.GridBagConstraints: int gridwidth>"
+    "push 0"->"fieldput <java.awt.GridBagConstraints: int gridwidth>";
+    "fieldput <java.awt.GridBagConstraints: int gridwidth>"->"load.r i2";
+    "load.r i2"->"push 10";
+    "fieldput <java.awt.GridBagConstraints: int anchor>"
+    "push 10"->"fieldput <java.awt.GridBagConstraints: int anchor>";
+    "new java.awt.Panel"
+    "fieldput <java.awt.GridBagConstraints: int anchor>"->"new java.awt.Panel";
+    "store.r i0"
+    "new java.awt.Panel"->"store.r i0";
+    "load.r i0"
+    "store.r i0"->"load.r i0";
+    "specialinvoke <java.awt.Panel: void <init>()>"
+    "load.r i0"->"specialinvoke <java.awt.Panel: void <init>()>";
+    "specialinvoke <java.awt.Panel: void <init>()>"->"load.r r0";
+    "new recoverButton"
+    "load.r r0"->"new recoverButton";
+    "new recoverButton"->"dup1.r";
+    "push 50"
+    "dup1.r"->"push 50";
+    "push 25"
+    "push 50"->"push 25";
+    "push \"New\""
+    "push 25"->"push \"New\"";
+    "push \"TimesRoman\""
+    "push \"New\""->"push \"TimesRoman\"";
+    "push 12"
+    "push \"TimesRoman\""->"push 12";
+    "push 12"->"load.r r0";
+    "fieldget <recover: java.awt.Color butbg>"
+    "load.r r0"->"fieldget <recover: java.awt.Color butbg>";
+    "fieldget <recover: java.awt.Color butbg>"->"load.r r0";
+    "fieldget <recover: java.awt.Color butfg>"
+    "load.r r0"->"fieldget <recover: java.awt.Color butfg>";
+    "specialinvoke <recoverButton: void <init>(int,int,java.lang.String,java.lang.String,int,java.awt.Color,java.awt.Color)>"
+    "fieldget <recover: java.awt.Color butfg>"->"specialinvoke <recoverButton: void <init>(int,int,java.lang.String,java.lang.String,int,java.awt.Color,java.awt.Color)>";
+    "fieldput <recover: recoverButton buttonNew>"
+    "specialinvoke <recoverButton: void <init>(int,int,java.lang.String,java.lang.String,int,java.awt.Color,java.awt.Color)>"->"fieldput <recover: recoverButton buttonNew>";
+    "fieldput <recover: recoverButton buttonNew>"->"load.r r0";
+    "fieldget <recover: recoverButton buttonNew>"
+    "load.r r0"->"fieldget <recover: recoverButton buttonNew>";
+    "fieldget <recover: recoverButton buttonNew>"->"load.r r0";
+    "load.r r0"->"fieldget <recover: java.awt.Color bg>";
+    "virtualinvoke <recoverButton: void setBGmain(java.awt.Color)>"
+    "fieldget <recover: java.awt.Color bg>"->"virtualinvoke <recoverButton: void setBGmain(java.awt.Color)>";
+    "virtualinvoke <recoverButton: void setBGmain(java.awt.Color)>"->"load.r r0";
+    "load.r r0"->"new recoverButton";
+    "new recoverButton"->"dup1.r";
+    "dup1.r"->"push 50";
+    "push 50"->"push 25";
+    "push \"Solve\""
+    "push 25"->"push \"Solve\"";
+    "push \"Solve\""->"push \"TimesRoman\"";
+    "push \"TimesRoman\""->"push 12";
+    "push 12"->"load.r r0";
+    "load.r r0"->"fieldget <recover: java.awt.Color butbg>";
+    "fieldget <recover: java.awt.Color butbg>"->"load.r r0";
+    "load.r r0"->"fieldget <recover: java.awt.Color butfg>";
+    "fieldget <recover: java.awt.Color butfg>"->"specialinvoke <recoverButton: void <init>(int,int,java.lang.String,java.lang.String,int,java.awt.Color,java.awt.Color)>";
+    "fieldput <recover: recoverButton buttonSolve>"
+    "specialinvoke <recoverButton: void <init>(int,int,java.lang.String,java.lang.String,int,java.awt.Color,java.awt.Color)>"->"fieldput <recover: recoverButton buttonSolve>";
+    "fieldput <recover: recoverButton buttonSolve>"->"load.r r0";
+    "fieldget <recover: recoverButton buttonSolve>"
+    "load.r r0"->"fieldget <recover: recoverButton buttonSolve>";
+    "fieldget <recover: recoverButton buttonSolve>"->"load.r r0";
+    "load.r r0"->"fieldget <recover: java.awt.Color bg>";
+    "fieldget <recover: java.awt.Color bg>"->"virtualinvoke <recoverButton: void setBGmain(java.awt.Color)>";
+    "virtualinvoke <recoverButton: void setBGmain(java.awt.Color)>"->"load.r i0";
+    "load.r i0"->"load.r r0";
+    "load.r r0"->"fieldget <recover: recoverButton buttonNew>";
+    "virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>"
+    "fieldget <recover: recoverButton buttonNew>"->"virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>";
+    "pop"
+    "virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>"->"pop";
+    "pop"->"load.r i0";
+    "load.r i0"->"load.r r0";
+    "load.r r0"->"fieldget <recover: recoverButton buttonSolve>";
+    "fieldget <recover: recoverButton buttonSolve>"->"virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>";
+    "virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>"->"pop";
+    "pop"->"load.r i0";
+    "new java.awt.Label"
+    "load.r i0"->"new java.awt.Label";
+    "new java.awt.Label"->"dup1.r";
+    "push \"Row:\""
+    "dup1.r"->"push \"Row:\"";
+    "push 2"
+    "push \"Row:\""->"push 2";
+    "specialinvoke <java.awt.Label: void <init>(java.lang.String,int)>"
+    "push 2"->"specialinvoke <java.awt.Label: void <init>(java.lang.String,int)>";
+    "specialinvoke <java.awt.Label: void <init>(java.lang.String,int)>"->"virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>";
+    "virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>"->"pop";
+    "pop"->"load.r i0";
+    "load.r i0"->"load.r r0";
+    "fieldget <recover: java.awt.TextField tfrow>"
+    "load.r r0"->"fieldget <recover: java.awt.TextField tfrow>";
+    "fieldget <recover: java.awt.TextField tfrow>"->"virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>";
+    "virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>"->"pop";
+    "pop"->"load.r i0";
+    "load.r i0"->"new java.awt.Label";
+    "new java.awt.Label"->"dup1.r";
+    "push \"Column:\""
+    "dup1.r"->"push \"Column:\"";
+    "push \"Column:\""->"push 2";
+    "push 2"->"specialinvoke <java.awt.Label: void <init>(java.lang.String,int)>";
+    "specialinvoke <java.awt.Label: void <init>(java.lang.String,int)>"->"virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>";
+    "virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>"->"pop";
+    "pop"->"load.r i0";
+    "load.r i0"->"load.r r0";
+    "fieldget <recover: java.awt.TextField tfcol>"
+    "load.r r0"->"fieldget <recover: java.awt.TextField tfcol>";
+    "fieldget <recover: java.awt.TextField tfcol>"->"virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>";
+    "virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>"->"pop";
+    "pop"->"load.r i1";
+    "load.r i1"->"load.r r0";
+    "load.r r0"->"fieldget <recover: recoverphoto rp>";
+    "fieldget <recover: recoverphoto rp>"->"load.r i2";
+    "virtualinvoke <java.awt.GridBagLayout: void setConstraints(java.awt.Component,java.awt.GridBagConstraints)>"
+    "load.r i2"->"virtualinvoke <java.awt.GridBagLayout: void setConstraints(java.awt.Component,java.awt.GridBagConstraints)>";
+    "virtualinvoke <java.awt.GridBagLayout: void setConstraints(java.awt.Component,java.awt.GridBagConstraints)>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <recover: recoverphoto rp>";
+    "fieldget <recover: recoverphoto rp>"->"virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>";
+    "virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>"->"pop";
+    "pop"->"load.r i1";
+    "load.r i1"->"load.r i0";
+    "load.r i0"->"load.r i2";
+    "load.r i2"->"virtualinvoke <java.awt.GridBagLayout: void setConstraints(java.awt.Component,java.awt.GridBagConstraints)>";
+    "virtualinvoke <java.awt.GridBagLayout: void setConstraints(java.awt.Component,java.awt.GridBagConstraints)>"->"load.r r0";
+    "load.r r0"->"load.r i0";
+    "load.r i0"->"virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>";
+    "virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>"->"pop";
+    "pop"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "fieldget <recover: int width>"
+    "load.r r0"->"fieldget <recover: int width>";
+    "fieldget <recover: int width>"->"load.r r0";
+    "fieldget <recover: int height>"
+    "load.r r0"->"fieldget <recover: int height>";
+    "virtualinvoke <java.applet.Applet: void resize(int,int)>"
+    "fieldget <recover: int height>"->"virtualinvoke <java.applet.Applet: void resize(int,int)>";
+    "return"
+    "virtualinvoke <java.applet.Applet: void resize(int,int)>"->"return";
+}

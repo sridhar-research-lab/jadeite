@@ -1,0 +1,19 @@
+digraph "" {
+    "r0 := @this: RunningRainbow"
+    "load.r r0"
+    "r0 := @this: RunningRainbow"->"load.r r0";
+    "push 1"
+    "load.r r0"->"push 1";
+    "fieldput <RunningRainbow: boolean isRunning>"
+    "push 1"->"fieldput <RunningRainbow: boolean isRunning>";
+    "fieldput <RunningRainbow: boolean isRunning>"->"load.r r0";
+    "fieldget <RunningRainbow: boolean isParams>"
+    "load.r r0"->"fieldget <RunningRainbow: boolean isParams>";
+    "ifne return"
+    "fieldget <RunningRainbow: boolean isParams>"->"ifne return";
+    "ifne return"->"load.r r0";
+    "virtualinvoke <RunningRainbow: void getParams()>"
+    "load.r r0"->"virtualinvoke <RunningRainbow: void getParams()>";
+    "return"
+    "virtualinvoke <RunningRainbow: void getParams()>"->"return";
+}

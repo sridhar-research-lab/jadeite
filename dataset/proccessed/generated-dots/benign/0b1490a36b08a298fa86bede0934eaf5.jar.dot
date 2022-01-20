@@ -1,0 +1,485 @@
+digraph "" {
+    "r0 := @this: XBall"
+    "load.r r0"
+    "r0 := @this: XBall"->"load.r r0";
+    "push \">> init <<\""
+    "load.r r0"->"push \">> init <<\"";
+    "virtualinvoke <java.applet.Applet: void showStatus(java.lang.String)>"
+    "push \">> init <<\""->"virtualinvoke <java.applet.Applet: void showStatus(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: void showStatus(java.lang.String)>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "push 400"
+    "load.r r0"->"push 400";
+    "push 400"->"push 400";
+    "virtualinvoke <java.awt.Component: java.awt.Image createImage(int,int)>"
+    "push 400"->"virtualinvoke <java.awt.Component: java.awt.Image createImage(int,int)>";
+    "fieldput <XBall: java.awt.Image image>"
+    "virtualinvoke <java.awt.Component: java.awt.Image createImage(int,int)>"->"fieldput <XBall: java.awt.Image image>";
+    "fieldput <XBall: java.awt.Image image>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "fieldget <XBall: java.awt.Image image>"
+    "load.r r0"->"fieldget <XBall: java.awt.Image image>";
+    "virtualinvoke <java.awt.Image: java.awt.Graphics getGraphics()>"
+    "fieldget <XBall: java.awt.Image image>"->"virtualinvoke <java.awt.Image: java.awt.Graphics getGraphics()>";
+    "fieldput <XBall: java.awt.Graphics offscreen>"
+    "virtualinvoke <java.awt.Image: java.awt.Graphics getGraphics()>"->"fieldput <XBall: java.awt.Graphics offscreen>";
+    "fieldput <XBall: java.awt.Graphics offscreen>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "virtualinvoke <java.applet.Applet: java.net.URL getCodeBase()>"
+    "load.r r0"->"virtualinvoke <java.applet.Applet: java.net.URL getCodeBase()>";
+    "push \"xball.jpg\""
+    "virtualinvoke <java.applet.Applet: java.net.URL getCodeBase()>"->"push \"xball.jpg\"";
+    "virtualinvoke <java.applet.Applet: java.awt.Image getImage(java.net.URL,java.lang.String)>"
+    "push \"xball.jpg\""->"virtualinvoke <java.applet.Applet: java.awt.Image getImage(java.net.URL,java.lang.String)>";
+    "fieldput <XBall: java.awt.Image ball>"
+    "virtualinvoke <java.applet.Applet: java.awt.Image getImage(java.net.URL,java.lang.String)>"->"fieldput <XBall: java.awt.Image ball>";
+    "new java.awt.Panel"
+    "fieldput <XBall: java.awt.Image ball>"->"new java.awt.Panel";
+    "store.r $r7"
+    "new java.awt.Panel"->"store.r $r7";
+    "load.r $r7"
+    "store.r $r7"->"load.r $r7";
+    "specialinvoke <java.awt.Panel: void <init>()>"
+    "load.r $r7"->"specialinvoke <java.awt.Panel: void <init>()>";
+    "specialinvoke <java.awt.Panel: void <init>()>"->"load.r $r7";
+    "new java.awt.GridLayout"
+    "load.r $r7"->"new java.awt.GridLayout";
+    "dup1.r"
+    "new java.awt.GridLayout"->"dup1.r";
+    "push 2"
+    "dup1.r"->"push 2";
+    "push 2"->"push 2";
+    "push 10"
+    "push 2"->"push 10";
+    "push 10"->"push 10";
+    "specialinvoke <java.awt.GridLayout: void <init>(int,int,int,int)>"
+    "push 10"->"specialinvoke <java.awt.GridLayout: void <init>(int,int,int,int)>";
+    "virtualinvoke <java.awt.Container: void setLayout(java.awt.LayoutManager)>"
+    "specialinvoke <java.awt.GridLayout: void <init>(int,int,int,int)>"->"virtualinvoke <java.awt.Container: void setLayout(java.awt.LayoutManager)>";
+    "virtualinvoke <java.awt.Container: void setLayout(java.awt.LayoutManager)>"->"load.r r0";
+    "new java.awt.Button"
+    "load.r r0"->"new java.awt.Button";
+    "new java.awt.Button"->"dup1.r";
+    "push \"Ask X-Ball\""
+    "dup1.r"->"push \"Ask X-Ball\"";
+    "specialinvoke <java.awt.Button: void <init>(java.lang.String)>"
+    "push \"Ask X-Ball\""->"specialinvoke <java.awt.Button: void <init>(java.lang.String)>";
+    "fieldput <XBall: java.awt.Button b>"
+    "specialinvoke <java.awt.Button: void <init>(java.lang.String)>"->"fieldput <XBall: java.awt.Button b>";
+    "fieldput <XBall: java.awt.Button b>"->"load.r r0";
+    "load.r r0"->"new java.awt.Button";
+    "new java.awt.Button"->"dup1.r";
+    "push \"Clear\""
+    "dup1.r"->"push \"Clear\"";
+    "push \"Clear\""->"specialinvoke <java.awt.Button: void <init>(java.lang.String)>";
+    "fieldput <XBall: java.awt.Button b2>"
+    "specialinvoke <java.awt.Button: void <init>(java.lang.String)>"->"fieldput <XBall: java.awt.Button b2>";
+    "fieldput <XBall: java.awt.Button b2>"->"load.r r0";
+    "new java.awt.Label"
+    "load.r r0"->"new java.awt.Label";
+    "new java.awt.Label"->"dup1.r";
+    "push \"Enter your question here\""
+    "dup1.r"->"push \"Enter your question here\"";
+    "push 1"
+    "push \"Enter your question here\""->"push 1";
+    "specialinvoke <java.awt.Label: void <init>(java.lang.String,int)>"
+    "push 1"->"specialinvoke <java.awt.Label: void <init>(java.lang.String,int)>";
+    "fieldput <XBall: java.awt.Label l>"
+    "specialinvoke <java.awt.Label: void <init>(java.lang.String,int)>"->"fieldput <XBall: java.awt.Label l>";
+    "fieldput <XBall: java.awt.Label l>"->"load.r r0";
+    "new java.awt.TextField"
+    "load.r r0"->"new java.awt.TextField";
+    "new java.awt.TextField"->"dup1.r";
+    "push 35"
+    "dup1.r"->"push 35";
+    "specialinvoke <java.awt.TextField: void <init>(int)>"
+    "push 35"->"specialinvoke <java.awt.TextField: void <init>(int)>";
+    "fieldput <XBall: java.awt.TextField tf>"
+    "specialinvoke <java.awt.TextField: void <init>(int)>"->"fieldput <XBall: java.awt.TextField tf>";
+    "fieldput <XBall: java.awt.TextField tf>"->"load.r r0";
+    "new java.awt.BorderLayout"
+    "load.r r0"->"new java.awt.BorderLayout";
+    "new java.awt.BorderLayout"->"dup1.r";
+    "push 17"
+    "dup1.r"->"push 17";
+    "push 13"
+    "push 17"->"push 13";
+    "specialinvoke <java.awt.BorderLayout: void <init>(int,int)>"
+    "push 13"->"specialinvoke <java.awt.BorderLayout: void <init>(int,int)>";
+    "specialinvoke <java.awt.BorderLayout: void <init>(int,int)>"->"virtualinvoke <java.awt.Container: void setLayout(java.awt.LayoutManager)>";
+    "virtualinvoke <java.awt.Container: void setLayout(java.awt.LayoutManager)>"->"load.r $r7";
+    "load.r $r7"->"load.r r0";
+    "fieldget <XBall: java.awt.Label l>"
+    "load.r r0"->"fieldget <XBall: java.awt.Label l>";
+    "virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>"
+    "fieldget <XBall: java.awt.Label l>"->"virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>";
+    "pop"
+    "virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>"->"pop";
+    "pop"->"load.r $r7";
+    "load.r $r7"->"load.r r0";
+    "fieldget <XBall: java.awt.Button b>"
+    "load.r r0"->"fieldget <XBall: java.awt.Button b>";
+    "fieldget <XBall: java.awt.Button b>"->"virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>";
+    "virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>"->"pop";
+    "pop"->"load.r $r7";
+    "load.r $r7"->"load.r r0";
+    "fieldget <XBall: java.awt.TextField tf>"
+    "load.r r0"->"fieldget <XBall: java.awt.TextField tf>";
+    "fieldget <XBall: java.awt.TextField tf>"->"virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>";
+    "virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>"->"pop";
+    "pop"->"load.r $r7";
+    "load.r $r7"->"load.r r0";
+    "fieldget <XBall: java.awt.Button b2>"
+    "load.r r0"->"fieldget <XBall: java.awt.Button b2>";
+    "fieldget <XBall: java.awt.Button b2>"->"virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>";
+    "virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>"->"pop";
+    "pop"->"load.r r0";
+    "push \"South\""
+    "load.r r0"->"push \"South\"";
+    "push \"South\""->"load.r $r7";
+    "virtualinvoke <java.awt.Container: java.awt.Component add(java.lang.String,java.awt.Component)>"
+    "load.r $r7"->"virtualinvoke <java.awt.Container: java.awt.Component add(java.lang.String,java.awt.Component)>";
+    "virtualinvoke <java.awt.Container: java.awt.Component add(java.lang.String,java.awt.Component)>"->"pop";
+    "pop"->"load.r r0";
+    "new java.awt.Font"
+    "load.r r0"->"new java.awt.Font";
+    "new java.awt.Font"->"dup1.r";
+    "push \"Courier\""
+    "dup1.r"->"push \"Courier\"";
+    "push \"Courier\""->"push 1";
+    "push 16"
+    "push 1"->"push 16";
+    "specialinvoke <java.awt.Font: void <init>(java.lang.String,int,int)>"
+    "push 16"->"specialinvoke <java.awt.Font: void <init>(java.lang.String,int,int)>";
+    "fieldput <XBall: java.awt.Font courierFont>"
+    "specialinvoke <java.awt.Font: void <init>(java.lang.String,int,int)>"->"fieldput <XBall: java.awt.Font courierFont>";
+    "fieldput <XBall: java.awt.Font courierFont>"->"load.r r0";
+    "push 26"
+    "load.r r0"->"push 26";
+    "newarray"
+    "push 26"->"newarray";
+    "fieldput <XBall: answer[] answers>"
+    "newarray"->"fieldput <XBall: answer[] answers>";
+    "fieldput <XBall: answer[] answers>"->"load.r r0";
+    "fieldget <XBall: answer[] answers>"
+    "load.r r0"->"fieldget <XBall: answer[] answers>";
+    "push 0"
+    "fieldget <XBall: answer[] answers>"->"push 0";
+    "new answer"
+    "push 0"->"new answer";
+    "new answer"->"dup1.r";
+    "push \"Yes\""
+    "dup1.r"->"push \"Yes\"";
+    "push \"\""
+    "push \"Yes\""->"push \"\"";
+    "specialinvoke <answer: void <init>(java.lang.String,java.lang.String)>"
+    "push \"\""->"specialinvoke <answer: void <init>(java.lang.String,java.lang.String)>";
+    "arraywrite.r"
+    "specialinvoke <answer: void <init>(java.lang.String,java.lang.String)>"->"arraywrite.r";
+    "arraywrite.r"->"load.r r0";
+    "load.r r0"->"fieldget <XBall: answer[] answers>";
+    "fieldget <XBall: answer[] answers>"->"push 1";
+    "push 1"->"new answer";
+    "new answer"->"dup1.r";
+    "push \"No\""
+    "dup1.r"->"push \"No\"";
+    "push \"No\""->"push \"\"";
+    "push \"\""->"specialinvoke <answer: void <init>(java.lang.String,java.lang.String)>";
+    "specialinvoke <answer: void <init>(java.lang.String,java.lang.String)>"->"arraywrite.r";
+    "arraywrite.r"->"load.r r0";
+    "load.r r0"->"fieldget <XBall: answer[] answers>";
+    "fieldget <XBall: answer[] answers>"->"push 2";
+    "push 2"->"new answer";
+    "new answer"->"dup1.r";
+    "push \"Maybe\""
+    "dup1.r"->"push \"Maybe\"";
+    "push \"Maybe\""->"push \"\"";
+    "push \"\""->"specialinvoke <answer: void <init>(java.lang.String,java.lang.String)>";
+    "specialinvoke <answer: void <init>(java.lang.String,java.lang.String)>"->"arraywrite.r";
+    "arraywrite.r"->"load.r r0";
+    "load.r r0"->"fieldget <XBall: answer[] answers>";
+    "push 3"
+    "fieldget <XBall: answer[] answers>"->"push 3";
+    "push 3"->"new answer";
+    "new answer"->"dup1.r";
+    "push \"Don\'t\""
+    "dup1.r"->"push \"Don\'t\"";
+    "push \"ask me\""
+    "push \"Don\'t\""->"push \"ask me\"";
+    "push \"ask me\""->"specialinvoke <answer: void <init>(java.lang.String,java.lang.String)>";
+    "specialinvoke <answer: void <init>(java.lang.String,java.lang.String)>"->"arraywrite.r";
+    "arraywrite.r"->"load.r r0";
+    "load.r r0"->"fieldget <XBall: answer[] answers>";
+    "push 4"
+    "fieldget <XBall: answer[] answers>"->"push 4";
+    "push 4"->"new answer";
+    "new answer"->"dup1.r";
+    "push \"Shut\""
+    "dup1.r"->"push \"Shut\"";
+    "push \"up!\""
+    "push \"Shut\""->"push \"up!\"";
+    "push \"up!\""->"specialinvoke <answer: void <init>(java.lang.String,java.lang.String)>";
+    "specialinvoke <answer: void <init>(java.lang.String,java.lang.String)>"->"arraywrite.r";
+    "arraywrite.r"->"load.r r0";
+    "load.r r0"->"fieldget <XBall: answer[] answers>";
+    "push 5"
+    "fieldget <XBall: answer[] answers>"->"push 5";
+    "push 5"->"new answer";
+    "new answer"->"dup1.r";
+    "push \"How would\""
+    "dup1.r"->"push \"How would\"";
+    "push \"I know?\""
+    "push \"How would\""->"push \"I know?\"";
+    "push \"I know?\""->"specialinvoke <answer: void <init>(java.lang.String,java.lang.String)>";
+    "specialinvoke <answer: void <init>(java.lang.String,java.lang.String)>"->"arraywrite.r";
+    "arraywrite.r"->"load.r r0";
+    "load.r r0"->"fieldget <XBall: answer[] answers>";
+    "push 6"
+    "fieldget <XBall: answer[] answers>"->"push 6";
+    "push 6"->"new answer";
+    "new answer"->"dup1.r";
+    "push \"You\""
+    "dup1.r"->"push \"You\"";
+    "push \"suck!\""
+    "push \"You\""->"push \"suck!\"";
+    "push \"suck!\""->"specialinvoke <answer: void <init>(java.lang.String,java.lang.String)>";
+    "specialinvoke <answer: void <init>(java.lang.String,java.lang.String)>"->"arraywrite.r";
+    "arraywrite.r"->"load.r r0";
+    "load.r r0"->"fieldget <XBall: answer[] answers>";
+    "push 7"
+    "fieldget <XBall: answer[] answers>"->"push 7";
+    "push 7"->"new answer";
+    "new answer"->"dup1.r";
+    "push \"I could never\""
+    "dup1.r"->"push \"I could never\"";
+    "push \"think of that\""
+    "push \"I could never\""->"push \"think of that\"";
+    "push \"think of that\""->"specialinvoke <answer: void <init>(java.lang.String,java.lang.String)>";
+    "specialinvoke <answer: void <init>(java.lang.String,java.lang.String)>"->"arraywrite.r";
+    "arraywrite.r"->"load.r r0";
+    "load.r r0"->"fieldget <XBall: answer[] answers>";
+    "push 8"
+    "fieldget <XBall: answer[] answers>"->"push 8";
+    "push 8"->"new answer";
+    "new answer"->"dup1.r";
+    "push \"I have seen\""
+    "dup1.r"->"push \"I have seen\"";
+    "push \"a fat man naked\""
+    "push \"I have seen\""->"push \"a fat man naked\"";
+    "push \"a fat man naked\""->"specialinvoke <answer: void <init>(java.lang.String,java.lang.String)>";
+    "specialinvoke <answer: void <init>(java.lang.String,java.lang.String)>"->"arraywrite.r";
+    "arraywrite.r"->"load.r r0";
+    "load.r r0"->"fieldget <XBall: answer[] answers>";
+    "push 9"
+    "fieldget <XBall: answer[] answers>"->"push 9";
+    "push 9"->"new answer";
+    "new answer"->"dup1.r";
+    "push \"I\'m not\""
+    "dup1.r"->"push \"I\'m not\"";
+    "push \"gay\""
+    "push \"I\'m not\""->"push \"gay\"";
+    "push \"gay\""->"specialinvoke <answer: void <init>(java.lang.String,java.lang.String)>";
+    "specialinvoke <answer: void <init>(java.lang.String,java.lang.String)>"->"arraywrite.r";
+    "arraywrite.r"->"load.r r0";
+    "load.r r0"->"fieldget <XBall: answer[] answers>";
+    "fieldget <XBall: answer[] answers>"->"push 10";
+    "push 10"->"new answer";
+    "new answer"->"dup1.r";
+    "push \"Ask me\""
+    "dup1.r"->"push \"Ask me\"";
+    "push \"later\""
+    "push \"Ask me\""->"push \"later\"";
+    "push \"later\""->"specialinvoke <answer: void <init>(java.lang.String,java.lang.String)>";
+    "specialinvoke <answer: void <init>(java.lang.String,java.lang.String)>"->"arraywrite.r";
+    "arraywrite.r"->"load.r r0";
+    "load.r r0"->"fieldget <XBall: answer[] answers>";
+    "push 11"
+    "fieldget <XBall: answer[] answers>"->"push 11";
+    "push 11"->"new answer";
+    "new answer"->"dup1.r";
+    "push \"Don\'t unwrap\""
+    "dup1.r"->"push \"Don\'t unwrap\"";
+    "push \"til christmas\""
+    "push \"Don\'t unwrap\""->"push \"til christmas\"";
+    "push \"til christmas\""->"specialinvoke <answer: void <init>(java.lang.String,java.lang.String)>";
+    "specialinvoke <answer: void <init>(java.lang.String,java.lang.String)>"->"arraywrite.r";
+    "arraywrite.r"->"load.r r0";
+    "load.r r0"->"fieldget <XBall: answer[] answers>";
+    "push 12"
+    "fieldget <XBall: answer[] answers>"->"push 12";
+    "push 12"->"new answer";
+    "new answer"->"dup1.r";
+    "push \"That doesn\'t\""
+    "dup1.r"->"push \"That doesn\'t\"";
+    "push \" matter\""
+    "push \"That doesn\'t\""->"push \" matter\"";
+    "push \" matter\""->"specialinvoke <answer: void <init>(java.lang.String,java.lang.String)>";
+    "specialinvoke <answer: void <init>(java.lang.String,java.lang.String)>"->"arraywrite.r";
+    "arraywrite.r"->"load.r r0";
+    "load.r r0"->"fieldget <XBall: answer[] answers>";
+    "fieldget <XBall: answer[] answers>"->"push 13";
+    "push 13"->"new answer";
+    "new answer"->"dup1.r";
+    "push \"That happens\""
+    "dup1.r"->"push \"That happens\"";
+    "push \"to all men\""
+    "push \"That happens\""->"push \"to all men\"";
+    "push \"to all men\""->"specialinvoke <answer: void <init>(java.lang.String,java.lang.String)>";
+    "specialinvoke <answer: void <init>(java.lang.String,java.lang.String)>"->"arraywrite.r";
+    "arraywrite.r"->"load.r r0";
+    "load.r r0"->"fieldget <XBall: answer[] answers>";
+    "push 14"
+    "fieldget <XBall: answer[] answers>"->"push 14";
+    "push 14"->"new answer";
+    "new answer"->"dup1.r";
+    "push \"No, that\""
+    "dup1.r"->"push \"No, that\"";
+    "push \"isn\'t big\""
+    "push \"No, that\""->"push \"isn\'t big\"";
+    "push \"isn\'t big\""->"specialinvoke <answer: void <init>(java.lang.String,java.lang.String)>";
+    "specialinvoke <answer: void <init>(java.lang.String,java.lang.String)>"->"arraywrite.r";
+    "arraywrite.r"->"load.r r0";
+    "load.r r0"->"fieldget <XBall: answer[] answers>";
+    "push 15"
+    "fieldget <XBall: answer[] answers>"->"push 15";
+    "push 15"->"new answer";
+    "new answer"->"dup1.r";
+    "dup1.r"->"push \"I\'m not\"";
+    "push \"so sure\""
+    "push \"I\'m not\""->"push \"so sure\"";
+    "push \"so sure\""->"specialinvoke <answer: void <init>(java.lang.String,java.lang.String)>";
+    "specialinvoke <answer: void <init>(java.lang.String,java.lang.String)>"->"arraywrite.r";
+    "arraywrite.r"->"load.r r0";
+    "load.r r0"->"fieldget <XBall: answer[] answers>";
+    "fieldget <XBall: answer[] answers>"->"push 16";
+    "push 16"->"new answer";
+    "new answer"->"dup1.r";
+    "push \"Check the\""
+    "dup1.r"->"push \"Check the\"";
+    "push \"dictionary\""
+    "push \"Check the\""->"push \"dictionary\"";
+    "push \"dictionary\""->"specialinvoke <answer: void <init>(java.lang.String,java.lang.String)>";
+    "specialinvoke <answer: void <init>(java.lang.String,java.lang.String)>"->"arraywrite.r";
+    "arraywrite.r"->"load.r r0";
+    "load.r r0"->"fieldget <XBall: answer[] answers>";
+    "fieldget <XBall: answer[] answers>"->"push 17";
+    "push 17"->"new answer";
+    "new answer"->"dup1.r";
+    "push \"Umm...\""
+    "dup1.r"->"push \"Umm...\"";
+    "push \"Umm...\""->"push \"Yes\"";
+    "push \"Yes\""->"specialinvoke <answer: void <init>(java.lang.String,java.lang.String)>";
+    "specialinvoke <answer: void <init>(java.lang.String,java.lang.String)>"->"arraywrite.r";
+    "arraywrite.r"->"load.r r0";
+    "load.r r0"->"fieldget <XBall: answer[] answers>";
+    "push 18"
+    "fieldget <XBall: answer[] answers>"->"push 18";
+    "push 18"->"new answer";
+    "new answer"->"dup1.r";
+    "push \"You should\""
+    "dup1.r"->"push \"You should\"";
+    "push \"get that checked\""
+    "push \"You should\""->"push \"get that checked\"";
+    "push \"get that checked\""->"specialinvoke <answer: void <init>(java.lang.String,java.lang.String)>";
+    "specialinvoke <answer: void <init>(java.lang.String,java.lang.String)>"->"arraywrite.r";
+    "arraywrite.r"->"load.r r0";
+    "load.r r0"->"fieldget <XBall: answer[] answers>";
+    "push 19"
+    "fieldget <XBall: answer[] answers>"->"push 19";
+    "push 19"->"new answer";
+    "new answer"->"dup1.r";
+    "push \"I like\""
+    "dup1.r"->"push \"I like\"";
+    "push \"cheese\""
+    "push \"I like\""->"push \"cheese\"";
+    "push \"cheese\""->"specialinvoke <answer: void <init>(java.lang.String,java.lang.String)>";
+    "specialinvoke <answer: void <init>(java.lang.String,java.lang.String)>"->"arraywrite.r";
+    "arraywrite.r"->"load.r r0";
+    "load.r r0"->"fieldget <XBall: answer[] answers>";
+    "push 20"
+    "fieldget <XBall: answer[] answers>"->"push 20";
+    "push 20"->"new answer";
+    "new answer"->"dup1.r";
+    "push \"Si\""
+    "dup1.r"->"push \"Si\"";
+    "push \"Si\""->"push \"\"";
+    "push \"\""->"specialinvoke <answer: void <init>(java.lang.String,java.lang.String)>";
+    "specialinvoke <answer: void <init>(java.lang.String,java.lang.String)>"->"arraywrite.r";
+    "arraywrite.r"->"load.r r0";
+    "load.r r0"->"fieldget <XBall: answer[] answers>";
+    "push 21"
+    "fieldget <XBall: answer[] answers>"->"push 21";
+    "push 21"->"new answer";
+    "new answer"->"dup1.r";
+    "push \"I don\'t\""
+    "dup1.r"->"push \"I don\'t\"";
+    "push \"know\""
+    "push \"I don\'t\""->"push \"know\"";
+    "push \"know\""->"specialinvoke <answer: void <init>(java.lang.String,java.lang.String)>";
+    "specialinvoke <answer: void <init>(java.lang.String,java.lang.String)>"->"arraywrite.r";
+    "arraywrite.r"->"load.r r0";
+    "load.r r0"->"fieldget <XBall: answer[] answers>";
+    "push 22"
+    "fieldget <XBall: answer[] answers>"->"push 22";
+    "push 22"->"new answer";
+    "new answer"->"dup1.r";
+    "push \"You will learn\""
+    "dup1.r"->"push \"You will learn\"";
+    "push \"in the future\""
+    "push \"You will learn\""->"push \"in the future\"";
+    "push \"in the future\""->"specialinvoke <answer: void <init>(java.lang.String,java.lang.String)>";
+    "specialinvoke <answer: void <init>(java.lang.String,java.lang.String)>"->"arraywrite.r";
+    "arraywrite.r"->"load.r r0";
+    "load.r r0"->"fieldget <XBall: answer[] answers>";
+    "push 23"
+    "fieldget <XBall: answer[] answers>"->"push 23";
+    "push 23"->"new answer";
+    "new answer"->"dup1.r";
+    "push \"...\""
+    "dup1.r"->"push \"...\"";
+    "push \"...\""->"push \"\"";
+    "push \"\""->"specialinvoke <answer: void <init>(java.lang.String,java.lang.String)>";
+    "specialinvoke <answer: void <init>(java.lang.String,java.lang.String)>"->"arraywrite.r";
+    "arraywrite.r"->"load.r r0";
+    "load.r r0"->"fieldget <XBall: answer[] answers>";
+    "push 24"
+    "fieldget <XBall: answer[] answers>"->"push 24";
+    "push 24"->"new answer";
+    "new answer"->"dup1.r";
+    "push \"I\'ll check\""
+    "dup1.r"->"push \"I\'ll check\"";
+    "push \"into it\""
+    "push \"I\'ll check\""->"push \"into it\"";
+    "push \"into it\""->"specialinvoke <answer: void <init>(java.lang.String,java.lang.String)>";
+    "specialinvoke <answer: void <init>(java.lang.String,java.lang.String)>"->"arraywrite.r";
+    "arraywrite.r"->"load.r r0";
+    "load.r r0"->"fieldget <XBall: answer[] answers>";
+    "push 25"
+    "fieldget <XBall: answer[] answers>"->"push 25";
+    "push 25"->"new answer";
+    "new answer"->"dup1.r";
+    "push \"o o\""
+    "dup1.r"->"push \"o o\"";
+    "push \"\\__/\""
+    "push \"o o\""->"push \"\\__/\"";
+    "push \"\\__/\""->"specialinvoke <answer: void <init>(java.lang.String,java.lang.String)>";
+    "specialinvoke <answer: void <init>(java.lang.String,java.lang.String)>"->"arraywrite.r";
+    "arraywrite.r"->"load.r r0";
+    "load.r r0"->"new answer";
+    "new answer"->"dup1.r";
+    "dup1.r"->"push \"\"";
+    "push \"\""->"push \"\"";
+    "push \"\""->"specialinvoke <answer: void <init>(java.lang.String,java.lang.String)>";
+    "fieldput <XBall: answer theAnswer>"
+    "specialinvoke <answer: void <init>(java.lang.String,java.lang.String)>"->"fieldput <XBall: answer theAnswer>";
+    "fieldput <XBall: answer theAnswer>"->"load.r r0";
+    "load.r r0"->"push 0";
+    "fieldput <XBall: boolean initialized>"
+    "push 0"->"fieldput <XBall: boolean initialized>";
+    "fieldput <XBall: boolean initialized>"->"load.r r0";
+    "virtualinvoke <java.awt.Component: void repaint()>"
+    "load.r r0"->"virtualinvoke <java.awt.Component: void repaint()>";
+    "return"
+    "virtualinvoke <java.awt.Component: void repaint()>"->"return";
+}

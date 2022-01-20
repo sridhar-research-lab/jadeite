@@ -1,0 +1,201 @@
+digraph "" {
+    "r0 := @this: Counter"
+    "new Gummy"
+    "r0 := @this: Counter"->"new Gummy";
+    "store.r $r12"
+    "new Gummy"->"store.r $r12";
+    "load.r $r12"
+    "store.r $r12"->"load.r $r12";
+    "specialinvoke <Gummy: void <init>()>"
+    "load.r $r12"->"specialinvoke <Gummy: void <init>()>";
+    "new VerifierBug"
+    "specialinvoke <Gummy: void <init>()>"->"new VerifierBug";
+    "store.r r2"
+    "new VerifierBug"->"store.r r2";
+    "load.r r2"
+    "store.r r2"->"load.r r2";
+    "specialinvoke <VerifierBug: void <init>()>"
+    "load.r r2"->"specialinvoke <VerifierBug: void <init>()>";
+    "staticget <java.lang.System: java.io.PrintStream out>"
+    "specialinvoke <VerifierBug: void <init>()>"->"staticget <java.lang.System: java.io.PrintStream out>";
+    "push \"1\n\""
+    "staticget <java.lang.System: java.io.PrintStream out>"->"push \"1\n\"";
+    "virtualinvoke <java.io.PrintStream: void println(java.lang.String)>"
+    "push \"1\n\""->"virtualinvoke <java.io.PrintStream: void println(java.lang.String)>";
+    "virtualinvoke <java.io.PrintStream: void println(java.lang.String)>"->"load.r r2";
+    "load.r r2"->"load.r $r12";
+    "virtualinvoke <java.lang.Object: java.lang.Class getClass()>"
+    "load.r $r12"->"virtualinvoke <java.lang.Object: java.lang.Class getClass()>";
+    "fieldput <VerifierBug: java.lang.Class Gummy_class>"
+    "virtualinvoke <java.lang.Object: java.lang.Class getClass()>"->"fieldput <VerifierBug: java.lang.Class Gummy_class>";
+    "fieldput <VerifierBug: java.lang.Class Gummy_class>"->"load.r r2";
+    "load.r r0"
+    "load.r r2"->"load.r r0";
+    "fieldget <Counter: byte[] UCL_def>"
+    "load.r r0"->"fieldget <Counter: byte[] UCL_def>";
+    "fieldput <VerifierBug: byte[] UCL_definition>"
+    "fieldget <Counter: byte[] UCL_def>"->"fieldput <VerifierBug: byte[] UCL_definition>";
+    "fieldput <VerifierBug: byte[] UCL_definition>"->"load.r r2";
+    "push \"Magic\""
+    "load.r r2"->"push \"Magic\"";
+    "push \"Magic\""->"load.r r0";
+    "fieldget <Counter: byte[] Magic_def>"
+    "load.r r0"->"fieldget <Counter: byte[] Magic_def>";
+    "push 0"
+    "fieldget <Counter: byte[] Magic_def>"->"push 0";
+    "push 0"->"load.r r0";
+    "load.r r0"->"fieldget <Counter: byte[] Magic_def>";
+    "arraylength"
+    "fieldget <Counter: byte[] Magic_def>"->"arraylength";
+    "virtualinvoke <VerifierBug: java.lang.Class myDefineClass(java.lang.String,byte[],int,int)>"
+    "arraylength"->"virtualinvoke <VerifierBug: java.lang.Class myDefineClass(java.lang.String,byte[],int,int)>";
+    "dup1.r"
+    "virtualinvoke <VerifierBug: java.lang.Class myDefineClass(java.lang.String,byte[],int,int)>"->"dup1.r";
+    "virtualinvoke <java.lang.Class: java.lang.Object newInstance()>"
+    "dup1.r"->"virtualinvoke <java.lang.Class: java.lang.Object newInstance()>";
+    "virtualinvoke <java.lang.Class: java.lang.Object newInstance()>"->"store.r r2";
+    "push 2"
+    "store.r r2"->"push 2";
+    "newarray"
+    "push 2"->"newarray";
+    "store.r r3"
+    "newarray"->"store.r r3";
+    "load.r r3"
+    "store.r r3"->"load.r r3";
+    "load.r r3"->"push 0";
+    "push 0"->"load.r $r12";
+    "load.r $r12"->"virtualinvoke <java.lang.Object: java.lang.Class getClass()>";
+    "arraywrite.r"
+    "virtualinvoke <java.lang.Object: java.lang.Class getClass()>"->"arraywrite.r";
+    "arraywrite.r"->"load.r r3";
+    "push 1"
+    "load.r r3"->"push 1";
+    "push \"com.ms.security.PermissionSet\""
+    "push 1"->"push \"com.ms.security.PermissionSet\"";
+    "staticinvoke <java.lang.Class: java.lang.Class forName(java.lang.String)>"
+    "push \"com.ms.security.PermissionSet\""->"staticinvoke <java.lang.Class: java.lang.Class forName(java.lang.String)>";
+    "staticinvoke <java.lang.Class: java.lang.Class forName(java.lang.String)>"->"arraywrite.r";
+    "push \"doit\""
+    "arraywrite.r"->"push \"doit\"";
+    "push \"doit\""->"load.r r3";
+    "virtualinvoke <java.lang.Class: java.lang.reflect.Method getMethod(java.lang.String,java.lang.Class[])>"
+    "load.r r3"->"virtualinvoke <java.lang.Class: java.lang.reflect.Method getMethod(java.lang.String,java.lang.Class[])>";
+    "new com.ms.security.PermissionDataSet"
+    "virtualinvoke <java.lang.Class: java.lang.reflect.Method getMethod(java.lang.String,java.lang.Class[])>"->"new com.ms.security.PermissionDataSet";
+    "store.r r7"
+    "new com.ms.security.PermissionDataSet"->"store.r r7";
+    "load.r r7"
+    "store.r r7"->"load.r r7";
+    "specialinvoke <com.ms.security.PermissionDataSet: void <init>()>"
+    "load.r r7"->"specialinvoke <com.ms.security.PermissionDataSet: void <init>()>";
+    "specialinvoke <com.ms.security.PermissionDataSet: void <init>()>"->"load.r r7";
+    "load.r r7"->"push 1";
+    "virtualinvoke <com.ms.security.PermissionDataSet: void setFullyTrusted(boolean)>"
+    "push 1"->"virtualinvoke <com.ms.security.PermissionDataSet: void setFullyTrusted(boolean)>";
+    "new com.ms.security.PermissionSet"
+    "virtualinvoke <com.ms.security.PermissionDataSet: void setFullyTrusted(boolean)>"->"new com.ms.security.PermissionSet";
+    "new com.ms.security.PermissionSet"->"store.r r3";
+    "store.r r3"->"load.r r3";
+    "load.r r3"->"load.r r7";
+    "specialinvoke <com.ms.security.PermissionSet: void <init>(com.ms.security.PermissionDataSet)>"
+    "load.r r7"->"specialinvoke <com.ms.security.PermissionSet: void <init>(com.ms.security.PermissionDataSet)>";
+    "specialinvoke <com.ms.security.PermissionSet: void <init>(com.ms.security.PermissionDataSet)>"->"load.r $r12";
+    "load.r $r12"->"load.r r0";
+    "load.r r0"->"virtualinvoke <java.lang.Object: java.lang.Class getClass()>";
+    "virtualinvoke <java.lang.Class: java.lang.ClassLoader getClassLoader()>"
+    "virtualinvoke <java.lang.Object: java.lang.Class getClass()>"->"virtualinvoke <java.lang.Class: java.lang.ClassLoader getClassLoader()>";
+    "checkcast"
+    "virtualinvoke <java.lang.Class: java.lang.ClassLoader getClassLoader()>"->"checkcast";
+    "checkcast"->"store.r r7";
+    "store.r r7"->"load.r r7";
+    "fieldput <Gummy: com.ms.vm.loader.URLClassLoader value>"
+    "load.r r7"->"fieldput <Gummy: com.ms.vm.loader.URLClassLoader value>";
+    "fieldput <Gummy: com.ms.vm.loader.URLClassLoader value>"->"push 2";
+    "push 2"->"newarray";
+    "store.r r8"
+    "newarray"->"store.r r8";
+    "load.r r8"
+    "store.r r8"->"load.r r8";
+    "load.r r8"->"push 0";
+    "push 0"->"load.r $r12";
+    "load.r $r12"->"arraywrite.r";
+    "arraywrite.r"->"load.r r8";
+    "load.r r8"->"push 1";
+    "push 1"->"load.r r3";
+    "load.r r3"->"arraywrite.r";
+    "arraywrite.r"->"load.r r2";
+    "load.r r2"->"load.r r8";
+    "virtualinvoke <java.lang.reflect.Method: java.lang.Object invoke(java.lang.Object,java.lang.Object[])>"
+    "load.r r8"->"virtualinvoke <java.lang.reflect.Method: java.lang.Object invoke(java.lang.Object,java.lang.Object[])>";
+    "pop"
+    "virtualinvoke <java.lang.reflect.Method: java.lang.Object invoke(java.lang.Object,java.lang.Object[])>"->"pop";
+    "pop"->"load.r r7";
+    "push \"Xeyond\""
+    "load.r r7"->"push \"Xeyond\"";
+    "virtualinvoke <com.ms.vm.loader.URLClassLoader: java.lang.Class loadClass(java.lang.String)>"
+    "push \"Xeyond\""->"virtualinvoke <com.ms.vm.loader.URLClassLoader: java.lang.Class loadClass(java.lang.String)>";
+    "virtualinvoke <com.ms.vm.loader.URLClassLoader: java.lang.Class loadClass(java.lang.String)>"->"store.r $r12";
+    "store.r $r12"->"load.r $r12";
+    "load.r $r12"->"virtualinvoke <java.lang.Class: java.lang.Object newInstance()>";
+    "virtualinvoke <java.lang.Class: java.lang.Object newInstance()>"->"pop";
+    "pop"->"load.r $r12";
+    "push \"Work\""
+    "load.r $r12"->"push \"Work\"";
+    "push \"Work\""->"push 1";
+    "push 1"->"newarray";
+    "newarray"->"dup1.r";
+    "dup1.r"->"push 0";
+    "new java.lang.String"
+    "push 0"->"new java.lang.String";
+    "new java.lang.String"->"dup1.r";
+    "specialinvoke <java.lang.String: void <init>()>"
+    "dup1.r"->"specialinvoke <java.lang.String: void <init>()>";
+    "specialinvoke <java.lang.String: void <init>()>"->"virtualinvoke <java.lang.Object: java.lang.Class getClass()>";
+    "virtualinvoke <java.lang.Object: java.lang.Class getClass()>"->"arraywrite.r";
+    "arraywrite.r"->"virtualinvoke <java.lang.Class: java.lang.reflect.Method getMethod(java.lang.String,java.lang.Class[])>";
+    "virtualinvoke <java.lang.Class: java.lang.reflect.Method getMethod(java.lang.String,java.lang.Class[])>"->"load.r $r12";
+    "load.r $r12"->"push 1";
+    "push 1"->"newarray";
+    "newarray"->"dup1.r";
+    "dup1.r"->"push 0";
+    "push 0"->"new java.lang.String";
+    "new java.lang.String"->"dup1.r";
+    "new java.lang.StringBuffer"
+    "dup1.r"->"new java.lang.StringBuffer";
+    "new java.lang.StringBuffer"->"dup1.r";
+    "push \" \""
+    "dup1.r"->"push \" \"";
+    "specialinvoke <java.lang.StringBuffer: void <init>(java.lang.String)>"
+    "push \" \""->"specialinvoke <java.lang.StringBuffer: void <init>(java.lang.String)>";
+    "specialinvoke <java.lang.StringBuffer: void <init>(java.lang.String)>"->"load.r r0";
+    "push \"ARGS\""
+    "load.r r0"->"push \"ARGS\"";
+    "virtualinvoke <Counter: java.lang.String getParameter(java.lang.String)>"
+    "push \"ARGS\""->"virtualinvoke <Counter: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"
+    "virtualinvoke <Counter: java.lang.String getParameter(java.lang.String)>"->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>"
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>";
+    "specialinvoke <java.lang.String: void <init>(java.lang.String)>"
+    "virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>"->"specialinvoke <java.lang.String: void <init>(java.lang.String)>";
+    "specialinvoke <java.lang.String: void <init>(java.lang.String)>"->"arraywrite.r";
+    "arraywrite.r"->"virtualinvoke <java.lang.reflect.Method: java.lang.Object invoke(java.lang.Object,java.lang.Object[])>";
+    "virtualinvoke <java.lang.reflect.Method: java.lang.Object invoke(java.lang.Object,java.lang.Object[])>"->"pop";
+    "pop"->"staticget <java.lang.System: java.io.PrintStream out>";
+    "push \"\""
+    "staticget <java.lang.System: java.io.PrintStream out>"->"push \"\"";
+    "push \"\""->"virtualinvoke <java.io.PrintStream: void println(java.lang.String)>";
+    "goto return"
+    "virtualinvoke <java.io.PrintStream: void println(java.lang.String)>"->"goto return";
+    "return"
+    "goto return"->"return";
+    "virtualinvoke <java.io.PrintStream: void println(java.lang.String)>"->"staticget <java.lang.System: java.io.PrintStream out>";
+    "store.r r0"
+    "staticget <java.lang.System: java.io.PrintStream out>"->"store.r r0";
+    "virtualinvoke <java.lang.Throwable: java.lang.String toString()>"
+    "store.r r0"->"virtualinvoke <java.lang.Throwable: java.lang.String toString()>";
+    "virtualinvoke <java.lang.Throwable: java.lang.String toString()>"->"store.r $r12";
+    "store.r $r12"->"load.r r0";
+    "load.r r0"->"load.r $r12";
+    "load.r $r12"->"virtualinvoke <java.io.PrintStream: void println(java.lang.String)>";
+}

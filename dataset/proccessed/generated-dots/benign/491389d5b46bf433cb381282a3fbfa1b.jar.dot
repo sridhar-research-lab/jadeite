@@ -1,0 +1,174 @@
+digraph "" {
+    "r0 := @this: octoshape.applets.init.OctoTestApplet"
+    "load.r r0"
+    "r0 := @this: octoshape.applets.init.OctoTestApplet"->"load.r r0";
+    "push \"display\""
+    "load.r r0"->"push \"display\"";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"
+    "push \"display\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "store.r r1"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"store.r r1";
+    "store.r r1"->"load.r r0";
+    "push \"callbackstring\""
+    "load.r r0"->"push \"callbackstring\"";
+    "push \"callbackstring\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "store.r r2"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"store.r r2";
+    "store.r r2"->"load.r r0";
+    "push \"initfunction\""
+    "load.r r0"->"push \"initfunction\"";
+    "push \"initfunction\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "store.r r19"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"store.r r19";
+    "load.r r19"
+    "store.r r19"->"load.r r19";
+    "ifnonnull load.r r0"
+    "load.r r19"->"ifnonnull load.r r0";
+    "push \"octopv_initAppletInited\""
+    "ifnonnull load.r r0"->"push \"octopv_initAppletInited\"";
+    "push \"octopv_initAppletInited\""->"store.r r19";
+    "store.r r19"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "staticinvoke <netscape.javascript.JSObject: netscape.javascript.JSObject getWindow(java.applet.Applet)>"
+    "load.r r0"->"staticinvoke <netscape.javascript.JSObject: netscape.javascript.JSObject getWindow(java.applet.Applet)>";
+    "fieldput <octoshape.applets.init.OctoTestApplet: netscape.javascript.JSObject jso>"
+    "staticinvoke <netscape.javascript.JSObject: netscape.javascript.JSObject getWindow(java.applet.Applet)>"->"fieldput <octoshape.applets.init.OctoTestApplet: netscape.javascript.JSObject jso>";
+    "fieldput <octoshape.applets.init.OctoTestApplet: netscape.javascript.JSObject jso>"->"load.r r0";
+    "new octoshape.applets.init.AppletDebug"
+    "load.r r0"->"new octoshape.applets.init.AppletDebug";
+    "dup1.r"
+    "new octoshape.applets.init.AppletDebug"->"dup1.r";
+    "load.r r2"
+    "dup1.r"->"load.r r2";
+    "load.r r1"
+    "load.r r2"->"load.r r1";
+    "load.r r1"->"load.r r0";
+    "fieldget <octoshape.applets.init.OctoTestApplet: netscape.javascript.JSObject jso>"
+    "load.r r0"->"fieldget <octoshape.applets.init.OctoTestApplet: netscape.javascript.JSObject jso>";
+    "specialinvoke <octoshape.applets.init.AppletDebug: void <init>(java.lang.String,java.lang.String,netscape.javascript.JSObject)>"
+    "fieldget <octoshape.applets.init.OctoTestApplet: netscape.javascript.JSObject jso>"->"specialinvoke <octoshape.applets.init.AppletDebug: void <init>(java.lang.String,java.lang.String,netscape.javascript.JSObject)>";
+    "fieldput <octoshape.applets.init.OctoTestApplet: octoshape.applets.init.AppletDebug debug>"
+    "specialinvoke <octoshape.applets.init.AppletDebug: void <init>(java.lang.String,java.lang.String,netscape.javascript.JSObject)>"->"fieldput <octoshape.applets.init.OctoTestApplet: octoshape.applets.init.AppletDebug debug>";
+    "push \"java.version\""
+    "fieldput <octoshape.applets.init.OctoTestApplet: octoshape.applets.init.AppletDebug debug>"->"push \"java.version\"";
+    "staticinvoke <java.lang.System: java.lang.String getProperty(java.lang.String)>"
+    "push \"java.version\""->"staticinvoke <java.lang.System: java.lang.String getProperty(java.lang.String)>";
+    "store.r r3"
+    "staticinvoke <java.lang.System: java.lang.String getProperty(java.lang.String)>"->"store.r r3";
+    "new java.lang.StringBuffer"
+    "store.r r3"->"new java.lang.StringBuffer";
+    "new java.lang.StringBuffer"->"dup1.r";
+    "load.r r3"
+    "dup1.r"->"load.r r3";
+    "push 2"
+    "load.r r3"->"push 2";
+    "virtualinvoke <java.lang.String: char charAt(int)>"
+    "push 2"->"virtualinvoke <java.lang.String: char charAt(int)>";
+    "staticinvoke <java.lang.String: java.lang.String valueOf(char)>"
+    "virtualinvoke <java.lang.String: char charAt(int)>"->"staticinvoke <java.lang.String: java.lang.String valueOf(char)>";
+    "specialinvoke <java.lang.StringBuffer: void <init>(java.lang.String)>"
+    "staticinvoke <java.lang.String: java.lang.String valueOf(char)>"->"specialinvoke <java.lang.StringBuffer: void <init>(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>"
+    "specialinvoke <java.lang.StringBuffer: void <init>(java.lang.String)>"->"virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>"->"store.r r1";
+    "store.r r1"->"load.r r3";
+    "virtualinvoke <java.lang.String: int length()>"
+    "load.r r3"->"virtualinvoke <java.lang.String: int length()>";
+    "push 5"
+    "virtualinvoke <java.lang.String: int length()>"->"push 5";
+    "ifcmplt.i push \"0\""
+    "push 5"->"ifcmplt.i push \"0\"";
+    "ifcmplt.i push \"0\""->"new java.lang.StringBuffer";
+    "new java.lang.StringBuffer"->"dup1.r";
+    "dup1.r"->"load.r r3";
+    "push 4"
+    "load.r r3"->"push 4";
+    "push 4"->"virtualinvoke <java.lang.String: char charAt(int)>";
+    "virtualinvoke <java.lang.String: char charAt(int)>"->"staticinvoke <java.lang.String: java.lang.String valueOf(char)>";
+    "staticinvoke <java.lang.String: java.lang.String valueOf(char)>"->"specialinvoke <java.lang.StringBuffer: void <init>(java.lang.String)>";
+    "specialinvoke <java.lang.StringBuffer: void <init>(java.lang.String)>"->"virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>";
+    "store.r r5"
+    "virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>"->"store.r r5";
+    "goto load.r r5"
+    "store.r r5"->"goto load.r r5";
+    "load.r r5"
+    "goto load.r r5"->"load.r r5";
+    "load.r r5"->"store.r r5";
+    "store.r r5"->"load.r r3";
+    "push \"_\""
+    "load.r r3"->"push \"_\"";
+    "virtualinvoke <java.lang.String: int indexOf(java.lang.String)>"
+    "push \"_\""->"virtualinvoke <java.lang.String: int indexOf(java.lang.String)>";
+    "push -1"
+    "virtualinvoke <java.lang.String: int indexOf(java.lang.String)>"->"push -1";
+    "ifcmpeq.i push \"0\""
+    "push -1"->"ifcmpeq.i push \"0\"";
+    "ifcmpeq.i push \"0\""->"load.r r3";
+    "load.r r3"->"load.r r3";
+    "load.r r3"->"push \"_\"";
+    "push \"_\""->"virtualinvoke <java.lang.String: int indexOf(java.lang.String)>";
+    "push 1"
+    "virtualinvoke <java.lang.String: int indexOf(java.lang.String)>"->"push 1";
+    "add.i"
+    "push 1"->"add.i";
+    "virtualinvoke <java.lang.String: java.lang.String substring(int)>"
+    "add.i"->"virtualinvoke <java.lang.String: java.lang.String substring(int)>";
+    "store.r $r21"
+    "virtualinvoke <java.lang.String: java.lang.String substring(int)>"->"store.r $r21";
+    "goto push \"os.version\""
+    "store.r $r21"->"goto push \"os.version\"";
+    "push \"os.version\""
+    "goto push \"os.version\""->"push \"os.version\"";
+    "push \"os.version\""->"staticinvoke <java.lang.System: java.lang.String getProperty(java.lang.String)>";
+    "staticinvoke <java.lang.System: java.lang.String getProperty(java.lang.String)>"->"store.r r3";
+    "store.r r3"->"load.r r0";
+    "load.r r0"->"fieldget <octoshape.applets.init.OctoTestApplet: netscape.javascript.JSObject jso>";
+    "fieldget <octoshape.applets.init.OctoTestApplet: netscape.javascript.JSObject jso>"->"push 5";
+    "newarray"
+    "push 5"->"newarray";
+    "store.r $r13"
+    "newarray"->"store.r $r13";
+    "load.r $r13"
+    "store.r $r13"->"load.r $r13";
+    "push 0"
+    "load.r $r13"->"push 0";
+    "push 0"->"load.r r2";
+    "arraywrite.r"
+    "load.r r2"->"arraywrite.r";
+    "arraywrite.r"->"load.r $r13";
+    "load.r $r13"->"push 1";
+    "push 1"->"load.r r1";
+    "load.r r1"->"arraywrite.r";
+    "arraywrite.r"->"load.r $r13";
+    "load.r $r13"->"push 2";
+    "push 2"->"load.r r5";
+    "load.r r5"->"arraywrite.r";
+    "arraywrite.r"->"load.r $r13";
+    "push 3"
+    "load.r $r13"->"push 3";
+    "load.r $r21"
+    "push 3"->"load.r $r21";
+    "load.r $r21"->"arraywrite.r";
+    "arraywrite.r"->"load.r $r13";
+    "load.r $r13"->"push 4";
+    "push 4"->"load.r r3";
+    "load.r r3"->"arraywrite.r";
+    "arraywrite.r"->"load.r r19";
+    "load.r r19"->"load.r $r13";
+    "virtualinvoke <netscape.javascript.JSObject: java.lang.Object call(java.lang.String,java.lang.Object[])>"
+    "load.r $r13"->"virtualinvoke <netscape.javascript.JSObject: java.lang.Object call(java.lang.String,java.lang.Object[])>";
+    "pop"
+    "virtualinvoke <netscape.javascript.JSObject: java.lang.Object call(java.lang.String,java.lang.Object[])>"->"pop";
+    "pop"->"load.r r0";
+    "fieldget <octoshape.applets.init.OctoTestApplet: octoshape.applets.init.AppletDebug debug>"
+    "load.r r0"->"fieldget <octoshape.applets.init.OctoTestApplet: octoshape.applets.init.AppletDebug debug>";
+    "virtualinvoke <octoshape.applets.init.AppletDebug: void printInfo()>"
+    "fieldget <octoshape.applets.init.OctoTestApplet: octoshape.applets.init.AppletDebug debug>"->"virtualinvoke <octoshape.applets.init.AppletDebug: void printInfo()>";
+    "return"
+    "virtualinvoke <octoshape.applets.init.AppletDebug: void printInfo()>"->"return";
+    "push \"0\""
+    "ifcmpeq.i push \"0\""->"push \"0\"";
+    "push \"0\""->"store.r $r21";
+    "ifcmplt.i push \"0\""->"push \"0\"";
+    "push \"0\""->"store.r r5";
+}

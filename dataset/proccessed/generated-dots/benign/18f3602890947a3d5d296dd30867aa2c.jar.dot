@@ -1,0 +1,228 @@
+digraph "" {
+    "r0 := @this: Puzzle"
+    "load.r r0"
+    "r0 := @this: Puzzle"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "virtualinvoke <java.awt.Component: java.awt.Dimension size()>"
+    "load.r r0"->"virtualinvoke <java.awt.Component: java.awt.Dimension size()>";
+    "dup1.r"
+    "virtualinvoke <java.awt.Component: java.awt.Dimension size()>"->"dup1.r";
+    "fieldget <java.awt.Dimension: int width>"
+    "dup1.r"->"fieldget <java.awt.Dimension: int width>";
+    "store.i r2"
+    "fieldget <java.awt.Dimension: int width>"->"store.i r2";
+    "store.i r2"->"load.r r0";
+    "load.i r2"
+    "load.r r0"->"load.i r2";
+    "fieldput <Puzzle: int AppletW>"
+    "load.i r2"->"fieldput <Puzzle: int AppletW>";
+    "fieldget <java.awt.Dimension: int height>"
+    "fieldput <Puzzle: int AppletW>"->"fieldget <java.awt.Dimension: int height>";
+    "fieldput <Puzzle: int AppletH>"
+    "fieldget <java.awt.Dimension: int height>"->"fieldput <Puzzle: int AppletH>";
+    "fieldput <Puzzle: int AppletH>"->"load.r r0";
+    "push 255"
+    "load.r r0"->"push 255";
+    "newarray"
+    "push 255"->"newarray";
+    "fieldput <Puzzle: java.net.URL[] bitmapURL>"
+    "newarray"->"fieldput <Puzzle: java.net.URL[] bitmapURL>";
+    "fieldput <Puzzle: java.net.URL[] bitmapURL>"->"load.r r0";
+    "new java.lang.StringBuffer"
+    "load.r r0"->"new java.lang.StringBuffer";
+    "new java.lang.StringBuffer"->"dup1.r";
+    "push \"IMAGE\""
+    "dup1.r"->"push \"IMAGE\"";
+    "specialinvoke <java.lang.StringBuffer: void <init>(java.lang.String)>"
+    "push \"IMAGE\""->"specialinvoke <java.lang.StringBuffer: void <init>(java.lang.String)>";
+    "specialinvoke <java.lang.StringBuffer: void <init>(java.lang.String)>"->"load.r r0";
+    "fieldget <Puzzle: int NumImages>"
+    "load.r r0"->"fieldget <Puzzle: int NumImages>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(int)>"
+    "fieldget <Puzzle: int NumImages>"->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(int)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>"
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(int)>"->"virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"
+    "virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>"->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "store.r r2"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"store.r r2";
+    "load.r r2"
+    "store.r r2"->"load.r r2";
+    "ifnull load.r r2"
+    "load.r r2"->"ifnull load.r r2";
+    "ifnull load.r r2"->"load.r r0";
+    "fieldget <Puzzle: java.net.URL[] bitmapURL>"
+    "load.r r0"->"fieldget <Puzzle: java.net.URL[] bitmapURL>";
+    "fieldget <Puzzle: java.net.URL[] bitmapURL>"->"load.r r0";
+    "load.r r0"->"fieldget <Puzzle: int NumImages>";
+    "new java.net.URL"
+    "fieldget <Puzzle: int NumImages>"->"new java.net.URL";
+    "new java.net.URL"->"dup1.r";
+    "dup1.r"->"load.r r2";
+    "specialinvoke <java.net.URL: void <init>(java.lang.String)>"
+    "load.r r2"->"specialinvoke <java.net.URL: void <init>(java.lang.String)>";
+    "arraywrite.r"
+    "specialinvoke <java.net.URL: void <init>(java.lang.String)>"->"arraywrite.r";
+    "goto load.r r0"
+    "arraywrite.r"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <Puzzle: int NumImages>";
+    "push 1"
+    "fieldget <Puzzle: int NumImages>"->"push 1";
+    "add.i"
+    "push 1"->"add.i";
+    "fieldput <Puzzle: int NumImages>"
+    "add.i"->"fieldput <Puzzle: int NumImages>";
+    "fieldput <Puzzle: int NumImages>"->"load.r r2";
+    "ifnonnull load.r r0"
+    "load.r r2"->"ifnonnull load.r r0";
+    "staticget <java.lang.System: java.io.PrintStream err>"
+    "ifnonnull load.r r0"->"staticget <java.lang.System: java.io.PrintStream err>";
+    "staticget <java.lang.System: java.io.PrintStream err>"->"new java.lang.StringBuffer";
+    "new java.lang.StringBuffer"->"dup1.r";
+    "push \"Puzzle: Total images:\""
+    "dup1.r"->"push \"Puzzle: Total images:\"";
+    "push \"Puzzle: Total images:\""->"specialinvoke <java.lang.StringBuffer: void <init>(java.lang.String)>";
+    "specialinvoke <java.lang.StringBuffer: void <init>(java.lang.String)>"->"load.r r0";
+    "load.r r0"->"fieldget <Puzzle: int NumImages>";
+    "fieldget <Puzzle: int NumImages>"->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(int)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(int)>"->"virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>";
+    "virtualinvoke <java.io.PrintStream: void println(java.lang.String)>"
+    "virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>"->"virtualinvoke <java.io.PrintStream: void println(java.lang.String)>";
+    "virtualinvoke <java.io.PrintStream: void println(java.lang.String)>"->"load.r r0";
+    "load.r r0"->"fieldget <Puzzle: int NumImages>";
+    "ifne load.r r0"
+    "fieldget <Puzzle: int NumImages>"->"ifne load.r r0";
+    "ifne load.r r0"->"load.r r0";
+    "load.r r0"->"push 1";
+    "fieldput <Puzzle: boolean error>"
+    "push 1"->"fieldput <Puzzle: boolean error>";
+    "fieldput <Puzzle: boolean error>"->"load.r r0";
+    "virtualinvoke <java.awt.Component: void repaint()>"
+    "load.r r0"->"virtualinvoke <java.awt.Component: void repaint()>";
+    "return"
+    "virtualinvoke <java.awt.Component: void repaint()>"->"return";
+    "ifne load.r r0"->"load.r r0";
+    "push \"JUMPTO\""
+    "load.r r0"->"push \"JUMPTO\"";
+    "push \"JUMPTO\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"store.r r2";
+    "store.r r2"->"load.r r0";
+    "load.r r0"->"new java.net.URL";
+    "new java.net.URL"->"dup1.r";
+    "dup1.r"->"load.r r2";
+    "load.r r2"->"specialinvoke <java.net.URL: void <init>(java.lang.String)>";
+    "fieldput <Puzzle: java.net.URL JumpTo>"
+    "specialinvoke <java.net.URL: void <init>(java.lang.String)>"->"fieldput <Puzzle: java.net.URL JumpTo>";
+    "fieldput <Puzzle: java.net.URL JumpTo>"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "push \"DELAY\""
+    "load.r r0"->"push \"DELAY\"";
+    "push \"DELAY\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"store.r r2";
+    "new java.lang.Integer"
+    "store.r r2"->"new java.lang.Integer";
+    "store.r $r22"
+    "new java.lang.Integer"->"store.r $r22";
+    "load.r $r22"
+    "store.r $r22"->"load.r $r22";
+    "load.r $r22"->"load.r r2";
+    "specialinvoke <java.lang.Integer: void <init>(java.lang.String)>"
+    "load.r r2"->"specialinvoke <java.lang.Integer: void <init>(java.lang.String)>";
+    "specialinvoke <java.lang.Integer: void <init>(java.lang.String)>"->"load.r $r22";
+    "virtualinvoke <java.lang.Integer: int intValue()>"
+    "load.r $r22"->"virtualinvoke <java.lang.Integer: int intValue()>";
+    "ifle load.r r0"
+    "virtualinvoke <java.lang.Integer: int intValue()>"->"ifle load.r r0";
+    "ifle load.r r0"->"load.r r0";
+    "load.r r0"->"load.r $r22";
+    "load.r $r22"->"virtualinvoke <java.lang.Integer: int intValue()>";
+    "fieldput <Puzzle: int imageDelay>"
+    "virtualinvoke <java.lang.Integer: int intValue()>"->"fieldput <Puzzle: int imageDelay>";
+    "fieldput <Puzzle: int imageDelay>"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "fieldget <Puzzle: int AppletW>"
+    "load.r r0"->"fieldget <Puzzle: int AppletW>";
+    "fieldget <Puzzle: int AppletW>"->"load.r r0";
+    "fieldget <Puzzle: int AppletH>"
+    "load.r r0"->"fieldget <Puzzle: int AppletH>";
+    "virtualinvoke <java.awt.Component: java.awt.Image createImage(int,int)>"
+    "fieldget <Puzzle: int AppletH>"->"virtualinvoke <java.awt.Component: java.awt.Image createImage(int,int)>";
+    "fieldput <Puzzle: java.awt.Image offScrImage>"
+    "virtualinvoke <java.awt.Component: java.awt.Image createImage(int,int)>"->"fieldput <Puzzle: java.awt.Image offScrImage>";
+    "fieldput <Puzzle: java.awt.Image offScrImage>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "fieldget <Puzzle: java.awt.Image offScrImage>"
+    "load.r r0"->"fieldget <Puzzle: java.awt.Image offScrImage>";
+    "virtualinvoke <java.awt.Image: java.awt.Graphics getGraphics()>"
+    "fieldget <Puzzle: java.awt.Image offScrImage>"->"virtualinvoke <java.awt.Image: java.awt.Graphics getGraphics()>";
+    "fieldput <Puzzle: java.awt.Graphics offScrGC>"
+    "virtualinvoke <java.awt.Image: java.awt.Graphics getGraphics()>"->"fieldput <Puzzle: java.awt.Graphics offScrGC>";
+    "fieldput <Puzzle: java.awt.Graphics offScrGC>"->"load.r r0";
+    "fieldget <Puzzle: java.awt.Graphics offScrGC>"
+    "load.r r0"->"fieldget <Puzzle: java.awt.Graphics offScrGC>";
+    "staticget <java.awt.Color: java.awt.Color black>"
+    "fieldget <Puzzle: java.awt.Graphics offScrGC>"->"staticget <java.awt.Color: java.awt.Color black>";
+    "virtualinvoke <java.awt.Graphics: void setColor(java.awt.Color)>"
+    "staticget <java.awt.Color: java.awt.Color black>"->"virtualinvoke <java.awt.Graphics: void setColor(java.awt.Color)>";
+    "virtualinvoke <java.awt.Graphics: void setColor(java.awt.Color)>"->"return";
+    "virtualinvoke <java.lang.Integer: int intValue()>"->"store.r r2";
+    "specialinvoke <java.net.URL: void <init>(java.lang.String)>"->"store.r $r22";
+    "store.r $r22"->"load.r r0";
+    "load.r r0"->"new java.net.URL";
+    "new java.net.URL"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "virtualinvoke <java.applet.Applet: java.net.URL getDocumentBase()>"
+    "load.r r0"->"virtualinvoke <java.applet.Applet: java.net.URL getDocumentBase()>";
+    "virtualinvoke <java.applet.Applet: java.net.URL getDocumentBase()>"->"load.r r2";
+    "specialinvoke <java.net.URL: void <init>(java.net.URL,java.lang.String)>"
+    "load.r r2"->"specialinvoke <java.net.URL: void <init>(java.net.URL,java.lang.String)>";
+    "specialinvoke <java.net.URL: void <init>(java.net.URL,java.lang.String)>"->"fieldput <Puzzle: java.net.URL JumpTo>";
+    "fieldput <Puzzle: java.net.URL JumpTo>"->"goto load.r r0";
+    "specialinvoke <java.net.URL: void <init>(java.net.URL,java.lang.String)>"->"store.r r2";
+    "store.r r2"->"load.r r0";
+    "push \"Jump To\""
+    "load.r r0"->"push \"Jump To\"";
+    "virtualinvoke <Puzzle: void urlError(java.lang.String)>"
+    "push \"Jump To\""->"virtualinvoke <Puzzle: void urlError(java.lang.String)>";
+    "virtualinvoke <Puzzle: void urlError(java.lang.String)>"->"goto load.r r0";
+    "specialinvoke <java.net.URL: void <init>(java.lang.String)>"->"store.r $r22";
+    "store.r $r22"->"load.r r0";
+    "load.r r0"->"fieldget <Puzzle: java.net.URL[] bitmapURL>";
+    "fieldget <Puzzle: java.net.URL[] bitmapURL>"->"load.r r0";
+    "load.r r0"->"fieldget <Puzzle: int NumImages>";
+    "fieldget <Puzzle: int NumImages>"->"new java.net.URL";
+    "new java.net.URL"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "load.r r0"->"virtualinvoke <java.applet.Applet: java.net.URL getDocumentBase()>";
+    "virtualinvoke <java.applet.Applet: java.net.URL getDocumentBase()>"->"load.r r2";
+    "load.r r2"->"specialinvoke <java.net.URL: void <init>(java.net.URL,java.lang.String)>";
+    "specialinvoke <java.net.URL: void <init>(java.net.URL,java.lang.String)>"->"arraywrite.r";
+    "arraywrite.r"->"goto load.r r0";
+    "specialinvoke <java.net.URL: void <init>(java.net.URL,java.lang.String)>"->"store.r r2";
+    "store.r r2"->"load.r r0";
+    "load.r r0"->"new java.lang.StringBuffer";
+    "new java.lang.StringBuffer"->"dup1.r";
+    "push \"Image\""
+    "dup1.r"->"push \"Image\"";
+    "push \"Image\""->"specialinvoke <java.lang.StringBuffer: void <init>(java.lang.String)>";
+    "specialinvoke <java.lang.StringBuffer: void <init>(java.lang.String)>"->"load.r r0";
+    "load.r r0"->"fieldget <Puzzle: int NumImages>";
+    "fieldget <Puzzle: int NumImages>"->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(int)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(int)>"->"virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>"->"virtualinvoke <Puzzle: void urlError(java.lang.String)>";
+    "push null"
+    "virtualinvoke <Puzzle: void urlError(java.lang.String)>"->"push null";
+    "push null"->"store.r r2";
+    "store.r r2"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <Puzzle: int NumImages>";
+    "fieldget <Puzzle: int NumImages>"->"push 1";
+    "sub.i"
+    "push 1"->"sub.i";
+    "sub.i"->"fieldput <Puzzle: int NumImages>";
+    "fieldput <Puzzle: int NumImages>"->"goto load.r r0";
+}

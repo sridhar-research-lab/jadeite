@@ -1,0 +1,1167 @@
+digraph "" {
+    "r0 := @this: vsw"
+    "load.r r0"
+    "r0 := @this: vsw"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "virtualinvoke <java.awt.Component: java.awt.Dimension size()>"
+    "load.r r0"->"virtualinvoke <java.awt.Component: java.awt.Dimension size()>";
+    "fieldput <vsw: java.awt.Dimension d>"
+    "virtualinvoke <java.awt.Component: java.awt.Dimension size()>"->"fieldput <vsw: java.awt.Dimension d>";
+    "fieldput <vsw: java.awt.Dimension d>"->"load.r r0";
+    "push \"Notice\""
+    "load.r r0"->"push \"Notice\"";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"
+    "push \"Notice\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "store.r r1"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"store.r r1";
+    "load.r r1"
+    "store.r r1"->"load.r r1";
+    "ifnull load.r r0"
+    "load.r r1"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r r1";
+    "load.r r1"->"load.r r0";
+    "virtualinvoke <java.applet.Applet: java.net.URL getDocumentBase()>"
+    "load.r r0"->"virtualinvoke <java.applet.Applet: java.net.URL getDocumentBase()>";
+    "staticinvoke <evalkey: java.lang.String getKey(java.lang.String,java.net.URL)>"
+    "virtualinvoke <java.applet.Applet: java.net.URL getDocumentBase()>"->"staticinvoke <evalkey: java.lang.String getKey(java.lang.String,java.net.URL)>";
+    "staticinvoke <evalkey: java.lang.String getKey(java.lang.String,java.net.URL)>"->"store.r r1";
+    "store.r r1"->"load.r r1";
+    "push \"Vertical Scrolling Window (Developer Version), Copyright (c) 2000, OpenCube Inc.\""
+    "load.r r1"->"push \"Vertical Scrolling Window (Developer Version), Copyright (c) 2000, OpenCube Inc.\"";
+    "virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>"
+    "push \"Vertical Scrolling Window (Developer Version), Copyright (c) 2000, OpenCube Inc.\""->"virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>";
+    "ifne load.r r0"
+    "virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>"->"ifne load.r r0";
+    "ifne load.r r0"->"load.r r1";
+    "push \"-1\""
+    "load.r r1"->"push \"-1\"";
+    "push \"-1\""->"virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>";
+    "ifeq load.r r0"
+    "virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>"->"ifeq load.r r0";
+    "ifeq load.r r0"->"load.r r0";
+    "push \"Incorrect Base URL Registration\""
+    "load.r r0"->"push \"Incorrect Base URL Registration\"";
+    "fieldput <vsw: java.lang.String m_sb_text>"
+    "push \"Incorrect Base URL Registration\""->"fieldput <vsw: java.lang.String m_sb_text>";
+    "return"
+    "fieldput <vsw: java.lang.String m_sb_text>"->"return";
+    "ifeq load.r r0"->"load.r r0";
+    "push \"Incorrect Copyright Notice in \'Notice\' tag\""
+    "load.r r0"->"push \"Incorrect Copyright Notice in \'Notice\' tag\"";
+    "push \"Incorrect Copyright Notice in \'Notice\' tag\""->"fieldput <vsw: java.lang.String m_sb_text>";
+    "fieldput <vsw: java.lang.String m_sb_text>"->"return";
+    "ifne load.r r0"->"load.r r0";
+    "push 1"
+    "load.r r0"->"push 1";
+    "fieldput <vsw: boolean tag>"
+    "push 1"->"fieldput <vsw: boolean tag>";
+    "goto load.r r0"
+    "fieldput <vsw: boolean tag>"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "push \"paramsinfile\""
+    "load.r r0"->"push \"paramsinfile\"";
+    "push \"paramsinfile\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "store.r $r12"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"store.r $r12";
+    "load.r $r12"
+    "store.r $r12"->"load.r $r12";
+    "ifnull new java.util.Properties"
+    "load.r $r12"->"ifnull new java.util.Properties";
+    "ifnull new java.util.Properties"->"load.r r0";
+    "load.r r0"->"load.r $r12";
+    "staticinvoke <java.lang.Boolean: java.lang.Boolean valueOf(java.lang.String)>"
+    "load.r $r12"->"staticinvoke <java.lang.Boolean: java.lang.Boolean valueOf(java.lang.String)>";
+    "virtualinvoke <java.lang.Boolean: boolean booleanValue()>"
+    "staticinvoke <java.lang.Boolean: java.lang.Boolean valueOf(java.lang.String)>"->"virtualinvoke <java.lang.Boolean: boolean booleanValue()>";
+    "fieldput <vsw: boolean m_paramsinfile>"
+    "virtualinvoke <java.lang.Boolean: boolean booleanValue()>"->"fieldput <vsw: boolean m_paramsinfile>";
+    "new java.util.Properties"
+    "fieldput <vsw: boolean m_paramsinfile>"->"new java.util.Properties";
+    "new java.util.Properties"->"store.r r1";
+    "store.r r1"->"load.r r1";
+    "specialinvoke <java.util.Properties: void <init>()>"
+    "load.r r1"->"specialinvoke <java.util.Properties: void <init>()>";
+    "specialinvoke <java.util.Properties: void <init>()>"->"load.r r0";
+    "fieldget <vsw: boolean m_paramsinfile>"
+    "load.r r0"->"fieldget <vsw: boolean m_paramsinfile>";
+    "fieldget <vsw: boolean m_paramsinfile>"->"ifeq load.r r0";
+    "ifeq load.r r0"->"load.r r0";
+    "push \"paramlocation\""
+    "load.r r0"->"push \"paramlocation\"";
+    "push \"paramlocation\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"store.r $r12";
+    "store.r $r12"->"load.r $r12";
+    "ifnonnull load.r r1"
+    "load.r $r12"->"ifnonnull load.r r1";
+    "ifnonnull load.r r1"->"load.r r0";
+    "push \"Missing \\\"paramlocation\\\" parameter\""
+    "load.r r0"->"push \"Missing \\\"paramlocation\\\" parameter\"";
+    "push \"Missing \\\"paramlocation\\\" parameter\""->"fieldput <vsw: java.lang.String m_sb_text>";
+    "fieldput <vsw: java.lang.String m_sb_text>"->"load.r r0";
+    "push 0"
+    "load.r r0"->"push 0";
+    "push 0"->"fieldput <vsw: boolean tag>";
+    "fieldput <vsw: boolean tag>"->"return";
+    "fieldput <vsw: boolean tag>"->"store.r r1";
+    "store.r r1"->"load.r r0";
+    "new java.lang.StringBuffer"
+    "load.r r0"->"new java.lang.StringBuffer";
+    "dup1.r"
+    "new java.lang.StringBuffer"->"dup1.r";
+    "push \"Error loading param file: \\\"\""
+    "dup1.r"->"push \"Error loading param file: \\\"\"";
+    "specialinvoke <java.lang.StringBuffer: void <init>(java.lang.String)>"
+    "push \"Error loading param file: \\\"\""->"specialinvoke <java.lang.StringBuffer: void <init>(java.lang.String)>";
+    "specialinvoke <java.lang.StringBuffer: void <init>(java.lang.String)>"->"load.r $r12";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"
+    "load.r $r12"->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "push \"\\\"\""
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"push \"\\\"\"";
+    "push \"\\\"\""->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>"
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>"->"fieldput <vsw: java.lang.String m_sb_text>";
+    "fieldput <vsw: java.lang.String m_sb_text>"->"load.r r0";
+    "load.r r0"->"push 0";
+    "push 0"->"fieldput <vsw: boolean tag>";
+    "fieldput <vsw: boolean tag>"->"return";
+    "ifnonnull load.r r1"->"load.r r1";
+    "new java.net.URL"
+    "load.r r1"->"new java.net.URL";
+    "new java.net.URL"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "load.r r0"->"virtualinvoke <java.applet.Applet: java.net.URL getDocumentBase()>";
+    "virtualinvoke <java.applet.Applet: java.net.URL getDocumentBase()>"->"load.r $r12";
+    "specialinvoke <java.net.URL: void <init>(java.net.URL,java.lang.String)>"
+    "load.r $r12"->"specialinvoke <java.net.URL: void <init>(java.net.URL,java.lang.String)>";
+    "virtualinvoke <java.net.URL: java.io.InputStream openStream()>"
+    "specialinvoke <java.net.URL: void <init>(java.net.URL,java.lang.String)>"->"virtualinvoke <java.net.URL: java.io.InputStream openStream()>";
+    "store.r r3"
+    "virtualinvoke <java.net.URL: java.io.InputStream openStream()>"->"store.r r3";
+    "load.r r3"
+    "store.r r3"->"load.r r3";
+    "virtualinvoke <java.util.Properties: void load(java.io.InputStream)>"
+    "load.r r3"->"virtualinvoke <java.util.Properties: void load(java.io.InputStream)>";
+    "virtualinvoke <java.util.Properties: void load(java.io.InputStream)>"->"load.r r3";
+    "virtualinvoke <java.io.InputStream: void close()>"
+    "load.r r3"->"virtualinvoke <java.io.InputStream: void close()>";
+    "virtualinvoke <java.io.InputStream: void close()>"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <vsw: boolean m_paramsinfile>";
+    "fieldget <vsw: boolean m_paramsinfile>"->"ifeq load.r r0";
+    "ifeq load.r r0"->"load.r r1";
+    "push \"barbuttoncolor\""
+    "load.r r1"->"push \"barbuttoncolor\"";
+    "virtualinvoke <java.util.Properties: java.lang.String getProperty(java.lang.String)>"
+    "push \"barbuttoncolor\""->"virtualinvoke <java.util.Properties: java.lang.String getProperty(java.lang.String)>";
+    "virtualinvoke <java.util.Properties: java.lang.String getProperty(java.lang.String)>"->"store.r $r12";
+    "goto load.r $r12"
+    "store.r $r12"->"goto load.r $r12";
+    "goto load.r $r12"->"load.r $r12";
+    "load.r $r12"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r r0";
+    "load.r r0"->"load.r $r12";
+    "staticinvoke <occcolor: java.awt.Color ConvertColor(java.lang.String)>"
+    "load.r $r12"->"staticinvoke <occcolor: java.awt.Color ConvertColor(java.lang.String)>";
+    "fieldput <vsw: java.awt.Color m_bc>"
+    "staticinvoke <occcolor: java.awt.Color ConvertColor(java.lang.String)>"->"fieldput <vsw: java.awt.Color m_bc>";
+    "fieldput <vsw: java.awt.Color m_bc>"->"load.r r0";
+    "load.r r0"->"fieldget <vsw: boolean m_paramsinfile>";
+    "fieldget <vsw: boolean m_paramsinfile>"->"ifeq load.r r0";
+    "ifeq load.r r0"->"load.r r1";
+    "push \"bararrowcolor\""
+    "load.r r1"->"push \"bararrowcolor\"";
+    "push \"bararrowcolor\""->"virtualinvoke <java.util.Properties: java.lang.String getProperty(java.lang.String)>";
+    "virtualinvoke <java.util.Properties: java.lang.String getProperty(java.lang.String)>"->"store.r $r12";
+    "store.r $r12"->"goto load.r $r12";
+    "goto load.r $r12"->"load.r $r12";
+    "load.r $r12"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r r0";
+    "load.r r0"->"load.r $r12";
+    "load.r $r12"->"staticinvoke <occcolor: java.awt.Color ConvertColor(java.lang.String)>";
+    "fieldput <vsw: java.awt.Color m_ac>"
+    "staticinvoke <occcolor: java.awt.Color ConvertColor(java.lang.String)>"->"fieldput <vsw: java.awt.Color m_ac>";
+    "fieldput <vsw: java.awt.Color m_ac>"->"load.r r0";
+    "load.r r0"->"fieldget <vsw: boolean m_paramsinfile>";
+    "fieldget <vsw: boolean m_paramsinfile>"->"ifeq load.r r0";
+    "ifeq load.r r0"->"load.r r1";
+    "push \"bararrowhcolor\""
+    "load.r r1"->"push \"bararrowhcolor\"";
+    "push \"bararrowhcolor\""->"virtualinvoke <java.util.Properties: java.lang.String getProperty(java.lang.String)>";
+    "virtualinvoke <java.util.Properties: java.lang.String getProperty(java.lang.String)>"->"store.r $r12";
+    "store.r $r12"->"goto load.r $r12";
+    "goto load.r $r12"->"load.r $r12";
+    "load.r $r12"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r r0";
+    "load.r r0"->"load.r $r12";
+    "load.r $r12"->"staticinvoke <occcolor: java.awt.Color ConvertColor(java.lang.String)>";
+    "fieldput <vsw: java.awt.Color m_hc>"
+    "staticinvoke <occcolor: java.awt.Color ConvertColor(java.lang.String)>"->"fieldput <vsw: java.awt.Color m_hc>";
+    "fieldput <vsw: java.awt.Color m_hc>"->"load.r r0";
+    "load.r r0"->"fieldget <vsw: boolean m_paramsinfile>";
+    "fieldget <vsw: boolean m_paramsinfile>"->"ifeq load.r r0";
+    "ifeq load.r r0"->"load.r r1";
+    "push \"barbgcolor\""
+    "load.r r1"->"push \"barbgcolor\"";
+    "push \"barbgcolor\""->"virtualinvoke <java.util.Properties: java.lang.String getProperty(java.lang.String)>";
+    "virtualinvoke <java.util.Properties: java.lang.String getProperty(java.lang.String)>"->"store.r $r12";
+    "store.r $r12"->"goto load.r $r12";
+    "goto load.r $r12"->"load.r $r12";
+    "load.r $r12"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r r0";
+    "load.r r0"->"load.r $r12";
+    "load.r $r12"->"staticinvoke <occcolor: java.awt.Color ConvertColor(java.lang.String)>";
+    "fieldput <vsw: java.awt.Color m_bgc>"
+    "staticinvoke <occcolor: java.awt.Color ConvertColor(java.lang.String)>"->"fieldput <vsw: java.awt.Color m_bgc>";
+    "fieldput <vsw: java.awt.Color m_bgc>"->"load.r r0";
+    "load.r r0"->"fieldget <vsw: boolean m_paramsinfile>";
+    "fieldget <vsw: boolean m_paramsinfile>"->"ifeq load.r r0";
+    "ifeq load.r r0"->"load.r r1";
+    "push \"barslidecolor\""
+    "load.r r1"->"push \"barslidecolor\"";
+    "push \"barslidecolor\""->"virtualinvoke <java.util.Properties: java.lang.String getProperty(java.lang.String)>";
+    "virtualinvoke <java.util.Properties: java.lang.String getProperty(java.lang.String)>"->"store.r $r12";
+    "store.r $r12"->"goto load.r $r12";
+    "goto load.r $r12"->"load.r $r12";
+    "load.r $r12"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r r0";
+    "load.r r0"->"load.r $r12";
+    "load.r $r12"->"staticinvoke <occcolor: java.awt.Color ConvertColor(java.lang.String)>";
+    "fieldput <vsw: java.awt.Color m_sc>"
+    "staticinvoke <occcolor: java.awt.Color ConvertColor(java.lang.String)>"->"fieldput <vsw: java.awt.Color m_sc>";
+    "fieldput <vsw: java.awt.Color m_sc>"->"load.r r0";
+    "load.r r0"->"fieldget <vsw: boolean m_paramsinfile>";
+    "fieldget <vsw: boolean m_paramsinfile>"->"ifeq load.r r0";
+    "ifeq load.r r0"->"load.r r1";
+    "push \"barslideocolor\""
+    "load.r r1"->"push \"barslideocolor\"";
+    "push \"barslideocolor\""->"virtualinvoke <java.util.Properties: java.lang.String getProperty(java.lang.String)>";
+    "virtualinvoke <java.util.Properties: java.lang.String getProperty(java.lang.String)>"->"store.r $r12";
+    "store.r $r12"->"goto load.r $r12";
+    "goto load.r $r12"->"load.r $r12";
+    "load.r $r12"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r r0";
+    "load.r r0"->"load.r $r12";
+    "load.r $r12"->"staticinvoke <occcolor: java.awt.Color ConvertColor(java.lang.String)>";
+    "fieldput <vsw: java.awt.Color m_oc>"
+    "staticinvoke <occcolor: java.awt.Color ConvertColor(java.lang.String)>"->"fieldput <vsw: java.awt.Color m_oc>";
+    "fieldput <vsw: java.awt.Color m_oc>"->"load.r r0";
+    "load.r r0"->"fieldget <vsw: boolean m_paramsinfile>";
+    "fieldget <vsw: boolean m_paramsinfile>"->"ifeq load.r r0";
+    "ifeq load.r r0"->"load.r r1";
+    "push \"barslideinset\""
+    "load.r r1"->"push \"barslideinset\"";
+    "push \"barslideinset\""->"virtualinvoke <java.util.Properties: java.lang.String getProperty(java.lang.String)>";
+    "virtualinvoke <java.util.Properties: java.lang.String getProperty(java.lang.String)>"->"store.r $r12";
+    "store.r $r12"->"goto load.r $r12";
+    "goto load.r $r12"->"load.r $r12";
+    "load.r $r12"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r r0";
+    "load.r r0"->"load.r $r12";
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"
+    "load.r $r12"->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>";
+    "fieldput <vsw: int m_si>"
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"->"fieldput <vsw: int m_si>";
+    "fieldput <vsw: int m_si>"->"load.r r0";
+    "load.r r0"->"fieldget <vsw: boolean m_paramsinfile>";
+    "fieldget <vsw: boolean m_paramsinfile>"->"ifeq load.r r0";
+    "ifeq load.r r0"->"load.r r1";
+    "push \"barwidth\""
+    "load.r r1"->"push \"barwidth\"";
+    "push \"barwidth\""->"virtualinvoke <java.util.Properties: java.lang.String getProperty(java.lang.String)>";
+    "virtualinvoke <java.util.Properties: java.lang.String getProperty(java.lang.String)>"->"store.r $r12";
+    "store.r $r12"->"goto load.r $r12";
+    "goto load.r $r12"->"load.r $r12";
+    "load.r $r12"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r r0";
+    "load.r r0"->"load.r $r12";
+    "load.r $r12"->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>";
+    "fieldput <vsw: int m_bar_width>"
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"->"fieldput <vsw: int m_bar_width>";
+    "fieldput <vsw: int m_bar_width>"->"load.r r0";
+    "new vswsb"
+    "load.r r0"->"new vswsb";
+    "new vswsb"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "fieldget <vsw: int m_bar_width>"
+    "load.r r0"->"fieldget <vsw: int m_bar_width>";
+    "fieldget <vsw: int m_bar_width>"->"load.r r0";
+    "fieldget <vsw: java.awt.Dimension d>"
+    "load.r r0"->"fieldget <vsw: java.awt.Dimension d>";
+    "fieldget <java.awt.Dimension: int height>"
+    "fieldget <vsw: java.awt.Dimension d>"->"fieldget <java.awt.Dimension: int height>";
+    "specialinvoke <vswsb: void <init>(int,int)>"
+    "fieldget <java.awt.Dimension: int height>"->"specialinvoke <vswsb: void <init>(int,int)>";
+    "fieldput <vsw: vswsb sb>"
+    "specialinvoke <vswsb: void <init>(int,int)>"->"fieldput <vsw: vswsb sb>";
+    "fieldput <vsw: vswsb sb>"->"load.r r0";
+    "fieldget <vsw: vswsb sb>"
+    "load.r r0"->"fieldget <vsw: vswsb sb>";
+    "fieldget <vsw: vswsb sb>"->"load.r r0";
+    "fieldget <vsw: java.awt.Color m_bgc>"
+    "load.r r0"->"fieldget <vsw: java.awt.Color m_bgc>";
+    "virtualinvoke <java.awt.Component: void setBackground(java.awt.Color)>"
+    "fieldget <vsw: java.awt.Color m_bgc>"->"virtualinvoke <java.awt.Component: void setBackground(java.awt.Color)>";
+    "virtualinvoke <java.awt.Component: void setBackground(java.awt.Color)>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <vsw: vswsb sb>";
+    "virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>"
+    "fieldget <vsw: vswsb sb>"->"virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>";
+    "pop"
+    "virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>"->"pop";
+    "new java.awt.BorderLayout"
+    "pop"->"new java.awt.BorderLayout";
+    "new java.awt.BorderLayout"->"store.r $r12";
+    "store.r $r12"->"load.r $r12";
+    "push 20"
+    "load.r $r12"->"push 20";
+    "push 20"->"push 20";
+    "specialinvoke <java.awt.BorderLayout: void <init>(int,int)>"
+    "push 20"->"specialinvoke <java.awt.BorderLayout: void <init>(int,int)>";
+    "specialinvoke <java.awt.BorderLayout: void <init>(int,int)>"->"load.r r0";
+    "load.r r0"->"load.r $r12";
+    "virtualinvoke <java.awt.Container: void setLayout(java.awt.LayoutManager)>"
+    "load.r $r12"->"virtualinvoke <java.awt.Container: void setLayout(java.awt.LayoutManager)>";
+    "virtualinvoke <java.awt.Container: void setLayout(java.awt.LayoutManager)>"->"load.r $r12";
+    "load.r $r12"->"load.r r0";
+    "load.r r0"->"fieldget <vsw: vswsb sb>";
+    "interfaceinvoke <java.awt.LayoutManager: void removeLayoutComponent(java.awt.Component)> 1"
+    "fieldget <vsw: vswsb sb>"->"interfaceinvoke <java.awt.LayoutManager: void removeLayoutComponent(java.awt.Component)> 1";
+    "interfaceinvoke <java.awt.LayoutManager: void removeLayoutComponent(java.awt.Component)> 1"->"load.r r0";
+    "load.r r0"->"fieldget <vsw: vswsb sb>";
+    "fieldget <vsw: vswsb sb>"->"load.r r0";
+    "load.r r0"->"fieldget <vsw: java.awt.Dimension d>";
+    "fieldget <java.awt.Dimension: int width>"
+    "fieldget <vsw: java.awt.Dimension d>"->"fieldget <java.awt.Dimension: int width>";
+    "fieldget <java.awt.Dimension: int width>"->"load.r r0";
+    "load.r r0"->"fieldget <vsw: int m_bar_width>";
+    "sub.i"
+    "fieldget <vsw: int m_bar_width>"->"sub.i";
+    "sub.i"->"push 0";
+    "push 0"->"load.r r0";
+    "load.r r0"->"fieldget <vsw: int m_bar_width>";
+    "fieldget <vsw: int m_bar_width>"->"load.r r0";
+    "load.r r0"->"fieldget <vsw: java.awt.Dimension d>";
+    "fieldget <vsw: java.awt.Dimension d>"->"fieldget <java.awt.Dimension: int height>";
+    "virtualinvoke <vswsb: void reshape(int,int,int,int)>"
+    "fieldget <java.awt.Dimension: int height>"->"virtualinvoke <vswsb: void reshape(int,int,int,int)>";
+    "virtualinvoke <vswsb: void reshape(int,int,int,int)>"->"load.r r0";
+    "new java.awt.Dimension"
+    "load.r r0"->"new java.awt.Dimension";
+    "new java.awt.Dimension"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "load.r r0"->"fieldget <vsw: java.awt.Dimension d>";
+    "fieldget <vsw: java.awt.Dimension d>"->"fieldget <java.awt.Dimension: int width>";
+    "fieldget <java.awt.Dimension: int width>"->"load.r r0";
+    "load.r r0"->"fieldget <vsw: int m_bar_width>";
+    "fieldget <vsw: int m_bar_width>"->"sub.i";
+    "sub.i"->"load.r r0";
+    "load.r r0"->"fieldget <vsw: java.awt.Dimension d>";
+    "fieldget <vsw: java.awt.Dimension d>"->"fieldget <java.awt.Dimension: int height>";
+    "specialinvoke <java.awt.Dimension: void <init>(int,int)>"
+    "fieldget <java.awt.Dimension: int height>"->"specialinvoke <java.awt.Dimension: void <init>(int,int)>";
+    "specialinvoke <java.awt.Dimension: void <init>(int,int)>"->"fieldput <vsw: java.awt.Dimension d>";
+    "fieldput <vsw: java.awt.Dimension d>"->"load.r r0";
+    "load.r r0"->"fieldget <vsw: vswsb sb>";
+    "fieldget <vsw: vswsb sb>"->"load.r r0";
+    "fieldget <vsw: int m_si>"
+    "load.r r0"->"fieldget <vsw: int m_si>";
+    "fieldget <vsw: int m_si>"->"load.r r0";
+    "fieldget <vsw: java.awt.Color m_bc>"
+    "load.r r0"->"fieldget <vsw: java.awt.Color m_bc>";
+    "fieldget <vsw: java.awt.Color m_bc>"->"load.r r0";
+    "fieldget <vsw: java.awt.Color m_ac>"
+    "load.r r0"->"fieldget <vsw: java.awt.Color m_ac>";
+    "fieldget <vsw: java.awt.Color m_ac>"->"load.r r0";
+    "fieldget <vsw: java.awt.Color m_hc>"
+    "load.r r0"->"fieldget <vsw: java.awt.Color m_hc>";
+    "fieldget <vsw: java.awt.Color m_hc>"->"load.r r0";
+    "load.r r0"->"fieldget <vsw: java.awt.Color m_bgc>";
+    "fieldget <vsw: java.awt.Color m_bgc>"->"load.r r0";
+    "fieldget <vsw: java.awt.Color m_sc>"
+    "load.r r0"->"fieldget <vsw: java.awt.Color m_sc>";
+    "fieldget <vsw: java.awt.Color m_sc>"->"load.r r0";
+    "fieldget <vsw: java.awt.Color m_oc>"
+    "load.r r0"->"fieldget <vsw: java.awt.Color m_oc>";
+    "virtualinvoke <vswsb: void setBarStyle(int,java.awt.Color,java.awt.Color,java.awt.Color,java.awt.Color,java.awt.Color,java.awt.Color)>"
+    "fieldget <vsw: java.awt.Color m_oc>"->"virtualinvoke <vswsb: void setBarStyle(int,java.awt.Color,java.awt.Color,java.awt.Color,java.awt.Color,java.awt.Color,java.awt.Color)>";
+    "virtualinvoke <vswsb: void setBarStyle(int,java.awt.Color,java.awt.Color,java.awt.Color,java.awt.Color,java.awt.Color,java.awt.Color)>"->"load.r r0";
+    "load.r r0"->"fieldget <vsw: boolean m_paramsinfile>";
+    "fieldget <vsw: boolean m_paramsinfile>"->"ifeq load.r r0";
+    "ifeq load.r r0"->"load.r r1";
+    "push \"barlinejump\""
+    "load.r r1"->"push \"barlinejump\"";
+    "push \"barlinejump\""->"virtualinvoke <java.util.Properties: java.lang.String getProperty(java.lang.String)>";
+    "virtualinvoke <java.util.Properties: java.lang.String getProperty(java.lang.String)>"->"store.r $r12";
+    "store.r $r12"->"goto load.r $r12";
+    "goto load.r $r12"->"load.r $r12";
+    "load.r $r12"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r r0";
+    "load.r r0"->"load.r $r12";
+    "load.r $r12"->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>";
+    "fieldput <vsw: int m_sb_line_dist>"
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"->"fieldput <vsw: int m_sb_line_dist>";
+    "fieldput <vsw: int m_sb_line_dist>"->"load.r r0";
+    "load.r r0"->"fieldget <vsw: boolean m_paramsinfile>";
+    "fieldget <vsw: boolean m_paramsinfile>"->"ifeq load.r r0";
+    "ifeq load.r r0"->"load.r r1";
+    "push \"font\""
+    "load.r r1"->"push \"font\"";
+    "push \"font\""->"virtualinvoke <java.util.Properties: java.lang.String getProperty(java.lang.String)>";
+    "virtualinvoke <java.util.Properties: java.lang.String getProperty(java.lang.String)>"->"store.r $r12";
+    "store.r $r12"->"goto load.r $r12";
+    "goto load.r $r12"->"load.r $r12";
+    "load.r $r12"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r r0";
+    "load.r r0"->"load.r $r12";
+    "push \",\""
+    "load.r $r12"->"push \",\"";
+    "staticinvoke <ocfontc: java.awt.Font getFontSD(java.lang.String,java.lang.String)>"
+    "push \",\""->"staticinvoke <ocfontc: java.awt.Font getFontSD(java.lang.String,java.lang.String)>";
+    "fieldput <vsw: java.awt.Font font>"
+    "staticinvoke <ocfontc: java.awt.Font getFontSD(java.lang.String,java.lang.String)>"->"fieldput <vsw: java.awt.Font font>";
+    "fieldput <vsw: java.awt.Font font>"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <vsw: boolean m_paramsinfile>";
+    "fieldget <vsw: boolean m_paramsinfile>"->"ifeq load.r r0";
+    "ifeq load.r r0"->"load.r r1";
+    "push \"loadfont\""
+    "load.r r1"->"push \"loadfont\"";
+    "push \"loadfont\""->"virtualinvoke <java.util.Properties: java.lang.String getProperty(java.lang.String)>";
+    "virtualinvoke <java.util.Properties: java.lang.String getProperty(java.lang.String)>"->"store.r $r12";
+    "store.r $r12"->"goto load.r $r12";
+    "goto load.r $r12"->"load.r $r12";
+    "load.r $r12"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r r0";
+    "load.r r0"->"load.r $r12";
+    "load.r $r12"->"push \",\"";
+    "push \",\""->"staticinvoke <ocfontc: java.awt.Font getFontSD(java.lang.String,java.lang.String)>";
+    "fieldput <vsw: java.awt.Font loadfont>"
+    "staticinvoke <ocfontc: java.awt.Font getFontSD(java.lang.String,java.lang.String)>"->"fieldput <vsw: java.awt.Font loadfont>";
+    "fieldput <vsw: java.awt.Font loadfont>"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <vsw: boolean m_paramsinfile>";
+    "fieldget <vsw: boolean m_paramsinfile>"->"ifeq load.r r0";
+    "ifeq load.r r0"->"load.r r1";
+    "push \"loadcolor\""
+    "load.r r1"->"push \"loadcolor\"";
+    "push \"loadcolor\""->"virtualinvoke <java.util.Properties: java.lang.String getProperty(java.lang.String)>";
+    "virtualinvoke <java.util.Properties: java.lang.String getProperty(java.lang.String)>"->"store.r $r12";
+    "store.r $r12"->"goto load.r $r12";
+    "goto load.r $r12"->"load.r $r12";
+    "load.r $r12"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r r0";
+    "load.r r0"->"load.r $r12";
+    "load.r $r12"->"staticinvoke <occcolor: java.awt.Color ConvertColor(java.lang.String)>";
+    "fieldput <vsw: java.awt.Color m_load_color>"
+    "staticinvoke <occcolor: java.awt.Color ConvertColor(java.lang.String)>"->"fieldput <vsw: java.awt.Color m_load_color>";
+    "fieldput <vsw: java.awt.Color m_load_color>"->"load.r r0";
+    "load.r r0"->"fieldget <vsw: boolean m_paramsinfile>";
+    "fieldget <vsw: boolean m_paramsinfile>"->"ifeq load.r r0";
+    "ifeq load.r r0"->"load.r r1";
+    "push \"loadmsg\""
+    "load.r r1"->"push \"loadmsg\"";
+    "push \"loadmsg\""->"virtualinvoke <java.util.Properties: java.lang.String getProperty(java.lang.String)>";
+    "virtualinvoke <java.util.Properties: java.lang.String getProperty(java.lang.String)>"->"store.r $r12";
+    "store.r $r12"->"goto load.r $r12";
+    "goto load.r $r12"->"load.r $r12";
+    "load.r $r12"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r r0";
+    "load.r r0"->"load.r $r12";
+    "fieldput <vsw: java.lang.String m_load_msg>"
+    "load.r $r12"->"fieldput <vsw: java.lang.String m_load_msg>";
+    "fieldput <vsw: java.lang.String m_load_msg>"->"load.r r0";
+    "load.r r0"->"fieldget <vsw: boolean m_paramsinfile>";
+    "fieldget <vsw: boolean m_paramsinfile>"->"ifeq load.r r0";
+    "ifeq load.r r0"->"load.r r1";
+    "push \"iconvoff\""
+    "load.r r1"->"push \"iconvoff\"";
+    "push \"iconvoff\""->"virtualinvoke <java.util.Properties: java.lang.String getProperty(java.lang.String)>";
+    "virtualinvoke <java.util.Properties: java.lang.String getProperty(java.lang.String)>"->"store.r $r12";
+    "store.r $r12"->"goto load.r $r12";
+    "goto load.r $r12"->"load.r $r12";
+    "load.r $r12"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r r0";
+    "load.r r0"->"load.r $r12";
+    "load.r $r12"->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>";
+    "fieldput <vsw: int m_icon_base_off>"
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"->"fieldput <vsw: int m_icon_base_off>";
+    "fieldput <vsw: int m_icon_base_off>"->"load.r r0";
+    "load.r r0"->"fieldget <vsw: boolean m_paramsinfile>";
+    "fieldget <vsw: boolean m_paramsinfile>"->"ifeq load.r r0";
+    "ifeq load.r r0"->"load.r r1";
+    "push \"topmargin\""
+    "load.r r1"->"push \"topmargin\"";
+    "push \"topmargin\""->"virtualinvoke <java.util.Properties: java.lang.String getProperty(java.lang.String)>";
+    "virtualinvoke <java.util.Properties: java.lang.String getProperty(java.lang.String)>"->"store.r $r12";
+    "store.r $r12"->"goto load.r $r12";
+    "goto load.r $r12"->"load.r $r12";
+    "load.r $r12"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r r0";
+    "load.r r0"->"load.r $r12";
+    "load.r $r12"->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>";
+    "fieldput <vsw: int m_top_margin>"
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"->"fieldput <vsw: int m_top_margin>";
+    "fieldput <vsw: int m_top_margin>"->"load.r r0";
+    "load.r r0"->"fieldget <vsw: boolean m_paramsinfile>";
+    "fieldget <vsw: boolean m_paramsinfile>"->"ifeq load.r r0";
+    "ifeq load.r r0"->"load.r r1";
+    "push \"scrolljump\""
+    "load.r r1"->"push \"scrolljump\"";
+    "push \"scrolljump\""->"virtualinvoke <java.util.Properties: java.lang.String getProperty(java.lang.String)>";
+    "virtualinvoke <java.util.Properties: java.lang.String getProperty(java.lang.String)>"->"store.r $r12";
+    "store.r $r12"->"goto load.r $r12";
+    "goto load.r $r12"->"load.r $r12";
+    "load.r $r12"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r r0";
+    "load.r r0"->"load.r $r12";
+    "load.r $r12"->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>";
+    "fieldput <vsw: int m_jump>"
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"->"fieldput <vsw: int m_jump>";
+    "fieldput <vsw: int m_jump>"->"load.r r0";
+    "load.r r0"->"fieldget <vsw: boolean m_paramsinfile>";
+    "fieldget <vsw: boolean m_paramsinfile>"->"ifeq load.r r0";
+    "ifeq load.r r0"->"load.r r1";
+    "push \"refreshscrollinterval\""
+    "load.r r1"->"push \"refreshscrollinterval\"";
+    "push \"refreshscrollinterval\""->"virtualinvoke <java.util.Properties: java.lang.String getProperty(java.lang.String)>";
+    "virtualinvoke <java.util.Properties: java.lang.String getProperty(java.lang.String)>"->"store.r $r12";
+    "store.r $r12"->"goto load.r $r12";
+    "goto load.r $r12"->"load.r $r12";
+    "load.r $r12"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r r0";
+    "load.r r0"->"load.r $r12";
+    "load.r $r12"->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>";
+    "fieldput <vsw: int m_file_update_scrolls>"
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"->"fieldput <vsw: int m_file_update_scrolls>";
+    "fieldput <vsw: int m_file_update_scrolls>"->"load.r r0";
+    "load.r r0"->"fieldget <vsw: boolean m_paramsinfile>";
+    "fieldget <vsw: boolean m_paramsinfile>"->"ifeq load.r r0";
+    "ifeq load.r r0"->"load.r r1";
+    "push \"filelocation\""
+    "load.r r1"->"push \"filelocation\"";
+    "push \"filelocation\""->"virtualinvoke <java.util.Properties: java.lang.String getProperty(java.lang.String)>";
+    "virtualinvoke <java.util.Properties: java.lang.String getProperty(java.lang.String)>"->"store.r $r12";
+    "store.r $r12"->"goto load.r $r12";
+    "goto load.r $r12"->"load.r $r12";
+    "load.r $r12"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r r0";
+    "load.r r0"->"load.r $r12";
+    "fieldput <vsw: java.lang.String m_file_location>"
+    "load.r $r12"->"fieldput <vsw: java.lang.String m_file_location>";
+    "fieldput <vsw: java.lang.String m_file_location>"->"load.r r0";
+    "load.r r0"->"new java.lang.StringBuffer";
+    "new java.lang.StringBuffer"->"dup1.r";
+    "push \"Loading: \""
+    "dup1.r"->"push \"Loading: \"";
+    "push \"Loading: \""->"specialinvoke <java.lang.StringBuffer: void <init>(java.lang.String)>";
+    "specialinvoke <java.lang.StringBuffer: void <init>(java.lang.String)>"->"load.r $r12";
+    "load.r $r12"->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>";
+    "fieldput <vsw: java.lang.String connect_message>"
+    "virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>"->"fieldput <vsw: java.lang.String connect_message>";
+    "fieldput <vsw: java.lang.String connect_message>"->"load.r r0";
+    "load.r r0"->"fieldget <vsw: boolean m_paramsinfile>";
+    "fieldget <vsw: boolean m_paramsinfile>"->"ifeq load.r r0";
+    "ifeq load.r r0"->"load.r r1";
+    "push \"sbupdatetext\""
+    "load.r r1"->"push \"sbupdatetext\"";
+    "push \"sbupdatetext\""->"virtualinvoke <java.util.Properties: java.lang.String getProperty(java.lang.String)>";
+    "virtualinvoke <java.util.Properties: java.lang.String getProperty(java.lang.String)>"->"store.r $r12";
+    "store.r $r12"->"goto load.r $r12";
+    "goto load.r $r12"->"load.r $r12";
+    "load.r $r12"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r r0";
+    "load.r r0"->"load.r $r12";
+    "fieldput <vsw: java.lang.String m_sb_update_message>"
+    "load.r $r12"->"fieldput <vsw: java.lang.String m_sb_update_message>";
+    "fieldput <vsw: java.lang.String m_sb_update_message>"->"load.r r0";
+    "load.r r0"->"fieldget <vsw: boolean m_paramsinfile>";
+    "fieldget <vsw: boolean m_paramsinfile>"->"ifeq load.r r0";
+    "ifeq load.r r0"->"load.r r1";
+    "push \"waitforfile\""
+    "load.r r1"->"push \"waitforfile\"";
+    "push \"waitforfile\""->"virtualinvoke <java.util.Properties: java.lang.String getProperty(java.lang.String)>";
+    "virtualinvoke <java.util.Properties: java.lang.String getProperty(java.lang.String)>"->"store.r $r12";
+    "store.r $r12"->"goto load.r $r12";
+    "goto load.r $r12"->"load.r $r12";
+    "load.r $r12"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r r0";
+    "load.r r0"->"load.r $r12";
+    "load.r $r12"->"staticinvoke <java.lang.Boolean: java.lang.Boolean valueOf(java.lang.String)>";
+    "staticinvoke <java.lang.Boolean: java.lang.Boolean valueOf(java.lang.String)>"->"virtualinvoke <java.lang.Boolean: boolean booleanValue()>";
+    "fieldput <vsw: boolean m_wait_for_file>"
+    "virtualinvoke <java.lang.Boolean: boolean booleanValue()>"->"fieldput <vsw: boolean m_wait_for_file>";
+    "fieldput <vsw: boolean m_wait_for_file>"->"load.r r0";
+    "load.r r0"->"fieldget <vsw: boolean m_paramsinfile>";
+    "fieldget <vsw: boolean m_paramsinfile>"->"ifeq load.r r0";
+    "ifeq load.r r0"->"load.r r1";
+    "push \"alligniconparas\""
+    "load.r r1"->"push \"alligniconparas\"";
+    "push \"alligniconparas\""->"virtualinvoke <java.util.Properties: java.lang.String getProperty(java.lang.String)>";
+    "virtualinvoke <java.util.Properties: java.lang.String getProperty(java.lang.String)>"->"store.r $r12";
+    "store.r $r12"->"goto load.r $r12";
+    "goto load.r $r12"->"load.r $r12";
+    "load.r $r12"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r r0";
+    "load.r r0"->"load.r $r12";
+    "load.r $r12"->"staticinvoke <java.lang.Boolean: java.lang.Boolean valueOf(java.lang.String)>";
+    "staticinvoke <java.lang.Boolean: java.lang.Boolean valueOf(java.lang.String)>"->"virtualinvoke <java.lang.Boolean: boolean booleanValue()>";
+    "fieldput <vsw: boolean m_indent_all>"
+    "virtualinvoke <java.lang.Boolean: boolean booleanValue()>"->"fieldput <vsw: boolean m_indent_all>";
+    "fieldput <vsw: boolean m_indent_all>"->"load.r r0";
+    "load.r r0"->"fieldget <vsw: boolean m_paramsinfile>";
+    "fieldget <vsw: boolean m_paramsinfile>"->"ifeq load.r r0";
+    "ifeq load.r r0"->"load.r r1";
+    "push \"underlinelinks\""
+    "load.r r1"->"push \"underlinelinks\"";
+    "push \"underlinelinks\""->"virtualinvoke <java.util.Properties: java.lang.String getProperty(java.lang.String)>";
+    "virtualinvoke <java.util.Properties: java.lang.String getProperty(java.lang.String)>"->"store.r $r12";
+    "store.r $r12"->"goto load.r $r12";
+    "goto load.r $r12"->"load.r $r12";
+    "load.r $r12"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r r0";
+    "load.r r0"->"load.r $r12";
+    "load.r $r12"->"staticinvoke <java.lang.Boolean: java.lang.Boolean valueOf(java.lang.String)>";
+    "staticinvoke <java.lang.Boolean: java.lang.Boolean valueOf(java.lang.String)>"->"virtualinvoke <java.lang.Boolean: boolean booleanValue()>";
+    "fieldput <vsw: boolean m_underline_links>"
+    "virtualinvoke <java.lang.Boolean: boolean booleanValue()>"->"fieldput <vsw: boolean m_underline_links>";
+    "fieldput <vsw: boolean m_underline_links>"->"load.r r0";
+    "load.r r0"->"fieldget <vsw: boolean m_paramsinfile>";
+    "fieldget <vsw: boolean m_paramsinfile>"->"ifeq load.r r0";
+    "ifeq load.r r0"->"load.r r1";
+    "push \"scrollafterlink\""
+    "load.r r1"->"push \"scrollafterlink\"";
+    "push \"scrollafterlink\""->"virtualinvoke <java.util.Properties: java.lang.String getProperty(java.lang.String)>";
+    "virtualinvoke <java.util.Properties: java.lang.String getProperty(java.lang.String)>"->"store.r $r12";
+    "store.r $r12"->"goto load.r $r12";
+    "goto load.r $r12"->"load.r $r12";
+    "load.r $r12"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r r0";
+    "load.r r0"->"load.r $r12";
+    "load.r $r12"->"staticinvoke <java.lang.Boolean: java.lang.Boolean valueOf(java.lang.String)>";
+    "staticinvoke <java.lang.Boolean: java.lang.Boolean valueOf(java.lang.String)>"->"virtualinvoke <java.lang.Boolean: boolean booleanValue()>";
+    "fieldput <vsw: boolean scrollafterlink>"
+    "virtualinvoke <java.lang.Boolean: boolean booleanValue()>"->"fieldput <vsw: boolean scrollafterlink>";
+    "fieldput <vsw: boolean scrollafterlink>"->"load.r r0";
+    "load.r r0"->"fieldget <vsw: boolean m_paramsinfile>";
+    "fieldget <vsw: boolean m_paramsinfile>"->"ifeq load.r r0";
+    "ifeq load.r r0"->"load.r r1";
+    "push \"allignment\""
+    "load.r r1"->"push \"allignment\"";
+    "push \"allignment\""->"virtualinvoke <java.util.Properties: java.lang.String getProperty(java.lang.String)>";
+    "virtualinvoke <java.util.Properties: java.lang.String getProperty(java.lang.String)>"->"store.r $r12";
+    "store.r $r12"->"goto load.r $r12";
+    "goto load.r $r12"->"load.r $r12";
+    "load.r $r12"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"load.r $r12";
+    "virtualinvoke <vsw: int allignment(java.lang.String)>"
+    "load.r $r12"->"virtualinvoke <vsw: int allignment(java.lang.String)>";
+    "fieldput <vsw: int m_def_centertext>"
+    "virtualinvoke <vsw: int allignment(java.lang.String)>"->"fieldput <vsw: int m_def_centertext>";
+    "fieldput <vsw: int m_def_centertext>"->"load.r r0";
+    "load.r r0"->"fieldget <vsw: boolean m_paramsinfile>";
+    "fieldget <vsw: boolean m_paramsinfile>"->"ifeq load.r r0";
+    "ifeq load.r r0"->"load.r r1";
+    "push \"loadwhere\""
+    "load.r r1"->"push \"loadwhere\"";
+    "push \"loadwhere\""->"virtualinvoke <java.util.Properties: java.lang.String getProperty(java.lang.String)>";
+    "virtualinvoke <java.util.Properties: java.lang.String getProperty(java.lang.String)>"->"store.r $r12";
+    "store.r $r12"->"goto load.r $r12";
+    "goto load.r $r12"->"load.r $r12";
+    "load.r $r12"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r r0";
+    "load.r r0"->"load.r $r12";
+    "fieldput <vsw: java.lang.String m_def_loadwhere>"
+    "load.r $r12"->"fieldput <vsw: java.lang.String m_def_loadwhere>";
+    "fieldput <vsw: java.lang.String m_def_loadwhere>"->"load.r r0";
+    "load.r r0"->"fieldget <vsw: boolean m_paramsinfile>";
+    "fieldget <vsw: boolean m_paramsinfile>"->"ifeq load.r r0";
+    "ifeq load.r r0"->"load.r r1";
+    "push \"textcolor\""
+    "load.r r1"->"push \"textcolor\"";
+    "push \"textcolor\""->"virtualinvoke <java.util.Properties: java.lang.String getProperty(java.lang.String)>";
+    "virtualinvoke <java.util.Properties: java.lang.String getProperty(java.lang.String)>"->"store.r $r12";
+    "store.r $r12"->"goto load.r $r12";
+    "goto load.r $r12"->"load.r $r12";
+    "load.r $r12"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r r0";
+    "load.r r0"->"load.r $r12";
+    "load.r $r12"->"staticinvoke <occcolor: java.awt.Color ConvertColor(java.lang.String)>";
+    "fieldput <vsw: java.awt.Color m_def_textcolor>"
+    "staticinvoke <occcolor: java.awt.Color ConvertColor(java.lang.String)>"->"fieldput <vsw: java.awt.Color m_def_textcolor>";
+    "fieldput <vsw: java.awt.Color m_def_textcolor>"->"load.r r0";
+    "load.r r0"->"fieldget <vsw: boolean m_paramsinfile>";
+    "fieldget <vsw: boolean m_paramsinfile>"->"ifeq load.r r0";
+    "ifeq load.r r0"->"load.r r1";
+    "push \"bgcolor\""
+    "load.r r1"->"push \"bgcolor\"";
+    "push \"bgcolor\""->"virtualinvoke <java.util.Properties: java.lang.String getProperty(java.lang.String)>";
+    "virtualinvoke <java.util.Properties: java.lang.String getProperty(java.lang.String)>"->"store.r $r12";
+    "store.r $r12"->"goto load.r $r12";
+    "goto load.r $r12"->"load.r $r12";
+    "load.r $r12"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r r0";
+    "load.r r0"->"load.r $r12";
+    "load.r $r12"->"staticinvoke <occcolor: java.awt.Color ConvertColor(java.lang.String)>";
+    "fieldput <vsw: java.awt.Color m_bgcolor>"
+    "staticinvoke <occcolor: java.awt.Color ConvertColor(java.lang.String)>"->"fieldput <vsw: java.awt.Color m_bgcolor>";
+    "fieldput <vsw: java.awt.Color m_bgcolor>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "fieldget <vsw: java.awt.Color m_bgcolor>"
+    "load.r r0"->"fieldget <vsw: java.awt.Color m_bgcolor>";
+    "fieldget <vsw: java.awt.Color m_bgcolor>"->"virtualinvoke <java.awt.Component: void setBackground(java.awt.Color)>";
+    "virtualinvoke <java.awt.Component: void setBackground(java.awt.Color)>"->"load.r r0";
+    "load.r r0"->"fieldget <vsw: boolean m_paramsinfile>";
+    "fieldget <vsw: boolean m_paramsinfile>"->"ifeq load.r r0";
+    "ifeq load.r r0"->"load.r r1";
+    "push \"delay\""
+    "load.r r1"->"push \"delay\"";
+    "push \"delay\""->"virtualinvoke <java.util.Properties: java.lang.String getProperty(java.lang.String)>";
+    "virtualinvoke <java.util.Properties: java.lang.String getProperty(java.lang.String)>"->"store.r $r12";
+    "store.r $r12"->"goto load.r $r12";
+    "goto load.r $r12"->"load.r $r12";
+    "load.r $r12"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r r0";
+    "load.r r0"->"load.r $r12";
+    "load.r $r12"->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>";
+    "fieldput <vsw: int m_def_delay>"
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"->"fieldput <vsw: int m_def_delay>";
+    "fieldput <vsw: int m_def_delay>"->"load.r r0";
+    "load.r r0"->"fieldget <vsw: boolean m_paramsinfile>";
+    "fieldget <vsw: boolean m_paramsinfile>"->"ifeq load.r r0";
+    "ifeq load.r r0"->"load.r r1";
+    "push \"scrolldelay\""
+    "load.r r1"->"push \"scrolldelay\"";
+    "push \"scrolldelay\""->"virtualinvoke <java.util.Properties: java.lang.String getProperty(java.lang.String)>";
+    "virtualinvoke <java.util.Properties: java.lang.String getProperty(java.lang.String)>"->"store.r $r12";
+    "store.r $r12"->"goto load.r $r12";
+    "goto load.r $r12"->"load.r $r12";
+    "load.r $r12"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r r0";
+    "load.r r0"->"load.r $r12";
+    "load.r $r12"->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>";
+    "fieldput <vsw: int m_scroll_delay>"
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"->"fieldput <vsw: int m_scroll_delay>";
+    "fieldput <vsw: int m_scroll_delay>"->"load.r r0";
+    "load.r r0"->"fieldget <vsw: boolean m_paramsinfile>";
+    "fieldget <vsw: boolean m_paramsinfile>"->"ifeq load.r r0";
+    "ifeq load.r r0"->"load.r r1";
+    "push \"lrmargins\""
+    "load.r r1"->"push \"lrmargins\"";
+    "push \"lrmargins\""->"virtualinvoke <java.util.Properties: java.lang.String getProperty(java.lang.String)>";
+    "virtualinvoke <java.util.Properties: java.lang.String getProperty(java.lang.String)>"->"store.r $r12";
+    "store.r $r12"->"goto load.r $r12";
+    "goto load.r $r12"->"load.r $r12";
+    "load.r $r12"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r r0";
+    "load.r r0"->"load.r $r12";
+    "load.r $r12"->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>";
+    "fieldput <vsw: int m_xoffset>"
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"->"fieldput <vsw: int m_xoffset>";
+    "fieldput <vsw: int m_xoffset>"->"load.r r0";
+    "load.r r0"->"fieldget <vsw: boolean m_paramsinfile>";
+    "fieldget <vsw: boolean m_paramsinfile>"->"ifeq load.r r0";
+    "ifeq load.r r0"->"load.r r1";
+    "push \"hlcolor\""
+    "load.r r1"->"push \"hlcolor\"";
+    "push \"hlcolor\""->"virtualinvoke <java.util.Properties: java.lang.String getProperty(java.lang.String)>";
+    "virtualinvoke <java.util.Properties: java.lang.String getProperty(java.lang.String)>"->"store.r $r12";
+    "store.r $r12"->"goto load.r $r12";
+    "goto load.r $r12"->"load.r $r12";
+    "load.r $r12"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r r0";
+    "load.r r0"->"load.r $r12";
+    "load.r $r12"->"staticinvoke <occcolor: java.awt.Color ConvertColor(java.lang.String)>";
+    "fieldput <vsw: java.awt.Color m_def_hlcolor>"
+    "staticinvoke <occcolor: java.awt.Color ConvertColor(java.lang.String)>"->"fieldput <vsw: java.awt.Color m_def_hlcolor>";
+    "fieldput <vsw: java.awt.Color m_def_hlcolor>"->"load.r r0";
+    "load.r r0"->"fieldget <vsw: boolean m_paramsinfile>";
+    "fieldget <vsw: boolean m_paramsinfile>"->"ifeq load.r r0";
+    "ifeq load.r r0"->"load.r r1";
+    "push \"onsbtext\""
+    "load.r r1"->"push \"onsbtext\"";
+    "push \"onsbtext\""->"virtualinvoke <java.util.Properties: java.lang.String getProperty(java.lang.String)>";
+    "virtualinvoke <java.util.Properties: java.lang.String getProperty(java.lang.String)>"->"store.r $r12";
+    "store.r $r12"->"goto load.r $r12";
+    "goto load.r $r12"->"load.r $r12";
+    "load.r $r12"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r r0";
+    "load.r r0"->"load.r $r12";
+    "load.r $r12"->"fieldput <vsw: java.lang.String m_sb_text>";
+    "fieldput <vsw: java.lang.String m_sb_text>"->"load.r r0";
+    "load.r r0"->"fieldget <vsw: boolean m_paramsinfile>";
+    "fieldget <vsw: boolean m_paramsinfile>"->"ifeq load.r r0";
+    "ifeq load.r r0"->"load.r r1";
+    "push \"offsbtext\""
+    "load.r r1"->"push \"offsbtext\"";
+    "push \"offsbtext\""->"virtualinvoke <java.util.Properties: java.lang.String getProperty(java.lang.String)>";
+    "virtualinvoke <java.util.Properties: java.lang.String getProperty(java.lang.String)>"->"store.r $r12";
+    "store.r $r12"->"goto load.r $r12";
+    "goto load.r $r12"->"load.r $r12";
+    "load.r $r12"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r r0";
+    "load.r r0"->"load.r $r12";
+    "fieldput <vsw: java.lang.String m_offsbtext>"
+    "load.r $r12"->"fieldput <vsw: java.lang.String m_offsbtext>";
+    "fieldput <vsw: java.lang.String m_offsbtext>"->"load.r r0";
+    "load.r r0"->"fieldget <vsw: boolean m_paramsinfile>";
+    "fieldget <vsw: boolean m_paramsinfile>"->"ifeq load.r r0";
+    "ifeq load.r r0"->"load.r r1";
+    "push \"showhand\""
+    "load.r r1"->"push \"showhand\"";
+    "push \"showhand\""->"virtualinvoke <java.util.Properties: java.lang.String getProperty(java.lang.String)>";
+    "virtualinvoke <java.util.Properties: java.lang.String getProperty(java.lang.String)>"->"store.r $r12";
+    "store.r $r12"->"goto load.r $r12";
+    "goto load.r $r12"->"load.r $r12";
+    "load.r $r12"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r r0";
+    "load.r r0"->"load.r $r12";
+    "load.r $r12"->"staticinvoke <java.lang.Boolean: java.lang.Boolean valueOf(java.lang.String)>";
+    "staticinvoke <java.lang.Boolean: java.lang.Boolean valueOf(java.lang.String)>"->"virtualinvoke <java.lang.Boolean: boolean booleanValue()>";
+    "fieldput <vsw: boolean m_showhand>"
+    "virtualinvoke <java.lang.Boolean: boolean booleanValue()>"->"fieldput <vsw: boolean m_showhand>";
+    "fieldput <vsw: boolean m_showhand>"->"load.r r0";
+    "load.r r0"->"fieldget <vsw: boolean m_paramsinfile>";
+    "fieldget <vsw: boolean m_paramsinfile>"->"ifeq load.r r0";
+    "goto load.r r1"
+    "ifeq load.r r0"->"goto load.r r1";
+    "goto load.r r1"->"load.r r1";
+    "load.r r1"->"new java.lang.StringBuffer";
+    "new java.lang.StringBuffer"->"dup1.r";
+    "push \"icon\""
+    "dup1.r"->"push \"icon\"";
+    "push \"icon\""->"specialinvoke <java.lang.StringBuffer: void <init>(java.lang.String)>";
+    "specialinvoke <java.lang.StringBuffer: void <init>(java.lang.String)>"->"load.r r0";
+    "fieldget <vsw: int num_i>"
+    "load.r r0"->"fieldget <vsw: int num_i>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(int)>"
+    "fieldget <vsw: int num_i>"->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(int)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(int)>"->"virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>"->"virtualinvoke <java.util.Properties: java.lang.String getProperty(java.lang.String)>";
+    "ifnonnull load.r r0"
+    "virtualinvoke <java.util.Properties: java.lang.String getProperty(java.lang.String)>"->"ifnonnull load.r r0";
+    "ifnonnull load.r r0"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <vsw: int num_i>";
+    "newarray"
+    "fieldget <vsw: int num_i>"->"newarray";
+    "fieldput <vsw: java.lang.String[] m_icon_file>"
+    "newarray"->"fieldput <vsw: java.lang.String[] m_icon_file>";
+    "fieldput <vsw: java.lang.String[] m_icon_file>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <vsw: int num_i>";
+    "fieldget <vsw: int num_i>"->"newarray";
+    "fieldput <vsw: java.lang.String[] m_icon_sfile>"
+    "newarray"->"fieldput <vsw: java.lang.String[] m_icon_sfile>";
+    "fieldput <vsw: java.lang.String[] m_icon_sfile>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <vsw: int num_i>";
+    "fieldget <vsw: int num_i>"->"newarray";
+    "fieldput <vsw: java.awt.Image[] icon>"
+    "newarray"->"fieldput <vsw: java.awt.Image[] icon>";
+    "fieldput <vsw: java.awt.Image[] icon>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <vsw: int num_i>";
+    "fieldget <vsw: int num_i>"->"newarray";
+    "fieldput <vsw: java.awt.Image[] sicon>"
+    "newarray"->"fieldput <vsw: java.awt.Image[] sicon>";
+    "fieldput <vsw: java.awt.Image[] sicon>"->"push 0";
+    "store.i $r12"
+    "push 0"->"store.i $r12";
+    "goto load.i $r12"
+    "store.i $r12"->"goto load.i $r12";
+    "load.i $r12"
+    "goto load.i $r12"->"load.i $r12";
+    "load.i $r12"->"load.r r0";
+    "load.r r0"->"fieldget <vsw: int num_i>";
+    "ifcmplt.i load.r r0"
+    "fieldget <vsw: int num_i>"->"ifcmplt.i load.r r0";
+    "ifcmplt.i load.r r0"->"load.r r0";
+    "new vswread"
+    "load.r r0"->"new vswread";
+    "new vswread"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "fieldget <vsw: java.lang.String m_file_location>"
+    "load.r r0"->"fieldget <vsw: java.lang.String m_file_location>";
+    "specialinvoke <vswread: void <init>(java.applet.Applet,java.lang.String)>"
+    "fieldget <vsw: java.lang.String m_file_location>"->"specialinvoke <vswread: void <init>(java.applet.Applet,java.lang.String)>";
+    "fieldput <vsw: vswread the_file>"
+    "specialinvoke <vswread: void <init>(java.applet.Applet,java.lang.String)>"->"fieldput <vsw: vswread the_file>";
+    "fieldput <vsw: vswread the_file>"->"return";
+    "ifcmplt.i load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <vsw: boolean m_paramsinfile>";
+    "ifeq load.r r1"
+    "fieldget <vsw: boolean m_paramsinfile>"->"ifeq load.r r1";
+    "ifeq load.r r1"->"load.r r1";
+    "load.r r1"->"new java.lang.StringBuffer";
+    "new java.lang.StringBuffer"->"dup1.r";
+    "dup1.r"->"push \"icon\"";
+    "push \"icon\""->"specialinvoke <java.lang.StringBuffer: void <init>(java.lang.String)>";
+    "specialinvoke <java.lang.StringBuffer: void <init>(java.lang.String)>"->"load.i $r12";
+    "load.i $r12"->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(int)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(int)>"->"virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>"->"virtualinvoke <java.util.Properties: java.lang.String getProperty(java.lang.String)>";
+    "virtualinvoke <java.util.Properties: java.lang.String getProperty(java.lang.String)>"->"store.r r3";
+    "goto load.r r3"
+    "store.r r3"->"goto load.r r3";
+    "goto load.r r3"->"load.r r3";
+    "load.r r3"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r r0";
+    "fieldget <vsw: java.lang.String[] m_icon_file>"
+    "load.r r0"->"fieldget <vsw: java.lang.String[] m_icon_file>";
+    "fieldget <vsw: java.lang.String[] m_icon_file>"->"load.i $r12";
+    "load.i $r12"->"load.r r3";
+    "arraywrite.r"
+    "load.r r3"->"arraywrite.r";
+    "arraywrite.r"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <vsw: boolean m_paramsinfile>";
+    "fieldget <vsw: boolean m_paramsinfile>"->"ifeq load.r r0";
+    "ifeq load.r r0"->"load.r r1";
+    "load.r r1"->"new java.lang.StringBuffer";
+    "new java.lang.StringBuffer"->"dup1.r";
+    "push \"iconhl\""
+    "dup1.r"->"push \"iconhl\"";
+    "push \"iconhl\""->"specialinvoke <java.lang.StringBuffer: void <init>(java.lang.String)>";
+    "specialinvoke <java.lang.StringBuffer: void <init>(java.lang.String)>"->"load.i $r12";
+    "load.i $r12"->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(int)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(int)>"->"virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>"->"virtualinvoke <java.util.Properties: java.lang.String getProperty(java.lang.String)>";
+    "virtualinvoke <java.util.Properties: java.lang.String getProperty(java.lang.String)>"->"store.r r3";
+    "store.r r3"->"goto load.r r3";
+    "goto load.r r3"->"load.r r3";
+    "load.r r3"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r r0";
+    "fieldget <vsw: java.lang.String[] m_icon_sfile>"
+    "load.r r0"->"fieldget <vsw: java.lang.String[] m_icon_sfile>";
+    "fieldget <vsw: java.lang.String[] m_icon_sfile>"->"load.i $r12";
+    "load.i $r12"->"load.r r3";
+    "load.r r3"->"arraywrite.r";
+    "goto inc.i $r12 1"
+    "arraywrite.r"->"goto inc.i $r12 1";
+    "inc.i $r12 1"
+    "goto inc.i $r12 1"->"inc.i $r12 1";
+    "ifnull load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <vsw: java.lang.String[] m_icon_sfile>";
+    "fieldget <vsw: java.lang.String[] m_icon_sfile>"->"load.i $r12";
+    "load.i $r12"->"push \"-1\"";
+    "push \"-1\""->"arraywrite.r";
+    "ifeq load.r r0"->"load.r r0";
+    "load.r r0"->"new java.lang.StringBuffer";
+    "new java.lang.StringBuffer"->"dup1.r";
+    "dup1.r"->"push \"iconhl\"";
+    "push \"iconhl\""->"specialinvoke <java.lang.StringBuffer: void <init>(java.lang.String)>";
+    "specialinvoke <java.lang.StringBuffer: void <init>(java.lang.String)>"->"load.i $r12";
+    "load.i $r12"->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(int)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(int)>"->"virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>"->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"store.r r3";
+    "ifnull load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <vsw: java.lang.String[] m_icon_file>";
+    "fieldget <vsw: java.lang.String[] m_icon_file>"->"load.i $r12";
+    "load.i $r12"->"push \"-1\"";
+    "push \"-1\""->"arraywrite.r";
+    "ifeq load.r r1"->"load.r r1";
+    "load.r r1"->"new java.lang.StringBuffer";
+    "new java.lang.StringBuffer"->"dup1.r";
+    "dup1.r"->"push \"icon\"";
+    "push \"icon\""->"specialinvoke <java.lang.StringBuffer: void <init>(java.lang.String)>";
+    "specialinvoke <java.lang.StringBuffer: void <init>(java.lang.String)>"->"load.i $r12";
+    "load.i $r12"->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(int)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(int)>"->"virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>"->"virtualinvoke <java.util.Properties: java.lang.String getProperty(java.lang.String)>";
+    "virtualinvoke <java.util.Properties: java.lang.String getProperty(java.lang.String)>"->"store.r r3";
+    "ifnonnull load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <vsw: int num_i>";
+    "fieldget <vsw: int num_i>"->"push 1";
+    "add.i"
+    "push 1"->"add.i";
+    "fieldput <vsw: int num_i>"
+    "add.i"->"fieldput <vsw: int num_i>";
+    "ifeq load.r r0"->"load.r r0";
+    "load.r r0"->"new java.lang.StringBuffer";
+    "new java.lang.StringBuffer"->"dup1.r";
+    "dup1.r"->"push \"icon\"";
+    "push \"icon\""->"specialinvoke <java.lang.StringBuffer: void <init>(java.lang.String)>";
+    "specialinvoke <java.lang.StringBuffer: void <init>(java.lang.String)>"->"load.r r0";
+    "load.r r0"->"fieldget <vsw: int num_i>";
+    "fieldget <vsw: int num_i>"->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(int)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(int)>"->"virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>"->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"ifnonnull load.r r0";
+    "ifnonnull load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <vsw: int num_i>";
+    "fieldget <vsw: int num_i>"->"push 1";
+    "push 1"->"add.i";
+    "add.i"->"fieldput <vsw: int num_i>";
+    "ifeq load.r r0"->"load.r r0";
+    "load.r r0"->"push \"showhand\"";
+    "push \"showhand\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"store.r $r12";
+    "ifeq load.r r0"->"load.r r0";
+    "load.r r0"->"push \"offsbtext\"";
+    "push \"offsbtext\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"store.r $r12";
+    "ifeq load.r r0"->"load.r r0";
+    "load.r r0"->"push \"onsbtext\"";
+    "push \"onsbtext\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"store.r $r12";
+    "ifeq load.r r0"->"load.r r0";
+    "load.r r0"->"push \"hlcolor\"";
+    "push \"hlcolor\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"store.r $r12";
+    "ifeq load.r r0"->"load.r r0";
+    "load.r r0"->"push \"lrmargins\"";
+    "push \"lrmargins\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"store.r $r12";
+    "ifeq load.r r0"->"load.r r0";
+    "load.r r0"->"push \"scrolldelay\"";
+    "push \"scrolldelay\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"store.r $r12";
+    "ifeq load.r r0"->"load.r r0";
+    "load.r r0"->"push \"delay\"";
+    "push \"delay\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"store.r $r12";
+    "ifeq load.r r0"->"load.r r0";
+    "load.r r0"->"push \"bgcolor\"";
+    "push \"bgcolor\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"store.r $r12";
+    "ifeq load.r r0"->"load.r r0";
+    "load.r r0"->"push \"textcolor\"";
+    "push \"textcolor\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"store.r $r12";
+    "ifeq load.r r0"->"load.r r0";
+    "load.r r0"->"push \"loadwhere\"";
+    "push \"loadwhere\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"store.r $r12";
+    "ifeq load.r r0"->"load.r r0";
+    "load.r r0"->"push \"allignment\"";
+    "push \"allignment\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"store.r $r12";
+    "ifeq load.r r0"->"load.r r0";
+    "load.r r0"->"push \"scrollafterlink\"";
+    "push \"scrollafterlink\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"store.r $r12";
+    "ifeq load.r r0"->"load.r r0";
+    "load.r r0"->"push \"underlinelinks\"";
+    "push \"underlinelinks\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"store.r $r12";
+    "ifeq load.r r0"->"load.r r0";
+    "load.r r0"->"push \"alligniconparas\"";
+    "push \"alligniconparas\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"store.r $r12";
+    "ifeq load.r r0"->"load.r r0";
+    "load.r r0"->"push \"waitforfile\"";
+    "push \"waitforfile\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"store.r $r12";
+    "ifeq load.r r0"->"load.r r0";
+    "load.r r0"->"push \"sbupdatetext\"";
+    "push \"sbupdatetext\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"store.r $r12";
+    "ifeq load.r r0"->"load.r r0";
+    "load.r r0"->"push \"filelocation\"";
+    "push \"filelocation\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"store.r $r12";
+    "ifeq load.r r0"->"load.r r0";
+    "load.r r0"->"push \"refreshscrollinterval\"";
+    "push \"refreshscrollinterval\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"store.r $r12";
+    "ifeq load.r r0"->"load.r r0";
+    "load.r r0"->"push \"scrolljump\"";
+    "push \"scrolljump\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"store.r $r12";
+    "ifeq load.r r0"->"load.r r0";
+    "load.r r0"->"push \"topmargin\"";
+    "push \"topmargin\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"store.r $r12";
+    "ifeq load.r r0"->"load.r r0";
+    "load.r r0"->"push \"iconvoff\"";
+    "push \"iconvoff\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"store.r $r12";
+    "ifeq load.r r0"->"load.r r0";
+    "load.r r0"->"push \"loadmsg\"";
+    "push \"loadmsg\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"store.r $r12";
+    "ifeq load.r r0"->"load.r r0";
+    "load.r r0"->"push \"loadcolor\"";
+    "push \"loadcolor\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"store.r $r12";
+    "ifnull load.r r0"->"load.r r0";
+    "new java.awt.Font"
+    "load.r r0"->"new java.awt.Font";
+    "new java.awt.Font"->"dup1.r";
+    "push \"Dialog\""
+    "dup1.r"->"push \"Dialog\"";
+    "push \"Dialog\""->"push 0";
+    "push 12"
+    "push 0"->"push 12";
+    "specialinvoke <java.awt.Font: void <init>(java.lang.String,int,int)>"
+    "push 12"->"specialinvoke <java.awt.Font: void <init>(java.lang.String,int,int)>";
+    "specialinvoke <java.awt.Font: void <init>(java.lang.String,int,int)>"->"fieldput <vsw: java.awt.Font loadfont>";
+    "ifeq load.r r0"->"load.r r0";
+    "load.r r0"->"push \"loadfont\"";
+    "push \"loadfont\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"store.r $r12";
+    "ifnull load.r r0"->"load.r r0";
+    "load.r r0"->"new java.awt.Font";
+    "new java.awt.Font"->"dup1.r";
+    "push \"DialogInput\""
+    "dup1.r"->"push \"DialogInput\"";
+    "push \"DialogInput\""->"push 0";
+    "push 10"
+    "push 0"->"push 10";
+    "push 10"->"specialinvoke <java.awt.Font: void <init>(java.lang.String,int,int)>";
+    "specialinvoke <java.awt.Font: void <init>(java.lang.String,int,int)>"->"fieldput <vsw: java.awt.Font font>";
+    "ifeq load.r r0"->"load.r r0";
+    "load.r r0"->"push \"font\"";
+    "push \"font\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"store.r $r12";
+    "ifeq load.r r0"->"load.r r0";
+    "load.r r0"->"push \"barlinejump\"";
+    "push \"barlinejump\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"store.r $r12";
+    "ifeq load.r r0"->"load.r r0";
+    "load.r r0"->"push \"barwidth\"";
+    "push \"barwidth\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"store.r $r12";
+    "ifeq load.r r0"->"load.r r0";
+    "load.r r0"->"push \"barslideinset\"";
+    "push \"barslideinset\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"store.r $r12";
+    "ifeq load.r r0"->"load.r r0";
+    "load.r r0"->"push \"barslideocolor\"";
+    "push \"barslideocolor\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"store.r $r12";
+    "ifeq load.r r0"->"load.r r0";
+    "load.r r0"->"push \"barslidecolor\"";
+    "push \"barslidecolor\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"store.r $r12";
+    "ifeq load.r r0"->"load.r r0";
+    "load.r r0"->"push \"barbgcolor\"";
+    "push \"barbgcolor\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"store.r $r12";
+    "ifeq load.r r0"->"load.r r0";
+    "load.r r0"->"push \"bararrowhcolor\"";
+    "push \"bararrowhcolor\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"store.r $r12";
+    "ifeq load.r r0"->"load.r r0";
+    "load.r r0"->"push \"bararrowcolor\"";
+    "push \"bararrowcolor\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"store.r $r12";
+    "ifeq load.r r0"->"load.r r0";
+    "load.r r0"->"push \"barbuttoncolor\"";
+    "push \"barbuttoncolor\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"store.r $r12";
+    "ifnull load.r r0"->"load.r r0";
+    "push \"Missing \'Notice\' Tag\""
+    "load.r r0"->"push \"Missing \'Notice\' Tag\"";
+    "push \"Missing \'Notice\' Tag\""->"fieldput <vsw: java.lang.String m_sb_text>";
+    "fieldput <vsw: java.lang.String m_sb_text>"->"return";
+}

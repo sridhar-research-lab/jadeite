@@ -1,0 +1,446 @@
+digraph "" {
+    "r0 := @this: a.a.a.a.r"
+    "load.r r0"
+    "r0 := @this: a.a.a.a.r"->"load.r r0";
+    "new a.a.a.a.an"
+    "load.r r0"->"new a.a.a.a.an";
+    "dup1.r"
+    "new a.a.a.a.an"->"dup1.r";
+    "specialinvoke <a.a.a.a.an: void <init>()>"
+    "dup1.r"->"specialinvoke <a.a.a.a.an: void <init>()>";
+    "fieldput <a.a.a.a.r: a.a.a.a.an q>"
+    "specialinvoke <a.a.a.a.an: void <init>()>"->"fieldput <a.a.a.a.r: a.a.a.a.an q>";
+    "fieldput <a.a.a.a.r: a.a.a.a.an q>"->"load.r r0";
+    "fieldget <a.a.a.a.r: a.a.a.a.an q>"
+    "load.r r0"->"fieldget <a.a.a.a.r: a.a.a.a.an q>";
+    "fieldget <a.a.a.a.r: a.a.a.a.an q>"->"load.r r0";
+    "fieldput <a.a.a.a.an: a.a.a.a.r 'case'>"
+    "load.r r0"->"fieldput <a.a.a.a.an: a.a.a.a.r 'case'>";
+    "staticget <java.lang.System: java.io.PrintStream out>"
+    "fieldput <a.a.a.a.an: a.a.a.a.r 'case'>"->"staticget <java.lang.System: java.io.PrintStream out>";
+    "staticget <java.lang.System: java.io.PrintStream out>"->"load.r r0";
+    "fieldget <a.a.a.a.r: java.lang.String N>"
+    "load.r r0"->"fieldget <a.a.a.a.r: java.lang.String N>";
+    "virtualinvoke <java.io.PrintStream: void println(java.lang.String)>"
+    "fieldget <a.a.a.a.r: java.lang.String N>"->"virtualinvoke <java.io.PrintStream: void println(java.lang.String)>";
+    "push \"java.version\""
+    "virtualinvoke <java.io.PrintStream: void println(java.lang.String)>"->"push \"java.version\"";
+    "staticinvoke <java.lang.System: java.lang.String getProperty(java.lang.String)>"
+    "push \"java.version\""->"staticinvoke <java.lang.System: java.lang.String getProperty(java.lang.String)>";
+    "store.r $r34"
+    "staticinvoke <java.lang.System: java.lang.String getProperty(java.lang.String)>"->"store.r $r34";
+    "store.r $r34"->"load.r r0";
+    "load.r $r34"
+    "load.r r0"->"load.r $r34";
+    "push 2"
+    "load.r $r34"->"push 2";
+    "virtualinvoke <java.lang.String: char charAt(int)>"
+    "push 2"->"virtualinvoke <java.lang.String: char charAt(int)>";
+    "push 48"
+    "virtualinvoke <java.lang.String: char charAt(int)>"->"push 48";
+    "sub.c"
+    "push 48"->"sub.c";
+    "fieldput <a.a.a.a.r: int 'new'>"
+    "sub.c"->"fieldput <a.a.a.a.r: int 'new'>";
+    "fieldput <a.a.a.a.r: int 'new'>"->"staticget <java.lang.System: java.io.PrintStream out>";
+    "new java.lang.StringBuffer"
+    "staticget <java.lang.System: java.io.PrintStream out>"->"new java.lang.StringBuffer";
+    "new java.lang.StringBuffer"->"dup1.r";
+    "push \"Java Version: \""
+    "dup1.r"->"push \"Java Version: \"";
+    "specialinvoke <java.lang.StringBuffer: void <init>(java.lang.String)>"
+    "push \"Java Version: \""->"specialinvoke <java.lang.StringBuffer: void <init>(java.lang.String)>";
+    "specialinvoke <java.lang.StringBuffer: void <init>(java.lang.String)>"->"load.r $r34";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"
+    "load.r $r34"->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "push \" from \""
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"push \" from \"";
+    "push \" from \""->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "push \"java.vendor\""
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"push \"java.vendor\"";
+    "push \"java.vendor\""->"staticinvoke <java.lang.System: java.lang.String getProperty(java.lang.String)>";
+    "staticinvoke <java.lang.System: java.lang.String getProperty(java.lang.String)>"->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>"
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>"->"virtualinvoke <java.io.PrintStream: void println(java.lang.String)>";
+    "virtualinvoke <java.io.PrintStream: void println(java.lang.String)>"->"staticget <java.lang.System: java.io.PrintStream out>";
+    "staticget <java.lang.System: java.io.PrintStream out>"->"new java.lang.StringBuffer";
+    "new java.lang.StringBuffer"->"dup1.r";
+    "push \"Operating system: \""
+    "dup1.r"->"push \"Operating system: \"";
+    "push \"Operating system: \""->"specialinvoke <java.lang.StringBuffer: void <init>(java.lang.String)>";
+    "push \"os.name\""
+    "specialinvoke <java.lang.StringBuffer: void <init>(java.lang.String)>"->"push \"os.name\"";
+    "push \"os.name\""->"staticinvoke <java.lang.System: java.lang.String getProperty(java.lang.String)>";
+    "staticinvoke <java.lang.System: java.lang.String getProperty(java.lang.String)>"->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "push \" version \""
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"push \" version \"";
+    "push \" version \""->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "push \"os.version\""
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"push \"os.version\"";
+    "push \"os.version\""->"staticinvoke <java.lang.System: java.lang.String getProperty(java.lang.String)>";
+    "staticinvoke <java.lang.System: java.lang.String getProperty(java.lang.String)>"->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "push \" on \""
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"push \" on \"";
+    "push \" on \""->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "push \"os.arch\""
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"push \"os.arch\"";
+    "push \"os.arch\""->"staticinvoke <java.lang.System: java.lang.String getProperty(java.lang.String)>";
+    "staticinvoke <java.lang.System: java.lang.String getProperty(java.lang.String)>"->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>"->"virtualinvoke <java.io.PrintStream: void println(java.lang.String)>";
+    "virtualinvoke <java.io.PrintStream: void println(java.lang.String)>"->"load.r $r34";
+    "push \"1.6.0_03\""
+    "load.r $r34"->"push \"1.6.0_03\"";
+    "virtualinvoke <java.lang.String: int compareTo(java.lang.String)>"
+    "push \"1.6.0_03\""->"virtualinvoke <java.lang.String: int compareTo(java.lang.String)>";
+    "iflt push \"os.name\""
+    "virtualinvoke <java.lang.String: int compareTo(java.lang.String)>"->"iflt push \"os.name\"";
+    "iflt push \"os.name\""->"load.r r0";
+    "push 17"
+    "load.r r0"->"push 17";
+    "fieldput <a.a.a.a.r: int l>"
+    "push 17"->"fieldput <a.a.a.a.r: int l>";
+    "fieldput <a.a.a.a.r: int l>"->"push \"os.name\"";
+    "push \"os.name\""->"staticinvoke <java.lang.System: java.lang.String getProperty(java.lang.String)>";
+    "virtualinvoke <java.lang.String: java.lang.String toLowerCase()>"
+    "staticinvoke <java.lang.System: java.lang.String getProperty(java.lang.String)>"->"virtualinvoke <java.lang.String: java.lang.String toLowerCase()>";
+    "push \"mac\""
+    "virtualinvoke <java.lang.String: java.lang.String toLowerCase()>"->"push \"mac\"";
+    "virtualinvoke <java.lang.String: boolean startsWith(java.lang.String)>"
+    "push \"mac\""->"virtualinvoke <java.lang.String: boolean startsWith(java.lang.String)>";
+    "ifeq load.r r0"
+    "virtualinvoke <java.lang.String: boolean startsWith(java.lang.String)>"->"ifeq load.r r0";
+    "push 1"
+    "ifeq load.r r0"->"push 1";
+    "staticput <a.a.a.a.r: boolean D>"
+    "push 1"->"staticput <a.a.a.a.r: boolean D>";
+    "staticput <a.a.a.a.r: boolean D>"->"load.r r0";
+    "fieldget <a.a.a.a.r: int 'new'>"
+    "load.r r0"->"fieldget <a.a.a.a.r: int 'new'>";
+    "push 3"
+    "fieldget <a.a.a.a.r: int 'new'>"->"push 3";
+    "ifcmpne.i load.r r0"
+    "push 3"->"ifcmpne.i load.r r0";
+    "ifcmpne.i load.r r0"->"push 1";
+    "staticput <a.a.a.a.r: boolean B>"
+    "push 1"->"staticput <a.a.a.a.r: boolean B>";
+    "staticput <a.a.a.a.r: boolean B>"->"load.r r0";
+    "load.r r0"->"fieldget <a.a.a.a.r: int 'new'>";
+    "push 4"
+    "fieldget <a.a.a.a.r: int 'new'>"->"push 4";
+    "push 4"->"ifcmpne.i load.r r0";
+    "ifcmpne.i load.r r0"->"push 1";
+    "push 1"->"staticput <a.a.a.a.r: boolean B>";
+    "staticput <a.a.a.a.r: boolean B>"->"push 1";
+    "staticput <a.a.a.a.r: boolean A>"
+    "push 1"->"staticput <a.a.a.a.r: boolean A>";
+    "goto load.r r0"
+    "staticput <a.a.a.a.r: boolean A>"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "virtualinvoke <java.awt.Component: void addMouseMotionListener(java.awt.event.MouseMotionListener)>"
+    "load.r r0"->"virtualinvoke <java.awt.Component: void addMouseMotionListener(java.awt.event.MouseMotionListener)>";
+    "virtualinvoke <java.awt.Component: void addMouseMotionListener(java.awt.event.MouseMotionListener)>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "virtualinvoke <java.awt.Component: void addMouseListener(java.awt.event.MouseListener)>"
+    "load.r r0"->"virtualinvoke <java.awt.Component: void addMouseListener(java.awt.event.MouseListener)>";
+    "virtualinvoke <java.awt.Component: void addMouseListener(java.awt.event.MouseListener)>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "virtualinvoke <java.awt.Component: void addKeyListener(java.awt.event.KeyListener)>"
+    "load.r r0"->"virtualinvoke <java.awt.Component: void addKeyListener(java.awt.event.KeyListener)>";
+    "virtualinvoke <java.awt.Component: void addKeyListener(java.awt.event.KeyListener)>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "fieldput <a.a.a.a.r: java.awt.Component c>"
+    "load.r r0"->"fieldput <a.a.a.a.r: java.awt.Component c>";
+    "fieldput <a.a.a.a.r: java.awt.Component c>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "virtualinvoke <java.awt.Component: java.awt.Dimension getSize()>"
+    "load.r r0"->"virtualinvoke <java.awt.Component: java.awt.Dimension getSize()>";
+    "fieldget <java.awt.Dimension: int width>"
+    "virtualinvoke <java.awt.Component: java.awt.Dimension getSize()>"->"fieldget <java.awt.Dimension: int width>";
+    "fieldput <a.a.a.a.r: int width>"
+    "fieldget <java.awt.Dimension: int width>"->"fieldput <a.a.a.a.r: int width>";
+    "fieldput <a.a.a.a.r: int width>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"virtualinvoke <java.awt.Component: java.awt.Dimension getSize()>";
+    "fieldget <java.awt.Dimension: int height>"
+    "virtualinvoke <java.awt.Component: java.awt.Dimension getSize()>"->"fieldget <java.awt.Dimension: int height>";
+    "fieldput <a.a.a.a.r: int height>"
+    "fieldget <java.awt.Dimension: int height>"->"fieldput <a.a.a.a.r: int height>";
+    "fieldput <a.a.a.a.r: int height>"->"load.r r0";
+    "load.r r0"->"fieldget <a.a.a.a.r: a.a.a.a.an q>";
+    "fieldget <a.a.a.a.r: a.a.a.a.an q>"->"load.r r0";
+    "fieldput <a.a.a.a.an: java.awt.Component L>"
+    "load.r r0"->"fieldput <a.a.a.a.an: java.awt.Component L>";
+    "fieldput <a.a.a.a.an: java.awt.Component L>"->"load.r r0";
+    "load.r r0"->"fieldget <a.a.a.a.r: a.a.a.a.an q>";
+    "fieldget <a.a.a.a.r: a.a.a.a.an q>"->"load.r r0";
+    "virtualinvoke <java.awt.Component: java.awt.Toolkit getToolkit()>"
+    "load.r r0"->"virtualinvoke <java.awt.Component: java.awt.Toolkit getToolkit()>";
+    "fieldput <a.a.a.a.an: java.awt.Toolkit I>"
+    "virtualinvoke <java.awt.Component: java.awt.Toolkit getToolkit()>"->"fieldput <a.a.a.a.an: java.awt.Toolkit I>";
+    "fieldput <a.a.a.a.an: java.awt.Toolkit I>"->"load.r r0";
+    "load.r r0"->"fieldget <a.a.a.a.r: a.a.a.a.an q>";
+    "new a.a.a.a.a3"
+    "fieldget <a.a.a.a.r: a.a.a.a.an q>"->"new a.a.a.a.a3";
+    "new a.a.a.a.a3"->"dup1.r";
+    "specialinvoke <a.a.a.a.a3: void <init>()>"
+    "dup1.r"->"specialinvoke <a.a.a.a.a3: void <init>()>";
+    "fieldput <a.a.a.a.an: a.a.a.a.a3 W>"
+    "specialinvoke <a.a.a.a.a3: void <init>()>"->"fieldput <a.a.a.a.an: a.a.a.a.a3 W>";
+    "fieldput <a.a.a.a.an: a.a.a.a.a3 W>"->"load.r r0";
+    "load.r r0"->"fieldget <a.a.a.a.r: a.a.a.a.an q>";
+    "new a.a.a.a.a9"
+    "fieldget <a.a.a.a.r: a.a.a.a.an q>"->"new a.a.a.a.a9";
+    "new a.a.a.a.a9"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "load.r r0"->"fieldget <a.a.a.a.r: a.a.a.a.an q>";
+    "specialinvoke <a.a.a.a.a9: void <init>(a.a.a.a.an)>"
+    "fieldget <a.a.a.a.r: a.a.a.a.an q>"->"specialinvoke <a.a.a.a.a9: void <init>(a.a.a.a.an)>";
+    "fieldput <a.a.a.a.an: a.a.a.a.a9 aa>"
+    "specialinvoke <a.a.a.a.a9: void <init>(a.a.a.a.an)>"->"fieldput <a.a.a.a.an: a.a.a.a.a9 aa>";
+    "fieldput <a.a.a.a.an: a.a.a.a.a9 aa>"->"load.r r0";
+    "load.r r0"->"fieldget <a.a.a.a.r: a.a.a.a.an q>";
+    "fieldget <a.a.a.a.r: a.a.a.a.an q>"->"load.r r0";
+    "fieldput <a.a.a.a.an: a.a.a.a.r P>"
+    "load.r r0"->"fieldput <a.a.a.a.an: a.a.a.a.r P>";
+    "fieldput <a.a.a.a.an: a.a.a.a.r P>"->"load.r r0";
+    "load.r r0"->"fieldget <a.a.a.a.r: a.a.a.a.an q>";
+    "new java.awt.MediaTracker"
+    "fieldget <a.a.a.a.r: a.a.a.a.an q>"->"new java.awt.MediaTracker";
+    "new java.awt.MediaTracker"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "specialinvoke <java.awt.MediaTracker: void <init>(java.awt.Component)>"
+    "load.r r0"->"specialinvoke <java.awt.MediaTracker: void <init>(java.awt.Component)>";
+    "fieldput <a.a.a.a.an: java.awt.MediaTracker 'if'>"
+    "specialinvoke <java.awt.MediaTracker: void <init>(java.awt.Component)>"->"fieldput <a.a.a.a.an: java.awt.MediaTracker 'if'>";
+    "fieldput <a.a.a.a.an: java.awt.MediaTracker 'if'>"->"load.r r0";
+    "load.r r0"->"fieldget <a.a.a.a.r: a.a.a.a.an q>";
+    "new a.a.a.a.a8"
+    "fieldget <a.a.a.a.r: a.a.a.a.an q>"->"new a.a.a.a.a8";
+    "new a.a.a.a.a8"->"dup1.r";
+    "specialinvoke <a.a.a.a.a8: void <init>()>"
+    "dup1.r"->"specialinvoke <a.a.a.a.a8: void <init>()>";
+    "fieldput <a.a.a.a.an: a.a.a.a.a8 s>"
+    "specialinvoke <a.a.a.a.a8: void <init>()>"->"fieldput <a.a.a.a.an: a.a.a.a.a8 s>";
+    "fieldput <a.a.a.a.an: a.a.a.a.a8 s>"->"load.r r0";
+    "load.r r0"->"fieldget <a.a.a.a.r: int 'new'>";
+    "staticput <a.a.a.a.an: int aj>"
+    "fieldget <a.a.a.a.r: int 'new'>"->"staticput <a.a.a.a.an: int aj>";
+    "staticput <a.a.a.a.an: int aj>"->"load.r r0";
+    "virtualinvoke <a.a.a.a.r: void 'goto'()>"
+    "load.r r0"->"virtualinvoke <a.a.a.a.r: void 'goto'()>";
+    "virtualinvoke <a.a.a.a.r: void 'goto'()>"->"load.r r0";
+    "push \"maximagesize\""
+    "load.r r0"->"push \"maximagesize\"";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"
+    "push \"maximagesize\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"store.r $r34";
+    "store.r $r34"->"load.r $r34";
+    "ifnull load.r r0"
+    "load.r $r34"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r $r34";
+    "staticinvoke <a.a.a.a.an: int a(java.lang.String)>"
+    "load.r $r34"->"staticinvoke <a.a.a.a.an: int a(java.lang.String)>";
+    "staticput <a.a.a.a.an: int b>"
+    "staticinvoke <a.a.a.a.an: int a(java.lang.String)>"->"staticput <a.a.a.a.an: int b>";
+    "staticget <a.a.a.a.an: int b>"
+    "staticput <a.a.a.a.an: int b>"->"staticget <a.a.a.a.an: int b>";
+    "ifge load.r r0"
+    "staticget <a.a.a.a.an: int b>"->"ifge load.r r0";
+    "push 0"
+    "ifge load.r r0"->"push 0";
+    "push 0"->"staticput <a.a.a.a.an: int b>";
+    "staticput <a.a.a.a.an: int b>"->"load.r r0";
+    "load.r r0"->"fieldget <a.a.a.a.r: int 'new'>";
+    "fieldget <a.a.a.a.r: int 'new'>"->"push 4";
+    "ifcmplt.i staticget <java.lang.System: java.io.PrintStream out>"
+    "push 4"->"ifcmplt.i staticget <java.lang.System: java.io.PrintStream out>";
+    "new a.a.a.a.a0"
+    "ifcmplt.i staticget <java.lang.System: java.io.PrintStream out>"->"new a.a.a.a.a0";
+    "new a.a.a.a.a0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "specialinvoke <a.a.a.a.a0: void <init>(a.a.a.a.r,java.awt.Component)>"
+    "load.r r0"->"specialinvoke <a.a.a.a.a0: void <init>(a.a.a.a.r,java.awt.Component)>";
+    "specialinvoke <a.a.a.a.a0: void <init>(a.a.a.a.r,java.awt.Component)>"->"staticget <java.lang.System: java.io.PrintStream out>";
+    "push \"Mouse wheel enabled.\""
+    "staticget <java.lang.System: java.io.PrintStream out>"->"push \"Mouse wheel enabled.\"";
+    "push \"Mouse wheel enabled.\""->"virtualinvoke <java.io.PrintStream: void println(java.lang.String)>";
+    "virtualinvoke <java.io.PrintStream: void println(java.lang.String)>"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "push \"mousespeed\""
+    "load.r r0"->"push \"mousespeed\"";
+    "push \"mousespeed\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"store.r $r34";
+    "store.r $r34"->"load.r $r34";
+    "load.r $r34"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r r0";
+    "load.r r0"->"load.r $r34";
+    "staticinvoke <java.lang.Float: java.lang.Float valueOf(java.lang.String)>"
+    "load.r $r34"->"staticinvoke <java.lang.Float: java.lang.Float valueOf(java.lang.String)>";
+    "virtualinvoke <java.lang.Float: float floatValue()>"
+    "staticinvoke <java.lang.Float: java.lang.Float valueOf(java.lang.String)>"->"virtualinvoke <java.lang.Float: float floatValue()>";
+    "push 100.0F"
+    "virtualinvoke <java.lang.Float: float floatValue()>"->"push 100.0F";
+    "div.f"
+    "push 100.0F"->"div.f";
+    "fieldput <a.a.a.a.r: float for>"
+    "div.f"->"fieldput <a.a.a.a.r: float for>";
+    "fieldput <a.a.a.a.r: float for>"->"load.r r0";
+    "fieldget <a.a.a.a.r: float for>"
+    "load.r r0"->"fieldget <a.a.a.a.r: float for>";
+    "f2d"
+    "fieldget <a.a.a.a.r: float for>"->"f2d";
+    "push 0.01"
+    "f2d"->"push 0.01";
+    "cmpg.d"
+    "push 0.01"->"cmpg.d";
+    "iflt load.r r0"
+    "cmpg.d"->"iflt load.r r0";
+    "iflt load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <a.a.a.a.r: float for>";
+    "fieldget <a.a.a.a.r: float for>"->"push 100.0F";
+    "cmpl.f"
+    "push 100.0F"->"cmpl.f";
+    "ifle load.r r0"
+    "cmpl.f"->"ifle load.r r0";
+    "ifle load.r r0"->"load.r r0";
+    "push 1.0F"
+    "load.r r0"->"push 1.0F";
+    "push 1.0F"->"fieldput <a.a.a.a.r: float for>";
+    "fieldput <a.a.a.a.r: float for>"->"load.r r0";
+    "push \"smoothstop\""
+    "load.r r0"->"push \"smoothstop\"";
+    "push \"smoothstop\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"store.r $r34";
+    "store.r $r34"->"load.r $r34";
+    "load.r $r34"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r $r34";
+    "load.r $r34"->"staticinvoke <java.lang.Float: java.lang.Float valueOf(java.lang.String)>";
+    "staticinvoke <java.lang.Float: java.lang.Float valueOf(java.lang.String)>"->"virtualinvoke <java.lang.Float: float floatValue()>";
+    "staticput <a.a.a.a.an: float g>"
+    "virtualinvoke <java.lang.Float: float floatValue()>"->"staticput <a.a.a.a.an: float g>";
+    "staticget <a.a.a.a.an: float g>"
+    "staticput <a.a.a.a.an: float g>"->"staticget <a.a.a.a.an: float g>";
+    "push 0.0F"
+    "staticget <a.a.a.a.an: float g>"->"push 0.0F";
+    "push 0.0F"->"cmpl.f";
+    "ifle staticget <a.a.a.a.an: float g>"
+    "cmpl.f"->"ifle staticget <a.a.a.a.an: float g>";
+    "ifle staticget <a.a.a.a.an: float g>"->"push 1.0F";
+    "push 1.0F"->"load.r $r34";
+    "load.r $r34"->"staticinvoke <java.lang.Float: java.lang.Float valueOf(java.lang.String)>";
+    "staticinvoke <java.lang.Float: java.lang.Float valueOf(java.lang.String)>"->"virtualinvoke <java.lang.Float: float floatValue()>";
+    "push 1000.0F"
+    "virtualinvoke <java.lang.Float: float floatValue()>"->"push 1000.0F";
+    "push 1000.0F"->"div.f";
+    "sub.f"
+    "div.f"->"sub.f";
+    "sub.f"->"staticput <a.a.a.a.an: float g>";
+    "staticput <a.a.a.a.an: float g>"->"staticget <a.a.a.a.an: float g>";
+    "staticget <a.a.a.a.an: float g>"->"push 1.0F";
+    "push 1.0F"->"cmpl.f";
+    "ifge push 0.0F"
+    "cmpl.f"->"ifge push 0.0F";
+    "ifge push 0.0F"->"staticget <a.a.a.a.an: float g>";
+    "staticget <a.a.a.a.an: float g>"->"push 0.0F";
+    "cmpg.f"
+    "push 0.0F"->"cmpg.f";
+    "cmpg.f"->"ifge load.r r0";
+    "ifge load.r r0"->"push 0.0F";
+    "push 0.0F"->"staticput <a.a.a.a.an: float g>";
+    "staticput <a.a.a.a.an: float g>"->"load.r r0";
+    "push \"fullscreen2\""
+    "load.r r0"->"push \"fullscreen2\"";
+    "push \"fullscreen2\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"store.r $r34";
+    "store.r $r34"->"load.r $r34";
+    "load.r $r34"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r $r34";
+    "load.r $r34"->"virtualinvoke <java.lang.String: java.lang.String toLowerCase()>";
+    "push \"true\""
+    "virtualinvoke <java.lang.String: java.lang.String toLowerCase()>"->"push \"true\"";
+    "push \"true\""->"virtualinvoke <java.lang.String: int compareTo(java.lang.String)>";
+    "ifne load.r r0"
+    "virtualinvoke <java.lang.String: int compareTo(java.lang.String)>"->"ifne load.r r0";
+    "ifne load.r r0"->"load.r r0";
+    "load.r r0"->"push 1";
+    "fieldput <a.a.a.a.r: boolean I>"
+    "push 1"->"fieldput <a.a.a.a.r: boolean I>";
+    "fieldput <a.a.a.a.r: boolean I>"->"load.r r0";
+    "fieldget <a.a.a.a.r: boolean I>"
+    "load.r r0"->"fieldget <a.a.a.a.r: boolean I>";
+    "fieldget <a.a.a.a.r: boolean I>"->"ifne load.r r0";
+    "ifne load.r r0"->"load.r r0";
+    "push \"fullscreen\""
+    "load.r r0"->"push \"fullscreen\"";
+    "push \"fullscreen\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"store.r $r34";
+    "store.r $r34"->"load.r $r34";
+    "load.r $r34"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r $r34";
+    "load.r $r34"->"virtualinvoke <java.lang.String: java.lang.String toLowerCase()>";
+    "virtualinvoke <java.lang.String: java.lang.String toLowerCase()>"->"push \"true\"";
+    "push \"true\""->"virtualinvoke <java.lang.String: int compareTo(java.lang.String)>";
+    "virtualinvoke <java.lang.String: int compareTo(java.lang.String)>"->"ifne load.r r0";
+    "ifne load.r r0"->"load.r r0";
+    "load.r r0"->"push 1";
+    "fieldput <a.a.a.a.r: boolean a>"
+    "push 1"->"fieldput <a.a.a.a.r: boolean a>";
+    "fieldput <a.a.a.a.r: boolean a>"->"load.r r0";
+    "push \"protectfullscreen\""
+    "load.r r0"->"push \"protectfullscreen\"";
+    "push \"protectfullscreen\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"store.r $r34";
+    "store.r $r34"->"load.r $r34";
+    "load.r $r34"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r $r34";
+    "load.r $r34"->"virtualinvoke <java.lang.String: java.lang.String toLowerCase()>";
+    "virtualinvoke <java.lang.String: java.lang.String toLowerCase()>"->"push \"true\"";
+    "push \"true\""->"virtualinvoke <java.lang.String: int compareTo(java.lang.String)>";
+    "virtualinvoke <java.lang.String: int compareTo(java.lang.String)>"->"ifne load.r r0";
+    "ifne load.r r0"->"load.r r0";
+    "load.r r0"->"push 1";
+    "fieldput <a.a.a.a.r: boolean 'byte'>"
+    "push 1"->"fieldput <a.a.a.a.r: boolean 'byte'>";
+    "fieldput <a.a.a.a.r: boolean 'byte'>"->"load.r r0";
+    "specialinvoke <a.a.a.a.r: void 'case'()>"
+    "load.r r0"->"specialinvoke <a.a.a.a.r: void 'case'()>";
+    "specialinvoke <a.a.a.a.r: void 'case'()>"->"load.r r0";
+    "fieldget <a.a.a.a.r: boolean 'byte'>"
+    "load.r r0"->"fieldget <a.a.a.a.r: boolean 'byte'>";
+    "fieldget <a.a.a.a.r: boolean 'byte'>"->"ifeq load.r r0";
+    "ifeq load.r r0"->"load.r r0";
+    "fieldget <a.a.a.a.r: boolean a>"
+    "load.r r0"->"fieldget <a.a.a.a.r: boolean a>";
+    "fieldget <a.a.a.a.r: boolean a>"->"ifne load.r r0";
+    "ifne load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <a.a.a.a.r: boolean I>";
+    "fieldget <a.a.a.a.r: boolean I>"->"ifne load.r r0";
+    "ifne load.r r0"->"load.r r0";
+    "load.r r0"->"push 1";
+    "push 1"->"fieldput <a.a.a.a.r: boolean a>";
+    "fieldput <a.a.a.a.r: boolean a>"->"load.r r0";
+    "load.r r0"->"push 0";
+    "virtualinvoke <a.a.a.a.r: void do(boolean)>"
+    "push 0"->"virtualinvoke <a.a.a.a.r: void do(boolean)>";
+    "virtualinvoke <a.a.a.a.r: void do(boolean)>"->"load.r r0";
+    "load.r r0"->"push 0";
+    "push 0"->"fieldput <a.a.a.a.r: boolean a>";
+    "fieldput <a.a.a.a.r: boolean a>"->"load.r r0";
+    "load.r r0"->"push 1";
+    "push 1"->"virtualinvoke <a.a.a.a.r: void do(boolean)>";
+    "return"
+    "virtualinvoke <a.a.a.a.r: void do(boolean)>"->"return";
+    "virtualinvoke <java.io.PrintStream: void println(java.lang.String)>"->"store.r $r34";
+    "store.r $r34"->"staticget <java.lang.System: java.io.PrintStream out>";
+    "push \"Mouse wheel not supported.\""
+    "staticget <java.lang.System: java.io.PrintStream out>"->"push \"Mouse wheel not supported.\"";
+    "push \"Mouse wheel not supported.\""->"virtualinvoke <java.io.PrintStream: void println(java.lang.String)>";
+    "virtualinvoke <java.io.PrintStream: void println(java.lang.String)>"->"goto load.r r0";
+    "ifcmplt.i staticget <java.lang.System: java.io.PrintStream out>"->"staticget <java.lang.System: java.io.PrintStream out>";
+    "staticget <java.lang.System: java.io.PrintStream out>"->"push \"Mouse wheel not supported.\"";
+    "push \"Mouse wheel not supported.\""->"virtualinvoke <java.io.PrintStream: void println(java.lang.String)>";
+    "load.r r0"->"store.r $r34";
+}

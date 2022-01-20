@@ -1,0 +1,17 @@
+digraph "" {
+    "r0 := @this: weightapplet.WeightApplet"
+    "load.r r0"
+    "r0 := @this: weightapplet.WeightApplet"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "fieldput <weightapplet.WeightApplet: weightapplet.WeightApplet applet>"
+    "load.r r0"->"fieldput <weightapplet.WeightApplet: weightapplet.WeightApplet applet>";
+    "fieldput <weightapplet.WeightApplet: weightapplet.WeightApplet applet>"->"load.r r0";
+    "specialinvoke <weightapplet.WeightApplet: void initComponents()>"
+    "load.r r0"->"specialinvoke <weightapplet.WeightApplet: void initComponents()>";
+    "goto return"
+    "specialinvoke <weightapplet.WeightApplet: void initComponents()>"->"goto return";
+    "return"
+    "goto return"->"return";
+    "virtualinvoke <java.lang.Exception: void printStackTrace()>"
+    "specialinvoke <weightapplet.WeightApplet: void initComponents()>"->"virtualinvoke <java.lang.Exception: void printStackTrace()>";
+}

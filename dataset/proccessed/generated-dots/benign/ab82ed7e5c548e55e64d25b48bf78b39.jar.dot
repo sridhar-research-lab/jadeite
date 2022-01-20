@@ -1,0 +1,32 @@
+digraph "" {
+    "r0 := @this: BattleShip"
+    "load.r r0"
+    "r0 := @this: BattleShip"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "virtualinvoke <java.awt.Component: java.awt.Dimension size()>"
+    "load.r r0"->"virtualinvoke <java.awt.Component: java.awt.Dimension size()>";
+    "fieldget <java.awt.Dimension: int width>"
+    "virtualinvoke <java.awt.Component: java.awt.Dimension size()>"->"fieldget <java.awt.Dimension: int width>";
+    "fieldget <java.awt.Dimension: int width>"->"load.r r0";
+    "load.r r0"->"virtualinvoke <java.awt.Component: java.awt.Dimension size()>";
+    "fieldget <java.awt.Dimension: int height>"
+    "virtualinvoke <java.awt.Component: java.awt.Dimension size()>"->"fieldget <java.awt.Dimension: int height>";
+    "virtualinvoke <java.awt.Component: java.awt.Image createImage(int,int)>"
+    "fieldget <java.awt.Dimension: int height>"->"virtualinvoke <java.awt.Component: java.awt.Image createImage(int,int)>";
+    "fieldput <BattleShip: java.awt.Image offscreenImage>"
+    "virtualinvoke <java.awt.Component: java.awt.Image createImage(int,int)>"->"fieldput <BattleShip: java.awt.Image offscreenImage>";
+    "fieldput <BattleShip: java.awt.Image offscreenImage>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "fieldget <BattleShip: java.awt.Image offscreenImage>"
+    "load.r r0"->"fieldget <BattleShip: java.awt.Image offscreenImage>";
+    "virtualinvoke <java.awt.Image: java.awt.Graphics getGraphics()>"
+    "fieldget <BattleShip: java.awt.Image offscreenImage>"->"virtualinvoke <java.awt.Image: java.awt.Graphics getGraphics()>";
+    "fieldput <BattleShip: java.awt.Graphics offscreen>"
+    "virtualinvoke <java.awt.Image: java.awt.Graphics getGraphics()>"->"fieldput <BattleShip: java.awt.Graphics offscreen>";
+    "fieldput <BattleShip: java.awt.Graphics offscreen>"->"load.r r0";
+    "virtualinvoke <BattleShip: void startGame()>"
+    "load.r r0"->"virtualinvoke <BattleShip: void startGame()>";
+    "return"
+    "virtualinvoke <BattleShip: void startGame()>"->"return";
+}

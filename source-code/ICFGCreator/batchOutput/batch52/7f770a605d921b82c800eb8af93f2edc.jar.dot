@@ -1,0 +1,222 @@
+digraph "" {
+    "r0 := @this: SramApplet"
+    "load.r r0"
+    "r0 := @this: SramApplet"->"load.r r0";
+    "new jfig.objects.FigAttribs"
+    "load.r r0"->"new jfig.objects.FigAttribs";
+    "dup1.r"
+    "new jfig.objects.FigAttribs"->"dup1.r";
+    "specialinvoke <jfig.objects.FigAttribs: void <init>()>"
+    "dup1.r"->"specialinvoke <jfig.objects.FigAttribs: void <init>()>";
+    "fieldput <SramApplet: jfig.objects.FigAttribs attribs>"
+    "specialinvoke <jfig.objects.FigAttribs: void <init>()>"->"fieldput <SramApplet: jfig.objects.FigAttribs attribs>";
+    "fieldput <SramApplet: jfig.objects.FigAttribs attribs>"->"load.r r0";
+    "new jfig.objects.FigObjectList"
+    "load.r r0"->"new jfig.objects.FigObjectList";
+    "new jfig.objects.FigObjectList"->"dup1.r";
+    "specialinvoke <jfig.objects.FigObjectList: void <init>()>"
+    "dup1.r"->"specialinvoke <jfig.objects.FigObjectList: void <init>()>";
+    "fieldput <SramApplet: jfig.objects.FigObjectList objectList>"
+    "specialinvoke <jfig.objects.FigObjectList: void <init>()>"->"fieldput <SramApplet: jfig.objects.FigObjectList objectList>";
+    "fieldput <SramApplet: jfig.objects.FigObjectList objectList>"->"load.r r0";
+    "new jfig.objects.FigParser"
+    "load.r r0"->"new jfig.objects.FigParser";
+    "new jfig.objects.FigParser"->"dup1.r";
+    "specialinvoke <jfig.objects.FigParser: void <init>()>"
+    "dup1.r"->"specialinvoke <jfig.objects.FigParser: void <init>()>";
+    "fieldput <SramApplet: jfig.objects.FigParser parser>"
+    "specialinvoke <jfig.objects.FigParser: void <init>()>"->"fieldput <SramApplet: jfig.objects.FigParser parser>";
+    "fieldput <SramApplet: jfig.objects.FigParser parser>"->"load.r r0";
+    "new jfig.canvas.FigSwingCanvas"
+    "load.r r0"->"new jfig.canvas.FigSwingCanvas";
+    "new jfig.canvas.FigSwingCanvas"->"dup1.r";
+    "specialinvoke <jfig.canvas.FigSwingCanvas: void <init>()>"
+    "dup1.r"->"specialinvoke <jfig.canvas.FigSwingCanvas: void <init>()>";
+    "fieldput <SramApplet: jfig.canvas.FigSwingCanvas objectCanvas>"
+    "specialinvoke <jfig.canvas.FigSwingCanvas: void <init>()>"->"fieldput <SramApplet: jfig.canvas.FigSwingCanvas objectCanvas>";
+    "fieldput <SramApplet: jfig.canvas.FigSwingCanvas objectCanvas>"->"load.r r0";
+    "fieldget <SramApplet: jfig.canvas.FigSwingCanvas objectCanvas>"
+    "load.r r0"->"fieldget <SramApplet: jfig.canvas.FigSwingCanvas objectCanvas>";
+    "push 0"
+    "fieldget <SramApplet: jfig.canvas.FigSwingCanvas objectCanvas>"->"push 0";
+    "virtualinvoke <jfig.canvas.FigSwingCanvas: void showRulers(boolean)>"
+    "push 0"->"virtualinvoke <jfig.canvas.FigSwingCanvas: void showRulers(boolean)>";
+    "virtualinvoke <jfig.canvas.FigSwingCanvas: void showRulers(boolean)>"->"load.r r0";
+    "load.r r0"->"fieldget <SramApplet: jfig.canvas.FigSwingCanvas objectCanvas>";
+    "virtualinvoke <jfig.canvas.FigSwingCanvas: jfig.canvas.FigTrafo2D getTrafo()>"
+    "fieldget <SramApplet: jfig.canvas.FigSwingCanvas objectCanvas>"->"virtualinvoke <jfig.canvas.FigSwingCanvas: jfig.canvas.FigTrafo2D getTrafo()>";
+    "virtualinvoke <jfig.canvas.FigSwingCanvas: jfig.canvas.FigTrafo2D getTrafo()>"->"push 0";
+    "virtualinvoke <jfig.canvas.FigTrafo2D: void setGridMode(int)>"
+    "push 0"->"virtualinvoke <jfig.canvas.FigTrafo2D: void setGridMode(int)>";
+    "virtualinvoke <jfig.canvas.FigTrafo2D: void setGridMode(int)>"->"load.r r0";
+    "load.r r0"->"fieldget <SramApplet: jfig.canvas.FigSwingCanvas objectCanvas>";
+    "fieldget <SramApplet: jfig.canvas.FigSwingCanvas objectCanvas>"->"virtualinvoke <jfig.canvas.FigSwingCanvas: jfig.canvas.FigTrafo2D getTrafo()>";
+    "push 1"
+    "virtualinvoke <jfig.canvas.FigSwingCanvas: jfig.canvas.FigTrafo2D getTrafo()>"->"push 1";
+    "virtualinvoke <jfig.canvas.FigTrafo2D: void setSnapRelative(int)>"
+    "push 1"->"virtualinvoke <jfig.canvas.FigTrafo2D: void setSnapRelative(int)>";
+    "virtualinvoke <jfig.canvas.FigTrafo2D: void setSnapRelative(int)>"->"load.r r0";
+    "load.r r0"->"fieldget <SramApplet: jfig.canvas.FigSwingCanvas objectCanvas>";
+    "store.r $r13"
+    "fieldget <SramApplet: jfig.canvas.FigSwingCanvas objectCanvas>"->"store.r $r13";
+    "new SramApplet$ObjectEnumerator"
+    "store.r $r13"->"new SramApplet$ObjectEnumerator";
+    "store.r r2"
+    "new SramApplet$ObjectEnumerator"->"store.r r2";
+    "store.r r2"->"load.r r0";
+    "ifnonnull load.r r2"
+    "load.r r0"->"ifnonnull load.r r2";
+    "push null"
+    "ifnonnull load.r r2"->"push null";
+    "athrow"
+    "push null"->"athrow";
+    "load.r r2"
+    "ifnonnull load.r r2"->"load.r r2";
+    "load.r r2"->"load.r r0";
+    "specialinvoke <SramApplet$ObjectEnumerator: void <init>(SramApplet)>"
+    "load.r r0"->"specialinvoke <SramApplet$ObjectEnumerator: void <init>(SramApplet)>";
+    "load.r $r13"
+    "specialinvoke <SramApplet$ObjectEnumerator: void <init>(SramApplet)>"->"load.r $r13";
+    "load.r $r13"->"load.r r2";
+    "virtualinvoke <jfig.canvas.FigSwingCanvas: void setObjectEnumerator(jfig.canvas.FigDrawableEnumerator)>"
+    "load.r r2"->"virtualinvoke <jfig.canvas.FigSwingCanvas: void setObjectEnumerator(jfig.canvas.FigDrawableEnumerator)>";
+    "virtualinvoke <jfig.canvas.FigSwingCanvas: void setObjectEnumerator(jfig.canvas.FigDrawableEnumerator)>"->"load.r r0";
+    "load.r r0"->"fieldget <SramApplet: jfig.canvas.FigSwingCanvas objectCanvas>";
+    "virtualinvoke <jfig.canvas.FigSwingCanvas: java.awt.Component getComponent()>"
+    "fieldget <SramApplet: jfig.canvas.FigSwingCanvas objectCanvas>"->"virtualinvoke <jfig.canvas.FigSwingCanvas: java.awt.Component getComponent()>";
+    "virtualinvoke <jfig.canvas.FigSwingCanvas: java.awt.Component getComponent()>"->"store.r r2";
+    "new SramApplet$MouseHandler"
+    "store.r r2"->"new SramApplet$MouseHandler";
+    "new SramApplet$MouseHandler"->"store.r $r13";
+    "store.r $r13"->"load.r r0";
+    "ifnonnull load.r $r13"
+    "load.r r0"->"ifnonnull load.r $r13";
+    "ifnonnull load.r $r13"->"push null";
+    "push null"->"athrow";
+    "ifnonnull load.r $r13"->"load.r $r13";
+    "load.r $r13"->"load.r r0";
+    "specialinvoke <SramApplet$MouseHandler: void <init>(SramApplet)>"
+    "load.r r0"->"specialinvoke <SramApplet$MouseHandler: void <init>(SramApplet)>";
+    "specialinvoke <SramApplet$MouseHandler: void <init>(SramApplet)>"->"load.r r2";
+    "load.r r2"->"load.r $r13";
+    "virtualinvoke <java.awt.Component: void addMouseListener(java.awt.event.MouseListener)>"
+    "load.r $r13"->"virtualinvoke <java.awt.Component: void addMouseListener(java.awt.event.MouseListener)>";
+    "virtualinvoke <java.awt.Component: void addMouseListener(java.awt.event.MouseListener)>"->"load.r r0";
+    "new java.awt.BorderLayout"
+    "load.r r0"->"new java.awt.BorderLayout";
+    "new java.awt.BorderLayout"->"dup1.r";
+    "specialinvoke <java.awt.BorderLayout: void <init>()>"
+    "dup1.r"->"specialinvoke <java.awt.BorderLayout: void <init>()>";
+    "virtualinvoke <SramApplet: void setLayout(java.awt.LayoutManager)>"
+    "specialinvoke <java.awt.BorderLayout: void <init>()>"->"virtualinvoke <SramApplet: void setLayout(java.awt.LayoutManager)>";
+    "virtualinvoke <SramApplet: void setLayout(java.awt.LayoutManager)>"->"load.r r0";
+    "push \"Center\""
+    "load.r r0"->"push \"Center\"";
+    "push \"Center\""->"load.r r0";
+    "load.r r0"->"fieldget <SramApplet: jfig.canvas.FigSwingCanvas objectCanvas>";
+    "fieldget <SramApplet: jfig.canvas.FigSwingCanvas objectCanvas>"->"virtualinvoke <jfig.canvas.FigSwingCanvas: java.awt.Component getComponent()>";
+    "virtualinvoke <SramApplet: java.awt.Component add(java.lang.String,java.awt.Component)>"
+    "virtualinvoke <jfig.canvas.FigSwingCanvas: java.awt.Component getComponent()>"->"virtualinvoke <SramApplet: java.awt.Component add(java.lang.String,java.awt.Component)>";
+    "pop"
+    "virtualinvoke <SramApplet: java.awt.Component add(java.lang.String,java.awt.Component)>"->"pop";
+    "pop"->"load.r r0";
+    "fieldget <SramApplet: jfig.objects.FigParser parser>"
+    "load.r r0"->"fieldget <SramApplet: jfig.objects.FigParser parser>";
+    "fieldget <SramApplet: jfig.objects.FigParser parser>"->"load.r r0";
+    "load.r r0"->"fieldget <SramApplet: jfig.canvas.FigSwingCanvas objectCanvas>";
+    "virtualinvoke <jfig.objects.FigParser: void setObjectPainter(jfig.canvas.ObjectPainter)>"
+    "fieldget <SramApplet: jfig.canvas.FigSwingCanvas objectCanvas>"->"virtualinvoke <jfig.objects.FigParser: void setObjectPainter(jfig.canvas.ObjectPainter)>";
+    "new java.net.URL"
+    "virtualinvoke <jfig.objects.FigParser: void setObjectPainter(jfig.canvas.ObjectPainter)>"->"new java.net.URL";
+    "new java.net.URL"->"store.r $r13";
+    "store.r $r13"->"load.r $r13";
+    "load.r $r13"->"load.r r0";
+    "virtualinvoke <java.applet.Applet: java.net.URL getCodeBase()>"
+    "load.r r0"->"virtualinvoke <java.applet.Applet: java.net.URL getCodeBase()>";
+    "push \"sram.fig\""
+    "virtualinvoke <java.applet.Applet: java.net.URL getCodeBase()>"->"push \"sram.fig\"";
+    "specialinvoke <java.net.URL: void <init>(java.net.URL,java.lang.String)>"
+    "push \"sram.fig\""->"specialinvoke <java.net.URL: void <init>(java.net.URL,java.lang.String)>";
+    "specialinvoke <java.net.URL: void <init>(java.net.URL,java.lang.String)>"->"load.r $r13";
+    "virtualinvoke <java.net.URL: java.io.InputStream openStream()>"
+    "load.r $r13"->"virtualinvoke <java.net.URL: java.io.InputStream openStream()>";
+    "virtualinvoke <java.net.URL: java.io.InputStream openStream()>"->"store.r r2";
+    "store.r r2"->"load.r r0";
+    "load.r r0"->"fieldget <SramApplet: jfig.objects.FigParser parser>";
+    "fieldget <SramApplet: jfig.objects.FigParser parser>"->"load.r $r13";
+    "virtualinvoke <java.net.URL: java.lang.String toExternalForm()>"
+    "load.r $r13"->"virtualinvoke <java.net.URL: java.lang.String toExternalForm()>";
+    "push \"URL\""
+    "virtualinvoke <java.net.URL: java.lang.String toExternalForm()>"->"push \"URL\"";
+    "virtualinvoke <jfig.objects.FigParser: void setFilenameAndType(java.lang.String,java.lang.String)>"
+    "push \"URL\""->"virtualinvoke <jfig.objects.FigParser: void setFilenameAndType(java.lang.String,java.lang.String)>";
+    "virtualinvoke <jfig.objects.FigParser: void setFilenameAndType(java.lang.String,java.lang.String)>"->"load.r r0";
+    "load.r r0"->"fieldget <SramApplet: jfig.objects.FigParser parser>";
+    "fieldget <SramApplet: jfig.objects.FigParser parser>"->"load.r r2";
+    "load.r r2"->"push 1";
+    "push 1"->"push 0";
+    "push 0"->"push 0";
+    "push 0"->"load.r r0";
+    "fieldget <SramApplet: jfig.objects.FigAttribs attribs>"
+    "load.r r0"->"fieldget <SramApplet: jfig.objects.FigAttribs attribs>";
+    "fieldget <SramApplet: jfig.objects.FigAttribs attribs>"->"load.r r0";
+    "load.r r0"->"fieldget <SramApplet: jfig.canvas.FigSwingCanvas objectCanvas>";
+    "fieldget <SramApplet: jfig.canvas.FigSwingCanvas objectCanvas>"->"virtualinvoke <jfig.canvas.FigSwingCanvas: jfig.canvas.FigTrafo2D getTrafo()>";
+    "virtualinvoke <jfig.canvas.FigSwingCanvas: jfig.canvas.FigTrafo2D getTrafo()>"->"load.r r0";
+    "fieldget <SramApplet: jfig.objects.FigObjectList objectList>"
+    "load.r r0"->"fieldget <SramApplet: jfig.objects.FigObjectList objectList>";
+    "virtualinvoke <jfig.objects.FigParser: int parse_fig_file_not_threaded(java.io.InputStream,boolean,boolean,boolean,jfig.objects.FigAttribs,jfig.canvas.FigTrafo2D,jfig.objects.FigObjectList)>"
+    "fieldget <SramApplet: jfig.objects.FigObjectList objectList>"->"virtualinvoke <jfig.objects.FigParser: int parse_fig_file_not_threaded(java.io.InputStream,boolean,boolean,boolean,jfig.objects.FigAttribs,jfig.canvas.FigTrafo2D,jfig.objects.FigObjectList)>";
+    "virtualinvoke <jfig.objects.FigParser: int parse_fig_file_not_threaded(java.io.InputStream,boolean,boolean,boolean,jfig.objects.FigAttribs,jfig.canvas.FigTrafo2D,jfig.objects.FigObjectList)>"->"pop";
+    "staticget <java.lang.System: java.io.PrintStream out>"
+    "pop"->"staticget <java.lang.System: java.io.PrintStream out>";
+    "push \"-#- parser ok, repainting\""
+    "staticget <java.lang.System: java.io.PrintStream out>"->"push \"-#- parser ok, repainting\"";
+    "virtualinvoke <java.io.PrintStream: void println(java.lang.String)>"
+    "push \"-#- parser ok, repainting\""->"virtualinvoke <java.io.PrintStream: void println(java.lang.String)>";
+    "virtualinvoke <java.io.PrintStream: void println(java.lang.String)>"->"load.r r0";
+    "load.r r0"->"fieldget <SramApplet: jfig.canvas.FigSwingCanvas objectCanvas>";
+    "virtualinvoke <jfig.canvas.FigSwingCanvas: void doFullRedraw()>"
+    "fieldget <SramApplet: jfig.canvas.FigSwingCanvas objectCanvas>"->"virtualinvoke <jfig.canvas.FigSwingCanvas: void doFullRedraw()>";
+    "goto load.r r0"
+    "virtualinvoke <jfig.canvas.FigSwingCanvas: void doFullRedraw()>"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "push 14"
+    "load.r r0"->"push 14";
+    "fieldput <SramApplet: int state>"
+    "push 14"->"fieldput <SramApplet: int state>";
+    "fieldput <SramApplet: int state>"->"load.r r0";
+    "virtualinvoke <SramApplet: void update()>"
+    "load.r r0"->"virtualinvoke <SramApplet: void update()>";
+    "virtualinvoke <SramApplet: void update()>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "fieldget <SramApplet: int state>"
+    "load.r r0"->"fieldget <SramApplet: int state>";
+    "push 8"
+    "fieldget <SramApplet: int state>"->"push 8";
+    "xor.i"
+    "push 8"->"xor.i";
+    "xor.i"->"fieldput <SramApplet: int state>";
+    "fieldput <SramApplet: int state>"->"load.r r0";
+    "load.r r0"->"virtualinvoke <SramApplet: void update()>";
+    "return"
+    "virtualinvoke <SramApplet: void update()>"->"return";
+    "virtualinvoke <jfig.canvas.FigSwingCanvas: void doFullRedraw()>"->"store.r r2";
+    "store.r r2"->"staticget <java.lang.System: java.io.PrintStream out>";
+    "new java.lang.StringBuffer"
+    "staticget <java.lang.System: java.io.PrintStream out>"->"new java.lang.StringBuffer";
+    "new java.lang.StringBuffer"->"dup1.r";
+    "push \"-F- \""
+    "dup1.r"->"push \"-F- \"";
+    "specialinvoke <java.lang.StringBuffer: void <init>(java.lang.String)>"
+    "push \"-F- \""->"specialinvoke <java.lang.StringBuffer: void <init>(java.lang.String)>";
+    "specialinvoke <java.lang.StringBuffer: void <init>(java.lang.String)>"->"load.r r2";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.Object)>"
+    "load.r r2"->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.Object)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>"
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.Object)>"->"virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>"->"virtualinvoke <java.io.PrintStream: void println(java.lang.String)>";
+    "virtualinvoke <java.io.PrintStream: void println(java.lang.String)>"->"load.r r2";
+    "virtualinvoke <java.lang.Throwable: void printStackTrace()>"
+    "load.r r2"->"virtualinvoke <java.lang.Throwable: void printStackTrace()>";
+}

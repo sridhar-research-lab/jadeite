@@ -1,0 +1,123 @@
+digraph "" {
+    "r0 := @this: com.act365.sudoku.SuDokuApplet"
+    "load.r r0"
+    "r0 := @this: com.act365.sudoku.SuDokuApplet"->"load.r r0";
+    "push \"ACROSS\""
+    "load.r r0"->"push \"ACROSS\"";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"
+    "push \"ACROSS\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "store.r r1"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"store.r r1";
+    "store.r r1"->"load.r r0";
+    "push \"DOWN\""
+    "load.r r0"->"push \"DOWN\"";
+    "push \"DOWN\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "store.r r2"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"store.r r2";
+    "load.r r1"
+    "store.r r2"->"load.r r1";
+    "instanceof"
+    "load.r r1"->"instanceof";
+    "ifeq load.r r2"
+    "instanceof"->"ifeq load.r r2";
+    "ifeq load.r r2"->"load.r r0";
+    "load.r r0"->"load.r r1";
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"
+    "load.r r1"->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>";
+    "fieldput <com.act365.sudoku.SuDokuApplet: int boxesAcross>"
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"->"fieldput <com.act365.sudoku.SuDokuApplet: int boxesAcross>";
+    "goto load.r r2"
+    "fieldput <com.act365.sudoku.SuDokuApplet: int boxesAcross>"->"goto load.r r2";
+    "load.r r2"
+    "goto load.r r2"->"load.r r2";
+    "load.r r2"->"instanceof";
+    "ifeq new com.act365.sudoku.GridContainer"
+    "instanceof"->"ifeq new com.act365.sudoku.GridContainer";
+    "ifeq new com.act365.sudoku.GridContainer"->"load.r r0";
+    "load.r r0"->"load.r r2";
+    "load.r r2"->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>";
+    "fieldput <com.act365.sudoku.SuDokuApplet: int boxesDown>"
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"->"fieldput <com.act365.sudoku.SuDokuApplet: int boxesDown>";
+    "goto new com.act365.sudoku.GridContainer"
+    "fieldput <com.act365.sudoku.SuDokuApplet: int boxesDown>"->"goto new com.act365.sudoku.GridContainer";
+    "new com.act365.sudoku.GridContainer"
+    "goto new com.act365.sudoku.GridContainer"->"new com.act365.sudoku.GridContainer";
+    "new com.act365.sudoku.GridContainer"->"store.r r2";
+    "store.r r2"->"load.r r2";
+    "new com.act365.sudoku.Grid"
+    "load.r r2"->"new com.act365.sudoku.Grid";
+    "dup1.r"
+    "new com.act365.sudoku.Grid"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "fieldget <com.act365.sudoku.SuDokuApplet: int boxesAcross>"
+    "load.r r0"->"fieldget <com.act365.sudoku.SuDokuApplet: int boxesAcross>";
+    "fieldget <com.act365.sudoku.SuDokuApplet: int boxesAcross>"->"load.r r0";
+    "fieldget <com.act365.sudoku.SuDokuApplet: int boxesDown>"
+    "load.r r0"->"fieldget <com.act365.sudoku.SuDokuApplet: int boxesDown>";
+    "specialinvoke <com.act365.sudoku.Grid: void <init>(int,int)>"
+    "fieldget <com.act365.sudoku.SuDokuApplet: int boxesDown>"->"specialinvoke <com.act365.sudoku.Grid: void <init>(int,int)>";
+    "specialinvoke <com.act365.sudoku.GridContainer: void <init>(com.act365.sudoku.Grid)>"
+    "specialinvoke <com.act365.sudoku.Grid: void <init>(int,int)>"->"specialinvoke <com.act365.sudoku.GridContainer: void <init>(com.act365.sudoku.Grid)>";
+    "new com.act365.sudoku.ControlContainer"
+    "specialinvoke <com.act365.sudoku.GridContainer: void <init>(com.act365.sudoku.Grid)>"->"new com.act365.sudoku.ControlContainer";
+    "new com.act365.sudoku.ControlContainer"->"store.r r1";
+    "store.r r1"->"load.r r1";
+    "load.r r1"->"load.r r2";
+    "load.r r2"->"load.r r0";
+    "virtualinvoke <java.lang.Object: java.lang.Class getClass()>"
+    "load.r r0"->"virtualinvoke <java.lang.Object: java.lang.Class getClass()>";
+    "specialinvoke <com.act365.sudoku.ControlContainer: void <init>(com.act365.sudoku.GridContainer,java.lang.Class)>"
+    "virtualinvoke <java.lang.Object: java.lang.Class getClass()>"->"specialinvoke <com.act365.sudoku.ControlContainer: void <init>(com.act365.sudoku.GridContainer,java.lang.Class)>";
+    "new com.act365.sudoku.SuDokuContainer"
+    "specialinvoke <com.act365.sudoku.ControlContainer: void <init>(com.act365.sudoku.GridContainer,java.lang.Class)>"->"new com.act365.sudoku.SuDokuContainer";
+    "store.r $r11"
+    "new com.act365.sudoku.SuDokuContainer"->"store.r $r11";
+    "load.r $r11"
+    "store.r $r11"->"load.r $r11";
+    "load.r $r11"->"load.r r2";
+    "load.r r2"->"load.r r1";
+    "specialinvoke <com.act365.sudoku.SuDokuContainer: void <init>(com.act365.sudoku.GridContainer,com.act365.sudoku.ControlContainer)>"
+    "load.r r1"->"specialinvoke <com.act365.sudoku.SuDokuContainer: void <init>(com.act365.sudoku.GridContainer,com.act365.sudoku.ControlContainer)>";
+    "specialinvoke <com.act365.sudoku.SuDokuContainer: void <init>(com.act365.sudoku.GridContainer,com.act365.sudoku.ControlContainer)>"->"load.r r0";
+    "load.r r0"->"load.r $r11";
+    "virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>"
+    "load.r $r11"->"virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>";
+    "pop"
+    "virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>"->"pop";
+    "pop"->"load.r r0";
+    "load.r r0"->"load.r $r11";
+    "virtualinvoke <com.act365.sudoku.SuDokuContainer: java.awt.Dimension getBestSize()>"
+    "load.r $r11"->"virtualinvoke <com.act365.sudoku.SuDokuContainer: java.awt.Dimension getBestSize()>";
+    "virtualinvoke <java.awt.Component: void setSize(java.awt.Dimension)>"
+    "virtualinvoke <com.act365.sudoku.SuDokuContainer: java.awt.Dimension getBestSize()>"->"virtualinvoke <java.awt.Component: void setSize(java.awt.Dimension)>";
+    "return"
+    "virtualinvoke <java.awt.Component: void setSize(java.awt.Dimension)>"->"return";
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"->"store.r r1";
+    "staticget <java.lang.System: java.io.PrintStream err>"
+    "store.r r1"->"staticget <java.lang.System: java.io.PrintStream err>";
+    "new java.lang.StringBuffer"
+    "staticget <java.lang.System: java.io.PrintStream err>"->"new java.lang.StringBuffer";
+    "new java.lang.StringBuffer"->"dup1.r";
+    "push \"Illegal DOWN vaue: \""
+    "dup1.r"->"push \"Illegal DOWN vaue: \"";
+    "specialinvoke <java.lang.StringBuffer: void <init>(java.lang.String)>"
+    "push \"Illegal DOWN vaue: \""->"specialinvoke <java.lang.StringBuffer: void <init>(java.lang.String)>";
+    "specialinvoke <java.lang.StringBuffer: void <init>(java.lang.String)>"->"load.r r2";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"
+    "load.r r2"->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>"
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>";
+    "virtualinvoke <java.io.PrintStream: void println(java.lang.String)>"
+    "virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>"->"virtualinvoke <java.io.PrintStream: void println(java.lang.String)>";
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"->"store.r $r11";
+    "store.r $r11"->"staticget <java.lang.System: java.io.PrintStream err>";
+    "staticget <java.lang.System: java.io.PrintStream err>"->"new java.lang.StringBuffer";
+    "new java.lang.StringBuffer"->"dup1.r";
+    "push \"Illegal ACROSS vaue: \""
+    "dup1.r"->"push \"Illegal ACROSS vaue: \"";
+    "push \"Illegal ACROSS vaue: \""->"specialinvoke <java.lang.StringBuffer: void <init>(java.lang.String)>";
+    "specialinvoke <java.lang.StringBuffer: void <init>(java.lang.String)>"->"load.r r1";
+    "load.r r1"->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>"->"virtualinvoke <java.io.PrintStream: void println(java.lang.String)>";
+}

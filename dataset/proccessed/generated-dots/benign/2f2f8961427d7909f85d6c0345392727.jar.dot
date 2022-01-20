@@ -1,0 +1,75 @@
+digraph "" {
+    "r0 := @this: multishow"
+    "load.r r0"
+    "r0 := @this: multishow"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "virtualinvoke <java.awt.Component: java.awt.Dimension size()>"
+    "load.r r0"->"virtualinvoke <java.awt.Component: java.awt.Dimension size()>";
+    "fieldget <java.awt.Dimension: int width>"
+    "virtualinvoke <java.awt.Component: java.awt.Dimension size()>"->"fieldget <java.awt.Dimension: int width>";
+    "fieldput <multishow: int XSIZE>"
+    "fieldget <java.awt.Dimension: int width>"->"fieldput <multishow: int XSIZE>";
+    "fieldput <multishow: int XSIZE>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"virtualinvoke <java.awt.Component: java.awt.Dimension size()>";
+    "fieldget <java.awt.Dimension: int height>"
+    "virtualinvoke <java.awt.Component: java.awt.Dimension size()>"->"fieldget <java.awt.Dimension: int height>";
+    "fieldput <multishow: int YSIZE>"
+    "fieldget <java.awt.Dimension: int height>"->"fieldput <multishow: int YSIZE>";
+    "fieldput <multishow: int YSIZE>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "fieldget <multishow: int XSIZE>"
+    "load.r r0"->"fieldget <multishow: int XSIZE>";
+    "fieldget <multishow: int XSIZE>"->"load.r r0";
+    "fieldget <multishow: int YSIZE>"
+    "load.r r0"->"fieldget <multishow: int YSIZE>";
+    "mul.i"
+    "fieldget <multishow: int YSIZE>"->"mul.i";
+    "fieldput <multishow: int SIZE>"
+    "mul.i"->"fieldput <multishow: int SIZE>";
+    "staticget <java.lang.System: java.io.PrintStream err>"
+    "fieldput <multishow: int SIZE>"->"staticget <java.lang.System: java.io.PrintStream err>";
+    "new java.lang.StringBuffer"
+    "staticget <java.lang.System: java.io.PrintStream err>"->"new java.lang.StringBuffer";
+    "dup1.r"
+    "new java.lang.StringBuffer"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "load.r r0"->"fieldget <multishow: int XSIZE>";
+    "staticinvoke <java.lang.String: java.lang.String valueOf(int)>"
+    "fieldget <multishow: int XSIZE>"->"staticinvoke <java.lang.String: java.lang.String valueOf(int)>";
+    "specialinvoke <java.lang.StringBuffer: void <init>(java.lang.String)>"
+    "staticinvoke <java.lang.String: java.lang.String valueOf(int)>"->"specialinvoke <java.lang.StringBuffer: void <init>(java.lang.String)>";
+    "push \" \""
+    "specialinvoke <java.lang.StringBuffer: void <init>(java.lang.String)>"->"push \" \"";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"
+    "push \" \""->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"load.r r0";
+    "load.r r0"->"fieldget <multishow: int YSIZE>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(int)>"
+    "fieldget <multishow: int YSIZE>"->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(int)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(int)>"->"push \" \"";
+    "push \" \""->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"load.r r0";
+    "fieldget <multishow: int SIZE>"
+    "load.r r0"->"fieldget <multishow: int SIZE>";
+    "fieldget <multishow: int SIZE>"->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(int)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>"
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(int)>"->"virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>";
+    "virtualinvoke <java.io.PrintStream: void println(java.lang.String)>"
+    "virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>"->"virtualinvoke <java.io.PrintStream: void println(java.lang.String)>";
+    "virtualinvoke <java.io.PrintStream: void println(java.lang.String)>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <multishow: int XSIZE>";
+    "fieldget <multishow: int XSIZE>"->"load.r r0";
+    "load.r r0"->"fieldget <multishow: int YSIZE>";
+    "virtualinvoke <java.awt.Component: java.awt.Image createImage(int,int)>"
+    "fieldget <multishow: int YSIZE>"->"virtualinvoke <java.awt.Component: java.awt.Image createImage(int,int)>";
+    "fieldput <multishow: java.awt.Image art>"
+    "virtualinvoke <java.awt.Component: java.awt.Image createImage(int,int)>"->"fieldput <multishow: java.awt.Image art>";
+    "fieldput <multishow: java.awt.Image art>"->"load.r r0";
+    "virtualinvoke <multishow: void begin()>"
+    "load.r r0"->"virtualinvoke <multishow: void begin()>";
+    "return"
+    "virtualinvoke <multishow: void begin()>"->"return";
+}

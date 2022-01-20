@@ -1,0 +1,162 @@
+digraph "" {
+    "r0 := @this: textscroll"
+    "load.r r0"
+    "r0 := @this: textscroll"->"load.r r0";
+    "staticinvoke <java.lang.Runtime: java.lang.Runtime getRuntime()>"
+    "load.r r0"->"staticinvoke <java.lang.Runtime: java.lang.Runtime getRuntime()>";
+    "virtualinvoke <java.lang.Runtime: long freeMemory()>"
+    "staticinvoke <java.lang.Runtime: java.lang.Runtime getRuntime()>"->"virtualinvoke <java.lang.Runtime: long freeMemory()>";
+    "fieldput <textscroll: long memFree>"
+    "virtualinvoke <java.lang.Runtime: long freeMemory()>"->"fieldput <textscroll: long memFree>";
+    "fieldput <textscroll: long memFree>"->"load.r r0";
+    "staticget <java.awt.Color: java.awt.Color black>"
+    "load.r r0"->"staticget <java.awt.Color: java.awt.Color black>";
+    "virtualinvoke <java.awt.Component: void setBackground(java.awt.Color)>"
+    "staticget <java.awt.Color: java.awt.Color black>"->"virtualinvoke <java.awt.Component: void setBackground(java.awt.Color)>";
+    "virtualinvoke <java.awt.Component: void setBackground(java.awt.Color)>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "virtualinvoke <java.awt.Component: java.awt.Dimension size()>"
+    "load.r r0"->"virtualinvoke <java.awt.Component: java.awt.Dimension size()>";
+    "fieldget <java.awt.Dimension: int width>"
+    "virtualinvoke <java.awt.Component: java.awt.Dimension size()>"->"fieldget <java.awt.Dimension: int width>";
+    "fieldput <textscroll: int XSIZE>"
+    "fieldget <java.awt.Dimension: int width>"->"fieldput <textscroll: int XSIZE>";
+    "fieldput <textscroll: int XSIZE>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"virtualinvoke <java.awt.Component: java.awt.Dimension size()>";
+    "fieldget <java.awt.Dimension: int height>"
+    "virtualinvoke <java.awt.Component: java.awt.Dimension size()>"->"fieldget <java.awt.Dimension: int height>";
+    "fieldput <textscroll: int YSIZE>"
+    "fieldget <java.awt.Dimension: int height>"->"fieldput <textscroll: int YSIZE>";
+    "fieldput <textscroll: int YSIZE>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "fieldget <textscroll: int XSIZE>"
+    "load.r r0"->"fieldget <textscroll: int XSIZE>";
+    "fieldget <textscroll: int XSIZE>"->"load.r r0";
+    "fieldget <textscroll: int YSIZE>"
+    "load.r r0"->"fieldget <textscroll: int YSIZE>";
+    "mul.i"
+    "fieldget <textscroll: int YSIZE>"->"mul.i";
+    "fieldput <textscroll: int SIZE>"
+    "mul.i"->"fieldput <textscroll: int SIZE>";
+    "new java.util.Random"
+    "fieldput <textscroll: int SIZE>"->"new java.util.Random";
+    "dup1.r"
+    "new java.util.Random"->"dup1.r";
+    "specialinvoke <java.util.Random: void <init>()>"
+    "dup1.r"->"specialinvoke <java.util.Random: void <init>()>";
+    "staticput <textscroll: java.util.Random rd>"
+    "specialinvoke <java.util.Random: void <init>()>"->"staticput <textscroll: java.util.Random rd>";
+    "staticput <textscroll: java.util.Random rd>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <textscroll: int XSIZE>";
+    "fieldget <textscroll: int XSIZE>"->"load.r r0";
+    "load.r r0"->"fieldget <textscroll: int YSIZE>";
+    "virtualinvoke <java.awt.Component: java.awt.Image createImage(int,int)>"
+    "fieldget <textscroll: int YSIZE>"->"virtualinvoke <java.awt.Component: java.awt.Image createImage(int,int)>";
+    "fieldput <textscroll: java.awt.Image mainImg>"
+    "virtualinvoke <java.awt.Component: java.awt.Image createImage(int,int)>"->"fieldput <textscroll: java.awt.Image mainImg>";
+    "staticget <java.lang.System: java.io.PrintStream err>"
+    "fieldput <textscroll: java.awt.Image mainImg>"->"staticget <java.lang.System: java.io.PrintStream err>";
+    "new java.lang.StringBuffer"
+    "staticget <java.lang.System: java.io.PrintStream err>"->"new java.lang.StringBuffer";
+    "new java.lang.StringBuffer"->"dup1.r";
+    "push \"Host: [\""
+    "dup1.r"->"push \"Host: [\"";
+    "specialinvoke <java.lang.StringBuffer: void <init>(java.lang.String)>"
+    "push \"Host: [\""->"specialinvoke <java.lang.StringBuffer: void <init>(java.lang.String)>";
+    "specialinvoke <java.lang.StringBuffer: void <init>(java.lang.String)>"->"load.r r0";
+    "virtualinvoke <java.applet.Applet: java.net.URL getDocumentBase()>"
+    "load.r r0"->"virtualinvoke <java.applet.Applet: java.net.URL getDocumentBase()>";
+    "virtualinvoke <java.net.URL: java.lang.String getHost()>"
+    "virtualinvoke <java.applet.Applet: java.net.URL getDocumentBase()>"->"virtualinvoke <java.net.URL: java.lang.String getHost()>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"
+    "virtualinvoke <java.net.URL: java.lang.String getHost()>"->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "push \"]\""
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"push \"]\"";
+    "push \"]\""->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>"
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>";
+    "virtualinvoke <java.io.PrintStream: void println(java.lang.String)>"
+    "virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>"->"virtualinvoke <java.io.PrintStream: void println(java.lang.String)>";
+    "virtualinvoke <java.io.PrintStream: void println(java.lang.String)>"->"load.r r0";
+    "fieldget <textscroll: java.awt.Image mainImg>"
+    "load.r r0"->"fieldget <textscroll: java.awt.Image mainImg>";
+    "virtualinvoke <java.awt.Image: java.awt.Graphics getGraphics()>"
+    "fieldget <textscroll: java.awt.Image mainImg>"->"virtualinvoke <java.awt.Image: java.awt.Graphics getGraphics()>";
+    "store.r r1"
+    "virtualinvoke <java.awt.Image: java.awt.Graphics getGraphics()>"->"store.r r1";
+    "store.r r1"->"load.r r0";
+    "new ionlink"
+    "load.r r0"->"new ionlink";
+    "new ionlink"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "load.r r1"
+    "load.r r0"->"load.r r1";
+    "load.r r1"->"load.r r0";
+    "load.r r0"->"fieldget <textscroll: int XSIZE>";
+    "fieldget <textscroll: int XSIZE>"->"load.r r0";
+    "load.r r0"->"fieldget <textscroll: int YSIZE>";
+    "specialinvoke <ionlink: void <init>(java.applet.Applet,java.awt.Graphics,int,int)>"
+    "fieldget <textscroll: int YSIZE>"->"specialinvoke <ionlink: void <init>(java.applet.Applet,java.awt.Graphics,int,int)>";
+    "fieldput <textscroll: ionlink overlink>"
+    "specialinvoke <ionlink: void <init>(java.applet.Applet,java.awt.Graphics,int,int)>"->"fieldput <textscroll: ionlink overlink>";
+    "fieldput <textscroll: ionlink overlink>"->"load.r r0";
+    "new wordset"
+    "load.r r0"->"new wordset";
+    "new wordset"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "load.r r0"->"load.r r1";
+    "load.r r1"->"load.r r0";
+    "load.r r0"->"fieldget <textscroll: int XSIZE>";
+    "fieldget <textscroll: int XSIZE>"->"load.r r0";
+    "load.r r0"->"fieldget <textscroll: int YSIZE>";
+    "specialinvoke <wordset: void <init>(java.applet.Applet,java.awt.Graphics,int,int)>"
+    "fieldget <textscroll: int YSIZE>"->"specialinvoke <wordset: void <init>(java.applet.Applet,java.awt.Graphics,int,int)>";
+    "fieldput <textscroll: wordset words>"
+    "specialinvoke <wordset: void <init>(java.applet.Applet,java.awt.Graphics,int,int)>"->"fieldput <textscroll: wordset words>";
+    "fieldput <textscroll: wordset words>"->"load.r r1";
+    "virtualinvoke <java.awt.Graphics: void dispose()>"
+    "load.r r1"->"virtualinvoke <java.awt.Graphics: void dispose()>";
+    "virtualinvoke <java.awt.Graphics: void dispose()>"->"load.r r0";
+    "new fgClass"
+    "load.r r0"->"new fgClass";
+    "new fgClass"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <textscroll: int XSIZE>";
+    "fieldget <textscroll: int XSIZE>"->"load.r r0";
+    "load.r r0"->"fieldget <textscroll: int YSIZE>";
+    "specialinvoke <fgClass: void <init>(java.applet.Applet,int,int)>"
+    "fieldget <textscroll: int YSIZE>"->"specialinvoke <fgClass: void <init>(java.applet.Applet,int,int)>";
+    "fieldput <textscroll: fgClass fg>"
+    "specialinvoke <fgClass: void <init>(java.applet.Applet,int,int)>"->"fieldput <textscroll: fgClass fg>";
+    "fieldput <textscroll: fgClass fg>"->"load.r r0";
+    "virtualinvoke <textscroll: void getTarget()>"
+    "load.r r0"->"virtualinvoke <textscroll: void getTarget()>";
+    "virtualinvoke <textscroll: void getTarget()>"->"load.r r0";
+    "virtualinvoke <textscroll: void getParameters()>"
+    "load.r r0"->"virtualinvoke <textscroll: void getParameters()>";
+    "staticinvoke <java.lang.System: void gc()>"
+    "virtualinvoke <textscroll: void getParameters()>"->"staticinvoke <java.lang.System: void gc()>";
+    "staticinvoke <java.lang.System: void gc()>"->"staticget <java.lang.System: java.io.PrintStream err>";
+    "staticget <java.lang.System: java.io.PrintStream err>"->"new java.lang.StringBuffer";
+    "new java.lang.StringBuffer"->"dup1.r";
+    "push \"Memory Used: \""
+    "dup1.r"->"push \"Memory Used: \"";
+    "push \"Memory Used: \""->"specialinvoke <java.lang.StringBuffer: void <init>(java.lang.String)>";
+    "specialinvoke <java.lang.StringBuffer: void <init>(java.lang.String)>"->"load.r r0";
+    "fieldget <textscroll: long memFree>"
+    "load.r r0"->"fieldget <textscroll: long memFree>";
+    "fieldget <textscroll: long memFree>"->"staticinvoke <java.lang.Runtime: java.lang.Runtime getRuntime()>";
+    "staticinvoke <java.lang.Runtime: java.lang.Runtime getRuntime()>"->"virtualinvoke <java.lang.Runtime: long freeMemory()>";
+    "sub.l"
+    "virtualinvoke <java.lang.Runtime: long freeMemory()>"->"sub.l";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(long)>"
+    "sub.l"->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(long)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(long)>"->"virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>"->"virtualinvoke <java.io.PrintStream: void println(java.lang.String)>";
+    "return"
+    "virtualinvoke <java.io.PrintStream: void println(java.lang.String)>"->"return";
+}

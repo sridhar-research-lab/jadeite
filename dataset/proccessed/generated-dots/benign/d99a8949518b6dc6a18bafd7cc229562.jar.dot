@@ -1,0 +1,595 @@
+digraph "" {
+    "r0 := @this: AStockChart"
+    "load.r r0"
+    "r0 := @this: AStockChart"->"load.r r0";
+    "virtualinvoke <java.awt.Component: java.awt.Font getFont()>"
+    "load.r r0"->"virtualinvoke <java.awt.Component: java.awt.Font getFont()>";
+    "store.r $r31"
+    "virtualinvoke <java.awt.Component: java.awt.Font getFont()>"->"store.r $r31";
+    "store.r $r31"->"load.r r0";
+    "new java.awt.GridBagLayout"
+    "load.r r0"->"new java.awt.GridBagLayout";
+    "dup1.r"
+    "new java.awt.GridBagLayout"->"dup1.r";
+    "specialinvoke <java.awt.GridBagLayout: void <init>()>"
+    "dup1.r"->"specialinvoke <java.awt.GridBagLayout: void <init>()>";
+    "virtualinvoke <java.awt.Container: void setLayout(java.awt.LayoutManager)>"
+    "specialinvoke <java.awt.GridBagLayout: void <init>()>"->"virtualinvoke <java.awt.Container: void setLayout(java.awt.LayoutManager)>";
+    "virtualinvoke <java.awt.Container: void setLayout(java.awt.LayoutManager)>"->"load.r r0";
+    "push \"type\""
+    "load.r r0"->"push \"type\"";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"
+    "push \"type\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "store.r $r43"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"store.r $r43";
+    "load.r $r43"
+    "store.r $r43"->"load.r $r43";
+    "ifnull load.r r0"
+    "load.r $r43"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r $r43";
+    "virtualinvoke <java.lang.String: java.lang.String toLowerCase()>"
+    "load.r $r43"->"virtualinvoke <java.lang.String: java.lang.String toLowerCase()>";
+    "push \"c\""
+    "virtualinvoke <java.lang.String: java.lang.String toLowerCase()>"->"push \"c\"";
+    "virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>"
+    "push \"c\""->"virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>";
+    "ifeq load.r r0"
+    "virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>"->"ifeq load.r r0";
+    "ifeq load.r r0"->"load.r r0";
+    "new CandleDisplayer"
+    "load.r r0"->"new CandleDisplayer";
+    "new CandleDisplayer"->"dup1.r";
+    "specialinvoke <CandleDisplayer: void <init>()>"
+    "dup1.r"->"specialinvoke <CandleDisplayer: void <init>()>";
+    "fieldput <AStockChart: StockDisplayer sd>"
+    "specialinvoke <CandleDisplayer: void <init>()>"->"fieldput <AStockChart: StockDisplayer sd>";
+    "goto load.r r0"
+    "fieldput <AStockChart: StockDisplayer sd>"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "push \"fontname\""
+    "load.r r0"->"push \"fontname\"";
+    "push \"fontname\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"store.r $r43";
+    "store.r $r43"->"load.r $r43";
+    "load.r $r43"->"ifnull load.r r0";
+    "new java.awt.Font"
+    "ifnull load.r r0"->"new java.awt.Font";
+    "new java.awt.Font"->"dup1.r";
+    "dup1.r"->"load.r $r43";
+    "load.r $r31"
+    "load.r $r43"->"load.r $r31";
+    "virtualinvoke <java.awt.Font: int getStyle()>"
+    "load.r $r31"->"virtualinvoke <java.awt.Font: int getStyle()>";
+    "virtualinvoke <java.awt.Font: int getStyle()>"->"load.r $r31";
+    "virtualinvoke <java.awt.Font: int getSize()>"
+    "load.r $r31"->"virtualinvoke <java.awt.Font: int getSize()>";
+    "specialinvoke <java.awt.Font: void <init>(java.lang.String,int,int)>"
+    "virtualinvoke <java.awt.Font: int getSize()>"->"specialinvoke <java.awt.Font: void <init>(java.lang.String,int,int)>";
+    "specialinvoke <java.awt.Font: void <init>(java.lang.String,int,int)>"->"store.r $r31";
+    "store.r $r31"->"load.r r0";
+    "push \"fontsize\""
+    "load.r r0"->"push \"fontsize\"";
+    "push \"fontsize\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"store.r $r43";
+    "store.r $r43"->"load.r $r43";
+    "load.r $r43"->"ifnull load.r r0";
+    "ifnull load.r r0"->"new java.awt.Font";
+    "new java.awt.Font"->"dup1.r";
+    "dup1.r"->"load.r $r31";
+    "virtualinvoke <java.awt.Font: java.lang.String getName()>"
+    "load.r $r31"->"virtualinvoke <java.awt.Font: java.lang.String getName()>";
+    "virtualinvoke <java.awt.Font: java.lang.String getName()>"->"load.r $r31";
+    "load.r $r31"->"virtualinvoke <java.awt.Font: int getStyle()>";
+    "virtualinvoke <java.awt.Font: int getStyle()>"->"load.r $r43";
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"
+    "load.r $r43"->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>";
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"->"specialinvoke <java.awt.Font: void <init>(java.lang.String,int,int)>";
+    "specialinvoke <java.awt.Font: void <init>(java.lang.String,int,int)>"->"store.r $r31";
+    "store.r $r31"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "push \"values\""
+    "load.r r0"->"push \"values\"";
+    "push \"values\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"store.r $r43";
+    "store.r $r43"->"load.r $r43";
+    "load.r $r43"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r r0";
+    "fieldget <AStockChart: StockDisplayer sd>"
+    "load.r r0"->"fieldget <AStockChart: StockDisplayer sd>";
+    "fieldget <AStockChart: StockDisplayer sd>"->"load.r $r43";
+    "push 1"
+    "load.r $r43"->"push 1";
+    "virtualinvoke <StockDisplayer: void fromString(java.lang.String,boolean)>"
+    "push 1"->"virtualinvoke <StockDisplayer: void fromString(java.lang.String,boolean)>";
+    "virtualinvoke <StockDisplayer: void fromString(java.lang.String,boolean)>"->"load.r r0";
+    "push \"file\""
+    "load.r r0"->"push \"file\"";
+    "push \"file\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"store.r $r43";
+    "store.r $r43"->"load.r $r43";
+    "load.r $r43"->"ifnull load.r r0";
+    "new java.io.InputStreamReader"
+    "ifnull load.r r0"->"new java.io.InputStreamReader";
+    "store.r $r19"
+    "new java.io.InputStreamReader"->"store.r $r19";
+    "load.r $r19"
+    "store.r $r19"->"load.r $r19";
+    "new java.net.URL"
+    "load.r $r19"->"new java.net.URL";
+    "new java.net.URL"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "virtualinvoke <java.applet.Applet: java.net.URL getDocumentBase()>"
+    "load.r r0"->"virtualinvoke <java.applet.Applet: java.net.URL getDocumentBase()>";
+    "virtualinvoke <java.applet.Applet: java.net.URL getDocumentBase()>"->"load.r $r43";
+    "specialinvoke <java.net.URL: void <init>(java.net.URL,java.lang.String)>"
+    "load.r $r43"->"specialinvoke <java.net.URL: void <init>(java.net.URL,java.lang.String)>";
+    "virtualinvoke <java.net.URL: java.io.InputStream openStream()>"
+    "specialinvoke <java.net.URL: void <init>(java.net.URL,java.lang.String)>"->"virtualinvoke <java.net.URL: java.io.InputStream openStream()>";
+    "specialinvoke <java.io.InputStreamReader: void <init>(java.io.InputStream)>"
+    "virtualinvoke <java.net.URL: java.io.InputStream openStream()>"->"specialinvoke <java.io.InputStreamReader: void <init>(java.io.InputStream)>";
+    "new java.io.BufferedReader"
+    "specialinvoke <java.io.InputStreamReader: void <init>(java.io.InputStream)>"->"new java.io.BufferedReader";
+    "store.r $r23"
+    "new java.io.BufferedReader"->"store.r $r23";
+    "load.r $r23"
+    "store.r $r23"->"load.r $r23";
+    "load.r $r23"->"load.r $r19";
+    "specialinvoke <java.io.BufferedReader: void <init>(java.io.Reader)>"
+    "load.r $r19"->"specialinvoke <java.io.BufferedReader: void <init>(java.io.Reader)>";
+    "specialinvoke <java.io.BufferedReader: void <init>(java.io.Reader)>"->"load.r r0";
+    "load.r r0"->"fieldget <AStockChart: StockDisplayer sd>";
+    "fieldget <AStockChart: StockDisplayer sd>"->"load.r $r23";
+    "load.r $r23"->"push 1";
+    "virtualinvoke <StockDisplayer: boolean fromReader(java.io.Reader,boolean)>"
+    "push 1"->"virtualinvoke <StockDisplayer: boolean fromReader(java.io.Reader,boolean)>";
+    "pop"
+    "virtualinvoke <StockDisplayer: boolean fromReader(java.io.Reader,boolean)>"->"pop";
+    "pop"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "fieldget <AStockChart: java.awt.GridBagConstraints c>"
+    "load.r r0"->"fieldget <AStockChart: java.awt.GridBagConstraints c>";
+    "fieldget <AStockChart: java.awt.GridBagConstraints c>"->"push 1";
+    "fieldput <java.awt.GridBagConstraints: int fill>"
+    "push 1"->"fieldput <java.awt.GridBagConstraints: int fill>";
+    "fieldput <java.awt.GridBagConstraints: int fill>"->"load.r r0";
+    "load.r r0"->"fieldget <AStockChart: java.awt.GridBagConstraints c>";
+    "push 1.0"
+    "fieldget <AStockChart: java.awt.GridBagConstraints c>"->"push 1.0";
+    "fieldput <java.awt.GridBagConstraints: double weightx>"
+    "push 1.0"->"fieldput <java.awt.GridBagConstraints: double weightx>";
+    "fieldput <java.awt.GridBagConstraints: double weightx>"->"load.r r0";
+    "load.r r0"->"fieldget <AStockChart: java.awt.GridBagConstraints c>";
+    "push 0"
+    "fieldget <AStockChart: java.awt.GridBagConstraints c>"->"push 0";
+    "fieldput <java.awt.GridBagConstraints: int gridwidth>"
+    "push 0"->"fieldput <java.awt.GridBagConstraints: int gridwidth>";
+    "fieldput <java.awt.GridBagConstraints: int gridwidth>"->"load.r r0";
+    "load.r r0"->"fieldget <AStockChart: java.awt.GridBagConstraints c>";
+    "fieldget <AStockChart: java.awt.GridBagConstraints c>"->"push 1.0";
+    "fieldput <java.awt.GridBagConstraints: double weighty>"
+    "push 1.0"->"fieldput <java.awt.GridBagConstraints: double weighty>";
+    "fieldput <java.awt.GridBagConstraints: double weighty>"->"load.r r0";
+    "new java.awt.Label"
+    "load.r r0"->"new java.awt.Label";
+    "new java.awt.Label"->"dup1.r";
+    "push \"Values\""
+    "dup1.r"->"push \"Values\"";
+    "specialinvoke <java.awt.Label: void <init>(java.lang.String)>"
+    "push \"Values\""->"specialinvoke <java.awt.Label: void <init>(java.lang.String)>";
+    "specialinvoke <java.awt.Label: void <init>(java.lang.String)>"->"load.r r0";
+    "load.r r0"->"fieldget <AStockChart: java.awt.GridBagConstraints c>";
+    "virtualinvoke <java.awt.Container: void add(java.awt.Component,java.lang.Object)>"
+    "fieldget <AStockChart: java.awt.GridBagConstraints c>"->"virtualinvoke <java.awt.Container: void add(java.awt.Component,java.lang.Object)>";
+    "virtualinvoke <java.awt.Container: void add(java.awt.Component,java.lang.Object)>"->"load.r r0";
+    "new MonoValueChart"
+    "load.r r0"->"new MonoValueChart";
+    "new MonoValueChart"->"dup1.r";
+    "specialinvoke <MonoValueChart: void <init>()>"
+    "dup1.r"->"specialinvoke <MonoValueChart: void <init>()>";
+    "fieldput <AStockChart: MonoValueChart vc>"
+    "specialinvoke <MonoValueChart: void <init>()>"->"fieldput <AStockChart: MonoValueChart vc>";
+    "fieldput <AStockChart: MonoValueChart vc>"->"load.r r0";
+    "fieldget <AStockChart: MonoValueChart vc>"
+    "load.r r0"->"fieldget <AStockChart: MonoValueChart vc>";
+    "push 10"
+    "fieldget <AStockChart: MonoValueChart vc>"->"push 10";
+    "virtualinvoke <MonoValueChart: void setNbPoint(int)>"
+    "push 10"->"virtualinvoke <MonoValueChart: void setNbPoint(int)>";
+    "virtualinvoke <MonoValueChart: void setNbPoint(int)>"->"load.r r0";
+    "load.r r0"->"fieldget <AStockChart: MonoValueChart vc>";
+    "fieldget <AStockChart: MonoValueChart vc>"->"push 0";
+    "virtualinvoke <MonoValueChart: void setMin(int)>"
+    "push 0"->"virtualinvoke <MonoValueChart: void setMin(int)>";
+    "virtualinvoke <MonoValueChart: void setMin(int)>"->"load.r r0";
+    "load.r r0"->"fieldget <AStockChart: MonoValueChart vc>";
+    "push 8"
+    "fieldget <AStockChart: MonoValueChart vc>"->"push 8";
+    "virtualinvoke <MonoValueChart: void setBorder(int)>"
+    "push 8"->"virtualinvoke <MonoValueChart: void setBorder(int)>";
+    "virtualinvoke <MonoValueChart: void setBorder(int)>"->"load.r r0";
+    "load.r r0"->"fieldget <AStockChart: MonoValueChart vc>";
+    "fieldget <AStockChart: MonoValueChart vc>"->"load.r $r31";
+    "virtualinvoke <java.awt.Component: void setFont(java.awt.Font)>"
+    "load.r $r31"->"virtualinvoke <java.awt.Component: void setFont(java.awt.Font)>";
+    "virtualinvoke <java.awt.Component: void setFont(java.awt.Font)>"->"load.r r0";
+    "load.r r0"->"new MonoValueChart";
+    "new MonoValueChart"->"dup1.r";
+    "dup1.r"->"specialinvoke <MonoValueChart: void <init>()>";
+    "fieldput <AStockChart: MonoValueChart vv>"
+    "specialinvoke <MonoValueChart: void <init>()>"->"fieldput <AStockChart: MonoValueChart vv>";
+    "fieldput <AStockChart: MonoValueChart vv>"->"load.r r0";
+    "fieldget <AStockChart: MonoValueChart vv>"
+    "load.r r0"->"fieldget <AStockChart: MonoValueChart vv>";
+    "fieldget <AStockChart: MonoValueChart vv>"->"push 10";
+    "push 10"->"virtualinvoke <MonoValueChart: void setNbPoint(int)>";
+    "virtualinvoke <MonoValueChart: void setNbPoint(int)>"->"load.r r0";
+    "load.r r0"->"fieldget <AStockChart: MonoValueChart vv>";
+    "fieldget <AStockChart: MonoValueChart vv>"->"push 8";
+    "push 8"->"virtualinvoke <MonoValueChart: void setBorder(int)>";
+    "virtualinvoke <MonoValueChart: void setBorder(int)>"->"load.r r0";
+    "load.r r0"->"fieldget <AStockChart: MonoValueChart vv>";
+    "fieldget <AStockChart: MonoValueChart vv>"->"load.r $r31";
+    "load.r $r31"->"virtualinvoke <java.awt.Component: void setFont(java.awt.Font)>";
+    "virtualinvoke <java.awt.Component: void setFont(java.awt.Font)>"->"load.r r0";
+    "push \"nbpoint\""
+    "load.r r0"->"push \"nbpoint\"";
+    "push \"nbpoint\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"store.r $r31";
+    "store.r $r31"->"load.r $r31";
+    "load.r $r31"->"ifnull load.r r0";
+    "new java.lang.Integer"
+    "ifnull load.r r0"->"new java.lang.Integer";
+    "new java.lang.Integer"->"dup1.r";
+    "dup1.r"->"load.r $r31";
+    "specialinvoke <java.lang.Integer: void <init>(java.lang.String)>"
+    "load.r $r31"->"specialinvoke <java.lang.Integer: void <init>(java.lang.String)>";
+    "virtualinvoke <java.lang.Integer: int intValue()>"
+    "specialinvoke <java.lang.Integer: void <init>(java.lang.String)>"->"virtualinvoke <java.lang.Integer: int intValue()>";
+    "store.i $r43"
+    "virtualinvoke <java.lang.Integer: int intValue()>"->"store.i $r43";
+    "store.i $r43"->"load.r r0";
+    "load.r r0"->"fieldget <AStockChart: MonoValueChart vc>";
+    "load.i $r43"
+    "fieldget <AStockChart: MonoValueChart vc>"->"load.i $r43";
+    "load.i $r43"->"virtualinvoke <MonoValueChart: void setNbPoint(int)>";
+    "virtualinvoke <MonoValueChart: void setNbPoint(int)>"->"load.r r0";
+    "load.r r0"->"fieldget <AStockChart: MonoValueChart vv>";
+    "fieldget <AStockChart: MonoValueChart vv>"->"load.i $r43";
+    "load.i $r43"->"virtualinvoke <MonoValueChart: void setNbPoint(int)>";
+    "virtualinvoke <MonoValueChart: void setNbPoint(int)>"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <AStockChart: MonoValueChart vc>";
+    "fieldget <AStockChart: MonoValueChart vc>"->"load.r r0";
+    "load.r r0"->"fieldget <AStockChart: StockDisplayer sd>";
+    "virtualinvoke <MonoValueChart: void setMVCDisplayer(MVCDisplayer)>"
+    "fieldget <AStockChart: StockDisplayer sd>"->"virtualinvoke <MonoValueChart: void setMVCDisplayer(MVCDisplayer)>";
+    "virtualinvoke <MonoValueChart: void setMVCDisplayer(MVCDisplayer)>"->"load.r r0";
+    "load.r r0"->"fieldget <AStockChart: java.awt.GridBagConstraints c>";
+    "push 5.0"
+    "fieldget <AStockChart: java.awt.GridBagConstraints c>"->"push 5.0";
+    "push 5.0"->"fieldput <java.awt.GridBagConstraints: double weighty>";
+    "fieldput <java.awt.GridBagConstraints: double weighty>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <AStockChart: MonoValueChart vc>";
+    "fieldget <AStockChart: MonoValueChart vc>"->"load.r r0";
+    "load.r r0"->"fieldget <AStockChart: java.awt.GridBagConstraints c>";
+    "fieldget <AStockChart: java.awt.GridBagConstraints c>"->"virtualinvoke <java.awt.Container: void add(java.awt.Component,java.lang.Object)>";
+    "virtualinvoke <java.awt.Container: void add(java.awt.Component,java.lang.Object)>"->"load.r r0";
+    "load.r r0"->"fieldget <AStockChart: java.awt.GridBagConstraints c>";
+    "fieldget <AStockChart: java.awt.GridBagConstraints c>"->"push 1.0";
+    "push 1.0"->"fieldput <java.awt.GridBagConstraints: double weighty>";
+    "fieldput <java.awt.GridBagConstraints: double weighty>"->"load.r r0";
+    "load.r r0"->"new java.awt.Label";
+    "new java.awt.Label"->"dup1.r";
+    "push \"Volume\""
+    "dup1.r"->"push \"Volume\"";
+    "push \"Volume\""->"specialinvoke <java.awt.Label: void <init>(java.lang.String)>";
+    "specialinvoke <java.awt.Label: void <init>(java.lang.String)>"->"load.r r0";
+    "load.r r0"->"fieldget <AStockChart: java.awt.GridBagConstraints c>";
+    "fieldget <AStockChart: java.awt.GridBagConstraints c>"->"virtualinvoke <java.awt.Container: void add(java.awt.Component,java.lang.Object)>";
+    "virtualinvoke <java.awt.Container: void add(java.awt.Component,java.lang.Object)>"->"load.r r0";
+    "new VolumeDisplayer"
+    "load.r r0"->"new VolumeDisplayer";
+    "new VolumeDisplayer"->"dup1.r";
+    "specialinvoke <VolumeDisplayer: void <init>()>"
+    "dup1.r"->"specialinvoke <VolumeDisplayer: void <init>()>";
+    "fieldput <AStockChart: VolumeDisplayer vd>"
+    "specialinvoke <VolumeDisplayer: void <init>()>"->"fieldput <AStockChart: VolumeDisplayer vd>";
+    "fieldput <AStockChart: VolumeDisplayer vd>"->"load.r r0";
+    "fieldget <AStockChart: VolumeDisplayer vd>"
+    "load.r r0"->"fieldget <AStockChart: VolumeDisplayer vd>";
+    "fieldget <AStockChart: VolumeDisplayer vd>"->"load.r r0";
+    "load.r r0"->"fieldget <AStockChart: StockDisplayer sd>";
+    "virtualinvoke <VolumeDisplayer: void fromStockDisplayer(StockDisplayer)>"
+    "fieldget <AStockChart: StockDisplayer sd>"->"virtualinvoke <VolumeDisplayer: void fromStockDisplayer(StockDisplayer)>";
+    "virtualinvoke <VolumeDisplayer: void fromStockDisplayer(StockDisplayer)>"->"load.r r0";
+    "load.r r0"->"fieldget <AStockChart: MonoValueChart vv>";
+    "fieldget <AStockChart: MonoValueChart vv>"->"push 1";
+    "virtualinvoke <MonoValueChart: void setLinkMode(int)>"
+    "push 1"->"virtualinvoke <MonoValueChart: void setLinkMode(int)>";
+    "virtualinvoke <MonoValueChart: void setLinkMode(int)>"->"load.r r0";
+    "load.r r0"->"fieldget <AStockChart: MonoValueChart vv>";
+    "fieldget <AStockChart: MonoValueChart vv>"->"push 0";
+    "push 0"->"virtualinvoke <MonoValueChart: void setMin(int)>";
+    "virtualinvoke <MonoValueChart: void setMin(int)>"->"load.r r0";
+    "load.r r0"->"fieldget <AStockChart: MonoValueChart vv>";
+    "fieldget <AStockChart: MonoValueChart vv>"->"load.r r0";
+    "load.r r0"->"fieldget <AStockChart: VolumeDisplayer vd>";
+    "fieldget <AStockChart: VolumeDisplayer vd>"->"virtualinvoke <MonoValueChart: void setMVCDisplayer(MVCDisplayer)>";
+    "virtualinvoke <MonoValueChart: void setMVCDisplayer(MVCDisplayer)>"->"load.r r0";
+    "load.r r0"->"fieldget <AStockChart: java.awt.GridBagConstraints c>";
+    "push 2.0"
+    "fieldget <AStockChart: java.awt.GridBagConstraints c>"->"push 2.0";
+    "push 2.0"->"fieldput <java.awt.GridBagConstraints: double weighty>";
+    "fieldput <java.awt.GridBagConstraints: double weighty>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <AStockChart: MonoValueChart vv>";
+    "fieldget <AStockChart: MonoValueChart vv>"->"load.r r0";
+    "load.r r0"->"fieldget <AStockChart: java.awt.GridBagConstraints c>";
+    "fieldget <AStockChart: java.awt.GridBagConstraints c>"->"virtualinvoke <java.awt.Container: void add(java.awt.Component,java.lang.Object)>";
+    "virtualinvoke <java.awt.Container: void add(java.awt.Component,java.lang.Object)>"->"load.r r0";
+    "push \"img\""
+    "load.r r0"->"push \"img\"";
+    "push \"img\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"store.r $r31";
+    "store.r $r31"->"load.r $r31";
+    "load.r $r31"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <AStockChart: MonoValueChart vc>";
+    "fieldget <AStockChart: MonoValueChart vc>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"virtualinvoke <java.applet.Applet: java.net.URL getDocumentBase()>";
+    "virtualinvoke <java.applet.Applet: java.net.URL getDocumentBase()>"->"load.r $r31";
+    "virtualinvoke <java.applet.Applet: java.awt.Image getImage(java.net.URL,java.lang.String)>"
+    "load.r $r31"->"virtualinvoke <java.applet.Applet: java.awt.Image getImage(java.net.URL,java.lang.String)>";
+    "virtualinvoke <MonoValueChart: void setBackImage(java.awt.Image)>"
+    "virtualinvoke <java.applet.Applet: java.awt.Image getImage(java.net.URL,java.lang.String)>"->"virtualinvoke <MonoValueChart: void setBackImage(java.awt.Image)>";
+    "virtualinvoke <MonoValueChart: void setBackImage(java.awt.Image)>"->"load.r r0";
+    "load.r r0"->"fieldget <AStockChart: MonoValueChart vv>";
+    "fieldget <AStockChart: MonoValueChart vv>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"virtualinvoke <java.applet.Applet: java.net.URL getDocumentBase()>";
+    "virtualinvoke <java.applet.Applet: java.net.URL getDocumentBase()>"->"load.r $r31";
+    "load.r $r31"->"virtualinvoke <java.applet.Applet: java.awt.Image getImage(java.net.URL,java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.awt.Image getImage(java.net.URL,java.lang.String)>"->"virtualinvoke <MonoValueChart: void setBackImage(java.awt.Image)>";
+    "virtualinvoke <MonoValueChart: void setBackImage(java.awt.Image)>"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "new java.awt.Panel"
+    "load.r r0"->"new java.awt.Panel";
+    "new java.awt.Panel"->"dup1.r";
+    "specialinvoke <java.awt.Panel: void <init>()>"
+    "dup1.r"->"specialinvoke <java.awt.Panel: void <init>()>";
+    "fieldput <AStockChart: java.awt.Panel p>"
+    "specialinvoke <java.awt.Panel: void <init>()>"->"fieldput <AStockChart: java.awt.Panel p>";
+    "fieldput <AStockChart: java.awt.Panel p>"->"load.r r0";
+    "fieldget <AStockChart: java.awt.Panel p>"
+    "load.r r0"->"fieldget <AStockChart: java.awt.Panel p>";
+    "new java.awt.FlowLayout"
+    "fieldget <AStockChart: java.awt.Panel p>"->"new java.awt.FlowLayout";
+    "new java.awt.FlowLayout"->"dup1.r";
+    "specialinvoke <java.awt.FlowLayout: void <init>()>"
+    "dup1.r"->"specialinvoke <java.awt.FlowLayout: void <init>()>";
+    "specialinvoke <java.awt.FlowLayout: void <init>()>"->"virtualinvoke <java.awt.Container: void setLayout(java.awt.LayoutManager)>";
+    "virtualinvoke <java.awt.Container: void setLayout(java.awt.LayoutManager)>"->"load.r r0";
+    "new java.awt.Button"
+    "load.r r0"->"new java.awt.Button";
+    "new java.awt.Button"->"dup1.r";
+    "push \"<\""
+    "dup1.r"->"push \"<\"";
+    "specialinvoke <java.awt.Button: void <init>(java.lang.String)>"
+    "push \"<\""->"specialinvoke <java.awt.Button: void <init>(java.lang.String)>";
+    "fieldput <AStockChart: java.awt.Button b>"
+    "specialinvoke <java.awt.Button: void <init>(java.lang.String)>"->"fieldput <AStockChart: java.awt.Button b>";
+    "fieldput <AStockChart: java.awt.Button b>"->"load.r r0";
+    "fieldget <AStockChart: java.awt.Button b>"
+    "load.r r0"->"fieldget <AStockChart: java.awt.Button b>";
+    "fieldget <AStockChart: java.awt.Button b>"->"push \"<\"";
+    "virtualinvoke <java.awt.Button: void setActionCommand(java.lang.String)>"
+    "push \"<\""->"virtualinvoke <java.awt.Button: void setActionCommand(java.lang.String)>";
+    "virtualinvoke <java.awt.Button: void setActionCommand(java.lang.String)>"->"load.r r0";
+    "load.r r0"->"fieldget <AStockChart: java.awt.Button b>";
+    "fieldget <AStockChart: java.awt.Button b>"->"load.r r0";
+    "virtualinvoke <java.awt.Button: void addActionListener(java.awt.event.ActionListener)>"
+    "load.r r0"->"virtualinvoke <java.awt.Button: void addActionListener(java.awt.event.ActionListener)>";
+    "virtualinvoke <java.awt.Button: void addActionListener(java.awt.event.ActionListener)>"->"load.r r0";
+    "load.r r0"->"fieldget <AStockChart: java.awt.Panel p>";
+    "fieldget <AStockChart: java.awt.Panel p>"->"load.r r0";
+    "load.r r0"->"fieldget <AStockChart: java.awt.Button b>";
+    "virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>"
+    "fieldget <AStockChart: java.awt.Button b>"->"virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>";
+    "virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>"->"pop";
+    "pop"->"load.r r0";
+    "load.r r0"->"new java.awt.Button";
+    "new java.awt.Button"->"dup1.r";
+    "push \">\""
+    "dup1.r"->"push \">\"";
+    "push \">\""->"specialinvoke <java.awt.Button: void <init>(java.lang.String)>";
+    "specialinvoke <java.awt.Button: void <init>(java.lang.String)>"->"fieldput <AStockChart: java.awt.Button b>";
+    "fieldput <AStockChart: java.awt.Button b>"->"load.r r0";
+    "load.r r0"->"fieldget <AStockChart: java.awt.Button b>";
+    "fieldget <AStockChart: java.awt.Button b>"->"push \">\"";
+    "push \">\""->"virtualinvoke <java.awt.Button: void setActionCommand(java.lang.String)>";
+    "virtualinvoke <java.awt.Button: void setActionCommand(java.lang.String)>"->"load.r r0";
+    "load.r r0"->"fieldget <AStockChart: java.awt.Button b>";
+    "fieldget <AStockChart: java.awt.Button b>"->"load.r r0";
+    "load.r r0"->"virtualinvoke <java.awt.Button: void addActionListener(java.awt.event.ActionListener)>";
+    "virtualinvoke <java.awt.Button: void addActionListener(java.awt.event.ActionListener)>"->"load.r r0";
+    "load.r r0"->"fieldget <AStockChart: java.awt.Panel p>";
+    "fieldget <AStockChart: java.awt.Panel p>"->"load.r r0";
+    "load.r r0"->"fieldget <AStockChart: java.awt.Button b>";
+    "fieldget <AStockChart: java.awt.Button b>"->"virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>";
+    "virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>"->"pop";
+    "pop"->"load.r r0";
+    "load.r r0"->"new java.awt.Button";
+    "new java.awt.Button"->"dup1.r";
+    "push \"None\""
+    "dup1.r"->"push \"None\"";
+    "push \"None\""->"specialinvoke <java.awt.Button: void <init>(java.lang.String)>";
+    "specialinvoke <java.awt.Button: void <init>(java.lang.String)>"->"fieldput <AStockChart: java.awt.Button b>";
+    "fieldput <AStockChart: java.awt.Button b>"->"load.r r0";
+    "load.r r0"->"fieldget <AStockChart: java.awt.Button b>";
+    "push \"n\""
+    "fieldget <AStockChart: java.awt.Button b>"->"push \"n\"";
+    "push \"n\""->"virtualinvoke <java.awt.Button: void setActionCommand(java.lang.String)>";
+    "virtualinvoke <java.awt.Button: void setActionCommand(java.lang.String)>"->"load.r r0";
+    "load.r r0"->"fieldget <AStockChart: java.awt.Button b>";
+    "fieldget <AStockChart: java.awt.Button b>"->"load.r r0";
+    "load.r r0"->"virtualinvoke <java.awt.Button: void addActionListener(java.awt.event.ActionListener)>";
+    "virtualinvoke <java.awt.Button: void addActionListener(java.awt.event.ActionListener)>"->"load.r r0";
+    "load.r r0"->"fieldget <AStockChart: java.awt.Panel p>";
+    "fieldget <AStockChart: java.awt.Panel p>"->"load.r r0";
+    "load.r r0"->"fieldget <AStockChart: java.awt.Button b>";
+    "fieldget <AStockChart: java.awt.Button b>"->"virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>";
+    "virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>"->"pop";
+    "pop"->"load.r r0";
+    "load.r r0"->"new java.awt.Button";
+    "new java.awt.Button"->"dup1.r";
+    "push \"Line\""
+    "dup1.r"->"push \"Line\"";
+    "push \"Line\""->"specialinvoke <java.awt.Button: void <init>(java.lang.String)>";
+    "specialinvoke <java.awt.Button: void <init>(java.lang.String)>"->"fieldput <AStockChart: java.awt.Button b>";
+    "fieldput <AStockChart: java.awt.Button b>"->"load.r r0";
+    "load.r r0"->"fieldget <AStockChart: java.awt.Button b>";
+    "push \"l\""
+    "fieldget <AStockChart: java.awt.Button b>"->"push \"l\"";
+    "push \"l\""->"virtualinvoke <java.awt.Button: void setActionCommand(java.lang.String)>";
+    "virtualinvoke <java.awt.Button: void setActionCommand(java.lang.String)>"->"load.r r0";
+    "load.r r0"->"fieldget <AStockChart: java.awt.Button b>";
+    "fieldget <AStockChart: java.awt.Button b>"->"load.r r0";
+    "load.r r0"->"virtualinvoke <java.awt.Button: void addActionListener(java.awt.event.ActionListener)>";
+    "virtualinvoke <java.awt.Button: void addActionListener(java.awt.event.ActionListener)>"->"load.r r0";
+    "load.r r0"->"fieldget <AStockChart: java.awt.Panel p>";
+    "fieldget <AStockChart: java.awt.Panel p>"->"load.r r0";
+    "load.r r0"->"fieldget <AStockChart: java.awt.Button b>";
+    "fieldget <AStockChart: java.awt.Button b>"->"virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>";
+    "virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>"->"pop";
+    "pop"->"load.r r0";
+    "load.r r0"->"new java.awt.Button";
+    "new java.awt.Button"->"dup1.r";
+    "push \"Fill\""
+    "dup1.r"->"push \"Fill\"";
+    "push \"Fill\""->"specialinvoke <java.awt.Button: void <init>(java.lang.String)>";
+    "specialinvoke <java.awt.Button: void <init>(java.lang.String)>"->"fieldput <AStockChart: java.awt.Button b>";
+    "fieldput <AStockChart: java.awt.Button b>"->"load.r r0";
+    "load.r r0"->"fieldget <AStockChart: java.awt.Button b>";
+    "push \"f\""
+    "fieldget <AStockChart: java.awt.Button b>"->"push \"f\"";
+    "push \"f\""->"virtualinvoke <java.awt.Button: void setActionCommand(java.lang.String)>";
+    "virtualinvoke <java.awt.Button: void setActionCommand(java.lang.String)>"->"load.r r0";
+    "load.r r0"->"fieldget <AStockChart: java.awt.Button b>";
+    "fieldget <AStockChart: java.awt.Button b>"->"load.r r0";
+    "load.r r0"->"virtualinvoke <java.awt.Button: void addActionListener(java.awt.event.ActionListener)>";
+    "virtualinvoke <java.awt.Button: void addActionListener(java.awt.event.ActionListener)>"->"load.r r0";
+    "load.r r0"->"fieldget <AStockChart: java.awt.Panel p>";
+    "fieldget <AStockChart: java.awt.Panel p>"->"load.r r0";
+    "load.r r0"->"fieldget <AStockChart: java.awt.Button b>";
+    "fieldget <AStockChart: java.awt.Button b>"->"virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>";
+    "virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>"->"pop";
+    "pop"->"load.r r0";
+    "load.r r0"->"new java.awt.Button";
+    "new java.awt.Button"->"dup1.r";
+    "push \"?\""
+    "dup1.r"->"push \"?\"";
+    "push \"?\""->"specialinvoke <java.awt.Button: void <init>(java.lang.String)>";
+    "specialinvoke <java.awt.Button: void <init>(java.lang.String)>"->"fieldput <AStockChart: java.awt.Button b>";
+    "fieldput <AStockChart: java.awt.Button b>"->"load.r r0";
+    "load.r r0"->"fieldget <AStockChart: java.awt.Button b>";
+    "fieldget <AStockChart: java.awt.Button b>"->"push \"?\"";
+    "push \"?\""->"virtualinvoke <java.awt.Button: void setActionCommand(java.lang.String)>";
+    "virtualinvoke <java.awt.Button: void setActionCommand(java.lang.String)>"->"load.r r0";
+    "load.r r0"->"fieldget <AStockChart: java.awt.Button b>";
+    "fieldget <AStockChart: java.awt.Button b>"->"load.r r0";
+    "load.r r0"->"virtualinvoke <java.awt.Button: void addActionListener(java.awt.event.ActionListener)>";
+    "virtualinvoke <java.awt.Button: void addActionListener(java.awt.event.ActionListener)>"->"load.r r0";
+    "load.r r0"->"fieldget <AStockChart: java.awt.Panel p>";
+    "fieldget <AStockChart: java.awt.Panel p>"->"load.r r0";
+    "load.r r0"->"fieldget <AStockChart: java.awt.Button b>";
+    "fieldget <AStockChart: java.awt.Button b>"->"virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>";
+    "virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>"->"pop";
+    "pop"->"load.r r0";
+    "load.r r0"->"fieldget <AStockChart: java.awt.GridBagConstraints c>";
+    "fieldget <AStockChart: java.awt.GridBagConstraints c>"->"push 1.0";
+    "push 1.0"->"fieldput <java.awt.GridBagConstraints: double weighty>";
+    "fieldput <java.awt.GridBagConstraints: double weighty>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <AStockChart: java.awt.Panel p>";
+    "fieldget <AStockChart: java.awt.Panel p>"->"load.r r0";
+    "load.r r0"->"fieldget <AStockChart: java.awt.GridBagConstraints c>";
+    "fieldget <AStockChart: java.awt.GridBagConstraints c>"->"virtualinvoke <java.awt.Container: void add(java.awt.Component,java.lang.Object)>";
+    "virtualinvoke <java.awt.Container: void add(java.awt.Component,java.lang.Object)>"->"load.r r0";
+    "virtualinvoke <java.awt.Container: void doLayout()>"
+    "load.r r0"->"virtualinvoke <java.awt.Container: void doLayout()>";
+    "virtualinvoke <java.awt.Container: void doLayout()>"->"load.r r0";
+    "virtualinvoke <java.awt.Component: void repaint()>"
+    "load.r r0"->"virtualinvoke <java.awt.Component: void repaint()>";
+    "return"
+    "virtualinvoke <java.awt.Component: void repaint()>"->"return";
+    "virtualinvoke <MonoValueChart: void setBackImage(java.awt.Image)>"->"store.r $r31";
+    "staticget <java.lang.System: java.io.PrintStream out>"
+    "store.r $r31"->"staticget <java.lang.System: java.io.PrintStream out>";
+    "new java.lang.StringBuffer"
+    "staticget <java.lang.System: java.io.PrintStream out>"->"new java.lang.StringBuffer";
+    "new java.lang.StringBuffer"->"dup1.r";
+    "push \"Load image : \""
+    "dup1.r"->"push \"Load image : \"";
+    "specialinvoke <java.lang.StringBuffer: void <init>(java.lang.String)>"
+    "push \"Load image : \""->"specialinvoke <java.lang.StringBuffer: void <init>(java.lang.String)>";
+    "specialinvoke <java.lang.StringBuffer: void <init>(java.lang.String)>"->"load.r $r31";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.Object)>"
+    "load.r $r31"->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.Object)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>"
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.Object)>"->"virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>";
+    "virtualinvoke <java.io.PrintStream: void println(java.lang.String)>"
+    "virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>"->"virtualinvoke <java.io.PrintStream: void println(java.lang.String)>";
+    "virtualinvoke <MonoValueChart: void setNbPoint(int)>"->"store.r $r43";
+    "store.r $r43"->"staticget <java.lang.System: java.io.PrintStream out>";
+    "staticget <java.lang.System: java.io.PrintStream out>"->"new java.lang.StringBuffer";
+    "new java.lang.StringBuffer"->"dup1.r";
+    "push \"nbpoint [\""
+    "dup1.r"->"push \"nbpoint [\"";
+    "push \"nbpoint [\""->"specialinvoke <java.lang.StringBuffer: void <init>(java.lang.String)>";
+    "specialinvoke <java.lang.StringBuffer: void <init>(java.lang.String)>"->"load.r $r31";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"
+    "load.r $r31"->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "push \"] :\""
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"push \"] :\"";
+    "push \"] :\""->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"load.r $r43";
+    "load.r $r43"->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.Object)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.Object)>"->"virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>"->"virtualinvoke <java.io.PrintStream: void println(java.lang.String)>";
+    "virtualinvoke <StockDisplayer: boolean fromReader(java.io.Reader,boolean)>"->"store.r $r19";
+    "store.r $r19"->"staticget <java.lang.System: java.io.PrintStream out>";
+    "staticget <java.lang.System: java.io.PrintStream out>"->"new java.lang.StringBuffer";
+    "new java.lang.StringBuffer"->"dup1.r";
+    "push \"Reading file \""
+    "dup1.r"->"push \"Reading file \"";
+    "push \"Reading file \""->"specialinvoke <java.lang.StringBuffer: void <init>(java.lang.String)>";
+    "specialinvoke <java.lang.StringBuffer: void <init>(java.lang.String)>"->"load.r $r43";
+    "load.r $r43"->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "push \", exception \""
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"push \", exception \"";
+    "push \", exception \""->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"load.r $r19";
+    "load.r $r19"->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.Object)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.Object)>"->"virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>"->"virtualinvoke <java.io.PrintStream: void println(java.lang.String)>";
+    "specialinvoke <java.awt.Font: void <init>(java.lang.String,int,int)>"->"store.r $r43";
+    "store.r $r43"->"staticget <java.lang.System: java.io.PrintStream out>";
+    "staticget <java.lang.System: java.io.PrintStream out>"->"new java.lang.StringBuffer";
+    "new java.lang.StringBuffer"->"dup1.r";
+    "push \"fontsize :\""
+    "dup1.r"->"push \"fontsize :\"";
+    "push \"fontsize :\""->"specialinvoke <java.lang.StringBuffer: void <init>(java.lang.String)>";
+    "specialinvoke <java.lang.StringBuffer: void <init>(java.lang.String)>"->"load.r $r43";
+    "load.r $r43"->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.Object)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.Object)>"->"virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>"->"virtualinvoke <java.io.PrintStream: void println(java.lang.String)>";
+    "ifeq load.r r0"->"load.r r0";
+    "new ChartDisplayer"
+    "load.r r0"->"new ChartDisplayer";
+    "new ChartDisplayer"->"dup1.r";
+    "specialinvoke <ChartDisplayer: void <init>()>"
+    "dup1.r"->"specialinvoke <ChartDisplayer: void <init>()>";
+    "specialinvoke <ChartDisplayer: void <init>()>"->"fieldput <AStockChart: StockDisplayer sd>";
+}

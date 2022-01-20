@@ -1,0 +1,32 @@
+digraph "" {
+    "r0 := @this: GetAccess"
+    "load.r r0"
+    "r0 := @this: GetAccess"->"load.r r0";
+    "push 19"
+    "load.r r0"->"push 19";
+    "fieldput <GetAccess: int k>"
+    "push 19"->"fieldput <GetAccess: int k>";
+    "fieldput <GetAccess: int k>"->"load.r r0";
+    "fieldget <GetAccess: java.lang.Object oInstaller>"
+    "load.r r0"->"fieldget <GetAccess: java.lang.Object oInstaller>";
+    "ifnull return"
+    "fieldget <GetAccess: java.lang.Object oInstaller>"->"ifnull return";
+    "ifnull return"->"load.r r0";
+    "load.r r0"->"fieldget <GetAccess: java.lang.Object oInstaller>";
+    "instanceof"
+    "fieldget <GetAccess: java.lang.Object oInstaller>"->"instanceof";
+    "ifeq return"
+    "instanceof"->"ifeq return";
+    "ifeq return"->"load.r r0";
+    "load.r r0"->"fieldget <GetAccess: java.lang.Object oInstaller>";
+    "checkcast"
+    "fieldget <GetAccess: java.lang.Object oInstaller>"->"checkcast";
+    "checkcast"->"load.r r0";
+    "virtualinvoke <java.applet.Applet: java.net.URL getCodeBase()>"
+    "load.r r0"->"virtualinvoke <java.applet.Applet: java.net.URL getCodeBase()>";
+    "virtualinvoke <java.applet.Applet: java.net.URL getCodeBase()>"->"load.r r0";
+    "virtualinvoke <Installer: void setApplet(java.net.URL,java.applet.Applet)>"
+    "load.r r0"->"virtualinvoke <Installer: void setApplet(java.net.URL,java.applet.Applet)>";
+    "return"
+    "virtualinvoke <Installer: void setApplet(java.net.URL,java.applet.Applet)>"->"return";
+}

@@ -1,0 +1,190 @@
+digraph "" {
+    "r0 := @this: ia.JPhotoAlbum"
+    "load.r r0"
+    "r0 := @this: ia.JPhotoAlbum"->"load.r r0";
+    "new java.awt.MediaTracker"
+    "load.r r0"->"new java.awt.MediaTracker";
+    "dup1.r"
+    "new java.awt.MediaTracker"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "specialinvoke <java.awt.MediaTracker: void <init>(java.awt.Component)>"
+    "load.r r0"->"specialinvoke <java.awt.MediaTracker: void <init>(java.awt.Component)>";
+    "fieldput <ia.JPhotoAlbum: java.awt.MediaTracker b>"
+    "specialinvoke <java.awt.MediaTracker: void <init>(java.awt.Component)>"->"fieldput <ia.JPhotoAlbum: java.awt.MediaTracker b>";
+    "fieldput <ia.JPhotoAlbum: java.awt.MediaTracker b>"->"load.r r0";
+    "new java.awt.Color"
+    "load.r r0"->"new java.awt.Color";
+    "new java.awt.Color"->"dup1.r";
+    "push 255"
+    "dup1.r"->"push 255";
+    "push 255"->"push 255";
+    "push 255"->"push 255";
+    "specialinvoke <java.awt.Color: void <init>(int,int,int)>"
+    "push 255"->"specialinvoke <java.awt.Color: void <init>(int,int,int)>";
+    "virtualinvoke <java.awt.Component: void setBackground(java.awt.Color)>"
+    "specialinvoke <java.awt.Color: void <init>(int,int,int)>"->"virtualinvoke <java.awt.Component: void setBackground(java.awt.Color)>";
+    "virtualinvoke <java.awt.Component: void setBackground(java.awt.Color)>"->"load.r r0";
+    "specialinvoke <ia.JPhotoAlbum: void a()>"
+    "load.r r0"->"specialinvoke <ia.JPhotoAlbum: void a()>";
+    "push \"\""
+    "specialinvoke <ia.JPhotoAlbum: void a()>"->"push \"\"";
+    "store.r r37"
+    "push \"\""->"store.r r37";
+    "new java.io.BufferedReader"
+    "store.r r37"->"new java.io.BufferedReader";
+    "store.r r3"
+    "new java.io.BufferedReader"->"store.r r3";
+    "load.r r3"
+    "store.r r3"->"load.r r3";
+    "new java.io.InputStreamReader"
+    "load.r r3"->"new java.io.InputStreamReader";
+    "new java.io.InputStreamReader"->"dup1.r";
+    "new java.net.URL"
+    "dup1.r"->"new java.net.URL";
+    "new java.net.URL"->"dup1.r";
+    "staticget <ia.JPhotoAlbum: java.lang.String[] z>"
+    "dup1.r"->"staticget <ia.JPhotoAlbum: java.lang.String[] z>";
+    "push 1"
+    "staticget <ia.JPhotoAlbum: java.lang.String[] z>"->"push 1";
+    "arrayread.r"
+    "push 1"->"arrayread.r";
+    "specialinvoke <java.net.URL: void <init>(java.lang.String)>"
+    "arrayread.r"->"specialinvoke <java.net.URL: void <init>(java.lang.String)>";
+    "virtualinvoke <java.net.URL: java.io.InputStream openStream()>"
+    "specialinvoke <java.net.URL: void <init>(java.lang.String)>"->"virtualinvoke <java.net.URL: java.io.InputStream openStream()>";
+    "specialinvoke <java.io.InputStreamReader: void <init>(java.io.InputStream)>"
+    "virtualinvoke <java.net.URL: java.io.InputStream openStream()>"->"specialinvoke <java.io.InputStreamReader: void <init>(java.io.InputStream)>";
+    "specialinvoke <java.io.BufferedReader: void <init>(java.io.Reader)>"
+    "specialinvoke <java.io.InputStreamReader: void <init>(java.io.InputStream)>"->"specialinvoke <java.io.BufferedReader: void <init>(java.io.Reader)>";
+    "specialinvoke <java.io.BufferedReader: void <init>(java.io.Reader)>"->"load.r r3";
+    "virtualinvoke <java.io.BufferedReader: java.lang.String readLine()>"
+    "load.r r3"->"virtualinvoke <java.io.BufferedReader: java.lang.String readLine()>";
+    "store.r r2"
+    "virtualinvoke <java.io.BufferedReader: java.lang.String readLine()>"->"store.r r2";
+    "load.r r2"
+    "store.r r2"->"load.r r2";
+    "ifnull load.r r0"
+    "load.r r2"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r r2";
+    "load.r r2"->"staticget <ia.JPhotoAlbum: java.lang.String[] z>";
+    "push 3"
+    "staticget <ia.JPhotoAlbum: java.lang.String[] z>"->"push 3";
+    "push 3"->"arrayread.r";
+    "virtualinvoke <java.lang.String: int indexOf(java.lang.String)>"
+    "arrayread.r"->"virtualinvoke <java.lang.String: int indexOf(java.lang.String)>";
+    "push -1"
+    "virtualinvoke <java.lang.String: int indexOf(java.lang.String)>"->"push -1";
+    "ifcmple.i load.r r3"
+    "push -1"->"ifcmple.i load.r r3";
+    "ifcmple.i load.r r3"->"load.r r2";
+    "load.r r2"->"load.r r2";
+    "load.r r2"->"load.r r2";
+    "load.r r2"->"staticget <ia.JPhotoAlbum: java.lang.String[] z>";
+    "push 2"
+    "staticget <ia.JPhotoAlbum: java.lang.String[] z>"->"push 2";
+    "push 2"->"arrayread.r";
+    "arrayread.r"->"store.r r2";
+    "store.r r2"->"load.r r2";
+    "load.r r2"->"staticget <ia.JPhotoAlbum: java.lang.String[] z>";
+    "push 0"
+    "staticget <ia.JPhotoAlbum: java.lang.String[] z>"->"push 0";
+    "push 0"->"arrayread.r";
+    "arrayread.r"->"store.r r3";
+    "store.r r3"->"virtualinvoke <java.lang.String: int indexOf(java.lang.String)>";
+    "virtualinvoke <java.lang.String: int indexOf(java.lang.String)>"->"load.r r2";
+    "virtualinvoke <java.lang.String: int length()>"
+    "load.r r2"->"virtualinvoke <java.lang.String: int length()>";
+    "add.i"
+    "virtualinvoke <java.lang.String: int length()>"->"add.i";
+    "store.i r2"
+    "add.i"->"store.i r2";
+    "store.i r2"->"load.r r3";
+    "load.i r2"
+    "load.r r3"->"load.i r2";
+    "virtualinvoke <java.lang.String: int indexOf(java.lang.String,int)>"
+    "load.i r2"->"virtualinvoke <java.lang.String: int indexOf(java.lang.String,int)>";
+    "store.i r3"
+    "virtualinvoke <java.lang.String: int indexOf(java.lang.String,int)>"->"store.i r3";
+    "store.i r3"->"load.i r2";
+    "load.i r3"
+    "load.i r2"->"load.i r3";
+    "virtualinvoke <java.lang.String: java.lang.String substring(int,int)>"
+    "load.i r3"->"virtualinvoke <java.lang.String: java.lang.String substring(int,int)>";
+    "virtualinvoke <java.lang.String: java.lang.String substring(int,int)>"->"store.r r37";
+    "goto load.r r0"
+    "store.r r37"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"new java.net.URL";
+    "new java.net.URL"->"dup1.r";
+    "load.r r37"
+    "dup1.r"->"load.r r37";
+    "load.r r37"->"specialinvoke <java.net.URL: void <init>(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.awt.Image getImage(java.net.URL)>"
+    "specialinvoke <java.net.URL: void <init>(java.lang.String)>"->"virtualinvoke <java.applet.Applet: java.awt.Image getImage(java.net.URL)>";
+    "fieldput <ia.JPhotoAlbum: java.awt.Image a>"
+    "virtualinvoke <java.applet.Applet: java.awt.Image getImage(java.net.URL)>"->"fieldput <ia.JPhotoAlbum: java.awt.Image a>";
+    "fieldput <ia.JPhotoAlbum: java.awt.Image a>"->"load.r r0";
+    "fieldget <ia.JPhotoAlbum: java.awt.MediaTracker b>"
+    "load.r r0"->"fieldget <ia.JPhotoAlbum: java.awt.MediaTracker b>";
+    "fieldget <ia.JPhotoAlbum: java.awt.MediaTracker b>"->"load.r r0";
+    "fieldget <ia.JPhotoAlbum: java.awt.Image a>"
+    "load.r r0"->"fieldget <ia.JPhotoAlbum: java.awt.Image a>";
+    "fieldget <ia.JPhotoAlbum: java.awt.Image a>"->"push 0";
+    "virtualinvoke <java.awt.MediaTracker: void addImage(java.awt.Image,int)>"
+    "push 0"->"virtualinvoke <java.awt.MediaTracker: void addImage(java.awt.Image,int)>";
+    "virtualinvoke <java.awt.MediaTracker: void addImage(java.awt.Image,int)>"->"load.r r0";
+    "load.r r0"->"fieldget <ia.JPhotoAlbum: java.awt.MediaTracker b>";
+    "virtualinvoke <java.awt.MediaTracker: void waitForAll()>"
+    "fieldget <ia.JPhotoAlbum: java.awt.MediaTracker b>"->"virtualinvoke <java.awt.MediaTracker: void waitForAll()>";
+    "virtualinvoke <java.awt.MediaTracker: void waitForAll()>"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "new java.lang.Thread"
+    "load.r r0"->"new java.lang.Thread";
+    "new java.lang.Thread"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "specialinvoke <java.lang.Thread: void <init>(java.lang.Runnable)>"
+    "load.r r0"->"specialinvoke <java.lang.Thread: void <init>(java.lang.Runnable)>";
+    "fieldput <ia.JPhotoAlbum: java.lang.Thread c>"
+    "specialinvoke <java.lang.Thread: void <init>(java.lang.Runnable)>"->"fieldput <ia.JPhotoAlbum: java.lang.Thread c>";
+    "return"
+    "fieldput <ia.JPhotoAlbum: java.lang.Thread c>"->"return";
+    "virtualinvoke <java.awt.MediaTracker: void waitForAll()>"->"store.r r3";
+    "store.r r3"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"new java.net.URL";
+    "new java.net.URL"->"dup1.r";
+    "new java.lang.StringBuffer"
+    "dup1.r"->"new java.lang.StringBuffer";
+    "new java.lang.StringBuffer"->"dup1.r";
+    "specialinvoke <java.lang.StringBuffer: void <init>()>"
+    "dup1.r"->"specialinvoke <java.lang.StringBuffer: void <init>()>";
+    "specialinvoke <java.lang.StringBuffer: void <init>()>"->"load.r r0";
+    "virtualinvoke <java.applet.Applet: java.net.URL getCodeBase()>"
+    "load.r r0"->"virtualinvoke <java.applet.Applet: java.net.URL getCodeBase()>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.Object)>"
+    "virtualinvoke <java.applet.Applet: java.net.URL getCodeBase()>"->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.Object)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.Object)>"->"staticget <ia.JPhotoAlbum: java.lang.String[] z>";
+    "push 4"
+    "staticget <ia.JPhotoAlbum: java.lang.String[] z>"->"push 4";
+    "push 4"->"arrayread.r";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"
+    "arrayread.r"->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>"
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>"->"specialinvoke <java.net.URL: void <init>(java.lang.String)>";
+    "specialinvoke <java.net.URL: void <init>(java.lang.String)>"->"virtualinvoke <java.applet.Applet: java.awt.Image getImage(java.net.URL)>";
+    "virtualinvoke <java.applet.Applet: java.awt.Image getImage(java.net.URL)>"->"fieldput <ia.JPhotoAlbum: java.awt.Image a>";
+    "fieldput <ia.JPhotoAlbum: java.awt.Image a>"->"load.r r0";
+    "load.r r0"->"fieldget <ia.JPhotoAlbum: java.awt.MediaTracker b>";
+    "fieldget <ia.JPhotoAlbum: java.awt.MediaTracker b>"->"load.r r0";
+    "load.r r0"->"fieldget <ia.JPhotoAlbum: java.awt.Image a>";
+    "fieldget <ia.JPhotoAlbum: java.awt.Image a>"->"push 0";
+    "push 0"->"virtualinvoke <java.awt.MediaTracker: void addImage(java.awt.Image,int)>";
+    "virtualinvoke <java.awt.MediaTracker: void addImage(java.awt.Image,int)>"->"load.r r0";
+    "load.r r0"->"fieldget <ia.JPhotoAlbum: java.awt.MediaTracker b>";
+    "fieldget <ia.JPhotoAlbum: java.awt.MediaTracker b>"->"virtualinvoke <java.awt.MediaTracker: void waitForAll()>";
+    "virtualinvoke <java.awt.MediaTracker: void waitForAll()>"->"goto load.r r0";
+    "virtualinvoke <java.lang.Throwable: void printStackTrace()>"
+    "virtualinvoke <java.awt.MediaTracker: void waitForAll()>"->"virtualinvoke <java.lang.Throwable: void printStackTrace()>";
+}

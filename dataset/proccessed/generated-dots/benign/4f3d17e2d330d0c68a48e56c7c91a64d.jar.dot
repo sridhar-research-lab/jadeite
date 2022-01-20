@@ -1,0 +1,19 @@
+digraph "" {
+    "r0 := @this: Bustout"
+    "load.r r0"
+    "r0 := @this: Bustout"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "push 180"
+    "load.r r0"->"push 180";
+    "push 300"
+    "push 180"->"push 300";
+    "virtualinvoke <java.awt.Component: java.awt.Image createImage(int,int)>"
+    "push 300"->"virtualinvoke <java.awt.Component: java.awt.Image createImage(int,int)>";
+    "fieldput <Bustout: java.awt.Image m_imagePlayfield>"
+    "virtualinvoke <java.awt.Component: java.awt.Image createImage(int,int)>"->"fieldput <Bustout: java.awt.Image m_imagePlayfield>";
+    "fieldput <Bustout: java.awt.Image m_imagePlayfield>"->"load.r r0";
+    "virtualinvoke <Bustout: void start()>"
+    "load.r r0"->"virtualinvoke <Bustout: void start()>";
+    "return"
+    "virtualinvoke <Bustout: void start()>"->"return";
+}

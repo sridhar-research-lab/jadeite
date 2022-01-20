@@ -1,0 +1,243 @@
+digraph "" {
+    "r0 := @this: FlagApplet"
+    "push 1"
+    "r0 := @this: FlagApplet"->"push 1";
+    "store.b i0"
+    "push 1"->"store.b i0";
+    "load.r r0"
+    "store.b i0"->"load.r r0";
+    "push \"copyright\""
+    "load.r r0"->"push \"copyright\"";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"
+    "push \"copyright\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "store.r r16"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"store.r r16";
+    "load.r r16"
+    "store.r r16"->"load.r r16";
+    "ifnonnull load.r r16"
+    "load.r r16"->"ifnonnull load.r r16";
+    "push 0"
+    "ifnonnull load.r r16"->"push 0";
+    "push 0"->"store.b i0";
+    "goto load.r r0"
+    "store.b i0"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "push \"home\""
+    "load.r r0"->"push \"home\"";
+    "push \"home\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"store.r r16";
+    "store.r r16"->"load.r r16";
+    "load.r r16"->"ifnonnull load.r r16";
+    "ifnonnull load.r r16"->"push 0";
+    "push 0"->"store.b i0";
+    "goto load.b i0"
+    "store.b i0"->"goto load.b i0";
+    "load.b i0"
+    "goto load.b i0"->"load.b i0";
+    "ifeq return"
+    "load.b i0"->"ifeq return";
+    "ifeq return"->"load.r r0";
+    "push \"Loading image...\""
+    "load.r r0"->"push \"Loading image...\"";
+    "virtualinvoke <java.applet.Applet: void showStatus(java.lang.String)>"
+    "push \"Loading image...\""->"virtualinvoke <java.applet.Applet: void showStatus(java.lang.String)>";
+    "new java.net.URL"
+    "virtualinvoke <java.applet.Applet: void showStatus(java.lang.String)>"->"new java.net.URL";
+    "dup1.r"
+    "new java.net.URL"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "push \"image\""
+    "load.r r0"->"push \"image\"";
+    "push \"image\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "specialinvoke <java.net.URL: void <init>(java.lang.String)>"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"specialinvoke <java.net.URL: void <init>(java.lang.String)>";
+    "store.r i0"
+    "specialinvoke <java.net.URL: void <init>(java.lang.String)>"->"store.r i0";
+    "goto load.r i0"
+    "store.r i0"->"goto load.r i0";
+    "load.r i0"
+    "goto load.r i0"->"load.r i0";
+    "ifnonnull load.r r0"
+    "load.r i0"->"ifnonnull load.r r0";
+    "ifnonnull load.r r0"->"new java.net.URL";
+    "new java.net.URL"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "virtualinvoke <java.applet.Applet: java.net.URL getDocumentBase()>"
+    "load.r r0"->"virtualinvoke <java.applet.Applet: java.net.URL getDocumentBase()>";
+    "virtualinvoke <java.applet.Applet: java.net.URL getDocumentBase()>"->"load.r r0";
+    "load.r r0"->"push \"image\"";
+    "push \"image\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "specialinvoke <java.net.URL: void <init>(java.net.URL,java.lang.String)>"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"specialinvoke <java.net.URL: void <init>(java.net.URL,java.lang.String)>";
+    "specialinvoke <java.net.URL: void <init>(java.net.URL,java.lang.String)>"->"store.r i0";
+    "store.r i0"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"load.r i0";
+    "virtualinvoke <java.applet.Applet: java.awt.Image getImage(java.net.URL)>"
+    "load.r i0"->"virtualinvoke <java.applet.Applet: java.awt.Image getImage(java.net.URL)>";
+    "fieldput <FlagApplet: java.awt.Image Ã>"
+    "virtualinvoke <java.applet.Applet: java.awt.Image getImage(java.net.URL)>"->"fieldput <FlagApplet: java.awt.Image Ã>";
+    "new java.awt.MediaTracker"
+    "fieldput <FlagApplet: java.awt.Image Ã>"->"new java.awt.MediaTracker";
+    "new java.awt.MediaTracker"->"store.r i0";
+    "store.r i0"->"load.r i0";
+    "load.r i0"->"load.r r0";
+    "specialinvoke <java.awt.MediaTracker: void <init>(java.awt.Component)>"
+    "load.r r0"->"specialinvoke <java.awt.MediaTracker: void <init>(java.awt.Component)>";
+    "specialinvoke <java.awt.MediaTracker: void <init>(java.awt.Component)>"->"load.r i0";
+    "load.r i0"->"load.r r0";
+    "fieldget <FlagApplet: java.awt.Image Ã>"
+    "load.r r0"->"fieldget <FlagApplet: java.awt.Image Ã>";
+    "fieldget <FlagApplet: java.awt.Image Ã>"->"push 0";
+    "virtualinvoke <java.awt.MediaTracker: void addImage(java.awt.Image,int)>"
+    "push 0"->"virtualinvoke <java.awt.MediaTracker: void addImage(java.awt.Image,int)>";
+    "virtualinvoke <java.awt.MediaTracker: void addImage(java.awt.Image,int)>"->"load.r i0";
+    "load.r i0"->"push 0";
+    "virtualinvoke <java.awt.MediaTracker: void waitForID(int)>"
+    "push 0"->"virtualinvoke <java.awt.MediaTracker: void waitForID(int)>";
+    "goto staticget <java.awt.Color: java.awt.Color black>"
+    "virtualinvoke <java.awt.MediaTracker: void waitForID(int)>"->"goto staticget <java.awt.Color: java.awt.Color black>";
+    "staticget <java.awt.Color: java.awt.Color black>"
+    "goto staticget <java.awt.Color: java.awt.Color black>"->"staticget <java.awt.Color: java.awt.Color black>";
+    "staticget <java.awt.Color: java.awt.Color black>"->"store.r r16";
+    "store.r r16"->"load.r r0";
+    "push \"background\""
+    "load.r r0"->"push \"background\"";
+    "push \"background\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "ifnull load.r r0"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r r0";
+    "load.r r0"->"push \"background\"";
+    "push \"background\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "staticinvoke <java.awt.Color: java.awt.Color decode(java.lang.String)>"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"staticinvoke <java.awt.Color: java.awt.Color decode(java.lang.String)>";
+    "staticinvoke <java.awt.Color: java.awt.Color decode(java.lang.String)>"->"store.r r16";
+    "store.r r16"->"load.r r0";
+    "load.r r0"->"load.r r16";
+    "virtualinvoke <java.awt.Component: void setBackground(java.awt.Color)>"
+    "load.r r16"->"virtualinvoke <java.awt.Component: void setBackground(java.awt.Color)>";
+    "virtualinvoke <java.awt.Component: void setBackground(java.awt.Color)>"->"load.r r0";
+    "virtualinvoke <java.awt.Component: void repaint()>"
+    "load.r r0"->"virtualinvoke <java.awt.Component: void repaint()>";
+    "virtualinvoke <java.awt.Component: void repaint()>"->"load.r r0";
+    "fieldget <FlagApplet: java.lang.Thread Æ>"
+    "load.r r0"->"fieldget <FlagApplet: java.lang.Thread Æ>";
+    "virtualinvoke <java.lang.Thread: void start()>"
+    "fieldget <FlagApplet: java.lang.Thread Æ>"->"virtualinvoke <java.lang.Thread: void start()>";
+    "virtualinvoke <java.lang.Thread: void start()>"->"load.r r0";
+    "push \"Generating animation frames...\""
+    "load.r r0"->"push \"Generating animation frames...\"";
+    "push \"Generating animation frames...\""->"virtualinvoke <java.applet.Applet: void showStatus(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: void showStatus(java.lang.String)>"->"load.r r0";
+    "push \"frames\""
+    "load.r r0"->"push \"frames\"";
+    "push \"frames\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"ifnull load.r r0";
+    "new java.lang.Integer"
+    "ifnull load.r r0"->"new java.lang.Integer";
+    "new java.lang.Integer"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "load.r r0"->"push \"frames\"";
+    "push \"frames\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "specialinvoke <java.lang.Integer: void <init>(java.lang.String)>"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"specialinvoke <java.lang.Integer: void <init>(java.lang.String)>";
+    "virtualinvoke <java.lang.Integer: int intValue()>"
+    "specialinvoke <java.lang.Integer: void <init>(java.lang.String)>"->"virtualinvoke <java.lang.Integer: int intValue()>";
+    "store.i i0"
+    "virtualinvoke <java.lang.Integer: int intValue()>"->"store.i i0";
+    "load.i i0"
+    "store.i i0"->"load.i i0";
+    "ifle load.r r0"
+    "load.i i0"->"ifle load.r r0";
+    "ifle load.r r0"->"load.r r0";
+    "load.r r0"->"load.i i0";
+    "fieldput <FlagApplet: int É>"
+    "load.i i0"->"fieldput <FlagApplet: int É>";
+    "fieldput <FlagApplet: int É>"->"load.r r0";
+    "fieldget <FlagApplet: AppletAnimation È>"
+    "load.r r0"->"fieldget <FlagApplet: AppletAnimation È>";
+    "fieldget <FlagApplet: AppletAnimation È>"->"load.r r0";
+    "load.r r0"->"fieldget <FlagApplet: java.awt.Image Ã>";
+    "fieldget <FlagApplet: java.awt.Image Ã>"->"load.r r0";
+    "fieldget <FlagApplet: int É>"
+    "load.r r0"->"fieldget <FlagApplet: int É>";
+    "fieldget <FlagApplet: int É>"->"load.r r16";
+    "virtualinvoke <AppletAnimation: void generateFrames(java.awt.Image,int,java.awt.Color)>"
+    "load.r r16"->"virtualinvoke <AppletAnimation: void generateFrames(java.awt.Image,int,java.awt.Color)>";
+    "virtualinvoke <AppletAnimation: void generateFrames(java.awt.Image,int,java.awt.Color)>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "virtualinvoke <java.awt.Component: java.awt.Dimension getSize()>"
+    "load.r r0"->"virtualinvoke <java.awt.Component: java.awt.Dimension getSize()>";
+    "fieldget <java.awt.Dimension: int width>"
+    "virtualinvoke <java.awt.Component: java.awt.Dimension getSize()>"->"fieldget <java.awt.Dimension: int width>";
+    "push 2"
+    "fieldget <java.awt.Dimension: int width>"->"push 2";
+    "div.i"
+    "push 2"->"div.i";
+    "div.i"->"load.r r0";
+    "load.r r0"->"fieldget <FlagApplet: AppletAnimation È>";
+    "fieldget <AppletAnimation: int width>"
+    "fieldget <FlagApplet: AppletAnimation È>"->"fieldget <AppletAnimation: int width>";
+    "fieldget <AppletAnimation: int width>"->"push 2";
+    "push 2"->"div.i";
+    "sub.i"
+    "div.i"->"sub.i";
+    "fieldput <FlagApplet: int Ê>"
+    "sub.i"->"fieldput <FlagApplet: int Ê>";
+    "fieldput <FlagApplet: int Ê>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"virtualinvoke <java.awt.Component: java.awt.Dimension getSize()>";
+    "fieldget <java.awt.Dimension: int height>"
+    "virtualinvoke <java.awt.Component: java.awt.Dimension getSize()>"->"fieldget <java.awt.Dimension: int height>";
+    "fieldget <java.awt.Dimension: int height>"->"push 2";
+    "push 2"->"div.i";
+    "div.i"->"load.r r0";
+    "load.r r0"->"fieldget <FlagApplet: AppletAnimation È>";
+    "fieldget <AppletAnimation: int height>"
+    "fieldget <FlagApplet: AppletAnimation È>"->"fieldget <AppletAnimation: int height>";
+    "fieldget <AppletAnimation: int height>"->"push 2";
+    "push 2"->"div.i";
+    "div.i"->"sub.i";
+    "fieldput <FlagApplet: int Ë>"
+    "sub.i"->"fieldput <FlagApplet: int Ë>";
+    "fieldput <FlagApplet: int Ë>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "push \"href\""
+    "load.r r0"->"push \"href\"";
+    "push \"href\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "fieldput <FlagApplet: java.lang.String Î>"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"fieldput <FlagApplet: java.lang.String Î>";
+    "fieldput <FlagApplet: java.lang.String Î>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "virtualinvoke <java.awt.Component: void addMouseListener(java.awt.event.MouseListener)>"
+    "load.r r0"->"virtualinvoke <java.awt.Component: void addMouseListener(java.awt.event.MouseListener)>";
+    "return"
+    "virtualinvoke <java.awt.Component: void addMouseListener(java.awt.event.MouseListener)>"->"return";
+    "virtualinvoke <java.lang.Throwable: void printStackTrace()>"
+    "virtualinvoke <java.awt.MediaTracker: void waitForID(int)>"->"virtualinvoke <java.lang.Throwable: void printStackTrace()>";
+    "specialinvoke <java.net.URL: void <init>(java.net.URL,java.lang.String)>"->"store.r i0";
+    "push null"
+    "store.r i0"->"push null";
+    "push null"->"store.r i0";
+    "specialinvoke <java.net.URL: void <init>(java.lang.String)>"->"store.r i0";
+    "store.r i0"->"push null";
+    "push null"->"store.r i0";
+    "ifnonnull load.r r16"->"load.r r16";
+    "push \"http://www.dancity.com/\""
+    "load.r r16"->"push \"http://www.dancity.com/\"";
+    "virtualinvoke <java.lang.String: boolean equalsIgnoreCase(java.lang.String)>"
+    "push \"http://www.dancity.com/\""->"virtualinvoke <java.lang.String: boolean equalsIgnoreCase(java.lang.String)>";
+    "ifne load.b i0"
+    "virtualinvoke <java.lang.String: boolean equalsIgnoreCase(java.lang.String)>"->"ifne load.b i0";
+    "ifne load.b i0"->"push 0";
+    "push 0"->"store.b i0";
+    "ifnonnull load.r r16"->"load.r r16";
+    "push \"(c) 1999 Dan MacFarlane\""
+    "load.r r16"->"push \"(c) 1999 Dan MacFarlane\"";
+    "push \"(c) 1999 Dan MacFarlane\""->"virtualinvoke <java.lang.String: boolean equalsIgnoreCase(java.lang.String)>";
+    "ifne load.r r0"
+    "virtualinvoke <java.lang.String: boolean equalsIgnoreCase(java.lang.String)>"->"ifne load.r r0";
+    "ifne load.r r0"->"push 0";
+    "push 0"->"store.b i0";
+}

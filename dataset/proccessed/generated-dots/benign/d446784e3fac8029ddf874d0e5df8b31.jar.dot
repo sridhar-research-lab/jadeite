@@ -1,0 +1,102 @@
+digraph "" {
+    "r0 := @this: Memory"
+    "load.r r0"
+    "r0 := @this: Memory"->"load.r r0";
+    "staticget <Memory: java.lang.String Q>"
+    "load.r r0"->"staticget <Memory: java.lang.String Q>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"
+    "staticget <Memory: java.lang.String Q>"->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "store.r r20"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"store.r r20";
+    "load.r r20"
+    "store.r r20"->"load.r r20";
+    "ifnonnull load.r r0"
+    "load.r r20"->"ifnonnull load.r r0";
+    "staticget <Memory: java.lang.String R>"
+    "ifnonnull load.r r0"->"staticget <Memory: java.lang.String R>";
+    "staticget <Memory: java.lang.String R>"->"store.r r20";
+    "store.r r20"->"load.r r0";
+    "new v"
+    "load.r r0"->"new v";
+    "dup1.r"
+    "new v"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "virtualinvoke <java.applet.Applet: java.net.URL getCodeBase()>"
+    "load.r r0"->"virtualinvoke <java.applet.Applet: java.net.URL getCodeBase()>";
+    "virtualinvoke <java.applet.Applet: java.net.URL getCodeBase()>"->"load.r r20";
+    "specialinvoke <v: void <init>(java.net.URL,java.lang.String)>"
+    "load.r r20"->"specialinvoke <v: void <init>(java.net.URL,java.lang.String)>";
+    "fieldput <Memory: v ba>"
+    "specialinvoke <v: void <init>(java.net.URL,java.lang.String)>"->"fieldput <Memory: v ba>";
+    "fieldput <Memory: v ba>"->"load.r r0";
+    "new abstract"
+    "load.r r0"->"new abstract";
+    "new abstract"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "fieldget <Memory: v ba>"
+    "load.r r0"->"fieldget <Memory: v ba>";
+    "specialinvoke <'abstract': void <init>(java.applet.Applet,v)>"
+    "fieldget <Memory: v ba>"->"specialinvoke <'abstract': void <init>(java.applet.Applet,v)>";
+    "fieldput <Memory: 'abstract' g>"
+    "specialinvoke <'abstract': void <init>(java.applet.Applet,v)>"->"fieldput <Memory: 'abstract' g>";
+    "fieldput <Memory: 'abstract' g>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "virtualinvoke <java.awt.Component: java.awt.Dimension getSize()>"
+    "load.r r0"->"virtualinvoke <java.awt.Component: java.awt.Dimension getSize()>";
+    "fieldput <Memory: java.awt.Dimension size>"
+    "virtualinvoke <java.awt.Component: java.awt.Dimension getSize()>"->"fieldput <Memory: java.awt.Dimension size>";
+    "fieldput <Memory: java.awt.Dimension size>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "fieldget <Memory: 'abstract' g>"
+    "load.r r0"->"fieldget <Memory: 'abstract' g>";
+    "staticget <Memory: java.lang.String S>"
+    "fieldget <Memory: 'abstract' g>"->"staticget <Memory: java.lang.String S>";
+    "staticget <java.awt.Color: java.awt.Color white>"
+    "staticget <Memory: java.lang.String S>"->"staticget <java.awt.Color: java.awt.Color white>";
+    "virtualinvoke <'abstract': java.awt.Color _(java.lang.String,java.awt.Color)>"
+    "staticget <java.awt.Color: java.awt.Color white>"->"virtualinvoke <'abstract': java.awt.Color _(java.lang.String,java.awt.Color)>";
+    "fieldput <Memory: java.awt.Color fb>"
+    "virtualinvoke <'abstract': java.awt.Color _(java.lang.String,java.awt.Color)>"->"fieldput <Memory: java.awt.Color fb>";
+    "fieldput <Memory: java.awt.Color fb>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <Memory: 'abstract' g>";
+    "staticget <Memory: java.lang.String T>"
+    "fieldget <Memory: 'abstract' g>"->"staticget <Memory: java.lang.String T>";
+    "staticget <java.awt.Color: java.awt.Color black>"
+    "staticget <Memory: java.lang.String T>"->"staticget <java.awt.Color: java.awt.Color black>";
+    "staticget <java.awt.Color: java.awt.Color black>"->"virtualinvoke <'abstract': java.awt.Color _(java.lang.String,java.awt.Color)>";
+    "fieldput <Memory: java.awt.Color gb>"
+    "virtualinvoke <'abstract': java.awt.Color _(java.lang.String,java.awt.Color)>"->"fieldput <Memory: java.awt.Color gb>";
+    "fieldput <Memory: java.awt.Color gb>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "fieldget <Memory: java.awt.Color fb>"
+    "load.r r0"->"fieldget <Memory: java.awt.Color fb>";
+    "virtualinvoke <java.awt.Component: void setBackground(java.awt.Color)>"
+    "fieldget <Memory: java.awt.Color fb>"->"virtualinvoke <java.awt.Component: void setBackground(java.awt.Color)>";
+    "virtualinvoke <java.awt.Component: void setBackground(java.awt.Color)>"->"load.r r0";
+    "new java.awt.Font"
+    "load.r r0"->"new java.awt.Font";
+    "new java.awt.Font"->"dup1.r";
+    "staticget <Memory: java.lang.String U>"
+    "dup1.r"->"staticget <Memory: java.lang.String U>";
+    "push 1"
+    "staticget <Memory: java.lang.String U>"->"push 1";
+    "push 12"
+    "push 1"->"push 12";
+    "specialinvoke <java.awt.Font: void <init>(java.lang.String,int,int)>"
+    "push 12"->"specialinvoke <java.awt.Font: void <init>(java.lang.String,int,int)>";
+    "virtualinvoke <java.awt.Component: void setFont(java.awt.Font)>"
+    "specialinvoke <java.awt.Font: void <init>(java.lang.String,int,int)>"->"virtualinvoke <java.awt.Component: void setFont(java.awt.Font)>";
+    "virtualinvoke <java.awt.Component: void setFont(java.awt.Font)>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "virtualinvoke <java.awt.Component: java.awt.Font getFont()>"
+    "load.r r0"->"virtualinvoke <java.awt.Component: java.awt.Font getFont()>";
+    "virtualinvoke <java.awt.Component: java.awt.FontMetrics getFontMetrics(java.awt.Font)>"
+    "virtualinvoke <java.awt.Component: java.awt.Font getFont()>"->"virtualinvoke <java.awt.Component: java.awt.FontMetrics getFontMetrics(java.awt.Font)>";
+    "fieldput <Memory: java.awt.FontMetrics eb>"
+    "virtualinvoke <java.awt.Component: java.awt.FontMetrics getFontMetrics(java.awt.Font)>"->"fieldput <Memory: java.awt.FontMetrics eb>";
+    "return"
+    "fieldput <Memory: java.awt.FontMetrics eb>"->"return";
+}

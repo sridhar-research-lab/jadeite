@@ -1,0 +1,71 @@
+digraph "" {
+    "r0 := @this: Blink"
+    "load.r r0"
+    "r0 := @this: Blink"->"load.r r0";
+    "new java.awt.Font"
+    "load.r r0"->"new java.awt.Font";
+    "dup1.r"
+    "new java.awt.Font"->"dup1.r";
+    "push \"TimesRoman\""
+    "dup1.r"->"push \"TimesRoman\"";
+    "push 0"
+    "push \"TimesRoman\""->"push 0";
+    "push 24"
+    "push 0"->"push 24";
+    "specialinvoke <java.awt.Font: void <init>(java.lang.String,int,int)>"
+    "push 24"->"specialinvoke <java.awt.Font: void <init>(java.lang.String,int,int)>";
+    "fieldput <Blink: java.awt.Font font>"
+    "specialinvoke <java.awt.Font: void <init>(java.lang.String,int,int)>"->"fieldput <Blink: java.awt.Font font>";
+    "fieldput <Blink: java.awt.Font font>"->"load.r r0";
+    "push \"speed\""
+    "load.r r0"->"push \"speed\"";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"
+    "push \"speed\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "store.r r5"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"store.r r5";
+    "load.r r5"
+    "store.r r5"->"load.r r5";
+    "ifnonnull push 1000"
+    "load.r r5"->"ifnonnull push 1000";
+    "push 400"
+    "ifnonnull push 1000"->"push 400";
+    "store.i r5"
+    "push 400"->"store.i r5";
+    "goto load.r r0"
+    "store.i r5"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "load.i r5"
+    "load.r r0"->"load.i r5";
+    "fieldput <Blink: int speed>"
+    "load.i r5"->"fieldput <Blink: int speed>";
+    "fieldput <Blink: int speed>"->"load.r r0";
+    "push \"lbl\""
+    "load.r r0"->"push \"lbl\"";
+    "push \"lbl\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"store.r r5";
+    "store.r r5"->"load.r r5";
+    "ifnonnull load.r r5"
+    "load.r r5"->"ifnonnull load.r r5";
+    "push \"Blink\""
+    "ifnonnull load.r r5"->"push \"Blink\"";
+    "push \"Blink\""->"store.r r5";
+    "store.r r5"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r5";
+    "fieldput <Blink: java.lang.String lbl>"
+    "load.r r5"->"fieldput <Blink: java.lang.String lbl>";
+    "return"
+    "fieldput <Blink: java.lang.String lbl>"->"return";
+    "ifnonnull load.r r5"->"load.r r5";
+    "load.r r5"->"store.r r5";
+    "push 1000"
+    "ifnonnull push 1000"->"push 1000";
+    "push 1000"->"load.r r5";
+    "staticinvoke <java.lang.Integer: java.lang.Integer valueOf(java.lang.String)>"
+    "load.r r5"->"staticinvoke <java.lang.Integer: java.lang.Integer valueOf(java.lang.String)>";
+    "virtualinvoke <java.lang.Integer: int intValue()>"
+    "staticinvoke <java.lang.Integer: java.lang.Integer valueOf(java.lang.String)>"->"virtualinvoke <java.lang.Integer: int intValue()>";
+    "div.i"
+    "virtualinvoke <java.lang.Integer: int intValue()>"->"div.i";
+    "div.i"->"store.i r5";
+}

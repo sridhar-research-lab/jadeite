@@ -1,0 +1,87 @@
+digraph "" {
+    "r0 := @this: RealSnow"
+    "load.r r0"
+    "r0 := @this: RealSnow"->"load.r r0";
+    "staticget <java.awt.Color: java.awt.Color black>"
+    "load.r r0"->"staticget <java.awt.Color: java.awt.Color black>";
+    "virtualinvoke <java.awt.Component: void setBackground(java.awt.Color)>"
+    "staticget <java.awt.Color: java.awt.Color black>"->"virtualinvoke <java.awt.Component: void setBackground(java.awt.Color)>";
+    "virtualinvoke <java.awt.Component: void setBackground(java.awt.Color)>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "virtualinvoke <java.awt.Component: java.awt.Dimension getSize()>"
+    "load.r r0"->"virtualinvoke <java.awt.Component: java.awt.Dimension getSize()>";
+    "fieldput <RealSnow: java.awt.Dimension dim>"
+    "virtualinvoke <java.awt.Component: java.awt.Dimension getSize()>"->"fieldput <RealSnow: java.awt.Dimension dim>";
+    "fieldput <RealSnow: java.awt.Dimension dim>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "fieldget <RealSnow: java.awt.Dimension dim>"
+    "load.r r0"->"fieldget <RealSnow: java.awt.Dimension dim>";
+    "fieldget <java.awt.Dimension: int width>"
+    "fieldget <RealSnow: java.awt.Dimension dim>"->"fieldget <java.awt.Dimension: int width>";
+    "fieldget <java.awt.Dimension: int width>"->"load.r r0";
+    "load.r r0"->"fieldget <RealSnow: java.awt.Dimension dim>";
+    "fieldget <java.awt.Dimension: int height>"
+    "fieldget <RealSnow: java.awt.Dimension dim>"->"fieldget <java.awt.Dimension: int height>";
+    "virtualinvoke <java.awt.Component: java.awt.Image createImage(int,int)>"
+    "fieldget <java.awt.Dimension: int height>"->"virtualinvoke <java.awt.Component: java.awt.Image createImage(int,int)>";
+    "fieldput <RealSnow: java.awt.Image buff>"
+    "virtualinvoke <java.awt.Component: java.awt.Image createImage(int,int)>"->"fieldput <RealSnow: java.awt.Image buff>";
+    "fieldput <RealSnow: java.awt.Image buff>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "fieldget <RealSnow: java.awt.Image buff>"
+    "load.r r0"->"fieldget <RealSnow: java.awt.Image buff>";
+    "virtualinvoke <java.awt.Image: java.awt.Graphics getGraphics()>"
+    "fieldget <RealSnow: java.awt.Image buff>"->"virtualinvoke <java.awt.Image: java.awt.Graphics getGraphics()>";
+    "fieldput <RealSnow: java.awt.Graphics buffG>"
+    "virtualinvoke <java.awt.Image: java.awt.Graphics getGraphics()>"->"fieldput <RealSnow: java.awt.Graphics buffG>";
+    "fieldput <RealSnow: java.awt.Graphics buffG>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "push \"Background\""
+    "load.r r0"->"push \"Background\"";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"
+    "push \"Background\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "store.r r1"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"store.r r1";
+    "store.r r1"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "push \"NumberOfFlakes\""
+    "load.r r0"->"push \"NumberOfFlakes\"";
+    "push \"NumberOfFlakes\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>";
+    "fieldput <RealSnow: int numberOfFlakes>"
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"->"fieldput <RealSnow: int numberOfFlakes>";
+    "fieldput <RealSnow: int numberOfFlakes>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "push \"Turbulence\""
+    "load.r r0"->"push \"Turbulence\"";
+    "push \"Turbulence\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>";
+    "fieldput <RealSnow: int numberOfWinds>"
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"->"fieldput <RealSnow: int numberOfWinds>";
+    "fieldput <RealSnow: int numberOfWinds>"->"load.r r0";
+    "virtualinvoke <java.applet.Applet: java.net.URL getDocumentBase()>"
+    "load.r r0"->"virtualinvoke <java.applet.Applet: java.net.URL getDocumentBase()>";
+    "load.r r1"
+    "virtualinvoke <java.applet.Applet: java.net.URL getDocumentBase()>"->"load.r r1";
+    "virtualinvoke <java.applet.Applet: java.awt.Image getImage(java.net.URL,java.lang.String)>"
+    "load.r r1"->"virtualinvoke <java.applet.Applet: java.awt.Image getImage(java.net.URL,java.lang.String)>";
+    "fieldput <RealSnow: java.awt.Image bgimage>"
+    "virtualinvoke <java.applet.Applet: java.awt.Image getImage(java.net.URL,java.lang.String)>"->"fieldput <RealSnow: java.awt.Image bgimage>";
+    "fieldput <RealSnow: java.awt.Image bgimage>"->"load.r r0";
+    "specialinvoke <RealSnow: void initWind()>"
+    "load.r r0"->"specialinvoke <RealSnow: void initWind()>";
+    "specialinvoke <RealSnow: void initWind()>"->"load.r r0";
+    "specialinvoke <RealSnow: void initSnow()>"
+    "load.r r0"->"specialinvoke <RealSnow: void initSnow()>";
+    "staticget <java.lang.System: java.io.PrintStream out>"
+    "specialinvoke <RealSnow: void initSnow()>"->"staticget <java.lang.System: java.io.PrintStream out>";
+    "push \"Starting life and struggling to survive\""
+    "staticget <java.lang.System: java.io.PrintStream out>"->"push \"Starting life and struggling to survive\"";
+    "virtualinvoke <java.io.PrintStream: void println(java.lang.String)>"
+    "push \"Starting life and struggling to survive\""->"virtualinvoke <java.io.PrintStream: void println(java.lang.String)>";
+    "return"
+    "virtualinvoke <java.io.PrintStream: void println(java.lang.String)>"->"return";
+}

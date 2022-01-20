@@ -1,0 +1,74 @@
+digraph "" {
+    "r0 := @this: VncViewer"
+    "load.r r0"
+    "r0 := @this: VncViewer"->"load.r r0";
+    "specialinvoke <VncViewer: void checkMsSecurity()>"
+    "load.r r0"->"specialinvoke <VncViewer: void checkMsSecurity()>";
+    "specialinvoke <VncViewer: void checkMsSecurity()>"->"load.r r0";
+    "virtualinvoke <VncViewer: void readParameters()>"
+    "load.r r0"->"virtualinvoke <VncViewer: void readParameters()>";
+    "virtualinvoke <VncViewer: void readParameters()>"->"load.r r0";
+    "fieldget <VncViewer: boolean inSeparateFrame>"
+    "load.r r0"->"fieldget <VncViewer: boolean inSeparateFrame>";
+    "ifeq load.r r0"
+    "fieldget <VncViewer: boolean inSeparateFrame>"->"ifeq load.r r0";
+    "ifeq load.r r0"->"load.r r0";
+    "new java.awt.Frame"
+    "load.r r0"->"new java.awt.Frame";
+    "dup1.r"
+    "new java.awt.Frame"->"dup1.r";
+    "push \"TightVNC\""
+    "dup1.r"->"push \"TightVNC\"";
+    "specialinvoke <java.awt.Frame: void <init>(java.lang.String)>"
+    "push \"TightVNC\""->"specialinvoke <java.awt.Frame: void <init>(java.lang.String)>";
+    "fieldput <VncViewer: java.awt.Frame vncFrame>"
+    "specialinvoke <java.awt.Frame: void <init>(java.lang.String)>"->"fieldput <VncViewer: java.awt.Frame vncFrame>";
+    "fieldput <VncViewer: java.awt.Frame vncFrame>"->"load.r r0";
+    "fieldget <VncViewer: boolean inAnApplet>"
+    "load.r r0"->"fieldget <VncViewer: boolean inAnApplet>";
+    "ifne load.r r0"
+    "fieldget <VncViewer: boolean inAnApplet>"->"ifne load.r r0";
+    "ifne load.r r0"->"load.r r0";
+    "fieldget <VncViewer: java.awt.Frame vncFrame>"
+    "load.r r0"->"fieldget <VncViewer: java.awt.Frame vncFrame>";
+    "push \"Center\""
+    "fieldget <VncViewer: java.awt.Frame vncFrame>"->"push \"Center\"";
+    "push \"Center\""->"load.r r0";
+    "virtualinvoke <java.awt.Container: java.awt.Component add(java.lang.String,java.awt.Component)>"
+    "load.r r0"->"virtualinvoke <java.awt.Container: java.awt.Component add(java.lang.String,java.awt.Component)>";
+    "pop"
+    "virtualinvoke <java.awt.Container: java.awt.Component add(java.lang.String,java.awt.Component)>"->"pop";
+    "pop"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <VncViewer: java.awt.Frame vncFrame>";
+    "fieldput <VncViewer: java.awt.Container vncContainer>"
+    "fieldget <VncViewer: java.awt.Frame vncFrame>"->"fieldput <VncViewer: java.awt.Container vncContainer>";
+    "goto load.r r0"
+    "fieldput <VncViewer: java.awt.Container vncContainer>"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "virtualinvoke <VncViewer: void initConnectionItems()>"
+    "load.r r0"->"virtualinvoke <VncViewer: void initConnectionItems()>";
+    "virtualinvoke <VncViewer: void initConnectionItems()>"->"load.r r0";
+    "new java.lang.Thread"
+    "load.r r0"->"new java.lang.Thread";
+    "new java.lang.Thread"->"dup1.r";
+    "push null"
+    "dup1.r"->"push null";
+    "push null"->"load.r r0";
+    "push \"VncViewer.rfbThread\""
+    "load.r r0"->"push \"VncViewer.rfbThread\"";
+    "specialinvoke <java.lang.Thread: void <init>(java.lang.ThreadGroup,java.lang.Runnable,java.lang.String)>"
+    "push \"VncViewer.rfbThread\""->"specialinvoke <java.lang.Thread: void <init>(java.lang.ThreadGroup,java.lang.Runnable,java.lang.String)>";
+    "fieldput <VncViewer: java.lang.Thread rfbThread>"
+    "specialinvoke <java.lang.Thread: void <init>(java.lang.ThreadGroup,java.lang.Runnable,java.lang.String)>"->"fieldput <VncViewer: java.lang.Thread rfbThread>";
+    "fieldput <VncViewer: java.lang.Thread rfbThread>"->"load.r r0";
+    "fieldget <VncViewer: java.lang.Thread rfbThread>"
+    "load.r r0"->"fieldget <VncViewer: java.lang.Thread rfbThread>";
+    "virtualinvoke <java.lang.Thread: void start()>"
+    "fieldget <VncViewer: java.lang.Thread rfbThread>"->"virtualinvoke <java.lang.Thread: void start()>";
+    "return"
+    "virtualinvoke <java.lang.Thread: void start()>"->"return";
+    "ifeq load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"fieldput <VncViewer: java.awt.Container vncContainer>";
+}

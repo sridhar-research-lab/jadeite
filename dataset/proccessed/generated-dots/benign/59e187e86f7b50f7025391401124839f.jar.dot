@@ -1,0 +1,115 @@
+digraph "" {
+    "r0 := @this: QuoteApplet"
+    "load.r r0"
+    "r0 := @this: QuoteApplet"->"load.r r0";
+    "virtualinvoke <QuoteApplet: void setupParameters()>"
+    "load.r r0"->"virtualinvoke <QuoteApplet: void setupParameters()>";
+    "virtualinvoke <QuoteApplet: void setupParameters()>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "fieldget <QuoteApplet: java.awt.Color bgColor>"
+    "load.r r0"->"fieldget <QuoteApplet: java.awt.Color bgColor>";
+    "virtualinvoke <java.awt.Component: void setBackground(java.awt.Color)>"
+    "fieldget <QuoteApplet: java.awt.Color bgColor>"->"virtualinvoke <java.awt.Component: void setBackground(java.awt.Color)>";
+    "virtualinvoke <java.awt.Component: void setBackground(java.awt.Color)>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "fieldget <QuoteApplet: java.awt.Color titleColor>"
+    "load.r r0"->"fieldget <QuoteApplet: java.awt.Color titleColor>";
+    "virtualinvoke <java.awt.Component: void setForeground(java.awt.Color)>"
+    "fieldget <QuoteApplet: java.awt.Color titleColor>"->"virtualinvoke <java.awt.Component: void setForeground(java.awt.Color)>";
+    "virtualinvoke <java.awt.Component: void setForeground(java.awt.Color)>"->"load.r r0";
+    "new java.awt.BorderLayout"
+    "load.r r0"->"new java.awt.BorderLayout";
+    "dup1.r"
+    "new java.awt.BorderLayout"->"dup1.r";
+    "specialinvoke <java.awt.BorderLayout: void <init>()>"
+    "dup1.r"->"specialinvoke <java.awt.BorderLayout: void <init>()>";
+    "virtualinvoke <java.awt.Container: void setLayout(java.awt.LayoutManager)>"
+    "specialinvoke <java.awt.BorderLayout: void <init>()>"->"virtualinvoke <java.awt.Container: void setLayout(java.awt.LayoutManager)>";
+    "new java.awt.Panel"
+    "virtualinvoke <java.awt.Container: void setLayout(java.awt.LayoutManager)>"->"new java.awt.Panel";
+    "store.r $r5"
+    "new java.awt.Panel"->"store.r $r5";
+    "load.r $r5"
+    "store.r $r5"->"load.r $r5";
+    "specialinvoke <java.awt.Panel: void <init>()>"
+    "load.r $r5"->"specialinvoke <java.awt.Panel: void <init>()>";
+    "specialinvoke <java.awt.Panel: void <init>()>"->"load.r $r5";
+    "new java.awt.Font"
+    "load.r $r5"->"new java.awt.Font";
+    "new java.awt.Font"->"dup1.r";
+    "push \"SansSerif\""
+    "dup1.r"->"push \"SansSerif\"";
+    "push 1"
+    "push \"SansSerif\""->"push 1";
+    "push 12"
+    "push 1"->"push 12";
+    "specialinvoke <java.awt.Font: void <init>(java.lang.String,int,int)>"
+    "push 12"->"specialinvoke <java.awt.Font: void <init>(java.lang.String,int,int)>";
+    "virtualinvoke <java.awt.Container: void setFont(java.awt.Font)>"
+    "specialinvoke <java.awt.Font: void <init>(java.lang.String,int,int)>"->"virtualinvoke <java.awt.Container: void setFont(java.awt.Font)>";
+    "virtualinvoke <java.awt.Container: void setFont(java.awt.Font)>"->"load.r $r5";
+    "new java.awt.Label"
+    "load.r $r5"->"new java.awt.Label";
+    "new java.awt.Label"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "fieldget <QuoteApplet: java.lang.String titleText>"
+    "load.r r0"->"fieldget <QuoteApplet: java.lang.String titleText>";
+    "fieldget <QuoteApplet: java.lang.String titleText>"->"push 1";
+    "specialinvoke <java.awt.Label: void <init>(java.lang.String,int)>"
+    "push 1"->"specialinvoke <java.awt.Label: void <init>(java.lang.String,int)>";
+    "virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>"
+    "specialinvoke <java.awt.Label: void <init>(java.lang.String,int)>"->"virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>";
+    "pop"
+    "virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>"->"pop";
+    "pop"->"load.r r0";
+    "new QuoteBox"
+    "load.r r0"->"new QuoteBox";
+    "new QuoteBox"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "specialinvoke <QuoteBox: void <init>(QuoteApplet)>"
+    "load.r r0"->"specialinvoke <QuoteBox: void <init>(QuoteApplet)>";
+    "fieldput <QuoteApplet: QuoteBox quoteBox>"
+    "specialinvoke <QuoteBox: void <init>(QuoteApplet)>"->"fieldput <QuoteApplet: QuoteBox quoteBox>";
+    "fieldput <QuoteApplet: QuoteBox quoteBox>"->"load.r r0";
+    "new QuoteApplet$1"
+    "load.r r0"->"new QuoteApplet$1";
+    "new QuoteApplet$1"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "specialinvoke <QuoteApplet$1: void <init>(QuoteApplet)>"
+    "load.r r0"->"specialinvoke <QuoteApplet$1: void <init>(QuoteApplet)>";
+    "fieldput <QuoteApplet: java.awt.event.MouseListener quoteBoxMouseListener>"
+    "specialinvoke <QuoteApplet$1: void <init>(QuoteApplet)>"->"fieldput <QuoteApplet: java.awt.event.MouseListener quoteBoxMouseListener>";
+    "fieldput <QuoteApplet: java.awt.event.MouseListener quoteBoxMouseListener>"->"load.r r0";
+    "fieldget <QuoteApplet: QuoteBox quoteBox>"
+    "load.r r0"->"fieldget <QuoteApplet: QuoteBox quoteBox>";
+    "fieldget <QuoteApplet: QuoteBox quoteBox>"->"load.r r0";
+    "fieldget <QuoteApplet: java.awt.event.MouseListener quoteBoxMouseListener>"
+    "load.r r0"->"fieldget <QuoteApplet: java.awt.event.MouseListener quoteBoxMouseListener>";
+    "virtualinvoke <java.awt.Component: void addMouseListener(java.awt.event.MouseListener)>"
+    "fieldget <QuoteApplet: java.awt.event.MouseListener quoteBoxMouseListener>"->"virtualinvoke <java.awt.Component: void addMouseListener(java.awt.event.MouseListener)>";
+    "virtualinvoke <java.awt.Component: void addMouseListener(java.awt.event.MouseListener)>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <QuoteApplet: QuoteBox quoteBox>";
+    "push \"Center\""
+    "fieldget <QuoteApplet: QuoteBox quoteBox>"->"push \"Center\"";
+    "virtualinvoke <java.awt.Container: void add(java.awt.Component,java.lang.Object)>"
+    "push \"Center\""->"virtualinvoke <java.awt.Container: void add(java.awt.Component,java.lang.Object)>";
+    "virtualinvoke <java.awt.Container: void add(java.awt.Component,java.lang.Object)>"->"load.r r0";
+    "load.r r0"->"load.r $r5";
+    "push \"North\""
+    "load.r $r5"->"push \"North\"";
+    "push \"North\""->"virtualinvoke <java.awt.Container: void add(java.awt.Component,java.lang.Object)>";
+    "new QuoteApplet$2"
+    "virtualinvoke <java.awt.Container: void add(java.awt.Component,java.lang.Object)>"->"new QuoteApplet$2";
+    "new QuoteApplet$2"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "specialinvoke <QuoteApplet$2: void <init>(QuoteApplet)>"
+    "load.r r0"->"specialinvoke <QuoteApplet$2: void <init>(QuoteApplet)>";
+    "virtualinvoke <java.lang.Thread: void start()>"
+    "specialinvoke <QuoteApplet$2: void <init>(QuoteApplet)>"->"virtualinvoke <java.lang.Thread: void start()>";
+    "virtualinvoke <java.lang.Thread: void start()>"->"load.r r0";
+    "virtualinvoke <QuoteApplet: void makeThread()>"
+    "load.r r0"->"virtualinvoke <QuoteApplet: void makeThread()>";
+    "return"
+    "virtualinvoke <QuoteApplet: void makeThread()>"->"return";
+}

@@ -1,0 +1,100 @@
+digraph "" {
+    "r0 := @this: JRBall"
+    "load.r r0"
+    "r0 := @this: JRBall"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "virtualinvoke <java.applet.Applet: java.net.URL getCodeBase()>"
+    "load.r r0"->"virtualinvoke <java.applet.Applet: java.net.URL getCodeBase()>";
+    "push \"wall.au\""
+    "virtualinvoke <java.applet.Applet: java.net.URL getCodeBase()>"->"push \"wall.au\"";
+    "virtualinvoke <java.applet.Applet: java.applet.AudioClip getAudioClip(java.net.URL,java.lang.String)>"
+    "push \"wall.au\""->"virtualinvoke <java.applet.Applet: java.applet.AudioClip getAudioClip(java.net.URL,java.lang.String)>";
+    "fieldput <JRBall: java.applet.AudioClip m_acBounce>"
+    "virtualinvoke <java.applet.Applet: java.applet.AudioClip getAudioClip(java.net.URL,java.lang.String)>"->"fieldput <JRBall: java.applet.AudioClip m_acBounce>";
+    "fieldput <JRBall: java.applet.AudioClip m_acBounce>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"virtualinvoke <java.applet.Applet: java.net.URL getCodeBase()>";
+    "push \"miss.au\""
+    "virtualinvoke <java.applet.Applet: java.net.URL getCodeBase()>"->"push \"miss.au\"";
+    "push \"miss.au\""->"virtualinvoke <java.applet.Applet: java.applet.AudioClip getAudioClip(java.net.URL,java.lang.String)>";
+    "fieldput <JRBall: java.applet.AudioClip m_acMiss>"
+    "virtualinvoke <java.applet.Applet: java.applet.AudioClip getAudioClip(java.net.URL,java.lang.String)>"->"fieldput <JRBall: java.applet.AudioClip m_acMiss>";
+    "fieldput <JRBall: java.applet.AudioClip m_acMiss>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"virtualinvoke <java.applet.Applet: java.net.URL getCodeBase()>";
+    "push \"swing.au\""
+    "virtualinvoke <java.applet.Applet: java.net.URL getCodeBase()>"->"push \"swing.au\"";
+    "push \"swing.au\""->"virtualinvoke <java.applet.Applet: java.applet.AudioClip getAudioClip(java.net.URL,java.lang.String)>";
+    "fieldput <JRBall: java.applet.AudioClip m_acHit>"
+    "virtualinvoke <java.applet.Applet: java.applet.AudioClip getAudioClip(java.net.URL,java.lang.String)>"->"fieldput <JRBall: java.applet.AudioClip m_acHit>";
+    "fieldput <JRBall: java.applet.AudioClip m_acHit>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "virtualinvoke <java.awt.Component: java.awt.Dimension size()>"
+    "load.r r0"->"virtualinvoke <java.awt.Component: java.awt.Dimension size()>";
+    "fieldget <java.awt.Dimension: int width>"
+    "virtualinvoke <java.awt.Component: java.awt.Dimension size()>"->"fieldget <java.awt.Dimension: int width>";
+    "fieldget <java.awt.Dimension: int width>"->"load.r r0";
+    "load.r r0"->"virtualinvoke <java.awt.Component: java.awt.Dimension size()>";
+    "fieldget <java.awt.Dimension: int height>"
+    "virtualinvoke <java.awt.Component: java.awt.Dimension size()>"->"fieldget <java.awt.Dimension: int height>";
+    "push 60"
+    "fieldget <java.awt.Dimension: int height>"->"push 60";
+    "sub.i"
+    "push 60"->"sub.i";
+    "virtualinvoke <java.awt.Component: java.awt.Image createImage(int,int)>"
+    "sub.i"->"virtualinvoke <java.awt.Component: java.awt.Image createImage(int,int)>";
+    "fieldput <JRBall: java.awt.Image offscreenImage>"
+    "virtualinvoke <java.awt.Component: java.awt.Image createImage(int,int)>"->"fieldput <JRBall: java.awt.Image offscreenImage>";
+    "fieldput <JRBall: java.awt.Image offscreenImage>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "fieldget <JRBall: java.awt.Image offscreenImage>"
+    "load.r r0"->"fieldget <JRBall: java.awt.Image offscreenImage>";
+    "virtualinvoke <java.awt.Image: java.awt.Graphics getGraphics()>"
+    "fieldget <JRBall: java.awt.Image offscreenImage>"->"virtualinvoke <java.awt.Image: java.awt.Graphics getGraphics()>";
+    "fieldput <JRBall: java.awt.Graphics offscreen>"
+    "virtualinvoke <java.awt.Image: java.awt.Graphics getGraphics()>"->"fieldput <JRBall: java.awt.Graphics offscreen>";
+    "fieldput <JRBall: java.awt.Graphics offscreen>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"virtualinvoke <java.awt.Component: java.awt.Dimension size()>";
+    "virtualinvoke <java.awt.Component: java.awt.Dimension size()>"->"fieldget <java.awt.Dimension: int width>";
+    "push 2"
+    "fieldget <java.awt.Dimension: int width>"->"push 2";
+    "push 2"->"load.r r0";
+    "fieldget <JRBall: int COURT_DEPTH>"
+    "load.r r0"->"fieldget <JRBall: int COURT_DEPTH>";
+    "mul.i"
+    "fieldget <JRBall: int COURT_DEPTH>"->"mul.i";
+    "mul.i"->"sub.i";
+    "fieldput <JRBall: int COURT_WIDTH>"
+    "sub.i"->"fieldput <JRBall: int COURT_WIDTH>";
+    "fieldput <JRBall: int COURT_WIDTH>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"virtualinvoke <java.awt.Component: java.awt.Dimension size()>";
+    "virtualinvoke <java.awt.Component: java.awt.Dimension size()>"->"fieldget <java.awt.Dimension: int height>";
+    "fieldget <java.awt.Dimension: int height>"->"push 2";
+    "push 2"->"load.r r0";
+    "load.r r0"->"fieldget <JRBall: int COURT_DEPTH>";
+    "fieldget <JRBall: int COURT_DEPTH>"->"mul.i";
+    "mul.i"->"sub.i";
+    "sub.i"->"push 60";
+    "push 60"->"sub.i";
+    "fieldput <JRBall: int COURT_HEIGHT>"
+    "sub.i"->"fieldput <JRBall: int COURT_HEIGHT>";
+    "fieldput <JRBall: int COURT_HEIGHT>"->"load.r r0";
+    "virtualinvoke <JRBall: void readParams()>"
+    "load.r r0"->"virtualinvoke <JRBall: void readParams()>";
+    "virtualinvoke <JRBall: void readParams()>"->"load.r r0";
+    "push -11"
+    "load.r r0"->"push -11";
+    "fieldput <JRBall: int m_iStatus>"
+    "push -11"->"fieldput <JRBall: int m_iStatus>";
+    "fieldput <JRBall: int m_iStatus>"->"load.r r0";
+    "virtualinvoke <JRBall: void addBanner()>"
+    "load.r r0"->"virtualinvoke <JRBall: void addBanner()>";
+    "return"
+    "virtualinvoke <JRBall: void addBanner()>"->"return";
+}

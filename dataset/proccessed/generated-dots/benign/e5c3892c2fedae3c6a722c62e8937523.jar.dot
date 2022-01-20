@@ -1,0 +1,2334 @@
+digraph "" {
+    "r0 := @this: imgViewer"
+    "push \"SansSerif\""
+    "r0 := @this: imgViewer"->"push \"SansSerif\"";
+    "store.r $r99"
+    "push \"SansSerif\""->"store.r $r99";
+    "push \"os.name\""
+    "store.r $r99"->"push \"os.name\"";
+    "staticinvoke <java.lang.System: java.lang.String getProperty(java.lang.String)>"
+    "push \"os.name\""->"staticinvoke <java.lang.System: java.lang.String getProperty(java.lang.String)>";
+    "push \"Linux\""
+    "staticinvoke <java.lang.System: java.lang.String getProperty(java.lang.String)>"->"push \"Linux\"";
+    "virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>"
+    "push \"Linux\""->"virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>";
+    "ifeq load.r r0"
+    "virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>"->"ifeq load.r r0";
+    "push \"Serif\""
+    "ifeq load.r r0"->"push \"Serif\"";
+    "push \"Serif\""->"store.r $r99";
+    "load.r r0"
+    "store.r $r99"->"load.r r0";
+    "push 1"
+    "load.r r0"->"push 1";
+    "fieldput <imgViewer: boolean useMainWindowForDialogs>"
+    "push 1"->"fieldput <imgViewer: boolean useMainWindowForDialogs>";
+    "fieldput <imgViewer: boolean useMainWindowForDialogs>"->"load.r r0";
+    "push \"browserIsIE\""
+    "load.r r0"->"push \"browserIsIE\"";
+    "virtualinvoke <imgViewer: java.lang.String getParameter(java.lang.String)>"
+    "push \"browserIsIE\""->"virtualinvoke <imgViewer: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <imgViewer: java.lang.String getParameter(java.lang.String)>"->"load.r r0";
+    "push 0"
+    "load.r r0"->"push 0";
+    "fieldput <imgViewer: boolean usingIE>"
+    "push 0"->"fieldput <imgViewer: boolean usingIE>";
+    "push \"true\""
+    "fieldput <imgViewer: boolean usingIE>"->"push \"true\"";
+    "push \"true\""->"virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>";
+    "ifeq goto load.r r0"
+    "virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>"->"ifeq goto load.r r0";
+    "ifeq goto load.r r0"->"load.r r0";
+    "load.r r0"->"push 1";
+    "push 1"->"fieldput <imgViewer: boolean usingIE>";
+    "goto load.r r0"
+    "fieldput <imgViewer: boolean usingIE>"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "new java.awt.Font"
+    "load.r r0"->"new java.awt.Font";
+    "dup1.r"
+    "new java.awt.Font"->"dup1.r";
+    "load.r $r99"
+    "dup1.r"->"load.r $r99";
+    "load.r $r99"->"push 0";
+    "push 12"
+    "push 0"->"push 12";
+    "specialinvoke <java.awt.Font: void <init>(java.lang.String,int,int)>"
+    "push 12"->"specialinvoke <java.awt.Font: void <init>(java.lang.String,int,int)>";
+    "fieldput <imgViewer: java.awt.Font normalFont>"
+    "specialinvoke <java.awt.Font: void <init>(java.lang.String,int,int)>"->"fieldput <imgViewer: java.awt.Font normalFont>";
+    "fieldput <imgViewer: java.awt.Font normalFont>"->"load.r r0";
+    "load.r r0"->"new java.awt.Font";
+    "new java.awt.Font"->"dup1.r";
+    "dup1.r"->"load.r $r99";
+    "load.r $r99"->"push 1";
+    "push 1"->"push 12";
+    "push 12"->"specialinvoke <java.awt.Font: void <init>(java.lang.String,int,int)>";
+    "fieldput <imgViewer: java.awt.Font boldFont>"
+    "specialinvoke <java.awt.Font: void <init>(java.lang.String,int,int)>"->"fieldput <imgViewer: java.awt.Font boldFont>";
+    "fieldput <imgViewer: java.awt.Font boldFont>"->"load.r r0";
+    "load.r r0"->"new java.awt.Font";
+    "new java.awt.Font"->"dup1.r";
+    "dup1.r"->"load.r $r99";
+    "load.r $r99"->"push 0";
+    "push 10"
+    "push 0"->"push 10";
+    "push 10"->"specialinvoke <java.awt.Font: void <init>(java.lang.String,int,int)>";
+    "fieldput <imgViewer: java.awt.Font smallFont>"
+    "specialinvoke <java.awt.Font: void <init>(java.lang.String,int,int)>"->"fieldput <imgViewer: java.awt.Font smallFont>";
+    "fieldput <imgViewer: java.awt.Font smallFont>"->"load.r r0";
+    "load.r r0"->"new java.awt.Font";
+    "new java.awt.Font"->"dup1.r";
+    "dup1.r"->"load.r $r99";
+    "load.r $r99"->"push 1";
+    "push 18"
+    "push 1"->"push 18";
+    "push 18"->"specialinvoke <java.awt.Font: void <init>(java.lang.String,int,int)>";
+    "fieldput <imgViewer: java.awt.Font largeBoldFont>"
+    "specialinvoke <java.awt.Font: void <init>(java.lang.String,int,int)>"->"fieldput <imgViewer: java.awt.Font largeBoldFont>";
+    "fieldput <imgViewer: java.awt.Font largeBoldFont>"->"load.r r0";
+    "virtualinvoke <imgViewer: java.awt.Container getContentPane()>"
+    "load.r r0"->"virtualinvoke <imgViewer: java.awt.Container getContentPane()>";
+    "staticget <java.awt.Color: java.awt.Color WHITE>"
+    "virtualinvoke <imgViewer: java.awt.Container getContentPane()>"->"staticget <java.awt.Color: java.awt.Color WHITE>";
+    "virtualinvoke <java.awt.Container: void setBackground(java.awt.Color)>"
+    "staticget <java.awt.Color: java.awt.Color WHITE>"->"virtualinvoke <java.awt.Container: void setBackground(java.awt.Color)>";
+    "virtualinvoke <java.awt.Container: void setBackground(java.awt.Color)>"->"load.r r0";
+    "load.r r0"->"virtualinvoke <imgViewer: java.awt.Container getContentPane()>";
+    "virtualinvoke <imgViewer: java.awt.Container getContentPane()>"->"load.r r0";
+    "fieldget <imgViewer: java.awt.Font normalFont>"
+    "load.r r0"->"fieldget <imgViewer: java.awt.Font normalFont>";
+    "virtualinvoke <java.awt.Container: void setFont(java.awt.Font)>"
+    "fieldget <imgViewer: java.awt.Font normalFont>"->"virtualinvoke <java.awt.Container: void setFont(java.awt.Font)>";
+    "push \"user.home\""
+    "virtualinvoke <java.awt.Container: void setFont(java.awt.Font)>"->"push \"user.home\"";
+    "push \"user.home\""->"staticinvoke <java.lang.System: java.lang.String getProperty(java.lang.String)>";
+    "pop"
+    "staticinvoke <java.lang.System: java.lang.String getProperty(java.lang.String)>"->"pop";
+    "pop"->"load.r r0";
+    "load.r r0"->"push 1";
+    "fieldput <imgViewer: boolean grantedPrivileges>"
+    "push 1"->"fieldput <imgViewer: boolean grantedPrivileges>";
+    "fieldput <imgViewer: boolean grantedPrivileges>"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "push \"sensor\""
+    "load.r r0"->"push \"sensor\"";
+    "push \"sensor\""->"virtualinvoke <imgViewer: java.lang.String getParameter(java.lang.String)>";
+    "store.r r1"
+    "virtualinvoke <imgViewer: java.lang.String getParameter(java.lang.String)>"->"store.r r1";
+    "load.r r1"
+    "store.r r1"->"load.r r1";
+    "push \"ASTERVNIR\""
+    "load.r r1"->"push \"ASTERVNIR\"";
+    "push \"ASTERVNIR\""->"virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>";
+    "ifne staticget <SensorStatus: SensorStatus ASTER_VNIR>"
+    "virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>"->"ifne staticget <SensorStatus: SensorStatus ASTER_VNIR>";
+    "ifne staticget <SensorStatus: SensorStatus ASTER_VNIR>"->"load.r r1";
+    "push \"ASTERL2V\""
+    "load.r r1"->"push \"ASTERL2V\"";
+    "push \"ASTERL2V\""->"virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>";
+    "ifeq load.r r1"
+    "virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>"->"ifeq load.r r1";
+    "staticget <SensorStatus: SensorStatus ASTER_VNIR>"
+    "ifeq load.r r1"->"staticget <SensorStatus: SensorStatus ASTER_VNIR>";
+    "staticget <SensorStatus: SensorStatus ASTER_VNIR>"->"store.r r1";
+    "store.r r1"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "push \"popout\""
+    "load.r r0"->"push \"popout\"";
+    "push \"popout\""->"virtualinvoke <imgViewer: java.lang.String getParameter(java.lang.String)>";
+    "store.r $r190"
+    "virtualinvoke <imgViewer: java.lang.String getParameter(java.lang.String)>"->"store.r $r190";
+    "load.r $r190"
+    "store.r $r190"->"load.r $r190";
+    "push \"TRUE\""
+    "load.r $r190"->"push \"TRUE\"";
+    "virtualinvoke <java.lang.String: boolean equalsIgnoreCase(java.lang.String)>"
+    "push \"TRUE\""->"virtualinvoke <java.lang.String: boolean equalsIgnoreCase(java.lang.String)>";
+    "ifne load.r r0"
+    "virtualinvoke <java.lang.String: boolean equalsIgnoreCase(java.lang.String)>"->"ifne load.r r0";
+    "ifne load.r r0"->"load.r $r190";
+    "push \"YES\""
+    "load.r $r190"->"push \"YES\"";
+    "push \"YES\""->"virtualinvoke <java.lang.String: boolean equalsIgnoreCase(java.lang.String)>";
+    "virtualinvoke <java.lang.String: boolean equalsIgnoreCase(java.lang.String)>"->"ifeq goto load.r r0";
+    "ifeq goto load.r r0"->"load.r r0";
+    "load.r r0"->"push 1";
+    "fieldput <imgViewer: boolean popOut>"
+    "push 1"->"fieldput <imgViewer: boolean popOut>";
+    "fieldput <imgViewer: boolean popOut>"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "fieldget <imgViewer: boolean popOut>"
+    "load.r r0"->"fieldget <imgViewer: boolean popOut>";
+    "fieldget <imgViewer: boolean popOut>"->"ifeq load.r r0";
+    "new javax.swing.JFrame"
+    "ifeq load.r r0"->"new javax.swing.JFrame";
+    "new javax.swing.JFrame"->"store.r $r190";
+    "store.r $r190"->"load.r $r190";
+    "push \"USGS Global Visualization Viewer\""
+    "load.r $r190"->"push \"USGS Global Visualization Viewer\"";
+    "specialinvoke <javax.swing.JFrame: void <init>(java.lang.String)>"
+    "push \"USGS Global Visualization Viewer\""->"specialinvoke <javax.swing.JFrame: void <init>(java.lang.String)>";
+    "specialinvoke <javax.swing.JFrame: void <init>(java.lang.String)>"->"load.r $r190";
+    "new imgViewer$1"
+    "load.r $r190"->"new imgViewer$1";
+    "new imgViewer$1"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "load.r r0"->"load.r $r190";
+    "specialinvoke <imgViewer$1: void <init>(imgViewer,javax.swing.JFrame)>"
+    "load.r $r190"->"specialinvoke <imgViewer$1: void <init>(imgViewer,javax.swing.JFrame)>";
+    "virtualinvoke <javax.swing.JFrame: void addWindowListener(java.awt.event.WindowListener)>"
+    "specialinvoke <imgViewer$1: void <init>(imgViewer,javax.swing.JFrame)>"->"virtualinvoke <javax.swing.JFrame: void addWindowListener(java.awt.event.WindowListener)>";
+    "virtualinvoke <javax.swing.JFrame: void addWindowListener(java.awt.event.WindowListener)>"->"load.r r0";
+    "load.r r0"->"load.r $r190";
+    "fieldput <imgViewer: javax.swing.JFrame mainWindow>"
+    "load.r $r190"->"fieldput <imgViewer: javax.swing.JFrame mainWindow>";
+    "fieldput <imgViewer: javax.swing.JFrame mainWindow>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "virtualinvoke <imgViewer: java.net.URL getCodeBase()>"
+    "load.r r0"->"virtualinvoke <imgViewer: java.net.URL getCodeBase()>";
+    "push \"graphics/glovis.gif\""
+    "virtualinvoke <imgViewer: java.net.URL getCodeBase()>"->"push \"graphics/glovis.gif\"";
+    "virtualinvoke <imgViewer: java.awt.Image getImage(java.net.URL,java.lang.String)>"
+    "push \"graphics/glovis.gif\""->"virtualinvoke <imgViewer: java.awt.Image getImage(java.net.URL,java.lang.String)>";
+    "virtualinvoke <imgViewer: java.awt.Image getImage(java.net.URL,java.lang.String)>"->"store.r $r190";
+    "store.r $r190"->"load.r r0";
+    "fieldget <imgViewer: javax.swing.JFrame mainWindow>"
+    "load.r r0"->"fieldget <imgViewer: javax.swing.JFrame mainWindow>";
+    "fieldget <imgViewer: javax.swing.JFrame mainWindow>"->"load.r $r190";
+    "virtualinvoke <javax.swing.JFrame: void setIconImage(java.awt.Image)>"
+    "load.r $r190"->"virtualinvoke <javax.swing.JFrame: void setIconImage(java.awt.Image)>";
+    "virtualinvoke <javax.swing.JFrame: void setIconImage(java.awt.Image)>"->"load.r r0";
+    "load.r r0"->"fieldget <imgViewer: javax.swing.JFrame mainWindow>";
+    "fieldget <imgViewer: javax.swing.JFrame mainWindow>"->"load.r r0";
+    "load.r r0"->"fieldget <imgViewer: java.awt.Font normalFont>";
+    "virtualinvoke <javax.swing.JFrame: void setFont(java.awt.Font)>"
+    "fieldget <imgViewer: java.awt.Font normalFont>"->"virtualinvoke <javax.swing.JFrame: void setFont(java.awt.Font)>";
+    "virtualinvoke <javax.swing.JFrame: void setFont(java.awt.Font)>"->"load.r r0";
+    "load.r r0"->"load.r $r99";
+    "specialinvoke <imgViewer: void showAppletMessage(java.lang.String)>"
+    "load.r $r99"->"specialinvoke <imgViewer: void showAppletMessage(java.lang.String)>";
+    "specialinvoke <imgViewer: void showAppletMessage(java.lang.String)>"->"load.r r0";
+    "load.r r0"->"push 1";
+    "virtualinvoke <imgViewer: void setVisible(boolean)>"
+    "push 1"->"virtualinvoke <imgViewer: void setVisible(boolean)>";
+    "virtualinvoke <imgViewer: void setVisible(boolean)>"->"load.r r0";
+    "virtualinvoke <imgViewer: java.awt.Point getLocationOnScreen()>"
+    "load.r r0"->"virtualinvoke <imgViewer: java.awt.Point getLocationOnScreen()>";
+    "virtualinvoke <imgViewer: java.awt.Point getLocationOnScreen()>"->"store.r $r99";
+    "store.r $r99"->"load.r r0";
+    "load.r r0"->"fieldget <imgViewer: javax.swing.JFrame mainWindow>";
+    "fieldget <imgViewer: javax.swing.JFrame mainWindow>"->"load.r $r99";
+    "virtualinvoke <javax.swing.JFrame: void setLocation(java.awt.Point)>"
+    "load.r $r99"->"virtualinvoke <javax.swing.JFrame: void setLocation(java.awt.Point)>";
+    "virtualinvoke <javax.swing.JFrame: void setLocation(java.awt.Point)>"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "new java.awt.Cursor"
+    "load.r r0"->"new java.awt.Cursor";
+    "new java.awt.Cursor"->"dup1.r";
+    "dup1.r"->"push 1";
+    "specialinvoke <java.awt.Cursor: void <init>(int)>"
+    "push 1"->"specialinvoke <java.awt.Cursor: void <init>(int)>";
+    "fieldput <imgViewer: java.awt.Cursor crosshairCursor>"
+    "specialinvoke <java.awt.Cursor: void <init>(int)>"->"fieldput <imgViewer: java.awt.Cursor crosshairCursor>";
+    "fieldput <imgViewer: java.awt.Cursor crosshairCursor>"->"load.r r0";
+    "load.r r0"->"new java.awt.Cursor";
+    "new java.awt.Cursor"->"dup1.r";
+    "dup1.r"->"push 12";
+    "push 12"->"specialinvoke <java.awt.Cursor: void <init>(int)>";
+    "fieldput <imgViewer: java.awt.Cursor handCursor>"
+    "specialinvoke <java.awt.Cursor: void <init>(int)>"->"fieldput <imgViewer: java.awt.Cursor handCursor>";
+    "fieldput <imgViewer: java.awt.Cursor handCursor>"->"load.r r0";
+    "load.r r0"->"new java.awt.Cursor";
+    "new java.awt.Cursor"->"dup1.r";
+    "push 13"
+    "dup1.r"->"push 13";
+    "push 13"->"specialinvoke <java.awt.Cursor: void <init>(int)>";
+    "fieldput <imgViewer: java.awt.Cursor moveCursor>"
+    "specialinvoke <java.awt.Cursor: void <init>(int)>"->"fieldput <imgViewer: java.awt.Cursor moveCursor>";
+    "fieldput <imgViewer: java.awt.Cursor moveCursor>"->"load.r r0";
+    "load.r r0"->"new java.awt.Cursor";
+    "new java.awt.Cursor"->"dup1.r";
+    "push 3"
+    "dup1.r"->"push 3";
+    "push 3"->"specialinvoke <java.awt.Cursor: void <init>(int)>";
+    "fieldput <imgViewer: java.awt.Cursor waitCursor>"
+    "specialinvoke <java.awt.Cursor: void <init>(int)>"->"fieldput <imgViewer: java.awt.Cursor waitCursor>";
+    "fieldput <imgViewer: java.awt.Cursor waitCursor>"->"load.r r0";
+    "load.r r0"->"new java.awt.Cursor";
+    "new java.awt.Cursor"->"dup1.r";
+    "dup1.r"->"push 0";
+    "push 0"->"specialinvoke <java.awt.Cursor: void <init>(int)>";
+    "fieldput <imgViewer: java.awt.Cursor defaultCursor>"
+    "specialinvoke <java.awt.Cursor: void <init>(int)>"->"fieldput <imgViewer: java.awt.Cursor defaultCursor>";
+    "fieldput <imgViewer: java.awt.Cursor defaultCursor>"->"load.r r0";
+    "new StatusBar"
+    "load.r r0"->"new StatusBar";
+    "new StatusBar"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "specialinvoke <StatusBar: void <init>(imgViewer)>"
+    "load.r r0"->"specialinvoke <StatusBar: void <init>(imgViewer)>";
+    "fieldput <imgViewer: StatusBar statusBar>"
+    "specialinvoke <StatusBar: void <init>(imgViewer)>"->"fieldput <imgViewer: StatusBar statusBar>";
+    "fieldput <imgViewer: StatusBar statusBar>"->"load.r r0";
+    "fieldget <imgViewer: StatusBar statusBar>"
+    "load.r r0"->"fieldget <imgViewer: StatusBar statusBar>";
+    "push \"USGS Browse Image Viewer Applet\""
+    "fieldget <imgViewer: StatusBar statusBar>"->"push \"USGS Browse Image Viewer Applet\"";
+    "virtualinvoke <StatusBar: void showStatus(java.lang.String)>"
+    "push \"USGS Browse Image Viewer Applet\""->"virtualinvoke <StatusBar: void showStatus(java.lang.String)>";
+    "virtualinvoke <StatusBar: void showStatus(java.lang.String)>"->"load.r r0";
+    "push \"limitMissions\""
+    "load.r r0"->"push \"limitMissions\"";
+    "push \"limitMissions\""->"virtualinvoke <imgViewer: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <imgViewer: java.lang.String getParameter(java.lang.String)>"->"store.r $r99";
+    "store.r $r99"->"load.r $r99";
+    "load.r $r99"->"push \"TRUE\"";
+    "push \"TRUE\""->"virtualinvoke <java.lang.String: boolean equalsIgnoreCase(java.lang.String)>";
+    "virtualinvoke <java.lang.String: boolean equalsIgnoreCase(java.lang.String)>"->"ifne load.r r0";
+    "ifne load.r r0"->"load.r $r99";
+    "load.r $r99"->"push \"YES\"";
+    "push \"YES\""->"virtualinvoke <java.lang.String: boolean equalsIgnoreCase(java.lang.String)>";
+    "virtualinvoke <java.lang.String: boolean equalsIgnoreCase(java.lang.String)>"->"ifeq goto load.r r0";
+    "ifeq goto load.r r0"->"load.r r0";
+    "load.r r0"->"push 1";
+    "fieldput <imgViewer: boolean limitCollectionMenu>"
+    "push 1"->"fieldput <imgViewer: boolean limitCollectionMenu>";
+    "fieldput <imgViewer: boolean limitCollectionMenu>"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "new SensorMenu"
+    "load.r r0"->"new SensorMenu";
+    "new SensorMenu"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "load.r r0"->"load.r r1";
+    "load.r r1"->"load.r r0";
+    "fieldget <imgViewer: boolean limitCollectionMenu>"
+    "load.r r0"->"fieldget <imgViewer: boolean limitCollectionMenu>";
+    "specialinvoke <SensorMenu: void <init>(imgViewer,SensorStatus,boolean)>"
+    "fieldget <imgViewer: boolean limitCollectionMenu>"->"specialinvoke <SensorMenu: void <init>(imgViewer,SensorStatus,boolean)>";
+    "fieldput <imgViewer: SensorMenu sensorMenu>"
+    "specialinvoke <SensorMenu: void <init>(imgViewer,SensorStatus,boolean)>"->"fieldput <imgViewer: SensorMenu sensorMenu>";
+    "fieldput <imgViewer: SensorMenu sensorMenu>"->"load.r r0";
+    "new LocatorMap"
+    "load.r r0"->"new LocatorMap";
+    "new LocatorMap"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "specialinvoke <LocatorMap: void <init>(imgViewer)>"
+    "load.r r0"->"specialinvoke <LocatorMap: void <init>(imgViewer)>";
+    "fieldput <imgViewer: LocatorMap locatorMap>"
+    "specialinvoke <LocatorMap: void <init>(imgViewer)>"->"fieldput <imgViewer: LocatorMap locatorMap>";
+    "fieldput <imgViewer: LocatorMap locatorMap>"->"load.r r0";
+    "fieldget <imgViewer: LocatorMap locatorMap>"
+    "load.r r0"->"fieldget <imgViewer: LocatorMap locatorMap>";
+    "fieldget <imgViewer: LocatorMap locatorMap>"->"load.r r0";
+    "fieldget <imgViewer: java.awt.Cursor crosshairCursor>"
+    "load.r r0"->"fieldget <imgViewer: java.awt.Cursor crosshairCursor>";
+    "virtualinvoke <LocatorMap: void setCursor(java.awt.Cursor)>"
+    "fieldget <imgViewer: java.awt.Cursor crosshairCursor>"->"virtualinvoke <LocatorMap: void setCursor(java.awt.Cursor)>";
+    "virtualinvoke <LocatorMap: void setCursor(java.awt.Cursor)>"->"load.r r0";
+    "new javax.swing.JScrollPane"
+    "load.r r0"->"new javax.swing.JScrollPane";
+    "new javax.swing.JScrollPane"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "load.r r0"->"fieldget <imgViewer: LocatorMap locatorMap>";
+    "push 22"
+    "fieldget <imgViewer: LocatorMap locatorMap>"->"push 22";
+    "push 32"
+    "push 22"->"push 32";
+    "specialinvoke <javax.swing.JScrollPane: void <init>(java.awt.Component,int,int)>"
+    "push 32"->"specialinvoke <javax.swing.JScrollPane: void <init>(java.awt.Component,int,int)>";
+    "fieldput <imgViewer: javax.swing.JScrollPane locatorMapScroll>"
+    "specialinvoke <javax.swing.JScrollPane: void <init>(java.awt.Component,int,int)>"->"fieldput <imgViewer: javax.swing.JScrollPane locatorMapScroll>";
+    "fieldput <imgViewer: javax.swing.JScrollPane locatorMapScroll>"->"load.r r0";
+    "fieldget <imgViewer: javax.swing.JScrollPane locatorMapScroll>"
+    "load.r r0"->"fieldget <imgViewer: javax.swing.JScrollPane locatorMapScroll>";
+    "staticget <java.awt.Color: java.awt.Color LIGHT_GRAY>"
+    "fieldget <imgViewer: javax.swing.JScrollPane locatorMapScroll>"->"staticget <java.awt.Color: java.awt.Color LIGHT_GRAY>";
+    "virtualinvoke <javax.swing.JScrollPane: void setBackground(java.awt.Color)>"
+    "staticget <java.awt.Color: java.awt.Color LIGHT_GRAY>"->"virtualinvoke <javax.swing.JScrollPane: void setBackground(java.awt.Color)>";
+    "virtualinvoke <javax.swing.JScrollPane: void setBackground(java.awt.Color)>"->"load.r r0";
+    "load.r r0"->"fieldget <imgViewer: javax.swing.JScrollPane locatorMapScroll>";
+    "virtualinvoke <javax.swing.JScrollPane: javax.swing.JScrollBar getHorizontalScrollBar()>"
+    "fieldget <imgViewer: javax.swing.JScrollPane locatorMapScroll>"->"virtualinvoke <javax.swing.JScrollPane: javax.swing.JScrollBar getHorizontalScrollBar()>";
+    "virtualinvoke <javax.swing.JScrollPane: javax.swing.JScrollBar getHorizontalScrollBar()>"->"push 10";
+    "virtualinvoke <javax.swing.JScrollBar: void setUnitIncrement(int)>"
+    "push 10"->"virtualinvoke <javax.swing.JScrollBar: void setUnitIncrement(int)>";
+    "virtualinvoke <javax.swing.JScrollBar: void setUnitIncrement(int)>"->"load.r r0";
+    "load.r r0"->"fieldget <imgViewer: javax.swing.JScrollPane locatorMapScroll>";
+    "virtualinvoke <javax.swing.JScrollPane: javax.swing.JScrollBar getVerticalScrollBar()>"
+    "fieldget <imgViewer: javax.swing.JScrollPane locatorMapScroll>"->"virtualinvoke <javax.swing.JScrollPane: javax.swing.JScrollBar getVerticalScrollBar()>";
+    "virtualinvoke <javax.swing.JScrollPane: javax.swing.JScrollBar getVerticalScrollBar()>"->"push 10";
+    "push 10"->"virtualinvoke <javax.swing.JScrollBar: void setUnitIncrement(int)>";
+    "virtualinvoke <javax.swing.JScrollBar: void setUnitIncrement(int)>"->"load.r r0";
+    "load.r r0"->"fieldget <imgViewer: LocatorMap locatorMap>";
+    "fieldget <imgViewer: LocatorMap locatorMap>"->"push 0";
+    "virtualinvoke <LocatorMap: void setFocusable(boolean)>"
+    "push 0"->"virtualinvoke <LocatorMap: void setFocusable(boolean)>";
+    "virtualinvoke <LocatorMap: void setFocusable(boolean)>"->"load.r r0";
+    "load.r r0"->"fieldget <imgViewer: javax.swing.JScrollPane locatorMapScroll>";
+    "fieldget <imgViewer: javax.swing.JScrollPane locatorMapScroll>"->"push 0";
+    "virtualinvoke <javax.swing.JScrollPane: void setFocusable(boolean)>"
+    "push 0"->"virtualinvoke <javax.swing.JScrollPane: void setFocusable(boolean)>";
+    "virtualinvoke <javax.swing.JScrollPane: void setFocusable(boolean)>"->"load.r r0";
+    "load.r r0"->"fieldget <imgViewer: javax.swing.JScrollPane locatorMapScroll>";
+    "new java.awt.Dimension"
+    "fieldget <imgViewer: javax.swing.JScrollPane locatorMapScroll>"->"new java.awt.Dimension";
+    "new java.awt.Dimension"->"dup1.r";
+    "push 240"
+    "dup1.r"->"push 240";
+    "push 400"
+    "push 240"->"push 400";
+    "specialinvoke <java.awt.Dimension: void <init>(int,int)>"
+    "push 400"->"specialinvoke <java.awt.Dimension: void <init>(int,int)>";
+    "virtualinvoke <javax.swing.JScrollPane: void setMaximumSize(java.awt.Dimension)>"
+    "specialinvoke <java.awt.Dimension: void <init>(int,int)>"->"virtualinvoke <javax.swing.JScrollPane: void setMaximumSize(java.awt.Dimension)>";
+    "virtualinvoke <javax.swing.JScrollPane: void setMaximumSize(java.awt.Dimension)>"->"load.r r0";
+    "load.r r0"->"fieldget <imgViewer: javax.swing.JScrollPane locatorMapScroll>";
+    "fieldget <imgViewer: javax.swing.JScrollPane locatorMapScroll>"->"new java.awt.Dimension";
+    "new java.awt.Dimension"->"dup1.r";
+    "dup1.r"->"push 240";
+    "push 100"
+    "push 240"->"push 100";
+    "push 100"->"specialinvoke <java.awt.Dimension: void <init>(int,int)>";
+    "virtualinvoke <javax.swing.JScrollPane: void setMinimumSize(java.awt.Dimension)>"
+    "specialinvoke <java.awt.Dimension: void <init>(int,int)>"->"virtualinvoke <javax.swing.JScrollPane: void setMinimumSize(java.awt.Dimension)>";
+    "virtualinvoke <javax.swing.JScrollPane: void setMinimumSize(java.awt.Dimension)>"->"load.r r0";
+    "load.r r0"->"fieldget <imgViewer: javax.swing.JScrollPane locatorMapScroll>";
+    "fieldget <imgViewer: javax.swing.JScrollPane locatorMapScroll>"->"new java.awt.Dimension";
+    "new java.awt.Dimension"->"dup1.r";
+    "dup1.r"->"push 240";
+    "push 240"->"push 240";
+    "push 240"->"specialinvoke <java.awt.Dimension: void <init>(int,int)>";
+    "virtualinvoke <javax.swing.JScrollPane: void setPreferredSize(java.awt.Dimension)>"
+    "specialinvoke <java.awt.Dimension: void <init>(int,int)>"->"virtualinvoke <javax.swing.JScrollPane: void setPreferredSize(java.awt.Dimension)>";
+    "virtualinvoke <javax.swing.JScrollPane: void setPreferredSize(java.awt.Dimension)>"->"load.r r0";
+    "new ImagePane"
+    "load.r r0"->"new ImagePane";
+    "new ImagePane"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <imgViewer: LocatorMap locatorMap>";
+    "specialinvoke <ImagePane: void <init>(imgViewer,LocatorMap)>"
+    "fieldget <imgViewer: LocatorMap locatorMap>"->"specialinvoke <ImagePane: void <init>(imgViewer,LocatorMap)>";
+    "fieldput <imgViewer: ImagePane imgArea>"
+    "specialinvoke <ImagePane: void <init>(imgViewer,LocatorMap)>"->"fieldput <imgViewer: ImagePane imgArea>";
+    "fieldput <imgViewer: ImagePane imgArea>"->"load.r r0";
+    "fieldget <imgViewer: ImagePane imgArea>"
+    "load.r r0"->"fieldget <imgViewer: ImagePane imgArea>";
+    "staticget <java.awt.Color: java.awt.Color BLACK>"
+    "fieldget <imgViewer: ImagePane imgArea>"->"staticget <java.awt.Color: java.awt.Color BLACK>";
+    "virtualinvoke <ImagePane: void setBackground(java.awt.Color)>"
+    "staticget <java.awt.Color: java.awt.Color BLACK>"->"virtualinvoke <ImagePane: void setBackground(java.awt.Color)>";
+    "virtualinvoke <ImagePane: void setBackground(java.awt.Color)>"->"load.r r0";
+    "load.r r0"->"new javax.swing.JScrollPane";
+    "new javax.swing.JScrollPane"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "load.r r0"->"fieldget <imgViewer: ImagePane imgArea>";
+    "push 20"
+    "fieldget <imgViewer: ImagePane imgArea>"->"push 20";
+    "push 30"
+    "push 20"->"push 30";
+    "push 30"->"specialinvoke <javax.swing.JScrollPane: void <init>(java.awt.Component,int,int)>";
+    "fieldput <imgViewer: javax.swing.JScrollPane imgScroll>"
+    "specialinvoke <javax.swing.JScrollPane: void <init>(java.awt.Component,int,int)>"->"fieldput <imgViewer: javax.swing.JScrollPane imgScroll>";
+    "fieldput <imgViewer: javax.swing.JScrollPane imgScroll>"->"load.r r0";
+    "fieldget <imgViewer: javax.swing.JScrollPane imgScroll>"
+    "load.r r0"->"fieldget <imgViewer: javax.swing.JScrollPane imgScroll>";
+    "push 650"
+    "fieldget <imgViewer: javax.swing.JScrollPane imgScroll>"->"push 650";
+    "push 650"->"push 650";
+    "virtualinvoke <javax.swing.JScrollPane: void setSize(int,int)>"
+    "push 650"->"virtualinvoke <javax.swing.JScrollPane: void setSize(int,int)>";
+    "virtualinvoke <javax.swing.JScrollPane: void setSize(int,int)>"->"load.r r0";
+    "load.r r0"->"fieldget <imgViewer: javax.swing.JScrollPane imgScroll>";
+    "fieldget <imgViewer: javax.swing.JScrollPane imgScroll>"->"staticget <java.awt.Color: java.awt.Color LIGHT_GRAY>";
+    "staticget <java.awt.Color: java.awt.Color LIGHT_GRAY>"->"virtualinvoke <javax.swing.JScrollPane: void setBackground(java.awt.Color)>";
+    "virtualinvoke <javax.swing.JScrollPane: void setBackground(java.awt.Color)>"->"load.r r0";
+    "load.r r0"->"fieldget <imgViewer: javax.swing.JScrollPane imgScroll>";
+    "fieldget <imgViewer: javax.swing.JScrollPane imgScroll>"->"virtualinvoke <javax.swing.JScrollPane: javax.swing.JScrollBar getHorizontalScrollBar()>";
+    "virtualinvoke <javax.swing.JScrollPane: javax.swing.JScrollBar getHorizontalScrollBar()>"->"push 10";
+    "push 10"->"virtualinvoke <javax.swing.JScrollBar: void setUnitIncrement(int)>";
+    "virtualinvoke <javax.swing.JScrollBar: void setUnitIncrement(int)>"->"load.r r0";
+    "load.r r0"->"fieldget <imgViewer: javax.swing.JScrollPane imgScroll>";
+    "fieldget <imgViewer: javax.swing.JScrollPane imgScroll>"->"virtualinvoke <javax.swing.JScrollPane: javax.swing.JScrollBar getVerticalScrollBar()>";
+    "virtualinvoke <javax.swing.JScrollPane: javax.swing.JScrollBar getVerticalScrollBar()>"->"push 10";
+    "push 10"->"virtualinvoke <javax.swing.JScrollBar: void setUnitIncrement(int)>";
+    "virtualinvoke <javax.swing.JScrollBar: void setUnitIncrement(int)>"->"load.r r0";
+    "load.r r0"->"fieldget <imgViewer: javax.swing.JScrollPane imgScroll>";
+    "virtualinvoke <javax.swing.JScrollPane: javax.swing.JViewport getViewport()>"
+    "fieldget <imgViewer: javax.swing.JScrollPane imgScroll>"->"virtualinvoke <javax.swing.JScrollPane: javax.swing.JViewport getViewport()>";
+    "virtualinvoke <javax.swing.JScrollPane: javax.swing.JViewport getViewport()>"->"push 0";
+    "virtualinvoke <javax.swing.JViewport: void setScrollMode(int)>"
+    "push 0"->"virtualinvoke <javax.swing.JViewport: void setScrollMode(int)>";
+    "virtualinvoke <javax.swing.JViewport: void setScrollMode(int)>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <imgViewer: ImagePane imgArea>";
+    "fieldget <ImagePane: MosaicData md>"
+    "fieldget <imgViewer: ImagePane imgArea>"->"fieldget <ImagePane: MosaicData md>";
+    "fieldput <imgViewer: MosaicData md>"
+    "fieldget <ImagePane: MosaicData md>"->"fieldput <imgViewer: MosaicData md>";
+    "fieldput <imgViewer: MosaicData md>"->"load.r r0";
+    "load.r r0"->"fieldget <imgViewer: StatusBar statusBar>";
+    "fieldget <StatusBar: ProgressIndicator progress>"
+    "fieldget <imgViewer: StatusBar statusBar>"->"fieldget <StatusBar: ProgressIndicator progress>";
+    "fieldget <StatusBar: ProgressIndicator progress>"->"load.r r0";
+    "fieldget <imgViewer: MosaicData md>"
+    "load.r r0"->"fieldget <imgViewer: MosaicData md>";
+    "virtualinvoke <ProgressIndicator: void addWorker(WorkMonitor)>"
+    "fieldget <imgViewer: MosaicData md>"->"virtualinvoke <ProgressIndicator: void addWorker(WorkMonitor)>";
+    "virtualinvoke <ProgressIndicator: void addWorker(WorkMonitor)>"->"load.r r0";
+    "load.r r0"->"fieldget <imgViewer: StatusBar statusBar>";
+    "fieldget <imgViewer: StatusBar statusBar>"->"fieldget <StatusBar: ProgressIndicator progress>";
+    "fieldget <StatusBar: ProgressIndicator progress>"->"load.r r0";
+    "load.r r0"->"fieldget <imgViewer: MosaicData md>";
+    "fieldget <MosaicData: ImageLoader imageLoader>"
+    "fieldget <imgViewer: MosaicData md>"->"fieldget <MosaicData: ImageLoader imageLoader>";
+    "fieldget <MosaicData: ImageLoader imageLoader>"->"virtualinvoke <ProgressIndicator: void addWorker(WorkMonitor)>";
+    "virtualinvoke <ProgressIndicator: void addWorker(WorkMonitor)>"->"load.r r0";
+    "load.r r0"->"fieldget <imgViewer: StatusBar statusBar>";
+    "fieldget <imgViewer: StatusBar statusBar>"->"fieldget <StatusBar: ProgressIndicator progress>";
+    "fieldget <StatusBar: ProgressIndicator progress>"->"load.r r0";
+    "load.r r0"->"fieldget <imgViewer: MosaicData md>";
+    "fieldget <MosaicData: MapLayers mapLayers>"
+    "fieldget <imgViewer: MosaicData md>"->"fieldget <MosaicData: MapLayers mapLayers>";
+    "fieldget <MosaicData: MapLayers mapLayers>"->"virtualinvoke <ProgressIndicator: void addWorker(WorkMonitor)>";
+    "virtualinvoke <ProgressIndicator: void addWorker(WorkMonitor)>"->"load.r r0";
+    "new UserDefinedAreaDialog"
+    "load.r r0"->"new UserDefinedAreaDialog";
+    "new UserDefinedAreaDialog"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "virtualinvoke <imgViewer: javax.swing.JFrame getDialogParent()>"
+    "load.r r0"->"virtualinvoke <imgViewer: javax.swing.JFrame getDialogParent()>";
+    "virtualinvoke <imgViewer: javax.swing.JFrame getDialogParent()>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <imgViewer: MosaicData md>";
+    "specialinvoke <UserDefinedAreaDialog: void <init>(javax.swing.JFrame,imgViewer,MosaicData)>"
+    "fieldget <imgViewer: MosaicData md>"->"specialinvoke <UserDefinedAreaDialog: void <init>(javax.swing.JFrame,imgViewer,MosaicData)>";
+    "fieldput <imgViewer: UserDefinedAreaDialog userDefinedAreaDialog>"
+    "specialinvoke <UserDefinedAreaDialog: void <init>(javax.swing.JFrame,imgViewer,MosaicData)>"->"fieldput <imgViewer: UserDefinedAreaDialog userDefinedAreaDialog>";
+    "fieldput <imgViewer: UserDefinedAreaDialog userDefinedAreaDialog>"->"load.r r0";
+    "new PointOfInterestDialog"
+    "load.r r0"->"new PointOfInterestDialog";
+    "new PointOfInterestDialog"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "load.r r0"->"virtualinvoke <imgViewer: javax.swing.JFrame getDialogParent()>";
+    "virtualinvoke <imgViewer: javax.swing.JFrame getDialogParent()>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <imgViewer: MosaicData md>";
+    "fieldget <imgViewer: MosaicData md>"->"load.r r0";
+    "load.r r0"->"fieldget <imgViewer: MosaicData md>";
+    "fieldget <imgViewer: MosaicData md>"->"fieldget <MosaicData: MapLayers mapLayers>";
+    "virtualinvoke <MapLayers: PointOfInterestMapLayer getPointOfInterestMapLayer()>"
+    "fieldget <MosaicData: MapLayers mapLayers>"->"virtualinvoke <MapLayers: PointOfInterestMapLayer getPointOfInterestMapLayer()>";
+    "specialinvoke <PointOfInterestDialog: void <init>(javax.swing.JFrame,imgViewer,MosaicData,PointOfInterestMapLayer)>"
+    "virtualinvoke <MapLayers: PointOfInterestMapLayer getPointOfInterestMapLayer()>"->"specialinvoke <PointOfInterestDialog: void <init>(javax.swing.JFrame,imgViewer,MosaicData,PointOfInterestMapLayer)>";
+    "fieldput <imgViewer: PointOfInterestDialog pointOfInterestDialog>"
+    "specialinvoke <PointOfInterestDialog: void <init>(javax.swing.JFrame,imgViewer,MosaicData,PointOfInterestMapLayer)>"->"fieldput <imgViewer: PointOfInterestDialog pointOfInterestDialog>";
+    "fieldput <imgViewer: PointOfInterestDialog pointOfInterestDialog>"->"load.r r0";
+    "new GridCellEntry"
+    "load.r r0"->"new GridCellEntry";
+    "new GridCellEntry"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <imgViewer: MosaicData md>";
+    "specialinvoke <GridCellEntry: void <init>(imgViewer,MosaicData)>"
+    "fieldget <imgViewer: MosaicData md>"->"specialinvoke <GridCellEntry: void <init>(imgViewer,MosaicData)>";
+    "fieldput <imgViewer: GridCellEntry gridCellEntry>"
+    "specialinvoke <GridCellEntry: void <init>(imgViewer,MosaicData)>"->"fieldput <imgViewer: GridCellEntry gridCellEntry>";
+    "fieldput <imgViewer: GridCellEntry gridCellEntry>"->"load.r r0";
+    "new LatLongEntry"
+    "load.r r0"->"new LatLongEntry";
+    "new LatLongEntry"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <imgViewer: MosaicData md>";
+    "specialinvoke <LatLongEntry: void <init>(imgViewer,MosaicData)>"
+    "fieldget <imgViewer: MosaicData md>"->"specialinvoke <LatLongEntry: void <init>(imgViewer,MosaicData)>";
+    "fieldput <imgViewer: LatLongEntry latLongEntry>"
+    "specialinvoke <LatLongEntry: void <init>(imgViewer,MosaicData)>"->"fieldput <imgViewer: LatLongEntry latLongEntry>";
+    "fieldput <imgViewer: LatLongEntry latLongEntry>"->"load.r r0";
+    "new CloudCoverLimit"
+    "load.r r0"->"new CloudCoverLimit";
+    "new CloudCoverLimit"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <imgViewer: MosaicData md>";
+    "specialinvoke <CloudCoverLimit: void <init>(imgViewer,MosaicData)>"
+    "fieldget <imgViewer: MosaicData md>"->"specialinvoke <CloudCoverLimit: void <init>(imgViewer,MosaicData)>";
+    "fieldput <imgViewer: CloudCoverLimit maxCC>"
+    "specialinvoke <CloudCoverLimit: void <init>(imgViewer,MosaicData)>"->"fieldput <imgViewer: CloudCoverLimit maxCC>";
+    "fieldput <imgViewer: CloudCoverLimit maxCC>"->"load.r r0";
+    "new ArrowPane"
+    "load.r r0"->"new ArrowPane";
+    "new ArrowPane"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "specialinvoke <ArrowPane: void <init>(imgViewer)>"
+    "load.r r0"->"specialinvoke <ArrowPane: void <init>(imgViewer)>";
+    "fieldput <imgViewer: ArrowPane controls>"
+    "specialinvoke <ArrowPane: void <init>(imgViewer)>"->"fieldput <imgViewer: ArrowPane controls>";
+    "fieldput <imgViewer: ArrowPane controls>"->"load.r r0";
+    "new SceneInfo"
+    "load.r r0"->"new SceneInfo";
+    "new SceneInfo"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <imgViewer: MosaicData md>";
+    "specialinvoke <SceneInfo: void <init>(imgViewer,MosaicData)>"
+    "fieldget <imgViewer: MosaicData md>"->"specialinvoke <SceneInfo: void <init>(imgViewer,MosaicData)>";
+    "fieldput <imgViewer: SceneInfo sceneInfo>"
+    "specialinvoke <SceneInfo: void <init>(imgViewer,MosaicData)>"->"fieldput <imgViewer: SceneInfo sceneInfo>";
+    "fieldput <imgViewer: SceneInfo sceneInfo>"->"load.r r0";
+    "new NavigateDate"
+    "load.r r0"->"new NavigateDate";
+    "new NavigateDate"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <imgViewer: MosaicData md>";
+    "specialinvoke <NavigateDate: void <init>(imgViewer,MosaicData)>"
+    "fieldget <imgViewer: MosaicData md>"->"specialinvoke <NavigateDate: void <init>(imgViewer,MosaicData)>";
+    "fieldput <imgViewer: NavigateDate navDate>"
+    "specialinvoke <NavigateDate: void <init>(imgViewer,MosaicData)>"->"fieldput <imgViewer: NavigateDate navDate>";
+    "new javax.swing.JPanel"
+    "fieldput <imgViewer: NavigateDate navDate>"->"new javax.swing.JPanel";
+    "new javax.swing.JPanel"->"store.r $r99";
+    "store.r $r99"->"load.r $r99";
+    "specialinvoke <javax.swing.JPanel: void <init>()>"
+    "load.r $r99"->"specialinvoke <javax.swing.JPanel: void <init>()>";
+    "specialinvoke <javax.swing.JPanel: void <init>()>"->"load.r $r99";
+    "new java.awt.GridLayout"
+    "load.r $r99"->"new java.awt.GridLayout";
+    "new java.awt.GridLayout"->"dup1.r";
+    "dup1.r"->"push 1";
+    "push 2"
+    "push 1"->"push 2";
+    "specialinvoke <java.awt.GridLayout: void <init>(int,int)>"
+    "push 2"->"specialinvoke <java.awt.GridLayout: void <init>(int,int)>";
+    "virtualinvoke <javax.swing.JPanel: void setLayout(java.awt.LayoutManager)>"
+    "specialinvoke <java.awt.GridLayout: void <init>(int,int)>"->"virtualinvoke <javax.swing.JPanel: void setLayout(java.awt.LayoutManager)>";
+    "virtualinvoke <javax.swing.JPanel: void setLayout(java.awt.LayoutManager)>"->"load.r r0";
+    "new javax.swing.JButton"
+    "load.r r0"->"new javax.swing.JButton";
+    "new javax.swing.JButton"->"dup1.r";
+    "push \"Prev Scene\""
+    "dup1.r"->"push \"Prev Scene\"";
+    "specialinvoke <javax.swing.JButton: void <init>(java.lang.String)>"
+    "push \"Prev Scene\""->"specialinvoke <javax.swing.JButton: void <init>(java.lang.String)>";
+    "fieldput <imgViewer: javax.swing.JButton dateDecButton>"
+    "specialinvoke <javax.swing.JButton: void <init>(java.lang.String)>"->"fieldput <imgViewer: javax.swing.JButton dateDecButton>";
+    "fieldput <imgViewer: javax.swing.JButton dateDecButton>"->"load.r r0";
+    "fieldget <imgViewer: javax.swing.JButton dateDecButton>"
+    "load.r r0"->"fieldget <imgViewer: javax.swing.JButton dateDecButton>";
+    "push 80"
+    "fieldget <imgViewer: javax.swing.JButton dateDecButton>"->"push 80";
+    "virtualinvoke <javax.swing.JButton: void setMnemonic(int)>"
+    "push 80"->"virtualinvoke <javax.swing.JButton: void setMnemonic(int)>";
+    "virtualinvoke <javax.swing.JButton: void setMnemonic(int)>"->"load.r r0";
+    "load.r r0"->"fieldget <imgViewer: javax.swing.JButton dateDecButton>";
+    "push \"Previous scene\""
+    "fieldget <imgViewer: javax.swing.JButton dateDecButton>"->"push \"Previous scene\"";
+    "virtualinvoke <javax.swing.JButton: void setToolTipText(java.lang.String)>"
+    "push \"Previous scene\""->"virtualinvoke <javax.swing.JButton: void setToolTipText(java.lang.String)>";
+    "virtualinvoke <javax.swing.JButton: void setToolTipText(java.lang.String)>"->"load.r r0";
+    "load.r r0"->"fieldget <imgViewer: javax.swing.JButton dateDecButton>";
+    "fieldget <imgViewer: javax.swing.JButton dateDecButton>"->"load.r r0";
+    "virtualinvoke <javax.swing.JButton: void addActionListener(java.awt.event.ActionListener)>"
+    "load.r r0"->"virtualinvoke <javax.swing.JButton: void addActionListener(java.awt.event.ActionListener)>";
+    "virtualinvoke <javax.swing.JButton: void addActionListener(java.awt.event.ActionListener)>"->"load.r r0";
+    "load.r r0"->"new javax.swing.JButton";
+    "new javax.swing.JButton"->"dup1.r";
+    "push \"Next Scene\""
+    "dup1.r"->"push \"Next Scene\"";
+    "push \"Next Scene\""->"specialinvoke <javax.swing.JButton: void <init>(java.lang.String)>";
+    "fieldput <imgViewer: javax.swing.JButton dateIncButton>"
+    "specialinvoke <javax.swing.JButton: void <init>(java.lang.String)>"->"fieldput <imgViewer: javax.swing.JButton dateIncButton>";
+    "fieldput <imgViewer: javax.swing.JButton dateIncButton>"->"load.r r0";
+    "fieldget <imgViewer: javax.swing.JButton dateIncButton>"
+    "load.r r0"->"fieldget <imgViewer: javax.swing.JButton dateIncButton>";
+    "push 78"
+    "fieldget <imgViewer: javax.swing.JButton dateIncButton>"->"push 78";
+    "push 78"->"virtualinvoke <javax.swing.JButton: void setMnemonic(int)>";
+    "virtualinvoke <javax.swing.JButton: void setMnemonic(int)>"->"load.r r0";
+    "load.r r0"->"fieldget <imgViewer: javax.swing.JButton dateIncButton>";
+    "push \"Next scene\""
+    "fieldget <imgViewer: javax.swing.JButton dateIncButton>"->"push \"Next scene\"";
+    "push \"Next scene\""->"virtualinvoke <javax.swing.JButton: void setToolTipText(java.lang.String)>";
+    "virtualinvoke <javax.swing.JButton: void setToolTipText(java.lang.String)>"->"load.r r0";
+    "load.r r0"->"fieldget <imgViewer: javax.swing.JButton dateIncButton>";
+    "fieldget <imgViewer: javax.swing.JButton dateIncButton>"->"load.r r0";
+    "load.r r0"->"virtualinvoke <javax.swing.JButton: void addActionListener(java.awt.event.ActionListener)>";
+    "virtualinvoke <javax.swing.JButton: void addActionListener(java.awt.event.ActionListener)>"->"load.r $r99";
+    "load.r $r99"->"load.r r0";
+    "load.r r0"->"fieldget <imgViewer: javax.swing.JButton dateDecButton>";
+    "virtualinvoke <javax.swing.JPanel: java.awt.Component add(java.awt.Component)>"
+    "fieldget <imgViewer: javax.swing.JButton dateDecButton>"->"virtualinvoke <javax.swing.JPanel: java.awt.Component add(java.awt.Component)>";
+    "virtualinvoke <javax.swing.JPanel: java.awt.Component add(java.awt.Component)>"->"pop";
+    "pop"->"load.r $r99";
+    "load.r $r99"->"load.r r0";
+    "load.r r0"->"fieldget <imgViewer: javax.swing.JButton dateIncButton>";
+    "fieldget <imgViewer: javax.swing.JButton dateIncButton>"->"virtualinvoke <javax.swing.JPanel: java.awt.Component add(java.awt.Component)>";
+    "virtualinvoke <javax.swing.JPanel: java.awt.Component add(java.awt.Component)>"->"pop";
+    "pop"->"new javax.swing.JPanel";
+    "new javax.swing.JPanel"->"store.r r1";
+    "store.r r1"->"load.r r1";
+    "load.r r1"->"specialinvoke <javax.swing.JPanel: void <init>()>";
+    "specialinvoke <javax.swing.JPanel: void <init>()>"->"load.r r1";
+    "new javax.swing.BoxLayout"
+    "load.r r1"->"new javax.swing.BoxLayout";
+    "new javax.swing.BoxLayout"->"dup1.r";
+    "dup1.r"->"load.r r1";
+    "load.r r1"->"push 1";
+    "specialinvoke <javax.swing.BoxLayout: void <init>(java.awt.Container,int)>"
+    "push 1"->"specialinvoke <javax.swing.BoxLayout: void <init>(java.awt.Container,int)>";
+    "specialinvoke <javax.swing.BoxLayout: void <init>(java.awt.Container,int)>"->"virtualinvoke <javax.swing.JPanel: void setLayout(java.awt.LayoutManager)>";
+    "virtualinvoke <javax.swing.JPanel: void setLayout(java.awt.LayoutManager)>"->"load.r r1";
+    "load.r r1"->"load.r r0";
+    "fieldget <imgViewer: NavigateDate navDate>"
+    "load.r r0"->"fieldget <imgViewer: NavigateDate navDate>";
+    "fieldget <imgViewer: NavigateDate navDate>"->"virtualinvoke <javax.swing.JPanel: java.awt.Component add(java.awt.Component)>";
+    "virtualinvoke <javax.swing.JPanel: java.awt.Component add(java.awt.Component)>"->"pop";
+    "pop"->"load.r r1";
+    "load.r r1"->"push 3";
+    "staticinvoke <javax.swing.Box: java.awt.Component createVerticalStrut(int)>"
+    "push 3"->"staticinvoke <javax.swing.Box: java.awt.Component createVerticalStrut(int)>";
+    "staticinvoke <javax.swing.Box: java.awt.Component createVerticalStrut(int)>"->"virtualinvoke <javax.swing.JPanel: java.awt.Component add(java.awt.Component)>";
+    "virtualinvoke <javax.swing.JPanel: java.awt.Component add(java.awt.Component)>"->"pop";
+    "pop"->"load.r r1";
+    "load.r r1"->"load.r $r99";
+    "load.r $r99"->"virtualinvoke <javax.swing.JPanel: java.awt.Component add(java.awt.Component)>";
+    "virtualinvoke <javax.swing.JPanel: java.awt.Component add(java.awt.Component)>"->"pop";
+    "pop"->"load.r r0";
+    "load.r r0"->"new javax.swing.JPanel";
+    "new javax.swing.JPanel"->"dup1.r";
+    "dup1.r"->"specialinvoke <javax.swing.JPanel: void <init>()>";
+    "fieldput <imgViewer: javax.swing.JPanel datePanel>"
+    "specialinvoke <javax.swing.JPanel: void <init>()>"->"fieldput <imgViewer: javax.swing.JPanel datePanel>";
+    "fieldput <imgViewer: javax.swing.JPanel datePanel>"->"load.r r0";
+    "new java.awt.CardLayout"
+    "load.r r0"->"new java.awt.CardLayout";
+    "new java.awt.CardLayout"->"dup1.r";
+    "specialinvoke <java.awt.CardLayout: void <init>()>"
+    "dup1.r"->"specialinvoke <java.awt.CardLayout: void <init>()>";
+    "fieldput <imgViewer: java.awt.CardLayout dateLayout>"
+    "specialinvoke <java.awt.CardLayout: void <init>()>"->"fieldput <imgViewer: java.awt.CardLayout dateLayout>";
+    "fieldput <imgViewer: java.awt.CardLayout dateLayout>"->"load.r r0";
+    "fieldget <imgViewer: javax.swing.JPanel datePanel>"
+    "load.r r0"->"fieldget <imgViewer: javax.swing.JPanel datePanel>";
+    "fieldget <imgViewer: javax.swing.JPanel datePanel>"->"load.r r0";
+    "fieldget <imgViewer: java.awt.CardLayout dateLayout>"
+    "load.r r0"->"fieldget <imgViewer: java.awt.CardLayout dateLayout>";
+    "fieldget <imgViewer: java.awt.CardLayout dateLayout>"->"virtualinvoke <javax.swing.JPanel: void setLayout(java.awt.LayoutManager)>";
+    "virtualinvoke <javax.swing.JPanel: void setLayout(java.awt.LayoutManager)>"->"load.r r0";
+    "load.r r0"->"fieldget <imgViewer: javax.swing.JPanel datePanel>";
+    "push \"visible\""
+    "fieldget <imgViewer: javax.swing.JPanel datePanel>"->"push \"visible\"";
+    "push \"visible\""->"load.r r1";
+    "virtualinvoke <javax.swing.JPanel: java.awt.Component add(java.lang.String,java.awt.Component)>"
+    "load.r r1"->"virtualinvoke <javax.swing.JPanel: java.awt.Component add(java.lang.String,java.awt.Component)>";
+    "virtualinvoke <javax.swing.JPanel: java.awt.Component add(java.lang.String,java.awt.Component)>"->"pop";
+    "pop"->"load.r r0";
+    "load.r r0"->"fieldget <imgViewer: javax.swing.JPanel datePanel>";
+    "push \"notVisible\""
+    "fieldget <imgViewer: javax.swing.JPanel datePanel>"->"push \"notVisible\"";
+    "push \"notVisible\""->"new javax.swing.JPanel";
+    "new javax.swing.JPanel"->"dup1.r";
+    "dup1.r"->"specialinvoke <javax.swing.JPanel: void <init>()>";
+    "specialinvoke <javax.swing.JPanel: void <init>()>"->"virtualinvoke <javax.swing.JPanel: java.awt.Component add(java.lang.String,java.awt.Component)>";
+    "virtualinvoke <javax.swing.JPanel: java.awt.Component add(java.lang.String,java.awt.Component)>"->"pop";
+    "pop"->"load.r r0";
+    "load.r r0"->"fieldget <imgViewer: javax.swing.JPanel datePanel>";
+    "virtualinvoke <javax.swing.JPanel: java.awt.Dimension getPreferredSize()>"
+    "fieldget <imgViewer: javax.swing.JPanel datePanel>"->"virtualinvoke <javax.swing.JPanel: java.awt.Dimension getPreferredSize()>";
+    "virtualinvoke <javax.swing.JPanel: java.awt.Dimension getPreferredSize()>"->"store.r $r99";
+    "store.r $r99"->"load.r $r99";
+    "load.r $r99"->"push 100";
+    "fieldput <java.awt.Dimension: int width>"
+    "push 100"->"fieldput <java.awt.Dimension: int width>";
+    "fieldput <java.awt.Dimension: int width>"->"load.r r0";
+    "load.r r0"->"fieldget <imgViewer: javax.swing.JPanel datePanel>";
+    "fieldget <imgViewer: javax.swing.JPanel datePanel>"->"load.r $r99";
+    "virtualinvoke <javax.swing.JPanel: void setMinimumSize(java.awt.Dimension)>"
+    "load.r $r99"->"virtualinvoke <javax.swing.JPanel: void setMinimumSize(java.awt.Dimension)>";
+    "virtualinvoke <javax.swing.JPanel: void setMinimumSize(java.awt.Dimension)>"->"load.r $r99";
+    "load.r $r99"->"push 240";
+    "push 240"->"fieldput <java.awt.Dimension: int width>";
+    "fieldput <java.awt.Dimension: int width>"->"load.r r0";
+    "load.r r0"->"fieldget <imgViewer: javax.swing.JPanel datePanel>";
+    "fieldget <imgViewer: javax.swing.JPanel datePanel>"->"load.r $r99";
+    "virtualinvoke <javax.swing.JPanel: void setMaximumSize(java.awt.Dimension)>"
+    "load.r $r99"->"virtualinvoke <javax.swing.JPanel: void setMaximumSize(java.awt.Dimension)>";
+    "virtualinvoke <javax.swing.JPanel: void setMaximumSize(java.awt.Dimension)>"->"load.r r0";
+    "new SceneListPanel"
+    "load.r r0"->"new SceneListPanel";
+    "new SceneListPanel"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "specialinvoke <SceneListPanel: void <init>(imgViewer)>"
+    "load.r r0"->"specialinvoke <SceneListPanel: void <init>(imgViewer)>";
+    "fieldput <imgViewer: SceneListPanel sceneListPanel>"
+    "specialinvoke <SceneListPanel: void <init>(imgViewer)>"->"fieldput <imgViewer: SceneListPanel sceneListPanel>";
+    "new javax.swing.JMenuBar"
+    "fieldput <imgViewer: SceneListPanel sceneListPanel>"->"new javax.swing.JMenuBar";
+    "new javax.swing.JMenuBar"->"store.r $r99";
+    "store.r $r99"->"load.r $r99";
+    "specialinvoke <javax.swing.JMenuBar: void <init>()>"
+    "load.r $r99"->"specialinvoke <javax.swing.JMenuBar: void <init>()>";
+    "specialinvoke <javax.swing.JMenuBar: void <init>()>"->"load.r r0";
+    "load.r r0"->"fieldget <imgViewer: boolean popOut>";
+    "fieldget <imgViewer: boolean popOut>"->"ifeq load.r r0";
+    "ifeq load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <imgViewer: javax.swing.JFrame mainWindow>";
+    "fieldget <imgViewer: javax.swing.JFrame mainWindow>"->"load.r $r99";
+    "virtualinvoke <javax.swing.JFrame: void setJMenuBar(javax.swing.JMenuBar)>"
+    "load.r $r99"->"virtualinvoke <javax.swing.JFrame: void setJMenuBar(javax.swing.JMenuBar)>";
+    "virtualinvoke <javax.swing.JFrame: void setJMenuBar(javax.swing.JMenuBar)>"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "fieldget <imgViewer: SensorMenu sensorMenu>"
+    "load.r r0"->"fieldget <imgViewer: SensorMenu sensorMenu>";
+    "push \"Collection menu\""
+    "fieldget <imgViewer: SensorMenu sensorMenu>"->"push \"Collection menu\"";
+    "virtualinvoke <SensorMenu: void setToolTipText(java.lang.String)>"
+    "push \"Collection menu\""->"virtualinvoke <SensorMenu: void setToolTipText(java.lang.String)>";
+    "virtualinvoke <SensorMenu: void setToolTipText(java.lang.String)>"->"load.r $r99";
+    "load.r $r99"->"load.r r0";
+    "load.r r0"->"fieldget <imgViewer: SensorMenu sensorMenu>";
+    "virtualinvoke <javax.swing.JMenuBar: javax.swing.JMenu add(javax.swing.JMenu)>"
+    "fieldget <imgViewer: SensorMenu sensorMenu>"->"virtualinvoke <javax.swing.JMenuBar: javax.swing.JMenu add(javax.swing.JMenu)>";
+    "virtualinvoke <javax.swing.JMenuBar: javax.swing.JMenu add(javax.swing.JMenu)>"->"pop";
+    "pop"->"load.r r0";
+    "new ResolutionMenu"
+    "load.r r0"->"new ResolutionMenu";
+    "new ResolutionMenu"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <imgViewer: MosaicData md>";
+    "specialinvoke <ResolutionMenu: void <init>(imgViewer,MosaicData)>"
+    "fieldget <imgViewer: MosaicData md>"->"specialinvoke <ResolutionMenu: void <init>(imgViewer,MosaicData)>";
+    "fieldput <imgViewer: ResolutionMenu resolutionMenu>"
+    "specialinvoke <ResolutionMenu: void <init>(imgViewer,MosaicData)>"->"fieldput <imgViewer: ResolutionMenu resolutionMenu>";
+    "fieldput <imgViewer: ResolutionMenu resolutionMenu>"->"load.r r0";
+    "fieldget <imgViewer: ResolutionMenu resolutionMenu>"
+    "load.r r0"->"fieldget <imgViewer: ResolutionMenu resolutionMenu>";
+    "push \"Resolution menu\""
+    "fieldget <imgViewer: ResolutionMenu resolutionMenu>"->"push \"Resolution menu\"";
+    "virtualinvoke <ResolutionMenu: void setToolTipText(java.lang.String)>"
+    "push \"Resolution menu\""->"virtualinvoke <ResolutionMenu: void setToolTipText(java.lang.String)>";
+    "virtualinvoke <ResolutionMenu: void setToolTipText(java.lang.String)>"->"load.r $r99";
+    "load.r $r99"->"load.r r0";
+    "load.r r0"->"fieldget <imgViewer: ResolutionMenu resolutionMenu>";
+    "fieldget <imgViewer: ResolutionMenu resolutionMenu>"->"virtualinvoke <javax.swing.JMenuBar: javax.swing.JMenu add(javax.swing.JMenu)>";
+    "virtualinvoke <javax.swing.JMenuBar: javax.swing.JMenu add(javax.swing.JMenu)>"->"pop";
+    "pop"->"load.r r0";
+    "new MapLayerMenu"
+    "load.r r0"->"new MapLayerMenu";
+    "new MapLayerMenu"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "load.r r0"->"fieldget <imgViewer: ImagePane imgArea>";
+    "fieldget <ImagePane: MapLayers mapLayers>"
+    "fieldget <imgViewer: ImagePane imgArea>"->"fieldget <ImagePane: MapLayers mapLayers>";
+    "fieldget <ImagePane: MapLayers mapLayers>"->"load.r r0";
+    "specialinvoke <MapLayerMenu: void <init>(MapLayers,imgViewer)>"
+    "load.r r0"->"specialinvoke <MapLayerMenu: void <init>(MapLayers,imgViewer)>";
+    "fieldput <imgViewer: MapLayerMenu mapLayerMenu>"
+    "specialinvoke <MapLayerMenu: void <init>(MapLayers,imgViewer)>"->"fieldput <imgViewer: MapLayerMenu mapLayerMenu>";
+    "fieldput <imgViewer: MapLayerMenu mapLayerMenu>"->"load.r r0";
+    "fieldget <imgViewer: MapLayerMenu mapLayerMenu>"
+    "load.r r0"->"fieldget <imgViewer: MapLayerMenu mapLayerMenu>";
+    "push \"Map Layer menu\""
+    "fieldget <imgViewer: MapLayerMenu mapLayerMenu>"->"push \"Map Layer menu\"";
+    "virtualinvoke <MapLayerMenu: void setToolTipText(java.lang.String)>"
+    "push \"Map Layer menu\""->"virtualinvoke <MapLayerMenu: void setToolTipText(java.lang.String)>";
+    "virtualinvoke <MapLayerMenu: void setToolTipText(java.lang.String)>"->"load.r $r99";
+    "load.r $r99"->"load.r r0";
+    "load.r r0"->"fieldget <imgViewer: MapLayerMenu mapLayerMenu>";
+    "fieldget <imgViewer: MapLayerMenu mapLayerMenu>"->"virtualinvoke <javax.swing.JMenuBar: javax.swing.JMenu add(javax.swing.JMenu)>";
+    "virtualinvoke <javax.swing.JMenuBar: javax.swing.JMenu add(javax.swing.JMenu)>"->"pop";
+    "pop"->"load.r r0";
+    "new ToolsMenu"
+    "load.r r0"->"new ToolsMenu";
+    "new ToolsMenu"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "specialinvoke <ToolsMenu: void <init>(imgViewer)>"
+    "load.r r0"->"specialinvoke <ToolsMenu: void <init>(imgViewer)>";
+    "fieldput <imgViewer: ToolsMenu toolsMenu>"
+    "specialinvoke <ToolsMenu: void <init>(imgViewer)>"->"fieldput <imgViewer: ToolsMenu toolsMenu>";
+    "fieldput <imgViewer: ToolsMenu toolsMenu>"->"load.r r0";
+    "fieldget <imgViewer: ToolsMenu toolsMenu>"
+    "load.r r0"->"fieldget <imgViewer: ToolsMenu toolsMenu>";
+    "push \"Tools menu\""
+    "fieldget <imgViewer: ToolsMenu toolsMenu>"->"push \"Tools menu\"";
+    "virtualinvoke <ToolsMenu: void setToolTipText(java.lang.String)>"
+    "push \"Tools menu\""->"virtualinvoke <ToolsMenu: void setToolTipText(java.lang.String)>";
+    "virtualinvoke <ToolsMenu: void setToolTipText(java.lang.String)>"->"load.r $r99";
+    "load.r $r99"->"load.r r0";
+    "load.r r0"->"fieldget <imgViewer: ToolsMenu toolsMenu>";
+    "fieldget <imgViewer: ToolsMenu toolsMenu>"->"virtualinvoke <javax.swing.JMenuBar: javax.swing.JMenu add(javax.swing.JMenu)>";
+    "virtualinvoke <javax.swing.JMenuBar: javax.swing.JMenu add(javax.swing.JMenu)>"->"pop";
+    "pop"->"load.r r0";
+    "fieldget <imgViewer: boolean grantedPrivileges>"
+    "load.r r0"->"fieldget <imgViewer: boolean grantedPrivileges>";
+    "fieldget <imgViewer: boolean grantedPrivileges>"->"ifeq load.r r0";
+    "ifeq load.r r0"->"load.r r0";
+    "new FileMenu"
+    "load.r r0"->"new FileMenu";
+    "new FileMenu"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "specialinvoke <FileMenu: void <init>(imgViewer)>"
+    "load.r r0"->"specialinvoke <FileMenu: void <init>(imgViewer)>";
+    "fieldput <imgViewer: FileMenu fileMenu>"
+    "specialinvoke <FileMenu: void <init>(imgViewer)>"->"fieldput <imgViewer: FileMenu fileMenu>";
+    "fieldput <imgViewer: FileMenu fileMenu>"->"load.r r0";
+    "fieldget <imgViewer: FileMenu fileMenu>"
+    "load.r r0"->"fieldget <imgViewer: FileMenu fileMenu>";
+    "push \"File menu\""
+    "fieldget <imgViewer: FileMenu fileMenu>"->"push \"File menu\"";
+    "virtualinvoke <FileMenu: void setToolTipText(java.lang.String)>"
+    "push \"File menu\""->"virtualinvoke <FileMenu: void setToolTipText(java.lang.String)>";
+    "virtualinvoke <FileMenu: void setToolTipText(java.lang.String)>"->"load.r $r99";
+    "load.r $r99"->"load.r r0";
+    "load.r r0"->"fieldget <imgViewer: FileMenu fileMenu>";
+    "fieldget <imgViewer: FileMenu fileMenu>"->"virtualinvoke <javax.swing.JMenuBar: javax.swing.JMenu add(javax.swing.JMenu)>";
+    "virtualinvoke <javax.swing.JMenuBar: javax.swing.JMenu add(javax.swing.JMenu)>"->"pop";
+    "pop"->"load.r r0";
+    "new HelpMenu"
+    "load.r r0"->"new HelpMenu";
+    "new HelpMenu"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "push \"Help\""
+    "load.r r0"->"push \"Help\"";
+    "specialinvoke <HelpMenu: void <init>(imgViewer,java.lang.String)>"
+    "push \"Help\""->"specialinvoke <HelpMenu: void <init>(imgViewer,java.lang.String)>";
+    "fieldput <imgViewer: HelpMenu helpMenu>"
+    "specialinvoke <HelpMenu: void <init>(imgViewer,java.lang.String)>"->"fieldput <imgViewer: HelpMenu helpMenu>";
+    "fieldput <imgViewer: HelpMenu helpMenu>"->"load.r r0";
+    "fieldget <imgViewer: HelpMenu helpMenu>"
+    "load.r r0"->"fieldget <imgViewer: HelpMenu helpMenu>";
+    "push \"Help menu\""
+    "fieldget <imgViewer: HelpMenu helpMenu>"->"push \"Help menu\"";
+    "virtualinvoke <HelpMenu: void setToolTipText(java.lang.String)>"
+    "push \"Help menu\""->"virtualinvoke <HelpMenu: void setToolTipText(java.lang.String)>";
+    "virtualinvoke <HelpMenu: void setToolTipText(java.lang.String)>"->"load.r $r99";
+    "load.r $r99"->"load.r r0";
+    "load.r r0"->"fieldget <imgViewer: HelpMenu helpMenu>";
+    "fieldget <imgViewer: HelpMenu helpMenu>"->"virtualinvoke <javax.swing.JMenuBar: javax.swing.JMenu add(javax.swing.JMenu)>";
+    "virtualinvoke <javax.swing.JMenuBar: javax.swing.JMenu add(javax.swing.JMenu)>"->"pop";
+    "pop"->"load.r r0";
+    "load.r r0"->"fieldget <imgViewer: MosaicData md>";
+    "fieldget <imgViewer: MosaicData md>"->"load.r r0";
+    "fieldget <imgViewer: SceneInfo sceneInfo>"
+    "load.r r0"->"fieldget <imgViewer: SceneInfo sceneInfo>";
+    "virtualinvoke <MosaicData: void addObserver(java.util.Observer)>"
+    "fieldget <imgViewer: SceneInfo sceneInfo>"->"virtualinvoke <MosaicData: void addObserver(java.util.Observer)>";
+    "virtualinvoke <MosaicData: void addObserver(java.util.Observer)>"->"load.r r0";
+    "load.r r0"->"fieldget <imgViewer: FileMenu fileMenu>";
+    "ifnull load.r r0"
+    "fieldget <imgViewer: FileMenu fileMenu>"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <imgViewer: MosaicData md>";
+    "fieldget <imgViewer: MosaicData md>"->"load.r r0";
+    "load.r r0"->"fieldget <imgViewer: FileMenu fileMenu>";
+    "fieldget <imgViewer: FileMenu fileMenu>"->"virtualinvoke <MosaicData: void addObserver(java.util.Observer)>";
+    "virtualinvoke <MosaicData: void addObserver(java.util.Observer)>"->"load.r r0";
+    "load.r r0"->"fieldget <imgViewer: MosaicData md>";
+    "fieldget <imgViewer: MosaicData md>"->"load.r r0";
+    "load.r r0"->"fieldget <imgViewer: NavigateDate navDate>";
+    "fieldget <imgViewer: NavigateDate navDate>"->"virtualinvoke <MosaicData: void addObserver(java.util.Observer)>";
+    "virtualinvoke <MosaicData: void addObserver(java.util.Observer)>"->"load.r r0";
+    "load.r r0"->"fieldget <imgViewer: MosaicData md>";
+    "fieldget <imgViewer: MosaicData md>"->"load.r r0";
+    "load.r r0"->"virtualinvoke <MosaicData: void addObserver(java.util.Observer)>";
+    "virtualinvoke <MosaicData: void addObserver(java.util.Observer)>"->"load.r r0";
+    "load.r r0"->"fieldget <imgViewer: MosaicData md>";
+    "fieldget <imgViewer: MosaicData md>"->"load.r r0";
+    "fieldget <imgViewer: GridCellEntry gridCellEntry>"
+    "load.r r0"->"fieldget <imgViewer: GridCellEntry gridCellEntry>";
+    "fieldget <imgViewer: GridCellEntry gridCellEntry>"->"virtualinvoke <MosaicData: void addObserver(java.util.Observer)>";
+    "virtualinvoke <MosaicData: void addObserver(java.util.Observer)>"->"load.r r0";
+    "load.r r0"->"fieldget <imgViewer: MosaicData md>";
+    "fieldget <imgViewer: MosaicData md>"->"load.r r0";
+    "fieldget <imgViewer: LatLongEntry latLongEntry>"
+    "load.r r0"->"fieldget <imgViewer: LatLongEntry latLongEntry>";
+    "fieldget <imgViewer: LatLongEntry latLongEntry>"->"virtualinvoke <MosaicData: void addObserver(java.util.Observer)>";
+    "virtualinvoke <MosaicData: void addObserver(java.util.Observer)>"->"load.r r0";
+    "load.r r0"->"fieldget <imgViewer: MosaicData md>";
+    "fieldget <imgViewer: MosaicData md>"->"load.r r0";
+    "load.r r0"->"fieldget <imgViewer: LocatorMap locatorMap>";
+    "fieldget <imgViewer: LocatorMap locatorMap>"->"virtualinvoke <MosaicData: void addObserver(java.util.Observer)>";
+    "virtualinvoke <MosaicData: void addObserver(java.util.Observer)>"->"load.r r0";
+    "load.r r0"->"fieldget <imgViewer: MosaicData md>";
+    "fieldget <imgViewer: MosaicData md>"->"load.r r0";
+    "load.r r0"->"fieldget <imgViewer: ImagePane imgArea>";
+    "fieldget <imgViewer: ImagePane imgArea>"->"virtualinvoke <MosaicData: void addObserver(java.util.Observer)>";
+    "virtualinvoke <MosaicData: void addObserver(java.util.Observer)>"->"load.r r0";
+    "load.r r0"->"fieldget <imgViewer: MosaicData md>";
+    "fieldget <imgViewer: MosaicData md>"->"load.r r0";
+    "fieldget <imgViewer: SceneListPanel sceneListPanel>"
+    "load.r r0"->"fieldget <imgViewer: SceneListPanel sceneListPanel>";
+    "fieldget <imgViewer: SceneListPanel sceneListPanel>"->"virtualinvoke <MosaicData: void addObserver(java.util.Observer)>";
+    "virtualinvoke <MosaicData: void addObserver(java.util.Observer)>"->"new javax.swing.JPanel";
+    "new javax.swing.JPanel"->"store.r $r99";
+    "store.r $r99"->"load.r $r99";
+    "load.r $r99"->"specialinvoke <javax.swing.JPanel: void <init>()>";
+    "specialinvoke <javax.swing.JPanel: void <init>()>"->"load.r $r99";
+    "load.r $r99"->"new javax.swing.BoxLayout";
+    "new javax.swing.BoxLayout"->"dup1.r";
+    "dup1.r"->"load.r $r99";
+    "load.r $r99"->"push 1";
+    "push 1"->"specialinvoke <javax.swing.BoxLayout: void <init>(java.awt.Container,int)>";
+    "specialinvoke <javax.swing.BoxLayout: void <init>(java.awt.Container,int)>"->"virtualinvoke <javax.swing.JPanel: void setLayout(java.awt.LayoutManager)>";
+    "virtualinvoke <javax.swing.JPanel: void setLayout(java.awt.LayoutManager)>"->"load.r $r99";
+    "load.r $r99"->"load.r r0";
+    "load.r r0"->"fieldget <imgViewer: javax.swing.JScrollPane locatorMapScroll>";
+    "fieldget <imgViewer: javax.swing.JScrollPane locatorMapScroll>"->"virtualinvoke <javax.swing.JPanel: java.awt.Component add(java.awt.Component)>";
+    "virtualinvoke <javax.swing.JPanel: java.awt.Component add(java.awt.Component)>"->"pop";
+    "pop"->"load.r $r99";
+    "load.r $r99"->"load.r r0";
+    "load.r r0"->"fieldget <imgViewer: GridCellEntry gridCellEntry>";
+    "fieldget <imgViewer: GridCellEntry gridCellEntry>"->"virtualinvoke <javax.swing.JPanel: java.awt.Component add(java.awt.Component)>";
+    "virtualinvoke <javax.swing.JPanel: java.awt.Component add(java.awt.Component)>"->"pop";
+    "pop"->"load.r $r99";
+    "load.r $r99"->"load.r r0";
+    "load.r r0"->"fieldget <imgViewer: LatLongEntry latLongEntry>";
+    "fieldget <imgViewer: LatLongEntry latLongEntry>"->"virtualinvoke <javax.swing.JPanel: java.awt.Component add(java.awt.Component)>";
+    "virtualinvoke <javax.swing.JPanel: java.awt.Component add(java.awt.Component)>"->"pop";
+    "pop"->"load.r r0";
+    "load.r r0"->"new javax.swing.JPanel";
+    "new javax.swing.JPanel"->"dup1.r";
+    "dup1.r"->"specialinvoke <javax.swing.JPanel: void <init>()>";
+    "fieldput <imgViewer: javax.swing.JPanel ccPanel>"
+    "specialinvoke <javax.swing.JPanel: void <init>()>"->"fieldput <imgViewer: javax.swing.JPanel ccPanel>";
+    "fieldput <imgViewer: javax.swing.JPanel ccPanel>"->"load.r r0";
+    "load.r r0"->"new java.awt.CardLayout";
+    "new java.awt.CardLayout"->"dup1.r";
+    "dup1.r"->"specialinvoke <java.awt.CardLayout: void <init>()>";
+    "fieldput <imgViewer: java.awt.CardLayout ccLayout>"
+    "specialinvoke <java.awt.CardLayout: void <init>()>"->"fieldput <imgViewer: java.awt.CardLayout ccLayout>";
+    "fieldput <imgViewer: java.awt.CardLayout ccLayout>"->"load.r r0";
+    "fieldget <imgViewer: javax.swing.JPanel ccPanel>"
+    "load.r r0"->"fieldget <imgViewer: javax.swing.JPanel ccPanel>";
+    "fieldget <imgViewer: javax.swing.JPanel ccPanel>"->"load.r r0";
+    "fieldget <imgViewer: java.awt.CardLayout ccLayout>"
+    "load.r r0"->"fieldget <imgViewer: java.awt.CardLayout ccLayout>";
+    "fieldget <imgViewer: java.awt.CardLayout ccLayout>"->"virtualinvoke <javax.swing.JPanel: void setLayout(java.awt.LayoutManager)>";
+    "virtualinvoke <javax.swing.JPanel: void setLayout(java.awt.LayoutManager)>"->"load.r r0";
+    "load.r r0"->"fieldget <imgViewer: javax.swing.JPanel ccPanel>";
+    "fieldget <imgViewer: javax.swing.JPanel ccPanel>"->"push \"visible\"";
+    "push \"visible\""->"load.r r0";
+    "fieldget <imgViewer: CloudCoverLimit maxCC>"
+    "load.r r0"->"fieldget <imgViewer: CloudCoverLimit maxCC>";
+    "fieldget <imgViewer: CloudCoverLimit maxCC>"->"virtualinvoke <javax.swing.JPanel: java.awt.Component add(java.lang.String,java.awt.Component)>";
+    "virtualinvoke <javax.swing.JPanel: java.awt.Component add(java.lang.String,java.awt.Component)>"->"pop";
+    "pop"->"load.r r0";
+    "load.r r0"->"fieldget <imgViewer: javax.swing.JPanel ccPanel>";
+    "fieldget <imgViewer: javax.swing.JPanel ccPanel>"->"push \"notVisible\"";
+    "push \"notVisible\""->"new javax.swing.JPanel";
+    "new javax.swing.JPanel"->"dup1.r";
+    "dup1.r"->"specialinvoke <javax.swing.JPanel: void <init>()>";
+    "specialinvoke <javax.swing.JPanel: void <init>()>"->"virtualinvoke <javax.swing.JPanel: java.awt.Component add(java.lang.String,java.awt.Component)>";
+    "virtualinvoke <javax.swing.JPanel: java.awt.Component add(java.lang.String,java.awt.Component)>"->"pop";
+    "pop"->"new javax.swing.JPanel";
+    "new javax.swing.JPanel"->"store.r $r190";
+    "store.r $r190"->"load.r $r190";
+    "load.r $r190"->"specialinvoke <javax.swing.JPanel: void <init>()>";
+    "specialinvoke <javax.swing.JPanel: void <init>()>"->"load.r $r190";
+    "load.r $r190"->"new javax.swing.BoxLayout";
+    "new javax.swing.BoxLayout"->"dup1.r";
+    "dup1.r"->"load.r $r190";
+    "load.r $r190"->"push 0";
+    "push 0"->"specialinvoke <javax.swing.BoxLayout: void <init>(java.awt.Container,int)>";
+    "specialinvoke <javax.swing.BoxLayout: void <init>(java.awt.Container,int)>"->"virtualinvoke <javax.swing.JPanel: void setLayout(java.awt.LayoutManager)>";
+    "virtualinvoke <javax.swing.JPanel: void setLayout(java.awt.LayoutManager)>"->"load.r $r190";
+    "load.r $r190"->"load.r r0";
+    "load.r r0"->"fieldget <imgViewer: javax.swing.JPanel ccPanel>";
+    "fieldget <imgViewer: javax.swing.JPanel ccPanel>"->"virtualinvoke <javax.swing.JPanel: java.awt.Component add(java.awt.Component)>";
+    "virtualinvoke <javax.swing.JPanel: java.awt.Component add(java.awt.Component)>"->"pop";
+    "pop"->"load.r $r190";
+    "load.r $r190"->"load.r r0";
+    "fieldget <imgViewer: ArrowPane controls>"
+    "load.r r0"->"fieldget <imgViewer: ArrowPane controls>";
+    "fieldget <imgViewer: ArrowPane controls>"->"virtualinvoke <javax.swing.JPanel: java.awt.Component add(java.awt.Component)>";
+    "virtualinvoke <javax.swing.JPanel: java.awt.Component add(java.awt.Component)>"->"pop";
+    "pop"->"load.r $r190";
+    "push 5"
+    "load.r $r190"->"push 5";
+    "staticinvoke <javax.swing.Box: java.awt.Component createHorizontalStrut(int)>"
+    "push 5"->"staticinvoke <javax.swing.Box: java.awt.Component createHorizontalStrut(int)>";
+    "staticinvoke <javax.swing.Box: java.awt.Component createHorizontalStrut(int)>"->"virtualinvoke <javax.swing.JPanel: java.awt.Component add(java.awt.Component)>";
+    "virtualinvoke <javax.swing.JPanel: java.awt.Component add(java.awt.Component)>"->"pop";
+    "pop"->"load.r $r190";
+    "load.r $r190"->"virtualinvoke <javax.swing.JPanel: java.awt.Dimension getPreferredSize()>";
+    "virtualinvoke <javax.swing.JPanel: java.awt.Dimension getPreferredSize()>"->"store.r r1";
+    "store.r r1"->"load.r r1";
+    "load.r r1"->"push 100";
+    "push 100"->"fieldput <java.awt.Dimension: int width>";
+    "fieldput <java.awt.Dimension: int width>"->"load.r $r190";
+    "load.r $r190"->"load.r r1";
+    "load.r r1"->"virtualinvoke <javax.swing.JPanel: void setMinimumSize(java.awt.Dimension)>";
+    "virtualinvoke <javax.swing.JPanel: void setMinimumSize(java.awt.Dimension)>"->"load.r r1";
+    "load.r r1"->"push 240";
+    "push 240"->"fieldput <java.awt.Dimension: int width>";
+    "fieldput <java.awt.Dimension: int width>"->"load.r $r190";
+    "load.r $r190"->"load.r r1";
+    "load.r r1"->"virtualinvoke <javax.swing.JPanel: void setMaximumSize(java.awt.Dimension)>";
+    "virtualinvoke <javax.swing.JPanel: void setMaximumSize(java.awt.Dimension)>"->"load.r $r99";
+    "load.r $r99"->"push 3";
+    "push 3"->"staticinvoke <javax.swing.Box: java.awt.Component createVerticalStrut(int)>";
+    "staticinvoke <javax.swing.Box: java.awt.Component createVerticalStrut(int)>"->"virtualinvoke <javax.swing.JPanel: java.awt.Component add(java.awt.Component)>";
+    "virtualinvoke <javax.swing.JPanel: java.awt.Component add(java.awt.Component)>"->"pop";
+    "pop"->"load.r $r99";
+    "load.r $r99"->"load.r $r190";
+    "load.r $r190"->"virtualinvoke <javax.swing.JPanel: java.awt.Component add(java.awt.Component)>";
+    "virtualinvoke <javax.swing.JPanel: java.awt.Component add(java.awt.Component)>"->"pop";
+    "pop"->"load.r $r99";
+    "load.r $r99"->"push 3";
+    "push 3"->"staticinvoke <javax.swing.Box: java.awt.Component createVerticalStrut(int)>";
+    "staticinvoke <javax.swing.Box: java.awt.Component createVerticalStrut(int)>"->"virtualinvoke <javax.swing.JPanel: java.awt.Component add(java.awt.Component)>";
+    "virtualinvoke <javax.swing.JPanel: java.awt.Component add(java.awt.Component)>"->"pop";
+    "pop"->"load.r $r99";
+    "load.r $r99"->"load.r r0";
+    "load.r r0"->"fieldget <imgViewer: SceneInfo sceneInfo>";
+    "fieldget <imgViewer: SceneInfo sceneInfo>"->"virtualinvoke <javax.swing.JPanel: java.awt.Component add(java.awt.Component)>";
+    "virtualinvoke <javax.swing.JPanel: java.awt.Component add(java.awt.Component)>"->"pop";
+    "pop"->"load.r $r99";
+    "load.r $r99"->"push 3";
+    "push 3"->"staticinvoke <javax.swing.Box: java.awt.Component createVerticalStrut(int)>";
+    "staticinvoke <javax.swing.Box: java.awt.Component createVerticalStrut(int)>"->"virtualinvoke <javax.swing.JPanel: java.awt.Component add(java.awt.Component)>";
+    "virtualinvoke <javax.swing.JPanel: java.awt.Component add(java.awt.Component)>"->"pop";
+    "pop"->"load.r $r99";
+    "load.r $r99"->"load.r r0";
+    "load.r r0"->"fieldget <imgViewer: javax.swing.JPanel datePanel>";
+    "fieldget <imgViewer: javax.swing.JPanel datePanel>"->"virtualinvoke <javax.swing.JPanel: java.awt.Component add(java.awt.Component)>";
+    "virtualinvoke <javax.swing.JPanel: java.awt.Component add(java.awt.Component)>"->"pop";
+    "pop"->"load.r $r99";
+    "load.r $r99"->"push 3";
+    "push 3"->"staticinvoke <javax.swing.Box: java.awt.Component createVerticalStrut(int)>";
+    "staticinvoke <javax.swing.Box: java.awt.Component createVerticalStrut(int)>"->"virtualinvoke <javax.swing.JPanel: java.awt.Component add(java.awt.Component)>";
+    "virtualinvoke <javax.swing.JPanel: java.awt.Component add(java.awt.Component)>"->"pop";
+    "pop"->"load.r $r99";
+    "load.r $r99"->"load.r r0";
+    "load.r r0"->"fieldget <imgViewer: SceneListPanel sceneListPanel>";
+    "fieldget <imgViewer: SceneListPanel sceneListPanel>"->"virtualinvoke <javax.swing.JPanel: java.awt.Component add(java.awt.Component)>";
+    "virtualinvoke <javax.swing.JPanel: java.awt.Component add(java.awt.Component)>"->"pop";
+    "pop"->"load.r $r99";
+    "load.r $r99"->"new java.awt.Dimension";
+    "new java.awt.Dimension"->"dup1.r";
+    "dup1.r"->"push 240";
+    "push 240"->"push 650";
+    "push 650"->"specialinvoke <java.awt.Dimension: void <init>(int,int)>";
+    "virtualinvoke <javax.swing.JPanel: void setPreferredSize(java.awt.Dimension)>"
+    "specialinvoke <java.awt.Dimension: void <init>(int,int)>"->"virtualinvoke <javax.swing.JPanel: void setPreferredSize(java.awt.Dimension)>";
+    "virtualinvoke <javax.swing.JPanel: void setPreferredSize(java.awt.Dimension)>"->"load.r $r99";
+    "load.r $r99"->"new java.awt.Dimension";
+    "new java.awt.Dimension"->"dup1.r";
+    "dup1.r"->"push 240";
+    "push 240"->"push 650";
+    "push 650"->"specialinvoke <java.awt.Dimension: void <init>(int,int)>";
+    "specialinvoke <java.awt.Dimension: void <init>(int,int)>"->"virtualinvoke <javax.swing.JPanel: void setMinimumSize(java.awt.Dimension)>";
+    "virtualinvoke <javax.swing.JPanel: void setMinimumSize(java.awt.Dimension)>"->"load.r $r99";
+    "load.r $r99"->"new java.awt.Dimension";
+    "new java.awt.Dimension"->"dup1.r";
+    "dup1.r"->"push 240";
+    "push 2000"
+    "push 240"->"push 2000";
+    "push 2000"->"specialinvoke <java.awt.Dimension: void <init>(int,int)>";
+    "specialinvoke <java.awt.Dimension: void <init>(int,int)>"->"virtualinvoke <javax.swing.JPanel: void setMaximumSize(java.awt.Dimension)>";
+    "virtualinvoke <javax.swing.JPanel: void setMaximumSize(java.awt.Dimension)>"->"load.r $r99";
+    "load.r $r99"->"push 240";
+    "push 240"->"staticinvoke <javax.swing.Box: java.awt.Component createHorizontalStrut(int)>";
+    "staticinvoke <javax.swing.Box: java.awt.Component createHorizontalStrut(int)>"->"virtualinvoke <javax.swing.JPanel: java.awt.Component add(java.awt.Component)>";
+    "virtualinvoke <javax.swing.JPanel: java.awt.Component add(java.awt.Component)>"->"pop";
+    "pop"->"new javax.swing.JPanel";
+    "new javax.swing.JPanel"->"store.r r1";
+    "store.r r1"->"load.r r1";
+    "load.r r1"->"specialinvoke <javax.swing.JPanel: void <init>()>";
+    "specialinvoke <javax.swing.JPanel: void <init>()>"->"load.r r1";
+    "new java.awt.GridBagLayout"
+    "load.r r1"->"new java.awt.GridBagLayout";
+    "new java.awt.GridBagLayout"->"dup1.r";
+    "specialinvoke <java.awt.GridBagLayout: void <init>()>"
+    "dup1.r"->"specialinvoke <java.awt.GridBagLayout: void <init>()>";
+    "specialinvoke <java.awt.GridBagLayout: void <init>()>"->"virtualinvoke <javax.swing.JPanel: void setLayout(java.awt.LayoutManager)>";
+    "new java.awt.GridBagConstraints"
+    "virtualinvoke <javax.swing.JPanel: void setLayout(java.awt.LayoutManager)>"->"new java.awt.GridBagConstraints";
+    "new java.awt.GridBagConstraints"->"store.r $r190";
+    "store.r $r190"->"load.r $r190";
+    "specialinvoke <java.awt.GridBagConstraints: void <init>()>"
+    "load.r $r190"->"specialinvoke <java.awt.GridBagConstraints: void <init>()>";
+    "specialinvoke <java.awt.GridBagConstraints: void <init>()>"->"load.r $r190";
+    "push -1"
+    "load.r $r190"->"push -1";
+    "fieldput <java.awt.GridBagConstraints: int gridwidth>"
+    "push -1"->"fieldput <java.awt.GridBagConstraints: int gridwidth>";
+    "fieldput <java.awt.GridBagConstraints: int gridwidth>"->"load.r $r190";
+    "push 0.0"
+    "load.r $r190"->"push 0.0";
+    "fieldput <java.awt.GridBagConstraints: double weightx>"
+    "push 0.0"->"fieldput <java.awt.GridBagConstraints: double weightx>";
+    "fieldput <java.awt.GridBagConstraints: double weightx>"->"load.r $r190";
+    "push 100.0"
+    "load.r $r190"->"push 100.0";
+    "fieldput <java.awt.GridBagConstraints: double weighty>"
+    "push 100.0"->"fieldput <java.awt.GridBagConstraints: double weighty>";
+    "fieldput <java.awt.GridBagConstraints: double weighty>"->"load.r $r190";
+    "load.r $r190"->"push 1";
+    "fieldput <java.awt.GridBagConstraints: int fill>"
+    "push 1"->"fieldput <java.awt.GridBagConstraints: int fill>";
+    "fieldput <java.awt.GridBagConstraints: int fill>"->"load.r r1";
+    "load.r r1"->"load.r $r99";
+    "load.r $r99"->"load.r $r190";
+    "virtualinvoke <javax.swing.JPanel: void add(java.awt.Component,java.lang.Object)>"
+    "load.r $r190"->"virtualinvoke <javax.swing.JPanel: void add(java.awt.Component,java.lang.Object)>";
+    "virtualinvoke <javax.swing.JPanel: void add(java.awt.Component,java.lang.Object)>"->"load.r $r190";
+    "load.r $r190"->"push 0";
+    "push 0"->"fieldput <java.awt.GridBagConstraints: int gridwidth>";
+    "fieldput <java.awt.GridBagConstraints: int gridwidth>"->"load.r $r190";
+    "load.r $r190"->"push 100.0";
+    "push 100.0"->"fieldput <java.awt.GridBagConstraints: double weightx>";
+    "fieldput <java.awt.GridBagConstraints: double weightx>"->"load.r $r190";
+    "load.r $r190"->"push 100.0";
+    "push 100.0"->"fieldput <java.awt.GridBagConstraints: double weighty>";
+    "fieldput <java.awt.GridBagConstraints: double weighty>"->"load.r $r190";
+    "load.r $r190"->"push 1";
+    "push 1"->"fieldput <java.awt.GridBagConstraints: int fill>";
+    "fieldput <java.awt.GridBagConstraints: int fill>"->"load.r r1";
+    "load.r r1"->"load.r r0";
+    "load.r r0"->"fieldget <imgViewer: javax.swing.JScrollPane imgScroll>";
+    "fieldget <imgViewer: javax.swing.JScrollPane imgScroll>"->"load.r $r190";
+    "load.r $r190"->"virtualinvoke <javax.swing.JPanel: void add(java.awt.Component,java.lang.Object)>";
+    "virtualinvoke <javax.swing.JPanel: void add(java.awt.Component,java.lang.Object)>"->"new javax.swing.JPanel";
+    "new javax.swing.JPanel"->"store.r $r99";
+    "store.r $r99"->"load.r $r99";
+    "load.r $r99"->"specialinvoke <javax.swing.JPanel: void <init>()>";
+    "specialinvoke <javax.swing.JPanel: void <init>()>"->"load.r $r99";
+    "new java.awt.BorderLayout"
+    "load.r $r99"->"new java.awt.BorderLayout";
+    "new java.awt.BorderLayout"->"dup1.r";
+    "specialinvoke <java.awt.BorderLayout: void <init>()>"
+    "dup1.r"->"specialinvoke <java.awt.BorderLayout: void <init>()>";
+    "specialinvoke <java.awt.BorderLayout: void <init>()>"->"virtualinvoke <javax.swing.JPanel: void setLayout(java.awt.LayoutManager)>";
+    "virtualinvoke <javax.swing.JPanel: void setLayout(java.awt.LayoutManager)>"->"load.r $r99";
+    "load.r $r99"->"load.r r1";
+    "push \"Center\""
+    "load.r r1"->"push \"Center\"";
+    "push \"Center\""->"virtualinvoke <javax.swing.JPanel: void add(java.awt.Component,java.lang.Object)>";
+    "virtualinvoke <javax.swing.JPanel: void add(java.awt.Component,java.lang.Object)>"->"load.r $r99";
+    "load.r $r99"->"load.r r0";
+    "load.r r0"->"fieldget <imgViewer: StatusBar statusBar>";
+    "push \"South\""
+    "fieldget <imgViewer: StatusBar statusBar>"->"push \"South\"";
+    "push \"South\""->"virtualinvoke <javax.swing.JPanel: void add(java.awt.Component,java.lang.Object)>";
+    "virtualinvoke <javax.swing.JPanel: void add(java.awt.Component,java.lang.Object)>"->"load.r $r99";
+    "load.r $r99"->"staticget <java.awt.Color: java.awt.Color BLACK>";
+    "staticinvoke <javax.swing.BorderFactory: javax.swing.border.Border createLineBorder(java.awt.Color)>"
+    "staticget <java.awt.Color: java.awt.Color BLACK>"->"staticinvoke <javax.swing.BorderFactory: javax.swing.border.Border createLineBorder(java.awt.Color)>";
+    "virtualinvoke <javax.swing.JPanel: void setBorder(javax.swing.border.Border)>"
+    "staticinvoke <javax.swing.BorderFactory: javax.swing.border.Border createLineBorder(java.awt.Color)>"->"virtualinvoke <javax.swing.JPanel: void setBorder(javax.swing.border.Border)>";
+    "virtualinvoke <javax.swing.JPanel: void setBorder(javax.swing.border.Border)>"->"load.r r0";
+    "load.r r0"->"fieldget <imgViewer: boolean popOut>";
+    "fieldget <imgViewer: boolean popOut>"->"ifeq load.r r0";
+    "ifeq load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <imgViewer: javax.swing.JFrame mainWindow>";
+    "virtualinvoke <javax.swing.JFrame: java.awt.Container getContentPane()>"
+    "fieldget <imgViewer: javax.swing.JFrame mainWindow>"->"virtualinvoke <javax.swing.JFrame: java.awt.Container getContentPane()>";
+    "virtualinvoke <javax.swing.JFrame: java.awt.Container getContentPane()>"->"load.r $r99";
+    "virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>"
+    "load.r $r99"->"virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>";
+    "virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>"->"pop";
+    "pop"->"load.r r0";
+    "load.r r0"->"fieldget <imgViewer: javax.swing.JFrame mainWindow>";
+    "virtualinvoke <javax.swing.JFrame: void validate()>"
+    "fieldget <imgViewer: javax.swing.JFrame mainWindow>"->"virtualinvoke <javax.swing.JFrame: void validate()>";
+    "virtualinvoke <javax.swing.JFrame: void validate()>"->"load.r r0";
+    "load.r r0"->"fieldget <imgViewer: javax.swing.JFrame mainWindow>";
+    "push 800"
+    "fieldget <imgViewer: javax.swing.JFrame mainWindow>"->"push 800";
+    "push 800"->"push 650";
+    "virtualinvoke <javax.swing.JFrame: void setSize(int,int)>"
+    "push 650"->"virtualinvoke <javax.swing.JFrame: void setSize(int,int)>";
+    "virtualinvoke <javax.swing.JFrame: void setSize(int,int)>"->"load.r r0";
+    "load.r r0"->"fieldget <imgViewer: javax.swing.JFrame mainWindow>";
+    "fieldget <imgViewer: javax.swing.JFrame mainWindow>"->"push 1";
+    "virtualinvoke <javax.swing.JFrame: void setVisible(boolean)>"
+    "push 1"->"virtualinvoke <javax.swing.JFrame: void setVisible(boolean)>";
+    "virtualinvoke <javax.swing.JFrame: void setVisible(boolean)>"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "new SearchForSceneDialog"
+    "load.r r0"->"new SearchForSceneDialog";
+    "new SearchForSceneDialog"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "load.r r0"->"virtualinvoke <imgViewer: javax.swing.JFrame getDialogParent()>";
+    "virtualinvoke <imgViewer: javax.swing.JFrame getDialogParent()>"->"load.r r0";
+    "specialinvoke <SearchForSceneDialog: void <init>(javax.swing.JFrame,imgViewer)>"
+    "load.r r0"->"specialinvoke <SearchForSceneDialog: void <init>(javax.swing.JFrame,imgViewer)>";
+    "fieldput <imgViewer: SearchForSceneDialog searchForSceneDialog>"
+    "specialinvoke <SearchForSceneDialog: void <init>(javax.swing.JFrame,imgViewer)>"->"fieldput <imgViewer: SearchForSceneDialog searchForSceneDialog>";
+    "fieldput <imgViewer: SearchForSceneDialog searchForSceneDialog>"->"load.r r0";
+    "new SearchLimitDialog"
+    "load.r r0"->"new SearchLimitDialog";
+    "new SearchLimitDialog"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "load.r r0"->"virtualinvoke <imgViewer: javax.swing.JFrame getDialogParent()>";
+    "virtualinvoke <imgViewer: javax.swing.JFrame getDialogParent()>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <imgViewer: MosaicData md>";
+    "specialinvoke <SearchLimitDialog: void <init>(javax.swing.JFrame,imgViewer,MosaicData)>"
+    "fieldget <imgViewer: MosaicData md>"->"specialinvoke <SearchLimitDialog: void <init>(javax.swing.JFrame,imgViewer,MosaicData)>";
+    "fieldput <imgViewer: SearchLimitDialog searchLimitDialog>"
+    "specialinvoke <SearchLimitDialog: void <init>(javax.swing.JFrame,imgViewer,MosaicData)>"->"fieldput <imgViewer: SearchLimitDialog searchLimitDialog>";
+    "fieldput <imgViewer: SearchLimitDialog searchLimitDialog>"->"load.r r0";
+    "new SearchForAddressDialog"
+    "load.r r0"->"new SearchForAddressDialog";
+    "new SearchForAddressDialog"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "load.r r0"->"virtualinvoke <imgViewer: javax.swing.JFrame getDialogParent()>";
+    "virtualinvoke <imgViewer: javax.swing.JFrame getDialogParent()>"->"load.r r0";
+    "specialinvoke <SearchForAddressDialog: void <init>(javax.swing.JFrame,imgViewer)>"
+    "load.r r0"->"specialinvoke <SearchForAddressDialog: void <init>(javax.swing.JFrame,imgViewer)>";
+    "fieldput <imgViewer: SearchForAddressDialog searchForAddressDialog>"
+    "specialinvoke <SearchForAddressDialog: void <init>(javax.swing.JFrame,imgViewer)>"->"fieldput <imgViewer: SearchForAddressDialog searchForAddressDialog>";
+    "fieldput <imgViewer: SearchForAddressDialog searchForAddressDialog>"->"load.r r0";
+    "load.r r0"->"fieldget <imgViewer: MosaicData md>";
+    "fieldget <imgViewer: MosaicData md>"->"load.r r0";
+    "fieldget <imgViewer: SearchLimitDialog searchLimitDialog>"
+    "load.r r0"->"fieldget <imgViewer: SearchLimitDialog searchLimitDialog>";
+    "fieldget <imgViewer: SearchLimitDialog searchLimitDialog>"->"virtualinvoke <MosaicData: void addObserver(java.util.Observer)>";
+    "virtualinvoke <MosaicData: void addObserver(java.util.Observer)>"->"load.r r0";
+    "new SceneListDialog"
+    "load.r r0"->"new SceneListDialog";
+    "new SceneListDialog"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "load.r r0"->"virtualinvoke <imgViewer: javax.swing.JFrame getDialogParent()>";
+    "virtualinvoke <imgViewer: javax.swing.JFrame getDialogParent()>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <imgViewer: MosaicData md>";
+    "specialinvoke <SceneListDialog: void <init>(javax.swing.JFrame,imgViewer,MosaicData)>"
+    "fieldget <imgViewer: MosaicData md>"->"specialinvoke <SceneListDialog: void <init>(javax.swing.JFrame,imgViewer,MosaicData)>";
+    "fieldput <imgViewer: SceneListDialog sceneListDialog>"
+    "specialinvoke <SceneListDialog: void <init>(javax.swing.JFrame,imgViewer,MosaicData)>"->"fieldput <imgViewer: SceneListDialog sceneListDialog>";
+    "fieldput <imgViewer: SceneListDialog sceneListDialog>"->"load.r r0";
+    "load.r r0"->"fieldget <imgViewer: MosaicData md>";
+    "fieldget <imgViewer: MosaicData md>"->"load.r r0";
+    "fieldget <imgViewer: SceneListDialog sceneListDialog>"
+    "load.r r0"->"fieldget <imgViewer: SceneListDialog sceneListDialog>";
+    "fieldget <imgViewer: SceneListDialog sceneListDialog>"->"virtualinvoke <MosaicData: void addObserver(java.util.Observer)>";
+    "virtualinvoke <MosaicData: void addObserver(java.util.Observer)>"->"load.r r0";
+    "new HideSceneDialog"
+    "load.r r0"->"new HideSceneDialog";
+    "new HideSceneDialog"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "load.r r0"->"virtualinvoke <imgViewer: javax.swing.JFrame getDialogParent()>";
+    "virtualinvoke <imgViewer: javax.swing.JFrame getDialogParent()>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <imgViewer: MosaicData md>";
+    "specialinvoke <HideSceneDialog: void <init>(javax.swing.JFrame,imgViewer,MosaicData)>"
+    "fieldget <imgViewer: MosaicData md>"->"specialinvoke <HideSceneDialog: void <init>(javax.swing.JFrame,imgViewer,MosaicData)>";
+    "fieldput <imgViewer: HideSceneDialog hideSceneDialog>"
+    "specialinvoke <HideSceneDialog: void <init>(javax.swing.JFrame,imgViewer,MosaicData)>"->"fieldput <imgViewer: HideSceneDialog hideSceneDialog>";
+    "fieldput <imgViewer: HideSceneDialog hideSceneDialog>"->"load.r r0";
+    "load.r r0"->"fieldget <imgViewer: MosaicData md>";
+    "fieldget <imgViewer: MosaicData md>"->"load.r r0";
+    "fieldget <imgViewer: HideSceneDialog hideSceneDialog>"
+    "load.r r0"->"fieldget <imgViewer: HideSceneDialog hideSceneDialog>";
+    "fieldget <imgViewer: HideSceneDialog hideSceneDialog>"->"virtualinvoke <MosaicData: void addObserver(java.util.Observer)>";
+    "virtualinvoke <MosaicData: void addObserver(java.util.Observer)>"->"load.r r0";
+    "new NDVIGraphDialog"
+    "load.r r0"->"new NDVIGraphDialog";
+    "new NDVIGraphDialog"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "load.r r0"->"virtualinvoke <imgViewer: javax.swing.JFrame getDialogParent()>";
+    "virtualinvoke <imgViewer: javax.swing.JFrame getDialogParent()>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <imgViewer: MosaicData md>";
+    "specialinvoke <NDVIGraphDialog: void <init>(javax.swing.JFrame,imgViewer,MosaicData)>"
+    "fieldget <imgViewer: MosaicData md>"->"specialinvoke <NDVIGraphDialog: void <init>(javax.swing.JFrame,imgViewer,MosaicData)>";
+    "fieldput <imgViewer: NDVIGraphDialog ndviGraphDialog>"
+    "specialinvoke <NDVIGraphDialog: void <init>(javax.swing.JFrame,imgViewer,MosaicData)>"->"fieldput <imgViewer: NDVIGraphDialog ndviGraphDialog>";
+    "fieldput <imgViewer: NDVIGraphDialog ndviGraphDialog>"->"load.r r0";
+    "load.r r0"->"fieldget <imgViewer: MosaicData md>";
+    "fieldget <imgViewer: MosaicData md>"->"load.r r0";
+    "fieldget <imgViewer: NDVIGraphDialog ndviGraphDialog>"
+    "load.r r0"->"fieldget <imgViewer: NDVIGraphDialog ndviGraphDialog>";
+    "fieldget <imgViewer: NDVIGraphDialog ndviGraphDialog>"->"virtualinvoke <MosaicData: void addObserver(java.util.Observer)>";
+    "virtualinvoke <MosaicData: void addObserver(java.util.Observer)>"->"load.r r0";
+    "load.r r0"->"fieldget <imgViewer: ImagePane imgArea>";
+    "fieldget <imgViewer: ImagePane imgArea>"->"push 1";
+    "virtualinvoke <ImagePane: javax.swing.InputMap getInputMap(int)>"
+    "push 1"->"virtualinvoke <ImagePane: javax.swing.InputMap getInputMap(int)>";
+    "push 83"
+    "virtualinvoke <ImagePane: javax.swing.InputMap getInputMap(int)>"->"push 83";
+    "push 83"->"push 0";
+    "push 0"->"push 0";
+    "staticinvoke <javax.swing.KeyStroke: javax.swing.KeyStroke getKeyStroke(int,int,boolean)>"
+    "push 0"->"staticinvoke <javax.swing.KeyStroke: javax.swing.KeyStroke getKeyStroke(int,int,boolean)>";
+    "push \"disable\""
+    "staticinvoke <javax.swing.KeyStroke: javax.swing.KeyStroke getKeyStroke(int,int,boolean)>"->"push \"disable\"";
+    "virtualinvoke <javax.swing.InputMap: void put(javax.swing.KeyStroke,java.lang.Object)>"
+    "push \"disable\""->"virtualinvoke <javax.swing.InputMap: void put(javax.swing.KeyStroke,java.lang.Object)>";
+    "virtualinvoke <javax.swing.InputMap: void put(javax.swing.KeyStroke,java.lang.Object)>"->"load.r r0";
+    "load.r r0"->"fieldget <imgViewer: ImagePane imgArea>";
+    "virtualinvoke <ImagePane: javax.swing.ActionMap getActionMap()>"
+    "fieldget <imgViewer: ImagePane imgArea>"->"virtualinvoke <ImagePane: javax.swing.ActionMap getActionMap()>";
+    "virtualinvoke <ImagePane: javax.swing.ActionMap getActionMap()>"->"push \"disable\"";
+    "new imgViewer$DisableMapLayersAction"
+    "push \"disable\""->"new imgViewer$DisableMapLayersAction";
+    "new imgViewer$DisableMapLayersAction"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "specialinvoke <imgViewer$DisableMapLayersAction: void <init>(imgViewer)>"
+    "load.r r0"->"specialinvoke <imgViewer$DisableMapLayersAction: void <init>(imgViewer)>";
+    "virtualinvoke <javax.swing.ActionMap: void put(java.lang.Object,javax.swing.Action)>"
+    "specialinvoke <imgViewer$DisableMapLayersAction: void <init>(imgViewer)>"->"virtualinvoke <javax.swing.ActionMap: void put(java.lang.Object,javax.swing.Action)>";
+    "virtualinvoke <javax.swing.ActionMap: void put(java.lang.Object,javax.swing.Action)>"->"load.r r0";
+    "load.r r0"->"fieldget <imgViewer: ImagePane imgArea>";
+    "fieldget <imgViewer: ImagePane imgArea>"->"push 1";
+    "push 1"->"virtualinvoke <ImagePane: javax.swing.InputMap getInputMap(int)>";
+    "virtualinvoke <ImagePane: javax.swing.InputMap getInputMap(int)>"->"push 83";
+    "push 83"->"push 0";
+    "push 0"->"push 1";
+    "push 1"->"staticinvoke <javax.swing.KeyStroke: javax.swing.KeyStroke getKeyStroke(int,int,boolean)>";
+    "push \"enable\""
+    "staticinvoke <javax.swing.KeyStroke: javax.swing.KeyStroke getKeyStroke(int,int,boolean)>"->"push \"enable\"";
+    "push \"enable\""->"virtualinvoke <javax.swing.InputMap: void put(javax.swing.KeyStroke,java.lang.Object)>";
+    "virtualinvoke <javax.swing.InputMap: void put(javax.swing.KeyStroke,java.lang.Object)>"->"load.r r0";
+    "load.r r0"->"fieldget <imgViewer: ImagePane imgArea>";
+    "fieldget <imgViewer: ImagePane imgArea>"->"virtualinvoke <ImagePane: javax.swing.ActionMap getActionMap()>";
+    "virtualinvoke <ImagePane: javax.swing.ActionMap getActionMap()>"->"push \"enable\"";
+    "new imgViewer$EnableMapLayersAction"
+    "push \"enable\""->"new imgViewer$EnableMapLayersAction";
+    "new imgViewer$EnableMapLayersAction"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "specialinvoke <imgViewer$EnableMapLayersAction: void <init>(imgViewer)>"
+    "load.r r0"->"specialinvoke <imgViewer$EnableMapLayersAction: void <init>(imgViewer)>";
+    "specialinvoke <imgViewer$EnableMapLayersAction: void <init>(imgViewer)>"->"virtualinvoke <javax.swing.ActionMap: void put(java.lang.Object,javax.swing.Action)>";
+    "staticinvoke <javax.swing.ToolTipManager: javax.swing.ToolTipManager sharedInstance()>"
+    "virtualinvoke <javax.swing.ActionMap: void put(java.lang.Object,javax.swing.Action)>"->"staticinvoke <javax.swing.ToolTipManager: javax.swing.ToolTipManager sharedInstance()>";
+    "push 6000"
+    "staticinvoke <javax.swing.ToolTipManager: javax.swing.ToolTipManager sharedInstance()>"->"push 6000";
+    "virtualinvoke <javax.swing.ToolTipManager: void setDismissDelay(int)>"
+    "push 6000"->"virtualinvoke <javax.swing.ToolTipManager: void setDismissDelay(int)>";
+    "virtualinvoke <javax.swing.ToolTipManager: void setDismissDelay(int)>"->"load.r r0";
+    "load.r r0"->"push 1";
+    "fieldput <imgViewer: boolean initialized>"
+    "push 1"->"fieldput <imgViewer: boolean initialized>";
+    "return"
+    "fieldput <imgViewer: boolean initialized>"->"return";
+    "ifeq load.r r0"->"load.r r0";
+    "load.r r0"->"virtualinvoke <imgViewer: java.awt.Container getContentPane()>";
+    "virtualinvoke <imgViewer: java.awt.Container getContentPane()>"->"load.r $r99";
+    "load.r $r99"->"virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>";
+    "virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>"->"pop";
+    "ifeq load.r r0"->"load.r r0";
+    "load.r r0"->"load.r $r99";
+    "virtualinvoke <imgViewer: void setJMenuBar(javax.swing.JMenuBar)>"
+    "load.r $r99"->"virtualinvoke <imgViewer: void setJMenuBar(javax.swing.JMenuBar)>";
+    "push 1"->"store.r $r99";
+    "ifeq load.r r0"->"load.r r0";
+    "load.r r0"->"virtualinvoke <imgViewer: java.awt.Container getContentPane()>";
+    "virtualinvoke <imgViewer: java.awt.Container getContentPane()>"->"load.r r0";
+    "load.r r0"->"fieldget <imgViewer: java.awt.Font normalFont>";
+    "fieldget <imgViewer: java.awt.Font normalFont>"->"virtualinvoke <java.awt.Container: void setFont(java.awt.Font)>";
+    "virtualinvoke <java.awt.Container: void setFont(java.awt.Font)>"->"load.r r0";
+    "load.r r0"->"virtualinvoke <imgViewer: java.awt.Container getContentPane()>";
+    "virtualinvoke <imgViewer: java.awt.Container getContentPane()>"->"push 1";
+    "virtualinvoke <java.awt.Container: void setFocusable(boolean)>"
+    "push 1"->"virtualinvoke <java.awt.Container: void setFocusable(boolean)>";
+    "virtualinvoke <java.awt.Container: void setFocusable(boolean)>"->"load.r r0";
+    "load.r r0"->"virtualinvoke <imgViewer: java.awt.Container getContentPane()>";
+    "virtualinvoke <imgViewer: java.awt.Container getContentPane()>"->"load.r r0";
+    "virtualinvoke <java.awt.Container: void addFocusListener(java.awt.event.FocusListener)>"
+    "load.r r0"->"virtualinvoke <java.awt.Container: void addFocusListener(java.awt.event.FocusListener)>";
+    "push 1"->"store.r $r190";
+    "ifeq load.r r1"->"load.r r1";
+    "push \"ASTERTIR\""
+    "load.r r1"->"push \"ASTERTIR\"";
+    "push \"ASTERTIR\""->"virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>";
+    "virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>"->"ifeq load.r r1";
+    "staticget <SensorStatus: SensorStatus ASTER_TIR>"
+    "ifeq load.r r1"->"staticget <SensorStatus: SensorStatus ASTER_TIR>";
+    "staticget <SensorStatus: SensorStatus ASTER_TIR>"->"store.r r1";
+    "store.r r1"->"goto load.r r0";
+    "ifeq load.r r1"->"load.r r1";
+    "push \"ASTER_VNIR_DATAPOOL\""
+    "load.r r1"->"push \"ASTER_VNIR_DATAPOOL\"";
+    "push \"ASTER_VNIR_DATAPOOL\""->"virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>";
+    "virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>"->"ifeq load.r r1";
+    "staticget <SensorStatus: SensorStatus ASTER_VNIR_DATAPOOL>"
+    "ifeq load.r r1"->"staticget <SensorStatus: SensorStatus ASTER_VNIR_DATAPOOL>";
+    "staticget <SensorStatus: SensorStatus ASTER_VNIR_DATAPOOL>"->"store.r r1";
+    "store.r r1"->"goto load.r r0";
+    "ifeq load.r r1"->"load.r r1";
+    "push \"ASTER_TIR_DATAPOOL\""
+    "load.r r1"->"push \"ASTER_TIR_DATAPOOL\"";
+    "push \"ASTER_TIR_DATAPOOL\""->"virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>";
+    "virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>"->"ifeq load.r r1";
+    "staticget <SensorStatus: SensorStatus ASTER_TIR_DATAPOOL>"
+    "ifeq load.r r1"->"staticget <SensorStatus: SensorStatus ASTER_TIR_DATAPOOL>";
+    "staticget <SensorStatus: SensorStatus ASTER_TIR_DATAPOOL>"->"store.r r1";
+    "store.r r1"->"goto load.r r0";
+    "ifeq load.r r1"->"load.r r1";
+    "push \"TM\""
+    "load.r r1"->"push \"TM\"";
+    "push \"TM\""->"virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>";
+    "virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>"->"ifeq load.r r1";
+    "staticget <SensorStatus: SensorStatus LANDSAT_TM>"
+    "ifeq load.r r1"->"staticget <SensorStatus: SensorStatus LANDSAT_TM>";
+    "staticget <SensorStatus: SensorStatus LANDSAT_TM>"->"store.r r1";
+    "store.r r1"->"goto load.r r0";
+    "ifeq load.r r1"->"load.r r1";
+    "push \"ETM\""
+    "load.r r1"->"push \"ETM\"";
+    "push \"ETM\""->"virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>";
+    "virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>"->"ifeq load.r r1";
+    "staticget <SensorStatus: SensorStatus LANDSAT_ETM>"
+    "ifeq load.r r1"->"staticget <SensorStatus: SensorStatus LANDSAT_ETM>";
+    "staticget <SensorStatus: SensorStatus LANDSAT_ETM>"->"store.r r1";
+    "store.r r1"->"goto load.r r0";
+    "ifeq load.r r1"->"load.r r1";
+    "push \"4_5MSS\""
+    "load.r r1"->"push \"4_5MSS\"";
+    "push \"4_5MSS\""->"virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>";
+    "virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>"->"ifeq load.r r1";
+    "staticget <SensorStatus: SensorStatus LANDSAT_4_5MSS>"
+    "ifeq load.r r1"->"staticget <SensorStatus: SensorStatus LANDSAT_4_5MSS>";
+    "staticget <SensorStatus: SensorStatus LANDSAT_4_5MSS>"->"store.r r1";
+    "store.r r1"->"goto load.r r0";
+    "ifeq load.r r1"->"load.r r1";
+    "push \"1_3MSS\""
+    "load.r r1"->"push \"1_3MSS\"";
+    "push \"1_3MSS\""->"virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>";
+    "virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>"->"ifeq load.r r1";
+    "staticget <SensorStatus: SensorStatus LANDSAT_1_3MSS>"
+    "ifeq load.r r1"->"staticget <SensorStatus: SensorStatus LANDSAT_1_3MSS>";
+    "staticget <SensorStatus: SensorStatus LANDSAT_1_3MSS>"->"store.r r1";
+    "store.r r1"->"goto load.r r0";
+    "ifeq load.r r1"->"load.r r1";
+    "push \"COMBINED\""
+    "load.r r1"->"push \"COMBINED\"";
+    "push \"COMBINED\""->"virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>";
+    "virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>"->"ifeq load.r r1";
+    "staticget <SensorStatus: SensorStatus LANDSAT_COMBINED>"
+    "ifeq load.r r1"->"staticget <SensorStatus: SensorStatus LANDSAT_COMBINED>";
+    "staticget <SensorStatus: SensorStatus LANDSAT_COMBINED>"->"store.r r1";
+    "store.r r1"->"goto load.r r0";
+    "ifeq load.r r1"->"load.r r1";
+    "push \"ORTHOTM\""
+    "load.r r1"->"push \"ORTHOTM\"";
+    "push \"ORTHOTM\""->"virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>";
+    "virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>"->"ifeq load.r r1";
+    "staticget <SensorStatus: SensorStatus ORTHO_TM>"
+    "ifeq load.r r1"->"staticget <SensorStatus: SensorStatus ORTHO_TM>";
+    "staticget <SensorStatus: SensorStatus ORTHO_TM>"->"store.r r1";
+    "store.r r1"->"goto load.r r0";
+    "ifeq load.r r1"->"load.r r1";
+    "push \"ORTHOETM\""
+    "load.r r1"->"push \"ORTHOETM\"";
+    "push \"ORTHOETM\""->"virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>";
+    "virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>"->"ifeq load.r r1";
+    "staticget <SensorStatus: SensorStatus ORTHO_ETM_PLUS>"
+    "ifeq load.r r1"->"staticget <SensorStatus: SensorStatus ORTHO_ETM_PLUS>";
+    "staticget <SensorStatus: SensorStatus ORTHO_ETM_PLUS>"->"store.r r1";
+    "store.r r1"->"goto load.r r0";
+    "ifeq load.r r1"->"load.r r1";
+    "push \"PANSHARPETM\""
+    "load.r r1"->"push \"PANSHARPETM\"";
+    "push \"PANSHARPETM\""->"virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>";
+    "virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>"->"ifeq load.r r1";
+    "staticget <SensorStatus: SensorStatus PANSHARP_ETM_PLUS>"
+    "ifeq load.r r1"->"staticget <SensorStatus: SensorStatus PANSHARP_ETM_PLUS>";
+    "staticget <SensorStatus: SensorStatus PANSHARP_ETM_PLUS>"->"store.r r1";
+    "store.r r1"->"goto load.r r0";
+    "ifeq load.r r1"->"load.r r1";
+    "push \"ORTHO1_3MSS\""
+    "load.r r1"->"push \"ORTHO1_3MSS\"";
+    "push \"ORTHO1_3MSS\""->"virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>";
+    "virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>"->"ifeq load.r r1";
+    "staticget <SensorStatus: SensorStatus ORTHO1_3MSS>"
+    "ifeq load.r r1"->"staticget <SensorStatus: SensorStatus ORTHO1_3MSS>";
+    "staticget <SensorStatus: SensorStatus ORTHO1_3MSS>"->"store.r r1";
+    "store.r r1"->"goto load.r r0";
+    "ifeq load.r r1"->"load.r r1";
+    "push \"ORTHO4_5MSS\""
+    "load.r r1"->"push \"ORTHO4_5MSS\"";
+    "push \"ORTHO4_5MSS\""->"virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>";
+    "virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>"->"ifeq load.r r1";
+    "staticget <SensorStatus: SensorStatus ORTHO4_5MSS>"
+    "ifeq load.r r1"->"staticget <SensorStatus: SensorStatus ORTHO4_5MSS>";
+    "staticget <SensorStatus: SensorStatus ORTHO4_5MSS>"->"store.r r1";
+    "store.r r1"->"goto load.r r0";
+    "ifeq load.r r1"->"load.r r1";
+    "push \"MRLC_2001TC\""
+    "load.r r1"->"push \"MRLC_2001TC\"";
+    "push \"MRLC_2001TC\""->"virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>";
+    "virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>"->"ifeq load.r r1";
+    "staticget <SensorStatus: SensorStatus MRLC_2001TC>"
+    "ifeq load.r r1"->"staticget <SensorStatus: SensorStatus MRLC_2001TC>";
+    "staticget <SensorStatus: SensorStatus MRLC_2001TC>"->"store.r r1";
+    "store.r r1"->"goto load.r r0";
+    "ifeq load.r r1"->"load.r r1";
+    "push \"MRLC_2001RA\""
+    "load.r r1"->"push \"MRLC_2001RA\"";
+    "push \"MRLC_2001RA\""->"virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>";
+    "virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>"->"ifeq load.r r1";
+    "staticget <SensorStatus: SensorStatus MRLC_2001RA>"
+    "ifeq load.r r1"->"staticget <SensorStatus: SensorStatus MRLC_2001RA>";
+    "staticget <SensorStatus: SensorStatus MRLC_2001RA>"->"store.r r1";
+    "store.r r1"->"goto load.r r0";
+    "ifeq load.r r1"->"load.r r1";
+    "push \"SLCOFF\""
+    "load.r r1"->"push \"SLCOFF\"";
+    "push \"SLCOFF\""->"virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>";
+    "virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>"->"ifeq load.r r1";
+    "staticget <SensorStatus: SensorStatus LANDSAT_ETM_SLC_OFF>"
+    "ifeq load.r r1"->"staticget <SensorStatus: SensorStatus LANDSAT_ETM_SLC_OFF>";
+    "staticget <SensorStatus: SensorStatus LANDSAT_ETM_SLC_OFF>"->"store.r r1";
+    "store.r r1"->"goto load.r r0";
+    "ifeq load.r r1"->"load.r r1";
+    "push \"MYD09A1\""
+    "load.r r1"->"push \"MYD09A1\"";
+    "push \"MYD09A1\""->"virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>";
+    "virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>"->"ifeq load.r r1";
+    "staticget <SensorStatus: SensorStatus MODIS_MYD09A1>"
+    "ifeq load.r r1"->"staticget <SensorStatus: SensorStatus MODIS_MYD09A1>";
+    "staticget <SensorStatus: SensorStatus MODIS_MYD09A1>"->"store.r r1";
+    "store.r r1"->"goto load.r r0";
+    "ifeq load.r r1"->"load.r r1";
+    "push \"MYD09GA\""
+    "load.r r1"->"push \"MYD09GA\"";
+    "push \"MYD09GA\""->"virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>";
+    "virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>"->"ifeq load.r r1";
+    "staticget <SensorStatus: SensorStatus MODIS_MYD09GA>"
+    "ifeq load.r r1"->"staticget <SensorStatus: SensorStatus MODIS_MYD09GA>";
+    "staticget <SensorStatus: SensorStatus MODIS_MYD09GA>"->"store.r r1";
+    "store.r r1"->"goto load.r r0";
+    "ifeq load.r r1"->"load.r r1";
+    "push \"MYD09GQ\""
+    "load.r r1"->"push \"MYD09GQ\"";
+    "push \"MYD09GQ\""->"virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>";
+    "virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>"->"ifeq load.r r1";
+    "staticget <SensorStatus: SensorStatus MODIS_MYD09GQ>"
+    "ifeq load.r r1"->"staticget <SensorStatus: SensorStatus MODIS_MYD09GQ>";
+    "staticget <SensorStatus: SensorStatus MODIS_MYD09GQ>"->"store.r r1";
+    "store.r r1"->"goto load.r r0";
+    "ifeq load.r r1"->"load.r r1";
+    "push \"MYD09Q1\""
+    "load.r r1"->"push \"MYD09Q1\"";
+    "push \"MYD09Q1\""->"virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>";
+    "virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>"->"ifeq load.r r1";
+    "staticget <SensorStatus: SensorStatus MODIS_MYD09Q1>"
+    "ifeq load.r r1"->"staticget <SensorStatus: SensorStatus MODIS_MYD09Q1>";
+    "staticget <SensorStatus: SensorStatus MODIS_MYD09Q1>"->"store.r r1";
+    "store.r r1"->"goto load.r r0";
+    "ifeq load.r r1"->"load.r r1";
+    "push \"MYD11A1DAY\""
+    "load.r r1"->"push \"MYD11A1DAY\"";
+    "push \"MYD11A1DAY\""->"virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>";
+    "virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>"->"ifeq load.r r1";
+    "staticget <SensorStatus: SensorStatus MODIS_MYD11A1_DAY>"
+    "ifeq load.r r1"->"staticget <SensorStatus: SensorStatus MODIS_MYD11A1_DAY>";
+    "staticget <SensorStatus: SensorStatus MODIS_MYD11A1_DAY>"->"store.r r1";
+    "store.r r1"->"goto load.r r0";
+    "ifeq load.r r1"->"load.r r1";
+    "push \"MYD11A1NIGHT\""
+    "load.r r1"->"push \"MYD11A1NIGHT\"";
+    "push \"MYD11A1NIGHT\""->"virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>";
+    "virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>"->"ifeq load.r r1";
+    "staticget <SensorStatus: SensorStatus MODIS_MYD11A1_NIGHT>"
+    "ifeq load.r r1"->"staticget <SensorStatus: SensorStatus MODIS_MYD11A1_NIGHT>";
+    "staticget <SensorStatus: SensorStatus MODIS_MYD11A1_NIGHT>"->"store.r r1";
+    "store.r r1"->"goto load.r r0";
+    "ifeq load.r r1"->"load.r r1";
+    "push \"MYD11A2DAY\""
+    "load.r r1"->"push \"MYD11A2DAY\"";
+    "push \"MYD11A2DAY\""->"virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>";
+    "virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>"->"ifeq load.r r1";
+    "staticget <SensorStatus: SensorStatus MODIS_MYD11A2_DAY>"
+    "ifeq load.r r1"->"staticget <SensorStatus: SensorStatus MODIS_MYD11A2_DAY>";
+    "staticget <SensorStatus: SensorStatus MODIS_MYD11A2_DAY>"->"store.r r1";
+    "store.r r1"->"goto load.r r0";
+    "ifeq load.r r1"->"load.r r1";
+    "push \"MYD11A2NIGHT\""
+    "load.r r1"->"push \"MYD11A2NIGHT\"";
+    "push \"MYD11A2NIGHT\""->"virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>";
+    "virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>"->"ifeq load.r r1";
+    "staticget <SensorStatus: SensorStatus MODIS_MYD11A2_NIGHT>"
+    "ifeq load.r r1"->"staticget <SensorStatus: SensorStatus MODIS_MYD11A2_NIGHT>";
+    "staticget <SensorStatus: SensorStatus MODIS_MYD11A2_NIGHT>"->"store.r r1";
+    "store.r r1"->"goto load.r r0";
+    "ifeq load.r r1"->"load.r r1";
+    "push \"MYD11B1DAY\""
+    "load.r r1"->"push \"MYD11B1DAY\"";
+    "push \"MYD11B1DAY\""->"virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>";
+    "virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>"->"ifeq load.r r1";
+    "staticget <SensorStatus: SensorStatus MODIS_MYD11B1_DAY>"
+    "ifeq load.r r1"->"staticget <SensorStatus: SensorStatus MODIS_MYD11B1_DAY>";
+    "staticget <SensorStatus: SensorStatus MODIS_MYD11B1_DAY>"->"store.r r1";
+    "store.r r1"->"goto load.r r0";
+    "ifeq load.r r1"->"load.r r1";
+    "push \"MYD11B1NIGHT\""
+    "load.r r1"->"push \"MYD11B1NIGHT\"";
+    "push \"MYD11B1NIGHT\""->"virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>";
+    "virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>"->"ifeq load.r r1";
+    "staticget <SensorStatus: SensorStatus MODIS_MYD11B1_NIGHT>"
+    "ifeq load.r r1"->"staticget <SensorStatus: SensorStatus MODIS_MYD11B1_NIGHT>";
+    "staticget <SensorStatus: SensorStatus MODIS_MYD11B1_NIGHT>"->"store.r r1";
+    "store.r r1"->"goto load.r r0";
+    "ifeq load.r r1"->"load.r r1";
+    "push \"MYD13A1EVI\""
+    "load.r r1"->"push \"MYD13A1EVI\"";
+    "push \"MYD13A1EVI\""->"virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>";
+    "virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>"->"ifeq load.r r1";
+    "staticget <SensorStatus: SensorStatus MODIS_MYD13A1_EVI>"
+    "ifeq load.r r1"->"staticget <SensorStatus: SensorStatus MODIS_MYD13A1_EVI>";
+    "staticget <SensorStatus: SensorStatus MODIS_MYD13A1_EVI>"->"store.r r1";
+    "store.r r1"->"goto load.r r0";
+    "ifeq load.r r1"->"load.r r1";
+    "push \"MYD13A1NDVI\""
+    "load.r r1"->"push \"MYD13A1NDVI\"";
+    "push \"MYD13A1NDVI\""->"virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>";
+    "virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>"->"ifeq load.r r1";
+    "staticget <SensorStatus: SensorStatus MODIS_MYD13A1_NDVI>"
+    "ifeq load.r r1"->"staticget <SensorStatus: SensorStatus MODIS_MYD13A1_NDVI>";
+    "staticget <SensorStatus: SensorStatus MODIS_MYD13A1_NDVI>"->"store.r r1";
+    "store.r r1"->"goto load.r r0";
+    "ifeq load.r r1"->"load.r r1";
+    "push \"MYD13A2EVI\""
+    "load.r r1"->"push \"MYD13A2EVI\"";
+    "push \"MYD13A2EVI\""->"virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>";
+    "virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>"->"ifeq load.r r1";
+    "staticget <SensorStatus: SensorStatus MODIS_MYD13A2_EVI>"
+    "ifeq load.r r1"->"staticget <SensorStatus: SensorStatus MODIS_MYD13A2_EVI>";
+    "staticget <SensorStatus: SensorStatus MODIS_MYD13A2_EVI>"->"store.r r1";
+    "store.r r1"->"goto load.r r0";
+    "ifeq load.r r1"->"load.r r1";
+    "push \"MYD13A2NDVI\""
+    "load.r r1"->"push \"MYD13A2NDVI\"";
+    "push \"MYD13A2NDVI\""->"virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>";
+    "virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>"->"ifeq load.r r1";
+    "staticget <SensorStatus: SensorStatus MODIS_MYD13A2_NDVI>"
+    "ifeq load.r r1"->"staticget <SensorStatus: SensorStatus MODIS_MYD13A2_NDVI>";
+    "staticget <SensorStatus: SensorStatus MODIS_MYD13A2_NDVI>"->"store.r r1";
+    "store.r r1"->"goto load.r r0";
+    "ifeq load.r r1"->"load.r r1";
+    "push \"MYD13A3EVI\""
+    "load.r r1"->"push \"MYD13A3EVI\"";
+    "push \"MYD13A3EVI\""->"virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>";
+    "virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>"->"ifeq load.r r1";
+    "staticget <SensorStatus: SensorStatus MODIS_MYD13A3_EVI>"
+    "ifeq load.r r1"->"staticget <SensorStatus: SensorStatus MODIS_MYD13A3_EVI>";
+    "staticget <SensorStatus: SensorStatus MODIS_MYD13A3_EVI>"->"store.r r1";
+    "store.r r1"->"goto load.r r0";
+    "ifeq load.r r1"->"load.r r1";
+    "push \"MYD13A3NDVI\""
+    "load.r r1"->"push \"MYD13A3NDVI\"";
+    "push \"MYD13A3NDVI\""->"virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>";
+    "virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>"->"ifeq load.r r1";
+    "staticget <SensorStatus: SensorStatus MODIS_MYD13A3_NDVI>"
+    "ifeq load.r r1"->"staticget <SensorStatus: SensorStatus MODIS_MYD13A3_NDVI>";
+    "staticget <SensorStatus: SensorStatus MODIS_MYD13A3_NDVI>"->"store.r r1";
+    "store.r r1"->"goto load.r r0";
+    "ifeq load.r r1"->"load.r r1";
+    "push \"MYD13Q1EVI\""
+    "load.r r1"->"push \"MYD13Q1EVI\"";
+    "push \"MYD13Q1EVI\""->"virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>";
+    "virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>"->"ifeq load.r r1";
+    "staticget <SensorStatus: SensorStatus MODIS_MYD13Q1_EVI>"
+    "ifeq load.r r1"->"staticget <SensorStatus: SensorStatus MODIS_MYD13Q1_EVI>";
+    "staticget <SensorStatus: SensorStatus MODIS_MYD13Q1_EVI>"->"store.r r1";
+    "store.r r1"->"goto load.r r0";
+    "ifeq load.r r1"->"load.r r1";
+    "push \"MYD13Q1NDVI\""
+    "load.r r1"->"push \"MYD13Q1NDVI\"";
+    "push \"MYD13Q1NDVI\""->"virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>";
+    "virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>"->"ifeq load.r r1";
+    "staticget <SensorStatus: SensorStatus MODIS_MYD13Q1_NDVI>"
+    "ifeq load.r r1"->"staticget <SensorStatus: SensorStatus MODIS_MYD13Q1_NDVI>";
+    "staticget <SensorStatus: SensorStatus MODIS_MYD13Q1_NDVI>"->"store.r r1";
+    "store.r r1"->"goto load.r r0";
+    "ifeq load.r r1"->"load.r r1";
+    "push \"MYD14A1\""
+    "load.r r1"->"push \"MYD14A1\"";
+    "push \"MYD14A1\""->"virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>";
+    "virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>"->"ifeq load.r r1";
+    "staticget <SensorStatus: SensorStatus MODIS_MYD14A1>"
+    "ifeq load.r r1"->"staticget <SensorStatus: SensorStatus MODIS_MYD14A1>";
+    "staticget <SensorStatus: SensorStatus MODIS_MYD14A1>"->"store.r r1";
+    "store.r r1"->"goto load.r r0";
+    "ifeq load.r r1"->"load.r r1";
+    "push \"MYD14A2\""
+    "load.r r1"->"push \"MYD14A2\"";
+    "push \"MYD14A2\""->"virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>";
+    "virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>"->"ifeq load.r r1";
+    "staticget <SensorStatus: SensorStatus MODIS_MYD14A2>"
+    "ifeq load.r r1"->"staticget <SensorStatus: SensorStatus MODIS_MYD14A2>";
+    "staticget <SensorStatus: SensorStatus MODIS_MYD14A2>"->"store.r r1";
+    "store.r r1"->"goto load.r r0";
+    "ifeq load.r r1"->"load.r r1";
+    "push \"MYD15A2FPAR\""
+    "load.r r1"->"push \"MYD15A2FPAR\"";
+    "push \"MYD15A2FPAR\""->"virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>";
+    "virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>"->"ifeq load.r r1";
+    "staticget <SensorStatus: SensorStatus MODIS_MYD15A2_FPAR>"
+    "ifeq load.r r1"->"staticget <SensorStatus: SensorStatus MODIS_MYD15A2_FPAR>";
+    "staticget <SensorStatus: SensorStatus MODIS_MYD15A2_FPAR>"->"store.r r1";
+    "store.r r1"->"goto load.r r0";
+    "ifeq load.r r1"->"load.r r1";
+    "push \"MYD15A2LAI\""
+    "load.r r1"->"push \"MYD15A2LAI\"";
+    "push \"MYD15A2LAI\""->"virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>";
+    "virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>"->"ifeq load.r r1";
+    "staticget <SensorStatus: SensorStatus MODIS_MYD15A2_LAI>"
+    "ifeq load.r r1"->"staticget <SensorStatus: SensorStatus MODIS_MYD15A2_LAI>";
+    "staticget <SensorStatus: SensorStatus MODIS_MYD15A2_LAI>"->"store.r r1";
+    "store.r r1"->"goto load.r r0";
+    "ifeq load.r r1"->"load.r r1";
+    "push \"MYD17A2GPP\""
+    "load.r r1"->"push \"MYD17A2GPP\"";
+    "push \"MYD17A2GPP\""->"virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>";
+    "virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>"->"ifeq load.r r1";
+    "staticget <SensorStatus: SensorStatus MODIS_MYD17A2_GPP>"
+    "ifeq load.r r1"->"staticget <SensorStatus: SensorStatus MODIS_MYD17A2_GPP>";
+    "staticget <SensorStatus: SensorStatus MODIS_MYD17A2_GPP>"->"store.r r1";
+    "store.r r1"->"goto load.r r0";
+    "ifeq load.r r1"->"load.r r1";
+    "push \"MYD17A2NETPSN\""
+    "load.r r1"->"push \"MYD17A2NETPSN\"";
+    "push \"MYD17A2NETPSN\""->"virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>";
+    "virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>"->"ifeq load.r r1";
+    "staticget <SensorStatus: SensorStatus MODIS_MYD17A2_NETPSN>"
+    "ifeq load.r r1"->"staticget <SensorStatus: SensorStatus MODIS_MYD17A2_NETPSN>";
+    "staticget <SensorStatus: SensorStatus MODIS_MYD17A2_NETPSN>"->"store.r r1";
+    "store.r r1"->"goto load.r r0";
+    "ifeq load.r r1"->"load.r r1";
+    "push \"MOD09A1\""
+    "load.r r1"->"push \"MOD09A1\"";
+    "push \"MOD09A1\""->"virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>";
+    "virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>"->"ifeq load.r r1";
+    "staticget <SensorStatus: SensorStatus MODIS_MOD09A1>"
+    "ifeq load.r r1"->"staticget <SensorStatus: SensorStatus MODIS_MOD09A1>";
+    "staticget <SensorStatus: SensorStatus MODIS_MOD09A1>"->"store.r r1";
+    "store.r r1"->"goto load.r r0";
+    "ifeq load.r r1"->"load.r r1";
+    "push \"MOD09GA\""
+    "load.r r1"->"push \"MOD09GA\"";
+    "push \"MOD09GA\""->"virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>";
+    "virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>"->"ifeq load.r r1";
+    "staticget <SensorStatus: SensorStatus MODIS_MOD09GA>"
+    "ifeq load.r r1"->"staticget <SensorStatus: SensorStatus MODIS_MOD09GA>";
+    "staticget <SensorStatus: SensorStatus MODIS_MOD09GA>"->"store.r r1";
+    "store.r r1"->"goto load.r r0";
+    "ifeq load.r r1"->"load.r r1";
+    "push \"MOD09GQ\""
+    "load.r r1"->"push \"MOD09GQ\"";
+    "push \"MOD09GQ\""->"virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>";
+    "virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>"->"ifeq load.r r1";
+    "staticget <SensorStatus: SensorStatus MODIS_MOD09GQ>"
+    "ifeq load.r r1"->"staticget <SensorStatus: SensorStatus MODIS_MOD09GQ>";
+    "staticget <SensorStatus: SensorStatus MODIS_MOD09GQ>"->"store.r r1";
+    "store.r r1"->"goto load.r r0";
+    "ifeq load.r r1"->"load.r r1";
+    "push \"MOD09Q1\""
+    "load.r r1"->"push \"MOD09Q1\"";
+    "push \"MOD09Q1\""->"virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>";
+    "virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>"->"ifeq load.r r1";
+    "staticget <SensorStatus: SensorStatus MODIS_MOD09Q1>"
+    "ifeq load.r r1"->"staticget <SensorStatus: SensorStatus MODIS_MOD09Q1>";
+    "staticget <SensorStatus: SensorStatus MODIS_MOD09Q1>"->"store.r r1";
+    "store.r r1"->"goto load.r r0";
+    "ifeq load.r r1"->"load.r r1";
+    "push \"MOD11A1DAY\""
+    "load.r r1"->"push \"MOD11A1DAY\"";
+    "push \"MOD11A1DAY\""->"virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>";
+    "virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>"->"ifeq load.r r1";
+    "staticget <SensorStatus: SensorStatus MODIS_MOD11A1_DAY>"
+    "ifeq load.r r1"->"staticget <SensorStatus: SensorStatus MODIS_MOD11A1_DAY>";
+    "staticget <SensorStatus: SensorStatus MODIS_MOD11A1_DAY>"->"store.r r1";
+    "store.r r1"->"goto load.r r0";
+    "ifeq load.r r1"->"load.r r1";
+    "push \"MOD11A1NIGHT\""
+    "load.r r1"->"push \"MOD11A1NIGHT\"";
+    "push \"MOD11A1NIGHT\""->"virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>";
+    "virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>"->"ifeq load.r r1";
+    "staticget <SensorStatus: SensorStatus MODIS_MOD11A1_NIGHT>"
+    "ifeq load.r r1"->"staticget <SensorStatus: SensorStatus MODIS_MOD11A1_NIGHT>";
+    "staticget <SensorStatus: SensorStatus MODIS_MOD11A1_NIGHT>"->"store.r r1";
+    "store.r r1"->"goto load.r r0";
+    "ifeq load.r r1"->"load.r r1";
+    "push \"MOD11A2DAY\""
+    "load.r r1"->"push \"MOD11A2DAY\"";
+    "push \"MOD11A2DAY\""->"virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>";
+    "virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>"->"ifeq load.r r1";
+    "staticget <SensorStatus: SensorStatus MODIS_MOD11A2_DAY>"
+    "ifeq load.r r1"->"staticget <SensorStatus: SensorStatus MODIS_MOD11A2_DAY>";
+    "staticget <SensorStatus: SensorStatus MODIS_MOD11A2_DAY>"->"store.r r1";
+    "store.r r1"->"goto load.r r0";
+    "ifeq load.r r1"->"load.r r1";
+    "push \"MOD11A2NIGHT\""
+    "load.r r1"->"push \"MOD11A2NIGHT\"";
+    "push \"MOD11A2NIGHT\""->"virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>";
+    "virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>"->"ifeq load.r r1";
+    "staticget <SensorStatus: SensorStatus MODIS_MOD11A2_NIGHT>"
+    "ifeq load.r r1"->"staticget <SensorStatus: SensorStatus MODIS_MOD11A2_NIGHT>";
+    "staticget <SensorStatus: SensorStatus MODIS_MOD11A2_NIGHT>"->"store.r r1";
+    "store.r r1"->"goto load.r r0";
+    "ifeq load.r r1"->"load.r r1";
+    "push \"MOD11B1DAY\""
+    "load.r r1"->"push \"MOD11B1DAY\"";
+    "push \"MOD11B1DAY\""->"virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>";
+    "virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>"->"ifeq load.r r1";
+    "staticget <SensorStatus: SensorStatus MODIS_MOD11B1_DAY>"
+    "ifeq load.r r1"->"staticget <SensorStatus: SensorStatus MODIS_MOD11B1_DAY>";
+    "staticget <SensorStatus: SensorStatus MODIS_MOD11B1_DAY>"->"store.r r1";
+    "store.r r1"->"goto load.r r0";
+    "ifeq load.r r1"->"load.r r1";
+    "push \"MOD11B1NIGHT\""
+    "load.r r1"->"push \"MOD11B1NIGHT\"";
+    "push \"MOD11B1NIGHT\""->"virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>";
+    "virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>"->"ifeq load.r r1";
+    "staticget <SensorStatus: SensorStatus MODIS_MOD11B1_NIGHT>"
+    "ifeq load.r r1"->"staticget <SensorStatus: SensorStatus MODIS_MOD11B1_NIGHT>";
+    "staticget <SensorStatus: SensorStatus MODIS_MOD11B1_NIGHT>"->"store.r r1";
+    "store.r r1"->"goto load.r r0";
+    "ifeq load.r r1"->"load.r r1";
+    "push \"MOD13A1EVI\""
+    "load.r r1"->"push \"MOD13A1EVI\"";
+    "push \"MOD13A1EVI\""->"virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>";
+    "virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>"->"ifeq load.r r1";
+    "staticget <SensorStatus: SensorStatus MODIS_MOD13A1_EVI>"
+    "ifeq load.r r1"->"staticget <SensorStatus: SensorStatus MODIS_MOD13A1_EVI>";
+    "staticget <SensorStatus: SensorStatus MODIS_MOD13A1_EVI>"->"store.r r1";
+    "store.r r1"->"goto load.r r0";
+    "ifeq load.r r1"->"load.r r1";
+    "push \"MOD13A1NDVI\""
+    "load.r r1"->"push \"MOD13A1NDVI\"";
+    "push \"MOD13A1NDVI\""->"virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>";
+    "virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>"->"ifeq load.r r1";
+    "staticget <SensorStatus: SensorStatus MODIS_MOD13A1_NDVI>"
+    "ifeq load.r r1"->"staticget <SensorStatus: SensorStatus MODIS_MOD13A1_NDVI>";
+    "staticget <SensorStatus: SensorStatus MODIS_MOD13A1_NDVI>"->"store.r r1";
+    "store.r r1"->"goto load.r r0";
+    "ifeq load.r r1"->"load.r r1";
+    "push \"MOD13A3EVI\""
+    "load.r r1"->"push \"MOD13A3EVI\"";
+    "push \"MOD13A3EVI\""->"virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>";
+    "virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>"->"ifeq load.r r1";
+    "staticget <SensorStatus: SensorStatus MODIS_MOD13A3_EVI>"
+    "ifeq load.r r1"->"staticget <SensorStatus: SensorStatus MODIS_MOD13A3_EVI>";
+    "staticget <SensorStatus: SensorStatus MODIS_MOD13A3_EVI>"->"store.r r1";
+    "store.r r1"->"goto load.r r0";
+    "ifeq load.r r1"->"load.r r1";
+    "push \"MOD13A3NDVI\""
+    "load.r r1"->"push \"MOD13A3NDVI\"";
+    "push \"MOD13A3NDVI\""->"virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>";
+    "virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>"->"ifeq load.r r1";
+    "staticget <SensorStatus: SensorStatus MODIS_MOD13A3_NDVI>"
+    "ifeq load.r r1"->"staticget <SensorStatus: SensorStatus MODIS_MOD13A3_NDVI>";
+    "staticget <SensorStatus: SensorStatus MODIS_MOD13A3_NDVI>"->"store.r r1";
+    "store.r r1"->"goto load.r r0";
+    "ifeq load.r r1"->"load.r r1";
+    "push \"MOD13A2EVI\""
+    "load.r r1"->"push \"MOD13A2EVI\"";
+    "push \"MOD13A2EVI\""->"virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>";
+    "virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>"->"ifeq load.r r1";
+    "staticget <SensorStatus: SensorStatus MODIS_MOD13A2_EVI>"
+    "ifeq load.r r1"->"staticget <SensorStatus: SensorStatus MODIS_MOD13A2_EVI>";
+    "staticget <SensorStatus: SensorStatus MODIS_MOD13A2_EVI>"->"store.r r1";
+    "store.r r1"->"goto load.r r0";
+    "ifeq load.r r1"->"load.r r1";
+    "push \"MOD13A2NDVI\""
+    "load.r r1"->"push \"MOD13A2NDVI\"";
+    "push \"MOD13A2NDVI\""->"virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>";
+    "virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>"->"ifeq load.r r1";
+    "staticget <SensorStatus: SensorStatus MODIS_MOD13A2_NDVI>"
+    "ifeq load.r r1"->"staticget <SensorStatus: SensorStatus MODIS_MOD13A2_NDVI>";
+    "staticget <SensorStatus: SensorStatus MODIS_MOD13A2_NDVI>"->"store.r r1";
+    "store.r r1"->"goto load.r r0";
+    "ifeq load.r r1"->"load.r r1";
+    "push \"MOD13Q1EVI\""
+    "load.r r1"->"push \"MOD13Q1EVI\"";
+    "push \"MOD13Q1EVI\""->"virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>";
+    "virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>"->"ifeq load.r r1";
+    "staticget <SensorStatus: SensorStatus MODIS_MOD13Q1_EVI>"
+    "ifeq load.r r1"->"staticget <SensorStatus: SensorStatus MODIS_MOD13Q1_EVI>";
+    "staticget <SensorStatus: SensorStatus MODIS_MOD13Q1_EVI>"->"store.r r1";
+    "store.r r1"->"goto load.r r0";
+    "ifeq load.r r1"->"load.r r1";
+    "push \"MOD13Q1NDVI\""
+    "load.r r1"->"push \"MOD13Q1NDVI\"";
+    "push \"MOD13Q1NDVI\""->"virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>";
+    "virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>"->"ifeq load.r r1";
+    "staticget <SensorStatus: SensorStatus MODIS_MOD13Q1_NDVI>"
+    "ifeq load.r r1"->"staticget <SensorStatus: SensorStatus MODIS_MOD13Q1_NDVI>";
+    "staticget <SensorStatus: SensorStatus MODIS_MOD13Q1_NDVI>"->"store.r r1";
+    "store.r r1"->"goto load.r r0";
+    "ifeq load.r r1"->"load.r r1";
+    "push \"MOD14A1\""
+    "load.r r1"->"push \"MOD14A1\"";
+    "push \"MOD14A1\""->"virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>";
+    "virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>"->"ifeq load.r r1";
+    "staticget <SensorStatus: SensorStatus MODIS_MOD14A1>"
+    "ifeq load.r r1"->"staticget <SensorStatus: SensorStatus MODIS_MOD14A1>";
+    "staticget <SensorStatus: SensorStatus MODIS_MOD14A1>"->"store.r r1";
+    "store.r r1"->"goto load.r r0";
+    "ifeq load.r r1"->"load.r r1";
+    "push \"MOD14A2\""
+    "load.r r1"->"push \"MOD14A2\"";
+    "push \"MOD14A2\""->"virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>";
+    "virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>"->"ifeq load.r r1";
+    "staticget <SensorStatus: SensorStatus MODIS_MOD14A2>"
+    "ifeq load.r r1"->"staticget <SensorStatus: SensorStatus MODIS_MOD14A2>";
+    "staticget <SensorStatus: SensorStatus MODIS_MOD14A2>"->"store.r r1";
+    "store.r r1"->"goto load.r r0";
+    "ifeq load.r r1"->"load.r r1";
+    "push \"MOD15A2FPAR\""
+    "load.r r1"->"push \"MOD15A2FPAR\"";
+    "push \"MOD15A2FPAR\""->"virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>";
+    "virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>"->"ifeq load.r r1";
+    "staticget <SensorStatus: SensorStatus MODIS_MOD15A2_FPAR>"
+    "ifeq load.r r1"->"staticget <SensorStatus: SensorStatus MODIS_MOD15A2_FPAR>";
+    "staticget <SensorStatus: SensorStatus MODIS_MOD15A2_FPAR>"->"store.r r1";
+    "store.r r1"->"goto load.r r0";
+    "ifeq load.r r1"->"load.r r1";
+    "push \"MOD15A2LAI\""
+    "load.r r1"->"push \"MOD15A2LAI\"";
+    "push \"MOD15A2LAI\""->"virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>";
+    "virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>"->"ifeq load.r r1";
+    "staticget <SensorStatus: SensorStatus MODIS_MOD15A2_LAI>"
+    "ifeq load.r r1"->"staticget <SensorStatus: SensorStatus MODIS_MOD15A2_LAI>";
+    "staticget <SensorStatus: SensorStatus MODIS_MOD15A2_LAI>"->"store.r r1";
+    "store.r r1"->"goto load.r r0";
+    "ifeq load.r r1"->"load.r r1";
+    "push \"MOD17A2GPP\""
+    "load.r r1"->"push \"MOD17A2GPP\"";
+    "push \"MOD17A2GPP\""->"virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>";
+    "virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>"->"ifeq load.r r1";
+    "staticget <SensorStatus: SensorStatus MODIS_MOD17A2_GPP>"
+    "ifeq load.r r1"->"staticget <SensorStatus: SensorStatus MODIS_MOD17A2_GPP>";
+    "staticget <SensorStatus: SensorStatus MODIS_MOD17A2_GPP>"->"store.r r1";
+    "store.r r1"->"goto load.r r0";
+    "ifeq load.r r1"->"load.r r1";
+    "push \"MOD17A2NETPSN\""
+    "load.r r1"->"push \"MOD17A2NETPSN\"";
+    "push \"MOD17A2NETPSN\""->"virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>";
+    "virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>"->"ifeq load.r r1";
+    "staticget <SensorStatus: SensorStatus MODIS_MOD17A2_NETPSN>"
+    "ifeq load.r r1"->"staticget <SensorStatus: SensorStatus MODIS_MOD17A2_NETPSN>";
+    "staticget <SensorStatus: SensorStatus MODIS_MOD17A2_NETPSN>"->"store.r r1";
+    "store.r r1"->"goto load.r r0";
+    "ifeq load.r r1"->"load.r r1";
+    "push \"MOD43B1\""
+    "load.r r1"->"push \"MOD43B1\"";
+    "push \"MOD43B1\""->"virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>";
+    "virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>"->"ifeq load.r r1";
+    "staticget <SensorStatus: SensorStatus MODIS_MOD43B1>"
+    "ifeq load.r r1"->"staticget <SensorStatus: SensorStatus MODIS_MOD43B1>";
+    "staticget <SensorStatus: SensorStatus MODIS_MOD43B1>"->"store.r r1";
+    "store.r r1"->"goto load.r r0";
+    "ifeq load.r r1"->"load.r r1";
+    "push \"MOD43B3\""
+    "load.r r1"->"push \"MOD43B3\"";
+    "push \"MOD43B3\""->"virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>";
+    "virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>"->"ifeq load.r r1";
+    "staticget <SensorStatus: SensorStatus MODIS_MOD43B3>"
+    "ifeq load.r r1"->"staticget <SensorStatus: SensorStatus MODIS_MOD43B3>";
+    "staticget <SensorStatus: SensorStatus MODIS_MOD43B3>"->"store.r r1";
+    "store.r r1"->"goto load.r r0";
+    "ifeq load.r r1"->"load.r r1";
+    "push \"MOD43B4\""
+    "load.r r1"->"push \"MOD43B4\"";
+    "push \"MOD43B4\""->"virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>";
+    "virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>"->"ifeq load.r r1";
+    "staticget <SensorStatus: SensorStatus MODIS_MOD43B4>"
+    "ifeq load.r r1"->"staticget <SensorStatus: SensorStatus MODIS_MOD43B4>";
+    "staticget <SensorStatus: SensorStatus MODIS_MOD43B4>"->"store.r r1";
+    "store.r r1"->"goto load.r r0";
+    "ifeq load.r r1"->"load.r r1";
+    "push \"MCD15A2FPAR\""
+    "load.r r1"->"push \"MCD15A2FPAR\"";
+    "push \"MCD15A2FPAR\""->"virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>";
+    "virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>"->"ifeq load.r r1";
+    "staticget <SensorStatus: SensorStatus MODIS_MCD15A2_FPAR>"
+    "ifeq load.r r1"->"staticget <SensorStatus: SensorStatus MODIS_MCD15A2_FPAR>";
+    "staticget <SensorStatus: SensorStatus MODIS_MCD15A2_FPAR>"->"store.r r1";
+    "store.r r1"->"goto load.r r0";
+    "ifeq load.r r1"->"load.r r1";
+    "push \"MCD15A2LAI\""
+    "load.r r1"->"push \"MCD15A2LAI\"";
+    "push \"MCD15A2LAI\""->"virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>";
+    "virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>"->"ifeq load.r r1";
+    "staticget <SensorStatus: SensorStatus MODIS_MCD15A2_LAI>"
+    "ifeq load.r r1"->"staticget <SensorStatus: SensorStatus MODIS_MCD15A2_LAI>";
+    "staticget <SensorStatus: SensorStatus MODIS_MCD15A2_LAI>"->"store.r r1";
+    "store.r r1"->"goto load.r r0";
+    "ifeq load.r r1"->"load.r r1";
+    "push \"MCD43A1\""
+    "load.r r1"->"push \"MCD43A1\"";
+    "push \"MCD43A1\""->"virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>";
+    "virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>"->"ifeq load.r r1";
+    "staticget <SensorStatus: SensorStatus MODIS_MCD43A1>"
+    "ifeq load.r r1"->"staticget <SensorStatus: SensorStatus MODIS_MCD43A1>";
+    "staticget <SensorStatus: SensorStatus MODIS_MCD43A1>"->"store.r r1";
+    "store.r r1"->"goto load.r r0";
+    "ifeq load.r r1"->"load.r r1";
+    "push \"MCD43A2\""
+    "load.r r1"->"push \"MCD43A2\"";
+    "push \"MCD43A2\""->"virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>";
+    "virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>"->"ifeq load.r r1";
+    "staticget <SensorStatus: SensorStatus MODIS_MCD43A2>"
+    "ifeq load.r r1"->"staticget <SensorStatus: SensorStatus MODIS_MCD43A2>";
+    "staticget <SensorStatus: SensorStatus MODIS_MCD43A2>"->"store.r r1";
+    "store.r r1"->"goto load.r r0";
+    "ifeq load.r r1"->"load.r r1";
+    "push \"MCD43A3\""
+    "load.r r1"->"push \"MCD43A3\"";
+    "push \"MCD43A3\""->"virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>";
+    "virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>"->"ifeq load.r r1";
+    "staticget <SensorStatus: SensorStatus MODIS_MCD43A3>"
+    "ifeq load.r r1"->"staticget <SensorStatus: SensorStatus MODIS_MCD43A3>";
+    "staticget <SensorStatus: SensorStatus MODIS_MCD43A3>"->"store.r r1";
+    "store.r r1"->"goto load.r r0";
+    "ifeq load.r r1"->"load.r r1";
+    "push \"MCD43A4\""
+    "load.r r1"->"push \"MCD43A4\"";
+    "push \"MCD43A4\""->"virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>";
+    "virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>"->"ifeq load.r r1";
+    "staticget <SensorStatus: SensorStatus MODIS_MCD43A4>"
+    "ifeq load.r r1"->"staticget <SensorStatus: SensorStatus MODIS_MCD43A4>";
+    "staticget <SensorStatus: SensorStatus MODIS_MCD43A4>"->"store.r r1";
+    "store.r r1"->"goto load.r r0";
+    "ifeq load.r r1"->"load.r r1";
+    "push \"MCD43B1\""
+    "load.r r1"->"push \"MCD43B1\"";
+    "push \"MCD43B1\""->"virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>";
+    "virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>"->"ifeq load.r r1";
+    "staticget <SensorStatus: SensorStatus MODIS_MCD43B1>"
+    "ifeq load.r r1"->"staticget <SensorStatus: SensorStatus MODIS_MCD43B1>";
+    "staticget <SensorStatus: SensorStatus MODIS_MCD43B1>"->"store.r r1";
+    "store.r r1"->"goto load.r r0";
+    "ifeq load.r r1"->"load.r r1";
+    "push \"MCD43B2\""
+    "load.r r1"->"push \"MCD43B2\"";
+    "push \"MCD43B2\""->"virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>";
+    "virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>"->"ifeq load.r r1";
+    "staticget <SensorStatus: SensorStatus MODIS_MCD43B2>"
+    "ifeq load.r r1"->"staticget <SensorStatus: SensorStatus MODIS_MCD43B2>";
+    "staticget <SensorStatus: SensorStatus MODIS_MCD43B2>"->"store.r r1";
+    "store.r r1"->"goto load.r r0";
+    "ifeq load.r r1"->"load.r r1";
+    "push \"MCD43B3\""
+    "load.r r1"->"push \"MCD43B3\"";
+    "push \"MCD43B3\""->"virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>";
+    "virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>"->"ifeq load.r r1";
+    "staticget <SensorStatus: SensorStatus MODIS_MCD43B3>"
+    "ifeq load.r r1"->"staticget <SensorStatus: SensorStatus MODIS_MCD43B3>";
+    "staticget <SensorStatus: SensorStatus MODIS_MCD43B3>"->"store.r r1";
+    "store.r r1"->"goto load.r r0";
+    "ifeq load.r r1"->"load.r r1";
+    "push \"MCD43B4\""
+    "load.r r1"->"push \"MCD43B4\"";
+    "push \"MCD43B4\""->"virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>";
+    "virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>"->"ifeq load.r r1";
+    "staticget <SensorStatus: SensorStatus MODIS_MCD43B4>"
+    "ifeq load.r r1"->"staticget <SensorStatus: SensorStatus MODIS_MCD43B4>";
+    "staticget <SensorStatus: SensorStatus MODIS_MCD43B4>"->"store.r r1";
+    "store.r r1"->"goto load.r r0";
+    "ifeq load.r r1"->"load.r r1";
+    "push \"ALI\""
+    "load.r r1"->"push \"ALI\"";
+    "push \"ALI\""->"virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>";
+    "virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>"->"ifeq load.r r1";
+    "staticget <SensorStatus: SensorStatus EO1_ALI>"
+    "ifeq load.r r1"->"staticget <SensorStatus: SensorStatus EO1_ALI>";
+    "staticget <SensorStatus: SensorStatus EO1_ALI>"->"store.r r1";
+    "store.r r1"->"goto load.r r0";
+    "ifeq load.r r1"->"load.r r1";
+    "push \"HYP\""
+    "load.r r1"->"push \"HYP\"";
+    "push \"HYP\""->"virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>";
+    "virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>"->"ifeq load.r r1";
+    "staticget <SensorStatus: SensorStatus EO1_HYP>"
+    "ifeq load.r r1"->"staticget <SensorStatus: SensorStatus EO1_HYP>";
+    "staticget <SensorStatus: SensorStatus EO1_HYP>"->"store.r r1";
+    "store.r r1"->"goto load.r r0";
+    "ifeq load.r r1"->"load.r r1";
+    "push \"TERRALOOK_ASTERVNIR\""
+    "load.r r1"->"push \"TERRALOOK_ASTERVNIR\"";
+    "push \"TERRALOOK_ASTERVNIR\""->"virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>";
+    "virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>"->"ifeq load.r r1";
+    "staticget <SensorStatus: SensorStatus TERRALOOK_ASTER_VNIR>"
+    "ifeq load.r r1"->"staticget <SensorStatus: SensorStatus TERRALOOK_ASTER_VNIR>";
+    "staticget <SensorStatus: SensorStatus TERRALOOK_ASTER_VNIR>"->"store.r r1";
+    "store.r r1"->"goto load.r r0";
+    "ifeq load.r r1"->"load.r r1";
+    "push \"TERRALOOK_GLS2005\""
+    "load.r r1"->"push \"TERRALOOK_GLS2005\"";
+    "push \"TERRALOOK_GLS2005\""->"virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>";
+    "virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>"->"ifeq load.r r1";
+    "staticget <SensorStatus: SensorStatus TERRALOOK_GLS2005>"
+    "ifeq load.r r1"->"staticget <SensorStatus: SensorStatus TERRALOOK_GLS2005>";
+    "staticget <SensorStatus: SensorStatus TERRALOOK_GLS2005>"->"store.r r1";
+    "store.r r1"->"goto load.r r0";
+    "ifeq load.r r1"->"load.r r1";
+    "push \"TERRALOOK_GLS2000\""
+    "load.r r1"->"push \"TERRALOOK_GLS2000\"";
+    "push \"TERRALOOK_GLS2000\""->"virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>";
+    "virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>"->"ifeq load.r r1";
+    "staticget <SensorStatus: SensorStatus TERRALOOK_GLS2000>"
+    "ifeq load.r r1"->"staticget <SensorStatus: SensorStatus TERRALOOK_GLS2000>";
+    "staticget <SensorStatus: SensorStatus TERRALOOK_GLS2000>"->"store.r r1";
+    "store.r r1"->"goto load.r r0";
+    "ifeq load.r r1"->"load.r r1";
+    "push \"TERRALOOK_GLS1990\""
+    "load.r r1"->"push \"TERRALOOK_GLS1990\"";
+    "push \"TERRALOOK_GLS1990\""->"virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>";
+    "virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>"->"ifeq load.r r1";
+    "staticget <SensorStatus: SensorStatus TERRALOOK_GLS1990>"
+    "ifeq load.r r1"->"staticget <SensorStatus: SensorStatus TERRALOOK_GLS1990>";
+    "staticget <SensorStatus: SensorStatus TERRALOOK_GLS1990>"->"store.r r1";
+    "store.r r1"->"goto load.r r0";
+    "ifeq load.r r1"->"load.r r1";
+    "push \"TERRALOOK_GLS1975_L4_5\""
+    "load.r r1"->"push \"TERRALOOK_GLS1975_L4_5\"";
+    "push \"TERRALOOK_GLS1975_L4_5\""->"virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>";
+    "virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>"->"ifeq load.r r1";
+    "staticget <SensorStatus: SensorStatus TERRALOOK_GLS1975_L4_5>"
+    "ifeq load.r r1"->"staticget <SensorStatus: SensorStatus TERRALOOK_GLS1975_L4_5>";
+    "staticget <SensorStatus: SensorStatus TERRALOOK_GLS1975_L4_5>"->"store.r r1";
+    "store.r r1"->"goto load.r r0";
+    "ifeq load.r r1"->"load.r r1";
+    "push \"TERRALOOK_GLS1975_L1_3\""
+    "load.r r1"->"push \"TERRALOOK_GLS1975_L1_3\"";
+    "push \"TERRALOOK_GLS1975_L1_3\""->"virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>";
+    "virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>"->"ifeq load.r r1";
+    "staticget <SensorStatus: SensorStatus TERRALOOK_GLS1975_L1_3>"
+    "ifeq load.r r1"->"staticget <SensorStatus: SensorStatus TERRALOOK_GLS1975_L1_3>";
+    "staticget <SensorStatus: SensorStatus TERRALOOK_GLS1975_L1_3>"->"store.r r1";
+    "store.r r1"->"goto load.r r0";
+    "ifeq load.r r1"->"load.r r1";
+    "push \"NAPP\""
+    "load.r r1"->"push \"NAPP\"";
+    "push \"NAPP\""->"virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>";
+    "virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>"->"ifeq load.r r1";
+    "staticget <SensorStatus: SensorStatus NAPP>"
+    "ifeq load.r r1"->"staticget <SensorStatus: SensorStatus NAPP>";
+    "staticget <SensorStatus: SensorStatus NAPP>"->"store.r r1";
+    "store.r r1"->"goto load.r r0";
+    "ifeq load.r r1"->"load.r r1";
+    "push \"NALC\""
+    "load.r r1"->"push \"NALC\"";
+    "push \"NALC\""->"virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>";
+    "virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>"->"ifeq load.r r1";
+    "staticget <SensorStatus: SensorStatus NALC>"
+    "ifeq load.r r1"->"staticget <SensorStatus: SensorStatus NALC>";
+    "staticget <SensorStatus: SensorStatus NALC>"->"store.r r1";
+    "store.r r1"->"goto load.r r0";
+    "ifeq load.r r1"->"load.r r1";
+    "push \"ETM_MOSAIC\""
+    "load.r r1"->"push \"ETM_MOSAIC\"";
+    "push \"ETM_MOSAIC\""->"virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>";
+    "virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>"->"ifeq load.r r1";
+    "staticget <SensorStatus: SensorStatus ETM_MOSAIC>"
+    "ifeq load.r r1"->"staticget <SensorStatus: SensorStatus ETM_MOSAIC>";
+    "staticget <SensorStatus: SensorStatus ETM_MOSAIC>"->"store.r r1";
+    "store.r r1"->"goto load.r r0";
+    "ifeq load.r r1"->"load.r r1";
+    "push \"TM_MOSAIC\""
+    "load.r r1"->"push \"TM_MOSAIC\"";
+    "push \"TM_MOSAIC\""->"virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>";
+    "virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>"->"ifeq load.r r1";
+    "staticget <SensorStatus: SensorStatus TM_MOSAIC>"
+    "ifeq load.r r1"->"staticget <SensorStatus: SensorStatus TM_MOSAIC>";
+    "staticget <SensorStatus: SensorStatus TM_MOSAIC>"->"store.r r1";
+    "store.r r1"->"goto load.r r0";
+    "ifeq load.r r1"->"load.r r1";
+    "push \"NHAP_BW\""
+    "load.r r1"->"push \"NHAP_BW\"";
+    "push \"NHAP_BW\""->"virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>";
+    "virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>"->"ifeq load.r r1";
+    "staticget <SensorStatus: SensorStatus NHAP_BW>"
+    "ifeq load.r r1"->"staticget <SensorStatus: SensorStatus NHAP_BW>";
+    "staticget <SensorStatus: SensorStatus NHAP_BW>"->"store.r r1";
+    "store.r r1"->"goto load.r r0";
+    "ifeq load.r r1"->"load.r r1";
+    "push \"NHAP_CIR\""
+    "load.r r1"->"push \"NHAP_CIR\"";
+    "push \"NHAP_CIR\""->"virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>";
+    "virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>"->"ifeq load.r r1";
+    "staticget <SensorStatus: SensorStatus NHAP_CIR>"
+    "ifeq load.r r1"->"staticget <SensorStatus: SensorStatus NHAP_CIR>";
+    "staticget <SensorStatus: SensorStatus NHAP_CIR>"->"store.r r1";
+    "store.r r1"->"goto load.r r0";
+    "ifeq load.r r1"->"load.r r1";
+    "push \"GLS2010\""
+    "load.r r1"->"push \"GLS2010\"";
+    "push \"GLS2010\""->"virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>";
+    "virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>"->"ifeq load.r r1";
+    "staticget <SensorStatus: SensorStatus GLS2010>"
+    "ifeq load.r r1"->"staticget <SensorStatus: SensorStatus GLS2010>";
+    "staticget <SensorStatus: SensorStatus GLS2010>"->"store.r r1";
+    "store.r r1"->"goto load.r r0";
+    "ifeq load.r r1"->"load.r r1";
+    "push \"GLS2005\""
+    "load.r r1"->"push \"GLS2005\"";
+    "push \"GLS2005\""->"virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>";
+    "virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>"->"ifeq load.r r1";
+    "staticget <SensorStatus: SensorStatus GLS2005>"
+    "ifeq load.r r1"->"staticget <SensorStatus: SensorStatus GLS2005>";
+    "staticget <SensorStatus: SensorStatus GLS2005>"->"store.r r1";
+    "store.r r1"->"goto load.r r0";
+    "ifeq load.r r1"->"load.r r1";
+    "push \"GLS2005_EO1\""
+    "load.r r1"->"push \"GLS2005_EO1\"";
+    "push \"GLS2005_EO1\""->"virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>";
+    "virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>"->"ifeq load.r r1";
+    "staticget <SensorStatus: SensorStatus GLS2005_EO1>"
+    "ifeq load.r r1"->"staticget <SensorStatus: SensorStatus GLS2005_EO1>";
+    "staticget <SensorStatus: SensorStatus GLS2005_EO1>"->"store.r r1";
+    "store.r r1"->"goto load.r r0";
+    "ifeq load.r r1"->"load.r r1";
+    "push \"GLS2000\""
+    "load.r r1"->"push \"GLS2000\"";
+    "push \"GLS2000\""->"virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>";
+    "virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>"->"ifeq load.r r1";
+    "staticget <SensorStatus: SensorStatus GLS2000>"
+    "ifeq load.r r1"->"staticget <SensorStatus: SensorStatus GLS2000>";
+    "staticget <SensorStatus: SensorStatus GLS2000>"->"store.r r1";
+    "store.r r1"->"goto load.r r0";
+    "ifeq load.r r1"->"load.r r1";
+    "push \"GLS1990\""
+    "load.r r1"->"push \"GLS1990\"";
+    "push \"GLS1990\""->"virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>";
+    "virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>"->"ifeq load.r r1";
+    "staticget <SensorStatus: SensorStatus GLS1990>"
+    "ifeq load.r r1"->"staticget <SensorStatus: SensorStatus GLS1990>";
+    "staticget <SensorStatus: SensorStatus GLS1990>"->"store.r r1";
+    "store.r r1"->"goto load.r r0";
+    "ifeq load.r r1"->"load.r r1";
+    "push \"GLS1975_4_5MSS\""
+    "load.r r1"->"push \"GLS1975_4_5MSS\"";
+    "push \"GLS1975_4_5MSS\""->"virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>";
+    "virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>"->"ifeq load.r r1";
+    "staticget <SensorStatus: SensorStatus GLS1975_4_5MSS>"
+    "ifeq load.r r1"->"staticget <SensorStatus: SensorStatus GLS1975_4_5MSS>";
+    "staticget <SensorStatus: SensorStatus GLS1975_4_5MSS>"->"store.r r1";
+    "store.r r1"->"goto load.r r0";
+    "ifeq load.r r1"->"load.r r1";
+    "push \"GLS1975_1_3MSS\""
+    "load.r r1"->"push \"GLS1975_1_3MSS\"";
+    "push \"GLS1975_1_3MSS\""->"virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>";
+    "virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>"->"ifeq load.r r1";
+    "staticget <SensorStatus: SensorStatus GLS1975_1_3MSS>"
+    "ifeq load.r r1"->"staticget <SensorStatus: SensorStatus GLS1975_1_3MSS>";
+    "staticget <SensorStatus: SensorStatus GLS1975_1_3MSS>"->"store.r r1";
+    "store.r r1"->"goto load.r r0";
+    "ifeq load.r r1"->"load.r r1";
+    "push \"SYSTEMATIC_L1G\""
+    "load.r r1"->"push \"SYSTEMATIC_L1G\"";
+    "push \"SYSTEMATIC_L1G\""->"virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>";
+    "ifeq staticget <SensorStatus: SensorStatus LANDSAT_ETM_SLC_OFF>"
+    "virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>"->"ifeq staticget <SensorStatus: SensorStatus LANDSAT_ETM_SLC_OFF>";
+    "staticget <SensorStatus: SensorStatus SYSTEMATIC_L1G>"
+    "ifeq staticget <SensorStatus: SensorStatus LANDSAT_ETM_SLC_OFF>"->"staticget <SensorStatus: SensorStatus SYSTEMATIC_L1G>";
+    "staticget <SensorStatus: SensorStatus SYSTEMATIC_L1G>"->"store.r r1";
+    "store.r r1"->"goto load.r r0";
+    "ifeq staticget <SensorStatus: SensorStatus LANDSAT_ETM_SLC_OFF>"->"staticget <SensorStatus: SensorStatus LANDSAT_ETM_SLC_OFF>";
+    "staticget <SensorStatus: SensorStatus LANDSAT_ETM_SLC_OFF>"->"store.r r1";
+    "push 1"->"store.r r1";
+    "push 1"->"store.r r1";
+}

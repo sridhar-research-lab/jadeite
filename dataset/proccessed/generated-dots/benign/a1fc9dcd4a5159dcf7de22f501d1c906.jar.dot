@@ -1,0 +1,132 @@
+digraph "" {
+    "r0 := @this: Nature"
+    "load.r r0"
+    "r0 := @this: Nature"->"load.r r0";
+    "virtualinvoke <Nature: void initForm()>"
+    "load.r r0"->"virtualinvoke <Nature: void initForm()>";
+    "virtualinvoke <Nature: void initForm()>"->"load.r r0";
+    "virtualinvoke <Nature: void getAppletParams()>"
+    "load.r r0"->"virtualinvoke <Nature: void getAppletParams()>";
+    "virtualinvoke <Nature: void getAppletParams()>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "virtualinvoke <java.awt.Component: java.awt.Dimension size()>"
+    "load.r r0"->"virtualinvoke <java.awt.Component: java.awt.Dimension size()>";
+    "fieldget <java.awt.Dimension: int width>"
+    "virtualinvoke <java.awt.Component: java.awt.Dimension size()>"->"fieldget <java.awt.Dimension: int width>";
+    "fieldget <java.awt.Dimension: int width>"->"load.r r0";
+    "load.r r0"->"virtualinvoke <java.awt.Component: java.awt.Dimension size()>";
+    "fieldget <java.awt.Dimension: int height>"
+    "virtualinvoke <java.awt.Component: java.awt.Dimension size()>"->"fieldget <java.awt.Dimension: int height>";
+    "virtualinvoke <java.awt.Component: java.awt.Image createImage(int,int)>"
+    "fieldget <java.awt.Dimension: int height>"->"virtualinvoke <java.awt.Component: java.awt.Image createImage(int,int)>";
+    "fieldput <Nature: java.awt.Image OffScreenImage>"
+    "virtualinvoke <java.awt.Component: java.awt.Image createImage(int,int)>"->"fieldput <Nature: java.awt.Image OffScreenImage>";
+    "fieldput <Nature: java.awt.Image OffScreenImage>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "fieldget <Nature: java.awt.Image OffScreenImage>"
+    "load.r r0"->"fieldget <Nature: java.awt.Image OffScreenImage>";
+    "virtualinvoke <java.awt.Image: java.awt.Graphics getGraphics()>"
+    "fieldget <Nature: java.awt.Image OffScreenImage>"->"virtualinvoke <java.awt.Image: java.awt.Graphics getGraphics()>";
+    "fieldput <Nature: java.awt.Graphics OffScreenGraphics>"
+    "virtualinvoke <java.awt.Image: java.awt.Graphics getGraphics()>"->"fieldput <Nature: java.awt.Graphics OffScreenGraphics>";
+    "fieldput <Nature: java.awt.Graphics OffScreenGraphics>"->"load.r r0";
+    "new java.lang.Thread"
+    "load.r r0"->"new java.lang.Thread";
+    "dup1.r"
+    "new java.lang.Thread"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "specialinvoke <java.lang.Thread: void <init>(java.lang.Runnable)>"
+    "load.r r0"->"specialinvoke <java.lang.Thread: void <init>(java.lang.Runnable)>";
+    "fieldput <Nature: java.lang.Thread Animator>"
+    "specialinvoke <java.lang.Thread: void <init>(java.lang.Runnable)>"->"fieldput <Nature: java.lang.Thread Animator>";
+    "fieldput <Nature: java.lang.Thread Animator>"->"load.r r0";
+    "fieldget <Nature: java.lang.Thread Animator>"
+    "load.r r0"->"fieldget <Nature: java.lang.Thread Animator>";
+    "virtualinvoke <java.lang.Thread: void start()>"
+    "fieldget <Nature: java.lang.Thread Animator>"->"virtualinvoke <java.lang.Thread: void start()>";
+    "push 0"
+    "virtualinvoke <java.lang.Thread: void start()>"->"push 0";
+    "store.i i0"
+    "push 0"->"store.i i0";
+    "goto load.i i0"
+    "store.i i0"->"goto load.i i0";
+    "load.i i0"
+    "goto load.i i0"->"load.i i0";
+    "load.i i0"->"load.r r0";
+    "fieldget <Nature: int MaxCount>"
+    "load.r r0"->"fieldget <Nature: int MaxCount>";
+    "ifcmplt.i load.r r0"
+    "fieldget <Nature: int MaxCount>"->"ifcmplt.i load.r r0";
+    "ifcmplt.i load.r r0"->"load.r r0";
+    "load.r r0"->"virtualinvoke <java.awt.Component: java.awt.Dimension size()>";
+    "virtualinvoke <java.awt.Component: java.awt.Dimension size()>"->"fieldget <java.awt.Dimension: int height>";
+    "fieldget <java.awt.Dimension: int height>"->"store.i i0";
+    "store.i i0"->"push 0";
+    "store.i i12"
+    "push 0"->"store.i i12";
+    "goto load.i i12"
+    "store.i i12"->"goto load.i i12";
+    "load.i i12"
+    "goto load.i i12"->"load.i i12";
+    "push 1024"
+    "load.i i12"->"push 1024";
+    "push 1024"->"ifcmplt.i load.r r0";
+    "return"
+    "ifcmplt.i load.r r0"->"return";
+    "ifcmplt.i load.r r0"->"load.r r0";
+    "fieldget <Nature: int[] Height>"
+    "load.r r0"->"fieldget <Nature: int[] Height>";
+    "fieldget <Nature: int[] Height>"->"load.i i12";
+    "load.i i12"->"load.i i0";
+    "arraywrite.i"
+    "load.i i0"->"arraywrite.i";
+    "inc.i i12 1"
+    "arraywrite.i"->"inc.i i12 1";
+    "ifcmplt.i load.r r0"->"load.r r0";
+    "fieldget <Nature: int[] Speed>"
+    "load.r r0"->"fieldget <Nature: int[] Speed>";
+    "fieldget <Nature: int[] Speed>"->"load.i i0";
+    "staticinvoke <java.lang.Math: double random()>"
+    "load.i i0"->"staticinvoke <java.lang.Math: double random()>";
+    "staticinvoke <java.lang.Math: double random()>"->"load.r r0";
+    "fieldget <Nature: int MaxSpeed>"
+    "load.r r0"->"fieldget <Nature: int MaxSpeed>";
+    "i2d"
+    "fieldget <Nature: int MaxSpeed>"->"i2d";
+    "mul.d"
+    "i2d"->"mul.d";
+    "d2i"
+    "mul.d"->"d2i";
+    "push 3"
+    "d2i"->"push 3";
+    "add.i"
+    "push 3"->"add.i";
+    "add.i"->"arraywrite.i";
+    "arraywrite.i"->"load.r r0";
+    "fieldget <Nature: int[] Xpos>"
+    "load.r r0"->"fieldget <Nature: int[] Xpos>";
+    "fieldget <Nature: int[] Xpos>"->"load.i i0";
+    "load.i i0"->"staticinvoke <java.lang.Math: double random()>";
+    "staticinvoke <java.lang.Math: double random()>"->"load.r r0";
+    "load.r r0"->"virtualinvoke <java.awt.Component: java.awt.Dimension size()>";
+    "virtualinvoke <java.awt.Component: java.awt.Dimension size()>"->"fieldget <java.awt.Dimension: int width>";
+    "fieldget <java.awt.Dimension: int width>"->"i2d";
+    "i2d"->"mul.d";
+    "mul.d"->"d2i";
+    "d2i"->"arraywrite.i";
+    "arraywrite.i"->"load.r r0";
+    "fieldget <Nature: int[] Ypos>"
+    "load.r r0"->"fieldget <Nature: int[] Ypos>";
+    "fieldget <Nature: int[] Ypos>"->"load.i i0";
+    "load.i i0"->"staticinvoke <java.lang.Math: double random()>";
+    "staticinvoke <java.lang.Math: double random()>"->"load.r r0";
+    "load.r r0"->"virtualinvoke <java.awt.Component: java.awt.Dimension size()>";
+    "virtualinvoke <java.awt.Component: java.awt.Dimension size()>"->"fieldget <java.awt.Dimension: int height>";
+    "fieldget <java.awt.Dimension: int height>"->"i2d";
+    "i2d"->"mul.d";
+    "mul.d"->"d2i";
+    "d2i"->"arraywrite.i";
+    "inc.i i0 1"
+    "arraywrite.i"->"inc.i i0 1";
+}

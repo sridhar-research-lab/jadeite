@@ -1,0 +1,39 @@
+digraph "" {
+    "r0 := @this: org.hsqldb.util.DatabaseManager"
+    "new org.hsqldb.util.DatabaseManager"
+    "r0 := @this: org.hsqldb.util.DatabaseManager"->"new org.hsqldb.util.DatabaseManager";
+    "store.r r0"
+    "new org.hsqldb.util.DatabaseManager"->"store.r r0";
+    "load.r r0"
+    "store.r r0"->"load.r r0";
+    "specialinvoke <org.hsqldb.util.DatabaseManager: void <init>()>"
+    "load.r r0"->"specialinvoke <org.hsqldb.util.DatabaseManager: void <init>()>";
+    "specialinvoke <org.hsqldb.util.DatabaseManager: void <init>()>"->"load.r r0";
+    "virtualinvoke <org.hsqldb.util.DatabaseManager: void main()>"
+    "load.r r0"->"virtualinvoke <org.hsqldb.util.DatabaseManager: void main()>";
+    "virtualinvoke <org.hsqldb.util.DatabaseManager: void main()>"->"load.r r0";
+    "staticget <org.hsqldb.util.DatabaseManager: java.lang.String defDriver>"
+    "load.r r0"->"staticget <org.hsqldb.util.DatabaseManager: java.lang.String defDriver>";
+    "staticget <org.hsqldb.util.DatabaseManager: java.lang.String defURL>"
+    "staticget <org.hsqldb.util.DatabaseManager: java.lang.String defDriver>"->"staticget <org.hsqldb.util.DatabaseManager: java.lang.String defURL>";
+    "staticget <org.hsqldb.util.DatabaseManager: java.lang.String defUser>"
+    "staticget <org.hsqldb.util.DatabaseManager: java.lang.String defURL>"->"staticget <org.hsqldb.util.DatabaseManager: java.lang.String defUser>";
+    "staticget <org.hsqldb.util.DatabaseManager: java.lang.String defPassword>"
+    "staticget <org.hsqldb.util.DatabaseManager: java.lang.String defUser>"->"staticget <org.hsqldb.util.DatabaseManager: java.lang.String defPassword>";
+    "staticinvoke <org.hsqldb.util.ConnectionDialog: java.sql.Connection createConnection(java.lang.String,java.lang.String,java.lang.String,java.lang.String)>"
+    "staticget <org.hsqldb.util.DatabaseManager: java.lang.String defPassword>"->"staticinvoke <org.hsqldb.util.ConnectionDialog: java.sql.Connection createConnection(java.lang.String,java.lang.String,java.lang.String,java.lang.String)>";
+    "virtualinvoke <org.hsqldb.util.DatabaseManager: void connect(java.sql.Connection)>"
+    "staticinvoke <org.hsqldb.util.ConnectionDialog: java.sql.Connection createConnection(java.lang.String,java.lang.String,java.lang.String,java.lang.String)>"->"virtualinvoke <org.hsqldb.util.DatabaseManager: void connect(java.sql.Connection)>";
+    "virtualinvoke <org.hsqldb.util.DatabaseManager: void connect(java.sql.Connection)>"->"load.r r0";
+    "virtualinvoke <org.hsqldb.util.DatabaseManager: void insertTestData()>"
+    "load.r r0"->"virtualinvoke <org.hsqldb.util.DatabaseManager: void insertTestData()>";
+    "virtualinvoke <org.hsqldb.util.DatabaseManager: void insertTestData()>"->"load.r r0";
+    "virtualinvoke <org.hsqldb.util.DatabaseManager: void refreshTree()>"
+    "load.r r0"->"virtualinvoke <org.hsqldb.util.DatabaseManager: void refreshTree()>";
+    "goto return"
+    "virtualinvoke <org.hsqldb.util.DatabaseManager: void refreshTree()>"->"goto return";
+    "return"
+    "goto return"->"return";
+    "virtualinvoke <java.lang.Exception: void printStackTrace()>"
+    "virtualinvoke <org.hsqldb.util.DatabaseManager: void refreshTree()>"->"virtualinvoke <java.lang.Exception: void printStackTrace()>";
+}

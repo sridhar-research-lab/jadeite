@@ -1,0 +1,16 @@
+digraph "" {
+    "r0 := @this: SIRfade2Free"
+    "load.r r0"
+    "r0 := @this: SIRfade2Free"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "push \"startupcolor\""
+    "load.r r0"->"push \"startupcolor\"";
+    "push \"255,255,255\""
+    "push \"startupcolor\""->"push \"255,255,255\"";
+    "virtualinvoke <SIRfade2Free: java.awt.Color parmgetcolor(java.lang.String,java.lang.String)>"
+    "push \"255,255,255\""->"virtualinvoke <SIRfade2Free: java.awt.Color parmgetcolor(java.lang.String,java.lang.String)>";
+    "virtualinvoke <java.awt.Component: void setBackground(java.awt.Color)>"
+    "virtualinvoke <SIRfade2Free: java.awt.Color parmgetcolor(java.lang.String,java.lang.String)>"->"virtualinvoke <java.awt.Component: void setBackground(java.awt.Color)>";
+    "return"
+    "virtualinvoke <java.awt.Component: void setBackground(java.awt.Color)>"->"return";
+}

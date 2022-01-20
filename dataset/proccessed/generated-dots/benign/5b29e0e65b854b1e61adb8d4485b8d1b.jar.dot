@@ -1,0 +1,227 @@
+digraph "" {
+    "r0 := @this: PlanetFinder"
+    "load.r r0"
+    "r0 := @this: PlanetFinder"->"load.r r0";
+    "new Language"
+    "load.r r0"->"new Language";
+    "dup1.r"
+    "new Language"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "push \"language\""
+    "load.r r0"->"push \"language\"";
+    "virtualinvoke <PlanetFinder: java.lang.String getParameter(java.lang.String)>"
+    "push \"language\""->"virtualinvoke <PlanetFinder: java.lang.String getParameter(java.lang.String)>";
+    "specialinvoke <Language: void <init>(java.lang.String)>"
+    "virtualinvoke <PlanetFinder: java.lang.String getParameter(java.lang.String)>"->"specialinvoke <Language: void <init>(java.lang.String)>";
+    "fieldput <PlanetFinder: Language lang>"
+    "specialinvoke <Language: void <init>(java.lang.String)>"->"fieldput <PlanetFinder: Language lang>";
+    "goto load.r r0"
+    "fieldput <PlanetFinder: Language lang>"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "new Text"
+    "load.r r0"->"new Text";
+    "new Text"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "fieldget <PlanetFinder: Language lang>"
+    "load.r r0"->"fieldget <PlanetFinder: Language lang>";
+    "specialinvoke <Text: void <init>(Language)>"
+    "fieldget <PlanetFinder: Language lang>"->"specialinvoke <Text: void <init>(Language)>";
+    "fieldput <PlanetFinder: Text txt>"
+    "specialinvoke <Text: void <init>(Language)>"->"fieldput <PlanetFinder: Text txt>";
+    "fieldput <PlanetFinder: Text txt>"->"load.r r0";
+    "specialinvoke <PlanetFinder: void initVariables()>"
+    "load.r r0"->"specialinvoke <PlanetFinder: void initVariables()>";
+    "specialinvoke <PlanetFinder: void initVariables()>"->"load.r r0";
+    "fieldget <PlanetFinder: java.awt.Checkbox nakedEyeOnlyCheckbox>"
+    "load.r r0"->"fieldget <PlanetFinder: java.awt.Checkbox nakedEyeOnlyCheckbox>";
+    "push 1"
+    "fieldget <PlanetFinder: java.awt.Checkbox nakedEyeOnlyCheckbox>"->"push 1";
+    "virtualinvoke <java.awt.Checkbox: void setState(boolean)>"
+    "push 1"->"virtualinvoke <java.awt.Checkbox: void setState(boolean)>";
+    "virtualinvoke <java.awt.Checkbox: void setState(boolean)>"->"load.r r0";
+    "fieldget <PlanetFinder: java.awt.Checkbox dstCheckbox>"
+    "load.r r0"->"fieldget <PlanetFinder: java.awt.Checkbox dstCheckbox>";
+    "staticinvoke <java.util.TimeZone: java.util.TimeZone getDefault()>"
+    "fieldget <PlanetFinder: java.awt.Checkbox dstCheckbox>"->"staticinvoke <java.util.TimeZone: java.util.TimeZone getDefault()>";
+    "new java.util.GregorianCalendar"
+    "staticinvoke <java.util.TimeZone: java.util.TimeZone getDefault()>"->"new java.util.GregorianCalendar";
+    "new java.util.GregorianCalendar"->"dup1.r";
+    "specialinvoke <java.util.GregorianCalendar: void <init>()>"
+    "dup1.r"->"specialinvoke <java.util.GregorianCalendar: void <init>()>";
+    "virtualinvoke <java.util.GregorianCalendar: java.util.Date getTime()>"
+    "specialinvoke <java.util.GregorianCalendar: void <init>()>"->"virtualinvoke <java.util.GregorianCalendar: java.util.Date getTime()>";
+    "virtualinvoke <java.util.TimeZone: boolean inDaylightTime(java.util.Date)>"
+    "virtualinvoke <java.util.GregorianCalendar: java.util.Date getTime()>"->"virtualinvoke <java.util.TimeZone: boolean inDaylightTime(java.util.Date)>";
+    "virtualinvoke <java.util.TimeZone: boolean inDaylightTime(java.util.Date)>"->"virtualinvoke <java.awt.Checkbox: void setState(boolean)>";
+    "virtualinvoke <java.awt.Checkbox: void setState(boolean)>"->"load.r r0";
+    "new java.lang.Long"
+    "load.r r0"->"new java.lang.Long";
+    "new java.lang.Long"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "push \"timezone\""
+    "load.r r0"->"push \"timezone\"";
+    "push \"timezone\""->"virtualinvoke <PlanetFinder: java.lang.String getParameter(java.lang.String)>";
+    "staticinvoke <java.lang.Double: java.lang.Double valueOf(java.lang.String)>"
+    "virtualinvoke <PlanetFinder: java.lang.String getParameter(java.lang.String)>"->"staticinvoke <java.lang.Double: java.lang.Double valueOf(java.lang.String)>";
+    "virtualinvoke <java.lang.Double: double doubleValue()>"
+    "staticinvoke <java.lang.Double: java.lang.Double valueOf(java.lang.String)>"->"virtualinvoke <java.lang.Double: double doubleValue()>";
+    "push 3600000.0"
+    "virtualinvoke <java.lang.Double: double doubleValue()>"->"push 3600000.0";
+    "mul.d"
+    "push 3600000.0"->"mul.d";
+    "staticinvoke <java.lang.Math: long round(double)>"
+    "mul.d"->"staticinvoke <java.lang.Math: long round(double)>";
+    "specialinvoke <java.lang.Long: void <init>(long)>"
+    "staticinvoke <java.lang.Math: long round(double)>"->"specialinvoke <java.lang.Long: void <init>(long)>";
+    "virtualinvoke <java.lang.Long: long longValue()>"
+    "specialinvoke <java.lang.Long: void <init>(long)>"->"virtualinvoke <java.lang.Long: long longValue()>";
+    "fieldput <PlanetFinder: long tzOffset>"
+    "virtualinvoke <java.lang.Long: long longValue()>"->"fieldput <PlanetFinder: long tzOffset>";
+    "fieldput <PlanetFinder: long tzOffset>"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "fieldget <PlanetFinder: long tzOffset>"
+    "load.r r0"->"fieldget <PlanetFinder: long tzOffset>";
+    "l2d"
+    "fieldget <PlanetFinder: long tzOffset>"->"l2d";
+    "specialinvoke <PlanetFinder: void setTimeZoneText(double)>"
+    "l2d"->"specialinvoke <PlanetFinder: void setTimeZoneText(double)>";
+    "specialinvoke <PlanetFinder: void setTimeZoneText(double)>"->"load.r r0";
+    "load.r r0"->"push 1";
+    "specialinvoke <PlanetFinder: void respondToSelectionOfTimeZone(boolean)>"
+    "push 1"->"specialinvoke <PlanetFinder: void respondToSelectionOfTimeZone(boolean)>";
+    "push -999.0"
+    "specialinvoke <PlanetFinder: void respondToSelectionOfTimeZone(boolean)>"->"push -999.0";
+    "store.d d4"
+    "push -999.0"->"store.d d4";
+    "store.d d4"->"push -999.0";
+    "store.d d5"
+    "push -999.0"->"store.d d5";
+    "store.d d5"->"load.r r0";
+    "push \"latitude\""
+    "load.r r0"->"push \"latitude\"";
+    "push \"latitude\""->"virtualinvoke <PlanetFinder: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <PlanetFinder: java.lang.String getParameter(java.lang.String)>"->"staticinvoke <java.lang.Double: java.lang.Double valueOf(java.lang.String)>";
+    "staticinvoke <java.lang.Double: java.lang.Double valueOf(java.lang.String)>"->"virtualinvoke <java.lang.Double: double doubleValue()>";
+    "virtualinvoke <java.lang.Double: double doubleValue()>"->"store.d d4";
+    "store.d d4"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "push \"longitude\""
+    "load.r r0"->"push \"longitude\"";
+    "push \"longitude\""->"virtualinvoke <PlanetFinder: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <PlanetFinder: java.lang.String getParameter(java.lang.String)>"->"staticinvoke <java.lang.Double: java.lang.Double valueOf(java.lang.String)>";
+    "staticinvoke <java.lang.Double: java.lang.Double valueOf(java.lang.String)>"->"virtualinvoke <java.lang.Double: double doubleValue()>";
+    "virtualinvoke <java.lang.Double: double doubleValue()>"->"store.d d5";
+    "goto load.d d4"
+    "store.d d5"->"goto load.d d4";
+    "load.d d4"
+    "goto load.d d4"->"load.d d4";
+    "push -900.0"
+    "load.d d4"->"push -900.0";
+    "cmpl.d"
+    "push -900.0"->"cmpl.d";
+    "ifle load.r r0"
+    "cmpl.d"->"ifle load.r r0";
+    "load.d d5"
+    "ifle load.r r0"->"load.d d5";
+    "load.d d5"->"push -900.0";
+    "push -900.0"->"cmpl.d";
+    "cmpl.d"->"ifle load.r r0";
+    "ifle load.r r0"->"load.r r0";
+    "specialinvoke <PlanetFinder: void selectNoCity()>"
+    "load.r r0"->"specialinvoke <PlanetFinder: void selectNoCity()>";
+    "specialinvoke <PlanetFinder: void selectNoCity()>"->"load.r r0";
+    "load.r r0"->"load.d d4";
+    "load.d d4"->"load.d d5";
+    "specialinvoke <PlanetFinder: void setLatLon(double,double)>"
+    "load.d d5"->"specialinvoke <PlanetFinder: void setLatLon(double,double)>";
+    "specialinvoke <PlanetFinder: void setLatLon(double,double)>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "push \"displayplanets\""
+    "load.r r0"->"push \"displayplanets\"";
+    "push \"displayplanets\""->"virtualinvoke <PlanetFinder: java.lang.String getParameter(java.lang.String)>";
+    "push \"y\""
+    "virtualinvoke <PlanetFinder: java.lang.String getParameter(java.lang.String)>"->"push \"y\"";
+    "virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>"
+    "push \"y\""->"virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>";
+    "fieldput <PlanetFinder: boolean optionDisplayPlanets>"
+    "virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>"->"fieldput <PlanetFinder: boolean optionDisplayPlanets>";
+    "fieldput <PlanetFinder: boolean optionDisplayPlanets>"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "push \"blackandwhiteonly\""
+    "load.r r0"->"push \"blackandwhiteonly\"";
+    "push \"blackandwhiteonly\""->"virtualinvoke <PlanetFinder: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <PlanetFinder: java.lang.String getParameter(java.lang.String)>"->"push \"y\"";
+    "push \"y\""->"virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>";
+    "fieldput <PlanetFinder: boolean optionBlackAndWhiteOnly>"
+    "virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>"->"fieldput <PlanetFinder: boolean optionBlackAndWhiteOnly>";
+    "fieldput <PlanetFinder: boolean optionBlackAndWhiteOnly>"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "push \"shownsew\""
+    "load.r r0"->"push \"shownsew\"";
+    "push \"shownsew\""->"virtualinvoke <PlanetFinder: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <PlanetFinder: java.lang.String getParameter(java.lang.String)>"->"push \"y\"";
+    "push \"y\""->"virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>";
+    "fieldput <PlanetFinder: boolean optionShowNSEW>"
+    "virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>"->"fieldput <PlanetFinder: boolean optionShowNSEW>";
+    "fieldput <PlanetFinder: boolean optionShowNSEW>"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "push \"dimmestmagnitude\""
+    "load.r r0"->"push \"dimmestmagnitude\"";
+    "push \"dimmestmagnitude\""->"virtualinvoke <PlanetFinder: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <PlanetFinder: java.lang.String getParameter(java.lang.String)>"->"staticinvoke <java.lang.Double: java.lang.Double valueOf(java.lang.String)>";
+    "staticinvoke <java.lang.Double: java.lang.Double valueOf(java.lang.String)>"->"virtualinvoke <java.lang.Double: double doubleValue()>";
+    "fieldput <PlanetFinder: double optionDimmestMagnitude>"
+    "virtualinvoke <java.lang.Double: double doubleValue()>"->"fieldput <PlanetFinder: double optionDimmestMagnitude>";
+    "fieldput <PlanetFinder: double optionDimmestMagnitude>"->"goto load.d d4";
+    "goto load.d d4"->"load.d d4";
+    "load.d d4"->"push -900.0";
+    "push -900.0"->"cmpl.d";
+    "ifle push 1"
+    "cmpl.d"->"ifle push 1";
+    "ifle push 1"->"load.d d5";
+    "load.d d5"->"push -900.0";
+    "push -900.0"->"cmpl.d";
+    "ifgt push 0"
+    "cmpl.d"->"ifgt push 0";
+    "ifgt push 0"->"push 1";
+    "store.b $r22"
+    "push 1"->"store.b $r22";
+    "store.b $r22"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "load.b $r22"
+    "load.r r0"->"load.b $r22";
+    "specialinvoke <PlanetFinder: void initApplet(boolean)>"
+    "load.b $r22"->"specialinvoke <PlanetFinder: void initApplet(boolean)>";
+    "specialinvoke <PlanetFinder: void initApplet(boolean)>"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "virtualinvoke <PlanetFinder: void repaint()>"
+    "load.r r0"->"virtualinvoke <PlanetFinder: void repaint()>";
+    "return"
+    "virtualinvoke <PlanetFinder: void repaint()>"->"return";
+    "store.r $r22"
+    "specialinvoke <PlanetFinder: void initApplet(boolean)>"->"store.r $r22";
+    "push 0"
+    "ifgt push 0"->"push 0";
+    "push 0"->"store.b $r22";
+    "virtualinvoke <java.lang.Double: double doubleValue()>"->"store.r $r22";
+    "virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>"->"store.r $r22";
+    "virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>"->"store.r $r22";
+    "virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>"->"store.r $r22";
+    "virtualinvoke <java.lang.Double: double doubleValue()>"->"store.r $r22";
+    "virtualinvoke <java.lang.Double: double doubleValue()>"->"store.r $r22";
+    "virtualinvoke <java.lang.Long: long longValue()>"->"store.r $r22";
+    "specialinvoke <Language: void <init>(java.lang.String)>"->"store.r $r22";
+    "store.r $r22"->"load.r r0";
+    "load.r r0"->"new Language";
+    "new Language"->"dup1.r";
+    "staticinvoke <java.util.Locale: java.util.Locale getDefault()>"
+    "dup1.r"->"staticinvoke <java.util.Locale: java.util.Locale getDefault()>";
+    "virtualinvoke <java.util.Locale: java.lang.String getDisplayLanguage()>"
+    "staticinvoke <java.util.Locale: java.util.Locale getDefault()>"->"virtualinvoke <java.util.Locale: java.lang.String getDisplayLanguage()>";
+    "virtualinvoke <java.util.Locale: java.lang.String getDisplayLanguage()>"->"specialinvoke <Language: void <init>(java.lang.String)>";
+    "specialinvoke <Language: void <init>(java.lang.String)>"->"fieldput <PlanetFinder: Language lang>";
+}

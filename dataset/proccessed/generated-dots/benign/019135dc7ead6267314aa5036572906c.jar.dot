@@ -1,0 +1,692 @@
+digraph "" {
+    "r0 := @this: epop.Epop"
+    "load.r r0"
+    "r0 := @this: epop.Epop"->"load.r r0";
+    "push \"bg\""
+    "load.r r0"->"push \"bg\"";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"
+    "push \"bg\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "store.r r1"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"store.r r1";
+    "store.r r1"->"load.r r0";
+    "load.r r1"
+    "load.r r0"->"load.r r1";
+    "staticinvoke <java.awt.Color: java.awt.Color decode(java.lang.String)>"
+    "load.r r1"->"staticinvoke <java.awt.Color: java.awt.Color decode(java.lang.String)>";
+    "fieldput <epop.Epop: java.awt.Color c>"
+    "staticinvoke <java.awt.Color: java.awt.Color decode(java.lang.String)>"->"fieldput <epop.Epop: java.awt.Color c>";
+    "goto load.r r0"
+    "fieldput <epop.Epop: java.awt.Color c>"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "push \"fg\""
+    "load.r r0"->"push \"fg\"";
+    "push \"fg\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"store.r r1";
+    "store.r r1"->"load.r r0";
+    "load.r r0"->"load.r r1";
+    "load.r r1"->"staticinvoke <java.awt.Color: java.awt.Color decode(java.lang.String)>";
+    "fieldput <epop.Epop: java.awt.Color m>"
+    "staticinvoke <java.awt.Color: java.awt.Color decode(java.lang.String)>"->"fieldput <epop.Epop: java.awt.Color m>";
+    "fieldput <epop.Epop: java.awt.Color m>"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "push \"roll\""
+    "load.r r0"->"push \"roll\"";
+    "push \"roll\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"store.r r1";
+    "store.r r1"->"load.r r0";
+    "load.r r0"->"load.r r1";
+    "load.r r1"->"staticinvoke <java.awt.Color: java.awt.Color decode(java.lang.String)>";
+    "fieldput <epop.Epop: java.awt.Color g>"
+    "staticinvoke <java.awt.Color: java.awt.Color decode(java.lang.String)>"->"fieldput <epop.Epop: java.awt.Color g>";
+    "fieldput <epop.Epop: java.awt.Color g>"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "virtualinvoke <java.awt.Component: java.awt.Font getFont()>"
+    "load.r r0"->"virtualinvoke <java.awt.Component: java.awt.Font getFont()>";
+    "virtualinvoke <java.awt.Font: int getSize()>"
+    "virtualinvoke <java.awt.Component: java.awt.Font getFont()>"->"virtualinvoke <java.awt.Font: int getSize()>";
+    "store.i i0"
+    "virtualinvoke <java.awt.Font: int getSize()>"->"store.i i0";
+    "store.i i0"->"load.r r0";
+    "virtualinvoke <java.awt.Component: java.awt.Toolkit getToolkit()>"
+    "load.r r0"->"virtualinvoke <java.awt.Component: java.awt.Toolkit getToolkit()>";
+    "virtualinvoke <java.awt.Toolkit: java.awt.Dimension getScreenSize()>"
+    "virtualinvoke <java.awt.Component: java.awt.Toolkit getToolkit()>"->"virtualinvoke <java.awt.Toolkit: java.awt.Dimension getScreenSize()>";
+    "fieldget <java.awt.Dimension: int height>"
+    "virtualinvoke <java.awt.Toolkit: java.awt.Dimension getScreenSize()>"->"fieldget <java.awt.Dimension: int height>";
+    "push 601"
+    "fieldget <java.awt.Dimension: int height>"->"push 601";
+    "ifcmpge.i load.r r0"
+    "push 601"->"ifcmpge.i load.r r0";
+    "inc.i i0 -1"
+    "ifcmpge.i load.r r0"->"inc.i i0 -1";
+    "inc.i i0 -1"->"load.r r0";
+    "load.r r0"->"virtualinvoke <java.awt.Component: java.awt.Toolkit getToolkit()>";
+    "virtualinvoke <java.awt.Component: java.awt.Toolkit getToolkit()>"->"virtualinvoke <java.awt.Toolkit: java.awt.Dimension getScreenSize()>";
+    "virtualinvoke <java.awt.Toolkit: java.awt.Dimension getScreenSize()>"->"fieldget <java.awt.Dimension: int height>";
+    "push 769"
+    "fieldget <java.awt.Dimension: int height>"->"push 769";
+    "ifcmpge.i new java.awt.Font"
+    "push 769"->"ifcmpge.i new java.awt.Font";
+    "ifcmpge.i new java.awt.Font"->"inc.i i0 -1";
+    "new java.awt.Font"
+    "inc.i i0 -1"->"new java.awt.Font";
+    "new java.awt.Font"->"store.r r1";
+    "store.r r1"->"load.r r1";
+    "push \"SansSerif\""
+    "load.r r1"->"push \"SansSerif\"";
+    "push 0"
+    "push \"SansSerif\""->"push 0";
+    "load.i i0"
+    "push 0"->"load.i i0";
+    "push 2"
+    "load.i i0"->"push 2";
+    "add.i"
+    "push 2"->"add.i";
+    "specialinvoke <java.awt.Font: void <init>(java.lang.String,int,int)>"
+    "add.i"->"specialinvoke <java.awt.Font: void <init>(java.lang.String,int,int)>";
+    "specialinvoke <java.awt.Font: void <init>(java.lang.String,int,int)>"->"new java.awt.Font";
+    "store.r $r23"
+    "new java.awt.Font"->"store.r $r23";
+    "load.r $r23"
+    "store.r $r23"->"load.r $r23";
+    "load.r $r23"->"push \"SansSerif\"";
+    "push \"SansSerif\""->"push 0";
+    "push 0"->"load.i i0";
+    "load.i i0"->"specialinvoke <java.awt.Font: void <init>(java.lang.String,int,int)>";
+    "specialinvoke <java.awt.Font: void <init>(java.lang.String,int,int)>"->"new java.awt.Font";
+    "store.r $r24"
+    "new java.awt.Font"->"store.r $r24";
+    "load.r $r24"
+    "store.r $r24"->"load.r $r24";
+    "load.r $r24"->"push \"SansSerif\"";
+    "push \"SansSerif\""->"push 2";
+    "push 2"->"load.i i0";
+    "load.i i0"->"specialinvoke <java.awt.Font: void <init>(java.lang.String,int,int)>";
+    "specialinvoke <java.awt.Font: void <init>(java.lang.String,int,int)>"->"load.r r0";
+    "load.r r0"->"load.r $r23";
+    "virtualinvoke <java.awt.Component: java.awt.FontMetrics getFontMetrics(java.awt.Font)>"
+    "load.r $r23"->"virtualinvoke <java.awt.Component: java.awt.FontMetrics getFontMetrics(java.awt.Font)>";
+    "dup1.r"
+    "virtualinvoke <java.awt.Component: java.awt.FontMetrics getFontMetrics(java.awt.Font)>"->"dup1.r";
+    "virtualinvoke <java.awt.FontMetrics: int getMaxAscent()>"
+    "dup1.r"->"virtualinvoke <java.awt.FontMetrics: int getMaxAscent()>";
+    "virtualinvoke <java.awt.FontMetrics: int getMaxAscent()>"->"store.i i0";
+    "virtualinvoke <java.awt.FontMetrics: int getMaxDescent()>"
+    "store.i i0"->"virtualinvoke <java.awt.FontMetrics: int getMaxDescent()>";
+    "virtualinvoke <java.awt.FontMetrics: int getMaxDescent()>"->"load.i i0";
+    "load.i i0"->"add.i";
+    "add.i"->"push 2";
+    "mul.i"
+    "push 2"->"mul.i";
+    "mul.i"->"store.i i0";
+    "store.i i0"->"load.r r0";
+    "load.r r0"->"virtualinvoke <java.awt.Component: java.awt.Toolkit getToolkit()>";
+    "virtualinvoke <java.awt.Component: java.awt.Toolkit getToolkit()>"->"virtualinvoke <java.awt.Toolkit: java.awt.Dimension getScreenSize()>";
+    "virtualinvoke <java.awt.Toolkit: java.awt.Dimension getScreenSize()>"->"fieldget <java.awt.Dimension: int height>";
+    "fieldget <java.awt.Dimension: int height>"->"load.i i0";
+    "div.i"
+    "load.i i0"->"div.i";
+    "div.i"->"store.i i0";
+    "store.i i0"->"load.r r0";
+    "load.r r0"->"virtualinvoke <java.awt.Component: java.awt.Toolkit getToolkit()>";
+    "virtualinvoke <java.awt.Component: java.awt.Toolkit getToolkit()>"->"virtualinvoke <java.awt.Toolkit: java.awt.Dimension getScreenSize()>";
+    "virtualinvoke <java.awt.Toolkit: java.awt.Dimension getScreenSize()>"->"fieldget <java.awt.Dimension: int height>";
+    "fieldget <java.awt.Dimension: int height>"->"push 601";
+    "push 601"->"ifcmpge.i load.r r0";
+    "ifcmpge.i load.r r0"->"load.i i0";
+    "load.i i0"->"push 2";
+    "push 2"->"div.i";
+    "div.i"->"store.i i0";
+    "store.i i0"->"load.r r0";
+    "push \"xoff\""
+    "load.r r0"->"push \"xoff\"";
+    "push \"xoff\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>";
+    "store.i $r94"
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"->"store.i $r94";
+    "store.i $r94"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "push \"arr\""
+    "load.r r0"->"push \"arr\"";
+    "push \"arr\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "store.r r9"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"store.r r9";
+    "staticget <java.awt.Color: java.awt.Color black>"
+    "store.r r9"->"staticget <java.awt.Color: java.awt.Color black>";
+    "store.r r99"
+    "staticget <java.awt.Color: java.awt.Color black>"->"store.r r99";
+    "load.r r9"
+    "store.r r99"->"load.r r9";
+    "load.r r9"->"staticinvoke <java.awt.Color: java.awt.Color decode(java.lang.String)>";
+    "staticinvoke <java.awt.Color: java.awt.Color decode(java.lang.String)>"->"store.r r99";
+    "store.r r99"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "push \"ad\""
+    "load.r r0"->"push \"ad\"";
+    "push \"ad\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"store.r r9";
+    "store.r r9"->"load.r r9";
+    "ifnull load.r r0"
+    "load.r r9"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r9";
+    "virtualinvoke <epop.Epop: java.lang.String c(java.lang.String)>"
+    "load.r r9"->"virtualinvoke <epop.Epop: java.lang.String c(java.lang.String)>";
+    "fieldput <epop.Epop: java.lang.String h>"
+    "virtualinvoke <epop.Epop: java.lang.String c(java.lang.String)>"->"fieldput <epop.Epop: java.lang.String h>";
+    "fieldput <epop.Epop: java.lang.String h>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r9";
+    "virtualinvoke <epop.Epop: java.lang.String d(java.lang.String)>"
+    "load.r r9"->"virtualinvoke <epop.Epop: java.lang.String d(java.lang.String)>";
+    "virtualinvoke <epop.Epop: java.net.URL b(java.lang.String)>"
+    "virtualinvoke <epop.Epop: java.lang.String d(java.lang.String)>"->"virtualinvoke <epop.Epop: java.net.URL b(java.lang.String)>";
+    "fieldput <epop.Epop: java.net.URL b>"
+    "virtualinvoke <epop.Epop: java.net.URL b(java.lang.String)>"->"fieldput <epop.Epop: java.net.URL b>";
+    "fieldput <epop.Epop: java.net.URL b>"->"load.r r0";
+    "new java.util.Vector"
+    "load.r r0"->"new java.util.Vector";
+    "new java.util.Vector"->"dup1.r";
+    "specialinvoke <java.util.Vector: void <init>()>"
+    "dup1.r"->"specialinvoke <java.util.Vector: void <init>()>";
+    "fieldput <epop.Epop: java.util.Vector e>"
+    "specialinvoke <java.util.Vector: void <init>()>"->"fieldput <epop.Epop: java.util.Vector e>";
+    "fieldput <epop.Epop: java.util.Vector e>"->"load.r r0";
+    "push \"md0\""
+    "load.r r0"->"push \"md0\"";
+    "push \"md0\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "store.r $r87"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"store.r $r87";
+    "store.r $r87"->"push 0";
+    "store.i i20"
+    "push 0"->"store.i i20";
+    "goto load.r $r87"
+    "store.i i20"->"goto load.r $r87";
+    "load.r $r87"
+    "goto load.r $r87"->"load.r $r87";
+    "ifnonnull new epop.b"
+    "load.r $r87"->"ifnonnull new epop.b";
+    "ifnonnull new epop.b"->"load.r r0";
+    "push \"replist\""
+    "load.r r0"->"push \"replist\"";
+    "push \"replist\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"store.r r9";
+    "store.r r9"->"load.r r9";
+    "load.r r9"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r r0";
+    "new java.util.Hashtable"
+    "load.r r0"->"new java.util.Hashtable";
+    "new java.util.Hashtable"->"dup1.r";
+    "specialinvoke <java.util.Hashtable: void <init>()>"
+    "dup1.r"->"specialinvoke <java.util.Hashtable: void <init>()>";
+    "fieldput <epop.Epop: java.util.Hashtable a>"
+    "specialinvoke <java.util.Hashtable: void <init>()>"->"fieldput <epop.Epop: java.util.Hashtable a>";
+    "new java.util.StringTokenizer"
+    "fieldput <epop.Epop: java.util.Hashtable a>"->"new java.util.StringTokenizer";
+    "new java.util.StringTokenizer"->"store.r $r87";
+    "store.r $r87"->"load.r $r87";
+    "load.r $r87"->"load.r r9";
+    "push \"|\""
+    "load.r r9"->"push \"|\"";
+    "specialinvoke <java.util.StringTokenizer: void <init>(java.lang.String,java.lang.String)>"
+    "push \"|\""->"specialinvoke <java.util.StringTokenizer: void <init>(java.lang.String,java.lang.String)>";
+    "specialinvoke <java.util.StringTokenizer: void <init>(java.lang.String,java.lang.String)>"->"goto load.r $r87";
+    "goto load.r $r87"->"load.r $r87";
+    "virtualinvoke <java.util.StringTokenizer: boolean hasMoreTokens()>"
+    "load.r $r87"->"virtualinvoke <java.util.StringTokenizer: boolean hasMoreTokens()>";
+    "ifne load.r r0"
+    "virtualinvoke <java.util.StringTokenizer: boolean hasMoreTokens()>"->"ifne load.r r0";
+    "ifne load.r r0"->"load.r r0";
+    "new epop.a"
+    "load.r r0"->"new epop.a";
+    "new epop.a"->"dup1.r";
+    "specialinvoke <epop.a: void <init>()>"
+    "dup1.r"->"specialinvoke <epop.a: void <init>()>";
+    "fieldput <epop.Epop: epop.a j>"
+    "specialinvoke <epop.a: void <init>()>"->"fieldput <epop.Epop: epop.a j>";
+    "fieldput <epop.Epop: epop.a j>"->"load.r r0";
+    "fieldget <epop.Epop: boolean i>"
+    "load.r r0"->"fieldget <epop.Epop: boolean i>";
+    "ifeq load.r r0"
+    "fieldget <epop.Epop: boolean i>"->"ifeq load.r r0";
+    "ifeq load.r r0"->"load.r r0";
+    "fieldget <epop.Epop: epop.a j>"
+    "load.r r0"->"fieldget <epop.Epop: epop.a j>";
+    "new java.awt.GridLayout"
+    "fieldget <epop.Epop: epop.a j>"->"new java.awt.GridLayout";
+    "new java.awt.GridLayout"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "fieldget <epop.Epop: java.util.Vector e>"
+    "load.r r0"->"fieldget <epop.Epop: java.util.Vector e>";
+    "virtualinvoke <java.util.Vector: int size()>"
+    "fieldget <epop.Epop: java.util.Vector e>"->"virtualinvoke <java.util.Vector: int size()>";
+    "push 1"
+    "virtualinvoke <java.util.Vector: int size()>"->"push 1";
+    "push 1"->"add.i";
+    "add.i"->"push 1";
+    "specialinvoke <java.awt.GridLayout: void <init>(int,int)>"
+    "push 1"->"specialinvoke <java.awt.GridLayout: void <init>(int,int)>";
+    "virtualinvoke <java.awt.Container: void setLayout(java.awt.LayoutManager)>"
+    "specialinvoke <java.awt.GridLayout: void <init>(int,int)>"->"virtualinvoke <java.awt.Container: void setLayout(java.awt.LayoutManager)>";
+    "virtualinvoke <java.awt.Container: void setLayout(java.awt.LayoutManager)>"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "push \"dframe\""
+    "load.r r0"->"push \"dframe\"";
+    "push \"dframe\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "fieldput <epop.Epop: java.lang.String f>"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"fieldput <epop.Epop: java.lang.String f>";
+    "fieldput <epop.Epop: java.lang.String f>"->"load.r r0";
+    "load.r r0"->"fieldget <epop.Epop: java.util.Vector e>";
+    "virtualinvoke <java.util.Vector: java.util.Enumeration elements()>"
+    "fieldget <epop.Epop: java.util.Vector e>"->"virtualinvoke <java.util.Vector: java.util.Enumeration elements()>";
+    "virtualinvoke <java.util.Vector: java.util.Enumeration elements()>"->"store.r r9";
+    "goto load.r r9"
+    "store.r r9"->"goto load.r r9";
+    "goto load.r r9"->"load.r r9";
+    "interfaceinvoke <java.util.Enumeration: boolean hasMoreElements()> 0"
+    "load.r r9"->"interfaceinvoke <java.util.Enumeration: boolean hasMoreElements()> 0";
+    "ifne load.r r9"
+    "interfaceinvoke <java.util.Enumeration: boolean hasMoreElements()> 0"->"ifne load.r r9";
+    "ifne load.r r9"->"load.r r0";
+    "load.r r0"->"fieldget <epop.Epop: boolean i>";
+    "fieldget <epop.Epop: boolean i>"->"ifeq load.r r0";
+    "new epop.b"
+    "ifeq load.r r0"->"new epop.b";
+    "new epop.b"->"store.r $r23";
+    "store.r $r23"->"load.r $r23";
+    "push \"Free Web Tools\""
+    "load.r $r23"->"push \"Free Web Tools\"";
+    "specialinvoke <epop.b: void <init>(java.lang.String)>"
+    "push \"Free Web Tools\""->"specialinvoke <epop.b: void <init>(java.lang.String)>";
+    "specialinvoke <epop.b: void <init>(java.lang.String)>"->"load.r $r23";
+    "load.r $r23"->"load.r r0";
+    "fieldget <epop.Epop: java.awt.Color c>"
+    "load.r r0"->"fieldget <epop.Epop: java.awt.Color c>";
+    "virtualinvoke <java.awt.Component: void setBackground(java.awt.Color)>"
+    "fieldget <epop.Epop: java.awt.Color c>"->"virtualinvoke <java.awt.Component: void setBackground(java.awt.Color)>";
+    "virtualinvoke <java.awt.Component: void setBackground(java.awt.Color)>"->"load.r $r23";
+    "load.r $r23"->"load.r r0";
+    "fieldget <epop.Epop: java.awt.Color m>"
+    "load.r r0"->"fieldget <epop.Epop: java.awt.Color m>";
+    "virtualinvoke <java.awt.Component: void setForeground(java.awt.Color)>"
+    "fieldget <epop.Epop: java.awt.Color m>"->"virtualinvoke <java.awt.Component: void setForeground(java.awt.Color)>";
+    "virtualinvoke <java.awt.Component: void setForeground(java.awt.Color)>"->"load.r $r23";
+    "load.r $r23"->"load.r r1";
+    "virtualinvoke <java.awt.Component: void setFont(java.awt.Font)>"
+    "load.r r1"->"virtualinvoke <java.awt.Component: void setFont(java.awt.Font)>";
+    "virtualinvoke <java.awt.Component: void setFont(java.awt.Font)>"->"load.r $r23";
+    "load.i $r94"
+    "load.r $r23"->"load.i $r94";
+    "fieldput <epop.b: int b>"
+    "load.i $r94"->"fieldput <epop.b: int b>";
+    "fieldput <epop.b: int b>"->"load.r $r23";
+    "load.r r99"
+    "load.r $r23"->"load.r r99";
+    "fieldput <epop.b: java.awt.Color h>"
+    "load.r r99"->"fieldput <epop.b: java.awt.Color h>";
+    "fieldput <epop.b: java.awt.Color h>"->"load.r $r23";
+    "push \"http://www.europa.bc.ca/software\""
+    "load.r $r23"->"push \"http://www.europa.bc.ca/software\"";
+    "fieldput <epop.b: java.lang.String c>"
+    "push \"http://www.europa.bc.ca/software\""->"fieldput <epop.b: java.lang.String c>";
+    "fieldput <epop.b: java.lang.String c>"->"load.r $r23";
+    "push \"_top\""
+    "load.r $r23"->"push \"_top\"";
+    "fieldput <epop.b: java.lang.String a>"
+    "push \"_top\""->"fieldput <epop.b: java.lang.String a>";
+    "fieldput <epop.b: java.lang.String a>"->"load.r r0";
+    "load.r r0"->"fieldget <epop.Epop: java.util.Vector e>";
+    "fieldget <epop.Epop: java.util.Vector e>"->"load.r $r23";
+    "virtualinvoke <java.util.Vector: void addElement(java.lang.Object)>"
+    "load.r $r23"->"virtualinvoke <java.util.Vector: void addElement(java.lang.Object)>";
+    "virtualinvoke <java.util.Vector: void addElement(java.lang.Object)>"->"load.r r0";
+    "load.r r0"->"fieldget <epop.Epop: epop.a j>";
+    "fieldget <epop.Epop: epop.a j>"->"load.r $r23";
+    "virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>"
+    "load.r $r23"->"virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>";
+    "pop"
+    "virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>"->"pop";
+    "pop"->"load.r r0";
+    "load.r r0"->"fieldget <epop.Epop: epop.a j>";
+    "fieldget <epop.Epop: epop.a j>"->"load.r r0";
+    "virtualinvoke <java.awt.Component: void addMouseMotionListener(java.awt.event.MouseMotionListener)>"
+    "load.r r0"->"virtualinvoke <java.awt.Component: void addMouseMotionListener(java.awt.event.MouseMotionListener)>";
+    "virtualinvoke <java.awt.Component: void addMouseMotionListener(java.awt.event.MouseMotionListener)>"->"load.r r0";
+    "load.r r0"->"fieldget <epop.Epop: epop.a j>";
+    "fieldget <epop.Epop: epop.a j>"->"load.r r0";
+    "virtualinvoke <java.awt.Component: void addMouseListener(java.awt.event.MouseListener)>"
+    "load.r r0"->"virtualinvoke <java.awt.Component: void addMouseListener(java.awt.event.MouseListener)>";
+    "virtualinvoke <java.awt.Component: void addMouseListener(java.awt.event.MouseListener)>"->"load.r r0";
+    "new java.awt.BorderLayout"
+    "load.r r0"->"new java.awt.BorderLayout";
+    "new java.awt.BorderLayout"->"dup1.r";
+    "specialinvoke <java.awt.BorderLayout: void <init>()>"
+    "dup1.r"->"specialinvoke <java.awt.BorderLayout: void <init>()>";
+    "specialinvoke <java.awt.BorderLayout: void <init>()>"->"virtualinvoke <java.awt.Container: void setLayout(java.awt.LayoutManager)>";
+    "new java.awt.Canvas"
+    "virtualinvoke <java.awt.Container: void setLayout(java.awt.LayoutManager)>"->"new java.awt.Canvas";
+    "new java.awt.Canvas"->"store.r r1";
+    "store.r r1"->"load.r r1";
+    "specialinvoke <java.awt.Canvas: void <init>()>"
+    "load.r r1"->"specialinvoke <java.awt.Canvas: void <init>()>";
+    "specialinvoke <java.awt.Canvas: void <init>()>"->"load.r r1";
+    "load.r r1"->"staticget <java.awt.Color: java.awt.Color black>";
+    "staticget <java.awt.Color: java.awt.Color black>"->"virtualinvoke <java.awt.Component: void setBackground(java.awt.Color)>";
+    "virtualinvoke <java.awt.Component: void setBackground(java.awt.Color)>"->"load.r r1";
+    "load.r r1"->"load.r r0";
+    "virtualinvoke <java.awt.Component: java.awt.Dimension getSize()>"
+    "load.r r0"->"virtualinvoke <java.awt.Component: java.awt.Dimension getSize()>";
+    "fieldget <java.awt.Dimension: int width>"
+    "virtualinvoke <java.awt.Component: java.awt.Dimension getSize()>"->"fieldget <java.awt.Dimension: int width>";
+    "fieldget <java.awt.Dimension: int width>"->"push 1";
+    "virtualinvoke <java.awt.Component: void setSize(int,int)>"
+    "push 1"->"virtualinvoke <java.awt.Component: void setSize(int,int)>";
+    "virtualinvoke <java.awt.Component: void setSize(int,int)>"->"load.r r0";
+    "load.r r0"->"load.r r1";
+    "push \"North\""
+    "load.r r1"->"push \"North\"";
+    "virtualinvoke <java.awt.Container: void add(java.awt.Component,java.lang.Object)>"
+    "push \"North\""->"virtualinvoke <java.awt.Container: void add(java.awt.Component,java.lang.Object)>";
+    "virtualinvoke <java.awt.Container: void add(java.awt.Component,java.lang.Object)>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <epop.Epop: epop.a j>";
+    "push \"Center\""
+    "fieldget <epop.Epop: epop.a j>"->"push \"Center\"";
+    "push \"Center\""->"virtualinvoke <java.awt.Container: void add(java.awt.Component,java.lang.Object)>";
+    "return"
+    "virtualinvoke <java.awt.Container: void add(java.awt.Component,java.lang.Object)>"->"return";
+    "ifne load.r r9"->"load.r r9";
+    "interfaceinvoke <java.util.Enumeration: java.lang.Object nextElement()> 0"
+    "load.r r9"->"interfaceinvoke <java.util.Enumeration: java.lang.Object nextElement()> 0";
+    "checkcast"
+    "interfaceinvoke <java.util.Enumeration: java.lang.Object nextElement()> 0"->"checkcast";
+    "checkcast"->"store.r $r87";
+    "store.r $r87"->"load.r r0";
+    "load.r r0"->"fieldget <epop.Epop: epop.a j>";
+    "fieldget <epop.Epop: epop.a j>"->"load.r $r87";
+    "load.r $r87"->"virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>";
+    "virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>"->"pop";
+    "pop"->"push 0";
+    "push 0"->"store.i i20";
+    "store.i i20"->"load.r r0";
+    "new java.lang.StringBuffer"
+    "load.r r0"->"new java.lang.StringBuffer";
+    "new java.lang.StringBuffer"->"dup1.r";
+    "push \"sd\""
+    "dup1.r"->"push \"sd\"";
+    "specialinvoke <java.lang.StringBuffer: void <init>(java.lang.String)>"
+    "push \"sd\""->"specialinvoke <java.lang.StringBuffer: void <init>(java.lang.String)>";
+    "specialinvoke <java.lang.StringBuffer: void <init>(java.lang.String)>"->"load.r r0";
+    "load.r r0"->"fieldget <epop.Epop: java.util.Vector e>";
+    "fieldget <epop.Epop: java.util.Vector e>"->"load.r $r87";
+    "virtualinvoke <java.util.Vector: int indexOf(java.lang.Object)>"
+    "load.r $r87"->"virtualinvoke <java.util.Vector: int indexOf(java.lang.Object)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(int)>"
+    "virtualinvoke <java.util.Vector: int indexOf(java.lang.Object)>"->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(int)>";
+    "push \"-\""
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(int)>"->"push \"-\"";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"
+    "push \"-\""->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"push 0";
+    "push 0"->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(int)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>"
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(int)>"->"virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>"->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "store.r r105"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"store.r r105";
+    "load.r r105"
+    "store.r r105"->"load.r r105";
+    "ifnull load.r r105"
+    "load.r r105"->"ifnull load.r r105";
+    "ifnull load.r r105"->"load.r r0";
+    "fieldget <epop.Epop: java.util.Hashtable a>"
+    "load.r r0"->"fieldget <epop.Epop: java.util.Hashtable a>";
+    "fieldget <epop.Epop: java.util.Hashtable a>"->"ifnull load.r r105";
+    "ifnull load.r r105"->"load.r r0";
+    "load.r r0"->"load.r r105";
+    "virtualinvoke <epop.Epop: java.lang.String a(java.lang.String)>"
+    "load.r r105"->"virtualinvoke <epop.Epop: java.lang.String a(java.lang.String)>";
+    "virtualinvoke <epop.Epop: java.lang.String a(java.lang.String)>"->"store.r r105";
+    "store.r r105"->"load.r r105";
+    "store.r $r62"
+    "load.r r105"->"store.r $r62";
+    "new java.awt.PopupMenu"
+    "store.r $r62"->"new java.awt.PopupMenu";
+    "store.r $r107"
+    "new java.awt.PopupMenu"->"store.r $r107";
+    "load.r $r107"
+    "store.r $r107"->"load.r $r107";
+    "specialinvoke <java.awt.PopupMenu: void <init>()>"
+    "load.r $r107"->"specialinvoke <java.awt.PopupMenu: void <init>()>";
+    "specialinvoke <java.awt.PopupMenu: void <init>()>"->"load.r $r107";
+    "store.r r109"
+    "load.r $r107"->"store.r r109";
+    "goto load.r r105"
+    "store.r r109"->"goto load.r r105";
+    "goto load.r r105"->"load.r r105";
+    "ifnonnull load.r r105"
+    "load.r r105"->"ifnonnull load.r r105";
+    "load.i i20"
+    "ifnonnull load.r r105"->"load.i i20";
+    "load.i i20"->"push 1";
+    "ifcmpgt.i load.r $r107"
+    "push 1"->"ifcmpgt.i load.r $r107";
+    "load.r $r62"
+    "ifcmpgt.i load.r $r107"->"load.r $r62";
+    "load.r $r62"->"push \"|\"";
+    "virtualinvoke <java.lang.String: int indexOf(java.lang.String)>"
+    "push \"|\""->"virtualinvoke <java.lang.String: int indexOf(java.lang.String)>";
+    "virtualinvoke <java.lang.String: int indexOf(java.lang.String)>"->"store.i i20";
+    "store.i i20"->"load.i i20";
+    "ifle load.r $r87"
+    "load.i i20"->"ifle load.r $r87";
+    "ifle load.r $r87"->"load.r $r87";
+    "load.r $r87"->"load.r $r62";
+    "load.r $r62"->"load.i i20";
+    "load.i i20"->"push 1";
+    "push 1"->"add.i";
+    "virtualinvoke <java.lang.String: java.lang.String substring(int)>"
+    "add.i"->"virtualinvoke <java.lang.String: java.lang.String substring(int)>";
+    "virtualinvoke <java.lang.String: java.lang.String substring(int)>"->"fieldput <epop.b: java.lang.String c>";
+    "fieldput <epop.b: java.lang.String c>"->"load.r $r87";
+    "load.r $r87"->"load.r $r62";
+    "load.r $r62"->"push 0";
+    "push 0"->"load.i i20";
+    "virtualinvoke <java.lang.String: java.lang.String substring(int,int)>"
+    "load.i i20"->"virtualinvoke <java.lang.String: java.lang.String substring(int,int)>";
+    "virtualinvoke <java.lang.String: java.lang.String substring(int,int)>"->"fieldput <epop.b: java.lang.String a>";
+    "fieldput <epop.b: java.lang.String a>"->"goto load.r r9";
+    "ifle load.r $r87"->"load.r $r87";
+    "load.r $r87"->"load.r $r62";
+    "load.r $r62"->"fieldput <epop.b: java.lang.String c>";
+    "fieldput <epop.b: java.lang.String c>"->"load.r $r87";
+    "load.r $r87"->"load.r r0";
+    "fieldget <epop.Epop: java.lang.String f>"
+    "load.r r0"->"fieldget <epop.Epop: java.lang.String f>";
+    "fieldget <epop.Epop: java.lang.String f>"->"fieldput <epop.b: java.lang.String a>";
+    "fieldput <epop.b: java.lang.String a>"->"goto load.r r9";
+    "ifcmpgt.i load.r $r107"->"load.r $r107";
+    "load.r $r107"->"load.r r0";
+    "virtualinvoke <java.awt.MenuItem: void addActionListener(java.awt.event.ActionListener)>"
+    "load.r r0"->"virtualinvoke <java.awt.MenuItem: void addActionListener(java.awt.event.ActionListener)>";
+    "virtualinvoke <java.awt.MenuItem: void addActionListener(java.awt.event.ActionListener)>"->"load.r $r87";
+    "load.r $r87"->"load.r $r107";
+    "fieldput <epop.b: java.awt.PopupMenu g>"
+    "load.r $r107"->"fieldput <epop.b: java.awt.PopupMenu g>";
+    "fieldput <epop.b: java.awt.PopupMenu g>"->"load.r $r87";
+    "load.r $r87"->"load.r $r107";
+    "virtualinvoke <java.awt.Component: void add(java.awt.PopupMenu)>"
+    "load.r $r107"->"virtualinvoke <java.awt.Component: void add(java.awt.PopupMenu)>";
+    "ifnonnull load.r r105"->"load.r r105";
+    "load.r r105"->"push \"|\"";
+    "push \"|\""->"virtualinvoke <java.lang.String: int indexOf(java.lang.String)>";
+    "store.i $r59"
+    "virtualinvoke <java.lang.String: int indexOf(java.lang.String)>"->"store.i $r59";
+    "load.i $r59"
+    "store.i $r59"->"load.i $r59";
+    "iflt inc.i i20 1"
+    "load.i $r59"->"iflt inc.i i20 1";
+    "new java.awt.MenuItem"
+    "iflt inc.i i20 1"->"new java.awt.MenuItem";
+    "new java.awt.MenuItem"->"store.r $r62";
+    "store.r $r62"->"load.r $r62";
+    "load.r $r62"->"load.r r105";
+    "load.r r105"->"push 0";
+    "push 0"->"load.i $r59";
+    "load.i $r59"->"virtualinvoke <java.lang.String: java.lang.String substring(int,int)>";
+    "specialinvoke <java.awt.MenuItem: void <init>(java.lang.String)>"
+    "virtualinvoke <java.lang.String: java.lang.String substring(int,int)>"->"specialinvoke <java.awt.MenuItem: void <init>(java.lang.String)>";
+    "specialinvoke <java.awt.MenuItem: void <init>(java.lang.String)>"->"load.r $r62";
+    "load.r $r62"->"load.r r105";
+    "load.r r105"->"load.i $r59";
+    "load.i $r59"->"push 1";
+    "push 1"->"add.i";
+    "add.i"->"virtualinvoke <java.lang.String: java.lang.String substring(int)>";
+    "virtualinvoke <java.awt.MenuItem: void setActionCommand(java.lang.String)>"
+    "virtualinvoke <java.lang.String: java.lang.String substring(int)>"->"virtualinvoke <java.awt.MenuItem: void setActionCommand(java.lang.String)>";
+    "virtualinvoke <java.awt.MenuItem: void setActionCommand(java.lang.String)>"->"load.r $r62";
+    "load.r $r62"->"load.r $r23";
+    "virtualinvoke <java.awt.MenuComponent: void setFont(java.awt.Font)>"
+    "load.r $r23"->"virtualinvoke <java.awt.MenuComponent: void setFont(java.awt.Font)>";
+    "load.r r109"
+    "virtualinvoke <java.awt.MenuComponent: void setFont(java.awt.Font)>"->"load.r r109";
+    "load.r r109"->"load.r $r62";
+    "virtualinvoke <java.awt.Menu: java.awt.MenuItem add(java.awt.MenuItem)>"
+    "load.r $r62"->"virtualinvoke <java.awt.Menu: java.awt.MenuItem add(java.awt.MenuItem)>";
+    "virtualinvoke <java.awt.Menu: java.awt.MenuItem add(java.awt.MenuItem)>"->"pop";
+    "inc.i i20 1"
+    "pop"->"inc.i i20 1";
+    "inc.i i20 1"->"load.r r105";
+    "load.r r105"->"store.r $r62";
+    "store.r $r62"->"load.r r0";
+    "load.r r0"->"new java.lang.StringBuffer";
+    "new java.lang.StringBuffer"->"dup1.r";
+    "dup1.r"->"push \"sd\"";
+    "push \"sd\""->"specialinvoke <java.lang.StringBuffer: void <init>(java.lang.String)>";
+    "specialinvoke <java.lang.StringBuffer: void <init>(java.lang.String)>"->"load.r r0";
+    "load.r r0"->"fieldget <epop.Epop: java.util.Vector e>";
+    "fieldget <epop.Epop: java.util.Vector e>"->"load.r $r87";
+    "load.r $r87"->"virtualinvoke <java.util.Vector: int indexOf(java.lang.Object)>";
+    "virtualinvoke <java.util.Vector: int indexOf(java.lang.Object)>"->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(int)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(int)>"->"push \"-\"";
+    "push \"-\""->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"load.i i20";
+    "load.i i20"->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(int)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(int)>"->"virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>"->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"store.r r105";
+    "store.r r105"->"load.r r105";
+    "ifnull load.i i20"
+    "load.r r105"->"ifnull load.i i20";
+    "ifnull load.i i20"->"load.r r0";
+    "load.r r0"->"fieldget <epop.Epop: java.util.Hashtable a>";
+    "fieldget <epop.Epop: java.util.Hashtable a>"->"ifnull load.i i20";
+    "ifnull load.i i20"->"load.r r0";
+    "load.r r0"->"load.r r105";
+    "load.r r105"->"virtualinvoke <epop.Epop: java.lang.String a(java.lang.String)>";
+    "virtualinvoke <epop.Epop: java.lang.String a(java.lang.String)>"->"store.r r105";
+    "store.r r105"->"load.i i20";
+    "load.i i20"->"load.i i0";
+    "rem.i"
+    "load.i i0"->"rem.i";
+    "ifne load.r r105"
+    "rem.i"->"ifne load.r r105";
+    "ifne load.r r105"->"load.r r105";
+    "load.r r105"->"ifnull load.r r105";
+    "new java.awt.Menu"
+    "ifnull load.r r105"->"new java.awt.Menu";
+    "store.r $r59"
+    "new java.awt.Menu"->"store.r $r59";
+    "load.r $r59"
+    "store.r $r59"->"load.r $r59";
+    "push \"More...\""
+    "load.r $r59"->"push \"More...\"";
+    "specialinvoke <java.awt.Menu: void <init>(java.lang.String)>"
+    "push \"More...\""->"specialinvoke <java.awt.Menu: void <init>(java.lang.String)>";
+    "specialinvoke <java.awt.Menu: void <init>(java.lang.String)>"->"load.r $r59";
+    "load.r $r59"->"load.r $r24";
+    "load.r $r24"->"virtualinvoke <java.awt.MenuComponent: void setFont(java.awt.Font)>";
+    "virtualinvoke <java.awt.MenuComponent: void setFont(java.awt.Font)>"->"load.r $r59";
+    "load.r $r59"->"load.r r0";
+    "load.r r0"->"virtualinvoke <java.awt.MenuItem: void addActionListener(java.awt.event.ActionListener)>";
+    "virtualinvoke <java.awt.MenuItem: void addActionListener(java.awt.event.ActionListener)>"->"load.r r109";
+    "virtualinvoke <java.awt.Menu: void addSeparator()>"
+    "load.r r109"->"virtualinvoke <java.awt.Menu: void addSeparator()>";
+    "virtualinvoke <java.awt.Menu: void addSeparator()>"->"load.r r109";
+    "load.r r109"->"load.r $r59";
+    "load.r $r59"->"virtualinvoke <java.awt.Menu: java.awt.MenuItem add(java.awt.MenuItem)>";
+    "virtualinvoke <java.awt.Menu: java.awt.MenuItem add(java.awt.MenuItem)>"->"pop";
+    "pop"->"load.r $r59";
+    "load.r $r59"->"store.r r109";
+    "ifeq load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <epop.Epop: epop.a j>";
+    "fieldget <epop.Epop: epop.a j>"->"new java.awt.GridLayout";
+    "new java.awt.GridLayout"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "load.r r0"->"fieldget <epop.Epop: java.util.Vector e>";
+    "fieldget <epop.Epop: java.util.Vector e>"->"virtualinvoke <java.util.Vector: int size()>";
+    "virtualinvoke <java.util.Vector: int size()>"->"push 1";
+    "push 1"->"specialinvoke <java.awt.GridLayout: void <init>(int,int)>";
+    "specialinvoke <java.awt.GridLayout: void <init>(int,int)>"->"virtualinvoke <java.awt.Container: void setLayout(java.awt.LayoutManager)>";
+    "ifne load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <epop.Epop: java.util.Hashtable a>";
+    "fieldget <epop.Epop: java.util.Hashtable a>"->"load.r $r87";
+    "virtualinvoke <java.util.StringTokenizer: java.lang.String nextToken()>"
+    "load.r $r87"->"virtualinvoke <java.util.StringTokenizer: java.lang.String nextToken()>";
+    "virtualinvoke <java.util.StringTokenizer: java.lang.String nextToken()>"->"load.r $r87";
+    "load.r $r87"->"virtualinvoke <java.util.StringTokenizer: java.lang.String nextToken()>";
+    "virtualinvoke <java.util.Hashtable: java.lang.Object put(java.lang.Object,java.lang.Object)>"
+    "virtualinvoke <java.util.StringTokenizer: java.lang.String nextToken()>"->"virtualinvoke <java.util.Hashtable: java.lang.Object put(java.lang.Object,java.lang.Object)>";
+    "virtualinvoke <java.util.Hashtable: java.lang.Object put(java.lang.Object,java.lang.Object)>"->"pop";
+    "ifnonnull new epop.b"->"new epop.b";
+    "new epop.b"->"store.r r9";
+    "store.r r9"->"load.r r9";
+    "load.r r9"->"load.r $r87";
+    "load.r $r87"->"specialinvoke <epop.b: void <init>(java.lang.String)>";
+    "specialinvoke <epop.b: void <init>(java.lang.String)>"->"load.r r9";
+    "load.r r9"->"load.r r0";
+    "load.r r0"->"fieldget <epop.Epop: java.awt.Color c>";
+    "fieldget <epop.Epop: java.awt.Color c>"->"virtualinvoke <java.awt.Component: void setBackground(java.awt.Color)>";
+    "virtualinvoke <java.awt.Component: void setBackground(java.awt.Color)>"->"load.r r9";
+    "load.r r9"->"load.r r0";
+    "load.r r0"->"fieldget <epop.Epop: java.awt.Color m>";
+    "fieldget <epop.Epop: java.awt.Color m>"->"virtualinvoke <java.awt.Component: void setForeground(java.awt.Color)>";
+    "virtualinvoke <java.awt.Component: void setForeground(java.awt.Color)>"->"load.r r9";
+    "load.r r9"->"load.r r1";
+    "load.r r1"->"virtualinvoke <java.awt.Component: void setFont(java.awt.Font)>";
+    "virtualinvoke <java.awt.Component: void setFont(java.awt.Font)>"->"load.r r9";
+    "load.r r9"->"load.i $r94";
+    "load.i $r94"->"fieldput <epop.b: int b>";
+    "fieldput <epop.b: int b>"->"load.r r9";
+    "load.r r9"->"load.r r99";
+    "load.r r99"->"fieldput <epop.b: java.awt.Color h>";
+    "fieldput <epop.b: java.awt.Color h>"->"load.r r0";
+    "load.r r0"->"fieldget <epop.Epop: java.util.Vector e>";
+    "fieldget <epop.Epop: java.util.Vector e>"->"load.r r9";
+    "load.r r9"->"virtualinvoke <java.util.Vector: void addElement(java.lang.Object)>";
+    "virtualinvoke <java.util.Vector: void addElement(java.lang.Object)>"->"inc.i i20 1";
+    "inc.i i20 1"->"load.r r0";
+    "load.r r0"->"new java.lang.StringBuffer";
+    "new java.lang.StringBuffer"->"dup1.r";
+    "push \"md\""
+    "dup1.r"->"push \"md\"";
+    "push \"md\""->"specialinvoke <java.lang.StringBuffer: void <init>(java.lang.String)>";
+    "specialinvoke <java.lang.StringBuffer: void <init>(java.lang.String)>"->"load.i i20";
+    "load.i i20"->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(int)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(int)>"->"virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>"->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"store.r $r87";
+    "staticinvoke <java.awt.Color: java.awt.Color decode(java.lang.String)>"->"store.r r9";
+    "store.r $r94"
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"->"store.r $r94";
+    "push 10"
+    "store.r $r94"->"push 10";
+    "push 10"->"store.i $r94";
+    "staticinvoke <java.awt.Color: java.awt.Color decode(java.lang.String)>"->"store.r r1";
+    "staticinvoke <java.awt.Color: java.awt.Color decode(java.lang.String)>"->"store.r r1";
+    "staticinvoke <java.awt.Color: java.awt.Color decode(java.lang.String)>"->"store.r r1";
+}

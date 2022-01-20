@@ -1,0 +1,425 @@
+digraph "" {
+    "r0 := @this: dac"
+    "load.r r0"
+    "r0 := @this: dac"->"load.r r0";
+    "specialinvoke <java.applet.Applet: void init()>"
+    "load.r r0"->"specialinvoke <java.applet.Applet: void init()>";
+    "specialinvoke <java.applet.Applet: void init()>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "push \"file\""
+    "load.r r0"->"push \"file\"";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"
+    "push \"file\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "fieldput <dac: java.lang.String infile>"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"fieldput <dac: java.lang.String infile>";
+    "fieldput <dac: java.lang.String infile>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "push \"alarmfile\""
+    "load.r r0"->"push \"alarmfile\"";
+    "push \"alarmfile\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "fieldput <dac: java.lang.String alarmau>"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"fieldput <dac: java.lang.String alarmau>";
+    "fieldput <dac: java.lang.String alarmau>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "push \"timefile\""
+    "load.r r0"->"push \"timefile\"";
+    "push \"timefile\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "fieldput <dac: java.lang.String timeau>"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"fieldput <dac: java.lang.String timeau>";
+    "fieldput <dac: java.lang.String timeau>"->"load.r r0";
+    "new java.lang.Integer"
+    "load.r r0"->"new java.lang.Integer";
+    "dup1.r"
+    "new java.lang.Integer"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "push \"delay\""
+    "load.r r0"->"push \"delay\"";
+    "push \"delay\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "specialinvoke <java.lang.Integer: void <init>(java.lang.String)>"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"specialinvoke <java.lang.Integer: void <init>(java.lang.String)>";
+    "virtualinvoke <java.lang.Integer: int intValue()>"
+    "specialinvoke <java.lang.Integer: void <init>(java.lang.String)>"->"virtualinvoke <java.lang.Integer: int intValue()>";
+    "fieldput <dac: int delay>"
+    "virtualinvoke <java.lang.Integer: int intValue()>"->"fieldput <dac: int delay>";
+    "fieldput <dac: int delay>"->"load.r r0";
+    "load.r r0"->"new java.lang.Integer";
+    "new java.lang.Integer"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "push \"panelstyle\""
+    "load.r r0"->"push \"panelstyle\"";
+    "push \"panelstyle\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"specialinvoke <java.lang.Integer: void <init>(java.lang.String)>";
+    "specialinvoke <java.lang.Integer: void <init>(java.lang.String)>"->"virtualinvoke <java.lang.Integer: int intValue()>";
+    "fieldput <dac: int panelstyle>"
+    "virtualinvoke <java.lang.Integer: int intValue()>"->"fieldput <dac: int panelstyle>";
+    "fieldput <dac: int panelstyle>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "push \"clocklocation\""
+    "load.r r0"->"push \"clocklocation\"";
+    "push \"clocklocation\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <dac: int[] parseInt(java.lang.String)>"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"virtualinvoke <dac: int[] parseInt(java.lang.String)>";
+    "virtualinvoke <dac: int[] parseInt(java.lang.String)>"->"dup1.r";
+    "push 0"
+    "dup1.r"->"push 0";
+    "arrayread.i"
+    "push 0"->"arrayread.i";
+    "store.i $i2"
+    "arrayread.i"->"store.i $i2";
+    "store.i $i2"->"load.r r0";
+    "load.i $i2"
+    "load.r r0"->"load.i $i2";
+    "fieldput <dac: int clockX>"
+    "load.i $i2"->"fieldput <dac: int clockX>";
+    "push 1"
+    "fieldput <dac: int clockX>"->"push 1";
+    "push 1"->"arrayread.i";
+    "fieldput <dac: int clockY>"
+    "arrayread.i"->"fieldput <dac: int clockY>";
+    "fieldput <dac: int clockY>"->"load.r r0";
+    "load.r r0"->"new java.lang.Integer";
+    "new java.lang.Integer"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "push \"clockmotionstep\""
+    "load.r r0"->"push \"clockmotionstep\"";
+    "push \"clockmotionstep\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"specialinvoke <java.lang.Integer: void <init>(java.lang.String)>";
+    "specialinvoke <java.lang.Integer: void <init>(java.lang.String)>"->"virtualinvoke <java.lang.Integer: int intValue()>";
+    "fieldput <dac: int mstep>"
+    "virtualinvoke <java.lang.Integer: int intValue()>"->"fieldput <dac: int mstep>";
+    "fieldput <dac: int mstep>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "push \"clockfontstyle\""
+    "load.r r0"->"push \"clockfontstyle\"";
+    "push \"clockfontstyle\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "fieldput <dac: java.lang.String fontstyle>"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"fieldput <dac: java.lang.String fontstyle>";
+    "fieldput <dac: java.lang.String fontstyle>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "push \"clockfontcolor\""
+    "load.r r0"->"push \"clockfontcolor\"";
+    "push \"clockfontcolor\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"virtualinvoke <dac: int[] parseInt(java.lang.String)>";
+    "store.r $i2"
+    "virtualinvoke <dac: int[] parseInt(java.lang.String)>"->"store.r $i2";
+    "store.r $i2"->"load.r r0";
+    "load.r $i2"
+    "load.r r0"->"load.r $i2";
+    "load.r $i2"->"push 0";
+    "push 0"->"arrayread.i";
+    "fieldput <dac: int fontR>"
+    "arrayread.i"->"fieldput <dac: int fontR>";
+    "fieldput <dac: int fontR>"->"load.r r0";
+    "load.r r0"->"load.r $i2";
+    "load.r $i2"->"push 1";
+    "push 1"->"arrayread.i";
+    "fieldput <dac: int fontG>"
+    "arrayread.i"->"fieldput <dac: int fontG>";
+    "fieldput <dac: int fontG>"->"load.r r0";
+    "load.r r0"->"load.r $i2";
+    "push 2"
+    "load.r $i2"->"push 2";
+    "push 2"->"arrayread.i";
+    "fieldput <dac: int fontB>"
+    "arrayread.i"->"fieldput <dac: int fontB>";
+    "fieldput <dac: int fontB>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "push \"clockfontbgcolor\""
+    "load.r r0"->"push \"clockfontbgcolor\"";
+    "push \"clockfontbgcolor\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"virtualinvoke <dac: int[] parseInt(java.lang.String)>";
+    "virtualinvoke <dac: int[] parseInt(java.lang.String)>"->"store.r $i2";
+    "store.r $i2"->"load.r r0";
+    "load.r r0"->"load.r $i2";
+    "load.r $i2"->"push 0";
+    "push 0"->"arrayread.i";
+    "fieldput <dac: int fontbgR>"
+    "arrayread.i"->"fieldput <dac: int fontbgR>";
+    "fieldput <dac: int fontbgR>"->"load.r r0";
+    "load.r r0"->"load.r $i2";
+    "load.r $i2"->"push 1";
+    "push 1"->"arrayread.i";
+    "fieldput <dac: int fontbgG>"
+    "arrayread.i"->"fieldput <dac: int fontbgG>";
+    "fieldput <dac: int fontbgG>"->"load.r r0";
+    "load.r r0"->"load.r $i2";
+    "load.r $i2"->"push 2";
+    "push 2"->"arrayread.i";
+    "fieldput <dac: int fontbgB>"
+    "arrayread.i"->"fieldput <dac: int fontbgB>";
+    "fieldput <dac: int fontbgB>"->"load.r r0";
+    "load.r r0"->"new java.lang.Integer";
+    "new java.lang.Integer"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "push \"clockfontsize\""
+    "load.r r0"->"push \"clockfontsize\"";
+    "push \"clockfontsize\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"specialinvoke <java.lang.Integer: void <init>(java.lang.String)>";
+    "specialinvoke <java.lang.Integer: void <init>(java.lang.String)>"->"virtualinvoke <java.lang.Integer: int intValue()>";
+    "fieldput <dac: int fontsize>"
+    "virtualinvoke <java.lang.Integer: int intValue()>"->"fieldput <dac: int fontsize>";
+    "fieldput <dac: int fontsize>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "push \"datelocation\""
+    "load.r r0"->"push \"datelocation\"";
+    "push \"datelocation\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"virtualinvoke <dac: int[] parseInt(java.lang.String)>";
+    "virtualinvoke <dac: int[] parseInt(java.lang.String)>"->"dup1.r";
+    "dup1.r"->"push 0";
+    "push 0"->"arrayread.i";
+    "arrayread.i"->"store.i $i2";
+    "store.i $i2"->"load.r r0";
+    "load.r r0"->"load.i $i2";
+    "fieldput <dac: int dateX>"
+    "load.i $i2"->"fieldput <dac: int dateX>";
+    "fieldput <dac: int dateX>"->"push 1";
+    "push 1"->"arrayread.i";
+    "fieldput <dac: int dateY>"
+    "arrayread.i"->"fieldput <dac: int dateY>";
+    "fieldput <dac: int dateY>"->"load.r r0";
+    "load.r r0"->"new java.lang.Integer";
+    "new java.lang.Integer"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "push \"datemotionstep\""
+    "load.r r0"->"push \"datemotionstep\"";
+    "push \"datemotionstep\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"specialinvoke <java.lang.Integer: void <init>(java.lang.String)>";
+    "specialinvoke <java.lang.Integer: void <init>(java.lang.String)>"->"virtualinvoke <java.lang.Integer: int intValue()>";
+    "fieldput <dac: int datemstep>"
+    "virtualinvoke <java.lang.Integer: int intValue()>"->"fieldput <dac: int datemstep>";
+    "fieldput <dac: int datemstep>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "push \"datefontstyle\""
+    "load.r r0"->"push \"datefontstyle\"";
+    "push \"datefontstyle\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "fieldput <dac: java.lang.String datefontstyle>"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"fieldput <dac: java.lang.String datefontstyle>";
+    "fieldput <dac: java.lang.String datefontstyle>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "push \"datefontcolor\""
+    "load.r r0"->"push \"datefontcolor\"";
+    "push \"datefontcolor\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"virtualinvoke <dac: int[] parseInt(java.lang.String)>";
+    "virtualinvoke <dac: int[] parseInt(java.lang.String)>"->"store.r $i2";
+    "store.r $i2"->"load.r r0";
+    "load.r r0"->"load.r $i2";
+    "load.r $i2"->"push 0";
+    "push 0"->"arrayread.i";
+    "fieldput <dac: int datefontR>"
+    "arrayread.i"->"fieldput <dac: int datefontR>";
+    "fieldput <dac: int datefontR>"->"load.r r0";
+    "load.r r0"->"load.r $i2";
+    "load.r $i2"->"push 1";
+    "push 1"->"arrayread.i";
+    "fieldput <dac: int datefontG>"
+    "arrayread.i"->"fieldput <dac: int datefontG>";
+    "fieldput <dac: int datefontG>"->"load.r r0";
+    "load.r r0"->"load.r $i2";
+    "load.r $i2"->"push 2";
+    "push 2"->"arrayread.i";
+    "fieldput <dac: int datefontB>"
+    "arrayread.i"->"fieldput <dac: int datefontB>";
+    "fieldput <dac: int datefontB>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "push \"datefontbgcolor\""
+    "load.r r0"->"push \"datefontbgcolor\"";
+    "push \"datefontbgcolor\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"virtualinvoke <dac: int[] parseInt(java.lang.String)>";
+    "virtualinvoke <dac: int[] parseInt(java.lang.String)>"->"store.r $i2";
+    "store.r $i2"->"load.r r0";
+    "load.r r0"->"load.r $i2";
+    "load.r $i2"->"push 0";
+    "push 0"->"arrayread.i";
+    "fieldput <dac: int datefontbgR>"
+    "arrayread.i"->"fieldput <dac: int datefontbgR>";
+    "fieldput <dac: int datefontbgR>"->"load.r r0";
+    "load.r r0"->"load.r $i2";
+    "load.r $i2"->"push 1";
+    "push 1"->"arrayread.i";
+    "fieldput <dac: int datefontbgG>"
+    "arrayread.i"->"fieldput <dac: int datefontbgG>";
+    "fieldput <dac: int datefontbgG>"->"load.r r0";
+    "load.r r0"->"load.r $i2";
+    "load.r $i2"->"push 2";
+    "push 2"->"arrayread.i";
+    "fieldput <dac: int datefontbgB>"
+    "arrayread.i"->"fieldput <dac: int datefontbgB>";
+    "fieldput <dac: int datefontbgB>"->"load.r r0";
+    "load.r r0"->"new java.lang.Integer";
+    "new java.lang.Integer"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "push \"datefontsize\""
+    "load.r r0"->"push \"datefontsize\"";
+    "push \"datefontsize\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"specialinvoke <java.lang.Integer: void <init>(java.lang.String)>";
+    "specialinvoke <java.lang.Integer: void <init>(java.lang.String)>"->"virtualinvoke <java.lang.Integer: int intValue()>";
+    "fieldput <dac: int datefontsize>"
+    "virtualinvoke <java.lang.Integer: int intValue()>"->"fieldput <dac: int datefontsize>";
+    "fieldput <dac: int datefontsize>"->"load.r r0";
+    "load.r r0"->"new java.lang.Integer";
+    "new java.lang.Integer"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "push \"alarmduration\""
+    "load.r r0"->"push \"alarmduration\"";
+    "push \"alarmduration\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"specialinvoke <java.lang.Integer: void <init>(java.lang.String)>";
+    "specialinvoke <java.lang.Integer: void <init>(java.lang.String)>"->"virtualinvoke <java.lang.Integer: int intValue()>";
+    "fieldput <dac: int nalarms>"
+    "virtualinvoke <java.lang.Integer: int intValue()>"->"fieldput <dac: int nalarms>";
+    "fieldput <dac: int nalarms>"->"load.r r0";
+    "new java.awt.MediaTracker"
+    "load.r r0"->"new java.awt.MediaTracker";
+    "new java.awt.MediaTracker"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "specialinvoke <java.awt.MediaTracker: void <init>(java.awt.Component)>"
+    "load.r r0"->"specialinvoke <java.awt.MediaTracker: void <init>(java.awt.Component)>";
+    "fieldput <dac: java.awt.MediaTracker tracker>"
+    "specialinvoke <java.awt.MediaTracker: void <init>(java.awt.Component)>"->"fieldput <dac: java.awt.MediaTracker tracker>";
+    "fieldput <dac: java.awt.MediaTracker tracker>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "virtualinvoke <java.applet.Applet: java.net.URL getDocumentBase()>"
+    "load.r r0"->"virtualinvoke <java.applet.Applet: java.net.URL getDocumentBase()>";
+    "virtualinvoke <java.applet.Applet: java.net.URL getDocumentBase()>"->"load.r r0";
+    "fieldget <dac: java.lang.String infile>"
+    "load.r r0"->"fieldget <dac: java.lang.String infile>";
+    "virtualinvoke <java.applet.Applet: java.awt.Image getImage(java.net.URL,java.lang.String)>"
+    "fieldget <dac: java.lang.String infile>"->"virtualinvoke <java.applet.Applet: java.awt.Image getImage(java.net.URL,java.lang.String)>";
+    "fieldput <dac: java.awt.Image photo>"
+    "virtualinvoke <java.applet.Applet: java.awt.Image getImage(java.net.URL,java.lang.String)>"->"fieldput <dac: java.awt.Image photo>";
+    "fieldput <dac: java.awt.Image photo>"->"load.r r0";
+    "fieldget <dac: java.awt.MediaTracker tracker>"
+    "load.r r0"->"fieldget <dac: java.awt.MediaTracker tracker>";
+    "fieldget <dac: java.awt.MediaTracker tracker>"->"load.r r0";
+    "fieldget <dac: java.awt.Image photo>"
+    "load.r r0"->"fieldget <dac: java.awt.Image photo>";
+    "fieldget <dac: java.awt.Image photo>"->"push 0";
+    "virtualinvoke <java.awt.MediaTracker: void addImage(java.awt.Image,int)>"
+    "push 0"->"virtualinvoke <java.awt.MediaTracker: void addImage(java.awt.Image,int)>";
+    "virtualinvoke <java.awt.MediaTracker: void addImage(java.awt.Image,int)>"->"load.r r0";
+    "specialinvoke <dac: void waitForImage()>"
+    "load.r r0"->"specialinvoke <dac: void waitForImage()>";
+    "specialinvoke <dac: void waitForImage()>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <dac: java.awt.Image photo>";
+    "fieldget <dac: java.awt.Image photo>"->"load.r r0";
+    "virtualinvoke <java.awt.Image: int getWidth(java.awt.image.ImageObserver)>"
+    "load.r r0"->"virtualinvoke <java.awt.Image: int getWidth(java.awt.image.ImageObserver)>";
+    "fieldput <dac: int width>"
+    "virtualinvoke <java.awt.Image: int getWidth(java.awt.image.ImageObserver)>"->"fieldput <dac: int width>";
+    "fieldput <dac: int width>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <dac: java.awt.Image photo>";
+    "fieldget <dac: java.awt.Image photo>"->"load.r r0";
+    "virtualinvoke <java.awt.Image: int getHeight(java.awt.image.ImageObserver)>"
+    "load.r r0"->"virtualinvoke <java.awt.Image: int getHeight(java.awt.image.ImageObserver)>";
+    "fieldput <dac: int height>"
+    "virtualinvoke <java.awt.Image: int getHeight(java.awt.image.ImageObserver)>"->"fieldput <dac: int height>";
+    "fieldput <dac: int height>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "fieldget <dac: int width>"
+    "load.r r0"->"fieldget <dac: int width>";
+    "fieldget <dac: int width>"->"load.r r0";
+    "fieldget <dac: int height>"
+    "load.r r0"->"fieldget <dac: int height>";
+    "virtualinvoke <java.applet.Applet: void resize(int,int)>"
+    "fieldget <dac: int height>"->"virtualinvoke <java.applet.Applet: void resize(int,int)>";
+    "virtualinvoke <java.applet.Applet: void resize(int,int)>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <dac: int width>";
+    "fieldget <dac: int width>"->"load.r r0";
+    "load.r r0"->"fieldget <dac: int height>";
+    "virtualinvoke <java.awt.Component: java.awt.Image createImage(int,int)>"
+    "fieldget <dac: int height>"->"virtualinvoke <java.awt.Component: java.awt.Image createImage(int,int)>";
+    "fieldput <dac: java.awt.Image oi>"
+    "virtualinvoke <java.awt.Component: java.awt.Image createImage(int,int)>"->"fieldput <dac: java.awt.Image oi>";
+    "fieldput <dac: java.awt.Image oi>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "fieldget <dac: java.awt.Image oi>"
+    "load.r r0"->"fieldget <dac: java.awt.Image oi>";
+    "virtualinvoke <java.awt.Image: java.awt.Graphics getGraphics()>"
+    "fieldget <dac: java.awt.Image oi>"->"virtualinvoke <java.awt.Image: java.awt.Graphics getGraphics()>";
+    "fieldput <dac: java.awt.Graphics og>"
+    "virtualinvoke <java.awt.Image: java.awt.Graphics getGraphics()>"->"fieldput <dac: java.awt.Graphics og>";
+    "fieldput <dac: java.awt.Graphics og>"->"load.r r0";
+    "virtualinvoke <java.awt.Component: void repaint()>"
+    "load.r r0"->"virtualinvoke <java.awt.Component: void repaint()>";
+    "virtualinvoke <java.awt.Component: void repaint()>"->"load.r r0";
+    "fieldget <dac: int clockX>"
+    "load.r r0"->"fieldget <dac: int clockX>";
+    "iflt load.r r0"
+    "fieldget <dac: int clockX>"->"iflt load.r r0";
+    "iflt load.r r0"->"load.r r0";
+    "fieldget <dac: int clockY>"
+    "load.r r0"->"fieldget <dac: int clockY>";
+    "ifge load.r r0"
+    "fieldget <dac: int clockY>"->"ifge load.r r0";
+    "ifge load.r r0"->"load.r r0";
+    "load.r r0"->"push 2";
+    "push 2"->"fieldput <dac: int clockX>";
+    "fieldput <dac: int clockX>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <dac: int height>";
+    "fieldget <dac: int height>"->"push 2";
+    "div.i"
+    "push 2"->"div.i";
+    "push 30"
+    "div.i"->"push 30";
+    "sub.i"
+    "push 30"->"sub.i";
+    "sub.i"->"fieldput <dac: int clockY>";
+    "fieldput <dac: int clockY>"->"load.r r0";
+    "load.r r0"->"push 1";
+    "fieldput <dac: boolean motion>"
+    "push 1"->"fieldput <dac: boolean motion>";
+    "fieldput <dac: boolean motion>"->"load.r r0";
+    "fieldget <dac: int dateX>"
+    "load.r r0"->"fieldget <dac: int dateX>";
+    "fieldget <dac: int dateX>"->"iflt load.r r0";
+    "iflt load.r r0"->"load.r r0";
+    "fieldget <dac: int dateY>"
+    "load.r r0"->"fieldget <dac: int dateY>";
+    "fieldget <dac: int dateY>"->"ifge load.r r0";
+    "ifge load.r r0"->"load.r r0";
+    "load.r r0"->"push 2";
+    "push 2"->"fieldput <dac: int dateX>";
+    "fieldput <dac: int dateX>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <dac: int height>";
+    "fieldget <dac: int height>"->"push 2";
+    "push 2"->"div.i";
+    "div.i"->"push 30";
+    "add.i"
+    "push 30"->"add.i";
+    "add.i"->"fieldput <dac: int dateY>";
+    "fieldput <dac: int dateY>"->"load.r r0";
+    "load.r r0"->"push 1";
+    "fieldput <dac: boolean datemotion>"
+    "push 1"->"fieldput <dac: boolean datemotion>";
+    "fieldput <dac: boolean datemotion>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"virtualinvoke <java.applet.Applet: java.net.URL getDocumentBase()>";
+    "virtualinvoke <java.applet.Applet: java.net.URL getDocumentBase()>"->"load.r r0";
+    "fieldget <dac: java.lang.String alarmau>"
+    "load.r r0"->"fieldget <dac: java.lang.String alarmau>";
+    "virtualinvoke <java.applet.Applet: java.applet.AudioClip getAudioClip(java.net.URL,java.lang.String)>"
+    "fieldget <dac: java.lang.String alarmau>"->"virtualinvoke <java.applet.Applet: java.applet.AudioClip getAudioClip(java.net.URL,java.lang.String)>";
+    "fieldput <dac: java.applet.AudioClip alarmaudio>"
+    "virtualinvoke <java.applet.Applet: java.applet.AudioClip getAudioClip(java.net.URL,java.lang.String)>"->"fieldput <dac: java.applet.AudioClip alarmaudio>";
+    "fieldput <dac: java.applet.AudioClip alarmaudio>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"virtualinvoke <java.applet.Applet: java.net.URL getDocumentBase()>";
+    "virtualinvoke <java.applet.Applet: java.net.URL getDocumentBase()>"->"load.r r0";
+    "fieldget <dac: java.lang.String timeau>"
+    "load.r r0"->"fieldget <dac: java.lang.String timeau>";
+    "fieldget <dac: java.lang.String timeau>"->"virtualinvoke <java.applet.Applet: java.applet.AudioClip getAudioClip(java.net.URL,java.lang.String)>";
+    "fieldput <dac: java.applet.AudioClip timeaudio>"
+    "virtualinvoke <java.applet.Applet: java.applet.AudioClip getAudioClip(java.net.URL,java.lang.String)>"->"fieldput <dac: java.applet.AudioClip timeaudio>";
+    "return"
+    "fieldput <dac: java.applet.AudioClip timeaudio>"->"return";
+}

@@ -1,0 +1,613 @@
+digraph "" {
+    "r0 := @this: com.spilka.client.ClientApplet"
+    "load.r r0"
+    "r0 := @this: com.spilka.client.ClientApplet"->"load.r r0";
+    "staticinvoke <a.h: void q(a.h)>"
+    "load.r r0"->"staticinvoke <a.h: void q(a.h)>";
+    "staticinvoke <a.h: void q(a.h)>"->"load.r r0";
+    "virtualinvoke <com.spilka.client.ClientApplet: java.net.URL getCodeBase()>"
+    "load.r r0"->"virtualinvoke <com.spilka.client.ClientApplet: java.net.URL getCodeBase()>";
+    "store.r r7"
+    "virtualinvoke <com.spilka.client.ClientApplet: java.net.URL getCodeBase()>"->"store.r r7";
+    "store.r r7"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "push \"altHost\""
+    "load.r r0"->"push \"altHost\"";
+    "virtualinvoke <com.spilka.client.ClientApplet: java.lang.String getParameter(java.lang.String)>"
+    "push \"altHost\""->"virtualinvoke <com.spilka.client.ClientApplet: java.lang.String getParameter(java.lang.String)>";
+    "fieldput <com.spilka.client.ClientApplet: java.lang.String w>"
+    "virtualinvoke <com.spilka.client.ClientApplet: java.lang.String getParameter(java.lang.String)>"->"fieldput <com.spilka.client.ClientApplet: java.lang.String w>";
+    "staticget <a.bl: java.lang.String q>"
+    "fieldput <com.spilka.client.ClientApplet: java.lang.String w>"->"staticget <a.bl: java.lang.String q>";
+    "staticinvoke <a.bl: void q(java.lang.String)>"
+    "staticget <a.bl: java.lang.String q>"->"staticinvoke <a.bl: void q(java.lang.String)>";
+    "staticinvoke <a.bl: void q(java.lang.String)>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "push \"language\""
+    "load.r r0"->"push \"language\"";
+    "push \"language\""->"virtualinvoke <com.spilka.client.ClientApplet: java.lang.String getParameter(java.lang.String)>";
+    "fieldput <com.spilka.client.ClientApplet: java.lang.String q>"
+    "virtualinvoke <com.spilka.client.ClientApplet: java.lang.String getParameter(java.lang.String)>"->"fieldput <com.spilka.client.ClientApplet: java.lang.String q>";
+    "fieldput <com.spilka.client.ClientApplet: java.lang.String q>"->"load.r r0";
+    "fieldget <com.spilka.client.ClientApplet: java.lang.String q>"
+    "load.r r0"->"fieldget <com.spilka.client.ClientApplet: java.lang.String q>";
+    "ifnull staticinvoke <a.ch: java.lang.String getChatName()>"
+    "fieldget <com.spilka.client.ClientApplet: java.lang.String q>"->"ifnull staticinvoke <a.ch: java.lang.String getChatName()>";
+    "new a.al"
+    "ifnull staticinvoke <a.ch: java.lang.String getChatName()>"->"new a.al";
+    "new java.util.zip.GZIPInputStream"
+    "new a.al"->"new java.util.zip.GZIPInputStream";
+    "store.r r8"
+    "new java.util.zip.GZIPInputStream"->"store.r r8";
+    "load.r r8"
+    "store.r r8"->"load.r r8";
+    "new java.net.URL"
+    "load.r r8"->"new java.net.URL";
+    "dup1.r"
+    "new java.net.URL"->"dup1.r";
+    "new java.lang.StringBuffer"
+    "dup1.r"->"new java.lang.StringBuffer";
+    "new java.lang.StringBuffer"->"dup1.r";
+    "dup1.r"->"store.r r8";
+    "store.r r8"->"new a.al";
+    "new a.k"
+    "new a.al"->"new a.k";
+    "new a.k"->"dup1.r";
+    "dup1.r"->"new java.net.URL";
+    "new java.net.URL"->"dup1.r";
+    "dup1.r"->"new java.lang.StringBuffer";
+    "new java.lang.StringBuffer"->"dup1.r";
+    "specialinvoke <java.lang.StringBuffer: void <init>()>"
+    "dup1.r"->"specialinvoke <java.lang.StringBuffer: void <init>()>";
+    "load.r r7"
+    "specialinvoke <java.lang.StringBuffer: void <init>()>"->"load.r r7";
+    "virtualinvoke <java.net.URL: java.lang.String toString()>"
+    "load.r r7"->"virtualinvoke <java.net.URL: java.lang.String toString()>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"
+    "virtualinvoke <java.net.URL: java.lang.String toString()>"->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "push \"Resources/languages/\""
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"push \"Resources/languages/\"";
+    "push \"Resources/languages/\""->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"load.r r0";
+    "load.r r0"->"fieldget <com.spilka.client.ClientApplet: java.lang.String q>";
+    "fieldget <com.spilka.client.ClientApplet: java.lang.String q>"->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>"
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>";
+    "specialinvoke <java.net.URL: void <init>(java.lang.String)>"
+    "virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>"->"specialinvoke <java.net.URL: void <init>(java.lang.String)>";
+    "virtualinvoke <java.net.URL: java.io.InputStream openStream()>"
+    "specialinvoke <java.net.URL: void <init>(java.lang.String)>"->"virtualinvoke <java.net.URL: java.io.InputStream openStream()>";
+    "specialinvoke <a.k: void <init>(java.io.InputStream)>"
+    "virtualinvoke <java.net.URL: java.io.InputStream openStream()>"->"specialinvoke <a.k: void <init>(java.io.InputStream)>";
+    "specialinvoke <a.al: void <init>(a.k)>"
+    "specialinvoke <a.k: void <init>(java.io.InputStream)>"->"specialinvoke <a.al: void <init>(a.k)>";
+    "goto staticinvoke <a.ch: java.lang.String getChatName()>"
+    "specialinvoke <a.al: void <init>(a.k)>"->"goto staticinvoke <a.ch: java.lang.String getChatName()>";
+    "staticinvoke <a.ch: java.lang.String getChatName()>"
+    "goto staticinvoke <a.ch: java.lang.String getChatName()>"->"staticinvoke <a.ch: java.lang.String getChatName()>";
+    "staticinvoke <a.al: java.lang.String q(java.lang.String)>"
+    "staticinvoke <a.ch: java.lang.String getChatName()>"->"staticinvoke <a.al: java.lang.String q(java.lang.String)>";
+    "staticput <a.cs: java.lang.String e>"
+    "staticinvoke <a.al: java.lang.String q(java.lang.String)>"->"staticput <a.cs: java.lang.String e>";
+    "staticget <java.lang.System: java.io.PrintStream out>"
+    "staticput <a.cs: java.lang.String e>"->"staticget <java.lang.System: java.io.PrintStream out>";
+    "staticget <a.cs: java.lang.String e>"
+    "staticget <java.lang.System: java.io.PrintStream out>"->"staticget <a.cs: java.lang.String e>";
+    "virtualinvoke <java.io.PrintStream: void println(java.lang.String)>"
+    "staticget <a.cs: java.lang.String e>"->"virtualinvoke <java.io.PrintStream: void println(java.lang.String)>";
+    "staticget <java.awt.Color: java.awt.Color white>"
+    "virtualinvoke <java.io.PrintStream: void println(java.lang.String)>"->"staticget <java.awt.Color: java.awt.Color white>";
+    "store.r r118"
+    "staticget <java.awt.Color: java.awt.Color white>"->"store.r r118";
+    "staticget <java.awt.Color: java.awt.Color black>"
+    "store.r r118"->"staticget <java.awt.Color: java.awt.Color black>";
+    "store.r r119"
+    "staticget <java.awt.Color: java.awt.Color black>"->"store.r r119";
+    "push null"
+    "store.r r119"->"push null";
+    "store.r r120"
+    "push null"->"store.r r120";
+    "store.r r120"->"load.r r0";
+    "push \"background\""
+    "load.r r0"->"push \"background\"";
+    "push \"background\""->"virtualinvoke <com.spilka.client.ClientApplet: java.lang.String getParameter(java.lang.String)>";
+    "store.r r1"
+    "virtualinvoke <com.spilka.client.ClientApplet: java.lang.String getParameter(java.lang.String)>"->"store.r r1";
+    "store.r r1"->"load.r r0";
+    "push \"backgroundImage\""
+    "load.r r0"->"push \"backgroundImage\"";
+    "push \"backgroundImage\""->"virtualinvoke <com.spilka.client.ClientApplet: java.lang.String getParameter(java.lang.String)>";
+    "store.r r2"
+    "virtualinvoke <com.spilka.client.ClientApplet: java.lang.String getParameter(java.lang.String)>"->"store.r r2";
+    "store.r r2"->"load.r r0";
+    "push \"textcolor\""
+    "load.r r0"->"push \"textcolor\"";
+    "push \"textcolor\""->"virtualinvoke <com.spilka.client.ClientApplet: java.lang.String getParameter(java.lang.String)>";
+    "store.r r3"
+    "virtualinvoke <com.spilka.client.ClientApplet: java.lang.String getParameter(java.lang.String)>"->"store.r r3";
+    "store.r r3"->"load.r r0";
+    "push \"themeID\""
+    "load.r r0"->"push \"themeID\"";
+    "push \"themeID\""->"virtualinvoke <com.spilka.client.ClientApplet: java.lang.String getParameter(java.lang.String)>";
+    "store.r r4"
+    "virtualinvoke <com.spilka.client.ClientApplet: java.lang.String getParameter(java.lang.String)>"->"store.r r4";
+    "store.r r4"->"load.r r0";
+    "push \"preferredPort\""
+    "load.r r0"->"push \"preferredPort\"";
+    "push \"preferredPort\""->"virtualinvoke <com.spilka.client.ClientApplet: java.lang.String getParameter(java.lang.String)>";
+    "store.r r5"
+    "virtualinvoke <com.spilka.client.ClientApplet: java.lang.String getParameter(java.lang.String)>"->"store.r r5";
+    "store.r r5"->"load.r r0";
+    "push \"ports\""
+    "load.r r0"->"push \"ports\"";
+    "push \"ports\""->"virtualinvoke <com.spilka.client.ClientApplet: java.lang.String getParameter(java.lang.String)>";
+    "store.r r6"
+    "virtualinvoke <com.spilka.client.ClientApplet: java.lang.String getParameter(java.lang.String)>"->"store.r r6";
+    "store.r r6"->"load.r r0";
+    "push \"COPPA1\""
+    "load.r r0"->"push \"COPPA1\"";
+    "push \"COPPA1\""->"virtualinvoke <com.spilka.client.ClientApplet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <com.spilka.client.ClientApplet: java.lang.String getParameter(java.lang.String)>"->"store.r r7";
+    "store.r r7"->"load.r r0";
+    "push \"COPPA2\""
+    "load.r r0"->"push \"COPPA2\"";
+    "push \"COPPA2\""->"virtualinvoke <com.spilka.client.ClientApplet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <com.spilka.client.ClientApplet: java.lang.String getParameter(java.lang.String)>"->"store.r r8";
+    "load.r r1"
+    "store.r r8"->"load.r r1";
+    "ifnull goto load.r r3"
+    "load.r r1"->"ifnull goto load.r r3";
+    "ifnull goto load.r r3"->"load.r r1";
+    "staticinvoke <a.ce: java.awt.Color q(java.lang.String)>"
+    "load.r r1"->"staticinvoke <a.ce: java.awt.Color q(java.lang.String)>";
+    "staticinvoke <a.ce: java.awt.Color q(java.lang.String)>"->"store.r r118";
+    "goto load.r r3"
+    "store.r r118"->"goto load.r r3";
+    "load.r r3"
+    "goto load.r r3"->"load.r r3";
+    "ifnull goto load.r r4"
+    "load.r r3"->"ifnull goto load.r r4";
+    "ifnull goto load.r r4"->"load.r r3";
+    "load.r r3"->"staticinvoke <a.ce: java.awt.Color q(java.lang.String)>";
+    "staticinvoke <a.ce: java.awt.Color q(java.lang.String)>"->"store.r r119";
+    "goto load.r r4"
+    "store.r r119"->"goto load.r r4";
+    "load.r r4"
+    "goto load.r r4"->"load.r r4";
+    "ifnull goto load.r r5"
+    "load.r r4"->"ifnull goto load.r r5";
+    "ifnull goto load.r r5"->"load.r r0";
+    "load.r r0"->"load.r r4";
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"
+    "load.r r4"->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>";
+    "fieldput <com.spilka.client.ClientApplet: int e>"
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"->"fieldput <com.spilka.client.ClientApplet: int e>";
+    "goto load.r r5"
+    "fieldput <com.spilka.client.ClientApplet: int e>"->"goto load.r r5";
+    "load.r r5"
+    "goto load.r r5"->"load.r r5";
+    "ifnull goto load.r r6"
+    "load.r r5"->"ifnull goto load.r r6";
+    "ifnull goto load.r r6"->"load.r r0";
+    "load.r r0"->"load.r r5";
+    "load.r r5"->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>";
+    "fieldput <com.spilka.client.ClientApplet: int r>"
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"->"fieldput <com.spilka.client.ClientApplet: int r>";
+    "goto load.r r6"
+    "fieldput <com.spilka.client.ClientApplet: int r>"->"goto load.r r6";
+    "load.r r6"
+    "goto load.r r6"->"load.r r6";
+    "ifnull load.r r2"
+    "load.r r6"->"ifnull load.r r2";
+    "staticinvoke <a.bl: void q()>"
+    "ifnull load.r r2"->"staticinvoke <a.bl: void q()>";
+    "staticinvoke <a.bl: void q()>"->"load.r r6";
+    "load.r r6"->"staticinvoke <a.bl: void q(java.lang.String)>";
+    "load.r r2"
+    "staticinvoke <a.bl: void q(java.lang.String)>"->"load.r r2";
+    "ifnull load.r r0"
+    "load.r r2"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"virtualinvoke <com.spilka.client.ClientApplet: java.net.URL getCodeBase()>";
+    "virtualinvoke <com.spilka.client.ClientApplet: java.net.URL getCodeBase()>"->"new java.lang.StringBuffer";
+    "new java.lang.StringBuffer"->"dup1.r";
+    "dup1.r"->"specialinvoke <java.lang.StringBuffer: void <init>()>";
+    "push \"Resources/\""
+    "specialinvoke <java.lang.StringBuffer: void <init>()>"->"push \"Resources/\"";
+    "push \"Resources/\""->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"load.r r2";
+    "load.r r2"->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>";
+    "virtualinvoke <com.spilka.client.ClientApplet: java.awt.Image getImage(java.net.URL,java.lang.String)>"
+    "virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>"->"virtualinvoke <com.spilka.client.ClientApplet: java.awt.Image getImage(java.net.URL,java.lang.String)>";
+    "virtualinvoke <com.spilka.client.ClientApplet: java.awt.Image getImage(java.net.URL,java.lang.String)>"->"store.r r120";
+    "store.r r120"->"load.r r0";
+    "load.r r118"
+    "load.r r0"->"load.r r118";
+    "virtualinvoke <com.spilka.client.ClientApplet: void setBackground(java.awt.Color)>"
+    "load.r r118"->"virtualinvoke <com.spilka.client.ClientApplet: void setBackground(java.awt.Color)>";
+    "virtualinvoke <com.spilka.client.ClientApplet: void setBackground(java.awt.Color)>"->"load.r r0";
+    "load.r r119"
+    "load.r r0"->"load.r r119";
+    "virtualinvoke <com.spilka.client.ClientApplet: void setForeground(java.awt.Color)>"
+    "load.r r119"->"virtualinvoke <com.spilka.client.ClientApplet: void setForeground(java.awt.Color)>";
+    "virtualinvoke <com.spilka.client.ClientApplet: void setForeground(java.awt.Color)>"->"load.r r0";
+    "new java.awt.BorderLayout"
+    "load.r r0"->"new java.awt.BorderLayout";
+    "new java.awt.BorderLayout"->"dup1.r";
+    "specialinvoke <java.awt.BorderLayout: void <init>()>"
+    "dup1.r"->"specialinvoke <java.awt.BorderLayout: void <init>()>";
+    "virtualinvoke <com.spilka.client.ClientApplet: void setLayout(java.awt.LayoutManager)>"
+    "specialinvoke <java.awt.BorderLayout: void <init>()>"->"virtualinvoke <com.spilka.client.ClientApplet: void setLayout(java.awt.LayoutManager)>";
+    "virtualinvoke <com.spilka.client.ClientApplet: void setLayout(java.awt.LayoutManager)>"->"load.r r0";
+    "push \"embedded\""
+    "load.r r0"->"push \"embedded\"";
+    "push \"embedded\""->"virtualinvoke <com.spilka.client.ClientApplet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <com.spilka.client.ClientApplet: java.lang.String getParameter(java.lang.String)>"->"store.r r2";
+    "store.r r2"->"load.r r2";
+    "load.r r2"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r r2";
+    "push \"true\""
+    "load.r r2"->"push \"true\"";
+    "virtualinvoke <java.lang.String: boolean equalsIgnoreCase(java.lang.String)>"
+    "push \"true\""->"virtualinvoke <java.lang.String: boolean equalsIgnoreCase(java.lang.String)>";
+    "ifeq load.r r0"
+    "virtualinvoke <java.lang.String: boolean equalsIgnoreCase(java.lang.String)>"->"ifeq load.r r0";
+    "ifeq load.r r0"->"load.r r0";
+    "push 1"
+    "load.r r0"->"push 1";
+    "fieldput <com.spilka.client.ClientApplet: boolean q>"
+    "push 1"->"fieldput <com.spilka.client.ClientApplet: boolean q>";
+    "fieldput <com.spilka.client.ClientApplet: boolean q>"->"load.r r0";
+    "fieldget <com.spilka.client.ClientApplet: boolean q>"
+    "load.r r0"->"fieldget <com.spilka.client.ClientApplet: boolean q>";
+    "ifeq push \"WindowHeight\""
+    "fieldget <com.spilka.client.ClientApplet: boolean q>"->"ifeq push \"WindowHeight\"";
+    "push \"height\""
+    "ifeq push \"WindowHeight\""->"push \"height\"";
+    "push \"height\""->"store.r r2";
+    "goto load.r r0"
+    "store.r r2"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r2";
+    "load.r r2"->"virtualinvoke <com.spilka.client.ClientApplet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <com.spilka.client.ClientApplet: java.lang.String getParameter(java.lang.String)>"->"store.r r2";
+    "store.r r2"->"load.r r2";
+    "load.r r2"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r2";
+    "load.r r2"->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>";
+    "fieldput <com.spilka.client.ClientApplet: int q>"
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"->"fieldput <com.spilka.client.ClientApplet: int q>";
+    "fieldput <com.spilka.client.ClientApplet: int q>"->"load.r r0";
+    "load.r r0"->"fieldget <com.spilka.client.ClientApplet: boolean q>";
+    "ifeq push \"WindowWidth\""
+    "fieldget <com.spilka.client.ClientApplet: boolean q>"->"ifeq push \"WindowWidth\"";
+    "push \"width\""
+    "ifeq push \"WindowWidth\""->"push \"width\"";
+    "push \"width\""->"store.r r2";
+    "store.r r2"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r2";
+    "load.r r2"->"virtualinvoke <com.spilka.client.ClientApplet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <com.spilka.client.ClientApplet: java.lang.String getParameter(java.lang.String)>"->"store.r r2";
+    "store.r r2"->"load.r r2";
+    "ifnull goto load.r r0"
+    "load.r r2"->"ifnull goto load.r r0";
+    "ifnull goto load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r2";
+    "load.r r2"->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>";
+    "fieldput <com.spilka.client.ClientApplet: int w>"
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"->"fieldput <com.spilka.client.ClientApplet: int w>";
+    "fieldput <com.spilka.client.ClientApplet: int w>"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "new a.aq"
+    "load.r r0"->"new a.aq";
+    "new a.aq"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "specialinvoke <a.aq: void <init>(a.h)>"
+    "load.r r0"->"specialinvoke <a.aq: void <init>(a.h)>";
+    "fieldput <a.h: a.W q>"
+    "specialinvoke <a.aq: void <init>(a.h)>"->"fieldput <a.h: a.W q>";
+    "fieldput <a.h: a.W q>"->"load.r r0";
+    "push \"RoomsTab\""
+    "load.r r0"->"push \"RoomsTab\"";
+    "push \"RoomsTab\""->"virtualinvoke <com.spilka.client.ClientApplet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <com.spilka.client.ClientApplet: java.lang.String getParameter(java.lang.String)>"->"store.r r2";
+    "store.r r2"->"load.r r2";
+    "load.r r2"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r r2";
+    "push \"false\""
+    "load.r r2"->"push \"false\"";
+    "push \"false\""->"virtualinvoke <java.lang.String: boolean equalsIgnoreCase(java.lang.String)>";
+    "virtualinvoke <java.lang.String: boolean equalsIgnoreCase(java.lang.String)>"->"ifeq load.r r0";
+    "ifeq load.r r0"->"load.r r0";
+    "fieldget <a.h: a.W q>"
+    "load.r r0"->"fieldget <a.h: a.W q>";
+    "push 0"
+    "fieldget <a.h: a.W q>"->"push 0";
+    "virtualinvoke <a.W: void w(boolean)>"
+    "push 0"->"virtualinvoke <a.W: void w(boolean)>";
+    "virtualinvoke <a.W: void w(boolean)>"->"load.r r0";
+    "push \"UsersTab\""
+    "load.r r0"->"push \"UsersTab\"";
+    "push \"UsersTab\""->"virtualinvoke <com.spilka.client.ClientApplet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <com.spilka.client.ClientApplet: java.lang.String getParameter(java.lang.String)>"->"store.r r2";
+    "store.r r2"->"load.r r2";
+    "load.r r2"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r r2";
+    "load.r r2"->"push \"false\"";
+    "push \"false\""->"virtualinvoke <java.lang.String: boolean equalsIgnoreCase(java.lang.String)>";
+    "virtualinvoke <java.lang.String: boolean equalsIgnoreCase(java.lang.String)>"->"ifeq load.r r0";
+    "ifeq load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <a.h: a.W q>";
+    "fieldget <a.h: a.W q>"->"push 0";
+    "virtualinvoke <a.W: void e(boolean)>"
+    "push 0"->"virtualinvoke <a.W: void e(boolean)>";
+    "virtualinvoke <a.W: void e(boolean)>"->"load.r r0";
+    "push \"BuddiesTab\""
+    "load.r r0"->"push \"BuddiesTab\"";
+    "push \"BuddiesTab\""->"virtualinvoke <com.spilka.client.ClientApplet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <com.spilka.client.ClientApplet: java.lang.String getParameter(java.lang.String)>"->"store.r r2";
+    "store.r r2"->"load.r r2";
+    "load.r r2"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r r2";
+    "load.r r2"->"push \"true\"";
+    "push \"true\""->"virtualinvoke <java.lang.String: boolean equalsIgnoreCase(java.lang.String)>";
+    "virtualinvoke <java.lang.String: boolean equalsIgnoreCase(java.lang.String)>"->"ifeq load.r r0";
+    "ifeq load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <a.h: a.W q>";
+    "fieldget <a.h: a.W q>"->"push 1";
+    "virtualinvoke <a.W: void q(boolean)>"
+    "push 1"->"virtualinvoke <a.W: void q(boolean)>";
+    "virtualinvoke <a.W: void q(boolean)>"->"load.r r0";
+    "push \"suppressUserList\""
+    "load.r r0"->"push \"suppressUserList\"";
+    "push \"suppressUserList\""->"virtualinvoke <com.spilka.client.ClientApplet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <com.spilka.client.ClientApplet: java.lang.String getParameter(java.lang.String)>"->"store.r r2";
+    "store.r r2"->"load.r r2";
+    "load.r r2"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r r2";
+    "load.r r2"->"push \"true\"";
+    "push \"true\""->"virtualinvoke <java.lang.String: boolean equalsIgnoreCase(java.lang.String)>";
+    "virtualinvoke <java.lang.String: boolean equalsIgnoreCase(java.lang.String)>"->"ifeq load.r r0";
+    "ifeq load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <a.h: a.W q>";
+    "fieldget <a.h: a.W q>"->"push 1";
+    "virtualinvoke <a.W: void r(boolean)>"
+    "push 1"->"virtualinvoke <a.W: void r(boolean)>";
+    "virtualinvoke <a.W: void r(boolean)>"->"load.r r0";
+    "push \"font1\""
+    "load.r r0"->"push \"font1\"";
+    "push \"font1\""->"virtualinvoke <com.spilka.client.ClientApplet: java.lang.String getParameter(java.lang.String)>";
+    "staticinvoke <a.be: void q(java.lang.String)>"
+    "virtualinvoke <com.spilka.client.ClientApplet: java.lang.String getParameter(java.lang.String)>"->"staticinvoke <a.be: void q(java.lang.String)>";
+    "staticinvoke <a.be: void q(java.lang.String)>"->"load.r r0";
+    "push \"font1b\""
+    "load.r r0"->"push \"font1b\"";
+    "push \"font1b\""->"virtualinvoke <com.spilka.client.ClientApplet: java.lang.String getParameter(java.lang.String)>";
+    "staticinvoke <a.be: void w(java.lang.String)>"
+    "virtualinvoke <com.spilka.client.ClientApplet: java.lang.String getParameter(java.lang.String)>"->"staticinvoke <a.be: void w(java.lang.String)>";
+    "staticinvoke <a.be: void w(java.lang.String)>"->"load.r r0";
+    "push \"font2\""
+    "load.r r0"->"push \"font2\"";
+    "push \"font2\""->"virtualinvoke <com.spilka.client.ClientApplet: java.lang.String getParameter(java.lang.String)>";
+    "staticinvoke <a.be: void e(java.lang.String)>"
+    "virtualinvoke <com.spilka.client.ClientApplet: java.lang.String getParameter(java.lang.String)>"->"staticinvoke <a.be: void e(java.lang.String)>";
+    "staticinvoke <a.be: void e(java.lang.String)>"->"load.r r0";
+    "push \"font2b\""
+    "load.r r0"->"push \"font2b\"";
+    "push \"font2b\""->"virtualinvoke <com.spilka.client.ClientApplet: java.lang.String getParameter(java.lang.String)>";
+    "staticinvoke <a.be: void r(java.lang.String)>"
+    "virtualinvoke <com.spilka.client.ClientApplet: java.lang.String getParameter(java.lang.String)>"->"staticinvoke <a.be: void r(java.lang.String)>";
+    "new a.cl"
+    "staticinvoke <a.be: void r(java.lang.String)>"->"new a.cl";
+    "new a.cl"->"store.r r2";
+    "store.r r2"->"load.r r0";
+    "load.r r0"->"fieldget <a.h: a.W q>";
+    "fieldget <a.h: a.W q>"->"store.r r6";
+    "store.r r6"->"load.r r0";
+    "load.r r0"->"fieldget <a.h: a.W q>";
+    "fieldget <a.aK: java.lang.String o>"
+    "fieldget <a.h: a.W q>"->"fieldget <a.aK: java.lang.String o>";
+    "ifnonnull push 0"
+    "fieldget <a.aK: java.lang.String o>"->"ifnonnull push 0";
+    "ifnonnull push 0"->"push 1";
+    "store.b r118"
+    "push 1"->"store.b r118";
+    "goto load.r r2"
+    "store.b r118"->"goto load.r r2";
+    "goto load.r r2"->"load.r r2";
+    "load.r r2"->"load.r r0";
+    "load.r r0"->"load.r r6";
+    "load.b r118"
+    "load.r r6"->"load.b r118";
+    "load.b r118"->"push 0";
+    "push 0"->"push 0";
+    "push 0"->"push 0";
+    "push 0"->"load.r r7";
+    "load.r r7"->"load.r r8";
+    "load.r r120"
+    "load.r r8"->"load.r r120";
+    "specialinvoke <a.cl: void <init>(a.h,a.bq,boolean,boolean,boolean,boolean,java.lang.String,java.lang.String,java.awt.Image)>"
+    "load.r r120"->"specialinvoke <a.cl: void <init>(a.h,a.bq,boolean,boolean,boolean,boolean,java.lang.String,java.lang.String,java.awt.Image)>";
+    "specialinvoke <a.cl: void <init>(a.h,a.bq,boolean,boolean,boolean,boolean,java.lang.String,java.lang.String,java.awt.Image)>"->"load.r r0";
+    "load.r r0"->"load.r r2";
+    "fieldput <a.h: a.cl q>"
+    "load.r r2"->"fieldput <a.h: a.cl q>";
+    "fieldput <a.h: a.cl q>"->"load.r r0";
+    "push \"Center\""
+    "load.r r0"->"push \"Center\"";
+    "push \"Center\""->"load.r r0";
+    "fieldget <a.h: a.cl q>"
+    "load.r r0"->"fieldget <a.h: a.cl q>";
+    "virtualinvoke <com.spilka.client.ClientApplet: java.awt.Component add(java.lang.String,java.awt.Component)>"
+    "fieldget <a.h: a.cl q>"->"virtualinvoke <com.spilka.client.ClientApplet: java.awt.Component add(java.lang.String,java.awt.Component)>";
+    "pop"
+    "virtualinvoke <com.spilka.client.ClientApplet: java.awt.Component add(java.lang.String,java.awt.Component)>"->"pop";
+    "pop"->"load.r r0";
+    "load.r r0"->"fieldget <a.h: a.cl q>";
+    "virtualinvoke <a.cl: void validate()>"
+    "fieldget <a.h: a.cl q>"->"virtualinvoke <a.cl: void validate()>";
+    "virtualinvoke <a.cl: void validate()>"->"load.r r0";
+    "fieldget <com.spilka.client.ClientApplet: a.W q>"
+    "load.r r0"->"fieldget <com.spilka.client.ClientApplet: a.W q>";
+    "fieldget <com.spilka.client.ClientApplet: a.W q>"->"fieldget <a.aK: java.lang.String o>";
+    "fieldget <a.aK: java.lang.String o>"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <com.spilka.client.ClientApplet: a.W q>";
+    "fieldget <com.spilka.client.ClientApplet: a.W q>"->"fieldget <a.aK: java.lang.String o>";
+    "virtualinvoke <java.lang.String: java.lang.String trim()>"
+    "fieldget <a.aK: java.lang.String o>"->"virtualinvoke <java.lang.String: java.lang.String trim()>";
+    "push \"\""
+    "virtualinvoke <java.lang.String: java.lang.String trim()>"->"push \"\"";
+    "virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>"
+    "push \"\""->"virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>";
+    "virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>"->"ifeq load.r r0";
+    "ifeq load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <com.spilka.client.ClientApplet: a.W q>";
+    "virtualinvoke <a.W: void e()>"
+    "fieldget <com.spilka.client.ClientApplet: a.W q>"->"virtualinvoke <a.W: void e()>";
+    "virtualinvoke <a.W: void e()>"->"load.r r0";
+    "push \"name\""
+    "load.r r0"->"push \"name\"";
+    "push \"name\""->"virtualinvoke <com.spilka.client.ClientApplet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <com.spilka.client.ClientApplet: java.lang.String getParameter(java.lang.String)>"->"pop";
+    "pop"->"push 0";
+    "store.i r7"
+    "push 0"->"store.i r7";
+    "load.i r7"
+    "store.i r7"->"load.i r7";
+    "load.i r7"->"load.r r0";
+    "fieldget <com.spilka.client.ClientApplet: java.awt.Image[] q>"
+    "load.r r0"->"fieldget <com.spilka.client.ClientApplet: java.awt.Image[] q>";
+    "arraylength"
+    "fieldget <com.spilka.client.ClientApplet: java.awt.Image[] q>"->"arraylength";
+    "ifcmpge.i return"
+    "arraylength"->"ifcmpge.i return";
+    "ifcmpge.i return"->"load.r r0";
+    "load.r r0"->"fieldget <com.spilka.client.ClientApplet: java.awt.Image[] q>";
+    "fieldget <com.spilka.client.ClientApplet: java.awt.Image[] q>"->"load.i r7";
+    "load.i r7"->"load.r r0";
+    "load.r r0"->"new java.net.URL";
+    "new java.net.URL"->"dup1.r";
+    "dup1.r"->"new java.lang.StringBuffer";
+    "new java.lang.StringBuffer"->"dup1.r";
+    "dup1.r"->"specialinvoke <java.lang.StringBuffer: void <init>()>";
+    "specialinvoke <java.lang.StringBuffer: void <init>()>"->"load.r r0";
+    "load.r r0"->"virtualinvoke <com.spilka.client.ClientApplet: java.net.URL getCodeBase()>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.Object)>"
+    "virtualinvoke <com.spilka.client.ClientApplet: java.net.URL getCodeBase()>"->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.Object)>";
+    "push \"\\\"5C?EB35CZCD1BCZCD1B/\""
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.Object)>"->"push \"\\\"5C?EB35CZCD1BCZCD1B/\"";
+    "staticinvoke <a.ce: java.lang.String q(java.lang.String)>"
+    "push \"\\\"5C?EB35CZCD1BCZCD1B/\""->"staticinvoke <a.ce: java.lang.String q(java.lang.String)>";
+    "staticinvoke <a.ce: java.lang.String q(java.lang.String)>"->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"load.i r7";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(int)>"
+    "load.i r7"->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(int)>";
+    "push \".gif\""
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(int)>"->"push \".gif\"";
+    "push \".gif\""->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>"->"specialinvoke <java.net.URL: void <init>(java.lang.String)>";
+    "virtualinvoke <com.spilka.client.ClientApplet: java.awt.Image getImage(java.net.URL)>"
+    "specialinvoke <java.net.URL: void <init>(java.lang.String)>"->"virtualinvoke <com.spilka.client.ClientApplet: java.awt.Image getImage(java.net.URL)>";
+    "arraywrite.r"
+    "virtualinvoke <com.spilka.client.ClientApplet: java.awt.Image getImage(java.net.URL)>"->"arraywrite.r";
+    "arraywrite.r"->"load.r r0";
+    "fieldget <com.spilka.client.ClientApplet: java.awt.Image[] w>"
+    "load.r r0"->"fieldget <com.spilka.client.ClientApplet: java.awt.Image[] w>";
+    "fieldget <com.spilka.client.ClientApplet: java.awt.Image[] w>"->"load.i r7";
+    "load.i r7"->"load.r r0";
+    "load.r r0"->"new java.net.URL";
+    "new java.net.URL"->"dup1.r";
+    "dup1.r"->"new java.lang.StringBuffer";
+    "new java.lang.StringBuffer"->"dup1.r";
+    "dup1.r"->"specialinvoke <java.lang.StringBuffer: void <init>()>";
+    "specialinvoke <java.lang.StringBuffer: void <init>()>"->"load.r r0";
+    "load.r r0"->"virtualinvoke <com.spilka.client.ClientApplet: java.net.URL getCodeBase()>";
+    "virtualinvoke <com.spilka.client.ClientApplet: java.net.URL getCodeBase()>"->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.Object)>";
+    "push \"\\\"5C?EB35CZCD1DEC5CZCD1DEC/\""
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.Object)>"->"push \"\\\"5C?EB35CZCD1DEC5CZCD1DEC/\"";
+    "push \"\\\"5C?EB35CZCD1DEC5CZCD1DEC/\""->"staticinvoke <a.ce: java.lang.String q(java.lang.String)>";
+    "staticinvoke <a.ce: java.lang.String q(java.lang.String)>"->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"load.i r7";
+    "load.i r7"->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(int)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(int)>"->"push \".gif\"";
+    "push \".gif\""->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>"->"specialinvoke <java.net.URL: void <init>(java.lang.String)>";
+    "specialinvoke <java.net.URL: void <init>(java.lang.String)>"->"virtualinvoke <com.spilka.client.ClientApplet: java.awt.Image getImage(java.net.URL)>";
+    "virtualinvoke <com.spilka.client.ClientApplet: java.awt.Image getImage(java.net.URL)>"->"arraywrite.r";
+    "inc.i r7 1"
+    "arraywrite.r"->"inc.i r7 1";
+    "goto load.i r7"
+    "inc.i r7 1"->"goto load.i r7";
+    "store.r r0"
+    "virtualinvoke <com.spilka.client.ClientApplet: java.awt.Image getImage(java.net.URL)>"->"store.r r0";
+    "return"
+    "store.r r0"->"return";
+    "ifcmpge.i return"->"return";
+    "ifnonnull push 0"->"push 0";
+    "push 0"->"store.b r118";
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"->"store.r r2";
+    "push \"WindowWidth\""
+    "ifeq push \"WindowWidth\""->"push \"WindowWidth\"";
+    "push \"WindowWidth\""->"store.r r2";
+    "push \"WindowHeight\""
+    "ifeq push \"WindowHeight\""->"push \"WindowHeight\"";
+    "push \"WindowHeight\""->"store.r r2";
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"->"store.r r5";
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"->"store.r r4";
+    "staticinvoke <a.ce: java.awt.Color q(java.lang.String)>"->"store.r r3";
+    "staticinvoke <a.ce: java.awt.Color q(java.lang.String)>"->"store.r r1";
+    "specialinvoke <a.al: void <init>(a.k)>"->"store.r r7";
+    "dup1.r"->"store.r r8";
+    "store.r r8"->"new a.al";
+    "new a.al"->"new a.k";
+    "new a.k"->"dup1.r";
+    "dup1.r"->"new java.net.URL";
+    "new java.net.URL"->"dup1.r";
+    "dup1.r"->"new java.lang.StringBuffer";
+    "new java.lang.StringBuffer"->"dup1.r";
+    "dup1.r"->"specialinvoke <java.lang.StringBuffer: void <init>()>";
+    "specialinvoke <java.lang.StringBuffer: void <init>()>"->"load.r r7";
+    "load.r r7"->"virtualinvoke <java.net.URL: java.lang.String toString()>";
+    "virtualinvoke <java.net.URL: java.lang.String toString()>"->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"push \"Resources/languages/\"";
+    "push \"Resources/languages/\""->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"load.r r0";
+    "load.r r0"->"fieldget <com.spilka.client.ClientApplet: java.lang.String q>";
+    "fieldget <com.spilka.client.ClientApplet: java.lang.String q>"->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>"->"specialinvoke <java.net.URL: void <init>(java.lang.String)>";
+    "specialinvoke <java.net.URL: void <init>(java.lang.String)>"->"virtualinvoke <java.net.URL: java.io.InputStream openStream()>";
+    "virtualinvoke <java.net.URL: java.io.InputStream openStream()>"->"specialinvoke <a.k: void <init>(java.io.InputStream)>";
+    "specialinvoke <a.k: void <init>(java.io.InputStream)>"->"specialinvoke <a.al: void <init>(a.k)>";
+    "specialinvoke <a.al: void <init>(a.k)>"->"goto staticinvoke <a.ch: java.lang.String getChatName()>";
+    "dup1.r"->"specialinvoke <java.lang.StringBuffer: void <init>()>";
+    "specialinvoke <java.lang.StringBuffer: void <init>()>"->"load.r r7";
+    "load.r r7"->"virtualinvoke <java.net.URL: java.lang.String toString()>";
+    "virtualinvoke <java.net.URL: java.lang.String toString()>"->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"push \"Resources/languages/\"";
+    "push \"Resources/languages/\""->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"load.r r0";
+    "load.r r0"->"fieldget <com.spilka.client.ClientApplet: java.lang.String q>";
+    "fieldget <com.spilka.client.ClientApplet: java.lang.String q>"->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "push \"z\""
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"push \"z\"";
+    "push \"z\""->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>"->"specialinvoke <java.net.URL: void <init>(java.lang.String)>";
+    "specialinvoke <java.net.URL: void <init>(java.lang.String)>"->"virtualinvoke <java.net.URL: java.io.InputStream openStream()>";
+    "specialinvoke <java.util.zip.GZIPInputStream: void <init>(java.io.InputStream)>"
+    "virtualinvoke <java.net.URL: java.io.InputStream openStream()>"->"specialinvoke <java.util.zip.GZIPInputStream: void <init>(java.io.InputStream)>";
+    "specialinvoke <java.util.zip.GZIPInputStream: void <init>(java.io.InputStream)>"->"new a.k";
+    "new a.k"->"dup1.r";
+    "dup1.r"->"load.r r8";
+    "load.r r8"->"specialinvoke <a.k: void <init>(java.io.InputStream)>";
+    "specialinvoke <a.k: void <init>(java.io.InputStream)>"->"specialinvoke <a.al: void <init>(a.k)>";
+    "specialinvoke <a.al: void <init>(a.k)>"->"goto staticinvoke <a.ch: java.lang.String getChatName()>";
+}

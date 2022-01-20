@@ -1,0 +1,21 @@
+digraph "" {
+    "r0 := @this: ModeBox"
+    "load.r r0"
+    "r0 := @this: ModeBox"->"load.r r0";
+    "new ModeBoxFrame"
+    "load.r r0"->"new ModeBoxFrame";
+    "dup1.r"
+    "new ModeBoxFrame"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "specialinvoke <ModeBoxFrame: void <init>(ModeBox)>"
+    "load.r r0"->"specialinvoke <ModeBoxFrame: void <init>(ModeBox)>";
+    "fieldput <ModeBox: ModeBoxFrame oc>"
+    "specialinvoke <ModeBoxFrame: void <init>(ModeBox)>"->"fieldput <ModeBox: ModeBoxFrame oc>";
+    "fieldput <ModeBox: ModeBoxFrame oc>"->"load.r r0";
+    "fieldget <ModeBox: ModeBoxFrame oc>"
+    "load.r r0"->"fieldget <ModeBox: ModeBoxFrame oc>";
+    "virtualinvoke <ModeBoxFrame: void init()>"
+    "fieldget <ModeBox: ModeBoxFrame oc>"->"virtualinvoke <ModeBoxFrame: void init()>";
+    "return"
+    "virtualinvoke <ModeBoxFrame: void init()>"->"return";
+}

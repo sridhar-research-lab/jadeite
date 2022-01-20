@@ -1,0 +1,152 @@
+digraph "" {
+    "r0 := @this: tetris"
+    "load.r r0"
+    "r0 := @this: tetris"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "virtualinvoke <java.applet.Applet: java.net.URL getCodeBase()>"
+    "load.r r0"->"virtualinvoke <java.applet.Applet: java.net.URL getCodeBase()>";
+    "push \"tap.aiff\""
+    "virtualinvoke <java.applet.Applet: java.net.URL getCodeBase()>"->"push \"tap.aiff\"";
+    "virtualinvoke <java.applet.Applet: java.applet.AudioClip getAudioClip(java.net.URL,java.lang.String)>"
+    "push \"tap.aiff\""->"virtualinvoke <java.applet.Applet: java.applet.AudioClip getAudioClip(java.net.URL,java.lang.String)>";
+    "fieldput <tetris: java.applet.AudioClip tap>"
+    "virtualinvoke <java.applet.Applet: java.applet.AudioClip getAudioClip(java.net.URL,java.lang.String)>"->"fieldput <tetris: java.applet.AudioClip tap>";
+    "goto load.r r0"
+    "fieldput <tetris: java.applet.AudioClip tap>"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"virtualinvoke <java.applet.Applet: java.net.URL getCodeBase()>";
+    "push \"pop.au\""
+    "virtualinvoke <java.applet.Applet: java.net.URL getCodeBase()>"->"push \"pop.au\"";
+    "push \"pop.au\""->"virtualinvoke <java.applet.Applet: java.applet.AudioClip getAudioClip(java.net.URL,java.lang.String)>";
+    "fieldput <tetris: java.applet.AudioClip pop>"
+    "virtualinvoke <java.applet.Applet: java.applet.AudioClip getAudioClip(java.net.URL,java.lang.String)>"->"fieldput <tetris: java.applet.AudioClip pop>";
+    "fieldput <tetris: java.applet.AudioClip pop>"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"virtualinvoke <java.applet.Applet: java.net.URL getCodeBase()>";
+    "push \"rot.aiff\""
+    "virtualinvoke <java.applet.Applet: java.net.URL getCodeBase()>"->"push \"rot.aiff\"";
+    "push \"rot.aiff\""->"virtualinvoke <java.applet.Applet: java.applet.AudioClip getAudioClip(java.net.URL,java.lang.String)>";
+    "fieldput <tetris: java.applet.AudioClip rot>"
+    "virtualinvoke <java.applet.Applet: java.applet.AudioClip getAudioClip(java.net.URL,java.lang.String)>"->"fieldput <tetris: java.applet.AudioClip rot>";
+    "fieldput <tetris: java.applet.AudioClip rot>"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "virtualinvoke <java.awt.Component: void addKeyListener(java.awt.event.KeyListener)>"
+    "load.r r0"->"virtualinvoke <java.awt.Component: void addKeyListener(java.awt.event.KeyListener)>";
+    "virtualinvoke <java.awt.Component: void addKeyListener(java.awt.event.KeyListener)>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "virtualinvoke <java.awt.Component: void addMouseListener(java.awt.event.MouseListener)>"
+    "load.r r0"->"virtualinvoke <java.awt.Component: void addMouseListener(java.awt.event.MouseListener)>";
+    "virtualinvoke <java.awt.Component: void addMouseListener(java.awt.event.MouseListener)>"->"load.r r0";
+    "push 20"
+    "load.r r0"->"push 20";
+    "newarray"
+    "push 20"->"newarray";
+    "fieldput <tetris: java.awt.Image[] images>"
+    "newarray"->"fieldput <tetris: java.awt.Image[] images>";
+    "new java.awt.MediaTracker"
+    "fieldput <tetris: java.awt.Image[] images>"->"new java.awt.MediaTracker";
+    "store.r $r8"
+    "new java.awt.MediaTracker"->"store.r $r8";
+    "load.r $r8"
+    "store.r $r8"->"load.r $r8";
+    "load.r $r8"->"load.r r0";
+    "specialinvoke <java.awt.MediaTracker: void <init>(java.awt.Component)>"
+    "load.r r0"->"specialinvoke <java.awt.MediaTracker: void <init>(java.awt.Component)>";
+    "push 0"
+    "specialinvoke <java.awt.MediaTracker: void <init>(java.awt.Component)>"->"push 0";
+    "store.i i2"
+    "push 0"->"store.i i2";
+    "load.i i2"
+    "store.i i2"->"load.i i2";
+    "load.i i2"->"push 20";
+    "ifcmpge.i load.r $r8"
+    "push 20"->"ifcmpge.i load.r $r8";
+    "ifcmpge.i load.r $r8"->"load.r r0";
+    "fieldget <tetris: java.awt.Image[] images>"
+    "load.r r0"->"fieldget <tetris: java.awt.Image[] images>";
+    "fieldget <tetris: java.awt.Image[] images>"->"load.i i2";
+    "load.i i2"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "virtualinvoke <java.applet.Applet: java.net.URL getDocumentBase()>"
+    "load.r r0"->"virtualinvoke <java.applet.Applet: java.net.URL getDocumentBase()>";
+    "new java.lang.StringBuffer"
+    "virtualinvoke <java.applet.Applet: java.net.URL getDocumentBase()>"->"new java.lang.StringBuffer";
+    "dup1.r"
+    "new java.lang.StringBuffer"->"dup1.r";
+    "specialinvoke <java.lang.StringBuffer: void <init>()>"
+    "dup1.r"->"specialinvoke <java.lang.StringBuffer: void <init>()>";
+    "push \"image\""
+    "specialinvoke <java.lang.StringBuffer: void <init>()>"->"push \"image\"";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"
+    "push \"image\""->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"load.i i2";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(int)>"
+    "load.i i2"->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(int)>";
+    "push \".JPG\""
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(int)>"->"push \".JPG\"";
+    "push \".JPG\""->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>"
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>";
+    "virtualinvoke <java.applet.Applet: java.awt.Image getImage(java.net.URL,java.lang.String)>"
+    "virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>"->"virtualinvoke <java.applet.Applet: java.awt.Image getImage(java.net.URL,java.lang.String)>";
+    "arraywrite.r"
+    "virtualinvoke <java.applet.Applet: java.awt.Image getImage(java.net.URL,java.lang.String)>"->"arraywrite.r";
+    "arraywrite.r"->"load.r $r8";
+    "load.r $r8"->"load.r r0";
+    "load.r r0"->"fieldget <tetris: java.awt.Image[] images>";
+    "fieldget <tetris: java.awt.Image[] images>"->"load.i i2";
+    "arrayread.r"
+    "load.i i2"->"arrayread.r";
+    "arrayread.r"->"load.i i2";
+    "virtualinvoke <java.awt.MediaTracker: void addImage(java.awt.Image,int)>"
+    "load.i i2"->"virtualinvoke <java.awt.MediaTracker: void addImage(java.awt.Image,int)>";
+    "inc.i i2 1"
+    "virtualinvoke <java.awt.MediaTracker: void addImage(java.awt.Image,int)>"->"inc.i i2 1";
+    "goto load.i i2"
+    "inc.i i2 1"->"goto load.i i2";
+    "ifcmpge.i load.r $r8"->"load.r $r8";
+    "virtualinvoke <java.awt.MediaTracker: void waitForAll()>"
+    "load.r $r8"->"virtualinvoke <java.awt.MediaTracker: void waitForAll()>";
+    "virtualinvoke <java.awt.MediaTracker: void waitForAll()>"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "virtualinvoke <java.awt.Component: java.awt.Dimension getSize()>"
+    "load.r r0"->"virtualinvoke <java.awt.Component: java.awt.Dimension getSize()>";
+    "fieldget <java.awt.Dimension: int width>"
+    "virtualinvoke <java.awt.Component: java.awt.Dimension getSize()>"->"fieldget <java.awt.Dimension: int width>";
+    "fieldget <java.awt.Dimension: int width>"->"load.r r0";
+    "load.r r0"->"virtualinvoke <java.awt.Component: java.awt.Dimension getSize()>";
+    "fieldget <java.awt.Dimension: int height>"
+    "virtualinvoke <java.awt.Component: java.awt.Dimension getSize()>"->"fieldget <java.awt.Dimension: int height>";
+    "virtualinvoke <java.awt.Component: java.awt.Image createImage(int,int)>"
+    "fieldget <java.awt.Dimension: int height>"->"virtualinvoke <java.awt.Component: java.awt.Image createImage(int,int)>";
+    "fieldput <tetris: java.awt.Image bufferimage>"
+    "virtualinvoke <java.awt.Component: java.awt.Image createImage(int,int)>"->"fieldput <tetris: java.awt.Image bufferimage>";
+    "fieldput <tetris: java.awt.Image bufferimage>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "fieldget <tetris: java.awt.Image bufferimage>"
+    "load.r r0"->"fieldget <tetris: java.awt.Image bufferimage>";
+    "virtualinvoke <java.awt.Image: java.awt.Graphics getGraphics()>"
+    "fieldget <tetris: java.awt.Image bufferimage>"->"virtualinvoke <java.awt.Image: java.awt.Graphics getGraphics()>";
+    "fieldput <tetris: java.awt.Graphics bufferg>"
+    "virtualinvoke <java.awt.Image: java.awt.Graphics getGraphics()>"->"fieldput <tetris: java.awt.Graphics bufferg>";
+    "return"
+    "fieldput <tetris: java.awt.Graphics bufferg>"->"return";
+    "virtualinvoke <java.awt.MediaTracker: void waitForAll()>"->"store.r $r8";
+    "staticget <java.lang.System: java.io.PrintStream out>"
+    "store.r $r8"->"staticget <java.lang.System: java.io.PrintStream out>";
+    "push \"Something happened while reading images...\""
+    "staticget <java.lang.System: java.io.PrintStream out>"->"push \"Something happened while reading images...\"";
+    "virtualinvoke <java.io.PrintStream: void println(java.lang.String)>"
+    "push \"Something happened while reading images...\""->"virtualinvoke <java.io.PrintStream: void println(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.applet.AudioClip getAudioClip(java.net.URL,java.lang.String)>"->"store.r $r8";
+    "virtualinvoke <java.applet.Applet: java.applet.AudioClip getAudioClip(java.net.URL,java.lang.String)>"->"store.r $r8";
+    "virtualinvoke <java.applet.Applet: java.applet.AudioClip getAudioClip(java.net.URL,java.lang.String)>"->"store.r $r8";
+}

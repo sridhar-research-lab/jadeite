@@ -1,0 +1,45 @@
+digraph "" {
+    "r0 := @this: deot212"
+    "load.r r0"
+    "r0 := @this: deot212"->"load.r r0";
+    "new java.util.Date"
+    "load.r r0"->"new java.util.Date";
+    "dup1.r"
+    "new java.util.Date"->"dup1.r";
+    "specialinvoke <java.util.Date: void <init>()>"
+    "dup1.r"->"specialinvoke <java.util.Date: void <init>()>";
+    "fieldput <deot212: java.util.Date dat>"
+    "specialinvoke <java.util.Date: void <init>()>"->"fieldput <deot212: java.util.Date dat>";
+    "fieldput <deot212: java.util.Date dat>"->"load.r r0";
+    "new java.awt.Color"
+    "load.r r0"->"new java.awt.Color";
+    "new java.awt.Color"->"dup1.r";
+    "push 2"
+    "dup1.r"->"push 2";
+    "push 86"
+    "push 2"->"push 86";
+    "push 86"->"push 2";
+    "specialinvoke <java.awt.Color: void <init>(int,int,int)>"
+    "push 2"->"specialinvoke <java.awt.Color: void <init>(int,int,int)>";
+    "virtualinvoke <java.awt.Component: void setBackground(java.awt.Color)>"
+    "specialinvoke <java.awt.Color: void <init>(int,int,int)>"->"virtualinvoke <java.awt.Component: void setBackground(java.awt.Color)>";
+    "virtualinvoke <java.awt.Component: void setBackground(java.awt.Color)>"->"load.r r0";
+    "new compute"
+    "load.r r0"->"new compute";
+    "new compute"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "fieldget <deot212: java.util.Date dat>"
+    "load.r r0"->"fieldget <deot212: java.util.Date dat>";
+    "fieldget <deot212: java.util.Date dat>"->"load.r r0";
+    "fieldget <deot212: java.lang.String versStr>"
+    "load.r r0"->"fieldget <deot212: java.lang.String versStr>";
+    "specialinvoke <compute: void <init>(java.util.Date,java.lang.String)>"
+    "fieldget <deot212: java.lang.String versStr>"->"specialinvoke <compute: void <init>(java.util.Date,java.lang.String)>";
+    "fieldput <deot212: compute comp>"
+    "specialinvoke <compute: void <init>(java.util.Date,java.lang.String)>"->"fieldput <deot212: compute comp>";
+    "fieldput <deot212: compute comp>"->"load.r r0";
+    "virtualinvoke <java.awt.Component: void repaint()>"
+    "load.r r0"->"virtualinvoke <java.awt.Component: void repaint()>";
+    "return"
+    "virtualinvoke <java.awt.Component: void repaint()>"->"return";
+}

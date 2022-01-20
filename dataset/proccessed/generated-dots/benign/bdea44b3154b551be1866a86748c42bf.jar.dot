@@ -1,0 +1,146 @@
+digraph "" {
+    "r0 := @this: com.lotus.sametime.util.STVMVerifier"
+    "load.r r0"
+    "r0 := @this: com.lotus.sametime.util.STVMVerifier"->"load.r r0";
+    "staticget <com.lotus.sametime.util.STVMVerifier: java.lang.String VENDOR>"
+    "load.r r0"->"staticget <com.lotus.sametime.util.STVMVerifier: java.lang.String VENDOR>";
+    "staticinvoke <java.lang.System: java.lang.String getProperty(java.lang.String)>"
+    "staticget <com.lotus.sametime.util.STVMVerifier: java.lang.String VENDOR>"->"staticinvoke <java.lang.System: java.lang.String getProperty(java.lang.String)>";
+    "fieldput <com.lotus.sametime.util.STVMVerifier: java.lang.String vendor>"
+    "staticinvoke <java.lang.System: java.lang.String getProperty(java.lang.String)>"->"fieldput <com.lotus.sametime.util.STVMVerifier: java.lang.String vendor>";
+    "fieldput <com.lotus.sametime.util.STVMVerifier: java.lang.String vendor>"->"load.r r0";
+    "staticget <com.lotus.sametime.util.STVMVerifier: java.lang.String VERSION>"
+    "load.r r0"->"staticget <com.lotus.sametime.util.STVMVerifier: java.lang.String VERSION>";
+    "staticget <com.lotus.sametime.util.STVMVerifier: java.lang.String VERSION>"->"staticinvoke <java.lang.System: java.lang.String getProperty(java.lang.String)>";
+    "fieldput <com.lotus.sametime.util.STVMVerifier: java.lang.String version>"
+    "staticinvoke <java.lang.System: java.lang.String getProperty(java.lang.String)>"->"fieldput <com.lotus.sametime.util.STVMVerifier: java.lang.String version>";
+    "fieldput <com.lotus.sametime.util.STVMVerifier: java.lang.String version>"->"load.r r0";
+    "staticget <com.lotus.sametime.util.STVMVerifier: java.lang.String OS_NAME>"
+    "load.r r0"->"staticget <com.lotus.sametime.util.STVMVerifier: java.lang.String OS_NAME>";
+    "staticget <com.lotus.sametime.util.STVMVerifier: java.lang.String OS_NAME>"->"staticinvoke <java.lang.System: java.lang.String getProperty(java.lang.String)>";
+    "fieldput <com.lotus.sametime.util.STVMVerifier: java.lang.String osName>"
+    "staticinvoke <java.lang.System: java.lang.String getProperty(java.lang.String)>"->"fieldput <com.lotus.sametime.util.STVMVerifier: java.lang.String osName>";
+    "fieldput <com.lotus.sametime.util.STVMVerifier: java.lang.String osName>"->"load.r r0";
+    "staticget <com.lotus.sametime.util.STVMVerifier: java.lang.String OS_ARCH>"
+    "load.r r0"->"staticget <com.lotus.sametime.util.STVMVerifier: java.lang.String OS_ARCH>";
+    "staticget <com.lotus.sametime.util.STVMVerifier: java.lang.String OS_ARCH>"->"staticinvoke <java.lang.System: java.lang.String getProperty(java.lang.String)>";
+    "fieldput <com.lotus.sametime.util.STVMVerifier: java.lang.String osArch>"
+    "staticinvoke <java.lang.System: java.lang.String getProperty(java.lang.String)>"->"fieldput <com.lotus.sametime.util.STVMVerifier: java.lang.String osArch>";
+    "fieldput <com.lotus.sametime.util.STVMVerifier: java.lang.String osArch>"->"load.r r0";
+    "staticget <com.lotus.sametime.util.STVMVerifier: java.lang.String OS_VERSION>"
+    "load.r r0"->"staticget <com.lotus.sametime.util.STVMVerifier: java.lang.String OS_VERSION>";
+    "staticget <com.lotus.sametime.util.STVMVerifier: java.lang.String OS_VERSION>"->"staticinvoke <java.lang.System: java.lang.String getProperty(java.lang.String)>";
+    "fieldput <com.lotus.sametime.util.STVMVerifier: java.lang.String osVersion>"
+    "staticinvoke <java.lang.System: java.lang.String getProperty(java.lang.String)>"->"fieldput <com.lotus.sametime.util.STVMVerifier: java.lang.String osVersion>";
+    "staticget <java.lang.System: java.io.PrintStream out>"
+    "fieldput <com.lotus.sametime.util.STVMVerifier: java.lang.String osVersion>"->"staticget <java.lang.System: java.io.PrintStream out>";
+    "staticget <java.lang.System: java.io.PrintStream out>"->"load.r r0";
+    "virtualinvoke <com.lotus.sametime.util.STVMVerifier: java.lang.String getAppletInfo()>"
+    "load.r r0"->"virtualinvoke <com.lotus.sametime.util.STVMVerifier: java.lang.String getAppletInfo()>";
+    "virtualinvoke <java.io.PrintStream: void println(java.lang.String)>"
+    "virtualinvoke <com.lotus.sametime.util.STVMVerifier: java.lang.String getAppletInfo()>"->"virtualinvoke <java.io.PrintStream: void println(java.lang.String)>";
+    "virtualinvoke <java.io.PrintStream: void println(java.lang.String)>"->"load.r r0";
+    "fieldget <com.lotus.sametime.util.STVMVerifier: java.lang.String vendor>"
+    "load.r r0"->"fieldget <com.lotus.sametime.util.STVMVerifier: java.lang.String vendor>";
+    "ifnull load.r r0"
+    "fieldget <com.lotus.sametime.util.STVMVerifier: java.lang.String vendor>"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <com.lotus.sametime.util.STVMVerifier: java.lang.String vendor>";
+    "push \"Microsoft\""
+    "fieldget <com.lotus.sametime.util.STVMVerifier: java.lang.String vendor>"->"push \"Microsoft\"";
+    "virtualinvoke <java.lang.String: int indexOf(java.lang.String)>"
+    "push \"Microsoft\""->"virtualinvoke <java.lang.String: int indexOf(java.lang.String)>";
+    "push -1"
+    "virtualinvoke <java.lang.String: int indexOf(java.lang.String)>"->"push -1";
+    "ifcmpeq.i load.r r0"
+    "push -1"->"ifcmpeq.i load.r r0";
+    "push \"com.ms.util.SystemVersionManager\""
+    "ifcmpeq.i load.r r0"->"push \"com.ms.util.SystemVersionManager\"";
+    "staticinvoke <java.lang.Class: java.lang.Class forName(java.lang.String)>"
+    "push \"com.ms.util.SystemVersionManager\""->"staticinvoke <java.lang.Class: java.lang.Class forName(java.lang.String)>";
+    "store.r r2"
+    "staticinvoke <java.lang.Class: java.lang.Class forName(java.lang.String)>"->"store.r r2";
+    "load.r r2"
+    "store.r r2"->"load.r r2";
+    "push \"getVMVersion\""
+    "load.r r2"->"push \"getVMVersion\"";
+    "push null"
+    "push \"getVMVersion\""->"push null";
+    "virtualinvoke <java.lang.Class: java.lang.reflect.Method getMethod(java.lang.String,java.lang.Class[])>"
+    "push null"->"virtualinvoke <java.lang.Class: java.lang.reflect.Method getMethod(java.lang.String,java.lang.Class[])>";
+    "virtualinvoke <java.lang.Class: java.lang.reflect.Method getMethod(java.lang.String,java.lang.Class[])>"->"load.r r2";
+    "load.r r2"->"push null";
+    "virtualinvoke <java.lang.reflect.Method: java.lang.Object invoke(java.lang.Object,java.lang.Object[])>"
+    "push null"->"virtualinvoke <java.lang.reflect.Method: java.lang.Object invoke(java.lang.Object,java.lang.Object[])>";
+    "checkcast"
+    "virtualinvoke <java.lang.reflect.Method: java.lang.Object invoke(java.lang.Object,java.lang.Object[])>"->"checkcast";
+    "checkcast"->"store.r r2";
+    "store.r r2"->"load.r r0";
+    "new java.lang.String"
+    "load.r r0"->"new java.lang.String";
+    "dup1.r"
+    "new java.lang.String"->"dup1.r";
+    "new java.lang.StringBuffer"
+    "dup1.r"->"new java.lang.StringBuffer";
+    "new java.lang.StringBuffer"->"dup1.r";
+    "specialinvoke <java.lang.StringBuffer: void <init>()>"
+    "dup1.r"->"specialinvoke <java.lang.StringBuffer: void <init>()>";
+    "push \"\""
+    "specialinvoke <java.lang.StringBuffer: void <init>()>"->"push \"\"";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"
+    "push \"\""->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"load.r r2";
+    "staticget <com.lotus.sametime.util.STVMVerifier: java.lang.String MAJOR_VERSION>"
+    "load.r r2"->"staticget <com.lotus.sametime.util.STVMVerifier: java.lang.String MAJOR_VERSION>";
+    "virtualinvoke <java.util.Hashtable: java.lang.Object get(java.lang.Object)>"
+    "staticget <com.lotus.sametime.util.STVMVerifier: java.lang.String MAJOR_VERSION>"->"virtualinvoke <java.util.Hashtable: java.lang.Object get(java.lang.Object)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.Object)>"
+    "virtualinvoke <java.util.Hashtable: java.lang.Object get(java.lang.Object)>"->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.Object)>";
+    "push \".\""
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.Object)>"->"push \".\"";
+    "push \".\""->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"load.r r2";
+    "staticget <com.lotus.sametime.util.STVMVerifier: java.lang.String MINOR_VERSION>"
+    "load.r r2"->"staticget <com.lotus.sametime.util.STVMVerifier: java.lang.String MINOR_VERSION>";
+    "staticget <com.lotus.sametime.util.STVMVerifier: java.lang.String MINOR_VERSION>"->"virtualinvoke <java.util.Hashtable: java.lang.Object get(java.lang.Object)>";
+    "virtualinvoke <java.util.Hashtable: java.lang.Object get(java.lang.Object)>"->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.Object)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.Object)>"->"push \".\"";
+    "push \".\""->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"load.r r2";
+    "staticget <com.lotus.sametime.util.STVMVerifier: java.lang.String BUILD_INCREMENT>"
+    "load.r r2"->"staticget <com.lotus.sametime.util.STVMVerifier: java.lang.String BUILD_INCREMENT>";
+    "staticget <com.lotus.sametime.util.STVMVerifier: java.lang.String BUILD_INCREMENT>"->"virtualinvoke <java.util.Hashtable: java.lang.Object get(java.lang.Object)>";
+    "virtualinvoke <java.util.Hashtable: java.lang.Object get(java.lang.Object)>"->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.Object)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.Object)>"->"push \".\"";
+    "push \".\""->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"load.r r2";
+    "staticget <com.lotus.sametime.util.STVMVerifier: java.lang.String BUILD_NUMBER>"
+    "load.r r2"->"staticget <com.lotus.sametime.util.STVMVerifier: java.lang.String BUILD_NUMBER>";
+    "staticget <com.lotus.sametime.util.STVMVerifier: java.lang.String BUILD_NUMBER>"->"virtualinvoke <java.util.Hashtable: java.lang.Object get(java.lang.Object)>";
+    "virtualinvoke <java.util.Hashtable: java.lang.Object get(java.lang.Object)>"->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.Object)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>"
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.Object)>"->"virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>";
+    "specialinvoke <java.lang.String: void <init>(java.lang.String)>"
+    "virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>"->"specialinvoke <java.lang.String: void <init>(java.lang.String)>";
+    "specialinvoke <java.lang.String: void <init>(java.lang.String)>"->"fieldput <com.lotus.sametime.util.STVMVerifier: java.lang.String version>";
+    "goto load.r r0"
+    "fieldput <com.lotus.sametime.util.STVMVerifier: java.lang.String version>"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "staticget <com.lotus.sametime.util.STVMVerifier: java.lang.String JAVA_SCRIPT_FRAME_NAME>"
+    "load.r r0"->"staticget <com.lotus.sametime.util.STVMVerifier: java.lang.String JAVA_SCRIPT_FRAME_NAME>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"
+    "staticget <com.lotus.sametime.util.STVMVerifier: java.lang.String JAVA_SCRIPT_FRAME_NAME>"->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "fieldput <com.lotus.sametime.util.STVMVerifier: java.lang.String documentTarget>"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"fieldput <com.lotus.sametime.util.STVMVerifier: java.lang.String documentTarget>";
+    "fieldput <com.lotus.sametime.util.STVMVerifier: java.lang.String documentTarget>"->"load.r r0";
+    "specialinvoke <com.lotus.sametime.util.STVMVerifier: void loadVMProperties()>"
+    "load.r r0"->"specialinvoke <com.lotus.sametime.util.STVMVerifier: void loadVMProperties()>";
+    "return"
+    "specialinvoke <com.lotus.sametime.util.STVMVerifier: void loadVMProperties()>"->"return";
+    "specialinvoke <java.lang.String: void <init>(java.lang.String)>"->"store.r r2";
+    "store.r r2"->"staticget <java.lang.System: java.io.PrintStream out>";
+    "push \"STVMVerifier.init():  Unable to determine Microsoft VM version\""
+    "staticget <java.lang.System: java.io.PrintStream out>"->"push \"STVMVerifier.init():  Unable to determine Microsoft VM version\"";
+    "push \"STVMVerifier.init():  Unable to determine Microsoft VM version\""->"virtualinvoke <java.io.PrintStream: void println(java.lang.String)>";
+}

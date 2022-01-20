@@ -1,0 +1,36 @@
+digraph "" {
+    "r0 := @this: WebHelp"
+    "load.r r0"
+    "r0 := @this: WebHelp"->"load.r r0";
+    "new CommandBuffer"
+    "load.r r0"->"new CommandBuffer";
+    "dup1.r"
+    "new CommandBuffer"->"dup1.r";
+    "specialinvoke <CommandBuffer: void <init>()>"
+    "dup1.r"->"specialinvoke <CommandBuffer: void <init>()>";
+    "fieldput <WebHelp: CommandBuffer m_commandBuffer>"
+    "specialinvoke <CommandBuffer: void <init>()>"->"fieldput <WebHelp: CommandBuffer m_commandBuffer>";
+    "staticget <java.lang.System: java.io.PrintStream out>"
+    "fieldput <WebHelp: CommandBuffer m_commandBuffer>"->"staticget <java.lang.System: java.io.PrintStream out>";
+    "push \"!!!Applet Init!!!\""
+    "staticget <java.lang.System: java.io.PrintStream out>"->"push \"!!!Applet Init!!!\"";
+    "virtualinvoke <java.io.PrintStream: void println(java.lang.String)>"
+    "push \"!!!Applet Init!!!\""->"virtualinvoke <java.io.PrintStream: void println(java.lang.String)>";
+    "push \"java.vendor\""
+    "virtualinvoke <java.io.PrintStream: void println(java.lang.String)>"->"push \"java.vendor\"";
+    "staticinvoke <java.lang.System: java.lang.String getProperty(java.lang.String)>"
+    "push \"java.vendor\""->"staticinvoke <java.lang.System: java.lang.String getProperty(java.lang.String)>";
+    "push \"Netscape\""
+    "staticinvoke <java.lang.System: java.lang.String getProperty(java.lang.String)>"->"push \"Netscape\"";
+    "virtualinvoke <java.lang.String: int indexOf(java.lang.String)>"
+    "push \"Netscape\""->"virtualinvoke <java.lang.String: int indexOf(java.lang.String)>";
+    "push -1"
+    "virtualinvoke <java.lang.String: int indexOf(java.lang.String)>"->"push -1";
+    "ifcmpeq.i return"
+    "push -1"->"ifcmpeq.i return";
+    "ifcmpeq.i return"->"load.r r0";
+    "virtualinvoke <WebHelp: void myrun()>"
+    "load.r r0"->"virtualinvoke <WebHelp: void myrun()>";
+    "return"
+    "virtualinvoke <WebHelp: void myrun()>"->"return";
+}

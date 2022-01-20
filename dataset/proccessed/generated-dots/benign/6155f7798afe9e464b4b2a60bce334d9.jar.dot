@@ -1,0 +1,456 @@
+digraph "" {
+    "r0 := @this: SiteSearcher"
+    "load.r r0"
+    "r0 := @this: SiteSearcher"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "push \"target\""
+    "load.r r0"->"push \"target\"";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"
+    "push \"target\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "fieldput <SiteSearcher: java.lang.String target>"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"fieldput <SiteSearcher: java.lang.String target>";
+    "fieldput <SiteSearcher: java.lang.String target>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "virtualinvoke <java.applet.Applet: java.net.URL getDocumentBase()>"
+    "load.r r0"->"virtualinvoke <java.applet.Applet: java.net.URL getDocumentBase()>";
+    "fieldput <SiteSearcher: java.net.URL docbase>"
+    "virtualinvoke <java.applet.Applet: java.net.URL getDocumentBase()>"->"fieldput <SiteSearcher: java.net.URL docbase>";
+    "fieldput <SiteSearcher: java.net.URL docbase>"->"load.r r0";
+    "fieldget <SiteSearcher: java.net.URL docbase>"
+    "load.r r0"->"fieldget <SiteSearcher: java.net.URL docbase>";
+    "virtualinvoke <java.net.URL: java.lang.String getFile()>"
+    "fieldget <SiteSearcher: java.net.URL docbase>"->"virtualinvoke <java.net.URL: java.lang.String getFile()>";
+    "store.r r2"
+    "virtualinvoke <java.net.URL: java.lang.String getFile()>"->"store.r r2";
+    "load.r r2"
+    "store.r r2"->"load.r r2";
+    "push \"Athens/Parthenon/1911\""
+    "load.r r2"->"push \"Athens/Parthenon/1911\"";
+    "virtualinvoke <java.lang.String: int indexOf(java.lang.String)>"
+    "push \"Athens/Parthenon/1911\""->"virtualinvoke <java.lang.String: int indexOf(java.lang.String)>";
+    "push -1"
+    "virtualinvoke <java.lang.String: int indexOf(java.lang.String)>"->"push -1";
+    "ifcmpne.i push 1"
+    "push -1"->"ifcmpne.i push 1";
+    "ifcmpne.i push 1"->"load.r r2";
+    "push \"~gilbertnews\""
+    "load.r r2"->"push \"~gilbertnews\"";
+    "push \"~gilbertnews\""->"virtualinvoke <java.lang.String: int indexOf(java.lang.String)>";
+    "virtualinvoke <java.lang.String: int indexOf(java.lang.String)>"->"push -1";
+    "push -1"->"ifcmpne.i push 1";
+    "push 0"
+    "ifcmpne.i push 1"->"push 0";
+    "store.b r2"
+    "push 0"->"store.b r2";
+    "goto load.r r0"
+    "store.b r2"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "load.b r2"
+    "load.r r0"->"load.b r2";
+    "fieldput <SiteSearcher: boolean atHome>"
+    "load.b r2"->"fieldput <SiteSearcher: boolean atHome>";
+    "fieldput <SiteSearcher: boolean atHome>"->"load.r r0";
+    "new java.net.URL"
+    "load.r r0"->"new java.net.URL";
+    "dup1.r"
+    "new java.net.URL"->"dup1.r";
+    "push \"http://www.geocities.com/Athens/Parthenon/1911\""
+    "dup1.r"->"push \"http://www.geocities.com/Athens/Parthenon/1911\"";
+    "specialinvoke <java.net.URL: void <init>(java.lang.String)>"
+    "push \"http://www.geocities.com/Athens/Parthenon/1911\""->"specialinvoke <java.net.URL: void <init>(java.lang.String)>";
+    "fieldput <SiteSearcher: java.net.URL thegilbertpost>"
+    "specialinvoke <java.net.URL: void <init>(java.lang.String)>"->"fieldput <SiteSearcher: java.net.URL thegilbertpost>";
+    "fieldput <SiteSearcher: java.net.URL thegilbertpost>"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "push \"files\""
+    "load.r r0"->"push \"files\"";
+    "push \"files\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "store.r $r7"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"store.r $r7";
+    "load.r $r7"
+    "store.r $r7"->"load.r $r7";
+    "ifnull load.r r0"
+    "load.r $r7"->"ifnull load.r r0";
+    "new java.util.StringTokenizer"
+    "ifnull load.r r0"->"new java.util.StringTokenizer";
+    "new java.util.StringTokenizer"->"store.r r2";
+    "store.r r2"->"load.r r2";
+    "load.r r2"->"load.r $r7";
+    "push \"\n\r \t,\""
+    "load.r $r7"->"push \"\n\r \t,\"";
+    "push \"\n\r \t,\""->"push 0";
+    "specialinvoke <java.util.StringTokenizer: void <init>(java.lang.String,java.lang.String,boolean)>"
+    "push 0"->"specialinvoke <java.util.StringTokenizer: void <init>(java.lang.String,java.lang.String,boolean)>";
+    "specialinvoke <java.util.StringTokenizer: void <init>(java.lang.String,java.lang.String,boolean)>"->"load.r r2";
+    "virtualinvoke <java.util.StringTokenizer: int countTokens()>"
+    "load.r r2"->"virtualinvoke <java.util.StringTokenizer: int countTokens()>";
+    "store.i $r7"
+    "virtualinvoke <java.util.StringTokenizer: int countTokens()>"->"store.i $r7";
+    "store.i $r7"->"load.r r0";
+    "load.i $r7"
+    "load.r r0"->"load.i $r7";
+    "newarray"
+    "load.i $r7"->"newarray";
+    "fieldput <SiteSearcher: java.net.URL[] urls>"
+    "newarray"->"fieldput <SiteSearcher: java.net.URL[] urls>";
+    "fieldput <SiteSearcher: java.net.URL[] urls>"->"load.r r0";
+    "load.r r0"->"load.i $r7";
+    "load.i $r7"->"newarray";
+    "fieldput <SiteSearcher: SearchThread[] threadpool>"
+    "newarray"->"fieldput <SiteSearcher: SearchThread[] threadpool>";
+    "fieldput <SiteSearcher: SearchThread[] threadpool>"->"load.r r0";
+    "load.r r0"->"load.i $r7";
+    "load.i $r7"->"newarray";
+    "fieldput <SiteSearcher: java.lang.String[] pageinfo>"
+    "newarray"->"fieldput <SiteSearcher: java.lang.String[] pageinfo>";
+    "fieldput <SiteSearcher: java.lang.String[] pageinfo>"->"load.r r0";
+    "load.r r0"->"load.i $r7";
+    "load.i $r7"->"newarray";
+    "fieldput <SiteSearcher: int[] matches>"
+    "newarray"->"fieldput <SiteSearcher: int[] matches>";
+    "fieldput <SiteSearcher: int[] matches>"->"load.r r0";
+    "load.r r0"->"load.i $r7";
+    "fieldput <SiteSearcher: int numThreads>"
+    "load.i $r7"->"fieldput <SiteSearcher: int numThreads>";
+    "fieldput <SiteSearcher: int numThreads>"->"push 0";
+    "store.i $r31"
+    "push 0"->"store.i $r31";
+    "goto load.i $r31"
+    "store.i $r31"->"goto load.i $r31";
+    "load.i $r31"
+    "goto load.i $r31"->"load.i $r31";
+    "load.i $r31"->"load.i $r7";
+    "ifcmplt.i load.r r2"
+    "load.i $r7"->"ifcmplt.i load.r r2";
+    "ifcmplt.i load.r r2"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "push 350"
+    "load.r r0"->"push 350";
+    "push 300"
+    "push 350"->"push 300";
+    "virtualinvoke <java.applet.Applet: void resize(int,int)>"
+    "push 300"->"virtualinvoke <java.applet.Applet: void resize(int,int)>";
+    "virtualinvoke <java.applet.Applet: void resize(int,int)>"->"load.r r0";
+    "new java.awt.BorderLayout"
+    "load.r r0"->"new java.awt.BorderLayout";
+    "new java.awt.BorderLayout"->"dup1.r";
+    "specialinvoke <java.awt.BorderLayout: void <init>()>"
+    "dup1.r"->"specialinvoke <java.awt.BorderLayout: void <init>()>";
+    "virtualinvoke <java.awt.Container: void setLayout(java.awt.LayoutManager)>"
+    "specialinvoke <java.awt.BorderLayout: void <init>()>"->"virtualinvoke <java.awt.Container: void setLayout(java.awt.LayoutManager)>";
+    "new java.awt.Panel"
+    "virtualinvoke <java.awt.Container: void setLayout(java.awt.LayoutManager)>"->"new java.awt.Panel";
+    "new java.awt.Panel"->"store.r r2";
+    "store.r r2"->"load.r r2";
+    "specialinvoke <java.awt.Panel: void <init>()>"
+    "load.r r2"->"specialinvoke <java.awt.Panel: void <init>()>";
+    "specialinvoke <java.awt.Panel: void <init>()>"->"load.r r2";
+    "load.r r2"->"new java.awt.BorderLayout";
+    "new java.awt.BorderLayout"->"dup1.r";
+    "dup1.r"->"specialinvoke <java.awt.BorderLayout: void <init>()>";
+    "specialinvoke <java.awt.BorderLayout: void <init>()>"->"virtualinvoke <java.awt.Container: void setLayout(java.awt.LayoutManager)>";
+    "virtualinvoke <java.awt.Container: void setLayout(java.awt.LayoutManager)>"->"new java.awt.Panel";
+    "new java.awt.Panel"->"store.r $r7";
+    "store.r $r7"->"load.r $r7";
+    "load.r $r7"->"specialinvoke <java.awt.Panel: void <init>()>";
+    "specialinvoke <java.awt.Panel: void <init>()>"->"load.r $r7";
+    "new java.awt.GridLayout"
+    "load.r $r7"->"new java.awt.GridLayout";
+    "new java.awt.GridLayout"->"dup1.r";
+    "push 2"
+    "dup1.r"->"push 2";
+    "push 1"
+    "push 2"->"push 1";
+    "specialinvoke <java.awt.GridLayout: void <init>(int,int)>"
+    "push 1"->"specialinvoke <java.awt.GridLayout: void <init>(int,int)>";
+    "specialinvoke <java.awt.GridLayout: void <init>(int,int)>"->"virtualinvoke <java.awt.Container: void setLayout(java.awt.LayoutManager)>";
+    "virtualinvoke <java.awt.Container: void setLayout(java.awt.LayoutManager)>"->"new java.awt.Panel";
+    "store.r $r31"
+    "new java.awt.Panel"->"store.r $r31";
+    "load.r $r31"
+    "store.r $r31"->"load.r $r31";
+    "load.r $r31"->"specialinvoke <java.awt.Panel: void <init>()>";
+    "specialinvoke <java.awt.Panel: void <init>()>"->"load.r $r31";
+    "load.r $r31"->"new java.awt.BorderLayout";
+    "new java.awt.BorderLayout"->"dup1.r";
+    "dup1.r"->"specialinvoke <java.awt.BorderLayout: void <init>()>";
+    "specialinvoke <java.awt.BorderLayout: void <init>()>"->"virtualinvoke <java.awt.Container: void setLayout(java.awt.LayoutManager)>";
+    "virtualinvoke <java.awt.Container: void setLayout(java.awt.LayoutManager)>"->"new java.awt.Panel";
+    "store.r $r33"
+    "new java.awt.Panel"->"store.r $r33";
+    "load.r $r33"
+    "store.r $r33"->"load.r $r33";
+    "load.r $r33"->"specialinvoke <java.awt.Panel: void <init>()>";
+    "specialinvoke <java.awt.Panel: void <init>()>"->"load.r $r33";
+    "new java.awt.Label"
+    "load.r $r33"->"new java.awt.Label";
+    "new java.awt.Label"->"dup1.r";
+    "push \"Search for:\""
+    "dup1.r"->"push \"Search for:\"";
+    "push \"Search for:\""->"push 2";
+    "specialinvoke <java.awt.Label: void <init>(java.lang.String,int)>"
+    "push 2"->"specialinvoke <java.awt.Label: void <init>(java.lang.String,int)>";
+    "virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>"
+    "specialinvoke <java.awt.Label: void <init>(java.lang.String,int)>"->"virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>";
+    "pop"
+    "virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>"->"pop";
+    "new java.awt.TextField"
+    "pop"->"new java.awt.TextField";
+    "store.r $r36"
+    "new java.awt.TextField"->"store.r $r36";
+    "load.r $r36"
+    "store.r $r36"->"load.r $r36";
+    "push 20"
+    "load.r $r36"->"push 20";
+    "specialinvoke <java.awt.TextField: void <init>(int)>"
+    "push 20"->"specialinvoke <java.awt.TextField: void <init>(int)>";
+    "specialinvoke <java.awt.TextField: void <init>(int)>"->"load.r r0";
+    "load.r r0"->"load.r $r36";
+    "fieldput <SiteSearcher: java.awt.TextField searchbox>"
+    "load.r $r36"->"fieldput <SiteSearcher: java.awt.TextField searchbox>";
+    "fieldput <SiteSearcher: java.awt.TextField searchbox>"->"load.r $r33";
+    "load.r $r33"->"load.r $r36";
+    "load.r $r36"->"virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>";
+    "virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>"->"pop";
+    "pop"->"load.r r0";
+    "push \"startwords\""
+    "load.r r0"->"push \"startwords\"";
+    "push \"startwords\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"store.r $r36";
+    "store.r $r36"->"load.r $r36";
+    "ifnull new java.awt.Button"
+    "load.r $r36"->"ifnull new java.awt.Button";
+    "ifnull new java.awt.Button"->"load.r r0";
+    "fieldget <SiteSearcher: java.awt.TextField searchbox>"
+    "load.r r0"->"fieldget <SiteSearcher: java.awt.TextField searchbox>";
+    "fieldget <SiteSearcher: java.awt.TextField searchbox>"->"load.r $r36";
+    "virtualinvoke <java.awt.TextComponent: void setText(java.lang.String)>"
+    "load.r $r36"->"virtualinvoke <java.awt.TextComponent: void setText(java.lang.String)>";
+    "new java.awt.Button"
+    "virtualinvoke <java.awt.TextComponent: void setText(java.lang.String)>"->"new java.awt.Button";
+    "new java.awt.Button"->"store.r $r36";
+    "store.r $r36"->"load.r $r36";
+    "push \"Search\""
+    "load.r $r36"->"push \"Search\"";
+    "specialinvoke <java.awt.Button: void <init>(java.lang.String)>"
+    "push \"Search\""->"specialinvoke <java.awt.Button: void <init>(java.lang.String)>";
+    "specialinvoke <java.awt.Button: void <init>(java.lang.String)>"->"load.r r0";
+    "load.r r0"->"load.r $r36";
+    "fieldput <SiteSearcher: java.awt.Button search>"
+    "load.r $r36"->"fieldput <SiteSearcher: java.awt.Button search>";
+    "fieldput <SiteSearcher: java.awt.Button search>"->"load.r $r33";
+    "load.r $r33"->"load.r $r36";
+    "load.r $r36"->"virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>";
+    "virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>"->"pop";
+    "pop"->"new java.awt.Button";
+    "new java.awt.Button"->"store.r $r36";
+    "store.r $r36"->"load.r $r36";
+    "push \"Stop\""
+    "load.r $r36"->"push \"Stop\"";
+    "push \"Stop\""->"specialinvoke <java.awt.Button: void <init>(java.lang.String)>";
+    "specialinvoke <java.awt.Button: void <init>(java.lang.String)>"->"load.r r0";
+    "load.r r0"->"load.r $r36";
+    "fieldput <SiteSearcher: java.awt.Button stop>"
+    "load.r $r36"->"fieldput <SiteSearcher: java.awt.Button stop>";
+    "fieldput <SiteSearcher: java.awt.Button stop>"->"load.r $r33";
+    "load.r $r33"->"load.r $r36";
+    "load.r $r36"->"virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>";
+    "virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>"->"pop";
+    "pop"->"load.r $r31";
+    "push \"Center\""
+    "load.r $r31"->"push \"Center\"";
+    "push \"Center\""->"load.r $r33";
+    "virtualinvoke <java.awt.Container: java.awt.Component add(java.lang.String,java.awt.Component)>"
+    "load.r $r33"->"virtualinvoke <java.awt.Container: java.awt.Component add(java.lang.String,java.awt.Component)>";
+    "virtualinvoke <java.awt.Container: java.awt.Component add(java.lang.String,java.awt.Component)>"->"pop";
+    "pop"->"load.r $r7";
+    "load.r $r7"->"load.r $r31";
+    "load.r $r31"->"virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>";
+    "virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>"->"pop";
+    "pop"->"new java.awt.Panel";
+    "new java.awt.Panel"->"store.r $r31";
+    "store.r $r31"->"load.r $r31";
+    "load.r $r31"->"specialinvoke <java.awt.Panel: void <init>()>";
+    "new ProgressBar"
+    "specialinvoke <java.awt.Panel: void <init>()>"->"new ProgressBar";
+    "new ProgressBar"->"store.r $r33";
+    "store.r $r33"->"load.r $r33";
+    "staticget <java.awt.Color: java.awt.Color cyan>"
+    "load.r $r33"->"staticget <java.awt.Color: java.awt.Color cyan>";
+    "staticget <java.awt.Color: java.awt.Color blue>"
+    "staticget <java.awt.Color: java.awt.Color cyan>"->"staticget <java.awt.Color: java.awt.Color blue>";
+    "virtualinvoke <java.awt.Color: java.awt.Color brighter()>"
+    "staticget <java.awt.Color: java.awt.Color blue>"->"virtualinvoke <java.awt.Color: java.awt.Color brighter()>";
+    "virtualinvoke <java.awt.Color: java.awt.Color brighter()>"->"virtualinvoke <java.awt.Color: java.awt.Color brighter()>";
+    "virtualinvoke <java.awt.Color: java.awt.Color brighter()>"->"virtualinvoke <java.awt.Color: java.awt.Color brighter()>";
+    "virtualinvoke <java.awt.Color: java.awt.Color brighter()>"->"push 300";
+    "push 300"->"push 20";
+    "push 20"->"load.r r0";
+    "fieldget <SiteSearcher: int numThreads>"
+    "load.r r0"->"fieldget <SiteSearcher: int numThreads>";
+    "push \"Searching...\""
+    "fieldget <SiteSearcher: int numThreads>"->"push \"Searching...\"";
+    "specialinvoke <ProgressBar: void <init>(java.awt.Color,java.awt.Color,int,int,int,java.lang.String)>"
+    "push \"Searching...\""->"specialinvoke <ProgressBar: void <init>(java.awt.Color,java.awt.Color,int,int,int,java.lang.String)>";
+    "specialinvoke <ProgressBar: void <init>(java.awt.Color,java.awt.Color,int,int,int,java.lang.String)>"->"load.r r0";
+    "load.r r0"->"load.r $r33";
+    "fieldput <SiteSearcher: ProgressBar progressbar>"
+    "load.r $r33"->"fieldput <SiteSearcher: ProgressBar progressbar>";
+    "fieldput <SiteSearcher: ProgressBar progressbar>"->"load.r $r31";
+    "load.r $r31"->"load.r $r33";
+    "load.r $r33"->"virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>";
+    "virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>"->"pop";
+    "pop"->"load.r r2";
+    "push \"North\""
+    "load.r r2"->"push \"North\"";
+    "push \"North\""->"load.r $r7";
+    "load.r $r7"->"virtualinvoke <java.awt.Container: java.awt.Component add(java.lang.String,java.awt.Component)>";
+    "virtualinvoke <java.awt.Container: java.awt.Component add(java.lang.String,java.awt.Component)>"->"pop";
+    "pop"->"load.r $r7";
+    "load.r $r7"->"load.r $r31";
+    "load.r $r31"->"virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>";
+    "virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>"->"pop";
+    "new java.awt.List"
+    "pop"->"new java.awt.List";
+    "new java.awt.List"->"store.r $r7";
+    "store.r $r7"->"load.r $r7";
+    "push 5"
+    "load.r $r7"->"push 5";
+    "push 5"->"push 0";
+    "specialinvoke <java.awt.List: void <init>(int,boolean)>"
+    "push 0"->"specialinvoke <java.awt.List: void <init>(int,boolean)>";
+    "specialinvoke <java.awt.List: void <init>(int,boolean)>"->"load.r r0";
+    "load.r r0"->"load.r $r7";
+    "fieldput <SiteSearcher: java.awt.List list>"
+    "load.r $r7"->"fieldput <SiteSearcher: java.awt.List list>";
+    "fieldput <SiteSearcher: java.awt.List list>"->"load.r r2";
+    "load.r r2"->"push \"Center\"";
+    "push \"Center\""->"load.r $r7";
+    "load.r $r7"->"virtualinvoke <java.awt.Container: java.awt.Component add(java.lang.String,java.awt.Component)>";
+    "virtualinvoke <java.awt.Container: java.awt.Component add(java.lang.String,java.awt.Component)>"->"pop";
+    "pop"->"load.r r0";
+    "fieldget <SiteSearcher: java.awt.List list>"
+    "load.r r0"->"fieldget <SiteSearcher: java.awt.List list>";
+    "push \"[SiteSearcher c1999 The Gilbert Post]\""
+    "fieldget <SiteSearcher: java.awt.List list>"->"push \"[SiteSearcher c1999 The Gilbert Post]\"";
+    "virtualinvoke <java.awt.List: void addItem(java.lang.String)>"
+    "push \"[SiteSearcher c1999 The Gilbert Post]\""->"virtualinvoke <java.awt.List: void addItem(java.lang.String)>";
+    "virtualinvoke <java.awt.List: void addItem(java.lang.String)>"->"load.r r0";
+    "load.r r0"->"push \"Center\"";
+    "push \"Center\""->"load.r r2";
+    "load.r r2"->"virtualinvoke <java.awt.Container: java.awt.Component add(java.lang.String,java.awt.Component)>";
+    "virtualinvoke <java.awt.Container: java.awt.Component add(java.lang.String,java.awt.Component)>"->"pop";
+    "pop"->"load.r r0";
+    "virtualinvoke <java.awt.Container: void validate()>"
+    "load.r r0"->"virtualinvoke <java.awt.Container: void validate()>";
+    "return"
+    "virtualinvoke <java.awt.Container: void validate()>"->"return";
+    "ifcmplt.i load.r r2"->"load.r r2";
+    "virtualinvoke <java.util.StringTokenizer: java.lang.String nextToken()>"
+    "load.r r2"->"virtualinvoke <java.util.StringTokenizer: java.lang.String nextToken()>";
+    "virtualinvoke <java.util.StringTokenizer: java.lang.String nextToken()>"->"store.r $r33";
+    "store.r $r33"->"load.r r0";
+    "fieldget <SiteSearcher: java.lang.String[] pageinfo>"
+    "load.r r0"->"fieldget <SiteSearcher: java.lang.String[] pageinfo>";
+    "fieldget <SiteSearcher: java.lang.String[] pageinfo>"->"load.i $r31";
+    "load.i $r31"->"load.r $r33";
+    "arraywrite.r"
+    "load.r $r33"->"arraywrite.r";
+    "arraywrite.r"->"load.r r0";
+    "fieldget <SiteSearcher: int[] matches>"
+    "load.r r0"->"fieldget <SiteSearcher: int[] matches>";
+    "fieldget <SiteSearcher: int[] matches>"->"load.i $r31";
+    "load.i $r31"->"push -1";
+    "arraywrite.i"
+    "push -1"->"arraywrite.i";
+    "arraywrite.i"->"load.r r0";
+    "fieldget <SiteSearcher: java.net.URL[] urls>"
+    "load.r r0"->"fieldget <SiteSearcher: java.net.URL[] urls>";
+    "fieldget <SiteSearcher: java.net.URL[] urls>"->"load.i $r31";
+    "load.i $r31"->"new java.net.URL";
+    "new java.net.URL"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "load.r r0"->"fieldget <SiteSearcher: java.net.URL docbase>";
+    "fieldget <SiteSearcher: java.net.URL docbase>"->"load.r $r33";
+    "specialinvoke <java.net.URL: void <init>(java.net.URL,java.lang.String)>"
+    "load.r $r33"->"specialinvoke <java.net.URL: void <init>(java.net.URL,java.lang.String)>";
+    "specialinvoke <java.net.URL: void <init>(java.net.URL,java.lang.String)>"->"arraywrite.r";
+    "arraywrite.r"->"load.r r0";
+    "fieldget <SiteSearcher: SearchThread[] threadpool>"
+    "load.r r0"->"fieldget <SiteSearcher: SearchThread[] threadpool>";
+    "fieldget <SiteSearcher: SearchThread[] threadpool>"->"load.i $r31";
+    "new SearchThread"
+    "load.i $r31"->"new SearchThread";
+    "new SearchThread"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <SiteSearcher: java.net.URL[] urls>";
+    "fieldget <SiteSearcher: java.net.URL[] urls>"->"load.i $r31";
+    "arrayread.r"
+    "load.i $r31"->"arrayread.r";
+    "arrayread.r"->"load.i $r31";
+    "specialinvoke <SearchThread: void <init>(SiteSearcher,java.net.URL,int)>"
+    "load.i $r31"->"specialinvoke <SearchThread: void <init>(SiteSearcher,java.net.URL,int)>";
+    "specialinvoke <SearchThread: void <init>(SiteSearcher,java.net.URL,int)>"->"arraywrite.r";
+    "arraywrite.r"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <SiteSearcher: SearchThread[] threadpool>";
+    "fieldget <SiteSearcher: SearchThread[] threadpool>"->"load.i $r31";
+    "load.i $r31"->"arrayread.r";
+    "push 7"
+    "arrayread.r"->"push 7";
+    "virtualinvoke <java.lang.Thread: void setPriority(int)>"
+    "push 7"->"virtualinvoke <java.lang.Thread: void setPriority(int)>";
+    "inc.i $r31 1"
+    "virtualinvoke <java.lang.Thread: void setPriority(int)>"->"inc.i $r31 1";
+    "specialinvoke <SearchThread: void <init>(SiteSearcher,java.net.URL,int)>"->"store.r $r33";
+    "store.r $r33"->"load.r r0";
+    "load.r r0"->"fieldget <SiteSearcher: java.net.URL[] urls>";
+    "fieldget <SiteSearcher: java.net.URL[] urls>"->"load.i $r31";
+    "push null"
+    "load.i $r31"->"push null";
+    "push null"->"arraywrite.r";
+    "arraywrite.r"->"load.r r0";
+    "load.r r0"->"fieldget <SiteSearcher: SearchThread[] threadpool>";
+    "fieldget <SiteSearcher: SearchThread[] threadpool>"->"load.i $r31";
+    "load.i $r31"->"new SearchThread";
+    "new SearchThread"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <SiteSearcher: java.net.URL[] urls>";
+    "fieldget <SiteSearcher: java.net.URL[] urls>"->"load.i $r31";
+    "load.i $r31"->"arrayread.r";
+    "arrayread.r"->"load.i $r31";
+    "load.i $r31"->"specialinvoke <SearchThread: void <init>(SiteSearcher,java.net.URL,int)>";
+    "specialinvoke <SearchThread: void <init>(SiteSearcher,java.net.URL,int)>"->"arraywrite.r";
+    "arraywrite.r"->"load.r r0";
+    "load.r r0"->"fieldget <SiteSearcher: SearchThread[] threadpool>";
+    "fieldget <SiteSearcher: SearchThread[] threadpool>"->"load.i $r31";
+    "load.i $r31"->"arrayread.r";
+    "virtualinvoke <SearchThread: void setErrored()>"
+    "arrayread.r"->"virtualinvoke <SearchThread: void setErrored()>";
+    "staticget <java.lang.System: java.io.PrintStream out>"
+    "virtualinvoke <SearchThread: void setErrored()>"->"staticget <java.lang.System: java.io.PrintStream out>";
+    "staticget <java.lang.System: java.io.PrintStream out>"->"load.r $r33";
+    "virtualinvoke <java.io.PrintStream: void println(java.lang.Object)>"
+    "load.r $r33"->"virtualinvoke <java.io.PrintStream: void println(java.lang.Object)>";
+    "virtualinvoke <java.io.PrintStream: void println(java.lang.Object)>"->"goto load.r r0";
+    "ifnull load.r r0"->"load.r r0";
+    "load.r r0"->"push 1";
+    "fieldput <SiteSearcher: boolean errored>"
+    "push 1"->"fieldput <SiteSearcher: boolean errored>";
+    "fieldput <SiteSearcher: boolean errored>"->"staticget <java.lang.System: java.io.PrintStream out>";
+    "push \"SiteSearcher Applet can\'t start\""
+    "staticget <java.lang.System: java.io.PrintStream out>"->"push \"SiteSearcher Applet can\'t start\"";
+    "virtualinvoke <java.io.PrintStream: void println(java.lang.String)>"
+    "push \"SiteSearcher Applet can\'t start\""->"virtualinvoke <java.io.PrintStream: void println(java.lang.String)>";
+    "virtualinvoke <java.io.PrintStream: void println(java.lang.String)>"->"staticget <java.lang.System: java.io.PrintStream out>";
+    "push \"Missing required parameter: files\""
+    "staticget <java.lang.System: java.io.PrintStream out>"->"push \"Missing required parameter: files\"";
+    "push \"Missing required parameter: files\""->"virtualinvoke <java.io.PrintStream: void println(java.lang.String)>";
+    "virtualinvoke <java.io.PrintStream: void println(java.lang.String)>"->"return";
+    "specialinvoke <java.net.URL: void <init>(java.lang.String)>"->"store.r r2";
+    "store.r r2"->"goto load.r r0";
+    "ifcmpne.i push 1"->"push 1";
+    "push 1"->"store.b r2";
+}

@@ -1,0 +1,472 @@
+digraph "" {
+    "r0 := @this: com.controlj.green.applets.TrendPlot"
+    "load.r r0"
+    "r0 := @this: com.controlj.green.applets.TrendPlot"->"load.r r0";
+    "push \"language\""
+    "load.r r0"->"push \"language\"";
+    "specialinvoke <com.controlj.green.applets.TrendPlot: java.lang.String tryGettingParameter(java.lang.String)>"
+    "push \"language\""->"specialinvoke <com.controlj.green.applets.TrendPlot: java.lang.String tryGettingParameter(java.lang.String)>";
+    "store.r r2"
+    "specialinvoke <com.controlj.green.applets.TrendPlot: java.lang.String tryGettingParameter(java.lang.String)>"->"store.r r2";
+    "store.r r2"->"load.r r0";
+    "push \"country\""
+    "load.r r0"->"push \"country\"";
+    "push \"country\""->"specialinvoke <com.controlj.green.applets.TrendPlot: java.lang.String tryGettingParameter(java.lang.String)>";
+    "store.r $r39"
+    "specialinvoke <com.controlj.green.applets.TrendPlot: java.lang.String tryGettingParameter(java.lang.String)>"->"store.r $r39";
+    "load.r r2"
+    "store.r $r39"->"load.r r2";
+    "ifnonnull load.r $r39"
+    "load.r r2"->"ifnonnull load.r $r39";
+    "push \"en\""
+    "ifnonnull load.r $r39"->"push \"en\"";
+    "push \"en\""->"store.r r2";
+    "load.r $r39"
+    "store.r r2"->"load.r $r39";
+    "ifnonnull load.r r2"
+    "load.r $r39"->"ifnonnull load.r r2";
+    "push \"\""
+    "ifnonnull load.r r2"->"push \"\"";
+    "push \"\""->"store.r $r39";
+    "store.r $r39"->"load.r r2";
+    "push \"zh\""
+    "load.r r2"->"push \"zh\"";
+    "virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>"
+    "push \"zh\""->"virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>";
+    "ifne load.r r0"
+    "virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>"->"ifne load.r r0";
+    "ifne load.r r0"->"load.r r2";
+    "push \"ko\""
+    "load.r r2"->"push \"ko\"";
+    "push \"ko\""->"virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>";
+    "virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>"->"ifne load.r r0";
+    "ifne load.r r0"->"load.r r2";
+    "push \"th\""
+    "load.r r2"->"push \"th\"";
+    "push \"th\""->"virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>";
+    "ifeq load.r r0"
+    "virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>"->"ifeq load.r r0";
+    "ifeq load.r r0"->"load.r r0";
+    "push \"Serif\""
+    "load.r r0"->"push \"Serif\"";
+    "fieldput <com.controlj.green.applets.TrendPlot: java.lang.String globalFontFamily>"
+    "push \"Serif\""->"fieldput <com.controlj.green.applets.TrendPlot: java.lang.String globalFontFamily>";
+    "fieldput <com.controlj.green.applets.TrendPlot: java.lang.String globalFontFamily>"->"load.r r0";
+    "new java.util.Locale"
+    "load.r r0"->"new java.util.Locale";
+    "dup1.r"
+    "new java.util.Locale"->"dup1.r";
+    "dup1.r"->"load.r r2";
+    "load.r r2"->"load.r $r39";
+    "specialinvoke <java.util.Locale: void <init>(java.lang.String,java.lang.String)>"
+    "load.r $r39"->"specialinvoke <java.util.Locale: void <init>(java.lang.String,java.lang.String)>";
+    "virtualinvoke <java.awt.Component: void setLocale(java.util.Locale)>"
+    "specialinvoke <java.util.Locale: void <init>(java.lang.String,java.lang.String)>"->"virtualinvoke <java.awt.Component: void setLocale(java.util.Locale)>";
+    "staticget <com.controlj.green.applets.TrendPlot: int traceLevel>"
+    "virtualinvoke <java.awt.Component: void setLocale(java.util.Locale)>"->"staticget <com.controlj.green.applets.TrendPlot: int traceLevel>";
+    "push 2"
+    "staticget <com.controlj.green.applets.TrendPlot: int traceLevel>"->"push 2";
+    "ifcmplt.i load.r r0"
+    "push 2"->"ifcmplt.i load.r r0";
+    "ifcmplt.i load.r r0"->"load.r r0";
+    "virtualinvoke <java.lang.Object: java.lang.Class getClass()>"
+    "load.r r0"->"virtualinvoke <java.lang.Object: java.lang.Class getClass()>";
+    "new java.lang.StringBuffer"
+    "virtualinvoke <java.lang.Object: java.lang.Class getClass()>"->"new java.lang.StringBuffer";
+    "new java.lang.StringBuffer"->"dup1.r";
+    "specialinvoke <java.lang.StringBuffer: void <init>()>"
+    "dup1.r"->"specialinvoke <java.lang.StringBuffer: void <init>()>";
+    "push \"Using locale: \""
+    "specialinvoke <java.lang.StringBuffer: void <init>()>"->"push \"Using locale: \"";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"
+    "push \"Using locale: \""->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"load.r r0";
+    "virtualinvoke <java.applet.Applet: java.util.Locale getLocale()>"
+    "load.r r0"->"virtualinvoke <java.applet.Applet: java.util.Locale getLocale()>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.Object)>"
+    "virtualinvoke <java.applet.Applet: java.util.Locale getLocale()>"->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.Object)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>"
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.Object)>"->"virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>";
+    "staticinvoke <com.controlj.green.applets.TrendPlot: void trace(java.lang.Class,java.lang.String)>"
+    "virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>"->"staticinvoke <com.controlj.green.applets.TrendPlot: void trace(java.lang.Class,java.lang.String)>";
+    "staticinvoke <com.controlj.green.applets.TrendPlot: void trace(java.lang.Class,java.lang.String)>"->"load.r r0";
+    "push \"true\""
+    "load.r r0"->"push \"true\"";
+    "push \"true\""->"load.r r0";
+    "push \"standardTime\""
+    "load.r r0"->"push \"standardTime\"";
+    "push \"standardTime\""->"specialinvoke <com.controlj.green.applets.TrendPlot: java.lang.String tryGettingParameter(java.lang.String)>";
+    "specialinvoke <com.controlj.green.applets.TrendPlot: java.lang.String tryGettingParameter(java.lang.String)>"->"virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>";
+    "fieldput <com.controlj.green.applets.TrendPlot: boolean standardTime>"
+    "virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>"->"fieldput <com.controlj.green.applets.TrendPlot: boolean standardTime>";
+    "fieldput <com.controlj.green.applets.TrendPlot: boolean standardTime>"->"load.r r0";
+    "push \"standardDate\""
+    "load.r r0"->"push \"standardDate\"";
+    "push \"standardDate\""->"specialinvoke <com.controlj.green.applets.TrendPlot: java.lang.String tryGettingParameter(java.lang.String)>";
+    "specialinvoke <com.controlj.green.applets.TrendPlot: java.lang.String tryGettingParameter(java.lang.String)>"->"store.r r2";
+    "store.r r2"->"load.r r0";
+    "load.r r0"->"load.r r2";
+    "load.r r2"->"store.r r2";
+    "store.r r2"->"load.r r0";
+    "push 1"
+    "load.r r0"->"push 1";
+    "fieldput <com.controlj.green.applets.TrendPlot: int standardDate>"
+    "push 1"->"fieldput <com.controlj.green.applets.TrendPlot: int standardDate>";
+    "fieldput <com.controlj.green.applets.TrendPlot: int standardDate>"->"load.r r0";
+    "push \"dateSeparator\""
+    "load.r r0"->"push \"dateSeparator\"";
+    "push \"dateSeparator\""->"specialinvoke <com.controlj.green.applets.TrendPlot: java.lang.String tryGettingParameter(java.lang.String)>";
+    "specialinvoke <com.controlj.green.applets.TrendPlot: java.lang.String tryGettingParameter(java.lang.String)>"->"store.r r2";
+    "store.r r2"->"load.r r2";
+    "ifnonnull load.r r0"
+    "load.r r2"->"ifnonnull load.r r0";
+    "ifnonnull load.r r0"->"load.r r0";
+    "push \"/\""
+    "load.r r0"->"push \"/\"";
+    "fieldput <com.controlj.green.applets.TrendPlot: java.lang.String separator>"
+    "push \"/\""->"fieldput <com.controlj.green.applets.TrendPlot: java.lang.String separator>";
+    "goto load.r r0"
+    "fieldput <com.controlj.green.applets.TrendPlot: java.lang.String separator>"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "push \"wbs\""
+    "load.r r0"->"push \"wbs\"";
+    "push \"wbs\""->"specialinvoke <com.controlj.green.applets.TrendPlot: java.lang.String tryGettingParameter(java.lang.String)>";
+    "specialinvoke <com.controlj.green.applets.TrendPlot: java.lang.String tryGettingParameter(java.lang.String)>"->"store.r r2";
+    "store.r r2"->"load.r r0";
+    "push \"location\""
+    "load.r r0"->"push \"location\"";
+    "push \"location\""->"specialinvoke <com.controlj.green.applets.TrendPlot: java.lang.String tryGettingParameter(java.lang.String)>";
+    "specialinvoke <com.controlj.green.applets.TrendPlot: java.lang.String tryGettingParameter(java.lang.String)>"->"store.r $r39";
+    "store.r $r39"->"load.r $r39";
+    "load.r $r39"->"ifnonnull load.r $r39";
+    "push \"0\""
+    "ifnonnull load.r $r39"->"push \"0\"";
+    "push \"0\""->"store.r $r39";
+    "store.r $r39"->"load.r $r39";
+    "push \"null\""
+    "load.r $r39"->"push \"null\"";
+    "push \"null\""->"virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>";
+    "virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>"->"ifeq load.r r0";
+    "ifeq load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "virtualinvoke <com.controlj.green.applets.TrendPlot: com.controlj.green.applets.TrendResource getTrendResource()>"
+    "load.r r0"->"virtualinvoke <com.controlj.green.applets.TrendPlot: com.controlj.green.applets.TrendResource getTrendResource()>";
+    "store.r $r20"
+    "virtualinvoke <com.controlj.green.applets.TrendPlot: com.controlj.green.applets.TrendResource getTrendResource()>"->"store.r $r20";
+    "store.r $r20"->"load.r r0";
+    "virtualinvoke <com.controlj.green.applets.TrendPlot: com.controlj.green.applets.TrendProperties getTrendProperties()>"
+    "load.r r0"->"virtualinvoke <com.controlj.green.applets.TrendPlot: com.controlj.green.applets.TrendProperties getTrendProperties()>";
+    "virtualinvoke <com.controlj.green.applets.TrendPlot: com.controlj.green.applets.TrendProperties getTrendProperties()>"->"dup1.r";
+    "load.r $r20"
+    "dup1.r"->"load.r $r20";
+    "virtualinvoke <com.controlj.green.applets.TrendProperties: void setDisplayTextResource(com.controlj.green.applets.TrendResource)>"
+    "load.r $r20"->"virtualinvoke <com.controlj.green.applets.TrendProperties: void setDisplayTextResource(com.controlj.green.applets.TrendResource)>";
+    "push \"Trend_Graph_Error\""
+    "virtualinvoke <com.controlj.green.applets.TrendProperties: void setDisplayTextResource(com.controlj.green.applets.TrendResource)>"->"push \"Trend_Graph_Error\"";
+    "virtualinvoke <com.controlj.green.applets.TrendProperties: java.lang.String getDisplayText(java.lang.String)>"
+    "push \"Trend_Graph_Error\""->"virtualinvoke <com.controlj.green.applets.TrendProperties: java.lang.String getDisplayText(java.lang.String)>";
+    "virtualinvoke <com.controlj.green.applets.TrendPlot: void displayErrorMessage(java.lang.String)>"
+    "virtualinvoke <com.controlj.green.applets.TrendProperties: java.lang.String getDisplayText(java.lang.String)>"->"virtualinvoke <com.controlj.green.applets.TrendPlot: void displayErrorMessage(java.lang.String)>";
+    "virtualinvoke <com.controlj.green.applets.TrendPlot: void displayErrorMessage(java.lang.String)>"->"load.r r0";
+    "push \" \""
+    "load.r r0"->"push \" \"";
+    "push 2004"
+    "push \" \""->"push 2004";
+    "specialinvoke <com.controlj.green.applets.TrendPlot: void notifyUserOfError(java.lang.String,int)>"
+    "push 2004"->"specialinvoke <com.controlj.green.applets.TrendPlot: void notifyUserOfError(java.lang.String,int)>";
+    "specialinvoke <com.controlj.green.applets.TrendPlot: void notifyUserOfError(java.lang.String,int)>"->"load.r r0";
+    "fieldget <com.controlj.green.applets.TrendPlot: com.controlj.green.applets.comm.ServletCommunicator dataCommunicator>"
+    "load.r r0"->"fieldget <com.controlj.green.applets.TrendPlot: com.controlj.green.applets.comm.ServletCommunicator dataCommunicator>";
+    "fieldget <com.controlj.green.applets.TrendPlot: com.controlj.green.applets.comm.ServletCommunicator dataCommunicator>"->"ifnonnull load.r r0";
+    "ifnonnull load.r r0"->"load.r r0";
+    "new java.net.URL"
+    "load.r r0"->"new java.net.URL";
+    "new java.net.URL"->"store.r $r20";
+    "store.r $r20"->"load.r $r20";
+    "load.r $r20"->"load.r r0";
+    "virtualinvoke <java.applet.Applet: java.net.URL getCodeBase()>"
+    "load.r r0"->"virtualinvoke <java.applet.Applet: java.net.URL getCodeBase()>";
+    "push \"/_common/servlet/lvl5/action\""
+    "virtualinvoke <java.applet.Applet: java.net.URL getCodeBase()>"->"push \"/_common/servlet/lvl5/action\"";
+    "specialinvoke <java.net.URL: void <init>(java.net.URL,java.lang.String)>"
+    "push \"/_common/servlet/lvl5/action\""->"specialinvoke <java.net.URL: void <init>(java.net.URL,java.lang.String)>";
+    "new com.controlj.green.applets.comm.ServletCommunicator"
+    "specialinvoke <java.net.URL: void <init>(java.net.URL,java.lang.String)>"->"new com.controlj.green.applets.comm.ServletCommunicator";
+    "new com.controlj.green.applets.comm.ServletCommunicator"->"dup1.r";
+    "dup1.r"->"load.r $r20";
+    "load.r $r20"->"new java.lang.StringBuffer";
+    "new java.lang.StringBuffer"->"dup1.r";
+    "dup1.r"->"specialinvoke <java.lang.StringBuffer: void <init>()>";
+    "push \"wbs=\""
+    "specialinvoke <java.lang.StringBuffer: void <init>()>"->"push \"wbs=\"";
+    "push \"wbs=\""->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"load.r r2";
+    "load.r r2"->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "push \"&action=notifyuser\""
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"push \"&action=notifyuser\"";
+    "push \"&action=notifyuser\""->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>";
+    "specialinvoke <com.controlj.green.applets.comm.ServletCommunicator: void <init>(java.net.URL,java.lang.String)>"
+    "virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>"->"specialinvoke <com.controlj.green.applets.comm.ServletCommunicator: void <init>(java.net.URL,java.lang.String)>";
+    "fieldput <com.controlj.green.applets.TrendPlot: com.controlj.green.applets.comm.ServletCommunicator errorCommunicator>"
+    "specialinvoke <com.controlj.green.applets.comm.ServletCommunicator: void <init>(java.net.URL,java.lang.String)>"->"fieldput <com.controlj.green.applets.TrendPlot: com.controlj.green.applets.comm.ServletCommunicator errorCommunicator>";
+    "fieldput <com.controlj.green.applets.TrendPlot: com.controlj.green.applets.comm.ServletCommunicator errorCommunicator>"->"load.r r0";
+    "fieldget <com.controlj.green.applets.TrendPlot: com.controlj.green.applets.comm.ServletCommunicator propertiesCommunicator>"
+    "load.r r0"->"fieldget <com.controlj.green.applets.TrendPlot: com.controlj.green.applets.comm.ServletCommunicator propertiesCommunicator>";
+    "fieldget <com.controlj.green.applets.TrendPlot: com.controlj.green.applets.comm.ServletCommunicator propertiesCommunicator>"->"ifnonnull load.r r0";
+    "ifnonnull load.r r0"->"load.r r0";
+    "push \"setpointtrend\""
+    "load.r r0"->"push \"setpointtrend\"";
+    "push \"setpointtrend\""->"specialinvoke <com.controlj.green.applets.TrendPlot: java.lang.String tryGettingParameter(java.lang.String)>";
+    "specialinvoke <com.controlj.green.applets.TrendPlot: java.lang.String tryGettingParameter(java.lang.String)>"->"store.r $r20";
+    "store.r $r20"->"load.r $r20";
+    "ifnull push 0"
+    "load.r $r20"->"ifnull push 0";
+    "ifnull push 0"->"load.r $r20";
+    "load.r $r20"->"push \"true\"";
+    "push \"true\""->"virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>";
+    "ifeq push 0"
+    "virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>"->"ifeq push 0";
+    "ifeq push 0"->"push 1";
+    "store.b $r20"
+    "push 1"->"store.b $r20";
+    "store.b $r20"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "load.b $r20"
+    "load.r r0"->"load.b $r20";
+    "fieldput <com.controlj.green.applets.TrendPlot: boolean isSetpointTrend>"
+    "load.b $r20"->"fieldput <com.controlj.green.applets.TrendPlot: boolean isSetpointTrend>";
+    "fieldput <com.controlj.green.applets.TrendPlot: boolean isSetpointTrend>"->"load.r r0";
+    "load.r r0"->"new java.net.URL";
+    "new java.net.URL"->"store.r $r20";
+    "store.r $r20"->"load.r $r20";
+    "load.r $r20"->"load.r r0";
+    "load.r r0"->"virtualinvoke <java.applet.Applet: java.net.URL getCodeBase()>";
+    "push \"/_common/servlet/lvl5/trendproperties\""
+    "virtualinvoke <java.applet.Applet: java.net.URL getCodeBase()>"->"push \"/_common/servlet/lvl5/trendproperties\"";
+    "push \"/_common/servlet/lvl5/trendproperties\""->"specialinvoke <java.net.URL: void <init>(java.net.URL,java.lang.String)>";
+    "specialinvoke <java.net.URL: void <init>(java.net.URL,java.lang.String)>"->"new com.controlj.green.applets.comm.ServletCommunicator";
+    "new com.controlj.green.applets.comm.ServletCommunicator"->"dup1.r";
+    "dup1.r"->"load.r $r20";
+    "load.r $r20"->"new java.lang.StringBuffer";
+    "new java.lang.StringBuffer"->"dup1.r";
+    "dup1.r"->"specialinvoke <java.lang.StringBuffer: void <init>()>";
+    "specialinvoke <java.lang.StringBuffer: void <init>()>"->"push \"wbs=\"";
+    "push \"wbs=\""->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"load.r r2";
+    "load.r r2"->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "push \"&path=\""
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"push \"&path=\"";
+    "push \"&path=\""->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"load.r $r39";
+    "load.r $r39"->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "push \"&setpoint=\""
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"push \"&setpoint=\"";
+    "push \"&setpoint=\""->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"load.r r0";
+    "fieldget <com.controlj.green.applets.TrendPlot: boolean isSetpointTrend>"
+    "load.r r0"->"fieldget <com.controlj.green.applets.TrendPlot: boolean isSetpointTrend>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(boolean)>"
+    "fieldget <com.controlj.green.applets.TrendPlot: boolean isSetpointTrend>"->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(boolean)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(boolean)>"->"virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>"->"specialinvoke <com.controlj.green.applets.comm.ServletCommunicator: void <init>(java.net.URL,java.lang.String)>";
+    "fieldput <com.controlj.green.applets.TrendPlot: com.controlj.green.applets.comm.ServletCommunicator propertiesCommunicator>"
+    "specialinvoke <com.controlj.green.applets.comm.ServletCommunicator: void <init>(java.net.URL,java.lang.String)>"->"fieldput <com.controlj.green.applets.TrendPlot: com.controlj.green.applets.comm.ServletCommunicator propertiesCommunicator>";
+    "fieldput <com.controlj.green.applets.TrendPlot: com.controlj.green.applets.comm.ServletCommunicator propertiesCommunicator>"->"load.r r0";
+    "load.r r0"->"fieldget <com.controlj.green.applets.TrendPlot: com.controlj.green.applets.comm.ServletCommunicator dataCommunicator>";
+    "fieldget <com.controlj.green.applets.TrendPlot: com.controlj.green.applets.comm.ServletCommunicator dataCommunicator>"->"ifnonnull load.r r0";
+    "ifnonnull load.r r0"->"load.r $r39";
+    "load.r $r39"->"store.r $r20";
+    "store.r $r20"->"load.r $r39";
+    "push \",\""
+    "load.r $r39"->"push \",\"";
+    "virtualinvoke <java.lang.String: int indexOf(java.lang.String)>"
+    "push \",\""->"virtualinvoke <java.lang.String: int indexOf(java.lang.String)>";
+    "ifge push \".\""
+    "virtualinvoke <java.lang.String: int indexOf(java.lang.String)>"->"ifge push \".\"";
+    "ifge push \".\""->"load.r $r39";
+    "push \";\""
+    "load.r $r39"->"push \";\"";
+    "push \";\""->"virtualinvoke <java.lang.String: int indexOf(java.lang.String)>";
+    "iflt load.r r0"
+    "virtualinvoke <java.lang.String: int indexOf(java.lang.String)>"->"iflt load.r r0";
+    "push \".\""
+    "iflt load.r r0"->"push \".\"";
+    "push \".\""->"store.r $r20";
+    "store.r $r20"->"load.r r0";
+    "load.r r0"->"new java.net.URL";
+    "new java.net.URL"->"store.r $r39";
+    "store.r $r39"->"load.r $r39";
+    "load.r $r39"->"load.r r0";
+    "load.r r0"->"virtualinvoke <java.applet.Applet: java.net.URL getCodeBase()>";
+    "push \"/_common/servlet/lvl5/trendservlet\""
+    "virtualinvoke <java.applet.Applet: java.net.URL getCodeBase()>"->"push \"/_common/servlet/lvl5/trendservlet\"";
+    "push \"/_common/servlet/lvl5/trendservlet\""->"specialinvoke <java.net.URL: void <init>(java.net.URL,java.lang.String)>";
+    "specialinvoke <java.net.URL: void <init>(java.net.URL,java.lang.String)>"->"new com.controlj.green.applets.comm.ServletCommunicator";
+    "new com.controlj.green.applets.comm.ServletCommunicator"->"dup1.r";
+    "dup1.r"->"load.r $r39";
+    "load.r $r39"->"new java.lang.StringBuffer";
+    "new java.lang.StringBuffer"->"dup1.r";
+    "dup1.r"->"specialinvoke <java.lang.StringBuffer: void <init>()>";
+    "specialinvoke <java.lang.StringBuffer: void <init>()>"->"push \"wbs=\"";
+    "push \"wbs=\""->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"load.r r2";
+    "load.r r2"->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"push \"&path=\"";
+    "push \"&path=\""->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"load.r $r20";
+    "load.r $r20"->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>"->"specialinvoke <com.controlj.green.applets.comm.ServletCommunicator: void <init>(java.net.URL,java.lang.String)>";
+    "fieldput <com.controlj.green.applets.TrendPlot: com.controlj.green.applets.comm.ServletCommunicator dataCommunicator>"
+    "specialinvoke <com.controlj.green.applets.comm.ServletCommunicator: void <init>(java.net.URL,java.lang.String)>"->"fieldput <com.controlj.green.applets.TrendPlot: com.controlj.green.applets.comm.ServletCommunicator dataCommunicator>";
+    "fieldput <com.controlj.green.applets.TrendPlot: com.controlj.green.applets.comm.ServletCommunicator dataCommunicator>"->"load.r r0";
+    "new com.controlj.green.applets.GraphHandler"
+    "load.r r0"->"new com.controlj.green.applets.GraphHandler";
+    "new com.controlj.green.applets.GraphHandler"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "specialinvoke <com.controlj.green.applets.GraphHandler: void <init>(java.applet.Applet)>"
+    "load.r r0"->"specialinvoke <com.controlj.green.applets.GraphHandler: void <init>(java.applet.Applet)>";
+    "fieldput <com.controlj.green.applets.TrendPlot: com.controlj.green.applets.GraphHandler graphHandler>"
+    "specialinvoke <com.controlj.green.applets.GraphHandler: void <init>(java.applet.Applet)>"->"fieldput <com.controlj.green.applets.TrendPlot: com.controlj.green.applets.GraphHandler graphHandler>";
+    "fieldput <com.controlj.green.applets.TrendPlot: com.controlj.green.applets.GraphHandler graphHandler>"->"load.r r0";
+    "fieldget <com.controlj.green.applets.TrendPlot: com.controlj.green.applets.draw.Markers markers>"
+    "load.r r0"->"fieldget <com.controlj.green.applets.TrendPlot: com.controlj.green.applets.draw.Markers markers>";
+    "fieldget <com.controlj.green.applets.TrendPlot: com.controlj.green.applets.draw.Markers markers>"->"ifnonnull load.r r0";
+    "ifnonnull load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "virtualinvoke <com.controlj.green.applets.TrendPlot: com.controlj.green.applets.draw.Markers getMarkersFromFile()>"
+    "load.r r0"->"virtualinvoke <com.controlj.green.applets.TrendPlot: com.controlj.green.applets.draw.Markers getMarkersFromFile()>";
+    "fieldput <com.controlj.green.applets.TrendPlot: com.controlj.green.applets.draw.Markers markers>"
+    "virtualinvoke <com.controlj.green.applets.TrendPlot: com.controlj.green.applets.draw.Markers getMarkersFromFile()>"->"fieldput <com.controlj.green.applets.TrendPlot: com.controlj.green.applets.draw.Markers markers>";
+    "fieldput <com.controlj.green.applets.TrendPlot: com.controlj.green.applets.draw.Markers markers>"->"load.r r0";
+    "new java.awt.Label"
+    "load.r r0"->"new java.awt.Label";
+    "new java.awt.Label"->"dup1.r";
+    "dup1.r"->"push \"\"";
+    "push \"\""->"push 1";
+    "specialinvoke <java.awt.Label: void <init>(java.lang.String,int)>"
+    "push 1"->"specialinvoke <java.awt.Label: void <init>(java.lang.String,int)>";
+    "fieldput <com.controlj.green.applets.TrendPlot: java.awt.Label statusLabel>"
+    "specialinvoke <java.awt.Label: void <init>(java.lang.String,int)>"->"fieldput <com.controlj.green.applets.TrendPlot: java.awt.Label statusLabel>";
+    "fieldput <com.controlj.green.applets.TrendPlot: java.awt.Label statusLabel>"->"load.r r0";
+    "fieldget <com.controlj.green.applets.TrendPlot: java.awt.Label statusLabel>"
+    "load.r r0"->"fieldget <com.controlj.green.applets.TrendPlot: java.awt.Label statusLabel>";
+    "new java.awt.Font"
+    "fieldget <com.controlj.green.applets.TrendPlot: java.awt.Label statusLabel>"->"new java.awt.Font";
+    "new java.awt.Font"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "fieldget <com.controlj.green.applets.TrendPlot: java.lang.String globalFontFamily>"
+    "load.r r0"->"fieldget <com.controlj.green.applets.TrendPlot: java.lang.String globalFontFamily>";
+    "push 0"
+    "fieldget <com.controlj.green.applets.TrendPlot: java.lang.String globalFontFamily>"->"push 0";
+    "push 15"
+    "push 0"->"push 15";
+    "specialinvoke <java.awt.Font: void <init>(java.lang.String,int,int)>"
+    "push 15"->"specialinvoke <java.awt.Font: void <init>(java.lang.String,int,int)>";
+    "virtualinvoke <java.awt.Component: void setFont(java.awt.Font)>"
+    "specialinvoke <java.awt.Font: void <init>(java.lang.String,int,int)>"->"virtualinvoke <java.awt.Component: void setFont(java.awt.Font)>";
+    "virtualinvoke <java.awt.Component: void setFont(java.awt.Font)>"->"load.r r0";
+    "load.r r0"->"fieldget <com.controlj.green.applets.TrendPlot: java.awt.Label statusLabel>";
+    "staticget <java.awt.Color: java.awt.Color green>"
+    "fieldget <com.controlj.green.applets.TrendPlot: java.awt.Label statusLabel>"->"staticget <java.awt.Color: java.awt.Color green>";
+    "virtualinvoke <java.awt.Component: void setForeground(java.awt.Color)>"
+    "staticget <java.awt.Color: java.awt.Color green>"->"virtualinvoke <java.awt.Component: void setForeground(java.awt.Color)>";
+    "virtualinvoke <java.awt.Component: void setForeground(java.awt.Color)>"->"load.r r0";
+    "staticget <java.awt.Color: java.awt.Color black>"
+    "load.r r0"->"staticget <java.awt.Color: java.awt.Color black>";
+    "virtualinvoke <java.awt.Component: void setBackground(java.awt.Color)>"
+    "staticget <java.awt.Color: java.awt.Color black>"->"virtualinvoke <java.awt.Component: void setBackground(java.awt.Color)>";
+    "virtualinvoke <java.awt.Component: void setBackground(java.awt.Color)>"->"load.r r0";
+    "new java.awt.BorderLayout"
+    "load.r r0"->"new java.awt.BorderLayout";
+    "new java.awt.BorderLayout"->"dup1.r";
+    "specialinvoke <java.awt.BorderLayout: void <init>()>"
+    "dup1.r"->"specialinvoke <java.awt.BorderLayout: void <init>()>";
+    "virtualinvoke <java.awt.Container: void setLayout(java.awt.LayoutManager)>"
+    "specialinvoke <java.awt.BorderLayout: void <init>()>"->"virtualinvoke <java.awt.Container: void setLayout(java.awt.LayoutManager)>";
+    "virtualinvoke <java.awt.Container: void setLayout(java.awt.LayoutManager)>"->"load.r r0";
+    "push \"Center\""
+    "load.r r0"->"push \"Center\"";
+    "push \"Center\""->"load.r r0";
+    "load.r r0"->"fieldget <com.controlj.green.applets.TrendPlot: java.awt.Label statusLabel>";
+    "virtualinvoke <java.awt.Container: java.awt.Component add(java.lang.String,java.awt.Component)>"
+    "fieldget <com.controlj.green.applets.TrendPlot: java.awt.Label statusLabel>"->"virtualinvoke <java.awt.Container: java.awt.Component add(java.lang.String,java.awt.Component)>";
+    "pop"
+    "virtualinvoke <java.awt.Container: java.awt.Component add(java.lang.String,java.awt.Component)>"->"pop";
+    "pop"->"load.r r0";
+    "load.r r0"->"fieldget <com.controlj.green.applets.TrendPlot: java.awt.Label statusLabel>";
+    "fieldget <com.controlj.green.applets.TrendPlot: java.awt.Label statusLabel>"->"push 1";
+    "virtualinvoke <java.awt.Component: void setVisible(boolean)>"
+    "push 1"->"virtualinvoke <java.awt.Component: void setVisible(boolean)>";
+    "virtualinvoke <java.awt.Component: void setVisible(boolean)>"->"load.r r0";
+    "load.r r0"->"push 1";
+    "push 1"->"virtualinvoke <java.awt.Component: void setVisible(boolean)>";
+    "virtualinvoke <java.awt.Component: void setVisible(boolean)>"->"load.r r0";
+    "push \"delayload\""
+    "load.r r0"->"push \"delayload\"";
+    "push \"delayload\""->"specialinvoke <com.controlj.green.applets.TrendPlot: java.lang.String tryGettingParameter(java.lang.String)>";
+    "specialinvoke <com.controlj.green.applets.TrendPlot: java.lang.String tryGettingParameter(java.lang.String)>"->"store.r r2";
+    "store.r r2"->"load.r r2";
+    "load.r r2"->"ifnull push 0";
+    "ifnull push 0"->"load.r r2";
+    "load.r r2"->"push \"true\"";
+    "push \"true\""->"virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>";
+    "virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>"->"ifeq push 0";
+    "ifeq push 0"->"push 1";
+    "store.b r2"
+    "push 1"->"store.b r2";
+    "store.b r2"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "load.b r2"
+    "load.r r0"->"load.b r2";
+    "fieldput <com.controlj.green.applets.TrendPlot: boolean delayload>"
+    "load.b r2"->"fieldput <com.controlj.green.applets.TrendPlot: boolean delayload>";
+    "goto return"
+    "fieldput <com.controlj.green.applets.TrendPlot: boolean delayload>"->"goto return";
+    "return"
+    "goto return"->"return";
+    "load.b r2"->"dup1.r";
+    "staticget <java.lang.System: java.io.PrintStream out>"
+    "dup1.r"->"staticget <java.lang.System: java.io.PrintStream out>";
+    "store.r r0"
+    "staticget <java.lang.System: java.io.PrintStream out>"->"store.r r0";
+    "store.r r0"->"new java.lang.StringBuffer";
+    "new java.lang.StringBuffer"->"dup1.r";
+    "dup1.r"->"specialinvoke <java.lang.StringBuffer: void <init>()>";
+    "push \"exception in init\""
+    "specialinvoke <java.lang.StringBuffer: void <init>()>"->"push \"exception in init\"";
+    "push \"exception in init\""->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"store.r r2";
+    "virtualinvoke <java.lang.Throwable: java.lang.String toString()>"
+    "store.r r2"->"virtualinvoke <java.lang.Throwable: java.lang.String toString()>";
+    "virtualinvoke <java.lang.Throwable: java.lang.String toString()>"->"store.r $r39";
+    "store.r $r39"->"load.r r0";
+    "load.r r0"->"load.r r2";
+    "load.r r2"->"load.r $r39";
+    "load.r $r39"->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>";
+    "virtualinvoke <java.io.PrintStream: void println(java.lang.String)>"
+    "virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>"->"virtualinvoke <java.io.PrintStream: void println(java.lang.String)>";
+    "virtualinvoke <java.lang.Throwable: void printStackTrace()>"
+    "virtualinvoke <java.io.PrintStream: void println(java.lang.String)>"->"virtualinvoke <java.lang.Throwable: void printStackTrace()>";
+    "ifeq push 0"->"push 0";
+    "push 0"->"store.b r2";
+    "ifeq push 0"->"push 0";
+    "push 0"->"store.b $r20";
+    "ifnonnull load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r2";
+    "load.r r2"->"fieldput <com.controlj.green.applets.TrendPlot: java.lang.String separator>";
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"
+    "load.r r2"->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>";
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"->"fieldput <com.controlj.green.applets.TrendPlot: int standardDate>";
+    "fieldput <com.controlj.green.applets.TrendPlot: int standardDate>"->"load.r r0";
+    "fieldget <com.controlj.green.applets.TrendPlot: int standardDate>"
+    "load.r r0"->"fieldget <com.controlj.green.applets.TrendPlot: int standardDate>";
+    "ifne goto load.r r0"
+    "fieldget <com.controlj.green.applets.TrendPlot: int standardDate>"->"ifne goto load.r r0";
+    "ifne goto load.r r0"->"load.r r0";
+    "load.r r0"->"push 1";
+    "push 1"->"fieldput <com.controlj.green.applets.TrendPlot: int standardDate>";
+    "fieldput <com.controlj.green.applets.TrendPlot: int standardDate>"->"goto load.r r0";
+}

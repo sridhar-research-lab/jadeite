@@ -1,0 +1,92 @@
+digraph "" {
+    "r0 := @this: com.mindprod.submitter.Submitter"
+    "load.r r0"
+    "r0 := @this: com.mindprod.submitter.Submitter"->"load.r r0";
+    "fieldget <com.mindprod.submitter.Submitter: boolean inApplet>"
+    "load.r r0"->"fieldget <com.mindprod.submitter.Submitter: boolean inApplet>";
+    "ifeq load.r r0"
+    "fieldget <com.mindprod.submitter.Submitter: boolean inApplet>"->"ifeq load.r r0";
+    "ifeq load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "push \"logDir\""
+    "load.r r0"->"push \"logDir\"";
+    "virtualinvoke <com.mindprod.submitter.Submitter: java.lang.String getParameter(java.lang.String)>"
+    "push \"logDir\""->"virtualinvoke <com.mindprod.submitter.Submitter: java.lang.String getParameter(java.lang.String)>";
+    "fieldput <com.mindprod.submitter.Submitter: java.lang.String logDir>"
+    "virtualinvoke <com.mindprod.submitter.Submitter: java.lang.String getParameter(java.lang.String)>"->"fieldput <com.mindprod.submitter.Submitter: java.lang.String logDir>";
+    "fieldput <com.mindprod.submitter.Submitter: java.lang.String logDir>"->"load.r r0";
+    "fieldget <com.mindprod.submitter.Submitter: java.lang.String logDir>"
+    "load.r r0"->"fieldget <com.mindprod.submitter.Submitter: java.lang.String logDir>";
+    "ifnull load.r r0"
+    "fieldget <com.mindprod.submitter.Submitter: java.lang.String logDir>"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <com.mindprod.submitter.Submitter: java.lang.String logDir>";
+    "virtualinvoke <java.lang.String: int length()>"
+    "fieldget <com.mindprod.submitter.Submitter: java.lang.String logDir>"->"virtualinvoke <java.lang.String: int length()>";
+    "virtualinvoke <java.lang.String: int length()>"->"ifeq load.r r0";
+    "ifeq load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <com.mindprod.submitter.Submitter: java.lang.String logDir>";
+    "push \"null\""
+    "fieldget <com.mindprod.submitter.Submitter: java.lang.String logDir>"->"push \"null\"";
+    "virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>"
+    "push \"null\""->"virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>";
+    "ifne load.r r0"
+    "virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>"->"ifne load.r r0";
+    "ifne load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <com.mindprod.submitter.Submitter: java.lang.String logDir>";
+    "push \"default\""
+    "fieldget <com.mindprod.submitter.Submitter: java.lang.String logDir>"->"push \"default\"";
+    "push \"default\""->"virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>";
+    "virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>"->"ifne load.r r0";
+    "ifne load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <com.mindprod.submitter.Submitter: java.lang.String logDir>";
+    "push \"noLog\""
+    "fieldget <com.mindprod.submitter.Submitter: java.lang.String logDir>"->"push \"noLog\"";
+    "virtualinvoke <java.lang.String: boolean equalsIgnoreCase(java.lang.String)>"
+    "push \"noLog\""->"virtualinvoke <java.lang.String: boolean equalsIgnoreCase(java.lang.String)>";
+    "virtualinvoke <java.lang.String: boolean equalsIgnoreCase(java.lang.String)>"->"ifeq load.r r0";
+    "ifeq load.r r0"->"load.r r0";
+    "push null"
+    "load.r r0"->"push null";
+    "push null"->"fieldput <com.mindprod.submitter.Submitter: java.lang.String logDir>";
+    "fieldput <com.mindprod.submitter.Submitter: java.lang.String logDir>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "virtualinvoke <com.mindprod.submitter.Submitter: java.awt.Container getContentPane()>"
+    "load.r r0"->"virtualinvoke <com.mindprod.submitter.Submitter: java.awt.Container getContentPane()>";
+    "fieldput <com.mindprod.submitter.Submitter: java.awt.Container contentPane>"
+    "virtualinvoke <com.mindprod.submitter.Submitter: java.awt.Container getContentPane()>"->"fieldput <com.mindprod.submitter.Submitter: java.awt.Container contentPane>";
+    "push 1"
+    "fieldput <com.mindprod.submitter.Submitter: java.awt.Container contentPane>"->"push 1";
+    "push 5"
+    "push 1"->"push 5";
+    "push 0"
+    "push 5"->"push 0";
+    "push 0"->"load.r r0";
+    "fieldget <com.mindprod.submitter.Submitter: java.awt.Container contentPane>"
+    "load.r r0"->"fieldget <com.mindprod.submitter.Submitter: java.awt.Container contentPane>";
+    "staticinvoke <com.mindprod.common11.VersionCheck: boolean isJavaVersionOK(int,int,int,java.awt.Container)>"
+    "fieldget <com.mindprod.submitter.Submitter: java.awt.Container contentPane>"->"staticinvoke <com.mindprod.common11.VersionCheck: boolean isJavaVersionOK(int,int,int,java.awt.Container)>";
+    "staticinvoke <com.mindprod.common11.VersionCheck: boolean isJavaVersionOK(int,int,int,java.awt.Container)>"->"ifne load.r r0";
+    "ifne load.r r0"->"load.r r0";
+    "virtualinvoke <com.mindprod.submitter.Submitter: void stop()>"
+    "load.r r0"->"virtualinvoke <com.mindprod.submitter.Submitter: void stop()>";
+    "virtualinvoke <com.mindprod.submitter.Submitter: void stop()>"->"load.r r0";
+    "virtualinvoke <com.mindprod.submitter.Submitter: void destroy()>"
+    "load.r r0"->"virtualinvoke <com.mindprod.submitter.Submitter: void destroy()>";
+    "virtualinvoke <com.mindprod.submitter.Submitter: void destroy()>"->"load.r r0";
+    "push class \"Lcom/mindprod/submitter/Submitter;\""
+    "load.r r0"->"push class \"Lcom/mindprod/submitter/Submitter;\"";
+    "staticinvoke <java.util.prefs.Preferences: java.util.prefs.Preferences userNodeForPackage(java.lang.Class)>"
+    "push class \"Lcom/mindprod/submitter/Submitter;\""->"staticinvoke <java.util.prefs.Preferences: java.util.prefs.Preferences userNodeForPackage(java.lang.Class)>";
+    "fieldput <com.mindprod.submitter.Submitter: java.util.prefs.Preferences userPrefs>"
+    "staticinvoke <java.util.prefs.Preferences: java.util.prefs.Preferences userNodeForPackage(java.lang.Class)>"->"fieldput <com.mindprod.submitter.Submitter: java.util.prefs.Preferences userPrefs>";
+    "fieldput <com.mindprod.submitter.Submitter: java.util.prefs.Preferences userPrefs>"->"load.r r0";
+    "load.r r0"->"push 0";
+    "fieldput <com.mindprod.submitter.Submitter: boolean usingAlt>"
+    "push 0"->"fieldput <com.mindprod.submitter.Submitter: boolean usingAlt>";
+    "fieldput <com.mindprod.submitter.Submitter: boolean usingAlt>"->"load.r r0";
+    "specialinvoke <com.mindprod.submitter.Submitter: void buildMenu()>"
+    "load.r r0"->"specialinvoke <com.mindprod.submitter.Submitter: void buildMenu()>";
+    "return"
+    "specialinvoke <com.mindprod.submitter.Submitter: void buildMenu()>"->"return";
+}

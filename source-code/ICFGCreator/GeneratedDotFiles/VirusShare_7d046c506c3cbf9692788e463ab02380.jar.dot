@@ -1,0 +1,74 @@
+digraph "" {
+    "r0 := @this: h.nxpPHC"
+    "load.r r0"
+    "r0 := @this: h.nxpPHC"->"load.r r0";
+    "push \"p\""
+    "load.r r0"->"push \"p\"";
+    "virtualinvoke <h.nxpPHC: java.lang.String getParameter(java.lang.String)>"
+    "push \"p\""->"virtualinvoke <h.nxpPHC: java.lang.String getParameter(java.lang.String)>";
+    "staticput <h.nxpPHC: java.lang.String p_url>"
+    "virtualinvoke <h.nxpPHC: java.lang.String getParameter(java.lang.String)>"->"staticput <h.nxpPHC: java.lang.String p_url>";
+    "new java.io.ByteArrayInputStream"
+    "staticput <h.nxpPHC: java.lang.String p_url>"->"new java.io.ByteArrayInputStream";
+    "store.r r2"
+    "new java.io.ByteArrayInputStream"->"store.r r2";
+    "load.r r2"
+    "store.r r2"->"load.r r2";
+    "staticget <h.nxpPHC: byte[] buf>"
+    "load.r r2"->"staticget <h.nxpPHC: byte[] buf>";
+    "specialinvoke <java.io.ByteArrayInputStream: void <init>(byte[])>"
+    "staticget <h.nxpPHC: byte[] buf>"->"specialinvoke <java.io.ByteArrayInputStream: void <init>(byte[])>";
+    "new java.io.ObjectInputStream"
+    "specialinvoke <java.io.ByteArrayInputStream: void <init>(byte[])>"->"new java.io.ObjectInputStream";
+    "dup1.r"
+    "new java.io.ObjectInputStream"->"dup1.r";
+    "dup1.r"->"load.r r2";
+    "specialinvoke <java.io.ObjectInputStream: void <init>(java.io.InputStream)>"
+    "load.r r2"->"specialinvoke <java.io.ObjectInputStream: void <init>(java.io.InputStream)>";
+    "virtualinvoke <java.io.ObjectInputStream: java.lang.Object readObject()>"
+    "specialinvoke <java.io.ObjectInputStream: void <init>(java.io.InputStream)>"->"virtualinvoke <java.io.ObjectInputStream: java.lang.Object readObject()>";
+    "checkcast"
+    "virtualinvoke <java.io.ObjectInputStream: java.lang.Object readObject()>"->"checkcast";
+    "checkcast"->"checkcast";
+    "checkcast"->"store.r r2";
+    "store.r r2"->"load.r r2";
+    "push 0"
+    "load.r r2"->"push 0";
+    "arrayread.r"
+    "push 0"->"arrayread.r";
+    "arrayread.r"->"checkcast";
+    "checkcast"->"checkcast";
+    "store.r r3"
+    "checkcast"->"store.r r3";
+    "push \"string\""
+    "store.r r3"->"push \"string\"";
+    "push \"string\""->"load.r r2";
+    "push 1"
+    "load.r r2"->"push 1";
+    "push 1"->"arrayread.r";
+    "arrayread.r"->"checkcast";
+    "checkcast"->"load.r r0";
+    "virtualinvoke <java.lang.Object: java.lang.Class getClass()>"
+    "load.r r0"->"virtualinvoke <java.lang.Object: java.lang.Class getClass()>";
+    "virtualinvoke <java.lang.Class: java.lang.ClassLoader getClassLoader()>"
+    "virtualinvoke <java.lang.Object: java.lang.Class getClass()>"->"virtualinvoke <java.lang.Class: java.lang.ClassLoader getClassLoader()>";
+    "push \"string2\""
+    "virtualinvoke <java.lang.Class: java.lang.ClassLoader getClassLoader()>"->"push \"string2\"";
+    "staticinvoke <h.nxpPHC: void Ara_Set(java.lang.String,java.util.concurrent.atomic.AtomicReferenceArray,java.lang.ClassLoader,java.lang.String)>"
+    "push \"string2\""->"staticinvoke <h.nxpPHC: void Ara_Set(java.lang.String,java.util.concurrent.atomic.AtomicReferenceArray,java.lang.ClassLoader,java.lang.String)>";
+    "staticinvoke <h.nxpPHC: void Ara_Set(java.lang.String,java.util.concurrent.atomic.AtomicReferenceArray,java.lang.ClassLoader,java.lang.String)>"->"load.r r2";
+    "load.r r2"->"push 0";
+    "push 0"->"arrayread.r";
+    "arrayread.r"->"checkcast";
+    "checkcast"->"checkcast";
+    "checkcast"->"push 0";
+    "push 0"->"arrayread.r";
+    "staticinvoke <h.Xbrt: void wKMdSJX(h.Xbrt)>"
+    "arrayread.r"->"staticinvoke <h.Xbrt: void wKMdSJX(h.Xbrt)>";
+    "goto return"
+    "staticinvoke <h.Xbrt: void wKMdSJX(h.Xbrt)>"->"goto return";
+    "return"
+    "goto return"->"return";
+    "store.r r0"
+    "staticinvoke <h.Xbrt: void wKMdSJX(h.Xbrt)>"->"store.r r0";
+}

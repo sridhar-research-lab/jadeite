@@ -1,0 +1,223 @@
+digraph "" {
+    "r0 := @this: Graph"
+    "load.r r0"
+    "r0 := @this: Graph"->"load.r r0";
+    "new java.awt.BorderLayout"
+    "load.r r0"->"new java.awt.BorderLayout";
+    "dup1.r"
+    "new java.awt.BorderLayout"->"dup1.r";
+    "specialinvoke <java.awt.BorderLayout: void <init>()>"
+    "dup1.r"->"specialinvoke <java.awt.BorderLayout: void <init>()>";
+    "virtualinvoke <java.awt.Container: void setLayout(java.awt.LayoutManager)>"
+    "specialinvoke <java.awt.BorderLayout: void <init>()>"->"virtualinvoke <java.awt.Container: void setLayout(java.awt.LayoutManager)>";
+    "virtualinvoke <java.awt.Container: void setLayout(java.awt.LayoutManager)>"->"load.r r0";
+    "new GraphPanel"
+    "load.r r0"->"new GraphPanel";
+    "new GraphPanel"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "specialinvoke <GraphPanel: void <init>(Graph)>"
+    "load.r r0"->"specialinvoke <GraphPanel: void <init>(Graph)>";
+    "fieldput <Graph: GraphPanel panel>"
+    "specialinvoke <GraphPanel: void <init>(Graph)>"->"fieldput <Graph: GraphPanel panel>";
+    "fieldput <Graph: GraphPanel panel>"->"load.r r0";
+    "push \"Center\""
+    "load.r r0"->"push \"Center\"";
+    "push \"Center\""->"load.r r0";
+    "fieldget <Graph: GraphPanel panel>"
+    "load.r r0"->"fieldget <Graph: GraphPanel panel>";
+    "virtualinvoke <java.awt.Container: java.awt.Component add(java.lang.String,java.awt.Component)>"
+    "fieldget <Graph: GraphPanel panel>"->"virtualinvoke <java.awt.Container: java.awt.Component add(java.lang.String,java.awt.Component)>";
+    "pop"
+    "virtualinvoke <java.awt.Container: java.awt.Component add(java.lang.String,java.awt.Component)>"->"pop";
+    "new java.awt.Panel"
+    "pop"->"new java.awt.Panel";
+    "store.r i0"
+    "new java.awt.Panel"->"store.r i0";
+    "load.r i0"
+    "store.r i0"->"load.r i0";
+    "specialinvoke <java.awt.Panel: void <init>()>"
+    "load.r i0"->"specialinvoke <java.awt.Panel: void <init>()>";
+    "specialinvoke <java.awt.Panel: void <init>()>"->"load.r r0";
+    "push \"South\""
+    "load.r r0"->"push \"South\"";
+    "push \"South\""->"load.r i0";
+    "load.r i0"->"virtualinvoke <java.awt.Container: java.awt.Component add(java.lang.String,java.awt.Component)>";
+    "virtualinvoke <java.awt.Container: java.awt.Component add(java.lang.String,java.awt.Component)>"->"pop";
+    "pop"->"load.r i0";
+    "new java.awt.Button"
+    "load.r i0"->"new java.awt.Button";
+    "new java.awt.Button"->"dup1.r";
+    "push \"Scramble\""
+    "dup1.r"->"push \"Scramble\"";
+    "specialinvoke <java.awt.Button: void <init>(java.lang.String)>"
+    "push \"Scramble\""->"specialinvoke <java.awt.Button: void <init>(java.lang.String)>";
+    "virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>"
+    "specialinvoke <java.awt.Button: void <init>(java.lang.String)>"->"virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>";
+    "virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>"->"pop";
+    "pop"->"load.r i0";
+    "load.r i0"->"new java.awt.Button";
+    "new java.awt.Button"->"dup1.r";
+    "push \"Shake\""
+    "dup1.r"->"push \"Shake\"";
+    "push \"Shake\""->"specialinvoke <java.awt.Button: void <init>(java.lang.String)>";
+    "specialinvoke <java.awt.Button: void <init>(java.lang.String)>"->"virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>";
+    "virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>"->"pop";
+    "pop"->"load.r i0";
+    "new java.awt.Checkbox"
+    "load.r i0"->"new java.awt.Checkbox";
+    "new java.awt.Checkbox"->"dup1.r";
+    "push \"Stress\""
+    "dup1.r"->"push \"Stress\"";
+    "specialinvoke <java.awt.Checkbox: void <init>(java.lang.String)>"
+    "push \"Stress\""->"specialinvoke <java.awt.Checkbox: void <init>(java.lang.String)>";
+    "specialinvoke <java.awt.Checkbox: void <init>(java.lang.String)>"->"virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>";
+    "virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>"->"pop";
+    "pop"->"load.r i0";
+    "load.r i0"->"new java.awt.Checkbox";
+    "new java.awt.Checkbox"->"dup1.r";
+    "push \"Random\""
+    "dup1.r"->"push \"Random\"";
+    "push \"Random\""->"specialinvoke <java.awt.Checkbox: void <init>(java.lang.String)>";
+    "specialinvoke <java.awt.Checkbox: void <init>(java.lang.String)>"->"virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>";
+    "virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>"->"pop";
+    "new java.util.StringTokenizer"
+    "pop"->"new java.util.StringTokenizer";
+    "store.r $r18"
+    "new java.util.StringTokenizer"->"store.r $r18";
+    "load.r $r18"
+    "store.r $r18"->"load.r $r18";
+    "load.r $r18"->"load.r r0";
+    "push \"edges\""
+    "load.r r0"->"push \"edges\"";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"
+    "push \"edges\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "push \",\""
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"push \",\"";
+    "specialinvoke <java.util.StringTokenizer: void <init>(java.lang.String,java.lang.String)>"
+    "push \",\""->"specialinvoke <java.util.StringTokenizer: void <init>(java.lang.String,java.lang.String)>";
+    "goto load.r $r18"
+    "specialinvoke <java.util.StringTokenizer: void <init>(java.lang.String,java.lang.String)>"->"goto load.r $r18";
+    "goto load.r $r18"->"load.r $r18";
+    "virtualinvoke <java.util.StringTokenizer: boolean hasMoreTokens()>"
+    "load.r $r18"->"virtualinvoke <java.util.StringTokenizer: boolean hasMoreTokens()>";
+    "ifne load.r $r18"
+    "virtualinvoke <java.util.StringTokenizer: boolean hasMoreTokens()>"->"ifne load.r $r18";
+    "ifne load.r $r18"->"load.r r0";
+    "virtualinvoke <java.awt.Component: java.awt.Dimension size()>"
+    "load.r r0"->"virtualinvoke <java.awt.Component: java.awt.Dimension size()>";
+    "virtualinvoke <java.awt.Component: java.awt.Dimension size()>"->"store.r i0";
+    "store.r i0"->"load.r r0";
+    "push \"center\""
+    "load.r r0"->"push \"center\"";
+    "push \"center\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"store.r $r18";
+    "store.r $r18"->"load.r $r18";
+    "ifnull return"
+    "load.r $r18"->"ifnull return";
+    "ifnull return"->"load.r r0";
+    "load.r r0"->"fieldget <Graph: GraphPanel panel>";
+    "fieldget <GraphPanel: Node[] nodes>"
+    "fieldget <Graph: GraphPanel panel>"->"fieldget <GraphPanel: Node[] nodes>";
+    "fieldget <GraphPanel: Node[] nodes>"->"load.r r0";
+    "load.r r0"->"fieldget <Graph: GraphPanel panel>";
+    "fieldget <Graph: GraphPanel panel>"->"load.r $r18";
+    "virtualinvoke <GraphPanel: int findNode(java.lang.String)>"
+    "load.r $r18"->"virtualinvoke <GraphPanel: int findNode(java.lang.String)>";
+    "arrayread.r"
+    "virtualinvoke <GraphPanel: int findNode(java.lang.String)>"->"arrayread.r";
+    "store.r r0"
+    "arrayread.r"->"store.r r0";
+    "store.r r0"->"load.r r0";
+    "load.r r0"->"load.r i0";
+    "fieldget <java.awt.Dimension: int width>"
+    "load.r i0"->"fieldget <java.awt.Dimension: int width>";
+    "push 2"
+    "fieldget <java.awt.Dimension: int width>"->"push 2";
+    "div.i"
+    "push 2"->"div.i";
+    "i2d"
+    "div.i"->"i2d";
+    "fieldput <Node: double x>"
+    "i2d"->"fieldput <Node: double x>";
+    "fieldput <Node: double x>"->"load.r r0";
+    "load.r r0"->"load.r i0";
+    "fieldget <java.awt.Dimension: int height>"
+    "load.r i0"->"fieldget <java.awt.Dimension: int height>";
+    "fieldget <java.awt.Dimension: int height>"->"push 2";
+    "push 2"->"div.i";
+    "div.i"->"i2d";
+    "fieldput <Node: double y>"
+    "i2d"->"fieldput <Node: double y>";
+    "fieldput <Node: double y>"->"load.r r0";
+    "push 1"
+    "load.r r0"->"push 1";
+    "fieldput <Node: boolean fixed>"
+    "push 1"->"fieldput <Node: boolean fixed>";
+    "return"
+    "fieldput <Node: boolean fixed>"->"return";
+    "ifne load.r $r18"->"load.r $r18";
+    "virtualinvoke <java.util.StringTokenizer: java.lang.String nextToken()>"
+    "load.r $r18"->"virtualinvoke <java.util.StringTokenizer: java.lang.String nextToken()>";
+    "store.r r27"
+    "virtualinvoke <java.util.StringTokenizer: java.lang.String nextToken()>"->"store.r r27";
+    "load.r r27"
+    "store.r r27"->"load.r r27";
+    "push 45"
+    "load.r r27"->"push 45";
+    "virtualinvoke <java.lang.String: int indexOf(int)>"
+    "push 45"->"virtualinvoke <java.lang.String: int indexOf(int)>";
+    "store.i i8"
+    "virtualinvoke <java.lang.String: int indexOf(int)>"->"store.i i8";
+    "load.i i8"
+    "store.i i8"->"load.i i8";
+    "ifle load.r $r18"
+    "load.i i8"->"ifle load.r $r18";
+    "push 50"
+    "ifle load.r $r18"->"push 50";
+    "store.i i9"
+    "push 50"->"store.i i9";
+    "store.i i9"->"load.r r27";
+    "push 47"
+    "load.r r27"->"push 47";
+    "push 47"->"virtualinvoke <java.lang.String: int indexOf(int)>";
+    "store.i i0"
+    "virtualinvoke <java.lang.String: int indexOf(int)>"->"store.i i0";
+    "load.i i0"
+    "store.i i0"->"load.i i0";
+    "ifle load.r r0"
+    "load.i i0"->"ifle load.r r0";
+    "ifle load.r r0"->"load.r r27";
+    "load.r r27"->"load.i i0";
+    "load.i i0"->"push 1";
+    "add.i"
+    "push 1"->"add.i";
+    "virtualinvoke <java.lang.String: java.lang.String substring(int)>"
+    "add.i"->"virtualinvoke <java.lang.String: java.lang.String substring(int)>";
+    "staticinvoke <java.lang.Integer: java.lang.Integer valueOf(java.lang.String)>"
+    "virtualinvoke <java.lang.String: java.lang.String substring(int)>"->"staticinvoke <java.lang.Integer: java.lang.Integer valueOf(java.lang.String)>";
+    "virtualinvoke <java.lang.Integer: int intValue()>"
+    "staticinvoke <java.lang.Integer: java.lang.Integer valueOf(java.lang.String)>"->"virtualinvoke <java.lang.Integer: int intValue()>";
+    "virtualinvoke <java.lang.Integer: int intValue()>"->"store.i i9";
+    "store.i i9"->"load.r r27";
+    "push 0"
+    "load.r r27"->"push 0";
+    "push 0"->"load.i i0";
+    "virtualinvoke <java.lang.String: java.lang.String substring(int,int)>"
+    "load.i i0"->"virtualinvoke <java.lang.String: java.lang.String substring(int,int)>";
+    "virtualinvoke <java.lang.String: java.lang.String substring(int,int)>"->"store.r r27";
+    "store.r r27"->"load.r r0";
+    "load.r r0"->"fieldget <Graph: GraphPanel panel>";
+    "fieldget <Graph: GraphPanel panel>"->"load.r r27";
+    "load.r r27"->"push 0";
+    "push 0"->"load.i i8";
+    "load.i i8"->"virtualinvoke <java.lang.String: java.lang.String substring(int,int)>";
+    "virtualinvoke <java.lang.String: java.lang.String substring(int,int)>"->"load.r r27";
+    "load.r r27"->"load.i i8";
+    "load.i i8"->"push 1";
+    "push 1"->"add.i";
+    "add.i"->"virtualinvoke <java.lang.String: java.lang.String substring(int)>";
+    "load.i i9"
+    "virtualinvoke <java.lang.String: java.lang.String substring(int)>"->"load.i i9";
+    "virtualinvoke <GraphPanel: void addEdge(java.lang.String,java.lang.String,int)>"
+    "load.i i9"->"virtualinvoke <GraphPanel: void addEdge(java.lang.String,java.lang.String,int)>";
+}

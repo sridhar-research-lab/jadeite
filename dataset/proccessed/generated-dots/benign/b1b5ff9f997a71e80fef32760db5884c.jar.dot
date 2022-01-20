@@ -1,0 +1,964 @@
+digraph "" {
+    "r0 := @this: BeamCurrent"
+    "load.r r0"
+    "r0 := @this: BeamCurrent"->"load.r r0";
+    "new lib.DChTCP"
+    "load.r r0"->"new lib.DChTCP";
+    "dup1.r"
+    "new lib.DChTCP"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "store.r $r26"
+    "load.r r0"->"store.r $r26";
+    "store.r $r26"->"load.r r0";
+    "load.r r0"->"new lib.DChTCP";
+    "new lib.DChTCP"->"dup1.r";
+    "staticget <BeamCurrent: java.lang.String DChServer>"
+    "dup1.r"->"staticget <BeamCurrent: java.lang.String DChServer>";
+    "staticget <BeamCurrent: int DChPort>"
+    "staticget <BeamCurrent: java.lang.String DChServer>"->"staticget <BeamCurrent: int DChPort>";
+    "specialinvoke <lib.DChTCP: void <init>(java.lang.String,int)>"
+    "staticget <BeamCurrent: int DChPort>"->"specialinvoke <lib.DChTCP: void <init>(java.lang.String,int)>";
+    "fieldput <BeamCurrent: lib.DChTCP dch>"
+    "specialinvoke <lib.DChTCP: void <init>(java.lang.String,int)>"->"fieldput <BeamCurrent: lib.DChTCP dch>";
+    "fieldput <BeamCurrent: lib.DChTCP dch>"->"load.r r0";
+    "fieldget <BeamCurrent: lib.DChTCP dch>"
+    "load.r r0"->"fieldget <BeamCurrent: lib.DChTCP dch>";
+    "virtualinvoke <lib.DChTCP: void open_dch()>"
+    "fieldget <BeamCurrent: lib.DChTCP dch>"->"virtualinvoke <lib.DChTCP: void open_dch()>";
+    "goto new java.awt.Font"
+    "virtualinvoke <lib.DChTCP: void open_dch()>"->"goto new java.awt.Font";
+    "new java.awt.Font"
+    "goto new java.awt.Font"->"new java.awt.Font";
+    "store.r r18"
+    "new java.awt.Font"->"store.r r18";
+    "load.r r18"
+    "store.r r18"->"load.r r18";
+    "push \"Serif\""
+    "load.r r18"->"push \"Serif\"";
+    "push 0"
+    "push \"Serif\""->"push 0";
+    "push 20"
+    "push 0"->"push 20";
+    "specialinvoke <java.awt.Font: void <init>(java.lang.String,int,int)>"
+    "push 20"->"specialinvoke <java.awt.Font: void <init>(java.lang.String,int,int)>";
+    "new javax.swing.JPanel"
+    "specialinvoke <java.awt.Font: void <init>(java.lang.String,int,int)>"->"new javax.swing.JPanel";
+    "new javax.swing.JPanel"->"store.r $r26";
+    "load.r $r26"
+    "store.r $r26"->"load.r $r26";
+    "specialinvoke <javax.swing.JPanel: void <init>()>"
+    "load.r $r26"->"specialinvoke <javax.swing.JPanel: void <init>()>";
+    "specialinvoke <javax.swing.JPanel: void <init>()>"->"load.r $r26";
+    "staticget <java.awt.Color: java.awt.Color lightGray>"
+    "load.r $r26"->"staticget <java.awt.Color: java.awt.Color lightGray>";
+    "virtualinvoke <javax.swing.JPanel: void setBackground(java.awt.Color)>"
+    "staticget <java.awt.Color: java.awt.Color lightGray>"->"virtualinvoke <javax.swing.JPanel: void setBackground(java.awt.Color)>";
+    "virtualinvoke <javax.swing.JPanel: void setBackground(java.awt.Color)>"->"load.r $r26";
+    "new java.awt.BorderLayout"
+    "load.r $r26"->"new java.awt.BorderLayout";
+    "new java.awt.BorderLayout"->"dup1.r";
+    "specialinvoke <java.awt.BorderLayout: void <init>()>"
+    "dup1.r"->"specialinvoke <java.awt.BorderLayout: void <init>()>";
+    "virtualinvoke <javax.swing.JPanel: void setLayout(java.awt.LayoutManager)>"
+    "specialinvoke <java.awt.BorderLayout: void <init>()>"->"virtualinvoke <javax.swing.JPanel: void setLayout(java.awt.LayoutManager)>";
+    "push 10"
+    "virtualinvoke <javax.swing.JPanel: void setLayout(java.awt.LayoutManager)>"->"push 10";
+    "newarray"
+    "push 10"->"newarray";
+    "store.r $r29"
+    "newarray"->"store.r $r29";
+    "load.r $r29"
+    "store.r $r29"->"load.r $r29";
+    "load.r $r29"->"push 0";
+    "push \"1000 mA\""
+    "push 0"->"push \"1000 mA\"";
+    "arraywrite.r"
+    "push \"1000 mA\""->"arraywrite.r";
+    "arraywrite.r"->"load.r $r29";
+    "push 1"
+    "load.r $r29"->"push 1";
+    "push \"500 mA\""
+    "push 1"->"push \"500 mA\"";
+    "push \"500 mA\""->"arraywrite.r";
+    "arraywrite.r"->"load.r $r29";
+    "push 2"
+    "load.r $r29"->"push 2";
+    "push \"250 mA\""
+    "push 2"->"push \"250 mA\"";
+    "push \"250 mA\""->"arraywrite.r";
+    "arraywrite.r"->"load.r $r29";
+    "push 3"
+    "load.r $r29"->"push 3";
+    "push \"100 mA\""
+    "push 3"->"push \"100 mA\"";
+    "push \"100 mA\""->"arraywrite.r";
+    "arraywrite.r"->"load.r $r29";
+    "push 4"
+    "load.r $r29"->"push 4";
+    "push \"Cont.Inj. 450 mA\""
+    "push 4"->"push \"Cont.Inj. 450 mA\"";
+    "push \"Cont.Inj. 450 mA\""->"arraywrite.r";
+    "arraywrite.r"->"load.r $r29";
+    "push 5"
+    "load.r $r29"->"push 5";
+    "push \"Cont.Inj. 440 mA\""
+    "push 5"->"push \"Cont.Inj. 440 mA\"";
+    "push \"Cont.Inj. 440 mA\""->"arraywrite.r";
+    "arraywrite.r"->"load.r $r29";
+    "push 6"
+    "load.r $r29"->"push 6";
+    "push \"Cont.Inj. 430 mA\""
+    "push 6"->"push \"Cont.Inj. 430 mA\"";
+    "push \"Cont.Inj. 430 mA\""->"arraywrite.r";
+    "arraywrite.r"->"load.r $r29";
+    "push 7"
+    "load.r $r29"->"push 7";
+    "push \"Cont.Inj. 420 mA\""
+    "push 7"->"push \"Cont.Inj. 420 mA\"";
+    "push \"Cont.Inj. 420 mA\""->"arraywrite.r";
+    "arraywrite.r"->"load.r $r29";
+    "push 8"
+    "load.r $r29"->"push 8";
+    "push \"Cont.Inj. 410 mA\""
+    "push 8"->"push \"Cont.Inj. 410 mA\"";
+    "push \"Cont.Inj. 410 mA\""->"arraywrite.r";
+    "arraywrite.r"->"load.r $r29";
+    "push 9"
+    "load.r $r29"->"push 9";
+    "push \"Cont.Inj. 400 mA\""
+    "push 9"->"push \"Cont.Inj. 400 mA\"";
+    "push \"Cont.Inj. 400 mA\""->"arraywrite.r";
+    "arraywrite.r"->"load.r r0";
+    "new javax.swing.JComboBox"
+    "load.r r0"->"new javax.swing.JComboBox";
+    "new javax.swing.JComboBox"->"dup1.r";
+    "dup1.r"->"load.r $r29";
+    "specialinvoke <javax.swing.JComboBox: void <init>(java.lang.Object[])>"
+    "load.r $r29"->"specialinvoke <javax.swing.JComboBox: void <init>(java.lang.Object[])>";
+    "fieldput <BeamCurrent: javax.swing.JComboBox cmbCurrentScale>"
+    "specialinvoke <javax.swing.JComboBox: void <init>(java.lang.Object[])>"->"fieldput <BeamCurrent: javax.swing.JComboBox cmbCurrentScale>";
+    "fieldput <BeamCurrent: javax.swing.JComboBox cmbCurrentScale>"->"load.r r0";
+    "fieldget <BeamCurrent: javax.swing.JComboBox cmbCurrentScale>"
+    "load.r r0"->"fieldget <BeamCurrent: javax.swing.JComboBox cmbCurrentScale>";
+    "fieldget <BeamCurrent: javax.swing.JComboBox cmbCurrentScale>"->"load.r $r29";
+    "arraylength"
+    "load.r $r29"->"arraylength";
+    "virtualinvoke <javax.swing.JComboBox: void setMaximumRowCount(int)>"
+    "arraylength"->"virtualinvoke <javax.swing.JComboBox: void setMaximumRowCount(int)>";
+    "virtualinvoke <javax.swing.JComboBox: void setMaximumRowCount(int)>"->"load.r r0";
+    "load.r r0"->"fieldget <BeamCurrent: javax.swing.JComboBox cmbCurrentScale>";
+    "fieldget <BeamCurrent: javax.swing.JComboBox cmbCurrentScale>"->"push 1";
+    "virtualinvoke <javax.swing.JComboBox: void setSelectedIndex(int)>"
+    "push 1"->"virtualinvoke <javax.swing.JComboBox: void setSelectedIndex(int)>";
+    "virtualinvoke <javax.swing.JComboBox: void setSelectedIndex(int)>"->"load.r r0";
+    "load.r r0"->"fieldget <BeamCurrent: javax.swing.JComboBox cmbCurrentScale>";
+    "new BeamCurrent$cmbCurrentScaleEventListener"
+    "fieldget <BeamCurrent: javax.swing.JComboBox cmbCurrentScale>"->"new BeamCurrent$cmbCurrentScaleEventListener";
+    "new BeamCurrent$cmbCurrentScaleEventListener"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "specialinvoke <BeamCurrent$cmbCurrentScaleEventListener: void <init>(BeamCurrent)>"
+    "load.r r0"->"specialinvoke <BeamCurrent$cmbCurrentScaleEventListener: void <init>(BeamCurrent)>";
+    "virtualinvoke <javax.swing.JComboBox: void addActionListener(java.awt.event.ActionListener)>"
+    "specialinvoke <BeamCurrent$cmbCurrentScaleEventListener: void <init>(BeamCurrent)>"->"virtualinvoke <javax.swing.JComboBox: void addActionListener(java.awt.event.ActionListener)>";
+    "virtualinvoke <javax.swing.JComboBox: void addActionListener(java.awt.event.ActionListener)>"->"push 6";
+    "push 6"->"newarray";
+    "newarray"->"store.r $r29";
+    "store.r $r29"->"load.r $r29";
+    "load.r $r29"->"push 0";
+    "push \"10000 min\""
+    "push 0"->"push \"10000 min\"";
+    "push \"10000 min\""->"arraywrite.r";
+    "arraywrite.r"->"load.r $r29";
+    "load.r $r29"->"push 1";
+    "push \"5000 min\""
+    "push 1"->"push \"5000 min\"";
+    "push \"5000 min\""->"arraywrite.r";
+    "arraywrite.r"->"load.r $r29";
+    "load.r $r29"->"push 2";
+    "push \"2500 min\""
+    "push 2"->"push \"2500 min\"";
+    "push \"2500 min\""->"arraywrite.r";
+    "arraywrite.r"->"load.r $r29";
+    "load.r $r29"->"push 3";
+    "push \"1000 min\""
+    "push 3"->"push \"1000 min\"";
+    "push \"1000 min\""->"arraywrite.r";
+    "arraywrite.r"->"load.r $r29";
+    "load.r $r29"->"push 4";
+    "push \"500 min\""
+    "push 4"->"push \"500 min\"";
+    "push \"500 min\""->"arraywrite.r";
+    "arraywrite.r"->"load.r $r29";
+    "load.r $r29"->"push 5";
+    "push \"none\""
+    "push 5"->"push \"none\"";
+    "push \"none\""->"arraywrite.r";
+    "arraywrite.r"->"load.r r0";
+    "load.r r0"->"new javax.swing.JComboBox";
+    "new javax.swing.JComboBox"->"dup1.r";
+    "dup1.r"->"load.r $r29";
+    "load.r $r29"->"specialinvoke <javax.swing.JComboBox: void <init>(java.lang.Object[])>";
+    "fieldput <BeamCurrent: javax.swing.JComboBox cmbLifeScale>"
+    "specialinvoke <javax.swing.JComboBox: void <init>(java.lang.Object[])>"->"fieldput <BeamCurrent: javax.swing.JComboBox cmbLifeScale>";
+    "fieldput <BeamCurrent: javax.swing.JComboBox cmbLifeScale>"->"load.r r0";
+    "fieldget <BeamCurrent: javax.swing.JComboBox cmbLifeScale>"
+    "load.r r0"->"fieldget <BeamCurrent: javax.swing.JComboBox cmbLifeScale>";
+    "fieldget <BeamCurrent: javax.swing.JComboBox cmbLifeScale>"->"push 1";
+    "push 1"->"virtualinvoke <javax.swing.JComboBox: void setSelectedIndex(int)>";
+    "virtualinvoke <javax.swing.JComboBox: void setSelectedIndex(int)>"->"load.r r0";
+    "load.r r0"->"fieldget <BeamCurrent: javax.swing.JComboBox cmbLifeScale>";
+    "new BeamCurrent$cmbLifeScaleEventListener"
+    "fieldget <BeamCurrent: javax.swing.JComboBox cmbLifeScale>"->"new BeamCurrent$cmbLifeScaleEventListener";
+    "new BeamCurrent$cmbLifeScaleEventListener"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "specialinvoke <BeamCurrent$cmbLifeScaleEventListener: void <init>(BeamCurrent)>"
+    "load.r r0"->"specialinvoke <BeamCurrent$cmbLifeScaleEventListener: void <init>(BeamCurrent)>";
+    "specialinvoke <BeamCurrent$cmbLifeScaleEventListener: void <init>(BeamCurrent)>"->"virtualinvoke <javax.swing.JComboBox: void addActionListener(java.awt.event.ActionListener)>";
+    "new javax.swing.JLabel"
+    "virtualinvoke <javax.swing.JComboBox: void addActionListener(java.awt.event.ActionListener)>"->"new javax.swing.JLabel";
+    "new javax.swing.JLabel"->"store.r $r29";
+    "store.r $r29"->"load.r $r29";
+    "push \"PF-Ring   Beam Current and Lifetime\""
+    "load.r $r29"->"push \"PF-Ring   Beam Current and Lifetime\"";
+    "push \"PF-Ring   Beam Current and Lifetime\""->"push 0";
+    "specialinvoke <javax.swing.JLabel: void <init>(java.lang.String,int)>"
+    "push 0"->"specialinvoke <javax.swing.JLabel: void <init>(java.lang.String,int)>";
+    "specialinvoke <javax.swing.JLabel: void <init>(java.lang.String,int)>"->"load.r $r29";
+    "load.r $r29"->"load.r r18";
+    "virtualinvoke <javax.swing.JLabel: void setFont(java.awt.Font)>"
+    "load.r r18"->"virtualinvoke <javax.swing.JLabel: void setFont(java.awt.Font)>";
+    "virtualinvoke <javax.swing.JLabel: void setFont(java.awt.Font)>"->"load.r $r26";
+    "load.r $r26"->"load.r r0";
+    "load.r r0"->"fieldget <BeamCurrent: javax.swing.JComboBox cmbCurrentScale>";
+    "push \"West\""
+    "fieldget <BeamCurrent: javax.swing.JComboBox cmbCurrentScale>"->"push \"West\"";
+    "virtualinvoke <javax.swing.JPanel: void add(java.awt.Component,java.lang.Object)>"
+    "push \"West\""->"virtualinvoke <javax.swing.JPanel: void add(java.awt.Component,java.lang.Object)>";
+    "virtualinvoke <javax.swing.JPanel: void add(java.awt.Component,java.lang.Object)>"->"load.r $r26";
+    "load.r $r26"->"load.r r0";
+    "load.r r0"->"fieldget <BeamCurrent: javax.swing.JComboBox cmbLifeScale>";
+    "push \"East\""
+    "fieldget <BeamCurrent: javax.swing.JComboBox cmbLifeScale>"->"push \"East\"";
+    "push \"East\""->"virtualinvoke <javax.swing.JPanel: void add(java.awt.Component,java.lang.Object)>";
+    "virtualinvoke <javax.swing.JPanel: void add(java.awt.Component,java.lang.Object)>"->"load.r $r26";
+    "load.r $r26"->"load.r $r29";
+    "push \"Center\""
+    "load.r $r29"->"push \"Center\"";
+    "push \"Center\""->"virtualinvoke <javax.swing.JPanel: void add(java.awt.Component,java.lang.Object)>";
+    "virtualinvoke <javax.swing.JPanel: void add(java.awt.Component,java.lang.Object)>"->"new java.awt.Font";
+    "new java.awt.Font"->"store.r r18";
+    "store.r r18"->"load.r r18";
+    "push \"SansSerif\""
+    "load.r r18"->"push \"SansSerif\"";
+    "push \"SansSerif\""->"push 0";
+    "push 18"
+    "push 0"->"push 18";
+    "push 18"->"specialinvoke <java.awt.Font: void <init>(java.lang.String,int,int)>";
+    "specialinvoke <java.awt.Font: void <init>(java.lang.String,int,int)>"->"new javax.swing.JPanel";
+    "store.r $r44"
+    "new javax.swing.JPanel"->"store.r $r44";
+    "load.r $r44"
+    "store.r $r44"->"load.r $r44";
+    "load.r $r44"->"specialinvoke <javax.swing.JPanel: void <init>()>";
+    "specialinvoke <javax.swing.JPanel: void <init>()>"->"load.r $r44";
+    "load.r $r44"->"staticget <java.awt.Color: java.awt.Color lightGray>";
+    "staticget <java.awt.Color: java.awt.Color lightGray>"->"virtualinvoke <javax.swing.JPanel: void setBackground(java.awt.Color)>";
+    "virtualinvoke <javax.swing.JPanel: void setBackground(java.awt.Color)>"->"load.r $r44";
+    "new java.awt.GridLayout"
+    "load.r $r44"->"new java.awt.GridLayout";
+    "new java.awt.GridLayout"->"dup1.r";
+    "dup1.r"->"push 2";
+    "push 2"->"push 1";
+    "specialinvoke <java.awt.GridLayout: void <init>(int,int)>"
+    "push 1"->"specialinvoke <java.awt.GridLayout: void <init>(int,int)>";
+    "specialinvoke <java.awt.GridLayout: void <init>(int,int)>"->"virtualinvoke <javax.swing.JPanel: void setLayout(java.awt.LayoutManager)>";
+    "virtualinvoke <javax.swing.JPanel: void setLayout(java.awt.LayoutManager)>"->"new javax.swing.JLabel";
+    "new javax.swing.JLabel"->"store.r $r29";
+    "store.r $r29"->"load.r $r29";
+    "push \"Beam Current\""
+    "load.r $r29"->"push \"Beam Current\"";
+    "push \"Beam Current\""->"push 4";
+    "push 4"->"specialinvoke <javax.swing.JLabel: void <init>(java.lang.String,int)>";
+    "specialinvoke <javax.swing.JLabel: void <init>(java.lang.String,int)>"->"load.r $r29";
+    "load.r $r29"->"load.r r18";
+    "load.r r18"->"virtualinvoke <javax.swing.JLabel: void setFont(java.awt.Font)>";
+    "virtualinvoke <javax.swing.JLabel: void setFont(java.awt.Font)>"->"load.r $r44";
+    "load.r $r44"->"load.r $r29";
+    "virtualinvoke <javax.swing.JPanel: java.awt.Component add(java.awt.Component)>"
+    "load.r $r29"->"virtualinvoke <javax.swing.JPanel: java.awt.Component add(java.awt.Component)>";
+    "pop"
+    "virtualinvoke <javax.swing.JPanel: java.awt.Component add(java.awt.Component)>"->"pop";
+    "pop"->"new javax.swing.JLabel";
+    "new javax.swing.JLabel"->"store.r $r29";
+    "store.r $r29"->"load.r $r29";
+    "push \"Averaged Pressure\""
+    "load.r $r29"->"push \"Averaged Pressure\"";
+    "push \"Averaged Pressure\""->"push 4";
+    "push 4"->"specialinvoke <javax.swing.JLabel: void <init>(java.lang.String,int)>";
+    "specialinvoke <javax.swing.JLabel: void <init>(java.lang.String,int)>"->"load.r $r29";
+    "load.r $r29"->"load.r r18";
+    "load.r r18"->"virtualinvoke <javax.swing.JLabel: void setFont(java.awt.Font)>";
+    "virtualinvoke <javax.swing.JLabel: void setFont(java.awt.Font)>"->"load.r $r44";
+    "load.r $r44"->"load.r $r29";
+    "load.r $r29"->"virtualinvoke <javax.swing.JPanel: java.awt.Component add(java.awt.Component)>";
+    "virtualinvoke <javax.swing.JPanel: java.awt.Component add(java.awt.Component)>"->"pop";
+    "pop"->"new javax.swing.JPanel";
+    "new javax.swing.JPanel"->"store.r $r29";
+    "store.r $r29"->"load.r $r29";
+    "load.r $r29"->"specialinvoke <javax.swing.JPanel: void <init>()>";
+    "specialinvoke <javax.swing.JPanel: void <init>()>"->"load.r $r29";
+    "load.r $r29"->"staticget <java.awt.Color: java.awt.Color lightGray>";
+    "staticget <java.awt.Color: java.awt.Color lightGray>"->"virtualinvoke <javax.swing.JPanel: void setBackground(java.awt.Color)>";
+    "virtualinvoke <javax.swing.JPanel: void setBackground(java.awt.Color)>"->"load.r $r29";
+    "load.r $r29"->"new java.awt.GridLayout";
+    "new java.awt.GridLayout"->"dup1.r";
+    "dup1.r"->"push 2";
+    "push 2"->"push 1";
+    "push 1"->"specialinvoke <java.awt.GridLayout: void <init>(int,int)>";
+    "specialinvoke <java.awt.GridLayout: void <init>(int,int)>"->"virtualinvoke <javax.swing.JPanel: void setLayout(java.awt.LayoutManager)>";
+    "virtualinvoke <javax.swing.JPanel: void setLayout(java.awt.LayoutManager)>"->"load.r r0";
+    "fieldget <BeamCurrent: javax.swing.JLabel lblCurrent>"
+    "load.r r0"->"fieldget <BeamCurrent: javax.swing.JLabel lblCurrent>";
+    "fieldget <BeamCurrent: javax.swing.JLabel lblCurrent>"->"load.r r18";
+    "load.r r18"->"virtualinvoke <javax.swing.JLabel: void setFont(java.awt.Font)>";
+    "virtualinvoke <javax.swing.JLabel: void setFont(java.awt.Font)>"->"load.r $r29";
+    "load.r $r29"->"load.r r0";
+    "load.r r0"->"fieldget <BeamCurrent: javax.swing.JLabel lblCurrent>";
+    "fieldget <BeamCurrent: javax.swing.JLabel lblCurrent>"->"virtualinvoke <javax.swing.JPanel: java.awt.Component add(java.awt.Component)>";
+    "virtualinvoke <javax.swing.JPanel: java.awt.Component add(java.awt.Component)>"->"pop";
+    "pop"->"load.r r0";
+    "fieldget <BeamCurrent: javax.swing.JLabel lblPav>"
+    "load.r r0"->"fieldget <BeamCurrent: javax.swing.JLabel lblPav>";
+    "fieldget <BeamCurrent: javax.swing.JLabel lblPav>"->"load.r r18";
+    "load.r r18"->"virtualinvoke <javax.swing.JLabel: void setFont(java.awt.Font)>";
+    "virtualinvoke <javax.swing.JLabel: void setFont(java.awt.Font)>"->"load.r $r29";
+    "load.r $r29"->"load.r r0";
+    "load.r r0"->"fieldget <BeamCurrent: javax.swing.JLabel lblPav>";
+    "fieldget <BeamCurrent: javax.swing.JLabel lblPav>"->"virtualinvoke <javax.swing.JPanel: java.awt.Component add(java.awt.Component)>";
+    "virtualinvoke <javax.swing.JPanel: java.awt.Component add(java.awt.Component)>"->"pop";
+    "pop"->"new javax.swing.JPanel";
+    "store.r $r60"
+    "new javax.swing.JPanel"->"store.r $r60";
+    "load.r $r60"
+    "store.r $r60"->"load.r $r60";
+    "load.r $r60"->"specialinvoke <javax.swing.JPanel: void <init>()>";
+    "specialinvoke <javax.swing.JPanel: void <init>()>"->"load.r $r60";
+    "load.r $r60"->"staticget <java.awt.Color: java.awt.Color lightGray>";
+    "staticget <java.awt.Color: java.awt.Color lightGray>"->"virtualinvoke <javax.swing.JPanel: void setBackground(java.awt.Color)>";
+    "virtualinvoke <javax.swing.JPanel: void setBackground(java.awt.Color)>"->"load.r $r60";
+    "load.r $r60"->"new java.awt.GridLayout";
+    "new java.awt.GridLayout"->"dup1.r";
+    "dup1.r"->"push 2";
+    "push 2"->"push 1";
+    "push 1"->"specialinvoke <java.awt.GridLayout: void <init>(int,int)>";
+    "specialinvoke <java.awt.GridLayout: void <init>(int,int)>"->"virtualinvoke <javax.swing.JPanel: void setLayout(java.awt.LayoutManager)>";
+    "virtualinvoke <javax.swing.JPanel: void setLayout(java.awt.LayoutManager)>"->"new javax.swing.JLabel";
+    "store.r $r63"
+    "new javax.swing.JLabel"->"store.r $r63";
+    "load.r $r63"
+    "store.r $r63"->"load.r $r63";
+    "push \"mA\""
+    "load.r $r63"->"push \"mA\"";
+    "push \"mA\""->"push 2";
+    "push 2"->"specialinvoke <javax.swing.JLabel: void <init>(java.lang.String,int)>";
+    "specialinvoke <javax.swing.JLabel: void <init>(java.lang.String,int)>"->"load.r $r63";
+    "load.r $r63"->"load.r r18";
+    "load.r r18"->"virtualinvoke <javax.swing.JLabel: void setFont(java.awt.Font)>";
+    "virtualinvoke <javax.swing.JLabel: void setFont(java.awt.Font)>"->"load.r $r60";
+    "load.r $r60"->"load.r $r63";
+    "load.r $r63"->"virtualinvoke <javax.swing.JPanel: java.awt.Component add(java.awt.Component)>";
+    "virtualinvoke <javax.swing.JPanel: java.awt.Component add(java.awt.Component)>"->"pop";
+    "pop"->"new javax.swing.JLabel";
+    "new javax.swing.JLabel"->"store.r $r63";
+    "store.r $r63"->"load.r $r63";
+    "push \"Pa\""
+    "load.r $r63"->"push \"Pa\"";
+    "push \"Pa\""->"push 2";
+    "push 2"->"specialinvoke <javax.swing.JLabel: void <init>(java.lang.String,int)>";
+    "specialinvoke <javax.swing.JLabel: void <init>(java.lang.String,int)>"->"load.r $r63";
+    "load.r $r63"->"load.r r18";
+    "load.r r18"->"virtualinvoke <javax.swing.JLabel: void setFont(java.awt.Font)>";
+    "virtualinvoke <javax.swing.JLabel: void setFont(java.awt.Font)>"->"load.r $r60";
+    "load.r $r60"->"load.r $r63";
+    "load.r $r63"->"virtualinvoke <javax.swing.JPanel: java.awt.Component add(java.awt.Component)>";
+    "virtualinvoke <javax.swing.JPanel: java.awt.Component add(java.awt.Component)>"->"pop";
+    "pop"->"new javax.swing.JPanel";
+    "new javax.swing.JPanel"->"store.r $r63";
+    "store.r $r63"->"load.r $r63";
+    "load.r $r63"->"specialinvoke <javax.swing.JPanel: void <init>()>";
+    "specialinvoke <javax.swing.JPanel: void <init>()>"->"load.r $r63";
+    "load.r $r63"->"staticget <java.awt.Color: java.awt.Color lightGray>";
+    "staticget <java.awt.Color: java.awt.Color lightGray>"->"virtualinvoke <javax.swing.JPanel: void setBackground(java.awt.Color)>";
+    "virtualinvoke <javax.swing.JPanel: void setBackground(java.awt.Color)>"->"load.r $r63";
+    "load.r $r63"->"new java.awt.BorderLayout";
+    "new java.awt.BorderLayout"->"dup1.r";
+    "dup1.r"->"push 5";
+    "push 5"->"push 0";
+    "specialinvoke <java.awt.BorderLayout: void <init>(int,int)>"
+    "push 0"->"specialinvoke <java.awt.BorderLayout: void <init>(int,int)>";
+    "specialinvoke <java.awt.BorderLayout: void <init>(int,int)>"->"virtualinvoke <javax.swing.JPanel: void setLayout(java.awt.LayoutManager)>";
+    "virtualinvoke <javax.swing.JPanel: void setLayout(java.awt.LayoutManager)>"->"load.r $r63";
+    "load.r $r63"->"load.r $r29";
+    "load.r $r29"->"push \"Center\"";
+    "push \"Center\""->"virtualinvoke <javax.swing.JPanel: void add(java.awt.Component,java.lang.Object)>";
+    "virtualinvoke <javax.swing.JPanel: void add(java.awt.Component,java.lang.Object)>"->"load.r $r63";
+    "load.r $r63"->"load.r $r60";
+    "load.r $r60"->"push \"East\"";
+    "push \"East\""->"virtualinvoke <javax.swing.JPanel: void add(java.awt.Component,java.lang.Object)>";
+    "virtualinvoke <javax.swing.JPanel: void add(java.awt.Component,java.lang.Object)>"->"new javax.swing.JPanel";
+    "new javax.swing.JPanel"->"store.r $r29";
+    "store.r $r29"->"load.r $r29";
+    "load.r $r29"->"specialinvoke <javax.swing.JPanel: void <init>()>";
+    "specialinvoke <javax.swing.JPanel: void <init>()>"->"load.r $r29";
+    "load.r $r29"->"staticget <java.awt.Color: java.awt.Color lightGray>";
+    "staticget <java.awt.Color: java.awt.Color lightGray>"->"virtualinvoke <javax.swing.JPanel: void setBackground(java.awt.Color)>";
+    "virtualinvoke <javax.swing.JPanel: void setBackground(java.awt.Color)>"->"load.r $r29";
+    "load.r $r29"->"new java.awt.BorderLayout";
+    "new java.awt.BorderLayout"->"dup1.r";
+    "dup1.r"->"push 20";
+    "push 20"->"push 0";
+    "push 0"->"specialinvoke <java.awt.BorderLayout: void <init>(int,int)>";
+    "specialinvoke <java.awt.BorderLayout: void <init>(int,int)>"->"virtualinvoke <javax.swing.JPanel: void setLayout(java.awt.LayoutManager)>";
+    "virtualinvoke <javax.swing.JPanel: void setLayout(java.awt.LayoutManager)>"->"load.r $r29";
+    "load.r $r29"->"load.r $r44";
+    "load.r $r44"->"push \"Center\"";
+    "push \"Center\""->"virtualinvoke <javax.swing.JPanel: void add(java.awt.Component,java.lang.Object)>";
+    "virtualinvoke <javax.swing.JPanel: void add(java.awt.Component,java.lang.Object)>"->"load.r $r29";
+    "load.r $r29"->"load.r $r63";
+    "load.r $r63"->"push \"East\"";
+    "push \"East\""->"virtualinvoke <javax.swing.JPanel: void add(java.awt.Component,java.lang.Object)>";
+    "virtualinvoke <javax.swing.JPanel: void add(java.awt.Component,java.lang.Object)>"->"new javax.swing.JPanel";
+    "new javax.swing.JPanel"->"store.r $r44";
+    "store.r $r44"->"load.r $r44";
+    "load.r $r44"->"specialinvoke <javax.swing.JPanel: void <init>()>";
+    "specialinvoke <javax.swing.JPanel: void <init>()>"->"load.r $r44";
+    "load.r $r44"->"staticget <java.awt.Color: java.awt.Color lightGray>";
+    "staticget <java.awt.Color: java.awt.Color lightGray>"->"virtualinvoke <javax.swing.JPanel: void setBackground(java.awt.Color)>";
+    "virtualinvoke <javax.swing.JPanel: void setBackground(java.awt.Color)>"->"load.r $r44";
+    "load.r $r44"->"new java.awt.GridLayout";
+    "new java.awt.GridLayout"->"dup1.r";
+    "dup1.r"->"push 2";
+    "push 2"->"push 1";
+    "push 1"->"specialinvoke <java.awt.GridLayout: void <init>(int,int)>";
+    "specialinvoke <java.awt.GridLayout: void <init>(int,int)>"->"virtualinvoke <javax.swing.JPanel: void setLayout(java.awt.LayoutManager)>";
+    "virtualinvoke <javax.swing.JPanel: void setLayout(java.awt.LayoutManager)>"->"load.r r0";
+    "fieldget <BeamCurrent: javax.swing.JLabel lblLifeCap>"
+    "load.r r0"->"fieldget <BeamCurrent: javax.swing.JLabel lblLifeCap>";
+    "fieldget <BeamCurrent: javax.swing.JLabel lblLifeCap>"->"load.r r18";
+    "load.r r18"->"virtualinvoke <javax.swing.JLabel: void setFont(java.awt.Font)>";
+    "virtualinvoke <javax.swing.JLabel: void setFont(java.awt.Font)>"->"load.r $r44";
+    "load.r $r44"->"load.r r0";
+    "load.r r0"->"fieldget <BeamCurrent: javax.swing.JLabel lblLifeCap>";
+    "fieldget <BeamCurrent: javax.swing.JLabel lblLifeCap>"->"virtualinvoke <javax.swing.JPanel: java.awt.Component add(java.awt.Component)>";
+    "virtualinvoke <javax.swing.JPanel: java.awt.Component add(java.awt.Component)>"->"pop";
+    "pop"->"new javax.swing.JLabel";
+    "new javax.swing.JLabel"->"store.r $r60";
+    "store.r $r60"->"load.r $r60";
+    "push \"I*tau\""
+    "load.r $r60"->"push \"I*tau\"";
+    "push \"I*tau\""->"push 4";
+    "push 4"->"specialinvoke <javax.swing.JLabel: void <init>(java.lang.String,int)>";
+    "specialinvoke <javax.swing.JLabel: void <init>(java.lang.String,int)>"->"load.r $r60";
+    "load.r $r60"->"load.r r18";
+    "load.r r18"->"virtualinvoke <javax.swing.JLabel: void setFont(java.awt.Font)>";
+    "virtualinvoke <javax.swing.JLabel: void setFont(java.awt.Font)>"->"load.r $r44";
+    "load.r $r44"->"load.r $r60";
+    "load.r $r60"->"virtualinvoke <javax.swing.JPanel: java.awt.Component add(java.awt.Component)>";
+    "virtualinvoke <javax.swing.JPanel: java.awt.Component add(java.awt.Component)>"->"pop";
+    "pop"->"new javax.swing.JPanel";
+    "new javax.swing.JPanel"->"store.r $r60";
+    "store.r $r60"->"load.r $r60";
+    "load.r $r60"->"specialinvoke <javax.swing.JPanel: void <init>()>";
+    "specialinvoke <javax.swing.JPanel: void <init>()>"->"load.r $r60";
+    "load.r $r60"->"staticget <java.awt.Color: java.awt.Color lightGray>";
+    "staticget <java.awt.Color: java.awt.Color lightGray>"->"virtualinvoke <javax.swing.JPanel: void setBackground(java.awt.Color)>";
+    "virtualinvoke <javax.swing.JPanel: void setBackground(java.awt.Color)>"->"load.r $r60";
+    "load.r $r60"->"new java.awt.GridLayout";
+    "new java.awt.GridLayout"->"dup1.r";
+    "dup1.r"->"push 2";
+    "push 2"->"push 1";
+    "push 1"->"specialinvoke <java.awt.GridLayout: void <init>(int,int)>";
+    "specialinvoke <java.awt.GridLayout: void <init>(int,int)>"->"virtualinvoke <javax.swing.JPanel: void setLayout(java.awt.LayoutManager)>";
+    "virtualinvoke <javax.swing.JPanel: void setLayout(java.awt.LayoutManager)>"->"load.r r0";
+    "fieldget <BeamCurrent: javax.swing.JLabel lblLife>"
+    "load.r r0"->"fieldget <BeamCurrent: javax.swing.JLabel lblLife>";
+    "fieldget <BeamCurrent: javax.swing.JLabel lblLife>"->"load.r r18";
+    "load.r r18"->"virtualinvoke <javax.swing.JLabel: void setFont(java.awt.Font)>";
+    "virtualinvoke <javax.swing.JLabel: void setFont(java.awt.Font)>"->"load.r $r60";
+    "load.r $r60"->"load.r r0";
+    "load.r r0"->"fieldget <BeamCurrent: javax.swing.JLabel lblLife>";
+    "fieldget <BeamCurrent: javax.swing.JLabel lblLife>"->"virtualinvoke <javax.swing.JPanel: java.awt.Component add(java.awt.Component)>";
+    "virtualinvoke <javax.swing.JPanel: java.awt.Component add(java.awt.Component)>"->"pop";
+    "pop"->"load.r r0";
+    "fieldget <BeamCurrent: javax.swing.JLabel lblItau>"
+    "load.r r0"->"fieldget <BeamCurrent: javax.swing.JLabel lblItau>";
+    "fieldget <BeamCurrent: javax.swing.JLabel lblItau>"->"load.r r18";
+    "load.r r18"->"virtualinvoke <javax.swing.JLabel: void setFont(java.awt.Font)>";
+    "virtualinvoke <javax.swing.JLabel: void setFont(java.awt.Font)>"->"load.r $r60";
+    "load.r $r60"->"load.r r0";
+    "load.r r0"->"fieldget <BeamCurrent: javax.swing.JLabel lblItau>";
+    "fieldget <BeamCurrent: javax.swing.JLabel lblItau>"->"virtualinvoke <javax.swing.JPanel: java.awt.Component add(java.awt.Component)>";
+    "virtualinvoke <javax.swing.JPanel: java.awt.Component add(java.awt.Component)>"->"pop";
+    "pop"->"new javax.swing.JPanel";
+    "new javax.swing.JPanel"->"store.r $r63";
+    "store.r $r63"->"load.r $r63";
+    "load.r $r63"->"specialinvoke <javax.swing.JPanel: void <init>()>";
+    "specialinvoke <javax.swing.JPanel: void <init>()>"->"load.r $r63";
+    "load.r $r63"->"staticget <java.awt.Color: java.awt.Color lightGray>";
+    "staticget <java.awt.Color: java.awt.Color lightGray>"->"virtualinvoke <javax.swing.JPanel: void setBackground(java.awt.Color)>";
+    "virtualinvoke <javax.swing.JPanel: void setBackground(java.awt.Color)>"->"load.r $r63";
+    "load.r $r63"->"new java.awt.GridLayout";
+    "new java.awt.GridLayout"->"dup1.r";
+    "dup1.r"->"push 2";
+    "push 2"->"push 1";
+    "push 1"->"specialinvoke <java.awt.GridLayout: void <init>(int,int)>";
+    "specialinvoke <java.awt.GridLayout: void <init>(int,int)>"->"virtualinvoke <javax.swing.JPanel: void setLayout(java.awt.LayoutManager)>";
+    "virtualinvoke <javax.swing.JPanel: void setLayout(java.awt.LayoutManager)>"->"load.r r0";
+    "fieldget <BeamCurrent: javax.swing.JLabel lblLifeUni>"
+    "load.r r0"->"fieldget <BeamCurrent: javax.swing.JLabel lblLifeUni>";
+    "fieldget <BeamCurrent: javax.swing.JLabel lblLifeUni>"->"load.r r18";
+    "load.r r18"->"virtualinvoke <javax.swing.JLabel: void setFont(java.awt.Font)>";
+    "virtualinvoke <javax.swing.JLabel: void setFont(java.awt.Font)>"->"load.r $r63";
+    "load.r $r63"->"load.r r0";
+    "load.r r0"->"fieldget <BeamCurrent: javax.swing.JLabel lblLifeUni>";
+    "fieldget <BeamCurrent: javax.swing.JLabel lblLifeUni>"->"virtualinvoke <javax.swing.JPanel: java.awt.Component add(java.awt.Component)>";
+    "virtualinvoke <javax.swing.JPanel: java.awt.Component add(java.awt.Component)>"->"pop";
+    "pop"->"new javax.swing.JLabel";
+    "store.r $r96"
+    "new javax.swing.JLabel"->"store.r $r96";
+    "load.r $r96"
+    "store.r $r96"->"load.r $r96";
+    "push \"A*min\""
+    "load.r $r96"->"push \"A*min\"";
+    "push \"A*min\""->"push 2";
+    "push 2"->"specialinvoke <javax.swing.JLabel: void <init>(java.lang.String,int)>";
+    "specialinvoke <javax.swing.JLabel: void <init>(java.lang.String,int)>"->"load.r $r96";
+    "load.r $r96"->"load.r r18";
+    "load.r r18"->"virtualinvoke <javax.swing.JLabel: void setFont(java.awt.Font)>";
+    "virtualinvoke <javax.swing.JLabel: void setFont(java.awt.Font)>"->"load.r $r63";
+    "load.r $r63"->"load.r $r96";
+    "load.r $r96"->"virtualinvoke <javax.swing.JPanel: java.awt.Component add(java.awt.Component)>";
+    "virtualinvoke <javax.swing.JPanel: java.awt.Component add(java.awt.Component)>"->"pop";
+    "pop"->"new javax.swing.JPanel";
+    "new javax.swing.JPanel"->"store.r r18";
+    "store.r r18"->"load.r r18";
+    "load.r r18"->"specialinvoke <javax.swing.JPanel: void <init>()>";
+    "specialinvoke <javax.swing.JPanel: void <init>()>"->"load.r r18";
+    "load.r r18"->"staticget <java.awt.Color: java.awt.Color lightGray>";
+    "staticget <java.awt.Color: java.awt.Color lightGray>"->"virtualinvoke <javax.swing.JPanel: void setBackground(java.awt.Color)>";
+    "virtualinvoke <javax.swing.JPanel: void setBackground(java.awt.Color)>"->"load.r r18";
+    "load.r r18"->"new java.awt.BorderLayout";
+    "new java.awt.BorderLayout"->"dup1.r";
+    "dup1.r"->"push 5";
+    "push 5"->"push 0";
+    "push 0"->"specialinvoke <java.awt.BorderLayout: void <init>(int,int)>";
+    "specialinvoke <java.awt.BorderLayout: void <init>(int,int)>"->"virtualinvoke <javax.swing.JPanel: void setLayout(java.awt.LayoutManager)>";
+    "virtualinvoke <javax.swing.JPanel: void setLayout(java.awt.LayoutManager)>"->"load.r r18";
+    "load.r r18"->"load.r $r60";
+    "load.r $r60"->"push \"Center\"";
+    "push \"Center\""->"virtualinvoke <javax.swing.JPanel: void add(java.awt.Component,java.lang.Object)>";
+    "virtualinvoke <javax.swing.JPanel: void add(java.awt.Component,java.lang.Object)>"->"load.r r18";
+    "load.r r18"->"load.r $r63";
+    "load.r $r63"->"push \"East\"";
+    "push \"East\""->"virtualinvoke <javax.swing.JPanel: void add(java.awt.Component,java.lang.Object)>";
+    "virtualinvoke <javax.swing.JPanel: void add(java.awt.Component,java.lang.Object)>"->"new javax.swing.JPanel";
+    "new javax.swing.JPanel"->"store.r $r60";
+    "store.r $r60"->"load.r $r60";
+    "load.r $r60"->"specialinvoke <javax.swing.JPanel: void <init>()>";
+    "specialinvoke <javax.swing.JPanel: void <init>()>"->"load.r $r60";
+    "load.r $r60"->"staticget <java.awt.Color: java.awt.Color lightGray>";
+    "staticget <java.awt.Color: java.awt.Color lightGray>"->"virtualinvoke <javax.swing.JPanel: void setBackground(java.awt.Color)>";
+    "virtualinvoke <javax.swing.JPanel: void setBackground(java.awt.Color)>"->"load.r $r60";
+    "load.r $r60"->"new java.awt.BorderLayout";
+    "new java.awt.BorderLayout"->"dup1.r";
+    "dup1.r"->"push 20";
+    "push 20"->"push 0";
+    "push 0"->"specialinvoke <java.awt.BorderLayout: void <init>(int,int)>";
+    "specialinvoke <java.awt.BorderLayout: void <init>(int,int)>"->"virtualinvoke <javax.swing.JPanel: void setLayout(java.awt.LayoutManager)>";
+    "virtualinvoke <javax.swing.JPanel: void setLayout(java.awt.LayoutManager)>"->"load.r $r60";
+    "load.r $r60"->"load.r $r44";
+    "load.r $r44"->"push \"Center\"";
+    "push \"Center\""->"virtualinvoke <javax.swing.JPanel: void add(java.awt.Component,java.lang.Object)>";
+    "virtualinvoke <javax.swing.JPanel: void add(java.awt.Component,java.lang.Object)>"->"load.r $r60";
+    "load.r $r60"->"load.r r18";
+    "load.r r18"->"push \"East\"";
+    "push \"East\""->"virtualinvoke <javax.swing.JPanel: void add(java.awt.Component,java.lang.Object)>";
+    "virtualinvoke <javax.swing.JPanel: void add(java.awt.Component,java.lang.Object)>"->"new javax.swing.JPanel";
+    "new javax.swing.JPanel"->"store.r r18";
+    "store.r r18"->"load.r r18";
+    "load.r r18"->"specialinvoke <javax.swing.JPanel: void <init>()>";
+    "specialinvoke <javax.swing.JPanel: void <init>()>"->"load.r r18";
+    "load.r r18"->"staticget <java.awt.Color: java.awt.Color lightGray>";
+    "staticget <java.awt.Color: java.awt.Color lightGray>"->"virtualinvoke <javax.swing.JPanel: void setBackground(java.awt.Color)>";
+    "virtualinvoke <javax.swing.JPanel: void setBackground(java.awt.Color)>"->"load.r r18";
+    "load.r r18"->"new java.awt.GridLayout";
+    "new java.awt.GridLayout"->"dup1.r";
+    "dup1.r"->"push 1";
+    "push 1"->"push 2";
+    "push 2"->"specialinvoke <java.awt.GridLayout: void <init>(int,int)>";
+    "specialinvoke <java.awt.GridLayout: void <init>(int,int)>"->"virtualinvoke <javax.swing.JPanel: void setLayout(java.awt.LayoutManager)>";
+    "virtualinvoke <javax.swing.JPanel: void setLayout(java.awt.LayoutManager)>"->"load.r r18";
+    "load.r r18"->"load.r $r29";
+    "load.r $r29"->"virtualinvoke <javax.swing.JPanel: java.awt.Component add(java.awt.Component)>";
+    "virtualinvoke <javax.swing.JPanel: java.awt.Component add(java.awt.Component)>"->"pop";
+    "pop"->"load.r r18";
+    "load.r r18"->"load.r $r60";
+    "load.r $r60"->"virtualinvoke <javax.swing.JPanel: java.awt.Component add(java.awt.Component)>";
+    "virtualinvoke <javax.swing.JPanel: java.awt.Component add(java.awt.Component)>"->"pop";
+    "pop"->"new java.awt.Font";
+    "new java.awt.Font"->"store.r $r29";
+    "store.r $r29"->"load.r $r29";
+    "load.r $r29"->"push \"SansSerif\"";
+    "push \"SansSerif\""->"push 1";
+    "push 14"
+    "push 1"->"push 14";
+    "push 14"->"specialinvoke <java.awt.Font: void <init>(java.lang.String,int,int)>";
+    "specialinvoke <java.awt.Font: void <init>(java.lang.String,int,int)>"->"new javax.swing.JPanel";
+    "new javax.swing.JPanel"->"store.r $r44";
+    "store.r $r44"->"load.r $r44";
+    "load.r $r44"->"specialinvoke <javax.swing.JPanel: void <init>()>";
+    "specialinvoke <javax.swing.JPanel: void <init>()>"->"load.r $r44";
+    "load.r $r44"->"staticget <java.awt.Color: java.awt.Color lightGray>";
+    "staticget <java.awt.Color: java.awt.Color lightGray>"->"virtualinvoke <javax.swing.JPanel: void setBackground(java.awt.Color)>";
+    "virtualinvoke <javax.swing.JPanel: void setBackground(java.awt.Color)>"->"load.r $r44";
+    "load.r $r44"->"new java.awt.GridLayout";
+    "new java.awt.GridLayout"->"dup1.r";
+    "dup1.r"->"push 6";
+    "push 6"->"push 8";
+    "push 8"->"specialinvoke <java.awt.GridLayout: void <init>(int,int)>";
+    "specialinvoke <java.awt.GridLayout: void <init>(int,int)>"->"virtualinvoke <javax.swing.JPanel: void setLayout(java.awt.LayoutManager)>";
+    "virtualinvoke <javax.swing.JPanel: void setLayout(java.awt.LayoutManager)>"->"push 0";
+    "store.i $r60"
+    "push 0"->"store.i $r60";
+    "load.i $r60"
+    "store.i $r60"->"load.i $r60";
+    "push 28"
+    "load.i $r60"->"push 28";
+    "ifcmpge.i new java.awt.Font"
+    "push 28"->"ifcmpge.i new java.awt.Font";
+    "ifcmpge.i new java.awt.Font"->"load.r r0";
+    "fieldget <BeamCurrent: javax.swing.JLabel[] lblBLCap>"
+    "load.r r0"->"fieldget <BeamCurrent: javax.swing.JLabel[] lblBLCap>";
+    "fieldget <BeamCurrent: javax.swing.JLabel[] lblBLCap>"->"load.i $r60";
+    "load.i $r60"->"new javax.swing.JLabel";
+    "new javax.swing.JLabel"->"dup1.r";
+    "push \"\""
+    "dup1.r"->"push \"\"";
+    "push \"\""->"push 2";
+    "push 2"->"specialinvoke <javax.swing.JLabel: void <init>(java.lang.String,int)>";
+    "specialinvoke <javax.swing.JLabel: void <init>(java.lang.String,int)>"->"arraywrite.r";
+    "arraywrite.r"->"load.r r0";
+    "fieldget <BeamCurrent: javax.swing.JLabel[] lblBLStat>"
+    "load.r r0"->"fieldget <BeamCurrent: javax.swing.JLabel[] lblBLStat>";
+    "fieldget <BeamCurrent: javax.swing.JLabel[] lblBLStat>"->"load.i $r60";
+    "load.i $r60"->"new javax.swing.JLabel";
+    "new javax.swing.JLabel"->"dup1.r";
+    "dup1.r"->"push \"\"";
+    "push \"\""->"push 2";
+    "push 2"->"specialinvoke <javax.swing.JLabel: void <init>(java.lang.String,int)>";
+    "specialinvoke <javax.swing.JLabel: void <init>(java.lang.String,int)>"->"arraywrite.r";
+    "arraywrite.r"->"load.i $r60";
+    "load.i $r60"->"push 20";
+    "ifcmple.i load.i $r60"
+    "push 20"->"ifcmple.i load.i $r60";
+    "ifcmple.i load.i $r60"->"load.i $r60";
+    "push 25"
+    "load.i $r60"->"push 25";
+    "ifcmpge.i load.i $r60"
+    "push 25"->"ifcmpge.i load.i $r60";
+    "goto inc.i $r60 1"
+    "ifcmpge.i load.i $r60"->"goto inc.i $r60 1";
+    "inc.i $r60 1"
+    "goto inc.i $r60 1"->"inc.i $r60 1";
+    "goto load.i $r60"
+    "inc.i $r60 1"->"goto load.i $r60";
+    "ifcmpge.i load.i $r60"->"load.i $r60";
+    "load.i $r60"->"push 25";
+    "ifcmpne.i load.r r0"
+    "push 25"->"ifcmpne.i load.r r0";
+    "ifcmpne.i load.r r0"->"load.r $r44";
+    "load.r $r44"->"load.r r0";
+    "load.r r0"->"fieldget <BeamCurrent: javax.swing.JLabel[] lblBLCap>";
+    "fieldget <BeamCurrent: javax.swing.JLabel[] lblBLCap>"->"load.i $r60";
+    "arrayread.r"
+    "load.i $r60"->"arrayread.r";
+    "arrayread.r"->"virtualinvoke <javax.swing.JPanel: java.awt.Component add(java.awt.Component)>";
+    "virtualinvoke <javax.swing.JPanel: java.awt.Component add(java.awt.Component)>"->"pop";
+    "pop"->"load.r $r44";
+    "load.r $r44"->"load.r r0";
+    "load.r r0"->"fieldget <BeamCurrent: javax.swing.JLabel[] lblBLStat>";
+    "fieldget <BeamCurrent: javax.swing.JLabel[] lblBLStat>"->"load.i $r60";
+    "load.i $r60"->"arrayread.r";
+    "arrayread.r"->"virtualinvoke <javax.swing.JPanel: java.awt.Component add(java.awt.Component)>";
+    "virtualinvoke <javax.swing.JPanel: java.awt.Component add(java.awt.Component)>"->"pop";
+    "pop"->"goto inc.i $r60 1";
+    "ifcmpne.i load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <BeamCurrent: javax.swing.JLabel[] lblBLCap>";
+    "fieldget <BeamCurrent: javax.swing.JLabel[] lblBLCap>"->"load.i $r60";
+    "load.i $r60"->"arrayread.r";
+    "new java.lang.StringBuilder"
+    "arrayread.r"->"new java.lang.StringBuilder";
+    "new java.lang.StringBuilder"->"dup1.r";
+    "specialinvoke <java.lang.StringBuilder: void <init>()>"
+    "dup1.r"->"specialinvoke <java.lang.StringBuilder: void <init>()>";
+    "push \"   BL- \""
+    "specialinvoke <java.lang.StringBuilder: void <init>()>"->"push \"   BL- \"";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"
+    "push \"   BL- \""->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"load.i $r60";
+    "load.i $r60"->"push 1";
+    "add.i"
+    "push 1"->"add.i";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(int)>"
+    "add.i"->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(int)>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.String toString()>"
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(int)>"->"virtualinvoke <java.lang.StringBuilder: java.lang.String toString()>";
+    "virtualinvoke <javax.swing.JLabel: void setText(java.lang.String)>"
+    "virtualinvoke <java.lang.StringBuilder: java.lang.String toString()>"->"virtualinvoke <javax.swing.JLabel: void setText(java.lang.String)>";
+    "virtualinvoke <javax.swing.JLabel: void setText(java.lang.String)>"->"load.r r0";
+    "load.r r0"->"fieldget <BeamCurrent: javax.swing.JLabel[] lblBLCap>";
+    "fieldget <BeamCurrent: javax.swing.JLabel[] lblBLCap>"->"load.i $r60";
+    "load.i $r60"->"arrayread.r";
+    "arrayread.r"->"load.r $r29";
+    "load.r $r29"->"virtualinvoke <javax.swing.JLabel: void setFont(java.awt.Font)>";
+    "virtualinvoke <javax.swing.JLabel: void setFont(java.awt.Font)>"->"load.r r0";
+    "load.r r0"->"fieldget <BeamCurrent: javax.swing.JLabel[] lblBLStat>";
+    "fieldget <BeamCurrent: javax.swing.JLabel[] lblBLStat>"->"load.i $r60";
+    "load.i $r60"->"arrayread.r";
+    "arrayread.r"->"load.r $r29";
+    "load.r $r29"->"virtualinvoke <javax.swing.JLabel: void setFont(java.awt.Font)>";
+    "virtualinvoke <javax.swing.JLabel: void setFont(java.awt.Font)>"->"load.r $r44";
+    "load.r $r44"->"load.r r0";
+    "load.r r0"->"fieldget <BeamCurrent: javax.swing.JLabel[] lblBLCap>";
+    "fieldget <BeamCurrent: javax.swing.JLabel[] lblBLCap>"->"load.i $r60";
+    "load.i $r60"->"arrayread.r";
+    "arrayread.r"->"virtualinvoke <javax.swing.JPanel: java.awt.Component add(java.awt.Component)>";
+    "virtualinvoke <javax.swing.JPanel: java.awt.Component add(java.awt.Component)>"->"pop";
+    "pop"->"load.r $r44";
+    "load.r $r44"->"load.r r0";
+    "load.r r0"->"fieldget <BeamCurrent: javax.swing.JLabel[] lblBLStat>";
+    "fieldget <BeamCurrent: javax.swing.JLabel[] lblBLStat>"->"load.i $r60";
+    "load.i $r60"->"arrayread.r";
+    "arrayread.r"->"virtualinvoke <javax.swing.JPanel: java.awt.Component add(java.awt.Component)>";
+    "virtualinvoke <javax.swing.JPanel: java.awt.Component add(java.awt.Component)>"->"pop";
+    "ifcmpge.i new java.awt.Font"->"new java.awt.Font";
+    "new java.awt.Font"->"store.r $r60";
+    "store.r $r60"->"load.r $r60";
+    "load.r $r60"->"push \"SansSerif\"";
+    "push \"SansSerif\""->"push 0";
+    "push 0"->"push 18";
+    "push 18"->"specialinvoke <java.awt.Font: void <init>(java.lang.String,int,int)>";
+    "specialinvoke <java.awt.Font: void <init>(java.lang.String,int,int)>"->"new javax.swing.JPanel";
+    "new javax.swing.JPanel"->"store.r $r29";
+    "store.r $r29"->"load.r $r29";
+    "load.r $r29"->"specialinvoke <javax.swing.JPanel: void <init>()>";
+    "specialinvoke <javax.swing.JPanel: void <init>()>"->"load.r $r29";
+    "load.r $r29"->"staticget <java.awt.Color: java.awt.Color lightGray>";
+    "staticget <java.awt.Color: java.awt.Color lightGray>"->"virtualinvoke <javax.swing.JPanel: void setBackground(java.awt.Color)>";
+    "virtualinvoke <javax.swing.JPanel: void setBackground(java.awt.Color)>"->"load.r $r29";
+    "load.r $r29"->"new java.awt.BorderLayout";
+    "new java.awt.BorderLayout"->"dup1.r";
+    "dup1.r"->"specialinvoke <java.awt.BorderLayout: void <init>()>";
+    "specialinvoke <java.awt.BorderLayout: void <init>()>"->"virtualinvoke <javax.swing.JPanel: void setLayout(java.awt.LayoutManager)>";
+    "virtualinvoke <javax.swing.JPanel: void setLayout(java.awt.LayoutManager)>"->"load.r $r29";
+    "load.r $r29"->"load.r r18";
+    "push \"North\""
+    "load.r r18"->"push \"North\"";
+    "push \"North\""->"virtualinvoke <javax.swing.JPanel: void add(java.awt.Component,java.lang.Object)>";
+    "virtualinvoke <javax.swing.JPanel: void add(java.awt.Component,java.lang.Object)>"->"load.r $r29";
+    "load.r $r29"->"load.r $r44";
+    "push \"South\""
+    "load.r $r44"->"push \"South\"";
+    "push \"South\""->"virtualinvoke <javax.swing.JPanel: void add(java.awt.Component,java.lang.Object)>";
+    "virtualinvoke <javax.swing.JPanel: void add(java.awt.Component,java.lang.Object)>"->"load.r r0";
+    "new BeamCurrent$MyJPanel"
+    "load.r r0"->"new BeamCurrent$MyJPanel";
+    "new BeamCurrent$MyJPanel"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "specialinvoke <BeamCurrent$MyJPanel: void <init>(BeamCurrent)>"
+    "load.r r0"->"specialinvoke <BeamCurrent$MyJPanel: void <init>(BeamCurrent)>";
+    "fieldput <BeamCurrent: BeamCurrent$MyJPanel pnlGraph>"
+    "specialinvoke <BeamCurrent$MyJPanel: void <init>(BeamCurrent)>"->"fieldput <BeamCurrent: BeamCurrent$MyJPanel pnlGraph>";
+    "fieldput <BeamCurrent: BeamCurrent$MyJPanel pnlGraph>"->"load.r r0";
+    "fieldget <BeamCurrent: BeamCurrent$MyJPanel pnlGraph>"
+    "load.r r0"->"fieldget <BeamCurrent: BeamCurrent$MyJPanel pnlGraph>";
+    "fieldget <BeamCurrent: BeamCurrent$MyJPanel pnlGraph>"->"staticget <java.awt.Color: java.awt.Color lightGray>";
+    "virtualinvoke <BeamCurrent$MyJPanel: void setBackground(java.awt.Color)>"
+    "staticget <java.awt.Color: java.awt.Color lightGray>"->"virtualinvoke <BeamCurrent$MyJPanel: void setBackground(java.awt.Color)>";
+    "virtualinvoke <BeamCurrent$MyJPanel: void setBackground(java.awt.Color)>"->"load.r r0";
+    "load.r r0"->"fieldget <BeamCurrent: BeamCurrent$MyJPanel pnlGraph>";
+    "fieldget <BeamCurrent: BeamCurrent$MyJPanel pnlGraph>"->"new java.awt.BorderLayout";
+    "new java.awt.BorderLayout"->"dup1.r";
+    "dup1.r"->"specialinvoke <java.awt.BorderLayout: void <init>()>";
+    "virtualinvoke <BeamCurrent$MyJPanel: void setLayout(java.awt.LayoutManager)>"
+    "specialinvoke <java.awt.BorderLayout: void <init>()>"->"virtualinvoke <BeamCurrent$MyJPanel: void setLayout(java.awt.LayoutManager)>";
+    "virtualinvoke <BeamCurrent$MyJPanel: void setLayout(java.awt.LayoutManager)>"->"load.r r0";
+    "fieldget <BeamCurrent: javax.swing.JLabel lblMode>"
+    "load.r r0"->"fieldget <BeamCurrent: javax.swing.JLabel lblMode>";
+    "fieldget <BeamCurrent: javax.swing.JLabel lblMode>"->"load.r $r60";
+    "load.r $r60"->"virtualinvoke <javax.swing.JLabel: void setFont(java.awt.Font)>";
+    "virtualinvoke <javax.swing.JLabel: void setFont(java.awt.Font)>"->"load.r r0";
+    "load.r r0"->"fieldget <BeamCurrent: BeamCurrent$MyJPanel pnlGraph>";
+    "fieldget <BeamCurrent: BeamCurrent$MyJPanel pnlGraph>"->"load.r r0";
+    "load.r r0"->"fieldget <BeamCurrent: javax.swing.JLabel lblMode>";
+    "fieldget <BeamCurrent: javax.swing.JLabel lblMode>"->"push \"North\"";
+    "virtualinvoke <BeamCurrent$MyJPanel: void add(java.awt.Component,java.lang.Object)>"
+    "push \"North\""->"virtualinvoke <BeamCurrent$MyJPanel: void add(java.awt.Component,java.lang.Object)>";
+    "virtualinvoke <BeamCurrent$MyJPanel: void add(java.awt.Component,java.lang.Object)>"->"load.r r0";
+    "load.r r0"->"fieldget <BeamCurrent: BeamCurrent$MyJPanel pnlGraph>";
+    "push 565"
+    "fieldget <BeamCurrent: BeamCurrent$MyJPanel pnlGraph>"->"push 565";
+    "push 465"
+    "push 565"->"push 465";
+    "virtualinvoke <BeamCurrent$MyJPanel: void setSize(int,int)>"
+    "push 465"->"virtualinvoke <BeamCurrent$MyJPanel: void setSize(int,int)>";
+    "virtualinvoke <BeamCurrent$MyJPanel: void setSize(int,int)>"->"new javax.swing.JLabel";
+    "new javax.swing.JLabel"->"store.r r18";
+    "store.r r18"->"load.r r18";
+    "push \"Network connection was broken...\""
+    "load.r r18"->"push \"Network connection was broken...\"";
+    "push \"Network connection was broken...\""->"push 0";
+    "push 0"->"specialinvoke <javax.swing.JLabel: void <init>(java.lang.String,int)>";
+    "specialinvoke <javax.swing.JLabel: void <init>(java.lang.String,int)>"->"load.r r18";
+    "load.r r18"->"new java.awt.Font";
+    "new java.awt.Font"->"dup1.r";
+    "dup1.r"->"push \"SansSerif\"";
+    "push \"SansSerif\""->"push 0";
+    "push 24"
+    "push 0"->"push 24";
+    "push 24"->"specialinvoke <java.awt.Font: void <init>(java.lang.String,int,int)>";
+    "specialinvoke <java.awt.Font: void <init>(java.lang.String,int,int)>"->"virtualinvoke <javax.swing.JLabel: void setFont(java.awt.Font)>";
+    "virtualinvoke <javax.swing.JLabel: void setFont(java.awt.Font)>"->"load.r r18";
+    "staticget <java.awt.Color: java.awt.Color yellow>"
+    "load.r r18"->"staticget <java.awt.Color: java.awt.Color yellow>";
+    "virtualinvoke <javax.swing.JLabel: void setForeground(java.awt.Color)>"
+    "staticget <java.awt.Color: java.awt.Color yellow>"->"virtualinvoke <javax.swing.JLabel: void setForeground(java.awt.Color)>";
+    "virtualinvoke <javax.swing.JLabel: void setForeground(java.awt.Color)>"->"new javax.swing.JPanel";
+    "new javax.swing.JPanel"->"store.r $r44";
+    "store.r $r44"->"load.r $r44";
+    "load.r $r44"->"specialinvoke <javax.swing.JPanel: void <init>()>";
+    "specialinvoke <javax.swing.JPanel: void <init>()>"->"load.r $r44";
+    "load.r $r44"->"new java.awt.BorderLayout";
+    "new java.awt.BorderLayout"->"dup1.r";
+    "dup1.r"->"specialinvoke <java.awt.BorderLayout: void <init>()>";
+    "specialinvoke <java.awt.BorderLayout: void <init>()>"->"virtualinvoke <javax.swing.JPanel: void setLayout(java.awt.LayoutManager)>";
+    "virtualinvoke <javax.swing.JPanel: void setLayout(java.awt.LayoutManager)>"->"load.r $r44";
+    "new java.awt.Color"
+    "load.r $r44"->"new java.awt.Color";
+    "new java.awt.Color"->"dup1.r";
+    "push 255"
+    "dup1.r"->"push 255";
+    "push 255"->"push 0";
+    "push 0"->"push 0";
+    "push 192"
+    "push 0"->"push 192";
+    "specialinvoke <java.awt.Color: void <init>(int,int,int,int)>"
+    "push 192"->"specialinvoke <java.awt.Color: void <init>(int,int,int,int)>";
+    "specialinvoke <java.awt.Color: void <init>(int,int,int,int)>"->"virtualinvoke <javax.swing.JPanel: void setBackground(java.awt.Color)>";
+    "virtualinvoke <javax.swing.JPanel: void setBackground(java.awt.Color)>"->"load.r $r44";
+    "load.r $r44"->"load.r r18";
+    "load.r r18"->"push \"Center\"";
+    "push \"Center\""->"virtualinvoke <javax.swing.JPanel: void add(java.awt.Component,java.lang.Object)>";
+    "virtualinvoke <javax.swing.JPanel: void add(java.awt.Component,java.lang.Object)>"->"load.r r0";
+    "virtualinvoke <BeamCurrent: java.awt.Component getGlassPane()>"
+    "load.r r0"->"virtualinvoke <BeamCurrent: java.awt.Component getGlassPane()>";
+    "checkcast"
+    "virtualinvoke <BeamCurrent: java.awt.Component getGlassPane()>"->"checkcast";
+    "checkcast"->"dup1.r";
+    "dup1.r"->"new java.awt.BorderLayout";
+    "new java.awt.BorderLayout"->"dup1.r";
+    "dup1.r"->"specialinvoke <java.awt.BorderLayout: void <init>()>";
+    "virtualinvoke <java.awt.Container: void setLayout(java.awt.LayoutManager)>"
+    "specialinvoke <java.awt.BorderLayout: void <init>()>"->"virtualinvoke <java.awt.Container: void setLayout(java.awt.LayoutManager)>";
+    "virtualinvoke <java.awt.Container: void setLayout(java.awt.LayoutManager)>"->"load.r $r44";
+    "load.r $r44"->"push \"Center\"";
+    "virtualinvoke <java.awt.Container: void add(java.awt.Component,java.lang.Object)>"
+    "push \"Center\""->"virtualinvoke <java.awt.Container: void add(java.awt.Component,java.lang.Object)>";
+    "virtualinvoke <java.awt.Container: void add(java.awt.Component,java.lang.Object)>"->"load.r r0";
+    "virtualinvoke <BeamCurrent: java.awt.Container getContentPane()>"
+    "load.r r0"->"virtualinvoke <BeamCurrent: java.awt.Container getContentPane()>";
+    "virtualinvoke <BeamCurrent: java.awt.Container getContentPane()>"->"store.r r18";
+    "store.r r18"->"load.r r18";
+    "load.r r18"->"staticget <java.awt.Color: java.awt.Color lightGray>";
+    "virtualinvoke <java.awt.Container: void setBackground(java.awt.Color)>"
+    "staticget <java.awt.Color: java.awt.Color lightGray>"->"virtualinvoke <java.awt.Container: void setBackground(java.awt.Color)>";
+    "virtualinvoke <java.awt.Container: void setBackground(java.awt.Color)>"->"load.r r18";
+    "load.r r18"->"new java.awt.BorderLayout";
+    "new java.awt.BorderLayout"->"dup1.r";
+    "dup1.r"->"specialinvoke <java.awt.BorderLayout: void <init>()>";
+    "specialinvoke <java.awt.BorderLayout: void <init>()>"->"virtualinvoke <java.awt.Container: void setLayout(java.awt.LayoutManager)>";
+    "virtualinvoke <java.awt.Container: void setLayout(java.awt.LayoutManager)>"->"load.r r18";
+    "load.r r18"->"load.r $r26";
+    "load.r $r26"->"push \"North\"";
+    "push \"North\""->"virtualinvoke <java.awt.Container: void add(java.awt.Component,java.lang.Object)>";
+    "virtualinvoke <java.awt.Container: void add(java.awt.Component,java.lang.Object)>"->"load.r r18";
+    "load.r r18"->"load.r r0";
+    "load.r r0"->"fieldget <BeamCurrent: BeamCurrent$MyJPanel pnlGraph>";
+    "fieldget <BeamCurrent: BeamCurrent$MyJPanel pnlGraph>"->"push \"Center\"";
+    "push \"Center\""->"virtualinvoke <java.awt.Container: void add(java.awt.Component,java.lang.Object)>";
+    "virtualinvoke <java.awt.Container: void add(java.awt.Component,java.lang.Object)>"->"load.r r18";
+    "load.r r18"->"load.r $r29";
+    "load.r $r29"->"push \"South\"";
+    "push \"South\""->"virtualinvoke <java.awt.Container: void add(java.awt.Component,java.lang.Object)>";
+    "virtualinvoke <java.awt.Container: void add(java.awt.Component,java.lang.Object)>"->"load.r r0";
+    "load.r r0"->"push 1";
+    "virtualinvoke <BeamCurrent: void setVisible(boolean)>"
+    "push 1"->"virtualinvoke <BeamCurrent: void setVisible(boolean)>";
+    "virtualinvoke <BeamCurrent: void setVisible(boolean)>"->"load.r r0";
+    "load.r r0"->"fieldget <BeamCurrent: BeamCurrent$MyJPanel pnlGraph>";
+    "fieldget <BeamCurrent: BeamCurrent$MyJPanel pnlGraph>"->"store.r $r26";
+    "store.r $r26"->"load.r $r26";
+    "entermonitor"
+    "load.r $r26"->"entermonitor";
+    "entermonitor"->"load.r r0";
+    "load.r r0"->"fieldget <BeamCurrent: BeamCurrent$MyJPanel pnlGraph>";
+    "virtualinvoke <BeamCurrent$MyJPanel: void DrawNewGraph()>"
+    "fieldget <BeamCurrent: BeamCurrent$MyJPanel pnlGraph>"->"virtualinvoke <BeamCurrent$MyJPanel: void DrawNewGraph()>";
+    "virtualinvoke <BeamCurrent$MyJPanel: void DrawNewGraph()>"->"load.r $r26";
+    "exitmonitor"
+    "load.r $r26"->"exitmonitor";
+    "goto load.r r0"
+    "exitmonitor"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "new java.util.Timer"
+    "load.r r0"->"new java.util.Timer";
+    "new java.util.Timer"->"dup1.r";
+    "dup1.r"->"push 1";
+    "specialinvoke <java.util.Timer: void <init>(boolean)>"
+    "push 1"->"specialinvoke <java.util.Timer: void <init>(boolean)>";
+    "fieldput <BeamCurrent: java.util.Timer timer>"
+    "specialinvoke <java.util.Timer: void <init>(boolean)>"->"fieldput <BeamCurrent: java.util.Timer timer>";
+    "fieldput <BeamCurrent: java.util.Timer timer>"->"load.r r0";
+    "fieldget <BeamCurrent: java.util.Timer timer>"
+    "load.r r0"->"fieldget <BeamCurrent: java.util.Timer timer>";
+    "new BeamCurrent$tskIncXaxis"
+    "fieldget <BeamCurrent: java.util.Timer timer>"->"new BeamCurrent$tskIncXaxis";
+    "new BeamCurrent$tskIncXaxis"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "specialinvoke <BeamCurrent$tskIncXaxis: void <init>(BeamCurrent)>"
+    "load.r r0"->"specialinvoke <BeamCurrent$tskIncXaxis: void <init>(BeamCurrent)>";
+    "push 180000L"
+    "specialinvoke <BeamCurrent$tskIncXaxis: void <init>(BeamCurrent)>"->"push 180000L";
+    "push 180000L"->"push 180000L";
+    "virtualinvoke <java.util.Timer: void scheduleAtFixedRate(java.util.TimerTask,long,long)>"
+    "push 180000L"->"virtualinvoke <java.util.Timer: void scheduleAtFixedRate(java.util.TimerTask,long,long)>";
+    "return"
+    "virtualinvoke <java.util.Timer: void scheduleAtFixedRate(java.util.TimerTask,long,long)>"->"return";
+    "store.r r0"
+    "load.r $r26"->"store.r r0";
+    "store.r r0"->"load.r $r26";
+    "load.r $r26"->"exitmonitor";
+    "exitmonitor"->"load.r r0";
+    "athrow"
+    "load.r r0"->"athrow";
+    "virtualinvoke <lib.DChTCP: void open_dch()>"->"store.r $r26";
+    "virtualinvoke <BeamCurrent: java.net.URL getDocumentBase()>"
+    "load.r r0"->"virtualinvoke <BeamCurrent: java.net.URL getDocumentBase()>";
+    "virtualinvoke <java.net.URL: java.lang.String getHost()>"
+    "virtualinvoke <BeamCurrent: java.net.URL getDocumentBase()>"->"virtualinvoke <java.net.URL: java.lang.String getHost()>";
+    "push 5500"
+    "virtualinvoke <java.net.URL: java.lang.String getHost()>"->"push 5500";
+    "push 5500"->"specialinvoke <lib.DChTCP: void <init>(java.lang.String,int)>";
+    "specialinvoke <lib.DChTCP: void <init>(java.lang.String,int)>"->"fieldput <BeamCurrent: lib.DChTCP dch>";
+    "fieldput <BeamCurrent: lib.DChTCP dch>"->"goto load.r r0";
+}

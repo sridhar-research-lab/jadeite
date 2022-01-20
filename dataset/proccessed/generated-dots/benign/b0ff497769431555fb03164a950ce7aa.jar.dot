@@ -1,0 +1,62 @@
+digraph "" {
+    "r0 := @this: Life"
+    "load.r r0"
+    "r0 := @this: Life"->"load.r r0";
+    "new java.awt.BorderLayout"
+    "load.r r0"->"new java.awt.BorderLayout";
+    "dup1.r"
+    "new java.awt.BorderLayout"->"dup1.r";
+    "specialinvoke <java.awt.BorderLayout: void <init>()>"
+    "dup1.r"->"specialinvoke <java.awt.BorderLayout: void <init>()>";
+    "virtualinvoke <java.awt.Container: void setLayout(java.awt.LayoutManager)>"
+    "specialinvoke <java.awt.BorderLayout: void <init>()>"->"virtualinvoke <java.awt.Container: void setLayout(java.awt.LayoutManager)>";
+    "virtualinvoke <java.awt.Container: void setLayout(java.awt.LayoutManager)>"->"load.r r0";
+    "new TGCanvas"
+    "load.r r0"->"new TGCanvas";
+    "new TGCanvas"->"dup1.r";
+    "push 500"
+    "dup1.r"->"push 500";
+    "push 500"->"push 500";
+    "specialinvoke <TGCanvas: void <init>(int,int)>"
+    "push 500"->"specialinvoke <TGCanvas: void <init>(int,int)>";
+    "fieldput <Life: TGCanvas canvas>"
+    "specialinvoke <TGCanvas: void <init>(int,int)>"->"fieldput <Life: TGCanvas canvas>";
+    "fieldput <Life: TGCanvas canvas>"->"load.r r0";
+    "fieldget <Life: TGCanvas canvas>"
+    "load.r r0"->"fieldget <Life: TGCanvas canvas>";
+    "staticget <java.awt.Color: java.awt.Color white>"
+    "fieldget <Life: TGCanvas canvas>"->"staticget <java.awt.Color: java.awt.Color white>";
+    "virtualinvoke <java.awt.Component: void setBackground(java.awt.Color)>"
+    "staticget <java.awt.Color: java.awt.Color white>"->"virtualinvoke <java.awt.Component: void setBackground(java.awt.Color)>";
+    "virtualinvoke <java.awt.Component: void setBackground(java.awt.Color)>"->"load.r r0";
+    "push \"Center\""
+    "load.r r0"->"push \"Center\"";
+    "push \"Center\""->"load.r r0";
+    "load.r r0"->"fieldget <Life: TGCanvas canvas>";
+    "virtualinvoke <java.awt.Container: java.awt.Component add(java.lang.String,java.awt.Component)>"
+    "fieldget <Life: TGCanvas canvas>"->"virtualinvoke <java.awt.Container: java.awt.Component add(java.lang.String,java.awt.Component)>";
+    "pop"
+    "virtualinvoke <java.awt.Container: java.awt.Component add(java.lang.String,java.awt.Component)>"->"pop";
+    "pop"->"load.r r0";
+    "load.r r0"->"fieldget <Life: TGCanvas canvas>";
+    "fieldget <Life: TGCanvas canvas>"->"load.r r0";
+    "virtualinvoke <TGCanvas: void addMouseHandler(TGMouseHandler)>"
+    "load.r r0"->"virtualinvoke <TGCanvas: void addMouseHandler(TGMouseHandler)>";
+    "virtualinvoke <TGCanvas: void addMouseHandler(TGMouseHandler)>"->"load.r r0";
+    "new Turtle"
+    "load.r r0"->"new Turtle";
+    "new Turtle"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "load.r r0"->"fieldget <Life: TGCanvas canvas>";
+    "specialinvoke <Turtle: void <init>(TGCanvas)>"
+    "fieldget <Life: TGCanvas canvas>"->"specialinvoke <Turtle: void <init>(TGCanvas)>";
+    "fieldput <Life: Turtle turtle>"
+    "specialinvoke <Turtle: void <init>(TGCanvas)>"->"fieldput <Life: Turtle turtle>";
+    "fieldput <Life: Turtle turtle>"->"load.r r0";
+    "fieldget <Life: Turtle turtle>"
+    "load.r r0"->"fieldget <Life: Turtle turtle>";
+    "virtualinvoke <Turtle: void hideturtle()>"
+    "fieldget <Life: Turtle turtle>"->"virtualinvoke <Turtle: void hideturtle()>";
+    "return"
+    "virtualinvoke <Turtle: void hideturtle()>"->"return";
+}

@@ -1,0 +1,50 @@
+digraph "" {
+    "r0 := @this: SpinTop"
+    "push 0"
+    "r0 := @this: SpinTop"->"push 0";
+    "store.i i0"
+    "push 0"->"store.i i0";
+    "goto load.i i0"
+    "store.i i0"->"goto load.i i0";
+    "load.i i0"
+    "goto load.i i0"->"load.i i0";
+    "push 18"
+    "load.i i0"->"push 18";
+    "ifcmplt.i load.r r0"
+    "push 18"->"ifcmplt.i load.r r0";
+    "return"
+    "ifcmplt.i load.r r0"->"return";
+    "load.r r0"
+    "ifcmplt.i load.r r0"->"load.r r0";
+    "fieldget <SpinTop: java.awt.Image[] img>"
+    "load.r r0"->"fieldget <SpinTop: java.awt.Image[] img>";
+    "fieldget <SpinTop: java.awt.Image[] img>"->"load.i i0";
+    "load.i i0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "virtualinvoke <java.applet.Applet: java.net.URL getCodeBase()>"
+    "load.r r0"->"virtualinvoke <java.applet.Applet: java.net.URL getCodeBase()>";
+    "new java.lang.StringBuffer"
+    "virtualinvoke <java.applet.Applet: java.net.URL getCodeBase()>"->"new java.lang.StringBuffer";
+    "dup1.r"
+    "new java.lang.StringBuffer"->"dup1.r";
+    "specialinvoke <java.lang.StringBuffer: void <init>()>"
+    "dup1.r"->"specialinvoke <java.lang.StringBuffer: void <init>()>";
+    "push \"tops\""
+    "specialinvoke <java.lang.StringBuffer: void <init>()>"->"push \"tops\"";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"
+    "push \"tops\""->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"load.i i0";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(int)>"
+    "load.i i0"->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(int)>";
+    "push \".gif\""
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(int)>"->"push \".gif\"";
+    "push \".gif\""->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>"
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>";
+    "virtualinvoke <java.applet.Applet: java.awt.Image getImage(java.net.URL,java.lang.String)>"
+    "virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>"->"virtualinvoke <java.applet.Applet: java.awt.Image getImage(java.net.URL,java.lang.String)>";
+    "arraywrite.r"
+    "virtualinvoke <java.applet.Applet: java.awt.Image getImage(java.net.URL,java.lang.String)>"->"arraywrite.r";
+    "inc.i i0 1"
+    "arraywrite.r"->"inc.i i0 1";
+}

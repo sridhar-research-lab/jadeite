@@ -1,0 +1,919 @@
+digraph "" {
+    "r0 := @this: SlidingPuzzle"
+    "load.r r0"
+    "r0 := @this: SlidingPuzzle"->"load.r r0";
+    "specialinvoke <java.applet.Applet: void init()>"
+    "load.r r0"->"specialinvoke <java.applet.Applet: void init()>";
+    "specialinvoke <java.applet.Applet: void init()>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "virtualinvoke <java.awt.Component: java.awt.Dimension size()>"
+    "load.r r0"->"virtualinvoke <java.awt.Component: java.awt.Dimension size()>";
+    "fieldget <java.awt.Dimension: int width>"
+    "virtualinvoke <java.awt.Component: java.awt.Dimension size()>"->"fieldget <java.awt.Dimension: int width>";
+    "fieldput <SlidingPuzzle: int width>"
+    "fieldget <java.awt.Dimension: int width>"->"fieldput <SlidingPuzzle: int width>";
+    "fieldput <SlidingPuzzle: int width>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"virtualinvoke <java.awt.Component: java.awt.Dimension size()>";
+    "fieldget <java.awt.Dimension: int height>"
+    "virtualinvoke <java.awt.Component: java.awt.Dimension size()>"->"fieldget <java.awt.Dimension: int height>";
+    "fieldput <SlidingPuzzle: int height>"
+    "fieldget <java.awt.Dimension: int height>"->"fieldput <SlidingPuzzle: int height>";
+    "fieldput <SlidingPuzzle: int height>"->"load.r r0";
+    "push \"regcode\""
+    "load.r r0"->"push \"regcode\"";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"
+    "push \"regcode\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "store.r r1"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"store.r r1";
+    "load.r r1"
+    "store.r r1"->"load.r r1";
+    "virtualinvoke <java.lang.String: java.lang.String trim()>"
+    "load.r r1"->"virtualinvoke <java.lang.String: java.lang.String trim()>";
+    "pop"
+    "virtualinvoke <java.lang.String: java.lang.String trim()>"->"pop";
+    "pop"->"load.r r1";
+    "virtualinvoke <java.lang.String: java.lang.String toUpperCase()>"
+    "load.r r1"->"virtualinvoke <java.lang.String: java.lang.String toUpperCase()>";
+    "virtualinvoke <java.lang.String: java.lang.String toUpperCase()>"->"pop";
+    "pop"->"load.r r1";
+    "load.r r1"->"load.r r1";
+    "virtualinvoke <java.lang.String: int length()>"
+    "load.r r1"->"virtualinvoke <java.lang.String: int length()>";
+    "push 1"
+    "virtualinvoke <java.lang.String: int length()>"->"push 1";
+    "sub.i"
+    "push 1"->"sub.i";
+    "virtualinvoke <java.lang.String: char charAt(int)>"
+    "sub.i"->"virtualinvoke <java.lang.String: char charAt(int)>";
+    "push 48"
+    "virtualinvoke <java.lang.String: char charAt(int)>"->"push 48";
+    "sub.c"
+    "push 48"->"sub.c";
+    "store.i i0"
+    "sub.c"->"store.i i0";
+    "load.i i0"
+    "store.i i0"->"load.i i0";
+    "push 4"
+    "load.i i0"->"push 4";
+    "add.i"
+    "push 4"->"add.i";
+    "add.i"->"load.r r1";
+    "load.r r1"->"virtualinvoke <java.lang.String: int length()>";
+    "ifcmpge.i load.r r0"
+    "virtualinvoke <java.lang.String: int length()>"->"ifcmpge.i load.r r0";
+    "new java.lang.Integer"
+    "ifcmpge.i load.r r0"->"new java.lang.Integer";
+    "dup1.r"
+    "new java.lang.Integer"->"dup1.r";
+    "dup1.r"->"load.r r1";
+    "load.r r1"->"load.i i0";
+    "load.i i0"->"load.i i0";
+    "push 3"
+    "load.i i0"->"push 3";
+    "push 3"->"add.i";
+    "virtualinvoke <java.lang.String: java.lang.String substring(int,int)>"
+    "add.i"->"virtualinvoke <java.lang.String: java.lang.String substring(int,int)>";
+    "specialinvoke <java.lang.Integer: void <init>(java.lang.String)>"
+    "virtualinvoke <java.lang.String: java.lang.String substring(int,int)>"->"specialinvoke <java.lang.Integer: void <init>(java.lang.String)>";
+    "virtualinvoke <java.lang.Integer: int intValue()>"
+    "specialinvoke <java.lang.Integer: void <init>(java.lang.String)>"->"virtualinvoke <java.lang.Integer: int intValue()>";
+    "virtualinvoke <java.lang.Integer: int intValue()>"->"store.i i0";
+    "store.i i0"->"new java.lang.Integer";
+    "new java.lang.Integer"->"dup1.r";
+    "dup1.r"->"load.r r1";
+    "load.r r1"->"load.r r1";
+    "load.r r1"->"virtualinvoke <java.lang.String: int length()>";
+    "virtualinvoke <java.lang.String: int length()>"->"push 4";
+    "push 4"->"sub.i";
+    "sub.i"->"load.r r1";
+    "load.r r1"->"virtualinvoke <java.lang.String: int length()>";
+    "virtualinvoke <java.lang.String: int length()>"->"push 1";
+    "push 1"->"sub.i";
+    "sub.i"->"virtualinvoke <java.lang.String: java.lang.String substring(int,int)>";
+    "virtualinvoke <java.lang.String: java.lang.String substring(int,int)>"->"specialinvoke <java.lang.Integer: void <init>(java.lang.String)>";
+    "specialinvoke <java.lang.Integer: void <init>(java.lang.String)>"->"virtualinvoke <java.lang.Integer: int intValue()>";
+    "store.i r1"
+    "virtualinvoke <java.lang.Integer: int intValue()>"->"store.i r1";
+    "store.i r1"->"load.r r0";
+    "virtualinvoke <java.applet.Applet: java.net.URL getDocumentBase()>"
+    "load.r r0"->"virtualinvoke <java.applet.Applet: java.net.URL getDocumentBase()>";
+    "virtualinvoke <java.net.URL: java.lang.String getHost()>"
+    "virtualinvoke <java.applet.Applet: java.net.URL getDocumentBase()>"->"virtualinvoke <java.net.URL: java.lang.String getHost()>";
+    "virtualinvoke <java.net.URL: java.lang.String getHost()>"->"virtualinvoke <java.lang.String: java.lang.String toUpperCase()>";
+    "store.r $r40"
+    "virtualinvoke <java.lang.String: java.lang.String toUpperCase()>"->"store.r $r40";
+    "push 0"
+    "store.r $r40"->"push 0";
+    "store.i i34"
+    "push 0"->"store.i i34";
+    "store.i i34"->"push 0";
+    "store.i i35"
+    "push 0"->"store.i i35";
+    "load.r $r40"
+    "store.i i35"->"load.r $r40";
+    "load.r $r40"->"virtualinvoke <java.lang.String: int length()>";
+    "ifle push 0"
+    "virtualinvoke <java.lang.String: int length()>"->"ifle push 0";
+    "ifle push 0"->"load.r $r40";
+    "load.r $r40"->"virtualinvoke <java.lang.String: int length()>";
+    "virtualinvoke <java.lang.String: int length()>"->"push 1";
+    "push 1"->"sub.i";
+    "store.i i36"
+    "sub.i"->"store.i i36";
+    "goto load.i i36"
+    "store.i i36"->"goto load.i i36";
+    "load.i i36"
+    "goto load.i i36"->"load.i i36";
+    "ifge load.r $r40"
+    "load.i i36"->"ifge load.r $r40";
+    "goto load.i i0"
+    "ifge load.r $r40"->"goto load.i i0";
+    "goto load.i i0"->"load.i i0";
+    "push 231"
+    "load.i i0"->"push 231";
+    "ifcmpne.i load.r r0"
+    "push 231"->"ifcmpne.i load.r r0";
+    "load.i r1"
+    "ifcmpne.i load.r r0"->"load.i r1";
+    "load.i r1"->"load.i i0";
+    "load.i i34"
+    "load.i i0"->"load.i i34";
+    "mul.i"
+    "load.i i34"->"mul.i";
+    "push 1000"
+    "mul.i"->"push 1000";
+    "rem.i"
+    "push 1000"->"rem.i";
+    "rem.i"->"ifcmpne.i load.r r0";
+    "ifcmpne.i load.r r0"->"load.r r0";
+    "load.r r0"->"push 1";
+    "fieldput <SlidingPuzzle: boolean registered>"
+    "push 1"->"fieldput <SlidingPuzzle: boolean registered>";
+    "fieldput <SlidingPuzzle: boolean registered>"->"load.r r0";
+    "load.r r0"->"new java.lang.Integer";
+    "new java.lang.Integer"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "push \"delay\""
+    "load.r r0"->"push \"delay\"";
+    "push \"delay\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"specialinvoke <java.lang.Integer: void <init>(java.lang.String)>";
+    "specialinvoke <java.lang.Integer: void <init>(java.lang.String)>"->"virtualinvoke <java.lang.Integer: int intValue()>";
+    "fieldput <SlidingPuzzle: int delay>"
+    "virtualinvoke <java.lang.Integer: int intValue()>"->"fieldput <SlidingPuzzle: int delay>";
+    "fieldput <SlidingPuzzle: int delay>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "push \"photo\""
+    "load.r r0"->"push \"photo\"";
+    "push \"photo\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "fieldput <SlidingPuzzle: java.lang.String picfile>"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"fieldput <SlidingPuzzle: java.lang.String picfile>";
+    "fieldput <SlidingPuzzle: java.lang.String picfile>"->"load.r r0";
+    "load.r r0"->"new java.lang.Integer";
+    "new java.lang.Integer"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "push \"scramblestart\""
+    "load.r r0"->"push \"scramblestart\"";
+    "push \"scramblestart\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"specialinvoke <java.lang.Integer: void <init>(java.lang.String)>";
+    "specialinvoke <java.lang.Integer: void <init>(java.lang.String)>"->"virtualinvoke <java.lang.Integer: int intValue()>";
+    "fieldput <SlidingPuzzle: int scramblestart>"
+    "virtualinvoke <java.lang.Integer: int intValue()>"->"fieldput <SlidingPuzzle: int scramblestart>";
+    "fieldput <SlidingPuzzle: int scramblestart>"->"load.r r0";
+    "load.r r0"->"new java.lang.Integer";
+    "new java.lang.Integer"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "push \"solvebutton\""
+    "load.r r0"->"push \"solvebutton\"";
+    "push \"solvebutton\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"specialinvoke <java.lang.Integer: void <init>(java.lang.String)>";
+    "specialinvoke <java.lang.Integer: void <init>(java.lang.String)>"->"virtualinvoke <java.lang.Integer: int intValue()>";
+    "fieldput <SlidingPuzzle: int solvebut>"
+    "virtualinvoke <java.lang.Integer: int intValue()>"->"fieldput <SlidingPuzzle: int solvebut>";
+    "fieldput <SlidingPuzzle: int solvebut>"->"new java.lang.Integer";
+    "new java.lang.Integer"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "push \"frames\""
+    "load.r r0"->"push \"frames\"";
+    "push \"frames\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"specialinvoke <java.lang.Integer: void <init>(java.lang.String)>";
+    "specialinvoke <java.lang.Integer: void <init>(java.lang.String)>"->"virtualinvoke <java.lang.Integer: int intValue()>";
+    "virtualinvoke <java.lang.Integer: int intValue()>"->"store.i i0";
+    "store.i i0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "push \"winfile\""
+    "load.r r0"->"push \"winfile\"";
+    "push \"winfile\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "fieldput <SlidingPuzzle: java.lang.String winfile>"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"fieldput <SlidingPuzzle: java.lang.String winfile>";
+    "fieldput <SlidingPuzzle: java.lang.String winfile>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "push \"movefile\""
+    "load.r r0"->"push \"movefile\"";
+    "push \"movefile\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "fieldput <SlidingPuzzle: java.lang.String movefile>"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"fieldput <SlidingPuzzle: java.lang.String movefile>";
+    "fieldput <SlidingPuzzle: java.lang.String movefile>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "push \"panelbg\""
+    "load.r r0"->"push \"panelbg\"";
+    "push \"panelbg\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <SlidingPuzzle: int[] parseInt(java.lang.String)>"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"virtualinvoke <SlidingPuzzle: int[] parseInt(java.lang.String)>";
+    "virtualinvoke <SlidingPuzzle: int[] parseInt(java.lang.String)>"->"store.r r1";
+    "store.r r1"->"load.r r0";
+    "new java.awt.Color"
+    "load.r r0"->"new java.awt.Color";
+    "new java.awt.Color"->"dup1.r";
+    "dup1.r"->"load.r r1";
+    "load.r r1"->"push 0";
+    "arrayread.i"
+    "push 0"->"arrayread.i";
+    "arrayread.i"->"load.r r1";
+    "load.r r1"->"push 1";
+    "push 1"->"arrayread.i";
+    "arrayread.i"->"load.r r1";
+    "push 2"
+    "load.r r1"->"push 2";
+    "push 2"->"arrayread.i";
+    "specialinvoke <java.awt.Color: void <init>(int,int,int)>"
+    "arrayread.i"->"specialinvoke <java.awt.Color: void <init>(int,int,int)>";
+    "fieldput <SlidingPuzzle: java.awt.Color bg>"
+    "specialinvoke <java.awt.Color: void <init>(int,int,int)>"->"fieldput <SlidingPuzzle: java.awt.Color bg>";
+    "fieldput <SlidingPuzzle: java.awt.Color bg>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "push \"panelfg\""
+    "load.r r0"->"push \"panelfg\"";
+    "push \"panelfg\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"virtualinvoke <SlidingPuzzle: int[] parseInt(java.lang.String)>";
+    "virtualinvoke <SlidingPuzzle: int[] parseInt(java.lang.String)>"->"store.r r1";
+    "store.r r1"->"load.r r0";
+    "load.r r0"->"new java.awt.Color";
+    "new java.awt.Color"->"dup1.r";
+    "dup1.r"->"load.r r1";
+    "load.r r1"->"push 0";
+    "push 0"->"arrayread.i";
+    "arrayread.i"->"load.r r1";
+    "load.r r1"->"push 1";
+    "push 1"->"arrayread.i";
+    "arrayread.i"->"load.r r1";
+    "load.r r1"->"push 2";
+    "push 2"->"arrayread.i";
+    "arrayread.i"->"specialinvoke <java.awt.Color: void <init>(int,int,int)>";
+    "fieldput <SlidingPuzzle: java.awt.Color fg>"
+    "specialinvoke <java.awt.Color: void <init>(int,int,int)>"->"fieldput <SlidingPuzzle: java.awt.Color fg>";
+    "fieldput <SlidingPuzzle: java.awt.Color fg>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "push \"buttonbg\""
+    "load.r r0"->"push \"buttonbg\"";
+    "push \"buttonbg\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"virtualinvoke <SlidingPuzzle: int[] parseInt(java.lang.String)>";
+    "virtualinvoke <SlidingPuzzle: int[] parseInt(java.lang.String)>"->"store.r r1";
+    "store.r r1"->"load.r r0";
+    "load.r r0"->"new java.awt.Color";
+    "new java.awt.Color"->"dup1.r";
+    "dup1.r"->"load.r r1";
+    "load.r r1"->"push 0";
+    "push 0"->"arrayread.i";
+    "arrayread.i"->"load.r r1";
+    "load.r r1"->"push 1";
+    "push 1"->"arrayread.i";
+    "arrayread.i"->"load.r r1";
+    "load.r r1"->"push 2";
+    "push 2"->"arrayread.i";
+    "arrayread.i"->"specialinvoke <java.awt.Color: void <init>(int,int,int)>";
+    "fieldput <SlidingPuzzle: java.awt.Color butbg>"
+    "specialinvoke <java.awt.Color: void <init>(int,int,int)>"->"fieldput <SlidingPuzzle: java.awt.Color butbg>";
+    "fieldput <SlidingPuzzle: java.awt.Color butbg>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "push \"buttonfg\""
+    "load.r r0"->"push \"buttonfg\"";
+    "push \"buttonfg\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"virtualinvoke <SlidingPuzzle: int[] parseInt(java.lang.String)>";
+    "virtualinvoke <SlidingPuzzle: int[] parseInt(java.lang.String)>"->"store.r r1";
+    "store.r r1"->"load.r r0";
+    "load.r r0"->"new java.awt.Color";
+    "new java.awt.Color"->"dup1.r";
+    "dup1.r"->"load.r r1";
+    "load.r r1"->"push 0";
+    "push 0"->"arrayread.i";
+    "arrayread.i"->"load.r r1";
+    "load.r r1"->"push 1";
+    "push 1"->"arrayread.i";
+    "arrayread.i"->"load.r r1";
+    "load.r r1"->"push 2";
+    "push 2"->"arrayread.i";
+    "arrayread.i"->"specialinvoke <java.awt.Color: void <init>(int,int,int)>";
+    "fieldput <SlidingPuzzle: java.awt.Color butfg>"
+    "specialinvoke <java.awt.Color: void <init>(int,int,int)>"->"fieldput <SlidingPuzzle: java.awt.Color butfg>";
+    "fieldput <SlidingPuzzle: java.awt.Color butfg>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "push \"mouseover\""
+    "load.r r0"->"push \"mouseover\"";
+    "push \"mouseover\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"virtualinvoke <SlidingPuzzle: int[] parseInt(java.lang.String)>";
+    "virtualinvoke <SlidingPuzzle: int[] parseInt(java.lang.String)>"->"store.r r1";
+    "store.r r1"->"load.r r0";
+    "load.r r0"->"new java.awt.Color";
+    "new java.awt.Color"->"dup1.r";
+    "dup1.r"->"load.r r1";
+    "load.r r1"->"push 0";
+    "push 0"->"arrayread.i";
+    "arrayread.i"->"load.r r1";
+    "load.r r1"->"push 1";
+    "push 1"->"arrayread.i";
+    "arrayread.i"->"load.r r1";
+    "load.r r1"->"push 2";
+    "push 2"->"arrayread.i";
+    "arrayread.i"->"specialinvoke <java.awt.Color: void <init>(int,int,int)>";
+    "fieldput <SlidingPuzzle: java.awt.Color overc>"
+    "specialinvoke <java.awt.Color: void <init>(int,int,int)>"->"fieldput <SlidingPuzzle: java.awt.Color overc>";
+    "fieldput <SlidingPuzzle: java.awt.Color overc>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "push \"linkto\""
+    "load.r r0"->"push \"linkto\"";
+    "push \"linkto\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"virtualinvoke <java.lang.String: java.lang.String trim()>";
+    "virtualinvoke <SlidingPuzzle: java.lang.String[] parse(java.lang.String)>"
+    "virtualinvoke <java.lang.String: java.lang.String trim()>"->"virtualinvoke <SlidingPuzzle: java.lang.String[] parse(java.lang.String)>";
+    "virtualinvoke <SlidingPuzzle: java.lang.String[] parse(java.lang.String)>"->"dup1.r";
+    "dup1.r"->"push 0";
+    "arrayread.r"
+    "push 0"->"arrayread.r";
+    "arrayread.r"->"store.r r1";
+    "store.r r1"->"load.r r0";
+    "load.r r0"->"load.r r1";
+    "fieldput <SlidingPuzzle: java.lang.String linkto>"
+    "load.r r1"->"fieldput <SlidingPuzzle: java.lang.String linkto>";
+    "fieldput <SlidingPuzzle: java.lang.String linkto>"->"push 1";
+    "push 1"->"arrayread.r";
+    "fieldput <SlidingPuzzle: java.lang.String linkframe>"
+    "arrayread.r"->"fieldput <SlidingPuzzle: java.lang.String linkframe>";
+    "fieldput <SlidingPuzzle: java.lang.String linkframe>"->"load.r r0";
+    "load.r r0"->"new java.lang.Integer";
+    "new java.lang.Integer"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "push \"row\""
+    "load.r r0"->"push \"row\"";
+    "push \"row\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"specialinvoke <java.lang.Integer: void <init>(java.lang.String)>";
+    "specialinvoke <java.lang.Integer: void <init>(java.lang.String)>"->"virtualinvoke <java.lang.Integer: int intValue()>";
+    "fieldput <SlidingPuzzle: int row>"
+    "virtualinvoke <java.lang.Integer: int intValue()>"->"fieldput <SlidingPuzzle: int row>";
+    "fieldput <SlidingPuzzle: int row>"->"load.r r0";
+    "load.r r0"->"new java.lang.Integer";
+    "new java.lang.Integer"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "push \"col\""
+    "load.r r0"->"push \"col\"";
+    "push \"col\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"specialinvoke <java.lang.Integer: void <init>(java.lang.String)>";
+    "specialinvoke <java.lang.Integer: void <init>(java.lang.String)>"->"virtualinvoke <java.lang.Integer: int intValue()>";
+    "fieldput <SlidingPuzzle: int col>"
+    "virtualinvoke <java.lang.Integer: int intValue()>"->"fieldput <SlidingPuzzle: int col>";
+    "fieldput <SlidingPuzzle: int col>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "push \"TitleText\""
+    "load.r r0"->"push \"TitleText\"";
+    "push \"TitleText\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "fieldput <SlidingPuzzle: java.lang.String TitleText>"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"fieldput <SlidingPuzzle: java.lang.String TitleText>";
+    "fieldput <SlidingPuzzle: java.lang.String TitleText>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "push \"NewGameText\""
+    "load.r r0"->"push \"NewGameText\"";
+    "push \"NewGameText\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "fieldput <SlidingPuzzle: java.lang.String NewGameText>"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"fieldput <SlidingPuzzle: java.lang.String NewGameText>";
+    "fieldput <SlidingPuzzle: java.lang.String NewGameText>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "push \"SolvePuzzleText\""
+    "load.r r0"->"push \"SolvePuzzleText\"";
+    "push \"SolvePuzzleText\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "fieldput <SlidingPuzzle: java.lang.String SolvePuzzleText>"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"fieldput <SlidingPuzzle: java.lang.String SolvePuzzleText>";
+    "fieldput <SlidingPuzzle: java.lang.String SolvePuzzleText>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "push \"MovesCountText\""
+    "load.r r0"->"push \"MovesCountText\"";
+    "push \"MovesCountText\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "fieldput <SlidingPuzzle: java.lang.String MovesCountText>"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"fieldput <SlidingPuzzle: java.lang.String MovesCountText>";
+    "fieldput <SlidingPuzzle: java.lang.String MovesCountText>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "push \"BestText\""
+    "load.r r0"->"push \"BestText\"";
+    "push \"BestText\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "fieldput <SlidingPuzzle: java.lang.String BestText>"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"fieldput <SlidingPuzzle: java.lang.String BestText>";
+    "fieldput <SlidingPuzzle: java.lang.String BestText>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "push \"FinishText\""
+    "load.r r0"->"push \"FinishText\"";
+    "push \"FinishText\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "fieldput <SlidingPuzzle: java.lang.String FinishText>"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"fieldput <SlidingPuzzle: java.lang.String FinishText>";
+    "fieldput <SlidingPuzzle: java.lang.String FinishText>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"virtualinvoke <java.applet.Applet: java.net.URL getDocumentBase()>";
+    "virtualinvoke <java.applet.Applet: java.net.URL getDocumentBase()>"->"load.r r0";
+    "fieldget <SlidingPuzzle: java.lang.String winfile>"
+    "load.r r0"->"fieldget <SlidingPuzzle: java.lang.String winfile>";
+    "virtualinvoke <java.applet.Applet: java.applet.AudioClip getAudioClip(java.net.URL,java.lang.String)>"
+    "fieldget <SlidingPuzzle: java.lang.String winfile>"->"virtualinvoke <java.applet.Applet: java.applet.AudioClip getAudioClip(java.net.URL,java.lang.String)>";
+    "fieldput <SlidingPuzzle: java.applet.AudioClip winaudio>"
+    "virtualinvoke <java.applet.Applet: java.applet.AudioClip getAudioClip(java.net.URL,java.lang.String)>"->"fieldput <SlidingPuzzle: java.applet.AudioClip winaudio>";
+    "fieldput <SlidingPuzzle: java.applet.AudioClip winaudio>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"virtualinvoke <java.applet.Applet: java.net.URL getDocumentBase()>";
+    "virtualinvoke <java.applet.Applet: java.net.URL getDocumentBase()>"->"load.r r0";
+    "fieldget <SlidingPuzzle: java.lang.String movefile>"
+    "load.r r0"->"fieldget <SlidingPuzzle: java.lang.String movefile>";
+    "fieldget <SlidingPuzzle: java.lang.String movefile>"->"virtualinvoke <java.applet.Applet: java.applet.AudioClip getAudioClip(java.net.URL,java.lang.String)>";
+    "fieldput <SlidingPuzzle: java.applet.AudioClip moveaudio>"
+    "virtualinvoke <java.applet.Applet: java.applet.AudioClip getAudioClip(java.net.URL,java.lang.String)>"->"fieldput <SlidingPuzzle: java.applet.AudioClip moveaudio>";
+    "fieldput <SlidingPuzzle: java.applet.AudioClip moveaudio>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "fieldget <SlidingPuzzle: java.lang.String picfile>"
+    "load.r r0"->"fieldget <SlidingPuzzle: java.lang.String picfile>";
+    "virtualinvoke <SlidingPuzzle: void readPhoto(java.lang.String)>"
+    "fieldget <SlidingPuzzle: java.lang.String picfile>"->"virtualinvoke <SlidingPuzzle: void readPhoto(java.lang.String)>";
+    "virtualinvoke <SlidingPuzzle: void readPhoto(java.lang.String)>"->"load.r r0";
+    "new SlidingPuzzlePhoto"
+    "load.r r0"->"new SlidingPuzzlePhoto";
+    "new SlidingPuzzlePhoto"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "fieldget <SlidingPuzzle: java.awt.Image photo>"
+    "load.r r0"->"fieldget <SlidingPuzzle: java.awt.Image photo>";
+    "fieldget <SlidingPuzzle: java.awt.Image photo>"->"load.r r0";
+    "fieldget <SlidingPuzzle: int picwidth>"
+    "load.r r0"->"fieldget <SlidingPuzzle: int picwidth>";
+    "fieldget <SlidingPuzzle: int picwidth>"->"load.r r0";
+    "fieldget <SlidingPuzzle: int picheight>"
+    "load.r r0"->"fieldget <SlidingPuzzle: int picheight>";
+    "fieldget <SlidingPuzzle: int picheight>"->"load.r r0";
+    "fieldget <SlidingPuzzle: int row>"
+    "load.r r0"->"fieldget <SlidingPuzzle: int row>";
+    "fieldget <SlidingPuzzle: int row>"->"load.r r0";
+    "fieldget <SlidingPuzzle: int col>"
+    "load.r r0"->"fieldget <SlidingPuzzle: int col>";
+    "fieldget <SlidingPuzzle: int col>"->"load.r r0";
+    "specialinvoke <SlidingPuzzlePhoto: void <init>(java.awt.Image,int,int,int,int,SlidingPuzzle)>"
+    "load.r r0"->"specialinvoke <SlidingPuzzlePhoto: void <init>(java.awt.Image,int,int,int,int,SlidingPuzzle)>";
+    "fieldput <SlidingPuzzle: SlidingPuzzlePhoto rp>"
+    "specialinvoke <SlidingPuzzlePhoto: void <init>(java.awt.Image,int,int,int,int,SlidingPuzzle)>"->"fieldput <SlidingPuzzle: SlidingPuzzlePhoto rp>";
+    "fieldput <SlidingPuzzle: SlidingPuzzlePhoto rp>"->"load.r r0";
+    "fieldget <SlidingPuzzle: SlidingPuzzlePhoto rp>"
+    "load.r r0"->"fieldget <SlidingPuzzle: SlidingPuzzlePhoto rp>";
+    "fieldget <SlidingPuzzle: SlidingPuzzlePhoto rp>"->"load.i i0";
+    "fieldput <SlidingPuzzlePhoto: int maxtransit>"
+    "load.i i0"->"fieldput <SlidingPuzzlePhoto: int maxtransit>";
+    "fieldput <SlidingPuzzlePhoto: int maxtransit>"->"load.r r0";
+    "load.r r0"->"fieldget <SlidingPuzzle: SlidingPuzzlePhoto rp>";
+    "fieldget <SlidingPuzzle: SlidingPuzzlePhoto rp>"->"load.r r0";
+    "fieldget <SlidingPuzzle: int delay>"
+    "load.r r0"->"fieldget <SlidingPuzzle: int delay>";
+    "fieldput <SlidingPuzzlePhoto: int delay>"
+    "fieldget <SlidingPuzzle: int delay>"->"fieldput <SlidingPuzzlePhoto: int delay>";
+    "fieldput <SlidingPuzzlePhoto: int delay>"->"load.r r0";
+    "load.r r0"->"fieldget <SlidingPuzzle: SlidingPuzzlePhoto rp>";
+    "fieldget <SlidingPuzzle: SlidingPuzzlePhoto rp>"->"load.r r0";
+    "fieldget <SlidingPuzzle: boolean registered>"
+    "load.r r0"->"fieldget <SlidingPuzzle: boolean registered>";
+    "fieldput <SlidingPuzzlePhoto: boolean registered>"
+    "fieldget <SlidingPuzzle: boolean registered>"->"fieldput <SlidingPuzzlePhoto: boolean registered>";
+    "fieldput <SlidingPuzzlePhoto: boolean registered>"->"load.r r0";
+    "load.r r0"->"fieldget <SlidingPuzzle: SlidingPuzzlePhoto rp>";
+    "fieldget <SlidingPuzzle: SlidingPuzzlePhoto rp>"->"load.r r0";
+    "fieldget <SlidingPuzzle: java.awt.Color bg>"
+    "load.r r0"->"fieldget <SlidingPuzzle: java.awt.Color bg>";
+    "fieldput <SlidingPuzzlePhoto: java.awt.Color bg>"
+    "fieldget <SlidingPuzzle: java.awt.Color bg>"->"fieldput <SlidingPuzzlePhoto: java.awt.Color bg>";
+    "fieldput <SlidingPuzzlePhoto: java.awt.Color bg>"->"load.r r0";
+    "load.r r0"->"fieldget <SlidingPuzzle: SlidingPuzzlePhoto rp>";
+    "fieldget <SlidingPuzzle: SlidingPuzzlePhoto rp>"->"load.r r0";
+    "fieldget <SlidingPuzzle: java.awt.Color overc>"
+    "load.r r0"->"fieldget <SlidingPuzzle: java.awt.Color overc>";
+    "fieldput <SlidingPuzzlePhoto: java.awt.Color overc>"
+    "fieldget <SlidingPuzzle: java.awt.Color overc>"->"fieldput <SlidingPuzzlePhoto: java.awt.Color overc>";
+    "fieldput <SlidingPuzzlePhoto: java.awt.Color overc>"->"load.r r0";
+    "load.r r0"->"fieldget <SlidingPuzzle: SlidingPuzzlePhoto rp>";
+    "fieldget <SlidingPuzzle: SlidingPuzzlePhoto rp>"->"load.r r0";
+    "fieldget <SlidingPuzzle: java.applet.AudioClip winaudio>"
+    "load.r r0"->"fieldget <SlidingPuzzle: java.applet.AudioClip winaudio>";
+    "fieldput <SlidingPuzzlePhoto: java.applet.AudioClip winaudio>"
+    "fieldget <SlidingPuzzle: java.applet.AudioClip winaudio>"->"fieldput <SlidingPuzzlePhoto: java.applet.AudioClip winaudio>";
+    "fieldput <SlidingPuzzlePhoto: java.applet.AudioClip winaudio>"->"load.r r0";
+    "load.r r0"->"fieldget <SlidingPuzzle: SlidingPuzzlePhoto rp>";
+    "fieldget <SlidingPuzzle: SlidingPuzzlePhoto rp>"->"load.r r0";
+    "fieldget <SlidingPuzzle: java.applet.AudioClip moveaudio>"
+    "load.r r0"->"fieldget <SlidingPuzzle: java.applet.AudioClip moveaudio>";
+    "fieldput <SlidingPuzzlePhoto: java.applet.AudioClip moveaudio>"
+    "fieldget <SlidingPuzzle: java.applet.AudioClip moveaudio>"->"fieldput <SlidingPuzzlePhoto: java.applet.AudioClip moveaudio>";
+    "fieldput <SlidingPuzzlePhoto: java.applet.AudioClip moveaudio>"->"load.r r0";
+    "load.r r0"->"fieldget <SlidingPuzzle: SlidingPuzzlePhoto rp>";
+    "fieldget <SlidingPuzzle: SlidingPuzzlePhoto rp>"->"load.r r0";
+    "fieldget <SlidingPuzzle: boolean gameover>"
+    "load.r r0"->"fieldget <SlidingPuzzle: boolean gameover>";
+    "fieldput <SlidingPuzzlePhoto: boolean gameover>"
+    "fieldget <SlidingPuzzle: boolean gameover>"->"fieldput <SlidingPuzzlePhoto: boolean gameover>";
+    "fieldput <SlidingPuzzlePhoto: boolean gameover>"->"load.r r0";
+    "load.r r0"->"fieldget <SlidingPuzzle: SlidingPuzzlePhoto rp>";
+    "fieldget <SlidingPuzzle: SlidingPuzzlePhoto rp>"->"load.r r0";
+    "fieldget <SlidingPuzzle: java.lang.String MovesCountText>"
+    "load.r r0"->"fieldget <SlidingPuzzle: java.lang.String MovesCountText>";
+    "fieldput <SlidingPuzzlePhoto: java.lang.String MovesCountText>"
+    "fieldget <SlidingPuzzle: java.lang.String MovesCountText>"->"fieldput <SlidingPuzzlePhoto: java.lang.String MovesCountText>";
+    "fieldput <SlidingPuzzlePhoto: java.lang.String MovesCountText>"->"load.r r0";
+    "load.r r0"->"fieldget <SlidingPuzzle: SlidingPuzzlePhoto rp>";
+    "fieldget <SlidingPuzzle: SlidingPuzzlePhoto rp>"->"load.r r0";
+    "fieldget <SlidingPuzzle: java.lang.String FinishText>"
+    "load.r r0"->"fieldget <SlidingPuzzle: java.lang.String FinishText>";
+    "fieldput <SlidingPuzzlePhoto: java.lang.String FinishText>"
+    "fieldget <SlidingPuzzle: java.lang.String FinishText>"->"fieldput <SlidingPuzzlePhoto: java.lang.String FinishText>";
+    "fieldput <SlidingPuzzlePhoto: java.lang.String FinishText>"->"load.r r0";
+    "load.r r0"->"fieldget <SlidingPuzzle: SlidingPuzzlePhoto rp>";
+    "fieldget <SlidingPuzzle: SlidingPuzzlePhoto rp>"->"load.r r0";
+    "fieldget <SlidingPuzzle: java.lang.String BestText>"
+    "load.r r0"->"fieldget <SlidingPuzzle: java.lang.String BestText>";
+    "fieldput <SlidingPuzzlePhoto: java.lang.String BestText>"
+    "fieldget <SlidingPuzzle: java.lang.String BestText>"->"fieldput <SlidingPuzzlePhoto: java.lang.String BestText>";
+    "fieldput <SlidingPuzzlePhoto: java.lang.String BestText>"->"load.r r0";
+    "load.r r0"->"fieldget <SlidingPuzzle: SlidingPuzzlePhoto rp>";
+    "virtualinvoke <java.awt.Component: void repaint()>"
+    "fieldget <SlidingPuzzle: SlidingPuzzlePhoto rp>"->"virtualinvoke <java.awt.Component: void repaint()>";
+    "new java.awt.Panel"
+    "virtualinvoke <java.awt.Component: void repaint()>"->"new java.awt.Panel";
+    "store.r i0"
+    "new java.awt.Panel"->"store.r i0";
+    "load.r i0"
+    "store.r i0"->"load.r i0";
+    "new java.awt.BorderLayout"
+    "load.r i0"->"new java.awt.BorderLayout";
+    "new java.awt.BorderLayout"->"dup1.r";
+    "specialinvoke <java.awt.BorderLayout: void <init>()>"
+    "dup1.r"->"specialinvoke <java.awt.BorderLayout: void <init>()>";
+    "specialinvoke <java.awt.Panel: void <init>(java.awt.LayoutManager)>"
+    "specialinvoke <java.awt.BorderLayout: void <init>()>"->"specialinvoke <java.awt.Panel: void <init>(java.awt.LayoutManager)>";
+    "specialinvoke <java.awt.Panel: void <init>(java.awt.LayoutManager)>"->"load.r i0";
+    "push \"Center\""
+    "load.r i0"->"push \"Center\"";
+    "push \"Center\""->"load.r r0";
+    "load.r r0"->"fieldget <SlidingPuzzle: SlidingPuzzlePhoto rp>";
+    "virtualinvoke <java.awt.Container: java.awt.Component add(java.lang.String,java.awt.Component)>"
+    "fieldget <SlidingPuzzle: SlidingPuzzlePhoto rp>"->"virtualinvoke <java.awt.Container: java.awt.Component add(java.lang.String,java.awt.Component)>";
+    "virtualinvoke <java.awt.Container: java.awt.Component add(java.lang.String,java.awt.Component)>"->"pop";
+    "pop"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <SlidingPuzzle: java.awt.Color bg>";
+    "virtualinvoke <java.awt.Component: void setBackground(java.awt.Color)>"
+    "fieldget <SlidingPuzzle: java.awt.Color bg>"->"virtualinvoke <java.awt.Component: void setBackground(java.awt.Color)>";
+    "virtualinvoke <java.awt.Component: void setBackground(java.awt.Color)>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "fieldget <SlidingPuzzle: java.awt.Color fg>"
+    "load.r r0"->"fieldget <SlidingPuzzle: java.awt.Color fg>";
+    "virtualinvoke <java.awt.Component: void setForeground(java.awt.Color)>"
+    "fieldget <SlidingPuzzle: java.awt.Color fg>"->"virtualinvoke <java.awt.Component: void setForeground(java.awt.Color)>";
+    "new java.awt.GridBagLayout"
+    "virtualinvoke <java.awt.Component: void setForeground(java.awt.Color)>"->"new java.awt.GridBagLayout";
+    "specialinvoke <java.awt.GridBagLayout: void <init>()>"
+    "new java.awt.GridBagLayout"->"specialinvoke <java.awt.GridBagLayout: void <init>()>";
+    "new java.awt.GridBagConstraints"
+    "specialinvoke <java.awt.GridBagLayout: void <init>()>"->"new java.awt.GridBagConstraints";
+    "new java.awt.GridBagConstraints"->"store.r r1";
+    "store.r r1"->"load.r r1";
+    "specialinvoke <java.awt.GridBagConstraints: void <init>()>"
+    "load.r r1"->"specialinvoke <java.awt.GridBagConstraints: void <init>()>";
+    "specialinvoke <java.awt.GridBagConstraints: void <init>()>"->"load.r r1";
+    "load.r r1"->"push 0";
+    "fieldput <java.awt.GridBagConstraints: int fill>"
+    "push 0"->"fieldput <java.awt.GridBagConstraints: int fill>";
+    "fieldput <java.awt.GridBagConstraints: int fill>"->"load.r r1";
+    "load.r r1"->"push 0";
+    "fieldput <java.awt.GridBagConstraints: int gridwidth>"
+    "push 0"->"fieldput <java.awt.GridBagConstraints: int gridwidth>";
+    "fieldput <java.awt.GridBagConstraints: int gridwidth>"->"load.r r1";
+    "push 10"
+    "load.r r1"->"push 10";
+    "fieldput <java.awt.GridBagConstraints: int anchor>"
+    "push 10"->"fieldput <java.awt.GridBagConstraints: int anchor>";
+    "push 5"
+    "fieldput <java.awt.GridBagConstraints: int anchor>"->"push 5";
+    "newarray"
+    "push 5"->"newarray";
+    "newarray"->"store.r r1";
+    "store.r r1"->"push 0";
+    "store.i $r40"
+    "push 0"->"store.i $r40";
+    "goto load.i $r40"
+    "store.i $r40"->"goto load.i $r40";
+    "load.i $r40"
+    "goto load.i $r40"->"load.i $r40";
+    "load.i $r40"->"push 5";
+    "ifcmplt.i load.r r1"
+    "push 5"->"ifcmplt.i load.r r1";
+    "ifcmplt.i load.r r1"->"load.r r0";
+    "new SlidingPuzzleButton"
+    "load.r r0"->"new SlidingPuzzleButton";
+    "new SlidingPuzzleButton"->"dup1.r";
+    "push 80"
+    "dup1.r"->"push 80";
+    "push 20"
+    "push 80"->"push 20";
+    "push 20"->"load.r r0";
+    "fieldget <SlidingPuzzle: java.lang.String NewGameText>"
+    "load.r r0"->"fieldget <SlidingPuzzle: java.lang.String NewGameText>";
+    "push \"Helvetica\""
+    "fieldget <SlidingPuzzle: java.lang.String NewGameText>"->"push \"Helvetica\"";
+    "push 11"
+    "push \"Helvetica\""->"push 11";
+    "push 11"->"load.r r0";
+    "fieldget <SlidingPuzzle: java.awt.Color butbg>"
+    "load.r r0"->"fieldget <SlidingPuzzle: java.awt.Color butbg>";
+    "fieldget <SlidingPuzzle: java.awt.Color butbg>"->"load.r r0";
+    "fieldget <SlidingPuzzle: java.awt.Color butfg>"
+    "load.r r0"->"fieldget <SlidingPuzzle: java.awt.Color butfg>";
+    "specialinvoke <SlidingPuzzleButton: void <init>(int,int,java.lang.String,java.lang.String,int,java.awt.Color,java.awt.Color)>"
+    "fieldget <SlidingPuzzle: java.awt.Color butfg>"->"specialinvoke <SlidingPuzzleButton: void <init>(int,int,java.lang.String,java.lang.String,int,java.awt.Color,java.awt.Color)>";
+    "fieldput <SlidingPuzzle: SlidingPuzzleButton buttonNew>"
+    "specialinvoke <SlidingPuzzleButton: void <init>(int,int,java.lang.String,java.lang.String,int,java.awt.Color,java.awt.Color)>"->"fieldput <SlidingPuzzle: SlidingPuzzleButton buttonNew>";
+    "fieldput <SlidingPuzzle: SlidingPuzzleButton buttonNew>"->"load.r r0";
+    "fieldget <SlidingPuzzle: SlidingPuzzleButton buttonNew>"
+    "load.r r0"->"fieldget <SlidingPuzzle: SlidingPuzzleButton buttonNew>";
+    "fieldget <SlidingPuzzle: SlidingPuzzleButton buttonNew>"->"load.r r0";
+    "load.r r0"->"fieldget <SlidingPuzzle: java.awt.Color bg>";
+    "virtualinvoke <SlidingPuzzleButton: void setBGmain(java.awt.Color)>"
+    "fieldget <SlidingPuzzle: java.awt.Color bg>"->"virtualinvoke <SlidingPuzzleButton: void setBGmain(java.awt.Color)>";
+    "virtualinvoke <SlidingPuzzleButton: void setBGmain(java.awt.Color)>"->"load.r r1";
+    "load.r r1"->"push 0";
+    "push 0"->"arrayread.r";
+    "arrayread.r"->"load.r r0";
+    "load.r r0"->"fieldget <SlidingPuzzle: SlidingPuzzleButton buttonNew>";
+    "virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>"
+    "fieldget <SlidingPuzzle: SlidingPuzzleButton buttonNew>"->"virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>";
+    "virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>"->"pop";
+    "pop"->"load.r r0";
+    "load.r r0"->"new SlidingPuzzleButton";
+    "new SlidingPuzzleButton"->"dup1.r";
+    "dup1.r"->"push 80";
+    "push 80"->"push 20";
+    "push 20"->"load.r r0";
+    "fieldget <SlidingPuzzle: java.lang.String SolvePuzzleText>"
+    "load.r r0"->"fieldget <SlidingPuzzle: java.lang.String SolvePuzzleText>";
+    "fieldget <SlidingPuzzle: java.lang.String SolvePuzzleText>"->"push \"Helvetica\"";
+    "push \"Helvetica\""->"push 11";
+    "push 11"->"load.r r0";
+    "load.r r0"->"fieldget <SlidingPuzzle: java.awt.Color butbg>";
+    "fieldget <SlidingPuzzle: java.awt.Color butbg>"->"load.r r0";
+    "load.r r0"->"fieldget <SlidingPuzzle: java.awt.Color butfg>";
+    "fieldget <SlidingPuzzle: java.awt.Color butfg>"->"specialinvoke <SlidingPuzzleButton: void <init>(int,int,java.lang.String,java.lang.String,int,java.awt.Color,java.awt.Color)>";
+    "fieldput <SlidingPuzzle: SlidingPuzzleButton buttonSolve>"
+    "specialinvoke <SlidingPuzzleButton: void <init>(int,int,java.lang.String,java.lang.String,int,java.awt.Color,java.awt.Color)>"->"fieldput <SlidingPuzzle: SlidingPuzzleButton buttonSolve>";
+    "fieldput <SlidingPuzzle: SlidingPuzzleButton buttonSolve>"->"load.r r0";
+    "fieldget <SlidingPuzzle: SlidingPuzzleButton buttonSolve>"
+    "load.r r0"->"fieldget <SlidingPuzzle: SlidingPuzzleButton buttonSolve>";
+    "fieldget <SlidingPuzzle: SlidingPuzzleButton buttonSolve>"->"load.r r0";
+    "load.r r0"->"fieldget <SlidingPuzzle: java.awt.Color bg>";
+    "fieldget <SlidingPuzzle: java.awt.Color bg>"->"virtualinvoke <SlidingPuzzleButton: void setBGmain(java.awt.Color)>";
+    "virtualinvoke <SlidingPuzzleButton: void setBGmain(java.awt.Color)>"->"load.r r0";
+    "fieldget <SlidingPuzzle: int solvebut>"
+    "load.r r0"->"fieldget <SlidingPuzzle: int solvebut>";
+    "ifle load.r r1"
+    "fieldget <SlidingPuzzle: int solvebut>"->"ifle load.r r1";
+    "ifle load.r r1"->"load.r r1";
+    "load.r r1"->"push 1";
+    "push 1"->"arrayread.r";
+    "arrayread.r"->"load.r r0";
+    "load.r r0"->"fieldget <SlidingPuzzle: SlidingPuzzleButton buttonSolve>";
+    "fieldget <SlidingPuzzle: SlidingPuzzleButton buttonSolve>"->"virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>";
+    "virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>"->"pop";
+    "goto load.r r0"
+    "pop"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "new java.awt.Label"
+    "load.r r0"->"new java.awt.Label";
+    "new java.awt.Label"->"dup1.r";
+    "push \"00:00:00\""
+    "dup1.r"->"push \"00:00:00\"";
+    "push \"00:00:00\""->"push 2";
+    "specialinvoke <java.awt.Label: void <init>(java.lang.String,int)>"
+    "push 2"->"specialinvoke <java.awt.Label: void <init>(java.lang.String,int)>";
+    "fieldput <SlidingPuzzle: java.awt.Label timer>"
+    "specialinvoke <java.awt.Label: void <init>(java.lang.String,int)>"->"fieldput <SlidingPuzzle: java.awt.Label timer>";
+    "fieldput <SlidingPuzzle: java.awt.Label timer>"->"load.r r0";
+    "fieldget <SlidingPuzzle: java.awt.Label timer>"
+    "load.r r0"->"fieldget <SlidingPuzzle: java.awt.Label timer>";
+    "fieldget <SlidingPuzzle: java.awt.Label timer>"->"load.r r0";
+    "load.r r0"->"fieldget <SlidingPuzzle: java.awt.Color bg>";
+    "fieldget <SlidingPuzzle: java.awt.Color bg>"->"virtualinvoke <java.awt.Component: void setBackground(java.awt.Color)>";
+    "virtualinvoke <java.awt.Component: void setBackground(java.awt.Color)>"->"load.r r0";
+    "load.r r0"->"fieldget <SlidingPuzzle: java.awt.Label timer>";
+    "fieldget <SlidingPuzzle: java.awt.Label timer>"->"load.r r0";
+    "load.r r0"->"fieldget <SlidingPuzzle: java.awt.Color fg>";
+    "fieldget <SlidingPuzzle: java.awt.Color fg>"->"virtualinvoke <java.awt.Component: void setForeground(java.awt.Color)>";
+    "virtualinvoke <java.awt.Component: void setForeground(java.awt.Color)>"->"load.r r0";
+    "load.r r0"->"fieldget <SlidingPuzzle: java.awt.Label timer>";
+    "new java.awt.Font"
+    "fieldget <SlidingPuzzle: java.awt.Label timer>"->"new java.awt.Font";
+    "new java.awt.Font"->"dup1.r";
+    "dup1.r"->"push \"Helvetica\"";
+    "push \"Helvetica\""->"push 1";
+    "push 12"
+    "push 1"->"push 12";
+    "specialinvoke <java.awt.Font: void <init>(java.lang.String,int,int)>"
+    "push 12"->"specialinvoke <java.awt.Font: void <init>(java.lang.String,int,int)>";
+    "virtualinvoke <java.awt.Component: void setFont(java.awt.Font)>"
+    "specialinvoke <java.awt.Font: void <init>(java.lang.String,int,int)>"->"virtualinvoke <java.awt.Component: void setFont(java.awt.Font)>";
+    "virtualinvoke <java.awt.Component: void setFont(java.awt.Font)>"->"load.r r1";
+    "load.r r1"->"push 2";
+    "push 2"->"arrayread.r";
+    "arrayread.r"->"load.r r0";
+    "load.r r0"->"fieldget <SlidingPuzzle: java.awt.Label timer>";
+    "fieldget <SlidingPuzzle: java.awt.Label timer>"->"virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>";
+    "virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>"->"pop";
+    "pop"->"new java.awt.Panel";
+    "new java.awt.Panel"->"store.r $r40";
+    "store.r $r40"->"load.r $r40";
+    "specialinvoke <java.awt.Panel: void <init>()>"
+    "load.r $r40"->"specialinvoke <java.awt.Panel: void <init>()>";
+    "specialinvoke <java.awt.Panel: void <init>()>"->"load.r $r40";
+    "new java.awt.FlowLayout"
+    "load.r $r40"->"new java.awt.FlowLayout";
+    "new java.awt.FlowLayout"->"dup1.r";
+    "specialinvoke <java.awt.FlowLayout: void <init>()>"
+    "dup1.r"->"specialinvoke <java.awt.FlowLayout: void <init>()>";
+    "virtualinvoke <java.awt.Container: void setLayout(java.awt.LayoutManager)>"
+    "specialinvoke <java.awt.FlowLayout: void <init>()>"->"virtualinvoke <java.awt.Container: void setLayout(java.awt.LayoutManager)>";
+    "virtualinvoke <java.awt.Container: void setLayout(java.awt.LayoutManager)>"->"push 0";
+    "push 0"->"store.i i34";
+    "goto load.i i34"
+    "store.i i34"->"goto load.i i34";
+    "goto load.i i34"->"load.i i34";
+    "load.i i34"->"push 3";
+    "ifcmplt.i load.r $r40"
+    "push 3"->"ifcmplt.i load.r $r40";
+    "ifcmplt.i load.r $r40"->"load.r i0";
+    "push \"South\""
+    "load.r i0"->"push \"South\"";
+    "push \"South\""->"load.r $r40";
+    "load.r $r40"->"virtualinvoke <java.awt.Container: java.awt.Component add(java.lang.String,java.awt.Component)>";
+    "virtualinvoke <java.awt.Container: java.awt.Component add(java.lang.String,java.awt.Component)>"->"pop";
+    "pop"->"new java.awt.Label";
+    "new java.awt.Label"->"store.r r1";
+    "store.r r1"->"load.r r1";
+    "load.r r1"->"load.r r0";
+    "fieldget <SlidingPuzzle: java.lang.String TitleText>"
+    "load.r r0"->"fieldget <SlidingPuzzle: java.lang.String TitleText>";
+    "fieldget <SlidingPuzzle: java.lang.String TitleText>"->"push 1";
+    "push 1"->"specialinvoke <java.awt.Label: void <init>(java.lang.String,int)>";
+    "specialinvoke <java.awt.Label: void <init>(java.lang.String,int)>"->"load.r r1";
+    "load.r r1"->"load.r r0";
+    "load.r r0"->"fieldget <SlidingPuzzle: java.awt.Color bg>";
+    "fieldget <SlidingPuzzle: java.awt.Color bg>"->"virtualinvoke <java.awt.Component: void setBackground(java.awt.Color)>";
+    "virtualinvoke <java.awt.Component: void setBackground(java.awt.Color)>"->"load.r r1";
+    "load.r r1"->"load.r r0";
+    "load.r r0"->"fieldget <SlidingPuzzle: java.awt.Color fg>";
+    "fieldget <SlidingPuzzle: java.awt.Color fg>"->"virtualinvoke <java.awt.Component: void setForeground(java.awt.Color)>";
+    "virtualinvoke <java.awt.Component: void setForeground(java.awt.Color)>"->"load.r r1";
+    "load.r r1"->"new java.awt.Font";
+    "new java.awt.Font"->"dup1.r";
+    "dup1.r"->"push \"Helvetica\"";
+    "push \"Helvetica\""->"push 1";
+    "push 1"->"push 20";
+    "push 20"->"specialinvoke <java.awt.Font: void <init>(java.lang.String,int,int)>";
+    "specialinvoke <java.awt.Font: void <init>(java.lang.String,int,int)>"->"virtualinvoke <java.awt.Component: void setFont(java.awt.Font)>";
+    "virtualinvoke <java.awt.Component: void setFont(java.awt.Font)>"->"load.r i0";
+    "push \"North\""
+    "load.r i0"->"push \"North\"";
+    "push \"North\""->"load.r r1";
+    "load.r r1"->"virtualinvoke <java.awt.Container: java.awt.Component add(java.lang.String,java.awt.Component)>";
+    "virtualinvoke <java.awt.Container: java.awt.Component add(java.lang.String,java.awt.Component)>"->"pop";
+    "pop"->"load.r r0";
+    "load.r r0"->"load.r i0";
+    "load.r i0"->"virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>";
+    "virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>"->"pop";
+    "pop"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "fieldget <SlidingPuzzle: int width>"
+    "load.r r0"->"fieldget <SlidingPuzzle: int width>";
+    "fieldget <SlidingPuzzle: int width>"->"load.r r0";
+    "fieldget <SlidingPuzzle: int height>"
+    "load.r r0"->"fieldget <SlidingPuzzle: int height>";
+    "virtualinvoke <java.applet.Applet: void resize(int,int)>"
+    "fieldget <SlidingPuzzle: int height>"->"virtualinvoke <java.applet.Applet: void resize(int,int)>";
+    "virtualinvoke <java.applet.Applet: void resize(int,int)>"->"load.r r0";
+    "virtualinvoke <java.awt.Component: void show()>"
+    "load.r r0"->"virtualinvoke <java.awt.Component: void show()>";
+    "virtualinvoke <java.awt.Component: void show()>"->"load.r r0";
+    "load.r r0"->"virtualinvoke <java.awt.Component: void repaint()>";
+    "return"
+    "virtualinvoke <java.awt.Component: void repaint()>"->"return";
+    "ifcmplt.i load.r $r40"->"load.r $r40";
+    "load.r $r40"->"load.r r1";
+    "load.r r1"->"load.i i34";
+    "load.i i34"->"arrayread.r";
+    "arrayread.r"->"virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>";
+    "virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>"->"pop";
+    "inc.i i34 1"
+    "pop"->"inc.i i34 1";
+    "ifle load.r r1"->"load.r r1";
+    "load.r r1"->"push 1";
+    "push 1"->"arrayread.r";
+    "arrayread.r"->"new java.awt.Label";
+    "new java.awt.Label"->"dup1.r";
+    "push \"\""
+    "dup1.r"->"push \"\"";
+    "push \"\""->"push 1";
+    "push 1"->"specialinvoke <java.awt.Label: void <init>(java.lang.String,int)>";
+    "specialinvoke <java.awt.Label: void <init>(java.lang.String,int)>"->"virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>";
+    "virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>"->"pop";
+    "ifcmplt.i load.r r1"->"load.r r1";
+    "load.r r1"->"load.i $r40";
+    "load.i $r40"->"new java.awt.Panel";
+    "new java.awt.Panel"->"dup1.r";
+    "dup1.r"->"specialinvoke <java.awt.Panel: void <init>()>";
+    "arraywrite.r"
+    "specialinvoke <java.awt.Panel: void <init>()>"->"arraywrite.r";
+    "inc.i $r40 1"
+    "arraywrite.r"->"inc.i $r40 1";
+    "ifge load.r $r40"->"load.r $r40";
+    "load.r $r40"->"load.i i36";
+    "load.i i36"->"virtualinvoke <java.lang.String: char charAt(int)>";
+    "push 46"
+    "virtualinvoke <java.lang.String: char charAt(int)>"->"push 46";
+    "ifcmpne.c load.i i35"
+    "push 46"->"ifcmpne.c load.i i35";
+    "inc.i i35 1"
+    "ifcmpne.c load.i i35"->"inc.i i35 1";
+    "load.i i35"
+    "inc.i i35 1"->"load.i i35";
+    "load.i i35"->"push 1";
+    "ifcmple.i inc.i i36 -1"
+    "push 1"->"ifcmple.i inc.i i36 -1";
+    "push -1"
+    "ifcmple.i inc.i i36 -1"->"push -1";
+    "push -1"->"store.i i36";
+    "goto inc.i i36 -1"
+    "store.i i36"->"goto inc.i i36 -1";
+    "inc.i i36 -1"
+    "goto inc.i i36 -1"->"inc.i i36 -1";
+    "ifcmpne.c load.i i35"->"load.i i35";
+    "load.i i35"->"push 2";
+    "ifcmpge.i load.i i35"
+    "push 2"->"ifcmpge.i load.i i35";
+    "ifcmpge.i load.i i35"->"load.r $r40";
+    "load.r $r40"->"load.i i36";
+    "load.i i36"->"virtualinvoke <java.lang.String: char charAt(int)>";
+    "push 65"
+    "virtualinvoke <java.lang.String: char charAt(int)>"->"push 65";
+    "ifcmplt.c load.i i35"
+    "push 65"->"ifcmplt.c load.i i35";
+    "ifcmplt.c load.i i35"->"load.r $r40";
+    "load.r $r40"->"load.i i36";
+    "load.i i36"->"virtualinvoke <java.lang.String: char charAt(int)>";
+    "push 90"
+    "virtualinvoke <java.lang.String: char charAt(int)>"->"push 90";
+    "ifcmpgt.c load.i i35"
+    "push 90"->"ifcmpgt.c load.i i35";
+    "ifcmpgt.c load.i i35"->"load.i i34";
+    "load.i i34"->"load.r $r40";
+    "load.r $r40"->"load.i i36";
+    "load.i i36"->"virtualinvoke <java.lang.String: char charAt(int)>";
+    "virtualinvoke <java.lang.String: char charAt(int)>"->"push 65";
+    "push 65"->"sub.c";
+    "sub.c"->"push 10";
+    "push 10"->"add.i";
+    "add.i"->"add.i";
+    "add.i"->"store.i i34";
+    "store.i i34"->"goto inc.i i36 -1";
+    "ifcmpgt.c load.i i35"->"load.i i35";
+    "load.i i35"->"push 2";
+    "ifcmpge.i inc.i i36 -1"
+    "push 2"->"ifcmpge.i inc.i i36 -1";
+    "ifcmpge.i inc.i i36 -1"->"load.r $r40";
+    "load.r $r40"->"load.i i36";
+    "load.i i36"->"virtualinvoke <java.lang.String: char charAt(int)>";
+    "virtualinvoke <java.lang.String: char charAt(int)>"->"push 48";
+    "ifcmplt.c inc.i i36 -1"
+    "push 48"->"ifcmplt.c inc.i i36 -1";
+    "ifcmplt.c inc.i i36 -1"->"load.r $r40";
+    "load.r $r40"->"load.i i36";
+    "load.i i36"->"virtualinvoke <java.lang.String: char charAt(int)>";
+    "push 57"
+    "virtualinvoke <java.lang.String: char charAt(int)>"->"push 57";
+    "ifcmpgt.c inc.i i36 -1"
+    "push 57"->"ifcmpgt.c inc.i i36 -1";
+    "ifcmpgt.c inc.i i36 -1"->"load.i i34";
+    "load.i i34"->"load.r $r40";
+    "load.r $r40"->"load.i i36";
+    "load.i i36"->"virtualinvoke <java.lang.String: char charAt(int)>";
+    "virtualinvoke <java.lang.String: char charAt(int)>"->"push 48";
+    "push 48"->"sub.c";
+    "sub.c"->"add.i";
+    "add.i"->"store.i i34";
+    "ifle push 0"->"push 0";
+    "push 0"->"store.i r1";
+}

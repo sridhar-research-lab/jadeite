@@ -1,0 +1,284 @@
+digraph "" {
+    "r0 := @this: Blocks"
+    "load.r r0"
+    "r0 := @this: Blocks"->"load.r r0";
+    "new java.awt.BorderLayout"
+    "load.r r0"->"new java.awt.BorderLayout";
+    "dup1.r"
+    "new java.awt.BorderLayout"->"dup1.r";
+    "specialinvoke <java.awt.BorderLayout: void <init>()>"
+    "dup1.r"->"specialinvoke <java.awt.BorderLayout: void <init>()>";
+    "virtualinvoke <java.awt.Container: void setLayout(java.awt.LayoutManager)>"
+    "specialinvoke <java.awt.BorderLayout: void <init>()>"->"virtualinvoke <java.awt.Container: void setLayout(java.awt.LayoutManager)>";
+    "new java.awt.Panel"
+    "virtualinvoke <java.awt.Container: void setLayout(java.awt.LayoutManager)>"->"new java.awt.Panel";
+    "store.r $r4"
+    "new java.awt.Panel"->"store.r $r4";
+    "load.r $r4"
+    "store.r $r4"->"load.r $r4";
+    "specialinvoke <java.awt.Panel: void <init>()>"
+    "load.r $r4"->"specialinvoke <java.awt.Panel: void <init>()>";
+    "specialinvoke <java.awt.Panel: void <init>()>"->"load.r $r4";
+    "new java.awt.GridLayout"
+    "load.r $r4"->"new java.awt.GridLayout";
+    "new java.awt.GridLayout"->"dup1.r";
+    "push 0"
+    "dup1.r"->"push 0";
+    "push 2"
+    "push 0"->"push 2";
+    "specialinvoke <java.awt.GridLayout: void <init>(int,int)>"
+    "push 2"->"specialinvoke <java.awt.GridLayout: void <init>(int,int)>";
+    "specialinvoke <java.awt.GridLayout: void <init>(int,int)>"->"virtualinvoke <java.awt.Container: void setLayout(java.awt.LayoutManager)>";
+    "virtualinvoke <java.awt.Container: void setLayout(java.awt.LayoutManager)>"->"load.r r0";
+    "push \"Center\""
+    "load.r r0"->"push \"Center\"";
+    "push \"Center\""->"load.r $r4";
+    "virtualinvoke <java.awt.Container: java.awt.Component add(java.lang.String,java.awt.Component)>"
+    "load.r $r4"->"virtualinvoke <java.awt.Container: java.awt.Component add(java.lang.String,java.awt.Component)>";
+    "pop"
+    "virtualinvoke <java.awt.Container: java.awt.Component add(java.lang.String,java.awt.Component)>"->"pop";
+    "pop"->"load.r r0";
+    "new PlayFieldCanvas"
+    "load.r r0"->"new PlayFieldCanvas";
+    "new PlayFieldCanvas"->"dup1.r";
+    "specialinvoke <PlayFieldCanvas: void <init>()>"
+    "dup1.r"->"specialinvoke <PlayFieldCanvas: void <init>()>";
+    "fieldput <Blocks: PlayFieldCanvas myPlayFieldCanvas>"
+    "specialinvoke <PlayFieldCanvas: void <init>()>"->"fieldput <Blocks: PlayFieldCanvas myPlayFieldCanvas>";
+    "fieldput <Blocks: PlayFieldCanvas myPlayFieldCanvas>"->"load.r $r4";
+    "load.r $r4"->"load.r r0";
+    "fieldget <Blocks: PlayFieldCanvas myPlayFieldCanvas>"
+    "load.r r0"->"fieldget <Blocks: PlayFieldCanvas myPlayFieldCanvas>";
+    "virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>"
+    "fieldget <Blocks: PlayFieldCanvas myPlayFieldCanvas>"->"virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>";
+    "virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>"->"pop";
+    "pop"->"load.r r0";
+    "new StatisticsCanvas"
+    "load.r r0"->"new StatisticsCanvas";
+    "new StatisticsCanvas"->"dup1.r";
+    "specialinvoke <StatisticsCanvas: void <init>()>"
+    "dup1.r"->"specialinvoke <StatisticsCanvas: void <init>()>";
+    "fieldput <Blocks: StatisticsCanvas Statistics>"
+    "specialinvoke <StatisticsCanvas: void <init>()>"->"fieldput <Blocks: StatisticsCanvas Statistics>";
+    "fieldput <Blocks: StatisticsCanvas Statistics>"->"load.r $r4";
+    "load.r $r4"->"load.r r0";
+    "fieldget <Blocks: StatisticsCanvas Statistics>"
+    "load.r r0"->"fieldget <Blocks: StatisticsCanvas Statistics>";
+    "fieldget <Blocks: StatisticsCanvas Statistics>"->"virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>";
+    "virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>"->"pop";
+    "pop"->"new java.awt.Panel";
+    "new java.awt.Panel"->"store.r $r4";
+    "store.r $r4"->"load.r $r4";
+    "load.r $r4"->"specialinvoke <java.awt.Panel: void <init>()>";
+    "specialinvoke <java.awt.Panel: void <init>()>"->"load.r $r4";
+    "new java.awt.FlowLayout"
+    "load.r $r4"->"new java.awt.FlowLayout";
+    "new java.awt.FlowLayout"->"dup1.r";
+    "specialinvoke <java.awt.FlowLayout: void <init>()>"
+    "dup1.r"->"specialinvoke <java.awt.FlowLayout: void <init>()>";
+    "specialinvoke <java.awt.FlowLayout: void <init>()>"->"virtualinvoke <java.awt.Container: void setLayout(java.awt.LayoutManager)>";
+    "virtualinvoke <java.awt.Container: void setLayout(java.awt.LayoutManager)>"->"load.r r0";
+    "push \"East\""
+    "load.r r0"->"push \"East\"";
+    "push \"East\""->"load.r $r4";
+    "load.r $r4"->"virtualinvoke <java.awt.Container: java.awt.Component add(java.lang.String,java.awt.Component)>";
+    "virtualinvoke <java.awt.Container: java.awt.Component add(java.lang.String,java.awt.Component)>"->"pop";
+    "pop"->"load.r $r4";
+    "new java.awt.Button"
+    "load.r $r4"->"new java.awt.Button";
+    "new java.awt.Button"->"dup1.r";
+    "push \"About\""
+    "dup1.r"->"push \"About\"";
+    "specialinvoke <java.awt.Button: void <init>(java.lang.String)>"
+    "push \"About\""->"specialinvoke <java.awt.Button: void <init>(java.lang.String)>";
+    "specialinvoke <java.awt.Button: void <init>(java.lang.String)>"->"virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>";
+    "virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>"->"pop";
+    "pop"->"load.r $r4";
+    "load.r $r4"->"new java.awt.Button";
+    "new java.awt.Button"->"dup1.r";
+    "push \"Pause / Resume\""
+    "dup1.r"->"push \"Pause / Resume\"";
+    "push \"Pause / Resume\""->"specialinvoke <java.awt.Button: void <init>(java.lang.String)>";
+    "specialinvoke <java.awt.Button: void <init>(java.lang.String)>"->"virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>";
+    "virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>"->"pop";
+    "pop"->"load.r r0";
+    "new java.util.Vector"
+    "load.r r0"->"new java.util.Vector";
+    "new java.util.Vector"->"dup1.r";
+    "specialinvoke <java.util.Vector: void <init>()>"
+    "dup1.r"->"specialinvoke <java.util.Vector: void <init>()>";
+    "fieldput <Blocks: java.util.Vector ShapeSet>"
+    "specialinvoke <java.util.Vector: void <init>()>"->"fieldput <Blocks: java.util.Vector ShapeSet>";
+    "fieldput <Blocks: java.util.Vector ShapeSet>"->"load.r r0";
+    "fieldget <Blocks: java.util.Vector ShapeSet>"
+    "load.r r0"->"fieldget <Blocks: java.util.Vector ShapeSet>";
+    "new Shape"
+    "fieldget <Blocks: java.util.Vector ShapeSet>"->"new Shape";
+    "new Shape"->"dup1.r";
+    "dup1.r"->"push 0";
+    "push 4080"
+    "push 0"->"push 4080";
+    "push 4080"->"push 4080";
+    "push 4080"->"push 0";
+    "staticget <java.awt.Color: java.awt.Color blue>"
+    "push 0"->"staticget <java.awt.Color: java.awt.Color blue>";
+    "push 3"
+    "staticget <java.awt.Color: java.awt.Color blue>"->"push 3";
+    "specialinvoke <Shape: void <init>(int,int,int,int,java.awt.Color,int)>"
+    "push 3"->"specialinvoke <Shape: void <init>(int,int,int,int,java.awt.Color,int)>";
+    "virtualinvoke <java.util.Vector: void addElement(java.lang.Object)>"
+    "specialinvoke <Shape: void <init>(int,int,int,int,java.awt.Color,int)>"->"virtualinvoke <java.util.Vector: void addElement(java.lang.Object)>";
+    "virtualinvoke <java.util.Vector: void addElement(java.lang.Object)>"->"load.r r0";
+    "load.r r0"->"fieldget <Blocks: java.util.Vector ShapeSet>";
+    "fieldget <Blocks: java.util.Vector ShapeSet>"->"new Shape";
+    "new Shape"->"dup1.r";
+    "push 3840"
+    "dup1.r"->"push 3840";
+    "push 3840"->"push 3840";
+    "push 3840"->"push 4080";
+    "push 4080"->"push 0";
+    "staticget <java.awt.Color: java.awt.Color yellow>"
+    "push 0"->"staticget <java.awt.Color: java.awt.Color yellow>";
+    "push 5"
+    "staticget <java.awt.Color: java.awt.Color yellow>"->"push 5";
+    "push 5"->"specialinvoke <Shape: void <init>(int,int,int,int,java.awt.Color,int)>";
+    "specialinvoke <Shape: void <init>(int,int,int,int,java.awt.Color,int)>"->"virtualinvoke <java.util.Vector: void addElement(java.lang.Object)>";
+    "virtualinvoke <java.util.Vector: void addElement(java.lang.Object)>"->"load.r r0";
+    "load.r r0"->"fieldget <Blocks: java.util.Vector ShapeSet>";
+    "fieldget <Blocks: java.util.Vector ShapeSet>"->"new Shape";
+    "new Shape"->"dup1.r";
+    "push 240"
+    "dup1.r"->"push 240";
+    "push 240"->"push 240";
+    "push 240"->"push 4080";
+    "push 4080"->"push 0";
+    "staticget <java.awt.Color: java.awt.Color pink>"
+    "push 0"->"staticget <java.awt.Color: java.awt.Color pink>";
+    "staticget <java.awt.Color: java.awt.Color pink>"->"push 5";
+    "push 5"->"specialinvoke <Shape: void <init>(int,int,int,int,java.awt.Color,int)>";
+    "specialinvoke <Shape: void <init>(int,int,int,int,java.awt.Color,int)>"->"virtualinvoke <java.util.Vector: void addElement(java.lang.Object)>";
+    "virtualinvoke <java.util.Vector: void addElement(java.lang.Object)>"->"load.r r0";
+    "load.r r0"->"fieldget <Blocks: java.util.Vector ShapeSet>";
+    "fieldget <Blocks: java.util.Vector ShapeSet>"->"new Shape";
+    "new Shape"->"dup1.r";
+    "dup1.r"->"push 0";
+    "push 0"->"push 3840";
+    "push 65520"
+    "push 3840"->"push 65520";
+    "push 65520"->"push 0";
+    "staticget <java.awt.Color: java.awt.Color green>"
+    "push 0"->"staticget <java.awt.Color: java.awt.Color green>";
+    "push 4"
+    "staticget <java.awt.Color: java.awt.Color green>"->"push 4";
+    "push 4"->"specialinvoke <Shape: void <init>(int,int,int,int,java.awt.Color,int)>";
+    "specialinvoke <Shape: void <init>(int,int,int,int,java.awt.Color,int)>"->"virtualinvoke <java.util.Vector: void addElement(java.lang.Object)>";
+    "virtualinvoke <java.util.Vector: void addElement(java.lang.Object)>"->"load.r r0";
+    "load.r r0"->"fieldget <Blocks: java.util.Vector ShapeSet>";
+    "fieldget <Blocks: java.util.Vector ShapeSet>"->"new Shape";
+    "new Shape"->"dup1.r";
+    "dup1.r"->"push 3840";
+    "push 3840"->"push 3840";
+    "push 3840"->"push 3840";
+    "push 3840"->"push 3840";
+    "staticget <java.awt.Color: java.awt.Color red>"
+    "push 3840"->"staticget <java.awt.Color: java.awt.Color red>";
+    "staticget <java.awt.Color: java.awt.Color red>"->"push 4";
+    "push 4"->"specialinvoke <Shape: void <init>(int,int,int,int,java.awt.Color,int)>";
+    "specialinvoke <Shape: void <init>(int,int,int,int,java.awt.Color,int)>"->"virtualinvoke <java.util.Vector: void addElement(java.lang.Object)>";
+    "virtualinvoke <java.util.Vector: void addElement(java.lang.Object)>"->"load.r r0";
+    "load.r r0"->"fieldget <Blocks: java.util.Vector ShapeSet>";
+    "fieldget <Blocks: java.util.Vector ShapeSet>"->"new Shape";
+    "new Shape"->"dup1.r";
+    "dup1.r"->"push 3840";
+    "push 3840"->"push 4080";
+    "push 4080"->"push 240";
+    "push 240"->"push 0";
+    "staticget <java.awt.Color: java.awt.Color magenta>"
+    "push 0"->"staticget <java.awt.Color: java.awt.Color magenta>";
+    "staticget <java.awt.Color: java.awt.Color magenta>"->"push 4";
+    "push 4"->"specialinvoke <Shape: void <init>(int,int,int,int,java.awt.Color,int)>";
+    "specialinvoke <Shape: void <init>(int,int,int,int,java.awt.Color,int)>"->"virtualinvoke <java.util.Vector: void addElement(java.lang.Object)>";
+    "virtualinvoke <java.util.Vector: void addElement(java.lang.Object)>"->"load.r r0";
+    "load.r r0"->"fieldget <Blocks: java.util.Vector ShapeSet>";
+    "fieldget <Blocks: java.util.Vector ShapeSet>"->"new Shape";
+    "new Shape"->"dup1.r";
+    "dup1.r"->"push 240";
+    "push 240"->"push 4080";
+    "push 4080"->"push 3840";
+    "push 3840"->"push 0";
+    "staticget <java.awt.Color: java.awt.Color orange>"
+    "push 0"->"staticget <java.awt.Color: java.awt.Color orange>";
+    "staticget <java.awt.Color: java.awt.Color orange>"->"push 4";
+    "push 4"->"specialinvoke <Shape: void <init>(int,int,int,int,java.awt.Color,int)>";
+    "specialinvoke <Shape: void <init>(int,int,int,int,java.awt.Color,int)>"->"virtualinvoke <java.util.Vector: void addElement(java.lang.Object)>";
+    "virtualinvoke <java.util.Vector: void addElement(java.lang.Object)>"->"push 4";
+    "newarray"
+    "push 4"->"newarray";
+    "staticput <Blocks: java.applet.AudioClip[] sounds>"
+    "newarray"->"staticput <Blocks: java.applet.AudioClip[] sounds>";
+    "staticget <Blocks: java.applet.AudioClip[] sounds>"
+    "staticput <Blocks: java.applet.AudioClip[] sounds>"->"staticget <Blocks: java.applet.AudioClip[] sounds>";
+    "staticget <Blocks: java.applet.AudioClip[] sounds>"->"push 0";
+    "push 0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "virtualinvoke <java.applet.Applet: java.net.URL getCodeBase()>"
+    "load.r r0"->"virtualinvoke <java.applet.Applet: java.net.URL getCodeBase()>";
+    "push \"audio/drop.au\""
+    "virtualinvoke <java.applet.Applet: java.net.URL getCodeBase()>"->"push \"audio/drop.au\"";
+    "virtualinvoke <java.applet.Applet: java.applet.AudioClip getAudioClip(java.net.URL,java.lang.String)>"
+    "push \"audio/drop.au\""->"virtualinvoke <java.applet.Applet: java.applet.AudioClip getAudioClip(java.net.URL,java.lang.String)>";
+    "arraywrite.r"
+    "virtualinvoke <java.applet.Applet: java.applet.AudioClip getAudioClip(java.net.URL,java.lang.String)>"->"arraywrite.r";
+    "arraywrite.r"->"staticget <Blocks: java.applet.AudioClip[] sounds>";
+    "push 1"
+    "staticget <Blocks: java.applet.AudioClip[] sounds>"->"push 1";
+    "push 1"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"virtualinvoke <java.applet.Applet: java.net.URL getCodeBase()>";
+    "push \"audio/gameover.au\""
+    "virtualinvoke <java.applet.Applet: java.net.URL getCodeBase()>"->"push \"audio/gameover.au\"";
+    "push \"audio/gameover.au\""->"virtualinvoke <java.applet.Applet: java.applet.AudioClip getAudioClip(java.net.URL,java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.applet.AudioClip getAudioClip(java.net.URL,java.lang.String)>"->"arraywrite.r";
+    "arraywrite.r"->"staticget <Blocks: java.applet.AudioClip[] sounds>";
+    "staticget <Blocks: java.applet.AudioClip[] sounds>"->"push 2";
+    "push 2"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"virtualinvoke <java.applet.Applet: java.net.URL getCodeBase()>";
+    "push \"audio/nextlevel.au\""
+    "virtualinvoke <java.applet.Applet: java.net.URL getCodeBase()>"->"push \"audio/nextlevel.au\"";
+    "push \"audio/nextlevel.au\""->"virtualinvoke <java.applet.Applet: java.applet.AudioClip getAudioClip(java.net.URL,java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.applet.AudioClip getAudioClip(java.net.URL,java.lang.String)>"->"arraywrite.r";
+    "arraywrite.r"->"staticget <Blocks: java.applet.AudioClip[] sounds>";
+    "staticget <Blocks: java.applet.AudioClip[] sounds>"->"push 3";
+    "push 3"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"virtualinvoke <java.applet.Applet: java.net.URL getCodeBase()>";
+    "push \"audio/line.au\""
+    "virtualinvoke <java.applet.Applet: java.net.URL getCodeBase()>"->"push \"audio/line.au\"";
+    "push \"audio/line.au\""->"virtualinvoke <java.applet.Applet: java.applet.AudioClip getAudioClip(java.net.URL,java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.applet.AudioClip getAudioClip(java.net.URL,java.lang.String)>"->"arraywrite.r";
+    "arraywrite.r"->"load.r r0";
+    "push 10"
+    "load.r r0"->"push 10";
+    "push 18"
+    "push 10"->"push 18";
+    "newmultiarray 2"
+    "push 18"->"newmultiarray 2";
+    "fieldput <Blocks: java.awt.Color[][] PlayField>"
+    "newmultiarray 2"->"fieldput <Blocks: java.awt.Color[][] PlayField>";
+    "fieldput <Blocks: java.awt.Color[][] PlayField>"->"load.r r0";
+    "load.r r0"->"fieldget <Blocks: PlayFieldCanvas myPlayFieldCanvas>";
+    "fieldget <Blocks: PlayFieldCanvas myPlayFieldCanvas>"->"load.r r0";
+    "fieldget <Blocks: java.awt.Color[][] PlayField>"
+    "load.r r0"->"fieldget <Blocks: java.awt.Color[][] PlayField>";
+    "virtualinvoke <PlayFieldCanvas: void SetPlayField(java.awt.Color[][])>"
+    "fieldget <Blocks: java.awt.Color[][] PlayField>"->"virtualinvoke <PlayFieldCanvas: void SetPlayField(java.awt.Color[][])>";
+    "virtualinvoke <PlayFieldCanvas: void SetPlayField(java.awt.Color[][])>"->"load.r r0";
+    "virtualinvoke <Blocks: void InitNewGame()>"
+    "load.r r0"->"virtualinvoke <Blocks: void InitNewGame()>";
+    "virtualinvoke <Blocks: void InitNewGame()>"->"load.r r0";
+    "virtualinvoke <Blocks: void GetNextRandomShape()>"
+    "load.r r0"->"virtualinvoke <Blocks: void GetNextRandomShape()>";
+    "return"
+    "virtualinvoke <Blocks: void GetNextRandomShape()>"->"return";
+}

@@ -1,0 +1,90 @@
+digraph "" {
+    "r0 := @this: CornHolio"
+    "load.r r0"
+    "r0 := @this: CornHolio"->"load.r r0";
+    "push \"text\""
+    "load.r r0"->"push \"text\"";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"
+    "push \"text\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "store.r $r1"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"store.r $r1";
+    "load.r $r1"
+    "store.r $r1"->"load.r $r1";
+    "ifnull push \"Sound Clip\""
+    "load.r $r1"->"ifnull push \"Sound Clip\"";
+    "ifnull push \"Sound Clip\""->"load.r $r1";
+    "load.r $r1"->"store.r $r1";
+    "goto load.r $r1"
+    "store.r $r1"->"goto load.r $r1";
+    "goto load.r $r1"->"load.r $r1";
+    "load.r $r1"->"store.r $r1";
+    "store.r $r1"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "push \"sound\""
+    "load.r r0"->"push \"sound\"";
+    "push \"sound\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "store.r $r2"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"store.r $r2";
+    "load.r $r2"
+    "store.r $r2"->"load.r $r2";
+    "fieldput <CornHolio: java.lang.String _sound>"
+    "load.r $r2"->"fieldput <CornHolio: java.lang.String _sound>";
+    "fieldput <CornHolio: java.lang.String _sound>"->"load.r $r2";
+    "ifnull push \"cornholio.au\""
+    "load.r $r2"->"ifnull push \"cornholio.au\"";
+    "ifnull push \"cornholio.au\""->"load.r r0";
+    "fieldget <CornHolio: java.lang.String _sound>"
+    "load.r r0"->"fieldget <CornHolio: java.lang.String _sound>";
+    "fieldget <CornHolio: java.lang.String _sound>"->"store.r $r2";
+    "goto load.r r0"
+    "store.r $r2"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "load.r r0"->"load.r $r2";
+    "load.r $r2"->"fieldput <CornHolio: java.lang.String _sound>";
+    "fieldput <CornHolio: java.lang.String _sound>"->"load.r r0";
+    "new java.awt.BorderLayout"
+    "load.r r0"->"new java.awt.BorderLayout";
+    "dup1.r"
+    "new java.awt.BorderLayout"->"dup1.r";
+    "specialinvoke <java.awt.BorderLayout: void <init>()>"
+    "dup1.r"->"specialinvoke <java.awt.BorderLayout: void <init>()>";
+    "virtualinvoke <java.awt.Container: void setLayout(java.awt.LayoutManager)>"
+    "specialinvoke <java.awt.BorderLayout: void <init>()>"->"virtualinvoke <java.awt.Container: void setLayout(java.awt.LayoutManager)>";
+    "virtualinvoke <java.awt.Container: void setLayout(java.awt.LayoutManager)>"->"load.r r0";
+    "new java.awt.Button"
+    "load.r r0"->"new java.awt.Button";
+    "new java.awt.Button"->"dup1.r";
+    "dup1.r"->"load.r $r1";
+    "specialinvoke <java.awt.Button: void <init>(java.lang.String)>"
+    "load.r $r1"->"specialinvoke <java.awt.Button: void <init>(java.lang.String)>";
+    "fieldput <CornHolio: java.awt.Button button>"
+    "specialinvoke <java.awt.Button: void <init>(java.lang.String)>"->"fieldput <CornHolio: java.awt.Button button>";
+    "fieldput <CornHolio: java.awt.Button button>"->"load.r r0";
+    "push \"Center\""
+    "load.r r0"->"push \"Center\"";
+    "push \"Center\""->"load.r r0";
+    "fieldget <CornHolio: java.awt.Button button>"
+    "load.r r0"->"fieldget <CornHolio: java.awt.Button button>";
+    "virtualinvoke <java.awt.Container: java.awt.Component add(java.lang.String,java.awt.Component)>"
+    "fieldget <CornHolio: java.awt.Button button>"->"virtualinvoke <java.awt.Container: java.awt.Component add(java.lang.String,java.awt.Component)>";
+    "pop"
+    "virtualinvoke <java.awt.Container: java.awt.Component add(java.lang.String,java.awt.Component)>"->"pop";
+    "pop"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "virtualinvoke <java.applet.Applet: java.net.URL getCodeBase()>"
+    "load.r r0"->"virtualinvoke <java.applet.Applet: java.net.URL getCodeBase()>";
+    "virtualinvoke <java.applet.Applet: java.net.URL getCodeBase()>"->"load.r r0";
+    "load.r r0"->"fieldget <CornHolio: java.lang.String _sound>";
+    "virtualinvoke <java.applet.Applet: java.applet.AudioClip getAudioClip(java.net.URL,java.lang.String)>"
+    "fieldget <CornHolio: java.lang.String _sound>"->"virtualinvoke <java.applet.Applet: java.applet.AudioClip getAudioClip(java.net.URL,java.lang.String)>";
+    "staticput <CornHolio: java.applet.AudioClip sound>"
+    "virtualinvoke <java.applet.Applet: java.applet.AudioClip getAudioClip(java.net.URL,java.lang.String)>"->"staticput <CornHolio: java.applet.AudioClip sound>";
+    "return"
+    "staticput <CornHolio: java.applet.AudioClip sound>"->"return";
+    "push \"cornholio.au\""
+    "ifnull push \"cornholio.au\""->"push \"cornholio.au\"";
+    "push \"cornholio.au\""->"store.r $r2";
+    "push \"Sound Clip\""
+    "ifnull push \"Sound Clip\""->"push \"Sound Clip\"";
+    "push \"Sound Clip\""->"store.r $r1";
+}

@@ -1,0 +1,106 @@
+digraph "" {
+    "r0 := @this: moaghunter"
+    "load.r r0"
+    "r0 := @this: moaghunter"->"load.r r0";
+    "push null"
+    "load.r r0"->"push null";
+    "virtualinvoke <java.awt.Container: void setLayout(java.awt.LayoutManager)>"
+    "push null"->"virtualinvoke <java.awt.Container: void setLayout(java.awt.LayoutManager)>";
+    "virtualinvoke <java.awt.Container: void setLayout(java.awt.LayoutManager)>"->"load.r r0";
+    "push 1"
+    "load.r r0"->"push 1";
+    "staticinvoke <java.awt.Cursor: java.awt.Cursor getPredefinedCursor(int)>"
+    "push 1"->"staticinvoke <java.awt.Cursor: java.awt.Cursor getPredefinedCursor(int)>";
+    "virtualinvoke <java.awt.Component: void setCursor(java.awt.Cursor)>"
+    "staticinvoke <java.awt.Cursor: java.awt.Cursor getPredefinedCursor(int)>"->"virtualinvoke <java.awt.Component: void setCursor(java.awt.Cursor)>";
+    "virtualinvoke <java.awt.Component: void setCursor(java.awt.Cursor)>"->"load.r r0";
+    "staticget <java.awt.Color: java.awt.Color black>"
+    "load.r r0"->"staticget <java.awt.Color: java.awt.Color black>";
+    "virtualinvoke <java.awt.Component: void setBackground(java.awt.Color)>"
+    "staticget <java.awt.Color: java.awt.Color black>"->"virtualinvoke <java.awt.Component: void setBackground(java.awt.Color)>";
+    "virtualinvoke <java.awt.Component: void setBackground(java.awt.Color)>"->"load.r r0";
+    "push 500"
+    "load.r r0"->"push 500";
+    "push 450"
+    "push 500"->"push 450";
+    "virtualinvoke <java.awt.Component: void setSize(int,int)>"
+    "push 450"->"virtualinvoke <java.awt.Component: void setSize(int,int)>";
+    "virtualinvoke <java.awt.Component: void setSize(int,int)>"->"load.r r0";
+    "new java.awt.Font"
+    "load.r r0"->"new java.awt.Font";
+    "dup1.r"
+    "new java.awt.Font"->"dup1.r";
+    "push \"Times New Roman\""
+    "dup1.r"->"push \"Times New Roman\"";
+    "push \"Times New Roman\""->"push 1";
+    "push 14"
+    "push 1"->"push 14";
+    "specialinvoke <java.awt.Font: void <init>(java.lang.String,int,int)>"
+    "push 14"->"specialinvoke <java.awt.Font: void <init>(java.lang.String,int,int)>";
+    "fieldput <moaghunter: java.awt.Font GameFont>"
+    "specialinvoke <java.awt.Font: void <init>(java.lang.String,int,int)>"->"fieldput <moaghunter: java.awt.Font GameFont>";
+    "staticinvoke <java.lang.Runtime: java.lang.Runtime getRuntime()>"
+    "fieldput <moaghunter: java.awt.Font GameFont>"->"staticinvoke <java.lang.Runtime: java.lang.Runtime getRuntime()>";
+    "staticput <moaghunter: java.lang.Runtime rt>"
+    "staticinvoke <java.lang.Runtime: java.lang.Runtime getRuntime()>"->"staticput <moaghunter: java.lang.Runtime rt>";
+    "staticput <moaghunter: java.lang.Runtime rt>"->"load.r r0";
+    "push \"HighScoreOn\""
+    "load.r r0"->"push \"HighScoreOn\"";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"
+    "push \"HighScoreOn\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "store.r r1"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"store.r r1";
+    "load.r r1"
+    "store.r r1"->"load.r r1";
+    "ifnull load.r r0"
+    "load.r r1"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r r1";
+    "push \"no\""
+    "load.r r1"->"push \"no\"";
+    "virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>"
+    "push \"no\""->"virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>";
+    "ifeq load.r r0"
+    "virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>"->"ifeq load.r r0";
+    "ifeq load.r r0"->"load.r r0";
+    "push 0"
+    "load.r r0"->"push 0";
+    "fieldput <moaghunter: boolean bHighScoreOn>"
+    "push 0"->"fieldput <moaghunter: boolean bHighScoreOn>";
+    "fieldput <moaghunter: boolean bHighScoreOn>"->"load.r r0";
+    "fieldget <moaghunter: boolean bHighScoreOn>"
+    "load.r r0"->"fieldget <moaghunter: boolean bHighScoreOn>";
+    "ifeq staticget <java.lang.System: java.io.PrintStream out>"
+    "fieldget <moaghunter: boolean bHighScoreOn>"->"ifeq staticget <java.lang.System: java.io.PrintStream out>";
+    "staticget <java.lang.System: java.io.PrintStream out>"
+    "ifeq staticget <java.lang.System: java.io.PrintStream out>"->"staticget <java.lang.System: java.io.PrintStream out>";
+    "push \"High Score Recording On\""
+    "staticget <java.lang.System: java.io.PrintStream out>"->"push \"High Score Recording On\"";
+    "virtualinvoke <java.io.PrintStream: void println(java.lang.String)>"
+    "push \"High Score Recording On\""->"virtualinvoke <java.io.PrintStream: void println(java.lang.String)>";
+    "goto staticget <java.lang.System: java.io.PrintStream out>"
+    "virtualinvoke <java.io.PrintStream: void println(java.lang.String)>"->"goto staticget <java.lang.System: java.io.PrintStream out>";
+    "goto staticget <java.lang.System: java.io.PrintStream out>"->"staticget <java.lang.System: java.io.PrintStream out>";
+    "new java.lang.StringBuffer"
+    "staticget <java.lang.System: java.io.PrintStream out>"->"new java.lang.StringBuffer";
+    "new java.lang.StringBuffer"->"dup1.r";
+    "push \"Build: \""
+    "dup1.r"->"push \"Build: \"";
+    "specialinvoke <java.lang.StringBuffer: void <init>(java.lang.String)>"
+    "push \"Build: \""->"specialinvoke <java.lang.StringBuffer: void <init>(java.lang.String)>";
+    "push 1.1"
+    "specialinvoke <java.lang.StringBuffer: void <init>(java.lang.String)>"->"push 1.1";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(double)>"
+    "push 1.1"->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(double)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>"
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(double)>"->"virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>"->"virtualinvoke <java.io.PrintStream: void println(java.lang.String)>";
+    "virtualinvoke <java.io.PrintStream: void println(java.lang.String)>"->"load.r r0";
+    "virtualinvoke <java.awt.Container: void validate()>"
+    "load.r r0"->"virtualinvoke <java.awt.Container: void validate()>";
+    "return"
+    "virtualinvoke <java.awt.Container: void validate()>"->"return";
+    "ifeq staticget <java.lang.System: java.io.PrintStream out>"->"staticget <java.lang.System: java.io.PrintStream out>";
+    "push \"High Score Recording off\""
+    "staticget <java.lang.System: java.io.PrintStream out>"->"push \"High Score Recording off\"";
+    "push \"High Score Recording off\""->"virtualinvoke <java.io.PrintStream: void println(java.lang.String)>";
+}

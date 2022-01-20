@@ -1,0 +1,90 @@
+digraph "" {
+    "r0 := @this: com.javafx.main.c"
+    "load.r r0"
+    "r0 := @this: com.javafx.main.c"->"load.r r0";
+    "push \"requiredFXVersion\""
+    "load.r r0"->"push \"requiredFXVersion\"";
+    "virtualinvoke <com.javafx.main.c: java.lang.String getParameter(java.lang.String)>"
+    "push \"requiredFXVersion\""->"virtualinvoke <com.javafx.main.c: java.lang.String getParameter(java.lang.String)>";
+    "pop"
+    "virtualinvoke <com.javafx.main.c: java.lang.String getParameter(java.lang.String)>"->"pop";
+    "staticinvoke <com.javafx.main.c: float a()>"
+    "pop"->"staticinvoke <com.javafx.main.c: float a()>";
+    "staticinvoke <com.javafx.main.c: float a()>"->"pop";
+    "push \"netscape.javascript.JSObject\""
+    "pop"->"push \"netscape.javascript.JSObject\"";
+    "staticinvoke <java.lang.Class: java.lang.Class forName(java.lang.String)>"
+    "push \"netscape.javascript.JSObject\""->"staticinvoke <java.lang.Class: java.lang.Class forName(java.lang.String)>";
+    "store.r $r3"
+    "staticinvoke <java.lang.Class: java.lang.Class forName(java.lang.String)>"->"store.r $r3";
+    "push 1"
+    "store.r $r3"->"push 1";
+    "newarray"
+    "push 1"->"newarray";
+    "store.r $r4"
+    "newarray"->"store.r $r4";
+    "staticget <com.javafx.main.c: java.lang.Class c>"
+    "store.r $r4"->"staticget <com.javafx.main.c: java.lang.Class c>";
+    "ifnonnull staticget <com.javafx.main.c: java.lang.Class c>"
+    "staticget <com.javafx.main.c: java.lang.Class c>"->"ifnonnull staticget <com.javafx.main.c: java.lang.Class c>";
+    "push \"java.applet.Applet\""
+    "ifnonnull staticget <com.javafx.main.c: java.lang.Class c>"->"push \"java.applet.Applet\"";
+    "staticinvoke <com.javafx.main.c: java.lang.Class a(java.lang.String)>"
+    "push \"java.applet.Applet\""->"staticinvoke <com.javafx.main.c: java.lang.Class a(java.lang.String)>";
+    "store.r $r12"
+    "staticinvoke <com.javafx.main.c: java.lang.Class a(java.lang.String)>"->"store.r $r12";
+    "load.r $r12"
+    "store.r $r12"->"load.r $r12";
+    "staticput <com.javafx.main.c: java.lang.Class c>"
+    "load.r $r12"->"staticput <com.javafx.main.c: java.lang.Class c>";
+    "goto load.r $r4"
+    "staticput <com.javafx.main.c: java.lang.Class c>"->"goto load.r $r4";
+    "load.r $r4"
+    "goto load.r $r4"->"load.r $r4";
+    "push 0"
+    "load.r $r4"->"push 0";
+    "push 0"->"load.r $r12";
+    "arraywrite.r"
+    "load.r $r12"->"arraywrite.r";
+    "load.r $r3"
+    "arraywrite.r"->"load.r $r3";
+    "push \"getWindow\""
+    "load.r $r3"->"push \"getWindow\"";
+    "push \"getWindow\""->"load.r $r4";
+    "virtualinvoke <java.lang.Class: java.lang.reflect.Method getMethod(java.lang.String,java.lang.Class[])>"
+    "load.r $r4"->"virtualinvoke <java.lang.Class: java.lang.reflect.Method getMethod(java.lang.String,java.lang.Class[])>";
+    "push null"
+    "virtualinvoke <java.lang.Class: java.lang.reflect.Method getMethod(java.lang.String,java.lang.Class[])>"->"push null";
+    "push null"->"push 1";
+    "push 1"->"newarray";
+    "dup1.r"
+    "newarray"->"dup1.r";
+    "dup1.r"->"push 0";
+    "push 0"->"load.r r0";
+    "load.r r0"->"arraywrite.r";
+    "virtualinvoke <java.lang.reflect.Method: java.lang.Object invoke(java.lang.Object,java.lang.Object[])>"
+    "arraywrite.r"->"virtualinvoke <java.lang.reflect.Method: java.lang.Object invoke(java.lang.Object,java.lang.Object[])>";
+    "ifnull push 0"
+    "virtualinvoke <java.lang.reflect.Method: java.lang.Object invoke(java.lang.Object,java.lang.Object[])>"->"ifnull push 0";
+    "ifnull push 0"->"push 1";
+    "store.b $r3"
+    "push 1"->"store.b $r3";
+    "goto load.r r0"
+    "store.b $r3"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "load.b $r3"
+    "load.r r0"->"load.b $r3";
+    "fieldput <com.javafx.main.c: boolean a>"
+    "load.b $r3"->"fieldput <com.javafx.main.c: boolean a>";
+    "fieldput <com.javafx.main.c: boolean a>"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "specialinvoke <com.javafx.main.c: void b()>"
+    "load.r r0"->"specialinvoke <com.javafx.main.c: void b()>";
+    "return"
+    "specialinvoke <com.javafx.main.c: void b()>"->"return";
+    "load.b $r3"->"store.r $r3";
+    "ifnull push 0"->"push 0";
+    "push 0"->"store.b $r3";
+    "ifnonnull staticget <com.javafx.main.c: java.lang.Class c>"->"staticget <com.javafx.main.c: java.lang.Class c>";
+    "staticget <com.javafx.main.c: java.lang.Class c>"->"store.r $r12";
+}

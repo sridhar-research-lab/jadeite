@@ -1,0 +1,126 @@
+digraph "" {
+    "r0 := @this: NewLineDemo"
+    "load.r r0"
+    "r0 := @this: NewLineDemo"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "virtualinvoke <java.awt.Component: java.awt.Dimension size()>"
+    "load.r r0"->"virtualinvoke <java.awt.Component: java.awt.Dimension size()>";
+    "fieldget <java.awt.Dimension: int width>"
+    "virtualinvoke <java.awt.Component: java.awt.Dimension size()>"->"fieldget <java.awt.Dimension: int width>";
+    "fieldget <java.awt.Dimension: int width>"->"load.r r0";
+    "load.r r0"->"virtualinvoke <java.awt.Component: java.awt.Dimension size()>";
+    "fieldget <java.awt.Dimension: int height>"
+    "virtualinvoke <java.awt.Component: java.awt.Dimension size()>"->"fieldget <java.awt.Dimension: int height>";
+    "virtualinvoke <java.awt.Component: java.awt.Image createImage(int,int)>"
+    "fieldget <java.awt.Dimension: int height>"->"virtualinvoke <java.awt.Component: java.awt.Image createImage(int,int)>";
+    "fieldput <NewLineDemo: java.awt.Image Buffer>"
+    "virtualinvoke <java.awt.Component: java.awt.Image createImage(int,int)>"->"fieldput <NewLineDemo: java.awt.Image Buffer>";
+    "fieldput <NewLineDemo: java.awt.Image Buffer>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "fieldget <NewLineDemo: java.awt.Image Buffer>"
+    "load.r r0"->"fieldget <NewLineDemo: java.awt.Image Buffer>";
+    "virtualinvoke <java.awt.Image: java.awt.Graphics getGraphics()>"
+    "fieldget <NewLineDemo: java.awt.Image Buffer>"->"virtualinvoke <java.awt.Image: java.awt.Graphics getGraphics()>";
+    "fieldput <NewLineDemo: java.awt.Graphics gBuffer>"
+    "virtualinvoke <java.awt.Image: java.awt.Graphics getGraphics()>"->"fieldput <NewLineDemo: java.awt.Graphics gBuffer>";
+    "fieldput <NewLineDemo: java.awt.Graphics gBuffer>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "fieldget <NewLineDemo: int total>"
+    "load.r r0"->"fieldget <NewLineDemo: int total>";
+    "newarray"
+    "fieldget <NewLineDemo: int total>"->"newarray";
+    "fieldput <NewLineDemo: Lines[] r>"
+    "newarray"->"fieldput <NewLineDemo: Lines[] r>";
+    "fieldput <NewLineDemo: Lines[] r>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"virtualinvoke <java.awt.Component: java.awt.Dimension size()>";
+    "virtualinvoke <java.awt.Component: java.awt.Dimension size()>"->"fieldget <java.awt.Dimension: int width>";
+    "fieldput <NewLineDemo: int w>"
+    "fieldget <java.awt.Dimension: int width>"->"fieldput <NewLineDemo: int w>";
+    "fieldput <NewLineDemo: int w>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"virtualinvoke <java.awt.Component: java.awt.Dimension size()>";
+    "virtualinvoke <java.awt.Component: java.awt.Dimension size()>"->"fieldget <java.awt.Dimension: int height>";
+    "fieldput <NewLineDemo: int h>"
+    "fieldget <java.awt.Dimension: int height>"->"fieldput <NewLineDemo: int h>";
+    "fieldput <NewLineDemo: int h>"->"load.r r0";
+    "push 0"
+    "load.r r0"->"push 0";
+    "fieldput <NewLineDemo: int j>"
+    "push 0"->"fieldput <NewLineDemo: int j>";
+    "goto load.r r0"
+    "fieldput <NewLineDemo: int j>"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "fieldget <NewLineDemo: int j>"
+    "load.r r0"->"fieldget <NewLineDemo: int j>";
+    "fieldget <NewLineDemo: int j>"->"load.r r0";
+    "load.r r0"->"fieldget <NewLineDemo: int total>";
+    "ifcmplt.i load.r r0"
+    "fieldget <NewLineDemo: int total>"->"ifcmplt.i load.r r0";
+    "ifcmplt.i load.r r0"->"load.r r0";
+    "new java.lang.Thread"
+    "load.r r0"->"new java.lang.Thread";
+    "dup1.r"
+    "new java.lang.Thread"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "specialinvoke <java.lang.Thread: void <init>(java.lang.Runnable)>"
+    "load.r r0"->"specialinvoke <java.lang.Thread: void <init>(java.lang.Runnable)>";
+    "fieldput <NewLineDemo: java.lang.Thread t1>"
+    "specialinvoke <java.lang.Thread: void <init>(java.lang.Runnable)>"->"fieldput <NewLineDemo: java.lang.Thread t1>";
+    "fieldput <NewLineDemo: java.lang.Thread t1>"->"load.r r0";
+    "load.r r0"->"new java.lang.Thread";
+    "new java.lang.Thread"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "load.r r0"->"specialinvoke <java.lang.Thread: void <init>(java.lang.Runnable)>";
+    "fieldput <NewLineDemo: java.lang.Thread t2>"
+    "specialinvoke <java.lang.Thread: void <init>(java.lang.Runnable)>"->"fieldput <NewLineDemo: java.lang.Thread t2>";
+    "fieldput <NewLineDemo: java.lang.Thread t2>"->"load.r r0";
+    "load.r r0"->"new java.lang.Thread";
+    "new java.lang.Thread"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "load.r r0"->"specialinvoke <java.lang.Thread: void <init>(java.lang.Runnable)>";
+    "fieldput <NewLineDemo: java.lang.Thread change>"
+    "specialinvoke <java.lang.Thread: void <init>(java.lang.Runnable)>"->"fieldput <NewLineDemo: java.lang.Thread change>";
+    "fieldput <NewLineDemo: java.lang.Thread change>"->"load.r r0";
+    "fieldget <NewLineDemo: java.lang.Thread t1>"
+    "load.r r0"->"fieldget <NewLineDemo: java.lang.Thread t1>";
+    "virtualinvoke <java.lang.Thread: void start()>"
+    "fieldget <NewLineDemo: java.lang.Thread t1>"->"virtualinvoke <java.lang.Thread: void start()>";
+    "virtualinvoke <java.lang.Thread: void start()>"->"load.r r0";
+    "fieldget <NewLineDemo: java.lang.Thread t2>"
+    "load.r r0"->"fieldget <NewLineDemo: java.lang.Thread t2>";
+    "fieldget <NewLineDemo: java.lang.Thread t2>"->"virtualinvoke <java.lang.Thread: void start()>";
+    "virtualinvoke <java.lang.Thread: void start()>"->"load.r r0";
+    "fieldget <NewLineDemo: java.lang.Thread change>"
+    "load.r r0"->"fieldget <NewLineDemo: java.lang.Thread change>";
+    "fieldget <NewLineDemo: java.lang.Thread change>"->"virtualinvoke <java.lang.Thread: void start()>";
+    "return"
+    "virtualinvoke <java.lang.Thread: void start()>"->"return";
+    "ifcmplt.i load.r r0"->"load.r r0";
+    "fieldget <NewLineDemo: Lines[] r>"
+    "load.r r0"->"fieldget <NewLineDemo: Lines[] r>";
+    "fieldget <NewLineDemo: Lines[] r>"->"load.r r0";
+    "load.r r0"->"fieldget <NewLineDemo: int j>";
+    "new Lines"
+    "fieldget <NewLineDemo: int j>"->"new Lines";
+    "new Lines"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "fieldget <NewLineDemo: int w>"
+    "load.r r0"->"fieldget <NewLineDemo: int w>";
+    "fieldget <NewLineDemo: int w>"->"load.r r0";
+    "fieldget <NewLineDemo: int h>"
+    "load.r r0"->"fieldget <NewLineDemo: int h>";
+    "specialinvoke <Lines: void <init>(int,int)>"
+    "fieldget <NewLineDemo: int h>"->"specialinvoke <Lines: void <init>(int,int)>";
+    "arraywrite.r"
+    "specialinvoke <Lines: void <init>(int,int)>"->"arraywrite.r";
+    "arraywrite.r"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <NewLineDemo: int j>";
+    "push 1"
+    "fieldget <NewLineDemo: int j>"->"push 1";
+    "add.i"
+    "push 1"->"add.i";
+    "add.i"->"fieldput <NewLineDemo: int j>";
+}

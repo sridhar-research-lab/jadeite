@@ -1,0 +1,864 @@
+digraph "" {
+    "r0 := @this: matchit"
+    "load.r r0"
+    "r0 := @this: matchit"->"load.r r0";
+    "specialinvoke <java.applet.Applet: void init()>"
+    "load.r r0"->"specialinvoke <java.applet.Applet: void init()>";
+    "specialinvoke <java.applet.Applet: void init()>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "virtualinvoke <java.awt.Component: java.awt.Dimension size()>"
+    "load.r r0"->"virtualinvoke <java.awt.Component: java.awt.Dimension size()>";
+    "fieldget <java.awt.Dimension: int width>"
+    "virtualinvoke <java.awt.Component: java.awt.Dimension size()>"->"fieldget <java.awt.Dimension: int width>";
+    "fieldput <matchit: int width>"
+    "fieldget <java.awt.Dimension: int width>"->"fieldput <matchit: int width>";
+    "fieldput <matchit: int width>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"virtualinvoke <java.awt.Component: java.awt.Dimension size()>";
+    "fieldget <java.awt.Dimension: int height>"
+    "virtualinvoke <java.awt.Component: java.awt.Dimension size()>"->"fieldget <java.awt.Dimension: int height>";
+    "fieldput <matchit: int height>"
+    "fieldget <java.awt.Dimension: int height>"->"fieldput <matchit: int height>";
+    "fieldput <matchit: int height>"->"load.r r0";
+    "push \"regcode\""
+    "load.r r0"->"push \"regcode\"";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"
+    "push \"regcode\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "store.r r1"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"store.r r1";
+    "load.r r1"
+    "store.r r1"->"load.r r1";
+    "virtualinvoke <java.lang.String: java.lang.String trim()>"
+    "load.r r1"->"virtualinvoke <java.lang.String: java.lang.String trim()>";
+    "pop"
+    "virtualinvoke <java.lang.String: java.lang.String trim()>"->"pop";
+    "pop"->"load.r r1";
+    "virtualinvoke <java.lang.String: java.lang.String toUpperCase()>"
+    "load.r r1"->"virtualinvoke <java.lang.String: java.lang.String toUpperCase()>";
+    "virtualinvoke <java.lang.String: java.lang.String toUpperCase()>"->"pop";
+    "pop"->"load.r r1";
+    "load.r r1"->"load.r r1";
+    "virtualinvoke <java.lang.String: int length()>"
+    "load.r r1"->"virtualinvoke <java.lang.String: int length()>";
+    "push 1"
+    "virtualinvoke <java.lang.String: int length()>"->"push 1";
+    "sub.i"
+    "push 1"->"sub.i";
+    "virtualinvoke <java.lang.String: char charAt(int)>"
+    "sub.i"->"virtualinvoke <java.lang.String: char charAt(int)>";
+    "push 48"
+    "virtualinvoke <java.lang.String: char charAt(int)>"->"push 48";
+    "sub.c"
+    "push 48"->"sub.c";
+    "store.i i0"
+    "sub.c"->"store.i i0";
+    "load.i i0"
+    "store.i i0"->"load.i i0";
+    "push 4"
+    "load.i i0"->"push 4";
+    "add.i"
+    "push 4"->"add.i";
+    "add.i"->"load.r r1";
+    "load.r r1"->"virtualinvoke <java.lang.String: int length()>";
+    "ifcmpge.i load.r r0"
+    "virtualinvoke <java.lang.String: int length()>"->"ifcmpge.i load.r r0";
+    "new java.lang.Integer"
+    "ifcmpge.i load.r r0"->"new java.lang.Integer";
+    "dup1.r"
+    "new java.lang.Integer"->"dup1.r";
+    "dup1.r"->"load.r r1";
+    "load.r r1"->"load.i i0";
+    "load.i i0"->"load.i i0";
+    "push 3"
+    "load.i i0"->"push 3";
+    "push 3"->"add.i";
+    "virtualinvoke <java.lang.String: java.lang.String substring(int,int)>"
+    "add.i"->"virtualinvoke <java.lang.String: java.lang.String substring(int,int)>";
+    "specialinvoke <java.lang.Integer: void <init>(java.lang.String)>"
+    "virtualinvoke <java.lang.String: java.lang.String substring(int,int)>"->"specialinvoke <java.lang.Integer: void <init>(java.lang.String)>";
+    "virtualinvoke <java.lang.Integer: int intValue()>"
+    "specialinvoke <java.lang.Integer: void <init>(java.lang.String)>"->"virtualinvoke <java.lang.Integer: int intValue()>";
+    "virtualinvoke <java.lang.Integer: int intValue()>"->"store.i i0";
+    "store.i i0"->"new java.lang.Integer";
+    "new java.lang.Integer"->"dup1.r";
+    "dup1.r"->"load.r r1";
+    "load.r r1"->"load.r r1";
+    "load.r r1"->"virtualinvoke <java.lang.String: int length()>";
+    "virtualinvoke <java.lang.String: int length()>"->"push 4";
+    "push 4"->"sub.i";
+    "sub.i"->"load.r r1";
+    "load.r r1"->"virtualinvoke <java.lang.String: int length()>";
+    "virtualinvoke <java.lang.String: int length()>"->"push 1";
+    "push 1"->"sub.i";
+    "sub.i"->"virtualinvoke <java.lang.String: java.lang.String substring(int,int)>";
+    "virtualinvoke <java.lang.String: java.lang.String substring(int,int)>"->"specialinvoke <java.lang.Integer: void <init>(java.lang.String)>";
+    "specialinvoke <java.lang.Integer: void <init>(java.lang.String)>"->"virtualinvoke <java.lang.Integer: int intValue()>";
+    "store.i r1"
+    "virtualinvoke <java.lang.Integer: int intValue()>"->"store.i r1";
+    "store.i r1"->"load.r r0";
+    "virtualinvoke <java.applet.Applet: java.net.URL getDocumentBase()>"
+    "load.r r0"->"virtualinvoke <java.applet.Applet: java.net.URL getDocumentBase()>";
+    "virtualinvoke <java.net.URL: java.lang.String getHost()>"
+    "virtualinvoke <java.applet.Applet: java.net.URL getDocumentBase()>"->"virtualinvoke <java.net.URL: java.lang.String getHost()>";
+    "virtualinvoke <java.net.URL: java.lang.String getHost()>"->"virtualinvoke <java.lang.String: java.lang.String toUpperCase()>";
+    "store.r r87"
+    "virtualinvoke <java.lang.String: java.lang.String toUpperCase()>"->"store.r r87";
+    "push 0"
+    "store.r r87"->"push 0";
+    "store.i i84"
+    "push 0"->"store.i i84";
+    "store.i i84"->"push 0";
+    "store.i i85"
+    "push 0"->"store.i i85";
+    "load.r r87"
+    "store.i i85"->"load.r r87";
+    "load.r r87"->"virtualinvoke <java.lang.String: int length()>";
+    "ifle push 0"
+    "virtualinvoke <java.lang.String: int length()>"->"ifle push 0";
+    "ifle push 0"->"load.r r87";
+    "load.r r87"->"virtualinvoke <java.lang.String: int length()>";
+    "virtualinvoke <java.lang.String: int length()>"->"push 1";
+    "push 1"->"sub.i";
+    "store.i i86"
+    "sub.i"->"store.i i86";
+    "goto load.i i86"
+    "store.i i86"->"goto load.i i86";
+    "load.i i86"
+    "goto load.i i86"->"load.i i86";
+    "ifge load.r r87"
+    "load.i i86"->"ifge load.r r87";
+    "goto load.i i0"
+    "ifge load.r r87"->"goto load.i i0";
+    "goto load.i i0"->"load.i i0";
+    "push 544"
+    "load.i i0"->"push 544";
+    "ifcmpne.i load.r r0"
+    "push 544"->"ifcmpne.i load.r r0";
+    "load.i r1"
+    "ifcmpne.i load.r r0"->"load.i r1";
+    "load.i r1"->"load.i i0";
+    "load.i i84"
+    "load.i i0"->"load.i i84";
+    "mul.i"
+    "load.i i84"->"mul.i";
+    "push 1000"
+    "mul.i"->"push 1000";
+    "rem.i"
+    "push 1000"->"rem.i";
+    "rem.i"->"ifcmpne.i load.r r0";
+    "ifcmpne.i load.r r0"->"load.r r0";
+    "load.r r0"->"push 1";
+    "fieldput <matchit: boolean registered>"
+    "push 1"->"fieldput <matchit: boolean registered>";
+    "fieldput <matchit: boolean registered>"->"load.r r0";
+    "load.r r0"->"new java.lang.Integer";
+    "new java.lang.Integer"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "push \"delay\""
+    "load.r r0"->"push \"delay\"";
+    "push \"delay\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"specialinvoke <java.lang.Integer: void <init>(java.lang.String)>";
+    "specialinvoke <java.lang.Integer: void <init>(java.lang.String)>"->"virtualinvoke <java.lang.Integer: int intValue()>";
+    "fieldput <matchit: int delay>"
+    "virtualinvoke <java.lang.Integer: int intValue()>"->"fieldput <matchit: int delay>";
+    "fieldput <matchit: int delay>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "push \"loading\""
+    "load.r r0"->"push \"loading\"";
+    "push \"loading\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>";
+    "fieldput <matchit: int loading>"
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"->"fieldput <matchit: int loading>";
+    "fieldput <matchit: int loading>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "push \"cardback\""
+    "load.r r0"->"push \"cardback\"";
+    "push \"cardback\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "fieldput <matchit: java.lang.String cardback>"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"fieldput <matchit: java.lang.String cardback>";
+    "fieldput <matchit: java.lang.String cardback>"->"load.r r0";
+    "load.r r0"->"new java.lang.Integer";
+    "new java.lang.Integer"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "push \"showbutton\""
+    "load.r r0"->"push \"showbutton\"";
+    "push \"showbutton\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"specialinvoke <java.lang.Integer: void <init>(java.lang.String)>";
+    "specialinvoke <java.lang.Integer: void <init>(java.lang.String)>"->"virtualinvoke <java.lang.Integer: int intValue()>";
+    "fieldput <matchit: int showbut>"
+    "virtualinvoke <java.lang.Integer: int intValue()>"->"fieldput <matchit: int showbut>";
+    "fieldput <matchit: int showbut>"->"load.r r0";
+    "fieldget <matchit: int showbut>"
+    "load.r r0"->"fieldget <matchit: int showbut>";
+    "fieldget <matchit: int showbut>"->"ifle push 0";
+    "ifle push 0"->"push 1";
+    "store.b i0"
+    "push 1"->"store.b i0";
+    "goto load.r r0"
+    "store.b i0"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "load.b i0"
+    "load.r r0"->"load.b i0";
+    "load.b i0"->"fieldput <matchit: int showbut>";
+    "fieldput <matchit: int showbut>"->"load.r r0";
+    "load.r r0"->"new java.lang.Integer";
+    "new java.lang.Integer"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "push \"total\""
+    "load.r r0"->"push \"total\"";
+    "push \"total\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"specialinvoke <java.lang.Integer: void <init>(java.lang.String)>";
+    "specialinvoke <java.lang.Integer: void <init>(java.lang.String)>"->"virtualinvoke <java.lang.Integer: int intValue()>";
+    "fieldput <matchit: int npics>"
+    "virtualinvoke <java.lang.Integer: int intValue()>"->"fieldput <matchit: int npics>";
+    "fieldput <matchit: int npics>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "fieldget <matchit: int npics>"
+    "load.r r0"->"fieldget <matchit: int npics>";
+    "fieldget <matchit: int npics>"->"push 1";
+    "push 1"->"add.i";
+    "newarray"
+    "add.i"->"newarray";
+    "fieldput <matchit: java.lang.String[] picfile>"
+    "newarray"->"fieldput <matchit: java.lang.String[] picfile>";
+    "fieldput <matchit: java.lang.String[] picfile>"->"push 0";
+    "push 0"->"store.i i0";
+    "store.i i0"->"goto load.i i0";
+    "goto load.i i0"->"load.i i0";
+    "load.i i0"->"load.r r0";
+    "load.r r0"->"fieldget <matchit: int npics>";
+    "ifcmplt.i load.r r0"
+    "fieldget <matchit: int npics>"->"ifcmplt.i load.r r0";
+    "ifcmplt.i load.r r0"->"load.r r0";
+    "fieldget <matchit: java.lang.String[] picfile>"
+    "load.r r0"->"fieldget <matchit: java.lang.String[] picfile>";
+    "fieldget <matchit: java.lang.String[] picfile>"->"load.r r0";
+    "load.r r0"->"fieldget <matchit: int npics>";
+    "fieldget <matchit: int npics>"->"load.r r0";
+    "fieldget <matchit: java.lang.String cardback>"
+    "load.r r0"->"fieldget <matchit: java.lang.String cardback>";
+    "fieldget <matchit: java.lang.String cardback>"->"virtualinvoke <java.lang.String: java.lang.String trim()>";
+    "arraywrite.r"
+    "virtualinvoke <java.lang.String: java.lang.String trim()>"->"arraywrite.r";
+    "arraywrite.r"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "push \"winfile\""
+    "load.r r0"->"push \"winfile\"";
+    "push \"winfile\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "fieldput <matchit: java.lang.String winfile>"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"fieldput <matchit: java.lang.String winfile>";
+    "fieldput <matchit: java.lang.String winfile>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "push \"clickfile\""
+    "load.r r0"->"push \"clickfile\"";
+    "push \"clickfile\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "fieldput <matchit: java.lang.String clickfile>"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"fieldput <matchit: java.lang.String clickfile>";
+    "fieldput <matchit: java.lang.String clickfile>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "push \"startpos\""
+    "load.r r0"->"push \"startpos\"";
+    "push \"startpos\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <matchit: int[] parseInt(java.lang.String)>"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"virtualinvoke <matchit: int[] parseInt(java.lang.String)>";
+    "virtualinvoke <matchit: int[] parseInt(java.lang.String)>"->"dup1.r";
+    "dup1.r"->"push 0";
+    "arrayread.i"
+    "push 0"->"arrayread.i";
+    "arrayread.i"->"store.i r1";
+    "store.i r1"->"push 1";
+    "push 1"->"arrayread.i";
+    "arrayread.i"->"store.i i0";
+    "store.i i0"->"load.r r0";
+    "fieldget <matchit: java.awt.Rectangle[] box>"
+    "load.r r0"->"fieldget <matchit: java.awt.Rectangle[] box>";
+    "fieldget <matchit: java.awt.Rectangle[] box>"->"push 0";
+    "new java.awt.Rectangle"
+    "push 0"->"new java.awt.Rectangle";
+    "new java.awt.Rectangle"->"dup1.r";
+    "dup1.r"->"load.i r1";
+    "load.i r1"->"load.i i0";
+    "push 50"
+    "load.i i0"->"push 50";
+    "push 20"
+    "push 50"->"push 20";
+    "specialinvoke <java.awt.Rectangle: void <init>(int,int,int,int)>"
+    "push 20"->"specialinvoke <java.awt.Rectangle: void <init>(int,int,int,int)>";
+    "specialinvoke <java.awt.Rectangle: void <init>(int,int,int,int)>"->"arraywrite.r";
+    "arraywrite.r"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "push \"solvepos\""
+    "load.r r0"->"push \"solvepos\"";
+    "push \"solvepos\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"virtualinvoke <matchit: int[] parseInt(java.lang.String)>";
+    "virtualinvoke <matchit: int[] parseInt(java.lang.String)>"->"dup1.r";
+    "dup1.r"->"push 0";
+    "push 0"->"arrayread.i";
+    "arrayread.i"->"store.i r1";
+    "store.i r1"->"push 1";
+    "push 1"->"arrayread.i";
+    "arrayread.i"->"store.i i0";
+    "store.i i0"->"load.r r0";
+    "load.r r0"->"fieldget <matchit: java.awt.Rectangle[] box>";
+    "fieldget <matchit: java.awt.Rectangle[] box>"->"push 1";
+    "push 1"->"new java.awt.Rectangle";
+    "new java.awt.Rectangle"->"dup1.r";
+    "dup1.r"->"load.i r1";
+    "load.i r1"->"load.i i0";
+    "load.i i0"->"push 50";
+    "push 50"->"push 20";
+    "push 20"->"specialinvoke <java.awt.Rectangle: void <init>(int,int,int,int)>";
+    "specialinvoke <java.awt.Rectangle: void <init>(int,int,int,int)>"->"arraywrite.r";
+    "arraywrite.r"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "push \"gamepos\""
+    "load.r r0"->"push \"gamepos\"";
+    "push \"gamepos\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"virtualinvoke <matchit: int[] parseInt(java.lang.String)>";
+    "virtualinvoke <matchit: int[] parseInt(java.lang.String)>"->"dup1.r";
+    "dup1.r"->"push 0";
+    "push 0"->"arrayread.i";
+    "arrayread.i"->"store.i i0";
+    "store.i i0"->"load.r r0";
+    "load.r r0"->"load.i i0";
+    "fieldput <matchit: int gamex>"
+    "load.i i0"->"fieldput <matchit: int gamex>";
+    "fieldput <matchit: int gamex>"->"push 1";
+    "push 1"->"arrayread.i";
+    "fieldput <matchit: int gamey>"
+    "arrayread.i"->"fieldput <matchit: int gamey>";
+    "fieldput <matchit: int gamey>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "push \"titlepos\""
+    "load.r r0"->"push \"titlepos\"";
+    "push \"titlepos\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"virtualinvoke <matchit: int[] parseInt(java.lang.String)>";
+    "virtualinvoke <matchit: int[] parseInt(java.lang.String)>"->"dup1.r";
+    "dup1.r"->"push 0";
+    "push 0"->"arrayread.i";
+    "arrayread.i"->"store.i i0";
+    "store.i i0"->"load.r r0";
+    "load.r r0"->"load.i i0";
+    "fieldput <matchit: int titx>"
+    "load.i i0"->"fieldput <matchit: int titx>";
+    "fieldput <matchit: int titx>"->"push 1";
+    "push 1"->"arrayread.i";
+    "fieldput <matchit: int tity>"
+    "arrayread.i"->"fieldput <matchit: int tity>";
+    "fieldput <matchit: int tity>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "push \"timerpos\""
+    "load.r r0"->"push \"timerpos\"";
+    "push \"timerpos\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"virtualinvoke <matchit: int[] parseInt(java.lang.String)>";
+    "virtualinvoke <matchit: int[] parseInt(java.lang.String)>"->"dup1.r";
+    "dup1.r"->"push 0";
+    "push 0"->"arrayread.i";
+    "arrayread.i"->"store.i i0";
+    "store.i i0"->"load.r r0";
+    "load.r r0"->"load.i i0";
+    "fieldput <matchit: int timerx>"
+    "load.i i0"->"fieldput <matchit: int timerx>";
+    "fieldput <matchit: int timerx>"->"push 1";
+    "push 1"->"arrayread.i";
+    "fieldput <matchit: int timery>"
+    "arrayread.i"->"fieldput <matchit: int timery>";
+    "fieldput <matchit: int timery>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "push \"bgimage\""
+    "load.r r0"->"push \"bgimage\"";
+    "push \"bgimage\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"virtualinvoke <java.lang.String: java.lang.String trim()>";
+    "fieldput <matchit: java.lang.String bgfile>"
+    "virtualinvoke <java.lang.String: java.lang.String trim()>"->"fieldput <matchit: java.lang.String bgfile>";
+    "fieldput <matchit: java.lang.String bgfile>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "push \"panelbg\""
+    "load.r r0"->"push \"panelbg\"";
+    "push \"panelbg\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"virtualinvoke <matchit: int[] parseInt(java.lang.String)>";
+    "store.r i0"
+    "virtualinvoke <matchit: int[] parseInt(java.lang.String)>"->"store.r i0";
+    "store.r i0"->"load.r r0";
+    "new java.awt.Color"
+    "load.r r0"->"new java.awt.Color";
+    "new java.awt.Color"->"dup1.r";
+    "load.r i0"
+    "dup1.r"->"load.r i0";
+    "load.r i0"->"push 0";
+    "push 0"->"arrayread.i";
+    "arrayread.i"->"load.r i0";
+    "load.r i0"->"push 1";
+    "push 1"->"arrayread.i";
+    "arrayread.i"->"load.r i0";
+    "push 2"
+    "load.r i0"->"push 2";
+    "push 2"->"arrayread.i";
+    "specialinvoke <java.awt.Color: void <init>(int,int,int)>"
+    "arrayread.i"->"specialinvoke <java.awt.Color: void <init>(int,int,int)>";
+    "fieldput <matchit: java.awt.Color bg>"
+    "specialinvoke <java.awt.Color: void <init>(int,int,int)>"->"fieldput <matchit: java.awt.Color bg>";
+    "fieldput <matchit: java.awt.Color bg>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "push \"panelfg\""
+    "load.r r0"->"push \"panelfg\"";
+    "push \"panelfg\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"virtualinvoke <matchit: int[] parseInt(java.lang.String)>";
+    "virtualinvoke <matchit: int[] parseInt(java.lang.String)>"->"store.r i0";
+    "store.r i0"->"load.r r0";
+    "load.r r0"->"new java.awt.Color";
+    "new java.awt.Color"->"dup1.r";
+    "dup1.r"->"load.r i0";
+    "load.r i0"->"push 0";
+    "push 0"->"arrayread.i";
+    "arrayread.i"->"load.r i0";
+    "load.r i0"->"push 1";
+    "push 1"->"arrayread.i";
+    "arrayread.i"->"load.r i0";
+    "load.r i0"->"push 2";
+    "push 2"->"arrayread.i";
+    "arrayread.i"->"specialinvoke <java.awt.Color: void <init>(int,int,int)>";
+    "fieldput <matchit: java.awt.Color fg>"
+    "specialinvoke <java.awt.Color: void <init>(int,int,int)>"->"fieldput <matchit: java.awt.Color fg>";
+    "fieldput <matchit: java.awt.Color fg>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "push \"buttonbg\""
+    "load.r r0"->"push \"buttonbg\"";
+    "push \"buttonbg\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"virtualinvoke <matchit: int[] parseInt(java.lang.String)>";
+    "virtualinvoke <matchit: int[] parseInt(java.lang.String)>"->"store.r i0";
+    "store.r i0"->"load.r r0";
+    "load.r r0"->"new java.awt.Color";
+    "new java.awt.Color"->"dup1.r";
+    "dup1.r"->"load.r i0";
+    "load.r i0"->"push 0";
+    "push 0"->"arrayread.i";
+    "arrayread.i"->"load.r i0";
+    "load.r i0"->"push 1";
+    "push 1"->"arrayread.i";
+    "arrayread.i"->"load.r i0";
+    "load.r i0"->"push 2";
+    "push 2"->"arrayread.i";
+    "arrayread.i"->"specialinvoke <java.awt.Color: void <init>(int,int,int)>";
+    "fieldput <matchit: java.awt.Color butbg>"
+    "specialinvoke <java.awt.Color: void <init>(int,int,int)>"->"fieldput <matchit: java.awt.Color butbg>";
+    "fieldput <matchit: java.awt.Color butbg>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "push \"buttonfg\""
+    "load.r r0"->"push \"buttonfg\"";
+    "push \"buttonfg\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"virtualinvoke <matchit: int[] parseInt(java.lang.String)>";
+    "virtualinvoke <matchit: int[] parseInt(java.lang.String)>"->"store.r i0";
+    "store.r i0"->"load.r r0";
+    "load.r r0"->"new java.awt.Color";
+    "new java.awt.Color"->"dup1.r";
+    "dup1.r"->"load.r i0";
+    "load.r i0"->"push 0";
+    "push 0"->"arrayread.i";
+    "arrayread.i"->"load.r i0";
+    "load.r i0"->"push 1";
+    "push 1"->"arrayread.i";
+    "arrayread.i"->"load.r i0";
+    "load.r i0"->"push 2";
+    "push 2"->"arrayread.i";
+    "arrayread.i"->"specialinvoke <java.awt.Color: void <init>(int,int,int)>";
+    "fieldput <matchit: java.awt.Color butfg>"
+    "specialinvoke <java.awt.Color: void <init>(int,int,int)>"->"fieldput <matchit: java.awt.Color butfg>";
+    "fieldput <matchit: java.awt.Color butfg>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "push \"winlink\""
+    "load.r r0"->"push \"winlink\"";
+    "push \"winlink\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"virtualinvoke <java.lang.String: java.lang.String trim()>";
+    "virtualinvoke <matchit: java.lang.String[] parse(java.lang.String)>"
+    "virtualinvoke <java.lang.String: java.lang.String trim()>"->"virtualinvoke <matchit: java.lang.String[] parse(java.lang.String)>";
+    "virtualinvoke <matchit: java.lang.String[] parse(java.lang.String)>"->"dup1.r";
+    "dup1.r"->"push 0";
+    "arrayread.r"
+    "push 0"->"arrayread.r";
+    "arrayread.r"->"store.r i0";
+    "store.r i0"->"load.r r0";
+    "load.r r0"->"load.r i0";
+    "fieldput <matchit: java.lang.String linkto>"
+    "load.r i0"->"fieldput <matchit: java.lang.String linkto>";
+    "fieldput <matchit: java.lang.String linkto>"->"push 1";
+    "push 1"->"arrayread.r";
+    "fieldput <matchit: java.lang.String linkframe>"
+    "arrayread.r"->"fieldput <matchit: java.lang.String linkframe>";
+    "fieldput <matchit: java.lang.String linkframe>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "push \"loselink\""
+    "load.r r0"->"push \"loselink\"";
+    "push \"loselink\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"virtualinvoke <java.lang.String: java.lang.String trim()>";
+    "virtualinvoke <java.lang.String: java.lang.String trim()>"->"virtualinvoke <matchit: java.lang.String[] parse(java.lang.String)>";
+    "virtualinvoke <matchit: java.lang.String[] parse(java.lang.String)>"->"dup1.r";
+    "dup1.r"->"push 0";
+    "push 0"->"arrayread.r";
+    "arrayread.r"->"store.r i0";
+    "store.r i0"->"load.r r0";
+    "load.r r0"->"load.r i0";
+    "fieldput <matchit: java.lang.String linkto2>"
+    "load.r i0"->"fieldput <matchit: java.lang.String linkto2>";
+    "fieldput <matchit: java.lang.String linkto2>"->"push 1";
+    "push 1"->"arrayread.r";
+    "fieldput <matchit: java.lang.String linkframe2>"
+    "arrayread.r"->"fieldput <matchit: java.lang.String linkframe2>";
+    "fieldput <matchit: java.lang.String linkframe2>"->"load.r r0";
+    "load.r r0"->"new java.lang.Integer";
+    "new java.lang.Integer"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "push \"row\""
+    "load.r r0"->"push \"row\"";
+    "push \"row\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"specialinvoke <java.lang.Integer: void <init>(java.lang.String)>";
+    "specialinvoke <java.lang.Integer: void <init>(java.lang.String)>"->"virtualinvoke <java.lang.Integer: int intValue()>";
+    "fieldput <matchit: int row>"
+    "virtualinvoke <java.lang.Integer: int intValue()>"->"fieldput <matchit: int row>";
+    "fieldput <matchit: int row>"->"load.r r0";
+    "load.r r0"->"new java.lang.Integer";
+    "new java.lang.Integer"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "push \"col\""
+    "load.r r0"->"push \"col\"";
+    "push \"col\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"specialinvoke <java.lang.Integer: void <init>(java.lang.String)>";
+    "specialinvoke <java.lang.Integer: void <init>(java.lang.String)>"->"virtualinvoke <java.lang.Integer: int intValue()>";
+    "fieldput <matchit: int col>"
+    "virtualinvoke <java.lang.Integer: int intValue()>"->"fieldput <matchit: int col>";
+    "fieldput <matchit: int col>"->"load.r r0";
+    "load.r r0"->"new java.lang.Integer";
+    "new java.lang.Integer"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "push \"gridwidth\""
+    "load.r r0"->"push \"gridwidth\"";
+    "push \"gridwidth\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"specialinvoke <java.lang.Integer: void <init>(java.lang.String)>";
+    "specialinvoke <java.lang.Integer: void <init>(java.lang.String)>"->"virtualinvoke <java.lang.Integer: int intValue()>";
+    "fieldput <matchit: int gridwidth>"
+    "virtualinvoke <java.lang.Integer: int intValue()>"->"fieldput <matchit: int gridwidth>";
+    "fieldput <matchit: int gridwidth>"->"load.r r0";
+    "load.r r0"->"new java.lang.Integer";
+    "new java.lang.Integer"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "push \"gridheight\""
+    "load.r r0"->"push \"gridheight\"";
+    "push \"gridheight\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"specialinvoke <java.lang.Integer: void <init>(java.lang.String)>";
+    "specialinvoke <java.lang.Integer: void <init>(java.lang.String)>"->"virtualinvoke <java.lang.Integer: int intValue()>";
+    "fieldput <matchit: int gridheight>"
+    "virtualinvoke <java.lang.Integer: int intValue()>"->"fieldput <matchit: int gridheight>";
+    "fieldput <matchit: int gridheight>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "push \"TitleText\""
+    "load.r r0"->"push \"TitleText\"";
+    "push \"TitleText\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "fieldput <matchit: java.lang.String TitleText>"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"fieldput <matchit: java.lang.String TitleText>";
+    "fieldput <matchit: java.lang.String TitleText>"->"load.r r0";
+    "load.r r0"->"new java.lang.Integer";
+    "new java.lang.Integer"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "push \"maxmoves\""
+    "load.r r0"->"push \"maxmoves\"";
+    "push \"maxmoves\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"specialinvoke <java.lang.Integer: void <init>(java.lang.String)>";
+    "specialinvoke <java.lang.Integer: void <init>(java.lang.String)>"->"virtualinvoke <java.lang.Integer: int intValue()>";
+    "fieldput <matchit: int maxmoves>"
+    "virtualinvoke <java.lang.Integer: int intValue()>"->"fieldput <matchit: int maxmoves>";
+    "fieldput <matchit: int maxmoves>"->"load.r r0";
+    "fieldget <matchit: int maxmoves>"
+    "load.r r0"->"fieldget <matchit: int maxmoves>";
+    "ifgt load.r r0"
+    "fieldget <matchit: int maxmoves>"->"ifgt load.r r0";
+    "ifgt load.r r0"->"load.r r0";
+    "push 16777216"
+    "load.r r0"->"push 16777216";
+    "push 16777216"->"fieldput <matchit: int maxmoves>";
+    "fieldput <matchit: int maxmoves>"->"load.r r0";
+    "load.r r0"->"new java.lang.Integer";
+    "new java.lang.Integer"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "push \"maxtime\""
+    "load.r r0"->"push \"maxtime\"";
+    "push \"maxtime\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"specialinvoke <java.lang.Integer: void <init>(java.lang.String)>";
+    "specialinvoke <java.lang.Integer: void <init>(java.lang.String)>"->"virtualinvoke <java.lang.Integer: int intValue()>";
+    "i2l"
+    "virtualinvoke <java.lang.Integer: int intValue()>"->"i2l";
+    "fieldput <matchit: long maxtime>"
+    "i2l"->"fieldput <matchit: long maxtime>";
+    "fieldput <matchit: long maxtime>"->"load.r r0";
+    "fieldget <matchit: long maxtime>"
+    "load.r r0"->"fieldget <matchit: long maxtime>";
+    "push 0L"
+    "fieldget <matchit: long maxtime>"->"push 0L";
+    "cmp.l"
+    "push 0L"->"cmp.l";
+    "cmp.l"->"ifgt load.r r0";
+    "ifgt load.r r0"->"load.r r0";
+    "push 36000L"
+    "load.r r0"->"push 36000L";
+    "push 36000L"->"fieldput <matchit: long maxtime>";
+    "fieldput <matchit: long maxtime>"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "push \"NewGameText\""
+    "load.r r0"->"push \"NewGameText\"";
+    "push \"NewGameText\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "fieldput <matchit: java.lang.String NewGameText>"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"fieldput <matchit: java.lang.String NewGameText>";
+    "fieldput <matchit: java.lang.String NewGameText>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "push \"SolvePuzzleText\""
+    "load.r r0"->"push \"SolvePuzzleText\"";
+    "push \"SolvePuzzleText\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "fieldput <matchit: java.lang.String SolvePuzzleText>"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"fieldput <matchit: java.lang.String SolvePuzzleText>";
+    "fieldput <matchit: java.lang.String SolvePuzzleText>"->"load.r r0";
+    "push \"MovesCountText\""
+    "load.r r0"->"push \"MovesCountText\"";
+    "push \"MovesCountText\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "ifnull load.r r0"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"push \"MovesCountText\"";
+    "push \"MovesCountText\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"virtualinvoke <java.lang.String: java.lang.String trim()>";
+    "fieldput <matchit: java.lang.String MovesCountText>"
+    "virtualinvoke <java.lang.String: java.lang.String trim()>"->"fieldput <matchit: java.lang.String MovesCountText>";
+    "fieldput <matchit: java.lang.String MovesCountText>"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "push \"RecordText\""
+    "load.r r0"->"push \"RecordText\"";
+    "push \"RecordText\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"push \"RecordText\"";
+    "push \"RecordText\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"virtualinvoke <java.lang.String: java.lang.String trim()>";
+    "fieldput <matchit: java.lang.String RecordText>"
+    "virtualinvoke <java.lang.String: java.lang.String trim()>"->"fieldput <matchit: java.lang.String RecordText>";
+    "fieldput <matchit: java.lang.String RecordText>"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "push \"WinText\""
+    "load.r r0"->"push \"WinText\"";
+    "push \"WinText\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "fieldput <matchit: java.lang.String WinText>"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"fieldput <matchit: java.lang.String WinText>";
+    "fieldput <matchit: java.lang.String WinText>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "push \"LoseText\""
+    "load.r r0"->"push \"LoseText\"";
+    "push \"LoseText\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "fieldput <matchit: java.lang.String LoseText>"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"fieldput <matchit: java.lang.String LoseText>";
+    "fieldput <matchit: java.lang.String LoseText>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"virtualinvoke <java.applet.Applet: java.net.URL getDocumentBase()>";
+    "virtualinvoke <java.applet.Applet: java.net.URL getDocumentBase()>"->"load.r r0";
+    "fieldget <matchit: java.lang.String winfile>"
+    "load.r r0"->"fieldget <matchit: java.lang.String winfile>";
+    "virtualinvoke <java.applet.Applet: java.applet.AudioClip getAudioClip(java.net.URL,java.lang.String)>"
+    "fieldget <matchit: java.lang.String winfile>"->"virtualinvoke <java.applet.Applet: java.applet.AudioClip getAudioClip(java.net.URL,java.lang.String)>";
+    "fieldput <matchit: java.applet.AudioClip winaudio>"
+    "virtualinvoke <java.applet.Applet: java.applet.AudioClip getAudioClip(java.net.URL,java.lang.String)>"->"fieldput <matchit: java.applet.AudioClip winaudio>";
+    "fieldput <matchit: java.applet.AudioClip winaudio>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"virtualinvoke <java.applet.Applet: java.net.URL getDocumentBase()>";
+    "virtualinvoke <java.applet.Applet: java.net.URL getDocumentBase()>"->"load.r r0";
+    "fieldget <matchit: java.lang.String clickfile>"
+    "load.r r0"->"fieldget <matchit: java.lang.String clickfile>";
+    "fieldget <matchit: java.lang.String clickfile>"->"virtualinvoke <java.applet.Applet: java.applet.AudioClip getAudioClip(java.net.URL,java.lang.String)>";
+    "fieldput <matchit: java.applet.AudioClip moveaudio>"
+    "virtualinvoke <java.applet.Applet: java.applet.AudioClip getAudioClip(java.net.URL,java.lang.String)>"->"fieldput <matchit: java.applet.AudioClip moveaudio>";
+    "fieldput <matchit: java.applet.AudioClip moveaudio>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <matchit: int npics>";
+    "fieldget <matchit: int npics>"->"push 1";
+    "push 1"->"add.i";
+    "add.i"->"newarray";
+    "fieldput <matchit: java.awt.Image[] photo>"
+    "newarray"->"fieldput <matchit: java.awt.Image[] photo>";
+    "fieldput <matchit: java.awt.Image[] photo>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "fieldget <matchit: int col>"
+    "load.r r0"->"fieldget <matchit: int col>";
+    "fieldget <matchit: int col>"->"load.r r0";
+    "fieldget <matchit: int gridwidth>"
+    "load.r r0"->"fieldget <matchit: int gridwidth>";
+    "fieldget <matchit: int gridwidth>"->"mul.i";
+    "mul.i"->"load.r r0";
+    "fieldget <matchit: int row>"
+    "load.r r0"->"fieldget <matchit: int row>";
+    "fieldget <matchit: int row>"->"load.r r0";
+    "fieldget <matchit: int gridheight>"
+    "load.r r0"->"fieldget <matchit: int gridheight>";
+    "fieldget <matchit: int gridheight>"->"mul.i";
+    "mul.i"->"load.r r0";
+    "load.r r0"->"fieldget <matchit: int gridwidth>";
+    "fieldget <matchit: int gridwidth>"->"load.r r0";
+    "load.r r0"->"fieldget <matchit: int gridheight>";
+    "virtualinvoke <matchit: void initgame(int,int,int,int)>"
+    "fieldget <matchit: int gridheight>"->"virtualinvoke <matchit: void initgame(int,int,int,int)>";
+    "virtualinvoke <matchit: void initgame(int,int,int,int)>"->"load.r r0";
+    "virtualinvoke <java.awt.Component: void repaint()>"
+    "load.r r0"->"virtualinvoke <java.awt.Component: void repaint()>";
+    "virtualinvoke <java.awt.Component: void repaint()>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "fieldget <matchit: int width>"
+    "load.r r0"->"fieldget <matchit: int width>";
+    "fieldget <matchit: int width>"->"load.r r0";
+    "fieldget <matchit: int height>"
+    "load.r r0"->"fieldget <matchit: int height>";
+    "virtualinvoke <java.awt.Component: java.awt.Image createImage(int,int)>"
+    "fieldget <matchit: int height>"->"virtualinvoke <java.awt.Component: java.awt.Image createImage(int,int)>";
+    "fieldput <matchit: java.awt.Image oi>"
+    "virtualinvoke <java.awt.Component: java.awt.Image createImage(int,int)>"->"fieldput <matchit: java.awt.Image oi>";
+    "fieldput <matchit: java.awt.Image oi>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "fieldget <matchit: java.awt.Image oi>"
+    "load.r r0"->"fieldget <matchit: java.awt.Image oi>";
+    "virtualinvoke <java.awt.Image: java.awt.Graphics getGraphics()>"
+    "fieldget <matchit: java.awt.Image oi>"->"virtualinvoke <java.awt.Image: java.awt.Graphics getGraphics()>";
+    "fieldput <matchit: java.awt.Graphics og>"
+    "virtualinvoke <java.awt.Image: java.awt.Graphics getGraphics()>"->"fieldput <matchit: java.awt.Graphics og>";
+    "fieldput <matchit: java.awt.Graphics og>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <matchit: int width>";
+    "fieldget <matchit: int width>"->"load.r r0";
+    "load.r r0"->"fieldget <matchit: int height>";
+    "virtualinvoke <java.applet.Applet: void resize(int,int)>"
+    "fieldget <matchit: int height>"->"virtualinvoke <java.applet.Applet: void resize(int,int)>";
+    "return"
+    "virtualinvoke <java.applet.Applet: void resize(int,int)>"->"return";
+    "ifnull load.r r0"->"load.r r0";
+    "push \"\""
+    "load.r r0"->"push \"\"";
+    "push \"\""->"fieldput <matchit: java.lang.String RecordText>";
+    "ifnull load.r r0"->"load.r r0";
+    "load.r r0"->"push \"\"";
+    "push \"\""->"fieldput <matchit: java.lang.String MovesCountText>";
+    "ifgt load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <matchit: long maxtime>";
+    "push 60L"
+    "fieldget <matchit: long maxtime>"->"push 60L";
+    "mul.l"
+    "push 60L"->"mul.l";
+    "mul.l"->"fieldput <matchit: long maxtime>";
+    "ifcmplt.i load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <matchit: java.lang.String[] picfile>";
+    "fieldget <matchit: java.lang.String[] picfile>"->"load.i i0";
+    "load.i i0"->"load.r r0";
+    "new java.lang.StringBuffer"
+    "load.r r0"->"new java.lang.StringBuffer";
+    "new java.lang.StringBuffer"->"dup1.r";
+    "specialinvoke <java.lang.StringBuffer: void <init>()>"
+    "dup1.r"->"specialinvoke <java.lang.StringBuffer: void <init>()>";
+    "push \"pic\""
+    "specialinvoke <java.lang.StringBuffer: void <init>()>"->"push \"pic\"";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"
+    "push \"pic\""->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"load.i i0";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(int)>"
+    "load.i i0"->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(int)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>"
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(int)>"->"virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>"->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"arraywrite.r";
+    "inc.i i0 1"
+    "arraywrite.r"->"inc.i i0 1";
+    "ifle push 0"->"push 0";
+    "push 0"->"store.b i0";
+    "ifge load.r r87"->"load.r r87";
+    "load.r r87"->"load.i i86";
+    "load.i i86"->"virtualinvoke <java.lang.String: char charAt(int)>";
+    "push 46"
+    "virtualinvoke <java.lang.String: char charAt(int)>"->"push 46";
+    "ifcmpne.c load.i i85"
+    "push 46"->"ifcmpne.c load.i i85";
+    "inc.i i85 1"
+    "ifcmpne.c load.i i85"->"inc.i i85 1";
+    "load.i i85"
+    "inc.i i85 1"->"load.i i85";
+    "load.i i85"->"push 1";
+    "ifcmple.i inc.i i86 -1"
+    "push 1"->"ifcmple.i inc.i i86 -1";
+    "push -1"
+    "ifcmple.i inc.i i86 -1"->"push -1";
+    "push -1"->"store.i i86";
+    "goto inc.i i86 -1"
+    "store.i i86"->"goto inc.i i86 -1";
+    "inc.i i86 -1"
+    "goto inc.i i86 -1"->"inc.i i86 -1";
+    "ifcmpne.c load.i i85"->"load.i i85";
+    "load.i i85"->"push 2";
+    "ifcmpge.i load.i i85"
+    "push 2"->"ifcmpge.i load.i i85";
+    "ifcmpge.i load.i i85"->"load.r r87";
+    "load.r r87"->"load.i i86";
+    "load.i i86"->"virtualinvoke <java.lang.String: char charAt(int)>";
+    "push 65"
+    "virtualinvoke <java.lang.String: char charAt(int)>"->"push 65";
+    "ifcmplt.c load.i i85"
+    "push 65"->"ifcmplt.c load.i i85";
+    "ifcmplt.c load.i i85"->"load.r r87";
+    "load.r r87"->"load.i i86";
+    "load.i i86"->"virtualinvoke <java.lang.String: char charAt(int)>";
+    "push 90"
+    "virtualinvoke <java.lang.String: char charAt(int)>"->"push 90";
+    "ifcmpgt.c load.i i85"
+    "push 90"->"ifcmpgt.c load.i i85";
+    "ifcmpgt.c load.i i85"->"load.i i84";
+    "load.i i84"->"load.r r87";
+    "load.r r87"->"load.i i86";
+    "load.i i86"->"virtualinvoke <java.lang.String: char charAt(int)>";
+    "virtualinvoke <java.lang.String: char charAt(int)>"->"push 65";
+    "push 65"->"sub.c";
+    "push 10"
+    "sub.c"->"push 10";
+    "push 10"->"add.i";
+    "add.i"->"add.i";
+    "add.i"->"store.i i84";
+    "store.i i84"->"goto inc.i i86 -1";
+    "ifcmpgt.c load.i i85"->"load.i i85";
+    "load.i i85"->"push 2";
+    "ifcmpge.i inc.i i86 -1"
+    "push 2"->"ifcmpge.i inc.i i86 -1";
+    "ifcmpge.i inc.i i86 -1"->"load.r r87";
+    "load.r r87"->"load.i i86";
+    "load.i i86"->"virtualinvoke <java.lang.String: char charAt(int)>";
+    "virtualinvoke <java.lang.String: char charAt(int)>"->"push 48";
+    "ifcmplt.c inc.i i86 -1"
+    "push 48"->"ifcmplt.c inc.i i86 -1";
+    "ifcmplt.c inc.i i86 -1"->"load.r r87";
+    "load.r r87"->"load.i i86";
+    "load.i i86"->"virtualinvoke <java.lang.String: char charAt(int)>";
+    "push 57"
+    "virtualinvoke <java.lang.String: char charAt(int)>"->"push 57";
+    "ifcmpgt.c inc.i i86 -1"
+    "push 57"->"ifcmpgt.c inc.i i86 -1";
+    "ifcmpgt.c inc.i i86 -1"->"load.i i84";
+    "load.i i84"->"load.r r87";
+    "load.r r87"->"load.i i86";
+    "load.i i86"->"virtualinvoke <java.lang.String: char charAt(int)>";
+    "virtualinvoke <java.lang.String: char charAt(int)>"->"push 48";
+    "push 48"->"sub.c";
+    "sub.c"->"add.i";
+    "add.i"->"store.i i84";
+    "ifle push 0"->"push 0";
+    "push 0"->"store.i r1";
+}

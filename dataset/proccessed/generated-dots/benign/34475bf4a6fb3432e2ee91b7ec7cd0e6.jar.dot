@@ -1,0 +1,955 @@
+digraph "" {
+    "r0 := @this: FadeText"
+    "load.r r0"
+    "r0 := @this: FadeText"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "virtualinvoke <java.awt.Component: java.awt.Dimension size()>"
+    "load.r r0"->"virtualinvoke <java.awt.Component: java.awt.Dimension size()>";
+    "fieldput <FadeText: java.awt.Dimension d>"
+    "virtualinvoke <java.awt.Component: java.awt.Dimension size()>"->"fieldput <FadeText: java.awt.Dimension d>";
+    "push 0"
+    "fieldput <FadeText: java.awt.Dimension d>"->"push 0";
+    "store.i i35"
+    "push 0"->"store.i i35";
+    "store.i i35"->"load.r r0";
+    "push \"Notice\""
+    "load.r r0"->"push \"Notice\"";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"
+    "push \"Notice\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "store.r r118"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"store.r r118";
+    "load.r r118"
+    "store.r r118"->"load.r r118";
+    "ifnull load.r r0"
+    "load.r r118"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r r118";
+    "load.r r118"->"load.r r0";
+    "virtualinvoke <java.applet.Applet: java.net.URL getDocumentBase()>"
+    "load.r r0"->"virtualinvoke <java.applet.Applet: java.net.URL getDocumentBase()>";
+    "staticinvoke <evalkey: java.lang.String getKey(java.lang.String,java.net.URL)>"
+    "virtualinvoke <java.applet.Applet: java.net.URL getDocumentBase()>"->"staticinvoke <evalkey: java.lang.String getKey(java.lang.String,java.net.URL)>";
+    "store.r r2"
+    "staticinvoke <evalkey: java.lang.String getKey(java.lang.String,java.net.URL)>"->"store.r r2";
+    "load.r r2"
+    "store.r r2"->"load.r r2";
+    "push \"Fading Messages (Developer Version), Copyright (c) 2000, OpenCube Inc.\""
+    "load.r r2"->"push \"Fading Messages (Developer Version), Copyright (c) 2000, OpenCube Inc.\"";
+    "virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>"
+    "push \"Fading Messages (Developer Version), Copyright (c) 2000, OpenCube Inc.\""->"virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>";
+    "ifne load.r r0"
+    "virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>"->"ifne load.r r0";
+    "ifne load.r r0"->"load.r r2";
+    "push \"-1\""
+    "load.r r2"->"push \"-1\"";
+    "push \"-1\""->"virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>";
+    "ifeq load.r r0"
+    "virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>"->"ifeq load.r r0";
+    "ifeq load.r r0"->"load.r r0";
+    "push \"Incorrect Base URL Registration\""
+    "load.r r0"->"push \"Incorrect Base URL Registration\"";
+    "fieldput <FadeText: java.lang.String m_onsbtext>"
+    "push \"Incorrect Base URL Registration\""->"fieldput <FadeText: java.lang.String m_onsbtext>";
+    "return"
+    "fieldput <FadeText: java.lang.String m_onsbtext>"->"return";
+    "ifeq load.r r0"->"load.r r0";
+    "push \"Incorrect Copyright Notice in \'Notice\' tag\""
+    "load.r r0"->"push \"Incorrect Copyright Notice in \'Notice\' tag\"";
+    "push \"Incorrect Copyright Notice in \'Notice\' tag\""->"fieldput <FadeText: java.lang.String m_onsbtext>";
+    "fieldput <FadeText: java.lang.String m_onsbtext>"->"return";
+    "ifne load.r r0"->"load.r r0";
+    "push 1"
+    "load.r r0"->"push 1";
+    "fieldput <FadeText: boolean tag>"
+    "push 1"->"fieldput <FadeText: boolean tag>";
+    "goto new java.util.Properties"
+    "fieldput <FadeText: boolean tag>"->"goto new java.util.Properties";
+    "new java.util.Properties"
+    "goto new java.util.Properties"->"new java.util.Properties";
+    "new java.util.Properties"->"store.r r2";
+    "store.r r2"->"load.r r2";
+    "specialinvoke <java.util.Properties: void <init>()>"
+    "load.r r2"->"specialinvoke <java.util.Properties: void <init>()>";
+    "specialinvoke <java.util.Properties: void <init>()>"->"load.r r0";
+    "push \"filelocation\""
+    "load.r r0"->"push \"filelocation\"";
+    "push \"filelocation\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"store.r r118";
+    "store.r r118"->"load.r r118";
+    "ifnonnull load.r r2"
+    "load.r r118"->"ifnonnull load.r r2";
+    "ifnonnull load.r r2"->"load.r r0";
+    "push \"Missing \\\"filelocation\\\" parameter\""
+    "load.r r0"->"push \"Missing \\\"filelocation\\\" parameter\"";
+    "push \"Missing \\\"filelocation\\\" parameter\""->"fieldput <FadeText: java.lang.String m_onsbtext>";
+    "fieldput <FadeText: java.lang.String m_onsbtext>"->"load.r r0";
+    "load.r r0"->"push 0";
+    "push 0"->"fieldput <FadeText: boolean tag>";
+    "fieldput <FadeText: boolean tag>"->"return";
+    "fieldput <FadeText: boolean tag>"->"store.r r2";
+    "store.r r2"->"load.r r0";
+    "new java.lang.StringBuffer"
+    "load.r r0"->"new java.lang.StringBuffer";
+    "dup1.r"
+    "new java.lang.StringBuffer"->"dup1.r";
+    "push \"Error loading param file: \\\"\""
+    "dup1.r"->"push \"Error loading param file: \\\"\"";
+    "specialinvoke <java.lang.StringBuffer: void <init>(java.lang.String)>"
+    "push \"Error loading param file: \\\"\""->"specialinvoke <java.lang.StringBuffer: void <init>(java.lang.String)>";
+    "specialinvoke <java.lang.StringBuffer: void <init>(java.lang.String)>"->"load.r r118";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"
+    "load.r r118"->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "push \"\\\"\""
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"push \"\\\"\"";
+    "push \"\\\"\""->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>"
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>"->"fieldput <FadeText: java.lang.String m_onsbtext>";
+    "fieldput <FadeText: java.lang.String m_onsbtext>"->"load.r r0";
+    "load.r r0"->"push 0";
+    "push 0"->"fieldput <FadeText: boolean tag>";
+    "fieldput <FadeText: boolean tag>"->"return";
+    "ifnonnull load.r r2"->"load.r r2";
+    "new java.net.URL"
+    "load.r r2"->"new java.net.URL";
+    "new java.net.URL"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "load.r r0"->"virtualinvoke <java.applet.Applet: java.net.URL getDocumentBase()>";
+    "virtualinvoke <java.applet.Applet: java.net.URL getDocumentBase()>"->"load.r r118";
+    "specialinvoke <java.net.URL: void <init>(java.net.URL,java.lang.String)>"
+    "load.r r118"->"specialinvoke <java.net.URL: void <init>(java.net.URL,java.lang.String)>";
+    "virtualinvoke <java.net.URL: java.io.InputStream openStream()>"
+    "specialinvoke <java.net.URL: void <init>(java.net.URL,java.lang.String)>"->"virtualinvoke <java.net.URL: java.io.InputStream openStream()>";
+    "store.r r5"
+    "virtualinvoke <java.net.URL: java.io.InputStream openStream()>"->"store.r r5";
+    "load.r r5"
+    "store.r r5"->"load.r r5";
+    "virtualinvoke <java.util.Properties: void load(java.io.InputStream)>"
+    "load.r r5"->"virtualinvoke <java.util.Properties: void load(java.io.InputStream)>";
+    "virtualinvoke <java.util.Properties: void load(java.io.InputStream)>"->"load.r r5";
+    "virtualinvoke <java.io.InputStream: void close()>"
+    "load.r r5"->"virtualinvoke <java.io.InputStream: void close()>";
+    "goto load.r r2"
+    "virtualinvoke <java.io.InputStream: void close()>"->"goto load.r r2";
+    "goto load.r r2"->"load.r r2";
+    "push \"onsbtext\""
+    "load.r r2"->"push \"onsbtext\"";
+    "virtualinvoke <java.util.Properties: java.lang.String getProperty(java.lang.String)>"
+    "push \"onsbtext\""->"virtualinvoke <java.util.Properties: java.lang.String getProperty(java.lang.String)>";
+    "virtualinvoke <java.util.Properties: java.lang.String getProperty(java.lang.String)>"->"store.r r118";
+    "store.r r118"->"load.r r118";
+    "ifnull load.r r2"
+    "load.r r118"->"ifnull load.r r2";
+    "ifnull load.r r2"->"load.r r0";
+    "load.r r0"->"load.r r118";
+    "load.r r118"->"fieldput <FadeText: java.lang.String m_onsbtext>";
+    "fieldput <FadeText: java.lang.String m_onsbtext>"->"load.r r2";
+    "push \"offsbtext\""
+    "load.r r2"->"push \"offsbtext\"";
+    "push \"offsbtext\""->"virtualinvoke <java.util.Properties: java.lang.String getProperty(java.lang.String)>";
+    "virtualinvoke <java.util.Properties: java.lang.String getProperty(java.lang.String)>"->"store.r r118";
+    "store.r r118"->"load.r r118";
+    "load.r r118"->"ifnull load.r r2";
+    "ifnull load.r r2"->"load.r r0";
+    "load.r r0"->"load.r r118";
+    "fieldput <FadeText: java.lang.String m_offsbtext>"
+    "load.r r118"->"fieldput <FadeText: java.lang.String m_offsbtext>";
+    "fieldput <FadeText: java.lang.String m_offsbtext>"->"load.r r2";
+    "push \"loadwhere\""
+    "load.r r2"->"push \"loadwhere\"";
+    "push \"loadwhere\""->"virtualinvoke <java.util.Properties: java.lang.String getProperty(java.lang.String)>";
+    "virtualinvoke <java.util.Properties: java.lang.String getProperty(java.lang.String)>"->"store.r r118";
+    "store.r r118"->"load.r r118";
+    "load.r r118"->"ifnull load.r r2";
+    "ifnull load.r r2"->"load.r r0";
+    "load.r r0"->"load.r r118";
+    "fieldput <FadeText: java.lang.String m_loadwhere>"
+    "load.r r118"->"fieldput <FadeText: java.lang.String m_loadwhere>";
+    "fieldput <FadeText: java.lang.String m_loadwhere>"->"load.r r2";
+    "push \"font\""
+    "load.r r2"->"push \"font\"";
+    "push \"font\""->"virtualinvoke <java.util.Properties: java.lang.String getProperty(java.lang.String)>";
+    "virtualinvoke <java.util.Properties: java.lang.String getProperty(java.lang.String)>"->"store.r r118";
+    "store.r r118"->"load.r r118";
+    "load.r r118"->"ifnull load.r r2";
+    "ifnull load.r r2"->"load.r r0";
+    "load.r r0"->"load.r r118";
+    "push \",\""
+    "load.r r118"->"push \",\"";
+    "staticinvoke <ocfontc: java.awt.Font getFontSD(java.lang.String,java.lang.String)>"
+    "push \",\""->"staticinvoke <ocfontc: java.awt.Font getFontSD(java.lang.String,java.lang.String)>";
+    "fieldput <FadeText: java.awt.Font m_font>"
+    "staticinvoke <ocfontc: java.awt.Font getFontSD(java.lang.String,java.lang.String)>"->"fieldput <FadeText: java.awt.Font m_font>";
+    "fieldput <FadeText: java.awt.Font m_font>"->"load.r r2";
+    "push \"delay\""
+    "load.r r2"->"push \"delay\"";
+    "push \"delay\""->"virtualinvoke <java.util.Properties: java.lang.String getProperty(java.lang.String)>";
+    "virtualinvoke <java.util.Properties: java.lang.String getProperty(java.lang.String)>"->"store.r r118";
+    "store.r r118"->"load.r r118";
+    "load.r r118"->"ifnull load.r r2";
+    "ifnull load.r r2"->"load.r r0";
+    "load.r r0"->"load.r r118";
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"
+    "load.r r118"->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>";
+    "fieldput <FadeText: int m_delay>"
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"->"fieldput <FadeText: int m_delay>";
+    "fieldput <FadeText: int m_delay>"->"load.r r2";
+    "push \"mouseoffdelay\""
+    "load.r r2"->"push \"mouseoffdelay\"";
+    "push \"mouseoffdelay\""->"virtualinvoke <java.util.Properties: java.lang.String getProperty(java.lang.String)>";
+    "virtualinvoke <java.util.Properties: java.lang.String getProperty(java.lang.String)>"->"store.r r118";
+    "store.r r118"->"load.r r118";
+    "load.r r118"->"ifnull load.r r2";
+    "ifnull load.r r2"->"load.r r0";
+    "load.r r0"->"load.r r118";
+    "load.r r118"->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>";
+    "fieldput <FadeText: int m_mouse_delay>"
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"->"fieldput <FadeText: int m_mouse_delay>";
+    "fieldput <FadeText: int m_mouse_delay>"->"load.r r2";
+    "push \"fadeindelay\""
+    "load.r r2"->"push \"fadeindelay\"";
+    "push \"fadeindelay\""->"virtualinvoke <java.util.Properties: java.lang.String getProperty(java.lang.String)>";
+    "virtualinvoke <java.util.Properties: java.lang.String getProperty(java.lang.String)>"->"store.r r118";
+    "store.r r118"->"load.r r118";
+    "load.r r118"->"ifnull load.r r2";
+    "ifnull load.r r2"->"load.r r0";
+    "load.r r0"->"load.r r118";
+    "load.r r118"->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>";
+    "fieldput <FadeText: int m_fadein_delay>"
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"->"fieldput <FadeText: int m_fadein_delay>";
+    "fieldput <FadeText: int m_fadein_delay>"->"load.r r2";
+    "push \"fadeoutdelay\""
+    "load.r r2"->"push \"fadeoutdelay\"";
+    "push \"fadeoutdelay\""->"virtualinvoke <java.util.Properties: java.lang.String getProperty(java.lang.String)>";
+    "virtualinvoke <java.util.Properties: java.lang.String getProperty(java.lang.String)>"->"store.r r118";
+    "store.r r118"->"load.r r118";
+    "load.r r118"->"ifnull load.r r2";
+    "ifnull load.r r2"->"load.r r0";
+    "load.r r0"->"load.r r118";
+    "load.r r118"->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>";
+    "fieldput <FadeText: int m_fadeout_delay>"
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"->"fieldput <FadeText: int m_fadeout_delay>";
+    "fieldput <FadeText: int m_fadeout_delay>"->"load.r r2";
+    "push \"fadebg\""
+    "load.r r2"->"push \"fadebg\"";
+    "push \"fadebg\""->"virtualinvoke <java.util.Properties: java.lang.String getProperty(java.lang.String)>";
+    "virtualinvoke <java.util.Properties: java.lang.String getProperty(java.lang.String)>"->"store.r r118";
+    "store.r r118"->"load.r r118";
+    "load.r r118"->"ifnull load.r r2";
+    "ifnull load.r r2"->"load.r r0";
+    "load.r r0"->"load.r r118";
+    "staticinvoke <java.lang.Boolean: java.lang.Boolean valueOf(java.lang.String)>"
+    "load.r r118"->"staticinvoke <java.lang.Boolean: java.lang.Boolean valueOf(java.lang.String)>";
+    "virtualinvoke <java.lang.Boolean: boolean booleanValue()>"
+    "staticinvoke <java.lang.Boolean: java.lang.Boolean valueOf(java.lang.String)>"->"virtualinvoke <java.lang.Boolean: boolean booleanValue()>";
+    "fieldput <FadeText: boolean m_fade_bg>"
+    "virtualinvoke <java.lang.Boolean: boolean booleanValue()>"->"fieldput <FadeText: boolean m_fade_bg>";
+    "fieldput <FadeText: boolean m_fade_bg>"->"load.r r2";
+    "push \"showhand\""
+    "load.r r2"->"push \"showhand\"";
+    "push \"showhand\""->"virtualinvoke <java.util.Properties: java.lang.String getProperty(java.lang.String)>";
+    "virtualinvoke <java.util.Properties: java.lang.String getProperty(java.lang.String)>"->"store.r r118";
+    "store.r r118"->"load.r r118";
+    "load.r r118"->"ifnull load.r r2";
+    "ifnull load.r r2"->"load.r r0";
+    "load.r r0"->"load.r r118";
+    "load.r r118"->"staticinvoke <java.lang.Boolean: java.lang.Boolean valueOf(java.lang.String)>";
+    "staticinvoke <java.lang.Boolean: java.lang.Boolean valueOf(java.lang.String)>"->"virtualinvoke <java.lang.Boolean: boolean booleanValue()>";
+    "fieldput <FadeText: boolean m_showhand>"
+    "virtualinvoke <java.lang.Boolean: boolean booleanValue()>"->"fieldput <FadeText: boolean m_showhand>";
+    "fieldput <FadeText: boolean m_showhand>"->"load.r r2";
+    "push \"underlinetext\""
+    "load.r r2"->"push \"underlinetext\"";
+    "push \"underlinetext\""->"virtualinvoke <java.util.Properties: java.lang.String getProperty(java.lang.String)>";
+    "virtualinvoke <java.util.Properties: java.lang.String getProperty(java.lang.String)>"->"store.r r118";
+    "store.r r118"->"load.r r118";
+    "load.r r118"->"ifnull load.r r2";
+    "ifnull load.r r2"->"load.r r0";
+    "load.r r0"->"load.r r118";
+    "load.r r118"->"staticinvoke <java.lang.Boolean: java.lang.Boolean valueOf(java.lang.String)>";
+    "staticinvoke <java.lang.Boolean: java.lang.Boolean valueOf(java.lang.String)>"->"virtualinvoke <java.lang.Boolean: boolean booleanValue()>";
+    "fieldput <FadeText: boolean m_underline>"
+    "virtualinvoke <java.lang.Boolean: boolean booleanValue()>"->"fieldput <FadeText: boolean m_underline>";
+    "fieldput <FadeText: boolean m_underline>"->"load.r r2";
+    "push \"hllinksonly\""
+    "load.r r2"->"push \"hllinksonly\"";
+    "push \"hllinksonly\""->"virtualinvoke <java.util.Properties: java.lang.String getProperty(java.lang.String)>";
+    "virtualinvoke <java.util.Properties: java.lang.String getProperty(java.lang.String)>"->"store.r r118";
+    "store.r r118"->"load.r r118";
+    "load.r r118"->"ifnull load.r r2";
+    "ifnull load.r r2"->"load.r r0";
+    "load.r r0"->"load.r r118";
+    "load.r r118"->"staticinvoke <java.lang.Boolean: java.lang.Boolean valueOf(java.lang.String)>";
+    "staticinvoke <java.lang.Boolean: java.lang.Boolean valueOf(java.lang.String)>"->"virtualinvoke <java.lang.Boolean: boolean booleanValue()>";
+    "fieldput <FadeText: boolean m_hllinksonly>"
+    "virtualinvoke <java.lang.Boolean: boolean booleanValue()>"->"fieldput <FadeText: boolean m_hllinksonly>";
+    "fieldput <FadeText: boolean m_hllinksonly>"->"load.r r2";
+    "push \"fadebgdelay\""
+    "load.r r2"->"push \"fadebgdelay\"";
+    "push \"fadebgdelay\""->"virtualinvoke <java.util.Properties: java.lang.String getProperty(java.lang.String)>";
+    "virtualinvoke <java.util.Properties: java.lang.String getProperty(java.lang.String)>"->"store.r r118";
+    "store.r r118"->"load.r r118";
+    "load.r r118"->"ifnull load.r r2";
+    "ifnull load.r r2"->"load.r r0";
+    "load.r r0"->"load.r r118";
+    "load.r r118"->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>";
+    "fieldput <FadeText: int m_fadebgdelay>"
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"->"fieldput <FadeText: int m_fadebgdelay>";
+    "fieldput <FadeText: int m_fadebgdelay>"->"load.r r2";
+    "push \"fadbgframes\""
+    "load.r r2"->"push \"fadbgframes\"";
+    "push \"fadbgframes\""->"virtualinvoke <java.util.Properties: java.lang.String getProperty(java.lang.String)>";
+    "virtualinvoke <java.util.Properties: java.lang.String getProperty(java.lang.String)>"->"store.r r118";
+    "store.r r118"->"load.r r118";
+    "load.r r118"->"ifnull load.r r2";
+    "ifnull load.r r2"->"load.r r0";
+    "load.r r0"->"load.r r118";
+    "load.r r118"->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>";
+    "fieldput <FadeText: int m_fadebgframes>"
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"->"fieldput <FadeText: int m_fadebgframes>";
+    "fieldput <FadeText: int m_fadebgframes>"->"load.r r2";
+    "push \"fadeinframes\""
+    "load.r r2"->"push \"fadeinframes\"";
+    "push \"fadeinframes\""->"virtualinvoke <java.util.Properties: java.lang.String getProperty(java.lang.String)>";
+    "virtualinvoke <java.util.Properties: java.lang.String getProperty(java.lang.String)>"->"store.r r118";
+    "store.r r118"->"load.r r118";
+    "load.r r118"->"ifnull load.r r2";
+    "ifnull load.r r2"->"load.r r0";
+    "load.r r0"->"load.r r118";
+    "load.r r118"->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>";
+    "fieldput <FadeText: int m_fadein_frames>"
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"->"fieldput <FadeText: int m_fadein_frames>";
+    "fieldput <FadeText: int m_fadein_frames>"->"load.r r2";
+    "push \"fadeoutframes\""
+    "load.r r2"->"push \"fadeoutframes\"";
+    "push \"fadeoutframes\""->"virtualinvoke <java.util.Properties: java.lang.String getProperty(java.lang.String)>";
+    "virtualinvoke <java.util.Properties: java.lang.String getProperty(java.lang.String)>"->"store.r r118";
+    "store.r r118"->"load.r r118";
+    "load.r r118"->"ifnull load.r r2";
+    "ifnull load.r r2"->"load.r r0";
+    "load.r r0"->"load.r r118";
+    "load.r r118"->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>";
+    "fieldput <FadeText: int m_fadeout_frames>"
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"->"fieldput <FadeText: int m_fadeout_frames>";
+    "fieldput <FadeText: int m_fadeout_frames>"->"load.r r2";
+    "push \"textmargin\""
+    "load.r r2"->"push \"textmargin\"";
+    "push \"textmargin\""->"virtualinvoke <java.util.Properties: java.lang.String getProperty(java.lang.String)>";
+    "virtualinvoke <java.util.Properties: java.lang.String getProperty(java.lang.String)>"->"store.r r118";
+    "store.r r118"->"load.r r118";
+    "load.r r118"->"ifnull load.r r2";
+    "ifnull load.r r2"->"load.r r0";
+    "load.r r0"->"load.r r118";
+    "load.r r118"->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>";
+    "fieldput <FadeText: int m_margin>"
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"->"fieldput <FadeText: int m_margin>";
+    "fieldput <FadeText: int m_margin>"->"load.r r2";
+    "push \"borderthickness\""
+    "load.r r2"->"push \"borderthickness\"";
+    "push \"borderthickness\""->"virtualinvoke <java.util.Properties: java.lang.String getProperty(java.lang.String)>";
+    "virtualinvoke <java.util.Properties: java.lang.String getProperty(java.lang.String)>"->"store.r r118";
+    "store.r r118"->"load.r r118";
+    "load.r r118"->"ifnull load.r r2";
+    "ifnull load.r r2"->"load.r r0";
+    "load.r r0"->"load.r r118";
+    "load.r r118"->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>";
+    "fieldput <FadeText: int m_b_thick>"
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"->"fieldput <FadeText: int m_b_thick>";
+    "fieldput <FadeText: int m_b_thick>"->"load.r r2";
+    "load.r r2"->"push \"font\"";
+    "push \"font\""->"virtualinvoke <java.util.Properties: java.lang.String getProperty(java.lang.String)>";
+    "virtualinvoke <java.util.Properties: java.lang.String getProperty(java.lang.String)>"->"store.r r118";
+    "store.r r118"->"load.r r118";
+    "load.r r118"->"ifnull load.r r2";
+    "ifnull load.r r2"->"load.r r0";
+    "load.r r0"->"load.r r118";
+    "fieldput <FadeText: java.lang.String m_messagefont>"
+    "load.r r118"->"fieldput <FadeText: java.lang.String m_messagefont>";
+    "fieldput <FadeText: java.lang.String m_messagefont>"->"load.r r2";
+    "push \"hltextcolor\""
+    "load.r r2"->"push \"hltextcolor\"";
+    "push \"hltextcolor\""->"virtualinvoke <java.util.Properties: java.lang.String getProperty(java.lang.String)>";
+    "virtualinvoke <java.util.Properties: java.lang.String getProperty(java.lang.String)>"->"store.r r118";
+    "store.r r118"->"load.r r118";
+    "load.r r118"->"ifnull load.r r2";
+    "ifnull load.r r2"->"load.r r0";
+    "load.r r0"->"load.r r118";
+    "staticinvoke <occcolor: java.awt.Color ConvertColor(java.lang.String)>"
+    "load.r r118"->"staticinvoke <occcolor: java.awt.Color ConvertColor(java.lang.String)>";
+    "fieldput <FadeText: java.awt.Color m_hltext_color>"
+    "staticinvoke <occcolor: java.awt.Color ConvertColor(java.lang.String)>"->"fieldput <FadeText: java.awt.Color m_hltext_color>";
+    "fieldput <FadeText: java.awt.Color m_hltext_color>"->"load.r r2";
+    "push \"hlbordercolor\""
+    "load.r r2"->"push \"hlbordercolor\"";
+    "push \"hlbordercolor\""->"virtualinvoke <java.util.Properties: java.lang.String getProperty(java.lang.String)>";
+    "virtualinvoke <java.util.Properties: java.lang.String getProperty(java.lang.String)>"->"store.r r118";
+    "store.r r118"->"load.r r118";
+    "load.r r118"->"ifnull load.r r2";
+    "ifnull load.r r2"->"load.r r0";
+    "load.r r0"->"load.r r118";
+    "load.r r118"->"staticinvoke <occcolor: java.awt.Color ConvertColor(java.lang.String)>";
+    "fieldput <FadeText: java.awt.Color m_hlborder_color>"
+    "staticinvoke <occcolor: java.awt.Color ConvertColor(java.lang.String)>"->"fieldput <FadeText: java.awt.Color m_hlborder_color>";
+    "fieldput <FadeText: java.awt.Color m_hlborder_color>"->"load.r r2";
+    "push \"textcolor\""
+    "load.r r2"->"push \"textcolor\"";
+    "push \"textcolor\""->"virtualinvoke <java.util.Properties: java.lang.String getProperty(java.lang.String)>";
+    "virtualinvoke <java.util.Properties: java.lang.String getProperty(java.lang.String)>"->"store.r r118";
+    "store.r r118"->"load.r r118";
+    "load.r r118"->"ifnull load.r r2";
+    "ifnull load.r r2"->"load.r r0";
+    "load.r r0"->"load.r r118";
+    "load.r r118"->"staticinvoke <occcolor: java.awt.Color ConvertColor(java.lang.String)>";
+    "fieldput <FadeText: java.awt.Color m_textcolor>"
+    "staticinvoke <occcolor: java.awt.Color ConvertColor(java.lang.String)>"->"fieldput <FadeText: java.awt.Color m_textcolor>";
+    "fieldput <FadeText: java.awt.Color m_textcolor>"->"load.r r2";
+    "push \"bgcolor\""
+    "load.r r2"->"push \"bgcolor\"";
+    "push \"bgcolor\""->"virtualinvoke <java.util.Properties: java.lang.String getProperty(java.lang.String)>";
+    "virtualinvoke <java.util.Properties: java.lang.String getProperty(java.lang.String)>"->"store.r r118";
+    "store.r r118"->"load.r r118";
+    "load.r r118"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r118";
+    "load.r r118"->"staticinvoke <occcolor: java.awt.Color ConvertColor(java.lang.String)>";
+    "fieldput <FadeText: java.awt.Color m_bgcolor>"
+    "staticinvoke <occcolor: java.awt.Color ConvertColor(java.lang.String)>"->"fieldput <FadeText: java.awt.Color m_bgcolor>";
+    "fieldput <FadeText: java.awt.Color m_bgcolor>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "fieldget <FadeText: java.awt.Color m_bgcolor>"
+    "load.r r0"->"fieldget <FadeText: java.awt.Color m_bgcolor>";
+    "virtualinvoke <java.awt.Component: void setBackground(java.awt.Color)>"
+    "fieldget <FadeText: java.awt.Color m_bgcolor>"->"virtualinvoke <java.awt.Component: void setBackground(java.awt.Color)>";
+    "virtualinvoke <java.awt.Component: void setBackground(java.awt.Color)>"->"goto load.r r2";
+    "goto load.r r2"->"load.r r2";
+    "push \"bordercolor\""
+    "load.r r2"->"push \"bordercolor\"";
+    "push \"bordercolor\""->"virtualinvoke <java.util.Properties: java.lang.String getProperty(java.lang.String)>";
+    "virtualinvoke <java.util.Properties: java.lang.String getProperty(java.lang.String)>"->"store.r r118";
+    "store.r r118"->"load.r r118";
+    "load.r r118"->"ifnull load.r r2";
+    "ifnull load.r r2"->"load.r r0";
+    "load.r r0"->"load.r r118";
+    "load.r r118"->"staticinvoke <occcolor: java.awt.Color ConvertColor(java.lang.String)>";
+    "fieldput <FadeText: java.awt.Color m_b_color>"
+    "staticinvoke <occcolor: java.awt.Color ConvertColor(java.lang.String)>"->"fieldput <FadeText: java.awt.Color m_b_color>";
+    "fieldput <FadeText: java.awt.Color m_b_color>"->"load.r r2";
+    "push \"valign\""
+    "load.r r2"->"push \"valign\"";
+    "push \"valign\""->"virtualinvoke <java.util.Properties: java.lang.String getProperty(java.lang.String)>";
+    "virtualinvoke <java.util.Properties: java.lang.String getProperty(java.lang.String)>"->"store.r r118";
+    "store.r r118"->"load.r r118";
+    "load.r r118"->"ifnull load.r r2";
+    "ifnull load.r r2"->"load.r r0";
+    "load.r r0"->"load.r r118";
+    "staticinvoke <FadeText: int getAlignValue(java.lang.String)>"
+    "load.r r118"->"staticinvoke <FadeText: int getAlignValue(java.lang.String)>";
+    "fieldput <FadeText: int m_valign>"
+    "staticinvoke <FadeText: int getAlignValue(java.lang.String)>"->"fieldput <FadeText: int m_valign>";
+    "fieldput <FadeText: int m_valign>"->"load.r r2";
+    "push \"halign\""
+    "load.r r2"->"push \"halign\"";
+    "push \"halign\""->"virtualinvoke <java.util.Properties: java.lang.String getProperty(java.lang.String)>";
+    "virtualinvoke <java.util.Properties: java.lang.String getProperty(java.lang.String)>"->"store.r r118";
+    "store.r r118"->"load.r r118";
+    "load.r r118"->"ifnull load.r r2";
+    "ifnull load.r r2"->"load.r r0";
+    "load.r r0"->"load.r r118";
+    "load.r r118"->"staticinvoke <FadeText: int getAlignValue(java.lang.String)>";
+    "fieldput <FadeText: int m_halign>"
+    "staticinvoke <FadeText: int getAlignValue(java.lang.String)>"->"fieldput <FadeText: int m_halign>";
+    "fieldput <FadeText: int m_halign>"->"goto load.r r2";
+    "goto load.r r2"->"load.r r2";
+    "load.r r2"->"new java.lang.StringBuffer";
+    "new java.lang.StringBuffer"->"dup1.r";
+    "push \"desc\""
+    "dup1.r"->"push \"desc\"";
+    "push \"desc\""->"specialinvoke <java.lang.StringBuffer: void <init>(java.lang.String)>";
+    "load.i i35"
+    "specialinvoke <java.lang.StringBuffer: void <init>(java.lang.String)>"->"load.i i35";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(int)>"
+    "load.i i35"->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(int)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(int)>"->"virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>"->"virtualinvoke <java.util.Properties: java.lang.String getProperty(java.lang.String)>";
+    "ifnonnull inc.i i35 1"
+    "virtualinvoke <java.util.Properties: java.lang.String getProperty(java.lang.String)>"->"ifnonnull inc.i i35 1";
+    "ifnonnull inc.i i35 1"->"load.r r0";
+    "fieldget <FadeText: int num_msg>"
+    "load.r r0"->"fieldget <FadeText: int num_msg>";
+    "fieldget <FadeText: int num_msg>"->"push 1";
+    "ifcmpge.i load.r r0"
+    "push 1"->"ifcmpge.i load.r r0";
+    "ifcmpge.i load.r r0"->"load.r r0";
+    "load.r r0"->"push 1";
+    "fieldput <FadeText: int num_msg>"
+    "push 1"->"fieldput <FadeText: int num_msg>";
+    "fieldput <FadeText: int num_msg>"->"load.r r0";
+    "load.r r0"->"push 1";
+    "fieldput <FadeText: boolean bad_descrips>"
+    "push 1"->"fieldput <FadeText: boolean bad_descrips>";
+    "fieldput <FadeText: boolean bad_descrips>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <FadeText: int num_msg>";
+    "newarray"
+    "fieldget <FadeText: int num_msg>"->"newarray";
+    "fieldput <FadeText: java.lang.String[] m_msg>"
+    "newarray"->"fieldput <FadeText: java.lang.String[] m_msg>";
+    "fieldput <FadeText: java.lang.String[] m_msg>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <FadeText: int num_msg>";
+    "fieldget <FadeText: int num_msg>"->"newarray";
+    "fieldput <FadeText: boolean[] m_cur_underline>"
+    "newarray"->"fieldput <FadeText: boolean[] m_cur_underline>";
+    "fieldput <FadeText: boolean[] m_cur_underline>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <FadeText: int num_msg>";
+    "fieldget <FadeText: int num_msg>"->"newarray";
+    "fieldput <FadeText: java.awt.Font[] m_cur_font>"
+    "newarray"->"fieldput <FadeText: java.awt.Font[] m_cur_font>";
+    "fieldput <FadeText: java.awt.Font[] m_cur_font>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <FadeText: int num_msg>";
+    "fieldget <FadeText: int num_msg>"->"newarray";
+    "fieldput <FadeText: java.awt.Color[] m_cur_textcolor>"
+    "newarray"->"fieldput <FadeText: java.awt.Color[] m_cur_textcolor>";
+    "fieldput <FadeText: java.awt.Color[] m_cur_textcolor>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <FadeText: int num_msg>";
+    "fieldget <FadeText: int num_msg>"->"newarray";
+    "fieldput <FadeText: java.awt.Color[] m_cur_bgcolor>"
+    "newarray"->"fieldput <FadeText: java.awt.Color[] m_cur_bgcolor>";
+    "fieldput <FadeText: java.awt.Color[] m_cur_bgcolor>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <FadeText: int num_msg>";
+    "fieldget <FadeText: int num_msg>"->"newarray";
+    "fieldput <FadeText: int[] m_cur_delay>"
+    "newarray"->"fieldput <FadeText: int[] m_cur_delay>";
+    "fieldput <FadeText: int[] m_cur_delay>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <FadeText: int num_msg>";
+    "fieldget <FadeText: int num_msg>"->"newarray";
+    "fieldput <FadeText: java.lang.String[] m_cur_desturl>"
+    "newarray"->"fieldput <FadeText: java.lang.String[] m_cur_desturl>";
+    "fieldput <FadeText: java.lang.String[] m_cur_desturl>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <FadeText: int num_msg>";
+    "fieldget <FadeText: int num_msg>"->"newarray";
+    "fieldput <FadeText: java.lang.String[] m_cur_loadwhere>"
+    "newarray"->"fieldput <FadeText: java.lang.String[] m_cur_loadwhere>";
+    "fieldput <FadeText: java.lang.String[] m_cur_loadwhere>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <FadeText: int num_msg>";
+    "fieldget <FadeText: int num_msg>"->"newarray";
+    "fieldput <FadeText: java.awt.Color[] m_cur_b_color>"
+    "newarray"->"fieldput <FadeText: java.awt.Color[] m_cur_b_color>";
+    "fieldput <FadeText: java.awt.Color[] m_cur_b_color>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <FadeText: int num_msg>";
+    "fieldget <FadeText: int num_msg>"->"newarray";
+    "fieldput <FadeText: int[] m_cur_b_thick>"
+    "newarray"->"fieldput <FadeText: int[] m_cur_b_thick>";
+    "fieldput <FadeText: int[] m_cur_b_thick>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <FadeText: int num_msg>";
+    "fieldget <FadeText: int num_msg>"->"newarray";
+    "fieldput <FadeText: int[] m_cur_valign>"
+    "newarray"->"fieldput <FadeText: int[] m_cur_valign>";
+    "fieldput <FadeText: int[] m_cur_valign>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <FadeText: int num_msg>";
+    "fieldget <FadeText: int num_msg>"->"newarray";
+    "fieldput <FadeText: int[] m_cur_halign>"
+    "newarray"->"fieldput <FadeText: int[] m_cur_halign>";
+    "fieldput <FadeText: int[] m_cur_halign>"->"push 0";
+    "push 0"->"store.i i35";
+    "goto load.i i35"
+    "store.i i35"->"goto load.i i35";
+    "goto load.i i35"->"load.i i35";
+    "load.i i35"->"load.r r0";
+    "load.r r0"->"fieldget <FadeText: int num_msg>";
+    "ifcmplt.i load.r r2"
+    "fieldget <FadeText: int num_msg>"->"ifcmplt.i load.r r2";
+    "ifcmplt.i load.r r2"->"load.r r0";
+    "fieldget <FadeText: boolean bad_descrips>"
+    "load.r r0"->"fieldget <FadeText: boolean bad_descrips>";
+    "fieldget <FadeText: boolean bad_descrips>"->"ifeq load.r r0";
+    "ifeq load.r r0"->"load.r r0";
+    "fieldget <FadeText: java.lang.String[] m_msg>"
+    "load.r r0"->"fieldget <FadeText: java.lang.String[] m_msg>";
+    "fieldget <FadeText: java.lang.String[] m_msg>"->"push 0";
+    "push \"Must include \'desc0\' tag at a minimum in order for this applet to function.\""
+    "push 0"->"push \"Must include \'desc0\' tag at a minimum in order for this applet to function.\"";
+    "arraywrite.r"
+    "push \"Must include \'desc0\' tag at a minimum in order for this applet to function.\""->"arraywrite.r";
+    "arraywrite.r"->"load.r r0";
+    "fieldget <FadeText: int[] m_cur_delay>"
+    "load.r r0"->"fieldget <FadeText: int[] m_cur_delay>";
+    "fieldget <FadeText: int[] m_cur_delay>"->"push 0";
+    "push 30000"
+    "push 0"->"push 30000";
+    "arraywrite.i"
+    "push 30000"->"arraywrite.i";
+    "arraywrite.i"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "fieldget <FadeText: java.awt.Font m_font>"
+    "load.r r0"->"fieldget <FadeText: java.awt.Font m_font>";
+    "virtualinvoke <java.awt.Component: void setFont(java.awt.Font)>"
+    "fieldget <FadeText: java.awt.Font m_font>"->"virtualinvoke <java.awt.Component: void setFont(java.awt.Font)>";
+    "virtualinvoke <java.awt.Component: void setFont(java.awt.Font)>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <FadeText: java.awt.Font m_font>";
+    "virtualinvoke <java.awt.Component: java.awt.FontMetrics getFontMetrics(java.awt.Font)>"
+    "fieldget <FadeText: java.awt.Font m_font>"->"virtualinvoke <java.awt.Component: java.awt.FontMetrics getFontMetrics(java.awt.Font)>";
+    "fieldput <FadeText: java.awt.FontMetrics fm>"
+    "virtualinvoke <java.awt.Component: java.awt.FontMetrics getFontMetrics(java.awt.Font)>"->"fieldput <FadeText: java.awt.FontMetrics fm>";
+    "fieldput <FadeText: java.awt.FontMetrics fm>"->"return";
+    "ifcmplt.i load.r r2"->"load.r r2";
+    "load.r r2"->"new java.lang.StringBuffer";
+    "new java.lang.StringBuffer"->"dup1.r";
+    "dup1.r"->"push \"desc\"";
+    "push \"desc\""->"specialinvoke <java.lang.StringBuffer: void <init>(java.lang.String)>";
+    "specialinvoke <java.lang.StringBuffer: void <init>(java.lang.String)>"->"load.i i35";
+    "load.i i35"->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(int)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(int)>"->"virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>"->"virtualinvoke <java.util.Properties: java.lang.String getProperty(java.lang.String)>";
+    "virtualinvoke <java.util.Properties: java.lang.String getProperty(java.lang.String)>"->"store.r r118";
+    "store.r r118"->"load.r r118";
+    "load.r r118"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <FadeText: java.lang.String[] m_msg>";
+    "fieldget <FadeText: java.lang.String[] m_msg>"->"load.i i35";
+    "new java.lang.String"
+    "load.i i35"->"new java.lang.String";
+    "new java.lang.String"->"dup1.r";
+    "dup1.r"->"load.r r118";
+    "specialinvoke <java.lang.String: void <init>(java.lang.String)>"
+    "load.r r118"->"specialinvoke <java.lang.String: void <init>(java.lang.String)>";
+    "specialinvoke <java.lang.String: void <init>(java.lang.String)>"->"arraywrite.r";
+    "arraywrite.r"->"goto load.r r2";
+    "goto load.r r2"->"load.r r2";
+    "load.r r2"->"new java.lang.StringBuffer";
+    "new java.lang.StringBuffer"->"dup1.r";
+    "dup1.r"->"push \"underlinetext\"";
+    "push \"underlinetext\""->"specialinvoke <java.lang.StringBuffer: void <init>(java.lang.String)>";
+    "specialinvoke <java.lang.StringBuffer: void <init>(java.lang.String)>"->"load.i i35";
+    "load.i i35"->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(int)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(int)>"->"virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>"->"virtualinvoke <java.util.Properties: java.lang.String getProperty(java.lang.String)>";
+    "virtualinvoke <java.util.Properties: java.lang.String getProperty(java.lang.String)>"->"store.r r118";
+    "store.r r118"->"load.r r118";
+    "load.r r118"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r r0";
+    "fieldget <FadeText: boolean[] m_cur_underline>"
+    "load.r r0"->"fieldget <FadeText: boolean[] m_cur_underline>";
+    "fieldget <FadeText: boolean[] m_cur_underline>"->"load.i i35";
+    "load.i i35"->"load.r r118";
+    "load.r r118"->"staticinvoke <java.lang.Boolean: java.lang.Boolean valueOf(java.lang.String)>";
+    "staticinvoke <java.lang.Boolean: java.lang.Boolean valueOf(java.lang.String)>"->"virtualinvoke <java.lang.Boolean: boolean booleanValue()>";
+    "arraywrite.b"
+    "virtualinvoke <java.lang.Boolean: boolean booleanValue()>"->"arraywrite.b";
+    "arraywrite.b"->"goto load.r r2";
+    "goto load.r r2"->"load.r r2";
+    "load.r r2"->"new java.lang.StringBuffer";
+    "new java.lang.StringBuffer"->"dup1.r";
+    "dup1.r"->"push \"font\"";
+    "push \"font\""->"specialinvoke <java.lang.StringBuffer: void <init>(java.lang.String)>";
+    "specialinvoke <java.lang.StringBuffer: void <init>(java.lang.String)>"->"load.i i35";
+    "load.i i35"->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(int)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(int)>"->"virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>"->"virtualinvoke <java.util.Properties: java.lang.String getProperty(java.lang.String)>";
+    "virtualinvoke <java.util.Properties: java.lang.String getProperty(java.lang.String)>"->"store.r r118";
+    "store.r r118"->"load.r r118";
+    "load.r r118"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r r0";
+    "fieldget <FadeText: java.awt.Font[] m_cur_font>"
+    "load.r r0"->"fieldget <FadeText: java.awt.Font[] m_cur_font>";
+    "fieldget <FadeText: java.awt.Font[] m_cur_font>"->"load.i i35";
+    "load.i i35"->"load.r r118";
+    "load.r r118"->"push \",\"";
+    "push \",\""->"staticinvoke <ocfontc: java.awt.Font getFontSD(java.lang.String,java.lang.String)>";
+    "staticinvoke <ocfontc: java.awt.Font getFontSD(java.lang.String,java.lang.String)>"->"arraywrite.r";
+    "arraywrite.r"->"goto load.r r2";
+    "goto load.r r2"->"load.r r2";
+    "load.r r2"->"new java.lang.StringBuffer";
+    "new java.lang.StringBuffer"->"dup1.r";
+    "dup1.r"->"push \"textcolor\"";
+    "push \"textcolor\""->"specialinvoke <java.lang.StringBuffer: void <init>(java.lang.String)>";
+    "specialinvoke <java.lang.StringBuffer: void <init>(java.lang.String)>"->"load.i i35";
+    "load.i i35"->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(int)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(int)>"->"virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>"->"virtualinvoke <java.util.Properties: java.lang.String getProperty(java.lang.String)>";
+    "virtualinvoke <java.util.Properties: java.lang.String getProperty(java.lang.String)>"->"store.r r118";
+    "store.r r118"->"load.r r118";
+    "load.r r118"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r r0";
+    "fieldget <FadeText: java.awt.Color[] m_cur_textcolor>"
+    "load.r r0"->"fieldget <FadeText: java.awt.Color[] m_cur_textcolor>";
+    "fieldget <FadeText: java.awt.Color[] m_cur_textcolor>"->"load.i i35";
+    "load.i i35"->"load.r r118";
+    "load.r r118"->"staticinvoke <occcolor: java.awt.Color ConvertColor(java.lang.String)>";
+    "staticinvoke <occcolor: java.awt.Color ConvertColor(java.lang.String)>"->"arraywrite.r";
+    "arraywrite.r"->"goto load.r r2";
+    "goto load.r r2"->"load.r r2";
+    "load.r r2"->"new java.lang.StringBuffer";
+    "new java.lang.StringBuffer"->"dup1.r";
+    "dup1.r"->"push \"bgcolor\"";
+    "push \"bgcolor\""->"specialinvoke <java.lang.StringBuffer: void <init>(java.lang.String)>";
+    "specialinvoke <java.lang.StringBuffer: void <init>(java.lang.String)>"->"load.i i35";
+    "load.i i35"->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(int)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(int)>"->"virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>"->"virtualinvoke <java.util.Properties: java.lang.String getProperty(java.lang.String)>";
+    "virtualinvoke <java.util.Properties: java.lang.String getProperty(java.lang.String)>"->"store.r r118";
+    "store.r r118"->"load.r r118";
+    "load.r r118"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r r0";
+    "fieldget <FadeText: java.awt.Color[] m_cur_bgcolor>"
+    "load.r r0"->"fieldget <FadeText: java.awt.Color[] m_cur_bgcolor>";
+    "fieldget <FadeText: java.awt.Color[] m_cur_bgcolor>"->"load.i i35";
+    "load.i i35"->"load.r r118";
+    "load.r r118"->"staticinvoke <occcolor: java.awt.Color ConvertColor(java.lang.String)>";
+    "staticinvoke <occcolor: java.awt.Color ConvertColor(java.lang.String)>"->"arraywrite.r";
+    "arraywrite.r"->"goto load.r r2";
+    "goto load.r r2"->"load.r r2";
+    "load.r r2"->"new java.lang.StringBuffer";
+    "new java.lang.StringBuffer"->"dup1.r";
+    "dup1.r"->"push \"delay\"";
+    "push \"delay\""->"specialinvoke <java.lang.StringBuffer: void <init>(java.lang.String)>";
+    "specialinvoke <java.lang.StringBuffer: void <init>(java.lang.String)>"->"load.i i35";
+    "load.i i35"->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(int)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(int)>"->"virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>"->"virtualinvoke <java.util.Properties: java.lang.String getProperty(java.lang.String)>";
+    "virtualinvoke <java.util.Properties: java.lang.String getProperty(java.lang.String)>"->"store.r r118";
+    "store.r r118"->"load.r r118";
+    "load.r r118"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <FadeText: int[] m_cur_delay>";
+    "fieldget <FadeText: int[] m_cur_delay>"->"load.i i35";
+    "load.i i35"->"load.r r118";
+    "load.r r118"->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>";
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"->"arraywrite.i";
+    "arraywrite.i"->"goto load.r r2";
+    "goto load.r r2"->"load.r r2";
+    "load.r r2"->"new java.lang.StringBuffer";
+    "new java.lang.StringBuffer"->"dup1.r";
+    "push \"desturl\""
+    "dup1.r"->"push \"desturl\"";
+    "push \"desturl\""->"specialinvoke <java.lang.StringBuffer: void <init>(java.lang.String)>";
+    "specialinvoke <java.lang.StringBuffer: void <init>(java.lang.String)>"->"load.i i35";
+    "load.i i35"->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(int)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(int)>"->"virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>"->"virtualinvoke <java.util.Properties: java.lang.String getProperty(java.lang.String)>";
+    "virtualinvoke <java.util.Properties: java.lang.String getProperty(java.lang.String)>"->"store.r r118";
+    "store.r r118"->"load.r r118";
+    "load.r r118"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r r0";
+    "fieldget <FadeText: java.lang.String[] m_cur_desturl>"
+    "load.r r0"->"fieldget <FadeText: java.lang.String[] m_cur_desturl>";
+    "fieldget <FadeText: java.lang.String[] m_cur_desturl>"->"load.i i35";
+    "load.i i35"->"load.r r118";
+    "load.r r118"->"arraywrite.r";
+    "arraywrite.r"->"goto load.r r2";
+    "goto load.r r2"->"load.r r2";
+    "load.r r2"->"new java.lang.StringBuffer";
+    "new java.lang.StringBuffer"->"dup1.r";
+    "dup1.r"->"push \"loadwhere\"";
+    "push \"loadwhere\""->"specialinvoke <java.lang.StringBuffer: void <init>(java.lang.String)>";
+    "specialinvoke <java.lang.StringBuffer: void <init>(java.lang.String)>"->"load.i i35";
+    "load.i i35"->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(int)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(int)>"->"virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>"->"virtualinvoke <java.util.Properties: java.lang.String getProperty(java.lang.String)>";
+    "virtualinvoke <java.util.Properties: java.lang.String getProperty(java.lang.String)>"->"store.r r118";
+    "store.r r118"->"load.r r118";
+    "load.r r118"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r r0";
+    "fieldget <FadeText: java.lang.String[] m_cur_loadwhere>"
+    "load.r r0"->"fieldget <FadeText: java.lang.String[] m_cur_loadwhere>";
+    "fieldget <FadeText: java.lang.String[] m_cur_loadwhere>"->"load.i i35";
+    "load.i i35"->"load.r r118";
+    "load.r r118"->"arraywrite.r";
+    "arraywrite.r"->"goto load.r r2";
+    "goto load.r r2"->"load.r r2";
+    "load.r r2"->"new java.lang.StringBuffer";
+    "new java.lang.StringBuffer"->"dup1.r";
+    "dup1.r"->"push \"valign\"";
+    "push \"valign\""->"specialinvoke <java.lang.StringBuffer: void <init>(java.lang.String)>";
+    "specialinvoke <java.lang.StringBuffer: void <init>(java.lang.String)>"->"load.i i35";
+    "load.i i35"->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(int)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(int)>"->"virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>"->"virtualinvoke <java.util.Properties: java.lang.String getProperty(java.lang.String)>";
+    "virtualinvoke <java.util.Properties: java.lang.String getProperty(java.lang.String)>"->"store.r r118";
+    "store.r r118"->"load.r r118";
+    "load.r r118"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r r0";
+    "fieldget <FadeText: int[] m_cur_valign>"
+    "load.r r0"->"fieldget <FadeText: int[] m_cur_valign>";
+    "fieldget <FadeText: int[] m_cur_valign>"->"load.i i35";
+    "load.i i35"->"load.r r118";
+    "load.r r118"->"staticinvoke <FadeText: int getAlignValue(java.lang.String)>";
+    "staticinvoke <FadeText: int getAlignValue(java.lang.String)>"->"arraywrite.i";
+    "arraywrite.i"->"goto load.r r2";
+    "goto load.r r2"->"load.r r2";
+    "load.r r2"->"new java.lang.StringBuffer";
+    "new java.lang.StringBuffer"->"dup1.r";
+    "dup1.r"->"push \"halign\"";
+    "push \"halign\""->"specialinvoke <java.lang.StringBuffer: void <init>(java.lang.String)>";
+    "specialinvoke <java.lang.StringBuffer: void <init>(java.lang.String)>"->"load.i i35";
+    "load.i i35"->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(int)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(int)>"->"virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>"->"virtualinvoke <java.util.Properties: java.lang.String getProperty(java.lang.String)>";
+    "virtualinvoke <java.util.Properties: java.lang.String getProperty(java.lang.String)>"->"store.r r118";
+    "store.r r118"->"load.r r118";
+    "load.r r118"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r r0";
+    "fieldget <FadeText: int[] m_cur_halign>"
+    "load.r r0"->"fieldget <FadeText: int[] m_cur_halign>";
+    "fieldget <FadeText: int[] m_cur_halign>"->"load.i i35";
+    "load.i i35"->"load.r r118";
+    "load.r r118"->"staticinvoke <FadeText: int getAlignValue(java.lang.String)>";
+    "staticinvoke <FadeText: int getAlignValue(java.lang.String)>"->"arraywrite.i";
+    "arraywrite.i"->"goto load.r r2";
+    "goto load.r r2"->"load.r r2";
+    "load.r r2"->"new java.lang.StringBuffer";
+    "new java.lang.StringBuffer"->"dup1.r";
+    "dup1.r"->"push \"bordercolor\"";
+    "push \"bordercolor\""->"specialinvoke <java.lang.StringBuffer: void <init>(java.lang.String)>";
+    "specialinvoke <java.lang.StringBuffer: void <init>(java.lang.String)>"->"load.i i35";
+    "load.i i35"->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(int)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(int)>"->"virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>"->"virtualinvoke <java.util.Properties: java.lang.String getProperty(java.lang.String)>";
+    "virtualinvoke <java.util.Properties: java.lang.String getProperty(java.lang.String)>"->"store.r r118";
+    "store.r r118"->"load.r r118";
+    "load.r r118"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r r0";
+    "fieldget <FadeText: java.awt.Color[] m_cur_b_color>"
+    "load.r r0"->"fieldget <FadeText: java.awt.Color[] m_cur_b_color>";
+    "fieldget <FadeText: java.awt.Color[] m_cur_b_color>"->"load.i i35";
+    "load.i i35"->"load.r r118";
+    "load.r r118"->"staticinvoke <occcolor: java.awt.Color ConvertColor(java.lang.String)>";
+    "staticinvoke <occcolor: java.awt.Color ConvertColor(java.lang.String)>"->"arraywrite.r";
+    "arraywrite.r"->"goto load.r r2";
+    "goto load.r r2"->"load.r r2";
+    "load.r r2"->"new java.lang.StringBuffer";
+    "new java.lang.StringBuffer"->"dup1.r";
+    "dup1.r"->"push \"borderthickness\"";
+    "push \"borderthickness\""->"specialinvoke <java.lang.StringBuffer: void <init>(java.lang.String)>";
+    "specialinvoke <java.lang.StringBuffer: void <init>(java.lang.String)>"->"load.i i35";
+    "load.i i35"->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(int)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(int)>"->"virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>"->"virtualinvoke <java.util.Properties: java.lang.String getProperty(java.lang.String)>";
+    "virtualinvoke <java.util.Properties: java.lang.String getProperty(java.lang.String)>"->"store.r r118";
+    "store.r r118"->"load.r r118";
+    "load.r r118"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r r0";
+    "fieldget <FadeText: int[] m_cur_b_thick>"
+    "load.r r0"->"fieldget <FadeText: int[] m_cur_b_thick>";
+    "fieldget <FadeText: int[] m_cur_b_thick>"->"load.i i35";
+    "load.i i35"->"load.r r118";
+    "load.r r118"->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>";
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"->"arraywrite.i";
+    "goto inc.i i35 1"
+    "arraywrite.i"->"goto inc.i i35 1";
+    "inc.i i35 1"
+    "goto inc.i i35 1"->"inc.i i35 1";
+    "ifnull load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <FadeText: int[] m_cur_b_thick>";
+    "fieldget <FadeText: int[] m_cur_b_thick>"->"load.i i35";
+    "load.i i35"->"load.r r0";
+    "fieldget <FadeText: int m_b_thick>"
+    "load.r r0"->"fieldget <FadeText: int m_b_thick>";
+    "fieldget <FadeText: int m_b_thick>"->"arraywrite.i";
+    "ifnull load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <FadeText: java.awt.Color[] m_cur_b_color>";
+    "fieldget <FadeText: java.awt.Color[] m_cur_b_color>"->"load.i i35";
+    "load.i i35"->"load.r r0";
+    "fieldget <FadeText: java.awt.Color m_b_color>"
+    "load.r r0"->"fieldget <FadeText: java.awt.Color m_b_color>";
+    "fieldget <FadeText: java.awt.Color m_b_color>"->"arraywrite.r";
+    "ifnull load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <FadeText: int[] m_cur_halign>";
+    "fieldget <FadeText: int[] m_cur_halign>"->"load.i i35";
+    "load.i i35"->"load.r r0";
+    "fieldget <FadeText: int m_valign>"
+    "load.r r0"->"fieldget <FadeText: int m_valign>";
+    "fieldget <FadeText: int m_valign>"->"arraywrite.i";
+    "ifnull load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <FadeText: int[] m_cur_valign>";
+    "fieldget <FadeText: int[] m_cur_valign>"->"load.i i35";
+    "load.i i35"->"load.r r0";
+    "load.r r0"->"fieldget <FadeText: int m_valign>";
+    "fieldget <FadeText: int m_valign>"->"arraywrite.i";
+    "ifnull load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <FadeText: java.lang.String[] m_cur_loadwhere>";
+    "fieldget <FadeText: java.lang.String[] m_cur_loadwhere>"->"load.i i35";
+    "load.i i35"->"load.r r0";
+    "fieldget <FadeText: java.lang.String m_loadwhere>"
+    "load.r r0"->"fieldget <FadeText: java.lang.String m_loadwhere>";
+    "fieldget <FadeText: java.lang.String m_loadwhere>"->"arraywrite.r";
+    "ifnull load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <FadeText: java.lang.String[] m_cur_desturl>";
+    "fieldget <FadeText: java.lang.String[] m_cur_desturl>"->"load.i i35";
+    "load.i i35"->"push \"-1\"";
+    "push \"-1\""->"arraywrite.r";
+    "ifnull load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <FadeText: int[] m_cur_delay>";
+    "fieldget <FadeText: int[] m_cur_delay>"->"load.i i35";
+    "load.i i35"->"load.r r0";
+    "fieldget <FadeText: int m_delay>"
+    "load.r r0"->"fieldget <FadeText: int m_delay>";
+    "fieldget <FadeText: int m_delay>"->"arraywrite.i";
+    "ifnull load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <FadeText: java.awt.Color[] m_cur_bgcolor>";
+    "fieldget <FadeText: java.awt.Color[] m_cur_bgcolor>"->"load.i i35";
+    "load.i i35"->"load.r r0";
+    "load.r r0"->"fieldget <FadeText: java.awt.Color m_bgcolor>";
+    "fieldget <FadeText: java.awt.Color m_bgcolor>"->"arraywrite.r";
+    "ifnull load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <FadeText: java.awt.Color[] m_cur_textcolor>";
+    "fieldget <FadeText: java.awt.Color[] m_cur_textcolor>"->"load.i i35";
+    "load.i i35"->"load.r r0";
+    "fieldget <FadeText: java.awt.Color m_textcolor>"
+    "load.r r0"->"fieldget <FadeText: java.awt.Color m_textcolor>";
+    "fieldget <FadeText: java.awt.Color m_textcolor>"->"arraywrite.r";
+    "ifnull load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <FadeText: java.awt.Font[] m_cur_font>";
+    "fieldget <FadeText: java.awt.Font[] m_cur_font>"->"load.i i35";
+    "load.i i35"->"load.r r0";
+    "load.r r0"->"fieldget <FadeText: java.awt.Font m_font>";
+    "fieldget <FadeText: java.awt.Font m_font>"->"arraywrite.r";
+    "ifnull load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <FadeText: boolean[] m_cur_underline>";
+    "fieldget <FadeText: boolean[] m_cur_underline>"->"load.i i35";
+    "load.i i35"->"load.r r0";
+    "fieldget <FadeText: boolean m_underline>"
+    "load.r r0"->"fieldget <FadeText: boolean m_underline>";
+    "fieldget <FadeText: boolean m_underline>"->"arraywrite.b";
+    "ifnull load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <FadeText: java.lang.String[] m_msg>";
+    "fieldget <FadeText: java.lang.String[] m_msg>"->"load.i i35";
+    "load.i i35"->"new java.lang.String";
+    "new java.lang.String"->"dup1.r";
+    "push \" \""
+    "dup1.r"->"push \" \"";
+    "push \" \""->"specialinvoke <java.lang.String: void <init>(java.lang.String)>";
+    "specialinvoke <java.lang.String: void <init>(java.lang.String)>"->"arraywrite.r";
+    "ifnonnull inc.i i35 1"->"inc.i i35 1";
+    "inc.i i35 1"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <FadeText: int num_msg>";
+    "fieldget <FadeText: int num_msg>"->"push 1";
+    "add.i"
+    "push 1"->"add.i";
+    "add.i"->"fieldput <FadeText: int num_msg>";
+    "ifnull load.r r0"->"load.r r0";
+    "staticget <java.awt.Color: java.awt.Color white>"
+    "load.r r0"->"staticget <java.awt.Color: java.awt.Color white>";
+    "staticget <java.awt.Color: java.awt.Color white>"->"fieldput <FadeText: java.awt.Color m_bgcolor>";
+    "fieldput <FadeText: java.awt.Color m_bgcolor>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <FadeText: java.awt.Color m_bgcolor>";
+    "fieldget <FadeText: java.awt.Color m_bgcolor>"->"virtualinvoke <java.awt.Component: void setBackground(java.awt.Color)>";
+    "ifnull load.r r0"->"load.r r0";
+    "push \"Missing \'Notice\' Tag\""
+    "load.r r0"->"push \"Missing \'Notice\' Tag\"";
+    "push \"Missing \'Notice\' Tag\""->"fieldput <FadeText: java.lang.String m_onsbtext>";
+    "fieldput <FadeText: java.lang.String m_onsbtext>"->"return";
+}

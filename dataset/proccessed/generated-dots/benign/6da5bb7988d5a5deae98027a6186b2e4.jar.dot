@@ -1,0 +1,908 @@
+digraph "" {
+    "r0 := @this: SlickTree"
+    "load.r r0"
+    "r0 := @this: SlickTree"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "virtualinvoke <java.awt.Component: java.awt.Dimension size()>"
+    "load.r r0"->"virtualinvoke <java.awt.Component: java.awt.Dimension size()>";
+    "fieldget <java.awt.Dimension: int width>"
+    "virtualinvoke <java.awt.Component: java.awt.Dimension size()>"->"fieldget <java.awt.Dimension: int width>";
+    "fieldput <SlickTree: int width>"
+    "fieldget <java.awt.Dimension: int width>"->"fieldput <SlickTree: int width>";
+    "fieldput <SlickTree: int width>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"virtualinvoke <java.awt.Component: java.awt.Dimension size()>";
+    "fieldget <java.awt.Dimension: int height>"
+    "virtualinvoke <java.awt.Component: java.awt.Dimension size()>"->"fieldget <java.awt.Dimension: int height>";
+    "fieldput <SlickTree: int height>"
+    "fieldget <java.awt.Dimension: int height>"->"fieldput <SlickTree: int height>";
+    "fieldput <SlickTree: int height>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "fieldget <SlickTree: int width>"
+    "load.r r0"->"fieldget <SlickTree: int width>";
+    "fieldget <SlickTree: int width>"->"load.r r0";
+    "fieldget <SlickTree: int height>"
+    "load.r r0"->"fieldget <SlickTree: int height>";
+    "virtualinvoke <java.awt.Component: java.awt.Image createImage(int,int)>"
+    "fieldget <SlickTree: int height>"->"virtualinvoke <java.awt.Component: java.awt.Image createImage(int,int)>";
+    "fieldput <SlickTree: java.awt.Image a19>"
+    "virtualinvoke <java.awt.Component: java.awt.Image createImage(int,int)>"->"fieldput <SlickTree: java.awt.Image a19>";
+    "fieldput <SlickTree: java.awt.Image a19>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "fieldget <SlickTree: java.awt.Image a19>"
+    "load.r r0"->"fieldget <SlickTree: java.awt.Image a19>";
+    "virtualinvoke <java.awt.Image: java.awt.Graphics getGraphics()>"
+    "fieldget <SlickTree: java.awt.Image a19>"->"virtualinvoke <java.awt.Image: java.awt.Graphics getGraphics()>";
+    "fieldput <SlickTree: java.awt.Graphics a20>"
+    "virtualinvoke <java.awt.Image: java.awt.Graphics getGraphics()>"->"fieldput <SlickTree: java.awt.Graphics a20>";
+    "staticget <java.lang.System: java.io.PrintStream out>"
+    "fieldput <SlickTree: java.awt.Graphics a20>"->"staticget <java.lang.System: java.io.PrintStream out>";
+    "staticget <java.lang.System: java.io.PrintStream out>"->"load.r r0";
+    "fieldget <SlickTree: java.lang.String INFO>"
+    "load.r r0"->"fieldget <SlickTree: java.lang.String INFO>";
+    "virtualinvoke <java.io.PrintStream: void println(java.lang.String)>"
+    "fieldget <SlickTree: java.lang.String INFO>"->"virtualinvoke <java.io.PrintStream: void println(java.lang.String)>";
+    "virtualinvoke <java.io.PrintStream: void println(java.lang.String)>"->"load.r r0";
+    "virtualinvoke <java.applet.Applet: java.net.URL getDocumentBase()>"
+    "load.r r0"->"virtualinvoke <java.applet.Applet: java.net.URL getDocumentBase()>";
+    "virtualinvoke <java.net.URL: java.lang.String getHost()>"
+    "virtualinvoke <java.applet.Applet: java.net.URL getDocumentBase()>"->"virtualinvoke <java.net.URL: java.lang.String getHost()>";
+    "store.r r1"
+    "virtualinvoke <java.net.URL: java.lang.String getHost()>"->"store.r r1";
+    "load.r r1"
+    "store.r r1"->"load.r r1";
+    "ifnull load.r r0"
+    "load.r r1"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r r1";
+    "push \"localhost\""
+    "load.r r1"->"push \"localhost\"";
+    "virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>"
+    "push \"localhost\""->"virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>";
+    "ifne load.r r0"
+    "virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>"->"ifne load.r r0";
+    "ifne load.r r0"->"load.r r1";
+    "push \"127.0.0.1\""
+    "load.r r1"->"push \"127.0.0.1\"";
+    "push \"127.0.0.1\""->"virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>";
+    "virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>"->"ifne load.r r0";
+    "ifne load.r r0"->"load.r r1";
+    "push \"\""
+    "load.r r1"->"push \"\"";
+    "push \"\""->"virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>";
+    "ifeq load.r r0"
+    "virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>"->"ifeq load.r r0";
+    "ifeq load.r r0"->"load.r r0";
+    "push 0"
+    "load.r r0"->"push 0";
+    "fieldput <SlickTree: boolean a32>"
+    "push 0"->"fieldput <SlickTree: boolean a32>";
+    "fieldput <SlickTree: boolean a32>"->"load.r r0";
+    "push \"key\""
+    "load.r r0"->"push \"key\"";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"
+    "push \"key\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r1";
+    "virtualinvoke <SlickTree: java.lang.String a98(java.lang.String)>"
+    "load.r r1"->"virtualinvoke <SlickTree: java.lang.String a98(java.lang.String)>";
+    "store.r r100"
+    "virtualinvoke <SlickTree: java.lang.String a98(java.lang.String)>"->"store.r r100";
+    "store.r r100"->"load.r r0";
+    "load.r r0"->"push \"key\"";
+    "push \"key\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "store.r r101"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"store.r r101";
+    "goto load.r r0"
+    "store.r r101"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "fieldget <SlickTree: boolean a32>"
+    "load.r r0"->"fieldget <SlickTree: boolean a32>";
+    "fieldget <SlickTree: boolean a32>"->"ifeq load.r r0";
+    "load.r r101"
+    "ifeq load.r r0"->"load.r r101";
+    "push 32"
+    "load.r r101"->"push 32";
+    "virtualinvoke <java.lang.String: int indexOf(int)>"
+    "push 32"->"virtualinvoke <java.lang.String: int indexOf(int)>";
+    "ifgt load.r r101"
+    "virtualinvoke <java.lang.String: int indexOf(int)>"->"ifgt load.r r101";
+    "ifgt load.r r101"->"load.r r0";
+    "load.r r0"->"fieldget <SlickTree: boolean a32>";
+    "fieldget <SlickTree: boolean a32>"->"ifeq load.r r0";
+    "ifeq load.r r0"->"load.r r101";
+    "load.r r100"
+    "load.r r101"->"load.r r100";
+    "load.r r100"->"virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>";
+    "ifeq push 1"
+    "virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>"->"ifeq push 1";
+    "ifeq push 1"->"push 0";
+    "store.b r100"
+    "push 0"->"store.b r100";
+    "store.b r100"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "load.b r100"
+    "load.r r0"->"load.b r100";
+    "load.b r100"->"fieldput <SlickTree: boolean a32>";
+    "fieldput <SlickTree: boolean a32>"->"load.r r0";
+    "load.r r0"->"fieldget <SlickTree: boolean a32>";
+    "fieldget <SlickTree: boolean a32>"->"ifeq load.r r0";
+    "ifeq load.r r0"->"load.r r0";
+    "push \"host\""
+    "load.r r0"->"push \"host\"";
+    "push \"host\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r r0";
+    "load.r r0"->"push \"host\"";
+    "push \"host\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.lang.String: int length()>"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"virtualinvoke <java.lang.String: int length()>";
+    "push 4"
+    "virtualinvoke <java.lang.String: int length()>"->"push 4";
+    "ifcmple.i load.r r0"
+    "push 4"->"ifcmple.i load.r r0";
+    "ifcmple.i load.r r0"->"load.r r1";
+    "load.r r1"->"load.r r0";
+    "load.r r0"->"push \"host\"";
+    "push \"host\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.lang.String: int indexOf(java.lang.String)>"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"virtualinvoke <java.lang.String: int indexOf(java.lang.String)>";
+    "push -1"
+    "virtualinvoke <java.lang.String: int indexOf(java.lang.String)>"->"push -1";
+    "push -1"->"ifcmple.i load.r r0";
+    "ifcmple.i load.r r0"->"load.r r0";
+    "load.r r0"->"push \"key\"";
+    "push \"key\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"push \"host\"";
+    "push \"host\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"virtualinvoke <SlickTree: java.lang.String a98(java.lang.String)>";
+    "virtualinvoke <SlickTree: java.lang.String a98(java.lang.String)>"->"virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>";
+    "virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>"->"ifeq load.r r0";
+    "ifeq load.r r0"->"load.r r0";
+    "load.r r0"->"push 0";
+    "push 0"->"fieldput <SlickTree: boolean a32>";
+    "fieldput <SlickTree: boolean a32>"->"load.r r0";
+    "push \"menu\""
+    "load.r r0"->"push \"menu\"";
+    "push \"menu\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"store.r r1";
+    "store.r r1"->"load.r r0";
+    "load.r r0"->"push -1";
+    "fieldput <SlickTree: int a4>"
+    "push -1"->"fieldput <SlickTree: int a4>";
+    "fieldput <SlickTree: int a4>"->"push 0";
+    "store.i r100"
+    "push 0"->"store.i r100";
+    "goto load.i r100"
+    "store.i r100"->"goto load.i r100";
+    "load.i r100"
+    "goto load.i r100"->"load.i r100";
+    "ifge load.r r1"
+    "load.i r100"->"ifge load.r r1";
+    "ifge load.r r1"->"load.r r0";
+    "load.r r0"->"fieldget <SlickTree: boolean a32>";
+    "fieldget <SlickTree: boolean a32>"->"ifeq load.r r0";
+    "ifeq load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "fieldget <SlickTree: int a4>"
+    "load.r r0"->"fieldget <SlickTree: int a4>";
+    "push 1"
+    "fieldget <SlickTree: int a4>"->"push 1";
+    "add.i"
+    "push 1"->"add.i";
+    "add.i"->"fieldput <SlickTree: int a4>";
+    "fieldput <SlickTree: int a4>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <SlickTree: int a4>";
+    "push 3"
+    "fieldget <SlickTree: int a4>"->"push 3";
+    "newmultiarray 2"
+    "push 3"->"newmultiarray 2";
+    "fieldput <SlickTree: java.lang.String[][] menu>"
+    "newmultiarray 2"->"fieldput <SlickTree: java.lang.String[][] menu>";
+    "fieldput <SlickTree: java.lang.String[][] menu>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <SlickTree: int a4>";
+    "newarray"
+    "fieldget <SlickTree: int a4>"->"newarray";
+    "fieldput <SlickTree: int[] a2>"
+    "newarray"->"fieldput <SlickTree: int[] a2>";
+    "fieldput <SlickTree: int[] a2>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <SlickTree: int a4>";
+    "fieldget <SlickTree: int a4>"->"newarray";
+    "fieldput <SlickTree: int[] a3>"
+    "newarray"->"fieldput <SlickTree: int[] a3>";
+    "fieldput <SlickTree: int[] a3>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <SlickTree: int a4>";
+    "fieldget <SlickTree: int a4>"->"newarray";
+    "fieldput <SlickTree: int[] a1>"
+    "newarray"->"fieldput <SlickTree: int[] a1>";
+    "fieldput <SlickTree: int[] a1>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <SlickTree: int a4>";
+    "fieldget <SlickTree: int a4>"->"newarray";
+    "fieldput <SlickTree: boolean[] a17>"
+    "newarray"->"fieldput <SlickTree: boolean[] a17>";
+    "fieldput <SlickTree: boolean[] a17>"->"load.r r0";
+    "load.r r0"->"fieldget <SlickTree: boolean a32>";
+    "ifeq push 0"
+    "fieldget <SlickTree: boolean a32>"->"ifeq push 0";
+    "ifeq push 0"->"load.r r0";
+    "fieldget <SlickTree: java.lang.String[][] menu>"
+    "load.r r0"->"fieldget <SlickTree: java.lang.String[][] menu>";
+    "fieldget <SlickTree: java.lang.String[][] menu>"->"load.r r0";
+    "load.r r0"->"fieldget <SlickTree: int a4>";
+    "fieldget <SlickTree: int a4>"->"push 1";
+    "sub.i"
+    "push 1"->"sub.i";
+    "arrayread.r"
+    "sub.i"->"arrayread.r";
+    "arrayread.r"->"push 0";
+    "push \"Java Applets\""
+    "push 0"->"push \"Java Applets\"";
+    "arraywrite.r"
+    "push \"Java Applets\""->"arraywrite.r";
+    "arraywrite.r"->"load.r r0";
+    "load.r r0"->"fieldget <SlickTree: java.lang.String[][] menu>";
+    "fieldget <SlickTree: java.lang.String[][] menu>"->"load.r r0";
+    "load.r r0"->"fieldget <SlickTree: int a4>";
+    "fieldget <SlickTree: int a4>"->"push 1";
+    "push 1"->"sub.i";
+    "sub.i"->"arrayread.r";
+    "arrayread.r"->"push 1";
+    "push \"http://go.to/javabase\""
+    "push 1"->"push \"http://go.to/javabase\"";
+    "push \"http://go.to/javabase\""->"arraywrite.r";
+    "arraywrite.r"->"load.r r0";
+    "load.r r0"->"fieldget <SlickTree: java.lang.String[][] menu>";
+    "fieldget <SlickTree: java.lang.String[][] menu>"->"load.r r0";
+    "load.r r0"->"fieldget <SlickTree: int a4>";
+    "fieldget <SlickTree: int a4>"->"push 1";
+    "push 1"->"sub.i";
+    "sub.i"->"arrayread.r";
+    "push 2"
+    "arrayread.r"->"push 2";
+    "push \"_blank\""
+    "push 2"->"push \"_blank\"";
+    "push \"_blank\""->"arraywrite.r";
+    "arraywrite.r"->"push 0";
+    "push 0"->"store.i r100";
+    "store.i r100"->"push 0";
+    "store.i r101"
+    "push 0"->"store.i r101";
+    "store.i r101"->"push 0";
+    "store.i $z11"
+    "push 0"->"store.i $z11";
+    "goto load.i $z11"
+    "store.i $z11"->"goto load.i $z11";
+    "load.i $z11"
+    "goto load.i $z11"->"load.i $z11";
+    "load.i $z11"->"load.r r0";
+    "load.r r0"->"fieldget <SlickTree: int a4>";
+    "ifcmplt.i load.i $z11"
+    "fieldget <SlickTree: int a4>"->"ifcmplt.i load.i $z11";
+    "ifcmplt.i load.i $z11"->"load.r r0";
+    "push \"AppletHomePage\""
+    "load.r r0"->"push \"AppletHomePage\"";
+    "push \"AppletHomePage\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r r0";
+    "load.r r0"->"push \"AppletHomePage\"";
+    "push \"AppletHomePage\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"push \"http://go.to/javabase\"";
+    "push \"http://go.to/javabase\""->"virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>";
+    "virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>"->"ifne load.r r0";
+    "ifne load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <SlickTree: java.lang.String[][] menu>";
+    "fieldget <SlickTree: java.lang.String[][] menu>"->"push 0";
+    "push 0"->"arrayread.r";
+    "arrayread.r"->"push 0";
+    "push \"AppletHomePage required\""
+    "push 0"->"push \"AppletHomePage required\"";
+    "push \"AppletHomePage required\""->"arraywrite.r";
+    "arraywrite.r"->"load.r r0";
+    "push \"autoCollapse\""
+    "load.r r0"->"push \"autoCollapse\"";
+    "push \"autoCollapse\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "ifnonnull push 1"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"ifnonnull push 1";
+    "ifnonnull push 1"->"push 0";
+    "store.b r1"
+    "push 0"->"store.b r1";
+    "store.b r1"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "load.b r1"
+    "load.r r0"->"load.b r1";
+    "fieldput <SlickTree: boolean a33>"
+    "load.b r1"->"fieldput <SlickTree: boolean a33>";
+    "fieldput <SlickTree: boolean a33>"->"load.r r0";
+    "push \"longHighlight\""
+    "load.r r0"->"push \"longHighlight\"";
+    "push \"longHighlight\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"ifnonnull push 1";
+    "ifnonnull push 1"->"push 0";
+    "push 0"->"store.b r1";
+    "store.b r1"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "load.r r0"->"load.b r1";
+    "fieldput <SlickTree: boolean a34>"
+    "load.b r1"->"fieldput <SlickTree: boolean a34>";
+    "fieldput <SlickTree: boolean a34>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "push \"bgColor\""
+    "load.r r0"->"push \"bgColor\"";
+    "push \"bgColor\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "staticget <java.awt.Color: java.awt.Color white>"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"staticget <java.awt.Color: java.awt.Color white>";
+    "virtualinvoke <SlickTree: java.awt.Color a50(java.lang.String,java.awt.Color)>"
+    "staticget <java.awt.Color: java.awt.Color white>"->"virtualinvoke <SlickTree: java.awt.Color a50(java.lang.String,java.awt.Color)>";
+    "fieldput <SlickTree: java.awt.Color a21>"
+    "virtualinvoke <SlickTree: java.awt.Color a50(java.lang.String,java.awt.Color)>"->"fieldput <SlickTree: java.awt.Color a21>";
+    "fieldput <SlickTree: java.awt.Color a21>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "push \"textColor\""
+    "load.r r0"->"push \"textColor\"";
+    "push \"textColor\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "staticget <java.awt.Color: java.awt.Color black>"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"staticget <java.awt.Color: java.awt.Color black>";
+    "virtualinvoke <SlickTree: java.awt.Color[] a55(java.lang.String,java.awt.Color)>"
+    "staticget <java.awt.Color: java.awt.Color black>"->"virtualinvoke <SlickTree: java.awt.Color[] a55(java.lang.String,java.awt.Color)>";
+    "fieldput <SlickTree: java.awt.Color[] a22>"
+    "virtualinvoke <SlickTree: java.awt.Color[] a55(java.lang.String,java.awt.Color)>"->"fieldput <SlickTree: java.awt.Color[] a22>";
+    "fieldput <SlickTree: java.awt.Color[] a22>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "push \"mouseTextColor\""
+    "load.r r0"->"push \"mouseTextColor\"";
+    "push \"mouseTextColor\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "staticget <java.awt.Color: java.awt.Color blue>"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"staticget <java.awt.Color: java.awt.Color blue>";
+    "staticget <java.awt.Color: java.awt.Color blue>"->"virtualinvoke <SlickTree: java.awt.Color[] a55(java.lang.String,java.awt.Color)>";
+    "fieldput <SlickTree: java.awt.Color[] a23>"
+    "virtualinvoke <SlickTree: java.awt.Color[] a55(java.lang.String,java.awt.Color)>"->"fieldput <SlickTree: java.awt.Color[] a23>";
+    "fieldput <SlickTree: java.awt.Color[] a23>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "push \"optionColor\""
+    "load.r r0"->"push \"optionColor\"";
+    "push \"optionColor\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "staticget <java.awt.Color: java.awt.Color lightGray>"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"staticget <java.awt.Color: java.awt.Color lightGray>";
+    "staticget <java.awt.Color: java.awt.Color lightGray>"->"virtualinvoke <SlickTree: java.awt.Color[] a55(java.lang.String,java.awt.Color)>";
+    "fieldput <SlickTree: java.awt.Color[] a24>"
+    "virtualinvoke <SlickTree: java.awt.Color[] a55(java.lang.String,java.awt.Color)>"->"fieldput <SlickTree: java.awt.Color[] a24>";
+    "fieldput <SlickTree: java.awt.Color[] a24>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "push \"mouseOptionColor\""
+    "load.r r0"->"push \"mouseOptionColor\"";
+    "push \"mouseOptionColor\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"staticget <java.awt.Color: java.awt.Color white>";
+    "staticget <java.awt.Color: java.awt.Color white>"->"virtualinvoke <SlickTree: java.awt.Color[] a55(java.lang.String,java.awt.Color)>";
+    "fieldput <SlickTree: java.awt.Color[] a25>"
+    "virtualinvoke <SlickTree: java.awt.Color[] a55(java.lang.String,java.awt.Color)>"->"fieldput <SlickTree: java.awt.Color[] a25>";
+    "fieldput <SlickTree: java.awt.Color[] a25>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "push \"mouseOverEffect\""
+    "load.r r0"->"push \"mouseOverEffect\"";
+    "push \"mouseOverEffect\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "push \"left\""
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"push \"left\"";
+    "virtualinvoke <SlickTree: java.lang.String[] a58(java.lang.String,java.lang.String)>"
+    "push \"left\""->"virtualinvoke <SlickTree: java.lang.String[] a58(java.lang.String,java.lang.String)>";
+    "fieldput <SlickTree: java.lang.String[] a26>"
+    "virtualinvoke <SlickTree: java.lang.String[] a58(java.lang.String,java.lang.String)>"->"fieldput <SlickTree: java.lang.String[] a26>";
+    "fieldput <SlickTree: java.lang.String[] a26>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "push \"showOptionEffect\""
+    "load.r r0"->"push \"showOptionEffect\"";
+    "push \"showOptionEffect\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"push \"left\"";
+    "push \"left\""->"virtualinvoke <SlickTree: java.lang.String[] a58(java.lang.String,java.lang.String)>";
+    "fieldput <SlickTree: java.lang.String[] a27>"
+    "virtualinvoke <SlickTree: java.lang.String[] a58(java.lang.String,java.lang.String)>"->"fieldput <SlickTree: java.lang.String[] a27>";
+    "fieldput <SlickTree: java.lang.String[] a27>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "push \"mouseDraw\""
+    "load.r r0"->"push \"mouseDraw\"";
+    "push \"mouseDraw\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "push \"fill\""
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"push \"fill\"";
+    "push \"fill\""->"virtualinvoke <SlickTree: java.lang.String[] a58(java.lang.String,java.lang.String)>";
+    "fieldput <SlickTree: java.lang.String[] a28>"
+    "virtualinvoke <SlickTree: java.lang.String[] a58(java.lang.String,java.lang.String)>"->"fieldput <SlickTree: java.lang.String[] a28>";
+    "fieldput <SlickTree: java.lang.String[] a28>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "push \"optionDraw\""
+    "load.r r0"->"push \"optionDraw\"";
+    "push \"optionDraw\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"push \"fill\"";
+    "push \"fill\""->"virtualinvoke <SlickTree: java.lang.String[] a58(java.lang.String,java.lang.String)>";
+    "fieldput <SlickTree: java.lang.String[] a29>"
+    "virtualinvoke <SlickTree: java.lang.String[] a58(java.lang.String,java.lang.String)>"->"fieldput <SlickTree: java.lang.String[] a29>";
+    "fieldput <SlickTree: java.lang.String[] a29>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "push \"delayTime\""
+    "load.r r0"->"push \"delayTime\"";
+    "push 20"
+    "push \"delayTime\""->"push 20";
+    "virtualinvoke <SlickTree: int a47(java.lang.String,int)>"
+    "push 20"->"virtualinvoke <SlickTree: int a47(java.lang.String,int)>";
+    "fieldput <SlickTree: int a7>"
+    "virtualinvoke <SlickTree: int a47(java.lang.String,int)>"->"fieldput <SlickTree: int a7>";
+    "fieldput <SlickTree: int a7>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "push \"visibilityStep\""
+    "load.r r0"->"push \"visibilityStep\"";
+    "push \"visibilityStep\""->"push 2";
+    "push 2"->"virtualinvoke <SlickTree: int a47(java.lang.String,int)>";
+    "fieldput <SlickTree: int a8>"
+    "virtualinvoke <SlickTree: int a47(java.lang.String,int)>"->"fieldput <SlickTree: int a8>";
+    "fieldput <SlickTree: int a8>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "push \"mouseOverStep\""
+    "load.r r0"->"push \"mouseOverStep\"";
+    "push \"mouseOverStep\""->"push 2";
+    "push 2"->"virtualinvoke <SlickTree: int a47(java.lang.String,int)>";
+    "fieldput <SlickTree: int a9>"
+    "virtualinvoke <SlickTree: int a47(java.lang.String,int)>"->"fieldput <SlickTree: int a9>";
+    "fieldput <SlickTree: int a9>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "push \"spacing\""
+    "load.r r0"->"push \"spacing\"";
+    "push \"spacing\""->"push 20";
+    "push 20"->"virtualinvoke <SlickTree: int a47(java.lang.String,int)>";
+    "fieldput <SlickTree: int a10>"
+    "virtualinvoke <SlickTree: int a47(java.lang.String,int)>"->"fieldput <SlickTree: int a10>";
+    "fieldput <SlickTree: int a10>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "push \"depthSpace\""
+    "load.r r0"->"push \"depthSpace\"";
+    "push 10"
+    "push \"depthSpace\""->"push 10";
+    "push 10"->"virtualinvoke <SlickTree: int a47(java.lang.String,int)>";
+    "fieldput <SlickTree: int a12>"
+    "virtualinvoke <SlickTree: int a47(java.lang.String,int)>"->"fieldput <SlickTree: int a12>";
+    "fieldput <SlickTree: int a12>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "push \"showDelay\""
+    "load.r r0"->"push \"showDelay\"";
+    "push \"showDelay\""->"push 20";
+    "push 20"->"virtualinvoke <SlickTree: int a47(java.lang.String,int)>";
+    "fieldput <SlickTree: int a14>"
+    "virtualinvoke <SlickTree: int a47(java.lang.String,int)>"->"fieldput <SlickTree: int a14>";
+    "fieldput <SlickTree: int a14>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "push \"rounding\""
+    "load.r r0"->"push \"rounding\"";
+    "push 5"
+    "push \"rounding\""->"push 5";
+    "push 5"->"virtualinvoke <SlickTree: int a47(java.lang.String,int)>";
+    "fieldput <SlickTree: int a15>"
+    "virtualinvoke <SlickTree: int a47(java.lang.String,int)>"->"fieldput <SlickTree: int a15>";
+    "fieldput <SlickTree: int a15>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "push \"showDepth\""
+    "load.r r0"->"push \"showDepth\"";
+    "push \"showDepth\""->"push 0";
+    "push 0"->"virtualinvoke <SlickTree: int a47(java.lang.String,int)>";
+    "fieldput <SlickTree: int a13>"
+    "virtualinvoke <SlickTree: int a47(java.lang.String,int)>"->"fieldput <SlickTree: int a13>";
+    "fieldput <SlickTree: int a13>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "push \"gap\""
+    "load.r r0"->"push \"gap\"";
+    "push \"gap\""->"push 0";
+    "push 0"->"virtualinvoke <SlickTree: int a47(java.lang.String,int)>";
+    "fieldput <SlickTree: int a11>"
+    "virtualinvoke <SlickTree: int a47(java.lang.String,int)>"->"fieldput <SlickTree: int a11>";
+    "fieldput <SlickTree: int a11>"->"load.r r0";
+    "push \"background\""
+    "load.r r0"->"push \"background\"";
+    "push \"background\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"virtualinvoke <java.applet.Applet: java.net.URL getDocumentBase()>";
+    "virtualinvoke <java.applet.Applet: java.net.URL getDocumentBase()>"->"load.r r0";
+    "load.r r0"->"push \"background\"";
+    "push \"background\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.awt.Image getImage(java.net.URL,java.lang.String)>"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"virtualinvoke <java.applet.Applet: java.awt.Image getImage(java.net.URL,java.lang.String)>";
+    "fieldput <SlickTree: java.awt.Image a35>"
+    "virtualinvoke <java.applet.Applet: java.awt.Image getImage(java.net.URL,java.lang.String)>"->"fieldput <SlickTree: java.awt.Image a35>";
+    "new java.awt.MediaTracker"
+    "fieldput <SlickTree: java.awt.Image a35>"->"new java.awt.MediaTracker";
+    "new java.awt.MediaTracker"->"store.r r1";
+    "store.r r1"->"load.r r1";
+    "load.r r1"->"load.r r0";
+    "specialinvoke <java.awt.MediaTracker: void <init>(java.awt.Component)>"
+    "load.r r0"->"specialinvoke <java.awt.MediaTracker: void <init>(java.awt.Component)>";
+    "specialinvoke <java.awt.MediaTracker: void <init>(java.awt.Component)>"->"load.r r1";
+    "load.r r1"->"load.r r0";
+    "fieldget <SlickTree: java.awt.Image a35>"
+    "load.r r0"->"fieldget <SlickTree: java.awt.Image a35>";
+    "fieldget <SlickTree: java.awt.Image a35>"->"push 0";
+    "virtualinvoke <java.awt.MediaTracker: void addImage(java.awt.Image,int)>"
+    "push 0"->"virtualinvoke <java.awt.MediaTracker: void addImage(java.awt.Image,int)>";
+    "virtualinvoke <java.awt.MediaTracker: void addImage(java.awt.Image,int)>"->"load.r r1";
+    "virtualinvoke <java.awt.MediaTracker: void waitForAll()>"
+    "load.r r1"->"virtualinvoke <java.awt.MediaTracker: void waitForAll()>";
+    "virtualinvoke <java.awt.MediaTracker: void waitForAll()>"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "push \"textFont\""
+    "load.r r0"->"push \"textFont\"";
+    "new java.awt.Font"
+    "push \"textFont\""->"new java.awt.Font";
+    "dup1.r"
+    "new java.awt.Font"->"dup1.r";
+    "push \"Times\""
+    "dup1.r"->"push \"Times\"";
+    "push \"Times\""->"push 0";
+    "push 12"
+    "push 0"->"push 12";
+    "specialinvoke <java.awt.Font: void <init>(java.lang.String,int,int)>"
+    "push 12"->"specialinvoke <java.awt.Font: void <init>(java.lang.String,int,int)>";
+    "virtualinvoke <SlickTree: java.awt.Font[] a64(java.lang.String,java.awt.Font)>"
+    "specialinvoke <java.awt.Font: void <init>(java.lang.String,int,int)>"->"virtualinvoke <SlickTree: java.awt.Font[] a64(java.lang.String,java.awt.Font)>";
+    "fieldput <SlickTree: java.awt.Font[] a30>"
+    "virtualinvoke <SlickTree: java.awt.Font[] a64(java.lang.String,java.awt.Font)>"->"fieldput <SlickTree: java.awt.Font[] a30>";
+    "fieldput <SlickTree: java.awt.Font[] a30>"->"load.r r0";
+    "push \"mouseTextFont\""
+    "load.r r0"->"push \"mouseTextFont\"";
+    "push \"mouseTextFont\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"push \"mouseTextFont\"";
+    "push \"mouseTextFont\""->"new java.awt.Font";
+    "new java.awt.Font"->"dup1.r";
+    "dup1.r"->"push \"Times\"";
+    "push \"Times\""->"push 2";
+    "push 2"->"push 12";
+    "push 12"->"specialinvoke <java.awt.Font: void <init>(java.lang.String,int,int)>";
+    "specialinvoke <java.awt.Font: void <init>(java.lang.String,int,int)>"->"virtualinvoke <SlickTree: java.awt.Font[] a64(java.lang.String,java.awt.Font)>";
+    "fieldput <SlickTree: java.awt.Font[] a31>"
+    "virtualinvoke <SlickTree: java.awt.Font[] a64(java.lang.String,java.awt.Font)>"->"fieldput <SlickTree: java.awt.Font[] a31>";
+    "goto push 0"
+    "fieldput <SlickTree: java.awt.Font[] a31>"->"goto push 0";
+    "goto push 0"->"push 0";
+    "store.i r1"
+    "push 0"->"store.i r1";
+    "goto load.i r1"
+    "store.i r1"->"goto load.i r1";
+    "load.i r1"
+    "goto load.i r1"->"load.i r1";
+    "load.i r1"->"load.r r0";
+    "load.r r0"->"fieldget <SlickTree: int a4>";
+    "ifcmplt.i load.r r0"
+    "fieldget <SlickTree: int a4>"->"ifcmplt.i load.r r0";
+    "return"
+    "ifcmplt.i load.r r0"->"return";
+    "ifcmplt.i load.r r0"->"load.r r0";
+    "fieldget <SlickTree: int[] a1>"
+    "load.r r0"->"fieldget <SlickTree: int[] a1>";
+    "fieldget <SlickTree: int[] a1>"->"load.i r1";
+    "arrayread.i"
+    "load.i r1"->"arrayread.i";
+    "arrayread.i"->"load.r r0";
+    "fieldget <SlickTree: int a13>"
+    "load.r r0"->"fieldget <SlickTree: int a13>";
+    "ifcmpge.i inc.i r1 1"
+    "fieldget <SlickTree: int a13>"->"ifcmpge.i inc.i r1 1";
+    "ifcmpge.i inc.i r1 1"->"load.i r1";
+    "load.i r1"->"load.r r0";
+    "load.r r0"->"fieldget <SlickTree: int a4>";
+    "fieldget <SlickTree: int a4>"->"push 1";
+    "push 1"->"sub.i";
+    "sub.i"->"ifcmpge.i inc.i r1 1";
+    "ifcmpge.i inc.i r1 1"->"load.r r0";
+    "load.r r0"->"fieldget <SlickTree: int[] a1>";
+    "fieldget <SlickTree: int[] a1>"->"load.i r1";
+    "load.i r1"->"push 1";
+    "push 1"->"add.i";
+    "add.i"->"arrayread.i";
+    "arrayread.i"->"load.r r0";
+    "load.r r0"->"fieldget <SlickTree: int[] a1>";
+    "fieldget <SlickTree: int[] a1>"->"load.i r1";
+    "load.i r1"->"arrayread.i";
+    "ifcmple.i inc.i r1 1"
+    "arrayread.i"->"ifcmple.i inc.i r1 1";
+    "ifcmple.i inc.i r1 1"->"load.r r0";
+    "load.r r0"->"load.i r1";
+    "virtualinvoke <SlickTree: void a86(int)>"
+    "load.i r1"->"virtualinvoke <SlickTree: void a86(int)>";
+    "inc.i r1 1"
+    "virtualinvoke <SlickTree: void a86(int)>"->"inc.i r1 1";
+    "ifnull load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "fieldget <SlickTree: java.awt.Font[] a30>"
+    "load.r r0"->"fieldget <SlickTree: java.awt.Font[] a30>";
+    "fieldget <SlickTree: java.awt.Font[] a30>"->"fieldput <SlickTree: java.awt.Font[] a31>";
+    "virtualinvoke <java.awt.MediaTracker: void waitForAll()>"->"store.r r1";
+    "store.r r1"->"goto load.r r0";
+    "ifnonnull push 1"->"push 1";
+    "push 1"->"store.b r1";
+    "ifnonnull push 1"->"push 1";
+    "push 1"->"store.b r1";
+    "ifcmplt.i load.i $z11"->"load.i $z11";
+    "load.i $z11"->"load.r r0";
+    "load.r r0"->"fieldget <SlickTree: int a4>";
+    "fieldget <SlickTree: int a4>"->"push 1";
+    "push 1"->"sub.i";
+    "ifcmplt.i load.r r1"
+    "sub.i"->"ifcmplt.i load.r r1";
+    "ifcmplt.i load.r r1"->"load.r r0";
+    "load.r r0"->"fieldget <SlickTree: boolean a32>";
+    "fieldget <SlickTree: boolean a32>"->"ifne load.r r0";
+    "ifne load.r r0"->"load.r r1";
+    "push 125"
+    "load.r r1"->"push 125";
+    "push 125"->"load.r r1";
+    "push 123"
+    "load.r r1"->"push 123";
+    "push 123"->"load.i r100";
+    "virtualinvoke <java.lang.String: int indexOf(int,int)>"
+    "load.i r100"->"virtualinvoke <java.lang.String: int indexOf(int,int)>";
+    "virtualinvoke <java.lang.String: int indexOf(int,int)>"->"push 1";
+    "push 1"->"add.i";
+    "store.i $r16"
+    "add.i"->"store.i $r16";
+    "load.i $r16"
+    "store.i $r16"->"load.i $r16";
+    "load.i $r16"->"virtualinvoke <java.lang.String: int indexOf(int,int)>";
+    "virtualinvoke <java.lang.String: int indexOf(int,int)>"->"store.i r100";
+    "store.i r100"->"load.r r1";
+    "load.r r1"->"load.i $r16";
+    "load.i $r16"->"load.i r100";
+    "virtualinvoke <java.lang.String: java.lang.String substring(int,int)>"
+    "load.i r100"->"virtualinvoke <java.lang.String: java.lang.String substring(int,int)>";
+    "store.r r103"
+    "virtualinvoke <java.lang.String: java.lang.String substring(int,int)>"->"store.r r103";
+    "store.r r103"->"push -1";
+    "store.i i66"
+    "push -1"->"store.i i66";
+    "store.i i66"->"push 0";
+    "store.i i67"
+    "push 0"->"store.i i67";
+    "goto load.i i67"
+    "store.i i67"->"goto load.i i67";
+    "load.i i67"
+    "goto load.i i67"->"load.i i67";
+    "load.i i67"->"push 3";
+    "ifcmplt.i load.i i66"
+    "push 3"->"ifcmplt.i load.i i66";
+    "ifcmplt.i load.i i66"->"load.r r0";
+    "load.r r0"->"fieldget <SlickTree: int[] a1>";
+    "fieldget <SlickTree: int[] a1>"->"load.i $z11";
+    "load.i $z11"->"push 0";
+    "arraywrite.i"
+    "push 0"->"arraywrite.i";
+    "arraywrite.i"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <SlickTree: java.lang.String[][] menu>";
+    "fieldget <SlickTree: java.lang.String[][] menu>"->"load.i $z11";
+    "load.i $z11"->"arrayread.r";
+    "arrayread.r"->"push 0";
+    "push 0"->"arrayread.r";
+    "arrayread.r"->"load.r r0";
+    "load.r r0"->"fieldget <SlickTree: int[] a1>";
+    "fieldget <SlickTree: int[] a1>"->"load.i $z11";
+    "load.i $z11"->"arrayread.i";
+    "virtualinvoke <java.lang.String: char charAt(int)>"
+    "arrayread.i"->"virtualinvoke <java.lang.String: char charAt(int)>";
+    "virtualinvoke <java.lang.String: char charAt(int)>"->"push 32";
+    "ifcmpeq.c load.r r0"
+    "push 32"->"ifcmpeq.c load.r r0";
+    "ifcmpeq.c load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <SlickTree: java.lang.String[][] menu>";
+    "fieldget <SlickTree: java.lang.String[][] menu>"->"load.i $z11";
+    "load.i $z11"->"arrayread.r";
+    "arrayread.r"->"push 0";
+    "push 0"->"load.r r0";
+    "load.r r0"->"fieldget <SlickTree: java.lang.String[][] menu>";
+    "fieldget <SlickTree: java.lang.String[][] menu>"->"load.i $z11";
+    "load.i $z11"->"arrayread.r";
+    "arrayread.r"->"push 0";
+    "push 0"->"arrayread.r";
+    "virtualinvoke <java.lang.String: java.lang.String trim()>"
+    "arrayread.r"->"virtualinvoke <java.lang.String: java.lang.String trim()>";
+    "virtualinvoke <java.lang.String: java.lang.String trim()>"->"arraywrite.r";
+    "arraywrite.r"->"load.r r0";
+    "load.r r0"->"fieldget <SlickTree: int[] a1>";
+    "fieldget <SlickTree: int[] a1>"->"load.i $z11";
+    "load.i $z11"->"arrayread.i";
+    "arrayread.i"->"ifne load.r r0";
+    "ifne load.r r0"->"load.r r0";
+    "fieldget <SlickTree: boolean[] a17>"
+    "load.r r0"->"fieldget <SlickTree: boolean[] a17>";
+    "fieldget <SlickTree: boolean[] a17>"->"load.i $z11";
+    "load.i $z11"->"push 1";
+    "arraywrite.b"
+    "push 1"->"arraywrite.b";
+    "arraywrite.b"->"load.r r0";
+    "fieldget <SlickTree: int[] a2>"
+    "load.r r0"->"fieldget <SlickTree: int[] a2>";
+    "fieldget <SlickTree: int[] a2>"->"load.i $z11";
+    "load.i r101"
+    "load.i $z11"->"load.i r101";
+    "neg.i"
+    "load.i r101"->"neg.i";
+    "neg.i"->"load.r r0";
+    "fieldget <SlickTree: int a14>"
+    "load.r r0"->"fieldget <SlickTree: int a14>";
+    "mul.i"
+    "fieldget <SlickTree: int a14>"->"mul.i";
+    "mul.i"->"arraywrite.i";
+    "inc.i r101 1"
+    "arraywrite.i"->"inc.i r101 1";
+    "inc.i r101 1"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "fieldget <SlickTree: int[] a3>"
+    "load.r r0"->"fieldget <SlickTree: int[] a3>";
+    "fieldget <SlickTree: int[] a3>"->"load.i $z11";
+    "load.i $z11"->"push 0";
+    "push 0"->"arraywrite.i";
+    "arraywrite.i"->"load.r r0";
+    "load.r r0"->"fieldget <SlickTree: int[] a1>";
+    "fieldget <SlickTree: int[] a1>"->"load.i $z11";
+    "load.i $z11"->"arrayread.i";
+    "arrayread.i"->"push 1";
+    "push 1"->"add.i";
+    "add.i"->"load.r r0";
+    "fieldget <SlickTree: int a0>"
+    "load.r r0"->"fieldget <SlickTree: int a0>";
+    "ifcmple.i inc.i $z11 1"
+    "fieldget <SlickTree: int a0>"->"ifcmple.i inc.i $z11 1";
+    "ifcmple.i inc.i $z11 1"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <SlickTree: int[] a1>";
+    "fieldget <SlickTree: int[] a1>"->"load.i $z11";
+    "load.i $z11"->"arrayread.i";
+    "arrayread.i"->"push 1";
+    "push 1"->"add.i";
+    "fieldput <SlickTree: int a0>"
+    "add.i"->"fieldput <SlickTree: int a0>";
+    "inc.i $z11 1"
+    "fieldput <SlickTree: int a0>"->"inc.i $z11 1";
+    "ifne load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <SlickTree: boolean[] a17>";
+    "fieldget <SlickTree: boolean[] a17>"->"load.i $z11";
+    "load.i $z11"->"push 0";
+    "push 0"->"arraywrite.b";
+    "arraywrite.b"->"load.r r0";
+    "load.r r0"->"fieldget <SlickTree: int[] a2>";
+    "fieldget <SlickTree: int[] a2>"->"load.i $z11";
+    "load.i $z11"->"push 0";
+    "push 0"->"arraywrite.i";
+    "ifcmpeq.c load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <SlickTree: int[] a1>";
+    "fieldget <SlickTree: int[] a1>"->"dup1.r";
+    "dup1.r"->"load.i $z11";
+    "load.i $z11"->"arrayread.i";
+    "arrayread.i"->"push 1";
+    "push 1"->"add.i";
+    "add.i"->"store.i $r16";
+    "store.i $r16"->"load.i $z11";
+    "load.i $z11"->"load.i $r16";
+    "load.i $r16"->"arraywrite.i";
+    "load.i i66"
+    "ifcmplt.i load.i i66"->"load.i i66";
+    "load.i i66"->"push 1";
+    "push 1"->"add.i";
+    "store.i i68"
+    "add.i"->"store.i i68";
+    "load.r r103"
+    "store.i i68"->"load.r r103";
+    "push 44"
+    "load.r r103"->"push 44";
+    "load.i i68"
+    "push 44"->"load.i i68";
+    "load.i i68"->"virtualinvoke <java.lang.String: int indexOf(int,int)>";
+    "virtualinvoke <java.lang.String: int indexOf(int,int)>"->"store.i i66";
+    "store.i i66"->"load.r r0";
+    "load.r r0"->"fieldget <SlickTree: java.lang.String[][] menu>";
+    "fieldget <SlickTree: java.lang.String[][] menu>"->"load.i $z11";
+    "load.i $z11"->"arrayread.r";
+    "store.r $r16"
+    "arrayread.r"->"store.r $r16";
+    "store.r $r16"->"load.i i67";
+    "store.i $i16"
+    "load.i i67"->"store.i $i16";
+    "store.i $i16"->"load.i i66";
+    "ifge load.i i66"
+    "load.i i66"->"ifge load.i i66";
+    "ifge load.i i66"->"load.r r103";
+    "load.r r103"->"virtualinvoke <java.lang.String: int length()>";
+    "store.i $i69"
+    "virtualinvoke <java.lang.String: int length()>"->"store.i $i69";
+    "goto load.r $r16"
+    "store.i $i69"->"goto load.r $r16";
+    "load.r $r16"
+    "goto load.r $r16"->"load.r $r16";
+    "load.i $i16"
+    "load.r $r16"->"load.i $i16";
+    "load.i $i16"->"load.r r103";
+    "load.r r103"->"load.i i68";
+    "load.i $i69"
+    "load.i i68"->"load.i $i69";
+    "load.i $i69"->"virtualinvoke <java.lang.String: java.lang.String substring(int,int)>";
+    "virtualinvoke <java.lang.String: java.lang.String substring(int,int)>"->"arraywrite.r";
+    "arraywrite.r"->"load.i i66";
+    "ifge inc.i i67 1"
+    "load.i i66"->"ifge inc.i i67 1";
+    "inc.i i67 1"
+    "ifge inc.i i67 1"->"inc.i i67 1";
+    "inc.i i67 1"->"goto load.i i67";
+    "goto load.i i67"->"load.i i67";
+    "load.i i67"->"push 3";
+    "push 3"->"ifcmplt.i load.r r0";
+    "ifcmplt.i load.r r0"->"inc.i i67 1";
+    "ifcmplt.i load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <SlickTree: java.lang.String[][] menu>";
+    "fieldget <SlickTree: java.lang.String[][] menu>"->"load.i $z11";
+    "load.i $z11"->"arrayread.r";
+    "arrayread.r"->"load.i i67";
+    "load.i i67"->"push \"\"";
+    "push \"\""->"arraywrite.r";
+    "arraywrite.r"->"inc.i i67 1";
+    "ifge load.i i66"->"load.i i66";
+    "load.i i66"->"store.i $i69";
+    "ifge load.r r1"->"load.r r1";
+    "load.r r1"->"push 125";
+    "push 125"->"load.i r100";
+    "load.i r100"->"push 1";
+    "push 1"->"add.i";
+    "add.i"->"virtualinvoke <java.lang.String: int indexOf(int,int)>";
+    "virtualinvoke <java.lang.String: int indexOf(int,int)>"->"store.i r100";
+    "store.i r100"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <SlickTree: int a4>";
+    "fieldget <SlickTree: int a4>"->"push 1";
+    "push 1"->"add.i";
+    "add.i"->"fieldput <SlickTree: int a4>";
+    "ifeq push 1"->"push 1";
+    "push 1"->"store.b r100";
+    "ifgt load.r r101"->"load.r r101";
+    "load.r r101"->"push 0";
+    "push 0"->"load.r r101";
+    "load.r r101"->"push 32";
+    "push 32"->"virtualinvoke <java.lang.String: int indexOf(int)>";
+    "virtualinvoke <java.lang.String: int indexOf(int)>"->"virtualinvoke <java.lang.String: java.lang.String substring(int,int)>";
+    "virtualinvoke <java.lang.String: java.lang.String substring(int,int)>"->"load.r r100";
+    "load.r r100"->"virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>";
+    "virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>"->"ifeq push 1";
+    "ifeq push 1"->"push 0";
+    "store.b $z11"
+    "push 0"->"store.b $z11";
+    "store.b $z11"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "load.b $z11"
+    "load.r r0"->"load.b $z11";
+    "load.b $z11"->"fieldput <SlickTree: boolean a32>";
+    "fieldput <SlickTree: boolean a32>"->"load.r r101";
+    "load.r r101"->"load.r r101";
+    "load.r r101"->"push 32";
+    "push 32"->"virtualinvoke <java.lang.String: int indexOf(int)>";
+    "virtualinvoke <java.lang.String: int indexOf(int)>"->"push 1";
+    "push 1"->"add.i";
+    "add.i"->"load.r r101";
+    "load.r r101"->"virtualinvoke <java.lang.String: int length()>";
+    "virtualinvoke <java.lang.String: int length()>"->"virtualinvoke <java.lang.String: java.lang.String substring(int,int)>";
+    "virtualinvoke <java.lang.String: java.lang.String substring(int,int)>"->"store.r r101";
+    "ifeq push 1"->"push 1";
+    "push 1"->"store.b $z11";
+}

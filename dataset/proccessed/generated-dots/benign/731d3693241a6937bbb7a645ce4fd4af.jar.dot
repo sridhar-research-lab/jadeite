@@ -1,0 +1,88 @@
+digraph "" {
+    "r0 := @this: panoapplet"
+    "load.r r0"
+    "r0 := @this: panoapplet"->"load.r r0";
+    "push null"
+    "load.r r0"->"push null";
+    "virtualinvoke <java.awt.Container: void setLayout(java.awt.LayoutManager)>"
+    "push null"->"virtualinvoke <java.awt.Container: void setLayout(java.awt.LayoutManager)>";
+    "new java.awt.MediaTracker"
+    "virtualinvoke <java.awt.Container: void setLayout(java.awt.LayoutManager)>"->"new java.awt.MediaTracker";
+    "store.r $r5"
+    "new java.awt.MediaTracker"->"store.r $r5";
+    "load.r $r5"
+    "store.r $r5"->"load.r $r5";
+    "load.r $r5"->"load.r r0";
+    "specialinvoke <java.awt.MediaTracker: void <init>(java.awt.Component)>"
+    "load.r r0"->"specialinvoke <java.awt.MediaTracker: void <init>(java.awt.Component)>";
+    "push \"Zoom_ToolBar.gif\""
+    "specialinvoke <java.awt.MediaTracker: void <init>(java.awt.Component)>"->"push \"Zoom_ToolBar.gif\"";
+    "staticinvoke <pa.a.a.a.c.a: java.io.InputStream a(java.lang.String)>"
+    "push \"Zoom_ToolBar.gif\""->"staticinvoke <pa.a.a.a.c.a: java.io.InputStream a(java.lang.String)>";
+    "store.r r2"
+    "staticinvoke <pa.a.a.a.c.a: java.io.InputStream a(java.lang.String)>"->"store.r r2";
+    "push 32768"
+    "store.r r2"->"push 32768";
+    "newarray"
+    "push 32768"->"newarray";
+    "store.r r3"
+    "newarray"->"store.r r3";
+    "new java.io.ByteArrayOutputStream"
+    "store.r r3"->"new java.io.ByteArrayOutputStream";
+    "store.r $r6"
+    "new java.io.ByteArrayOutputStream"->"store.r $r6";
+    "load.r $r6"
+    "store.r $r6"->"load.r $r6";
+    "specialinvoke <java.io.ByteArrayOutputStream: void <init>()>"
+    "load.r $r6"->"specialinvoke <java.io.ByteArrayOutputStream: void <init>()>";
+    "goto load.r r2"
+    "specialinvoke <java.io.ByteArrayOutputStream: void <init>()>"->"goto load.r r2";
+    "load.r r2"
+    "goto load.r r2"->"load.r r2";
+    "load.r r3"
+    "load.r r2"->"load.r r3";
+    "virtualinvoke <java.io.InputStream: int read(byte[])>"
+    "load.r r3"->"virtualinvoke <java.io.InputStream: int read(byte[])>";
+    "store.i $i1"
+    "virtualinvoke <java.io.InputStream: int read(byte[])>"->"store.i $i1";
+    "load.i $i1"
+    "store.i $i1"->"load.i $i1";
+    "ifgt load.r $r6"
+    "load.i $i1"->"ifgt load.r $r6";
+    "ifgt load.r $r6"->"load.r r0";
+    "staticinvoke <java.awt.Toolkit: java.awt.Toolkit getDefaultToolkit()>"
+    "load.r r0"->"staticinvoke <java.awt.Toolkit: java.awt.Toolkit getDefaultToolkit()>";
+    "staticinvoke <java.awt.Toolkit: java.awt.Toolkit getDefaultToolkit()>"->"load.r $r6";
+    "virtualinvoke <java.io.ByteArrayOutputStream: byte[] toByteArray()>"
+    "load.r $r6"->"virtualinvoke <java.io.ByteArrayOutputStream: byte[] toByteArray()>";
+    "virtualinvoke <java.awt.Toolkit: java.awt.Image createImage(byte[])>"
+    "virtualinvoke <java.io.ByteArrayOutputStream: byte[] toByteArray()>"->"virtualinvoke <java.awt.Toolkit: java.awt.Image createImage(byte[])>";
+    "fieldput <panoapplet: java.awt.Image q>"
+    "virtualinvoke <java.awt.Toolkit: java.awt.Image createImage(byte[])>"->"fieldput <panoapplet: java.awt.Image q>";
+    "fieldput <panoapplet: java.awt.Image q>"->"load.r $r5";
+    "load.r $r5"->"load.r r0";
+    "fieldget <panoapplet: java.awt.Image q>"
+    "load.r r0"->"fieldget <panoapplet: java.awt.Image q>";
+    "push 0"
+    "fieldget <panoapplet: java.awt.Image q>"->"push 0";
+    "virtualinvoke <java.awt.MediaTracker: void addImage(java.awt.Image,int)>"
+    "push 0"->"virtualinvoke <java.awt.MediaTracker: void addImage(java.awt.Image,int)>";
+    "virtualinvoke <java.awt.MediaTracker: void addImage(java.awt.Image,int)>"->"load.r $r5";
+    "virtualinvoke <java.awt.MediaTracker: void waitForAll()>"
+    "load.r $r5"->"virtualinvoke <java.awt.MediaTracker: void waitForAll()>";
+    "goto load.r r0"
+    "virtualinvoke <java.awt.MediaTracker: void waitForAll()>"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <panoapplet: java.awt.Image q>";
+    "staticinvoke <pa.a.a.a.d.b: void 'if'(java.awt.Image)>"
+    "fieldget <panoapplet: java.awt.Image q>"->"staticinvoke <pa.a.a.a.d.b: void 'if'(java.awt.Image)>";
+    "return"
+    "staticinvoke <pa.a.a.a.d.b: void 'if'(java.awt.Image)>"->"return";
+    "virtualinvoke <java.awt.MediaTracker: void waitForAll()>"->"store.r r2";
+    "ifgt load.r $r6"->"load.r $r6";
+    "load.r $r6"->"load.r r3";
+    "load.r r3"->"push 0";
+    "push 0"->"load.i $i1";
+    "virtualinvoke <java.io.ByteArrayOutputStream: void write(byte[],int,int)>"
+    "load.i $i1"->"virtualinvoke <java.io.ByteArrayOutputStream: void write(byte[],int,int)>";
+}

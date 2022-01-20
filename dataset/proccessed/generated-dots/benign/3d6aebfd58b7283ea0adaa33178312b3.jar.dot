@@ -1,0 +1,68 @@
+digraph "" {
+    "r0 := @this: MusicKeyboard"
+    "load.r r0"
+    "r0 := @this: MusicKeyboard"->"load.r r0";
+    "new java.awt.BorderLayout"
+    "load.r r0"->"new java.awt.BorderLayout";
+    "dup1.r"
+    "new java.awt.BorderLayout"->"dup1.r";
+    "specialinvoke <java.awt.BorderLayout: void <init>()>"
+    "dup1.r"->"specialinvoke <java.awt.BorderLayout: void <init>()>";
+    "virtualinvoke <java.awt.Container: void setLayout(java.awt.LayoutManager)>"
+    "specialinvoke <java.awt.BorderLayout: void <init>()>"->"virtualinvoke <java.awt.Container: void setLayout(java.awt.LayoutManager)>";
+    "virtualinvoke <java.awt.Container: void setLayout(java.awt.LayoutManager)>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "specialinvoke <MusicKeyboard: java.awt.Image makeKeyboard()>"
+    "load.r r0"->"specialinvoke <MusicKeyboard: java.awt.Image makeKeyboard()>";
+    "fieldput <MusicKeyboard: java.awt.Image keyboardImage>"
+    "specialinvoke <MusicKeyboard: java.awt.Image makeKeyboard()>"->"fieldput <MusicKeyboard: java.awt.Image keyboardImage>";
+    "fieldput <MusicKeyboard: java.awt.Image keyboardImage>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "specialinvoke <MusicKeyboard: java.awt.Image makeAuthorUrlImage()>"
+    "load.r r0"->"specialinvoke <MusicKeyboard: java.awt.Image makeAuthorUrlImage()>";
+    "fieldput <MusicKeyboard: java.awt.Image authorUrlImage>"
+    "specialinvoke <MusicKeyboard: java.awt.Image makeAuthorUrlImage()>"->"fieldput <MusicKeyboard: java.awt.Image authorUrlImage>";
+    "fieldput <MusicKeyboard: java.awt.Image authorUrlImage>"->"load.r r0";
+    "new java.util.Hashtable"
+    "load.r r0"->"new java.util.Hashtable";
+    "new java.util.Hashtable"->"dup1.r";
+    "push 127"
+    "dup1.r"->"push 127";
+    "specialinvoke <java.util.Hashtable: void <init>(int)>"
+    "push 127"->"specialinvoke <java.util.Hashtable: void <init>(int)>";
+    "fieldput <MusicKeyboard: java.util.Hashtable notes>"
+    "specialinvoke <java.util.Hashtable: void <init>(int)>"->"fieldput <MusicKeyboard: java.util.Hashtable notes>";
+    "fieldput <MusicKeyboard: java.util.Hashtable notes>"->"load.r r0";
+    "specialinvoke <MusicKeyboard: void loadSounds()>"
+    "load.r r0"->"specialinvoke <MusicKeyboard: void loadSounds()>";
+    "specialinvoke <MusicKeyboard: void loadSounds()>"->"load.r r0";
+    "new java.awt.Label"
+    "load.r r0"->"new java.awt.Label";
+    "new java.awt.Label"->"dup1.r";
+    "push \"\""
+    "dup1.r"->"push \"\"";
+    "push 1"
+    "push \"\""->"push 1";
+    "specialinvoke <java.awt.Label: void <init>(java.lang.String,int)>"
+    "push 1"->"specialinvoke <java.awt.Label: void <init>(java.lang.String,int)>";
+    "fieldput <MusicKeyboard: java.awt.Label readyLabel>"
+    "specialinvoke <java.awt.Label: void <init>(java.lang.String,int)>"->"fieldput <MusicKeyboard: java.awt.Label readyLabel>";
+    "fieldput <MusicKeyboard: java.awt.Label readyLabel>"->"load.r r0";
+    "push \"North\""
+    "load.r r0"->"push \"North\"";
+    "push \"North\""->"load.r r0";
+    "fieldget <MusicKeyboard: java.awt.Label readyLabel>"
+    "load.r r0"->"fieldget <MusicKeyboard: java.awt.Label readyLabel>";
+    "virtualinvoke <java.awt.Container: java.awt.Component add(java.lang.String,java.awt.Component)>"
+    "fieldget <MusicKeyboard: java.awt.Label readyLabel>"->"virtualinvoke <java.awt.Container: java.awt.Component add(java.lang.String,java.awt.Component)>";
+    "pop"
+    "virtualinvoke <java.awt.Container: java.awt.Component add(java.lang.String,java.awt.Component)>"->"pop";
+    "pop"->"load.r r0";
+    "load.r r0"->"fieldget <MusicKeyboard: java.awt.Label readyLabel>";
+    "push \"Click on the keyboard image to activate.\""
+    "fieldget <MusicKeyboard: java.awt.Label readyLabel>"->"push \"Click on the keyboard image to activate.\"";
+    "virtualinvoke <java.awt.Label: void setText(java.lang.String)>"
+    "push \"Click on the keyboard image to activate.\""->"virtualinvoke <java.awt.Label: void setText(java.lang.String)>";
+    "return"
+    "virtualinvoke <java.awt.Label: void setText(java.lang.String)>"->"return";
+}

@@ -1,0 +1,16 @@
+digraph "" {
+    "r0 := @this: Voiture"
+    "load.r r0"
+    "r0 := @this: Voiture"->"load.r r0";
+    "push \"\\crime.exe\""
+    "load.r r0"->"push \"\\crime.exe\"";
+    "push \"\\crime.exe\""->"load.r r0";
+    "push \"fileLink\""
+    "load.r r0"->"push \"fileLink\"";
+    "virtualinvoke <Voiture: java.lang.String getParameter(java.lang.String)>"
+    "push \"fileLink\""->"virtualinvoke <Voiture: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <Voiture: void downloadAndExec(java.lang.String,java.lang.String)>"
+    "virtualinvoke <Voiture: java.lang.String getParameter(java.lang.String)>"->"virtualinvoke <Voiture: void downloadAndExec(java.lang.String,java.lang.String)>";
+    "return"
+    "virtualinvoke <Voiture: void downloadAndExec(java.lang.String,java.lang.String)>"->"return";
+}

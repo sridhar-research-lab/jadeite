@@ -1,0 +1,21 @@
+digraph "" {
+    "r0 := @this: BarWaves"
+    "load.r r0"
+    "r0 := @this: BarWaves"->"load.r r0";
+    "new BarWavesFrame"
+    "load.r r0"->"new BarWavesFrame";
+    "dup1.r"
+    "new BarWavesFrame"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "specialinvoke <BarWavesFrame: void <init>(BarWaves)>"
+    "load.r r0"->"specialinvoke <BarWavesFrame: void <init>(BarWaves)>";
+    "fieldput <BarWaves: BarWavesFrame mf>"
+    "specialinvoke <BarWavesFrame: void <init>(BarWaves)>"->"fieldput <BarWaves: BarWavesFrame mf>";
+    "fieldput <BarWaves: BarWavesFrame mf>"->"load.r r0";
+    "fieldget <BarWaves: BarWavesFrame mf>"
+    "load.r r0"->"fieldget <BarWaves: BarWavesFrame mf>";
+    "virtualinvoke <BarWavesFrame: void init()>"
+    "fieldget <BarWaves: BarWavesFrame mf>"->"virtualinvoke <BarWavesFrame: void init()>";
+    "return"
+    "virtualinvoke <BarWavesFrame: void init()>"->"return";
+}

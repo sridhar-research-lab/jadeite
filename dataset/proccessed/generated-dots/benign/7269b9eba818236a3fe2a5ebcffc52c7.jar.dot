@@ -1,0 +1,37 @@
+digraph "" {
+    "r0 := @this: Envelope"
+    "load.r r0"
+    "r0 := @this: Envelope"->"load.r r0";
+    "new EnvelopeFrame"
+    "load.r r0"->"new EnvelopeFrame";
+    "dup1.r"
+    "new EnvelopeFrame"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "specialinvoke <EnvelopeFrame: void <init>(Envelope)>"
+    "load.r r0"->"specialinvoke <EnvelopeFrame: void <init>(Envelope)>";
+    "fieldput <Envelope: EnvelopeFrame mf>"
+    "specialinvoke <EnvelopeFrame: void <init>(Envelope)>"->"fieldput <Envelope: EnvelopeFrame mf>";
+    "fieldput <Envelope: EnvelopeFrame mf>"->"load.r r0";
+    "fieldget <Envelope: EnvelopeFrame mf>"
+    "load.r r0"->"fieldget <Envelope: EnvelopeFrame mf>";
+    "virtualinvoke <EnvelopeFrame: void init()>"
+    "fieldget <Envelope: EnvelopeFrame mf>"->"virtualinvoke <EnvelopeFrame: void init()>";
+    "goto return"
+    "virtualinvoke <EnvelopeFrame: void init()>"->"goto return";
+    "return"
+    "goto return"->"return";
+    "virtualinvoke <java.lang.Exception: void printStackTrace()>"
+    "virtualinvoke <EnvelopeFrame: void init()>"->"virtualinvoke <java.lang.Exception: void printStackTrace()>";
+    "virtualinvoke <java.lang.Exception: void printStackTrace()>"->"load.r r0";
+    "push null"
+    "load.r r0"->"push null";
+    "push null"->"fieldput <Envelope: EnvelopeFrame mf>";
+    "fieldput <Envelope: EnvelopeFrame mf>"->"load.r r0";
+    "push 1"
+    "load.r r0"->"push 1";
+    "fieldput <Envelope: boolean security>"
+    "push 1"->"fieldput <Envelope: boolean security>";
+    "fieldput <Envelope: boolean security>"->"load.r r0";
+    "virtualinvoke <Envelope: void repaint()>"
+    "load.r r0"->"virtualinvoke <Envelope: void repaint()>";
+}

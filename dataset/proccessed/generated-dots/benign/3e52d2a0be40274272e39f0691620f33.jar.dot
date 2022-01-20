@@ -1,0 +1,451 @@
+digraph "" {
+    "r0 := @this: centipedo"
+    "load.r r0"
+    "r0 := @this: centipedo"->"load.r r0";
+    "new java.awt.Font"
+    "load.r r0"->"new java.awt.Font";
+    "dup1.r"
+    "new java.awt.Font"->"dup1.r";
+    "push \"TimesRoman\""
+    "dup1.r"->"push \"TimesRoman\"";
+    "push 1"
+    "push \"TimesRoman\""->"push 1";
+    "push 24"
+    "push 1"->"push 24";
+    "specialinvoke <java.awt.Font: void <init>(java.lang.String,int,int)>"
+    "push 24"->"specialinvoke <java.awt.Font: void <init>(java.lang.String,int,int)>";
+    "fieldput <centipedo: java.awt.Font big_font>"
+    "specialinvoke <java.awt.Font: void <init>(java.lang.String,int,int)>"->"fieldput <centipedo: java.awt.Font big_font>";
+    "fieldput <centipedo: java.awt.Font big_font>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "fieldget <centipedo: java.awt.Font big_font>"
+    "load.r r0"->"fieldget <centipedo: java.awt.Font big_font>";
+    "virtualinvoke <java.awt.Component: java.awt.FontMetrics getFontMetrics(java.awt.Font)>"
+    "fieldget <centipedo: java.awt.Font big_font>"->"virtualinvoke <java.awt.Component: java.awt.FontMetrics getFontMetrics(java.awt.Font)>";
+    "fieldput <centipedo: java.awt.FontMetrics big_font_metrics>"
+    "virtualinvoke <java.awt.Component: java.awt.FontMetrics getFontMetrics(java.awt.Font)>"->"fieldput <centipedo: java.awt.FontMetrics big_font_metrics>";
+    "fieldput <centipedo: java.awt.FontMetrics big_font_metrics>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <centipedo: java.awt.Font big_font>";
+    "virtualinvoke <java.awt.Component: void setFont(java.awt.Font)>"
+    "fieldget <centipedo: java.awt.Font big_font>"->"virtualinvoke <java.awt.Component: void setFont(java.awt.Font)>";
+    "virtualinvoke <java.awt.Component: void setFont(java.awt.Font)>"->"load.r r0";
+    "new java.awt.MediaTracker"
+    "load.r r0"->"new java.awt.MediaTracker";
+    "new java.awt.MediaTracker"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "specialinvoke <java.awt.MediaTracker: void <init>(java.awt.Component)>"
+    "load.r r0"->"specialinvoke <java.awt.MediaTracker: void <init>(java.awt.Component)>";
+    "fieldput <centipedo: java.awt.MediaTracker tracker>"
+    "specialinvoke <java.awt.MediaTracker: void <init>(java.awt.Component)>"->"fieldput <centipedo: java.awt.MediaTracker tracker>";
+    "fieldput <centipedo: java.awt.MediaTracker tracker>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "virtualinvoke <java.applet.Applet: java.net.URL getCodeBase()>"
+    "load.r r0"->"virtualinvoke <java.applet.Applet: java.net.URL getCodeBase()>";
+    "push \"images/player.gif\""
+    "virtualinvoke <java.applet.Applet: java.net.URL getCodeBase()>"->"push \"images/player.gif\"";
+    "virtualinvoke <java.applet.Applet: java.awt.Image getImage(java.net.URL,java.lang.String)>"
+    "push \"images/player.gif\""->"virtualinvoke <java.applet.Applet: java.awt.Image getImage(java.net.URL,java.lang.String)>";
+    "fieldput <centipedo: java.awt.Image player_image>"
+    "virtualinvoke <java.applet.Applet: java.awt.Image getImage(java.net.URL,java.lang.String)>"->"fieldput <centipedo: java.awt.Image player_image>";
+    "fieldput <centipedo: java.awt.Image player_image>"->"load.r r0";
+    "fieldget <centipedo: java.awt.MediaTracker tracker>"
+    "load.r r0"->"fieldget <centipedo: java.awt.MediaTracker tracker>";
+    "fieldget <centipedo: java.awt.MediaTracker tracker>"->"load.r r0";
+    "fieldget <centipedo: java.awt.Image player_image>"
+    "load.r r0"->"fieldget <centipedo: java.awt.Image player_image>";
+    "push 0"
+    "fieldget <centipedo: java.awt.Image player_image>"->"push 0";
+    "virtualinvoke <java.awt.MediaTracker: void addImage(java.awt.Image,int)>"
+    "push 0"->"virtualinvoke <java.awt.MediaTracker: void addImage(java.awt.Image,int)>";
+    "virtualinvoke <java.awt.MediaTracker: void addImage(java.awt.Image,int)>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"virtualinvoke <java.applet.Applet: java.net.URL getCodeBase()>";
+    "push \"images/dead_player.gif\""
+    "virtualinvoke <java.applet.Applet: java.net.URL getCodeBase()>"->"push \"images/dead_player.gif\"";
+    "push \"images/dead_player.gif\""->"virtualinvoke <java.applet.Applet: java.awt.Image getImage(java.net.URL,java.lang.String)>";
+    "fieldput <centipedo: java.awt.Image dead_player_image>"
+    "virtualinvoke <java.applet.Applet: java.awt.Image getImage(java.net.URL,java.lang.String)>"->"fieldput <centipedo: java.awt.Image dead_player_image>";
+    "fieldput <centipedo: java.awt.Image dead_player_image>"->"load.r r0";
+    "load.r r0"->"fieldget <centipedo: java.awt.MediaTracker tracker>";
+    "fieldget <centipedo: java.awt.MediaTracker tracker>"->"load.r r0";
+    "fieldget <centipedo: java.awt.Image dead_player_image>"
+    "load.r r0"->"fieldget <centipedo: java.awt.Image dead_player_image>";
+    "fieldget <centipedo: java.awt.Image dead_player_image>"->"push 0";
+    "push 0"->"virtualinvoke <java.awt.MediaTracker: void addImage(java.awt.Image,int)>";
+    "virtualinvoke <java.awt.MediaTracker: void addImage(java.awt.Image,int)>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"virtualinvoke <java.applet.Applet: java.net.URL getCodeBase()>";
+    "push \"images/shot.gif\""
+    "virtualinvoke <java.applet.Applet: java.net.URL getCodeBase()>"->"push \"images/shot.gif\"";
+    "push \"images/shot.gif\""->"virtualinvoke <java.applet.Applet: java.awt.Image getImage(java.net.URL,java.lang.String)>";
+    "fieldput <centipedo: java.awt.Image shot_image>"
+    "virtualinvoke <java.applet.Applet: java.awt.Image getImage(java.net.URL,java.lang.String)>"->"fieldput <centipedo: java.awt.Image shot_image>";
+    "fieldput <centipedo: java.awt.Image shot_image>"->"load.r r0";
+    "load.r r0"->"fieldget <centipedo: java.awt.MediaTracker tracker>";
+    "fieldget <centipedo: java.awt.MediaTracker tracker>"->"load.r r0";
+    "fieldget <centipedo: java.awt.Image shot_image>"
+    "load.r r0"->"fieldget <centipedo: java.awt.Image shot_image>";
+    "fieldget <centipedo: java.awt.Image shot_image>"->"push 1";
+    "push 1"->"virtualinvoke <java.awt.MediaTracker: void addImage(java.awt.Image,int)>";
+    "virtualinvoke <java.awt.MediaTracker: void addImage(java.awt.Image,int)>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"virtualinvoke <java.applet.Applet: java.net.URL getCodeBase()>";
+    "push \"images/mushroom.gif\""
+    "virtualinvoke <java.applet.Applet: java.net.URL getCodeBase()>"->"push \"images/mushroom.gif\"";
+    "push \"images/mushroom.gif\""->"virtualinvoke <java.applet.Applet: java.awt.Image getImage(java.net.URL,java.lang.String)>";
+    "fieldput <centipedo: java.awt.Image mushroom_image>"
+    "virtualinvoke <java.applet.Applet: java.awt.Image getImage(java.net.URL,java.lang.String)>"->"fieldput <centipedo: java.awt.Image mushroom_image>";
+    "fieldput <centipedo: java.awt.Image mushroom_image>"->"load.r r0";
+    "load.r r0"->"fieldget <centipedo: java.awt.MediaTracker tracker>";
+    "fieldget <centipedo: java.awt.MediaTracker tracker>"->"load.r r0";
+    "fieldget <centipedo: java.awt.Image mushroom_image>"
+    "load.r r0"->"fieldget <centipedo: java.awt.Image mushroom_image>";
+    "push 2"
+    "fieldget <centipedo: java.awt.Image mushroom_image>"->"push 2";
+    "push 2"->"virtualinvoke <java.awt.MediaTracker: void addImage(java.awt.Image,int)>";
+    "virtualinvoke <java.awt.MediaTracker: void addImage(java.awt.Image,int)>"->"load.r r0";
+    "load.r r0"->"push 2";
+    "newarray"
+    "push 2"->"newarray";
+    "fieldput <centipedo: java.awt.Image[] beetle_images>"
+    "newarray"->"fieldput <centipedo: java.awt.Image[] beetle_images>";
+    "fieldput <centipedo: java.awt.Image[] beetle_images>"->"load.r r0";
+    "fieldget <centipedo: java.awt.Image[] beetle_images>"
+    "load.r r0"->"fieldget <centipedo: java.awt.Image[] beetle_images>";
+    "fieldget <centipedo: java.awt.Image[] beetle_images>"->"push 0";
+    "push 0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"virtualinvoke <java.applet.Applet: java.net.URL getCodeBase()>";
+    "push \"images/beetle_right.gif\""
+    "virtualinvoke <java.applet.Applet: java.net.URL getCodeBase()>"->"push \"images/beetle_right.gif\"";
+    "push \"images/beetle_right.gif\""->"virtualinvoke <java.applet.Applet: java.awt.Image getImage(java.net.URL,java.lang.String)>";
+    "arraywrite.r"
+    "virtualinvoke <java.applet.Applet: java.awt.Image getImage(java.net.URL,java.lang.String)>"->"arraywrite.r";
+    "arraywrite.r"->"load.r r0";
+    "load.r r0"->"fieldget <centipedo: java.awt.Image[] beetle_images>";
+    "fieldget <centipedo: java.awt.Image[] beetle_images>"->"push 1";
+    "push 1"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"virtualinvoke <java.applet.Applet: java.net.URL getCodeBase()>";
+    "push \"images/beetle_left.gif\""
+    "virtualinvoke <java.applet.Applet: java.net.URL getCodeBase()>"->"push \"images/beetle_left.gif\"";
+    "push \"images/beetle_left.gif\""->"virtualinvoke <java.applet.Applet: java.awt.Image getImage(java.net.URL,java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.awt.Image getImage(java.net.URL,java.lang.String)>"->"arraywrite.r";
+    "arraywrite.r"->"load.r r0";
+    "load.r r0"->"fieldget <centipedo: java.awt.MediaTracker tracker>";
+    "fieldget <centipedo: java.awt.MediaTracker tracker>"->"load.r r0";
+    "load.r r0"->"fieldget <centipedo: java.awt.Image[] beetle_images>";
+    "fieldget <centipedo: java.awt.Image[] beetle_images>"->"push 0";
+    "arrayread.r"
+    "push 0"->"arrayread.r";
+    "push 4"
+    "arrayread.r"->"push 4";
+    "push 4"->"virtualinvoke <java.awt.MediaTracker: void addImage(java.awt.Image,int)>";
+    "virtualinvoke <java.awt.MediaTracker: void addImage(java.awt.Image,int)>"->"load.r r0";
+    "load.r r0"->"fieldget <centipedo: java.awt.MediaTracker tracker>";
+    "fieldget <centipedo: java.awt.MediaTracker tracker>"->"load.r r0";
+    "load.r r0"->"fieldget <centipedo: java.awt.Image[] beetle_images>";
+    "fieldget <centipedo: java.awt.Image[] beetle_images>"->"push 1";
+    "push 1"->"arrayread.r";
+    "arrayread.r"->"push 4";
+    "push 4"->"virtualinvoke <java.awt.MediaTracker: void addImage(java.awt.Image,int)>";
+    "virtualinvoke <java.awt.MediaTracker: void addImage(java.awt.Image,int)>"->"load.r r0";
+    "load.r r0"->"push 2";
+    "push 2"->"newarray";
+    "fieldput <centipedo: java.awt.Image[] scorpion_images>"
+    "newarray"->"fieldput <centipedo: java.awt.Image[] scorpion_images>";
+    "fieldput <centipedo: java.awt.Image[] scorpion_images>"->"load.r r0";
+    "fieldget <centipedo: java.awt.Image[] scorpion_images>"
+    "load.r r0"->"fieldget <centipedo: java.awt.Image[] scorpion_images>";
+    "fieldget <centipedo: java.awt.Image[] scorpion_images>"->"push 0";
+    "push 0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"virtualinvoke <java.applet.Applet: java.net.URL getCodeBase()>";
+    "push \"images/scorpion_right.gif\""
+    "virtualinvoke <java.applet.Applet: java.net.URL getCodeBase()>"->"push \"images/scorpion_right.gif\"";
+    "push \"images/scorpion_right.gif\""->"virtualinvoke <java.applet.Applet: java.awt.Image getImage(java.net.URL,java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.awt.Image getImage(java.net.URL,java.lang.String)>"->"arraywrite.r";
+    "arraywrite.r"->"load.r r0";
+    "load.r r0"->"fieldget <centipedo: java.awt.Image[] scorpion_images>";
+    "fieldget <centipedo: java.awt.Image[] scorpion_images>"->"push 1";
+    "push 1"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"virtualinvoke <java.applet.Applet: java.net.URL getCodeBase()>";
+    "push \"images/scorpion_left.gif\""
+    "virtualinvoke <java.applet.Applet: java.net.URL getCodeBase()>"->"push \"images/scorpion_left.gif\"";
+    "push \"images/scorpion_left.gif\""->"virtualinvoke <java.applet.Applet: java.awt.Image getImage(java.net.URL,java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.awt.Image getImage(java.net.URL,java.lang.String)>"->"arraywrite.r";
+    "arraywrite.r"->"load.r r0";
+    "load.r r0"->"fieldget <centipedo: java.awt.MediaTracker tracker>";
+    "fieldget <centipedo: java.awt.MediaTracker tracker>"->"load.r r0";
+    "load.r r0"->"fieldget <centipedo: java.awt.Image[] scorpion_images>";
+    "fieldget <centipedo: java.awt.Image[] scorpion_images>"->"push 0";
+    "push 0"->"arrayread.r";
+    "push 5"
+    "arrayread.r"->"push 5";
+    "push 5"->"virtualinvoke <java.awt.MediaTracker: void addImage(java.awt.Image,int)>";
+    "virtualinvoke <java.awt.MediaTracker: void addImage(java.awt.Image,int)>"->"load.r r0";
+    "load.r r0"->"fieldget <centipedo: java.awt.MediaTracker tracker>";
+    "fieldget <centipedo: java.awt.MediaTracker tracker>"->"load.r r0";
+    "load.r r0"->"fieldget <centipedo: java.awt.Image[] scorpion_images>";
+    "fieldget <centipedo: java.awt.Image[] scorpion_images>"->"push 1";
+    "push 1"->"arrayread.r";
+    "arrayread.r"->"push 5";
+    "push 5"->"virtualinvoke <java.awt.MediaTracker: void addImage(java.awt.Image,int)>";
+    "virtualinvoke <java.awt.MediaTracker: void addImage(java.awt.Image,int)>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"virtualinvoke <java.applet.Applet: java.net.URL getCodeBase()>";
+    "push \"images/spider.gif\""
+    "virtualinvoke <java.applet.Applet: java.net.URL getCodeBase()>"->"push \"images/spider.gif\"";
+    "push \"images/spider.gif\""->"virtualinvoke <java.applet.Applet: java.awt.Image getImage(java.net.URL,java.lang.String)>";
+    "fieldput <centipedo: java.awt.Image spider_image>"
+    "virtualinvoke <java.applet.Applet: java.awt.Image getImage(java.net.URL,java.lang.String)>"->"fieldput <centipedo: java.awt.Image spider_image>";
+    "fieldput <centipedo: java.awt.Image spider_image>"->"load.r r0";
+    "load.r r0"->"fieldget <centipedo: java.awt.MediaTracker tracker>";
+    "fieldget <centipedo: java.awt.MediaTracker tracker>"->"load.r r0";
+    "fieldget <centipedo: java.awt.Image spider_image>"
+    "load.r r0"->"fieldget <centipedo: java.awt.Image spider_image>";
+    "push 6"
+    "fieldget <centipedo: java.awt.Image spider_image>"->"push 6";
+    "push 6"->"virtualinvoke <java.awt.MediaTracker: void addImage(java.awt.Image,int)>";
+    "virtualinvoke <java.awt.MediaTracker: void addImage(java.awt.Image,int)>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"virtualinvoke <java.applet.Applet: java.net.URL getCodeBase()>";
+    "push \"images/flea.gif\""
+    "virtualinvoke <java.applet.Applet: java.net.URL getCodeBase()>"->"push \"images/flea.gif\"";
+    "push \"images/flea.gif\""->"virtualinvoke <java.applet.Applet: java.awt.Image getImage(java.net.URL,java.lang.String)>";
+    "fieldput <centipedo: java.awt.Image flea_image>"
+    "virtualinvoke <java.applet.Applet: java.awt.Image getImage(java.net.URL,java.lang.String)>"->"fieldput <centipedo: java.awt.Image flea_image>";
+    "fieldput <centipedo: java.awt.Image flea_image>"->"load.r r0";
+    "load.r r0"->"fieldget <centipedo: java.awt.MediaTracker tracker>";
+    "fieldget <centipedo: java.awt.MediaTracker tracker>"->"load.r r0";
+    "fieldget <centipedo: java.awt.Image flea_image>"
+    "load.r r0"->"fieldget <centipedo: java.awt.Image flea_image>";
+    "fieldget <centipedo: java.awt.Image flea_image>"->"push 6";
+    "push 6"->"virtualinvoke <java.awt.MediaTracker: void addImage(java.awt.Image,int)>";
+    "virtualinvoke <java.awt.MediaTracker: void addImage(java.awt.Image,int)>"->"load.r r0";
+    "load.r r0"->"push 2";
+    "push 2"->"newarray";
+    "fieldput <centipedo: java.awt.Image[] centipede_images>"
+    "newarray"->"fieldput <centipedo: java.awt.Image[] centipede_images>";
+    "fieldput <centipedo: java.awt.Image[] centipede_images>"->"load.r r0";
+    "fieldget <centipedo: java.awt.Image[] centipede_images>"
+    "load.r r0"->"fieldget <centipedo: java.awt.Image[] centipede_images>";
+    "fieldget <centipedo: java.awt.Image[] centipede_images>"->"push 0";
+    "push 0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"virtualinvoke <java.applet.Applet: java.net.URL getCodeBase()>";
+    "push \"images/head.gif\""
+    "virtualinvoke <java.applet.Applet: java.net.URL getCodeBase()>"->"push \"images/head.gif\"";
+    "push \"images/head.gif\""->"virtualinvoke <java.applet.Applet: java.awt.Image getImage(java.net.URL,java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.awt.Image getImage(java.net.URL,java.lang.String)>"->"arraywrite.r";
+    "arraywrite.r"->"load.r r0";
+    "load.r r0"->"fieldget <centipedo: java.awt.Image[] centipede_images>";
+    "fieldget <centipedo: java.awt.Image[] centipede_images>"->"push 1";
+    "push 1"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"virtualinvoke <java.applet.Applet: java.net.URL getCodeBase()>";
+    "push \"images/body.gif\""
+    "virtualinvoke <java.applet.Applet: java.net.URL getCodeBase()>"->"push \"images/body.gif\"";
+    "push \"images/body.gif\""->"virtualinvoke <java.applet.Applet: java.awt.Image getImage(java.net.URL,java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.awt.Image getImage(java.net.URL,java.lang.String)>"->"arraywrite.r";
+    "arraywrite.r"->"load.r r0";
+    "load.r r0"->"fieldget <centipedo: java.awt.MediaTracker tracker>";
+    "fieldget <centipedo: java.awt.MediaTracker tracker>"->"load.r r0";
+    "load.r r0"->"fieldget <centipedo: java.awt.Image[] centipede_images>";
+    "fieldget <centipedo: java.awt.Image[] centipede_images>"->"push 0";
+    "push 0"->"arrayread.r";
+    "push 3"
+    "arrayread.r"->"push 3";
+    "push 3"->"virtualinvoke <java.awt.MediaTracker: void addImage(java.awt.Image,int)>";
+    "virtualinvoke <java.awt.MediaTracker: void addImage(java.awt.Image,int)>"->"load.r r0";
+    "load.r r0"->"fieldget <centipedo: java.awt.MediaTracker tracker>";
+    "fieldget <centipedo: java.awt.MediaTracker tracker>"->"load.r r0";
+    "load.r r0"->"fieldget <centipedo: java.awt.Image[] centipede_images>";
+    "fieldget <centipedo: java.awt.Image[] centipede_images>"->"push 1";
+    "push 1"->"arrayread.r";
+    "arrayread.r"->"push 3";
+    "push 3"->"virtualinvoke <java.awt.MediaTracker: void addImage(java.awt.Image,int)>";
+    "virtualinvoke <java.awt.MediaTracker: void addImage(java.awt.Image,int)>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"virtualinvoke <java.applet.Applet: java.net.URL getCodeBase()>";
+    "push \"sounds/shot.au\""
+    "virtualinvoke <java.applet.Applet: java.net.URL getCodeBase()>"->"push \"sounds/shot.au\"";
+    "virtualinvoke <java.applet.Applet: java.applet.AudioClip getAudioClip(java.net.URL,java.lang.String)>"
+    "push \"sounds/shot.au\""->"virtualinvoke <java.applet.Applet: java.applet.AudioClip getAudioClip(java.net.URL,java.lang.String)>";
+    "fieldput <centipedo: java.applet.AudioClip fire_shot_sound>"
+    "virtualinvoke <java.applet.Applet: java.applet.AudioClip getAudioClip(java.net.URL,java.lang.String)>"->"fieldput <centipedo: java.applet.AudioClip fire_shot_sound>";
+    "fieldput <centipedo: java.applet.AudioClip fire_shot_sound>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"virtualinvoke <java.applet.Applet: java.net.URL getCodeBase()>";
+    "push \"sounds/drip.au\""
+    "virtualinvoke <java.applet.Applet: java.net.URL getCodeBase()>"->"push \"sounds/drip.au\"";
+    "push \"sounds/drip.au\""->"virtualinvoke <java.applet.Applet: java.applet.AudioClip getAudioClip(java.net.URL,java.lang.String)>";
+    "fieldput <centipedo: java.applet.AudioClip destroy_mushroom_sound>"
+    "virtualinvoke <java.applet.Applet: java.applet.AudioClip getAudioClip(java.net.URL,java.lang.String)>"->"fieldput <centipedo: java.applet.AudioClip destroy_mushroom_sound>";
+    "fieldput <centipedo: java.applet.AudioClip destroy_mushroom_sound>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"virtualinvoke <java.applet.Applet: java.net.URL getCodeBase()>";
+    "push \"sounds/Water.au\""
+    "virtualinvoke <java.applet.Applet: java.net.URL getCodeBase()>"->"push \"sounds/Water.au\"";
+    "push \"sounds/Water.au\""->"virtualinvoke <java.applet.Applet: java.applet.AudioClip getAudioClip(java.net.URL,java.lang.String)>";
+    "fieldput <centipedo: java.applet.AudioClip destroy_centipede_sound>"
+    "virtualinvoke <java.applet.Applet: java.applet.AudioClip getAudioClip(java.net.URL,java.lang.String)>"->"fieldput <centipedo: java.applet.AudioClip destroy_centipede_sound>";
+    "fieldput <centipedo: java.applet.AudioClip destroy_centipede_sound>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"virtualinvoke <java.applet.Applet: java.net.URL getCodeBase()>";
+    "push \"sounds/crunch.au\""
+    "virtualinvoke <java.applet.Applet: java.net.URL getCodeBase()>"->"push \"sounds/crunch.au\"";
+    "push \"sounds/crunch.au\""->"virtualinvoke <java.applet.Applet: java.applet.AudioClip getAudioClip(java.net.URL,java.lang.String)>";
+    "fieldput <centipedo: java.applet.AudioClip destroy_beetle_sound>"
+    "virtualinvoke <java.applet.Applet: java.applet.AudioClip getAudioClip(java.net.URL,java.lang.String)>"->"fieldput <centipedo: java.applet.AudioClip destroy_beetle_sound>";
+    "fieldput <centipedo: java.applet.AudioClip destroy_beetle_sound>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"virtualinvoke <java.applet.Applet: java.net.URL getCodeBase()>";
+    "push \"sounds/wohoo.au\""
+    "virtualinvoke <java.applet.Applet: java.net.URL getCodeBase()>"->"push \"sounds/wohoo.au\"";
+    "push \"sounds/wohoo.au\""->"virtualinvoke <java.applet.Applet: java.applet.AudioClip getAudioClip(java.net.URL,java.lang.String)>";
+    "fieldput <centipedo: java.applet.AudioClip destroy_scorpion_sound>"
+    "virtualinvoke <java.applet.Applet: java.applet.AudioClip getAudioClip(java.net.URL,java.lang.String)>"->"fieldput <centipedo: java.applet.AudioClip destroy_scorpion_sound>";
+    "fieldput <centipedo: java.applet.AudioClip destroy_scorpion_sound>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"virtualinvoke <java.applet.Applet: java.net.URL getCodeBase()>";
+    "push \"sounds/hammer.au\""
+    "virtualinvoke <java.applet.Applet: java.net.URL getCodeBase()>"->"push \"sounds/hammer.au\"";
+    "push \"sounds/hammer.au\""->"virtualinvoke <java.applet.Applet: java.applet.AudioClip getAudioClip(java.net.URL,java.lang.String)>";
+    "fieldput <centipedo: java.applet.AudioClip destroy_spider_sound>"
+    "virtualinvoke <java.applet.Applet: java.applet.AudioClip getAudioClip(java.net.URL,java.lang.String)>"->"fieldput <centipedo: java.applet.AudioClip destroy_spider_sound>";
+    "fieldput <centipedo: java.applet.AudioClip destroy_spider_sound>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"virtualinvoke <java.applet.Applet: java.net.URL getCodeBase()>";
+    "push \"sounds/hehehehe.au\""
+    "virtualinvoke <java.applet.Applet: java.net.URL getCodeBase()>"->"push \"sounds/hehehehe.au\"";
+    "push \"sounds/hehehehe.au\""->"virtualinvoke <java.applet.Applet: java.applet.AudioClip getAudioClip(java.net.URL,java.lang.String)>";
+    "fieldput <centipedo: java.applet.AudioClip destroy_flea_sound>"
+    "virtualinvoke <java.applet.Applet: java.applet.AudioClip getAudioClip(java.net.URL,java.lang.String)>"->"fieldput <centipedo: java.applet.AudioClip destroy_flea_sound>";
+    "fieldput <centipedo: java.applet.AudioClip destroy_flea_sound>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"virtualinvoke <java.applet.Applet: java.net.URL getCodeBase()>";
+    "push \"sounds/crap1.au\""
+    "virtualinvoke <java.applet.Applet: java.net.URL getCodeBase()>"->"push \"sounds/crap1.au\"";
+    "push \"sounds/crap1.au\""->"virtualinvoke <java.applet.Applet: java.applet.AudioClip getAudioClip(java.net.URL,java.lang.String)>";
+    "fieldput <centipedo: java.applet.AudioClip destroy_player_sound>"
+    "virtualinvoke <java.applet.Applet: java.applet.AudioClip getAudioClip(java.net.URL,java.lang.String)>"->"fieldput <centipedo: java.applet.AudioClip destroy_player_sound>";
+    "fieldput <centipedo: java.applet.AudioClip destroy_player_sound>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"virtualinvoke <java.applet.Applet: java.net.URL getCodeBase()>";
+    "push \"sounds/magic.au\""
+    "virtualinvoke <java.applet.Applet: java.net.URL getCodeBase()>"->"push \"sounds/magic.au\"";
+    "push \"sounds/magic.au\""->"virtualinvoke <java.applet.Applet: java.applet.AudioClip getAudioClip(java.net.URL,java.lang.String)>";
+    "fieldput <centipedo: java.applet.AudioClip new_level_sound>"
+    "virtualinvoke <java.applet.Applet: java.applet.AudioClip getAudioClip(java.net.URL,java.lang.String)>"->"fieldput <centipedo: java.applet.AudioClip new_level_sound>";
+    "fieldput <centipedo: java.applet.AudioClip new_level_sound>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"virtualinvoke <java.applet.Applet: java.net.URL getCodeBase()>";
+    "push \"sounds/bleep.au\""
+    "virtualinvoke <java.applet.Applet: java.net.URL getCodeBase()>"->"push \"sounds/bleep.au\"";
+    "push \"sounds/bleep.au\""->"virtualinvoke <java.applet.Applet: java.applet.AudioClip getAudioClip(java.net.URL,java.lang.String)>";
+    "fieldput <centipedo: java.applet.AudioClip extra_life_sound>"
+    "virtualinvoke <java.applet.Applet: java.applet.AudioClip getAudioClip(java.net.URL,java.lang.String)>"->"fieldput <centipedo: java.applet.AudioClip extra_life_sound>";
+    "fieldput <centipedo: java.applet.AudioClip extra_life_sound>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "fieldget <centipedo: int max_shots>"
+    "load.r r0"->"fieldget <centipedo: int max_shots>";
+    "fieldget <centipedo: int max_shots>"->"newarray";
+    "fieldput <centipedo: java.awt.Point[] shots>"
+    "newarray"->"fieldput <centipedo: java.awt.Point[] shots>";
+    "fieldput <centipedo: java.awt.Point[] shots>"->"push 0";
+    "store.i i2"
+    "push 0"->"store.i i2";
+    "goto load.i i2"
+    "store.i i2"->"goto load.i i2";
+    "load.i i2"
+    "goto load.i i2"->"load.i i2";
+    "load.i i2"->"load.r r0";
+    "fieldget <centipedo: java.awt.Point[] shots>"
+    "load.r r0"->"fieldget <centipedo: java.awt.Point[] shots>";
+    "arraylength"
+    "fieldget <centipedo: java.awt.Point[] shots>"->"arraylength";
+    "ifcmplt.i load.r r0"
+    "arraylength"->"ifcmplt.i load.r r0";
+    "ifcmplt.i load.r r0"->"load.r r0";
+    "new java.awt.Point"
+    "load.r r0"->"new java.awt.Point";
+    "new java.awt.Point"->"dup1.r";
+    "push 300"
+    "dup1.r"->"push 300";
+    "push 208"
+    "push 300"->"push 208";
+    "specialinvoke <java.awt.Point: void <init>(int,int)>"
+    "push 208"->"specialinvoke <java.awt.Point: void <init>(int,int)>";
+    "fieldput <centipedo: java.awt.Point mouse_loc>"
+    "specialinvoke <java.awt.Point: void <init>(int,int)>"->"fieldput <centipedo: java.awt.Point mouse_loc>";
+    "fieldput <centipedo: java.awt.Point mouse_loc>"->"load.r r0";
+    "load.r r0"->"new java.awt.Point";
+    "new java.awt.Point"->"dup1.r";
+    "dup1.r"->"push 300";
+    "push 300"->"push 208";
+    "push 208"->"specialinvoke <java.awt.Point: void <init>(int,int)>";
+    "fieldput <centipedo: java.awt.Point mouse>"
+    "specialinvoke <java.awt.Point: void <init>(int,int)>"->"fieldput <centipedo: java.awt.Point mouse>";
+    "fieldput <centipedo: java.awt.Point mouse>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "fieldget <centipedo: java.awt.Color[] background_colors>"
+    "load.r r0"->"fieldget <centipedo: java.awt.Color[] background_colors>";
+    "fieldget <centipedo: java.awt.Color[] background_colors>"->"push 0";
+    "push 0"->"arrayread.r";
+    "virtualinvoke <java.awt.Component: void setBackground(java.awt.Color)>"
+    "arrayread.r"->"virtualinvoke <java.awt.Component: void setBackground(java.awt.Color)>";
+    "virtualinvoke <java.awt.Component: void setBackground(java.awt.Color)>"->"load.r r0";
+    "push 600"
+    "load.r r0"->"push 600";
+    "push 448"
+    "push 600"->"push 448";
+    "virtualinvoke <java.applet.Applet: void resize(int,int)>"
+    "push 448"->"virtualinvoke <java.applet.Applet: void resize(int,int)>";
+    "virtualinvoke <java.applet.Applet: void resize(int,int)>"->"load.r r0";
+    "new java.lang.Thread"
+    "load.r r0"->"new java.lang.Thread";
+    "new java.lang.Thread"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "specialinvoke <java.lang.Thread: void <init>(java.lang.Runnable)>"
+    "load.r r0"->"specialinvoke <java.lang.Thread: void <init>(java.lang.Runnable)>";
+    "fieldput <centipedo: java.lang.Thread thread>"
+    "specialinvoke <java.lang.Thread: void <init>(java.lang.Runnable)>"->"fieldput <centipedo: java.lang.Thread thread>";
+    "fieldput <centipedo: java.lang.Thread thread>"->"load.r r0";
+    "fieldget <centipedo: java.lang.Thread thread>"
+    "load.r r0"->"fieldget <centipedo: java.lang.Thread thread>";
+    "virtualinvoke <java.lang.Thread: void start()>"
+    "fieldget <centipedo: java.lang.Thread thread>"->"virtualinvoke <java.lang.Thread: void start()>";
+    "return"
+    "virtualinvoke <java.lang.Thread: void start()>"->"return";
+    "ifcmplt.i load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <centipedo: java.awt.Point[] shots>";
+    "fieldget <centipedo: java.awt.Point[] shots>"->"load.i i2";
+    "load.i i2"->"new java.awt.Point";
+    "new java.awt.Point"->"dup1.r";
+    "dup1.r"->"push 0";
+    "push 0"->"push 0";
+    "push 0"->"specialinvoke <java.awt.Point: void <init>(int,int)>";
+    "specialinvoke <java.awt.Point: void <init>(int,int)>"->"arraywrite.r";
+    "inc.i i2 1"
+    "arraywrite.r"->"inc.i i2 1";
+}

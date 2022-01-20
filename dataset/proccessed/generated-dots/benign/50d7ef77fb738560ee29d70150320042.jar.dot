@@ -1,0 +1,379 @@
+digraph "" {
+    "r0 := @this: Asteroids"
+    "staticget <java.lang.System: java.io.PrintStream out>"
+    "r0 := @this: Asteroids"->"staticget <java.lang.System: java.io.PrintStream out>";
+    "push \"Asteroids, Copyright 1998 by Mike Hall.\""
+    "staticget <java.lang.System: java.io.PrintStream out>"->"push \"Asteroids, Copyright 1998 by Mike Hall.\"";
+    "virtualinvoke <java.io.PrintStream: void println(java.lang.String)>"
+    "push \"Asteroids, Copyright 1998 by Mike Hall.\""->"virtualinvoke <java.io.PrintStream: void println(java.lang.String)>";
+    "load.r r0"
+    "virtualinvoke <java.io.PrintStream: void println(java.lang.String)>"->"load.r r0";
+    "virtualinvoke <java.awt.Component: java.awt.Graphics getGraphics()>"
+    "load.r r0"->"virtualinvoke <java.awt.Component: java.awt.Graphics getGraphics()>";
+    "store.r r1"
+    "virtualinvoke <java.awt.Component: java.awt.Graphics getGraphics()>"->"store.r r1";
+    "store.r r1"->"load.r r0";
+    "virtualinvoke <java.awt.Component: java.awt.Dimension size()>"
+    "load.r r0"->"virtualinvoke <java.awt.Component: java.awt.Dimension size()>";
+    "dup1.r"
+    "virtualinvoke <java.awt.Component: java.awt.Dimension size()>"->"dup1.r";
+    "fieldget <java.awt.Dimension: int width>"
+    "dup1.r"->"fieldget <java.awt.Dimension: int width>";
+    "staticput <AsteroidsSprite: int width>"
+    "fieldget <java.awt.Dimension: int width>"->"staticput <AsteroidsSprite: int width>";
+    "fieldget <java.awt.Dimension: int height>"
+    "staticput <AsteroidsSprite: int width>"->"fieldget <java.awt.Dimension: int height>";
+    "staticput <AsteroidsSprite: int height>"
+    "fieldget <java.awt.Dimension: int height>"->"staticput <AsteroidsSprite: int height>";
+    "staticput <AsteroidsSprite: int height>"->"load.r r0";
+    "staticget <AsteroidsSprite: int width>"
+    "load.r r0"->"staticget <AsteroidsSprite: int width>";
+    "staticget <AsteroidsSprite: int height>"
+    "staticget <AsteroidsSprite: int width>"->"staticget <AsteroidsSprite: int height>";
+    "mul.i"
+    "staticget <AsteroidsSprite: int height>"->"mul.i";
+    "push 5000"
+    "mul.i"->"push 5000";
+    "div.i"
+    "push 5000"->"div.i";
+    "fieldput <Asteroids: int numStars>"
+    "div.i"->"fieldput <Asteroids: int numStars>";
+    "fieldput <Asteroids: int numStars>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "fieldget <Asteroids: int numStars>"
+    "load.r r0"->"fieldget <Asteroids: int numStars>";
+    "newarray"
+    "fieldget <Asteroids: int numStars>"->"newarray";
+    "fieldput <Asteroids: java.awt.Point[] stars>"
+    "newarray"->"fieldput <Asteroids: java.awt.Point[] stars>";
+    "push 0"
+    "fieldput <Asteroids: java.awt.Point[] stars>"->"push 0";
+    "store.i i14"
+    "push 0"->"store.i i14";
+    "goto load.i i14"
+    "store.i i14"->"goto load.i i14";
+    "load.i i14"
+    "goto load.i i14"->"load.i i14";
+    "load.i i14"->"load.r r0";
+    "load.r r0"->"fieldget <Asteroids: int numStars>";
+    "ifcmplt.i load.r r0"
+    "fieldget <Asteroids: int numStars>"->"ifcmplt.i load.r r0";
+    "ifcmplt.i load.r r0"->"load.r r0";
+    "new AsteroidsSprite"
+    "load.r r0"->"new AsteroidsSprite";
+    "new AsteroidsSprite"->"dup1.r";
+    "specialinvoke <AsteroidsSprite: void <init>()>"
+    "dup1.r"->"specialinvoke <AsteroidsSprite: void <init>()>";
+    "fieldput <Asteroids: AsteroidsSprite ship>"
+    "specialinvoke <AsteroidsSprite: void <init>()>"->"fieldput <Asteroids: AsteroidsSprite ship>";
+    "fieldput <Asteroids: AsteroidsSprite ship>"->"load.r r0";
+    "fieldget <Asteroids: AsteroidsSprite ship>"
+    "load.r r0"->"fieldget <Asteroids: AsteroidsSprite ship>";
+    "fieldget <AsteroidsSprite: java.awt.Polygon shape>"
+    "fieldget <Asteroids: AsteroidsSprite ship>"->"fieldget <AsteroidsSprite: java.awt.Polygon shape>";
+    "fieldget <AsteroidsSprite: java.awt.Polygon shape>"->"push 0";
+    "push -10"
+    "push 0"->"push -10";
+    "virtualinvoke <java.awt.Polygon: void addPoint(int,int)>"
+    "push -10"->"virtualinvoke <java.awt.Polygon: void addPoint(int,int)>";
+    "virtualinvoke <java.awt.Polygon: void addPoint(int,int)>"->"load.r r0";
+    "load.r r0"->"fieldget <Asteroids: AsteroidsSprite ship>";
+    "fieldget <Asteroids: AsteroidsSprite ship>"->"fieldget <AsteroidsSprite: java.awt.Polygon shape>";
+    "push 7"
+    "fieldget <AsteroidsSprite: java.awt.Polygon shape>"->"push 7";
+    "push 10"
+    "push 7"->"push 10";
+    "push 10"->"virtualinvoke <java.awt.Polygon: void addPoint(int,int)>";
+    "virtualinvoke <java.awt.Polygon: void addPoint(int,int)>"->"load.r r0";
+    "load.r r0"->"fieldget <Asteroids: AsteroidsSprite ship>";
+    "fieldget <Asteroids: AsteroidsSprite ship>"->"fieldget <AsteroidsSprite: java.awt.Polygon shape>";
+    "push -7"
+    "fieldget <AsteroidsSprite: java.awt.Polygon shape>"->"push -7";
+    "push -7"->"push 10";
+    "push 10"->"virtualinvoke <java.awt.Polygon: void addPoint(int,int)>";
+    "virtualinvoke <java.awt.Polygon: void addPoint(int,int)>"->"push 0";
+    "push 0"->"store.i i14";
+    "store.i i14"->"goto load.i i14";
+    "goto load.i i14"->"load.i i14";
+    "push 6"
+    "load.i i14"->"push 6";
+    "push 6"->"ifcmplt.i load.r r0";
+    "ifcmplt.i load.r r0"->"load.r r0";
+    "load.r r0"->"new AsteroidsSprite";
+    "new AsteroidsSprite"->"dup1.r";
+    "dup1.r"->"specialinvoke <AsteroidsSprite: void <init>()>";
+    "fieldput <Asteroids: AsteroidsSprite ufo>"
+    "specialinvoke <AsteroidsSprite: void <init>()>"->"fieldput <Asteroids: AsteroidsSprite ufo>";
+    "fieldput <Asteroids: AsteroidsSprite ufo>"->"load.r r0";
+    "fieldget <Asteroids: AsteroidsSprite ufo>"
+    "load.r r0"->"fieldget <Asteroids: AsteroidsSprite ufo>";
+    "fieldget <Asteroids: AsteroidsSprite ufo>"->"fieldget <AsteroidsSprite: java.awt.Polygon shape>";
+    "push -15"
+    "fieldget <AsteroidsSprite: java.awt.Polygon shape>"->"push -15";
+    "push -15"->"push 0";
+    "push 0"->"virtualinvoke <java.awt.Polygon: void addPoint(int,int)>";
+    "virtualinvoke <java.awt.Polygon: void addPoint(int,int)>"->"load.r r0";
+    "load.r r0"->"fieldget <Asteroids: AsteroidsSprite ufo>";
+    "fieldget <Asteroids: AsteroidsSprite ufo>"->"fieldget <AsteroidsSprite: java.awt.Polygon shape>";
+    "fieldget <AsteroidsSprite: java.awt.Polygon shape>"->"push -10";
+    "push -5"
+    "push -10"->"push -5";
+    "push -5"->"virtualinvoke <java.awt.Polygon: void addPoint(int,int)>";
+    "virtualinvoke <java.awt.Polygon: void addPoint(int,int)>"->"load.r r0";
+    "load.r r0"->"fieldget <Asteroids: AsteroidsSprite ufo>";
+    "fieldget <Asteroids: AsteroidsSprite ufo>"->"fieldget <AsteroidsSprite: java.awt.Polygon shape>";
+    "fieldget <AsteroidsSprite: java.awt.Polygon shape>"->"push -5";
+    "push -5"->"push -5";
+    "push -5"->"virtualinvoke <java.awt.Polygon: void addPoint(int,int)>";
+    "virtualinvoke <java.awt.Polygon: void addPoint(int,int)>"->"load.r r0";
+    "load.r r0"->"fieldget <Asteroids: AsteroidsSprite ufo>";
+    "fieldget <Asteroids: AsteroidsSprite ufo>"->"fieldget <AsteroidsSprite: java.awt.Polygon shape>";
+    "fieldget <AsteroidsSprite: java.awt.Polygon shape>"->"push -5";
+    "push -9"
+    "push -5"->"push -9";
+    "push -9"->"virtualinvoke <java.awt.Polygon: void addPoint(int,int)>";
+    "virtualinvoke <java.awt.Polygon: void addPoint(int,int)>"->"load.r r0";
+    "load.r r0"->"fieldget <Asteroids: AsteroidsSprite ufo>";
+    "fieldget <Asteroids: AsteroidsSprite ufo>"->"fieldget <AsteroidsSprite: java.awt.Polygon shape>";
+    "push 5"
+    "fieldget <AsteroidsSprite: java.awt.Polygon shape>"->"push 5";
+    "push 5"->"push -9";
+    "push -9"->"virtualinvoke <java.awt.Polygon: void addPoint(int,int)>";
+    "virtualinvoke <java.awt.Polygon: void addPoint(int,int)>"->"load.r r0";
+    "load.r r0"->"fieldget <Asteroids: AsteroidsSprite ufo>";
+    "fieldget <Asteroids: AsteroidsSprite ufo>"->"fieldget <AsteroidsSprite: java.awt.Polygon shape>";
+    "fieldget <AsteroidsSprite: java.awt.Polygon shape>"->"push 5";
+    "push 5"->"push -5";
+    "push -5"->"virtualinvoke <java.awt.Polygon: void addPoint(int,int)>";
+    "virtualinvoke <java.awt.Polygon: void addPoint(int,int)>"->"load.r r0";
+    "load.r r0"->"fieldget <Asteroids: AsteroidsSprite ufo>";
+    "fieldget <Asteroids: AsteroidsSprite ufo>"->"fieldget <AsteroidsSprite: java.awt.Polygon shape>";
+    "fieldget <AsteroidsSprite: java.awt.Polygon shape>"->"push 10";
+    "push 10"->"push -5";
+    "push -5"->"virtualinvoke <java.awt.Polygon: void addPoint(int,int)>";
+    "virtualinvoke <java.awt.Polygon: void addPoint(int,int)>"->"load.r r0";
+    "load.r r0"->"fieldget <Asteroids: AsteroidsSprite ufo>";
+    "fieldget <Asteroids: AsteroidsSprite ufo>"->"fieldget <AsteroidsSprite: java.awt.Polygon shape>";
+    "push 15"
+    "fieldget <AsteroidsSprite: java.awt.Polygon shape>"->"push 15";
+    "push 15"->"push 0";
+    "push 0"->"virtualinvoke <java.awt.Polygon: void addPoint(int,int)>";
+    "virtualinvoke <java.awt.Polygon: void addPoint(int,int)>"->"load.r r0";
+    "load.r r0"->"fieldget <Asteroids: AsteroidsSprite ufo>";
+    "fieldget <Asteroids: AsteroidsSprite ufo>"->"fieldget <AsteroidsSprite: java.awt.Polygon shape>";
+    "fieldget <AsteroidsSprite: java.awt.Polygon shape>"->"push 10";
+    "push 10"->"push 5";
+    "push 5"->"virtualinvoke <java.awt.Polygon: void addPoint(int,int)>";
+    "virtualinvoke <java.awt.Polygon: void addPoint(int,int)>"->"load.r r0";
+    "load.r r0"->"fieldget <Asteroids: AsteroidsSprite ufo>";
+    "fieldget <Asteroids: AsteroidsSprite ufo>"->"fieldget <AsteroidsSprite: java.awt.Polygon shape>";
+    "fieldget <AsteroidsSprite: java.awt.Polygon shape>"->"push -10";
+    "push -10"->"push 5";
+    "push 5"->"virtualinvoke <java.awt.Polygon: void addPoint(int,int)>";
+    "virtualinvoke <java.awt.Polygon: void addPoint(int,int)>"->"load.r r0";
+    "load.r r0"->"new AsteroidsSprite";
+    "new AsteroidsSprite"->"dup1.r";
+    "dup1.r"->"specialinvoke <AsteroidsSprite: void <init>()>";
+    "fieldput <Asteroids: AsteroidsSprite missle>"
+    "specialinvoke <AsteroidsSprite: void <init>()>"->"fieldput <Asteroids: AsteroidsSprite missle>";
+    "fieldput <Asteroids: AsteroidsSprite missle>"->"load.r r0";
+    "fieldget <Asteroids: AsteroidsSprite missle>"
+    "load.r r0"->"fieldget <Asteroids: AsteroidsSprite missle>";
+    "fieldget <Asteroids: AsteroidsSprite missle>"->"fieldget <AsteroidsSprite: java.awt.Polygon shape>";
+    "fieldget <AsteroidsSprite: java.awt.Polygon shape>"->"push 0";
+    "push -4"
+    "push 0"->"push -4";
+    "push -4"->"virtualinvoke <java.awt.Polygon: void addPoint(int,int)>";
+    "virtualinvoke <java.awt.Polygon: void addPoint(int,int)>"->"load.r r0";
+    "load.r r0"->"fieldget <Asteroids: AsteroidsSprite missle>";
+    "fieldget <Asteroids: AsteroidsSprite missle>"->"fieldget <AsteroidsSprite: java.awt.Polygon shape>";
+    "push 1"
+    "fieldget <AsteroidsSprite: java.awt.Polygon shape>"->"push 1";
+    "push -3"
+    "push 1"->"push -3";
+    "push -3"->"virtualinvoke <java.awt.Polygon: void addPoint(int,int)>";
+    "virtualinvoke <java.awt.Polygon: void addPoint(int,int)>"->"load.r r0";
+    "load.r r0"->"fieldget <Asteroids: AsteroidsSprite missle>";
+    "fieldget <Asteroids: AsteroidsSprite missle>"->"fieldget <AsteroidsSprite: java.awt.Polygon shape>";
+    "fieldget <AsteroidsSprite: java.awt.Polygon shape>"->"push 1";
+    "push 3"
+    "push 1"->"push 3";
+    "push 3"->"virtualinvoke <java.awt.Polygon: void addPoint(int,int)>";
+    "virtualinvoke <java.awt.Polygon: void addPoint(int,int)>"->"load.r r0";
+    "load.r r0"->"fieldget <Asteroids: AsteroidsSprite missle>";
+    "fieldget <Asteroids: AsteroidsSprite missle>"->"fieldget <AsteroidsSprite: java.awt.Polygon shape>";
+    "push 2"
+    "fieldget <AsteroidsSprite: java.awt.Polygon shape>"->"push 2";
+    "push 4"
+    "push 2"->"push 4";
+    "push 4"->"virtualinvoke <java.awt.Polygon: void addPoint(int,int)>";
+    "virtualinvoke <java.awt.Polygon: void addPoint(int,int)>"->"load.r r0";
+    "load.r r0"->"fieldget <Asteroids: AsteroidsSprite missle>";
+    "fieldget <Asteroids: AsteroidsSprite missle>"->"fieldget <AsteroidsSprite: java.awt.Polygon shape>";
+    "push -2"
+    "fieldget <AsteroidsSprite: java.awt.Polygon shape>"->"push -2";
+    "push -2"->"push 4";
+    "push 4"->"virtualinvoke <java.awt.Polygon: void addPoint(int,int)>";
+    "virtualinvoke <java.awt.Polygon: void addPoint(int,int)>"->"load.r r0";
+    "load.r r0"->"fieldget <Asteroids: AsteroidsSprite missle>";
+    "fieldget <Asteroids: AsteroidsSprite missle>"->"fieldget <AsteroidsSprite: java.awt.Polygon shape>";
+    "push -1"
+    "fieldget <AsteroidsSprite: java.awt.Polygon shape>"->"push -1";
+    "push -1"->"push 3";
+    "push 3"->"virtualinvoke <java.awt.Polygon: void addPoint(int,int)>";
+    "virtualinvoke <java.awt.Polygon: void addPoint(int,int)>"->"load.r r0";
+    "load.r r0"->"fieldget <Asteroids: AsteroidsSprite missle>";
+    "fieldget <Asteroids: AsteroidsSprite missle>"->"fieldget <AsteroidsSprite: java.awt.Polygon shape>";
+    "fieldget <AsteroidsSprite: java.awt.Polygon shape>"->"push -1";
+    "push -1"->"push -3";
+    "push -3"->"virtualinvoke <java.awt.Polygon: void addPoint(int,int)>";
+    "virtualinvoke <java.awt.Polygon: void addPoint(int,int)>"->"push 0";
+    "push 0"->"store.i i14";
+    "store.i i14"->"goto load.i i14";
+    "goto load.i i14"->"load.i i14";
+    "push 8"
+    "load.i i14"->"push 8";
+    "push 8"->"ifcmplt.i load.r r0";
+    "ifcmplt.i load.r r0"->"push 0";
+    "push 0"->"store.i i14";
+    "store.i i14"->"goto load.i i14";
+    "goto load.i i14"->"load.i i14";
+    "push 20"
+    "load.i i14"->"push 20";
+    "push 20"->"ifcmplt.i load.r r0";
+    "load.r r1"
+    "ifcmplt.i load.r r0"->"load.r r1";
+    "load.r r1"->"load.r r0";
+    "fieldget <Asteroids: java.awt.Font font>"
+    "load.r r0"->"fieldget <Asteroids: java.awt.Font font>";
+    "virtualinvoke <java.awt.Graphics: void setFont(java.awt.Font)>"
+    "fieldget <Asteroids: java.awt.Font font>"->"virtualinvoke <java.awt.Graphics: void setFont(java.awt.Font)>";
+    "virtualinvoke <java.awt.Graphics: void setFont(java.awt.Font)>"->"load.r r0";
+    "load.r r0"->"load.r r1";
+    "virtualinvoke <java.awt.Graphics: java.awt.FontMetrics getFontMetrics()>"
+    "load.r r1"->"virtualinvoke <java.awt.Graphics: java.awt.FontMetrics getFontMetrics()>";
+    "fieldput <Asteroids: java.awt.FontMetrics fm>"
+    "virtualinvoke <java.awt.Graphics: java.awt.FontMetrics getFontMetrics()>"->"fieldput <Asteroids: java.awt.FontMetrics fm>";
+    "fieldput <Asteroids: java.awt.FontMetrics fm>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "fieldget <Asteroids: java.awt.FontMetrics fm>"
+    "load.r r0"->"fieldget <Asteroids: java.awt.FontMetrics fm>";
+    "virtualinvoke <java.awt.FontMetrics: int getMaxAdvance()>"
+    "fieldget <Asteroids: java.awt.FontMetrics fm>"->"virtualinvoke <java.awt.FontMetrics: int getMaxAdvance()>";
+    "fieldput <Asteroids: int fontWidth>"
+    "virtualinvoke <java.awt.FontMetrics: int getMaxAdvance()>"->"fieldput <Asteroids: int fontWidth>";
+    "fieldput <Asteroids: int fontWidth>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <Asteroids: java.awt.FontMetrics fm>";
+    "virtualinvoke <java.awt.FontMetrics: int getHeight()>"
+    "fieldget <Asteroids: java.awt.FontMetrics fm>"->"virtualinvoke <java.awt.FontMetrics: int getHeight()>";
+    "fieldput <Asteroids: int fontHeight>"
+    "virtualinvoke <java.awt.FontMetrics: int getHeight()>"->"fieldput <Asteroids: int fontHeight>";
+    "fieldput <Asteroids: int fontHeight>"->"load.r r0";
+    "load.r r0"->"push 0";
+    "fieldput <Asteroids: int highScore>"
+    "push 0"->"fieldput <Asteroids: int highScore>";
+    "fieldput <Asteroids: int highScore>"->"load.r r0";
+    "load.r r0"->"push 1";
+    "fieldput <Asteroids: boolean sound>"
+    "push 1"->"fieldput <Asteroids: boolean sound>";
+    "fieldput <Asteroids: boolean sound>"->"load.r r0";
+    "load.r r0"->"push 1";
+    "fieldput <Asteroids: boolean detail>"
+    "push 1"->"fieldput <Asteroids: boolean detail>";
+    "fieldput <Asteroids: boolean detail>"->"load.r r0";
+    "virtualinvoke <Asteroids: void initGame()>"
+    "load.r r0"->"virtualinvoke <Asteroids: void initGame()>";
+    "virtualinvoke <Asteroids: void initGame()>"->"load.r r0";
+    "virtualinvoke <Asteroids: void endGame()>"
+    "load.r r0"->"virtualinvoke <Asteroids: void endGame()>";
+    "return"
+    "virtualinvoke <Asteroids: void endGame()>"->"return";
+    "ifcmplt.i load.r r0"->"load.r r0";
+    "fieldget <Asteroids: AsteroidsSprite[] explosions>"
+    "load.r r0"->"fieldget <Asteroids: AsteroidsSprite[] explosions>";
+    "fieldget <Asteroids: AsteroidsSprite[] explosions>"->"load.i i14";
+    "load.i i14"->"new AsteroidsSprite";
+    "new AsteroidsSprite"->"dup1.r";
+    "dup1.r"->"specialinvoke <AsteroidsSprite: void <init>()>";
+    "arraywrite.r"
+    "specialinvoke <AsteroidsSprite: void <init>()>"->"arraywrite.r";
+    "inc.i i14 1"
+    "arraywrite.r"->"inc.i i14 1";
+    "ifcmplt.i load.r r0"->"load.r r0";
+    "fieldget <Asteroids: AsteroidsSprite[] asteroids>"
+    "load.r r0"->"fieldget <Asteroids: AsteroidsSprite[] asteroids>";
+    "fieldget <Asteroids: AsteroidsSprite[] asteroids>"->"load.i i14";
+    "load.i i14"->"new AsteroidsSprite";
+    "new AsteroidsSprite"->"dup1.r";
+    "dup1.r"->"specialinvoke <AsteroidsSprite: void <init>()>";
+    "specialinvoke <AsteroidsSprite: void <init>()>"->"arraywrite.r";
+    "arraywrite.r"->"inc.i i14 1";
+    "ifcmplt.i load.r r0"->"load.r r0";
+    "fieldget <Asteroids: AsteroidsSprite[] photons>"
+    "load.r r0"->"fieldget <Asteroids: AsteroidsSprite[] photons>";
+    "fieldget <Asteroids: AsteroidsSprite[] photons>"->"load.i i14";
+    "load.i i14"->"new AsteroidsSprite";
+    "new AsteroidsSprite"->"dup1.r";
+    "dup1.r"->"specialinvoke <AsteroidsSprite: void <init>()>";
+    "specialinvoke <AsteroidsSprite: void <init>()>"->"arraywrite.r";
+    "arraywrite.r"->"load.r r0";
+    "load.r r0"->"fieldget <Asteroids: AsteroidsSprite[] photons>";
+    "fieldget <Asteroids: AsteroidsSprite[] photons>"->"load.i i14";
+    "arrayread.r"
+    "load.i i14"->"arrayread.r";
+    "arrayread.r"->"fieldget <AsteroidsSprite: java.awt.Polygon shape>";
+    "fieldget <AsteroidsSprite: java.awt.Polygon shape>"->"push 1";
+    "push 1"->"push 1";
+    "push 1"->"virtualinvoke <java.awt.Polygon: void addPoint(int,int)>";
+    "virtualinvoke <java.awt.Polygon: void addPoint(int,int)>"->"load.r r0";
+    "load.r r0"->"fieldget <Asteroids: AsteroidsSprite[] photons>";
+    "fieldget <Asteroids: AsteroidsSprite[] photons>"->"load.i i14";
+    "load.i i14"->"arrayread.r";
+    "arrayread.r"->"fieldget <AsteroidsSprite: java.awt.Polygon shape>";
+    "fieldget <AsteroidsSprite: java.awt.Polygon shape>"->"push 1";
+    "push 1"->"push -1";
+    "push -1"->"virtualinvoke <java.awt.Polygon: void addPoint(int,int)>";
+    "virtualinvoke <java.awt.Polygon: void addPoint(int,int)>"->"load.r r0";
+    "load.r r0"->"fieldget <Asteroids: AsteroidsSprite[] photons>";
+    "fieldget <Asteroids: AsteroidsSprite[] photons>"->"load.i i14";
+    "load.i i14"->"arrayread.r";
+    "arrayread.r"->"fieldget <AsteroidsSprite: java.awt.Polygon shape>";
+    "fieldget <AsteroidsSprite: java.awt.Polygon shape>"->"push -1";
+    "push -1"->"push 1";
+    "push 1"->"virtualinvoke <java.awt.Polygon: void addPoint(int,int)>";
+    "virtualinvoke <java.awt.Polygon: void addPoint(int,int)>"->"load.r r0";
+    "load.r r0"->"fieldget <Asteroids: AsteroidsSprite[] photons>";
+    "fieldget <Asteroids: AsteroidsSprite[] photons>"->"load.i i14";
+    "load.i i14"->"arrayread.r";
+    "arrayread.r"->"fieldget <AsteroidsSprite: java.awt.Polygon shape>";
+    "fieldget <AsteroidsSprite: java.awt.Polygon shape>"->"push -1";
+    "push -1"->"push -1";
+    "push -1"->"virtualinvoke <java.awt.Polygon: void addPoint(int,int)>";
+    "virtualinvoke <java.awt.Polygon: void addPoint(int,int)>"->"inc.i i14 1";
+    "ifcmplt.i load.r r0"->"load.r r0";
+    "fieldget <Asteroids: java.awt.Point[] stars>"
+    "load.r r0"->"fieldget <Asteroids: java.awt.Point[] stars>";
+    "fieldget <Asteroids: java.awt.Point[] stars>"->"load.i i14";
+    "new java.awt.Point"
+    "load.i i14"->"new java.awt.Point";
+    "new java.awt.Point"->"dup1.r";
+    "staticinvoke <java.lang.Math: double random()>"
+    "dup1.r"->"staticinvoke <java.lang.Math: double random()>";
+    "staticinvoke <java.lang.Math: double random()>"->"staticget <AsteroidsSprite: int width>";
+    "i2d"
+    "staticget <AsteroidsSprite: int width>"->"i2d";
+    "mul.d"
+    "i2d"->"mul.d";
+    "d2i"
+    "mul.d"->"d2i";
+    "d2i"->"staticinvoke <java.lang.Math: double random()>";
+    "staticinvoke <java.lang.Math: double random()>"->"staticget <AsteroidsSprite: int height>";
+    "staticget <AsteroidsSprite: int height>"->"i2d";
+    "i2d"->"mul.d";
+    "mul.d"->"d2i";
+    "specialinvoke <java.awt.Point: void <init>(int,int)>"
+    "d2i"->"specialinvoke <java.awt.Point: void <init>(int,int)>";
+    "specialinvoke <java.awt.Point: void <init>(int,int)>"->"arraywrite.r";
+    "arraywrite.r"->"inc.i i14 1";
+}

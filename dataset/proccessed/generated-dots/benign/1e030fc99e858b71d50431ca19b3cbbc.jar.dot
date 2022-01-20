@@ -1,0 +1,286 @@
+digraph "" {
+    "r0 := @this: ptolemy.plot.PlotApplet"
+    "load.r r0"
+    "r0 := @this: ptolemy.plot.PlotApplet"->"load.r r0";
+    "specialinvoke <java.applet.Applet: void init()>"
+    "load.r r0"->"specialinvoke <java.applet.Applet: void init()>";
+    "specialinvoke <java.applet.Applet: void init()>"->"load.r r0";
+    "new java.awt.BorderLayout"
+    "load.r r0"->"new java.awt.BorderLayout";
+    "dup1.r"
+    "new java.awt.BorderLayout"->"dup1.r";
+    "specialinvoke <java.awt.BorderLayout: void <init>()>"
+    "dup1.r"->"specialinvoke <java.awt.BorderLayout: void <init>()>";
+    "virtualinvoke <java.awt.Container: void setLayout(java.awt.LayoutManager)>"
+    "specialinvoke <java.awt.BorderLayout: void <init>()>"->"virtualinvoke <java.awt.Container: void setLayout(java.awt.LayoutManager)>";
+    "virtualinvoke <java.awt.Container: void setLayout(java.awt.LayoutManager)>"->"load.r r0";
+    "fieldget <ptolemy.plot.PlotApplet: ptolemy.plot.Plot _myPlot>"
+    "load.r r0"->"fieldget <ptolemy.plot.PlotApplet: ptolemy.plot.Plot _myPlot>";
+    "ifnonnull load.r r0"
+    "fieldget <ptolemy.plot.PlotApplet: ptolemy.plot.Plot _myPlot>"->"ifnonnull load.r r0";
+    "ifnonnull load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "virtualinvoke <ptolemy.plot.PlotApplet: ptolemy.plot.Plot newPlot()>"
+    "load.r r0"->"virtualinvoke <ptolemy.plot.PlotApplet: ptolemy.plot.Plot newPlot()>";
+    "fieldput <ptolemy.plot.PlotApplet: ptolemy.plot.Plot _myPlot>"
+    "virtualinvoke <ptolemy.plot.PlotApplet: ptolemy.plot.Plot newPlot()>"->"fieldput <ptolemy.plot.PlotApplet: ptolemy.plot.Plot _myPlot>";
+    "fieldput <ptolemy.plot.PlotApplet: ptolemy.plot.Plot _myPlot>"->"load.r r0";
+    "push \"Center\""
+    "load.r r0"->"push \"Center\"";
+    "push \"Center\""->"load.r r0";
+    "virtualinvoke <ptolemy.plot.PlotApplet: ptolemy.plot.Plot plot()>"
+    "load.r r0"->"virtualinvoke <ptolemy.plot.PlotApplet: ptolemy.plot.Plot plot()>";
+    "virtualinvoke <java.awt.Container: java.awt.Component add(java.lang.String,java.awt.Component)>"
+    "virtualinvoke <ptolemy.plot.PlotApplet: ptolemy.plot.Plot plot()>"->"virtualinvoke <java.awt.Container: java.awt.Component add(java.lang.String,java.awt.Component)>";
+    "pop"
+    "virtualinvoke <java.awt.Container: java.awt.Component add(java.lang.String,java.awt.Component)>"->"pop";
+    "pop"->"load.r r0";
+    "push \"width\""
+    "load.r r0"->"push \"width\"";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"
+    "push \"width\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "store.r r1"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"store.r r1";
+    "load.r r1"
+    "store.r r1"->"load.r r1";
+    "ifnull push 400"
+    "load.r r1"->"ifnull push 400";
+    "ifnull push 400"->"load.r r1";
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"
+    "load.r r1"->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>";
+    "store.i r1"
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"->"store.i r1";
+    "goto load.r r0"
+    "store.i r1"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "push \"height\""
+    "load.r r0"->"push \"height\"";
+    "push \"height\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "store.r r2"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"store.r r2";
+    "load.r r2"
+    "store.r r2"->"load.r r2";
+    "load.r r2"->"ifnull push 400";
+    "ifnull push 400"->"load.r r2";
+    "load.r r2"->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>";
+    "store.i r2"
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"->"store.i r2";
+    "store.i r2"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "load.r r0"->"virtualinvoke <ptolemy.plot.PlotApplet: ptolemy.plot.Plot plot()>";
+    "load.i r1"
+    "virtualinvoke <ptolemy.plot.PlotApplet: ptolemy.plot.Plot plot()>"->"load.i r1";
+    "load.i r2"
+    "load.i r1"->"load.i r2";
+    "virtualinvoke <ptolemy.plot.PlotBox: void setSize(int,int)>"
+    "load.i r2"->"virtualinvoke <ptolemy.plot.PlotBox: void setSize(int,int)>";
+    "virtualinvoke <ptolemy.plot.PlotBox: void setSize(int,int)>"->"load.r r0";
+    "load.r r0"->"virtualinvoke <ptolemy.plot.PlotApplet: ptolemy.plot.Plot plot()>";
+    "push 1"
+    "virtualinvoke <ptolemy.plot.PlotApplet: ptolemy.plot.Plot plot()>"->"push 1";
+    "virtualinvoke <ptolemy.plot.PlotBox: void setButtons(boolean)>"
+    "push 1"->"virtualinvoke <ptolemy.plot.PlotBox: void setButtons(boolean)>";
+    "staticget <java.awt.Color: java.awt.Color white>"
+    "virtualinvoke <ptolemy.plot.PlotBox: void setButtons(boolean)>"->"staticget <java.awt.Color: java.awt.Color white>";
+    "staticget <java.awt.Color: java.awt.Color white>"->"store.r r1";
+    "store.r r1"->"load.r r0";
+    "push \"background\""
+    "load.r r0"->"push \"background\"";
+    "push \"background\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"store.r r2";
+    "store.r r2"->"load.r r2";
+    "ifnull load.r r0"
+    "load.r r2"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r r2";
+    "staticinvoke <ptolemy.plot.PlotBox: java.awt.Color getColorByName(java.lang.String)>"
+    "load.r r2"->"staticinvoke <ptolemy.plot.PlotBox: java.awt.Color getColorByName(java.lang.String)>";
+    "staticinvoke <ptolemy.plot.PlotBox: java.awt.Color getColorByName(java.lang.String)>"->"store.r r1";
+    "store.r r1"->"load.r r0";
+    "load.r r0"->"load.r r1";
+    "virtualinvoke <java.awt.Component: void setBackground(java.awt.Color)>"
+    "load.r r1"->"virtualinvoke <java.awt.Component: void setBackground(java.awt.Color)>";
+    "virtualinvoke <java.awt.Component: void setBackground(java.awt.Color)>"->"load.r r0";
+    "load.r r0"->"virtualinvoke <ptolemy.plot.PlotApplet: ptolemy.plot.Plot plot()>";
+    "virtualinvoke <ptolemy.plot.PlotApplet: ptolemy.plot.Plot plot()>"->"load.r r1";
+    "virtualinvoke <ptolemy.plot.PlotBox: void setBackground(java.awt.Color)>"
+    "load.r r1"->"virtualinvoke <ptolemy.plot.PlotBox: void setBackground(java.awt.Color)>";
+    "staticget <java.awt.Color: java.awt.Color black>"
+    "virtualinvoke <ptolemy.plot.PlotBox: void setBackground(java.awt.Color)>"->"staticget <java.awt.Color: java.awt.Color black>";
+    "staticget <java.awt.Color: java.awt.Color black>"->"store.r r1";
+    "store.r r1"->"load.r r0";
+    "push \"foreground\""
+    "load.r r0"->"push \"foreground\"";
+    "push \"foreground\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"store.r r2";
+    "store.r r2"->"load.r r2";
+    "load.r r2"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r r2";
+    "load.r r2"->"staticinvoke <ptolemy.plot.PlotBox: java.awt.Color getColorByName(java.lang.String)>";
+    "staticinvoke <ptolemy.plot.PlotBox: java.awt.Color getColorByName(java.lang.String)>"->"store.r r1";
+    "store.r r1"->"load.r r0";
+    "load.r r0"->"load.r r1";
+    "virtualinvoke <java.awt.Component: void setForeground(java.awt.Color)>"
+    "load.r r1"->"virtualinvoke <java.awt.Component: void setForeground(java.awt.Color)>";
+    "virtualinvoke <java.awt.Component: void setForeground(java.awt.Color)>"->"load.r r0";
+    "load.r r0"->"virtualinvoke <ptolemy.plot.PlotApplet: ptolemy.plot.Plot plot()>";
+    "virtualinvoke <ptolemy.plot.PlotApplet: ptolemy.plot.Plot plot()>"->"load.r r1";
+    "virtualinvoke <ptolemy.plot.PlotBox: void setForeground(java.awt.Color)>"
+    "load.r r1"->"virtualinvoke <ptolemy.plot.PlotBox: void setForeground(java.awt.Color)>";
+    "virtualinvoke <ptolemy.plot.PlotBox: void setForeground(java.awt.Color)>"->"load.r r0";
+    "load.r r0"->"virtualinvoke <ptolemy.plot.PlotApplet: ptolemy.plot.Plot plot()>";
+    "virtualinvoke <ptolemy.plot.PlotApplet: ptolemy.plot.Plot plot()>"->"push 1";
+    "virtualinvoke <java.awt.Component: void setVisible(boolean)>"
+    "push 1"->"virtualinvoke <java.awt.Component: void setVisible(boolean)>";
+    "virtualinvoke <java.awt.Component: void setVisible(boolean)>"->"load.r r0";
+    "push \"pxgraphargs\""
+    "load.r r0"->"push \"pxgraphargs\"";
+    "push \"pxgraphargs\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"store.r r2";
+    "store.r r2"->"load.r r2";
+    "load.r r2"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r r0";
+    "push \"Reading arguments\""
+    "load.r r0"->"push \"Reading arguments\"";
+    "push \"Reading arguments\""->"store.r r1";
+    "staticget <java.lang.System: java.io.PrintStream err>"
+    "store.r r1"->"staticget <java.lang.System: java.io.PrintStream err>";
+    "new java.lang.StringBuffer"
+    "staticget <java.lang.System: java.io.PrintStream err>"->"new java.lang.StringBuffer";
+    "new java.lang.StringBuffer"->"dup1.r";
+    "push \"PlotApplet: failed to parse `\""
+    "dup1.r"->"push \"PlotApplet: failed to parse `\"";
+    "specialinvoke <java.lang.StringBuffer: void <init>(java.lang.String)>"
+    "push \"PlotApplet: failed to parse `\""->"specialinvoke <java.lang.StringBuffer: void <init>(java.lang.String)>";
+    "specialinvoke <java.lang.StringBuffer: void <init>(java.lang.String)>"->"load.r r2";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"
+    "load.r r2"->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "push \"\': \""
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"push \"\': \"";
+    "push \"\': \""->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"load.r r1";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.Object)>"
+    "load.r r1"->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.Object)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>"
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.Object)>"->"virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>";
+    "virtualinvoke <java.io.PrintStream: void println(java.lang.String)>"
+    "virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>"->"virtualinvoke <java.io.PrintStream: void println(java.lang.String)>";
+    "virtualinvoke <java.io.PrintStream: void println(java.lang.String)>"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "push \"dataurl\""
+    "load.r r0"->"push \"dataurl\"";
+    "push \"dataurl\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"store.r r1";
+    "store.r r1"->"load.r r1";
+    "ifnull return"
+    "load.r r1"->"ifnull return";
+    "ifnull return"->"load.r r0";
+    "push \"Reading data\""
+    "load.r r0"->"push \"Reading data\"";
+    "push \"Reading data\""->"staticget <java.lang.System: java.io.PrintStream err>";
+    "store.r r0"
+    "staticget <java.lang.System: java.io.PrintStream err>"->"store.r r0";
+    "virtualinvoke <java.lang.Throwable: java.lang.String toString()>"
+    "store.r r0"->"virtualinvoke <java.lang.Throwable: java.lang.String toString()>";
+    "virtualinvoke <java.lang.Throwable: java.lang.String toString()>"->"store.r r1";
+    "store.r r1"->"load.r r0";
+    "load.r r0"->"load.r r1";
+    "load.r r1"->"virtualinvoke <java.io.PrintStream: void println(java.lang.String)>";
+    "goto return"
+    "virtualinvoke <java.io.PrintStream: void println(java.lang.String)>"->"goto return";
+    "return"
+    "goto return"->"return";
+    "push \"Reading data\""->"store.r r0";
+    "store.r r0"->"staticget <java.lang.System: java.io.PrintStream err>";
+    "staticget <java.lang.System: java.io.PrintStream err>"->"new java.lang.StringBuffer";
+    "new java.lang.StringBuffer"->"dup1.r";
+    "push \"PlotApplet: file not found: \""
+    "dup1.r"->"push \"PlotApplet: file not found: \"";
+    "push \"PlotApplet: file not found: \""->"specialinvoke <java.lang.StringBuffer: void <init>(java.lang.String)>";
+    "specialinvoke <java.lang.StringBuffer: void <init>(java.lang.String)>"->"load.r r0";
+    "load.r r0"->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.Object)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.Object)>"->"virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>"->"virtualinvoke <java.io.PrintStream: void println(java.lang.String)>";
+    "virtualinvoke <java.io.PrintStream: void println(java.lang.String)>"->"goto return";
+    "push \"Reading data\""->"store.r r0";
+    "store.r r0"->"staticget <java.lang.System: java.io.PrintStream err>";
+    "staticget <java.lang.System: java.io.PrintStream err>"->"new java.lang.StringBuffer";
+    "new java.lang.StringBuffer"->"dup1.r";
+    "push \"PlotApplet: error reading input file: \""
+    "dup1.r"->"push \"PlotApplet: error reading input file: \"";
+    "push \"PlotApplet: error reading input file: \""->"specialinvoke <java.lang.StringBuffer: void <init>(java.lang.String)>";
+    "specialinvoke <java.lang.StringBuffer: void <init>(java.lang.String)>"->"load.r r0";
+    "load.r r0"->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.Object)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.Object)>"->"virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>"->"virtualinvoke <java.io.PrintStream: void println(java.lang.String)>";
+    "virtualinvoke <java.io.PrintStream: void println(java.lang.String)>"->"goto return";
+    "virtualinvoke <java.applet.Applet: void showStatus(java.lang.String)>"
+    "push \"Reading data\""->"virtualinvoke <java.applet.Applet: void showStatus(java.lang.String)>";
+    "new java.net.URL"
+    "virtualinvoke <java.applet.Applet: void showStatus(java.lang.String)>"->"new java.net.URL";
+    "new java.net.URL"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "virtualinvoke <java.applet.Applet: java.net.URL getDocumentBase()>"
+    "load.r r0"->"virtualinvoke <java.applet.Applet: java.net.URL getDocumentBase()>";
+    "virtualinvoke <java.applet.Applet: java.net.URL getDocumentBase()>"->"load.r r1";
+    "specialinvoke <java.net.URL: void <init>(java.net.URL,java.lang.String)>"
+    "load.r r1"->"specialinvoke <java.net.URL: void <init>(java.net.URL,java.lang.String)>";
+    "specialinvoke <java.net.URL: void <init>(java.net.URL,java.lang.String)>"->"load.r r0";
+    "load.r r0"->"virtualinvoke <ptolemy.plot.PlotApplet: ptolemy.plot.Plot plot()>";
+    "virtualinvoke <ptolemy.plot.PlotApplet: ptolemy.plot.Plot plot()>"->"store.r r1";
+    "virtualinvoke <java.net.URL: java.io.InputStream openStream()>"
+    "store.r r1"->"virtualinvoke <java.net.URL: java.io.InputStream openStream()>";
+    "virtualinvoke <java.net.URL: java.io.InputStream openStream()>"->"store.r r2";
+    "store.r r2"->"load.r r1";
+    "load.r r1"->"load.r r2";
+    "virtualinvoke <ptolemy.plot.Plot: void read(java.io.InputStream)>"
+    "load.r r2"->"virtualinvoke <ptolemy.plot.Plot: void read(java.io.InputStream)>";
+    "virtualinvoke <ptolemy.plot.Plot: void read(java.io.InputStream)>"->"load.r r0";
+    "push \"Done\""
+    "load.r r0"->"push \"Done\"";
+    "push \"Done\""->"virtualinvoke <java.applet.Applet: void showStatus(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: void showStatus(java.lang.String)>"->"goto return";
+    "push \"Reading arguments\""->"store.r r1";
+    "store.r r1"->"staticget <java.lang.System: java.io.PrintStream err>";
+    "staticget <java.lang.System: java.io.PrintStream err>"->"new java.lang.StringBuffer";
+    "new java.lang.StringBuffer"->"dup1.r";
+    "dup1.r"->"push \"PlotApplet: file not found: \"";
+    "push \"PlotApplet: file not found: \""->"specialinvoke <java.lang.StringBuffer: void <init>(java.lang.String)>";
+    "specialinvoke <java.lang.StringBuffer: void <init>(java.lang.String)>"->"load.r r1";
+    "load.r r1"->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.Object)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.Object)>"->"virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>"->"virtualinvoke <java.io.PrintStream: void println(java.lang.String)>";
+    "virtualinvoke <java.io.PrintStream: void println(java.lang.String)>"->"goto load.r r0";
+    "push \"Reading arguments\""->"store.r r1";
+    "store.r r1"->"staticget <java.lang.System: java.io.PrintStream err>";
+    "staticget <java.lang.System: java.io.PrintStream err>"->"new java.lang.StringBuffer";
+    "new java.lang.StringBuffer"->"dup1.r";
+    "dup1.r"->"push \"PlotApplet: error reading input file: \"";
+    "push \"PlotApplet: error reading input file: \""->"specialinvoke <java.lang.StringBuffer: void <init>(java.lang.String)>";
+    "specialinvoke <java.lang.StringBuffer: void <init>(java.lang.String)>"->"load.r r1";
+    "load.r r1"->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.Object)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.Object)>"->"virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>"->"virtualinvoke <java.io.PrintStream: void println(java.lang.String)>";
+    "virtualinvoke <java.io.PrintStream: void println(java.lang.String)>"->"goto load.r r0";
+    "push \"Reading arguments\""->"virtualinvoke <java.applet.Applet: void showStatus(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: void showStatus(java.lang.String)>"->"load.r r0";
+    "load.r r0"->"virtualinvoke <ptolemy.plot.PlotApplet: ptolemy.plot.Plot plot()>";
+    "virtualinvoke <ptolemy.plot.PlotApplet: ptolemy.plot.Plot plot()>"->"load.r r0";
+    "load.r r0"->"virtualinvoke <java.applet.Applet: java.net.URL getDocumentBase()>";
+    "fieldput <ptolemy.plot.PlotBox: java.net.URL _documentBase>"
+    "virtualinvoke <java.applet.Applet: java.net.URL getDocumentBase()>"->"fieldput <ptolemy.plot.PlotBox: java.net.URL _documentBase>";
+    "fieldput <ptolemy.plot.PlotBox: java.net.URL _documentBase>"->"load.r r0";
+    "load.r r0"->"virtualinvoke <ptolemy.plot.PlotApplet: ptolemy.plot.Plot plot()>";
+    "virtualinvoke <ptolemy.plot.PlotApplet: ptolemy.plot.Plot plot()>"->"load.r r2";
+    "virtualinvoke <ptolemy.plot.Plot: int parsePxgraphargs(java.lang.String)>"
+    "load.r r2"->"virtualinvoke <ptolemy.plot.Plot: int parsePxgraphargs(java.lang.String)>";
+    "virtualinvoke <ptolemy.plot.Plot: int parsePxgraphargs(java.lang.String)>"->"pop";
+    "pop"->"load.r r0";
+    "load.r r0"->"push \"Done\"";
+    "push \"Done\""->"virtualinvoke <java.applet.Applet: void showStatus(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: void showStatus(java.lang.String)>"->"goto load.r r0";
+    "push 400"
+    "ifnull push 400"->"push 400";
+    "push 400"->"store.i r2";
+    "ifnull push 400"->"push 400";
+    "push 400"->"store.i r1";
+}

@@ -1,0 +1,20 @@
+digraph "" {
+    "r0 := @this: JUpload.startup"
+    "load.r r0"
+    "r0 := @this: JUpload.startup"->"load.r r0";
+    "push \"startup() init()\""
+    "load.r r0"->"push \"startup() init()\"";
+    "specialinvoke <JUpload.startup: void debug(java.lang.String)>"
+    "push \"startup() init()\""->"specialinvoke <JUpload.startup: void debug(java.lang.String)>";
+    "specialinvoke <JUpload.startup: void debug(java.lang.String)>"->"load.r r0";
+    "virtualinvoke <JUpload.startup: void debugInfo()>"
+    "load.r r0"->"virtualinvoke <JUpload.startup: void debugInfo()>";
+    "virtualinvoke <JUpload.startup: void debugInfo()>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "virtualinvoke <java.applet.Applet: java.applet.AppletContext getAppletContext()>"
+    "load.r r0"->"virtualinvoke <java.applet.Applet: java.applet.AppletContext getAppletContext()>";
+    "fieldput <JUpload.startup: java.applet.AppletContext context>"
+    "virtualinvoke <java.applet.Applet: java.applet.AppletContext getAppletContext()>"->"fieldput <JUpload.startup: java.applet.AppletContext context>";
+    "return"
+    "fieldput <JUpload.startup: java.applet.AppletContext context>"->"return";
+}

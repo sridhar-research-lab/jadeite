@@ -1,0 +1,20 @@
+digraph "" {
+    "r0 := @this: changedefault"
+    "new java.lang.Thread"
+    "r0 := @this: changedefault"->"new java.lang.Thread";
+    "dup1.r"
+    "new java.lang.Thread"->"dup1.r";
+    "new changedefault$1"
+    "dup1.r"->"new changedefault$1";
+    "new changedefault$1"->"dup1.r";
+    "load.r r0"
+    "dup1.r"->"load.r r0";
+    "specialinvoke <changedefault$1: void <init>(changedefault)>"
+    "load.r r0"->"specialinvoke <changedefault$1: void <init>(changedefault)>";
+    "specialinvoke <java.lang.Thread: void <init>(java.lang.Runnable)>"
+    "specialinvoke <changedefault$1: void <init>(changedefault)>"->"specialinvoke <java.lang.Thread: void <init>(java.lang.Runnable)>";
+    "virtualinvoke <java.lang.Thread: void start()>"
+    "specialinvoke <java.lang.Thread: void <init>(java.lang.Runnable)>"->"virtualinvoke <java.lang.Thread: void start()>";
+    "return"
+    "virtualinvoke <java.lang.Thread: void start()>"->"return";
+}

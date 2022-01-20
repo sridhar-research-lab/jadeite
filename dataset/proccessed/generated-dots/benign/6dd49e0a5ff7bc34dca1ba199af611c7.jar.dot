@@ -1,0 +1,33 @@
+digraph "" {
+    "r0 := @this: ManPack.Applet1"
+    "load.r r0"
+    "r0 := @this: ManPack.Applet1"->"load.r r0";
+    "specialinvoke <ManPack.Applet1: void jbInit()>"
+    "load.r r0"->"specialinvoke <ManPack.Applet1: void jbInit()>";
+    "goto load.r r0"
+    "specialinvoke <ManPack.Applet1: void jbInit()>"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "new ManPack.Poly"
+    "load.r r0"->"new ManPack.Poly";
+    "dup1.r"
+    "new ManPack.Poly"->"dup1.r";
+    "staticget <ManPack.Applet1: int initPoints>"
+    "dup1.r"->"staticget <ManPack.Applet1: int initPoints>";
+    "staticget <ManPack.Applet1: int initPoints>"->"load.r r0";
+    "fieldget <ManPack.Applet1: int initRadius>"
+    "load.r r0"->"fieldget <ManPack.Applet1: int initRadius>";
+    "fieldget <ManPack.Applet1: int initRadius>"->"load.r r0";
+    "fieldget <ManPack.Applet1: int initX>"
+    "load.r r0"->"fieldget <ManPack.Applet1: int initX>";
+    "fieldget <ManPack.Applet1: int initX>"->"load.r r0";
+    "fieldget <ManPack.Applet1: int initY>"
+    "load.r r0"->"fieldget <ManPack.Applet1: int initY>";
+    "specialinvoke <ManPack.Poly: void <init>(int,int,int,int)>"
+    "fieldget <ManPack.Applet1: int initY>"->"specialinvoke <ManPack.Poly: void <init>(int,int,int,int)>";
+    "fieldput <ManPack.Applet1: ManPack.Poly p>"
+    "specialinvoke <ManPack.Poly: void <init>(int,int,int,int)>"->"fieldput <ManPack.Applet1: ManPack.Poly p>";
+    "return"
+    "fieldput <ManPack.Applet1: ManPack.Poly p>"->"return";
+    "virtualinvoke <java.lang.Throwable: void printStackTrace()>"
+    "specialinvoke <ManPack.Applet1: void jbInit()>"->"virtualinvoke <java.lang.Throwable: void printStackTrace()>";
+}

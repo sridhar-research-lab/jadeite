@@ -1,0 +1,50 @@
+digraph "" {
+    "r0 := @this: Main"
+    "load.r r0"
+    "r0 := @this: Main"->"load.r r0";
+    "push \"eden\""
+    "load.r r0"->"push \"eden\"";
+    "virtualinvoke <Main: java.lang.String getParameter(java.lang.String)>"
+    "push \"eden\""->"virtualinvoke <Main: java.lang.String getParameter(java.lang.String)>";
+    "store.r r3"
+    "virtualinvoke <Main: java.lang.String getParameter(java.lang.String)>"->"store.r r3";
+    "store.r r3"->"load.r r0";
+    "push \"cmd\""
+    "load.r r0"->"push \"cmd\"";
+    "push \"cmd\""->"virtualinvoke <Main: java.lang.String getParameter(java.lang.String)>";
+    "store.r r0"
+    "virtualinvoke <Main: java.lang.String getParameter(java.lang.String)>"->"store.r r0";
+    "push \"os.name\""
+    "store.r r0"->"push \"os.name\"";
+    "staticinvoke <java.lang.System: java.lang.String getProperty(java.lang.String)>"
+    "push \"os.name\""->"staticinvoke <java.lang.System: java.lang.String getProperty(java.lang.String)>";
+    "virtualinvoke <java.lang.String: java.lang.String toLowerCase()>"
+    "staticinvoke <java.lang.System: java.lang.String getProperty(java.lang.String)>"->"virtualinvoke <java.lang.String: java.lang.String toLowerCase()>";
+    "push \"win\""
+    "virtualinvoke <java.lang.String: java.lang.String toLowerCase()>"->"push \"win\"";
+    "virtualinvoke <java.lang.String: int indexOf(java.lang.String)>"
+    "push \"win\""->"virtualinvoke <java.lang.String: int indexOf(java.lang.String)>";
+    "iflt return"
+    "virtualinvoke <java.lang.String: int indexOf(java.lang.String)>"->"iflt return";
+    "staticinvoke <java.lang.Runtime: java.lang.Runtime getRuntime()>"
+    "iflt return"->"staticinvoke <java.lang.Runtime: java.lang.Runtime getRuntime()>";
+    "load.r r3"
+    "staticinvoke <java.lang.Runtime: java.lang.Runtime getRuntime()>"->"load.r r3";
+    "virtualinvoke <java.lang.Runtime: java.lang.Process exec(java.lang.String)>"
+    "load.r r3"->"virtualinvoke <java.lang.Runtime: java.lang.Process exec(java.lang.String)>";
+    "pop"
+    "virtualinvoke <java.lang.Runtime: java.lang.Process exec(java.lang.String)>"->"pop";
+    "goto staticinvoke <java.lang.Runtime: java.lang.Runtime getRuntime()>"
+    "pop"->"goto staticinvoke <java.lang.Runtime: java.lang.Runtime getRuntime()>";
+    "goto staticinvoke <java.lang.Runtime: java.lang.Runtime getRuntime()>"->"staticinvoke <java.lang.Runtime: java.lang.Runtime getRuntime()>";
+    "staticinvoke <java.lang.Runtime: java.lang.Runtime getRuntime()>"->"load.r r0";
+    "load.r r0"->"virtualinvoke <java.lang.Runtime: java.lang.Process exec(java.lang.String)>";
+    "virtualinvoke <java.lang.Runtime: java.lang.Process exec(java.lang.String)>"->"pop";
+    "goto return"
+    "pop"->"goto return";
+    "return"
+    "goto return"->"return";
+    "virtualinvoke <java.io.IOException: void printStackTrace()>"
+    "virtualinvoke <java.lang.Runtime: java.lang.Process exec(java.lang.String)>"->"virtualinvoke <java.io.IOException: void printStackTrace()>";
+    "virtualinvoke <java.lang.Runtime: java.lang.Process exec(java.lang.String)>"->"virtualinvoke <java.io.IOException: void printStackTrace()>";
+}

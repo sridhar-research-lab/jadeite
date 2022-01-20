@@ -1,0 +1,92 @@
+digraph "" {
+    "r0 := @this: pa.a.b.a.a.d"
+    "load.r r0"
+    "r0 := @this: pa.a.b.a.a.d"->"load.r r0";
+    "new java.awt.BorderLayout"
+    "load.r r0"->"new java.awt.BorderLayout";
+    "dup1.r"
+    "new java.awt.BorderLayout"->"dup1.r";
+    "specialinvoke <java.awt.BorderLayout: void <init>()>"
+    "dup1.r"->"specialinvoke <java.awt.BorderLayout: void <init>()>";
+    "virtualinvoke <java.awt.Container: void setLayout(java.awt.LayoutManager)>"
+    "specialinvoke <java.awt.BorderLayout: void <init>()>"->"virtualinvoke <java.awt.Container: void setLayout(java.awt.LayoutManager)>";
+    "new java.awt.MediaTracker"
+    "virtualinvoke <java.awt.Container: void setLayout(java.awt.LayoutManager)>"->"new java.awt.MediaTracker";
+    "store.r $r6"
+    "new java.awt.MediaTracker"->"store.r $r6";
+    "load.r $r6"
+    "store.r $r6"->"load.r $r6";
+    "load.r $r6"->"load.r r0";
+    "specialinvoke <java.awt.MediaTracker: void <init>(java.awt.Component)>"
+    "load.r r0"->"specialinvoke <java.awt.MediaTracker: void <init>(java.awt.Component)>";
+    "push \"images/objectbar.gif\""
+    "specialinvoke <java.awt.MediaTracker: void <init>(java.awt.Component)>"->"push \"images/objectbar.gif\"";
+    "staticinvoke <pa.a.b.a.g: java.io.InputStream a(java.lang.String)>"
+    "push \"images/objectbar.gif\""->"staticinvoke <pa.a.b.a.g: java.io.InputStream a(java.lang.String)>";
+    "store.r r2"
+    "staticinvoke <pa.a.b.a.g: java.io.InputStream a(java.lang.String)>"->"store.r r2";
+    "push 32768"
+    "store.r r2"->"push 32768";
+    "newarray"
+    "push 32768"->"newarray";
+    "store.r r3"
+    "newarray"->"store.r r3";
+    "new java.io.ByteArrayOutputStream"
+    "store.r r3"->"new java.io.ByteArrayOutputStream";
+    "store.r $r7"
+    "new java.io.ByteArrayOutputStream"->"store.r $r7";
+    "load.r $r7"
+    "store.r $r7"->"load.r $r7";
+    "specialinvoke <java.io.ByteArrayOutputStream: void <init>()>"
+    "load.r $r7"->"specialinvoke <java.io.ByteArrayOutputStream: void <init>()>";
+    "goto load.r r2"
+    "specialinvoke <java.io.ByteArrayOutputStream: void <init>()>"->"goto load.r r2";
+    "load.r r2"
+    "goto load.r r2"->"load.r r2";
+    "load.r r3"
+    "load.r r2"->"load.r r3";
+    "virtualinvoke <java.io.InputStream: int read(byte[])>"
+    "load.r r3"->"virtualinvoke <java.io.InputStream: int read(byte[])>";
+    "store.i $i1"
+    "virtualinvoke <java.io.InputStream: int read(byte[])>"->"store.i $i1";
+    "load.i $i1"
+    "store.i $i1"->"load.i $i1";
+    "ifgt load.r $r7"
+    "load.i $i1"->"ifgt load.r $r7";
+    "ifgt load.r $r7"->"load.r r0";
+    "staticinvoke <java.awt.Toolkit: java.awt.Toolkit getDefaultToolkit()>"
+    "load.r r0"->"staticinvoke <java.awt.Toolkit: java.awt.Toolkit getDefaultToolkit()>";
+    "staticinvoke <java.awt.Toolkit: java.awt.Toolkit getDefaultToolkit()>"->"load.r $r7";
+    "virtualinvoke <java.io.ByteArrayOutputStream: byte[] toByteArray()>"
+    "load.r $r7"->"virtualinvoke <java.io.ByteArrayOutputStream: byte[] toByteArray()>";
+    "virtualinvoke <java.awt.Toolkit: java.awt.Image createImage(byte[])>"
+    "virtualinvoke <java.io.ByteArrayOutputStream: byte[] toByteArray()>"->"virtualinvoke <java.awt.Toolkit: java.awt.Image createImage(byte[])>";
+    "fieldput <pa.a.b.a.a.d: java.awt.Image t>"
+    "virtualinvoke <java.awt.Toolkit: java.awt.Image createImage(byte[])>"->"fieldput <pa.a.b.a.a.d: java.awt.Image t>";
+    "fieldput <pa.a.b.a.a.d: java.awt.Image t>"->"load.r $r6";
+    "load.r $r6"->"load.r r0";
+    "fieldget <pa.a.b.a.a.d: java.awt.Image t>"
+    "load.r r0"->"fieldget <pa.a.b.a.a.d: java.awt.Image t>";
+    "push 0"
+    "fieldget <pa.a.b.a.a.d: java.awt.Image t>"->"push 0";
+    "virtualinvoke <java.awt.MediaTracker: void addImage(java.awt.Image,int)>"
+    "push 0"->"virtualinvoke <java.awt.MediaTracker: void addImage(java.awt.Image,int)>";
+    "virtualinvoke <java.awt.MediaTracker: void addImage(java.awt.Image,int)>"->"load.r $r6";
+    "virtualinvoke <java.awt.MediaTracker: void waitForAll()>"
+    "load.r $r6"->"virtualinvoke <java.awt.MediaTracker: void waitForAll()>";
+    "goto load.r r0"
+    "virtualinvoke <java.awt.MediaTracker: void waitForAll()>"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <pa.a.b.a.a.d: java.awt.Image t>";
+    "staticinvoke <pa.a.b.a.f: void a(java.awt.Image)>"
+    "fieldget <pa.a.b.a.a.d: java.awt.Image t>"->"staticinvoke <pa.a.b.a.f: void a(java.awt.Image)>";
+    "return"
+    "staticinvoke <pa.a.b.a.f: void a(java.awt.Image)>"->"return";
+    "virtualinvoke <java.awt.MediaTracker: void waitForAll()>"->"store.r r2";
+    "ifgt load.r $r7"->"load.r $r7";
+    "load.r $r7"->"load.r r3";
+    "load.r r3"->"push 0";
+    "push 0"->"load.i $i1";
+    "virtualinvoke <java.io.ByteArrayOutputStream: void write(byte[],int,int)>"
+    "load.i $i1"->"virtualinvoke <java.io.ByteArrayOutputStream: void write(byte[],int,int)>";
+}

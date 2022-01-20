@@ -1,0 +1,42 @@
+digraph "" {
+    "r0 := @this: MissileCommando"
+    "load.r r0"
+    "r0 := @this: MissileCommando"->"load.r r0";
+    "new java.awt.Font"
+    "load.r r0"->"new java.awt.Font";
+    "dup1.r"
+    "new java.awt.Font"->"dup1.r";
+    "push \"TimesRoman\""
+    "dup1.r"->"push \"TimesRoman\"";
+    "push 1"
+    "push \"TimesRoman\""->"push 1";
+    "push 24"
+    "push 1"->"push 24";
+    "specialinvoke <java.awt.Font: void <init>(java.lang.String,int,int)>"
+    "push 24"->"specialinvoke <java.awt.Font: void <init>(java.lang.String,int,int)>";
+    "fieldput <MissileCommando: java.awt.Font font>"
+    "specialinvoke <java.awt.Font: void <init>(java.lang.String,int,int)>"->"fieldput <MissileCommando: java.awt.Font font>";
+    "fieldput <MissileCommando: java.awt.Font font>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "fieldget <MissileCommando: java.awt.Font font>"
+    "load.r r0"->"fieldget <MissileCommando: java.awt.Font font>";
+    "virtualinvoke <java.awt.Component: java.awt.FontMetrics getFontMetrics(java.awt.Font)>"
+    "fieldget <MissileCommando: java.awt.Font font>"->"virtualinvoke <java.awt.Component: java.awt.FontMetrics getFontMetrics(java.awt.Font)>";
+    "fieldput <MissileCommando: java.awt.FontMetrics fontMetrics>"
+    "virtualinvoke <java.awt.Component: java.awt.FontMetrics getFontMetrics(java.awt.Font)>"->"fieldput <MissileCommando: java.awt.FontMetrics fontMetrics>";
+    "fieldput <MissileCommando: java.awt.FontMetrics fontMetrics>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <MissileCommando: java.awt.Font font>";
+    "virtualinvoke <java.awt.Component: void setFont(java.awt.Font)>"
+    "fieldget <MissileCommando: java.awt.Font font>"->"virtualinvoke <java.awt.Component: void setFont(java.awt.Font)>";
+    "virtualinvoke <java.awt.Component: void setFont(java.awt.Font)>"->"load.r r0";
+    "push 500"
+    "load.r r0"->"push 500";
+    "push 300"
+    "push 500"->"push 300";
+    "virtualinvoke <java.applet.Applet: void resize(int,int)>"
+    "push 300"->"virtualinvoke <java.applet.Applet: void resize(int,int)>";
+    "return"
+    "virtualinvoke <java.applet.Applet: void resize(int,int)>"->"return";
+}

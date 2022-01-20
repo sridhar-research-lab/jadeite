@@ -1,0 +1,57 @@
+digraph "" {
+    "r0 := @parameter0: java.lang.String[]"
+    "$r3 = new net.sourceforge.jannealer.AnnealingScheme"
+    "r0 := @parameter0: java.lang.String[]"->"$r3 = new net.sourceforge.jannealer.AnnealingScheme";
+    "specialinvoke $r3.<net.sourceforge.jannealer.AnnealingScheme: void <init>()>()"
+    "$r3 = new net.sourceforge.jannealer.AnnealingScheme"->"specialinvoke $r3.<net.sourceforge.jannealer.AnnealingScheme: void <init>()>()";
+    "$r4 = new net.sourceforge.jannealer.test.ConfigureAnnealing$1"
+    "specialinvoke $r3.<net.sourceforge.jannealer.AnnealingScheme: void <init>()>()"->"$r4 = new net.sourceforge.jannealer.test.ConfigureAnnealing$1";
+    "specialinvoke $r4.<net.sourceforge.jannealer.test.ConfigureAnnealing$1: void <init>()>()"
+    "$r4 = new net.sourceforge.jannealer.test.ConfigureAnnealing$1"->"specialinvoke $r4.<net.sourceforge.jannealer.test.ConfigureAnnealing$1: void <init>()>()";
+    "virtualinvoke $r3.<net.sourceforge.jannealer.AnnealingScheme: void setFunction(net.sourceforge.jannealer.ObjectiveFunction)>($r4)"
+    "specialinvoke $r4.<net.sourceforge.jannealer.test.ConfigureAnnealing$1: void <init>()>()"->"virtualinvoke $r3.<net.sourceforge.jannealer.AnnealingScheme: void setFunction(net.sourceforge.jannealer.ObjectiveFunction)>($r4)";
+    "$r5 = newarray (double)[3]"
+    "virtualinvoke $r3.<net.sourceforge.jannealer.AnnealingScheme: void setFunction(net.sourceforge.jannealer.ObjectiveFunction)>($r4)"->"$r5 = newarray (double)[3]";
+    "$r5[0] = 50.0"
+    "$r5 = newarray (double)[3]"->"$r5[0] = 50.0";
+    "$r5[1] = 1000000.0"
+    "$r5[0] = 50.0"->"$r5[1] = 1000000.0";
+    "$r5[2] = 20.0"
+    "$r5[1] = 1000000.0"->"$r5[2] = 20.0";
+    "virtualinvoke $r3.<net.sourceforge.jannealer.AnnealingScheme: void setSolution(double[])>($r5)"
+    "$r5[2] = 20.0"->"virtualinvoke $r3.<net.sourceforge.jannealer.AnnealingScheme: void setSolution(double[])>($r5)";
+    "virtualinvoke $r3.<net.sourceforge.jannealer.AnnealingScheme: void setTolerance(double)>(0.01)"
+    "virtualinvoke $r3.<net.sourceforge.jannealer.AnnealingScheme: void setSolution(double[])>($r5)"->"virtualinvoke $r3.<net.sourceforge.jannealer.AnnealingScheme: void setTolerance(double)>(0.01)";
+    "virtualinvoke $r3.<net.sourceforge.jannealer.AnnealingScheme: void anneal()>()"
+    "virtualinvoke $r3.<net.sourceforge.jannealer.AnnealingScheme: void setTolerance(double)>(0.01)"->"virtualinvoke $r3.<net.sourceforge.jannealer.AnnealingScheme: void anneal()>()";
+    "r2 = virtualinvoke $r3.<net.sourceforge.jannealer.AnnealingScheme: double[] getSolution()>()"
+    "virtualinvoke $r3.<net.sourceforge.jannealer.AnnealingScheme: void anneal()>()"->"r2 = virtualinvoke $r3.<net.sourceforge.jannealer.AnnealingScheme: double[] getSolution()>()";
+    "$r7 = <java.lang.System: java.io.PrintStream out>"
+    "r2 = virtualinvoke $r3.<net.sourceforge.jannealer.AnnealingScheme: double[] getSolution()>()"->"$r7 = <java.lang.System: java.io.PrintStream out>";
+    "$r6 = new java.lang.StringBuffer"
+    "$r7 = <java.lang.System: java.io.PrintStream out>"->"$r6 = new java.lang.StringBuffer";
+    "specialinvoke $r6.<java.lang.StringBuffer: void <init>(java.lang.String)>(\"Use coolingrate \")"
+    "$r6 = new java.lang.StringBuffer"->"specialinvoke $r6.<java.lang.StringBuffer: void <init>(java.lang.String)>(\"Use coolingrate \")";
+    "$d0 = r2[0]"
+    "specialinvoke $r6.<java.lang.StringBuffer: void <init>(java.lang.String)>(\"Use coolingrate \")"->"$d0 = r2[0]";
+    "$r8 = virtualinvoke $r6.<java.lang.StringBuffer: java.lang.StringBuffer append(double)>($d0)"
+    "$d0 = r2[0]"->"$r8 = virtualinvoke $r6.<java.lang.StringBuffer: java.lang.StringBuffer append(double)>($d0)";
+    "$r9 = virtualinvoke $r8.<java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>(\" temperature \")"
+    "$r8 = virtualinvoke $r6.<java.lang.StringBuffer: java.lang.StringBuffer append(double)>($d0)"->"$r9 = virtualinvoke $r8.<java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>(\" temperature \")";
+    "$d1 = r2[1]"
+    "$r9 = virtualinvoke $r8.<java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>(\" temperature \")"->"$d1 = r2[1]";
+    "$r10 = virtualinvoke $r9.<java.lang.StringBuffer: java.lang.StringBuffer append(double)>($d1)"
+    "$d1 = r2[1]"->"$r10 = virtualinvoke $r9.<java.lang.StringBuffer: java.lang.StringBuffer append(double)>($d1)";
+    "$r11 = virtualinvoke $r10.<java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>(\" iterations \")"
+    "$r10 = virtualinvoke $r9.<java.lang.StringBuffer: java.lang.StringBuffer append(double)>($d1)"->"$r11 = virtualinvoke $r10.<java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>(\" iterations \")";
+    "$d2 = r2[2]"
+    "$r11 = virtualinvoke $r10.<java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>(\" iterations \")"->"$d2 = r2[2]";
+    "$r12 = virtualinvoke $r11.<java.lang.StringBuffer: java.lang.StringBuffer append(double)>($d2)"
+    "$d2 = r2[2]"->"$r12 = virtualinvoke $r11.<java.lang.StringBuffer: java.lang.StringBuffer append(double)>($d2)";
+    "$r13 = virtualinvoke $r12.<java.lang.StringBuffer: java.lang.String toString()>()"
+    "$r12 = virtualinvoke $r11.<java.lang.StringBuffer: java.lang.StringBuffer append(double)>($d2)"->"$r13 = virtualinvoke $r12.<java.lang.StringBuffer: java.lang.String toString()>()";
+    "virtualinvoke $r7.<java.io.PrintStream: void println(java.lang.String)>($r13)"
+    "$r13 = virtualinvoke $r12.<java.lang.StringBuffer: java.lang.String toString()>()"->"virtualinvoke $r7.<java.io.PrintStream: void println(java.lang.String)>($r13)";
+    "return"
+    "virtualinvoke $r7.<java.io.PrintStream: void println(java.lang.String)>($r13)"->"return";
+}

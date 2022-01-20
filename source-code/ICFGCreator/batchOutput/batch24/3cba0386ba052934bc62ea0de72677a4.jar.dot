@@ -1,0 +1,68 @@
+digraph "" {
+    "r0 := @this: SiteBrowser"
+    "load.r r0"
+    "r0 := @this: SiteBrowser"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "virtualinvoke <java.awt.Component: java.awt.Dimension getSize()>"
+    "load.r r0"->"virtualinvoke <java.awt.Component: java.awt.Dimension getSize()>";
+    "fieldget <java.awt.Dimension: int height>"
+    "virtualinvoke <java.awt.Component: java.awt.Dimension getSize()>"->"fieldget <java.awt.Dimension: int height>";
+    "fieldput <SiteBrowser: int height>"
+    "fieldget <java.awt.Dimension: int height>"->"fieldput <SiteBrowser: int height>";
+    "fieldput <SiteBrowser: int height>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"virtualinvoke <java.awt.Component: java.awt.Dimension getSize()>";
+    "fieldget <java.awt.Dimension: int width>"
+    "virtualinvoke <java.awt.Component: java.awt.Dimension getSize()>"->"fieldget <java.awt.Dimension: int width>";
+    "fieldput <SiteBrowser: int width>"
+    "fieldget <java.awt.Dimension: int width>"->"fieldput <SiteBrowser: int width>";
+    "fieldput <SiteBrowser: int width>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "fieldget <SiteBrowser: int width>"
+    "load.r r0"->"fieldget <SiteBrowser: int width>";
+    "fieldget <SiteBrowser: int width>"->"load.r r0";
+    "fieldget <SiteBrowser: int height>"
+    "load.r r0"->"fieldget <SiteBrowser: int height>";
+    "virtualinvoke <java.awt.Component: java.awt.Image createImage(int,int)>"
+    "fieldget <SiteBrowser: int height>"->"virtualinvoke <java.awt.Component: java.awt.Image createImage(int,int)>";
+    "fieldput <SiteBrowser: java.awt.Image drawBuf>"
+    "virtualinvoke <java.awt.Component: java.awt.Image createImage(int,int)>"->"fieldput <SiteBrowser: java.awt.Image drawBuf>";
+    "fieldput <SiteBrowser: java.awt.Image drawBuf>"->"load.r r0";
+    "fieldget <SiteBrowser: java.awt.Image drawBuf>"
+    "load.r r0"->"fieldget <SiteBrowser: java.awt.Image drawBuf>";
+    "virtualinvoke <java.awt.Image: java.awt.Graphics getGraphics()>"
+    "fieldget <SiteBrowser: java.awt.Image drawBuf>"->"virtualinvoke <java.awt.Image: java.awt.Graphics getGraphics()>";
+    "dup1.r"
+    "virtualinvoke <java.awt.Image: java.awt.Graphics getGraphics()>"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "fieldget <SiteBrowser: java.awt.Color BGColor>"
+    "load.r r0"->"fieldget <SiteBrowser: java.awt.Color BGColor>";
+    "virtualinvoke <java.awt.Graphics: void setColor(java.awt.Color)>"
+    "fieldget <SiteBrowser: java.awt.Color BGColor>"->"virtualinvoke <java.awt.Graphics: void setColor(java.awt.Color)>";
+    "push 0"
+    "virtualinvoke <java.awt.Graphics: void setColor(java.awt.Color)>"->"push 0";
+    "push 0"->"push 0";
+    "push 0"->"load.r r0";
+    "load.r r0"->"fieldget <SiteBrowser: int width>";
+    "fieldget <SiteBrowser: int width>"->"load.r r0";
+    "load.r r0"->"fieldget <SiteBrowser: int height>";
+    "virtualinvoke <java.awt.Graphics: void fillRect(int,int,int,int)>"
+    "fieldget <SiteBrowser: int height>"->"virtualinvoke <java.awt.Graphics: void fillRect(int,int,int,int)>";
+    "new java.lang.Thread"
+    "virtualinvoke <java.awt.Graphics: void fillRect(int,int,int,int)>"->"new java.lang.Thread";
+    "new java.lang.Thread"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "specialinvoke <java.lang.Thread: void <init>(java.lang.Runnable)>"
+    "load.r r0"->"specialinvoke <java.lang.Thread: void <init>(java.lang.Runnable)>";
+    "virtualinvoke <java.lang.Thread: void start()>"
+    "specialinvoke <java.lang.Thread: void <init>(java.lang.Runnable)>"->"virtualinvoke <java.lang.Thread: void start()>";
+    "return"
+    "virtualinvoke <java.lang.Thread: void start()>"->"return";
+    "store.r $r9"
+    "virtualinvoke <java.lang.Thread: void start()>"->"store.r $r9";
+    "store.r $r9"->"load.r r0";
+    "virtualinvoke <SiteBrowser: void run()>"
+    "load.r r0"->"virtualinvoke <SiteBrowser: void run()>";
+    "virtualinvoke <SiteBrowser: void run()>"->"return";
+}

@@ -1,0 +1,209 @@
+digraph "" {
+    "r0 := @this: ChompText"
+    "load.r r0"
+    "r0 := @this: ChompText"->"load.r r0";
+    "push \"Loading...\""
+    "load.r r0"->"push \"Loading...\"";
+    "virtualinvoke <java.applet.Applet: void showStatus(java.lang.String)>"
+    "push \"Loading...\""->"virtualinvoke <java.applet.Applet: void showStatus(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: void showStatus(java.lang.String)>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "virtualinvoke <java.awt.Component: java.awt.Dimension getSize()>"
+    "load.r r0"->"virtualinvoke <java.awt.Component: java.awt.Dimension getSize()>";
+    "fieldget <java.awt.Dimension: int width>"
+    "virtualinvoke <java.awt.Component: java.awt.Dimension getSize()>"->"fieldget <java.awt.Dimension: int width>";
+    "fieldget <java.awt.Dimension: int width>"->"load.r r0";
+    "load.r r0"->"virtualinvoke <java.awt.Component: java.awt.Dimension getSize()>";
+    "fieldget <java.awt.Dimension: int height>"
+    "virtualinvoke <java.awt.Component: java.awt.Dimension getSize()>"->"fieldget <java.awt.Dimension: int height>";
+    "virtualinvoke <java.awt.Component: java.awt.Image createImage(int,int)>"
+    "fieldget <java.awt.Dimension: int height>"->"virtualinvoke <java.awt.Component: java.awt.Image createImage(int,int)>";
+    "fieldput <ChompText: java.awt.Image workspace>"
+    "virtualinvoke <java.awt.Component: java.awt.Image createImage(int,int)>"->"fieldput <ChompText: java.awt.Image workspace>";
+    "fieldput <ChompText: java.awt.Image workspace>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "fieldget <ChompText: java.awt.Image workspace>"
+    "load.r r0"->"fieldget <ChompText: java.awt.Image workspace>";
+    "virtualinvoke <java.awt.Image: java.awt.Graphics getGraphics()>"
+    "fieldget <ChompText: java.awt.Image workspace>"->"virtualinvoke <java.awt.Image: java.awt.Graphics getGraphics()>";
+    "fieldput <ChompText: java.awt.Graphics offscreen>"
+    "virtualinvoke <java.awt.Image: java.awt.Graphics getGraphics()>"->"fieldput <ChompText: java.awt.Graphics offscreen>";
+    "new java.awt.MediaTracker"
+    "fieldput <ChompText: java.awt.Graphics offscreen>"->"new java.awt.MediaTracker";
+    "store.r r2"
+    "new java.awt.MediaTracker"->"store.r r2";
+    "load.r r2"
+    "store.r r2"->"load.r r2";
+    "load.r r2"->"load.r r0";
+    "specialinvoke <java.awt.MediaTracker: void <init>(java.awt.Component)>"
+    "load.r r0"->"specialinvoke <java.awt.MediaTracker: void <init>(java.awt.Component)>";
+    "specialinvoke <java.awt.MediaTracker: void <init>(java.awt.Component)>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "virtualinvoke <java.applet.Applet: java.net.URL getCodeBase()>"
+    "load.r r0"->"virtualinvoke <java.applet.Applet: java.net.URL getCodeBase()>";
+    "push \"chompani.gif\""
+    "virtualinvoke <java.applet.Applet: java.net.URL getCodeBase()>"->"push \"chompani.gif\"";
+    "virtualinvoke <java.applet.Applet: java.awt.Image getImage(java.net.URL,java.lang.String)>"
+    "push \"chompani.gif\""->"virtualinvoke <java.applet.Applet: java.awt.Image getImage(java.net.URL,java.lang.String)>";
+    "fieldput <ChompText: java.awt.Image chomp>"
+    "virtualinvoke <java.applet.Applet: java.awt.Image getImage(java.net.URL,java.lang.String)>"->"fieldput <ChompText: java.awt.Image chomp>";
+    "fieldput <ChompText: java.awt.Image chomp>"->"load.r r2";
+    "load.r r2"->"load.r r0";
+    "fieldget <ChompText: java.awt.Image chomp>"
+    "load.r r0"->"fieldget <ChompText: java.awt.Image chomp>";
+    "push 0"
+    "fieldget <ChompText: java.awt.Image chomp>"->"push 0";
+    "virtualinvoke <java.awt.MediaTracker: void addImage(java.awt.Image,int)>"
+    "push 0"->"virtualinvoke <java.awt.MediaTracker: void addImage(java.awt.Image,int)>";
+    "virtualinvoke <java.awt.MediaTracker: void addImage(java.awt.Image,int)>"->"load.r r2";
+    "load.r r2"->"push 0";
+    "virtualinvoke <java.awt.MediaTracker: void waitForID(int)>"
+    "push 0"->"virtualinvoke <java.awt.MediaTracker: void waitForID(int)>";
+    "goto load.r r0"
+    "virtualinvoke <java.awt.MediaTracker: void waitForID(int)>"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "push \"text\""
+    "load.r r0"->"push \"text\"";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"
+    "push \"text\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"store.r r2";
+    "store.r r2"->"load.r r2";
+    "ifnull push \"Text\""
+    "load.r r2"->"ifnull push \"Text\"";
+    "ifnull push \"Text\""->"load.r r2";
+    "load.r r2"->"store.r r2";
+    "store.r r2"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r2";
+    "fieldput <ChompText: java.lang.String text>"
+    "load.r r2"->"fieldput <ChompText: java.lang.String text>";
+    "fieldput <ChompText: java.lang.String text>"->"load.r r0";
+    "push \"pause\""
+    "load.r r0"->"push \"pause\"";
+    "push \"pause\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"store.r r2";
+    "store.r r2"->"load.r r2";
+    "ifnull load.r r0"
+    "load.r r2"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r2";
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"
+    "load.r r2"->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>";
+    "fieldput <ChompText: int pause>"
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"->"fieldput <ChompText: int pause>";
+    "fieldput <ChompText: int pause>"->"load.r r0";
+    "push \"bgcolor\""
+    "load.r r0"->"push \"bgcolor\"";
+    "push \"bgcolor\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"store.r r2";
+    "store.r r2"->"load.r r2";
+    "load.r r2"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r r0";
+    "new java.awt.Color"
+    "load.r r0"->"new java.awt.Color";
+    "dup1.r"
+    "new java.awt.Color"->"dup1.r";
+    "dup1.r"->"load.r r2";
+    "push 16"
+    "load.r r2"->"push 16";
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String,int)>"
+    "push 16"->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String,int)>";
+    "specialinvoke <java.awt.Color: void <init>(int)>"
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String,int)>"->"specialinvoke <java.awt.Color: void <init>(int)>";
+    "fieldput <ChompText: java.awt.Color bgColor>"
+    "specialinvoke <java.awt.Color: void <init>(int)>"->"fieldput <ChompText: java.awt.Color bgColor>";
+    "fieldput <ChompText: java.awt.Color bgColor>"->"load.r r0";
+    "push \"textcolor\""
+    "load.r r0"->"push \"textcolor\"";
+    "push \"textcolor\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"store.r r2";
+    "store.r r2"->"load.r r2";
+    "ifnull new java.awt.Font"
+    "load.r r2"->"ifnull new java.awt.Font";
+    "ifnull new java.awt.Font"->"load.r r0";
+    "load.r r0"->"new java.awt.Color";
+    "new java.awt.Color"->"dup1.r";
+    "dup1.r"->"load.r r2";
+    "load.r r2"->"push 16";
+    "push 16"->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String,int)>";
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String,int)>"->"specialinvoke <java.awt.Color: void <init>(int)>";
+    "fieldput <ChompText: java.awt.Color textColor>"
+    "specialinvoke <java.awt.Color: void <init>(int)>"->"fieldput <ChompText: java.awt.Color textColor>";
+    "new java.awt.Font"
+    "fieldput <ChompText: java.awt.Color textColor>"->"new java.awt.Font";
+    "new java.awt.Font"->"store.r r2";
+    "store.r r2"->"load.r r2";
+    "push \"Helvetica\""
+    "load.r r2"->"push \"Helvetica\"";
+    "push 1"
+    "push \"Helvetica\""->"push 1";
+    "push 25"
+    "push 1"->"push 25";
+    "specialinvoke <java.awt.Font: void <init>(java.lang.String,int,int)>"
+    "push 25"->"specialinvoke <java.awt.Font: void <init>(java.lang.String,int,int)>";
+    "specialinvoke <java.awt.Font: void <init>(java.lang.String,int,int)>"->"load.r r0";
+    "fieldget <ChompText: java.awt.Graphics offscreen>"
+    "load.r r0"->"fieldget <ChompText: java.awt.Graphics offscreen>";
+    "fieldget <ChompText: java.awt.Graphics offscreen>"->"load.r r2";
+    "virtualinvoke <java.awt.Graphics: void setFont(java.awt.Font)>"
+    "load.r r2"->"virtualinvoke <java.awt.Graphics: void setFont(java.awt.Font)>";
+    "virtualinvoke <java.awt.Graphics: void setFont(java.awt.Font)>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r2";
+    "virtualinvoke <java.awt.Component: java.awt.FontMetrics getFontMetrics(java.awt.Font)>"
+    "load.r r2"->"virtualinvoke <java.awt.Component: java.awt.FontMetrics getFontMetrics(java.awt.Font)>";
+    "virtualinvoke <java.awt.Component: java.awt.FontMetrics getFontMetrics(java.awt.Font)>"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "load.r r0"->"virtualinvoke <java.awt.Component: java.awt.Dimension getSize()>";
+    "virtualinvoke <java.awt.Component: java.awt.Dimension getSize()>"->"fieldget <java.awt.Dimension: int width>";
+    "push 2"
+    "fieldget <java.awt.Dimension: int width>"->"push 2";
+    "div.i"
+    "push 2"->"div.i";
+    "store.i r2"
+    "div.i"->"store.i r2";
+    "store.i r2"->"load.r r0";
+    "fieldget <ChompText: java.lang.String text>"
+    "load.r r0"->"fieldget <ChompText: java.lang.String text>";
+    "virtualinvoke <java.awt.FontMetrics: int stringWidth(java.lang.String)>"
+    "fieldget <ChompText: java.lang.String text>"->"virtualinvoke <java.awt.FontMetrics: int stringWidth(java.lang.String)>";
+    "virtualinvoke <java.awt.FontMetrics: int stringWidth(java.lang.String)>"->"push 2";
+    "push 2"->"div.i";
+    "store.i $i5"
+    "div.i"->"store.i $i5";
+    "store.i $i5"->"load.r r0";
+    "load.i r2"
+    "load.r r0"->"load.i r2";
+    "load.i $i5"
+    "load.i r2"->"load.i $i5";
+    "sub.i"
+    "load.i $i5"->"sub.i";
+    "fieldput <ChompText: int textX>"
+    "sub.i"->"fieldput <ChompText: int textX>";
+    "fieldput <ChompText: int textX>"->"load.r r0";
+    "load.r r0"->"virtualinvoke <java.awt.Component: java.awt.Dimension getSize()>";
+    "virtualinvoke <java.awt.Component: java.awt.Dimension getSize()>"->"fieldget <java.awt.Dimension: int height>";
+    "fieldget <java.awt.Dimension: int height>"->"push 2";
+    "push 2"->"div.i";
+    "store.i r0"
+    "div.i"->"store.i r0";
+    "virtualinvoke <java.awt.FontMetrics: int getHeight()>"
+    "store.i r0"->"virtualinvoke <java.awt.FontMetrics: int getHeight()>";
+    "push 3"
+    "virtualinvoke <java.awt.FontMetrics: int getHeight()>"->"push 3";
+    "push 3"->"div.i";
+    "load.i r0"
+    "div.i"->"load.i r0";
+    "add.i"
+    "load.i r0"->"add.i";
+    "fieldput <ChompText: int textY>"
+    "add.i"->"fieldput <ChompText: int textY>";
+    "return"
+    "fieldput <ChompText: int textY>"->"return";
+    "push \"Text\""
+    "ifnull push \"Text\""->"push \"Text\"";
+    "push \"Text\""->"store.r r2";
+    "virtualinvoke <java.awt.MediaTracker: void waitForID(int)>"->"store.r r2";
+}

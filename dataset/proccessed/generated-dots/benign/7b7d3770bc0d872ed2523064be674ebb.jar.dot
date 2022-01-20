@@ -1,0 +1,56 @@
+digraph "" {
+    "r0 := @this: uPixScreen"
+    "load.r r0"
+    "r0 := @this: uPixScreen"->"load.r r0";
+    "push \"ss.gif\""
+    "load.r r0"->"push \"ss.gif\"";
+    "specialinvoke <uPixScreen: void p(java.lang.String)>"
+    "push \"ss.gif\""->"specialinvoke <uPixScreen: void p(java.lang.String)>";
+    "specialinvoke <uPixScreen: void p(java.lang.String)>"->"load.r r0";
+    "virtualinvoke <uPixScreen: void d()>"
+    "load.r r0"->"virtualinvoke <uPixScreen: void d()>";
+    "virtualinvoke <uPixScreen: void d()>"->"load.r r0";
+    "fieldget <uPixScreen: int na>"
+    "load.r r0"->"fieldget <uPixScreen: int na>";
+    "push 4095"
+    "fieldget <uPixScreen: int na>"->"push 4095";
+    "and.i"
+    "push 4095"->"and.i";
+    "push 1003"
+    "and.i"->"push 1003";
+    "ifcmpne.i load.r r0"
+    "push 1003"->"ifcmpne.i load.r r0";
+    "ifcmpne.i load.r r0"->"load.r r0";
+    "push 0"
+    "load.r r0"->"push 0";
+    "fieldput <uPixScreen: boolean aq>"
+    "push 0"->"fieldput <uPixScreen: boolean aq>";
+    "fieldput <uPixScreen: boolean aq>"->"load.r r0";
+    "push \"autoHide\""
+    "load.r r0"->"push \"autoHide\"";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"
+    "push \"autoHide\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "store.r r1"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"store.r r1";
+    "load.r r1"
+    "store.r r1"->"load.r r1";
+    "ifnull load.r r0"
+    "load.r r1"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r r1";
+    "push \"yes\""
+    "load.r r1"->"push \"yes\"";
+    "virtualinvoke <java.lang.String: int compareTo(java.lang.String)>"
+    "push \"yes\""->"virtualinvoke <java.lang.String: int compareTo(java.lang.String)>";
+    "ifne load.r r0"
+    "virtualinvoke <java.lang.String: int compareTo(java.lang.String)>"->"ifne load.r r0";
+    "ifne load.r r0"->"load.r r0";
+    "push 1"
+    "load.r r0"->"push 1";
+    "fieldput <uPixScreen: boolean am>"
+    "push 1"->"fieldput <uPixScreen: boolean am>";
+    "fieldput <uPixScreen: boolean am>"->"load.r r0";
+    "virtualinvoke <uPixScreen: void l()>"
+    "load.r r0"->"virtualinvoke <uPixScreen: void l()>";
+    "return"
+    "virtualinvoke <uPixScreen: void l()>"->"return";
+}

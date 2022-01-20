@@ -1,0 +1,46 @@
+digraph "" {
+    "r0 := @this: blaze3d"
+    "load.r r0"
+    "r0 := @this: blaze3d"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "virtualinvoke <java.awt.Component: void addKeyListener(java.awt.event.KeyListener)>"
+    "load.r r0"->"virtualinvoke <java.awt.Component: void addKeyListener(java.awt.event.KeyListener)>";
+    "virtualinvoke <java.awt.Component: void addKeyListener(java.awt.event.KeyListener)>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "virtualinvoke <java.awt.Component: void addFocusListener(java.awt.event.FocusListener)>"
+    "load.r r0"->"virtualinvoke <java.awt.Component: void addFocusListener(java.awt.event.FocusListener)>";
+    "virtualinvoke <java.awt.Component: void addFocusListener(java.awt.event.FocusListener)>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "virtualinvoke <java.awt.Component: void addMouseListener(java.awt.event.MouseListener)>"
+    "load.r r0"->"virtualinvoke <java.awt.Component: void addMouseListener(java.awt.event.MouseListener)>";
+    "virtualinvoke <java.awt.Component: void addMouseListener(java.awt.event.MouseListener)>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "virtualinvoke <java.awt.Component: void addMouseMotionListener(java.awt.event.MouseMotionListener)>"
+    "load.r r0"->"virtualinvoke <java.awt.Component: void addMouseMotionListener(java.awt.event.MouseMotionListener)>";
+    "virtualinvoke <java.awt.Component: void addMouseMotionListener(java.awt.event.MouseMotionListener)>"->"load.r r0";
+    "specialinvoke <blaze3d: void m()>"
+    "load.r r0"->"specialinvoke <blaze3d: void m()>";
+    "new java.net.URL"
+    "specialinvoke <blaze3d: void m()>"->"new java.net.URL";
+    "dup1.r"
+    "new java.net.URL"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "virtualinvoke <java.applet.Applet: java.net.URL getDocumentBase()>"
+    "load.r r0"->"virtualinvoke <java.applet.Applet: java.net.URL getDocumentBase()>";
+    "push \"\""
+    "virtualinvoke <java.applet.Applet: java.net.URL getDocumentBase()>"->"push \"\"";
+    "specialinvoke <java.net.URL: void <init>(java.net.URL,java.lang.String)>"
+    "push \"\""->"specialinvoke <java.net.URL: void <init>(java.net.URL,java.lang.String)>";
+    "virtualinvoke <java.net.URL: java.net.URLConnection openConnection()>"
+    "specialinvoke <java.net.URL: void <init>(java.net.URL,java.lang.String)>"->"virtualinvoke <java.net.URL: java.net.URLConnection openConnection()>";
+    "push 1"
+    "virtualinvoke <java.net.URL: java.net.URLConnection openConnection()>"->"push 1";
+    "virtualinvoke <java.net.URLConnection: void setDefaultUseCaches(boolean)>"
+    "push 1"->"virtualinvoke <java.net.URLConnection: void setDefaultUseCaches(boolean)>";
+    "goto return"
+    "virtualinvoke <java.net.URLConnection: void setDefaultUseCaches(boolean)>"->"goto return";
+    "return"
+    "goto return"->"return";
+    "store.r r0"
+    "virtualinvoke <java.net.URLConnection: void setDefaultUseCaches(boolean)>"->"store.r r0";
+}

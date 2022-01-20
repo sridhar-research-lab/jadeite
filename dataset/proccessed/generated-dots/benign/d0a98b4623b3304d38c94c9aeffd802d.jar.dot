@@ -1,0 +1,136 @@
+digraph "" {
+    "r0 := @this: Rotate2"
+    "load.r r0"
+    "r0 := @this: Rotate2"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "virtualinvoke <java.awt.Component: java.awt.Dimension size()>"
+    "load.r r0"->"virtualinvoke <java.awt.Component: java.awt.Dimension size()>";
+    "dup1.r"
+    "virtualinvoke <java.awt.Component: java.awt.Dimension size()>"->"dup1.r";
+    "fieldget <java.awt.Dimension: int width>"
+    "dup1.r"->"fieldget <java.awt.Dimension: int width>";
+    "store.i $i0"
+    "fieldget <java.awt.Dimension: int width>"->"store.i $i0";
+    "store.i $i0"->"load.r r0";
+    "load.i $i0"
+    "load.r r0"->"load.i $i0";
+    "fieldput <Rotate2: int Wide>"
+    "load.i $i0"->"fieldput <Rotate2: int Wide>";
+    "fieldget <java.awt.Dimension: int height>"
+    "fieldput <Rotate2: int Wide>"->"fieldget <java.awt.Dimension: int height>";
+    "fieldput <Rotate2: int High>"
+    "fieldget <java.awt.Dimension: int height>"->"fieldput <Rotate2: int High>";
+    "fieldput <Rotate2: int High>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "fieldget <Rotate2: int Wide>"
+    "load.r r0"->"fieldget <Rotate2: int Wide>";
+    "fieldget <Rotate2: int Wide>"->"load.r r0";
+    "fieldget <Rotate2: int High>"
+    "load.r r0"->"fieldget <Rotate2: int High>";
+    "virtualinvoke <java.awt.Component: java.awt.Image createImage(int,int)>"
+    "fieldget <Rotate2: int High>"->"virtualinvoke <java.awt.Component: java.awt.Image createImage(int,int)>";
+    "fieldput <Rotate2: java.awt.Image buffer>"
+    "virtualinvoke <java.awt.Component: java.awt.Image createImage(int,int)>"->"fieldput <Rotate2: java.awt.Image buffer>";
+    "fieldput <Rotate2: java.awt.Image buffer>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "push \"Image\""
+    "load.r r0"->"push \"Image\"";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"
+    "push \"Image\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "fieldput <Rotate2: java.lang.String Image_Name>"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"fieldput <Rotate2: java.lang.String Image_Name>";
+    "fieldput <Rotate2: java.lang.String Image_Name>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "push \"BackGround\""
+    "load.r r0"->"push \"BackGround\"";
+    "push \"BackGround\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "fieldput <Rotate2: java.lang.String color>"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"fieldput <Rotate2: java.lang.String color>";
+    "fieldput <Rotate2: java.lang.String color>"->"load.r r0";
+    "fieldget <Rotate2: java.lang.String color>"
+    "load.r r0"->"fieldget <Rotate2: java.lang.String color>";
+    "ifnull load.r r0"
+    "fieldget <Rotate2: java.lang.String color>"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <Rotate2: java.lang.String color>";
+    "push 16"
+    "fieldget <Rotate2: java.lang.String color>"->"push 16";
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String,int)>"
+    "push 16"->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String,int)>";
+    "fieldput <Rotate2: int BackGround_Color>"
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String,int)>"->"fieldput <Rotate2: int BackGround_Color>";
+    "goto load.r r0"
+    "fieldput <Rotate2: int BackGround_Color>"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "push \"Steps\""
+    "load.r r0"->"push \"Steps\"";
+    "push \"Steps\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "fieldput <Rotate2: java.lang.String step>"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"fieldput <Rotate2: java.lang.String step>";
+    "fieldput <Rotate2: java.lang.String step>"->"load.r r0";
+    "fieldget <Rotate2: java.lang.String step>"
+    "load.r r0"->"fieldget <Rotate2: java.lang.String step>";
+    "fieldget <Rotate2: java.lang.String step>"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <Rotate2: java.lang.String step>";
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"
+    "fieldget <Rotate2: java.lang.String step>"->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>";
+    "fieldput <Rotate2: int Step>"
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"->"fieldput <Rotate2: int Step>";
+    "fieldput <Rotate2: int Step>"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "fieldget <Rotate2: int Step>"
+    "load.r r0"->"fieldget <Rotate2: int Step>";
+    "push 255"
+    "fieldget <Rotate2: int Step>"->"push 255";
+    "ifcmple.i load.r r0"
+    "push 255"->"ifcmple.i load.r r0";
+    "ifcmple.i load.r r0"->"load.r r0";
+    "load.r r0"->"push 255";
+    "push 255"->"fieldput <Rotate2: int Step>";
+    "fieldput <Rotate2: int Step>"->"load.r r0";
+    "load.r r0"->"push 255";
+    "push 255"->"load.r r0";
+    "load.r r0"->"fieldget <Rotate2: int Step>";
+    "div.i"
+    "fieldget <Rotate2: int Step>"->"div.i";
+    "div.i"->"fieldput <Rotate2: int Step>";
+    "fieldput <Rotate2: int Step>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "push \"Speed\""
+    "load.r r0"->"push \"Speed\"";
+    "push \"Speed\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "fieldput <Rotate2: java.lang.String pause>"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"fieldput <Rotate2: java.lang.String pause>";
+    "fieldput <Rotate2: java.lang.String pause>"->"load.r r0";
+    "fieldget <Rotate2: java.lang.String pause>"
+    "load.r r0"->"fieldget <Rotate2: java.lang.String pause>";
+    "fieldget <Rotate2: java.lang.String pause>"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <Rotate2: java.lang.String pause>";
+    "fieldget <Rotate2: java.lang.String pause>"->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>";
+    "fieldput <Rotate2: int Pause>"
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"->"fieldput <Rotate2: int Pause>";
+    "goto return"
+    "fieldput <Rotate2: int Pause>"->"goto return";
+    "return"
+    "goto return"->"return";
+    "ifnull load.r r0"->"load.r r0";
+    "push 10"
+    "load.r r0"->"push 10";
+    "push 10"->"fieldput <Rotate2: int Pause>";
+    "ifnull load.r r0"->"load.r r0";
+    "load.r r0"->"push 255";
+    "push 255"->"fieldput <Rotate2: int Step>";
+    "ifnull load.r r0"->"load.r r0";
+    "push \"000000\""
+    "load.r r0"->"push \"000000\"";
+    "push \"000000\""->"push 16";
+    "push 16"->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String,int)>";
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String,int)>"->"fieldput <Rotate2: int BackGround_Color>";
+}

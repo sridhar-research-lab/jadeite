@@ -1,0 +1,162 @@
+digraph "" {
+    "r0 := @this: LineBouncer"
+    "load.r r0"
+    "r0 := @this: LineBouncer"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "virtualinvoke <java.awt.Component: java.awt.Graphics getGraphics()>"
+    "load.r r0"->"virtualinvoke <java.awt.Component: java.awt.Graphics getGraphics()>";
+    "dup1.r"
+    "virtualinvoke <java.awt.Component: java.awt.Graphics getGraphics()>"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "fieldget <LineBouncer: java.awt.Font font>"
+    "load.r r0"->"fieldget <LineBouncer: java.awt.Font font>";
+    "virtualinvoke <java.awt.Graphics: void setFont(java.awt.Font)>"
+    "fieldget <LineBouncer: java.awt.Font font>"->"virtualinvoke <java.awt.Graphics: void setFont(java.awt.Font)>";
+    "virtualinvoke <java.awt.Graphics: void setFont(java.awt.Font)>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "virtualinvoke <java.awt.Component: java.awt.Dimension size()>"
+    "load.r r0"->"virtualinvoke <java.awt.Component: java.awt.Dimension size()>";
+    "fieldput <LineBouncer: java.awt.Dimension d>"
+    "virtualinvoke <java.awt.Component: java.awt.Dimension size()>"->"fieldput <LineBouncer: java.awt.Dimension d>";
+    "fieldput <LineBouncer: java.awt.Dimension d>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "push \"Text\""
+    "load.r r0"->"push \"Text\"";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"
+    "push \"Text\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "fieldput <LineBouncer: java.lang.String s>"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"fieldput <LineBouncer: java.lang.String s>";
+    "virtualinvoke <java.awt.Graphics: java.awt.FontMetrics getFontMetrics()>"
+    "fieldput <LineBouncer: java.lang.String s>"->"virtualinvoke <java.awt.Graphics: java.awt.FontMetrics getFontMetrics()>";
+    "fieldput <LineBouncer: java.awt.FontMetrics fm>"
+    "virtualinvoke <java.awt.Graphics: java.awt.FontMetrics getFontMetrics()>"->"fieldput <LineBouncer: java.awt.FontMetrics fm>";
+    "fieldput <LineBouncer: java.awt.FontMetrics fm>"->"load.r r0";
+    "push 32"
+    "load.r r0"->"push 32";
+    "newarray"
+    "push 32"->"newarray";
+    "fieldput <LineBouncer: int[] x1>"
+    "newarray"->"fieldput <LineBouncer: int[] x1>";
+    "fieldput <LineBouncer: int[] x1>"->"load.r r0";
+    "load.r r0"->"push 32";
+    "push 32"->"newarray";
+    "fieldput <LineBouncer: int[] x2>"
+    "newarray"->"fieldput <LineBouncer: int[] x2>";
+    "fieldput <LineBouncer: int[] x2>"->"load.r r0";
+    "load.r r0"->"push 32";
+    "push 32"->"newarray";
+    "fieldput <LineBouncer: int[] y1>"
+    "newarray"->"fieldput <LineBouncer: int[] y1>";
+    "fieldput <LineBouncer: int[] y1>"->"load.r r0";
+    "load.r r0"->"push 32";
+    "push 32"->"newarray";
+    "fieldput <LineBouncer: int[] y2>"
+    "newarray"->"fieldput <LineBouncer: int[] y2>";
+    "push 0"
+    "fieldput <LineBouncer: int[] y2>"->"push 0";
+    "store.i i12"
+    "push 0"->"store.i i12";
+    "goto load.i i12"
+    "store.i i12"->"goto load.i i12";
+    "load.i i12"
+    "goto load.i i12"->"load.i i12";
+    "load.i i12"->"push 32";
+    "ifcmplt.i load.r r0"
+    "push 32"->"ifcmplt.i load.r r0";
+    "ifcmplt.i load.r r0"->"load.r r0";
+    "push 1"
+    "load.r r0"->"push 1";
+    "staticinvoke <java.lang.Math: double random()>"
+    "push 1"->"staticinvoke <java.lang.Math: double random()>";
+    "staticinvoke <java.lang.Math: double random()>"->"load.r r0";
+    "fieldget <LineBouncer: java.awt.Dimension d>"
+    "load.r r0"->"fieldget <LineBouncer: java.awt.Dimension d>";
+    "fieldget <java.awt.Dimension: int width>"
+    "fieldget <LineBouncer: java.awt.Dimension d>"->"fieldget <java.awt.Dimension: int width>";
+    "i2d"
+    "fieldget <java.awt.Dimension: int width>"->"i2d";
+    "mul.d"
+    "i2d"->"mul.d";
+    "push 2.0"
+    "mul.d"->"push 2.0";
+    "sub.d"
+    "push 2.0"->"sub.d";
+    "d2i"
+    "sub.d"->"d2i";
+    "add.i"
+    "d2i"->"add.i";
+    "fieldput <LineBouncer: int x1pos>"
+    "add.i"->"fieldput <LineBouncer: int x1pos>";
+    "fieldput <LineBouncer: int x1pos>"->"load.r r0";
+    "load.r r0"->"push 1";
+    "push 1"->"staticinvoke <java.lang.Math: double random()>";
+    "staticinvoke <java.lang.Math: double random()>"->"load.r r0";
+    "load.r r0"->"fieldget <LineBouncer: java.awt.Dimension d>";
+    "fieldget <LineBouncer: java.awt.Dimension d>"->"fieldget <java.awt.Dimension: int width>";
+    "fieldget <java.awt.Dimension: int width>"->"i2d";
+    "i2d"->"mul.d";
+    "mul.d"->"push 2.0";
+    "push 2.0"->"sub.d";
+    "sub.d"->"d2i";
+    "d2i"->"add.i";
+    "fieldput <LineBouncer: int x2pos>"
+    "add.i"->"fieldput <LineBouncer: int x2pos>";
+    "fieldput <LineBouncer: int x2pos>"->"load.r r0";
+    "load.r r0"->"push 1";
+    "push 1"->"staticinvoke <java.lang.Math: double random()>";
+    "staticinvoke <java.lang.Math: double random()>"->"load.r r0";
+    "load.r r0"->"fieldget <LineBouncer: java.awt.Dimension d>";
+    "fieldget <java.awt.Dimension: int height>"
+    "fieldget <LineBouncer: java.awt.Dimension d>"->"fieldget <java.awt.Dimension: int height>";
+    "fieldget <java.awt.Dimension: int height>"->"i2d";
+    "i2d"->"mul.d";
+    "mul.d"->"push 2.0";
+    "push 2.0"->"sub.d";
+    "sub.d"->"d2i";
+    "d2i"->"add.i";
+    "fieldput <LineBouncer: int y1pos>"
+    "add.i"->"fieldput <LineBouncer: int y1pos>";
+    "fieldput <LineBouncer: int y1pos>"->"load.r r0";
+    "load.r r0"->"push 1";
+    "push 1"->"staticinvoke <java.lang.Math: double random()>";
+    "staticinvoke <java.lang.Math: double random()>"->"load.r r0";
+    "load.r r0"->"fieldget <LineBouncer: java.awt.Dimension d>";
+    "fieldget <LineBouncer: java.awt.Dimension d>"->"fieldget <java.awt.Dimension: int height>";
+    "fieldget <java.awt.Dimension: int height>"->"i2d";
+    "i2d"->"mul.d";
+    "mul.d"->"push 2.0";
+    "push 2.0"->"sub.d";
+    "sub.d"->"d2i";
+    "d2i"->"add.i";
+    "fieldput <LineBouncer: int y2pos>"
+    "add.i"->"fieldput <LineBouncer: int y2pos>";
+    "return"
+    "fieldput <LineBouncer: int y2pos>"->"return";
+    "ifcmplt.i load.r r0"->"load.r r0";
+    "fieldget <LineBouncer: int[] x1>"
+    "load.r r0"->"fieldget <LineBouncer: int[] x1>";
+    "fieldget <LineBouncer: int[] x1>"->"load.i i12";
+    "load.i i12"->"push 0";
+    "arraywrite.i"
+    "push 0"->"arraywrite.i";
+    "arraywrite.i"->"load.r r0";
+    "fieldget <LineBouncer: int[] y1>"
+    "load.r r0"->"fieldget <LineBouncer: int[] y1>";
+    "fieldget <LineBouncer: int[] y1>"->"load.i i12";
+    "load.i i12"->"push 0";
+    "push 0"->"arraywrite.i";
+    "arraywrite.i"->"load.r r0";
+    "fieldget <LineBouncer: int[] x2>"
+    "load.r r0"->"fieldget <LineBouncer: int[] x2>";
+    "fieldget <LineBouncer: int[] x2>"->"load.i i12";
+    "load.i i12"->"push 0";
+    "push 0"->"arraywrite.i";
+    "arraywrite.i"->"load.r r0";
+    "fieldget <LineBouncer: int[] y2>"
+    "load.r r0"->"fieldget <LineBouncer: int[] y2>";
+    "fieldget <LineBouncer: int[] y2>"->"load.i i12";
+    "load.i i12"->"push 0";
+    "push 0"->"arraywrite.i";
+    "inc.i i12 1"
+    "arraywrite.i"->"inc.i i12 1";
+}

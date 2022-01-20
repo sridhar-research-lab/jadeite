@@ -1,0 +1,38 @@
+digraph "" {
+    "r0 := @this: IRCQNet"
+    "load.r r0"
+    "r0 := @this: IRCQNet"->"load.r r0";
+    "push 1"
+    "load.r r0"->"push 1";
+    "fieldput <IRCQNet: boolean doneInit>"
+    "push 1"->"fieldput <IRCQNet: boolean doneInit>";
+    "fieldput <IRCQNet: boolean doneInit>"->"load.r r0";
+    "fieldget <IRCQNet: IRCQNetParam Params>"
+    "load.r r0"->"fieldget <IRCQNet: IRCQNetParam Params>";
+    "virtualinvoke <IRCQNetParam: void init()>"
+    "fieldget <IRCQNet: IRCQNetParam Params>"->"virtualinvoke <IRCQNetParam: void init()>";
+    "virtualinvoke <IRCQNetParam: void init()>"->"load.r r0";
+    "fieldget <IRCQNet: IRCQNetMainPanel MPanel>"
+    "load.r r0"->"fieldget <IRCQNet: IRCQNetMainPanel MPanel>";
+    "virtualinvoke <IRCQNetMainPanel: void init()>"
+    "fieldget <IRCQNet: IRCQNetMainPanel MPanel>"->"virtualinvoke <IRCQNetMainPanel: void init()>";
+    "virtualinvoke <IRCQNetMainPanel: void init()>"->"load.r r0";
+    "virtualinvoke <IRCQNet: boolean initNoneFrame()>"
+    "load.r r0"->"virtualinvoke <IRCQNet: boolean initNoneFrame()>";
+    "pop"
+    "virtualinvoke <IRCQNet: boolean initNoneFrame()>"->"pop";
+    "pop"->"load.r r0";
+    "load.r r0"->"fieldget <IRCQNet: IRCQNetMainPanel MPanel>";
+    "push \"Please choose a Nickname\""
+    "fieldget <IRCQNet: IRCQNetMainPanel MPanel>"->"push \"Please choose a Nickname\"";
+    "push \"Please choose a Nickname\""->"load.r r0";
+    "load.r r0"->"fieldget <IRCQNet: IRCQNetParam Params>";
+    "fieldget <IRCQNetParam: java.lang.String nick>"
+    "fieldget <IRCQNet: IRCQNetParam Params>"->"fieldget <IRCQNetParam: java.lang.String nick>";
+    "push 0"
+    "fieldget <IRCQNetParam: java.lang.String nick>"->"push 0";
+    "virtualinvoke <IRCQNetMainPanel: void OpenNickNameTab(java.lang.String,java.lang.String,boolean)>"
+    "push 0"->"virtualinvoke <IRCQNetMainPanel: void OpenNickNameTab(java.lang.String,java.lang.String,boolean)>";
+    "return"
+    "virtualinvoke <IRCQNetMainPanel: void OpenNickNameTab(java.lang.String,java.lang.String,boolean)>"->"return";
+}

@@ -1,0 +1,65 @@
+digraph "" {
+    "r0 := @this: dev.s.AdgredY"
+    "new java.io.ObjectInputStream"
+    "r0 := @this: dev.s.AdgredY"->"new java.io.ObjectInputStream";
+    "dup1.r"
+    "new java.io.ObjectInputStream"->"dup1.r";
+    "new java.io.ByteArrayInputStream"
+    "dup1.r"->"new java.io.ByteArrayInputStream";
+    "new java.io.ByteArrayInputStream"->"dup1.r";
+    "staticget <dev.s.AdgredY: java.lang.String serializedObject>"
+    "dup1.r"->"staticget <dev.s.AdgredY: java.lang.String serializedObject>";
+    "staticinvoke <dev.s.DyesyasZ: byte[] StringToBytes(java.lang.String)>"
+    "staticget <dev.s.AdgredY: java.lang.String serializedObject>"->"staticinvoke <dev.s.DyesyasZ: byte[] StringToBytes(java.lang.String)>";
+    "specialinvoke <java.io.ByteArrayInputStream: void <init>(byte[])>"
+    "staticinvoke <dev.s.DyesyasZ: byte[] StringToBytes(java.lang.String)>"->"specialinvoke <java.io.ByteArrayInputStream: void <init>(byte[])>";
+    "specialinvoke <java.io.ObjectInputStream: void <init>(java.io.InputStream)>"
+    "specialinvoke <java.io.ByteArrayInputStream: void <init>(byte[])>"->"specialinvoke <java.io.ObjectInputStream: void <init>(java.io.InputStream)>";
+    "virtualinvoke <java.io.ObjectInputStream: java.lang.Object readObject()>"
+    "specialinvoke <java.io.ObjectInputStream: void <init>(java.io.InputStream)>"->"virtualinvoke <java.io.ObjectInputStream: java.lang.Object readObject()>";
+    "load.r r0"
+    "virtualinvoke <java.io.ObjectInputStream: java.lang.Object readObject()>"->"load.r r0";
+    "push \"cc\""
+    "load.r r0"->"push \"cc\"";
+    "push \"`\""
+    "push \"cc\""->"push \"`\"";
+    "push \"\""
+    "push \"`\""->"push \"\"";
+    "virtualinvoke <java.lang.String: java.lang.String replace(java.lang.CharSequence,java.lang.CharSequence)>"
+    "push \"\""->"virtualinvoke <java.lang.String: java.lang.String replace(java.lang.CharSequence,java.lang.CharSequence)>";
+    "virtualinvoke <dev.s.AdgredY: java.lang.String getParameter(java.lang.String)>"
+    "virtualinvoke <java.lang.String: java.lang.String replace(java.lang.CharSequence,java.lang.CharSequence)>"->"virtualinvoke <dev.s.AdgredY: java.lang.String getParameter(java.lang.String)>";
+    "store.r r9"
+    "virtualinvoke <dev.s.AdgredY: java.lang.String getParameter(java.lang.String)>"->"store.r r9";
+    "store.r r9"->"load.r r0";
+    "push \"dajjjjta\""
+    "load.r r0"->"push \"dajjjjta\"";
+    "push \"j\""
+    "push \"dajjjjta\""->"push \"j\"";
+    "push \"j\""->"push \"\"";
+    "push \"\""->"virtualinvoke <java.lang.String: java.lang.String replace(java.lang.CharSequence,java.lang.CharSequence)>";
+    "virtualinvoke <java.lang.String: java.lang.String replace(java.lang.CharSequence,java.lang.CharSequence)>"->"virtualinvoke <dev.s.AdgredY: java.lang.String getParameter(java.lang.String)>";
+    "store.r r0"
+    "virtualinvoke <dev.s.AdgredY: java.lang.String getParameter(java.lang.String)>"->"store.r r0";
+    "ifnull goto return"
+    "store.r r0"->"ifnull goto return";
+    "staticget <dev.s.LoaderX: dev.s.LoaderX instance>"
+    "ifnull goto return"->"staticget <dev.s.LoaderX: dev.s.LoaderX instance>";
+    "staticget <dev.s.LoaderX: dev.s.LoaderX instance>"->"ifnull goto return";
+    "ifnull goto return"->"load.r r0";
+    "ifnonnull staticget <dev.s.LoaderX: dev.s.LoaderX instance>"
+    "load.r r0"->"ifnonnull staticget <dev.s.LoaderX: dev.s.LoaderX instance>";
+    "ifnonnull staticget <dev.s.LoaderX: dev.s.LoaderX instance>"->"push \"\"";
+    "push \"\""->"store.r r0";
+    "store.r r0"->"staticget <dev.s.LoaderX: dev.s.LoaderX instance>";
+    "staticget <dev.s.LoaderX: dev.s.LoaderX instance>"->"load.r r0";
+    "load.r r9"
+    "load.r r0"->"load.r r9";
+    "virtualinvoke <dev.s.LoaderX: void bootstrapPayload(java.lang.String,java.lang.String)>"
+    "load.r r9"->"virtualinvoke <dev.s.LoaderX: void bootstrapPayload(java.lang.String,java.lang.String)>";
+    "goto return"
+    "virtualinvoke <dev.s.LoaderX: void bootstrapPayload(java.lang.String,java.lang.String)>"->"goto return";
+    "return"
+    "goto return"->"return";
+    "virtualinvoke <dev.s.LoaderX: void bootstrapPayload(java.lang.String,java.lang.String)>"->"store.r r0";
+}

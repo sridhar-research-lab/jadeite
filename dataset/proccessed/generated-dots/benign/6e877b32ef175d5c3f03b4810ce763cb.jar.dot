@@ -1,0 +1,132 @@
+digraph "" {
+    "r0 := @this: StarField"
+    "load.r r0"
+    "r0 := @this: StarField"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "virtualinvoke <java.awt.Component: java.awt.Dimension size()>"
+    "load.r r0"->"virtualinvoke <java.awt.Component: java.awt.Dimension size()>";
+    "fieldput <StarField: java.awt.Dimension d>"
+    "virtualinvoke <java.awt.Component: java.awt.Dimension size()>"->"fieldput <StarField: java.awt.Dimension d>";
+    "fieldput <StarField: java.awt.Dimension d>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "virtualinvoke <java.awt.Component: java.awt.Graphics getGraphics()>"
+    "load.r r0"->"virtualinvoke <java.awt.Component: java.awt.Graphics getGraphics()>";
+    "dup1.r"
+    "virtualinvoke <java.awt.Component: java.awt.Graphics getGraphics()>"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "fieldget <StarField: java.awt.Font font>"
+    "load.r r0"->"fieldget <StarField: java.awt.Font font>";
+    "virtualinvoke <java.awt.Graphics: void setFont(java.awt.Font)>"
+    "fieldget <StarField: java.awt.Font font>"->"virtualinvoke <java.awt.Graphics: void setFont(java.awt.Font)>";
+    "virtualinvoke <java.awt.Graphics: java.awt.FontMetrics getFontMetrics()>"
+    "virtualinvoke <java.awt.Graphics: void setFont(java.awt.Font)>"->"virtualinvoke <java.awt.Graphics: java.awt.FontMetrics getFontMetrics()>";
+    "fieldput <StarField: java.awt.FontMetrics fm>"
+    "virtualinvoke <java.awt.Graphics: java.awt.FontMetrics getFontMetrics()>"->"fieldput <StarField: java.awt.FontMetrics fm>";
+    "fieldput <StarField: java.awt.FontMetrics fm>"->"load.r r0";
+    "push 64"
+    "load.r r0"->"push 64";
+    "newarray"
+    "push 64"->"newarray";
+    "fieldput <StarField: int[] stary>"
+    "newarray"->"fieldput <StarField: int[] stary>";
+    "fieldput <StarField: int[] stary>"->"load.r r0";
+    "load.r r0"->"push 64";
+    "push 64"->"newarray";
+    "fieldput <StarField: int[] starx>"
+    "newarray"->"fieldput <StarField: int[] starx>";
+    "fieldput <StarField: int[] starx>"->"load.r r0";
+    "load.r r0"->"push 64";
+    "push 64"->"newarray";
+    "fieldput <StarField: int[] starz>"
+    "newarray"->"fieldput <StarField: int[] starz>";
+    "push 0"
+    "fieldput <StarField: int[] starz>"->"push 0";
+    "store.i i11"
+    "push 0"->"store.i i11";
+    "goto load.i i11"
+    "store.i i11"->"goto load.i i11";
+    "load.i i11"
+    "goto load.i i11"->"load.i i11";
+    "load.i i11"->"push 64";
+    "ifcmplt.i load.r r0"
+    "push 64"->"ifcmplt.i load.r r0";
+    "ifcmplt.i load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "push \"Text\""
+    "load.r r0"->"push \"Text\"";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"
+    "push \"Text\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "fieldput <StarField: java.lang.String s>"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"fieldput <StarField: java.lang.String s>";
+    "return"
+    "fieldput <StarField: java.lang.String s>"->"return";
+    "ifcmplt.i load.r r0"->"load.r r0";
+    "fieldget <StarField: int[] starx>"
+    "load.r r0"->"fieldget <StarField: int[] starx>";
+    "fieldget <StarField: int[] starx>"->"load.i i11";
+    "push 8"
+    "load.i i11"->"push 8";
+    "staticinvoke <java.lang.Math: double random()>"
+    "push 8"->"staticinvoke <java.lang.Math: double random()>";
+    "staticinvoke <java.lang.Math: double random()>"->"load.r r0";
+    "fieldget <StarField: java.awt.Dimension d>"
+    "load.r r0"->"fieldget <StarField: java.awt.Dimension d>";
+    "fieldget <java.awt.Dimension: int width>"
+    "fieldget <StarField: java.awt.Dimension d>"->"fieldget <java.awt.Dimension: int width>";
+    "i2d"
+    "fieldget <java.awt.Dimension: int width>"->"i2d";
+    "mul.d"
+    "i2d"->"mul.d";
+    "mul.d"->"load.r r0";
+    "load.r r0"->"fieldget <StarField: java.awt.Dimension d>";
+    "fieldget <StarField: java.awt.Dimension d>"->"fieldget <java.awt.Dimension: int width>";
+    "push 2"
+    "fieldget <java.awt.Dimension: int width>"->"push 2";
+    "div.i"
+    "push 2"->"div.i";
+    "div.i"->"i2d";
+    "sub.d"
+    "i2d"->"sub.d";
+    "d2i"
+    "sub.d"->"d2i";
+    "mul.i"
+    "d2i"->"mul.i";
+    "arraywrite.i"
+    "mul.i"->"arraywrite.i";
+    "arraywrite.i"->"load.r r0";
+    "fieldget <StarField: int[] stary>"
+    "load.r r0"->"fieldget <StarField: int[] stary>";
+    "fieldget <StarField: int[] stary>"->"load.i i11";
+    "load.i i11"->"push 8";
+    "push 8"->"staticinvoke <java.lang.Math: double random()>";
+    "staticinvoke <java.lang.Math: double random()>"->"load.r r0";
+    "load.r r0"->"fieldget <StarField: java.awt.Dimension d>";
+    "fieldget <java.awt.Dimension: int height>"
+    "fieldget <StarField: java.awt.Dimension d>"->"fieldget <java.awt.Dimension: int height>";
+    "fieldget <java.awt.Dimension: int height>"->"i2d";
+    "i2d"->"mul.d";
+    "push 2.0"
+    "mul.d"->"push 2.0";
+    "push 2.0"->"mul.d";
+    "mul.d"->"load.r r0";
+    "load.r r0"->"fieldget <StarField: java.awt.Dimension d>";
+    "fieldget <StarField: java.awt.Dimension d>"->"fieldget <java.awt.Dimension: int height>";
+    "fieldget <java.awt.Dimension: int height>"->"push 2";
+    "push 2"->"div.i";
+    "div.i"->"i2d";
+    "i2d"->"sub.d";
+    "sub.d"->"d2i";
+    "d2i"->"mul.i";
+    "mul.i"->"arraywrite.i";
+    "arraywrite.i"->"load.r r0";
+    "fieldget <StarField: int[] starz>"
+    "load.r r0"->"fieldget <StarField: int[] starz>";
+    "fieldget <StarField: int[] starz>"->"load.i i11";
+    "load.i i11"->"load.i i11";
+    "load.i i11"->"push 2";
+    "add.i"
+    "push 2"->"add.i";
+    "add.i"->"arraywrite.i";
+    "inc.i i11 1"
+    "arraywrite.i"->"inc.i i11 1";
+}

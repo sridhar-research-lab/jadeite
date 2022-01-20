@@ -1,0 +1,294 @@
+digraph "" {
+    "r0 := @this: sunclock110"
+    "load.r r0"
+    "r0 := @this: sunclock110"->"load.r r0";
+    "new java.lang.StringBuffer"
+    "load.r r0"->"new java.lang.StringBuffer";
+    "dup1.r"
+    "new java.lang.StringBuffer"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "virtualinvoke <java.applet.Applet: java.net.URL getDocumentBase()>"
+    "load.r r0"->"virtualinvoke <java.applet.Applet: java.net.URL getDocumentBase()>";
+    "virtualinvoke <java.net.URL: java.lang.String toString()>"
+    "virtualinvoke <java.applet.Applet: java.net.URL getDocumentBase()>"->"virtualinvoke <java.net.URL: java.lang.String toString()>";
+    "staticinvoke <java.lang.String: java.lang.String valueOf(java.lang.Object)>"
+    "virtualinvoke <java.net.URL: java.lang.String toString()>"->"staticinvoke <java.lang.String: java.lang.String valueOf(java.lang.Object)>";
+    "specialinvoke <java.lang.StringBuffer: void <init>(java.lang.String)>"
+    "staticinvoke <java.lang.String: java.lang.String valueOf(java.lang.Object)>"->"specialinvoke <java.lang.StringBuffer: void <init>(java.lang.String)>";
+    "push \"1234567890123456789012345\""
+    "specialinvoke <java.lang.StringBuffer: void <init>(java.lang.String)>"->"push \"1234567890123456789012345\"";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"
+    "push \"1234567890123456789012345\""->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>"
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>";
+    "push 0"
+    "virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>"->"push 0";
+    "push 27"
+    "push 0"->"push 27";
+    "virtualinvoke <java.lang.String: java.lang.String substring(int,int)>"
+    "push 27"->"virtualinvoke <java.lang.String: java.lang.String substring(int,int)>";
+    "fieldput <sunclock110: java.lang.String wwwStr>"
+    "virtualinvoke <java.lang.String: java.lang.String substring(int,int)>"->"fieldput <sunclock110: java.lang.String wwwStr>";
+    "fieldput <sunclock110: java.lang.String wwwStr>"->"load.r r0";
+    "new java.util.Date"
+    "load.r r0"->"new java.util.Date";
+    "new java.util.Date"->"dup1.r";
+    "specialinvoke <java.util.Date: void <init>()>"
+    "dup1.r"->"specialinvoke <java.util.Date: void <init>()>";
+    "fieldput <sunclock110: java.util.Date dat>"
+    "specialinvoke <java.util.Date: void <init>()>"->"fieldput <sunclock110: java.util.Date dat>";
+    "fieldput <sunclock110: java.util.Date dat>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "push \"latitude\""
+    "load.r r0"->"push \"latitude\"";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"
+    "push \"latitude\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "fieldput <sunclock110: java.lang.String latStr>"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"fieldput <sunclock110: java.lang.String latStr>";
+    "fieldput <sunclock110: java.lang.String latStr>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "push \"longitude\""
+    "load.r r0"->"push \"longitude\"";
+    "push \"longitude\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "fieldput <sunclock110: java.lang.String longStr>"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"fieldput <sunclock110: java.lang.String longStr>";
+    "fieldput <sunclock110: java.lang.String longStr>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "fieldget <sunclock110: java.lang.String latStr>"
+    "load.r r0"->"fieldget <sunclock110: java.lang.String latStr>";
+    "staticinvoke <java.lang.Double: java.lang.Double valueOf(java.lang.String)>"
+    "fieldget <sunclock110: java.lang.String latStr>"->"staticinvoke <java.lang.Double: java.lang.Double valueOf(java.lang.String)>";
+    "virtualinvoke <java.lang.Double: double doubleValue()>"
+    "staticinvoke <java.lang.Double: java.lang.Double valueOf(java.lang.String)>"->"virtualinvoke <java.lang.Double: double doubleValue()>";
+    "fieldput <sunclock110: double latitude>"
+    "virtualinvoke <java.lang.Double: double doubleValue()>"->"fieldput <sunclock110: double latitude>";
+    "fieldput <sunclock110: double latitude>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "fieldget <sunclock110: java.lang.String longStr>"
+    "load.r r0"->"fieldget <sunclock110: java.lang.String longStr>";
+    "fieldget <sunclock110: java.lang.String longStr>"->"staticinvoke <java.lang.Double: java.lang.Double valueOf(java.lang.String)>";
+    "staticinvoke <java.lang.Double: java.lang.Double valueOf(java.lang.String)>"->"virtualinvoke <java.lang.Double: double doubleValue()>";
+    "fieldput <sunclock110: double longitude>"
+    "virtualinvoke <java.lang.Double: double doubleValue()>"->"fieldput <sunclock110: double longitude>";
+    "fieldput <sunclock110: double longitude>"->"load.r r0";
+    "staticget <java.awt.Color: java.awt.Color white>"
+    "load.r r0"->"staticget <java.awt.Color: java.awt.Color white>";
+    "virtualinvoke <java.awt.Component: void setBackground(java.awt.Color)>"
+    "staticget <java.awt.Color: java.awt.Color white>"->"virtualinvoke <java.awt.Component: void setBackground(java.awt.Color)>";
+    "virtualinvoke <java.awt.Component: void setBackground(java.awt.Color)>"->"load.r r0";
+    "new compute"
+    "load.r r0"->"new compute";
+    "new compute"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "fieldget <sunclock110: java.util.Date dat>"
+    "load.r r0"->"fieldget <sunclock110: java.util.Date dat>";
+    "fieldget <sunclock110: java.util.Date dat>"->"load.r r0";
+    "fieldget <sunclock110: double latitude>"
+    "load.r r0"->"fieldget <sunclock110: double latitude>";
+    "fieldget <sunclock110: double latitude>"->"load.r r0";
+    "fieldget <sunclock110: double longitude>"
+    "load.r r0"->"fieldget <sunclock110: double longitude>";
+    "specialinvoke <compute: void <init>(java.util.Date,double,double)>"
+    "fieldget <sunclock110: double longitude>"->"specialinvoke <compute: void <init>(java.util.Date,double,double)>";
+    "fieldput <sunclock110: compute comp>"
+    "specialinvoke <compute: void <init>(java.util.Date,double,double)>"->"fieldput <sunclock110: compute comp>";
+    "fieldput <sunclock110: compute comp>"->"load.r r0";
+    "new java.awt.Label"
+    "load.r r0"->"new java.awt.Label";
+    "new java.awt.Label"->"dup1.r";
+    "push \"Lat. =\""
+    "dup1.r"->"push \"Lat. =\"";
+    "specialinvoke <java.awt.Label: void <init>(java.lang.String)>"
+    "push \"Lat. =\""->"specialinvoke <java.awt.Label: void <init>(java.lang.String)>";
+    "fieldput <sunclock110: java.awt.Label latLabel>"
+    "specialinvoke <java.awt.Label: void <init>(java.lang.String)>"->"fieldput <sunclock110: java.awt.Label latLabel>";
+    "fieldput <sunclock110: java.awt.Label latLabel>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "fieldget <sunclock110: java.awt.Label latLabel>"
+    "load.r r0"->"fieldget <sunclock110: java.awt.Label latLabel>";
+    "virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>"
+    "fieldget <sunclock110: java.awt.Label latLabel>"->"virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>";
+    "pop"
+    "virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>"->"pop";
+    "pop"->"load.r r0";
+    "new java.awt.TextField"
+    "load.r r0"->"new java.awt.TextField";
+    "new java.awt.TextField"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "load.r r0"->"fieldget <sunclock110: java.lang.String latStr>";
+    "push 6"
+    "fieldget <sunclock110: java.lang.String latStr>"->"push 6";
+    "specialinvoke <java.awt.TextField: void <init>(java.lang.String,int)>"
+    "push 6"->"specialinvoke <java.awt.TextField: void <init>(java.lang.String,int)>";
+    "fieldput <sunclock110: java.awt.TextField latField>"
+    "specialinvoke <java.awt.TextField: void <init>(java.lang.String,int)>"->"fieldput <sunclock110: java.awt.TextField latField>";
+    "fieldput <sunclock110: java.awt.TextField latField>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "fieldget <sunclock110: java.awt.TextField latField>"
+    "load.r r0"->"fieldget <sunclock110: java.awt.TextField latField>";
+    "fieldget <sunclock110: java.awt.TextField latField>"->"virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>";
+    "virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>"->"pop";
+    "pop"->"load.r r0";
+    "load.r r0"->"new java.awt.Label";
+    "new java.awt.Label"->"dup1.r";
+    "push \" Long.=\""
+    "dup1.r"->"push \" Long.=\"";
+    "push \" Long.=\""->"specialinvoke <java.awt.Label: void <init>(java.lang.String)>";
+    "fieldput <sunclock110: java.awt.Label longLabel>"
+    "specialinvoke <java.awt.Label: void <init>(java.lang.String)>"->"fieldput <sunclock110: java.awt.Label longLabel>";
+    "fieldput <sunclock110: java.awt.Label longLabel>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "fieldget <sunclock110: java.awt.Label longLabel>"
+    "load.r r0"->"fieldget <sunclock110: java.awt.Label longLabel>";
+    "fieldget <sunclock110: java.awt.Label longLabel>"->"virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>";
+    "virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>"->"pop";
+    "pop"->"load.r r0";
+    "load.r r0"->"new java.awt.TextField";
+    "new java.awt.TextField"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "load.r r0"->"fieldget <sunclock110: java.lang.String longStr>";
+    "fieldget <sunclock110: java.lang.String longStr>"->"push 6";
+    "push 6"->"specialinvoke <java.awt.TextField: void <init>(java.lang.String,int)>";
+    "fieldput <sunclock110: java.awt.TextField longField>"
+    "specialinvoke <java.awt.TextField: void <init>(java.lang.String,int)>"->"fieldput <sunclock110: java.awt.TextField longField>";
+    "fieldput <sunclock110: java.awt.TextField longField>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "fieldget <sunclock110: java.awt.TextField longField>"
+    "load.r r0"->"fieldget <sunclock110: java.awt.TextField longField>";
+    "fieldget <sunclock110: java.awt.TextField longField>"->"virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>";
+    "virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>"->"pop";
+    "pop"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "push \"email\""
+    "load.r r0"->"push \"email\"";
+    "push \"email\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "fieldput <sunclock110: java.lang.String email>"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"fieldput <sunclock110: java.lang.String email>";
+    "fieldput <sunclock110: java.lang.String email>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "push \"password\""
+    "load.r r0"->"push \"password\"";
+    "push \"password\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "fieldput <sunclock110: java.lang.String param>"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"fieldput <sunclock110: java.lang.String param>";
+    "fieldput <sunclock110: java.lang.String param>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "fieldget <sunclock110: java.lang.String wwwStr>"
+    "load.r r0"->"fieldget <sunclock110: java.lang.String wwwStr>";
+    "push 21"
+    "fieldget <sunclock110: java.lang.String wwwStr>"->"push 21";
+    "virtualinvoke <sunclock110: int formula(java.lang.String,int)>"
+    "push 21"->"virtualinvoke <sunclock110: int formula(java.lang.String,int)>";
+    "virtualinvoke <sunclock110: int formula(java.lang.String,int)>"->"load.r r0";
+    "push \"http://www.jgiesen.de\""
+    "load.r r0"->"push \"http://www.jgiesen.de\"";
+    "push \"http://www.jgiesen.de\""->"push 21";
+    "push 21"->"virtualinvoke <sunclock110: int formula(java.lang.String,int)>";
+    "ifcmpeq.i load.r r0"
+    "virtualinvoke <sunclock110: int formula(java.lang.String,int)>"->"ifcmpeq.i load.r r0";
+    "ifcmpeq.i load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <sunclock110: java.lang.String wwwStr>";
+    "push 22"
+    "fieldget <sunclock110: java.lang.String wwwStr>"->"push 22";
+    "push 22"->"virtualinvoke <sunclock110: int formula(java.lang.String,int)>";
+    "virtualinvoke <sunclock110: int formula(java.lang.String,int)>"->"load.r r0";
+    "push \"http://www.GeoAstro.de\""
+    "load.r r0"->"push \"http://www.GeoAstro.de\"";
+    "push \"http://www.GeoAstro.de\""->"push 22";
+    "push 22"->"virtualinvoke <sunclock110: int formula(java.lang.String,int)>";
+    "ifcmpne.i load.r r0"
+    "virtualinvoke <sunclock110: int formula(java.lang.String,int)>"->"ifcmpne.i load.r r0";
+    "ifcmpne.i load.r r0"->"load.r r0";
+    "push 1"
+    "load.r r0"->"push 1";
+    "fieldput <sunclock110: boolean ok>"
+    "push 1"->"fieldput <sunclock110: boolean ok>";
+    "fieldput <sunclock110: boolean ok>"->"load.r r0";
+    "load.r r0"->"push 0";
+    "fieldput <sunclock110: boolean demo>"
+    "push 0"->"fieldput <sunclock110: boolean demo>";
+    "goto load.r r0"
+    "fieldput <sunclock110: boolean demo>"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "fieldget <sunclock110: boolean ok>"
+    "load.r r0"->"fieldget <sunclock110: boolean ok>";
+    "ifne load.r r0"
+    "fieldget <sunclock110: boolean ok>"->"ifne load.r r0";
+    "ifne load.r r0"->"load.r r0";
+    "load.r r0"->"push 1";
+    "push 1"->"fieldput <sunclock110: boolean ok>";
+    "fieldput <sunclock110: boolean ok>"->"load.r r0";
+    "fieldget <sunclock110: java.lang.String email>"
+    "load.r r0"->"fieldget <sunclock110: java.lang.String email>";
+    "virtualinvoke <java.lang.String: int length()>"
+    "fieldget <sunclock110: java.lang.String email>"->"virtualinvoke <java.lang.String: int length()>";
+    "ifeq load.r r0"
+    "virtualinvoke <java.lang.String: int length()>"->"ifeq load.r r0";
+    "ifeq load.r r0"->"load.r r0";
+    "fieldget <sunclock110: java.lang.String param>"
+    "load.r r0"->"fieldget <sunclock110: java.lang.String param>";
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"
+    "fieldget <sunclock110: java.lang.String param>"->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>";
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <sunclock110: java.lang.String email>";
+    "fieldget <sunclock110: java.lang.String email>"->"load.r r0";
+    "load.r r0"->"fieldget <sunclock110: java.lang.String email>";
+    "fieldget <sunclock110: java.lang.String email>"->"virtualinvoke <java.lang.String: int length()>";
+    "virtualinvoke <java.lang.String: int length()>"->"virtualinvoke <sunclock110: int formula(java.lang.String,int)>";
+    "virtualinvoke <sunclock110: int formula(java.lang.String,int)>"->"ifcmpeq.i load.r r0";
+    "ifcmpeq.i load.r r0"->"load.r r0";
+    "load.r r0"->"push 0";
+    "push 0"->"fieldput <sunclock110: boolean ok>";
+    "fieldput <sunclock110: boolean ok>"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <sunclock110: java.lang.String wwwStr>";
+    "fieldget <sunclock110: java.lang.String wwwStr>"->"push 0";
+    "push 7"
+    "push 0"->"push 7";
+    "push 7"->"virtualinvoke <java.lang.String: java.lang.String substring(int,int)>";
+    "push \"http://\""
+    "virtualinvoke <java.lang.String: java.lang.String substring(int,int)>"->"push \"http://\"";
+    "virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>"
+    "push \"http://\""->"virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>";
+    "virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>"->"ifeq load.r r0";
+    "ifeq load.r r0"->"load.r r0";
+    "load.r r0"->"push 0";
+    "push 0"->"fieldput <sunclock110: boolean ok>";
+    "fieldput <sunclock110: boolean ok>"->"load.r r0";
+    "load.r r0"->"push 1";
+    "push 1"->"fieldput <sunclock110: boolean demo>";
+    "fieldput <sunclock110: boolean demo>"->"load.r r0";
+    "fieldget <sunclock110: boolean demo>"
+    "load.r r0"->"fieldget <sunclock110: boolean demo>";
+    "fieldget <sunclock110: boolean demo>"->"ifeq load.r r0";
+    "ifeq load.r r0"->"load.r r0";
+    "load.r r0"->"new java.lang.StringBuffer";
+    "new java.lang.StringBuffer"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "fieldget <sunclock110: java.lang.String versStr>"
+    "load.r r0"->"fieldget <sunclock110: java.lang.String versStr>";
+    "fieldget <sunclock110: java.lang.String versStr>"->"staticinvoke <java.lang.String: java.lang.String valueOf(java.lang.Object)>";
+    "staticinvoke <java.lang.String: java.lang.String valueOf(java.lang.Object)>"->"specialinvoke <java.lang.StringBuffer: void <init>(java.lang.String)>";
+    "push \" DEMO\""
+    "specialinvoke <java.lang.StringBuffer: void <init>(java.lang.String)>"->"push \" DEMO\"";
+    "push \" DEMO\""->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>";
+    "fieldput <sunclock110: java.lang.String versStr>"
+    "virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>"->"fieldput <sunclock110: java.lang.String versStr>";
+    "fieldput <sunclock110: java.lang.String versStr>"->"load.r r0";
+    "virtualinvoke <java.awt.Component: void repaint()>"
+    "load.r r0"->"virtualinvoke <java.awt.Component: void repaint()>";
+    "return"
+    "virtualinvoke <java.awt.Component: void repaint()>"->"return";
+    "ifcmpeq.i load.r r0"->"load.r r0";
+    "load.r r0"->"push 1";
+    "push 1"->"fieldput <sunclock110: boolean ok>";
+    "fieldput <sunclock110: boolean ok>"->"load.r r0";
+    "load.r r0"->"push 0";
+    "push 0"->"fieldput <sunclock110: boolean demo>";
+    "ifcmpne.i load.r r0"->"load.r r0";
+    "load.r r0"->"push 0";
+    "push 0"->"fieldput <sunclock110: boolean ok>";
+}

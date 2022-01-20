@@ -1,0 +1,39 @@
+digraph "" {
+    "r0 := @this: JNote"
+    "new JavaGUI"
+    "r0 := @this: JNote"->"new JavaGUI";
+    "store.r r0"
+    "new JavaGUI"->"store.r r0";
+    "load.r r0"
+    "store.r r0"->"load.r r0";
+    "push \"Java NoteBook\""
+    "load.r r0"->"push \"Java NoteBook\"";
+    "specialinvoke <JavaGUI: void <init>(java.lang.String)>"
+    "push \"Java NoteBook\""->"specialinvoke <JavaGUI: void <init>(java.lang.String)>";
+    "specialinvoke <JavaGUI: void <init>(java.lang.String)>"->"load.r r0";
+    "virtualinvoke <java.awt.Window: void pack()>"
+    "load.r r0"->"virtualinvoke <java.awt.Window: void pack()>";
+    "virtualinvoke <java.awt.Window: void pack()>"->"load.r r0";
+    "push 640"
+    "load.r r0"->"push 640";
+    "push 480"
+    "push 640"->"push 480";
+    "virtualinvoke <java.awt.Component: void resize(int,int)>"
+    "push 480"->"virtualinvoke <java.awt.Component: void resize(int,int)>";
+    "virtualinvoke <java.awt.Component: void resize(int,int)>"->"load.r r0";
+    "push 0"
+    "load.r r0"->"push 0";
+    "push 30"
+    "push 0"->"push 30";
+    "virtualinvoke <java.awt.Component: void setLocation(int,int)>"
+    "push 30"->"virtualinvoke <java.awt.Component: void setLocation(int,int)>";
+    "virtualinvoke <java.awt.Component: void setLocation(int,int)>"->"load.r r0";
+    "load.r r0"->"push 0";
+    "virtualinvoke <java.awt.Frame: void setResizable(boolean)>"
+    "push 0"->"virtualinvoke <java.awt.Frame: void setResizable(boolean)>";
+    "virtualinvoke <java.awt.Frame: void setResizable(boolean)>"->"load.r r0";
+    "virtualinvoke <java.awt.Window: void show()>"
+    "load.r r0"->"virtualinvoke <java.awt.Window: void show()>";
+    "return"
+    "virtualinvoke <java.awt.Window: void show()>"->"return";
+}

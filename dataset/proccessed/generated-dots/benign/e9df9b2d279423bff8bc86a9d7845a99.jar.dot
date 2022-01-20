@@ -1,0 +1,44 @@
+digraph "" {
+    "r0 := @this: chkStockID"
+    "load.r r0"
+    "r0 := @this: chkStockID"->"load.r r0";
+    "push \"BGCOLOR\""
+    "load.r r0"->"push \"BGCOLOR\"";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"
+    "push \"BGCOLOR\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "ifnonnull load.r r0"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"ifnonnull load.r r0";
+    "ifnonnull load.r r0"->"load.r r0";
+    "new java.awt.Color"
+    "load.r r0"->"new java.awt.Color";
+    "dup1.r"
+    "new java.awt.Color"->"dup1.r";
+    "push 14806004"
+    "dup1.r"->"push 14806004";
+    "specialinvoke <java.awt.Color: void <init>(int)>"
+    "push 14806004"->"specialinvoke <java.awt.Color: void <init>(int)>";
+    "fieldput <chkStockID: java.awt.Color BGColor>"
+    "specialinvoke <java.awt.Color: void <init>(int)>"->"fieldput <chkStockID: java.awt.Color BGColor>";
+    "goto load.r r0"
+    "fieldput <chkStockID: java.awt.Color BGColor>"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "specialinvoke <chkStockID: void inId()>"
+    "load.r r0"->"specialinvoke <chkStockID: void inId()>";
+    "specialinvoke <chkStockID: void inId()>"->"load.r r0";
+    "specialinvoke <chkStockID: void notifyLoaded()>"
+    "load.r r0"->"specialinvoke <chkStockID: void notifyLoaded()>";
+    "return"
+    "specialinvoke <chkStockID: void notifyLoaded()>"->"return";
+    "ifnonnull load.r r0"->"load.r r0";
+    "load.r r0"->"new java.awt.Color";
+    "new java.awt.Color"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "load.r r0"->"push \"BGCOLOR\"";
+    "push \"BGCOLOR\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "push 16"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"push 16";
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String,int)>"
+    "push 16"->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String,int)>";
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String,int)>"->"specialinvoke <java.awt.Color: void <init>(int)>";
+    "specialinvoke <java.awt.Color: void <init>(int)>"->"fieldput <chkStockID: java.awt.Color BGColor>";
+}

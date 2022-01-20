@@ -1,0 +1,64 @@
+digraph "" {
+    "r0 := @this: Sitemapper"
+    "load.r r0"
+    "r0 := @this: Sitemapper"->"load.r r0";
+    "specialinvoke <java.applet.Applet: void init()>"
+    "load.r r0"->"specialinvoke <java.applet.Applet: void init()>";
+    "specialinvoke <java.applet.Applet: void init()>"->"load.r r0";
+    "new java.lang.String"
+    "load.r r0"->"new java.lang.String";
+    "dup1.r"
+    "new java.lang.String"->"dup1.r";
+    "push \"SiteMapper\""
+    "dup1.r"->"push \"SiteMapper\"";
+    "staticget <java.util.Locale: java.util.Locale GERMAN>"
+    "push \"SiteMapper\""->"staticget <java.util.Locale: java.util.Locale GERMAN>";
+    "staticinvoke <java.util.ResourceBundle: java.util.ResourceBundle getBundle(java.lang.String,java.util.Locale)>"
+    "staticget <java.util.Locale: java.util.Locale GERMAN>"->"staticinvoke <java.util.ResourceBundle: java.util.ResourceBundle getBundle(java.lang.String,java.util.Locale)>";
+    "push \"Error_showing_url\""
+    "staticinvoke <java.util.ResourceBundle: java.util.ResourceBundle getBundle(java.lang.String,java.util.Locale)>"->"push \"Error_showing_url\"";
+    "virtualinvoke <java.util.ResourceBundle: java.lang.String getString(java.lang.String)>"
+    "push \"Error_showing_url\""->"virtualinvoke <java.util.ResourceBundle: java.lang.String getString(java.lang.String)>";
+    "specialinvoke <java.lang.String: void <init>(java.lang.String)>"
+    "virtualinvoke <java.util.ResourceBundle: java.lang.String getString(java.lang.String)>"->"specialinvoke <java.lang.String: void <init>(java.lang.String)>";
+    "fieldput <Sitemapper: java.lang.String STRING_Error_showing_url>"
+    "specialinvoke <java.lang.String: void <init>(java.lang.String)>"->"fieldput <Sitemapper: java.lang.String STRING_Error_showing_url>";
+    "fieldput <Sitemapper: java.lang.String STRING_Error_showing_url>"->"load.r r0";
+    "load.r r0"->"new java.lang.String";
+    "new java.lang.String"->"dup1.r";
+    "dup1.r"->"push \"SiteMapper\"";
+    "push \"SiteMapper\""->"staticget <java.util.Locale: java.util.Locale GERMAN>";
+    "staticget <java.util.Locale: java.util.Locale GERMAN>"->"staticinvoke <java.util.ResourceBundle: java.util.ResourceBundle getBundle(java.lang.String,java.util.Locale)>";
+    "push \"No_text_file\""
+    "staticinvoke <java.util.ResourceBundle: java.util.ResourceBundle getBundle(java.lang.String,java.util.Locale)>"->"push \"No_text_file\"";
+    "push \"No_text_file\""->"virtualinvoke <java.util.ResourceBundle: java.lang.String getString(java.lang.String)>";
+    "virtualinvoke <java.util.ResourceBundle: java.lang.String getString(java.lang.String)>"->"specialinvoke <java.lang.String: void <init>(java.lang.String)>";
+    "fieldput <Sitemapper: java.lang.String STRING_No_text_file>"
+    "specialinvoke <java.lang.String: void <init>(java.lang.String)>"->"fieldput <Sitemapper: java.lang.String STRING_No_text_file>";
+    "fieldput <Sitemapper: java.lang.String STRING_No_text_file>"->"load.r r0";
+    "staticget <java.awt.Color: java.awt.Color white>"
+    "load.r r0"->"staticget <java.awt.Color: java.awt.Color white>";
+    "virtualinvoke <java.awt.Component: void setBackground(java.awt.Color)>"
+    "staticget <java.awt.Color: java.awt.Color white>"->"virtualinvoke <java.awt.Component: void setBackground(java.awt.Color)>";
+    "virtualinvoke <java.awt.Component: void setBackground(java.awt.Color)>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "push \"source_file\""
+    "load.r r0"->"push \"source_file\"";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"
+    "push \"source_file\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <Sitemapper: void load_site_info(java.lang.String)>"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"virtualinvoke <Sitemapper: void load_site_info(java.lang.String)>";
+    "virtualinvoke <Sitemapper: void load_site_info(java.lang.String)>"->"load.r r0";
+    "virtualinvoke <Sitemapper: void setup_components()>"
+    "load.r r0"->"virtualinvoke <Sitemapper: void setup_components()>";
+    "virtualinvoke <Sitemapper: void setup_components()>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "fieldget <Sitemapper: button_panel view_buttons>"
+    "load.r r0"->"fieldget <Sitemapper: button_panel view_buttons>";
+    "fieldget <button_panel: int view>"
+    "fieldget <Sitemapper: button_panel view_buttons>"->"fieldget <button_panel: int view>";
+    "virtualinvoke <Sitemapper: void display_view(int)>"
+    "fieldget <button_panel: int view>"->"virtualinvoke <Sitemapper: void display_view(int)>";
+    "return"
+    "virtualinvoke <Sitemapper: void display_view(int)>"->"return";
+}

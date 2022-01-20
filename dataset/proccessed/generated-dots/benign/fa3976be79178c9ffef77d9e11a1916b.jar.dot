@@ -1,0 +1,18 @@
+digraph "" {
+    "r0 := @this: jlog.jim.ViewerApplet"
+    "load.r r0"
+    "r0 := @this: jlog.jim.ViewerApplet"->"load.r r0";
+    "virtualinvoke <jlog.jim.ViewerApplet: void $QQC()>"
+    "load.r r0"->"virtualinvoke <jlog.jim.ViewerApplet: void $QQC()>";
+    "goto return"
+    "virtualinvoke <jlog.jim.ViewerApplet: void $QQC()>"->"goto return";
+    "return"
+    "goto return"->"return";
+    "store.r $r2"
+    "virtualinvoke <jlog.jim.ViewerApplet: void $QQC()>"->"store.r $r2";
+    "store.r $r2"->"load.r r0";
+    "load.r $r2"
+    "load.r r0"->"load.r $r2";
+    "virtualinvoke <jlog.jim.ViewerApplet: void $RQC(java.lang.Throwable)>"
+    "load.r $r2"->"virtualinvoke <jlog.jim.ViewerApplet: void $RQC(java.lang.Throwable)>";
+}

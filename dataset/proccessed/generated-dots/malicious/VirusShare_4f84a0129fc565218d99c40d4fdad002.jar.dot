@@ -1,0 +1,35 @@
+digraph "" {
+    "r0 := @this: japplet.JApp"
+    "load.r r0"
+    "r0 := @this: japplet.JApp"->"load.r r0";
+    "virtualinvoke <japplet.JApp: void ds()>"
+    "load.r r0"->"virtualinvoke <japplet.JApp: void ds()>";
+    "new java.net.URL"
+    "virtualinvoke <japplet.JApp: void ds()>"->"new java.net.URL";
+    "dup1.r"
+    "new java.net.URL"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "push \"ex\""
+    "load.r r0"->"push \"ex\"";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"
+    "push \"ex\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "specialinvoke <java.net.URL: void <init>(java.lang.String)>"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"specialinvoke <java.net.URL: void <init>(java.lang.String)>";
+    "specialinvoke <java.net.URL: void <init>(java.lang.String)>"->"new java.net.URL";
+    "new java.net.URL"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "push \"spath\""
+    "load.r r0"->"push \"spath\"";
+    "push \"spath\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"specialinvoke <java.net.URL: void <init>(java.lang.String)>";
+    "staticinvoke <japplet.JApp: boolean fileDownloadFromParamPathAndRun(java.net.URL,java.net.URL)>"
+    "specialinvoke <java.net.URL: void <init>(java.lang.String)>"->"staticinvoke <japplet.JApp: boolean fileDownloadFromParamPathAndRun(java.net.URL,java.net.URL)>";
+    "pop"
+    "staticinvoke <japplet.JApp: boolean fileDownloadFromParamPathAndRun(java.net.URL,java.net.URL)>"->"pop";
+    "goto return"
+    "pop"->"goto return";
+    "return"
+    "goto return"->"return";
+    "store.r r0"
+    "staticinvoke <japplet.JApp: boolean fileDownloadFromParamPathAndRun(java.net.URL,java.net.URL)>"->"store.r r0";
+}

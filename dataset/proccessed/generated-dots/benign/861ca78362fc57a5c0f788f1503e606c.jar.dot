@@ -1,0 +1,184 @@
+digraph "" {
+    "r0 := @this: coolbanner"
+    "load.r r0"
+    "r0 := @this: coolbanner"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "fieldget <coolbanner: int iw>"
+    "load.r r0"->"fieldget <coolbanner: int iw>";
+    "fieldget <coolbanner: int iw>"->"load.r r0";
+    "fieldget <coolbanner: int ih>"
+    "load.r r0"->"fieldget <coolbanner: int ih>";
+    "virtualinvoke <java.awt.Component: java.awt.Image createImage(int,int)>"
+    "fieldget <coolbanner: int ih>"->"virtualinvoke <java.awt.Component: java.awt.Image createImage(int,int)>";
+    "fieldput <coolbanner: java.awt.Image Buf>"
+    "virtualinvoke <java.awt.Component: java.awt.Image createImage(int,int)>"->"fieldput <coolbanner: java.awt.Image Buf>";
+    "fieldput <coolbanner: java.awt.Image Buf>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "fieldget <coolbanner: java.awt.Image Buf>"
+    "load.r r0"->"fieldget <coolbanner: java.awt.Image Buf>";
+    "virtualinvoke <java.awt.Image: java.awt.Graphics getGraphics()>"
+    "fieldget <coolbanner: java.awt.Image Buf>"->"virtualinvoke <java.awt.Image: java.awt.Graphics getGraphics()>";
+    "fieldput <coolbanner: java.awt.Graphics Bufg>"
+    "virtualinvoke <java.awt.Image: java.awt.Graphics getGraphics()>"->"fieldput <coolbanner: java.awt.Graphics Bufg>";
+    "fieldput <coolbanner: java.awt.Graphics Bufg>"->"load.r r0";
+    "push \"img1\""
+    "load.r r0"->"push \"img1\"";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"
+    "push \"img1\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "store.r r1"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"store.r r1";
+    "store.r r1"->"load.r r0";
+    "push \"link1\""
+    "load.r r0"->"push \"link1\"";
+    "push \"link1\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "store.r r2"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"store.r r2";
+    "load.r r1"
+    "store.r r2"->"load.r r1";
+    "ifnull load.r r0"
+    "load.r r1"->"ifnull load.r r0";
+    "new coolbanner$imageInfo"
+    "ifnull load.r r0"->"new coolbanner$imageInfo";
+    "dup1.r"
+    "new coolbanner$imageInfo"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r1";
+    "push 0"
+    "load.r r1"->"push 0";
+    "virtualinvoke <coolbanner: java.awt.Image loadImage(java.lang.String,int)>"
+    "push 0"->"virtualinvoke <coolbanner: java.awt.Image loadImage(java.lang.String,int)>";
+    "load.r r2"
+    "virtualinvoke <coolbanner: java.awt.Image loadImage(java.lang.String,int)>"->"load.r r2";
+    "specialinvoke <coolbanner$imageInfo: void <init>(coolbanner,java.awt.Image,java.lang.String)>"
+    "load.r r2"->"specialinvoke <coolbanner$imageInfo: void <init>(coolbanner,java.awt.Image,java.lang.String)>";
+    "fieldget <coolbanner$imageInfo: java.awt.Image Img>"
+    "specialinvoke <coolbanner$imageInfo: void <init>(coolbanner,java.awt.Image,java.lang.String)>"->"fieldget <coolbanner$imageInfo: java.awt.Image Img>";
+    "fieldget <coolbanner$imageInfo: java.awt.Image Img>"->"store.r r1";
+    "store.r r1"->"load.r r0";
+    "fieldget <coolbanner: java.awt.Graphics Bufg>"
+    "load.r r0"->"fieldget <coolbanner: java.awt.Graphics Bufg>";
+    "fieldget <coolbanner: java.awt.Graphics Bufg>"->"load.r r1";
+    "load.r r1"->"push 0";
+    "push 0"->"push 0";
+    "push 0"->"load.r r0";
+    "virtualinvoke <java.awt.Graphics: boolean drawImage(java.awt.Image,int,int,java.awt.image.ImageObserver)>"
+    "load.r r0"->"virtualinvoke <java.awt.Graphics: boolean drawImage(java.awt.Image,int,int,java.awt.image.ImageObserver)>";
+    "pop"
+    "virtualinvoke <java.awt.Graphics: boolean drawImage(java.awt.Image,int,int,java.awt.image.ImageObserver)>"->"pop";
+    "pop"->"load.r r0";
+    "new java.util.Vector"
+    "load.r r0"->"new java.util.Vector";
+    "new java.util.Vector"->"dup1.r";
+    "specialinvoke <java.util.Vector: void <init>()>"
+    "dup1.r"->"specialinvoke <java.util.Vector: void <init>()>";
+    "fieldput <coolbanner: java.util.Vector imgVector>"
+    "specialinvoke <java.util.Vector: void <init>()>"->"fieldput <coolbanner: java.util.Vector imgVector>";
+    "fieldput <coolbanner: java.util.Vector imgVector>"->"load.r r0";
+    "push 6"
+    "load.r r0"->"push 6";
+    "newarray"
+    "push 6"->"newarray";
+    "fieldput <coolbanner: int[] effectsArray>"
+    "newarray"->"fieldput <coolbanner: int[] effectsArray>";
+    "push 1"
+    "fieldput <coolbanner: int[] effectsArray>"->"push 1";
+    "staticget <coolbanner: int wipeBits>"
+    "push 1"->"staticget <coolbanner: int wipeBits>";
+    "shl.i"
+    "staticget <coolbanner: int wipeBits>"->"shl.i";
+    "staticput <coolbanner: int wipeFactor>"
+    "shl.i"->"staticput <coolbanner: int wipeFactor>";
+    "push 8"
+    "staticput <coolbanner: int wipeFactor>"->"push 8";
+    "push 8"->"staticget <coolbanner: int wipeBits>";
+    "sub.i"
+    "staticget <coolbanner: int wipeBits>"->"sub.i";
+    "staticput <coolbanner: int wipeBits>"
+    "sub.i"->"staticput <coolbanner: int wipeBits>";
+    "staticput <coolbanner: int wipeBits>"->"load.r r0";
+    "push 256"
+    "load.r r0"->"push 256";
+    "newmultiarray 1"
+    "push 256"->"newmultiarray 1";
+    "fieldput <coolbanner: int[][] data>"
+    "newmultiarray 1"->"fieldput <coolbanner: int[][] data>";
+    "fieldput <coolbanner: int[][] data>"->"push 0";
+    "store.i r1"
+    "push 0"->"store.i r1";
+    "goto load.i r1"
+    "store.i r1"->"goto load.i r1";
+    "load.i r1"
+    "goto load.i r1"->"load.i r1";
+    "load.i r1"->"push 256";
+    "ifcmplt.i load.r r0"
+    "push 256"->"ifcmplt.i load.r r0";
+    "ifcmplt.i load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <coolbanner: int iw>";
+    "fieldget <coolbanner: int iw>"->"load.r r0";
+    "load.r r0"->"fieldget <coolbanner: int ih>";
+    "mul.i"
+    "fieldget <coolbanner: int ih>"->"mul.i";
+    "mul.i"->"newarray";
+    "fieldput <coolbanner: int[] transdata>"
+    "newarray"->"fieldput <coolbanner: int[] transdata>";
+    "fieldput <coolbanner: int[] transdata>"->"load.r r0";
+    "virtualinvoke <coolbanner: void getParameters()>"
+    "load.r r0"->"virtualinvoke <coolbanner: void getParameters()>";
+    "virtualinvoke <coolbanner: void getParameters()>"->"load.r r0";
+    "virtualinvoke <coolbanner: void getFiles()>"
+    "load.r r0"->"virtualinvoke <coolbanner: void getFiles()>";
+    "virtualinvoke <coolbanner: void getFiles()>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "fieldget <coolbanner: java.util.Vector imgVector>"
+    "load.r r0"->"fieldget <coolbanner: java.util.Vector imgVector>";
+    "virtualinvoke <java.util.Vector: int size()>"
+    "fieldget <coolbanner: java.util.Vector imgVector>"->"virtualinvoke <java.util.Vector: int size()>";
+    "virtualinvoke <java.util.Vector: int size()>"->"push 1";
+    "add.i"
+    "push 1"->"add.i";
+    "add.i"->"load.r r0";
+    "load.r r0"->"fieldget <coolbanner: int iw>";
+    "fieldget <coolbanner: int iw>"->"load.r r0";
+    "load.r r0"->"fieldget <coolbanner: int ih>";
+    "fieldget <coolbanner: int ih>"->"mul.i";
+    "newmultiarray 2"
+    "mul.i"->"newmultiarray 2";
+    "fieldput <coolbanner: int[][] convArray>"
+    "newmultiarray 2"->"fieldput <coolbanner: int[][] convArray>";
+    "fieldput <coolbanner: int[][] convArray>"->"push 0";
+    "push 0"->"store.i r1";
+    "store.i r1"->"goto load.i r1";
+    "goto load.i r1"->"load.i r1";
+    "load.i r1"->"push 6";
+    "push 6"->"ifcmplt.i load.r r0";
+    "ifcmplt.i load.r r0"->"load.r r0";
+    "load.r r0"->"push 0";
+    "fieldput <coolbanner: int effectCount>"
+    "push 0"->"fieldput <coolbanner: int effectCount>";
+    "fieldput <coolbanner: int effectCount>"->"load.r r0";
+    "virtualinvoke <coolbanner: void getNewEffect()>"
+    "load.r r0"->"virtualinvoke <coolbanner: void getNewEffect()>";
+    "return"
+    "virtualinvoke <coolbanner: void getNewEffect()>"->"return";
+    "ifcmplt.i load.r r0"->"load.r r0";
+    "fieldget <coolbanner: int[] effectsArray>"
+    "load.r r0"->"fieldget <coolbanner: int[] effectsArray>";
+    "fieldget <coolbanner: int[] effectsArray>"->"load.i r1";
+    "load.i r1"->"push 0";
+    "arraywrite.i"
+    "push 0"->"arraywrite.i";
+    "inc.i r1 1"
+    "arraywrite.i"->"inc.i r1 1";
+    "ifcmplt.i load.r r0"->"load.r r0";
+    "fieldget <coolbanner: int[][] data>"
+    "load.r r0"->"fieldget <coolbanner: int[][] data>";
+    "fieldget <coolbanner: int[][] data>"->"load.i r1";
+    "push null"
+    "load.i r1"->"push null";
+    "arraywrite.r"
+    "push null"->"arraywrite.r";
+    "arraywrite.r"->"inc.i r1 1";
+}

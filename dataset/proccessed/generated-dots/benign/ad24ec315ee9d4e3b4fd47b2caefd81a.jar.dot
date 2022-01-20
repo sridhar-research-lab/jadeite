@@ -1,0 +1,69 @@
+digraph "" {
+    "r0 := @this: particleTree"
+    "load.r r0"
+    "r0 := @this: particleTree"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "fieldget <particleTree: int width>"
+    "load.r r0"->"fieldget <particleTree: int width>";
+    "fieldget <particleTree: int width>"->"load.r r0";
+    "fieldget <particleTree: int height>"
+    "load.r r0"->"fieldget <particleTree: int height>";
+    "virtualinvoke <java.applet.Applet: void resize(int,int)>"
+    "fieldget <particleTree: int height>"->"virtualinvoke <java.applet.Applet: void resize(int,int)>";
+    "virtualinvoke <java.applet.Applet: void resize(int,int)>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <particleTree: int width>";
+    "fieldget <particleTree: int width>"->"load.r r0";
+    "load.r r0"->"fieldget <particleTree: int height>";
+    "virtualinvoke <java.awt.Component: java.awt.Image createImage(int,int)>"
+    "fieldget <particleTree: int height>"->"virtualinvoke <java.awt.Component: java.awt.Image createImage(int,int)>";
+    "fieldput <particleTree: java.awt.Image im>"
+    "virtualinvoke <java.awt.Component: java.awt.Image createImage(int,int)>"->"fieldput <particleTree: java.awt.Image im>";
+    "fieldput <particleTree: java.awt.Image im>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "fieldget <particleTree: java.awt.Image im>"
+    "load.r r0"->"fieldget <particleTree: java.awt.Image im>";
+    "virtualinvoke <java.awt.Image: java.awt.Graphics getGraphics()>"
+    "fieldget <particleTree: java.awt.Image im>"->"virtualinvoke <java.awt.Image: java.awt.Graphics getGraphics()>";
+    "fieldput <particleTree: java.awt.Graphics offscreen>"
+    "virtualinvoke <java.awt.Image: java.awt.Graphics getGraphics()>"->"fieldput <particleTree: java.awt.Graphics offscreen>";
+    "goto load.r r0"
+    "fieldput <particleTree: java.awt.Graphics offscreen>"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "new fPointTree"
+    "load.r r0"->"new fPointTree";
+    "dup1.r"
+    "new fPointTree"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "load.r r0"->"fieldget <particleTree: int width>";
+    "i2d"
+    "fieldget <particleTree: int width>"->"i2d";
+    "push 2.0"
+    "i2d"->"push 2.0";
+    "div.d"
+    "push 2.0"->"div.d";
+    "div.d"->"load.r r0";
+    "load.r r0"->"fieldget <particleTree: int height>";
+    "fieldget <particleTree: int height>"->"i2d";
+    "i2d"->"load.r r0";
+    "fieldget <particleTree: double kVX>"
+    "load.r r0"->"fieldget <particleTree: double kVX>";
+    "fieldget <particleTree: double kVX>"->"load.r r0";
+    "fieldget <particleTree: double kVY>"
+    "load.r r0"->"fieldget <particleTree: double kVY>";
+    "push null"
+    "fieldget <particleTree: double kVY>"->"push null";
+    "push null"->"push null";
+    "specialinvoke <fPointTree: void <init>(double,double,double,double,fPointTree,fPointTree)>"
+    "push null"->"specialinvoke <fPointTree: void <init>(double,double,double,double,fPointTree,fPointTree)>";
+    "fieldput <particleTree: fPointTree root>"
+    "specialinvoke <fPointTree: void <init>(double,double,double,double,fPointTree,fPointTree)>"->"fieldput <particleTree: fPointTree root>";
+    "return"
+    "fieldput <particleTree: fPointTree root>"->"return";
+    "store.r $r5"
+    "virtualinvoke <java.awt.Image: java.awt.Graphics getGraphics()>"->"store.r $r5";
+    "store.r $r5"->"load.r r0";
+    "load.r r0"->"push null";
+    "push null"->"fieldput <particleTree: java.awt.Graphics offscreen>";
+}

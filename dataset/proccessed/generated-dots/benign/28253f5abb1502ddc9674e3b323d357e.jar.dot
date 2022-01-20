@@ -1,0 +1,134 @@
+digraph "" {
+    "r0 := @this: JavaVersionApplet"
+    "load.r r0"
+    "r0 := @this: JavaVersionApplet"->"load.r r0";
+    "push \"targetVersion\""
+    "load.r r0"->"push \"targetVersion\"";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"
+    "push \"targetVersion\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "store.r r1"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"store.r r1";
+    "store.r r1"->"load.r r0";
+    "push -1.0F"
+    "load.r r0"->"push -1.0F";
+    "fieldput <JavaVersionApplet: float targetVersion>"
+    "push -1.0F"->"fieldput <JavaVersionApplet: float targetVersion>";
+    "load.r r1"
+    "fieldput <JavaVersionApplet: float targetVersion>"->"load.r r1";
+    "ifnull load.r r0"
+    "load.r r1"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r r0";
+    "new java.lang.Float"
+    "load.r r0"->"new java.lang.Float";
+    "dup1.r"
+    "new java.lang.Float"->"dup1.r";
+    "dup1.r"->"load.r r1";
+    "specialinvoke <java.lang.Float: void <init>(java.lang.String)>"
+    "load.r r1"->"specialinvoke <java.lang.Float: void <init>(java.lang.String)>";
+    "virtualinvoke <java.lang.Float: float floatValue()>"
+    "specialinvoke <java.lang.Float: void <init>(java.lang.String)>"->"virtualinvoke <java.lang.Float: float floatValue()>";
+    "virtualinvoke <java.lang.Float: float floatValue()>"->"fieldput <JavaVersionApplet: float targetVersion>";
+    "fieldput <JavaVersionApplet: float targetVersion>"->"load.r r0";
+    "new java.lang.StringBuffer"
+    "load.r r0"->"new java.lang.StringBuffer";
+    "new java.lang.StringBuffer"->"dup1.r";
+    "specialinvoke <java.lang.StringBuffer: void <init>()>"
+    "dup1.r"->"specialinvoke <java.lang.StringBuffer: void <init>()>";
+    "push \"Java \""
+    "specialinvoke <java.lang.StringBuffer: void <init>()>"->"push \"Java \"";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"
+    "push \"Java \""->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"load.r r0";
+    "fieldget <JavaVersionApplet: float targetVersion>"
+    "load.r r0"->"fieldget <JavaVersionApplet: float targetVersion>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(float)>"
+    "fieldget <JavaVersionApplet: float targetVersion>"->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(float)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>"
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(float)>"->"virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>";
+    "virtualinvoke <JavaVersionApplet: void println(java.lang.String)>"
+    "virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>"->"virtualinvoke <JavaVersionApplet: void println(java.lang.String)>";
+    "goto load.r r0"
+    "virtualinvoke <JavaVersionApplet: void println(java.lang.String)>"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "push \"redirect\""
+    "load.r r0"->"push \"redirect\"";
+    "push \"redirect\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "fieldput <JavaVersionApplet: java.lang.String redirectURLString>"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"fieldput <JavaVersionApplet: java.lang.String redirectURLString>";
+    "fieldput <JavaVersionApplet: java.lang.String redirectURLString>"->"load.r r0";
+    "fieldget <JavaVersionApplet: java.lang.String redirectURLString>"
+    "load.r r0"->"fieldget <JavaVersionApplet: java.lang.String redirectURLString>";
+    "ifnonnull load.r r0"
+    "fieldget <JavaVersionApplet: java.lang.String redirectURLString>"->"ifnonnull load.r r0";
+    "ifnonnull load.r r0"->"load.r r0";
+    "push \"The redirect url must be given in the applet parameters.  E.G.\n<PARAM NAME=redirect VALUE=javaversion.html>\""
+    "load.r r0"->"push \"The redirect url must be given in the applet parameters.  E.G.\n<PARAM NAME=redirect VALUE=javaversion.html>\"";
+    "push \"The redirect url must be given in the applet parameters.  E.G.\n<PARAM NAME=redirect VALUE=javaversion.html>\""->"virtualinvoke <JavaVersionApplet: void println(java.lang.String)>";
+    "virtualinvoke <JavaVersionApplet: void println(java.lang.String)>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "push \"target\""
+    "load.r r0"->"push \"target\"";
+    "push \"target\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "fieldput <JavaVersionApplet: java.lang.String target>"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"fieldput <JavaVersionApplet: java.lang.String target>";
+    "fieldput <JavaVersionApplet: java.lang.String target>"->"load.r r0";
+    "fieldget <JavaVersionApplet: java.lang.String target>"
+    "load.r r0"->"fieldget <JavaVersionApplet: java.lang.String target>";
+    "fieldget <JavaVersionApplet: java.lang.String target>"->"ifnonnull load.r r0";
+    "ifnonnull load.r r0"->"load.r r0";
+    "push \"_top\""
+    "load.r r0"->"push \"_top\"";
+    "push \"_top\""->"fieldput <JavaVersionApplet: java.lang.String target>";
+    "fieldput <JavaVersionApplet: java.lang.String target>"->"load.r r0";
+    "staticinvoke <JavaVersionApplet: float getVersion()>"
+    "load.r r0"->"staticinvoke <JavaVersionApplet: float getVersion()>";
+    "fieldput <JavaVersionApplet: float version>"
+    "staticinvoke <JavaVersionApplet: float getVersion()>"->"fieldput <JavaVersionApplet: float version>";
+    "fieldput <JavaVersionApplet: float version>"->"load.r r0";
+    "load.r r0"->"new java.lang.StringBuffer";
+    "new java.lang.StringBuffer"->"dup1.r";
+    "dup1.r"->"specialinvoke <java.lang.StringBuffer: void <init>()>";
+    "push \"\""
+    "specialinvoke <java.lang.StringBuffer: void <init>()>"->"push \"\"";
+    "push \"\""->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"staticinvoke <JavaVersionApplet: float getVersion()>";
+    "staticinvoke <JavaVersionApplet: float getVersion()>"->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(float)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(float)>"->"virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>"->"virtualinvoke <JavaVersionApplet: void println(java.lang.String)>";
+    "virtualinvoke <JavaVersionApplet: void println(java.lang.String)>"->"load.r r0";
+    "fieldget <JavaVersionApplet: float version>"
+    "load.r r0"->"fieldget <JavaVersionApplet: float version>";
+    "fieldget <JavaVersionApplet: float version>"->"load.r r0";
+    "load.r r0"->"fieldget <JavaVersionApplet: float targetVersion>";
+    "cmpg.f"
+    "fieldget <JavaVersionApplet: float targetVersion>"->"cmpg.f";
+    "ifge return"
+    "cmpg.f"->"ifge return";
+    "ifge return"->"load.r r0";
+    "specialinvoke <JavaVersionApplet: void redirect()>"
+    "load.r r0"->"specialinvoke <JavaVersionApplet: void redirect()>";
+    "return"
+    "specialinvoke <JavaVersionApplet: void redirect()>"->"return";
+    "store.r $r14"
+    "virtualinvoke <JavaVersionApplet: void println(java.lang.String)>"->"store.r $r14";
+    "store.r $r14"->"load.r r0";
+    "load.r r0"->"new java.lang.StringBuffer";
+    "new java.lang.StringBuffer"->"dup1.r";
+    "dup1.r"->"specialinvoke <java.lang.StringBuffer: void <init>()>";
+    "push \"The Java version \""
+    "specialinvoke <java.lang.StringBuffer: void <init>()>"->"push \"The Java version \"";
+    "push \"The Java version \""->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"load.r r1";
+    "load.r r1"->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "push \" cannot be recognised as a number!\""
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"push \" cannot be recognised as a number!\"";
+    "push \" cannot be recognised as a number!\""->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>"->"virtualinvoke <JavaVersionApplet: void println(java.lang.String)>";
+    "virtualinvoke <JavaVersionApplet: void println(java.lang.String)>"->"goto load.r r0";
+    "ifnull load.r r0"->"load.r r0";
+    "push \"Java target version must be specified in the applet parameters.  E.G.\n<PARAM NAME=targetVersion VALUE=1.3>\""
+    "load.r r0"->"push \"Java target version must be specified in the applet parameters.  E.G.\n<PARAM NAME=targetVersion VALUE=1.3>\"";
+    "push \"Java target version must be specified in the applet parameters.  E.G.\n<PARAM NAME=targetVersion VALUE=1.3>\""->"virtualinvoke <JavaVersionApplet: void println(java.lang.String)>";
+}

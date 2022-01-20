@@ -1,0 +1,23 @@
+digraph "" {
+    "r0 := @this: MSFcmd"
+    "load.r r0"
+    "r0 := @this: MSFcmd"->"load.r r0";
+    "push \"first\""
+    "load.r r0"->"push \"first\"";
+    "virtualinvoke <MSFcmd: java.lang.String getParameter(java.lang.String)>"
+    "push \"first\""->"virtualinvoke <MSFcmd: java.lang.String getParameter(java.lang.String)>";
+    "pop"
+    "virtualinvoke <MSFcmd: java.lang.String getParameter(java.lang.String)>"->"pop";
+    "staticinvoke <java.lang.Runtime: java.lang.Runtime getRuntime()>"
+    "pop"->"staticinvoke <java.lang.Runtime: java.lang.Runtime getRuntime()>";
+    "staticinvoke <java.lang.Runtime: java.lang.Runtime getRuntime()>"->"push \"first\"";
+    "virtualinvoke <java.lang.Runtime: java.lang.Process exec(java.lang.String)>"
+    "push \"first\""->"virtualinvoke <java.lang.Runtime: java.lang.Process exec(java.lang.String)>";
+    "virtualinvoke <java.lang.Runtime: java.lang.Process exec(java.lang.String)>"->"pop";
+    "goto return"
+    "pop"->"goto return";
+    "return"
+    "goto return"->"return";
+    "virtualinvoke <java.io.IOException: void printStackTrace()>"
+    "virtualinvoke <java.lang.Runtime: java.lang.Process exec(java.lang.String)>"->"virtualinvoke <java.io.IOException: void printStackTrace()>";
+}

@@ -1,0 +1,297 @@
+digraph "" {
+    "r0 := @this: Glitzer3"
+    "load.r r0"
+    "r0 := @this: Glitzer3"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "virtualinvoke <java.awt.Component: java.awt.Dimension size()>"
+    "load.r r0"->"virtualinvoke <java.awt.Component: java.awt.Dimension size()>";
+    "fieldget <java.awt.Dimension: int width>"
+    "virtualinvoke <java.awt.Component: java.awt.Dimension size()>"->"fieldget <java.awt.Dimension: int width>";
+    "fieldput <Glitzer3: int AppletW>"
+    "fieldget <java.awt.Dimension: int width>"->"fieldput <Glitzer3: int AppletW>";
+    "fieldput <Glitzer3: int AppletW>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"virtualinvoke <java.awt.Component: java.awt.Dimension size()>";
+    "fieldget <java.awt.Dimension: int height>"
+    "virtualinvoke <java.awt.Component: java.awt.Dimension size()>"->"fieldget <java.awt.Dimension: int height>";
+    "fieldput <Glitzer3: int AppletH>"
+    "fieldget <java.awt.Dimension: int height>"->"fieldput <Glitzer3: int AppletH>";
+    "fieldput <Glitzer3: int AppletH>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "push \"nPartikel\""
+    "load.r r0"->"push \"nPartikel\"";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"
+    "push \"nPartikel\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>";
+    "fieldput <Glitzer3: int nPartikel>"
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"->"fieldput <Glitzer3: int nPartikel>";
+    "fieldput <Glitzer3: int nPartikel>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "push \"Streuung\""
+    "load.r r0"->"push \"Streuung\"";
+    "push \"Streuung\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>";
+    "i2d"
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"->"i2d";
+    "fieldput <Glitzer3: double Streuung>"
+    "i2d"->"fieldput <Glitzer3: double Streuung>";
+    "fieldput <Glitzer3: double Streuung>"->"load.r r0";
+    "push \"Mausdynamik\""
+    "load.r r0"->"push \"Mausdynamik\"";
+    "push \"Mausdynamik\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "push \"y\""
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"push \"y\"";
+    "virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>"
+    "push \"y\""->"virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>";
+    "ifeq load.r r0"
+    "virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>"->"ifeq load.r r0";
+    "ifeq load.r r0"->"load.r r0";
+    "push 1"
+    "load.r r0"->"push 1";
+    "fieldput <Glitzer3: boolean Mausdynamik>"
+    "push 1"->"fieldput <Glitzer3: boolean Mausdynamik>";
+    "goto load.r r0"
+    "fieldput <Glitzer3: boolean Mausdynamik>"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "push 1.0"
+    "load.r r0"->"push 1.0";
+    "push 0.001"
+    "push 1.0"->"push 0.001";
+    "push 0.001"->"load.r r0";
+    "push \"Ageing\""
+    "load.r r0"->"push \"Ageing\"";
+    "push \"Ageing\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>";
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"->"i2d";
+    "mul.d"
+    "i2d"->"mul.d";
+    "sub.d"
+    "mul.d"->"sub.d";
+    "fieldput <Glitzer3: double Ageing>"
+    "sub.d"->"fieldput <Glitzer3: double Ageing>";
+    "fieldput <Glitzer3: double Ageing>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "push \"Frequency\""
+    "load.r r0"->"push \"Frequency\"";
+    "push \"Frequency\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>";
+    "fieldput <Glitzer3: int Frequency>"
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"->"fieldput <Glitzer3: int Frequency>";
+    "fieldput <Glitzer3: int Frequency>"->"load.r r0";
+    "push 0.1"
+    "load.r r0"->"push 0.1";
+    "push 0.1"->"load.r r0";
+    "push \"Gravity\""
+    "load.r r0"->"push \"Gravity\"";
+    "push \"Gravity\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>";
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"->"i2d";
+    "i2d"->"mul.d";
+    "fieldput <Glitzer3: double Gravity>"
+    "mul.d"->"fieldput <Glitzer3: double Gravity>";
+    "fieldput <Glitzer3: double Gravity>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "push \"BGImage\""
+    "load.r r0"->"push \"BGImage\"";
+    "push \"BGImage\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "fieldput <Glitzer3: java.lang.String imageFilename>"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"fieldput <Glitzer3: java.lang.String imageFilename>";
+    "fieldput <Glitzer3: java.lang.String imageFilename>"->"load.r r0";
+    "fieldget <Glitzer3: java.lang.String imageFilename>"
+    "load.r r0"->"fieldget <Glitzer3: java.lang.String imageFilename>";
+    "push \"NONE\""
+    "fieldget <Glitzer3: java.lang.String imageFilename>"->"push \"NONE\"";
+    "push \"NONE\""->"virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>";
+    "ifne load.r r0"
+    "virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>"->"ifne load.r r0";
+    "ifne load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <Glitzer3: java.lang.String imageFilename>";
+    "push \"none\""
+    "fieldget <Glitzer3: java.lang.String imageFilename>"->"push \"none\"";
+    "push \"none\""->"virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>";
+    "virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>"->"ifeq load.r r0";
+    "ifeq load.r r0"->"load.r r0";
+    "push null"
+    "load.r r0"->"push null";
+    "push null"->"fieldput <Glitzer3: java.lang.String imageFilename>";
+    "fieldput <Glitzer3: java.lang.String imageFilename>"->"load.r r0";
+    "push 0.03"
+    "load.r r0"->"push 0.03";
+    "push 0.03"->"load.r r0";
+    "push \"Brightness\""
+    "load.r r0"->"push \"Brightness\"";
+    "push \"Brightness\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>";
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"->"i2d";
+    "i2d"->"mul.d";
+    "fieldput <Glitzer3: double Brightness>"
+    "mul.d"->"fieldput <Glitzer3: double Brightness>";
+    "fieldput <Glitzer3: double Brightness>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "fieldget <Glitzer3: int nPartikel>"
+    "load.r r0"->"fieldget <Glitzer3: int nPartikel>";
+    "newarray"
+    "fieldget <Glitzer3: int nPartikel>"->"newarray";
+    "fieldput <Glitzer3: double[] x>"
+    "newarray"->"fieldput <Glitzer3: double[] x>";
+    "fieldput <Glitzer3: double[] x>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <Glitzer3: int nPartikel>";
+    "fieldget <Glitzer3: int nPartikel>"->"newarray";
+    "fieldput <Glitzer3: double[] y>"
+    "newarray"->"fieldput <Glitzer3: double[] y>";
+    "fieldput <Glitzer3: double[] y>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <Glitzer3: int nPartikel>";
+    "fieldget <Glitzer3: int nPartikel>"->"newarray";
+    "fieldput <Glitzer3: double[] vX>"
+    "newarray"->"fieldput <Glitzer3: double[] vX>";
+    "fieldput <Glitzer3: double[] vX>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <Glitzer3: int nPartikel>";
+    "fieldget <Glitzer3: int nPartikel>"->"newarray";
+    "fieldput <Glitzer3: double[] vY>"
+    "newarray"->"fieldput <Glitzer3: double[] vY>";
+    "fieldput <Glitzer3: double[] vY>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <Glitzer3: int nPartikel>";
+    "fieldget <Glitzer3: int nPartikel>"->"newarray";
+    "fieldput <Glitzer3: double[] w>"
+    "newarray"->"fieldput <Glitzer3: double[] w>";
+    "fieldput <Glitzer3: double[] w>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <Glitzer3: int nPartikel>";
+    "fieldget <Glitzer3: int nPartikel>"->"newarray";
+    "fieldput <Glitzer3: double[] P>"
+    "newarray"->"fieldput <Glitzer3: double[] P>";
+    "fieldput <Glitzer3: double[] P>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <Glitzer3: int nPartikel>";
+    "fieldget <Glitzer3: int nPartikel>"->"newarray";
+    "fieldput <Glitzer3: boolean[] active>"
+    "newarray"->"fieldput <Glitzer3: boolean[] active>";
+    "fieldput <Glitzer3: boolean[] active>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <Glitzer3: int nPartikel>";
+    "fieldget <Glitzer3: int nPartikel>"->"newarray";
+    "fieldput <Glitzer3: int[] type>"
+    "newarray"->"fieldput <Glitzer3: int[] type>";
+    "push 0"
+    "fieldput <Glitzer3: int[] type>"->"push 0";
+    "store.i i18"
+    "push 0"->"store.i i18";
+    "goto load.i i18"
+    "store.i i18"->"goto load.i i18";
+    "load.i i18"
+    "goto load.i i18"->"load.i i18";
+    "load.i i18"->"load.r r0";
+    "load.r r0"->"fieldget <Glitzer3: int nPartikel>";
+    "ifcmplt.i load.r r0"
+    "fieldget <Glitzer3: int nPartikel>"->"ifcmplt.i load.r r0";
+    "ifcmplt.i load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "fieldget <Glitzer3: int nFarben>"
+    "load.r r0"->"fieldget <Glitzer3: int nFarben>";
+    "fieldget <Glitzer3: int nFarben>"->"newarray";
+    "fieldput <Glitzer3: java.awt.Color[] Farbe>"
+    "newarray"->"fieldput <Glitzer3: java.awt.Color[] Farbe>";
+    "fieldput <Glitzer3: java.awt.Color[] Farbe>"->"push 0";
+    "push 0"->"store.i i18";
+    "store.i i18"->"goto load.i i18";
+    "goto load.i i18"->"load.i i18";
+    "load.i i18"->"load.r r0";
+    "load.r r0"->"fieldget <Glitzer3: int nFarben>";
+    "ifcmplt.i load.i i18"
+    "fieldget <Glitzer3: int nFarben>"->"ifcmplt.i load.i i18";
+    "ifcmplt.i load.i i18"->"load.r r0";
+    "new Glitzer3$MouseEventHandler"
+    "load.r r0"->"new Glitzer3$MouseEventHandler";
+    "dup1.r"
+    "new Glitzer3$MouseEventHandler"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "specialinvoke <Glitzer3$MouseEventHandler: void <init>(Glitzer3)>"
+    "load.r r0"->"specialinvoke <Glitzer3$MouseEventHandler: void <init>(Glitzer3)>";
+    "virtualinvoke <java.awt.Component: void addMouseListener(java.awt.event.MouseListener)>"
+    "specialinvoke <Glitzer3$MouseEventHandler: void <init>(Glitzer3)>"->"virtualinvoke <java.awt.Component: void addMouseListener(java.awt.event.MouseListener)>";
+    "virtualinvoke <java.awt.Component: void addMouseListener(java.awt.event.MouseListener)>"->"load.r r0";
+    "new Glitzer3$MouseMotionEventHandler"
+    "load.r r0"->"new Glitzer3$MouseMotionEventHandler";
+    "new Glitzer3$MouseMotionEventHandler"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "specialinvoke <Glitzer3$MouseMotionEventHandler: void <init>(Glitzer3)>"
+    "load.r r0"->"specialinvoke <Glitzer3$MouseMotionEventHandler: void <init>(Glitzer3)>";
+    "virtualinvoke <java.awt.Component: void addMouseMotionListener(java.awt.event.MouseMotionListener)>"
+    "specialinvoke <Glitzer3$MouseMotionEventHandler: void <init>(Glitzer3)>"->"virtualinvoke <java.awt.Component: void addMouseMotionListener(java.awt.event.MouseMotionListener)>";
+    "return"
+    "virtualinvoke <java.awt.Component: void addMouseMotionListener(java.awt.event.MouseMotionListener)>"->"return";
+    "ifcmplt.i load.i i18"->"load.i i18";
+    "store.i i20"
+    "load.i i18"->"store.i i20";
+    "store.i i20"->"load.i i18";
+    "push 255"
+    "load.i i18"->"push 255";
+    "ifcmple.i push 2.0"
+    "push 255"->"ifcmple.i push 2.0";
+    "ifcmple.i push 2.0"->"push 255";
+    "push 255"->"store.i i20";
+    "push 2.0"
+    "store.i i20"->"push 2.0";
+    "push 2.0"->"load.i i18";
+    "load.i i18"->"i2d";
+    "i2d"->"mul.d";
+    "d2i"
+    "mul.d"->"d2i";
+    "store.i i21"
+    "d2i"->"store.i i21";
+    "load.i i21"
+    "store.i i21"->"load.i i21";
+    "load.i i21"->"push 255";
+    "ifcmple.i push 4.0"
+    "push 255"->"ifcmple.i push 4.0";
+    "ifcmple.i push 4.0"->"push 255";
+    "push 255"->"store.i i21";
+    "push 4.0"
+    "store.i i21"->"push 4.0";
+    "push 4.0"->"load.i i18";
+    "load.i i18"->"i2d";
+    "i2d"->"mul.d";
+    "mul.d"->"d2i";
+    "store.i i22"
+    "d2i"->"store.i i22";
+    "load.i i22"
+    "store.i i22"->"load.i i22";
+    "load.i i22"->"push 255";
+    "ifcmple.i load.r r0"
+    "push 255"->"ifcmple.i load.r r0";
+    "ifcmple.i load.r r0"->"push 255";
+    "push 255"->"store.i i22";
+    "store.i i22"->"load.r r0";
+    "fieldget <Glitzer3: java.awt.Color[] Farbe>"
+    "load.r r0"->"fieldget <Glitzer3: java.awt.Color[] Farbe>";
+    "fieldget <Glitzer3: java.awt.Color[] Farbe>"->"load.i i18";
+    "new java.awt.Color"
+    "load.i i18"->"new java.awt.Color";
+    "new java.awt.Color"->"dup1.r";
+    "dup1.r"->"load.i i22";
+    "load.i i22"->"load.i i21";
+    "load.i i20"
+    "load.i i21"->"load.i i20";
+    "specialinvoke <java.awt.Color: void <init>(int,int,int)>"
+    "load.i i20"->"specialinvoke <java.awt.Color: void <init>(int,int,int)>";
+    "arraywrite.r"
+    "specialinvoke <java.awt.Color: void <init>(int,int,int)>"->"arraywrite.r";
+    "inc.i i18 1"
+    "arraywrite.r"->"inc.i i18 1";
+    "ifcmplt.i load.r r0"->"load.r r0";
+    "fieldget <Glitzer3: boolean[] active>"
+    "load.r r0"->"fieldget <Glitzer3: boolean[] active>";
+    "fieldget <Glitzer3: boolean[] active>"->"load.i i18";
+    "load.i i18"->"push 0";
+    "arraywrite.b"
+    "push 0"->"arraywrite.b";
+    "arraywrite.b"->"inc.i i18 1";
+    "ifeq load.r r0"->"load.r r0";
+    "load.r r0"->"push 0";
+    "push 0"->"fieldput <Glitzer3: boolean Mausdynamik>";
+}

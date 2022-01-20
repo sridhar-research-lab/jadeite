@@ -1,0 +1,249 @@
+digraph "" {
+    "r0 := @this: clock"
+    "load.r r0"
+    "r0 := @this: clock"->"load.r r0";
+    "push \"image\""
+    "load.r r0"->"push \"image\"";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"
+    "push \"image\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "store.r $r24"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"store.r $r24";
+    "load.r $r24"
+    "store.r $r24"->"load.r $r24";
+    "ifnull new java.awt.Dimension"
+    "load.r $r24"->"ifnull new java.awt.Dimension";
+    "ifnull new java.awt.Dimension"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "virtualinvoke <java.applet.Applet: java.net.URL getDocumentBase()>"
+    "load.r r0"->"virtualinvoke <java.applet.Applet: java.net.URL getDocumentBase()>";
+    "virtualinvoke <java.applet.Applet: java.net.URL getDocumentBase()>"->"load.r $r24";
+    "virtualinvoke <java.applet.Applet: java.awt.Image getImage(java.net.URL,java.lang.String)>"
+    "load.r $r24"->"virtualinvoke <java.applet.Applet: java.awt.Image getImage(java.net.URL,java.lang.String)>";
+    "fieldput <clock: java.awt.Image bk>"
+    "virtualinvoke <java.applet.Applet: java.awt.Image getImage(java.net.URL,java.lang.String)>"->"fieldput <clock: java.awt.Image bk>";
+    "fieldput <clock: java.awt.Image bk>"->"load.r r0";
+    "fieldget <clock: java.awt.MediaTracker tracker>"
+    "load.r r0"->"fieldget <clock: java.awt.MediaTracker tracker>";
+    "fieldget <clock: java.awt.MediaTracker tracker>"->"load.r r0";
+    "fieldget <clock: java.awt.Image bk>"
+    "load.r r0"->"fieldget <clock: java.awt.Image bk>";
+    "push 1"
+    "fieldget <clock: java.awt.Image bk>"->"push 1";
+    "virtualinvoke <java.awt.MediaTracker: void addImage(java.awt.Image,int)>"
+    "push 1"->"virtualinvoke <java.awt.MediaTracker: void addImage(java.awt.Image,int)>";
+    "virtualinvoke <java.awt.MediaTracker: void addImage(java.awt.Image,int)>"->"load.r r0";
+    "load.r r0"->"fieldget <clock: java.awt.MediaTracker tracker>";
+    "fieldget <clock: java.awt.MediaTracker tracker>"->"push 1";
+    "virtualinvoke <java.awt.MediaTracker: void waitForID(int)>"
+    "push 1"->"virtualinvoke <java.awt.MediaTracker: void waitForID(int)>";
+    "goto new java.awt.Dimension"
+    "virtualinvoke <java.awt.MediaTracker: void waitForID(int)>"->"goto new java.awt.Dimension";
+    "new java.awt.Dimension"
+    "goto new java.awt.Dimension"->"new java.awt.Dimension";
+    "new java.awt.Dimension"->"store.r $r24";
+    "store.r $r24"->"load.r $r24";
+    "load.r $r24"->"load.r r0";
+    "virtualinvoke <java.awt.Component: java.awt.Dimension size()>"
+    "load.r r0"->"virtualinvoke <java.awt.Component: java.awt.Dimension size()>";
+    "specialinvoke <java.awt.Dimension: void <init>(java.awt.Dimension)>"
+    "virtualinvoke <java.awt.Component: java.awt.Dimension size()>"->"specialinvoke <java.awt.Dimension: void <init>(java.awt.Dimension)>";
+    "specialinvoke <java.awt.Dimension: void <init>(java.awt.Dimension)>"->"load.r r0";
+    "load.r r0"->"load.r $r24";
+    "fieldget <java.awt.Dimension: int width>"
+    "load.r $r24"->"fieldget <java.awt.Dimension: int width>";
+    "fieldput <clock: int XSize>"
+    "fieldget <java.awt.Dimension: int width>"->"fieldput <clock: int XSize>";
+    "fieldput <clock: int XSize>"->"load.r r0";
+    "load.r r0"->"load.r $r24";
+    "fieldget <java.awt.Dimension: int height>"
+    "load.r $r24"->"fieldget <java.awt.Dimension: int height>";
+    "fieldput <clock: int YSize>"
+    "fieldget <java.awt.Dimension: int height>"->"fieldput <clock: int YSize>";
+    "fieldput <clock: int YSize>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "fieldget <clock: int XSize>"
+    "load.r r0"->"fieldget <clock: int XSize>";
+    "push 2"
+    "fieldget <clock: int XSize>"->"push 2";
+    "div.i"
+    "push 2"->"div.i";
+    "fieldput <clock: int XOrig>"
+    "div.i"->"fieldput <clock: int XOrig>";
+    "fieldput <clock: int XOrig>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "fieldget <clock: int YSize>"
+    "load.r r0"->"fieldget <clock: int YSize>";
+    "fieldget <clock: int YSize>"->"push 2";
+    "push 2"->"div.i";
+    "fieldput <clock: int YOrig>"
+    "div.i"->"fieldput <clock: int YOrig>";
+    "fieldput <clock: int YOrig>"->"load.r r0";
+    "fieldget <clock: int XOrig>"
+    "load.r r0"->"fieldget <clock: int XOrig>";
+    "fieldget <clock: int XOrig>"->"load.r r0";
+    "fieldget <clock: int YOrig>"
+    "load.r r0"->"fieldget <clock: int YOrig>";
+    "ifcmpge.i load.r r0"
+    "fieldget <clock: int YOrig>"->"ifcmpge.i load.r r0";
+    "ifcmpge.i load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <clock: int XOrig>";
+    "store.i $r24"
+    "fieldget <clock: int XOrig>"->"store.i $r24";
+    "goto load.r r0"
+    "store.i $r24"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "load.i $r24"
+    "load.r r0"->"load.i $r24";
+    "i2d"
+    "load.i $r24"->"i2d";
+    "fieldput <clock: double m_scale>"
+    "i2d"->"fieldput <clock: double m_scale>";
+    "fieldput <clock: double m_scale>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <clock: int XSize>";
+    "fieldget <clock: int XSize>"->"load.r r0";
+    "load.r r0"->"fieldget <clock: int YSize>";
+    "virtualinvoke <java.applet.Applet: void resize(int,int)>"
+    "fieldget <clock: int YSize>"->"virtualinvoke <java.applet.Applet: void resize(int,int)>";
+    "virtualinvoke <java.applet.Applet: void resize(int,int)>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <clock: int XSize>";
+    "fieldget <clock: int XSize>"->"load.r r0";
+    "load.r r0"->"fieldget <clock: int YSize>";
+    "virtualinvoke <java.awt.Component: java.awt.Image createImage(int,int)>"
+    "fieldget <clock: int YSize>"->"virtualinvoke <java.awt.Component: java.awt.Image createImage(int,int)>";
+    "fieldput <clock: java.awt.Image offScreenImage>"
+    "virtualinvoke <java.awt.Component: java.awt.Image createImage(int,int)>"->"fieldput <clock: java.awt.Image offScreenImage>";
+    "fieldput <clock: java.awt.Image offScreenImage>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "fieldget <clock: java.awt.Image offScreenImage>"
+    "load.r r0"->"fieldget <clock: java.awt.Image offScreenImage>";
+    "virtualinvoke <java.awt.Image: java.awt.Graphics getGraphics()>"
+    "fieldget <clock: java.awt.Image offScreenImage>"->"virtualinvoke <java.awt.Image: java.awt.Graphics getGraphics()>";
+    "fieldput <clock: java.awt.Graphics offScreen>"
+    "virtualinvoke <java.awt.Image: java.awt.Graphics getGraphics()>"->"fieldput <clock: java.awt.Graphics offScreen>";
+    "fieldput <clock: java.awt.Graphics offScreen>"->"load.r r0";
+    "staticget <java.awt.Color: java.awt.Color black>"
+    "load.r r0"->"staticget <java.awt.Color: java.awt.Color black>";
+    "virtualinvoke <java.awt.Component: void setBackground(java.awt.Color)>"
+    "staticget <java.awt.Color: java.awt.Color black>"->"virtualinvoke <java.awt.Component: void setBackground(java.awt.Color)>";
+    "virtualinvoke <java.awt.Component: void setBackground(java.awt.Color)>"->"load.r r0";
+    "push \"col\""
+    "load.r r0"->"push \"col\"";
+    "push \"col\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"store.r $r24";
+    "store.r $r24"->"load.r $r24";
+    "ifnull return"
+    "load.r $r24"->"ifnull return";
+    "ifnull return"->"load.r $r24";
+    "virtualinvoke <java.lang.String: java.lang.String toLowerCase()>"
+    "load.r $r24"->"virtualinvoke <java.lang.String: java.lang.String toLowerCase()>";
+    "pop"
+    "virtualinvoke <java.lang.String: java.lang.String toLowerCase()>"->"pop";
+    "pop"->"load.r $r24";
+    "push \"red\""
+    "load.r $r24"->"push \"red\"";
+    "virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>"
+    "push \"red\""->"virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>";
+    "ifeq load.r $r24"
+    "virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>"->"ifeq load.r $r24";
+    "ifeq load.r $r24"->"load.r r0";
+    "staticget <java.awt.Color: java.awt.Color red>"
+    "load.r r0"->"staticget <java.awt.Color: java.awt.Color red>";
+    "fieldput <clock: java.awt.Color c>"
+    "staticget <java.awt.Color: java.awt.Color red>"->"fieldput <clock: java.awt.Color c>";
+    "return"
+    "fieldput <clock: java.awt.Color c>"->"return";
+    "ifeq load.r $r24"->"load.r $r24";
+    "push \"green\""
+    "load.r $r24"->"push \"green\"";
+    "push \"green\""->"virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>";
+    "virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>"->"ifeq load.r $r24";
+    "ifeq load.r $r24"->"load.r r0";
+    "staticget <java.awt.Color: java.awt.Color green>"
+    "load.r r0"->"staticget <java.awt.Color: java.awt.Color green>";
+    "staticget <java.awt.Color: java.awt.Color green>"->"fieldput <clock: java.awt.Color c>";
+    "fieldput <clock: java.awt.Color c>"->"return";
+    "ifeq load.r $r24"->"load.r $r24";
+    "push \"yellow\""
+    "load.r $r24"->"push \"yellow\"";
+    "push \"yellow\""->"virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>";
+    "virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>"->"ifeq load.r $r24";
+    "ifeq load.r $r24"->"load.r r0";
+    "staticget <java.awt.Color: java.awt.Color yellow>"
+    "load.r r0"->"staticget <java.awt.Color: java.awt.Color yellow>";
+    "staticget <java.awt.Color: java.awt.Color yellow>"->"fieldput <clock: java.awt.Color c>";
+    "fieldput <clock: java.awt.Color c>"->"return";
+    "ifeq load.r $r24"->"load.r $r24";
+    "push \"cyan\""
+    "load.r $r24"->"push \"cyan\"";
+    "push \"cyan\""->"virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>";
+    "virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>"->"ifeq load.r $r24";
+    "ifeq load.r $r24"->"load.r r0";
+    "staticget <java.awt.Color: java.awt.Color cyan>"
+    "load.r r0"->"staticget <java.awt.Color: java.awt.Color cyan>";
+    "staticget <java.awt.Color: java.awt.Color cyan>"->"fieldput <clock: java.awt.Color c>";
+    "fieldput <clock: java.awt.Color c>"->"return";
+    "ifeq load.r $r24"->"load.r $r24";
+    "push \"magenta\""
+    "load.r $r24"->"push \"magenta\"";
+    "push \"magenta\""->"virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>";
+    "virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>"->"ifeq load.r $r24";
+    "ifeq load.r $r24"->"load.r r0";
+    "staticget <java.awt.Color: java.awt.Color magenta>"
+    "load.r r0"->"staticget <java.awt.Color: java.awt.Color magenta>";
+    "staticget <java.awt.Color: java.awt.Color magenta>"->"fieldput <clock: java.awt.Color c>";
+    "fieldput <clock: java.awt.Color c>"->"return";
+    "ifeq load.r $r24"->"load.r $r24";
+    "push \"black\""
+    "load.r $r24"->"push \"black\"";
+    "push \"black\""->"virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>";
+    "virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>"->"ifeq load.r $r24";
+    "ifeq load.r $r24"->"load.r r0";
+    "load.r r0"->"staticget <java.awt.Color: java.awt.Color black>";
+    "staticget <java.awt.Color: java.awt.Color black>"->"fieldput <clock: java.awt.Color c>";
+    "fieldput <clock: java.awt.Color c>"->"return";
+    "ifeq load.r $r24"->"load.r $r24";
+    "push \"orange\""
+    "load.r $r24"->"push \"orange\"";
+    "push \"orange\""->"virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>";
+    "virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>"->"ifeq load.r $r24";
+    "ifeq load.r $r24"->"load.r r0";
+    "staticget <java.awt.Color: java.awt.Color orange>"
+    "load.r r0"->"staticget <java.awt.Color: java.awt.Color orange>";
+    "staticget <java.awt.Color: java.awt.Color orange>"->"fieldput <clock: java.awt.Color c>";
+    "fieldput <clock: java.awt.Color c>"->"return";
+    "ifeq load.r $r24"->"load.r $r24";
+    "push \"pink\""
+    "load.r $r24"->"push \"pink\"";
+    "push \"pink\""->"virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>";
+    "virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>"->"ifeq load.r $r24";
+    "ifeq load.r $r24"->"load.r r0";
+    "staticget <java.awt.Color: java.awt.Color pink>"
+    "load.r r0"->"staticget <java.awt.Color: java.awt.Color pink>";
+    "staticget <java.awt.Color: java.awt.Color pink>"->"fieldput <clock: java.awt.Color c>";
+    "fieldput <clock: java.awt.Color c>"->"return";
+    "ifeq load.r $r24"->"load.r $r24";
+    "push \"white\""
+    "load.r $r24"->"push \"white\"";
+    "push \"white\""->"virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>";
+    "ifeq return"
+    "virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>"->"ifeq return";
+    "ifeq return"->"load.r r0";
+    "staticget <java.awt.Color: java.awt.Color white>"
+    "load.r r0"->"staticget <java.awt.Color: java.awt.Color white>";
+    "staticget <java.awt.Color: java.awt.Color white>"->"fieldput <clock: java.awt.Color c>";
+    "fieldput <clock: java.awt.Color c>"->"return";
+    "ifcmpge.i load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <clock: int YOrig>";
+    "fieldget <clock: int YOrig>"->"store.i $r24";
+    "virtualinvoke <java.lang.Throwable: java.lang.String toString()>"
+    "virtualinvoke <java.awt.MediaTracker: void waitForID(int)>"->"virtualinvoke <java.lang.Throwable: java.lang.String toString()>";
+    "virtualinvoke <java.lang.Throwable: java.lang.String toString()>"->"store.r $r24";
+    "store.r $r24"->"load.r r0";
+    "load.r r0"->"load.r $r24";
+    "fieldput <clock: java.lang.String Error>"
+    "load.r $r24"->"fieldput <clock: java.lang.String Error>";
+}

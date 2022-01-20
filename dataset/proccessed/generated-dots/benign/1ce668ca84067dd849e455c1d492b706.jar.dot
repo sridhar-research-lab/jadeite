@@ -1,0 +1,72 @@
+digraph "" {
+    "r0 := @this: AppletWatcher"
+    "load.r r0"
+    "r0 := @this: AppletWatcher"->"load.r r0";
+    "push \"BACKGROUND\""
+    "load.r r0"->"push \"BACKGROUND\"";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"
+    "push \"BACKGROUND\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "store.r r4"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"store.r r4";
+    "load.r r4"
+    "store.r r4"->"load.r r4";
+    "ifnull load.r r0"
+    "load.r r4"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r4";
+    "virtualinvoke <AppletWatcher: java.awt.Color c(java.lang.String)>"
+    "load.r r4"->"virtualinvoke <AppletWatcher: java.awt.Color c(java.lang.String)>";
+    "virtualinvoke <java.awt.Component: void setBackground(java.awt.Color)>"
+    "virtualinvoke <AppletWatcher: java.awt.Color c(java.lang.String)>"->"virtualinvoke <java.awt.Component: void setBackground(java.awt.Color)>";
+    "virtualinvoke <java.awt.Component: void setBackground(java.awt.Color)>"->"load.r r0";
+    "push \"FOREGROUND\""
+    "load.r r0"->"push \"FOREGROUND\"";
+    "push \"FOREGROUND\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"store.r r4";
+    "store.r r4"->"load.r r4";
+    "load.r r4"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r4";
+    "load.r r4"->"virtualinvoke <AppletWatcher: java.awt.Color c(java.lang.String)>";
+    "virtualinvoke <java.awt.Component: void setForeground(java.awt.Color)>"
+    "virtualinvoke <AppletWatcher: java.awt.Color c(java.lang.String)>"->"virtualinvoke <java.awt.Component: void setForeground(java.awt.Color)>";
+    "virtualinvoke <java.awt.Component: void setForeground(java.awt.Color)>"->"load.r r0";
+    "push \"INFOTEXT\""
+    "load.r r0"->"push \"INFOTEXT\"";
+    "push \"INFOTEXT\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"store.r r4";
+    "store.r r4"->"load.r r4";
+    "load.r r4"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r4";
+    "fieldput <AppletWatcher: java.lang.String text>"
+    "load.r r4"->"fieldput <AppletWatcher: java.lang.String text>";
+    "fieldput <AppletWatcher: java.lang.String text>"->"load.r r0";
+    "push \"MAXDURATION\""
+    "load.r r0"->"push \"MAXDURATION\"";
+    "push \"MAXDURATION\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"store.r r4";
+    "store.r r4"->"load.r r4";
+    "ifnull return"
+    "load.r r4"->"ifnull return";
+    "ifnull return"->"load.r r0";
+    "load.r r0"->"load.r r4";
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"
+    "load.r r4"->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>";
+    "push 1000"
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"->"push 1000";
+    "mul.i"
+    "push 1000"->"mul.i";
+    "i2l"
+    "mul.i"->"i2l";
+    "fieldput <AppletWatcher: long md>"
+    "i2l"->"fieldput <AppletWatcher: long md>";
+    "goto return"
+    "fieldput <AppletWatcher: long md>"->"goto return";
+    "return"
+    "goto return"->"return";
+    "virtualinvoke <java.lang.Throwable: void printStackTrace()>"
+    "i2l"->"virtualinvoke <java.lang.Throwable: void printStackTrace()>";
+}

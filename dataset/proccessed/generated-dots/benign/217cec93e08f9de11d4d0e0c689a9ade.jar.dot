@@ -1,0 +1,134 @@
+digraph "" {
+    "r0 := @this: soundOut.SoundOut"
+    "load.r r0"
+    "r0 := @this: soundOut.SoundOut"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "push \"numPts\""
+    "load.r r0"->"push \"numPts\"";
+    "push \"8000\""
+    "push \"numPts\""->"push \"8000\"";
+    "virtualinvoke <soundOut.SoundOut: java.lang.String getParameter(java.lang.String,java.lang.String)>"
+    "push \"8000\""->"virtualinvoke <soundOut.SoundOut: java.lang.String getParameter(java.lang.String,java.lang.String)>";
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"
+    "virtualinvoke <soundOut.SoundOut: java.lang.String getParameter(java.lang.String,java.lang.String)>"->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>";
+    "fieldput <soundOut.SoundOut: int numPts>"
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"->"fieldput <soundOut.SoundOut: int numPts>";
+    "goto load.r r0"
+    "fieldput <soundOut.SoundOut: int numPts>"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "push \"showControls\""
+    "load.r r0"->"push \"showControls\"";
+    "push \"true\""
+    "push \"showControls\""->"push \"true\"";
+    "push \"true\""->"virtualinvoke <soundOut.SoundOut: java.lang.String getParameter(java.lang.String,java.lang.String)>";
+    "staticinvoke <java.lang.Boolean: java.lang.Boolean valueOf(java.lang.String)>"
+    "virtualinvoke <soundOut.SoundOut: java.lang.String getParameter(java.lang.String,java.lang.String)>"->"staticinvoke <java.lang.Boolean: java.lang.Boolean valueOf(java.lang.String)>";
+    "virtualinvoke <java.lang.Boolean: boolean booleanValue()>"
+    "staticinvoke <java.lang.Boolean: java.lang.Boolean valueOf(java.lang.String)>"->"virtualinvoke <java.lang.Boolean: boolean booleanValue()>";
+    "fieldput <soundOut.SoundOut: boolean showControls>"
+    "virtualinvoke <java.lang.Boolean: boolean booleanValue()>"->"fieldput <soundOut.SoundOut: boolean showControls>";
+    "fieldput <soundOut.SoundOut: boolean showControls>"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "push \"ampFunc\""
+    "load.r r0"->"push \"ampFunc\"";
+    "push \"sin(2*pi*400*t)\""
+    "push \"ampFunc\""->"push \"sin(2*pi*400*t)\"";
+    "push \"sin(2*pi*400*t)\""->"virtualinvoke <soundOut.SoundOut: java.lang.String getParameter(java.lang.String,java.lang.String)>";
+    "fieldput <soundOut.SoundOut: java.lang.String ampFunc>"
+    "virtualinvoke <soundOut.SoundOut: java.lang.String getParameter(java.lang.String,java.lang.String)>"->"fieldput <soundOut.SoundOut: java.lang.String ampFunc>";
+    "fieldput <soundOut.SoundOut: java.lang.String ampFunc>"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "push \"volume\""
+    "load.r r0"->"push \"volume\"";
+    "push \"1.0\""
+    "push \"volume\""->"push \"1.0\"";
+    "push \"1.0\""->"virtualinvoke <soundOut.SoundOut: java.lang.String getParameter(java.lang.String,java.lang.String)>";
+    "staticinvoke <java.lang.Double: java.lang.Double valueOf(java.lang.String)>"
+    "virtualinvoke <soundOut.SoundOut: java.lang.String getParameter(java.lang.String,java.lang.String)>"->"staticinvoke <java.lang.Double: java.lang.Double valueOf(java.lang.String)>";
+    "virtualinvoke <java.lang.Double: double doubleValue()>"
+    "staticinvoke <java.lang.Double: java.lang.Double valueOf(java.lang.String)>"->"virtualinvoke <java.lang.Double: double doubleValue()>";
+    "fieldput <soundOut.SoundOut: double volume>"
+    "virtualinvoke <java.lang.Double: double doubleValue()>"->"fieldput <soundOut.SoundOut: double volume>";
+    "fieldput <soundOut.SoundOut: double volume>"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "push \"mute\""
+    "load.r r0"->"push \"mute\"";
+    "push \"false\""
+    "push \"mute\""->"push \"false\"";
+    "push \"false\""->"virtualinvoke <soundOut.SoundOut: java.lang.String getParameter(java.lang.String,java.lang.String)>";
+    "virtualinvoke <soundOut.SoundOut: java.lang.String getParameter(java.lang.String,java.lang.String)>"->"staticinvoke <java.lang.Boolean: java.lang.Boolean valueOf(java.lang.String)>";
+    "staticinvoke <java.lang.Boolean: java.lang.Boolean valueOf(java.lang.String)>"->"virtualinvoke <java.lang.Boolean: boolean booleanValue()>";
+    "fieldput <soundOut.SoundOut: boolean mute>"
+    "virtualinvoke <java.lang.Boolean: boolean booleanValue()>"->"fieldput <soundOut.SoundOut: boolean mute>";
+    "fieldput <soundOut.SoundOut: boolean mute>"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "virtualinvoke <soundOut.SoundOut: void jbInit()>"
+    "load.r r0"->"virtualinvoke <soundOut.SoundOut: void jbInit()>";
+    "virtualinvoke <soundOut.SoundOut: void jbInit()>"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "new soundOut.SoundData"
+    "load.r r0"->"new soundOut.SoundData";
+    "dup1.r"
+    "new soundOut.SoundData"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "fieldget <soundOut.SoundOut: int numPts>"
+    "load.r r0"->"fieldget <soundOut.SoundOut: int numPts>";
+    "specialinvoke <soundOut.SoundData: void <init>(int)>"
+    "fieldget <soundOut.SoundOut: int numPts>"->"specialinvoke <soundOut.SoundData: void <init>(int)>";
+    "fieldput <soundOut.SoundOut: soundOut.SoundData soundData>"
+    "specialinvoke <soundOut.SoundData: void <init>(int)>"->"fieldput <soundOut.SoundOut: soundOut.SoundData soundData>";
+    "fieldput <soundOut.SoundOut: soundOut.SoundData soundData>"->"load.r r0";
+    "fieldget <soundOut.SoundOut: java.awt.TextField funcField>"
+    "load.r r0"->"fieldget <soundOut.SoundOut: java.awt.TextField funcField>";
+    "fieldget <soundOut.SoundOut: java.awt.TextField funcField>"->"load.r r0";
+    "fieldget <soundOut.SoundOut: java.lang.String ampFunc>"
+    "load.r r0"->"fieldget <soundOut.SoundOut: java.lang.String ampFunc>";
+    "virtualinvoke <java.awt.TextComponent: void setText(java.lang.String)>"
+    "fieldget <soundOut.SoundOut: java.lang.String ampFunc>"->"virtualinvoke <java.awt.TextComponent: void setText(java.lang.String)>";
+    "virtualinvoke <java.awt.TextComponent: void setText(java.lang.String)>"->"load.r r0";
+    "fieldget <soundOut.SoundOut: soundOut.SoundData soundData>"
+    "load.r r0"->"fieldget <soundOut.SoundOut: soundOut.SoundData soundData>";
+    "fieldget <soundOut.SoundOut: soundOut.SoundData soundData>"->"load.r r0";
+    "load.r r0"->"fieldget <soundOut.SoundOut: java.lang.String ampFunc>";
+    "virtualinvoke <soundOut.SoundData: void newAmpFunc(java.lang.String)>"
+    "fieldget <soundOut.SoundOut: java.lang.String ampFunc>"->"virtualinvoke <soundOut.SoundData: void newAmpFunc(java.lang.String)>";
+    "virtualinvoke <soundOut.SoundData: void newAmpFunc(java.lang.String)>"->"load.r r0";
+    "new soundOut.SoundPlayer"
+    "load.r r0"->"new soundOut.SoundPlayer";
+    "new soundOut.SoundPlayer"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "load.r r0"->"fieldget <soundOut.SoundOut: int numPts>";
+    "fieldget <soundOut.SoundOut: int numPts>"->"load.r r0";
+    "fieldget <soundOut.SoundOut: boolean oneShot>"
+    "load.r r0"->"fieldget <soundOut.SoundOut: boolean oneShot>";
+    "specialinvoke <soundOut.SoundPlayer: void <init>(int,boolean)>"
+    "fieldget <soundOut.SoundOut: boolean oneShot>"->"specialinvoke <soundOut.SoundPlayer: void <init>(int,boolean)>";
+    "fieldput <soundOut.SoundOut: soundOut.SoundPlayer soundPlayer>"
+    "specialinvoke <soundOut.SoundPlayer: void <init>(int,boolean)>"->"fieldput <soundOut.SoundOut: soundOut.SoundPlayer soundPlayer>";
+    "fieldput <soundOut.SoundOut: soundOut.SoundPlayer soundPlayer>"->"load.r r0";
+    "virtualinvoke <soundOut.SoundOut: void calc()>"
+    "load.r r0"->"virtualinvoke <soundOut.SoundOut: void calc()>";
+    "virtualinvoke <soundOut.SoundOut: void calc()>"->"load.r r0";
+    "fieldget <soundOut.SoundOut: soundOut.SoundPlayer soundPlayer>"
+    "load.r r0"->"fieldget <soundOut.SoundOut: soundOut.SoundPlayer soundPlayer>";
+    "fieldget <soundOut.SoundOut: soundOut.SoundPlayer soundPlayer>"->"load.r r0";
+    "fieldget <soundOut.SoundOut: java.awt.Checkbox sndCkBox>"
+    "load.r r0"->"fieldget <soundOut.SoundOut: java.awt.Checkbox sndCkBox>";
+    "virtualinvoke <java.awt.Checkbox: boolean getState()>"
+    "fieldget <soundOut.SoundOut: java.awt.Checkbox sndCkBox>"->"virtualinvoke <java.awt.Checkbox: boolean getState()>";
+    "virtualinvoke <soundOut.SoundPlayer: void setMute(boolean)>"
+    "virtualinvoke <java.awt.Checkbox: boolean getState()>"->"virtualinvoke <soundOut.SoundPlayer: void setMute(boolean)>";
+    "return"
+    "virtualinvoke <soundOut.SoundPlayer: void setMute(boolean)>"->"return";
+    "virtualinvoke <java.lang.Throwable: void printStackTrace()>"
+    "virtualinvoke <soundOut.SoundOut: void jbInit()>"->"virtualinvoke <java.lang.Throwable: void printStackTrace()>";
+    "virtualinvoke <java.lang.Boolean: boolean booleanValue()>"->"virtualinvoke <java.lang.Throwable: void printStackTrace()>";
+    "virtualinvoke <java.lang.Double: double doubleValue()>"->"virtualinvoke <java.lang.Throwable: void printStackTrace()>";
+    "virtualinvoke <soundOut.SoundOut: java.lang.String getParameter(java.lang.String,java.lang.String)>"->"virtualinvoke <java.lang.Throwable: void printStackTrace()>";
+    "virtualinvoke <java.lang.Boolean: boolean booleanValue()>"->"virtualinvoke <java.lang.Throwable: void printStackTrace()>";
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"->"virtualinvoke <java.lang.Throwable: void printStackTrace()>";
+}

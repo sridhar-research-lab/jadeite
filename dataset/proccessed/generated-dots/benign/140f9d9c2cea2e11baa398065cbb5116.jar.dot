@@ -1,0 +1,795 @@
+digraph "" {
+    "r0 := @this: joybutton"
+    "load.r r0"
+    "r0 := @this: joybutton"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "virtualinvoke <java.awt.Component: java.awt.Dimension size()>"
+    "load.r r0"->"virtualinvoke <java.awt.Component: java.awt.Dimension size()>";
+    "fieldget <java.awt.Dimension: int width>"
+    "virtualinvoke <java.awt.Component: java.awt.Dimension size()>"->"fieldget <java.awt.Dimension: int width>";
+    "fieldput <joybutton: int w>"
+    "fieldget <java.awt.Dimension: int width>"->"fieldput <joybutton: int w>";
+    "fieldput <joybutton: int w>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"virtualinvoke <java.awt.Component: java.awt.Dimension size()>";
+    "fieldget <java.awt.Dimension: int height>"
+    "virtualinvoke <java.awt.Component: java.awt.Dimension size()>"->"fieldget <java.awt.Dimension: int height>";
+    "fieldput <joybutton: int h>"
+    "fieldget <java.awt.Dimension: int height>"->"fieldput <joybutton: int h>";
+    "fieldput <joybutton: int h>"->"load.r r0";
+    "push 0"
+    "load.r r0"->"push 0";
+    "fieldput <joybutton: boolean registered>"
+    "push 0"->"fieldput <joybutton: boolean registered>";
+    "fieldput <joybutton: boolean registered>"->"push 0";
+    "store.i i46"
+    "push 0"->"store.i i46";
+    "new java.util.StringTokenizer"
+    "store.i i46"->"new java.util.StringTokenizer";
+    "store.r i1"
+    "new java.util.StringTokenizer"->"store.r i1";
+    "load.r i1"
+    "store.r i1"->"load.r i1";
+    "load.r i1"->"load.r r0";
+    "push \"G\""
+    "load.r r0"->"push \"G\"";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"
+    "push \"G\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "push \"|\""
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"push \"|\"";
+    "specialinvoke <java.util.StringTokenizer: void <init>(java.lang.String,java.lang.String)>"
+    "push \"|\""->"specialinvoke <java.util.StringTokenizer: void <init>(java.lang.String,java.lang.String)>";
+    "specialinvoke <java.util.StringTokenizer: void <init>(java.lang.String,java.lang.String)>"->"load.r r0";
+    "load.r r0"->"load.r i1";
+    "virtualinvoke <java.util.StringTokenizer: java.lang.String nextToken()>"
+    "load.r i1"->"virtualinvoke <java.util.StringTokenizer: java.lang.String nextToken()>";
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"
+    "virtualinvoke <java.util.StringTokenizer: java.lang.String nextToken()>"->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>";
+    "fieldput <joybutton: int num_buttons>"
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"->"fieldput <joybutton: int num_buttons>";
+    "fieldput <joybutton: int num_buttons>"->"load.r r0";
+    "load.r r0"->"load.r i1";
+    "load.r i1"->"virtualinvoke <java.util.StringTokenizer: java.lang.String nextToken()>";
+    "fieldput <joybutton: java.lang.String bkimage_name>"
+    "virtualinvoke <java.util.StringTokenizer: java.lang.String nextToken()>"->"fieldput <joybutton: java.lang.String bkimage_name>";
+    "fieldput <joybutton: java.lang.String bkimage_name>"->"load.r r0";
+    "new java.awt.Color"
+    "load.r r0"->"new java.awt.Color";
+    "dup1.r"
+    "new java.awt.Color"->"dup1.r";
+    "dup1.r"->"load.r i1";
+    "load.r i1"->"virtualinvoke <java.util.StringTokenizer: java.lang.String nextToken()>";
+    "push 16"
+    "virtualinvoke <java.util.StringTokenizer: java.lang.String nextToken()>"->"push 16";
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String,int)>"
+    "push 16"->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String,int)>";
+    "specialinvoke <java.awt.Color: void <init>(int)>"
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String,int)>"->"specialinvoke <java.awt.Color: void <init>(int)>";
+    "fieldput <joybutton: java.awt.Color bkcolor>"
+    "specialinvoke <java.awt.Color: void <init>(int)>"->"fieldput <joybutton: java.awt.Color bkcolor>";
+    "fieldput <joybutton: java.awt.Color bkcolor>"->"load.r i1";
+    "load.r i1"->"virtualinvoke <java.util.StringTokenizer: java.lang.String nextToken()>";
+    "push \"1\""
+    "virtualinvoke <java.util.StringTokenizer: java.lang.String nextToken()>"->"push \"1\"";
+    "virtualinvoke <java.lang.String: boolean equalsIgnoreCase(java.lang.String)>"
+    "push \"1\""->"virtualinvoke <java.lang.String: boolean equalsIgnoreCase(java.lang.String)>";
+    "ifeq load.r i1"
+    "virtualinvoke <java.lang.String: boolean equalsIgnoreCase(java.lang.String)>"->"ifeq load.r i1";
+    "ifeq load.r i1"->"load.r r0";
+    "push 1"
+    "load.r r0"->"push 1";
+    "fieldput <joybutton: boolean bk_resize>"
+    "push 1"->"fieldput <joybutton: boolean bk_resize>";
+    "fieldput <joybutton: boolean bk_resize>"->"load.r i1";
+    "load.r i1"->"virtualinvoke <java.util.StringTokenizer: java.lang.String nextToken()>";
+    "virtualinvoke <java.util.StringTokenizer: java.lang.String nextToken()>"->"push \"1\"";
+    "push \"1\""->"virtualinvoke <java.lang.String: boolean equalsIgnoreCase(java.lang.String)>";
+    "ifeq load.r r0"
+    "virtualinvoke <java.lang.String: boolean equalsIgnoreCase(java.lang.String)>"->"ifeq load.r r0";
+    "ifeq load.r r0"->"load.r r0";
+    "load.r r0"->"push 1";
+    "fieldput <joybutton: boolean tile>"
+    "push 1"->"fieldput <joybutton: boolean tile>";
+    "fieldput <joybutton: boolean tile>"->"load.r r0";
+    "load.r r0"->"load.r i1";
+    "load.r i1"->"virtualinvoke <java.util.StringTokenizer: java.lang.String nextToken()>";
+    "virtualinvoke <java.util.StringTokenizer: java.lang.String nextToken()>"->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>";
+    "fieldput <joybutton: int bk_x>"
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"->"fieldput <joybutton: int bk_x>";
+    "fieldput <joybutton: int bk_x>"->"load.r r0";
+    "load.r r0"->"load.r i1";
+    "load.r i1"->"virtualinvoke <java.util.StringTokenizer: java.lang.String nextToken()>";
+    "virtualinvoke <java.util.StringTokenizer: java.lang.String nextToken()>"->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>";
+    "fieldput <joybutton: int bk_y>"
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"->"fieldput <joybutton: int bk_y>";
+    "fieldput <joybutton: int bk_y>"->"load.r i1";
+    "load.r i1"->"virtualinvoke <java.util.StringTokenizer: java.lang.String nextToken()>";
+    "push \"7\""
+    "virtualinvoke <java.util.StringTokenizer: java.lang.String nextToken()>"->"push \"7\"";
+    "push \"7\""->"virtualinvoke <java.lang.String: boolean equalsIgnoreCase(java.lang.String)>";
+    "virtualinvoke <java.lang.String: boolean equalsIgnoreCase(java.lang.String)>"->"ifeq load.r i1";
+    "ifeq load.r i1"->"load.r r0";
+    "load.r r0"->"push 1";
+    "push 1"->"fieldput <joybutton: boolean registered>";
+    "fieldput <joybutton: boolean registered>"->"load.r i1";
+    "load.r i1"->"virtualinvoke <java.util.StringTokenizer: java.lang.String nextToken()>";
+    "virtualinvoke <java.util.StringTokenizer: java.lang.String nextToken()>"->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>";
+    "store.i i0"
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"->"store.i i0";
+    "store.i i0"->"load.r r0";
+    "load.r r0"->"load.r i1";
+    "load.r i1"->"virtualinvoke <java.util.StringTokenizer: java.lang.String nextToken()>";
+    "virtualinvoke <java.util.StringTokenizer: java.lang.String nextToken()>"->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>";
+    "fieldput <joybutton: int BkShading>"
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"->"fieldput <joybutton: int BkShading>";
+    "fieldput <joybutton: int BkShading>"->"load.r r0";
+    "load.r r0"->"load.r i1";
+    "load.r i1"->"virtualinvoke <java.util.StringTokenizer: java.lang.String nextToken()>";
+    "virtualinvoke <java.util.StringTokenizer: java.lang.String nextToken()>"->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>";
+    "fieldput <joybutton: int BkThickness>"
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"->"fieldput <joybutton: int BkThickness>";
+    "fieldput <joybutton: int BkThickness>"->"load.r r0";
+    "load.r r0"->"new java.awt.Color";
+    "new java.awt.Color"->"dup1.r";
+    "dup1.r"->"load.r i1";
+    "load.r i1"->"virtualinvoke <java.util.StringTokenizer: java.lang.String nextToken()>";
+    "virtualinvoke <java.util.StringTokenizer: java.lang.String nextToken()>"->"push 16";
+    "push 16"->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String,int)>";
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String,int)>"->"specialinvoke <java.awt.Color: void <init>(int)>";
+    "fieldput <joybutton: java.awt.Color BkBorderColor>"
+    "specialinvoke <java.awt.Color: void <init>(int)>"->"fieldput <joybutton: java.awt.Color BkBorderColor>";
+    "fieldput <joybutton: java.awt.Color BkBorderColor>"->"load.r r0";
+    "load.r r0"->"load.r i1";
+    "load.r i1"->"virtualinvoke <java.util.StringTokenizer: java.lang.String nextToken()>";
+    "virtualinvoke <java.util.StringTokenizer: java.lang.String nextToken()>"->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>";
+    "fieldput <joybutton: int BkBorderState>"
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"->"fieldput <joybutton: int BkBorderState>";
+    "fieldput <joybutton: int BkBorderState>"->"load.r r0";
+    "fieldget <joybutton: int num_buttons>"
+    "load.r r0"->"fieldget <joybutton: int num_buttons>";
+    "push 3"
+    "fieldget <joybutton: int num_buttons>"->"push 3";
+    "mul.i"
+    "push 3"->"mul.i";
+    "store.i i1"
+    "mul.i"->"store.i i1";
+    "store.i i1"->"load.r r0";
+    "load.i i0"
+    "load.r r0"->"load.i i0";
+    "newarray"
+    "load.i i0"->"newarray";
+    "fieldput <joybutton: int[] font>"
+    "newarray"->"fieldput <joybutton: int[] font>";
+    "fieldput <joybutton: int[] font>"->"load.r r0";
+    "load.r r0"->"load.i i0";
+    "load.i i0"->"newarray";
+    "fieldput <joybutton: int[] fontX>"
+    "newarray"->"fieldput <joybutton: int[] fontX>";
+    "fieldput <joybutton: int[] fontX>"->"load.r r0";
+    "load.r r0"->"load.i i0";
+    "load.i i0"->"newarray";
+    "fieldput <joybutton: int[] fontY>"
+    "newarray"->"fieldput <joybutton: int[] fontY>";
+    "fieldput <joybutton: int[] fontY>"->"load.r r0";
+    "load.r r0"->"load.i i0";
+    "load.i i0"->"newarray";
+    "fieldput <joybutton: int[] fontSize>"
+    "newarray"->"fieldput <joybutton: int[] fontSize>";
+    "fieldput <joybutton: int[] fontSize>"->"load.r r0";
+    "load.r r0"->"load.i i0";
+    "load.i i0"->"newarray";
+    "fieldput <joybutton: int[] fontStyle>"
+    "newarray"->"fieldput <joybutton: int[] fontStyle>";
+    "fieldput <joybutton: int[] fontStyle>"->"load.r r0";
+    "load.r r0"->"load.i i0";
+    "load.i i0"->"newarray";
+    "fieldput <joybutton: java.lang.String[] message>"
+    "newarray"->"fieldput <joybutton: java.lang.String[] message>";
+    "fieldput <joybutton: java.lang.String[] message>"->"load.r r0";
+    "load.r r0"->"load.i i0";
+    "load.i i0"->"newarray";
+    "fieldput <joybutton: java.awt.Color[] fontColor>"
+    "newarray"->"fieldput <joybutton: java.awt.Color[] fontColor>";
+    "fieldput <joybutton: java.awt.Color[] fontColor>"->"load.r r0";
+    "load.i i1"
+    "load.r r0"->"load.i i1";
+    "load.i i1"->"newarray";
+    "fieldput <joybutton: int[] fontMessages>"
+    "newarray"->"fieldput <joybutton: int[] fontMessages>";
+    "fieldput <joybutton: int[] fontMessages>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <joybutton: int num_buttons>";
+    "fieldput <joybutton: int last_button_move>"
+    "fieldget <joybutton: int num_buttons>"->"fieldput <joybutton: int last_button_move>";
+    "fieldput <joybutton: int last_button_move>"->"load.r r0";
+    "load.r r0"->"load.i i1";
+    "load.i i1"->"newarray";
+    "fieldput <joybutton: java.awt.Graphics[] btn_offGraphics>"
+    "newarray"->"fieldput <joybutton: java.awt.Graphics[] btn_offGraphics>";
+    "fieldput <joybutton: java.awt.Graphics[] btn_offGraphics>"->"load.r r0";
+    "load.r r0"->"load.i i1";
+    "load.i i1"->"newarray";
+    "fieldput <joybutton: java.awt.Image[] btn_offImage>"
+    "newarray"->"fieldput <joybutton: java.awt.Image[] btn_offImage>";
+    "fieldput <joybutton: java.awt.Image[] btn_offImage>"->"load.r r0";
+    "load.r r0"->"load.i i1";
+    "load.i i1"->"newarray";
+    "fieldput <joybutton: java.awt.Color[] btn_color>"
+    "newarray"->"fieldput <joybutton: java.awt.Color[] btn_color>";
+    "fieldput <joybutton: java.awt.Color[] btn_color>"->"load.r r0";
+    "load.r r0"->"load.i i1";
+    "load.i i1"->"newarray";
+    "fieldput <joybutton: java.awt.Color[] btn_border_color>"
+    "newarray"->"fieldput <joybutton: java.awt.Color[] btn_border_color>";
+    "fieldput <joybutton: java.awt.Color[] btn_border_color>"->"load.r r0";
+    "load.r r0"->"load.i i1";
+    "load.i i1"->"newarray";
+    "fieldput <joybutton: boolean[] resize>"
+    "newarray"->"fieldput <joybutton: boolean[] resize>";
+    "fieldput <joybutton: boolean[] resize>"->"load.r r0";
+    "load.r r0"->"load.i i1";
+    "load.i i1"->"newarray";
+    "fieldput <joybutton: int[] border>"
+    "newarray"->"fieldput <joybutton: int[] border>";
+    "fieldput <joybutton: int[] border>"->"load.r r0";
+    "load.r r0"->"load.i i1";
+    "load.i i1"->"newarray";
+    "fieldput <joybutton: int[] border_thickness>"
+    "newarray"->"fieldput <joybutton: int[] border_thickness>";
+    "fieldput <joybutton: int[] border_thickness>"->"load.r r0";
+    "load.r r0"->"load.i i1";
+    "load.i i1"->"newarray";
+    "fieldput <joybutton: int[] border_shading>"
+    "newarray"->"fieldput <joybutton: int[] border_shading>";
+    "fieldput <joybutton: int[] border_shading>"->"load.r r0";
+    "load.r r0"->"load.i i1";
+    "load.i i1"->"newarray";
+    "fieldput <joybutton: int[] border_up>"
+    "newarray"->"fieldput <joybutton: int[] border_up>";
+    "fieldput <joybutton: int[] border_up>"->"load.r r0";
+    "load.r r0"->"load.i i1";
+    "load.i i1"->"newarray";
+    "fieldput <joybutton: java.awt.Image[] image>"
+    "newarray"->"fieldput <joybutton: java.awt.Image[] image>";
+    "fieldput <joybutton: java.awt.Image[] image>"->"load.r r0";
+    "load.r r0"->"load.i i1";
+    "load.i i1"->"newarray";
+    "fieldput <joybutton: int[] image_x>"
+    "newarray"->"fieldput <joybutton: int[] image_x>";
+    "fieldput <joybutton: int[] image_x>"->"load.r r0";
+    "load.r r0"->"load.i i1";
+    "load.i i1"->"newarray";
+    "fieldput <joybutton: int[] image_y>"
+    "newarray"->"fieldput <joybutton: int[] image_y>";
+    "fieldput <joybutton: int[] image_y>"->"load.r r0";
+    "load.r r0"->"load.i i1";
+    "load.i i1"->"newarray";
+    "fieldput <joybutton: java.lang.String[] image_name>"
+    "newarray"->"fieldput <joybutton: java.lang.String[] image_name>";
+    "fieldput <joybutton: java.lang.String[] image_name>"->"load.r r0";
+    "load.r r0"->"load.i i1";
+    "load.i i1"->"newarray";
+    "fieldput <joybutton: java.lang.String[] sound_name>"
+    "newarray"->"fieldput <joybutton: java.lang.String[] sound_name>";
+    "fieldput <joybutton: java.lang.String[] sound_name>"->"load.r r0";
+    "load.r r0"->"load.i i1";
+    "load.i i1"->"newarray";
+    "fieldput <joybutton: java.applet.AudioClip[] sound>"
+    "newarray"->"fieldput <joybutton: java.applet.AudioClip[] sound>";
+    "fieldput <joybutton: java.applet.AudioClip[] sound>"->"load.r r0";
+    "load.r r0"->"load.i i1";
+    "load.i i1"->"newarray";
+    "fieldput <joybutton: java.lang.String[] link>"
+    "newarray"->"fieldput <joybutton: java.lang.String[] link>";
+    "fieldput <joybutton: java.lang.String[] link>"->"load.r r0";
+    "load.r r0"->"load.i i1";
+    "load.i i1"->"newarray";
+    "fieldput <joybutton: java.lang.String[] frame>"
+    "newarray"->"fieldput <joybutton: java.lang.String[] frame>";
+    "fieldput <joybutton: java.lang.String[] frame>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <joybutton: int num_buttons>";
+    "fieldget <joybutton: int num_buttons>"->"newarray";
+    "fieldput <joybutton: int[] button_w>"
+    "newarray"->"fieldput <joybutton: int[] button_w>";
+    "fieldput <joybutton: int[] button_w>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <joybutton: int num_buttons>";
+    "fieldget <joybutton: int num_buttons>"->"newarray";
+    "fieldput <joybutton: int[] button_h>"
+    "newarray"->"fieldput <joybutton: int[] button_h>";
+    "fieldput <joybutton: int[] button_h>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <joybutton: int num_buttons>";
+    "fieldget <joybutton: int num_buttons>"->"newarray";
+    "fieldput <joybutton: int[] button_x>"
+    "newarray"->"fieldput <joybutton: int[] button_x>";
+    "fieldput <joybutton: int[] button_x>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <joybutton: int num_buttons>";
+    "fieldget <joybutton: int num_buttons>"->"newarray";
+    "fieldput <joybutton: int[] button_y>"
+    "newarray"->"fieldput <joybutton: int[] button_y>";
+    "fieldput <joybutton: int[] button_y>"->"load.r r0";
+    "load.r r0"->"load.i i1";
+    "load.i i1"->"newarray";
+    "fieldput <joybutton: java.lang.String[] status>"
+    "newarray"->"fieldput <joybutton: java.lang.String[] status>";
+    "fieldput <joybutton: java.lang.String[] status>"->"push 0";
+    "store.i i47"
+    "push 0"->"store.i i47";
+    "goto load.i i47"
+    "store.i i47"->"goto load.i i47";
+    "load.i i47"
+    "goto load.i i47"->"load.i i47";
+    "load.i i47"->"load.r r0";
+    "load.r r0"->"fieldget <joybutton: int num_buttons>";
+    "ifcmplt.i new java.util.StringTokenizer"
+    "fieldget <joybutton: int num_buttons>"->"ifcmplt.i new java.util.StringTokenizer";
+    "ifcmplt.i new java.util.StringTokenizer"->"load.r r0";
+    "fieldget <joybutton: java.lang.String bkimage_name>"
+    "load.r r0"->"fieldget <joybutton: java.lang.String bkimage_name>";
+    "push \" \""
+    "fieldget <joybutton: java.lang.String bkimage_name>"->"push \" \"";
+    "push \" \""->"virtualinvoke <java.lang.String: boolean equalsIgnoreCase(java.lang.String)>";
+    "virtualinvoke <java.lang.String: boolean equalsIgnoreCase(java.lang.String)>"->"ifeq load.r r0";
+    "ifeq load.r r0"->"load.r r0";
+    "push null"
+    "load.r r0"->"push null";
+    "push null"->"fieldput <joybutton: java.lang.String bkimage_name>";
+    "fieldput <joybutton: java.lang.String bkimage_name>"->"load.r r0";
+    "load.r r0"->"push null";
+    "fieldput <joybutton: java.awt.Image bkimage>"
+    "push null"->"fieldput <joybutton: java.awt.Image bkimage>";
+    "goto push 0"
+    "fieldput <joybutton: java.awt.Image bkimage>"->"goto push 0";
+    "goto push 0"->"push 0";
+    "push 0"->"store.i i46";
+    "goto load.i i46"
+    "store.i i46"->"goto load.i i46";
+    "load.i i46"
+    "goto load.i i46"->"load.i i46";
+    "load.i i46"->"load.i i1";
+    "ifcmplt.i load.r r0"
+    "load.i i1"->"ifcmplt.i load.r r0";
+    "ifcmplt.i load.r r0"->"push 3";
+    "push 3"->"newarray";
+    "newarray"->"store.r i1";
+    "store.r i1"->"load.r i1";
+    "load.r i1"->"push 0";
+    "push 0"->"load.r r0";
+    "virtualinvoke <java.applet.Applet: java.net.URL getDocumentBase()>"
+    "load.r r0"->"virtualinvoke <java.applet.Applet: java.net.URL getDocumentBase()>";
+    "virtualinvoke <java.net.URL: java.lang.String toString()>"
+    "virtualinvoke <java.applet.Applet: java.net.URL getDocumentBase()>"->"virtualinvoke <java.net.URL: java.lang.String toString()>";
+    "virtualinvoke <java.net.URL: java.lang.String toString()>"->"push 1";
+    "virtualinvoke <java.lang.String: char charAt(int)>"
+    "push 1"->"virtualinvoke <java.lang.String: char charAt(int)>";
+    "arraywrite.c"
+    "virtualinvoke <java.lang.String: char charAt(int)>"->"arraywrite.c";
+    "arraywrite.c"->"load.r i1";
+    "load.r i1"->"push 1";
+    "push 1"->"load.r r0";
+    "load.r r0"->"virtualinvoke <java.applet.Applet: java.net.URL getDocumentBase()>";
+    "virtualinvoke <java.applet.Applet: java.net.URL getDocumentBase()>"->"virtualinvoke <java.net.URL: java.lang.String toString()>";
+    "push 2"
+    "virtualinvoke <java.net.URL: java.lang.String toString()>"->"push 2";
+    "push 2"->"virtualinvoke <java.lang.String: char charAt(int)>";
+    "virtualinvoke <java.lang.String: char charAt(int)>"->"arraywrite.c";
+    "arraywrite.c"->"load.r i1";
+    "load.r i1"->"push 2";
+    "push 58"
+    "push 2"->"push 58";
+    "push 58"->"arraywrite.c";
+    "arraywrite.c"->"load.r i1";
+    "load.r i1"->"push 0";
+    "arrayread.c"
+    "push 0"->"arrayread.c";
+    "arrayread.c"->"load.r i1";
+    "load.r i1"->"push 2";
+    "push 2"->"arrayread.c";
+    "ifcmpeq.c load.r r0"
+    "arrayread.c"->"ifcmpeq.c load.r r0";
+    "ifcmpeq.c load.r r0"->"load.r i1";
+    "load.r i1"->"push 1";
+    "push 1"->"arrayread.c";
+    "arrayread.c"->"load.r i1";
+    "load.r i1"->"push 2";
+    "push 2"->"arrayread.c";
+    "arrayread.c"->"ifcmpeq.c load.r r0";
+    "ifcmpeq.c load.r r0"->"load.r r0";
+    "load.r r0"->"virtualinvoke <java.applet.Applet: java.net.URL getDocumentBase()>";
+    "virtualinvoke <java.applet.Applet: java.net.URL getDocumentBase()>"->"virtualinvoke <java.net.URL: java.lang.String toString()>";
+    "push \"file\""
+    "virtualinvoke <java.net.URL: java.lang.String toString()>"->"push \"file\"";
+    "virtualinvoke <java.lang.String: boolean startsWith(java.lang.String)>"
+    "push \"file\""->"virtualinvoke <java.lang.String: boolean startsWith(java.lang.String)>";
+    "ifeq return"
+    "virtualinvoke <java.lang.String: boolean startsWith(java.lang.String)>"->"ifeq return";
+    "ifeq return"->"load.r r0";
+    "fieldget <joybutton: boolean registered>"
+    "load.r r0"->"fieldget <joybutton: boolean registered>";
+    "ifne return"
+    "fieldget <joybutton: boolean registered>"->"ifne return";
+    "ifne return"->"load.r r0";
+    "load.r r0"->"push 1";
+    "push 1"->"fieldput <joybutton: boolean registered>";
+    "return"
+    "fieldput <joybutton: boolean registered>"->"return";
+    "ifcmplt.i load.r r0"->"load.r r0";
+    "fieldget <joybutton: java.lang.String[] image_name>"
+    "load.r r0"->"fieldget <joybutton: java.lang.String[] image_name>";
+    "fieldget <joybutton: java.lang.String[] image_name>"->"load.i i46";
+    "arrayread.r"
+    "load.i i46"->"arrayread.r";
+    "arrayread.r"->"push \" \"";
+    "push \" \""->"virtualinvoke <java.lang.String: boolean equalsIgnoreCase(java.lang.String)>";
+    "virtualinvoke <java.lang.String: boolean equalsIgnoreCase(java.lang.String)>"->"ifeq load.r r0";
+    "ifeq load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <joybutton: java.lang.String[] image_name>";
+    "fieldget <joybutton: java.lang.String[] image_name>"->"load.i i46";
+    "load.i i46"->"push null";
+    "arraywrite.r"
+    "push null"->"arraywrite.r";
+    "goto load.r r0"
+    "arraywrite.r"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "fieldget <joybutton: java.lang.String[] sound_name>"
+    "load.r r0"->"fieldget <joybutton: java.lang.String[] sound_name>";
+    "fieldget <joybutton: java.lang.String[] sound_name>"->"load.i i46";
+    "load.i i46"->"arrayread.r";
+    "arrayread.r"->"push \" \"";
+    "push \" \""->"virtualinvoke <java.lang.String: boolean equalsIgnoreCase(java.lang.String)>";
+    "virtualinvoke <java.lang.String: boolean equalsIgnoreCase(java.lang.String)>"->"ifeq load.r r0";
+    "ifeq load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <joybutton: java.lang.String[] sound_name>";
+    "fieldget <joybutton: java.lang.String[] sound_name>"->"load.i i46";
+    "load.i i46"->"push null";
+    "push null"->"arraywrite.r";
+    "goto inc.i i46 1"
+    "arraywrite.r"->"goto inc.i i46 1";
+    "inc.i i46 1"
+    "goto inc.i i46 1"->"inc.i i46 1";
+    "ifeq load.r r0"->"load.r r0";
+    "fieldget <joybutton: java.applet.AudioClip[] sound>"
+    "load.r r0"->"fieldget <joybutton: java.applet.AudioClip[] sound>";
+    "fieldget <joybutton: java.applet.AudioClip[] sound>"->"load.i i46";
+    "load.i i46"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "virtualinvoke <java.applet.Applet: java.net.URL getCodeBase()>"
+    "load.r r0"->"virtualinvoke <java.applet.Applet: java.net.URL getCodeBase()>";
+    "virtualinvoke <java.applet.Applet: java.net.URL getCodeBase()>"->"load.r r0";
+    "load.r r0"->"fieldget <joybutton: java.lang.String[] sound_name>";
+    "fieldget <joybutton: java.lang.String[] sound_name>"->"load.i i46";
+    "load.i i46"->"arrayread.r";
+    "virtualinvoke <java.applet.Applet: java.applet.AudioClip getAudioClip(java.net.URL,java.lang.String)>"
+    "arrayread.r"->"virtualinvoke <java.applet.Applet: java.applet.AudioClip getAudioClip(java.net.URL,java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.applet.AudioClip getAudioClip(java.net.URL,java.lang.String)>"->"arraywrite.r";
+    "ifeq load.r r0"->"load.r r0";
+    "fieldget <joybutton: java.awt.Image[] image>"
+    "load.r r0"->"fieldget <joybutton: java.awt.Image[] image>";
+    "fieldget <joybutton: java.awt.Image[] image>"->"load.i i46";
+    "load.i i46"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"virtualinvoke <java.applet.Applet: java.net.URL getCodeBase()>";
+    "virtualinvoke <java.applet.Applet: java.net.URL getCodeBase()>"->"load.r r0";
+    "load.r r0"->"fieldget <joybutton: java.lang.String[] image_name>";
+    "fieldget <joybutton: java.lang.String[] image_name>"->"load.i i46";
+    "load.i i46"->"arrayread.r";
+    "virtualinvoke <java.applet.Applet: java.awt.Image getImage(java.net.URL,java.lang.String)>"
+    "arrayread.r"->"virtualinvoke <java.applet.Applet: java.awt.Image getImage(java.net.URL,java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.awt.Image getImage(java.net.URL,java.lang.String)>"->"arraywrite.r";
+    "arraywrite.r"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <joybutton: java.awt.Image[] image>";
+    "fieldget <joybutton: java.awt.Image[] image>"->"load.i i46";
+    "load.i i46"->"arrayread.r";
+    "virtualinvoke <joybutton: void loadimage(java.awt.Image)>"
+    "arrayread.r"->"virtualinvoke <joybutton: void loadimage(java.awt.Image)>";
+    "ifeq load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"virtualinvoke <java.applet.Applet: java.net.URL getCodeBase()>";
+    "virtualinvoke <java.applet.Applet: java.net.URL getCodeBase()>"->"load.r r0";
+    "load.r r0"->"fieldget <joybutton: java.lang.String bkimage_name>";
+    "fieldget <joybutton: java.lang.String bkimage_name>"->"virtualinvoke <java.applet.Applet: java.awt.Image getImage(java.net.URL,java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.awt.Image getImage(java.net.URL,java.lang.String)>"->"fieldput <joybutton: java.awt.Image bkimage>";
+    "fieldput <joybutton: java.awt.Image bkimage>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "fieldget <joybutton: java.awt.Image bkimage>"
+    "load.r r0"->"fieldget <joybutton: java.awt.Image bkimage>";
+    "fieldget <joybutton: java.awt.Image bkimage>"->"virtualinvoke <joybutton: void loadimage(java.awt.Image)>";
+    "ifcmplt.i new java.util.StringTokenizer"->"new java.util.StringTokenizer";
+    "store.r i0"
+    "new java.util.StringTokenizer"->"store.r i0";
+    "load.r i0"
+    "store.r i0"->"load.r i0";
+    "load.r i0"->"load.r r0";
+    "load.r r0"->"load.i i47";
+    "staticinvoke <java.lang.Integer: java.lang.String toString(int)>"
+    "load.i i47"->"staticinvoke <java.lang.Integer: java.lang.String toString(int)>";
+    "staticinvoke <java.lang.Integer: java.lang.String toString(int)>"->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"push \"|\"";
+    "push \"|\""->"specialinvoke <java.util.StringTokenizer: void <init>(java.lang.String,java.lang.String)>";
+    "specialinvoke <java.util.StringTokenizer: void <init>(java.lang.String,java.lang.String)>"->"load.r r0";
+    "fieldget <joybutton: int[] button_x>"
+    "load.r r0"->"fieldget <joybutton: int[] button_x>";
+    "fieldget <joybutton: int[] button_x>"->"load.i i47";
+    "load.i i47"->"load.r i0";
+    "load.r i0"->"virtualinvoke <java.util.StringTokenizer: java.lang.String nextToken()>";
+    "virtualinvoke <java.util.StringTokenizer: java.lang.String nextToken()>"->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>";
+    "arraywrite.i"
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"->"arraywrite.i";
+    "arraywrite.i"->"load.r r0";
+    "fieldget <joybutton: int[] button_y>"
+    "load.r r0"->"fieldget <joybutton: int[] button_y>";
+    "fieldget <joybutton: int[] button_y>"->"load.i i47";
+    "load.i i47"->"load.r i0";
+    "load.r i0"->"virtualinvoke <java.util.StringTokenizer: java.lang.String nextToken()>";
+    "virtualinvoke <java.util.StringTokenizer: java.lang.String nextToken()>"->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>";
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"->"arraywrite.i";
+    "arraywrite.i"->"load.r r0";
+    "fieldget <joybutton: int[] button_w>"
+    "load.r r0"->"fieldget <joybutton: int[] button_w>";
+    "fieldget <joybutton: int[] button_w>"->"load.i i47";
+    "load.i i47"->"load.r i0";
+    "load.r i0"->"virtualinvoke <java.util.StringTokenizer: java.lang.String nextToken()>";
+    "virtualinvoke <java.util.StringTokenizer: java.lang.String nextToken()>"->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>";
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"->"arraywrite.i";
+    "arraywrite.i"->"load.r r0";
+    "fieldget <joybutton: int[] button_h>"
+    "load.r r0"->"fieldget <joybutton: int[] button_h>";
+    "fieldget <joybutton: int[] button_h>"->"load.i i47";
+    "load.i i47"->"load.r i0";
+    "load.r i0"->"virtualinvoke <java.util.StringTokenizer: java.lang.String nextToken()>";
+    "virtualinvoke <java.util.StringTokenizer: java.lang.String nextToken()>"->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>";
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"->"arraywrite.i";
+    "arraywrite.i"->"push 0";
+    "store.i i48"
+    "push 0"->"store.i i48";
+    "goto load.i i48"
+    "store.i i48"->"goto load.i i48";
+    "load.i i48"
+    "goto load.i i48"->"load.i i48";
+    "load.i i48"->"push 3";
+    "ifcmplt.i load.i i47"
+    "push 3"->"ifcmplt.i load.i i47";
+    "inc.i i47 1"
+    "ifcmplt.i load.i i47"->"inc.i i47 1";
+    "ifcmplt.i load.i i47"->"load.i i47";
+    "load.i i47"->"push 3";
+    "push 3"->"mul.i";
+    "mul.i"->"load.i i48";
+    "add.i"
+    "load.i i48"->"add.i";
+    "store.i i49"
+    "add.i"->"store.i i49";
+    "store.i i49"->"load.r r0";
+    "fieldget <joybutton: int[] border>"
+    "load.r r0"->"fieldget <joybutton: int[] border>";
+    "load.i i49"
+    "fieldget <joybutton: int[] border>"->"load.i i49";
+    "load.i i49"->"load.r i0";
+    "load.r i0"->"virtualinvoke <java.util.StringTokenizer: java.lang.String nextToken()>";
+    "virtualinvoke <java.util.StringTokenizer: java.lang.String nextToken()>"->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>";
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"->"arraywrite.i";
+    "arraywrite.i"->"load.r r0";
+    "fieldget <joybutton: int[] border_thickness>"
+    "load.r r0"->"fieldget <joybutton: int[] border_thickness>";
+    "fieldget <joybutton: int[] border_thickness>"->"load.i i49";
+    "load.i i49"->"load.r i0";
+    "load.r i0"->"virtualinvoke <java.util.StringTokenizer: java.lang.String nextToken()>";
+    "virtualinvoke <java.util.StringTokenizer: java.lang.String nextToken()>"->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>";
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"->"arraywrite.i";
+    "arraywrite.i"->"load.r r0";
+    "fieldget <joybutton: int[] border_shading>"
+    "load.r r0"->"fieldget <joybutton: int[] border_shading>";
+    "fieldget <joybutton: int[] border_shading>"->"load.i i49";
+    "load.i i49"->"load.r i0";
+    "load.r i0"->"virtualinvoke <java.util.StringTokenizer: java.lang.String nextToken()>";
+    "virtualinvoke <java.util.StringTokenizer: java.lang.String nextToken()>"->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>";
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"->"arraywrite.i";
+    "arraywrite.i"->"load.r r0";
+    "fieldget <joybutton: java.awt.Color[] btn_border_color>"
+    "load.r r0"->"fieldget <joybutton: java.awt.Color[] btn_border_color>";
+    "fieldget <joybutton: java.awt.Color[] btn_border_color>"->"load.i i49";
+    "load.i i49"->"new java.awt.Color";
+    "new java.awt.Color"->"dup1.r";
+    "dup1.r"->"load.r i0";
+    "load.r i0"->"virtualinvoke <java.util.StringTokenizer: java.lang.String nextToken()>";
+    "virtualinvoke <java.util.StringTokenizer: java.lang.String nextToken()>"->"push 16";
+    "push 16"->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String,int)>";
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String,int)>"->"specialinvoke <java.awt.Color: void <init>(int)>";
+    "specialinvoke <java.awt.Color: void <init>(int)>"->"arraywrite.r";
+    "arraywrite.r"->"load.r r0";
+    "fieldget <joybutton: java.awt.Color[] btn_color>"
+    "load.r r0"->"fieldget <joybutton: java.awt.Color[] btn_color>";
+    "fieldget <joybutton: java.awt.Color[] btn_color>"->"load.i i49";
+    "load.i i49"->"new java.awt.Color";
+    "new java.awt.Color"->"dup1.r";
+    "dup1.r"->"load.r i0";
+    "load.r i0"->"virtualinvoke <java.util.StringTokenizer: java.lang.String nextToken()>";
+    "virtualinvoke <java.util.StringTokenizer: java.lang.String nextToken()>"->"push 16";
+    "push 16"->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String,int)>";
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String,int)>"->"specialinvoke <java.awt.Color: void <init>(int)>";
+    "specialinvoke <java.awt.Color: void <init>(int)>"->"arraywrite.r";
+    "arraywrite.r"->"load.r r0";
+    "fieldget <joybutton: int[] border_up>"
+    "load.r r0"->"fieldget <joybutton: int[] border_up>";
+    "fieldget <joybutton: int[] border_up>"->"load.i i49";
+    "load.i i49"->"load.r i0";
+    "load.r i0"->"virtualinvoke <java.util.StringTokenizer: java.lang.String nextToken()>";
+    "virtualinvoke <java.util.StringTokenizer: java.lang.String nextToken()>"->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>";
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"->"arraywrite.i";
+    "arraywrite.i"->"load.r r0";
+    "load.r r0"->"fieldget <joybutton: java.lang.String[] sound_name>";
+    "fieldget <joybutton: java.lang.String[] sound_name>"->"load.i i49";
+    "load.i i49"->"load.r i0";
+    "load.r i0"->"virtualinvoke <java.util.StringTokenizer: java.lang.String nextToken()>";
+    "virtualinvoke <java.util.StringTokenizer: java.lang.String nextToken()>"->"arraywrite.r";
+    "arraywrite.r"->"load.r r0";
+    "fieldget <joybutton: java.lang.String[] status>"
+    "load.r r0"->"fieldget <joybutton: java.lang.String[] status>";
+    "fieldget <joybutton: java.lang.String[] status>"->"load.i i49";
+    "load.i i49"->"load.r i0";
+    "load.r i0"->"virtualinvoke <java.util.StringTokenizer: java.lang.String nextToken()>";
+    "virtualinvoke <java.util.StringTokenizer: java.lang.String nextToken()>"->"arraywrite.r";
+    "arraywrite.r"->"load.r r0";
+    "fieldget <joybutton: java.lang.String[] link>"
+    "load.r r0"->"fieldget <joybutton: java.lang.String[] link>";
+    "fieldget <joybutton: java.lang.String[] link>"->"load.i i49";
+    "load.i i49"->"load.r i0";
+    "load.r i0"->"virtualinvoke <java.util.StringTokenizer: java.lang.String nextToken()>";
+    "virtualinvoke <java.util.StringTokenizer: java.lang.String nextToken()>"->"arraywrite.r";
+    "arraywrite.r"->"load.r r0";
+    "load.r r0"->"fieldget <joybutton: java.lang.String[] link>";
+    "fieldget <joybutton: java.lang.String[] link>"->"load.i i49";
+    "load.i i49"->"arrayread.r";
+    "arrayread.r"->"push \" \"";
+    "push \" \""->"virtualinvoke <java.lang.String: boolean equalsIgnoreCase(java.lang.String)>";
+    "virtualinvoke <java.lang.String: boolean equalsIgnoreCase(java.lang.String)>"->"ifeq load.r r0";
+    "ifeq load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <joybutton: java.lang.String[] link>";
+    "fieldget <joybutton: java.lang.String[] link>"->"load.i i49";
+    "load.i i49"->"push null";
+    "push null"->"arraywrite.r";
+    "arraywrite.r"->"load.r r0";
+    "fieldget <joybutton: java.lang.String[] frame>"
+    "load.r r0"->"fieldget <joybutton: java.lang.String[] frame>";
+    "fieldget <joybutton: java.lang.String[] frame>"->"load.i i49";
+    "load.i i49"->"load.r i0";
+    "load.r i0"->"virtualinvoke <java.util.StringTokenizer: java.lang.String nextToken()>";
+    "virtualinvoke <java.util.StringTokenizer: java.lang.String nextToken()>"->"arraywrite.r";
+    "arraywrite.r"->"load.r r0";
+    "load.r r0"->"fieldget <joybutton: java.lang.String[] frame>";
+    "fieldget <joybutton: java.lang.String[] frame>"->"load.i i49";
+    "load.i i49"->"arrayread.r";
+    "arrayread.r"->"push \" \"";
+    "push \" \""->"virtualinvoke <java.lang.String: boolean equalsIgnoreCase(java.lang.String)>";
+    "virtualinvoke <java.lang.String: boolean equalsIgnoreCase(java.lang.String)>"->"ifeq load.r r0";
+    "ifeq load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <joybutton: java.lang.String[] frame>";
+    "fieldget <joybutton: java.lang.String[] frame>"->"load.i i49";
+    "load.i i49"->"push null";
+    "push null"->"arraywrite.r";
+    "arraywrite.r"->"load.r r0";
+    "fieldget <joybutton: int[] fontMessages>"
+    "load.r r0"->"fieldget <joybutton: int[] fontMessages>";
+    "fieldget <joybutton: int[] fontMessages>"->"load.i i49";
+    "load.i i49"->"load.r i0";
+    "load.r i0"->"virtualinvoke <java.util.StringTokenizer: java.lang.String nextToken()>";
+    "virtualinvoke <java.util.StringTokenizer: java.lang.String nextToken()>"->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>";
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"->"arraywrite.i";
+    "arraywrite.i"->"push 0";
+    "store.i i50"
+    "push 0"->"store.i i50";
+    "goto load.i i50"
+    "store.i i50"->"goto load.i i50";
+    "load.i i50"
+    "goto load.i i50"->"load.i i50";
+    "load.i i50"->"load.r r0";
+    "load.r r0"->"fieldget <joybutton: int[] fontMessages>";
+    "fieldget <joybutton: int[] fontMessages>"->"load.i i49";
+    "arrayread.i"
+    "load.i i49"->"arrayread.i";
+    "arrayread.i"->"ifcmplt.i load.r r0";
+    "ifcmplt.i load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <joybutton: java.lang.String[] image_name>";
+    "fieldget <joybutton: java.lang.String[] image_name>"->"load.i i49";
+    "load.i i49"->"load.r i0";
+    "load.r i0"->"virtualinvoke <java.util.StringTokenizer: java.lang.String nextToken()>";
+    "virtualinvoke <java.util.StringTokenizer: java.lang.String nextToken()>"->"arraywrite.r";
+    "arraywrite.r"->"load.r r0";
+    "fieldget <joybutton: int[] image_x>"
+    "load.r r0"->"fieldget <joybutton: int[] image_x>";
+    "fieldget <joybutton: int[] image_x>"->"load.i i49";
+    "load.i i49"->"load.r i0";
+    "load.r i0"->"virtualinvoke <java.util.StringTokenizer: java.lang.String nextToken()>";
+    "virtualinvoke <java.util.StringTokenizer: java.lang.String nextToken()>"->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>";
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"->"arraywrite.i";
+    "arraywrite.i"->"load.r r0";
+    "fieldget <joybutton: int[] image_y>"
+    "load.r r0"->"fieldget <joybutton: int[] image_y>";
+    "fieldget <joybutton: int[] image_y>"->"load.i i49";
+    "load.i i49"->"load.r i0";
+    "load.r i0"->"virtualinvoke <java.util.StringTokenizer: java.lang.String nextToken()>";
+    "virtualinvoke <java.util.StringTokenizer: java.lang.String nextToken()>"->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>";
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"->"arraywrite.i";
+    "arraywrite.i"->"load.r i0";
+    "load.r i0"->"virtualinvoke <java.util.StringTokenizer: java.lang.String nextToken()>";
+    "virtualinvoke <java.util.StringTokenizer: java.lang.String nextToken()>"->"push \"1\"";
+    "push \"1\""->"virtualinvoke <java.lang.String: boolean equalsIgnoreCase(java.lang.String)>";
+    "ifeq inc.i i48 1"
+    "virtualinvoke <java.lang.String: boolean equalsIgnoreCase(java.lang.String)>"->"ifeq inc.i i48 1";
+    "ifeq inc.i i48 1"->"load.r r0";
+    "fieldget <joybutton: boolean[] resize>"
+    "load.r r0"->"fieldget <joybutton: boolean[] resize>";
+    "fieldget <joybutton: boolean[] resize>"->"load.i i49";
+    "load.i i49"->"push 1";
+    "arraywrite.b"
+    "push 1"->"arraywrite.b";
+    "inc.i i48 1"
+    "arraywrite.b"->"inc.i i48 1";
+    "ifcmplt.i load.r r0"->"load.r r0";
+    "fieldget <joybutton: java.awt.Color[] fontColor>"
+    "load.r r0"->"fieldget <joybutton: java.awt.Color[] fontColor>";
+    "fieldget <joybutton: java.awt.Color[] fontColor>"->"load.i i46";
+    "load.i i46"->"new java.awt.Color";
+    "new java.awt.Color"->"dup1.r";
+    "dup1.r"->"load.r i0";
+    "load.r i0"->"virtualinvoke <java.util.StringTokenizer: java.lang.String nextToken()>";
+    "virtualinvoke <java.util.StringTokenizer: java.lang.String nextToken()>"->"push 16";
+    "push 16"->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String,int)>";
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String,int)>"->"specialinvoke <java.awt.Color: void <init>(int)>";
+    "specialinvoke <java.awt.Color: void <init>(int)>"->"arraywrite.r";
+    "arraywrite.r"->"load.r r0";
+    "fieldget <joybutton: int[] fontX>"
+    "load.r r0"->"fieldget <joybutton: int[] fontX>";
+    "fieldget <joybutton: int[] fontX>"->"load.i i46";
+    "load.i i46"->"load.r i0";
+    "load.r i0"->"virtualinvoke <java.util.StringTokenizer: java.lang.String nextToken()>";
+    "virtualinvoke <java.util.StringTokenizer: java.lang.String nextToken()>"->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>";
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"->"arraywrite.i";
+    "arraywrite.i"->"load.r r0";
+    "fieldget <joybutton: int[] fontY>"
+    "load.r r0"->"fieldget <joybutton: int[] fontY>";
+    "fieldget <joybutton: int[] fontY>"->"load.i i46";
+    "load.i i46"->"load.r i0";
+    "load.r i0"->"virtualinvoke <java.util.StringTokenizer: java.lang.String nextToken()>";
+    "virtualinvoke <java.util.StringTokenizer: java.lang.String nextToken()>"->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>";
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"->"arraywrite.i";
+    "arraywrite.i"->"load.r r0";
+    "fieldget <joybutton: int[] fontSize>"
+    "load.r r0"->"fieldget <joybutton: int[] fontSize>";
+    "fieldget <joybutton: int[] fontSize>"->"load.i i46";
+    "load.i i46"->"load.r i0";
+    "load.r i0"->"virtualinvoke <java.util.StringTokenizer: java.lang.String nextToken()>";
+    "virtualinvoke <java.util.StringTokenizer: java.lang.String nextToken()>"->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>";
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"->"arraywrite.i";
+    "arraywrite.i"->"load.r r0";
+    "fieldget <joybutton: int[] fontStyle>"
+    "load.r r0"->"fieldget <joybutton: int[] fontStyle>";
+    "fieldget <joybutton: int[] fontStyle>"->"load.i i46";
+    "load.i i46"->"load.r i0";
+    "load.r i0"->"virtualinvoke <java.util.StringTokenizer: java.lang.String nextToken()>";
+    "virtualinvoke <java.util.StringTokenizer: java.lang.String nextToken()>"->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>";
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"->"arraywrite.i";
+    "arraywrite.i"->"load.r r0";
+    "fieldget <joybutton: int[] font>"
+    "load.r r0"->"fieldget <joybutton: int[] font>";
+    "fieldget <joybutton: int[] font>"->"load.i i46";
+    "load.i i46"->"load.r i0";
+    "load.r i0"->"virtualinvoke <java.util.StringTokenizer: java.lang.String nextToken()>";
+    "virtualinvoke <java.util.StringTokenizer: java.lang.String nextToken()>"->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>";
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"->"arraywrite.i";
+    "arraywrite.i"->"load.r r0";
+    "fieldget <joybutton: java.lang.String[] message>"
+    "load.r r0"->"fieldget <joybutton: java.lang.String[] message>";
+    "fieldget <joybutton: java.lang.String[] message>"->"load.i i46";
+    "load.i i46"->"load.r i0";
+    "load.r i0"->"virtualinvoke <java.util.StringTokenizer: java.lang.String nextToken()>";
+    "virtualinvoke <java.util.StringTokenizer: java.lang.String nextToken()>"->"arraywrite.r";
+    "arraywrite.r"->"inc.i i46 1";
+    "inc.i i50 1"
+    "inc.i i46 1"->"inc.i i50 1";
+}

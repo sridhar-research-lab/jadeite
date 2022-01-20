@@ -1,0 +1,27 @@
+digraph "" {
+    "r0 := @this: wot"
+    "load.r r0"
+    "r0 := @this: wot"->"load.r r0";
+    "push \"hao\""
+    "load.r r0"->"push \"hao\"";
+    "virtualinvoke <wot: java.lang.String getParameter(java.lang.String)>"
+    "push \"hao\""->"virtualinvoke <wot: java.lang.String getParameter(java.lang.String)>";
+    "staticput <wot: java.lang.String mun>"
+    "virtualinvoke <wot: java.lang.String getParameter(java.lang.String)>"->"staticput <wot: java.lang.String mun>";
+    "staticget <wot: java.lang.String mun>"
+    "staticput <wot: java.lang.String mun>"->"staticget <wot: java.lang.String mun>";
+    "virtualinvoke <java.lang.String: int length()>"
+    "staticget <wot: java.lang.String mun>"->"virtualinvoke <java.lang.String: int length()>";
+    "ifle goto return"
+    "virtualinvoke <java.lang.String: int length()>"->"ifle goto return";
+    "ifle goto return"->"load.r r0";
+    "load.r r0"->"staticget <wot: java.lang.String mun>";
+    "virtualinvoke <wot: void hyp(java.lang.String)>"
+    "staticget <wot: java.lang.String mun>"->"virtualinvoke <wot: void hyp(java.lang.String)>";
+    "goto return"
+    "virtualinvoke <wot: void hyp(java.lang.String)>"->"goto return";
+    "return"
+    "goto return"->"return";
+    "store.r r0"
+    "virtualinvoke <wot: void hyp(java.lang.String)>"->"store.r r0";
+}

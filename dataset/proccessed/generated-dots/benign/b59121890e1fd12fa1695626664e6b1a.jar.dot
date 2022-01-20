@@ -1,0 +1,26 @@
+digraph "" {
+    "r0 := @this: ifs.IFSApplet"
+    "new ifs.IFSCanvas"
+    "r0 := @this: ifs.IFSApplet"->"new ifs.IFSCanvas";
+    "store.r $r3"
+    "new ifs.IFSCanvas"->"store.r $r3";
+    "load.r $r3"
+    "store.r $r3"->"load.r $r3";
+    "specialinvoke <ifs.IFSCanvas: void <init>()>"
+    "load.r $r3"->"specialinvoke <ifs.IFSCanvas: void <init>()>";
+    "load.r r0"
+    "specialinvoke <ifs.IFSCanvas: void <init>()>"->"load.r r0";
+    "load.r r0"->"load.r $r3";
+    "push 1"
+    "load.r $r3"->"push 1";
+    "virtualinvoke <ifs.IFSCanvas: javax.swing.JMenuBar getMenuBar(boolean)>"
+    "push 1"->"virtualinvoke <ifs.IFSCanvas: javax.swing.JMenuBar getMenuBar(boolean)>";
+    "virtualinvoke <ifs.IFSCanvas: javax.swing.JMenuBar getMenuBar(boolean)>"->"load.r r0";
+    "load.r r0"->"load.r $r3";
+    "virtualinvoke <ifs.IFSApplet: void setContentPane(java.awt.Container)>"
+    "load.r $r3"->"virtualinvoke <ifs.IFSApplet: void setContentPane(java.awt.Container)>";
+    "virtualinvoke <ifs.IFSApplet: void setJMenuBar(javax.swing.JMenuBar)>"
+    "virtualinvoke <ifs.IFSApplet: void setContentPane(java.awt.Container)>"->"virtualinvoke <ifs.IFSApplet: void setJMenuBar(javax.swing.JMenuBar)>";
+    "return"
+    "virtualinvoke <ifs.IFSApplet: void setJMenuBar(javax.swing.JMenuBar)>"->"return";
+}

@@ -1,0 +1,183 @@
+digraph "" {
+    "r0 := @this: vnews.vnews"
+    "load.r r0"
+    "r0 := @this: vnews.vnews"->"load.r r0";
+    "virtualinvoke <vnews.vnews: void d()>"
+    "load.r r0"->"virtualinvoke <vnews.vnews: void d()>";
+    "virtualinvoke <vnews.vnews: void d()>"->"load.r r0";
+    "virtualinvoke <vnews.vnews: void c()>"
+    "load.r r0"->"virtualinvoke <vnews.vnews: void c()>";
+    "virtualinvoke <vnews.vnews: void c()>"->"load.r r0";
+    "push \"dataURL\""
+    "load.r r0"->"push \"dataURL\"";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"
+    "push \"dataURL\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "store.r r1"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"store.r r1";
+    "load.r r1"
+    "store.r r1"->"load.r r1";
+    "ifnull load.r r0"
+    "load.r r1"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r r0";
+    "virtualinvoke <java.applet.Applet: java.net.URL getDocumentBase()>"
+    "load.r r0"->"virtualinvoke <java.applet.Applet: java.net.URL getDocumentBase()>";
+    "virtualinvoke <java.net.URL: java.lang.String getProtocol()>"
+    "virtualinvoke <java.applet.Applet: java.net.URL getDocumentBase()>"->"virtualinvoke <java.net.URL: java.lang.String getProtocol()>";
+    "push \"file://\""
+    "virtualinvoke <java.net.URL: java.lang.String getProtocol()>"->"push \"file://\"";
+    "virtualinvoke <java.lang.String: boolean equalsIgnoreCase(java.lang.String)>"
+    "push \"file://\""->"virtualinvoke <java.lang.String: boolean equalsIgnoreCase(java.lang.String)>";
+    "ifeq load.r r1"
+    "virtualinvoke <java.lang.String: boolean equalsIgnoreCase(java.lang.String)>"->"ifeq load.r r1";
+    "ifeq load.r r1"->"load.r r0";
+    "new java.net.URL"
+    "load.r r0"->"new java.net.URL";
+    "dup1.r"
+    "new java.net.URL"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "load.r r0"->"virtualinvoke <java.applet.Applet: java.net.URL getDocumentBase()>";
+    "virtualinvoke <java.applet.Applet: java.net.URL getDocumentBase()>"->"virtualinvoke <java.net.URL: java.lang.String getProtocol()>";
+    "virtualinvoke <java.net.URL: java.lang.String getProtocol()>"->"load.r r0";
+    "load.r r0"->"virtualinvoke <java.applet.Applet: java.net.URL getDocumentBase()>";
+    "virtualinvoke <java.net.URL: java.lang.String getHost()>"
+    "virtualinvoke <java.applet.Applet: java.net.URL getDocumentBase()>"->"virtualinvoke <java.net.URL: java.lang.String getHost()>";
+    "virtualinvoke <java.net.URL: java.lang.String getHost()>"->"load.r r0";
+    "load.r r0"->"virtualinvoke <java.applet.Applet: java.net.URL getDocumentBase()>";
+    "virtualinvoke <java.net.URL: int getPort()>"
+    "virtualinvoke <java.applet.Applet: java.net.URL getDocumentBase()>"->"virtualinvoke <java.net.URL: int getPort()>";
+    "new java.lang.StringBuffer"
+    "virtualinvoke <java.net.URL: int getPort()>"->"new java.lang.StringBuffer";
+    "new java.lang.StringBuffer"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "load.r r0"->"virtualinvoke <java.applet.Applet: java.net.URL getDocumentBase()>";
+    "virtualinvoke <java.net.URL: java.lang.String getFile()>"
+    "virtualinvoke <java.applet.Applet: java.net.URL getDocumentBase()>"->"virtualinvoke <java.net.URL: java.lang.String getFile()>";
+    "push 0"
+    "virtualinvoke <java.net.URL: java.lang.String getFile()>"->"push 0";
+    "push 0"->"load.r r0";
+    "load.r r0"->"virtualinvoke <java.applet.Applet: java.net.URL getDocumentBase()>";
+    "virtualinvoke <java.applet.Applet: java.net.URL getDocumentBase()>"->"virtualinvoke <java.net.URL: java.lang.String getFile()>";
+    "staticget <java.io.File: java.lang.String separator>"
+    "virtualinvoke <java.net.URL: java.lang.String getFile()>"->"staticget <java.io.File: java.lang.String separator>";
+    "virtualinvoke <java.lang.String: int lastIndexOf(java.lang.String)>"
+    "staticget <java.io.File: java.lang.String separator>"->"virtualinvoke <java.lang.String: int lastIndexOf(java.lang.String)>";
+    "virtualinvoke <java.lang.String: java.lang.String substring(int,int)>"
+    "virtualinvoke <java.lang.String: int lastIndexOf(java.lang.String)>"->"virtualinvoke <java.lang.String: java.lang.String substring(int,int)>";
+    "staticinvoke <java.lang.String: java.lang.String valueOf(java.lang.Object)>"
+    "virtualinvoke <java.lang.String: java.lang.String substring(int,int)>"->"staticinvoke <java.lang.String: java.lang.String valueOf(java.lang.Object)>";
+    "specialinvoke <java.lang.StringBuffer: void <init>(java.lang.String)>"
+    "staticinvoke <java.lang.String: java.lang.String valueOf(java.lang.Object)>"->"specialinvoke <java.lang.StringBuffer: void <init>(java.lang.String)>";
+    "specialinvoke <java.lang.StringBuffer: void <init>(java.lang.String)>"->"staticget <java.io.File: java.lang.String separator>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"
+    "staticget <java.io.File: java.lang.String separator>"->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"load.r r1";
+    "load.r r1"->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>"
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>";
+    "specialinvoke <java.net.URL: void <init>(java.lang.String,java.lang.String,int,java.lang.String)>"
+    "virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>"->"specialinvoke <java.net.URL: void <init>(java.lang.String,java.lang.String,int,java.lang.String)>";
+    "fieldput <vnews.vnews: java.net.URL F>"
+    "specialinvoke <java.net.URL: void <init>(java.lang.String,java.lang.String,int,java.lang.String)>"->"fieldput <vnews.vnews: java.net.URL F>";
+    "goto load.r r0"
+    "fieldput <vnews.vnews: java.net.URL F>"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "virtualinvoke <java.awt.Component: void addMouseListener(java.awt.event.MouseListener)>"
+    "load.r r0"->"virtualinvoke <java.awt.Component: void addMouseListener(java.awt.event.MouseListener)>";
+    "virtualinvoke <java.awt.Component: void addMouseListener(java.awt.event.MouseListener)>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "virtualinvoke <java.awt.Component: void addMouseMotionListener(java.awt.event.MouseMotionListener)>"
+    "load.r r0"->"virtualinvoke <java.awt.Component: void addMouseMotionListener(java.awt.event.MouseMotionListener)>";
+    "virtualinvoke <java.awt.Component: void addMouseMotionListener(java.awt.event.MouseMotionListener)>"->"load.r r0";
+    "load.r r0"->"push 0";
+    "fieldput <vnews.vnews: int p>"
+    "push 0"->"fieldput <vnews.vnews: int p>";
+    "fieldput <vnews.vnews: int p>"->"load.r r0";
+    "load.r r0"->"push 0";
+    "fieldput <vnews.vnews: int j>"
+    "push 0"->"fieldput <vnews.vnews: int j>";
+    "fieldput <vnews.vnews: int j>"->"load.r r0";
+    "load.r r0"->"push 0";
+    "fieldput <vnews.vnews: int m>"
+    "push 0"->"fieldput <vnews.vnews: int m>";
+    "fieldput <vnews.vnews: int m>"->"load.r r0";
+    "load.r r0"->"push 0";
+    "fieldput <vnews.vnews: boolean R>"
+    "push 0"->"fieldput <vnews.vnews: boolean R>";
+    "fieldput <vnews.vnews: boolean R>"->"load.r r0";
+    "load.r r0"->"push 0";
+    "fieldput <vnews.vnews: boolean S>"
+    "push 0"->"fieldput <vnews.vnews: boolean S>";
+    "fieldput <vnews.vnews: boolean S>"->"load.r r0";
+    "load.r r0"->"push 0";
+    "fieldput <vnews.vnews: boolean I>"
+    "push 0"->"fieldput <vnews.vnews: boolean I>";
+    "fieldput <vnews.vnews: boolean I>"->"load.r r0";
+    "push -1"
+    "load.r r0"->"push -1";
+    "fieldput <vnews.vnews: int A>"
+    "push -1"->"fieldput <vnews.vnews: int A>";
+    "return"
+    "fieldput <vnews.vnews: int A>"->"return";
+    "virtualinvoke <java.lang.Throwable: void printStackTrace()>"
+    "specialinvoke <java.net.URL: void <init>(java.lang.String,java.lang.String,int,java.lang.String)>"->"virtualinvoke <java.lang.Throwable: void printStackTrace()>";
+    "ifeq load.r r1"->"load.r r1";
+    "load.r r1"->"push 0";
+    "virtualinvoke <java.lang.String: char charAt(int)>"
+    "push 0"->"virtualinvoke <java.lang.String: char charAt(int)>";
+    "push 47"
+    "virtualinvoke <java.lang.String: char charAt(int)>"->"push 47";
+    "ifcmpne.c load.r r0"
+    "push 47"->"ifcmpne.c load.r r0";
+    "ifcmpne.c load.r r0"->"load.r r0";
+    "load.r r0"->"new java.net.URL";
+    "new java.net.URL"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "load.r r0"->"virtualinvoke <java.applet.Applet: java.net.URL getDocumentBase()>";
+    "virtualinvoke <java.applet.Applet: java.net.URL getDocumentBase()>"->"virtualinvoke <java.net.URL: java.lang.String getProtocol()>";
+    "virtualinvoke <java.net.URL: java.lang.String getProtocol()>"->"load.r r0";
+    "load.r r0"->"virtualinvoke <java.applet.Applet: java.net.URL getDocumentBase()>";
+    "virtualinvoke <java.applet.Applet: java.net.URL getDocumentBase()>"->"virtualinvoke <java.net.URL: java.lang.String getHost()>";
+    "virtualinvoke <java.net.URL: java.lang.String getHost()>"->"load.r r0";
+    "load.r r0"->"virtualinvoke <java.applet.Applet: java.net.URL getDocumentBase()>";
+    "virtualinvoke <java.applet.Applet: java.net.URL getDocumentBase()>"->"virtualinvoke <java.net.URL: int getPort()>";
+    "virtualinvoke <java.net.URL: int getPort()>"->"load.r r1";
+    "load.r r1"->"specialinvoke <java.net.URL: void <init>(java.lang.String,java.lang.String,int,java.lang.String)>";
+    "specialinvoke <java.net.URL: void <init>(java.lang.String,java.lang.String,int,java.lang.String)>"->"fieldput <vnews.vnews: java.net.URL F>";
+    "fieldput <vnews.vnews: java.net.URL F>"->"goto load.r r0";
+    "ifcmpne.c load.r r0"->"load.r r0";
+    "load.r r0"->"new java.net.URL";
+    "new java.net.URL"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "load.r r0"->"virtualinvoke <java.applet.Applet: java.net.URL getDocumentBase()>";
+    "virtualinvoke <java.applet.Applet: java.net.URL getDocumentBase()>"->"virtualinvoke <java.net.URL: java.lang.String getProtocol()>";
+    "virtualinvoke <java.net.URL: java.lang.String getProtocol()>"->"load.r r0";
+    "load.r r0"->"virtualinvoke <java.applet.Applet: java.net.URL getDocumentBase()>";
+    "virtualinvoke <java.applet.Applet: java.net.URL getDocumentBase()>"->"virtualinvoke <java.net.URL: java.lang.String getHost()>";
+    "virtualinvoke <java.net.URL: java.lang.String getHost()>"->"load.r r0";
+    "load.r r0"->"virtualinvoke <java.applet.Applet: java.net.URL getDocumentBase()>";
+    "virtualinvoke <java.applet.Applet: java.net.URL getDocumentBase()>"->"virtualinvoke <java.net.URL: int getPort()>";
+    "virtualinvoke <java.net.URL: int getPort()>"->"new java.lang.StringBuffer";
+    "new java.lang.StringBuffer"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "load.r r0"->"virtualinvoke <java.applet.Applet: java.net.URL getDocumentBase()>";
+    "virtualinvoke <java.applet.Applet: java.net.URL getDocumentBase()>"->"virtualinvoke <java.net.URL: java.lang.String getFile()>";
+    "virtualinvoke <java.net.URL: java.lang.String getFile()>"->"push 0";
+    "push 0"->"load.r r0";
+    "load.r r0"->"virtualinvoke <java.applet.Applet: java.net.URL getDocumentBase()>";
+    "virtualinvoke <java.applet.Applet: java.net.URL getDocumentBase()>"->"virtualinvoke <java.net.URL: java.lang.String getFile()>";
+    "push \"/\""
+    "virtualinvoke <java.net.URL: java.lang.String getFile()>"->"push \"/\"";
+    "push \"/\""->"virtualinvoke <java.lang.String: int lastIndexOf(java.lang.String)>";
+    "virtualinvoke <java.lang.String: int lastIndexOf(java.lang.String)>"->"virtualinvoke <java.lang.String: java.lang.String substring(int,int)>";
+    "virtualinvoke <java.lang.String: java.lang.String substring(int,int)>"->"staticinvoke <java.lang.String: java.lang.String valueOf(java.lang.Object)>";
+    "staticinvoke <java.lang.String: java.lang.String valueOf(java.lang.Object)>"->"specialinvoke <java.lang.StringBuffer: void <init>(java.lang.String)>";
+    "specialinvoke <java.lang.StringBuffer: void <init>(java.lang.String)>"->"push \"/\"";
+    "push \"/\""->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"load.r r1";
+    "load.r r1"->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>"->"specialinvoke <java.net.URL: void <init>(java.lang.String,java.lang.String,int,java.lang.String)>";
+    "specialinvoke <java.net.URL: void <init>(java.lang.String,java.lang.String,int,java.lang.String)>"->"fieldput <vnews.vnews: java.net.URL F>";
+    "fieldput <vnews.vnews: java.net.URL F>"->"goto load.r r0";
+}

@@ -1,0 +1,461 @@
+digraph "" {
+    "r0 := @this: SunClockApplet"
+    "load.r r0"
+    "r0 := @this: SunClockApplet"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "virtualinvoke <SunClockApplet: java.lang.String getAppletInfo()>"
+    "load.r r0"->"virtualinvoke <SunClockApplet: java.lang.String getAppletInfo()>";
+    "virtualinvoke <java.applet.Applet: void showStatus(java.lang.String)>"
+    "virtualinvoke <SunClockApplet: java.lang.String getAppletInfo()>"->"virtualinvoke <java.applet.Applet: void showStatus(java.lang.String)>";
+    "new java.lang.Thread"
+    "virtualinvoke <java.applet.Applet: void showStatus(java.lang.String)>"->"new java.lang.Thread";
+    "specialinvoke <java.lang.Thread: void <init>()>"
+    "new java.lang.Thread"->"specialinvoke <java.lang.Thread: void <init>()>";
+    "push 100L"
+    "specialinvoke <java.lang.Thread: void <init>()>"->"push 100L";
+    "staticinvoke <java.lang.Thread: void sleep(long)>"
+    "push 100L"->"staticinvoke <java.lang.Thread: void sleep(long)>";
+    "goto load.r r0"
+    "staticinvoke <java.lang.Thread: void sleep(long)>"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "push \"\""
+    "load.r r0"->"push \"\"";
+    "push \"\""->"virtualinvoke <java.applet.Applet: void showStatus(java.lang.String)>";
+    "push \"java.version\""
+    "virtualinvoke <java.applet.Applet: void showStatus(java.lang.String)>"->"push \"java.version\"";
+    "staticinvoke <java.lang.System: java.lang.String getProperty(java.lang.String)>"
+    "push \"java.version\""->"staticinvoke <java.lang.System: java.lang.String getProperty(java.lang.String)>";
+    "push \"1.1\""
+    "staticinvoke <java.lang.System: java.lang.String getProperty(java.lang.String)>"->"push \"1.1\"";
+    "virtualinvoke <java.lang.String: int compareTo(java.lang.String)>"
+    "push \"1.1\""->"virtualinvoke <java.lang.String: int compareTo(java.lang.String)>";
+    "ifge push 1"
+    "virtualinvoke <java.lang.String: int compareTo(java.lang.String)>"->"ifge push 1";
+    "push 0"
+    "ifge push 1"->"push 0";
+    "store.b $r9"
+    "push 0"->"store.b $r9";
+    "store.b $r9"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "load.b $r9"
+    "load.r r0"->"load.b $r9";
+    "fieldput <SunClockApplet: boolean newJavaFeatures>"
+    "load.b $r9"->"fieldput <SunClockApplet: boolean newJavaFeatures>";
+    "fieldput <SunClockApplet: boolean newJavaFeatures>"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "virtualinvoke <SunClockApplet: void selectDefaultFont()>"
+    "load.r r0"->"virtualinvoke <SunClockApplet: void selectDefaultFont()>";
+    "virtualinvoke <SunClockApplet: void selectDefaultFont()>"->"load.r r0";
+    "virtualinvoke <SunClockApplet: void getBackgroundColor()>"
+    "load.r r0"->"virtualinvoke <SunClockApplet: void getBackgroundColor()>";
+    "virtualinvoke <SunClockApplet: void getBackgroundColor()>"->"load.r r0";
+    "fieldget <SunClockApplet: boolean newJavaFeatures>"
+    "load.r r0"->"fieldget <SunClockApplet: boolean newJavaFeatures>";
+    "ifne load.r r0"
+    "fieldget <SunClockApplet: boolean newJavaFeatures>"->"ifne load.r r0";
+    "ifne load.r r0"->"load.r r0";
+    "new java.awt.BorderLayout"
+    "load.r r0"->"new java.awt.BorderLayout";
+    "dup1.r"
+    "new java.awt.BorderLayout"->"dup1.r";
+    "specialinvoke <java.awt.BorderLayout: void <init>()>"
+    "dup1.r"->"specialinvoke <java.awt.BorderLayout: void <init>()>";
+    "virtualinvoke <java.awt.Container: void setLayout(java.awt.LayoutManager)>"
+    "specialinvoke <java.awt.BorderLayout: void <init>()>"->"virtualinvoke <java.awt.Container: void setLayout(java.awt.LayoutManager)>";
+    "new java.awt.TextField"
+    "virtualinvoke <java.awt.Container: void setLayout(java.awt.LayoutManager)>"->"new java.awt.TextField";
+    "store.r $r9"
+    "new java.awt.TextField"->"store.r $r9";
+    "load.r $r9"
+    "store.r $r9"->"load.r $r9";
+    "push \"Sorry, but this applet requires Java 1.1 support. Please run the SimpleSunClock applet instead.\""
+    "load.r $r9"->"push \"Sorry, but this applet requires Java 1.1 support. Please run the SimpleSunClock applet instead.\"";
+    "specialinvoke <java.awt.TextField: void <init>(java.lang.String)>"
+    "push \"Sorry, but this applet requires Java 1.1 support. Please run the SimpleSunClock applet instead.\""->"specialinvoke <java.awt.TextField: void <init>(java.lang.String)>";
+    "specialinvoke <java.awt.TextField: void <init>(java.lang.String)>"->"load.r $r9";
+    "load.r $r9"->"push 0";
+    "virtualinvoke <java.awt.TextComponent: void setEditable(boolean)>"
+    "push 0"->"virtualinvoke <java.awt.TextComponent: void setEditable(boolean)>";
+    "virtualinvoke <java.awt.TextComponent: void setEditable(boolean)>"->"load.r r0";
+    "push \"Center\""
+    "load.r r0"->"push \"Center\"";
+    "push \"Center\""->"load.r $r9";
+    "virtualinvoke <java.awt.Container: java.awt.Component add(java.lang.String,java.awt.Component)>"
+    "load.r $r9"->"virtualinvoke <java.awt.Container: java.awt.Component add(java.lang.String,java.awt.Component)>";
+    "pop"
+    "virtualinvoke <java.awt.Container: java.awt.Component add(java.lang.String,java.awt.Component)>"->"pop";
+    "goto return"
+    "pop"->"goto return";
+    "return"
+    "goto return"->"return";
+    "ifne load.r r0"->"load.r r0";
+    "fieldget <SunClockApplet: SunClockData sunClockData>"
+    "load.r r0"->"fieldget <SunClockApplet: SunClockData sunClockData>";
+    "fieldget <SunClockApplet: SunClockData sunClockData>"->"load.r r0";
+    "virtualinvoke <java.awt.Component: java.awt.Font getFont()>"
+    "load.r r0"->"virtualinvoke <java.awt.Component: java.awt.Font getFont()>";
+    "virtualinvoke <SunClockData: void setDisplayFont(java.awt.Font)>"
+    "virtualinvoke <java.awt.Component: java.awt.Font getFont()>"->"virtualinvoke <SunClockData: void setDisplayFont(java.awt.Font)>";
+    "new java.awt.Font"
+    "virtualinvoke <SunClockData: void setDisplayFont(java.awt.Font)>"->"new java.awt.Font";
+    "new java.awt.Font"->"store.r $r9";
+    "store.r $r9"->"load.r $r9";
+    "push \"SansSerif\""
+    "load.r $r9"->"push \"SansSerif\"";
+    "push \"SansSerif\""->"push 0";
+    "push 12"
+    "push 0"->"push 12";
+    "specialinvoke <java.awt.Font: void <init>(java.lang.String,int,int)>"
+    "push 12"->"specialinvoke <java.awt.Font: void <init>(java.lang.String,int,int)>";
+    "specialinvoke <java.awt.Font: void <init>(java.lang.String,int,int)>"->"load.r r0";
+    "fieldget <SunClockApplet: java.awt.Button infoButton>"
+    "load.r r0"->"fieldget <SunClockApplet: java.awt.Button infoButton>";
+    "fieldget <SunClockApplet: java.awt.Button infoButton>"->"load.r $r9";
+    "virtualinvoke <java.awt.Component: void setFont(java.awt.Font)>"
+    "load.r $r9"->"virtualinvoke <java.awt.Component: void setFont(java.awt.Font)>";
+    "virtualinvoke <java.awt.Component: void setFont(java.awt.Font)>"->"load.r r0";
+    "fieldget <SunClockApplet: java.awt.Button optionButton>"
+    "load.r r0"->"fieldget <SunClockApplet: java.awt.Button optionButton>";
+    "fieldget <SunClockApplet: java.awt.Button optionButton>"->"load.r $r9";
+    "load.r $r9"->"virtualinvoke <java.awt.Component: void setFont(java.awt.Font)>";
+    "virtualinvoke <java.awt.Component: void setFont(java.awt.Font)>"->"load.r r0";
+    "virtualinvoke <SunClockApplet: void getParameters()>"
+    "load.r r0"->"virtualinvoke <SunClockApplet: void getParameters()>";
+    "virtualinvoke <SunClockApplet: void getParameters()>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "virtualinvoke <java.applet.Applet: java.net.URL getDocumentBase()>"
+    "load.r r0"->"virtualinvoke <java.applet.Applet: java.net.URL getDocumentBase()>";
+    "push \"DecClockTower.au\""
+    "virtualinvoke <java.applet.Applet: java.net.URL getDocumentBase()>"->"push \"DecClockTower.au\"";
+    "virtualinvoke <java.applet.Applet: java.applet.AudioClip getAudioClip(java.net.URL,java.lang.String)>"
+    "push \"DecClockTower.au\""->"virtualinvoke <java.applet.Applet: java.applet.AudioClip getAudioClip(java.net.URL,java.lang.String)>";
+    "fieldput <SunClockApplet: java.applet.AudioClip hourBell>"
+    "virtualinvoke <java.applet.Applet: java.applet.AudioClip getAudioClip(java.net.URL,java.lang.String)>"->"fieldput <SunClockApplet: java.applet.AudioClip hourBell>";
+    "fieldput <SunClockApplet: java.applet.AudioClip hourBell>"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <SunClockApplet: java.awt.Button infoButton>";
+    "staticget <java.awt.Color: java.awt.Color white>"
+    "fieldget <SunClockApplet: java.awt.Button infoButton>"->"staticget <java.awt.Color: java.awt.Color white>";
+    "virtualinvoke <java.awt.Component: void setBackground(java.awt.Color)>"
+    "staticget <java.awt.Color: java.awt.Color white>"->"virtualinvoke <java.awt.Component: void setBackground(java.awt.Color)>";
+    "virtualinvoke <java.awt.Component: void setBackground(java.awt.Color)>"->"load.r r0";
+    "load.r r0"->"fieldget <SunClockApplet: java.awt.Button optionButton>";
+    "fieldget <SunClockApplet: java.awt.Button optionButton>"->"staticget <java.awt.Color: java.awt.Color white>";
+    "staticget <java.awt.Color: java.awt.Color white>"->"virtualinvoke <java.awt.Component: void setBackground(java.awt.Color)>";
+    "new java.awt.Panel"
+    "virtualinvoke <java.awt.Component: void setBackground(java.awt.Color)>"->"new java.awt.Panel";
+    "new java.awt.Panel"->"store.r $r9";
+    "store.r $r9"->"load.r $r9";
+    "specialinvoke <java.awt.Panel: void <init>()>"
+    "load.r $r9"->"specialinvoke <java.awt.Panel: void <init>()>";
+    "specialinvoke <java.awt.Panel: void <init>()>"->"load.r $r9";
+    "new java.awt.FlowLayout"
+    "load.r $r9"->"new java.awt.FlowLayout";
+    "new java.awt.FlowLayout"->"dup1.r";
+    "push 1"
+    "dup1.r"->"push 1";
+    "push 4"
+    "push 1"->"push 4";
+    "push 2"
+    "push 4"->"push 2";
+    "specialinvoke <java.awt.FlowLayout: void <init>(int,int,int)>"
+    "push 2"->"specialinvoke <java.awt.FlowLayout: void <init>(int,int,int)>";
+    "specialinvoke <java.awt.FlowLayout: void <init>(int,int,int)>"->"virtualinvoke <java.awt.Container: void setLayout(java.awt.LayoutManager)>";
+    "virtualinvoke <java.awt.Container: void setLayout(java.awt.LayoutManager)>"->"load.r $r9";
+    "load.r $r9"->"load.r r0";
+    "load.r r0"->"fieldget <SunClockApplet: java.awt.Button infoButton>";
+    "virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>"
+    "fieldget <SunClockApplet: java.awt.Button infoButton>"->"virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>";
+    "virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>"->"pop";
+    "pop"->"load.r $r9";
+    "load.r $r9"->"load.r r0";
+    "load.r r0"->"fieldget <SunClockApplet: java.awt.Button optionButton>";
+    "fieldget <SunClockApplet: java.awt.Button optionButton>"->"virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>";
+    "virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>"->"pop";
+    "new java.awt.Label"
+    "pop"->"new java.awt.Label";
+    "store.r $r24"
+    "new java.awt.Label"->"store.r $r24";
+    "load.r $r24"
+    "store.r $r24"->"load.r $r24";
+    "push \"2.0\""
+    "load.r $r24"->"push \"2.0\"";
+    "specialinvoke <java.awt.Label: void <init>(java.lang.String)>"
+    "push \"2.0\""->"specialinvoke <java.awt.Label: void <init>(java.lang.String)>";
+    "specialinvoke <java.awt.Label: void <init>(java.lang.String)>"->"load.r $r24";
+    "load.r $r24"->"new java.awt.Font";
+    "new java.awt.Font"->"dup1.r";
+    "push \"Helvetica\""
+    "dup1.r"->"push \"Helvetica\"";
+    "push \"Helvetica\""->"push 2";
+    "push 9"
+    "push 2"->"push 9";
+    "push 9"->"specialinvoke <java.awt.Font: void <init>(java.lang.String,int,int)>";
+    "specialinvoke <java.awt.Font: void <init>(java.lang.String,int,int)>"->"virtualinvoke <java.awt.Component: void setFont(java.awt.Font)>";
+    "virtualinvoke <java.awt.Component: void setFont(java.awt.Font)>"->"load.r r0";
+    "new SunClockDisplay"
+    "load.r r0"->"new SunClockDisplay";
+    "new SunClockDisplay"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "load.r r0"->"fieldget <SunClockApplet: SunClockData sunClockData>";
+    "fieldget <SunClockApplet: SunClockData sunClockData>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "virtualinvoke <java.applet.Applet: java.net.URL getCodeBase()>"
+    "load.r r0"->"virtualinvoke <java.applet.Applet: java.net.URL getCodeBase()>";
+    "push \"EarthImage360.gif\""
+    "virtualinvoke <java.applet.Applet: java.net.URL getCodeBase()>"->"push \"EarthImage360.gif\"";
+    "virtualinvoke <java.applet.Applet: java.awt.Image getImage(java.net.URL,java.lang.String)>"
+    "push \"EarthImage360.gif\""->"virtualinvoke <java.applet.Applet: java.awt.Image getImage(java.net.URL,java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.awt.Image getImage(java.net.URL,java.lang.String)>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"virtualinvoke <java.applet.Applet: java.net.URL getCodeBase()>";
+    "push \"FullMoon64.gif\""
+    "virtualinvoke <java.applet.Applet: java.net.URL getCodeBase()>"->"push \"FullMoon64.gif\"";
+    "push \"FullMoon64.gif\""->"virtualinvoke <java.applet.Applet: java.awt.Image getImage(java.net.URL,java.lang.String)>";
+    "specialinvoke <SunClockDisplay: void <init>(SunClockData,java.awt.Image,java.awt.Image)>"
+    "virtualinvoke <java.applet.Applet: java.awt.Image getImage(java.net.URL,java.lang.String)>"->"specialinvoke <SunClockDisplay: void <init>(SunClockData,java.awt.Image,java.awt.Image)>";
+    "fieldput <SunClockApplet: SunClockDisplay sunClockDisplay>"
+    "specialinvoke <SunClockDisplay: void <init>(SunClockData,java.awt.Image,java.awt.Image)>"->"fieldput <SunClockApplet: SunClockDisplay sunClockDisplay>";
+    "fieldput <SunClockApplet: SunClockDisplay sunClockDisplay>"->"load.r r0";
+    "new SunClockText"
+    "load.r r0"->"new SunClockText";
+    "new SunClockText"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "load.r r0"->"fieldget <SunClockApplet: SunClockData sunClockData>";
+    "specialinvoke <SunClockText: void <init>(SunClockData)>"
+    "fieldget <SunClockApplet: SunClockData sunClockData>"->"specialinvoke <SunClockText: void <init>(SunClockData)>";
+    "fieldput <SunClockApplet: SunClockText sunClockText>"
+    "specialinvoke <SunClockText: void <init>(SunClockData)>"->"fieldput <SunClockApplet: SunClockText sunClockText>";
+    "fieldput <SunClockApplet: SunClockText sunClockText>"->"load.r r0";
+    "fieldget <SunClockApplet: SunClockText sunClockText>"
+    "load.r r0"->"fieldget <SunClockApplet: SunClockText sunClockText>";
+    "fieldget <SunClockApplet: SunClockText sunClockText>"->"staticget <java.awt.Color: java.awt.Color white>";
+    "staticget <java.awt.Color: java.awt.Color white>"->"virtualinvoke <java.awt.Component: void setBackground(java.awt.Color)>";
+    "new java.awt.GridBagLayout"
+    "virtualinvoke <java.awt.Component: void setBackground(java.awt.Color)>"->"new java.awt.GridBagLayout";
+    "store.r $r36"
+    "new java.awt.GridBagLayout"->"store.r $r36";
+    "load.r $r36"
+    "store.r $r36"->"load.r $r36";
+    "specialinvoke <java.awt.GridBagLayout: void <init>()>"
+    "load.r $r36"->"specialinvoke <java.awt.GridBagLayout: void <init>()>";
+    "specialinvoke <java.awt.GridBagLayout: void <init>()>"->"load.r r0";
+    "load.r r0"->"load.r $r36";
+    "load.r $r36"->"virtualinvoke <java.awt.Container: void setLayout(java.awt.LayoutManager)>";
+    "new java.awt.GridBagConstraints"
+    "virtualinvoke <java.awt.Container: void setLayout(java.awt.LayoutManager)>"->"new java.awt.GridBagConstraints";
+    "store.r $r37"
+    "new java.awt.GridBagConstraints"->"store.r $r37";
+    "load.r $r37"
+    "store.r $r37"->"load.r $r37";
+    "specialinvoke <java.awt.GridBagConstraints: void <init>()>"
+    "load.r $r37"->"specialinvoke <java.awt.GridBagConstraints: void <init>()>";
+    "specialinvoke <java.awt.GridBagConstraints: void <init>()>"->"load.r $r37";
+    "load.r $r37"->"push 0";
+    "fieldput <java.awt.GridBagConstraints: int gridx>"
+    "push 0"->"fieldput <java.awt.GridBagConstraints: int gridx>";
+    "fieldput <java.awt.GridBagConstraints: int gridx>"->"load.r $r37";
+    "load.r $r37"->"push 0";
+    "fieldput <java.awt.GridBagConstraints: int gridy>"
+    "push 0"->"fieldput <java.awt.GridBagConstraints: int gridy>";
+    "fieldput <java.awt.GridBagConstraints: int gridy>"->"load.r $r37";
+    "load.r $r37"->"push 2";
+    "fieldput <java.awt.GridBagConstraints: int gridwidth>"
+    "push 2"->"fieldput <java.awt.GridBagConstraints: int gridwidth>";
+    "fieldput <java.awt.GridBagConstraints: int gridwidth>"->"load.r $r37";
+    "load.r $r37"->"push 1";
+    "fieldput <java.awt.GridBagConstraints: int gridheight>"
+    "push 1"->"fieldput <java.awt.GridBagConstraints: int gridheight>";
+    "fieldput <java.awt.GridBagConstraints: int gridheight>"->"load.r $r37";
+    "load.r $r37"->"push 2";
+    "fieldput <java.awt.GridBagConstraints: int fill>"
+    "push 2"->"fieldput <java.awt.GridBagConstraints: int fill>";
+    "fieldput <java.awt.GridBagConstraints: int fill>"->"load.r $r37";
+    "push 10"
+    "load.r $r37"->"push 10";
+    "fieldput <java.awt.GridBagConstraints: int anchor>"
+    "push 10"->"fieldput <java.awt.GridBagConstraints: int anchor>";
+    "fieldput <java.awt.GridBagConstraints: int anchor>"->"load.r $r37";
+    "push 0.0"
+    "load.r $r37"->"push 0.0";
+    "fieldput <java.awt.GridBagConstraints: double weightx>"
+    "push 0.0"->"fieldput <java.awt.GridBagConstraints: double weightx>";
+    "fieldput <java.awt.GridBagConstraints: double weightx>"->"load.r $r37";
+    "load.r $r37"->"push 0.0";
+    "fieldput <java.awt.GridBagConstraints: double weighty>"
+    "push 0.0"->"fieldput <java.awt.GridBagConstraints: double weighty>";
+    "fieldput <java.awt.GridBagConstraints: double weighty>"->"load.r $r37";
+    "new java.awt.Insets"
+    "load.r $r37"->"new java.awt.Insets";
+    "new java.awt.Insets"->"dup1.r";
+    "dup1.r"->"push 0";
+    "push 0"->"push 0";
+    "push 0"->"push 0";
+    "push 0"->"push 0";
+    "specialinvoke <java.awt.Insets: void <init>(int,int,int,int)>"
+    "push 0"->"specialinvoke <java.awt.Insets: void <init>(int,int,int,int)>";
+    "fieldput <java.awt.GridBagConstraints: java.awt.Insets insets>"
+    "specialinvoke <java.awt.Insets: void <init>(int,int,int,int)>"->"fieldput <java.awt.GridBagConstraints: java.awt.Insets insets>";
+    "fieldput <java.awt.GridBagConstraints: java.awt.Insets insets>"->"load.r $r36";
+    "load.r $r36"->"load.r r0";
+    "fieldget <SunClockApplet: SunClockDisplay sunClockDisplay>"
+    "load.r r0"->"fieldget <SunClockApplet: SunClockDisplay sunClockDisplay>";
+    "fieldget <SunClockApplet: SunClockDisplay sunClockDisplay>"->"load.r $r37";
+    "virtualinvoke <java.awt.GridBagLayout: void setConstraints(java.awt.Component,java.awt.GridBagConstraints)>"
+    "load.r $r37"->"virtualinvoke <java.awt.GridBagLayout: void setConstraints(java.awt.Component,java.awt.GridBagConstraints)>";
+    "virtualinvoke <java.awt.GridBagLayout: void setConstraints(java.awt.Component,java.awt.GridBagConstraints)>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <SunClockApplet: SunClockDisplay sunClockDisplay>";
+    "fieldget <SunClockApplet: SunClockDisplay sunClockDisplay>"->"virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>";
+    "virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>"->"pop";
+    "pop"->"load.r $r37";
+    "load.r $r37"->"push 0";
+    "push 0"->"fieldput <java.awt.GridBagConstraints: int gridx>";
+    "fieldput <java.awt.GridBagConstraints: int gridx>"->"load.r $r37";
+    "load.r $r37"->"push 1";
+    "push 1"->"fieldput <java.awt.GridBagConstraints: int gridy>";
+    "fieldput <java.awt.GridBagConstraints: int gridy>"->"load.r $r37";
+    "load.r $r37"->"push 2";
+    "push 2"->"fieldput <java.awt.GridBagConstraints: int gridwidth>";
+    "fieldput <java.awt.GridBagConstraints: int gridwidth>"->"load.r $r37";
+    "load.r $r37"->"push 1";
+    "push 1"->"fieldput <java.awt.GridBagConstraints: int gridheight>";
+    "fieldput <java.awt.GridBagConstraints: int gridheight>"->"load.r $r37";
+    "load.r $r37"->"push 1";
+    "push 1"->"fieldput <java.awt.GridBagConstraints: int fill>";
+    "fieldput <java.awt.GridBagConstraints: int fill>"->"load.r $r37";
+    "load.r $r37"->"push 10";
+    "push 10"->"fieldput <java.awt.GridBagConstraints: int anchor>";
+    "fieldput <java.awt.GridBagConstraints: int anchor>"->"load.r $r37";
+    "push 1.0"
+    "load.r $r37"->"push 1.0";
+    "push 1.0"->"fieldput <java.awt.GridBagConstraints: double weightx>";
+    "fieldput <java.awt.GridBagConstraints: double weightx>"->"load.r $r37";
+    "load.r $r37"->"push 1.0";
+    "push 1.0"->"fieldput <java.awt.GridBagConstraints: double weighty>";
+    "fieldput <java.awt.GridBagConstraints: double weighty>"->"load.r $r37";
+    "load.r $r37"->"new java.awt.Insets";
+    "new java.awt.Insets"->"dup1.r";
+    "dup1.r"->"push 0";
+    "push 0"->"push 0";
+    "push 0"->"push 0";
+    "push 0"->"push 0";
+    "push 0"->"specialinvoke <java.awt.Insets: void <init>(int,int,int,int)>";
+    "specialinvoke <java.awt.Insets: void <init>(int,int,int,int)>"->"fieldput <java.awt.GridBagConstraints: java.awt.Insets insets>";
+    "fieldput <java.awt.GridBagConstraints: java.awt.Insets insets>"->"load.r $r36";
+    "load.r $r36"->"load.r r0";
+    "load.r r0"->"fieldget <SunClockApplet: SunClockText sunClockText>";
+    "fieldget <SunClockApplet: SunClockText sunClockText>"->"load.r $r37";
+    "load.r $r37"->"virtualinvoke <java.awt.GridBagLayout: void setConstraints(java.awt.Component,java.awt.GridBagConstraints)>";
+    "virtualinvoke <java.awt.GridBagLayout: void setConstraints(java.awt.Component,java.awt.GridBagConstraints)>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <SunClockApplet: SunClockText sunClockText>";
+    "fieldget <SunClockApplet: SunClockText sunClockText>"->"virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>";
+    "virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>"->"pop";
+    "pop"->"load.r $r37";
+    "load.r $r37"->"push 0";
+    "push 0"->"fieldput <java.awt.GridBagConstraints: int gridx>";
+    "fieldput <java.awt.GridBagConstraints: int gridx>"->"load.r $r37";
+    "load.r $r37"->"push 2";
+    "push 2"->"fieldput <java.awt.GridBagConstraints: int gridy>";
+    "fieldput <java.awt.GridBagConstraints: int gridy>"->"load.r $r37";
+    "load.r $r37"->"push 1";
+    "push 1"->"fieldput <java.awt.GridBagConstraints: int gridwidth>";
+    "fieldput <java.awt.GridBagConstraints: int gridwidth>"->"load.r $r37";
+    "load.r $r37"->"push 1";
+    "push 1"->"fieldput <java.awt.GridBagConstraints: int gridheight>";
+    "fieldput <java.awt.GridBagConstraints: int gridheight>"->"load.r $r37";
+    "load.r $r37"->"push 2";
+    "push 2"->"fieldput <java.awt.GridBagConstraints: int fill>";
+    "fieldput <java.awt.GridBagConstraints: int fill>"->"load.r $r37";
+    "load.r $r37"->"push 10";
+    "push 10"->"fieldput <java.awt.GridBagConstraints: int anchor>";
+    "fieldput <java.awt.GridBagConstraints: int anchor>"->"load.r $r37";
+    "load.r $r37"->"push 1.0";
+    "push 1.0"->"fieldput <java.awt.GridBagConstraints: double weightx>";
+    "fieldput <java.awt.GridBagConstraints: double weightx>"->"load.r $r37";
+    "load.r $r37"->"push 0.0";
+    "push 0.0"->"fieldput <java.awt.GridBagConstraints: double weighty>";
+    "fieldput <java.awt.GridBagConstraints: double weighty>"->"load.r $r37";
+    "load.r $r37"->"new java.awt.Insets";
+    "new java.awt.Insets"->"dup1.r";
+    "dup1.r"->"push 2";
+    "push 2"->"push 2";
+    "push 2"->"push 2";
+    "push 2"->"push 2";
+    "push 2"->"specialinvoke <java.awt.Insets: void <init>(int,int,int,int)>";
+    "specialinvoke <java.awt.Insets: void <init>(int,int,int,int)>"->"fieldput <java.awt.GridBagConstraints: java.awt.Insets insets>";
+    "fieldput <java.awt.GridBagConstraints: java.awt.Insets insets>"->"load.r $r36";
+    "load.r $r36"->"load.r $r9";
+    "load.r $r9"->"load.r $r37";
+    "load.r $r37"->"virtualinvoke <java.awt.GridBagLayout: void setConstraints(java.awt.Component,java.awt.GridBagConstraints)>";
+    "virtualinvoke <java.awt.GridBagLayout: void setConstraints(java.awt.Component,java.awt.GridBagConstraints)>"->"load.r r0";
+    "load.r r0"->"load.r $r9";
+    "load.r $r9"->"virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>";
+    "virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>"->"pop";
+    "pop"->"load.r $r37";
+    "load.r $r37"->"push 0";
+    "push 0"->"fieldput <java.awt.GridBagConstraints: int gridx>";
+    "fieldput <java.awt.GridBagConstraints: int gridx>"->"load.r $r37";
+    "push 3"
+    "load.r $r37"->"push 3";
+    "push 3"->"fieldput <java.awt.GridBagConstraints: int gridy>";
+    "fieldput <java.awt.GridBagConstraints: int gridy>"->"load.r $r37";
+    "load.r $r37"->"push 2";
+    "push 2"->"fieldput <java.awt.GridBagConstraints: int gridwidth>";
+    "fieldput <java.awt.GridBagConstraints: int gridwidth>"->"load.r $r37";
+    "load.r $r37"->"push 1";
+    "push 1"->"fieldput <java.awt.GridBagConstraints: int gridheight>";
+    "fieldput <java.awt.GridBagConstraints: int gridheight>"->"load.r $r37";
+    "load.r $r37"->"push 2";
+    "push 2"->"fieldput <java.awt.GridBagConstraints: int fill>";
+    "fieldput <java.awt.GridBagConstraints: int fill>"->"load.r $r37";
+    "push 17"
+    "load.r $r37"->"push 17";
+    "push 17"->"fieldput <java.awt.GridBagConstraints: int anchor>";
+    "fieldput <java.awt.GridBagConstraints: int anchor>"->"load.r $r37";
+    "load.r $r37"->"push 1.0";
+    "push 1.0"->"fieldput <java.awt.GridBagConstraints: double weightx>";
+    "fieldput <java.awt.GridBagConstraints: double weightx>"->"load.r $r37";
+    "load.r $r37"->"push 0.0";
+    "push 0.0"->"fieldput <java.awt.GridBagConstraints: double weighty>";
+    "fieldput <java.awt.GridBagConstraints: double weighty>"->"load.r $r37";
+    "load.r $r37"->"new java.awt.Insets";
+    "new java.awt.Insets"->"dup1.r";
+    "dup1.r"->"push 2";
+    "push 2"->"push 4";
+    "push 4"->"push 2";
+    "push 2"->"push 2";
+    "push 2"->"specialinvoke <java.awt.Insets: void <init>(int,int,int,int)>";
+    "specialinvoke <java.awt.Insets: void <init>(int,int,int,int)>"->"fieldput <java.awt.GridBagConstraints: java.awt.Insets insets>";
+    "fieldput <java.awt.GridBagConstraints: java.awt.Insets insets>"->"load.r $r36";
+    "load.r $r36"->"load.r $r24";
+    "load.r $r24"->"load.r $r37";
+    "load.r $r37"->"virtualinvoke <java.awt.GridBagLayout: void setConstraints(java.awt.Component,java.awt.GridBagConstraints)>";
+    "virtualinvoke <java.awt.GridBagLayout: void setConstraints(java.awt.Component,java.awt.GridBagConstraints)>"->"load.r r0";
+    "load.r r0"->"load.r $r24";
+    "load.r $r24"->"virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>";
+    "virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>"->"pop";
+    "pop"->"load.r r0";
+    "load.r r0"->"fieldget <SunClockApplet: java.awt.Button optionButton>";
+    "fieldget <SunClockApplet: java.awt.Button optionButton>"->"load.r r0";
+    "virtualinvoke <java.awt.Button: void addActionListener(java.awt.event.ActionListener)>"
+    "load.r r0"->"virtualinvoke <java.awt.Button: void addActionListener(java.awt.event.ActionListener)>";
+    "virtualinvoke <java.awt.Button: void addActionListener(java.awt.event.ActionListener)>"->"load.r r0";
+    "load.r r0"->"fieldget <SunClockApplet: java.awt.Button infoButton>";
+    "fieldget <SunClockApplet: java.awt.Button infoButton>"->"load.r r0";
+    "load.r r0"->"virtualinvoke <java.awt.Button: void addActionListener(java.awt.event.ActionListener)>";
+    "virtualinvoke <java.applet.Applet: java.applet.AudioClip getAudioClip(java.net.URL,java.lang.String)>"->"store.r $r9";
+    "store.r $r9"->"load.r r0";
+    "push null"
+    "load.r r0"->"push null";
+    "push null"->"fieldput <SunClockApplet: java.applet.AudioClip hourBell>";
+    "ifge push 1"->"push 1";
+    "push 1"->"store.b $r9";
+    "virtualinvoke <java.lang.String: int compareTo(java.lang.String)>"->"store.r $r9";
+    "store.r $r9"->"load.r r0";
+    "load.r r0"->"push 0";
+    "push 0"->"fieldput <SunClockApplet: boolean newJavaFeatures>";
+    "staticinvoke <java.lang.Thread: void sleep(long)>"->"store.r $r9";
+}

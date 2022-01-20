@@ -1,0 +1,141 @@
+digraph "" {
+    "r0 := @this: souvenir"
+    "load.r r0"
+    "r0 := @this: souvenir"->"load.r r0";
+    "push \"delay\""
+    "load.r r0"->"push \"delay\"";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"
+    "push \"delay\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "store.r r14"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"store.r r14";
+    "load.r r14"
+    "store.r r14"->"load.r r14";
+    "ifnull load.r r0"
+    "load.r r14"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r14";
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"
+    "load.r r14"->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>";
+    "fieldput <souvenir: int delay>"
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"->"fieldput <souvenir: int delay>";
+    "fieldput <souvenir: int delay>"->"load.r r0";
+    "fieldget <souvenir: int delay>"
+    "load.r r0"->"fieldget <souvenir: int delay>";
+    "push 10"
+    "fieldget <souvenir: int delay>"->"push 10";
+    "ifcmpge.i load.r r0"
+    "push 10"->"ifcmpge.i load.r r0";
+    "ifcmpge.i load.r r0"->"load.r r0";
+    "load.r r0"->"push 10";
+    "push 10"->"fieldput <souvenir: int delay>";
+    "fieldput <souvenir: int delay>"->"load.r r0";
+    "push \"bgcolor\""
+    "load.r r0"->"push \"bgcolor\"";
+    "push \"bgcolor\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"store.r r14";
+    "store.r r14"->"load.r r14";
+    "load.r r14"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r r0";
+    "new java.awt.Color"
+    "load.r r0"->"new java.awt.Color";
+    "dup1.r"
+    "new java.awt.Color"->"dup1.r";
+    "dup1.r"->"load.r r14";
+    "push 16"
+    "load.r r14"->"push 16";
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String,int)>"
+    "push 16"->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String,int)>";
+    "specialinvoke <java.awt.Color: void <init>(int)>"
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String,int)>"->"specialinvoke <java.awt.Color: void <init>(int)>";
+    "fieldput <souvenir: java.awt.Color bgcolor>"
+    "specialinvoke <java.awt.Color: void <init>(int)>"->"fieldput <souvenir: java.awt.Color bgcolor>";
+    "fieldput <souvenir: java.awt.Color bgcolor>"->"load.r r0";
+    "push \"target\""
+    "load.r r0"->"push \"target\"";
+    "push \"target\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"store.r r14";
+    "store.r r14"->"load.r r14";
+    "load.r r14"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r14";
+    "fieldput <souvenir: java.lang.String target>"
+    "load.r r14"->"fieldput <souvenir: java.lang.String target>";
+    "fieldput <souvenir: java.lang.String target>"->"load.r r0";
+    "push \"increment\""
+    "load.r r0"->"push \"increment\"";
+    "push \"increment\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"store.r r14";
+    "store.r r14"->"load.r r14";
+    "ifnull staticget <souvenir: int incr>"
+    "load.r r14"->"ifnull staticget <souvenir: int incr>";
+    "ifnull staticget <souvenir: int incr>"->"load.r r14";
+    "load.r r14"->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>";
+    "staticput <souvenir: int incr>"
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"->"staticput <souvenir: int incr>";
+    "staticget <souvenir: int incr>"
+    "staticput <souvenir: int incr>"->"staticget <souvenir: int incr>";
+    "push 255"
+    "staticget <souvenir: int incr>"->"push 255";
+    "ifcmple.i load.r r0"
+    "push 255"->"ifcmple.i load.r r0";
+    "ifcmple.i load.r r0"->"push 255";
+    "push 255"->"staticput <souvenir: int incr>";
+    "staticput <souvenir: int incr>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "virtualinvoke <java.awt.Component: java.awt.Dimension size()>"
+    "load.r r0"->"virtualinvoke <java.awt.Component: java.awt.Dimension size()>";
+    "fieldget <java.awt.Dimension: int width>"
+    "virtualinvoke <java.awt.Component: java.awt.Dimension size()>"->"fieldget <java.awt.Dimension: int width>";
+    "fieldget <java.awt.Dimension: int width>"->"load.r r0";
+    "load.r r0"->"virtualinvoke <java.awt.Component: java.awt.Dimension size()>";
+    "fieldget <java.awt.Dimension: int height>"
+    "virtualinvoke <java.awt.Component: java.awt.Dimension size()>"->"fieldget <java.awt.Dimension: int height>";
+    "mul.i"
+    "fieldget <java.awt.Dimension: int height>"->"mul.i";
+    "newarray"
+    "mul.i"->"newarray";
+    "fieldput <souvenir: int[] pixels>"
+    "newarray"->"fieldput <souvenir: int[] pixels>";
+    "fieldput <souvenir: int[] pixels>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"virtualinvoke <java.awt.Component: java.awt.Dimension size()>";
+    "virtualinvoke <java.awt.Component: java.awt.Dimension size()>"->"fieldget <java.awt.Dimension: int width>";
+    "fieldget <java.awt.Dimension: int width>"->"load.r r0";
+    "load.r r0"->"virtualinvoke <java.awt.Component: java.awt.Dimension size()>";
+    "virtualinvoke <java.awt.Component: java.awt.Dimension size()>"->"fieldget <java.awt.Dimension: int height>";
+    "fieldget <java.awt.Dimension: int height>"->"mul.i";
+    "mul.i"->"newarray";
+    "fieldput <souvenir: int[] buffer>"
+    "newarray"->"fieldput <souvenir: int[] buffer>";
+    "fieldput <souvenir: int[] buffer>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "fieldget <souvenir: java.awt.Color bgcolor>"
+    "load.r r0"->"fieldget <souvenir: java.awt.Color bgcolor>";
+    "virtualinvoke <java.awt.Component: void setBackground(java.awt.Color)>"
+    "fieldget <souvenir: java.awt.Color bgcolor>"->"virtualinvoke <java.awt.Component: void setBackground(java.awt.Color)>";
+    "virtualinvoke <java.awt.Component: void setBackground(java.awt.Color)>"->"load.r r0";
+    "specialinvoke <souvenir: void readFile()>"
+    "load.r r0"->"specialinvoke <souvenir: void readFile()>";
+    "specialinvoke <souvenir: void readFile()>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"virtualinvoke <java.awt.Component: java.awt.Dimension size()>";
+    "virtualinvoke <java.awt.Component: java.awt.Dimension size()>"->"fieldget <java.awt.Dimension: int width>";
+    "fieldget <java.awt.Dimension: int width>"->"load.r r0";
+    "load.r r0"->"virtualinvoke <java.awt.Component: java.awt.Dimension size()>";
+    "virtualinvoke <java.awt.Component: java.awt.Dimension size()>"->"fieldget <java.awt.Dimension: int height>";
+    "virtualinvoke <java.awt.Component: java.awt.Image createImage(int,int)>"
+    "fieldget <java.awt.Dimension: int height>"->"virtualinvoke <java.awt.Component: java.awt.Image createImage(int,int)>";
+    "fieldput <souvenir: java.awt.Image dbimage>"
+    "virtualinvoke <java.awt.Component: java.awt.Image createImage(int,int)>"->"fieldput <souvenir: java.awt.Image dbimage>";
+    "fieldput <souvenir: java.awt.Image dbimage>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "fieldget <souvenir: java.awt.Image dbimage>"
+    "load.r r0"->"fieldget <souvenir: java.awt.Image dbimage>";
+    "virtualinvoke <java.awt.Image: java.awt.Graphics getGraphics()>"
+    "fieldget <souvenir: java.awt.Image dbimage>"->"virtualinvoke <java.awt.Image: java.awt.Graphics getGraphics()>";
+    "fieldput <souvenir: java.awt.Graphics dbgraphics>"
+    "virtualinvoke <java.awt.Image: java.awt.Graphics getGraphics()>"->"fieldput <souvenir: java.awt.Graphics dbgraphics>";
+    "return"
+    "fieldput <souvenir: java.awt.Graphics dbgraphics>"->"return";
+}

@@ -1,0 +1,116 @@
+digraph "" {
+    "r0 := @this: Calc1"
+    "load.r r0"
+    "r0 := @this: Calc1"->"load.r r0";
+    "new java.awt.BorderLayout"
+    "load.r r0"->"new java.awt.BorderLayout";
+    "dup1.r"
+    "new java.awt.BorderLayout"->"dup1.r";
+    "specialinvoke <java.awt.BorderLayout: void <init>()>"
+    "dup1.r"->"specialinvoke <java.awt.BorderLayout: void <init>()>";
+    "virtualinvoke <java.awt.Container: void setLayout(java.awt.LayoutManager)>"
+    "specialinvoke <java.awt.BorderLayout: void <init>()>"->"virtualinvoke <java.awt.Container: void setLayout(java.awt.LayoutManager)>";
+    "virtualinvoke <java.awt.Container: void setLayout(java.awt.LayoutManager)>"->"load.r r0";
+    "new java.awt.Color"
+    "load.r r0"->"new java.awt.Color";
+    "new java.awt.Color"->"dup1.r";
+    "push 105"
+    "dup1.r"->"push 105";
+    "push 105"->"push 105";
+    "push 105"->"push 105";
+    "specialinvoke <java.awt.Color: void <init>(int,int,int)>"
+    "push 105"->"specialinvoke <java.awt.Color: void <init>(int,int,int)>";
+    "virtualinvoke <java.awt.Component: void setBackground(java.awt.Color)>"
+    "specialinvoke <java.awt.Color: void <init>(int,int,int)>"->"virtualinvoke <java.awt.Component: void setBackground(java.awt.Color)>";
+    "virtualinvoke <java.awt.Component: void setBackground(java.awt.Color)>"->"load.r r0";
+    "new OperationPanel"
+    "load.r r0"->"new OperationPanel";
+    "new OperationPanel"->"dup1.r";
+    "specialinvoke <OperationPanel: void <init>()>"
+    "dup1.r"->"specialinvoke <OperationPanel: void <init>()>";
+    "fieldput <Calc1: OperationPanel myoperation>"
+    "specialinvoke <OperationPanel: void <init>()>"->"fieldput <Calc1: OperationPanel myoperation>";
+    "fieldput <Calc1: OperationPanel myoperation>"->"load.r r0";
+    "fieldget <Calc1: OperationPanel myoperation>"
+    "load.r r0"->"fieldget <Calc1: OperationPanel myoperation>";
+    "new java.awt.Font"
+    "fieldget <Calc1: OperationPanel myoperation>"->"new java.awt.Font";
+    "new java.awt.Font"->"dup1.r";
+    "push \"SansSerif\""
+    "dup1.r"->"push \"SansSerif\"";
+    "push 1"
+    "push \"SansSerif\""->"push 1";
+    "push 14"
+    "push 1"->"push 14";
+    "specialinvoke <java.awt.Font: void <init>(java.lang.String,int,int)>"
+    "push 14"->"specialinvoke <java.awt.Font: void <init>(java.lang.String,int,int)>";
+    "virtualinvoke <java.awt.Component: void setFont(java.awt.Font)>"
+    "specialinvoke <java.awt.Font: void <init>(java.lang.String,int,int)>"->"virtualinvoke <java.awt.Component: void setFont(java.awt.Font)>";
+    "virtualinvoke <java.awt.Component: void setFont(java.awt.Font)>"->"load.r r0";
+    "push \"East\""
+    "load.r r0"->"push \"East\"";
+    "push \"East\""->"load.r r0";
+    "load.r r0"->"fieldget <Calc1: OperationPanel myoperation>";
+    "virtualinvoke <java.awt.Container: java.awt.Component add(java.lang.String,java.awt.Component)>"
+    "fieldget <Calc1: OperationPanel myoperation>"->"virtualinvoke <java.awt.Container: java.awt.Component add(java.lang.String,java.awt.Component)>";
+    "pop"
+    "virtualinvoke <java.awt.Container: java.awt.Component add(java.lang.String,java.awt.Component)>"->"pop";
+    "pop"->"load.r r0";
+    "new NumPanel"
+    "load.r r0"->"new NumPanel";
+    "new NumPanel"->"dup1.r";
+    "specialinvoke <NumPanel: void <init>()>"
+    "dup1.r"->"specialinvoke <NumPanel: void <init>()>";
+    "fieldput <Calc1: NumPanel nums>"
+    "specialinvoke <NumPanel: void <init>()>"->"fieldput <Calc1: NumPanel nums>";
+    "fieldput <Calc1: NumPanel nums>"->"load.r r0";
+    "fieldget <Calc1: NumPanel nums>"
+    "load.r r0"->"fieldget <Calc1: NumPanel nums>";
+    "fieldget <Calc1: NumPanel nums>"->"new java.awt.Font";
+    "new java.awt.Font"->"dup1.r";
+    "dup1.r"->"push \"SansSerif\"";
+    "push \"SansSerif\""->"push 1";
+    "push 1"->"push 14";
+    "push 14"->"specialinvoke <java.awt.Font: void <init>(java.lang.String,int,int)>";
+    "specialinvoke <java.awt.Font: void <init>(java.lang.String,int,int)>"->"virtualinvoke <java.awt.Component: void setFont(java.awt.Font)>";
+    "virtualinvoke <java.awt.Component: void setFont(java.awt.Font)>"->"load.r r0";
+    "push \"West\""
+    "load.r r0"->"push \"West\"";
+    "push \"West\""->"load.r r0";
+    "load.r r0"->"fieldget <Calc1: NumPanel nums>";
+    "fieldget <Calc1: NumPanel nums>"->"virtualinvoke <java.awt.Container: java.awt.Component add(java.lang.String,java.awt.Component)>";
+    "virtualinvoke <java.awt.Container: java.awt.Component add(java.lang.String,java.awt.Component)>"->"pop";
+    "new java.awt.TextField"
+    "pop"->"new java.awt.TextField";
+    "new java.awt.TextField"->"dup1.r";
+    "specialinvoke <java.awt.TextField: void <init>()>"
+    "dup1.r"->"specialinvoke <java.awt.TextField: void <init>()>";
+    "staticput <Calc1: java.awt.TextField display>"
+    "specialinvoke <java.awt.TextField: void <init>()>"->"staticput <Calc1: java.awt.TextField display>";
+    "staticget <Calc1: java.awt.TextField display>"
+    "staticput <Calc1: java.awt.TextField display>"->"staticget <Calc1: java.awt.TextField display>";
+    "push 0"
+    "staticget <Calc1: java.awt.TextField display>"->"push 0";
+    "virtualinvoke <java.awt.TextComponent: void setEditable(boolean)>"
+    "push 0"->"virtualinvoke <java.awt.TextComponent: void setEditable(boolean)>";
+    "virtualinvoke <java.awt.TextComponent: void setEditable(boolean)>"->"staticget <Calc1: java.awt.TextField display>";
+    "staticget <java.awt.Color: java.awt.Color yellow>"
+    "staticget <Calc1: java.awt.TextField display>"->"staticget <java.awt.Color: java.awt.Color yellow>";
+    "staticget <java.awt.Color: java.awt.Color yellow>"->"virtualinvoke <java.awt.Component: void setBackground(java.awt.Color)>";
+    "virtualinvoke <java.awt.Component: void setBackground(java.awt.Color)>"->"staticget <Calc1: java.awt.TextField display>";
+    "staticget <Calc1: java.awt.TextField display>"->"new java.awt.Font";
+    "new java.awt.Font"->"dup1.r";
+    "dup1.r"->"push \"SansSerif\"";
+    "push \"SansSerif\""->"push 1";
+    "push 1"->"push 14";
+    "push 14"->"specialinvoke <java.awt.Font: void <init>(java.lang.String,int,int)>";
+    "specialinvoke <java.awt.Font: void <init>(java.lang.String,int,int)>"->"virtualinvoke <java.awt.Component: void setFont(java.awt.Font)>";
+    "virtualinvoke <java.awt.Component: void setFont(java.awt.Font)>"->"load.r r0";
+    "push \"North\""
+    "load.r r0"->"push \"North\"";
+    "push \"North\""->"staticget <Calc1: java.awt.TextField display>";
+    "staticget <Calc1: java.awt.TextField display>"->"virtualinvoke <java.awt.Container: java.awt.Component add(java.lang.String,java.awt.Component)>";
+    "virtualinvoke <java.awt.Container: java.awt.Component add(java.lang.String,java.awt.Component)>"->"pop";
+    "return"
+    "pop"->"return";
+}

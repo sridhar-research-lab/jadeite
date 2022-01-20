@@ -1,0 +1,68 @@
+digraph "" {
+    "r0 := @this: worldTime"
+    "load.r r0"
+    "r0 := @this: worldTime"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "specialinvoke <worldTime: int getNumCities()>"
+    "load.r r0"->"specialinvoke <worldTime: int getNumCities()>";
+    "fieldput <worldTime: int numCities>"
+    "specialinvoke <worldTime: int getNumCities()>"->"fieldput <worldTime: int numCities>";
+    "fieldput <worldTime: int numCities>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "fieldget <worldTime: int numCities>"
+    "load.r r0"->"fieldget <worldTime: int numCities>";
+    "newarray"
+    "fieldget <worldTime: int numCities>"->"newarray";
+    "fieldput <worldTime: java.util.SimpleTimeZone[] cityTimeZone>"
+    "newarray"->"fieldput <worldTime: java.util.SimpleTimeZone[] cityTimeZone>";
+    "fieldput <worldTime: java.util.SimpleTimeZone[] cityTimeZone>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <worldTime: int numCities>";
+    "fieldget <worldTime: int numCities>"->"newarray";
+    "fieldput <worldTime: java.util.Calendar[] calendar>"
+    "newarray"->"fieldput <worldTime: java.util.Calendar[] calendar>";
+    "fieldput <worldTime: java.util.Calendar[] calendar>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <worldTime: int numCities>";
+    "fieldget <worldTime: int numCities>"->"newarray";
+    "fieldput <worldTime: java.text.DateFormat[] timeFormat>"
+    "newarray"->"fieldput <worldTime: java.text.DateFormat[] timeFormat>";
+    "fieldput <worldTime: java.text.DateFormat[] timeFormat>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <worldTime: int numCities>";
+    "fieldget <worldTime: int numCities>"->"newarray";
+    "fieldput <worldTime: java.text.DateFormat[] dateFormat>"
+    "newarray"->"fieldput <worldTime: java.text.DateFormat[] dateFormat>";
+    "fieldput <worldTime: java.text.DateFormat[] dateFormat>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <worldTime: int numCities>";
+    "fieldget <worldTime: int numCities>"->"newarray";
+    "fieldput <worldTime: java.awt.Label[] lblTime>"
+    "newarray"->"fieldput <worldTime: java.awt.Label[] lblTime>";
+    "fieldput <worldTime: java.awt.Label[] lblTime>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <worldTime: int numCities>";
+    "fieldget <worldTime: int numCities>"->"newarray";
+    "fieldput <worldTime: java.awt.Label[] lblDate>"
+    "newarray"->"fieldput <worldTime: java.awt.Label[] lblDate>";
+    "fieldput <worldTime: java.awt.Label[] lblDate>"->"load.r r0";
+    "new java.util.Date"
+    "load.r r0"->"new java.util.Date";
+    "dup1.r"
+    "new java.util.Date"->"dup1.r";
+    "specialinvoke <java.util.Date: void <init>()>"
+    "dup1.r"->"specialinvoke <java.util.Date: void <init>()>";
+    "fieldput <worldTime: java.util.Date runTime>"
+    "specialinvoke <java.util.Date: void <init>()>"->"fieldput <worldTime: java.util.Date runTime>";
+    "fieldput <worldTime: java.util.Date runTime>"->"load.r r0";
+    "specialinvoke <worldTime: void setLocale()>"
+    "load.r r0"->"specialinvoke <worldTime: void setLocale()>";
+    "specialinvoke <worldTime: void setLocale()>"->"load.r r0";
+    "specialinvoke <worldTime: void setColors()>"
+    "load.r r0"->"specialinvoke <worldTime: void setColors()>";
+    "specialinvoke <worldTime: void setColors()>"->"load.r r0";
+    "specialinvoke <worldTime: void buildGUI()>"
+    "load.r r0"->"specialinvoke <worldTime: void buildGUI()>";
+    "return"
+    "specialinvoke <worldTime: void buildGUI()>"->"return";
+}

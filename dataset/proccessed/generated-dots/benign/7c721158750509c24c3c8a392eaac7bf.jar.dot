@@ -1,0 +1,697 @@
+digraph "" {
+    "r0 := @this: org.nis.nutracalc.NutraCalc"
+    "staticinvoke <javax.swing.UIManager: java.lang.String getSystemLookAndFeelClassName()>"
+    "r0 := @this: org.nis.nutracalc.NutraCalc"->"staticinvoke <javax.swing.UIManager: java.lang.String getSystemLookAndFeelClassName()>";
+    "staticinvoke <javax.swing.UIManager: void setLookAndFeel(java.lang.String)>"
+    "staticinvoke <javax.swing.UIManager: java.lang.String getSystemLookAndFeelClassName()>"->"staticinvoke <javax.swing.UIManager: void setLookAndFeel(java.lang.String)>";
+    "goto load.r r0"
+    "staticinvoke <javax.swing.UIManager: void setLookAndFeel(java.lang.String)>"->"goto load.r r0";
+    "load.r r0"
+    "goto load.r r0"->"load.r r0";
+    "new org.nis.nutracalc.AppData"
+    "load.r r0"->"new org.nis.nutracalc.AppData";
+    "dup1.r"
+    "new org.nis.nutracalc.AppData"->"dup1.r";
+    "specialinvoke <org.nis.nutracalc.AppData: void <init>()>"
+    "dup1.r"->"specialinvoke <org.nis.nutracalc.AppData: void <init>()>";
+    "fieldput <org.nis.nutracalc.NutraCalc: org.nis.nutracalc.AppData appData>"
+    "specialinvoke <org.nis.nutracalc.AppData: void <init>()>"->"fieldput <org.nis.nutracalc.NutraCalc: org.nis.nutracalc.AppData appData>";
+    "new javax.swing.JLabel"
+    "fieldput <org.nis.nutracalc.NutraCalc: org.nis.nutracalc.AppData appData>"->"new javax.swing.JLabel";
+    "store.r $r9"
+    "new javax.swing.JLabel"->"store.r $r9";
+    "load.r $r9"
+    "store.r $r9"->"load.r $r9";
+    "push \"Category:\""
+    "load.r $r9"->"push \"Category:\"";
+    "specialinvoke <javax.swing.JLabel: void <init>(java.lang.String)>"
+    "push \"Category:\""->"specialinvoke <javax.swing.JLabel: void <init>(java.lang.String)>";
+    "specialinvoke <javax.swing.JLabel: void <init>(java.lang.String)>"->"load.r r0";
+    "new javax.swing.JComboBox"
+    "load.r r0"->"new javax.swing.JComboBox";
+    "new javax.swing.JComboBox"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "fieldget <org.nis.nutracalc.NutraCalc: org.nis.nutracalc.AppData appData>"
+    "load.r r0"->"fieldget <org.nis.nutracalc.NutraCalc: org.nis.nutracalc.AppData appData>";
+    "virtualinvoke <org.nis.nutracalc.AppData: java.util.Vector getCategories()>"
+    "fieldget <org.nis.nutracalc.NutraCalc: org.nis.nutracalc.AppData appData>"->"virtualinvoke <org.nis.nutracalc.AppData: java.util.Vector getCategories()>";
+    "specialinvoke <javax.swing.JComboBox: void <init>(java.util.Vector)>"
+    "virtualinvoke <org.nis.nutracalc.AppData: java.util.Vector getCategories()>"->"specialinvoke <javax.swing.JComboBox: void <init>(java.util.Vector)>";
+    "fieldput <org.nis.nutracalc.NutraCalc: javax.swing.JComboBox categoryList>"
+    "specialinvoke <javax.swing.JComboBox: void <init>(java.util.Vector)>"->"fieldput <org.nis.nutracalc.NutraCalc: javax.swing.JComboBox categoryList>";
+    "fieldput <org.nis.nutracalc.NutraCalc: javax.swing.JComboBox categoryList>"->"new javax.swing.JLabel";
+    "store.r $r13"
+    "new javax.swing.JLabel"->"store.r $r13";
+    "load.r $r13"
+    "store.r $r13"->"load.r $r13";
+    "push \"Item:\""
+    "load.r $r13"->"push \"Item:\"";
+    "push \"Item:\""->"specialinvoke <javax.swing.JLabel: void <init>(java.lang.String)>";
+    "specialinvoke <javax.swing.JLabel: void <init>(java.lang.String)>"->"load.r r0";
+    "load.r r0"->"new javax.swing.JComboBox";
+    "new javax.swing.JComboBox"->"dup1.r";
+    "new javax.swing.DefaultComboBoxModel"
+    "dup1.r"->"new javax.swing.DefaultComboBoxModel";
+    "new javax.swing.DefaultComboBoxModel"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "load.r r0"->"fieldget <org.nis.nutracalc.NutraCalc: org.nis.nutracalc.AppData appData>";
+    "fieldget <org.nis.nutracalc.NutraCalc: org.nis.nutracalc.AppData appData>"->"load.r r0";
+    "load.r r0"->"fieldget <org.nis.nutracalc.NutraCalc: org.nis.nutracalc.AppData appData>";
+    "fieldget <org.nis.nutracalc.NutraCalc: org.nis.nutracalc.AppData appData>"->"virtualinvoke <org.nis.nutracalc.AppData: java.util.Vector getCategories()>";
+    "push 0"
+    "virtualinvoke <org.nis.nutracalc.AppData: java.util.Vector getCategories()>"->"push 0";
+    "virtualinvoke <java.util.Vector: java.lang.Object get(int)>"
+    "push 0"->"virtualinvoke <java.util.Vector: java.lang.Object get(int)>";
+    "checkcast"
+    "virtualinvoke <java.util.Vector: java.lang.Object get(int)>"->"checkcast";
+    "virtualinvoke <org.nis.nutracalc.AppData: java.util.Vector getItems(java.lang.String)>"
+    "checkcast"->"virtualinvoke <org.nis.nutracalc.AppData: java.util.Vector getItems(java.lang.String)>";
+    "specialinvoke <javax.swing.DefaultComboBoxModel: void <init>(java.util.Vector)>"
+    "virtualinvoke <org.nis.nutracalc.AppData: java.util.Vector getItems(java.lang.String)>"->"specialinvoke <javax.swing.DefaultComboBoxModel: void <init>(java.util.Vector)>";
+    "specialinvoke <javax.swing.JComboBox: void <init>(javax.swing.ComboBoxModel)>"
+    "specialinvoke <javax.swing.DefaultComboBoxModel: void <init>(java.util.Vector)>"->"specialinvoke <javax.swing.JComboBox: void <init>(javax.swing.ComboBoxModel)>";
+    "fieldput <org.nis.nutracalc.NutraCalc: javax.swing.JComboBox itemList>"
+    "specialinvoke <javax.swing.JComboBox: void <init>(javax.swing.ComboBoxModel)>"->"fieldput <org.nis.nutracalc.NutraCalc: javax.swing.JComboBox itemList>";
+    "fieldput <org.nis.nutracalc.NutraCalc: javax.swing.JComboBox itemList>"->"new javax.swing.JLabel";
+    "store.r $r22"
+    "new javax.swing.JLabel"->"store.r $r22";
+    "load.r $r22"
+    "store.r $r22"->"load.r $r22";
+    "push \"Item Substitutions:\""
+    "load.r $r22"->"push \"Item Substitutions:\"";
+    "push \"Item Substitutions:\""->"specialinvoke <javax.swing.JLabel: void <init>(java.lang.String)>";
+    "specialinvoke <javax.swing.JLabel: void <init>(java.lang.String)>"->"load.r r0";
+    "new javax.swing.JPanel"
+    "load.r r0"->"new javax.swing.JPanel";
+    "new javax.swing.JPanel"->"dup1.r";
+    "specialinvoke <javax.swing.JPanel: void <init>()>"
+    "dup1.r"->"specialinvoke <javax.swing.JPanel: void <init>()>";
+    "fieldput <org.nis.nutracalc.NutraCalc: javax.swing.JPanel substitutionList>"
+    "specialinvoke <javax.swing.JPanel: void <init>()>"->"fieldput <org.nis.nutracalc.NutraCalc: javax.swing.JPanel substitutionList>";
+    "fieldput <org.nis.nutracalc.NutraCalc: javax.swing.JPanel substitutionList>"->"load.r r0";
+    "new javax.swing.JScrollPane"
+    "load.r r0"->"new javax.swing.JScrollPane";
+    "new javax.swing.JScrollPane"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "fieldget <org.nis.nutracalc.NutraCalc: javax.swing.JPanel substitutionList>"
+    "load.r r0"->"fieldget <org.nis.nutracalc.NutraCalc: javax.swing.JPanel substitutionList>";
+    "push 22"
+    "fieldget <org.nis.nutracalc.NutraCalc: javax.swing.JPanel substitutionList>"->"push 22";
+    "push 30"
+    "push 22"->"push 30";
+    "specialinvoke <javax.swing.JScrollPane: void <init>(java.awt.Component,int,int)>"
+    "push 30"->"specialinvoke <javax.swing.JScrollPane: void <init>(java.awt.Component,int,int)>";
+    "fieldput <org.nis.nutracalc.NutraCalc: javax.swing.JScrollPane substitutionListView>"
+    "specialinvoke <javax.swing.JScrollPane: void <init>(java.awt.Component,int,int)>"->"fieldput <org.nis.nutracalc.NutraCalc: javax.swing.JScrollPane substitutionListView>";
+    "fieldput <org.nis.nutracalc.NutraCalc: javax.swing.JScrollPane substitutionListView>"->"load.r r0";
+    "new javax.swing.JButton"
+    "load.r r0"->"new javax.swing.JButton";
+    "new javax.swing.JButton"->"dup1.r";
+    "push \"Add item to meal\""
+    "dup1.r"->"push \"Add item to meal\"";
+    "specialinvoke <javax.swing.JButton: void <init>(java.lang.String)>"
+    "push \"Add item to meal\""->"specialinvoke <javax.swing.JButton: void <init>(java.lang.String)>";
+    "fieldput <org.nis.nutracalc.NutraCalc: javax.swing.JButton addButton>"
+    "specialinvoke <javax.swing.JButton: void <init>(java.lang.String)>"->"fieldput <org.nis.nutracalc.NutraCalc: javax.swing.JButton addButton>";
+    "fieldput <org.nis.nutracalc.NutraCalc: javax.swing.JButton addButton>"->"new javax.swing.JLabel";
+    "store.r $r27"
+    "new javax.swing.JLabel"->"store.r $r27";
+    "load.r $r27"
+    "store.r $r27"->"load.r $r27";
+    "push \"Meal Contents:\""
+    "load.r $r27"->"push \"Meal Contents:\"";
+    "push \"Meal Contents:\""->"specialinvoke <javax.swing.JLabel: void <init>(java.lang.String)>";
+    "specialinvoke <javax.swing.JLabel: void <init>(java.lang.String)>"->"load.r r0";
+    "new javax.swing.JTree"
+    "load.r r0"->"new javax.swing.JTree";
+    "new javax.swing.JTree"->"dup1.r";
+    "new javax.swing.tree.DefaultTreeModel"
+    "dup1.r"->"new javax.swing.tree.DefaultTreeModel";
+    "new javax.swing.tree.DefaultTreeModel"->"dup1.r";
+    "new javax.swing.tree.DefaultMutableTreeNode"
+    "dup1.r"->"new javax.swing.tree.DefaultMutableTreeNode";
+    "new javax.swing.tree.DefaultMutableTreeNode"->"dup1.r";
+    "push \"Meal\""
+    "dup1.r"->"push \"Meal\"";
+    "specialinvoke <javax.swing.tree.DefaultMutableTreeNode: void <init>(java.lang.Object)>"
+    "push \"Meal\""->"specialinvoke <javax.swing.tree.DefaultMutableTreeNode: void <init>(java.lang.Object)>";
+    "specialinvoke <javax.swing.tree.DefaultTreeModel: void <init>(javax.swing.tree.TreeNode)>"
+    "specialinvoke <javax.swing.tree.DefaultMutableTreeNode: void <init>(java.lang.Object)>"->"specialinvoke <javax.swing.tree.DefaultTreeModel: void <init>(javax.swing.tree.TreeNode)>";
+    "specialinvoke <javax.swing.JTree: void <init>(javax.swing.tree.TreeModel)>"
+    "specialinvoke <javax.swing.tree.DefaultTreeModel: void <init>(javax.swing.tree.TreeNode)>"->"specialinvoke <javax.swing.JTree: void <init>(javax.swing.tree.TreeModel)>";
+    "fieldput <org.nis.nutracalc.NutraCalc: javax.swing.JTree mealTree>"
+    "specialinvoke <javax.swing.JTree: void <init>(javax.swing.tree.TreeModel)>"->"fieldput <org.nis.nutracalc.NutraCalc: javax.swing.JTree mealTree>";
+    "fieldput <org.nis.nutracalc.NutraCalc: javax.swing.JTree mealTree>"->"load.r r0";
+    "fieldget <org.nis.nutracalc.NutraCalc: javax.swing.JTree mealTree>"
+    "load.r r0"->"fieldget <org.nis.nutracalc.NutraCalc: javax.swing.JTree mealTree>";
+    "virtualinvoke <javax.swing.JTree: javax.swing.tree.TreeSelectionModel getSelectionModel()>"
+    "fieldget <org.nis.nutracalc.NutraCalc: javax.swing.JTree mealTree>"->"virtualinvoke <javax.swing.JTree: javax.swing.tree.TreeSelectionModel getSelectionModel()>";
+    "push 1"
+    "virtualinvoke <javax.swing.JTree: javax.swing.tree.TreeSelectionModel getSelectionModel()>"->"push 1";
+    "interfaceinvoke <javax.swing.tree.TreeSelectionModel: void setSelectionMode(int)> 1"
+    "push 1"->"interfaceinvoke <javax.swing.tree.TreeSelectionModel: void setSelectionMode(int)> 1";
+    "interfaceinvoke <javax.swing.tree.TreeSelectionModel: void setSelectionMode(int)> 1"->"load.r r0";
+    "load.r r0"->"fieldget <org.nis.nutracalc.NutraCalc: javax.swing.JTree mealTree>";
+    "fieldget <org.nis.nutracalc.NutraCalc: javax.swing.JTree mealTree>"->"push 1";
+    "virtualinvoke <javax.swing.JTree: void setShowsRootHandles(boolean)>"
+    "push 1"->"virtualinvoke <javax.swing.JTree: void setShowsRootHandles(boolean)>";
+    "virtualinvoke <javax.swing.JTree: void setShowsRootHandles(boolean)>"->"load.r r0";
+    "load.r r0"->"new javax.swing.JScrollPane";
+    "new javax.swing.JScrollPane"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "load.r r0"->"fieldget <org.nis.nutracalc.NutraCalc: javax.swing.JTree mealTree>";
+    "fieldget <org.nis.nutracalc.NutraCalc: javax.swing.JTree mealTree>"->"push 22";
+    "push 22"->"push 30";
+    "push 30"->"specialinvoke <javax.swing.JScrollPane: void <init>(java.awt.Component,int,int)>";
+    "fieldput <org.nis.nutracalc.NutraCalc: javax.swing.JScrollPane mealView>"
+    "specialinvoke <javax.swing.JScrollPane: void <init>(java.awt.Component,int,int)>"->"fieldput <org.nis.nutracalc.NutraCalc: javax.swing.JScrollPane mealView>";
+    "fieldput <org.nis.nutracalc.NutraCalc: javax.swing.JScrollPane mealView>"->"load.r r0";
+    "load.r r0"->"new javax.swing.JButton";
+    "new javax.swing.JButton"->"dup1.r";
+    "push \"Remove item from meal\""
+    "dup1.r"->"push \"Remove item from meal\"";
+    "push \"Remove item from meal\""->"specialinvoke <javax.swing.JButton: void <init>(java.lang.String)>";
+    "fieldput <org.nis.nutracalc.NutraCalc: javax.swing.JButton removeButton>"
+    "specialinvoke <javax.swing.JButton: void <init>(java.lang.String)>"->"fieldput <org.nis.nutracalc.NutraCalc: javax.swing.JButton removeButton>";
+    "fieldput <org.nis.nutracalc.NutraCalc: javax.swing.JButton removeButton>"->"new javax.swing.JLabel";
+    "store.r $r37"
+    "new javax.swing.JLabel"->"store.r $r37";
+    "load.r $r37"
+    "store.r $r37"->"load.r $r37";
+    "push \"Nutrition Facts:\""
+    "load.r $r37"->"push \"Nutrition Facts:\"";
+    "push \"Nutrition Facts:\""->"specialinvoke <javax.swing.JLabel: void <init>(java.lang.String)>";
+    "specialinvoke <javax.swing.JLabel: void <init>(java.lang.String)>"->"load.r r0";
+    "new org.nis.nutracalc.NutritionLabel"
+    "load.r r0"->"new org.nis.nutracalc.NutritionLabel";
+    "new org.nis.nutracalc.NutritionLabel"->"dup1.r";
+    "specialinvoke <org.nis.nutracalc.NutritionLabel: void <init>()>"
+    "dup1.r"->"specialinvoke <org.nis.nutracalc.NutritionLabel: void <init>()>";
+    "fieldput <org.nis.nutracalc.NutraCalc: org.nis.nutracalc.NutritionLabel itemNutrition>"
+    "specialinvoke <org.nis.nutracalc.NutritionLabel: void <init>()>"->"fieldput <org.nis.nutracalc.NutraCalc: org.nis.nutracalc.NutritionLabel itemNutrition>";
+    "fieldput <org.nis.nutracalc.NutraCalc: org.nis.nutracalc.NutritionLabel itemNutrition>"->"load.r r0";
+    "load.r r0"->"new javax.swing.JScrollPane";
+    "new javax.swing.JScrollPane"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "fieldget <org.nis.nutracalc.NutraCalc: org.nis.nutracalc.NutritionLabel itemNutrition>"
+    "load.r r0"->"fieldget <org.nis.nutracalc.NutraCalc: org.nis.nutracalc.NutritionLabel itemNutrition>";
+    "fieldget <org.nis.nutracalc.NutraCalc: org.nis.nutracalc.NutritionLabel itemNutrition>"->"push 22";
+    "push 22"->"push 30";
+    "push 30"->"specialinvoke <javax.swing.JScrollPane: void <init>(java.awt.Component,int,int)>";
+    "fieldput <org.nis.nutracalc.NutraCalc: javax.swing.JScrollPane nutritionView>"
+    "specialinvoke <javax.swing.JScrollPane: void <init>(java.awt.Component,int,int)>"->"fieldput <org.nis.nutracalc.NutraCalc: javax.swing.JScrollPane nutritionView>";
+    "fieldput <org.nis.nutracalc.NutraCalc: javax.swing.JScrollPane nutritionView>"->"load.r r0";
+    "fieldget <org.nis.nutracalc.NutraCalc: javax.swing.JComboBox categoryList>"
+    "load.r r0"->"fieldget <org.nis.nutracalc.NutraCalc: javax.swing.JComboBox categoryList>";
+    "new org.nis.nutracalc.NutraCalc$1"
+    "fieldget <org.nis.nutracalc.NutraCalc: javax.swing.JComboBox categoryList>"->"new org.nis.nutracalc.NutraCalc$1";
+    "new org.nis.nutracalc.NutraCalc$1"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "specialinvoke <org.nis.nutracalc.NutraCalc$1: void <init>(org.nis.nutracalc.NutraCalc)>"
+    "load.r r0"->"specialinvoke <org.nis.nutracalc.NutraCalc$1: void <init>(org.nis.nutracalc.NutraCalc)>";
+    "virtualinvoke <javax.swing.JComboBox: void addActionListener(java.awt.event.ActionListener)>"
+    "specialinvoke <org.nis.nutracalc.NutraCalc$1: void <init>(org.nis.nutracalc.NutraCalc)>"->"virtualinvoke <javax.swing.JComboBox: void addActionListener(java.awt.event.ActionListener)>";
+    "virtualinvoke <javax.swing.JComboBox: void addActionListener(java.awt.event.ActionListener)>"->"load.r r0";
+    "fieldget <org.nis.nutracalc.NutraCalc: javax.swing.JComboBox itemList>"
+    "load.r r0"->"fieldget <org.nis.nutracalc.NutraCalc: javax.swing.JComboBox itemList>";
+    "new org.nis.nutracalc.NutraCalc$2"
+    "fieldget <org.nis.nutracalc.NutraCalc: javax.swing.JComboBox itemList>"->"new org.nis.nutracalc.NutraCalc$2";
+    "new org.nis.nutracalc.NutraCalc$2"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "specialinvoke <org.nis.nutracalc.NutraCalc$2: void <init>(org.nis.nutracalc.NutraCalc)>"
+    "load.r r0"->"specialinvoke <org.nis.nutracalc.NutraCalc$2: void <init>(org.nis.nutracalc.NutraCalc)>";
+    "specialinvoke <org.nis.nutracalc.NutraCalc$2: void <init>(org.nis.nutracalc.NutraCalc)>"->"virtualinvoke <javax.swing.JComboBox: void addActionListener(java.awt.event.ActionListener)>";
+    "virtualinvoke <javax.swing.JComboBox: void addActionListener(java.awt.event.ActionListener)>"->"load.r r0";
+    "fieldget <org.nis.nutracalc.NutraCalc: javax.swing.JButton addButton>"
+    "load.r r0"->"fieldget <org.nis.nutracalc.NutraCalc: javax.swing.JButton addButton>";
+    "new org.nis.nutracalc.NutraCalc$3"
+    "fieldget <org.nis.nutracalc.NutraCalc: javax.swing.JButton addButton>"->"new org.nis.nutracalc.NutraCalc$3";
+    "new org.nis.nutracalc.NutraCalc$3"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "specialinvoke <org.nis.nutracalc.NutraCalc$3: void <init>(org.nis.nutracalc.NutraCalc)>"
+    "load.r r0"->"specialinvoke <org.nis.nutracalc.NutraCalc$3: void <init>(org.nis.nutracalc.NutraCalc)>";
+    "virtualinvoke <javax.swing.JButton: void addActionListener(java.awt.event.ActionListener)>"
+    "specialinvoke <org.nis.nutracalc.NutraCalc$3: void <init>(org.nis.nutracalc.NutraCalc)>"->"virtualinvoke <javax.swing.JButton: void addActionListener(java.awt.event.ActionListener)>";
+    "virtualinvoke <javax.swing.JButton: void addActionListener(java.awt.event.ActionListener)>"->"load.r r0";
+    "fieldget <org.nis.nutracalc.NutraCalc: javax.swing.JButton removeButton>"
+    "load.r r0"->"fieldget <org.nis.nutracalc.NutraCalc: javax.swing.JButton removeButton>";
+    "new org.nis.nutracalc.NutraCalc$4"
+    "fieldget <org.nis.nutracalc.NutraCalc: javax.swing.JButton removeButton>"->"new org.nis.nutracalc.NutraCalc$4";
+    "new org.nis.nutracalc.NutraCalc$4"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "specialinvoke <org.nis.nutracalc.NutraCalc$4: void <init>(org.nis.nutracalc.NutraCalc)>"
+    "load.r r0"->"specialinvoke <org.nis.nutracalc.NutraCalc$4: void <init>(org.nis.nutracalc.NutraCalc)>";
+    "specialinvoke <org.nis.nutracalc.NutraCalc$4: void <init>(org.nis.nutracalc.NutraCalc)>"->"virtualinvoke <javax.swing.JButton: void addActionListener(java.awt.event.ActionListener)>";
+    "virtualinvoke <javax.swing.JButton: void addActionListener(java.awt.event.ActionListener)>"->"load.r r0";
+    "load.r r0"->"fieldget <org.nis.nutracalc.NutraCalc: javax.swing.JTree mealTree>";
+    "new org.nis.nutracalc.NutraCalc$5"
+    "fieldget <org.nis.nutracalc.NutraCalc: javax.swing.JTree mealTree>"->"new org.nis.nutracalc.NutraCalc$5";
+    "new org.nis.nutracalc.NutraCalc$5"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "specialinvoke <org.nis.nutracalc.NutraCalc$5: void <init>(org.nis.nutracalc.NutraCalc)>"
+    "load.r r0"->"specialinvoke <org.nis.nutracalc.NutraCalc$5: void <init>(org.nis.nutracalc.NutraCalc)>";
+    "virtualinvoke <javax.swing.JTree: void addTreeSelectionListener(javax.swing.event.TreeSelectionListener)>"
+    "specialinvoke <org.nis.nutracalc.NutraCalc$5: void <init>(org.nis.nutracalc.NutraCalc)>"->"virtualinvoke <javax.swing.JTree: void addTreeSelectionListener(javax.swing.event.TreeSelectionListener)>";
+    "new javax.swing.SpringLayout"
+    "virtualinvoke <javax.swing.JTree: void addTreeSelectionListener(javax.swing.event.TreeSelectionListener)>"->"new javax.swing.SpringLayout";
+    "store.r $r51"
+    "new javax.swing.SpringLayout"->"store.r $r51";
+    "load.r $r51"
+    "store.r $r51"->"load.r $r51";
+    "specialinvoke <javax.swing.SpringLayout: void <init>()>"
+    "load.r $r51"->"specialinvoke <javax.swing.SpringLayout: void <init>()>";
+    "specialinvoke <javax.swing.SpringLayout: void <init>()>"->"load.r r0";
+    "virtualinvoke <org.nis.nutracalc.NutraCalc: java.awt.Container getContentPane()>"
+    "load.r r0"->"virtualinvoke <org.nis.nutracalc.NutraCalc: java.awt.Container getContentPane()>";
+    "store.r r6"
+    "virtualinvoke <org.nis.nutracalc.NutraCalc: java.awt.Container getContentPane()>"->"store.r r6";
+    "store.r r6"->"load.r r0";
+    "load.r r0"->"load.r $r51";
+    "virtualinvoke <org.nis.nutracalc.NutraCalc: void setLayout(java.awt.LayoutManager)>"
+    "load.r $r51"->"virtualinvoke <org.nis.nutracalc.NutraCalc: void setLayout(java.awt.LayoutManager)>";
+    "virtualinvoke <org.nis.nutracalc.NutraCalc: void setLayout(java.awt.LayoutManager)>"->"load.r r0";
+    "load.r r0"->"load.r $r9";
+    "virtualinvoke <org.nis.nutracalc.NutraCalc: java.awt.Component add(java.awt.Component)>"
+    "load.r $r9"->"virtualinvoke <org.nis.nutracalc.NutraCalc: java.awt.Component add(java.awt.Component)>";
+    "pop"
+    "virtualinvoke <org.nis.nutracalc.NutraCalc: java.awt.Component add(java.awt.Component)>"->"pop";
+    "pop"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <org.nis.nutracalc.NutraCalc: javax.swing.JComboBox categoryList>";
+    "fieldget <org.nis.nutracalc.NutraCalc: javax.swing.JComboBox categoryList>"->"virtualinvoke <org.nis.nutracalc.NutraCalc: java.awt.Component add(java.awt.Component)>";
+    "virtualinvoke <org.nis.nutracalc.NutraCalc: java.awt.Component add(java.awt.Component)>"->"pop";
+    "pop"->"load.r r0";
+    "load.r r0"->"load.r $r13";
+    "load.r $r13"->"virtualinvoke <org.nis.nutracalc.NutraCalc: java.awt.Component add(java.awt.Component)>";
+    "virtualinvoke <org.nis.nutracalc.NutraCalc: java.awt.Component add(java.awt.Component)>"->"pop";
+    "pop"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <org.nis.nutracalc.NutraCalc: javax.swing.JComboBox itemList>";
+    "fieldget <org.nis.nutracalc.NutraCalc: javax.swing.JComboBox itemList>"->"virtualinvoke <org.nis.nutracalc.NutraCalc: java.awt.Component add(java.awt.Component)>";
+    "virtualinvoke <org.nis.nutracalc.NutraCalc: java.awt.Component add(java.awt.Component)>"->"pop";
+    "pop"->"load.r r0";
+    "load.r r0"->"load.r $r22";
+    "load.r $r22"->"virtualinvoke <org.nis.nutracalc.NutraCalc: java.awt.Component add(java.awt.Component)>";
+    "virtualinvoke <org.nis.nutracalc.NutraCalc: java.awt.Component add(java.awt.Component)>"->"pop";
+    "pop"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "fieldget <org.nis.nutracalc.NutraCalc: javax.swing.JScrollPane substitutionListView>"
+    "load.r r0"->"fieldget <org.nis.nutracalc.NutraCalc: javax.swing.JScrollPane substitutionListView>";
+    "fieldget <org.nis.nutracalc.NutraCalc: javax.swing.JScrollPane substitutionListView>"->"virtualinvoke <org.nis.nutracalc.NutraCalc: java.awt.Component add(java.awt.Component)>";
+    "virtualinvoke <org.nis.nutracalc.NutraCalc: java.awt.Component add(java.awt.Component)>"->"pop";
+    "pop"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <org.nis.nutracalc.NutraCalc: javax.swing.JButton addButton>";
+    "fieldget <org.nis.nutracalc.NutraCalc: javax.swing.JButton addButton>"->"virtualinvoke <org.nis.nutracalc.NutraCalc: java.awt.Component add(java.awt.Component)>";
+    "virtualinvoke <org.nis.nutracalc.NutraCalc: java.awt.Component add(java.awt.Component)>"->"pop";
+    "pop"->"load.r r0";
+    "load.r r0"->"load.r $r27";
+    "load.r $r27"->"virtualinvoke <org.nis.nutracalc.NutraCalc: java.awt.Component add(java.awt.Component)>";
+    "virtualinvoke <org.nis.nutracalc.NutraCalc: java.awt.Component add(java.awt.Component)>"->"pop";
+    "pop"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "fieldget <org.nis.nutracalc.NutraCalc: javax.swing.JScrollPane mealView>"
+    "load.r r0"->"fieldget <org.nis.nutracalc.NutraCalc: javax.swing.JScrollPane mealView>";
+    "fieldget <org.nis.nutracalc.NutraCalc: javax.swing.JScrollPane mealView>"->"virtualinvoke <org.nis.nutracalc.NutraCalc: java.awt.Component add(java.awt.Component)>";
+    "virtualinvoke <org.nis.nutracalc.NutraCalc: java.awt.Component add(java.awt.Component)>"->"pop";
+    "pop"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <org.nis.nutracalc.NutraCalc: javax.swing.JButton removeButton>";
+    "fieldget <org.nis.nutracalc.NutraCalc: javax.swing.JButton removeButton>"->"virtualinvoke <org.nis.nutracalc.NutraCalc: java.awt.Component add(java.awt.Component)>";
+    "virtualinvoke <org.nis.nutracalc.NutraCalc: java.awt.Component add(java.awt.Component)>"->"pop";
+    "pop"->"load.r r0";
+    "load.r r0"->"load.r $r37";
+    "load.r $r37"->"virtualinvoke <org.nis.nutracalc.NutraCalc: java.awt.Component add(java.awt.Component)>";
+    "virtualinvoke <org.nis.nutracalc.NutraCalc: java.awt.Component add(java.awt.Component)>"->"pop";
+    "pop"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "fieldget <org.nis.nutracalc.NutraCalc: javax.swing.JScrollPane nutritionView>"
+    "load.r r0"->"fieldget <org.nis.nutracalc.NutraCalc: javax.swing.JScrollPane nutritionView>";
+    "fieldget <org.nis.nutracalc.NutraCalc: javax.swing.JScrollPane nutritionView>"->"virtualinvoke <org.nis.nutracalc.NutraCalc: java.awt.Component add(java.awt.Component)>";
+    "virtualinvoke <org.nis.nutracalc.NutraCalc: java.awt.Component add(java.awt.Component)>"->"pop";
+    "pop"->"load.r r0";
+    "load.r r0"->"fieldget <org.nis.nutracalc.NutraCalc: javax.swing.JScrollPane substitutionListView>";
+    "new java.awt.Dimension"
+    "fieldget <org.nis.nutracalc.NutraCalc: javax.swing.JScrollPane substitutionListView>"->"new java.awt.Dimension";
+    "new java.awt.Dimension"->"dup1.r";
+    "push 230"
+    "dup1.r"->"push 230";
+    "push 230"->"load.r r0";
+    "load.r r0"->"fieldget <org.nis.nutracalc.NutraCalc: javax.swing.JScrollPane nutritionView>";
+    "virtualinvoke <javax.swing.JScrollPane: java.awt.Dimension getPreferredSize()>"
+    "fieldget <org.nis.nutracalc.NutraCalc: javax.swing.JScrollPane nutritionView>"->"virtualinvoke <javax.swing.JScrollPane: java.awt.Dimension getPreferredSize()>";
+    "fieldget <java.awt.Dimension: int height>"
+    "virtualinvoke <javax.swing.JScrollPane: java.awt.Dimension getPreferredSize()>"->"fieldget <java.awt.Dimension: int height>";
+    "fieldget <java.awt.Dimension: int height>"->"load.r r0";
+    "load.r r0"->"fieldget <org.nis.nutracalc.NutraCalc: javax.swing.JComboBox categoryList>";
+    "virtualinvoke <javax.swing.JComboBox: java.awt.Dimension getPreferredSize()>"
+    "fieldget <org.nis.nutracalc.NutraCalc: javax.swing.JComboBox categoryList>"->"virtualinvoke <javax.swing.JComboBox: java.awt.Dimension getPreferredSize()>";
+    "virtualinvoke <javax.swing.JComboBox: java.awt.Dimension getPreferredSize()>"->"fieldget <java.awt.Dimension: int height>";
+    "sub.i"
+    "fieldget <java.awt.Dimension: int height>"->"sub.i";
+    "sub.i"->"load.r r0";
+    "load.r r0"->"fieldget <org.nis.nutracalc.NutraCalc: javax.swing.JComboBox itemList>";
+    "fieldget <org.nis.nutracalc.NutraCalc: javax.swing.JComboBox itemList>"->"virtualinvoke <javax.swing.JComboBox: java.awt.Dimension getPreferredSize()>";
+    "virtualinvoke <javax.swing.JComboBox: java.awt.Dimension getPreferredSize()>"->"fieldget <java.awt.Dimension: int height>";
+    "fieldget <java.awt.Dimension: int height>"->"sub.i";
+    "sub.i"->"load.r $r22";
+    "virtualinvoke <javax.swing.JLabel: java.awt.Dimension getPreferredSize()>"
+    "load.r $r22"->"virtualinvoke <javax.swing.JLabel: java.awt.Dimension getPreferredSize()>";
+    "virtualinvoke <javax.swing.JLabel: java.awt.Dimension getPreferredSize()>"->"fieldget <java.awt.Dimension: int height>";
+    "fieldget <java.awt.Dimension: int height>"->"sub.i";
+    "sub.i"->"load.r r0";
+    "load.r r0"->"fieldget <org.nis.nutracalc.NutraCalc: javax.swing.JButton addButton>";
+    "virtualinvoke <javax.swing.JButton: java.awt.Dimension getPreferredSize()>"
+    "fieldget <org.nis.nutracalc.NutraCalc: javax.swing.JButton addButton>"->"virtualinvoke <javax.swing.JButton: java.awt.Dimension getPreferredSize()>";
+    "virtualinvoke <javax.swing.JButton: java.awt.Dimension getPreferredSize()>"->"fieldget <java.awt.Dimension: int height>";
+    "fieldget <java.awt.Dimension: int height>"->"sub.i";
+    "sub.i"->"push 30";
+    "push 30"->"sub.i";
+    "specialinvoke <java.awt.Dimension: void <init>(int,int)>"
+    "sub.i"->"specialinvoke <java.awt.Dimension: void <init>(int,int)>";
+    "virtualinvoke <javax.swing.JScrollPane: void setPreferredSize(java.awt.Dimension)>"
+    "specialinvoke <java.awt.Dimension: void <init>(int,int)>"->"virtualinvoke <javax.swing.JScrollPane: void setPreferredSize(java.awt.Dimension)>";
+    "virtualinvoke <javax.swing.JScrollPane: void setPreferredSize(java.awt.Dimension)>"->"load.r r0";
+    "load.r r0"->"fieldget <org.nis.nutracalc.NutraCalc: javax.swing.JScrollPane mealView>";
+    "fieldget <org.nis.nutracalc.NutraCalc: javax.swing.JScrollPane mealView>"->"new java.awt.Dimension";
+    "new java.awt.Dimension"->"dup1.r";
+    "push 250"
+    "dup1.r"->"push 250";
+    "push 250"->"load.r r0";
+    "load.r r0"->"fieldget <org.nis.nutracalc.NutraCalc: javax.swing.JScrollPane nutritionView>";
+    "fieldget <org.nis.nutracalc.NutraCalc: javax.swing.JScrollPane nutritionView>"->"virtualinvoke <javax.swing.JScrollPane: java.awt.Dimension getPreferredSize()>";
+    "virtualinvoke <javax.swing.JScrollPane: java.awt.Dimension getPreferredSize()>"->"fieldget <java.awt.Dimension: int height>";
+    "fieldget <java.awt.Dimension: int height>"->"load.r r0";
+    "load.r r0"->"fieldget <org.nis.nutracalc.NutraCalc: javax.swing.JComboBox itemList>";
+    "fieldget <org.nis.nutracalc.NutraCalc: javax.swing.JComboBox itemList>"->"virtualinvoke <javax.swing.JComboBox: java.awt.Dimension getPreferredSize()>";
+    "virtualinvoke <javax.swing.JComboBox: java.awt.Dimension getPreferredSize()>"->"fieldget <java.awt.Dimension: int height>";
+    "fieldget <java.awt.Dimension: int height>"->"sub.i";
+    "sub.i"->"load.r $r27";
+    "load.r $r27"->"virtualinvoke <javax.swing.JLabel: java.awt.Dimension getPreferredSize()>";
+    "virtualinvoke <javax.swing.JLabel: java.awt.Dimension getPreferredSize()>"->"fieldget <java.awt.Dimension: int height>";
+    "fieldget <java.awt.Dimension: int height>"->"sub.i";
+    "sub.i"->"load.r r0";
+    "load.r r0"->"fieldget <org.nis.nutracalc.NutraCalc: javax.swing.JButton removeButton>";
+    "fieldget <org.nis.nutracalc.NutraCalc: javax.swing.JButton removeButton>"->"virtualinvoke <javax.swing.JButton: java.awt.Dimension getPreferredSize()>";
+    "virtualinvoke <javax.swing.JButton: java.awt.Dimension getPreferredSize()>"->"fieldget <java.awt.Dimension: int height>";
+    "fieldget <java.awt.Dimension: int height>"->"sub.i";
+    "sub.i"->"push 30";
+    "push 30"->"sub.i";
+    "sub.i"->"specialinvoke <java.awt.Dimension: void <init>(int,int)>";
+    "specialinvoke <java.awt.Dimension: void <init>(int,int)>"->"virtualinvoke <javax.swing.JScrollPane: void setPreferredSize(java.awt.Dimension)>";
+    "virtualinvoke <javax.swing.JScrollPane: void setPreferredSize(java.awt.Dimension)>"->"load.r r0";
+    "load.r r0"->"fieldget <org.nis.nutracalc.NutraCalc: javax.swing.JScrollPane nutritionView>";
+    "fieldget <org.nis.nutracalc.NutraCalc: javax.swing.JScrollPane nutritionView>"->"new java.awt.Dimension";
+    "new java.awt.Dimension"->"dup1.r";
+    "dup1.r"->"push 250";
+    "push 250"->"load.r r0";
+    "load.r r0"->"fieldget <org.nis.nutracalc.NutraCalc: javax.swing.JScrollPane nutritionView>";
+    "fieldget <org.nis.nutracalc.NutraCalc: javax.swing.JScrollPane nutritionView>"->"virtualinvoke <javax.swing.JScrollPane: java.awt.Dimension getPreferredSize()>";
+    "virtualinvoke <javax.swing.JScrollPane: java.awt.Dimension getPreferredSize()>"->"fieldget <java.awt.Dimension: int height>";
+    "fieldget <java.awt.Dimension: int height>"->"specialinvoke <java.awt.Dimension: void <init>(int,int)>";
+    "specialinvoke <java.awt.Dimension: void <init>(int,int)>"->"virtualinvoke <javax.swing.JScrollPane: void setPreferredSize(java.awt.Dimension)>";
+    "virtualinvoke <javax.swing.JScrollPane: void setPreferredSize(java.awt.Dimension)>"->"load.r $r51";
+    "push \"West\""
+    "load.r $r51"->"push \"West\"";
+    "push \"West\""->"load.r $r9";
+    "push 5"
+    "load.r $r9"->"push 5";
+    "push 5"->"push \"West\"";
+    "load.r r6"
+    "push \"West\""->"load.r r6";
+    "virtualinvoke <javax.swing.SpringLayout: void putConstraint(java.lang.String,java.awt.Component,int,java.lang.String,java.awt.Component)>"
+    "load.r r6"->"virtualinvoke <javax.swing.SpringLayout: void putConstraint(java.lang.String,java.awt.Component,int,java.lang.String,java.awt.Component)>";
+    "virtualinvoke <javax.swing.SpringLayout: void putConstraint(java.lang.String,java.awt.Component,int,java.lang.String,java.awt.Component)>"->"load.r $r51";
+    "push \"North\""
+    "load.r $r51"->"push \"North\"";
+    "push \"North\""->"load.r $r9";
+    "load.r $r9"->"push 5";
+    "push 5"->"push \"North\"";
+    "push \"North\""->"load.r r6";
+    "load.r r6"->"virtualinvoke <javax.swing.SpringLayout: void putConstraint(java.lang.String,java.awt.Component,int,java.lang.String,java.awt.Component)>";
+    "virtualinvoke <javax.swing.SpringLayout: void putConstraint(java.lang.String,java.awt.Component,int,java.lang.String,java.awt.Component)>"->"load.r $r51";
+    "load.r $r51"->"push \"West\"";
+    "push \"West\""->"load.r r0";
+    "load.r r0"->"fieldget <org.nis.nutracalc.NutraCalc: javax.swing.JComboBox categoryList>";
+    "fieldget <org.nis.nutracalc.NutraCalc: javax.swing.JComboBox categoryList>"->"push 5";
+    "push \"East\""
+    "push 5"->"push \"East\"";
+    "push \"East\""->"load.r $r9";
+    "load.r $r9"->"virtualinvoke <javax.swing.SpringLayout: void putConstraint(java.lang.String,java.awt.Component,int,java.lang.String,java.awt.Component)>";
+    "virtualinvoke <javax.swing.SpringLayout: void putConstraint(java.lang.String,java.awt.Component,int,java.lang.String,java.awt.Component)>"->"load.r $r51";
+    "load.r $r51"->"push \"North\"";
+    "push \"North\""->"load.r r0";
+    "load.r r0"->"fieldget <org.nis.nutracalc.NutraCalc: javax.swing.JComboBox categoryList>";
+    "fieldget <org.nis.nutracalc.NutraCalc: javax.swing.JComboBox categoryList>"->"push 5";
+    "push 5"->"push \"North\"";
+    "push \"North\""->"load.r r6";
+    "load.r r6"->"virtualinvoke <javax.swing.SpringLayout: void putConstraint(java.lang.String,java.awt.Component,int,java.lang.String,java.awt.Component)>";
+    "virtualinvoke <javax.swing.SpringLayout: void putConstraint(java.lang.String,java.awt.Component,int,java.lang.String,java.awt.Component)>"->"load.r $r51";
+    "load.r $r51"->"push \"West\"";
+    "push \"West\""->"load.r $r13";
+    "load.r $r13"->"push 5";
+    "push 5"->"push \"West\"";
+    "push \"West\""->"load.r r6";
+    "load.r r6"->"virtualinvoke <javax.swing.SpringLayout: void putConstraint(java.lang.String,java.awt.Component,int,java.lang.String,java.awt.Component)>";
+    "virtualinvoke <javax.swing.SpringLayout: void putConstraint(java.lang.String,java.awt.Component,int,java.lang.String,java.awt.Component)>"->"load.r $r51";
+    "load.r $r51"->"push \"North\"";
+    "push \"North\""->"load.r $r13";
+    "load.r $r13"->"push 5";
+    "push \"South\""
+    "push 5"->"push \"South\"";
+    "push \"South\""->"load.r r0";
+    "load.r r0"->"fieldget <org.nis.nutracalc.NutraCalc: javax.swing.JComboBox categoryList>";
+    "fieldget <org.nis.nutracalc.NutraCalc: javax.swing.JComboBox categoryList>"->"virtualinvoke <javax.swing.SpringLayout: void putConstraint(java.lang.String,java.awt.Component,int,java.lang.String,java.awt.Component)>";
+    "virtualinvoke <javax.swing.SpringLayout: void putConstraint(java.lang.String,java.awt.Component,int,java.lang.String,java.awt.Component)>"->"load.r $r51";
+    "load.r $r51"->"push \"West\"";
+    "push \"West\""->"load.r r0";
+    "load.r r0"->"fieldget <org.nis.nutracalc.NutraCalc: javax.swing.JComboBox itemList>";
+    "fieldget <org.nis.nutracalc.NutraCalc: javax.swing.JComboBox itemList>"->"push 5";
+    "push 5"->"push \"East\"";
+    "push \"East\""->"load.r $r13";
+    "load.r $r13"->"virtualinvoke <javax.swing.SpringLayout: void putConstraint(java.lang.String,java.awt.Component,int,java.lang.String,java.awt.Component)>";
+    "virtualinvoke <javax.swing.SpringLayout: void putConstraint(java.lang.String,java.awt.Component,int,java.lang.String,java.awt.Component)>"->"load.r $r51";
+    "load.r $r51"->"push \"North\"";
+    "push \"North\""->"load.r r0";
+    "load.r r0"->"fieldget <org.nis.nutracalc.NutraCalc: javax.swing.JComboBox itemList>";
+    "fieldget <org.nis.nutracalc.NutraCalc: javax.swing.JComboBox itemList>"->"push 5";
+    "push 5"->"push \"South\"";
+    "push \"South\""->"load.r r0";
+    "load.r r0"->"fieldget <org.nis.nutracalc.NutraCalc: javax.swing.JComboBox categoryList>";
+    "fieldget <org.nis.nutracalc.NutraCalc: javax.swing.JComboBox categoryList>"->"virtualinvoke <javax.swing.SpringLayout: void putConstraint(java.lang.String,java.awt.Component,int,java.lang.String,java.awt.Component)>";
+    "virtualinvoke <javax.swing.SpringLayout: void putConstraint(java.lang.String,java.awt.Component,int,java.lang.String,java.awt.Component)>"->"load.r $r51";
+    "load.r $r51"->"push \"West\"";
+    "push \"West\""->"load.r $r22";
+    "load.r $r22"->"push 5";
+    "push 5"->"push \"West\"";
+    "push \"West\""->"load.r r6";
+    "load.r r6"->"virtualinvoke <javax.swing.SpringLayout: void putConstraint(java.lang.String,java.awt.Component,int,java.lang.String,java.awt.Component)>";
+    "virtualinvoke <javax.swing.SpringLayout: void putConstraint(java.lang.String,java.awt.Component,int,java.lang.String,java.awt.Component)>"->"load.r $r51";
+    "load.r $r51"->"push \"North\"";
+    "push \"North\""->"load.r $r22";
+    "load.r $r22"->"push 5";
+    "push 5"->"push \"South\"";
+    "push \"South\""->"load.r r0";
+    "load.r r0"->"fieldget <org.nis.nutracalc.NutraCalc: javax.swing.JComboBox itemList>";
+    "fieldget <org.nis.nutracalc.NutraCalc: javax.swing.JComboBox itemList>"->"virtualinvoke <javax.swing.SpringLayout: void putConstraint(java.lang.String,java.awt.Component,int,java.lang.String,java.awt.Component)>";
+    "virtualinvoke <javax.swing.SpringLayout: void putConstraint(java.lang.String,java.awt.Component,int,java.lang.String,java.awt.Component)>"->"load.r $r51";
+    "load.r $r51"->"push \"West\"";
+    "push \"West\""->"load.r r0";
+    "load.r r0"->"fieldget <org.nis.nutracalc.NutraCalc: javax.swing.JScrollPane substitutionListView>";
+    "fieldget <org.nis.nutracalc.NutraCalc: javax.swing.JScrollPane substitutionListView>"->"push 5";
+    "push 5"->"push \"West\"";
+    "push \"West\""->"load.r r6";
+    "load.r r6"->"virtualinvoke <javax.swing.SpringLayout: void putConstraint(java.lang.String,java.awt.Component,int,java.lang.String,java.awt.Component)>";
+    "virtualinvoke <javax.swing.SpringLayout: void putConstraint(java.lang.String,java.awt.Component,int,java.lang.String,java.awt.Component)>"->"load.r $r51";
+    "load.r $r51"->"push \"North\"";
+    "push \"North\""->"load.r r0";
+    "load.r r0"->"fieldget <org.nis.nutracalc.NutraCalc: javax.swing.JScrollPane substitutionListView>";
+    "fieldget <org.nis.nutracalc.NutraCalc: javax.swing.JScrollPane substitutionListView>"->"push 5";
+    "push 5"->"push \"South\"";
+    "push \"South\""->"load.r $r22";
+    "load.r $r22"->"virtualinvoke <javax.swing.SpringLayout: void putConstraint(java.lang.String,java.awt.Component,int,java.lang.String,java.awt.Component)>";
+    "virtualinvoke <javax.swing.SpringLayout: void putConstraint(java.lang.String,java.awt.Component,int,java.lang.String,java.awt.Component)>"->"load.r $r51";
+    "load.r $r51"->"push \"South\"";
+    "push \"South\""->"load.r r0";
+    "load.r r0"->"fieldget <org.nis.nutracalc.NutraCalc: javax.swing.JScrollPane substitutionListView>";
+    "push -5"
+    "fieldget <org.nis.nutracalc.NutraCalc: javax.swing.JScrollPane substitutionListView>"->"push -5";
+    "push -5"->"push \"North\"";
+    "push \"North\""->"load.r r0";
+    "load.r r0"->"fieldget <org.nis.nutracalc.NutraCalc: javax.swing.JButton addButton>";
+    "fieldget <org.nis.nutracalc.NutraCalc: javax.swing.JButton addButton>"->"virtualinvoke <javax.swing.SpringLayout: void putConstraint(java.lang.String,java.awt.Component,int,java.lang.String,java.awt.Component)>";
+    "virtualinvoke <javax.swing.SpringLayout: void putConstraint(java.lang.String,java.awt.Component,int,java.lang.String,java.awt.Component)>"->"load.r $r51";
+    "load.r $r51"->"push \"West\"";
+    "push \"West\""->"load.r r0";
+    "load.r r0"->"fieldget <org.nis.nutracalc.NutraCalc: javax.swing.JButton addButton>";
+    "fieldget <org.nis.nutracalc.NutraCalc: javax.swing.JButton addButton>"->"push 5";
+    "push 5"->"push \"West\"";
+    "push \"West\""->"load.r r6";
+    "load.r r6"->"virtualinvoke <javax.swing.SpringLayout: void putConstraint(java.lang.String,java.awt.Component,int,java.lang.String,java.awt.Component)>";
+    "virtualinvoke <javax.swing.SpringLayout: void putConstraint(java.lang.String,java.awt.Component,int,java.lang.String,java.awt.Component)>"->"load.r $r51";
+    "load.r $r51"->"push \"South\"";
+    "push \"South\""->"load.r r0";
+    "load.r r0"->"fieldget <org.nis.nutracalc.NutraCalc: javax.swing.JButton addButton>";
+    "fieldget <org.nis.nutracalc.NutraCalc: javax.swing.JButton addButton>"->"push -5";
+    "push -5"->"push \"South\"";
+    "push \"South\""->"load.r r6";
+    "load.r r6"->"virtualinvoke <javax.swing.SpringLayout: void putConstraint(java.lang.String,java.awt.Component,int,java.lang.String,java.awt.Component)>";
+    "virtualinvoke <javax.swing.SpringLayout: void putConstraint(java.lang.String,java.awt.Component,int,java.lang.String,java.awt.Component)>"->"load.r $r51";
+    "load.r $r51"->"push \"West\"";
+    "push \"West\""->"load.r $r27";
+    "load.r $r27"->"push 5";
+    "push 5"->"push \"East\"";
+    "push \"East\""->"load.r r0";
+    "load.r r0"->"fieldget <org.nis.nutracalc.NutraCalc: javax.swing.JScrollPane substitutionListView>";
+    "fieldget <org.nis.nutracalc.NutraCalc: javax.swing.JScrollPane substitutionListView>"->"virtualinvoke <javax.swing.SpringLayout: void putConstraint(java.lang.String,java.awt.Component,int,java.lang.String,java.awt.Component)>";
+    "virtualinvoke <javax.swing.SpringLayout: void putConstraint(java.lang.String,java.awt.Component,int,java.lang.String,java.awt.Component)>"->"load.r $r51";
+    "load.r $r51"->"push \"North\"";
+    "push \"North\""->"load.r $r27";
+    "load.r $r27"->"push 5";
+    "push 5"->"push \"South\"";
+    "push \"South\""->"load.r r0";
+    "load.r r0"->"fieldget <org.nis.nutracalc.NutraCalc: javax.swing.JComboBox itemList>";
+    "fieldget <org.nis.nutracalc.NutraCalc: javax.swing.JComboBox itemList>"->"virtualinvoke <javax.swing.SpringLayout: void putConstraint(java.lang.String,java.awt.Component,int,java.lang.String,java.awt.Component)>";
+    "virtualinvoke <javax.swing.SpringLayout: void putConstraint(java.lang.String,java.awt.Component,int,java.lang.String,java.awt.Component)>"->"load.r $r51";
+    "load.r $r51"->"push \"West\"";
+    "push \"West\""->"load.r r0";
+    "load.r r0"->"fieldget <org.nis.nutracalc.NutraCalc: javax.swing.JScrollPane mealView>";
+    "fieldget <org.nis.nutracalc.NutraCalc: javax.swing.JScrollPane mealView>"->"push 5";
+    "push 5"->"push \"East\"";
+    "push \"East\""->"load.r r0";
+    "load.r r0"->"fieldget <org.nis.nutracalc.NutraCalc: javax.swing.JScrollPane substitutionListView>";
+    "fieldget <org.nis.nutracalc.NutraCalc: javax.swing.JScrollPane substitutionListView>"->"virtualinvoke <javax.swing.SpringLayout: void putConstraint(java.lang.String,java.awt.Component,int,java.lang.String,java.awt.Component)>";
+    "virtualinvoke <javax.swing.SpringLayout: void putConstraint(java.lang.String,java.awt.Component,int,java.lang.String,java.awt.Component)>"->"load.r $r51";
+    "load.r $r51"->"push \"North\"";
+    "push \"North\""->"load.r r0";
+    "load.r r0"->"fieldget <org.nis.nutracalc.NutraCalc: javax.swing.JScrollPane mealView>";
+    "fieldget <org.nis.nutracalc.NutraCalc: javax.swing.JScrollPane mealView>"->"push 5";
+    "push 5"->"push \"South\"";
+    "push \"South\""->"load.r $r27";
+    "load.r $r27"->"virtualinvoke <javax.swing.SpringLayout: void putConstraint(java.lang.String,java.awt.Component,int,java.lang.String,java.awt.Component)>";
+    "virtualinvoke <javax.swing.SpringLayout: void putConstraint(java.lang.String,java.awt.Component,int,java.lang.String,java.awt.Component)>"->"load.r $r51";
+    "load.r $r51"->"push \"South\"";
+    "push \"South\""->"load.r r0";
+    "load.r r0"->"fieldget <org.nis.nutracalc.NutraCalc: javax.swing.JScrollPane mealView>";
+    "fieldget <org.nis.nutracalc.NutraCalc: javax.swing.JScrollPane mealView>"->"push -5";
+    "push -5"->"push \"North\"";
+    "push \"North\""->"load.r r0";
+    "load.r r0"->"fieldget <org.nis.nutracalc.NutraCalc: javax.swing.JButton removeButton>";
+    "fieldget <org.nis.nutracalc.NutraCalc: javax.swing.JButton removeButton>"->"virtualinvoke <javax.swing.SpringLayout: void putConstraint(java.lang.String,java.awt.Component,int,java.lang.String,java.awt.Component)>";
+    "virtualinvoke <javax.swing.SpringLayout: void putConstraint(java.lang.String,java.awt.Component,int,java.lang.String,java.awt.Component)>"->"load.r $r51";
+    "load.r $r51"->"push \"West\"";
+    "push \"West\""->"load.r r0";
+    "load.r r0"->"fieldget <org.nis.nutracalc.NutraCalc: javax.swing.JButton removeButton>";
+    "fieldget <org.nis.nutracalc.NutraCalc: javax.swing.JButton removeButton>"->"push 5";
+    "push 5"->"push \"East\"";
+    "push \"East\""->"load.r r0";
+    "load.r r0"->"fieldget <org.nis.nutracalc.NutraCalc: javax.swing.JScrollPane substitutionListView>";
+    "fieldget <org.nis.nutracalc.NutraCalc: javax.swing.JScrollPane substitutionListView>"->"virtualinvoke <javax.swing.SpringLayout: void putConstraint(java.lang.String,java.awt.Component,int,java.lang.String,java.awt.Component)>";
+    "virtualinvoke <javax.swing.SpringLayout: void putConstraint(java.lang.String,java.awt.Component,int,java.lang.String,java.awt.Component)>"->"load.r $r51";
+    "load.r $r51"->"push \"South\"";
+    "push \"South\""->"load.r r0";
+    "load.r r0"->"fieldget <org.nis.nutracalc.NutraCalc: javax.swing.JButton removeButton>";
+    "fieldget <org.nis.nutracalc.NutraCalc: javax.swing.JButton removeButton>"->"push -5";
+    "push -5"->"push \"South\"";
+    "push \"South\""->"load.r r6";
+    "load.r r6"->"virtualinvoke <javax.swing.SpringLayout: void putConstraint(java.lang.String,java.awt.Component,int,java.lang.String,java.awt.Component)>";
+    "virtualinvoke <javax.swing.SpringLayout: void putConstraint(java.lang.String,java.awt.Component,int,java.lang.String,java.awt.Component)>"->"load.r $r51";
+    "load.r $r51"->"push \"West\"";
+    "push \"West\""->"load.r $r37";
+    "load.r $r37"->"push 5";
+    "push 5"->"push \"East\"";
+    "push \"East\""->"load.r r0";
+    "load.r r0"->"fieldget <org.nis.nutracalc.NutraCalc: javax.swing.JScrollPane mealView>";
+    "fieldget <org.nis.nutracalc.NutraCalc: javax.swing.JScrollPane mealView>"->"virtualinvoke <javax.swing.SpringLayout: void putConstraint(java.lang.String,java.awt.Component,int,java.lang.String,java.awt.Component)>";
+    "virtualinvoke <javax.swing.SpringLayout: void putConstraint(java.lang.String,java.awt.Component,int,java.lang.String,java.awt.Component)>"->"load.r $r51";
+    "load.r $r51"->"push \"North\"";
+    "push \"North\""->"load.r $r37";
+    "load.r $r37"->"push 5";
+    "push 5"->"push \"North\"";
+    "push \"North\""->"load.r r6";
+    "load.r r6"->"virtualinvoke <javax.swing.SpringLayout: void putConstraint(java.lang.String,java.awt.Component,int,java.lang.String,java.awt.Component)>";
+    "virtualinvoke <javax.swing.SpringLayout: void putConstraint(java.lang.String,java.awt.Component,int,java.lang.String,java.awt.Component)>"->"load.r $r51";
+    "load.r $r51"->"push \"West\"";
+    "push \"West\""->"load.r r0";
+    "load.r r0"->"fieldget <org.nis.nutracalc.NutraCalc: javax.swing.JScrollPane nutritionView>";
+    "fieldget <org.nis.nutracalc.NutraCalc: javax.swing.JScrollPane nutritionView>"->"push 5";
+    "push 5"->"push \"East\"";
+    "push \"East\""->"load.r r0";
+    "load.r r0"->"fieldget <org.nis.nutracalc.NutraCalc: javax.swing.JScrollPane mealView>";
+    "fieldget <org.nis.nutracalc.NutraCalc: javax.swing.JScrollPane mealView>"->"virtualinvoke <javax.swing.SpringLayout: void putConstraint(java.lang.String,java.awt.Component,int,java.lang.String,java.awt.Component)>";
+    "virtualinvoke <javax.swing.SpringLayout: void putConstraint(java.lang.String,java.awt.Component,int,java.lang.String,java.awt.Component)>"->"load.r $r51";
+    "load.r $r51"->"push \"North\"";
+    "push \"North\""->"load.r r0";
+    "load.r r0"->"fieldget <org.nis.nutracalc.NutraCalc: javax.swing.JScrollPane nutritionView>";
+    "fieldget <org.nis.nutracalc.NutraCalc: javax.swing.JScrollPane nutritionView>"->"push 5";
+    "push 5"->"push \"South\"";
+    "push \"South\""->"load.r $r37";
+    "load.r $r37"->"virtualinvoke <javax.swing.SpringLayout: void putConstraint(java.lang.String,java.awt.Component,int,java.lang.String,java.awt.Component)>";
+    "virtualinvoke <javax.swing.SpringLayout: void putConstraint(java.lang.String,java.awt.Component,int,java.lang.String,java.awt.Component)>"->"load.r $r51";
+    "load.r $r51"->"push \"East\"";
+    "push \"East\""->"load.r r6";
+    "load.r r6"->"push 5";
+    "push 5"->"push \"East\"";
+    "push \"East\""->"load.r r0";
+    "load.r r0"->"fieldget <org.nis.nutracalc.NutraCalc: javax.swing.JScrollPane nutritionView>";
+    "fieldget <org.nis.nutracalc.NutraCalc: javax.swing.JScrollPane nutritionView>"->"virtualinvoke <javax.swing.SpringLayout: void putConstraint(java.lang.String,java.awt.Component,int,java.lang.String,java.awt.Component)>";
+    "virtualinvoke <javax.swing.SpringLayout: void putConstraint(java.lang.String,java.awt.Component,int,java.lang.String,java.awt.Component)>"->"load.r $r51";
+    "load.r $r51"->"push \"South\"";
+    "push \"South\""->"load.r r6";
+    "load.r r6"->"push 5";
+    "push 5"->"push \"South\"";
+    "push \"South\""->"load.r r0";
+    "load.r r0"->"fieldget <org.nis.nutracalc.NutraCalc: javax.swing.JScrollPane nutritionView>";
+    "fieldget <org.nis.nutracalc.NutraCalc: javax.swing.JScrollPane nutritionView>"->"virtualinvoke <javax.swing.SpringLayout: void putConstraint(java.lang.String,java.awt.Component,int,java.lang.String,java.awt.Component)>";
+    "virtualinvoke <javax.swing.SpringLayout: void putConstraint(java.lang.String,java.awt.Component,int,java.lang.String,java.awt.Component)>"->"load.r r0";
+    "push null"
+    "load.r r0"->"push null";
+    "fieldput <org.nis.nutracalc.NutraCalc: org.nis.nutracalc.Item selectedItem>"
+    "push null"->"fieldput <org.nis.nutracalc.NutraCalc: org.nis.nutracalc.Item selectedItem>";
+    "fieldput <org.nis.nutracalc.NutraCalc: org.nis.nutracalc.Item selectedItem>"->"load.r r0";
+    "new java.util.ArrayList"
+    "load.r r0"->"new java.util.ArrayList";
+    "new java.util.ArrayList"->"dup1.r";
+    "specialinvoke <java.util.ArrayList: void <init>()>"
+    "dup1.r"->"specialinvoke <java.util.ArrayList: void <init>()>";
+    "fieldput <org.nis.nutracalc.NutraCalc: java.util.List meal>"
+    "specialinvoke <java.util.ArrayList: void <init>()>"->"fieldput <org.nis.nutracalc.NutraCalc: java.util.List meal>";
+    "fieldput <org.nis.nutracalc.NutraCalc: java.util.List meal>"->"load.r r0";
+    "push 750"
+    "load.r r0"->"push 750";
+    "push 400"
+    "push 750"->"push 400";
+    "virtualinvoke <org.nis.nutracalc.NutraCalc: void setSize(int,int)>"
+    "push 400"->"virtualinvoke <org.nis.nutracalc.NutraCalc: void setSize(int,int)>";
+    "goto return"
+    "virtualinvoke <org.nis.nutracalc.NutraCalc: void setSize(int,int)>"->"goto return";
+    "return"
+    "goto return"->"return";
+    "virtualinvoke <org.nis.nutracalc.NutraCalc: void setSize(int,int)>"->"dup1.r";
+    "new java.lang.StringBuilder"
+    "dup1.r"->"new java.lang.StringBuilder";
+    "new java.lang.StringBuilder"->"store.r r6";
+    "store.r r6"->"load.r r6";
+    "push \"A critical error occurred: \""
+    "load.r r6"->"push \"A critical error occurred: \"";
+    "specialinvoke <java.lang.StringBuilder: void <init>(java.lang.String)>"
+    "push \"A critical error occurred: \""->"specialinvoke <java.lang.StringBuilder: void <init>(java.lang.String)>";
+    "virtualinvoke <java.lang.Exception: java.lang.String getMessage()>"
+    "specialinvoke <java.lang.StringBuilder: void <init>(java.lang.String)>"->"virtualinvoke <java.lang.Exception: java.lang.String getMessage()>";
+    "virtualinvoke <java.lang.Exception: java.lang.String getMessage()>"->"store.r $r9";
+    "store.r $r9"->"load.r r0";
+    "load.r r0"->"load.r r6";
+    "load.r r6"->"load.r $r9";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"
+    "load.r $r9"->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.String toString()>"
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"virtualinvoke <java.lang.StringBuilder: java.lang.String toString()>";
+    "push \"Critical Error\""
+    "virtualinvoke <java.lang.StringBuilder: java.lang.String toString()>"->"push \"Critical Error\"";
+    "push \"Critical Error\""->"push 0";
+    "staticinvoke <javax.swing.JOptionPane: void showMessageDialog(java.awt.Component,java.lang.Object,java.lang.String,int)>"
+    "push 0"->"staticinvoke <javax.swing.JOptionPane: void showMessageDialog(java.awt.Component,java.lang.Object,java.lang.String,int)>";
+    "virtualinvoke <java.lang.Exception: void printStackTrace()>"
+    "staticinvoke <javax.swing.JOptionPane: void showMessageDialog(java.awt.Component,java.lang.Object,java.lang.String,int)>"->"virtualinvoke <java.lang.Exception: void printStackTrace()>";
+    "staticinvoke <javax.swing.UIManager: void setLookAndFeel(java.lang.String)>"->"store.r r6";
+}

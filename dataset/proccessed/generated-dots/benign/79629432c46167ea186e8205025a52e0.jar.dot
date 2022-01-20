@@ -1,0 +1,108 @@
+digraph "" {
+    "r0 := @this: sexy.gui.SexyApplet"
+    "load.r r0"
+    "r0 := @this: sexy.gui.SexyApplet"->"load.r r0";
+    "fieldget <sexy.gui.SexyApplet: java.util.Hashtable mProperties>"
+    "load.r r0"->"fieldget <sexy.gui.SexyApplet: java.util.Hashtable mProperties>";
+    "push \"DIALOG_BUTTON_YES\""
+    "fieldget <sexy.gui.SexyApplet: java.util.Hashtable mProperties>"->"push \"DIALOG_BUTTON_YES\"";
+    "push \"Yes\""
+    "push \"DIALOG_BUTTON_YES\""->"push \"Yes\"";
+    "virtualinvoke <java.util.Hashtable: java.lang.Object put(java.lang.Object,java.lang.Object)>"
+    "push \"Yes\""->"virtualinvoke <java.util.Hashtable: java.lang.Object put(java.lang.Object,java.lang.Object)>";
+    "pop"
+    "virtualinvoke <java.util.Hashtable: java.lang.Object put(java.lang.Object,java.lang.Object)>"->"pop";
+    "pop"->"load.r r0";
+    "load.r r0"->"fieldget <sexy.gui.SexyApplet: java.util.Hashtable mProperties>";
+    "push \"DIALOG_BUTTON_NO\""
+    "fieldget <sexy.gui.SexyApplet: java.util.Hashtable mProperties>"->"push \"DIALOG_BUTTON_NO\"";
+    "push \"No\""
+    "push \"DIALOG_BUTTON_NO\""->"push \"No\"";
+    "push \"No\""->"virtualinvoke <java.util.Hashtable: java.lang.Object put(java.lang.Object,java.lang.Object)>";
+    "virtualinvoke <java.util.Hashtable: java.lang.Object put(java.lang.Object,java.lang.Object)>"->"pop";
+    "pop"->"load.r r0";
+    "new java.lang.Integer"
+    "load.r r0"->"new java.lang.Integer";
+    "dup1.r"
+    "new java.lang.Integer"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "push \"pc_scorebroadcast\""
+    "load.r r0"->"push \"pc_scorebroadcast\"";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"
+    "push \"pc_scorebroadcast\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "specialinvoke <java.lang.Integer: void <init>(java.lang.String)>"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"specialinvoke <java.lang.Integer: void <init>(java.lang.String)>";
+    "virtualinvoke <java.lang.Integer: int intValue()>"
+    "specialinvoke <java.lang.Integer: void <init>(java.lang.String)>"->"virtualinvoke <java.lang.Integer: int intValue()>";
+    "fieldput <sexy.gui.SexyApplet: int mScoreBroadcastTime>"
+    "virtualinvoke <java.lang.Integer: int intValue()>"->"fieldput <sexy.gui.SexyApplet: int mScoreBroadcastTime>";
+    "fieldput <sexy.gui.SexyApplet: int mScoreBroadcastTime>"->"load.r r0";
+    "fieldget <sexy.gui.SexyApplet: int mScoreBroadcastTime>"
+    "load.r r0"->"fieldget <sexy.gui.SexyApplet: int mScoreBroadcastTime>";
+    "ifle new sexy.util.AsyncJSCall"
+    "fieldget <sexy.gui.SexyApplet: int mScoreBroadcastTime>"->"ifle new sexy.util.AsyncJSCall";
+    "ifle new sexy.util.AsyncJSCall"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <sexy.gui.SexyApplet: int mScoreBroadcastTime>";
+    "push 1000"
+    "fieldget <sexy.gui.SexyApplet: int mScoreBroadcastTime>"->"push 1000";
+    "mul.i"
+    "push 1000"->"mul.i";
+    "mul.i"->"fieldput <sexy.gui.SexyApplet: int mScoreBroadcastTime>";
+    "goto new sexy.util.AsyncJSCall"
+    "fieldput <sexy.gui.SexyApplet: int mScoreBroadcastTime>"->"goto new sexy.util.AsyncJSCall";
+    "new sexy.util.AsyncJSCall"
+    "goto new sexy.util.AsyncJSCall"->"new sexy.util.AsyncJSCall";
+    "new sexy.util.AsyncJSCall"->"load.r r0";
+    "push \"AppletLoaded\""
+    "load.r r0"->"push \"AppletLoaded\"";
+    "push null"
+    "push \"AppletLoaded\""->"push null";
+    "specialinvoke <sexy.util.AsyncJSCall: void <init>(sexy.gui.SexyApplet,java.lang.String,java.lang.Object[])>"
+    "push null"->"specialinvoke <sexy.util.AsyncJSCall: void <init>(sexy.gui.SexyApplet,java.lang.String,java.lang.Object[])>";
+    "specialinvoke <sexy.util.AsyncJSCall: void <init>(sexy.gui.SexyApplet,java.lang.String,java.lang.Object[])>"->"load.r r0";
+    "virtualinvoke <sexy.gui.SexyApplet: void Initialize()>"
+    "load.r r0"->"virtualinvoke <sexy.gui.SexyApplet: void Initialize()>";
+    "virtualinvoke <sexy.gui.SexyApplet: void Initialize()>"->"load.r r0";
+    "fieldget <sexy.gui.SexyApplet: java.lang.String mProdName>"
+    "load.r r0"->"fieldget <sexy.gui.SexyApplet: java.lang.String mProdName>";
+    "ifnonnull load.r r0"
+    "fieldget <sexy.gui.SexyApplet: java.lang.String mProdName>"->"ifnonnull load.r r0";
+    "staticget <java.lang.System: java.io.PrintStream out>"
+    "ifnonnull load.r r0"->"staticget <java.lang.System: java.io.PrintStream out>";
+    "push \"WARNING: mProdName not set\""
+    "staticget <java.lang.System: java.io.PrintStream out>"->"push \"WARNING: mProdName not set\"";
+    "virtualinvoke <java.io.PrintStream: void println(java.lang.String)>"
+    "push \"WARNING: mProdName not set\""->"virtualinvoke <java.io.PrintStream: void println(java.lang.String)>";
+    "virtualinvoke <java.io.PrintStream: void println(java.lang.String)>"->"load.r r0";
+    "fieldget <sexy.gui.SexyApplet: int mVersion>"
+    "load.r r0"->"fieldget <sexy.gui.SexyApplet: int mVersion>";
+    "ifne load.r r0"
+    "fieldget <sexy.gui.SexyApplet: int mVersion>"->"ifne load.r r0";
+    "ifne load.r r0"->"staticget <java.lang.System: java.io.PrintStream out>";
+    "push \"WARNING: mVersion not set\""
+    "staticget <java.lang.System: java.io.PrintStream out>"->"push \"WARNING: mVersion not set\"";
+    "push \"WARNING: mVersion not set\""->"virtualinvoke <java.io.PrintStream: void println(java.lang.String)>";
+    "virtualinvoke <java.io.PrintStream: void println(java.lang.String)>"->"load.r r0";
+    "fieldget <sexy.gui.SexyApplet: java.lang.String mBuildDate>"
+    "load.r r0"->"fieldget <sexy.gui.SexyApplet: java.lang.String mBuildDate>";
+    "fieldget <sexy.gui.SexyApplet: java.lang.String mBuildDate>"->"ifnonnull load.r r0";
+    "ifnonnull load.r r0"->"staticget <java.lang.System: java.io.PrintStream out>";
+    "push \"WARNING: mBuildDate not set\""
+    "staticget <java.lang.System: java.io.PrintStream out>"->"push \"WARNING: mBuildDate not set\"";
+    "push \"WARNING: mBuildDate not set\""->"virtualinvoke <java.io.PrintStream: void println(java.lang.String)>";
+    "virtualinvoke <java.io.PrintStream: void println(java.lang.String)>"->"load.r r0";
+    "virtualinvoke <sexy.gui.SexyApplet: void StartThread()>"
+    "load.r r0"->"virtualinvoke <sexy.gui.SexyApplet: void StartThread()>";
+    "return"
+    "virtualinvoke <sexy.gui.SexyApplet: void StartThread()>"->"return";
+    "store.r $r12"
+    "virtualinvoke <sexy.gui.SexyApplet: void StartThread()>"->"store.r $r12";
+    "store.r $r12"->"load.r r0";
+    "load.r $r12"
+    "load.r r0"->"load.r $r12";
+    "virtualinvoke <sexy.gui.SexyApplet: void CaughtThrowable(java.lang.Throwable)>"
+    "load.r $r12"->"virtualinvoke <sexy.gui.SexyApplet: void CaughtThrowable(java.lang.Throwable)>";
+    "virtualinvoke <sexy.gui.SexyApplet: void CaughtThrowable(java.lang.Throwable)>"->"return";
+    "mul.i"->"store.r $r12";
+}

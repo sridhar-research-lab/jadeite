@@ -1,0 +1,156 @@
+digraph "" {
+    "r0 := @this: battle"
+    "push 0"
+    "r0 := @this: battle"->"push 0";
+    "store.i i0"
+    "push 0"->"store.i i0";
+    "goto load.i i0"
+    "store.i i0"->"goto load.i i0";
+    "load.i i0"
+    "goto load.i i0"->"load.i i0";
+    "push 10"
+    "load.i i0"->"push 10";
+    "ifcmplt.i push 0"
+    "push 10"->"ifcmplt.i push 0";
+    "ifcmplt.i push 0"->"push 0";
+    "push 0"->"store.i i0";
+    "store.i i0"->"goto load.i i0";
+    "goto load.i i0"->"load.i i0";
+    "push 2"
+    "load.i i0"->"push 2";
+    "ifcmplt.i load.r r0"
+    "push 2"->"ifcmplt.i load.r r0";
+    "ifcmplt.i load.r r0"->"push 0";
+    "push 0"->"store.i i0";
+    "store.i i0"->"goto load.i i0";
+    "goto load.i i0"->"load.i i0";
+    "load.i i0"->"push 2";
+    "push 2"->"ifcmplt.i load.r r0";
+    "ifcmplt.i load.r r0"->"push 0";
+    "push 0"->"store.i i0";
+    "store.i i0"->"goto load.i i0";
+    "goto load.i i0"->"load.i i0";
+    "load.i i0"->"push 2";
+    "push 2"->"ifcmplt.i load.r r0";
+    "ifcmplt.i load.r r0"->"push 0";
+    "push 0"->"store.i i0";
+    "store.i i0"->"goto load.i i0";
+    "goto load.i i0"->"load.i i0";
+    "load.i i0"->"push 2";
+    "push 2"->"ifcmplt.i load.r r0";
+    "ifcmplt.i load.r r0"->"push 0";
+    "push 0"->"store.i i0";
+    "store.i i0"->"goto load.i i0";
+    "goto load.i i0"->"load.i i0";
+    "load.i i0"->"push 2";
+    "push 2"->"ifcmplt.i load.r r0";
+    "load.r r0"
+    "ifcmplt.i load.r r0"->"load.r r0";
+    "load.r r0"->"push 0";
+    "fieldput <battle: int battleshipHitCt>"
+    "push 0"->"fieldput <battle: int battleshipHitCt>";
+    "fieldput <battle: int battleshipHitCt>"->"load.r r0";
+    "load.r r0"->"push 0";
+    "fieldput <battle: int destroyerHitCt>"
+    "push 0"->"fieldput <battle: int destroyerHitCt>";
+    "fieldput <battle: int destroyerHitCt>"->"load.r r0";
+    "load.r r0"->"push 0";
+    "fieldput <battle: int subHitCt>"
+    "push 0"->"fieldput <battle: int subHitCt>";
+    "fieldput <battle: int subHitCt>"->"load.r r0";
+    "load.r r0"->"push 0";
+    "fieldput <battle: int patrolHitCt>"
+    "push 0"->"fieldput <battle: int patrolHitCt>";
+    "fieldput <battle: int patrolHitCt>"->"load.r r0";
+    "load.r r0"->"push 0";
+    "fieldput <battle: int carrierHitCt>"
+    "push 0"->"fieldput <battle: int carrierHitCt>";
+    "fieldput <battle: int carrierHitCt>"->"load.r r0";
+    "virtualinvoke <battle: void getCarrier()>"
+    "load.r r0"->"virtualinvoke <battle: void getCarrier()>";
+    "virtualinvoke <battle: void getCarrier()>"->"load.r r0";
+    "load.r r0"->"push 0";
+    "fieldput <battle: boolean ok>"
+    "push 0"->"fieldput <battle: boolean ok>";
+    "fieldput <battle: boolean ok>"->"load.r r0";
+    "virtualinvoke <battle: void getBattle()>"
+    "load.r r0"->"virtualinvoke <battle: void getBattle()>";
+    "virtualinvoke <battle: void getBattle()>"->"load.r r0";
+    "load.r r0"->"push 0";
+    "push 0"->"fieldput <battle: boolean ok>";
+    "fieldput <battle: boolean ok>"->"load.r r0";
+    "virtualinvoke <battle: void getDestroyer()>"
+    "load.r r0"->"virtualinvoke <battle: void getDestroyer()>";
+    "virtualinvoke <battle: void getDestroyer()>"->"load.r r0";
+    "load.r r0"->"push 0";
+    "push 0"->"fieldput <battle: boolean ok>";
+    "fieldput <battle: boolean ok>"->"load.r r0";
+    "virtualinvoke <battle: void getSub()>"
+    "load.r r0"->"virtualinvoke <battle: void getSub()>";
+    "virtualinvoke <battle: void getSub()>"->"load.r r0";
+    "load.r r0"->"push 0";
+    "push 0"->"fieldput <battle: boolean ok>";
+    "fieldput <battle: boolean ok>"->"load.r r0";
+    "virtualinvoke <battle: void getPatrol()>"
+    "load.r r0"->"virtualinvoke <battle: void getPatrol()>";
+    "return"
+    "virtualinvoke <battle: void getPatrol()>"->"return";
+    "ifcmplt.i load.r r0"->"load.r r0";
+    "fieldget <battle: int[] battlepos>"
+    "load.r r0"->"fieldget <battle: int[] battlepos>";
+    "fieldget <battle: int[] battlepos>"->"load.i i0";
+    "load.i i0"->"push 0";
+    "arraywrite.i"
+    "push 0"->"arraywrite.i";
+    "inc.i i0 1"
+    "arraywrite.i"->"inc.i i0 1";
+    "ifcmplt.i load.r r0"->"load.r r0";
+    "fieldget <battle: int[] carrierpos>"
+    "load.r r0"->"fieldget <battle: int[] carrierpos>";
+    "fieldget <battle: int[] carrierpos>"->"load.i i0";
+    "load.i i0"->"push 0";
+    "push 0"->"arraywrite.i";
+    "arraywrite.i"->"inc.i i0 1";
+    "ifcmplt.i load.r r0"->"load.r r0";
+    "fieldget <battle: int[] subpos>"
+    "load.r r0"->"fieldget <battle: int[] subpos>";
+    "fieldget <battle: int[] subpos>"->"load.i i0";
+    "load.i i0"->"push 0";
+    "push 0"->"arraywrite.i";
+    "arraywrite.i"->"inc.i i0 1";
+    "ifcmplt.i load.r r0"->"load.r r0";
+    "fieldget <battle: int[] destroyerpos>"
+    "load.r r0"->"fieldget <battle: int[] destroyerpos>";
+    "fieldget <battle: int[] destroyerpos>"->"load.i i0";
+    "load.i i0"->"push 0";
+    "push 0"->"arraywrite.i";
+    "arraywrite.i"->"inc.i i0 1";
+    "ifcmplt.i load.r r0"->"load.r r0";
+    "fieldget <battle: int[] patrolpos>"
+    "load.r r0"->"fieldget <battle: int[] patrolpos>";
+    "fieldget <battle: int[] patrolpos>"->"load.i i0";
+    "load.i i0"->"push 0";
+    "push 0"->"arraywrite.i";
+    "arraywrite.i"->"inc.i i0 1";
+    "ifcmplt.i push 0"->"push 0";
+    "store.i i1"
+    "push 0"->"store.i i1";
+    "goto load.i i1"
+    "store.i i1"->"goto load.i i1";
+    "load.i i1"
+    "goto load.i i1"->"load.i i1";
+    "load.i i1"->"push 10";
+    "push 10"->"ifcmplt.i load.r r0";
+    "ifcmplt.i load.r r0"->"inc.i i0 1";
+    "ifcmplt.i load.r r0"->"load.r r0";
+    "fieldget <battle: int[][] guessed>"
+    "load.r r0"->"fieldget <battle: int[][] guessed>";
+    "fieldget <battle: int[][] guessed>"->"load.i i0";
+    "arrayread.r"
+    "load.i i0"->"arrayread.r";
+    "arrayread.r"->"load.i i1";
+    "load.i i1"->"push 2";
+    "push 2"->"arraywrite.i";
+    "inc.i i1 1"
+    "arraywrite.i"->"inc.i i1 1";
+}

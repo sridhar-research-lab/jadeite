@@ -1,0 +1,43 @@
+digraph "" {
+    "r0 := @this: testJava2_1.TestVMApplet"
+    "load.r r0"
+    "r0 := @this: testJava2_1.TestVMApplet"->"load.r r0";
+    "virtualinvoke <testJava2_1.TestVMApplet: java.applet.AppletContext getAppletContext()>"
+    "load.r r0"->"virtualinvoke <testJava2_1.TestVMApplet: java.applet.AppletContext getAppletContext()>";
+    "staticput <testJava2_1.TestVMApplet: java.applet.AppletContext appletContext>"
+    "virtualinvoke <testJava2_1.TestVMApplet: java.applet.AppletContext getAppletContext()>"->"staticput <testJava2_1.TestVMApplet: java.applet.AppletContext appletContext>";
+    "push \"TabbedPane.selected\""
+    "staticput <testJava2_1.TestVMApplet: java.applet.AppletContext appletContext>"->"push \"TabbedPane.selected\"";
+    "staticget <java.awt.Color: java.awt.Color WHITE>"
+    "push \"TabbedPane.selected\""->"staticget <java.awt.Color: java.awt.Color WHITE>";
+    "staticinvoke <javax.swing.UIManager: java.lang.Object put(java.lang.Object,java.lang.Object)>"
+    "staticget <java.awt.Color: java.awt.Color WHITE>"->"staticinvoke <javax.swing.UIManager: java.lang.Object put(java.lang.Object,java.lang.Object)>";
+    "pop"
+    "staticinvoke <javax.swing.UIManager: java.lang.Object put(java.lang.Object,java.lang.Object)>"->"pop";
+    "pop"->"load.r r0";
+    "virtualinvoke <testJava2_1.TestVMApplet: javax.swing.JRootPane getRootPane()>"
+    "load.r r0"->"virtualinvoke <testJava2_1.TestVMApplet: javax.swing.JRootPane getRootPane()>";
+    "staticget <java.awt.Color: java.awt.Color BLACK>"
+    "virtualinvoke <testJava2_1.TestVMApplet: javax.swing.JRootPane getRootPane()>"->"staticget <java.awt.Color: java.awt.Color BLACK>";
+    "staticinvoke <javax.swing.BorderFactory: javax.swing.border.Border createLineBorder(java.awt.Color)>"
+    "staticget <java.awt.Color: java.awt.Color BLACK>"->"staticinvoke <javax.swing.BorderFactory: javax.swing.border.Border createLineBorder(java.awt.Color)>";
+    "virtualinvoke <javax.swing.JRootPane: void setBorder(javax.swing.border.Border)>"
+    "staticinvoke <javax.swing.BorderFactory: javax.swing.border.Border createLineBorder(java.awt.Color)>"->"virtualinvoke <javax.swing.JRootPane: void setBorder(javax.swing.border.Border)>";
+    "virtualinvoke <javax.swing.JRootPane: void setBorder(javax.swing.border.Border)>"->"load.r r0";
+    "virtualinvoke <testJava2_1.TestVMApplet: java.awt.Container getContentPane()>"
+    "load.r r0"->"virtualinvoke <testJava2_1.TestVMApplet: java.awt.Container getContentPane()>";
+    "new testJava2_1.TestVM"
+    "virtualinvoke <testJava2_1.TestVMApplet: java.awt.Container getContentPane()>"->"new testJava2_1.TestVM";
+    "dup1.r"
+    "new testJava2_1.TestVM"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "virtualinvoke <testJava2_1.TestVMApplet: java.net.URL getCodeBase()>"
+    "load.r r0"->"virtualinvoke <testJava2_1.TestVMApplet: java.net.URL getCodeBase()>";
+    "specialinvoke <testJava2_1.TestVM: void <init>(java.net.URL)>"
+    "virtualinvoke <testJava2_1.TestVMApplet: java.net.URL getCodeBase()>"->"specialinvoke <testJava2_1.TestVM: void <init>(java.net.URL)>";
+    "virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>"
+    "specialinvoke <testJava2_1.TestVM: void <init>(java.net.URL)>"->"virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>";
+    "virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>"->"pop";
+    "return"
+    "pop"->"return";
+}

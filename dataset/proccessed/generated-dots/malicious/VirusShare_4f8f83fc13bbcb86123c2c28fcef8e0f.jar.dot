@@ -1,0 +1,29 @@
+digraph "" {
+    "r0 := @this: ore"
+    "load.r r0"
+    "r0 := @this: ore"->"load.r r0";
+    "virtualinvoke <ore: void enableSecurity()>"
+    "load.r r0"->"virtualinvoke <ore: void enableSecurity()>";
+    "virtualinvoke <ore: void enableSecurity()>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "push \"lewd\""
+    "load.r r0"->"push \"lewd\"";
+    "virtualinvoke <ore: java.lang.String getParameter(java.lang.String)>"
+    "push \"lewd\""->"virtualinvoke <ore: java.lang.String getParameter(java.lang.String)>";
+    "push \"\\d\""
+    "virtualinvoke <ore: java.lang.String getParameter(java.lang.String)>"->"push \"\\d\"";
+    "push \"\""
+    "push \"\\d\""->"push \"\"";
+    "virtualinvoke <java.lang.String: java.lang.String replaceAll(java.lang.String,java.lang.String)>"
+    "push \"\""->"virtualinvoke <java.lang.String: java.lang.String replaceAll(java.lang.String,java.lang.String)>";
+    "virtualinvoke <ore: java.lang.String saveFile(java.lang.String)>"
+    "virtualinvoke <java.lang.String: java.lang.String replaceAll(java.lang.String,java.lang.String)>"->"virtualinvoke <ore: java.lang.String saveFile(java.lang.String)>";
+    "pop"
+    "virtualinvoke <ore: java.lang.String saveFile(java.lang.String)>"->"pop";
+    "goto return"
+    "pop"->"goto return";
+    "return"
+    "goto return"->"return";
+    "store.r r0"
+    "virtualinvoke <ore: java.lang.String saveFile(java.lang.String)>"->"store.r r0";
+}

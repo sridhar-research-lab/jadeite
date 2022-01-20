@@ -1,0 +1,29 @@
+digraph "" {
+    "r0 := @this: PolySolver"
+    "staticinvoke <javax.swing.UIManager: java.lang.String getSystemLookAndFeelClassName()>"
+    "r0 := @this: PolySolver"->"staticinvoke <javax.swing.UIManager: java.lang.String getSystemLookAndFeelClassName()>";
+    "staticinvoke <javax.swing.UIManager: void setLookAndFeel(java.lang.String)>"
+    "staticinvoke <javax.swing.UIManager: java.lang.String getSystemLookAndFeelClassName()>"->"staticinvoke <javax.swing.UIManager: void setLookAndFeel(java.lang.String)>";
+    "goto load.r r0"
+    "staticinvoke <javax.swing.UIManager: void setLookAndFeel(java.lang.String)>"->"goto load.r r0";
+    "load.r r0"
+    "goto load.r r0"->"load.r r0";
+    "virtualinvoke <PolySolver: java.awt.Container getContentPane()>"
+    "load.r r0"->"virtualinvoke <PolySolver: java.awt.Container getContentPane()>";
+    "new MainPanel"
+    "virtualinvoke <PolySolver: java.awt.Container getContentPane()>"->"new MainPanel";
+    "dup1.r"
+    "new MainPanel"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "specialinvoke <MainPanel: void <init>(javax.swing.JApplet)>"
+    "load.r r0"->"specialinvoke <MainPanel: void <init>(javax.swing.JApplet)>";
+    "virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>"
+    "specialinvoke <MainPanel: void <init>(javax.swing.JApplet)>"->"virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>";
+    "pop"
+    "virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>"->"pop";
+    "return"
+    "pop"->"return";
+    "store.r $r6"
+    "staticinvoke <javax.swing.UIManager: void setLookAndFeel(java.lang.String)>"->"store.r $r6";
+    "store.r $r6"->"goto load.r r0";
+}

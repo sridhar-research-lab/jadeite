@@ -1,0 +1,116 @@
+digraph "" {
+    "r0 := @this: UI_NetRoute"
+    "load.r r0"
+    "r0 := @this: UI_NetRoute"->"load.r r0";
+    "push 0"
+    "load.r r0"->"push 0";
+    "fieldput <UI_NetRoute: boolean _boolLoaded>"
+    "push 0"->"fieldput <UI_NetRoute: boolean _boolLoaded>";
+    "fieldput <UI_NetRoute: boolean _boolLoaded>"->"load.r r0";
+    "virtualinvoke <UI_NetRoute: java.awt.Container getContentPane()>"
+    "load.r r0"->"virtualinvoke <UI_NetRoute: java.awt.Container getContentPane()>";
+    "staticget <Main: java.awt.Color WINDOW_COLOR>"
+    "virtualinvoke <UI_NetRoute: java.awt.Container getContentPane()>"->"staticget <Main: java.awt.Color WINDOW_COLOR>";
+    "virtualinvoke <java.awt.Container: void setBackground(java.awt.Color)>"
+    "staticget <Main: java.awt.Color WINDOW_COLOR>"->"virtualinvoke <java.awt.Container: void setBackground(java.awt.Color)>";
+    "virtualinvoke <java.awt.Container: void setBackground(java.awt.Color)>"->"load.r r0";
+    "load.r r0"->"virtualinvoke <UI_NetRoute: java.awt.Container getContentPane()>";
+    "push null"
+    "virtualinvoke <UI_NetRoute: java.awt.Container getContentPane()>"->"push null";
+    "virtualinvoke <java.awt.Container: void setLayout(java.awt.LayoutManager)>"
+    "push null"->"virtualinvoke <java.awt.Container: void setLayout(java.awt.LayoutManager)>";
+    "new javax.swing.JTabbedPane"
+    "virtualinvoke <java.awt.Container: void setLayout(java.awt.LayoutManager)>"->"new javax.swing.JTabbedPane";
+    "dup1.r"
+    "new javax.swing.JTabbedPane"->"dup1.r";
+    "specialinvoke <javax.swing.JTabbedPane: void <init>()>"
+    "dup1.r"->"specialinvoke <javax.swing.JTabbedPane: void <init>()>";
+    "staticput <UI_NetRoute: javax.swing.JTabbedPane _tabMain>"
+    "specialinvoke <javax.swing.JTabbedPane: void <init>()>"->"staticput <UI_NetRoute: javax.swing.JTabbedPane _tabMain>";
+    "staticget <UI_NetRoute: javax.swing.JTabbedPane _tabMain>"
+    "staticput <UI_NetRoute: javax.swing.JTabbedPane _tabMain>"->"staticget <UI_NetRoute: javax.swing.JTabbedPane _tabMain>";
+    "staticget <UI_NetRoute: javax.swing.JTabbedPane _tabMain>"->"staticget <Main: java.awt.Color WINDOW_COLOR>";
+    "virtualinvoke <javax.swing.JTabbedPane: void setBackground(java.awt.Color)>"
+    "staticget <Main: java.awt.Color WINDOW_COLOR>"->"virtualinvoke <javax.swing.JTabbedPane: void setBackground(java.awt.Color)>";
+    "virtualinvoke <javax.swing.JTabbedPane: void setBackground(java.awt.Color)>"->"staticget <UI_NetRoute: javax.swing.JTabbedPane _tabMain>";
+    "push 45"
+    "staticget <UI_NetRoute: javax.swing.JTabbedPane _tabMain>"->"push 45";
+    "push 20"
+    "push 45"->"push 20";
+    "push 705"
+    "push 20"->"push 705";
+    "push 515"
+    "push 705"->"push 515";
+    "virtualinvoke <javax.swing.JTabbedPane: void setBounds(int,int,int,int)>"
+    "push 515"->"virtualinvoke <javax.swing.JTabbedPane: void setBounds(int,int,int,int)>";
+    "new NetManager"
+    "virtualinvoke <javax.swing.JTabbedPane: void setBounds(int,int,int,int)>"->"new NetManager";
+    "specialinvoke <NetManager: void <init>()>"
+    "new NetManager"->"specialinvoke <NetManager: void <init>()>";
+    "specialinvoke <NetManager: void <init>()>"->"staticget <UI_NetRoute: javax.swing.JTabbedPane _tabMain>";
+    "push \"Network\""
+    "staticget <UI_NetRoute: javax.swing.JTabbedPane _tabMain>"->"push \"Network\"";
+    "staticinvoke <NetManager: javax.swing.JPanel getNetwork()>"
+    "push \"Network\""->"staticinvoke <NetManager: javax.swing.JPanel getNetwork()>";
+    "virtualinvoke <javax.swing.JTabbedPane: java.awt.Component add(java.lang.String,java.awt.Component)>"
+    "staticinvoke <NetManager: javax.swing.JPanel getNetwork()>"->"virtualinvoke <javax.swing.JTabbedPane: java.awt.Component add(java.lang.String,java.awt.Component)>";
+    "pop"
+    "virtualinvoke <javax.swing.JTabbedPane: java.awt.Component add(java.lang.String,java.awt.Component)>"->"pop";
+    "pop"->"staticget <UI_NetRoute: javax.swing.JTabbedPane _tabMain>";
+    "push \"Network A\""
+    "staticget <UI_NetRoute: javax.swing.JTabbedPane _tabMain>"->"push \"Network A\"";
+    "staticinvoke <NetManager: javax.swing.JPanel getNetworkA()>"
+    "push \"Network A\""->"staticinvoke <NetManager: javax.swing.JPanel getNetworkA()>";
+    "staticinvoke <NetManager: javax.swing.JPanel getNetworkA()>"->"virtualinvoke <javax.swing.JTabbedPane: java.awt.Component add(java.lang.String,java.awt.Component)>";
+    "virtualinvoke <javax.swing.JTabbedPane: java.awt.Component add(java.lang.String,java.awt.Component)>"->"pop";
+    "pop"->"staticget <UI_NetRoute: javax.swing.JTabbedPane _tabMain>";
+    "push \"Network B\""
+    "staticget <UI_NetRoute: javax.swing.JTabbedPane _tabMain>"->"push \"Network B\"";
+    "staticinvoke <NetManager: javax.swing.JPanel getNetworkB()>"
+    "push \"Network B\""->"staticinvoke <NetManager: javax.swing.JPanel getNetworkB()>";
+    "staticinvoke <NetManager: javax.swing.JPanel getNetworkB()>"->"virtualinvoke <javax.swing.JTabbedPane: java.awt.Component add(java.lang.String,java.awt.Component)>";
+    "virtualinvoke <javax.swing.JTabbedPane: java.awt.Component add(java.lang.String,java.awt.Component)>"->"pop";
+    "pop"->"staticget <UI_NetRoute: javax.swing.JTabbedPane _tabMain>";
+    "push \"Network C\""
+    "staticget <UI_NetRoute: javax.swing.JTabbedPane _tabMain>"->"push \"Network C\"";
+    "staticinvoke <NetManager: javax.swing.JPanel getNetworkC()>"
+    "push \"Network C\""->"staticinvoke <NetManager: javax.swing.JPanel getNetworkC()>";
+    "staticinvoke <NetManager: javax.swing.JPanel getNetworkC()>"->"virtualinvoke <javax.swing.JTabbedPane: java.awt.Component add(java.lang.String,java.awt.Component)>";
+    "virtualinvoke <javax.swing.JTabbedPane: java.awt.Component add(java.lang.String,java.awt.Component)>"->"pop";
+    "pop"->"staticget <UI_NetRoute: javax.swing.JTabbedPane _tabMain>";
+    "push \"Network D\""
+    "staticget <UI_NetRoute: javax.swing.JTabbedPane _tabMain>"->"push \"Network D\"";
+    "staticinvoke <NetManager: javax.swing.JPanel getNetworkD()>"
+    "push \"Network D\""->"staticinvoke <NetManager: javax.swing.JPanel getNetworkD()>";
+    "staticinvoke <NetManager: javax.swing.JPanel getNetworkD()>"->"virtualinvoke <javax.swing.JTabbedPane: java.awt.Component add(java.lang.String,java.awt.Component)>";
+    "virtualinvoke <javax.swing.JTabbedPane: java.awt.Component add(java.lang.String,java.awt.Component)>"->"pop";
+    "pop"->"staticget <UI_NetRoute: javax.swing.JTabbedPane _tabMain>";
+    "push \"Network E\""
+    "staticget <UI_NetRoute: javax.swing.JTabbedPane _tabMain>"->"push \"Network E\"";
+    "staticinvoke <NetManager: javax.swing.JPanel getNetworkE()>"
+    "push \"Network E\""->"staticinvoke <NetManager: javax.swing.JPanel getNetworkE()>";
+    "staticinvoke <NetManager: javax.swing.JPanel getNetworkE()>"->"virtualinvoke <javax.swing.JTabbedPane: java.awt.Component add(java.lang.String,java.awt.Component)>";
+    "virtualinvoke <javax.swing.JTabbedPane: java.awt.Component add(java.lang.String,java.awt.Component)>"->"pop";
+    "pop"->"load.r r0";
+    "load.r r0"->"virtualinvoke <UI_NetRoute: java.awt.Container getContentPane()>";
+    "virtualinvoke <UI_NetRoute: java.awt.Container getContentPane()>"->"staticget <UI_NetRoute: javax.swing.JTabbedPane _tabMain>";
+    "virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>"
+    "staticget <UI_NetRoute: javax.swing.JTabbedPane _tabMain>"->"virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>";
+    "virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>"->"pop";
+    "pop"->"load.r r0";
+    "push \"Network Routing\""
+    "load.r r0"->"push \"Network Routing\"";
+    "specialinvoke <UI_NetRoute: void pInitTitle(java.lang.String)>"
+    "push \"Network Routing\""->"specialinvoke <UI_NetRoute: void pInitTitle(java.lang.String)>";
+    "specialinvoke <UI_NetRoute: void pInitTitle(java.lang.String)>"->"load.r r0";
+    "fieldget <UI_NetRoute: boolean _boolLoaded>"
+    "load.r r0"->"fieldget <UI_NetRoute: boolean _boolLoaded>";
+    "ifne load.r r0"
+    "fieldget <UI_NetRoute: boolean _boolLoaded>"->"ifne load.r r0";
+    "ifne load.r r0"->"load.r r0";
+    "push 1"
+    "load.r r0"->"push 1";
+    "push 1"->"fieldput <UI_NetRoute: boolean _boolLoaded>";
+    "return"
+    "fieldput <UI_NetRoute: boolean _boolLoaded>"->"return";
+}

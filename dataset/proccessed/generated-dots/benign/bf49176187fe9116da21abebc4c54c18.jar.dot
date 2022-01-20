@@ -1,0 +1,22 @@
+digraph "" {
+    "r0 := @this: TextRotatorApplet"
+    "load.r r0"
+    "r0 := @this: TextRotatorApplet"->"load.r r0";
+    "virtualinvoke <TextRotatorApplet: void initForm()>"
+    "load.r r0"->"virtualinvoke <TextRotatorApplet: void initForm()>";
+    "virtualinvoke <TextRotatorApplet: void initForm()>"->"load.r r0";
+    "specialinvoke <TextRotatorApplet: void usePageParams()>"
+    "load.r r0"->"specialinvoke <TextRotatorApplet: void usePageParams()>";
+    "specialinvoke <TextRotatorApplet: void usePageParams()>"->"load.r r0";
+    "new java.lang.Thread"
+    "load.r r0"->"new java.lang.Thread";
+    "dup1.r"
+    "new java.lang.Thread"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "specialinvoke <java.lang.Thread: void <init>(java.lang.Runnable)>"
+    "load.r r0"->"specialinvoke <java.lang.Thread: void <init>(java.lang.Runnable)>";
+    "fieldput <TextRotatorApplet: java.lang.Thread m_threadRun>"
+    "specialinvoke <java.lang.Thread: void <init>(java.lang.Runnable)>"->"fieldput <TextRotatorApplet: java.lang.Thread m_threadRun>";
+    "return"
+    "fieldput <TextRotatorApplet: java.lang.Thread m_threadRun>"->"return";
+}

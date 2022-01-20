@@ -1,0 +1,1097 @@
+digraph "" {
+    "r0 := @this: ZapiszJakoPL"
+    "load.r r0"
+    "r0 := @this: ZapiszJakoPL"->"load.r r0";
+    "push \"adres\""
+    "load.r r0"->"push \"adres\"";
+    "virtualinvoke <ZapiszJakoPL: java.lang.String getParameter(java.lang.String)>"
+    "push \"adres\""->"virtualinvoke <ZapiszJakoPL: java.lang.String getParameter(java.lang.String)>";
+    "store.r $r222"
+    "virtualinvoke <ZapiszJakoPL: java.lang.String getParameter(java.lang.String)>"->"store.r $r222";
+    "store.r $r222"->"load.r r0";
+    "push \"strona\""
+    "load.r r0"->"push \"strona\"";
+    "push \"strona\""->"virtualinvoke <ZapiszJakoPL: java.lang.String getParameter(java.lang.String)>";
+    "store.r r1"
+    "virtualinvoke <ZapiszJakoPL: java.lang.String getParameter(java.lang.String)>"->"store.r r1";
+    "store.r r1"->"load.r r0";
+    "push \"id\""
+    "load.r r0"->"push \"id\"";
+    "push \"id\""->"virtualinvoke <ZapiszJakoPL: java.lang.String getParameter(java.lang.String)>";
+    "store.r r2"
+    "virtualinvoke <ZapiszJakoPL: java.lang.String getParameter(java.lang.String)>"->"store.r r2";
+    "load.r r1"
+    "store.r r2"->"load.r r1";
+    "push \"youtube.com\""
+    "load.r r1"->"push \"youtube.com\"";
+    "virtualinvoke <java.lang.String: boolean contains(java.lang.CharSequence)>"
+    "push \"youtube.com\""->"virtualinvoke <java.lang.String: boolean contains(java.lang.CharSequence)>";
+    "ifeq load.r r1"
+    "virtualinvoke <java.lang.String: boolean contains(java.lang.CharSequence)>"->"ifeq load.r r1";
+    "load.r r2"
+    "ifeq load.r r1"->"load.r r2";
+    "load.r r2"->"store.r r1";
+    "store.r r1"->"load.r r2";
+    "ifnonnull load.r r0"
+    "load.r r2"->"ifnonnull load.r r0";
+    "ifnonnull load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r $r222"
+    "load.r r0"->"load.r $r222";
+    "specialinvoke <ZapiszJakoPL: java.lang.String getRedirUrl(java.lang.String)>"
+    "load.r $r222"->"specialinvoke <ZapiszJakoPL: java.lang.String getRedirUrl(java.lang.String)>";
+    "push \"UTF-8\""
+    "specialinvoke <ZapiszJakoPL: java.lang.String getRedirUrl(java.lang.String)>"->"push \"UTF-8\"";
+    "staticinvoke <java.net.URLDecoder: java.lang.String decode(java.lang.String,java.lang.String)>"
+    "push \"UTF-8\""->"staticinvoke <java.net.URLDecoder: java.lang.String decode(java.lang.String,java.lang.String)>";
+    "push \"v=\""
+    "staticinvoke <java.net.URLDecoder: java.lang.String decode(java.lang.String,java.lang.String)>"->"push \"v=\"";
+    "push \"&\""
+    "push \"v=\""->"push \"&\"";
+    "specialinvoke <ZapiszJakoPL: java.lang.String inbtwn(java.lang.String,java.lang.String,java.lang.String)>"
+    "push \"&\""->"specialinvoke <ZapiszJakoPL: java.lang.String inbtwn(java.lang.String,java.lang.String,java.lang.String)>";
+    "specialinvoke <ZapiszJakoPL: java.lang.String inbtwn(java.lang.String,java.lang.String,java.lang.String)>"->"store.r r1";
+    "store.r r1"->"load.r r0";
+    "new java.lang.StringBuilder"
+    "load.r r0"->"new java.lang.StringBuilder";
+    "dup1.r"
+    "new java.lang.StringBuilder"->"dup1.r";
+    "push \"http://www.youtube.com/get_video_info?video_id=\""
+    "dup1.r"->"push \"http://www.youtube.com/get_video_info?video_id=\"";
+    "specialinvoke <java.lang.StringBuilder: void <init>(java.lang.String)>"
+    "push \"http://www.youtube.com/get_video_info?video_id=\""->"specialinvoke <java.lang.StringBuilder: void <init>(java.lang.String)>";
+    "specialinvoke <java.lang.StringBuilder: void <init>(java.lang.String)>"->"load.r r1";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"
+    "load.r r1"->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.String toString()>"
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"virtualinvoke <java.lang.StringBuilder: java.lang.String toString()>";
+    "push \"GET\""
+    "virtualinvoke <java.lang.StringBuilder: java.lang.String toString()>"->"push \"GET\"";
+    "specialinvoke <ZapiszJakoPL: java.lang.String getUrlContent(java.lang.String,java.lang.String)>"
+    "push \"GET\""->"specialinvoke <ZapiszJakoPL: java.lang.String getUrlContent(java.lang.String,java.lang.String)>";
+    "store.r r231"
+    "specialinvoke <ZapiszJakoPL: java.lang.String getUrlContent(java.lang.String,java.lang.String)>"->"store.r r231";
+    "store.r r231"->"load.r r0";
+    "load.r r0"->"new java.lang.StringBuilder";
+    "new java.lang.StringBuilder"->"dup1.r";
+    "push \"http://www.youtube.com/watch?v=\""
+    "dup1.r"->"push \"http://www.youtube.com/watch?v=\"";
+    "push \"http://www.youtube.com/watch?v=\""->"specialinvoke <java.lang.StringBuilder: void <init>(java.lang.String)>";
+    "specialinvoke <java.lang.StringBuilder: void <init>(java.lang.String)>"->"load.r r1";
+    "load.r r1"->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"virtualinvoke <java.lang.StringBuilder: java.lang.String toString()>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.String toString()>"->"push \"GET\"";
+    "push \"GET\""->"specialinvoke <ZapiszJakoPL: java.lang.String getUrlContent(java.lang.String,java.lang.String)>";
+    "store.r $r6"
+    "specialinvoke <ZapiszJakoPL: java.lang.String getUrlContent(java.lang.String,java.lang.String)>"->"store.r $r6";
+    "store.r $r6"->"load.r r0";
+    "load.r $r6"
+    "load.r r0"->"load.r $r6";
+    "push \"\'VIDEO_TITLE\': \'\""
+    "load.r $r6"->"push \"\'VIDEO_TITLE\': \'\"";
+    "push \"\',\""
+    "push \"\'VIDEO_TITLE\': \'\""->"push \"\',\"";
+    "push \"\',\""->"specialinvoke <ZapiszJakoPL: java.lang.String inbtwn(java.lang.String,java.lang.String,java.lang.String)>";
+    "specialinvoke <ZapiszJakoPL: java.lang.String inbtwn(java.lang.String,java.lang.String,java.lang.String)>"->"store.r r2";
+    "store.r r2"->"load.r r2";
+    "ifnonnull load.r r2"
+    "load.r r2"->"ifnonnull load.r r2";
+    "ifnonnull load.r r2"->"load.r r0";
+    "load.r r0"->"load.r $r6";
+    "push \"name=\\\"title\\\" content=\\\"\""
+    "load.r $r6"->"push \"name=\\\"title\\\" content=\\\"\"";
+    "push \"\\\"\""
+    "push \"name=\\\"title\\\" content=\\\"\""->"push \"\\\"\"";
+    "push \"\\\"\""->"specialinvoke <ZapiszJakoPL: java.lang.String inbtwn(java.lang.String,java.lang.String,java.lang.String)>";
+    "specialinvoke <ZapiszJakoPL: java.lang.String inbtwn(java.lang.String,java.lang.String,java.lang.String)>"->"store.r r2";
+    "store.r r2"->"load.r r2";
+    "load.r r2"->"ifnonnull load.r r0";
+    "ifnonnull load.r r0"->"load.r r0";
+    "load.r r0"->"load.r $r6";
+    "push \"<h3>&ldquo;\""
+    "load.r $r6"->"push \"<h3>&ldquo;\"";
+    "push \"&rdquo;</h3>\""
+    "push \"<h3>&ldquo;\""->"push \"&rdquo;</h3>\"";
+    "push \"&rdquo;</h3>\""->"specialinvoke <ZapiszJakoPL: java.lang.String inbtwn(java.lang.String,java.lang.String,java.lang.String)>";
+    "specialinvoke <ZapiszJakoPL: java.lang.String inbtwn(java.lang.String,java.lang.String,java.lang.String)>"->"store.r r2";
+    "store.r r2"->"load.r r0";
+    "load.r r0"->"load.r r2";
+    "specialinvoke <ZapiszJakoPL: java.lang.String setHTMLEntity(java.lang.String)>"
+    "load.r r2"->"specialinvoke <ZapiszJakoPL: java.lang.String setHTMLEntity(java.lang.String)>";
+    "specialinvoke <ZapiszJakoPL: java.lang.String setHTMLEntity(java.lang.String)>"->"store.r r2";
+    "store.r r2"->"load.r r0";
+    "load.r r0"->"load.r $r6";
+    "push \"\\\"t\\\": \\\"\""
+    "load.r $r6"->"push \"\\\"t\\\": \\\"\"";
+    "push \"\\\"t\\\": \\\"\""->"push \"\\\"\"";
+    "push \"\\\"\""->"specialinvoke <ZapiszJakoPL: java.lang.String inbtwn(java.lang.String,java.lang.String,java.lang.String)>";
+    "specialinvoke <ZapiszJakoPL: java.lang.String inbtwn(java.lang.String,java.lang.String,java.lang.String)>"->"store.r $r222";
+    "store.r $r222"->"load.r $r222";
+    "ifnonnull load.r $r222"
+    "load.r $r222"->"ifnonnull load.r $r222";
+    "ifnonnull load.r $r222"->"load.r r0";
+    "load.r r0"->"load.r $r6";
+    "push \"&t=\""
+    "load.r $r6"->"push \"&t=\"";
+    "push \"&t=\""->"push \"&\"";
+    "push \"&\""->"specialinvoke <ZapiszJakoPL: java.lang.String inbtwn(java.lang.String,java.lang.String,java.lang.String)>";
+    "specialinvoke <ZapiszJakoPL: java.lang.String inbtwn(java.lang.String,java.lang.String,java.lang.String)>"->"store.r $r222";
+    "store.r $r222"->"load.r $r222";
+    "load.r $r222"->"ifnonnull load.r r0";
+    "ifnonnull load.r r0"->"load.r r0";
+    "load.r r231"
+    "load.r r0"->"load.r r231";
+    "push \"&token=\""
+    "load.r r231"->"push \"&token=\"";
+    "push \"&token=\""->"push \"&\"";
+    "push \"&\""->"specialinvoke <ZapiszJakoPL: java.lang.String inbtwn(java.lang.String,java.lang.String,java.lang.String)>";
+    "specialinvoke <ZapiszJakoPL: java.lang.String inbtwn(java.lang.String,java.lang.String,java.lang.String)>"->"store.r $r222";
+    "store.r $r222"->"load.r r0";
+    "load.r r0"->"load.r r231";
+    "push \"fmt_url_map=\""
+    "load.r r231"->"push \"fmt_url_map=\"";
+    "push \"fmt_url_map=\""->"push \"&\"";
+    "push \"&\""->"specialinvoke <ZapiszJakoPL: java.lang.String inbtwn(java.lang.String,java.lang.String,java.lang.String)>";
+    "specialinvoke <ZapiszJakoPL: java.lang.String inbtwn(java.lang.String,java.lang.String,java.lang.String)>"->"store.r r231";
+    "store.r r231"->"load.r r231";
+    "load.r r231"->"ifnonnull load.r r0";
+    "ifnonnull load.r r0"->"load.r r0";
+    "load.r r0"->"load.r $r6";
+    "load.r $r6"->"push \"fmt_url_map=\"";
+    "push \"fmt_url_map=\""->"push \"&\"";
+    "push \"&\""->"specialinvoke <ZapiszJakoPL: java.lang.String inbtwn(java.lang.String,java.lang.String,java.lang.String)>";
+    "specialinvoke <ZapiszJakoPL: java.lang.String inbtwn(java.lang.String,java.lang.String,java.lang.String)>"->"store.r r231";
+    "store.r r231"->"load.r r0";
+    "load.r r0"->"load.r r231";
+    "push \"13%7C\""
+    "load.r r231"->"push \"13%7C\"";
+    "push \"%2C\""
+    "push \"13%7C\""->"push \"%2C\"";
+    "push \"%2C\""->"specialinvoke <ZapiszJakoPL: java.lang.String inbtwn(java.lang.String,java.lang.String,java.lang.String)>";
+    "specialinvoke <ZapiszJakoPL: java.lang.String inbtwn(java.lang.String,java.lang.String,java.lang.String)>"->"store.r $r6";
+    "store.r $r6"->"load.r $r6";
+    "ifnonnull load.r $r6"
+    "load.r $r6"->"ifnonnull load.r $r6";
+    "ifnonnull load.r $r6"->"load.r r0";
+    "load.r r0"->"new java.lang.StringBuilder";
+    "new java.lang.StringBuilder"->"dup1.r";
+    "push \"http://www.youtube.com/get_video?video_id=\""
+    "dup1.r"->"push \"http://www.youtube.com/get_video?video_id=\"";
+    "push \"http://www.youtube.com/get_video?video_id=\""->"specialinvoke <java.lang.StringBuilder: void <init>(java.lang.String)>";
+    "specialinvoke <java.lang.StringBuilder: void <init>(java.lang.String)>"->"load.r r1";
+    "load.r r1"->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"push \"&t=\"";
+    "push \"&t=\""->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"load.r $r222";
+    "load.r $r222"->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "push \"&fmt=13&asv=2\""
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"push \"&fmt=13&asv=2\"";
+    "push \"&fmt=13&asv=2\""->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"virtualinvoke <java.lang.StringBuilder: java.lang.String toString()>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.String toString()>"->"specialinvoke <ZapiszJakoPL: java.lang.String getRedirUrl(java.lang.String)>";
+    "specialinvoke <ZapiszJakoPL: java.lang.String getRedirUrl(java.lang.String)>"->"store.r $r6";
+    "store.r $r6"->"load.r $r6";
+    "ifnull load.r r0"
+    "load.r $r6"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r $r6";
+    "staticinvoke <java.net.URLDecoder: java.lang.String decode(java.lang.String)>"
+    "load.r $r6"->"staticinvoke <java.net.URLDecoder: java.lang.String decode(java.lang.String)>";
+    "store.r $r122"
+    "staticinvoke <java.net.URLDecoder: java.lang.String decode(java.lang.String)>"->"store.r $r122";
+    "new java.net.URL"
+    "store.r $r122"->"new java.net.URL";
+    "new java.net.URL"->"store.r $r6";
+    "store.r $r6"->"load.r $r6";
+    "load.r $r6"->"new java.lang.StringBuilder";
+    "new java.lang.StringBuilder"->"dup1.r";
+    "push \"javascript:zapiszjakopl_append(\'3GP\', \'Low Quality - 176x144\', \'\""
+    "dup1.r"->"push \"javascript:zapiszjakopl_append(\'3GP\', \'Low Quality - 176x144\', \'\"";
+    "push \"javascript:zapiszjakopl_append(\'3GP\', \'Low Quality - 176x144\', \'\""->"specialinvoke <java.lang.StringBuilder: void <init>(java.lang.String)>";
+    "load.r $r122"
+    "specialinvoke <java.lang.StringBuilder: void <init>(java.lang.String)>"->"load.r $r122";
+    "load.r $r122"->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "push \"\', \'\""
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"push \"\', \'\"";
+    "push \"\', \'\""->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"load.r r2";
+    "load.r r2"->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "push \"\');\""
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"push \"\');\"";
+    "push \"\');\""->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"virtualinvoke <java.lang.StringBuilder: java.lang.String toString()>";
+    "specialinvoke <java.net.URL: void <init>(java.lang.String)>"
+    "virtualinvoke <java.lang.StringBuilder: java.lang.String toString()>"->"specialinvoke <java.net.URL: void <init>(java.lang.String)>";
+    "specialinvoke <java.net.URL: void <init>(java.lang.String)>"->"load.r r0";
+    "virtualinvoke <ZapiszJakoPL: java.applet.AppletContext getAppletContext()>"
+    "load.r r0"->"virtualinvoke <ZapiszJakoPL: java.applet.AppletContext getAppletContext()>";
+    "virtualinvoke <ZapiszJakoPL: java.applet.AppletContext getAppletContext()>"->"load.r $r6";
+    "interfaceinvoke <java.applet.AppletContext: void showDocument(java.net.URL)> 1"
+    "load.r $r6"->"interfaceinvoke <java.applet.AppletContext: void showDocument(java.net.URL)> 1";
+    "interfaceinvoke <java.applet.AppletContext: void showDocument(java.net.URL)> 1"->"load.r r0";
+    "load.r r0"->"load.r r231";
+    "push \"17%7C\""
+    "load.r r231"->"push \"17%7C\"";
+    "push \"17%7C\""->"push \"%2C\"";
+    "push \"%2C\""->"specialinvoke <ZapiszJakoPL: java.lang.String inbtwn(java.lang.String,java.lang.String,java.lang.String)>";
+    "specialinvoke <ZapiszJakoPL: java.lang.String inbtwn(java.lang.String,java.lang.String,java.lang.String)>"->"store.r $r6";
+    "store.r $r6"->"load.r $r6";
+    "load.r $r6"->"ifnonnull load.r $r6";
+    "ifnonnull load.r $r6"->"load.r r0";
+    "load.r r0"->"new java.lang.StringBuilder";
+    "new java.lang.StringBuilder"->"dup1.r";
+    "dup1.r"->"push \"http://www.youtube.com/get_video?video_id=\"";
+    "push \"http://www.youtube.com/get_video?video_id=\""->"specialinvoke <java.lang.StringBuilder: void <init>(java.lang.String)>";
+    "specialinvoke <java.lang.StringBuilder: void <init>(java.lang.String)>"->"load.r r1";
+    "load.r r1"->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"push \"&t=\"";
+    "push \"&t=\""->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"load.r $r222";
+    "load.r $r222"->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "push \"&fmt=17&asv=2\""
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"push \"&fmt=17&asv=2\"";
+    "push \"&fmt=17&asv=2\""->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"virtualinvoke <java.lang.StringBuilder: java.lang.String toString()>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.String toString()>"->"specialinvoke <ZapiszJakoPL: java.lang.String getRedirUrl(java.lang.String)>";
+    "specialinvoke <ZapiszJakoPL: java.lang.String getRedirUrl(java.lang.String)>"->"store.r $r6";
+    "store.r $r6"->"load.r $r6";
+    "load.r $r6"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r $r6";
+    "load.r $r6"->"staticinvoke <java.net.URLDecoder: java.lang.String decode(java.lang.String)>";
+    "staticinvoke <java.net.URLDecoder: java.lang.String decode(java.lang.String)>"->"store.r $r122";
+    "store.r $r122"->"new java.net.URL";
+    "new java.net.URL"->"store.r $r6";
+    "store.r $r6"->"load.r $r6";
+    "load.r $r6"->"new java.lang.StringBuilder";
+    "new java.lang.StringBuilder"->"dup1.r";
+    "push \"javascript:zapiszjakopl_append(\'3GP\', \'Medium Quality - 176x144\', \'\""
+    "dup1.r"->"push \"javascript:zapiszjakopl_append(\'3GP\', \'Medium Quality - 176x144\', \'\"";
+    "push \"javascript:zapiszjakopl_append(\'3GP\', \'Medium Quality - 176x144\', \'\""->"specialinvoke <java.lang.StringBuilder: void <init>(java.lang.String)>";
+    "specialinvoke <java.lang.StringBuilder: void <init>(java.lang.String)>"->"load.r $r122";
+    "load.r $r122"->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"push \"\', \'\"";
+    "push \"\', \'\""->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"load.r r2";
+    "load.r r2"->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"push \"\');\"";
+    "push \"\');\""->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"virtualinvoke <java.lang.StringBuilder: java.lang.String toString()>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.String toString()>"->"specialinvoke <java.net.URL: void <init>(java.lang.String)>";
+    "specialinvoke <java.net.URL: void <init>(java.lang.String)>"->"load.r r0";
+    "load.r r0"->"virtualinvoke <ZapiszJakoPL: java.applet.AppletContext getAppletContext()>";
+    "virtualinvoke <ZapiszJakoPL: java.applet.AppletContext getAppletContext()>"->"load.r $r6";
+    "load.r $r6"->"interfaceinvoke <java.applet.AppletContext: void showDocument(java.net.URL)> 1";
+    "interfaceinvoke <java.applet.AppletContext: void showDocument(java.net.URL)> 1"->"load.r r0";
+    "load.r r0"->"load.r r231";
+    "push \"36%7C\""
+    "load.r r231"->"push \"36%7C\"";
+    "push \"36%7C\""->"push \"%2C\"";
+    "push \"%2C\""->"specialinvoke <ZapiszJakoPL: java.lang.String inbtwn(java.lang.String,java.lang.String,java.lang.String)>";
+    "specialinvoke <ZapiszJakoPL: java.lang.String inbtwn(java.lang.String,java.lang.String,java.lang.String)>"->"store.r $r6";
+    "store.r $r6"->"load.r $r6";
+    "load.r $r6"->"ifnonnull load.r $r6";
+    "ifnonnull load.r $r6"->"load.r r0";
+    "load.r r0"->"new java.lang.StringBuilder";
+    "new java.lang.StringBuilder"->"dup1.r";
+    "dup1.r"->"push \"http://www.youtube.com/get_video?video_id=\"";
+    "push \"http://www.youtube.com/get_video?video_id=\""->"specialinvoke <java.lang.StringBuilder: void <init>(java.lang.String)>";
+    "specialinvoke <java.lang.StringBuilder: void <init>(java.lang.String)>"->"load.r r1";
+    "load.r r1"->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"push \"&t=\"";
+    "push \"&t=\""->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"load.r $r222";
+    "load.r $r222"->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "push \"&fmt=36&asv=2\""
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"push \"&fmt=36&asv=2\"";
+    "push \"&fmt=36&asv=2\""->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"virtualinvoke <java.lang.StringBuilder: java.lang.String toString()>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.String toString()>"->"specialinvoke <ZapiszJakoPL: java.lang.String getRedirUrl(java.lang.String)>";
+    "specialinvoke <ZapiszJakoPL: java.lang.String getRedirUrl(java.lang.String)>"->"store.r $r6";
+    "store.r $r6"->"load.r $r6";
+    "load.r $r6"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r $r6";
+    "load.r $r6"->"staticinvoke <java.net.URLDecoder: java.lang.String decode(java.lang.String)>";
+    "staticinvoke <java.net.URLDecoder: java.lang.String decode(java.lang.String)>"->"store.r $r122";
+    "store.r $r122"->"new java.net.URL";
+    "new java.net.URL"->"store.r $r6";
+    "store.r $r6"->"load.r $r6";
+    "load.r $r6"->"new java.lang.StringBuilder";
+    "new java.lang.StringBuilder"->"dup1.r";
+    "push \"javascript:zapiszjakopl_append(\'3GP\', \'High Quality - 320x240\', \'\""
+    "dup1.r"->"push \"javascript:zapiszjakopl_append(\'3GP\', \'High Quality - 320x240\', \'\"";
+    "push \"javascript:zapiszjakopl_append(\'3GP\', \'High Quality - 320x240\', \'\""->"specialinvoke <java.lang.StringBuilder: void <init>(java.lang.String)>";
+    "specialinvoke <java.lang.StringBuilder: void <init>(java.lang.String)>"->"load.r $r122";
+    "load.r $r122"->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"push \"\', \'\"";
+    "push \"\', \'\""->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"load.r r2";
+    "load.r r2"->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"push \"\');\"";
+    "push \"\');\""->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"virtualinvoke <java.lang.StringBuilder: java.lang.String toString()>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.String toString()>"->"specialinvoke <java.net.URL: void <init>(java.lang.String)>";
+    "specialinvoke <java.net.URL: void <init>(java.lang.String)>"->"load.r r0";
+    "load.r r0"->"virtualinvoke <ZapiszJakoPL: java.applet.AppletContext getAppletContext()>";
+    "virtualinvoke <ZapiszJakoPL: java.applet.AppletContext getAppletContext()>"->"load.r $r6";
+    "load.r $r6"->"interfaceinvoke <java.applet.AppletContext: void showDocument(java.net.URL)> 1";
+    "interfaceinvoke <java.applet.AppletContext: void showDocument(java.net.URL)> 1"->"load.r r0";
+    "load.r r0"->"load.r r231";
+    "push \"%2C5%7C\""
+    "load.r r231"->"push \"%2C5%7C\"";
+    "push \"%2C5%7C\""->"push \"%2C\"";
+    "push \"%2C\""->"specialinvoke <ZapiszJakoPL: java.lang.String inbtwn(java.lang.String,java.lang.String,java.lang.String)>";
+    "specialinvoke <ZapiszJakoPL: java.lang.String inbtwn(java.lang.String,java.lang.String,java.lang.String)>"->"store.r $r6";
+    "store.r $r6"->"load.r $r6";
+    "load.r $r6"->"ifnonnull load.r $r6";
+    "ifnonnull load.r $r6"->"load.r r0";
+    "load.r r0"->"new java.lang.StringBuilder";
+    "new java.lang.StringBuilder"->"dup1.r";
+    "dup1.r"->"push \"http://www.youtube.com/get_video?video_id=\"";
+    "push \"http://www.youtube.com/get_video?video_id=\""->"specialinvoke <java.lang.StringBuilder: void <init>(java.lang.String)>";
+    "specialinvoke <java.lang.StringBuilder: void <init>(java.lang.String)>"->"load.r r1";
+    "load.r r1"->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"push \"&t=\"";
+    "push \"&t=\""->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"load.r $r222";
+    "load.r $r222"->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "push \"&fmt=5&asv=2\""
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"push \"&fmt=5&asv=2\"";
+    "push \"&fmt=5&asv=2\""->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"virtualinvoke <java.lang.StringBuilder: java.lang.String toString()>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.String toString()>"->"specialinvoke <ZapiszJakoPL: java.lang.String getRedirUrl(java.lang.String)>";
+    "specialinvoke <ZapiszJakoPL: java.lang.String getRedirUrl(java.lang.String)>"->"store.r $r6";
+    "store.r $r6"->"load.r $r6";
+    "load.r $r6"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r $r6";
+    "load.r $r6"->"staticinvoke <java.net.URLDecoder: java.lang.String decode(java.lang.String)>";
+    "staticinvoke <java.net.URLDecoder: java.lang.String decode(java.lang.String)>"->"store.r $r122";
+    "store.r $r122"->"new java.net.URL";
+    "new java.net.URL"->"store.r $r6";
+    "store.r $r6"->"load.r $r6";
+    "load.r $r6"->"new java.lang.StringBuilder";
+    "new java.lang.StringBuilder"->"dup1.r";
+    "push \"javascript:zapiszjakopl_append(\'FLV\', \'Low Quality - 320x240\', \'\""
+    "dup1.r"->"push \"javascript:zapiszjakopl_append(\'FLV\', \'Low Quality - 320x240\', \'\"";
+    "push \"javascript:zapiszjakopl_append(\'FLV\', \'Low Quality - 320x240\', \'\""->"specialinvoke <java.lang.StringBuilder: void <init>(java.lang.String)>";
+    "specialinvoke <java.lang.StringBuilder: void <init>(java.lang.String)>"->"load.r $r122";
+    "load.r $r122"->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"push \"\', \'\"";
+    "push \"\', \'\""->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"load.r r2";
+    "load.r r2"->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"push \"\');\"";
+    "push \"\');\""->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"virtualinvoke <java.lang.StringBuilder: java.lang.String toString()>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.String toString()>"->"specialinvoke <java.net.URL: void <init>(java.lang.String)>";
+    "specialinvoke <java.net.URL: void <init>(java.lang.String)>"->"load.r r0";
+    "load.r r0"->"virtualinvoke <ZapiszJakoPL: java.applet.AppletContext getAppletContext()>";
+    "virtualinvoke <ZapiszJakoPL: java.applet.AppletContext getAppletContext()>"->"load.r $r6";
+    "load.r $r6"->"interfaceinvoke <java.applet.AppletContext: void showDocument(java.net.URL)> 1";
+    "interfaceinvoke <java.applet.AppletContext: void showDocument(java.net.URL)> 1"->"load.r r0";
+    "load.r r0"->"load.r r231";
+    "push \"34%7C\""
+    "load.r r231"->"push \"34%7C\"";
+    "push \"34%7C\""->"push \"%2C\"";
+    "push \"%2C\""->"specialinvoke <ZapiszJakoPL: java.lang.String inbtwn(java.lang.String,java.lang.String,java.lang.String)>";
+    "specialinvoke <ZapiszJakoPL: java.lang.String inbtwn(java.lang.String,java.lang.String,java.lang.String)>"->"store.r $r6";
+    "store.r $r6"->"load.r $r6";
+    "load.r $r6"->"ifnonnull load.r $r6";
+    "ifnonnull load.r $r6"->"load.r r0";
+    "load.r r0"->"new java.lang.StringBuilder";
+    "new java.lang.StringBuilder"->"dup1.r";
+    "dup1.r"->"push \"http://www.youtube.com/get_video?video_id=\"";
+    "push \"http://www.youtube.com/get_video?video_id=\""->"specialinvoke <java.lang.StringBuilder: void <init>(java.lang.String)>";
+    "specialinvoke <java.lang.StringBuilder: void <init>(java.lang.String)>"->"load.r r1";
+    "load.r r1"->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"push \"&t=\"";
+    "push \"&t=\""->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"load.r $r222";
+    "load.r $r222"->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "push \"&fmt=34&asv=2\""
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"push \"&fmt=34&asv=2\"";
+    "push \"&fmt=34&asv=2\""->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"virtualinvoke <java.lang.StringBuilder: java.lang.String toString()>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.String toString()>"->"specialinvoke <ZapiszJakoPL: java.lang.String getRedirUrl(java.lang.String)>";
+    "specialinvoke <ZapiszJakoPL: java.lang.String getRedirUrl(java.lang.String)>"->"store.r $r6";
+    "store.r $r6"->"load.r $r6";
+    "load.r $r6"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r $r6";
+    "load.r $r6"->"staticinvoke <java.net.URLDecoder: java.lang.String decode(java.lang.String)>";
+    "staticinvoke <java.net.URLDecoder: java.lang.String decode(java.lang.String)>"->"store.r $r122";
+    "store.r $r122"->"new java.net.URL";
+    "new java.net.URL"->"store.r $r6";
+    "store.r $r6"->"load.r $r6";
+    "load.r $r6"->"new java.lang.StringBuilder";
+    "new java.lang.StringBuilder"->"dup1.r";
+    "push \"javascript:zapiszjakopl_append(\'FLV\', \'Medium Quality - 400x226\', \'\""
+    "dup1.r"->"push \"javascript:zapiszjakopl_append(\'FLV\', \'Medium Quality - 400x226\', \'\"";
+    "push \"javascript:zapiszjakopl_append(\'FLV\', \'Medium Quality - 400x226\', \'\""->"specialinvoke <java.lang.StringBuilder: void <init>(java.lang.String)>";
+    "specialinvoke <java.lang.StringBuilder: void <init>(java.lang.String)>"->"load.r $r122";
+    "load.r $r122"->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"push \"\', \'\"";
+    "push \"\', \'\""->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"load.r r2";
+    "load.r r2"->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"push \"\');\"";
+    "push \"\');\""->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"virtualinvoke <java.lang.StringBuilder: java.lang.String toString()>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.String toString()>"->"specialinvoke <java.net.URL: void <init>(java.lang.String)>";
+    "specialinvoke <java.net.URL: void <init>(java.lang.String)>"->"load.r r0";
+    "load.r r0"->"virtualinvoke <ZapiszJakoPL: java.applet.AppletContext getAppletContext()>";
+    "virtualinvoke <ZapiszJakoPL: java.applet.AppletContext getAppletContext()>"->"load.r $r6";
+    "load.r $r6"->"interfaceinvoke <java.applet.AppletContext: void showDocument(java.net.URL)> 1";
+    "interfaceinvoke <java.applet.AppletContext: void showDocument(java.net.URL)> 1"->"load.r r0";
+    "load.r r0"->"load.r r231";
+    "push \"6%7C\""
+    "load.r r231"->"push \"6%7C\"";
+    "push \"6%7C\""->"push \"%2C\"";
+    "push \"%2C\""->"specialinvoke <ZapiszJakoPL: java.lang.String inbtwn(java.lang.String,java.lang.String,java.lang.String)>";
+    "specialinvoke <ZapiszJakoPL: java.lang.String inbtwn(java.lang.String,java.lang.String,java.lang.String)>"->"store.r $r6";
+    "store.r $r6"->"load.r $r6";
+    "load.r $r6"->"ifnonnull load.r $r6";
+    "ifnonnull load.r $r6"->"load.r r0";
+    "load.r r0"->"new java.lang.StringBuilder";
+    "new java.lang.StringBuilder"->"dup1.r";
+    "dup1.r"->"push \"http://www.youtube.com/get_video?video_id=\"";
+    "push \"http://www.youtube.com/get_video?video_id=\""->"specialinvoke <java.lang.StringBuilder: void <init>(java.lang.String)>";
+    "specialinvoke <java.lang.StringBuilder: void <init>(java.lang.String)>"->"load.r r1";
+    "load.r r1"->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"push \"&t=\"";
+    "push \"&t=\""->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"load.r $r222";
+    "load.r $r222"->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "push \"&fmt=6&asv=2\""
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"push \"&fmt=6&asv=2\"";
+    "push \"&fmt=6&asv=2\""->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"virtualinvoke <java.lang.StringBuilder: java.lang.String toString()>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.String toString()>"->"specialinvoke <ZapiszJakoPL: java.lang.String getRedirUrl(java.lang.String)>";
+    "specialinvoke <ZapiszJakoPL: java.lang.String getRedirUrl(java.lang.String)>"->"store.r $r6";
+    "store.r $r6"->"load.r $r6";
+    "load.r $r6"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r $r6";
+    "load.r $r6"->"staticinvoke <java.net.URLDecoder: java.lang.String decode(java.lang.String)>";
+    "staticinvoke <java.net.URLDecoder: java.lang.String decode(java.lang.String)>"->"store.r $r122";
+    "store.r $r122"->"new java.net.URL";
+    "new java.net.URL"->"store.r $r6";
+    "store.r $r6"->"load.r $r6";
+    "load.r $r6"->"new java.lang.StringBuilder";
+    "new java.lang.StringBuilder"->"dup1.r";
+    "push \"javascript:zapiszjakopl_append(\'FLV\', \'Medium Quality - 480x360\', \'\""
+    "dup1.r"->"push \"javascript:zapiszjakopl_append(\'FLV\', \'Medium Quality - 480x360\', \'\"";
+    "push \"javascript:zapiszjakopl_append(\'FLV\', \'Medium Quality - 480x360\', \'\""->"specialinvoke <java.lang.StringBuilder: void <init>(java.lang.String)>";
+    "specialinvoke <java.lang.StringBuilder: void <init>(java.lang.String)>"->"load.r $r122";
+    "load.r $r122"->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"push \"\', \'\"";
+    "push \"\', \'\""->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"load.r r2";
+    "load.r r2"->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"push \"\');\"";
+    "push \"\');\""->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"virtualinvoke <java.lang.StringBuilder: java.lang.String toString()>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.String toString()>"->"specialinvoke <java.net.URL: void <init>(java.lang.String)>";
+    "specialinvoke <java.net.URL: void <init>(java.lang.String)>"->"load.r r0";
+    "load.r r0"->"virtualinvoke <ZapiszJakoPL: java.applet.AppletContext getAppletContext()>";
+    "virtualinvoke <ZapiszJakoPL: java.applet.AppletContext getAppletContext()>"->"load.r $r6";
+    "load.r $r6"->"interfaceinvoke <java.applet.AppletContext: void showDocument(java.net.URL)> 1";
+    "interfaceinvoke <java.applet.AppletContext: void showDocument(java.net.URL)> 1"->"load.r r0";
+    "load.r r0"->"load.r r231";
+    "push \"35%7C\""
+    "load.r r231"->"push \"35%7C\"";
+    "push \"35%7C\""->"push \"%2C\"";
+    "push \"%2C\""->"specialinvoke <ZapiszJakoPL: java.lang.String inbtwn(java.lang.String,java.lang.String,java.lang.String)>";
+    "specialinvoke <ZapiszJakoPL: java.lang.String inbtwn(java.lang.String,java.lang.String,java.lang.String)>"->"store.r $r6";
+    "store.r $r6"->"load.r $r6";
+    "load.r $r6"->"ifnonnull load.r $r6";
+    "ifnonnull load.r $r6"->"load.r r0";
+    "load.r r0"->"new java.lang.StringBuilder";
+    "new java.lang.StringBuilder"->"dup1.r";
+    "dup1.r"->"push \"http://www.youtube.com/get_video?video_id=\"";
+    "push \"http://www.youtube.com/get_video?video_id=\""->"specialinvoke <java.lang.StringBuilder: void <init>(java.lang.String)>";
+    "specialinvoke <java.lang.StringBuilder: void <init>(java.lang.String)>"->"load.r r1";
+    "load.r r1"->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"push \"&t=\"";
+    "push \"&t=\""->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"load.r $r222";
+    "load.r $r222"->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "push \"&fmt=35&asv=2\""
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"push \"&fmt=35&asv=2\"";
+    "push \"&fmt=35&asv=2\""->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"virtualinvoke <java.lang.StringBuilder: java.lang.String toString()>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.String toString()>"->"specialinvoke <ZapiszJakoPL: java.lang.String getRedirUrl(java.lang.String)>";
+    "specialinvoke <ZapiszJakoPL: java.lang.String getRedirUrl(java.lang.String)>"->"store.r $r6";
+    "store.r $r6"->"load.r $r6";
+    "load.r $r6"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r $r6";
+    "load.r $r6"->"staticinvoke <java.net.URLDecoder: java.lang.String decode(java.lang.String)>";
+    "staticinvoke <java.net.URLDecoder: java.lang.String decode(java.lang.String)>"->"new java.lang.StringBuilder";
+    "new java.lang.StringBuilder"->"store.r $r122";
+    "store.r $r122"->"load.r $r122";
+    "push \"javascript:zapiszjakopl_append(\'FLV\', \'High Quality - 640x380\', \'\""
+    "load.r $r122"->"push \"javascript:zapiszjakopl_append(\'FLV\', \'High Quality - 640x380\', \'\"";
+    "push \"javascript:zapiszjakopl_append(\'FLV\', \'High Quality - 640x380\', \'\""->"specialinvoke <java.lang.StringBuilder: void <init>(java.lang.String)>";
+    "specialinvoke <java.lang.StringBuilder: void <init>(java.lang.String)>"->"staticinvoke <java.net.URLDecoder: java.lang.String decode(java.lang.String)>";
+    "store.r $r123"
+    "staticinvoke <java.net.URLDecoder: java.lang.String decode(java.lang.String)>"->"store.r $r123";
+    "store.r $r123"->"new java.net.URL";
+    "new java.net.URL"->"store.r $r6";
+    "store.r $r6"->"load.r $r6";
+    "load.r $r6"->"load.r $r122";
+    "load.r $r123"
+    "load.r $r122"->"load.r $r123";
+    "load.r $r123"->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"push \"\', \'\"";
+    "push \"\', \'\""->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"load.r r2";
+    "load.r r2"->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"push \"\');\"";
+    "push \"\');\""->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"virtualinvoke <java.lang.StringBuilder: java.lang.String toString()>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.String toString()>"->"specialinvoke <java.net.URL: void <init>(java.lang.String)>";
+    "specialinvoke <java.net.URL: void <init>(java.lang.String)>"->"load.r r0";
+    "load.r r0"->"virtualinvoke <ZapiszJakoPL: java.applet.AppletContext getAppletContext()>";
+    "virtualinvoke <ZapiszJakoPL: java.applet.AppletContext getAppletContext()>"->"load.r $r6";
+    "load.r $r6"->"interfaceinvoke <java.applet.AppletContext: void showDocument(java.net.URL)> 1";
+    "interfaceinvoke <java.applet.AppletContext: void showDocument(java.net.URL)> 1"->"load.r r0";
+    "load.r r0"->"load.r r231";
+    "push \"18%7C\""
+    "load.r r231"->"push \"18%7C\"";
+    "push \"18%7C\""->"push \"%2C\"";
+    "push \"%2C\""->"specialinvoke <ZapiszJakoPL: java.lang.String inbtwn(java.lang.String,java.lang.String,java.lang.String)>";
+    "specialinvoke <ZapiszJakoPL: java.lang.String inbtwn(java.lang.String,java.lang.String,java.lang.String)>"->"store.r $r6";
+    "store.r $r6"->"load.r $r6";
+    "load.r $r6"->"ifnonnull load.r $r6";
+    "ifnonnull load.r $r6"->"load.r r0";
+    "load.r r0"->"new java.lang.StringBuilder";
+    "new java.lang.StringBuilder"->"dup1.r";
+    "dup1.r"->"push \"http://www.youtube.com/get_video?video_id=\"";
+    "push \"http://www.youtube.com/get_video?video_id=\""->"specialinvoke <java.lang.StringBuilder: void <init>(java.lang.String)>";
+    "specialinvoke <java.lang.StringBuilder: void <init>(java.lang.String)>"->"load.r r1";
+    "load.r r1"->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"push \"&t=\"";
+    "push \"&t=\""->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"load.r $r222";
+    "load.r $r222"->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "push \"&fmt=18&asv=2\""
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"push \"&fmt=18&asv=2\"";
+    "push \"&fmt=18&asv=2\""->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"virtualinvoke <java.lang.StringBuilder: java.lang.String toString()>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.String toString()>"->"specialinvoke <ZapiszJakoPL: java.lang.String getRedirUrl(java.lang.String)>";
+    "specialinvoke <ZapiszJakoPL: java.lang.String getRedirUrl(java.lang.String)>"->"store.r $r6";
+    "store.r $r6"->"load.r $r6";
+    "load.r $r6"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r $r6";
+    "load.r $r6"->"staticinvoke <java.net.URLDecoder: java.lang.String decode(java.lang.String)>";
+    "staticinvoke <java.net.URLDecoder: java.lang.String decode(java.lang.String)>"->"store.r $r122";
+    "store.r $r122"->"new java.net.URL";
+    "new java.net.URL"->"store.r $r6";
+    "store.r $r6"->"load.r $r6";
+    "load.r $r6"->"new java.lang.StringBuilder";
+    "new java.lang.StringBuilder"->"dup1.r";
+    "push \"javascript:zapiszjakopl_append(\'MP4\', \'High Quality - 480x360\', \'\""
+    "dup1.r"->"push \"javascript:zapiszjakopl_append(\'MP4\', \'High Quality - 480x360\', \'\"";
+    "push \"javascript:zapiszjakopl_append(\'MP4\', \'High Quality - 480x360\', \'\""->"specialinvoke <java.lang.StringBuilder: void <init>(java.lang.String)>";
+    "specialinvoke <java.lang.StringBuilder: void <init>(java.lang.String)>"->"load.r $r122";
+    "load.r $r122"->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"push \"\', \'\"";
+    "push \"\', \'\""->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"load.r r2";
+    "load.r r2"->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"push \"\');\"";
+    "push \"\');\""->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"virtualinvoke <java.lang.StringBuilder: java.lang.String toString()>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.String toString()>"->"specialinvoke <java.net.URL: void <init>(java.lang.String)>";
+    "specialinvoke <java.net.URL: void <init>(java.lang.String)>"->"load.r r0";
+    "load.r r0"->"virtualinvoke <ZapiszJakoPL: java.applet.AppletContext getAppletContext()>";
+    "virtualinvoke <ZapiszJakoPL: java.applet.AppletContext getAppletContext()>"->"load.r $r6";
+    "load.r $r6"->"interfaceinvoke <java.applet.AppletContext: void showDocument(java.net.URL)> 1";
+    "interfaceinvoke <java.applet.AppletContext: void showDocument(java.net.URL)> 1"->"load.r r0";
+    "load.r r0"->"load.r r231";
+    "push \"22%7C\""
+    "load.r r231"->"push \"22%7C\"";
+    "push \"22%7C\""->"push \"%2C\"";
+    "push \"%2C\""->"specialinvoke <ZapiszJakoPL: java.lang.String inbtwn(java.lang.String,java.lang.String,java.lang.String)>";
+    "specialinvoke <ZapiszJakoPL: java.lang.String inbtwn(java.lang.String,java.lang.String,java.lang.String)>"->"store.r $r6";
+    "store.r $r6"->"load.r $r6";
+    "load.r $r6"->"ifnonnull load.r $r6";
+    "ifnonnull load.r $r6"->"load.r r0";
+    "load.r r0"->"new java.lang.StringBuilder";
+    "new java.lang.StringBuilder"->"dup1.r";
+    "dup1.r"->"push \"http://www.youtube.com/get_video?video_id=\"";
+    "push \"http://www.youtube.com/get_video?video_id=\""->"specialinvoke <java.lang.StringBuilder: void <init>(java.lang.String)>";
+    "specialinvoke <java.lang.StringBuilder: void <init>(java.lang.String)>"->"load.r r1";
+    "load.r r1"->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"push \"&t=\"";
+    "push \"&t=\""->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"load.r $r222";
+    "load.r $r222"->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "push \"&fmt=22&asv=2\""
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"push \"&fmt=22&asv=2\"";
+    "push \"&fmt=22&asv=2\""->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"virtualinvoke <java.lang.StringBuilder: java.lang.String toString()>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.String toString()>"->"specialinvoke <ZapiszJakoPL: java.lang.String getRedirUrl(java.lang.String)>";
+    "specialinvoke <ZapiszJakoPL: java.lang.String getRedirUrl(java.lang.String)>"->"store.r $r6";
+    "store.r $r6"->"load.r $r6";
+    "load.r $r6"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r $r6";
+    "load.r $r6"->"staticinvoke <java.net.URLDecoder: java.lang.String decode(java.lang.String)>";
+    "staticinvoke <java.net.URLDecoder: java.lang.String decode(java.lang.String)>"->"store.r $r122";
+    "store.r $r122"->"new java.net.URL";
+    "new java.net.URL"->"store.r $r6";
+    "store.r $r6"->"load.r $r6";
+    "load.r $r6"->"new java.lang.StringBuilder";
+    "new java.lang.StringBuilder"->"dup1.r";
+    "push \"javascript:zapiszjakopl_append(\'MP4\', \'High Quality - 1280x720\', \'\""
+    "dup1.r"->"push \"javascript:zapiszjakopl_append(\'MP4\', \'High Quality - 1280x720\', \'\"";
+    "push \"javascript:zapiszjakopl_append(\'MP4\', \'High Quality - 1280x720\', \'\""->"specialinvoke <java.lang.StringBuilder: void <init>(java.lang.String)>";
+    "specialinvoke <java.lang.StringBuilder: void <init>(java.lang.String)>"->"load.r $r122";
+    "load.r $r122"->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"push \"\', \'\"";
+    "push \"\', \'\""->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"load.r r2";
+    "load.r r2"->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"push \"\');\"";
+    "push \"\');\""->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"virtualinvoke <java.lang.StringBuilder: java.lang.String toString()>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.String toString()>"->"specialinvoke <java.net.URL: void <init>(java.lang.String)>";
+    "specialinvoke <java.net.URL: void <init>(java.lang.String)>"->"load.r r0";
+    "load.r r0"->"virtualinvoke <ZapiszJakoPL: java.applet.AppletContext getAppletContext()>";
+    "virtualinvoke <ZapiszJakoPL: java.applet.AppletContext getAppletContext()>"->"load.r $r6";
+    "load.r $r6"->"interfaceinvoke <java.applet.AppletContext: void showDocument(java.net.URL)> 1";
+    "interfaceinvoke <java.applet.AppletContext: void showDocument(java.net.URL)> 1"->"load.r r0";
+    "load.r r0"->"load.r r231";
+    "push \"37%7C\""
+    "load.r r231"->"push \"37%7C\"";
+    "push \"37%7C\""->"push \"%2C\"";
+    "push \"%2C\""->"specialinvoke <ZapiszJakoPL: java.lang.String inbtwn(java.lang.String,java.lang.String,java.lang.String)>";
+    "specialinvoke <ZapiszJakoPL: java.lang.String inbtwn(java.lang.String,java.lang.String,java.lang.String)>"->"store.r $r6";
+    "store.r $r6"->"load.r $r6";
+    "load.r $r6"->"ifnonnull load.r $r6";
+    "ifnonnull load.r $r6"->"load.r r0";
+    "load.r r0"->"new java.lang.StringBuilder";
+    "new java.lang.StringBuilder"->"dup1.r";
+    "dup1.r"->"push \"http://www.youtube.com/get_video?video_id=\"";
+    "push \"http://www.youtube.com/get_video?video_id=\""->"specialinvoke <java.lang.StringBuilder: void <init>(java.lang.String)>";
+    "specialinvoke <java.lang.StringBuilder: void <init>(java.lang.String)>"->"load.r r1";
+    "load.r r1"->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"push \"&t=\"";
+    "push \"&t=\""->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"load.r $r222";
+    "load.r $r222"->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "push \"&fmt=37&asv=2\""
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"push \"&fmt=37&asv=2\"";
+    "push \"&fmt=37&asv=2\""->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"virtualinvoke <java.lang.StringBuilder: java.lang.String toString()>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.String toString()>"->"specialinvoke <ZapiszJakoPL: java.lang.String getRedirUrl(java.lang.String)>";
+    "specialinvoke <ZapiszJakoPL: java.lang.String getRedirUrl(java.lang.String)>"->"store.r $r6";
+    "store.r $r6"->"load.r $r6";
+    "load.r $r6"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r $r6";
+    "load.r $r6"->"staticinvoke <java.net.URLDecoder: java.lang.String decode(java.lang.String)>";
+    "staticinvoke <java.net.URLDecoder: java.lang.String decode(java.lang.String)>"->"store.r $r122";
+    "store.r $r122"->"new java.net.URL";
+    "new java.net.URL"->"store.r $r6";
+    "store.r $r6"->"load.r $r6";
+    "load.r $r6"->"new java.lang.StringBuilder";
+    "new java.lang.StringBuilder"->"dup1.r";
+    "push \"javascript:zapiszjakopl_append(\'MP4\', \'High Quality - 1920x1280\', \'\""
+    "dup1.r"->"push \"javascript:zapiszjakopl_append(\'MP4\', \'High Quality - 1920x1280\', \'\"";
+    "push \"javascript:zapiszjakopl_append(\'MP4\', \'High Quality - 1920x1280\', \'\""->"specialinvoke <java.lang.StringBuilder: void <init>(java.lang.String)>";
+    "specialinvoke <java.lang.StringBuilder: void <init>(java.lang.String)>"->"load.r $r122";
+    "load.r $r122"->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"push \"\', \'\"";
+    "push \"\', \'\""->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"load.r r2";
+    "load.r r2"->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"push \"\');\"";
+    "push \"\');\""->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"virtualinvoke <java.lang.StringBuilder: java.lang.String toString()>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.String toString()>"->"specialinvoke <java.net.URL: void <init>(java.lang.String)>";
+    "specialinvoke <java.net.URL: void <init>(java.lang.String)>"->"load.r r0";
+    "load.r r0"->"virtualinvoke <ZapiszJakoPL: java.applet.AppletContext getAppletContext()>";
+    "virtualinvoke <ZapiszJakoPL: java.applet.AppletContext getAppletContext()>"->"load.r $r6";
+    "load.r $r6"->"interfaceinvoke <java.applet.AppletContext: void showDocument(java.net.URL)> 1";
+    "interfaceinvoke <java.applet.AppletContext: void showDocument(java.net.URL)> 1"->"load.r r0";
+    "load.r r0"->"load.r r231";
+    "push \"38%7C\""
+    "load.r r231"->"push \"38%7C\"";
+    "push \"38%7C\""->"push \"%2C\"";
+    "push \"%2C\""->"specialinvoke <ZapiszJakoPL: java.lang.String inbtwn(java.lang.String,java.lang.String,java.lang.String)>";
+    "specialinvoke <ZapiszJakoPL: java.lang.String inbtwn(java.lang.String,java.lang.String,java.lang.String)>"->"store.r r231";
+    "store.r r231"->"load.r r231";
+    "ifnonnull load.r r231"
+    "load.r r231"->"ifnonnull load.r r231";
+    "ifnonnull load.r r231"->"load.r r0";
+    "load.r r0"->"new java.lang.StringBuilder";
+    "new java.lang.StringBuilder"->"dup1.r";
+    "dup1.r"->"push \"http://www.youtube.com/get_video?video_id=\"";
+    "push \"http://www.youtube.com/get_video?video_id=\""->"specialinvoke <java.lang.StringBuilder: void <init>(java.lang.String)>";
+    "specialinvoke <java.lang.StringBuilder: void <init>(java.lang.String)>"->"load.r r1";
+    "load.r r1"->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"push \"&t=\"";
+    "push \"&t=\""->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"load.r $r222";
+    "load.r $r222"->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"push \"&fmt=37&asv=2\"";
+    "push \"&fmt=37&asv=2\""->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"virtualinvoke <java.lang.StringBuilder: java.lang.String toString()>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.String toString()>"->"specialinvoke <ZapiszJakoPL: java.lang.String getRedirUrl(java.lang.String)>";
+    "specialinvoke <ZapiszJakoPL: java.lang.String getRedirUrl(java.lang.String)>"->"store.r r231";
+    "store.r r231"->"load.r r231";
+    "ifnull goto new java.net.URL"
+    "load.r r231"->"ifnull goto new java.net.URL";
+    "ifnull goto new java.net.URL"->"load.r r231";
+    "load.r r231"->"staticinvoke <java.net.URLDecoder: java.lang.String decode(java.lang.String)>";
+    "staticinvoke <java.net.URLDecoder: java.lang.String decode(java.lang.String)>"->"store.r $r222";
+    "store.r $r222"->"new java.net.URL";
+    "new java.net.URL"->"store.r r1";
+    "store.r r1"->"load.r r1";
+    "load.r r1"->"new java.lang.StringBuilder";
+    "new java.lang.StringBuilder"->"dup1.r";
+    "push \"javascript:zapiszjakopl_append(\'MP4\', \'Mega Quality - 3820x2160\', \'\""
+    "dup1.r"->"push \"javascript:zapiszjakopl_append(\'MP4\', \'Mega Quality - 3820x2160\', \'\"";
+    "push \"javascript:zapiszjakopl_append(\'MP4\', \'Mega Quality - 3820x2160\', \'\""->"specialinvoke <java.lang.StringBuilder: void <init>(java.lang.String)>";
+    "specialinvoke <java.lang.StringBuilder: void <init>(java.lang.String)>"->"load.r $r222";
+    "load.r $r222"->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"push \"\', \'\"";
+    "push \"\', \'\""->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"load.r r2";
+    "load.r r2"->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"push \"\');\"";
+    "push \"\');\""->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"virtualinvoke <java.lang.StringBuilder: java.lang.String toString()>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.String toString()>"->"specialinvoke <java.net.URL: void <init>(java.lang.String)>";
+    "specialinvoke <java.net.URL: void <init>(java.lang.String)>"->"load.r r0";
+    "load.r r0"->"virtualinvoke <ZapiszJakoPL: java.applet.AppletContext getAppletContext()>";
+    "virtualinvoke <ZapiszJakoPL: java.applet.AppletContext getAppletContext()>"->"load.r r1";
+    "load.r r1"->"interfaceinvoke <java.applet.AppletContext: void showDocument(java.net.URL)> 1";
+    "goto new java.net.URL"
+    "interfaceinvoke <java.applet.AppletContext: void showDocument(java.net.URL)> 1"->"goto new java.net.URL";
+    "goto new java.net.URL"->"new java.net.URL";
+    "new java.net.URL"->"store.r r1";
+    "store.r r1"->"load.r r1";
+    "load.r r1"->"new java.lang.StringBuilder";
+    "new java.lang.StringBuilder"->"dup1.r";
+    "store.r r0"
+    "dup1.r"->"store.r r0";
+    "goto return"
+    "store.r r0"->"goto return";
+    "return"
+    "goto return"->"return";
+    "dup1.r"->"store.r r0";
+    "specialinvoke <java.lang.StringBuilder: void <init>()>"
+    "dup1.r"->"specialinvoke <java.lang.StringBuilder: void <init>()>";
+    "push \"javascript:zapiszjakopl_done();\""
+    "specialinvoke <java.lang.StringBuilder: void <init>()>"->"push \"javascript:zapiszjakopl_done();\"";
+    "push \"javascript:zapiszjakopl_done();\""->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"virtualinvoke <java.lang.StringBuilder: java.lang.String toString()>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.String toString()>"->"specialinvoke <java.net.URL: void <init>(java.lang.String)>";
+    "specialinvoke <java.net.URL: void <init>(java.lang.String)>"->"load.r r0";
+    "load.r r0"->"virtualinvoke <ZapiszJakoPL: java.applet.AppletContext getAppletContext()>";
+    "virtualinvoke <ZapiszJakoPL: java.applet.AppletContext getAppletContext()>"->"load.r r1";
+    "load.r r1"->"interfaceinvoke <java.applet.AppletContext: void showDocument(java.net.URL)> 1";
+    "goto goto return"
+    "interfaceinvoke <java.applet.AppletContext: void showDocument(java.net.URL)> 1"->"goto goto return";
+    "interfaceinvoke <java.applet.AppletContext: void showDocument(java.net.URL)> 1"->"store.r r1";
+    "store.r r1"->"goto new java.net.URL";
+    "ifeq load.r r1"->"load.r r1";
+    "push \"wrzuta.pl\""
+    "load.r r1"->"push \"wrzuta.pl\"";
+    "push \"wrzuta.pl\""->"virtualinvoke <java.lang.String: boolean contains(java.lang.CharSequence)>";
+    "ifeq new java.net.URL"
+    "virtualinvoke <java.lang.String: boolean contains(java.lang.CharSequence)>"->"ifeq new java.net.URL";
+    "ifeq new java.net.URL"->"load.r $r222";
+    "push \"/audio/\""
+    "load.r $r222"->"push \"/audio/\"";
+    "push \"/audio/\""->"virtualinvoke <java.lang.String: boolean contains(java.lang.CharSequence)>";
+    "ifeq load.r $r222"
+    "virtualinvoke <java.lang.String: boolean contains(java.lang.CharSequence)>"->"ifeq load.r $r222";
+    "ifeq load.r $r222"->"load.r r0";
+    "load.r r0"->"load.r $r222";
+    "load.r $r222"->"push \"/audio/\"";
+    "push \"/xml/plik/\""
+    "push \"/audio/\""->"push \"/xml/plik/\"";
+    "virtualinvoke <java.lang.String: java.lang.String replace(java.lang.CharSequence,java.lang.CharSequence)>"
+    "push \"/xml/plik/\""->"virtualinvoke <java.lang.String: java.lang.String replace(java.lang.CharSequence,java.lang.CharSequence)>";
+    "virtualinvoke <java.lang.String: java.lang.String replace(java.lang.CharSequence,java.lang.CharSequence)>"->"store.r r1";
+    "store.r r1"->"new java.lang.StringBuilder";
+    "new java.lang.StringBuilder"->"dup1.r";
+    "dup1.r"->"specialinvoke <java.lang.StringBuilder: void <init>()>";
+    "specialinvoke <java.lang.StringBuilder: void <init>()>"->"load.r r1";
+    "load.r r1"->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "push \"/wrzuta.pl/undefined/\""
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"push \"/wrzuta.pl/undefined/\"";
+    "push \"/wrzuta.pl/undefined/\""->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"virtualinvoke <java.lang.StringBuilder: java.lang.String toString()>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.String toString()>"->"push \"GET\"";
+    "push \"GET\""->"specialinvoke <ZapiszJakoPL: java.lang.String getUrlContent(java.lang.String,java.lang.String)>";
+    "push \"<![CDATA[\""
+    "specialinvoke <ZapiszJakoPL: java.lang.String getUrlContent(java.lang.String,java.lang.String)>"->"push \"<![CDATA[\"";
+    "push \"\""
+    "push \"<![CDATA[\""->"push \"\"";
+    "push \"\""->"virtualinvoke <java.lang.String: java.lang.String replace(java.lang.CharSequence,java.lang.CharSequence)>";
+    "virtualinvoke <java.lang.String: java.lang.String toString()>"
+    "virtualinvoke <java.lang.String: java.lang.String replace(java.lang.CharSequence,java.lang.CharSequence)>"->"virtualinvoke <java.lang.String: java.lang.String toString()>";
+    "push \"]]>\""
+    "virtualinvoke <java.lang.String: java.lang.String toString()>"->"push \"]]>\"";
+    "push \"]]>\""->"push \"\"";
+    "push \"\""->"virtualinvoke <java.lang.String: java.lang.String replace(java.lang.CharSequence,java.lang.CharSequence)>";
+    "virtualinvoke <java.lang.String: java.lang.String replace(java.lang.CharSequence,java.lang.CharSequence)>"->"virtualinvoke <java.lang.String: java.lang.String toString()>";
+    "virtualinvoke <java.lang.String: java.lang.String toString()>"->"push \"]]>\"";
+    "push \"]]>\""->"push \"\"";
+    "push \"\""->"virtualinvoke <java.lang.String: java.lang.String replace(java.lang.CharSequence,java.lang.CharSequence)>";
+    "virtualinvoke <java.lang.String: java.lang.String replace(java.lang.CharSequence,java.lang.CharSequence)>"->"virtualinvoke <java.lang.String: java.lang.String toString()>";
+    "store.r r274"
+    "virtualinvoke <java.lang.String: java.lang.String toString()>"->"store.r r274";
+    "store.r r274"->"load.r r0";
+    "load.r r274"
+    "load.r r0"->"load.r r274";
+    "push \"<fileId>\""
+    "load.r r274"->"push \"<fileId>\"";
+    "push \"</fileId>\""
+    "push \"<fileId>\""->"push \"</fileId>\"";
+    "push \"</fileId>\""->"specialinvoke <ZapiszJakoPL: java.lang.String inbtwn(java.lang.String,java.lang.String,java.lang.String)>";
+    "specialinvoke <ZapiszJakoPL: java.lang.String inbtwn(java.lang.String,java.lang.String,java.lang.String)>"->"store.r $r123";
+    "store.r $r123"->"load.r r0";
+    "load.r r0"->"load.r r274";
+    "push \"<name>\""
+    "load.r r274"->"push \"<name>\"";
+    "push \"</name>\""
+    "push \"<name>\""->"push \"</name>\"";
+    "push \"</name>\""->"specialinvoke <ZapiszJakoPL: java.lang.String inbtwn(java.lang.String,java.lang.String,java.lang.String)>";
+    "specialinvoke <ZapiszJakoPL: java.lang.String inbtwn(java.lang.String,java.lang.String,java.lang.String)>"->"store.r r1";
+    "store.r r1"->"load.r r0";
+    "load.r r0"->"load.r r274";
+    "push \"<filePageUrl>\""
+    "load.r r274"->"push \"<filePageUrl>\"";
+    "push \"</filePageUrl>\""
+    "push \"<filePageUrl>\""->"push \"</filePageUrl>\"";
+    "push \"</filePageUrl>\""->"specialinvoke <ZapiszJakoPL: java.lang.String inbtwn(java.lang.String,java.lang.String,java.lang.String)>";
+    "specialinvoke <ZapiszJakoPL: java.lang.String inbtwn(java.lang.String,java.lang.String,java.lang.String)>"->"store.r r2";
+    "store.r r2"->"load.r r0";
+    "load.r r0"->"load.r r274";
+    "push \"<key>\""
+    "load.r r274"->"push \"<key>\"";
+    "push \"</key>\""
+    "push \"<key>\""->"push \"</key>\"";
+    "push \"</key>\""->"specialinvoke <ZapiszJakoPL: java.lang.String inbtwn(java.lang.String,java.lang.String,java.lang.String)>";
+    "specialinvoke <ZapiszJakoPL: java.lang.String inbtwn(java.lang.String,java.lang.String,java.lang.String)>"->"store.r $r222";
+    "store.r $r222"->"load.r r0";
+    "load.r r0"->"load.r r274";
+    "push \"<login>\""
+    "load.r r274"->"push \"<login>\"";
+    "push \"</login>\""
+    "push \"<login>\""->"push \"</login>\"";
+    "push \"</login>\""->"specialinvoke <ZapiszJakoPL: java.lang.String inbtwn(java.lang.String,java.lang.String,java.lang.String)>";
+    "specialinvoke <ZapiszJakoPL: java.lang.String inbtwn(java.lang.String,java.lang.String,java.lang.String)>"->"store.r r231";
+    "store.r r231"->"load.r r0";
+    "load.r r0"->"load.r r274";
+    "push \"<size>\""
+    "load.r r274"->"push \"<size>\"";
+    "push \"</size>\""
+    "push \"<size>\""->"push \"</size>\"";
+    "push \"</size>\""->"specialinvoke <ZapiszJakoPL: java.lang.String inbtwn(java.lang.String,java.lang.String,java.lang.String)>";
+    "specialinvoke <ZapiszJakoPL: java.lang.String inbtwn(java.lang.String,java.lang.String,java.lang.String)>"->"store.r $r6";
+    "store.r $r6"->"load.r r0";
+    "load.r r0"->"load.r r274";
+    "push \"<duration>\""
+    "load.r r274"->"push \"<duration>\"";
+    "push \"</duration>\""
+    "push \"<duration>\""->"push \"</duration>\"";
+    "push \"</duration>\""->"specialinvoke <ZapiszJakoPL: java.lang.String inbtwn(java.lang.String,java.lang.String,java.lang.String)>";
+    "specialinvoke <ZapiszJakoPL: java.lang.String inbtwn(java.lang.String,java.lang.String,java.lang.String)>"->"store.r $r122";
+    "store.r $r122"->"load.r r0";
+    "load.r r0"->"load.r r274";
+    "push \"<tags>\""
+    "load.r r274"->"push \"<tags>\"";
+    "push \"</tags>\""
+    "push \"<tags>\""->"push \"</tags>\"";
+    "push \"</tags>\""->"specialinvoke <ZapiszJakoPL: java.lang.String inbtwn(java.lang.String,java.lang.String,java.lang.String)>";
+    "push \"\\<.*?\\>\""
+    "specialinvoke <ZapiszJakoPL: java.lang.String inbtwn(java.lang.String,java.lang.String,java.lang.String)>"->"push \"\\<.*?\\>\"";
+    "push \"\\<.*?\\>\""->"push \"\"";
+    "virtualinvoke <java.lang.String: java.lang.String replaceAll(java.lang.String,java.lang.String)>"
+    "push \"\""->"virtualinvoke <java.lang.String: java.lang.String replaceAll(java.lang.String,java.lang.String)>";
+    "virtualinvoke <java.lang.String: java.lang.String replaceAll(java.lang.String,java.lang.String)>"->"store.r r274";
+    "store.r r274"->"new java.net.URL";
+    "store.r $r31"
+    "new java.net.URL"->"store.r $r31";
+    "load.r $r31"
+    "store.r $r31"->"load.r $r31";
+    "load.r $r31"->"new java.lang.StringBuilder";
+    "new java.lang.StringBuilder"->"dup1.r";
+    "dup1.r"->"store.r $r123";
+    "store.r $r123"->"load.r r0";
+    "load.r r0"->"new java.lang.StringBuilder";
+    "new java.lang.StringBuilder"->"dup1.r";
+    "push \"http://www.zapiszjako.pl/baza/addwrzuta.phtml?typ=1&tytul=\""
+    "dup1.r"->"push \"http://www.zapiszjako.pl/baza/addwrzuta.phtml?typ=1&tytul=\"";
+    "push \"http://www.zapiszjako.pl/baza/addwrzuta.phtml?typ=1&tytul=\""->"specialinvoke <java.lang.StringBuilder: void <init>(java.lang.String)>";
+    "specialinvoke <java.lang.StringBuilder: void <init>(java.lang.String)>"->"load.r r1";
+    "load.r r1"->"push \"UTF-8\"";
+    "staticinvoke <java.net.URLEncoder: java.lang.String encode(java.lang.String,java.lang.String)>"
+    "push \"UTF-8\""->"staticinvoke <java.net.URLEncoder: java.lang.String encode(java.lang.String,java.lang.String)>";
+    "staticinvoke <java.net.URLEncoder: java.lang.String encode(java.lang.String,java.lang.String)>"->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "push \"&id_org=\""
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"push \"&id_org=\"";
+    "push \"&id_org=\""->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"load.r $r222";
+    "load.r $r222"->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "push \"&login=\""
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"push \"&login=\"";
+    "push \"&login=\""->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"load.r r231";
+    "load.r r231"->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "push \"&wielkosc=\""
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"push \"&wielkosc=\"";
+    "push \"&wielkosc=\""->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"load.r $r6";
+    "load.r $r6"->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "push \"&czas=\""
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"push \"&czas=\"";
+    "push \"&czas=\""->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"load.r $r122";
+    "load.r $r122"->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "push \"&adres=\""
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"push \"&adres=\"";
+    "push \"&adres=\""->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"load.r r2";
+    "load.r r2"->"push \"UTF-8\"";
+    "push \"UTF-8\""->"staticinvoke <java.net.URLEncoder: java.lang.String encode(java.lang.String,java.lang.String)>";
+    "staticinvoke <java.net.URLEncoder: java.lang.String encode(java.lang.String,java.lang.String)>"->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "push \"&tagi=\""
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"push \"&tagi=\"";
+    "push \"&tagi=\""->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"load.r r274";
+    "load.r r274"->"push \"UTF-8\"";
+    "push \"UTF-8\""->"staticinvoke <java.net.URLEncoder: java.lang.String encode(java.lang.String,java.lang.String)>";
+    "staticinvoke <java.net.URLEncoder: java.lang.String encode(java.lang.String,java.lang.String)>"->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"virtualinvoke <java.lang.StringBuilder: java.lang.String toString()>";
+    "push \"POST\""
+    "virtualinvoke <java.lang.StringBuilder: java.lang.String toString()>"->"push \"POST\"";
+    "push \"POST\""->"specialinvoke <ZapiszJakoPL: java.lang.String getUrlContent(java.lang.String,java.lang.String)>";
+    "pop"
+    "specialinvoke <ZapiszJakoPL: java.lang.String getUrlContent(java.lang.String,java.lang.String)>"->"pop";
+    "goto goto new java.net.URL"
+    "pop"->"goto goto new java.net.URL";
+    "goto goto new java.net.URL"->"goto new java.net.URL";
+    "specialinvoke <ZapiszJakoPL: java.lang.String getUrlContent(java.lang.String,java.lang.String)>"->"store.r r1";
+    "dup1.r"->"specialinvoke <java.lang.StringBuilder: void <init>()>";
+    "push \"javascript:zapiszjakopl_append(\'MP3\', \'\', \'\""
+    "specialinvoke <java.lang.StringBuilder: void <init>()>"->"push \"javascript:zapiszjakopl_append(\'MP3\', \'\', \'\"";
+    "push \"javascript:zapiszjakopl_append(\'MP3\', \'\', \'\""->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"load.r $r123";
+    "load.r $r123"->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"push \"\', \'\"";
+    "push \"\', \'\""->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"load.r r0";
+    "load.r r0"->"load.r r1";
+    "specialinvoke <ZapiszJakoPL: java.lang.String setHTMLEntity2(java.lang.String)>"
+    "load.r r1"->"specialinvoke <ZapiszJakoPL: java.lang.String setHTMLEntity2(java.lang.String)>";
+    "specialinvoke <ZapiszJakoPL: java.lang.String setHTMLEntity2(java.lang.String)>"->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"push \"\');\"";
+    "push \"\');\""->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"virtualinvoke <java.lang.StringBuilder: java.lang.String toString()>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.String toString()>"->"specialinvoke <java.net.URL: void <init>(java.lang.String)>";
+    "specialinvoke <java.net.URL: void <init>(java.lang.String)>"->"load.r r0";
+    "load.r r0"->"virtualinvoke <ZapiszJakoPL: java.applet.AppletContext getAppletContext()>";
+    "virtualinvoke <ZapiszJakoPL: java.applet.AppletContext getAppletContext()>"->"load.r $r31";
+    "load.r $r31"->"interfaceinvoke <java.applet.AppletContext: void showDocument(java.net.URL)> 1";
+    "goto load.r r0"
+    "interfaceinvoke <java.applet.AppletContext: void showDocument(java.net.URL)> 1"->"goto load.r r0";
+    "ifeq load.r $r222"->"load.r $r222";
+    "push \"/film/\""
+    "load.r $r222"->"push \"/film/\"";
+    "push \"/film/\""->"virtualinvoke <java.lang.String: boolean contains(java.lang.CharSequence)>";
+    "ifeq goto new java.net.URL"
+    "virtualinvoke <java.lang.String: boolean contains(java.lang.CharSequence)>"->"ifeq goto new java.net.URL";
+    "ifeq goto new java.net.URL"->"load.r r0";
+    "load.r r0"->"load.r $r222";
+    "load.r $r222"->"push \"/film/\"";
+    "push \"/film/\""->"push \"/xml/plik/\"";
+    "push \"/xml/plik/\""->"virtualinvoke <java.lang.String: java.lang.String replace(java.lang.CharSequence,java.lang.CharSequence)>";
+    "virtualinvoke <java.lang.String: java.lang.String replace(java.lang.CharSequence,java.lang.CharSequence)>"->"push \"GET\"";
+    "push \"GET\""->"specialinvoke <ZapiszJakoPL: java.lang.String getUrlContent(java.lang.String,java.lang.String)>";
+    "specialinvoke <ZapiszJakoPL: java.lang.String getUrlContent(java.lang.String,java.lang.String)>"->"push \"<![CDATA[\"";
+    "push \"<![CDATA[\""->"push \"\"";
+    "push \"\""->"virtualinvoke <java.lang.String: java.lang.String replace(java.lang.CharSequence,java.lang.CharSequence)>";
+    "virtualinvoke <java.lang.String: java.lang.String replace(java.lang.CharSequence,java.lang.CharSequence)>"->"virtualinvoke <java.lang.String: java.lang.String toString()>";
+    "virtualinvoke <java.lang.String: java.lang.String toString()>"->"push \"]]>\"";
+    "push \"]]>\""->"push \"\"";
+    "push \"\""->"virtualinvoke <java.lang.String: java.lang.String replace(java.lang.CharSequence,java.lang.CharSequence)>";
+    "virtualinvoke <java.lang.String: java.lang.String replace(java.lang.CharSequence,java.lang.CharSequence)>"->"virtualinvoke <java.lang.String: java.lang.String toString()>";
+    "virtualinvoke <java.lang.String: java.lang.String toString()>"->"store.r r231";
+    "store.r r231"->"load.r r0";
+    "load.r r0"->"load.r r231";
+    "load.r r231"->"push \"<fileId>\"";
+    "push \"<fileId>\""->"push \"</fileId>\"";
+    "push \"</fileId>\""->"specialinvoke <ZapiszJakoPL: java.lang.String inbtwn(java.lang.String,java.lang.String,java.lang.String)>";
+    "specialinvoke <ZapiszJakoPL: java.lang.String inbtwn(java.lang.String,java.lang.String,java.lang.String)>"->"store.r $r222";
+    "store.r $r222"->"load.r r0";
+    "load.r r0"->"load.r r231";
+    "load.r r231"->"push \"<name>\"";
+    "push \"<name>\""->"push \"</name>\"";
+    "push \"</name>\""->"specialinvoke <ZapiszJakoPL: java.lang.String inbtwn(java.lang.String,java.lang.String,java.lang.String)>";
+    "specialinvoke <ZapiszJakoPL: java.lang.String inbtwn(java.lang.String,java.lang.String,java.lang.String)>"->"store.r r1";
+    "store.r r1"->"load.r r0";
+    "load.r r0"->"load.r r231";
+    "load.r r231"->"push \"<filePageUrl>\"";
+    "push \"<filePageUrl>\""->"push \"</filePageUrl>\"";
+    "push \"</filePageUrl>\""->"specialinvoke <ZapiszJakoPL: java.lang.String inbtwn(java.lang.String,java.lang.String,java.lang.String)>";
+    "specialinvoke <ZapiszJakoPL: java.lang.String inbtwn(java.lang.String,java.lang.String,java.lang.String)>"->"store.r r2";
+    "store.r r2"->"load.r r0";
+    "load.r r0"->"load.r r231";
+    "load.r r231"->"push \"<key>\"";
+    "push \"<key>\""->"push \"</key>\"";
+    "push \"</key>\""->"specialinvoke <ZapiszJakoPL: java.lang.String inbtwn(java.lang.String,java.lang.String,java.lang.String)>";
+    "specialinvoke <ZapiszJakoPL: java.lang.String inbtwn(java.lang.String,java.lang.String,java.lang.String)>"->"store.r r231";
+    "store.r r231"->"new java.net.URL";
+    "new java.net.URL"->"store.r $r6";
+    "store.r $r6"->"load.r $r6";
+    "load.r $r6"->"new java.lang.StringBuilder";
+    "new java.lang.StringBuilder"->"dup1.r";
+    "dup1.r"->"store.r $r222";
+    "store.r $r222"->"load.r r0";
+    "load.r r0"->"new java.lang.StringBuilder";
+    "new java.lang.StringBuilder"->"dup1.r";
+    "push \"http://www.zapiszjako.pl/baza/addwrzuta.phtml?typ=2&tytul=\""
+    "dup1.r"->"push \"http://www.zapiszjako.pl/baza/addwrzuta.phtml?typ=2&tytul=\"";
+    "push \"http://www.zapiszjako.pl/baza/addwrzuta.phtml?typ=2&tytul=\""->"specialinvoke <java.lang.StringBuilder: void <init>(java.lang.String)>";
+    "specialinvoke <java.lang.StringBuilder: void <init>(java.lang.String)>"->"load.r r1";
+    "load.r r1"->"push \"UTF-8\"";
+    "push \"UTF-8\""->"staticinvoke <java.net.URLEncoder: java.lang.String encode(java.lang.String,java.lang.String)>";
+    "staticinvoke <java.net.URLEncoder: java.lang.String encode(java.lang.String,java.lang.String)>"->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"push \"&id_org=\"";
+    "push \"&id_org=\""->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"load.r r231";
+    "load.r r231"->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"push \"&adres=\"";
+    "push \"&adres=\""->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"load.r r2";
+    "load.r r2"->"push \"UTF-8\"";
+    "push \"UTF-8\""->"staticinvoke <java.net.URLEncoder: java.lang.String encode(java.lang.String,java.lang.String)>";
+    "staticinvoke <java.net.URLEncoder: java.lang.String encode(java.lang.String,java.lang.String)>"->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"virtualinvoke <java.lang.StringBuilder: java.lang.String toString()>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.String toString()>"->"push \"POST\"";
+    "push \"POST\""->"specialinvoke <ZapiszJakoPL: java.lang.String getUrlContent(java.lang.String,java.lang.String)>";
+    "specialinvoke <ZapiszJakoPL: java.lang.String getUrlContent(java.lang.String,java.lang.String)>"->"pop";
+    "dup1.r"->"specialinvoke <java.lang.StringBuilder: void <init>()>";
+    "push \"javascript:zapiszjakopl_append(\'FLV\', \'\', \'\""
+    "specialinvoke <java.lang.StringBuilder: void <init>()>"->"push \"javascript:zapiszjakopl_append(\'FLV\', \'\', \'\"";
+    "push \"javascript:zapiszjakopl_append(\'FLV\', \'\', \'\""->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"load.r $r222";
+    "load.r $r222"->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"push \"\', \'\"";
+    "push \"\', \'\""->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"load.r r0";
+    "load.r r0"->"load.r r1";
+    "load.r r1"->"specialinvoke <ZapiszJakoPL: java.lang.String setHTMLEntity2(java.lang.String)>";
+    "specialinvoke <ZapiszJakoPL: java.lang.String setHTMLEntity2(java.lang.String)>"->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"push \"\');\"";
+    "push \"\');\""->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"virtualinvoke <java.lang.StringBuilder: java.lang.String toString()>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.String toString()>"->"specialinvoke <java.net.URL: void <init>(java.lang.String)>";
+    "specialinvoke <java.net.URL: void <init>(java.lang.String)>"->"load.r r0";
+    "load.r r0"->"virtualinvoke <ZapiszJakoPL: java.applet.AppletContext getAppletContext()>";
+    "virtualinvoke <ZapiszJakoPL: java.applet.AppletContext getAppletContext()>"->"load.r $r6";
+    "load.r $r6"->"interfaceinvoke <java.applet.AppletContext: void showDocument(java.net.URL)> 1";
+    "interfaceinvoke <java.applet.AppletContext: void showDocument(java.net.URL)> 1"->"goto load.r r0";
+}

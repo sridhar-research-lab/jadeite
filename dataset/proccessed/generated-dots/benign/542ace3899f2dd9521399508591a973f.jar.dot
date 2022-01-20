@@ -1,0 +1,54 @@
+digraph "" {
+    "r0 := @this: Runtux"
+    "load.r r0"
+    "r0 := @this: Runtux"->"load.r r0";
+    "push null"
+    "load.r r0"->"push null";
+    "virtualinvoke <java.awt.Container: void setLayout(java.awt.LayoutManager)>"
+    "push null"->"virtualinvoke <java.awt.Container: void setLayout(java.awt.LayoutManager)>";
+    "virtualinvoke <java.awt.Container: void setLayout(java.awt.LayoutManager)>"->"load.r r0";
+    "new Map"
+    "load.r r0"->"new Map";
+    "dup1.r"
+    "new Map"->"dup1.r";
+    "push 80"
+    "dup1.r"->"push 80";
+    "push 10"
+    "push 80"->"push 10";
+    "specialinvoke <Map: void <init>(int,int)>"
+    "push 10"->"specialinvoke <Map: void <init>(int,int)>";
+    "fieldput <Runtux: Map map>"
+    "specialinvoke <Map: void <init>(int,int)>"->"fieldput <Runtux: Map map>";
+    "fieldput <Runtux: Map map>"->"load.r r0";
+    "fieldget <Runtux: Map map>"
+    "load.r r0"->"fieldget <Runtux: Map map>";
+    "virtualinvoke <Map: void create()>"
+    "fieldget <Runtux: Map map>"->"virtualinvoke <Map: void create()>";
+    "virtualinvoke <Map: void create()>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "push 352"
+    "load.r r0"->"push 352";
+    "push 320"
+    "push 352"->"push 320";
+    "virtualinvoke <java.awt.Component: java.awt.Image createImage(int,int)>"
+    "push 320"->"virtualinvoke <java.awt.Component: java.awt.Image createImage(int,int)>";
+    "fieldput <Runtux: java.awt.Image buff>"
+    "virtualinvoke <java.awt.Component: java.awt.Image createImage(int,int)>"->"fieldput <Runtux: java.awt.Image buff>";
+    "fieldput <Runtux: java.awt.Image buff>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "virtualinvoke <java.awt.Component: void addKeyListener(java.awt.event.KeyListener)>"
+    "load.r r0"->"virtualinvoke <java.awt.Component: void addKeyListener(java.awt.event.KeyListener)>";
+    "virtualinvoke <java.awt.Component: void addKeyListener(java.awt.event.KeyListener)>"->"load.r r0";
+    "virtualinvoke <java.awt.Component: void requestFocus()>"
+    "load.r r0"->"virtualinvoke <java.awt.Component: void requestFocus()>";
+    "new java.lang.Thread"
+    "virtualinvoke <java.awt.Component: void requestFocus()>"->"new java.lang.Thread";
+    "new java.lang.Thread"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "specialinvoke <java.lang.Thread: void <init>(java.lang.Runnable)>"
+    "load.r r0"->"specialinvoke <java.lang.Thread: void <init>(java.lang.Runnable)>";
+    "virtualinvoke <java.lang.Thread: void start()>"
+    "specialinvoke <java.lang.Thread: void <init>(java.lang.Runnable)>"->"virtualinvoke <java.lang.Thread: void start()>";
+    "return"
+    "virtualinvoke <java.lang.Thread: void start()>"->"return";
+}

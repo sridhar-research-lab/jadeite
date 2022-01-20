@@ -1,0 +1,56 @@
+digraph "" {
+    "r0 := @this: myf.y.AppletX"
+    "new java.io.ObjectInputStream"
+    "r0 := @this: myf.y.AppletX"->"new java.io.ObjectInputStream";
+    "dup1.r"
+    "new java.io.ObjectInputStream"->"dup1.r";
+    "new java.io.ByteArrayInputStream"
+    "dup1.r"->"new java.io.ByteArrayInputStream";
+    "new java.io.ByteArrayInputStream"->"dup1.r";
+    "staticget <myf.y.AppletX: java.lang.String serializedObject>"
+    "dup1.r"->"staticget <myf.y.AppletX: java.lang.String serializedObject>";
+    "staticinvoke <myf.y.AppletX: byte[] StringToBytes(java.lang.String)>"
+    "staticget <myf.y.AppletX: java.lang.String serializedObject>"->"staticinvoke <myf.y.AppletX: byte[] StringToBytes(java.lang.String)>";
+    "specialinvoke <java.io.ByteArrayInputStream: void <init>(byte[])>"
+    "staticinvoke <myf.y.AppletX: byte[] StringToBytes(java.lang.String)>"->"specialinvoke <java.io.ByteArrayInputStream: void <init>(byte[])>";
+    "specialinvoke <java.io.ObjectInputStream: void <init>(java.io.InputStream)>"
+    "specialinvoke <java.io.ByteArrayInputStream: void <init>(byte[])>"->"specialinvoke <java.io.ObjectInputStream: void <init>(java.io.InputStream)>";
+    "virtualinvoke <java.io.ObjectInputStream: java.lang.Object readObject()>"
+    "specialinvoke <java.io.ObjectInputStream: void <init>(java.io.InputStream)>"->"virtualinvoke <java.io.ObjectInputStream: java.lang.Object readObject()>";
+    "ifnull goto return"
+    "virtualinvoke <java.io.ObjectInputStream: java.lang.Object readObject()>"->"ifnull goto return";
+    "staticget <myf.y.LoaderX: myf.y.LoaderX instance>"
+    "ifnull goto return"->"staticget <myf.y.LoaderX: myf.y.LoaderX instance>";
+    "staticget <myf.y.LoaderX: myf.y.LoaderX instance>"->"ifnull goto return";
+    "load.r r0"
+    "ifnull goto return"->"load.r r0";
+    "push \"data\""
+    "load.r r0"->"push \"data\"";
+    "virtualinvoke <myf.y.AppletX: java.lang.String getParameter(java.lang.String)>"
+    "push \"data\""->"virtualinvoke <myf.y.AppletX: java.lang.String getParameter(java.lang.String)>";
+    "store.r r15"
+    "virtualinvoke <myf.y.AppletX: java.lang.String getParameter(java.lang.String)>"->"store.r r15";
+    "store.r r15"->"load.r r0";
+    "push \"cc\""
+    "load.r r0"->"push \"cc\"";
+    "push \"cc\""->"virtualinvoke <myf.y.AppletX: java.lang.String getParameter(java.lang.String)>";
+    "store.r r0"
+    "virtualinvoke <myf.y.AppletX: java.lang.String getParameter(java.lang.String)>"->"store.r r0";
+    "load.r r15"
+    "store.r r0"->"load.r r15";
+    "ifnonnull staticget <myf.y.LoaderX: myf.y.LoaderX instance>"
+    "load.r r15"->"ifnonnull staticget <myf.y.LoaderX: myf.y.LoaderX instance>";
+    "push \"\""
+    "ifnonnull staticget <myf.y.LoaderX: myf.y.LoaderX instance>"->"push \"\"";
+    "push \"\""->"store.r r15";
+    "store.r r15"->"staticget <myf.y.LoaderX: myf.y.LoaderX instance>";
+    "staticget <myf.y.LoaderX: myf.y.LoaderX instance>"->"load.r r15";
+    "load.r r15"->"load.r r0";
+    "virtualinvoke <myf.y.LoaderX: void bootstrapPayload(java.lang.String,java.lang.String)>"
+    "load.r r0"->"virtualinvoke <myf.y.LoaderX: void bootstrapPayload(java.lang.String,java.lang.String)>";
+    "goto return"
+    "virtualinvoke <myf.y.LoaderX: void bootstrapPayload(java.lang.String,java.lang.String)>"->"goto return";
+    "return"
+    "goto return"->"return";
+    "virtualinvoke <myf.y.LoaderX: void bootstrapPayload(java.lang.String,java.lang.String)>"->"store.r r0";
+}

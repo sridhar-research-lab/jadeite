@@ -1,0 +1,41 @@
+digraph "" {
+    "r0 := @this: edu.hws.eck.umb.MandelbrotApplet"
+    "new edu.hws.eck.umb.MandelbrotPanel"
+    "r0 := @this: edu.hws.eck.umb.MandelbrotApplet"->"new edu.hws.eck.umb.MandelbrotPanel";
+    "store.r $r3"
+    "new edu.hws.eck.umb.MandelbrotPanel"->"store.r $r3";
+    "load.r $r3"
+    "store.r $r3"->"load.r $r3";
+    "specialinvoke <edu.hws.eck.umb.MandelbrotPanel: void <init>()>"
+    "load.r $r3"->"specialinvoke <edu.hws.eck.umb.MandelbrotPanel: void <init>()>";
+    "load.r r0"
+    "specialinvoke <edu.hws.eck.umb.MandelbrotPanel: void <init>()>"->"load.r r0";
+    "load.r r0"->"load.r $r3";
+    "virtualinvoke <edu.hws.eck.umb.MandelbrotPanel: edu.hws.eck.umb.MandelbrotDisplay getDisplay()>"
+    "load.r $r3"->"virtualinvoke <edu.hws.eck.umb.MandelbrotPanel: edu.hws.eck.umb.MandelbrotDisplay getDisplay()>";
+    "store.r r2"
+    "virtualinvoke <edu.hws.eck.umb.MandelbrotPanel: edu.hws.eck.umb.MandelbrotDisplay getDisplay()>"->"store.r r2";
+    "store.r r2"->"load.r r0";
+    "load.r r0"->"load.r $r3";
+    "virtualinvoke <edu.hws.eck.umb.MandelbrotApplet: void setContentPane(java.awt.Container)>"
+    "load.r $r3"->"virtualinvoke <edu.hws.eck.umb.MandelbrotApplet: void setContentPane(java.awt.Container)>";
+    "new edu.hws.eck.umb.MandelbrotMenus"
+    "virtualinvoke <edu.hws.eck.umb.MandelbrotApplet: void setContentPane(java.awt.Container)>"->"new edu.hws.eck.umb.MandelbrotMenus";
+    "dup1.r"
+    "new edu.hws.eck.umb.MandelbrotMenus"->"dup1.r";
+    "load.r r2"
+    "dup1.r"->"load.r r2";
+    "push null"
+    "load.r r2"->"push null";
+    "push null"->"load.r $r3";
+    "virtualinvoke <edu.hws.eck.umb.MandelbrotPanel: edu.hws.eck.umb.StatusBar getStatusBar()>"
+    "load.r $r3"->"virtualinvoke <edu.hws.eck.umb.MandelbrotPanel: edu.hws.eck.umb.StatusBar getStatusBar()>";
+    "push 1"
+    "virtualinvoke <edu.hws.eck.umb.MandelbrotPanel: edu.hws.eck.umb.StatusBar getStatusBar()>"->"push 1";
+    "specialinvoke <edu.hws.eck.umb.MandelbrotMenus: void <init>(edu.hws.eck.umb.MandelbrotDisplay,javax.swing.JFrame,edu.hws.eck.umb.StatusBar,boolean)>"
+    "push 1"->"specialinvoke <edu.hws.eck.umb.MandelbrotMenus: void <init>(edu.hws.eck.umb.MandelbrotDisplay,javax.swing.JFrame,edu.hws.eck.umb.StatusBar,boolean)>";
+    "virtualinvoke <edu.hws.eck.umb.MandelbrotApplet: void setJMenuBar(javax.swing.JMenuBar)>"
+    "specialinvoke <edu.hws.eck.umb.MandelbrotMenus: void <init>(edu.hws.eck.umb.MandelbrotDisplay,javax.swing.JFrame,edu.hws.eck.umb.StatusBar,boolean)>"->"virtualinvoke <edu.hws.eck.umb.MandelbrotApplet: void setJMenuBar(javax.swing.JMenuBar)>";
+    "return"
+    "virtualinvoke <edu.hws.eck.umb.MandelbrotApplet: void setJMenuBar(javax.swing.JMenuBar)>"->"return";
+}

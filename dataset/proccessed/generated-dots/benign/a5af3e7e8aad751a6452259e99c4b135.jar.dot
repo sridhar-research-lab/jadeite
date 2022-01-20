@@ -1,0 +1,21 @@
+digraph "" {
+    "r0 := @this: DiffEq"
+    "load.r r0"
+    "r0 := @this: DiffEq"->"load.r r0";
+    "new DiffEqFrame"
+    "load.r r0"->"new DiffEqFrame";
+    "dup1.r"
+    "new DiffEqFrame"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "specialinvoke <DiffEqFrame: void <init>(DiffEq)>"
+    "load.r r0"->"specialinvoke <DiffEqFrame: void <init>(DiffEq)>";
+    "fieldput <DiffEq: DiffEqFrame mf>"
+    "specialinvoke <DiffEqFrame: void <init>(DiffEq)>"->"fieldput <DiffEq: DiffEqFrame mf>";
+    "fieldput <DiffEq: DiffEqFrame mf>"->"load.r r0";
+    "fieldget <DiffEq: DiffEqFrame mf>"
+    "load.r r0"->"fieldget <DiffEq: DiffEqFrame mf>";
+    "virtualinvoke <DiffEqFrame: void init()>"
+    "fieldget <DiffEq: DiffEqFrame mf>"->"virtualinvoke <DiffEqFrame: void init()>";
+    "return"
+    "virtualinvoke <DiffEqFrame: void init()>"->"return";
+}

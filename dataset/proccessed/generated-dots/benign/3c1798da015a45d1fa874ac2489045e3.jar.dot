@@ -1,0 +1,217 @@
+digraph "" {
+    "r0 := @this: colorfader"
+    "load.r r0"
+    "r0 := @this: colorfader"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "push \"bgcolor\""
+    "load.r r0"->"push \"bgcolor\"";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"
+    "push \"bgcolor\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "push 16"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"push 16";
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String,int)>"
+    "push 16"->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String,int)>";
+    "fieldput <colorfader: int bgci>"
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String,int)>"->"fieldput <colorfader: int bgci>";
+    "goto load.r r0"
+    "fieldput <colorfader: int bgci>"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "new java.awt.Color"
+    "load.r r0"->"new java.awt.Color";
+    "dup1.r"
+    "new java.awt.Color"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "fieldget <colorfader: int bgci>"
+    "load.r r0"->"fieldget <colorfader: int bgci>";
+    "specialinvoke <java.awt.Color: void <init>(int)>"
+    "fieldget <colorfader: int bgci>"->"specialinvoke <java.awt.Color: void <init>(int)>";
+    "fieldput <colorfader: java.awt.Color bgc>"
+    "specialinvoke <java.awt.Color: void <init>(int)>"->"fieldput <colorfader: java.awt.Color bgc>";
+    "fieldput <colorfader: java.awt.Color bgc>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "fieldget <colorfader: java.awt.Color bgc>"
+    "load.r r0"->"fieldget <colorfader: java.awt.Color bgc>";
+    "virtualinvoke <java.awt.Component: void setBackground(java.awt.Color)>"
+    "fieldget <colorfader: java.awt.Color bgc>"->"virtualinvoke <java.awt.Component: void setBackground(java.awt.Color)>";
+    "virtualinvoke <java.awt.Component: void setBackground(java.awt.Color)>"->"load.r r0";
+    "virtualinvoke <java.awt.Component: void show()>"
+    "load.r r0"->"virtualinvoke <java.awt.Component: void show()>";
+    "virtualinvoke <java.awt.Component: void show()>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "push \"delay_period\""
+    "load.r r0"->"push \"delay_period\"";
+    "push \"delay_period\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "push 10"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"push 10";
+    "push 10"->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String,int)>";
+    "fieldput <colorfader: int delay_period>"
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String,int)>"->"fieldput <colorfader: int delay_period>";
+    "fieldput <colorfader: int delay_period>"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "fieldget <colorfader: int delay_period>"
+    "load.r r0"->"fieldget <colorfader: int delay_period>";
+    "push 15"
+    "fieldget <colorfader: int delay_period>"->"push 15";
+    "ifcmpge.i load.r r0"
+    "push 15"->"ifcmpge.i load.r r0";
+    "ifcmpge.i load.r r0"->"load.r r0";
+    "load.r r0"->"push 15";
+    "push 15"->"fieldput <colorfader: int delay_period>";
+    "fieldput <colorfader: int delay_period>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "push \"image_align\""
+    "load.r r0"->"push \"image_align\"";
+    "push \"image_align\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "fieldput <colorfader: java.lang.String image_align>"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"fieldput <colorfader: java.lang.String image_align>";
+    "fieldput <colorfader: java.lang.String image_align>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "push \"image_valign\""
+    "load.r r0"->"push \"image_valign\"";
+    "push \"image_valign\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "fieldput <colorfader: java.lang.String image_valign>"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"fieldput <colorfader: java.lang.String image_valign>";
+    "fieldput <colorfader: java.lang.String image_valign>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "virtualinvoke <java.awt.Component: java.awt.Dimension size()>"
+    "load.r r0"->"virtualinvoke <java.awt.Component: java.awt.Dimension size()>";
+    "fieldget <java.awt.Dimension: int width>"
+    "virtualinvoke <java.awt.Component: java.awt.Dimension size()>"->"fieldget <java.awt.Dimension: int width>";
+    "fieldput <colorfader: int genislik>"
+    "fieldget <java.awt.Dimension: int width>"->"fieldput <colorfader: int genislik>";
+    "fieldput <colorfader: int genislik>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"virtualinvoke <java.awt.Component: java.awt.Dimension size()>";
+    "fieldget <java.awt.Dimension: int height>"
+    "virtualinvoke <java.awt.Component: java.awt.Dimension size()>"->"fieldget <java.awt.Dimension: int height>";
+    "fieldput <colorfader: int yukseklik>"
+    "fieldget <java.awt.Dimension: int height>"->"fieldput <colorfader: int yukseklik>";
+    "fieldput <colorfader: int yukseklik>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "push \"link\""
+    "load.r r0"->"push \"link\"";
+    "push \"link\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "fieldput <colorfader: java.lang.String link1>"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"fieldput <colorfader: java.lang.String link1>";
+    "fieldput <colorfader: java.lang.String link1>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "push \"regcode\""
+    "load.r r0"->"push \"regcode\"";
+    "push \"regcode\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "fieldput <colorfader: java.lang.String regcode>"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"fieldput <colorfader: java.lang.String regcode>";
+    "fieldput <colorfader: java.lang.String regcode>"->"load.r r0";
+    "fieldget <colorfader: java.lang.String regcode>"
+    "load.r r0"->"fieldget <colorfader: java.lang.String regcode>";
+    "ifnull load.r r0"
+    "fieldget <colorfader: java.lang.String regcode>"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <colorfader: java.lang.String regcode>";
+    "push \"cfader3464\""
+    "fieldget <colorfader: java.lang.String regcode>"->"push \"cfader3464\"";
+    "virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>"
+    "push \"cfader3464\""->"virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>";
+    "ifeq load.r r0"
+    "virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>"->"ifeq load.r r0";
+    "ifeq load.r r0"->"load.r r0";
+    "push 1"
+    "load.r r0"->"push 1";
+    "fieldput <colorfader: boolean rg>"
+    "push 1"->"fieldput <colorfader: boolean rg>";
+    "fieldput <colorfader: boolean rg>"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "push \"info\""
+    "load.r r0"->"push \"info\"";
+    "push \"info\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "fieldput <colorfader: java.lang.String infostr>"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"fieldput <colorfader: java.lang.String infostr>";
+    "fieldput <colorfader: java.lang.String infostr>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "push \"status_bar\""
+    "load.r r0"->"push \"status_bar\"";
+    "push \"status_bar\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "fieldput <colorfader: java.lang.String status_bar>"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"fieldput <colorfader: java.lang.String status_bar>";
+    "fieldput <colorfader: java.lang.String status_bar>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "push \"target_frame\""
+    "load.r r0"->"push \"target_frame\"";
+    "push \"target_frame\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "fieldput <colorfader: java.lang.String target_frame>"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"fieldput <colorfader: java.lang.String target_frame>";
+    "fieldput <colorfader: java.lang.String target_frame>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "fieldget <colorfader: int genislik>"
+    "load.r r0"->"fieldget <colorfader: int genislik>";
+    "fieldget <colorfader: int genislik>"->"load.r r0";
+    "fieldget <colorfader: int yukseklik>"
+    "load.r r0"->"fieldget <colorfader: int yukseklik>";
+    "virtualinvoke <java.awt.Component: java.awt.Image createImage(int,int)>"
+    "fieldget <colorfader: int yukseklik>"->"virtualinvoke <java.awt.Component: java.awt.Image createImage(int,int)>";
+    "fieldput <colorfader: java.awt.Image offimg>"
+    "virtualinvoke <java.awt.Component: java.awt.Image createImage(int,int)>"->"fieldput <colorfader: java.awt.Image offimg>";
+    "fieldput <colorfader: java.awt.Image offimg>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "fieldget <colorfader: java.awt.Image offimg>"
+    "load.r r0"->"fieldget <colorfader: java.awt.Image offimg>";
+    "virtualinvoke <java.awt.Image: java.awt.Graphics getGraphics()>"
+    "fieldget <colorfader: java.awt.Image offimg>"->"virtualinvoke <java.awt.Image: java.awt.Graphics getGraphics()>";
+    "fieldput <colorfader: java.awt.Graphics offScreeng>"
+    "virtualinvoke <java.awt.Image: java.awt.Graphics getGraphics()>"->"fieldput <colorfader: java.awt.Graphics offScreeng>";
+    "fieldput <colorfader: java.awt.Graphics offScreeng>"->"load.r r0";
+    "new java.awt.MediaTracker"
+    "load.r r0"->"new java.awt.MediaTracker";
+    "new java.awt.MediaTracker"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "specialinvoke <java.awt.MediaTracker: void <init>(java.awt.Component)>"
+    "load.r r0"->"specialinvoke <java.awt.MediaTracker: void <init>(java.awt.Component)>";
+    "fieldput <colorfader: java.awt.MediaTracker tracker>"
+    "specialinvoke <java.awt.MediaTracker: void <init>(java.awt.Component)>"->"fieldput <colorfader: java.awt.MediaTracker tracker>";
+    "fieldput <colorfader: java.awt.MediaTracker tracker>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "virtualinvoke <java.applet.Applet: java.net.URL getCodeBase()>"
+    "load.r r0"->"virtualinvoke <java.applet.Applet: java.net.URL getCodeBase()>";
+    "virtualinvoke <java.applet.Applet: java.net.URL getCodeBase()>"->"load.r r0";
+    "push \"image\""
+    "load.r r0"->"push \"image\"";
+    "push \"image\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.awt.Image getImage(java.net.URL,java.lang.String)>"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"virtualinvoke <java.applet.Applet: java.awt.Image getImage(java.net.URL,java.lang.String)>";
+    "fieldput <colorfader: java.awt.Image image>"
+    "virtualinvoke <java.applet.Applet: java.awt.Image getImage(java.net.URL,java.lang.String)>"->"fieldput <colorfader: java.awt.Image image>";
+    "fieldput <colorfader: java.awt.Image image>"->"load.r r0";
+    "fieldget <colorfader: java.awt.MediaTracker tracker>"
+    "load.r r0"->"fieldget <colorfader: java.awt.MediaTracker tracker>";
+    "fieldget <colorfader: java.awt.MediaTracker tracker>"->"load.r r0";
+    "fieldget <colorfader: java.awt.Image image>"
+    "load.r r0"->"fieldget <colorfader: java.awt.Image image>";
+    "push 0"
+    "fieldget <colorfader: java.awt.Image image>"->"push 0";
+    "virtualinvoke <java.awt.MediaTracker: void addImage(java.awt.Image,int)>"
+    "push 0"->"virtualinvoke <java.awt.MediaTracker: void addImage(java.awt.Image,int)>";
+    "virtualinvoke <java.awt.MediaTracker: void addImage(java.awt.Image,int)>"->"load.r r0";
+    "virtualinvoke <java.awt.Component: void repaint()>"
+    "load.r r0"->"virtualinvoke <java.awt.Component: void repaint()>";
+    "return"
+    "virtualinvoke <java.awt.Component: void repaint()>"->"return";
+    "ifeq load.r r0"->"load.r r0";
+    "load.r r0"->"push 0";
+    "push 0"->"fieldput <colorfader: boolean rg>";
+    "fieldput <colorfader: boolean rg>"->"goto load.r r0";
+    "ifnull load.r r0"->"load.r r0";
+    "load.r r0"->"push 0";
+    "push 0"->"fieldput <colorfader: boolean rg>";
+    "store.r $r13"
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String,int)>"->"store.r $r13";
+    "store.r $r13"->"load.r r0";
+    "push 120"
+    "load.r r0"->"push 120";
+    "push 120"->"fieldput <colorfader: int delay_period>";
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String,int)>"->"store.r $r13";
+    "store.r $r13"->"load.r r0";
+    "load.r r0"->"push 0";
+    "push 0"->"fieldput <colorfader: int bgci>";
+}

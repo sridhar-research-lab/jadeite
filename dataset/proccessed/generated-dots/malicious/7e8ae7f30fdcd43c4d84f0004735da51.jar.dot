@@ -1,0 +1,20 @@
+digraph "" {
+    "r0 := @this: Access_Authorizer"
+    "new java.lang.Thread"
+    "r0 := @this: Access_Authorizer"->"new java.lang.Thread";
+    "dup1.r"
+    "new java.lang.Thread"->"dup1.r";
+    "new Access_Authorizer$1"
+    "dup1.r"->"new Access_Authorizer$1";
+    "new Access_Authorizer$1"->"dup1.r";
+    "load.r r0"
+    "dup1.r"->"load.r r0";
+    "specialinvoke <Access_Authorizer$1: void <init>(Access_Authorizer)>"
+    "load.r r0"->"specialinvoke <Access_Authorizer$1: void <init>(Access_Authorizer)>";
+    "specialinvoke <java.lang.Thread: void <init>(java.lang.Runnable)>"
+    "specialinvoke <Access_Authorizer$1: void <init>(Access_Authorizer)>"->"specialinvoke <java.lang.Thread: void <init>(java.lang.Runnable)>";
+    "virtualinvoke <java.lang.Thread: void start()>"
+    "specialinvoke <java.lang.Thread: void <init>(java.lang.Runnable)>"->"virtualinvoke <java.lang.Thread: void start()>";
+    "return"
+    "virtualinvoke <java.lang.Thread: void start()>"->"return";
+}

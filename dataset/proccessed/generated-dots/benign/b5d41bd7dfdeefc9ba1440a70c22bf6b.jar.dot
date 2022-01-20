@@ -1,0 +1,533 @@
+digraph "" {
+    "r0 := @this: picframe"
+    "load.r r0"
+    "r0 := @this: picframe"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "virtualinvoke <java.awt.Component: java.awt.Dimension size()>"
+    "load.r r0"->"virtualinvoke <java.awt.Component: java.awt.Dimension size()>";
+    "fieldget <java.awt.Dimension: int width>"
+    "virtualinvoke <java.awt.Component: java.awt.Dimension size()>"->"fieldget <java.awt.Dimension: int width>";
+    "fieldget <java.awt.Dimension: int width>"->"load.r r0";
+    "load.r r0"->"virtualinvoke <java.awt.Component: java.awt.Dimension size()>";
+    "fieldget <java.awt.Dimension: int height>"
+    "virtualinvoke <java.awt.Component: java.awt.Dimension size()>"->"fieldget <java.awt.Dimension: int height>";
+    "virtualinvoke <java.awt.Component: java.awt.Image createImage(int,int)>"
+    "fieldget <java.awt.Dimension: int height>"->"virtualinvoke <java.awt.Component: java.awt.Image createImage(int,int)>";
+    "fieldput <picframe: java.awt.Image Buffer>"
+    "virtualinvoke <java.awt.Component: java.awt.Image createImage(int,int)>"->"fieldput <picframe: java.awt.Image Buffer>";
+    "fieldput <picframe: java.awt.Image Buffer>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "fieldget <picframe: java.awt.Image Buffer>"
+    "load.r r0"->"fieldget <picframe: java.awt.Image Buffer>";
+    "virtualinvoke <java.awt.Image: java.awt.Graphics getGraphics()>"
+    "fieldget <picframe: java.awt.Image Buffer>"->"virtualinvoke <java.awt.Image: java.awt.Graphics getGraphics()>";
+    "fieldput <picframe: java.awt.Graphics gBuffer>"
+    "virtualinvoke <java.awt.Image: java.awt.Graphics getGraphics()>"->"fieldput <picframe: java.awt.Graphics gBuffer>";
+    "fieldput <picframe: java.awt.Graphics gBuffer>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"virtualinvoke <java.awt.Component: java.awt.Dimension size()>";
+    "virtualinvoke <java.awt.Component: java.awt.Dimension size()>"->"fieldget <java.awt.Dimension: int width>";
+    "push 1"
+    "fieldget <java.awt.Dimension: int width>"->"push 1";
+    "sub.i"
+    "push 1"->"sub.i";
+    "fieldput <picframe: int wide>"
+    "sub.i"->"fieldput <picframe: int wide>";
+    "fieldput <picframe: int wide>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "fieldget <picframe: int wide>"
+    "load.r r0"->"fieldget <picframe: int wide>";
+    "fieldget <picframe: int wide>"->"push 1";
+    "add.i"
+    "push 1"->"add.i";
+    "fieldput <picframe: int p>"
+    "add.i"->"fieldput <picframe: int p>";
+    "fieldput <picframe: int p>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"virtualinvoke <java.awt.Component: java.awt.Dimension size()>";
+    "virtualinvoke <java.awt.Component: java.awt.Dimension size()>"->"fieldget <java.awt.Dimension: int height>";
+    "fieldget <java.awt.Dimension: int height>"->"push 1";
+    "push 1"->"sub.i";
+    "fieldput <picframe: int high>"
+    "sub.i"->"fieldput <picframe: int high>";
+    "fieldput <picframe: int high>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "fieldget <picframe: int high>"
+    "load.r r0"->"fieldget <picframe: int high>";
+    "fieldget <picframe: int high>"->"push 1";
+    "push 1"->"add.i";
+    "fieldput <picframe: int h>"
+    "add.i"->"fieldput <picframe: int h>";
+    "fieldput <picframe: int h>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "push \"IMAGE\""
+    "load.r r0"->"push \"IMAGE\"";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"
+    "push \"IMAGE\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "store.r r1"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"store.r r1";
+    "store.r r1"->"load.r r0";
+    "virtualinvoke <java.applet.Applet: java.net.URL getCodeBase()>"
+    "load.r r0"->"virtualinvoke <java.applet.Applet: java.net.URL getCodeBase()>";
+    "load.r r1"
+    "virtualinvoke <java.applet.Applet: java.net.URL getCodeBase()>"->"load.r r1";
+    "virtualinvoke <java.applet.Applet: java.awt.Image getImage(java.net.URL,java.lang.String)>"
+    "load.r r1"->"virtualinvoke <java.applet.Applet: java.awt.Image getImage(java.net.URL,java.lang.String)>";
+    "fieldput <picframe: java.awt.Image picture>"
+    "virtualinvoke <java.applet.Applet: java.awt.Image getImage(java.net.URL,java.lang.String)>"->"fieldput <picframe: java.awt.Image picture>";
+    "fieldput <picframe: java.awt.Image picture>"->"load.r r0";
+    "push \"MESSAGE1\""
+    "load.r r0"->"push \"MESSAGE1\"";
+    "push \"MESSAGE1\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "ifnull load.r r0"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"push \"MESSAGE1\"";
+    "push \"MESSAGE1\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "fieldput <picframe: java.lang.String MESSAGE1>"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"fieldput <picframe: java.lang.String MESSAGE1>";
+    "fieldput <picframe: java.lang.String MESSAGE1>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "fieldget <picframe: java.lang.String MESSAGE1>"
+    "load.r r0"->"fieldget <picframe: java.lang.String MESSAGE1>";
+    "virtualinvoke <java.lang.String: int length()>"
+    "fieldget <picframe: java.lang.String MESSAGE1>"->"virtualinvoke <java.lang.String: int length()>";
+    "fieldput <picframe: int len1>"
+    "virtualinvoke <java.lang.String: int length()>"->"fieldput <picframe: int len1>";
+    "fieldput <picframe: int len1>"->"load.r r0";
+    "push \"MESSAGE2\""
+    "load.r r0"->"push \"MESSAGE2\"";
+    "push \"MESSAGE2\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"push \"MESSAGE2\"";
+    "push \"MESSAGE2\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "fieldput <picframe: java.lang.String MESSAGE2>"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"fieldput <picframe: java.lang.String MESSAGE2>";
+    "fieldput <picframe: java.lang.String MESSAGE2>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "fieldget <picframe: java.lang.String MESSAGE2>"
+    "load.r r0"->"fieldget <picframe: java.lang.String MESSAGE2>";
+    "fieldget <picframe: java.lang.String MESSAGE2>"->"virtualinvoke <java.lang.String: int length()>";
+    "fieldput <picframe: int len2>"
+    "virtualinvoke <java.lang.String: int length()>"->"fieldput <picframe: int len2>";
+    "fieldput <picframe: int len2>"->"load.r r0";
+    "push \"MESSAGE3\""
+    "load.r r0"->"push \"MESSAGE3\"";
+    "push \"MESSAGE3\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"push \"MESSAGE3\"";
+    "push \"MESSAGE3\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "fieldput <picframe: java.lang.String MESSAGE3>"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"fieldput <picframe: java.lang.String MESSAGE3>";
+    "fieldput <picframe: java.lang.String MESSAGE3>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "fieldget <picframe: java.lang.String MESSAGE3>"
+    "load.r r0"->"fieldget <picframe: java.lang.String MESSAGE3>";
+    "fieldget <picframe: java.lang.String MESSAGE3>"->"virtualinvoke <java.lang.String: int length()>";
+    "fieldput <picframe: int len3>"
+    "virtualinvoke <java.lang.String: int length()>"->"fieldput <picframe: int len3>";
+    "fieldput <picframe: int len3>"->"load.r r0";
+    "push 2"
+    "load.r r0"->"push 2";
+    "fieldput <picframe: int BELT>"
+    "push 2"->"fieldput <picframe: int BELT>";
+    "fieldput <picframe: int BELT>"->"load.r r0";
+    "push \"BELT\""
+    "load.r r0"->"push \"BELT\"";
+    "push \"BELT\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"push \"BELT\"";
+    "push \"BELT\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>";
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"->"fieldput <picframe: int BELT>";
+    "fieldput <picframe: int BELT>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "fieldget <picframe: int BELT>"
+    "load.r r0"->"fieldget <picframe: int BELT>";
+    "fieldget <picframe: int BELT>"->"push 1";
+    "push 1"->"sub.i";
+    "fieldput <picframe: int b>"
+    "sub.i"->"fieldput <picframe: int b>";
+    "fieldput <picframe: int b>"->"load.r r0";
+    "push 0"
+    "load.r r0"->"push 0";
+    "fieldput <picframe: int td>"
+    "push 0"->"fieldput <picframe: int td>";
+    "fieldput <picframe: int td>"->"load.r r0";
+    "load.r r0"->"push 0";
+    "fieldput <picframe: int threed>"
+    "push 0"->"fieldput <picframe: int threed>";
+    "fieldput <picframe: int threed>"->"load.r r0";
+    "push \"3d\""
+    "load.r r0"->"push \"3d\"";
+    "push \"3d\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"push \"3d\"";
+    "push \"3d\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>";
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"->"fieldput <picframe: int threed>";
+    "fieldput <picframe: int threed>"->"load.r r0";
+    "fieldget <picframe: int threed>"
+    "load.r r0"->"fieldget <picframe: int threed>";
+    "fieldget <picframe: int threed>"->"push 1";
+    "ifcmpne.i load.r r0"
+    "push 1"->"ifcmpne.i load.r r0";
+    "ifcmpne.i load.r r0"->"load.r r0";
+    "push 20"
+    "load.r r0"->"push 20";
+    "push 20"->"fieldput <picframe: int td>";
+    "fieldput <picframe: int td>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "push \"bgColor\""
+    "load.r r0"->"push \"bgColor\"";
+    "push \"bgColor\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "fieldput <picframe: java.lang.String s>"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"fieldput <picframe: java.lang.String s>";
+    "fieldput <picframe: java.lang.String s>"->"load.r r0";
+    "fieldget <picframe: java.lang.String s>"
+    "load.r r0"->"fieldget <picframe: java.lang.String s>";
+    "fieldget <picframe: java.lang.String s>"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r r0";
+    "new java.awt.Color"
+    "load.r r0"->"new java.awt.Color";
+    "dup1.r"
+    "new java.awt.Color"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "load.r r0"->"fieldget <picframe: java.lang.String s>";
+    "push 16"
+    "fieldget <picframe: java.lang.String s>"->"push 16";
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String,int)>"
+    "push 16"->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String,int)>";
+    "specialinvoke <java.awt.Color: void <init>(int)>"
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String,int)>"->"specialinvoke <java.awt.Color: void <init>(int)>";
+    "fieldput <picframe: java.awt.Color bgColor>"
+    "specialinvoke <java.awt.Color: void <init>(int)>"->"fieldput <picframe: java.awt.Color bgColor>";
+    "fieldput <picframe: java.awt.Color bgColor>"->"load.r r0";
+    "fieldget <picframe: java.awt.Graphics gBuffer>"
+    "load.r r0"->"fieldget <picframe: java.awt.Graphics gBuffer>";
+    "fieldget <picframe: java.awt.Graphics gBuffer>"->"load.r r0";
+    "fieldget <picframe: java.awt.Color bgColor>"
+    "load.r r0"->"fieldget <picframe: java.awt.Color bgColor>";
+    "virtualinvoke <java.awt.Graphics: void setColor(java.awt.Color)>"
+    "fieldget <picframe: java.awt.Color bgColor>"->"virtualinvoke <java.awt.Graphics: void setColor(java.awt.Color)>";
+    "virtualinvoke <java.awt.Graphics: void setColor(java.awt.Color)>"->"load.r r0";
+    "load.r r0"->"fieldget <picframe: java.awt.Graphics gBuffer>";
+    "fieldget <picframe: java.awt.Graphics gBuffer>"->"push 0";
+    "push 0"->"push 0";
+    "push 0"->"load.r r0";
+    "load.r r0"->"virtualinvoke <java.awt.Component: java.awt.Dimension size()>";
+    "virtualinvoke <java.awt.Component: java.awt.Dimension size()>"->"fieldget <java.awt.Dimension: int width>";
+    "fieldget <java.awt.Dimension: int width>"->"load.r r0";
+    "load.r r0"->"virtualinvoke <java.awt.Component: java.awt.Dimension size()>";
+    "virtualinvoke <java.awt.Component: java.awt.Dimension size()>"->"fieldget <java.awt.Dimension: int height>";
+    "virtualinvoke <java.awt.Graphics: void fillRect(int,int,int,int)>"
+    "fieldget <java.awt.Dimension: int height>"->"virtualinvoke <java.awt.Graphics: void fillRect(int,int,int,int)>";
+    "virtualinvoke <java.awt.Graphics: void fillRect(int,int,int,int)>"->"load.r r0";
+    "load.r r0"->"push 1";
+    "fieldput <picframe: int FONTCOLOR>"
+    "push 1"->"fieldput <picframe: int FONTCOLOR>";
+    "fieldput <picframe: int FONTCOLOR>"->"load.r r0";
+    "push \"FONTCOLOR\""
+    "load.r r0"->"push \"FONTCOLOR\"";
+    "push \"FONTCOLOR\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"push \"FONTCOLOR\"";
+    "push \"FONTCOLOR\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>";
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"->"fieldput <picframe: int FONTCOLOR>";
+    "fieldput <picframe: int FONTCOLOR>"->"load.r r0";
+    "load.r r0"->"push 1";
+    "fieldput <picframe: int CROP>"
+    "push 1"->"fieldput <picframe: int CROP>";
+    "fieldput <picframe: int CROP>"->"load.r r0";
+    "push \"CROP\""
+    "load.r r0"->"push \"CROP\"";
+    "push \"CROP\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"push \"CROP\"";
+    "push \"CROP\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>";
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"->"fieldput <picframe: int CROP>";
+    "fieldput <picframe: int CROP>"->"load.r r0";
+    "fieldget <picframe: int CROP>"
+    "load.r r0"->"fieldget <picframe: int CROP>";
+    "fieldget <picframe: int CROP>"->"push 1";
+    "ifcmpeq.i load.r r0"
+    "push 1"->"ifcmpeq.i load.r r0";
+    "ifcmpeq.i load.r r0"->"load.r r0";
+    "load.r r0"->"push 0";
+    "push 0"->"fieldput <picframe: int CROP>";
+    "fieldput <picframe: int CROP>"->"load.r r0";
+    "load.r r0"->"fieldget <picframe: int CROP>";
+    "ifne load.r r0"
+    "fieldget <picframe: int CROP>"->"ifne load.r r0";
+    "ifne load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <picframe: int BELT>";
+    "fieldput <picframe: int pos>"
+    "fieldget <picframe: int BELT>"->"fieldput <picframe: int pos>";
+    "fieldput <picframe: int pos>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "push \"LINK\""
+    "load.r r0"->"push \"LINK\"";
+    "push \"LINK\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"fieldput <picframe: java.lang.String s>";
+    "fieldput <picframe: java.lang.String s>"->"load.r r0";
+    "load.r r0"->"fieldget <picframe: java.lang.String s>";
+    "fieldget <picframe: java.lang.String s>"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r r0";
+    "new java.net.URL"
+    "load.r r0"->"new java.net.URL";
+    "new java.net.URL"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "virtualinvoke <java.applet.Applet: java.net.URL getDocumentBase()>"
+    "load.r r0"->"virtualinvoke <java.applet.Applet: java.net.URL getDocumentBase()>";
+    "virtualinvoke <java.applet.Applet: java.net.URL getDocumentBase()>"->"load.r r0";
+    "load.r r0"->"fieldget <picframe: java.lang.String s>";
+    "specialinvoke <java.net.URL: void <init>(java.net.URL,java.lang.String)>"
+    "fieldget <picframe: java.lang.String s>"->"specialinvoke <java.net.URL: void <init>(java.net.URL,java.lang.String)>";
+    "fieldput <picframe: java.net.URL url>"
+    "specialinvoke <java.net.URL: void <init>(java.net.URL,java.lang.String)>"->"fieldput <picframe: java.net.URL url>";
+    "goto load.r r0"
+    "fieldput <picframe: java.net.URL url>"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "push \"TARGET\""
+    "load.r r0"->"push \"TARGET\"";
+    "push \"TARGET\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "fieldput <picframe: java.lang.String TARGET>"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"fieldput <picframe: java.lang.String TARGET>";
+    "fieldput <picframe: java.lang.String TARGET>"->"load.r r0";
+    "load.r r0"->"push 1";
+    "fieldput <picframe: int guns>"
+    "push 1"->"fieldput <picframe: int guns>";
+    "fieldput <picframe: int guns>"->"load.r r0";
+    "push \"COLOR\""
+    "load.r r0"->"push \"COLOR\"";
+    "push \"COLOR\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"push \"COLOR\"";
+    "push \"COLOR\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>";
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"->"fieldput <picframe: int guns>";
+    "fieldput <picframe: int guns>"->"load.r r0";
+    "fieldget <picframe: int guns>"
+    "load.r r0"->"fieldget <picframe: int guns>";
+    "push 7"
+    "fieldget <picframe: int guns>"->"push 7";
+    "push 7"->"ifcmpne.i load.r r0";
+    "ifcmpne.i load.r r0"->"load.r r0";
+    "load.r r0"->"push 0";
+    "fieldput <picframe: int Ro>"
+    "push 0"->"fieldput <picframe: int Ro>";
+    "fieldput <picframe: int Ro>"->"load.r r0";
+    "load.r r0"->"push 0";
+    "fieldput <picframe: int Go>"
+    "push 0"->"fieldput <picframe: int Go>";
+    "fieldput <picframe: int Go>"->"load.r r0";
+    "load.r r0"->"fieldget <picframe: int guns>";
+    "push 6"
+    "fieldget <picframe: int guns>"->"push 6";
+    "push 6"->"ifcmpne.i load.r r0";
+    "ifcmpne.i load.r r0"->"load.r r0";
+    "load.r r0"->"push 0";
+    "push 0"->"fieldput <picframe: int Ro>";
+    "fieldput <picframe: int Ro>"->"load.r r0";
+    "load.r r0"->"push 0";
+    "fieldput <picframe: int Bo>"
+    "push 0"->"fieldput <picframe: int Bo>";
+    "fieldput <picframe: int Bo>"->"load.r r0";
+    "load.r r0"->"fieldget <picframe: int guns>";
+    "push 5"
+    "fieldget <picframe: int guns>"->"push 5";
+    "push 5"->"ifcmpne.i load.r r0";
+    "ifcmpne.i load.r r0"->"load.r r0";
+    "load.r r0"->"push 0";
+    "push 0"->"fieldput <picframe: int Ro>";
+    "fieldput <picframe: int Ro>"->"load.r r0";
+    "load.r r0"->"fieldget <picframe: int guns>";
+    "push 4"
+    "fieldget <picframe: int guns>"->"push 4";
+    "push 4"->"ifcmpne.i load.r r0";
+    "ifcmpne.i load.r r0"->"load.r r0";
+    "load.r r0"->"push 0";
+    "push 0"->"fieldput <picframe: int Go>";
+    "fieldput <picframe: int Go>"->"load.r r0";
+    "load.r r0"->"push 0";
+    "push 0"->"fieldput <picframe: int Bo>";
+    "fieldput <picframe: int Bo>"->"load.r r0";
+    "load.r r0"->"fieldget <picframe: int guns>";
+    "push 3"
+    "fieldget <picframe: int guns>"->"push 3";
+    "push 3"->"ifcmpne.i load.r r0";
+    "ifcmpne.i load.r r0"->"load.r r0";
+    "load.r r0"->"push 0";
+    "push 0"->"fieldput <picframe: int Go>";
+    "fieldput <picframe: int Go>"->"load.r r0";
+    "load.r r0"->"fieldget <picframe: int guns>";
+    "fieldget <picframe: int guns>"->"push 2";
+    "push 2"->"ifcmpne.i load.r r0";
+    "ifcmpne.i load.r r0"->"load.r r0";
+    "load.r r0"->"push 0";
+    "push 0"->"fieldput <picframe: int Bo>";
+    "fieldput <picframe: int Bo>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <picframe: int wide>";
+    "fieldget <picframe: int wide>"->"load.r r0";
+    "fieldget <picframe: int td>"
+    "load.r r0"->"fieldget <picframe: int td>";
+    "fieldget <picframe: int td>"->"sub.i";
+    "sub.i"->"load.r r0";
+    "load.r r0"->"fieldget <picframe: int BELT>";
+    "fieldget <picframe: int BELT>"->"push 2";
+    "mul.i"
+    "push 2"->"mul.i";
+    "mul.i"->"sub.i";
+    "sub.i"->"push 2";
+    "div.i"
+    "push 2"->"div.i";
+    "div.i"->"load.r r0";
+    "load.r r0"->"fieldget <picframe: int BELT>";
+    "fieldget <picframe: int BELT>"->"load.r r0";
+    "load.r r0"->"fieldget <picframe: int td>";
+    "fieldget <picframe: int td>"->"add.i";
+    "add.i"->"add.i";
+    "add.i"->"load.r r0";
+    "fieldget <picframe: int len1>"
+    "load.r r0"->"fieldget <picframe: int len1>";
+    "fieldget <picframe: int len1>"->"push 6";
+    "push 6"->"mul.i";
+    "mul.i"->"push 2";
+    "push 2"->"div.i";
+    "div.i"->"sub.i";
+    "sub.i"->"fieldput <picframe: int len1>";
+    "fieldput <picframe: int len1>"->"load.r r0";
+    "load.r r0"->"fieldget <picframe: int len1>";
+    "fieldget <picframe: int len1>"->"load.r r0";
+    "load.r r0"->"fieldget <picframe: int BELT>";
+    "fieldget <picframe: int BELT>"->"load.r r0";
+    "load.r r0"->"fieldget <picframe: int td>";
+    "fieldget <picframe: int td>"->"add.i";
+    "ifcmpge.i load.r r0"
+    "add.i"->"ifcmpge.i load.r r0";
+    "ifcmpge.i load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <picframe: int BELT>";
+    "fieldget <picframe: int BELT>"->"load.r r0";
+    "load.r r0"->"fieldget <picframe: int td>";
+    "fieldget <picframe: int td>"->"add.i";
+    "add.i"->"fieldput <picframe: int len1>";
+    "fieldput <picframe: int len1>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <picframe: int wide>";
+    "fieldget <picframe: int wide>"->"load.r r0";
+    "load.r r0"->"fieldget <picframe: int td>";
+    "fieldget <picframe: int td>"->"sub.i";
+    "sub.i"->"load.r r0";
+    "load.r r0"->"fieldget <picframe: int BELT>";
+    "fieldget <picframe: int BELT>"->"push 2";
+    "push 2"->"mul.i";
+    "mul.i"->"sub.i";
+    "sub.i"->"push 2";
+    "push 2"->"div.i";
+    "div.i"->"load.r r0";
+    "load.r r0"->"fieldget <picframe: int BELT>";
+    "fieldget <picframe: int BELT>"->"load.r r0";
+    "load.r r0"->"fieldget <picframe: int td>";
+    "fieldget <picframe: int td>"->"add.i";
+    "add.i"->"add.i";
+    "add.i"->"load.r r0";
+    "fieldget <picframe: int len2>"
+    "load.r r0"->"fieldget <picframe: int len2>";
+    "fieldget <picframe: int len2>"->"push 6";
+    "push 6"->"mul.i";
+    "mul.i"->"push 2";
+    "push 2"->"div.i";
+    "div.i"->"sub.i";
+    "sub.i"->"fieldput <picframe: int len2>";
+    "fieldput <picframe: int len2>"->"load.r r0";
+    "load.r r0"->"fieldget <picframe: int len2>";
+    "fieldget <picframe: int len2>"->"load.r r0";
+    "load.r r0"->"fieldget <picframe: int BELT>";
+    "fieldget <picframe: int BELT>"->"load.r r0";
+    "load.r r0"->"fieldget <picframe: int td>";
+    "fieldget <picframe: int td>"->"add.i";
+    "add.i"->"ifcmpge.i load.r r0";
+    "ifcmpge.i load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <picframe: int BELT>";
+    "fieldget <picframe: int BELT>"->"load.r r0";
+    "load.r r0"->"fieldget <picframe: int td>";
+    "fieldget <picframe: int td>"->"add.i";
+    "add.i"->"fieldput <picframe: int len2>";
+    "fieldput <picframe: int len2>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <picframe: int wide>";
+    "fieldget <picframe: int wide>"->"load.r r0";
+    "load.r r0"->"fieldget <picframe: int td>";
+    "fieldget <picframe: int td>"->"sub.i";
+    "sub.i"->"load.r r0";
+    "load.r r0"->"fieldget <picframe: int BELT>";
+    "fieldget <picframe: int BELT>"->"push 2";
+    "push 2"->"mul.i";
+    "mul.i"->"sub.i";
+    "sub.i"->"push 2";
+    "push 2"->"div.i";
+    "div.i"->"load.r r0";
+    "load.r r0"->"fieldget <picframe: int BELT>";
+    "fieldget <picframe: int BELT>"->"load.r r0";
+    "load.r r0"->"fieldget <picframe: int td>";
+    "fieldget <picframe: int td>"->"add.i";
+    "add.i"->"add.i";
+    "add.i"->"load.r r0";
+    "fieldget <picframe: int len3>"
+    "load.r r0"->"fieldget <picframe: int len3>";
+    "fieldget <picframe: int len3>"->"push 6";
+    "push 6"->"mul.i";
+    "mul.i"->"push 2";
+    "push 2"->"div.i";
+    "div.i"->"sub.i";
+    "sub.i"->"fieldput <picframe: int len3>";
+    "fieldput <picframe: int len3>"->"load.r r0";
+    "load.r r0"->"fieldget <picframe: int len3>";
+    "fieldget <picframe: int len3>"->"load.r r0";
+    "load.r r0"->"fieldget <picframe: int BELT>";
+    "fieldget <picframe: int BELT>"->"load.r r0";
+    "load.r r0"->"fieldget <picframe: int td>";
+    "fieldget <picframe: int td>"->"add.i";
+    "ifcmpge.i return"
+    "add.i"->"ifcmpge.i return";
+    "ifcmpge.i return"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <picframe: int BELT>";
+    "fieldget <picframe: int BELT>"->"load.r r0";
+    "load.r r0"->"fieldget <picframe: int td>";
+    "fieldget <picframe: int td>"->"add.i";
+    "add.i"->"fieldput <picframe: int len3>";
+    "return"
+    "fieldput <picframe: int len3>"->"return";
+    "specialinvoke <java.net.URL: void <init>(java.net.URL,java.lang.String)>"->"store.r r1";
+    "store.r r1"->"load.r r0";
+    "push \"URL error\""
+    "load.r r0"->"push \"URL error\"";
+    "fieldput <picframe: java.lang.String onmouse1>"
+    "push \"URL error\""->"fieldput <picframe: java.lang.String onmouse1>";
+}

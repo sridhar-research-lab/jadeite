@@ -1,0 +1,49 @@
+digraph "" {
+    "r0 := @this: Lsys"
+    "load.r r0"
+    "r0 := @this: Lsys"->"load.r r0";
+    "virtualinvoke <Lsys: void Z0052()>"
+    "load.r r0"->"virtualinvoke <Lsys: void Z0052()>";
+    "virtualinvoke <Lsys: void Z0052()>"->"load.r r0";
+    "new java.awt.Color"
+    "load.r r0"->"new java.awt.Color";
+    "dup1.r"
+    "new java.awt.Color"->"dup1.r";
+    "push 204"
+    "dup1.r"->"push 204";
+    "push 255"
+    "push 204"->"push 255";
+    "push 255"->"push 255";
+    "specialinvoke <java.awt.Color: void <init>(int,int,int)>"
+    "push 255"->"specialinvoke <java.awt.Color: void <init>(int,int,int)>";
+    "fieldput <Lsys: java.awt.Color Z0008>"
+    "specialinvoke <java.awt.Color: void <init>(int,int,int)>"->"fieldput <Lsys: java.awt.Color Z0008>";
+    "fieldput <Lsys: java.awt.Color Z0008>"->"load.r r0";
+    "virtualinvoke <Lsys: java.awt.Container getContentPane()>"
+    "load.r r0"->"virtualinvoke <Lsys: java.awt.Container getContentPane()>";
+    "virtualinvoke <Lsys: java.awt.Container getContentPane()>"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "virtualinvoke <Lsys: javax.swing.JPanel Z0049()>"
+    "load.r r0"->"virtualinvoke <Lsys: javax.swing.JPanel Z0049()>";
+    "push \"East\""
+    "virtualinvoke <Lsys: javax.swing.JPanel Z0049()>"->"push \"East\"";
+    "virtualinvoke <java.awt.Container: void add(java.awt.Component,java.lang.Object)>"
+    "push \"East\""->"virtualinvoke <java.awt.Container: void add(java.awt.Component,java.lang.Object)>";
+    "virtualinvoke <java.awt.Container: void add(java.awt.Component,java.lang.Object)>"->"load.r r0";
+    "new Lsys$DrawingArea"
+    "load.r r0"->"new Lsys$DrawingArea";
+    "new Lsys$DrawingArea"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "specialinvoke <Lsys$DrawingArea: void <init>(Lsys)>"
+    "load.r r0"->"specialinvoke <Lsys$DrawingArea: void <init>(Lsys)>";
+    "fieldput <Lsys: Lsys$DrawingArea Z0019>"
+    "specialinvoke <Lsys$DrawingArea: void <init>(Lsys)>"->"fieldput <Lsys: Lsys$DrawingArea Z0019>";
+    "fieldput <Lsys: Lsys$DrawingArea Z0019>"->"load.r r0";
+    "fieldget <Lsys: Lsys$DrawingArea Z0019>"
+    "load.r r0"->"fieldget <Lsys: Lsys$DrawingArea Z0019>";
+    "push \"Center\""
+    "fieldget <Lsys: Lsys$DrawingArea Z0019>"->"push \"Center\"";
+    "push \"Center\""->"virtualinvoke <java.awt.Container: void add(java.awt.Component,java.lang.Object)>";
+    "return"
+    "virtualinvoke <java.awt.Container: void add(java.awt.Component,java.lang.Object)>"->"return";
+}

@@ -1,0 +1,81 @@
+digraph "" {
+    "r0 := @this: Racquetball"
+    "load.r r0"
+    "r0 := @this: Racquetball"->"load.r r0";
+    "new java.awt.BorderLayout"
+    "load.r r0"->"new java.awt.BorderLayout";
+    "dup1.r"
+    "new java.awt.BorderLayout"->"dup1.r";
+    "specialinvoke <java.awt.BorderLayout: void <init>()>"
+    "dup1.r"->"specialinvoke <java.awt.BorderLayout: void <init>()>";
+    "virtualinvoke <java.awt.Container: void setLayout(java.awt.LayoutManager)>"
+    "specialinvoke <java.awt.BorderLayout: void <init>()>"->"virtualinvoke <java.awt.Container: void setLayout(java.awt.LayoutManager)>";
+    "new TGCanvas"
+    "virtualinvoke <java.awt.Container: void setLayout(java.awt.LayoutManager)>"->"new TGCanvas";
+    "new TGCanvas"->"dup1.r";
+    "push 600"
+    "dup1.r"->"push 600";
+    "push 400"
+    "push 600"->"push 400";
+    "specialinvoke <TGCanvas: void <init>(int,int)>"
+    "push 400"->"specialinvoke <TGCanvas: void <init>(int,int)>";
+    "staticput <Racquetball: TGCanvas canvas>"
+    "specialinvoke <TGCanvas: void <init>(int,int)>"->"staticput <Racquetball: TGCanvas canvas>";
+    "staticget <Racquetball: TGCanvas canvas>"
+    "staticput <Racquetball: TGCanvas canvas>"->"staticget <Racquetball: TGCanvas canvas>";
+    "staticget <java.awt.Color: java.awt.Color white>"
+    "staticget <Racquetball: TGCanvas canvas>"->"staticget <java.awt.Color: java.awt.Color white>";
+    "virtualinvoke <java.awt.Component: void setBackground(java.awt.Color)>"
+    "staticget <java.awt.Color: java.awt.Color white>"->"virtualinvoke <java.awt.Component: void setBackground(java.awt.Color)>";
+    "virtualinvoke <java.awt.Component: void setBackground(java.awt.Color)>"->"load.r r0";
+    "push \"Center\""
+    "load.r r0"->"push \"Center\"";
+    "push \"Center\""->"staticget <Racquetball: TGCanvas canvas>";
+    "virtualinvoke <java.awt.Container: java.awt.Component add(java.lang.String,java.awt.Component)>"
+    "staticget <Racquetball: TGCanvas canvas>"->"virtualinvoke <java.awt.Container: java.awt.Component add(java.lang.String,java.awt.Component)>";
+    "pop"
+    "virtualinvoke <java.awt.Container: java.awt.Component add(java.lang.String,java.awt.Component)>"->"pop";
+    "pop"->"staticget <Racquetball: TGCanvas canvas>";
+    "staticget <Racquetball: TGCanvas canvas>"->"load.r r0";
+    "virtualinvoke <TGCanvas: void addMouseHandler(TGMouseHandler)>"
+    "load.r r0"->"virtualinvoke <TGCanvas: void addMouseHandler(TGMouseHandler)>";
+    "new Turtle"
+    "virtualinvoke <TGCanvas: void addMouseHandler(TGMouseHandler)>"->"new Turtle";
+    "new Turtle"->"dup1.r";
+    "dup1.r"->"staticget <Racquetball: TGCanvas canvas>";
+    "specialinvoke <Turtle: void <init>(TGCanvas)>"
+    "staticget <Racquetball: TGCanvas canvas>"->"specialinvoke <Turtle: void <init>(TGCanvas)>";
+    "staticput <Racquetball: Turtle turtle>"
+    "specialinvoke <Turtle: void <init>(TGCanvas)>"->"staticput <Racquetball: Turtle turtle>";
+    "staticget <Racquetball: Turtle turtle>"
+    "staticput <Racquetball: Turtle turtle>"->"staticget <Racquetball: Turtle turtle>";
+    "virtualinvoke <Turtle: void hideturtle()>"
+    "staticget <Racquetball: Turtle turtle>"->"virtualinvoke <Turtle: void hideturtle()>";
+    "new Court"
+    "virtualinvoke <Turtle: void hideturtle()>"->"new Court";
+    "new Court"->"dup1.r";
+    "dup1.r"->"staticget <Racquetball: Turtle turtle>";
+    "push -100"
+    "staticget <Racquetball: Turtle turtle>"->"push -100";
+    "push 100"
+    "push -100"->"push 100";
+    "push 100"->"push -100";
+    "push -100"->"push 100";
+    "specialinvoke <Court: void <init>(Turtle,int,int,int,int)>"
+    "push 100"->"specialinvoke <Court: void <init>(Turtle,int,int,int,int)>";
+    "staticput <Racquetball: Court court>"
+    "specialinvoke <Court: void <init>(Turtle,int,int,int,int)>"->"staticput <Racquetball: Court court>";
+    "new Paddle"
+    "staticput <Racquetball: Court court>"->"new Paddle";
+    "new Paddle"->"dup1.r";
+    "dup1.r"->"staticget <Racquetball: TGCanvas canvas>";
+    "push 0"
+    "staticget <Racquetball: TGCanvas canvas>"->"push 0";
+    "push 0"->"push -100";
+    "specialinvoke <Paddle: void <init>(TGCanvas,int,int)>"
+    "push -100"->"specialinvoke <Paddle: void <init>(TGCanvas,int,int)>";
+    "staticput <Racquetball: Paddle paddle>"
+    "specialinvoke <Paddle: void <init>(TGCanvas,int,int)>"->"staticput <Racquetball: Paddle paddle>";
+    "return"
+    "staticput <Racquetball: Paddle paddle>"->"return";
+}

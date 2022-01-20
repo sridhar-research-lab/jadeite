@@ -1,0 +1,20 @@
+digraph "" {
+    "r0 := @this: lol"
+    "new java.lang.Thread"
+    "r0 := @this: lol"->"new java.lang.Thread";
+    "dup1.r"
+    "new java.lang.Thread"->"dup1.r";
+    "new lol$1"
+    "dup1.r"->"new lol$1";
+    "new lol$1"->"dup1.r";
+    "load.r r0"
+    "dup1.r"->"load.r r0";
+    "specialinvoke <lol$1: void <init>(lol)>"
+    "load.r r0"->"specialinvoke <lol$1: void <init>(lol)>";
+    "specialinvoke <java.lang.Thread: void <init>(java.lang.Runnable)>"
+    "specialinvoke <lol$1: void <init>(lol)>"->"specialinvoke <java.lang.Thread: void <init>(java.lang.Runnable)>";
+    "virtualinvoke <java.lang.Thread: void start()>"
+    "specialinvoke <java.lang.Thread: void <init>(java.lang.Runnable)>"->"virtualinvoke <java.lang.Thread: void start()>";
+    "return"
+    "virtualinvoke <java.lang.Thread: void start()>"->"return";
+}

@@ -1,0 +1,21 @@
+digraph "" {
+    "r0 := @this: EMBox"
+    "load.r r0"
+    "r0 := @this: EMBox"->"load.r r0";
+    "new EMBoxFrame"
+    "load.r r0"->"new EMBoxFrame";
+    "dup1.r"
+    "new EMBoxFrame"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "specialinvoke <EMBoxFrame: void <init>(EMBox)>"
+    "load.r r0"->"specialinvoke <EMBoxFrame: void <init>(EMBox)>";
+    "fieldput <EMBox: EMBoxFrame oc>"
+    "specialinvoke <EMBoxFrame: void <init>(EMBox)>"->"fieldput <EMBox: EMBoxFrame oc>";
+    "fieldput <EMBox: EMBoxFrame oc>"->"load.r r0";
+    "fieldget <EMBox: EMBoxFrame oc>"
+    "load.r r0"->"fieldget <EMBox: EMBoxFrame oc>";
+    "virtualinvoke <EMBoxFrame: void init()>"
+    "fieldget <EMBox: EMBoxFrame oc>"->"virtualinvoke <EMBoxFrame: void init()>";
+    "return"
+    "virtualinvoke <EMBoxFrame: void init()>"->"return";
+}

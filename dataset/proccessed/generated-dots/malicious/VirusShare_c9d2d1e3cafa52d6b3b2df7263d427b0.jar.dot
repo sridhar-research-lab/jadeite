@@ -1,0 +1,213 @@
+digraph "" {
+    "r0 := @this: LauncherBase"
+    "load.r r0"
+    "r0 := @this: LauncherBase"->"load.r r0";
+    "new java.util.Vector"
+    "load.r r0"->"new java.util.Vector";
+    "dup1.r"
+    "new java.util.Vector"->"dup1.r";
+    "specialinvoke <java.util.Vector: void <init>()>"
+    "dup1.r"->"specialinvoke <java.util.Vector: void <init>()>";
+    "fieldput <LauncherBase: java.util.Vector vUserProperties>"
+    "specialinvoke <java.util.Vector: void <init>()>"->"fieldput <LauncherBase: java.util.Vector vUserProperties>";
+    "fieldput <LauncherBase: java.util.Vector vUserProperties>"->"load.r r0";
+    "push \"Color\""
+    "load.r r0"->"push \"Color\"";
+    "virtualinvoke <LauncherBase: java.lang.String getParameter(java.lang.String)>"
+    "push \"Color\""->"virtualinvoke <LauncherBase: java.lang.String getParameter(java.lang.String)>";
+    "ifnull load.r r0"
+    "virtualinvoke <LauncherBase: java.lang.String getParameter(java.lang.String)>"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r r0";
+    "new java.awt.Color"
+    "load.r r0"->"new java.awt.Color";
+    "new java.awt.Color"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "load.r r0"->"push \"Color\"";
+    "push \"Color\""->"virtualinvoke <LauncherBase: java.lang.String getParameter(java.lang.String)>";
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"
+    "virtualinvoke <LauncherBase: java.lang.String getParameter(java.lang.String)>"->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>";
+    "specialinvoke <java.awt.Color: void <init>(int)>"
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"->"specialinvoke <java.awt.Color: void <init>(int)>";
+    "fieldput <LauncherBase: java.awt.Color backgroundColor>"
+    "specialinvoke <java.awt.Color: void <init>(int)>"->"fieldput <LauncherBase: java.awt.Color backgroundColor>";
+    "fieldput <LauncherBase: java.awt.Color backgroundColor>"->"load.r r0";
+    "push \"ArrowColor\""
+    "load.r r0"->"push \"ArrowColor\"";
+    "push \"ArrowColor\""->"virtualinvoke <LauncherBase: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <LauncherBase: java.lang.String getParameter(java.lang.String)>"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r r0";
+    "load.r r0"->"new java.awt.Color";
+    "new java.awt.Color"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "load.r r0"->"push \"ArrowColor\"";
+    "push \"ArrowColor\""->"virtualinvoke <LauncherBase: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <LauncherBase: java.lang.String getParameter(java.lang.String)>"->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>";
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"->"specialinvoke <java.awt.Color: void <init>(int)>";
+    "fieldput <LauncherBase: java.awt.Color arrowColor>"
+    "specialinvoke <java.awt.Color: void <init>(int)>"->"fieldput <LauncherBase: java.awt.Color arrowColor>";
+    "fieldput <LauncherBase: java.awt.Color arrowColor>"->"load.r r0";
+    "push \"LabelColor\""
+    "load.r r0"->"push \"LabelColor\"";
+    "push \"LabelColor\""->"virtualinvoke <LauncherBase: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <LauncherBase: java.lang.String getParameter(java.lang.String)>"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r r0";
+    "load.r r0"->"new java.awt.Color";
+    "new java.awt.Color"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "load.r r0"->"push \"LabelColor\"";
+    "push \"LabelColor\""->"virtualinvoke <LauncherBase: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <LauncherBase: java.lang.String getParameter(java.lang.String)>"->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>";
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"->"specialinvoke <java.awt.Color: void <init>(int)>";
+    "fieldput <LauncherBase: java.awt.Color labelColor>"
+    "specialinvoke <java.awt.Color: void <init>(int)>"->"fieldput <LauncherBase: java.awt.Color labelColor>";
+    "goto load.r r0"
+    "fieldput <LauncherBase: java.awt.Color labelColor>"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "specialinvoke <LauncherBase: void createGUI()>"
+    "load.r r0"->"specialinvoke <LauncherBase: void createGUI()>";
+    "specialinvoke <LauncherBase: void createGUI()>"->"load.r r0";
+    "push \"Info\""
+    "load.r r0"->"push \"Info\"";
+    "new java.lang.StringBuilder"
+    "push \"Info\""->"new java.lang.StringBuilder";
+    "new java.lang.StringBuilder"->"dup1.r";
+    "push \"JRE \""
+    "dup1.r"->"push \"JRE \"";
+    "specialinvoke <java.lang.StringBuilder: void <init>(java.lang.String)>"
+    "push \"JRE \""->"specialinvoke <java.lang.StringBuilder: void <init>(java.lang.String)>";
+    "push \"javaplugin.version\""
+    "specialinvoke <java.lang.StringBuilder: void <init>(java.lang.String)>"->"push \"javaplugin.version\"";
+    "staticinvoke <java.lang.System: java.lang.String getProperty(java.lang.String)>"
+    "push \"javaplugin.version\""->"staticinvoke <java.lang.System: java.lang.String getProperty(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"
+    "staticinvoke <java.lang.System: java.lang.String getProperty(java.lang.String)>"->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.String toString()>"
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"virtualinvoke <java.lang.StringBuilder: java.lang.String toString()>";
+    "push null"
+    "virtualinvoke <java.lang.StringBuilder: java.lang.String toString()>"->"push null";
+    "virtualinvoke <LauncherBase: void logOut(java.lang.String,java.lang.String,java.lang.String)>"
+    "push null"->"virtualinvoke <LauncherBase: void logOut(java.lang.String,java.lang.String,java.lang.String)>";
+    "new java.util.Properties"
+    "virtualinvoke <LauncherBase: void logOut(java.lang.String,java.lang.String,java.lang.String)>"->"new java.util.Properties";
+    "store.r $r15"
+    "new java.util.Properties"->"store.r $r15";
+    "load.r $r15"
+    "store.r $r15"->"load.r $r15";
+    "specialinvoke <java.util.Properties: void <init>()>"
+    "load.r $r15"->"specialinvoke <java.util.Properties: void <init>()>";
+    "push class \"LLauncherBase;\""
+    "specialinvoke <java.util.Properties: void <init>()>"->"push class \"LLauncherBase;\"";
+    "push \"build.properties\""
+    "push class \"LLauncherBase;\""->"push \"build.properties\"";
+    "virtualinvoke <java.lang.Class: java.net.URL getResource(java.lang.String)>"
+    "push \"build.properties\""->"virtualinvoke <java.lang.Class: java.net.URL getResource(java.lang.String)>";
+    "new java.io.BufferedInputStream"
+    "virtualinvoke <java.lang.Class: java.net.URL getResource(java.lang.String)>"->"new java.io.BufferedInputStream";
+    "store.r $r26"
+    "new java.io.BufferedInputStream"->"store.r $r26";
+    "virtualinvoke <java.net.URL: java.io.InputStream openStream()>"
+    "store.r $r26"->"virtualinvoke <java.net.URL: java.io.InputStream openStream()>";
+    "store.r $r27"
+    "virtualinvoke <java.net.URL: java.io.InputStream openStream()>"->"store.r $r27";
+    "load.r $r26"
+    "store.r $r27"->"load.r $r26";
+    "load.r $r27"
+    "load.r $r26"->"load.r $r27";
+    "specialinvoke <java.io.BufferedInputStream: void <init>(java.io.InputStream)>"
+    "load.r $r27"->"specialinvoke <java.io.BufferedInputStream: void <init>(java.io.InputStream)>";
+    "specialinvoke <java.io.BufferedInputStream: void <init>(java.io.InputStream)>"->"load.r $r15";
+    "load.r $r15"->"load.r $r26";
+    "virtualinvoke <java.util.Properties: void load(java.io.InputStream)>"
+    "load.r $r26"->"virtualinvoke <java.util.Properties: void load(java.io.InputStream)>";
+    "virtualinvoke <java.util.Properties: void load(java.io.InputStream)>"->"load.r $r26";
+    "virtualinvoke <java.io.BufferedInputStream: void close()>"
+    "load.r $r26"->"virtualinvoke <java.io.BufferedInputStream: void close()>";
+    "virtualinvoke <java.io.BufferedInputStream: void close()>"->"load.r r0";
+    "load.r r0"->"push \"Info\"";
+    "push \"Info\""->"new java.lang.StringBuilder";
+    "new java.lang.StringBuilder"->"dup1.r";
+    "push \"Applet Build \""
+    "dup1.r"->"push \"Applet Build \"";
+    "push \"Applet Build \""->"specialinvoke <java.lang.StringBuilder: void <init>(java.lang.String)>";
+    "specialinvoke <java.lang.StringBuilder: void <init>(java.lang.String)>"->"load.r $r15";
+    "push \"build\""
+    "load.r $r15"->"push \"build\"";
+    "push \"n/a\""
+    "push \"build\""->"push \"n/a\"";
+    "virtualinvoke <java.util.Properties: java.lang.String getProperty(java.lang.String,java.lang.String)>"
+    "push \"n/a\""->"virtualinvoke <java.util.Properties: java.lang.String getProperty(java.lang.String,java.lang.String)>";
+    "virtualinvoke <java.util.Properties: java.lang.String getProperty(java.lang.String,java.lang.String)>"->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "push \" from \""
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"push \" from \"";
+    "push \" from \""->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"load.r $r15";
+    "push \"date\""
+    "load.r $r15"->"push \"date\"";
+    "push \"date\""->"push \"n/a\"";
+    "push \"n/a\""->"virtualinvoke <java.util.Properties: java.lang.String getProperty(java.lang.String,java.lang.String)>";
+    "virtualinvoke <java.util.Properties: java.lang.String getProperty(java.lang.String,java.lang.String)>"->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"virtualinvoke <java.lang.StringBuilder: java.lang.String toString()>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.String toString()>"->"push null";
+    "push null"->"virtualinvoke <LauncherBase: void logOut(java.lang.String,java.lang.String,java.lang.String)>";
+    "goto staticget <LauncherBase: boolean loadLibraryDone>"
+    "virtualinvoke <LauncherBase: void logOut(java.lang.String,java.lang.String,java.lang.String)>"->"goto staticget <LauncherBase: boolean loadLibraryDone>";
+    "staticget <LauncherBase: boolean loadLibraryDone>"
+    "goto staticget <LauncherBase: boolean loadLibraryDone>"->"staticget <LauncherBase: boolean loadLibraryDone>";
+    "ifne load.r r0"
+    "staticget <LauncherBase: boolean loadLibraryDone>"->"ifne load.r r0";
+    "ifne load.r r0"->"load.r r0";
+    "push \"Error\""
+    "load.r r0"->"push \"Error\"";
+    "push \"Program execution stopped because LoadLibrary failed\""
+    "push \"Error\""->"push \"Program execution stopped because LoadLibrary failed\"";
+    "push \"Program execution stopped because LoadLibrary failed\""->"push null";
+    "push null"->"virtualinvoke <LauncherBase: void logOut(java.lang.String,java.lang.String,java.lang.String)>";
+    "return"
+    "virtualinvoke <LauncherBase: void logOut(java.lang.String,java.lang.String,java.lang.String)>"->"return";
+    "ifne load.r r0"->"load.r r0";
+    "specialinvoke <LauncherBase: void GetAppletStartParameters()>"
+    "load.r r0"->"specialinvoke <LauncherBase: void GetAppletStartParameters()>";
+    "specialinvoke <LauncherBase: void GetAppletStartParameters()>"->"load.r r0";
+    "push \"Applet Status\""
+    "load.r r0"->"push \"Applet Status\"";
+    "push \"initialized\""
+    "push \"Applet Status\""->"push \"initialized\"";
+    "push \"initialized\""->"push null";
+    "push null"->"virtualinvoke <LauncherBase: void logOut(java.lang.String,java.lang.String,java.lang.String)>";
+    "virtualinvoke <LauncherBase: void logOut(java.lang.String,java.lang.String,java.lang.String)>"->"load.r r0";
+    "push \"Autostart\""
+    "load.r r0"->"push \"Autostart\"";
+    "push \"Autostart\""->"virtualinvoke <LauncherBase: java.lang.String getParameter(java.lang.String)>";
+    "ifnull return"
+    "virtualinvoke <LauncherBase: java.lang.String getParameter(java.lang.String)>"->"ifnull return";
+    "ifnull return"->"load.r r0";
+    "load.r r0"->"push \"Autostart\"";
+    "push \"Autostart\""->"virtualinvoke <LauncherBase: java.lang.String getParameter(java.lang.String)>";
+    "push \"1\""
+    "virtualinvoke <LauncherBase: java.lang.String getParameter(java.lang.String)>"->"push \"1\"";
+    "virtualinvoke <java.lang.String: int compareTo(java.lang.String)>"
+    "push \"1\""->"virtualinvoke <java.lang.String: int compareTo(java.lang.String)>";
+    "ifne return"
+    "virtualinvoke <java.lang.String: int compareTo(java.lang.String)>"->"ifne return";
+    "ifne return"->"load.r r0";
+    "specialinvoke <LauncherBase: void updateAndExecute()>"
+    "load.r r0"->"specialinvoke <LauncherBase: void updateAndExecute()>";
+    "specialinvoke <LauncherBase: void updateAndExecute()>"->"return";
+    "virtualinvoke <LauncherBase: void logOut(java.lang.String,java.lang.String,java.lang.String)>"->"store.r $r15";
+    "store.r $r15"->"load.r r0";
+    "load.r r0"->"push \"Info\"";
+    "push \"Applet Build properties not available\""
+    "push \"Info\""->"push \"Applet Build properties not available\"";
+    "push \"Applet Build properties not available\""->"push null";
+    "push null"->"virtualinvoke <LauncherBase: void logOut(java.lang.String,java.lang.String,java.lang.String)>";
+    "virtualinvoke <java.lang.NumberFormatException: java.lang.String toString()>"
+    "specialinvoke <java.awt.Color: void <init>(int)>"->"virtualinvoke <java.lang.NumberFormatException: java.lang.String toString()>";
+    "virtualinvoke <java.lang.NumberFormatException: java.lang.String toString()>"->"store.r $r15";
+    "store.r $r15"->"load.r r0";
+    "push \"NumberFormatException\""
+    "load.r r0"->"push \"NumberFormatException\"";
+    "push \"Parsing Color/ArrowColor/LabelColor\""
+    "push \"NumberFormatException\""->"push \"Parsing Color/ArrowColor/LabelColor\"";
+    "push \"Parsing Color/ArrowColor/LabelColor\""->"load.r $r15";
+    "load.r $r15"->"virtualinvoke <LauncherBase: void logOut(java.lang.String,java.lang.String,java.lang.String)>";
+}

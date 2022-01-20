@@ -1,0 +1,40 @@
+digraph "" {
+    "r0 := @this: y.cnt.0"
+    "load.r r0"
+    "r0 := @this: y.cnt.0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "push \"host\""
+    "load.r r0"->"push \"host\"";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"
+    "push \"host\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "fieldput <y.cnt.0: java.lang.String d>"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"fieldput <y.cnt.0: java.lang.String d>";
+    "fieldput <y.cnt.0: java.lang.String d>"->"load.r r0";
+    "fieldget <y.cnt.0: java.lang.String d>"
+    "load.r r0"->"fieldget <y.cnt.0: java.lang.String d>";
+    "ifnonnull load.r r0"
+    "fieldget <y.cnt.0: java.lang.String d>"->"ifnonnull load.r r0";
+    "ifnonnull load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "virtualinvoke <java.applet.Applet: java.net.URL getCodeBase()>"
+    "load.r r0"->"virtualinvoke <java.applet.Applet: java.net.URL getCodeBase()>";
+    "virtualinvoke <java.net.URL: java.lang.String getHost()>"
+    "virtualinvoke <java.applet.Applet: java.net.URL getCodeBase()>"->"virtualinvoke <java.net.URL: java.lang.String getHost()>";
+    "virtualinvoke <java.net.URL: java.lang.String getHost()>"->"fieldput <y.cnt.0: java.lang.String d>";
+    "fieldput <y.cnt.0: java.lang.String d>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "push \"id\""
+    "load.r r0"->"push \"id\"";
+    "push \"id\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "fieldput <y.cnt.0: java.lang.String b>"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"fieldput <y.cnt.0: java.lang.String b>";
+    "fieldput <y.cnt.0: java.lang.String b>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "push \"location\""
+    "load.r r0"->"push \"location\"";
+    "push \"location\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "fieldput <y.cnt.0: java.lang.String c>"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"fieldput <y.cnt.0: java.lang.String c>";
+    "return"
+    "fieldput <y.cnt.0: java.lang.String c>"->"return";
+}

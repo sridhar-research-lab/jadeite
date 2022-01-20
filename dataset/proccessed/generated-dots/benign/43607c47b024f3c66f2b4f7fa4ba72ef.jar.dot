@@ -1,0 +1,300 @@
+digraph "" {
+    "r0 := @this: PushIt"
+    "load.r r0"
+    "r0 := @this: PushIt"->"load.r r0";
+    "push \"parameterFile\""
+    "load.r r0"->"push \"parameterFile\"";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"
+    "push \"parameterFile\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "store.r r1"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"store.r r1";
+    "new java.awt.Dimension"
+    "store.r r1"->"new java.awt.Dimension";
+    "store.r $r5"
+    "new java.awt.Dimension"->"store.r $r5";
+    "load.r $r5"
+    "store.r $r5"->"load.r $r5";
+    "specialinvoke <java.awt.Dimension: void <init>()>"
+    "load.r $r5"->"specialinvoke <java.awt.Dimension: void <init>()>";
+    "load.r r1"
+    "specialinvoke <java.awt.Dimension: void <init>()>"->"load.r r1";
+    "ifnull load.r r0"
+    "load.r r1"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r r0";
+    "push \"Reading data ...\""
+    "load.r r0"->"push \"Reading data ...\"";
+    "virtualinvoke <java.applet.Applet: void showStatus(java.lang.String)>"
+    "push \"Reading data ...\""->"virtualinvoke <java.applet.Applet: void showStatus(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: void showStatus(java.lang.String)>"->"load.r r0";
+    "load.r r0"->"load.r r1";
+    "push null"
+    "load.r r1"->"push null";
+    "push 1"
+    "push null"->"push 1";
+    "specialinvoke <PushIt: java.net.URL parseURL(java.lang.String,java.net.URL,boolean)>"
+    "push 1"->"specialinvoke <PushIt: java.net.URL parseURL(java.lang.String,java.net.URL,boolean)>";
+    "virtualinvoke <java.net.URL: java.io.InputStream openStream()>"
+    "specialinvoke <PushIt: java.net.URL parseURL(java.lang.String,java.net.URL,boolean)>"->"virtualinvoke <java.net.URL: java.io.InputStream openStream()>";
+    "virtualinvoke <java.net.URL: java.io.InputStream openStream()>"->"store.r r1";
+    "store.r r1"->"load.r r0";
+    "fieldget <PushIt: java.util.Properties parameters>"
+    "load.r r0"->"fieldget <PushIt: java.util.Properties parameters>";
+    "fieldget <PushIt: java.util.Properties parameters>"->"load.r r1";
+    "virtualinvoke <java.util.Properties: void load(java.io.InputStream)>"
+    "load.r r1"->"virtualinvoke <java.util.Properties: void load(java.io.InputStream)>";
+    "virtualinvoke <java.util.Properties: void load(java.io.InputStream)>"->"load.r r1";
+    "virtualinvoke <java.io.InputStream: void close()>"
+    "load.r r1"->"virtualinvoke <java.io.InputStream: void close()>";
+    "goto load.r r0"
+    "virtualinvoke <java.io.InputStream: void close()>"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "push \"\""
+    "load.r r0"->"push \"\"";
+    "push \"\""->"virtualinvoke <java.applet.Applet: void showStatus(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: void showStatus(java.lang.String)>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "virtualinvoke <java.awt.Component: java.awt.Dimension getSize()>"
+    "load.r r0"->"virtualinvoke <java.awt.Component: java.awt.Dimension getSize()>";
+    "fieldget <java.awt.Dimension: int width>"
+    "virtualinvoke <java.awt.Component: java.awt.Dimension getSize()>"->"fieldget <java.awt.Dimension: int width>";
+    "fieldput <PushIt: int width>"
+    "fieldget <java.awt.Dimension: int width>"->"fieldput <PushIt: int width>";
+    "fieldput <PushIt: int width>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"virtualinvoke <java.awt.Component: java.awt.Dimension getSize()>";
+    "fieldget <java.awt.Dimension: int height>"
+    "virtualinvoke <java.awt.Component: java.awt.Dimension getSize()>"->"fieldget <java.awt.Dimension: int height>";
+    "fieldput <PushIt: int height>"
+    "fieldget <java.awt.Dimension: int height>"->"fieldput <PushIt: int height>";
+    "fieldput <PushIt: int height>"->"load.r r0";
+    "staticget <PushIt: java.lang.Object[][] envParams>"
+    "load.r r0"->"staticget <PushIt: java.lang.Object[][] envParams>";
+    "staticget <PushIt: java.lang.Object[][] envParams>"->"load.r r0";
+    "fieldget <PushIt: java.lang.Object[] envValues>"
+    "load.r r0"->"fieldget <PushIt: java.lang.Object[] envValues>";
+    "fieldget <PushIt: java.lang.Object[] envValues>"->"load.r r0";
+    "load.r r0"->"fieldget <PushIt: java.lang.Object[] envValues>";
+    "fieldget <PushIt: java.lang.Object[] envValues>"->"push null";
+    "specialinvoke <PushIt: void getParameterValues(java.lang.Object[][],java.lang.Object[],java.lang.Object[],java.lang.String)>"
+    "push null"->"specialinvoke <PushIt: void getParameterValues(java.lang.Object[][],java.lang.Object[],java.lang.Object[],java.lang.String)>";
+    "specialinvoke <PushIt: void getParameterValues(java.lang.Object[][],java.lang.Object[],java.lang.Object[],java.lang.String)>"->"load.r r0";
+    "staticget <PushIt: java.lang.Object[][] buttonParams>"
+    "load.r r0"->"staticget <PushIt: java.lang.Object[][] buttonParams>";
+    "staticget <PushIt: java.lang.Object[][] buttonParams>"->"load.r r0";
+    "fieldget <PushIt: java.lang.Object[] buttonValues>"
+    "load.r r0"->"fieldget <PushIt: java.lang.Object[] buttonValues>";
+    "fieldget <PushIt: java.lang.Object[] buttonValues>"->"load.r r0";
+    "load.r r0"->"fieldget <PushIt: java.lang.Object[] buttonValues>";
+    "fieldget <PushIt: java.lang.Object[] buttonValues>"->"push null";
+    "push null"->"specialinvoke <PushIt: void getParameterValues(java.lang.Object[][],java.lang.Object[],java.lang.Object[],java.lang.String)>";
+    "specialinvoke <PushIt: void getParameterValues(java.lang.Object[][],java.lang.Object[],java.lang.Object[],java.lang.String)>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <PushIt: java.lang.Object[] envValues>";
+    "push 4"
+    "fieldget <PushIt: java.lang.Object[] envValues>"->"push 4";
+    "arrayread.r"
+    "push 4"->"arrayread.r";
+    "checkcast"
+    "arrayread.r"->"checkcast";
+    "virtualinvoke <java.lang.Integer: int intValue()>"
+    "checkcast"->"virtualinvoke <java.lang.Integer: int intValue()>";
+    "push 3"
+    "virtualinvoke <java.lang.Integer: int intValue()>"->"push 3";
+    "rem.i"
+    "push 3"->"rem.i";
+    "fieldput <PushIt: int hAlign>"
+    "rem.i"->"fieldput <PushIt: int hAlign>";
+    "fieldput <PushIt: int hAlign>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <PushIt: java.lang.Object[] envValues>";
+    "push 5"
+    "fieldget <PushIt: java.lang.Object[] envValues>"->"push 5";
+    "push 5"->"arrayread.r";
+    "arrayread.r"->"checkcast";
+    "checkcast"->"virtualinvoke <java.lang.Integer: int intValue()>";
+    "virtualinvoke <java.lang.Integer: int intValue()>"->"push 3";
+    "push 3"->"rem.i";
+    "fieldput <PushIt: int vAlign>"
+    "rem.i"->"fieldput <PushIt: int vAlign>";
+    "fieldput <PushIt: int vAlign>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <PushIt: java.lang.Object[] envValues>";
+    "push 6"
+    "fieldget <PushIt: java.lang.Object[] envValues>"->"push 6";
+    "push 6"->"arrayread.r";
+    "arrayread.r"->"checkcast";
+    "checkcast"->"virtualinvoke <java.lang.Integer: int intValue()>";
+    "push 2"
+    "virtualinvoke <java.lang.Integer: int intValue()>"->"push 2";
+    "push 2"->"rem.i";
+    "fieldput <PushIt: int arrangement>"
+    "rem.i"->"fieldput <PushIt: int arrangement>";
+    "fieldput <PushIt: int arrangement>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "virtualinvoke <java.awt.Container: void setLayout(java.awt.LayoutManager)>"
+    "load.r r0"->"virtualinvoke <java.awt.Container: void setLayout(java.awt.LayoutManager)>";
+    "virtualinvoke <java.awt.Container: void setLayout(java.awt.LayoutManager)>"->"load.r r0";
+    "specialinvoke <PushIt: void createSeedSource()>"
+    "load.r r0"->"specialinvoke <PushIt: void createSeedSource()>";
+    "specialinvoke <PushIt: void createSeedSource()>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <PushIt: java.lang.Object[] envValues>";
+    "fieldget <PushIt: java.lang.Object[] envValues>"->"push 1";
+    "push 1"->"arrayread.r";
+    "arrayread.r"->"checkcast";
+    "virtualinvoke <PushIt: void setBackground(java.awt.Color)>"
+    "checkcast"->"virtualinvoke <PushIt: void setBackground(java.awt.Color)>";
+    "virtualinvoke <PushIt: void setBackground(java.awt.Color)>"->"load.r r0";
+    "load.r r0"->"fieldget <PushIt: java.lang.Object[] envValues>";
+    "push 0"
+    "fieldget <PushIt: java.lang.Object[] envValues>"->"push 0";
+    "push 0"->"arrayread.r";
+    "arrayread.r"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <PushIt: java.lang.Object[] envValues>";
+    "fieldget <PushIt: java.lang.Object[] envValues>"->"push 0";
+    "push 0"->"arrayread.r";
+    "arrayread.r"->"checkcast";
+    "virtualinvoke <PushIt: void setBackground(java.awt.Image)>"
+    "checkcast"->"virtualinvoke <PushIt: void setBackground(java.awt.Image)>";
+    "virtualinvoke <PushIt: void setBackground(java.awt.Image)>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "specialinvoke <PushIt: int getButtonCount()>"
+    "load.r r0"->"specialinvoke <PushIt: int getButtonCount()>";
+    "fieldput <PushIt: int totalN>"
+    "specialinvoke <PushIt: int getButtonCount()>"->"fieldput <PushIt: int totalN>";
+    "fieldput <PushIt: int totalN>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <PushIt: java.lang.Object[] envValues>";
+    "push 7"
+    "fieldget <PushIt: java.lang.Object[] envValues>"->"push 7";
+    "push 7"->"arrayread.r";
+    "arrayread.r"->"checkcast";
+    "checkcast"->"load.r r0";
+    "load.r r0"->"fieldget <PushIt: java.lang.Object[] envValues>";
+    "push 8"
+    "fieldget <PushIt: java.lang.Object[] envValues>"->"push 8";
+    "push 8"->"arrayread.r";
+    "arrayread.r"->"checkcast";
+    "checkcast"->"push 0";
+    "push 0"->"load.r r0";
+    "load.r r0"->"fieldget <PushIt: java.lang.Object[] envValues>";
+    "push 9"
+    "fieldget <PushIt: java.lang.Object[] envValues>"->"push 9";
+    "push 9"->"arrayread.r";
+    "arrayread.r"->"checkcast";
+    "push 0.25"
+    "checkcast"->"push 0.25";
+    "push 0.25"->"push 1";
+    "push 1"->"load.r $r5";
+    "specialinvoke <PushIt: int[] createLabel(java.lang.String,java.awt.Font,int,java.awt.Color,double,boolean,java.awt.Dimension)>"
+    "load.r $r5"->"specialinvoke <PushIt: int[] createLabel(java.lang.String,java.awt.Font,int,java.awt.Color,double,boolean,java.awt.Dimension)>";
+    "specialinvoke <PushIt: int[] createLabel(java.lang.String,java.awt.Font,int,java.awt.Color,double,boolean,java.awt.Dimension)>"->"store.r r1";
+    "new java.awt.image.MemoryImageSource"
+    "store.r r1"->"new java.awt.image.MemoryImageSource";
+    "dup1.r"
+    "new java.awt.image.MemoryImageSource"->"dup1.r";
+    "dup1.r"->"load.r $r5";
+    "load.r $r5"->"fieldget <java.awt.Dimension: int width>";
+    "fieldget <java.awt.Dimension: int width>"->"load.r $r5";
+    "load.r $r5"->"fieldget <java.awt.Dimension: int height>";
+    "fieldget <java.awt.Dimension: int height>"->"load.r r1";
+    "load.r r1"->"push 0";
+    "push 0"->"load.r $r5";
+    "load.r $r5"->"fieldget <java.awt.Dimension: int width>";
+    "specialinvoke <java.awt.image.MemoryImageSource: void <init>(int,int,int[],int,int)>"
+    "fieldget <java.awt.Dimension: int width>"->"specialinvoke <java.awt.image.MemoryImageSource: void <init>(int,int,int[],int,int)>";
+    "virtualinvoke <java.awt.Component: java.awt.Image createImage(java.awt.image.ImageProducer)>"
+    "specialinvoke <java.awt.image.MemoryImageSource: void <init>(int,int,int[],int,int)>"->"virtualinvoke <java.awt.Component: java.awt.Image createImage(java.awt.image.ImageProducer)>";
+    "fieldput <PushIt: java.awt.Image loadImage>"
+    "virtualinvoke <java.awt.Component: java.awt.Image createImage(java.awt.image.ImageProducer)>"->"fieldput <PushIt: java.awt.Image loadImage>";
+    "fieldput <PushIt: java.awt.Image loadImage>"->"load.r r0";
+    "new java.awt.Rectangle"
+    "load.r r0"->"new java.awt.Rectangle";
+    "new java.awt.Rectangle"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "fieldget <PushIt: int width>"
+    "load.r r0"->"fieldget <PushIt: int width>";
+    "fieldget <PushIt: int width>"->"load.r r0";
+    "fieldget <PushIt: java.awt.Image loadImage>"
+    "load.r r0"->"fieldget <PushIt: java.awt.Image loadImage>";
+    "fieldget <PushIt: java.awt.Image loadImage>"->"push null";
+    "virtualinvoke <java.awt.Image: int getWidth(java.awt.image.ImageObserver)>"
+    "push null"->"virtualinvoke <java.awt.Image: int getWidth(java.awt.image.ImageObserver)>";
+    "sub.i"
+    "virtualinvoke <java.awt.Image: int getWidth(java.awt.image.ImageObserver)>"->"sub.i";
+    "sub.i"->"push 2";
+    "div.i"
+    "push 2"->"div.i";
+    "div.i"->"load.r r0";
+    "fieldget <PushIt: int height>"
+    "load.r r0"->"fieldget <PushIt: int height>";
+    "fieldget <PushIt: int height>"->"load.r r0";
+    "load.r r0"->"fieldget <PushIt: java.awt.Image loadImage>";
+    "fieldget <PushIt: java.awt.Image loadImage>"->"push null";
+    "virtualinvoke <java.awt.Image: int getHeight(java.awt.image.ImageObserver)>"
+    "push null"->"virtualinvoke <java.awt.Image: int getHeight(java.awt.image.ImageObserver)>";
+    "virtualinvoke <java.awt.Image: int getHeight(java.awt.image.ImageObserver)>"->"sub.i";
+    "sub.i"->"push 2";
+    "push 2"->"div.i";
+    "div.i"->"load.r r0";
+    "load.r r0"->"fieldget <PushIt: java.awt.Image loadImage>";
+    "fieldget <PushIt: java.awt.Image loadImage>"->"push null";
+    "push null"->"virtualinvoke <java.awt.Image: int getWidth(java.awt.image.ImageObserver)>";
+    "virtualinvoke <java.awt.Image: int getWidth(java.awt.image.ImageObserver)>"->"load.r r0";
+    "load.r r0"->"fieldget <PushIt: java.awt.Image loadImage>";
+    "fieldget <PushIt: java.awt.Image loadImage>"->"push null";
+    "push null"->"virtualinvoke <java.awt.Image: int getHeight(java.awt.image.ImageObserver)>";
+    "specialinvoke <java.awt.Rectangle: void <init>(int,int,int,int)>"
+    "virtualinvoke <java.awt.Image: int getHeight(java.awt.image.ImageObserver)>"->"specialinvoke <java.awt.Rectangle: void <init>(int,int,int,int)>";
+    "fieldput <PushIt: java.awt.Rectangle loadBounds>"
+    "specialinvoke <java.awt.Rectangle: void <init>(int,int,int,int)>"->"fieldput <PushIt: java.awt.Rectangle loadBounds>";
+    "fieldput <PushIt: java.awt.Rectangle loadBounds>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "fieldget <PushIt: int totalN>"
+    "load.r r0"->"fieldget <PushIt: int totalN>";
+    "newarray"
+    "fieldget <PushIt: int totalN>"->"newarray";
+    "fieldput <PushIt: PushButton[] buttons>"
+    "newarray"->"fieldput <PushIt: PushButton[] buttons>";
+    "fieldput <PushIt: PushButton[] buttons>"->"push 0";
+    "store.i $r5"
+    "push 0"->"store.i $r5";
+    "goto load.i $r5"
+    "store.i $r5"->"goto load.i $r5";
+    "load.i $r5"
+    "goto load.i $r5"->"load.i $r5";
+    "load.i $r5"->"load.r r0";
+    "load.r r0"->"fieldget <PushIt: int totalN>";
+    "ifcmplt.i load.r r0"
+    "fieldget <PushIt: int totalN>"->"ifcmplt.i load.r r0";
+    "return"
+    "ifcmplt.i load.r r0"->"return";
+    "ifcmplt.i load.r r0"->"load.r r0";
+    "fieldget <PushIt: PushButton[] buttons>"
+    "load.r r0"->"fieldget <PushIt: PushButton[] buttons>";
+    "fieldget <PushIt: PushButton[] buttons>"->"load.i $r5";
+    "new PushButton"
+    "load.i $r5"->"new PushButton";
+    "new PushButton"->"dup1.r";
+    "specialinvoke <PushButton: void <init>()>"
+    "dup1.r"->"specialinvoke <PushButton: void <init>()>";
+    "arraywrite.r"
+    "specialinvoke <PushButton: void <init>()>"->"arraywrite.r";
+    "arraywrite.r"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <PushIt: PushButton[] buttons>";
+    "fieldget <PushIt: PushButton[] buttons>"->"load.i $r5";
+    "load.i $r5"->"arrayread.r";
+    "arrayread.r"->"load.i $r5";
+    "virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component,int)>"
+    "load.i $r5"->"virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component,int)>";
+    "pop"
+    "virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component,int)>"->"pop";
+    "inc.i $r5 1"
+    "pop"->"inc.i $r5 1";
+    "virtualinvoke <java.io.InputStream: void close()>"->"store.r r1";
+}

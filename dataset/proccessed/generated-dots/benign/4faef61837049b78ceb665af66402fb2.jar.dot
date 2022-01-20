@@ -1,0 +1,30 @@
+digraph "" {
+    "r0 := @this: Scroll"
+    "load.r r0"
+    "r0 := @this: Scroll"->"load.r r0";
+    "virtualinvoke <Scroll: void getParameterValue()>"
+    "load.r r0"->"virtualinvoke <Scroll: void getParameterValue()>";
+    "virtualinvoke <Scroll: void getParameterValue()>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "fieldget <Scroll: java.awt.Color descBColor>"
+    "load.r r0"->"fieldget <Scroll: java.awt.Color descBColor>";
+    "virtualinvoke <java.awt.Component: void setBackground(java.awt.Color)>"
+    "fieldget <Scroll: java.awt.Color descBColor>"->"virtualinvoke <java.awt.Component: void setBackground(java.awt.Color)>";
+    "virtualinvoke <java.awt.Component: void setBackground(java.awt.Color)>"->"load.r r0";
+    "new java.awt.Cursor"
+    "load.r r0"->"new java.awt.Cursor";
+    "dup1.r"
+    "new java.awt.Cursor"->"dup1.r";
+    "push 12"
+    "dup1.r"->"push 12";
+    "specialinvoke <java.awt.Cursor: void <init>(int)>"
+    "push 12"->"specialinvoke <java.awt.Cursor: void <init>(int)>";
+    "virtualinvoke <java.awt.Container: void setCursor(java.awt.Cursor)>"
+    "specialinvoke <java.awt.Cursor: void <init>(int)>"->"virtualinvoke <java.awt.Container: void setCursor(java.awt.Cursor)>";
+    "virtualinvoke <java.awt.Container: void setCursor(java.awt.Cursor)>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "virtualinvoke <java.awt.Component: void addMouseListener(java.awt.event.MouseListener)>"
+    "load.r r0"->"virtualinvoke <java.awt.Component: void addMouseListener(java.awt.event.MouseListener)>";
+    "return"
+    "virtualinvoke <java.awt.Component: void addMouseListener(java.awt.event.MouseListener)>"->"return";
+}

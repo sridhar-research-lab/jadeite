@@ -1,0 +1,48 @@
+digraph "" {
+    "r0 := @this: T"
+    "load.r r0"
+    "r0 := @this: T"->"load.r r0";
+    "push \"\u03d3\u95ed\""
+    "load.r r0"->"push \"\u03d3\u95ed\"";
+    "staticinvoke <T: java.lang.String 奾(java.lang.String)>"
+    "push \"\u03d3\u95ed\""->"staticinvoke <T: java.lang.String 奾(java.lang.String)>";
+    "virtualinvoke <T: java.lang.String getParameter(java.lang.String)>"
+    "staticinvoke <T: java.lang.String 奾(java.lang.String)>"->"virtualinvoke <T: java.lang.String getParameter(java.lang.String)>";
+    "staticinvoke <T: java.lang.String dcu(java.lang.String)>"
+    "virtualinvoke <T: java.lang.String getParameter(java.lang.String)>"->"staticinvoke <T: java.lang.String dcu(java.lang.String)>";
+    "staticput <T: java.lang.String urla>"
+    "staticinvoke <T: java.lang.String dcu(java.lang.String)>"->"staticput <T: java.lang.String urla>";
+    "staticget <java.lang.System: java.io.PrintStream out>"
+    "staticput <T: java.lang.String urla>"->"staticget <java.lang.System: java.io.PrintStream out>";
+    "new java.lang.StringBuilder"
+    "staticget <java.lang.System: java.io.PrintStream out>"->"new java.lang.StringBuilder";
+    "dup1.r"
+    "new java.lang.StringBuilder"->"dup1.r";
+    "specialinvoke <java.lang.StringBuilder: void <init>()>"
+    "dup1.r"->"specialinvoke <java.lang.StringBuilder: void <init>()>";
+    "push \"\u03ef\u95e0\ue33a\uac20\u6a16\uad43\u6073\u8da2\u4e4d\u3440\ue0ab\ued08\u1a7f\u658b\u911b\uc888\u02ea\uba7b\u1289\""
+    "specialinvoke <java.lang.StringBuilder: void <init>()>"->"push \"\u03ef\u95e0\ue33a\uac20\u6a16\uad43\u6073\u8da2\u4e4d\u3440\ue0ab\ued08\u1a7f\u658b\u911b\uc888\u02ea\uba7b\u1289\"";
+    "push \"\u03ef\u95e0\ue33a\uac20\u6a16\uad43\u6073\u8da2\u4e4d\u3440\ue0ab\ued08\u1a7f\u658b\u911b\uc888\u02ea\uba7b\u1289\""->"staticinvoke <T: java.lang.String 奾(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"
+    "staticinvoke <T: java.lang.String 奾(java.lang.String)>"->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "staticinvoke <java.lang.System: java.lang.SecurityManager getSecurityManager()>"
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"staticinvoke <java.lang.System: java.lang.SecurityManager getSecurityManager()>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.Object)>"
+    "staticinvoke <java.lang.System: java.lang.SecurityManager getSecurityManager()>"->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.Object)>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.String toString()>"
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.Object)>"->"virtualinvoke <java.lang.StringBuilder: java.lang.String toString()>";
+    "virtualinvoke <java.io.PrintStream: void println(java.lang.String)>"
+    "virtualinvoke <java.lang.StringBuilder: java.lang.String toString()>"->"virtualinvoke <java.io.PrintStream: void println(java.lang.String)>";
+    "staticinvoke <V: void get_classes()>"
+    "virtualinvoke <java.io.PrintStream: void println(java.lang.String)>"->"staticinvoke <V: void get_classes()>";
+    "staticinvoke <V: void get_methods()>"
+    "staticinvoke <V: void get_classes()>"->"staticinvoke <V: void get_methods()>";
+    "staticinvoke <E: void run()>"
+    "staticinvoke <V: void get_methods()>"->"staticinvoke <E: void run()>";
+    "goto return"
+    "staticinvoke <E: void run()>"->"goto return";
+    "return"
+    "goto return"->"return";
+    "virtualinvoke <java.lang.Throwable: void printStackTrace()>"
+    "staticinvoke <E: void run()>"->"virtualinvoke <java.lang.Throwable: void printStackTrace()>";
+}

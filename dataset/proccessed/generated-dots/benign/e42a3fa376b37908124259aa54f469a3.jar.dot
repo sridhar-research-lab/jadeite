@@ -1,0 +1,480 @@
+digraph "" {
+    "r0 := @this: hnews"
+    "load.r r0"
+    "r0 := @this: hnews"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "virtualinvoke <java.applet.Applet: java.net.URL getCodeBase()>"
+    "load.r r0"->"virtualinvoke <java.applet.Applet: java.net.URL getCodeBase()>";
+    "fieldput <hnews: java.net.URL homeUrl>"
+    "virtualinvoke <java.applet.Applet: java.net.URL getCodeBase()>"->"fieldput <hnews: java.net.URL homeUrl>";
+    "fieldput <hnews: java.net.URL homeUrl>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "virtualinvoke <java.applet.Applet: java.net.URL getDocumentBase()>"
+    "load.r r0"->"virtualinvoke <java.applet.Applet: java.net.URL getDocumentBase()>";
+    "fieldput <hnews: java.net.URL docUrl>"
+    "virtualinvoke <java.applet.Applet: java.net.URL getDocumentBase()>"->"fieldput <hnews: java.net.URL docUrl>";
+    "fieldput <hnews: java.net.URL docUrl>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"virtualinvoke <java.applet.Applet: java.net.URL getDocumentBase()>";
+    "virtualinvoke <java.net.URL: java.lang.String getHost()>"
+    "virtualinvoke <java.applet.Applet: java.net.URL getDocumentBase()>"->"virtualinvoke <java.net.URL: java.lang.String getHost()>";
+    "fieldput <hnews: java.lang.String host>"
+    "virtualinvoke <java.net.URL: java.lang.String getHost()>"->"fieldput <hnews: java.lang.String host>";
+    "fieldput <hnews: java.lang.String host>"->"load.r r0";
+    "fieldget <hnews: boolean LOCAL_TEST>"
+    "load.r r0"->"fieldget <hnews: boolean LOCAL_TEST>";
+    "ifeq load.r r0"
+    "fieldget <hnews: boolean LOCAL_TEST>"->"ifeq load.r r0";
+    "ifeq load.r r0"->"load.r r0";
+    "push \"http://app.quotemedia.com/\""
+    "load.r r0"->"push \"http://app.quotemedia.com/\"";
+    "fieldput <hnews: java.lang.String baseUrl>"
+    "push \"http://app.quotemedia.com/\""->"fieldput <hnews: java.lang.String baseUrl>";
+    "fieldput <hnews: java.lang.String baseUrl>"->"load.r r0";
+    "push \"501\""
+    "load.r r0"->"push \"501\"";
+    "fieldput <hnews: java.lang.String wmid>"
+    "push \"501\""->"fieldput <hnews: java.lang.String wmid>";
+    "goto load.r r0"
+    "fieldput <hnews: java.lang.String wmid>"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "push \"topics\""
+    "load.r r0"->"push \"topics\"";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"
+    "push \"topics\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "ifnull load.r r0"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"push \"topics\"";
+    "push \"topics\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "fieldput <hnews: java.lang.String topics>"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"fieldput <hnews: java.lang.String topics>";
+    "new java.util.StringTokenizer"
+    "fieldput <hnews: java.lang.String topics>"->"new java.util.StringTokenizer";
+    "store.r $r63"
+    "new java.util.StringTokenizer"->"store.r $r63";
+    "load.r $r63"
+    "store.r $r63"->"load.r $r63";
+    "load.r $r63"->"load.r r0";
+    "fieldget <hnews: java.lang.String topics>"
+    "load.r r0"->"fieldget <hnews: java.lang.String topics>";
+    "push \",\""
+    "fieldget <hnews: java.lang.String topics>"->"push \",\"";
+    "specialinvoke <java.util.StringTokenizer: void <init>(java.lang.String,java.lang.String)>"
+    "push \",\""->"specialinvoke <java.util.StringTokenizer: void <init>(java.lang.String,java.lang.String)>";
+    "push 10"
+    "specialinvoke <java.util.StringTokenizer: void <init>(java.lang.String,java.lang.String)>"->"push 10";
+    "push 0"
+    "push 10"->"push 0";
+    "push 0"->"load.r $r63";
+    "virtualinvoke <java.util.StringTokenizer: int countTokens()>"
+    "load.r $r63"->"virtualinvoke <java.util.StringTokenizer: int countTokens()>";
+    "staticinvoke <java.lang.Math: int max(int,int)>"
+    "virtualinvoke <java.util.StringTokenizer: int countTokens()>"->"staticinvoke <java.lang.Math: int max(int,int)>";
+    "staticinvoke <java.lang.Math: int min(int,int)>"
+    "staticinvoke <java.lang.Math: int max(int,int)>"->"staticinvoke <java.lang.Math: int min(int,int)>";
+    "store.i i0"
+    "staticinvoke <java.lang.Math: int min(int,int)>"->"store.i i0";
+    "push \"\""
+    "store.i i0"->"push \"\"";
+    "store.r r77"
+    "push \"\""->"store.r r77";
+    "store.r r77"->"push 0";
+    "store.i i23"
+    "push 0"->"store.i i23";
+    "store.i i23"->"load.r $r63";
+    "virtualinvoke <java.util.StringTokenizer: boolean hasMoreTokens()>"
+    "load.r $r63"->"virtualinvoke <java.util.StringTokenizer: boolean hasMoreTokens()>";
+    "ifeq load.i i23"
+    "virtualinvoke <java.util.StringTokenizer: boolean hasMoreTokens()>"->"ifeq load.i i23";
+    "load.i i23"
+    "ifeq load.i i23"->"load.i i23";
+    "load.i i0"
+    "load.i i23"->"load.i i0";
+    "ifcmpgt.i load.i i23"
+    "load.i i0"->"ifcmpgt.i load.i i23";
+    "ifcmpgt.i load.i i23"->"load.r $r63";
+    "virtualinvoke <java.util.StringTokenizer: java.lang.String nextToken()>"
+    "load.r $r63"->"virtualinvoke <java.util.StringTokenizer: java.lang.String nextToken()>";
+    "store.r r1"
+    "virtualinvoke <java.util.StringTokenizer: java.lang.String nextToken()>"->"store.r r1";
+    "new java.lang.StringBuffer"
+    "store.r r1"->"new java.lang.StringBuffer";
+    "dup1.r"
+    "new java.lang.StringBuffer"->"dup1.r";
+    "specialinvoke <java.lang.StringBuffer: void <init>()>"
+    "dup1.r"->"specialinvoke <java.lang.StringBuffer: void <init>()>";
+    "load.r r77"
+    "specialinvoke <java.lang.StringBuffer: void <init>()>"->"load.r r77";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"
+    "load.r r77"->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "push \"topic=\""
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"push \"topic=\"";
+    "push \"topic=\""->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "load.r r1"
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"load.r r1";
+    "load.r r1"->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "push \"&\""
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"push \"&\"";
+    "push \"&\""->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>"
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>"->"store.r r77";
+    "inc.i i23 1"
+    "store.r r77"->"inc.i i23 1";
+    "goto load.r $r63"
+    "inc.i i23 1"->"goto load.r $r63";
+    "ifcmpgt.i load.i i23"->"load.i i23";
+    "ifle load.r r0"
+    "load.i i23"->"ifle load.r r0";
+    "ifle load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r77";
+    "load.r r77"->"push 0";
+    "push 0"->"load.r r77";
+    "virtualinvoke <java.lang.String: int length()>"
+    "load.r r77"->"virtualinvoke <java.lang.String: int length()>";
+    "push 1"
+    "virtualinvoke <java.lang.String: int length()>"->"push 1";
+    "sub.i"
+    "push 1"->"sub.i";
+    "virtualinvoke <java.lang.String: java.lang.String substring(int,int)>"
+    "sub.i"->"virtualinvoke <java.lang.String: java.lang.String substring(int,int)>";
+    "virtualinvoke <java.lang.String: java.lang.String substring(int,int)>"->"fieldput <hnews: java.lang.String topics>";
+    "goto goto load.r r0"
+    "fieldput <hnews: java.lang.String topics>"->"goto goto load.r r0";
+    "goto goto load.r r0"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "push \"fullHeader\""
+    "load.r r0"->"push \"fullHeader\"";
+    "push \"fullHeader\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r r0";
+    "load.r r0"->"push \"fullHeader\"";
+    "push \"fullHeader\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "push \"true\""
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"push \"true\"";
+    "virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>"
+    "push \"true\""->"virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>";
+    "virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>"->"ifeq load.r r0";
+    "ifeq load.r r0"->"load.r r0";
+    "load.r r0"->"push 1";
+    "fieldput <hnews: boolean showFullHeader>"
+    "push 1"->"fieldput <hnews: boolean showFullHeader>";
+    "fieldput <hnews: boolean showFullHeader>"->"load.r r0";
+    "push \"perTopic\""
+    "load.r r0"->"push \"perTopic\"";
+    "push \"perTopic\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"push \"perTopic\"";
+    "push \"perTopic\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "fieldput <hnews: java.lang.String perTopic>"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"fieldput <hnews: java.lang.String perTopic>";
+    "fieldput <hnews: java.lang.String perTopic>"->"load.r r0";
+    "push \"webmasterId\""
+    "load.r r0"->"push \"webmasterId\"";
+    "push \"webmasterId\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"push \"webmasterId\"";
+    "push \"webmasterId\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"fieldput <hnews: java.lang.String wmid>";
+    "fieldput <hnews: java.lang.String wmid>"->"load.r r0";
+    "push \"delay\""
+    "load.r r0"->"push \"delay\"";
+    "push \"delay\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r r0";
+    "new java.lang.Integer"
+    "load.r r0"->"new java.lang.Integer";
+    "new java.lang.Integer"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "load.r r0"->"push \"delay\"";
+    "push \"delay\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "specialinvoke <java.lang.Integer: void <init>(java.lang.String)>"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"specialinvoke <java.lang.Integer: void <init>(java.lang.String)>";
+    "virtualinvoke <java.lang.Integer: int intValue()>"
+    "specialinvoke <java.lang.Integer: void <init>(java.lang.String)>"->"virtualinvoke <java.lang.Integer: int intValue()>";
+    "fieldput <hnews: int delay>"
+    "virtualinvoke <java.lang.Integer: int intValue()>"->"fieldput <hnews: int delay>";
+    "fieldput <hnews: int delay>"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "fieldget <hnews: int delay>"
+    "load.r r0"->"fieldget <hnews: int delay>";
+    "push 1000"
+    "fieldget <hnews: int delay>"->"push 1000";
+    "mul.i"
+    "push 1000"->"mul.i";
+    "mul.i"->"fieldput <hnews: int delay>";
+    "fieldput <hnews: int delay>"->"load.r r0";
+    "push \"hbg\""
+    "load.r r0"->"push \"hbg\"";
+    "push \"hbg\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"push \"hbg\"";
+    "push \"hbg\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "staticinvoke <java.awt.Color: java.awt.Color decode(java.lang.String)>"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"staticinvoke <java.awt.Color: java.awt.Color decode(java.lang.String)>";
+    "fieldput <hnews: java.awt.Color hbg>"
+    "staticinvoke <java.awt.Color: java.awt.Color decode(java.lang.String)>"->"fieldput <hnews: java.awt.Color hbg>";
+    "fieldput <hnews: java.awt.Color hbg>"->"load.r r0";
+    "push \"bg\""
+    "load.r r0"->"push \"bg\"";
+    "push \"bg\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"push \"bg\"";
+    "push \"bg\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"staticinvoke <java.awt.Color: java.awt.Color decode(java.lang.String)>";
+    "fieldput <hnews: java.awt.Color nbg>"
+    "staticinvoke <java.awt.Color: java.awt.Color decode(java.lang.String)>"->"fieldput <hnews: java.awt.Color nbg>";
+    "fieldput <hnews: java.awt.Color nbg>"->"load.r r0";
+    "push \"hfg\""
+    "load.r r0"->"push \"hfg\"";
+    "push \"hfg\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"push \"hfg\"";
+    "push \"hfg\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"staticinvoke <java.awt.Color: java.awt.Color decode(java.lang.String)>";
+    "fieldput <hnews: java.awt.Color hcolor>"
+    "staticinvoke <java.awt.Color: java.awt.Color decode(java.lang.String)>"->"fieldput <hnews: java.awt.Color hcolor>";
+    "fieldput <hnews: java.awt.Color hcolor>"->"load.r r0";
+    "push \"fg\""
+    "load.r r0"->"push \"fg\"";
+    "push \"fg\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"push \"fg\"";
+    "push \"fg\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"staticinvoke <java.awt.Color: java.awt.Color decode(java.lang.String)>";
+    "fieldput <hnews: java.awt.Color ncolor>"
+    "staticinvoke <java.awt.Color: java.awt.Color decode(java.lang.String)>"->"fieldput <hnews: java.awt.Color ncolor>";
+    "fieldput <hnews: java.awt.Color ncolor>"->"load.r r0";
+    "push \"highlight\""
+    "load.r r0"->"push \"highlight\"";
+    "push \"highlight\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"push \"highlight\"";
+    "push \"highlight\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"staticinvoke <java.awt.Color: java.awt.Color decode(java.lang.String)>";
+    "fieldput <hnews: java.awt.Color highlight>"
+    "staticinvoke <java.awt.Color: java.awt.Color decode(java.lang.String)>"->"fieldput <hnews: java.awt.Color highlight>";
+    "fieldput <hnews: java.awt.Color highlight>"->"load.r r0";
+    "push \"fontsize\""
+    "load.r r0"->"push \"fontsize\"";
+    "push \"fontsize\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r r0";
+    "load.r r0"->"new java.lang.Integer";
+    "new java.lang.Integer"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "load.r r0"->"push \"fontsize\"";
+    "push \"fontsize\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"specialinvoke <java.lang.Integer: void <init>(java.lang.String)>";
+    "specialinvoke <java.lang.Integer: void <init>(java.lang.String)>"->"virtualinvoke <java.lang.Integer: int intValue()>";
+    "fieldput <hnews: int fontsize>"
+    "virtualinvoke <java.lang.Integer: int intValue()>"->"fieldput <hnews: int fontsize>";
+    "fieldput <hnews: int fontsize>"->"load.r r0";
+    "push \"header\""
+    "load.r r0"->"push \"header\"";
+    "push \"header\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r r0";
+    "load.r r0"->"push \"header\"";
+    "push \"header\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "push \"off\""
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"push \"off\"";
+    "virtualinvoke <java.lang.String: boolean equalsIgnoreCase(java.lang.String)>"
+    "push \"off\""->"virtualinvoke <java.lang.String: boolean equalsIgnoreCase(java.lang.String)>";
+    "virtualinvoke <java.lang.String: boolean equalsIgnoreCase(java.lang.String)>"->"ifeq load.r r0";
+    "ifeq load.r r0"->"load.r r0";
+    "load.r r0"->"push 0";
+    "fieldput <hnews: boolean header>"
+    "push 0"->"fieldput <hnews: boolean header>";
+    "fieldput <hnews: boolean header>"->"load.r r0";
+    "push \"newsURL\""
+    "load.r r0"->"push \"newsURL\"";
+    "push \"newsURL\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"push \"newsURL\"";
+    "push \"newsURL\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "fieldput <hnews: java.lang.String newsParamURL>"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"fieldput <hnews: java.lang.String newsParamURL>";
+    "fieldput <hnews: java.lang.String newsParamURL>"->"load.r r0";
+    "new java.awt.Font"
+    "load.r r0"->"new java.awt.Font";
+    "new java.awt.Font"->"dup1.r";
+    "push \"SanSerif\""
+    "dup1.r"->"push \"SanSerif\"";
+    "push \"SanSerif\""->"push 0";
+    "push 0"->"load.r r0";
+    "fieldget <hnews: int fontsize>"
+    "load.r r0"->"fieldget <hnews: int fontsize>";
+    "specialinvoke <java.awt.Font: void <init>(java.lang.String,int,int)>"
+    "fieldget <hnews: int fontsize>"->"specialinvoke <java.awt.Font: void <init>(java.lang.String,int,int)>";
+    "fieldput <hnews: java.awt.Font dfont>"
+    "specialinvoke <java.awt.Font: void <init>(java.lang.String,int,int)>"->"fieldput <hnews: java.awt.Font dfont>";
+    "fieldput <hnews: java.awt.Font dfont>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "fieldget <hnews: java.awt.Color hbg>"
+    "load.r r0"->"fieldget <hnews: java.awt.Color hbg>";
+    "virtualinvoke <java.awt.Component: void setBackground(java.awt.Color)>"
+    "fieldget <hnews: java.awt.Color hbg>"->"virtualinvoke <java.awt.Component: void setBackground(java.awt.Color)>";
+    "virtualinvoke <java.awt.Component: void setBackground(java.awt.Color)>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "fieldget <hnews: java.awt.Font dfont>"
+    "load.r r0"->"fieldget <hnews: java.awt.Font dfont>";
+    "virtualinvoke <java.awt.Component: java.awt.FontMetrics getFontMetrics(java.awt.Font)>"
+    "fieldget <hnews: java.awt.Font dfont>"->"virtualinvoke <java.awt.Component: java.awt.FontMetrics getFontMetrics(java.awt.Font)>";
+    "fieldput <hnews: java.awt.FontMetrics fm>"
+    "virtualinvoke <java.awt.Component: java.awt.FontMetrics getFontMetrics(java.awt.Font)>"->"fieldput <hnews: java.awt.FontMetrics fm>";
+    "fieldput <hnews: java.awt.FontMetrics fm>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "fieldget <hnews: java.awt.FontMetrics fm>"
+    "load.r r0"->"fieldget <hnews: java.awt.FontMetrics fm>";
+    "virtualinvoke <java.awt.FontMetrics: int getMaxAscent()>"
+    "fieldget <hnews: java.awt.FontMetrics fm>"->"virtualinvoke <java.awt.FontMetrics: int getMaxAscent()>";
+    "fieldput <hnews: int maxAscent>"
+    "virtualinvoke <java.awt.FontMetrics: int getMaxAscent()>"->"fieldput <hnews: int maxAscent>";
+    "fieldput <hnews: int maxAscent>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <hnews: java.awt.FontMetrics fm>";
+    "virtualinvoke <java.awt.FontMetrics: int getMaxDescent()>"
+    "fieldget <hnews: java.awt.FontMetrics fm>"->"virtualinvoke <java.awt.FontMetrics: int getMaxDescent()>";
+    "fieldput <hnews: int maxDescent>"
+    "virtualinvoke <java.awt.FontMetrics: int getMaxDescent()>"->"fieldput <hnews: int maxDescent>";
+    "fieldput <hnews: int maxDescent>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "virtualinvoke <java.awt.Component: void addMouseListener(java.awt.event.MouseListener)>"
+    "load.r r0"->"virtualinvoke <java.awt.Component: void addMouseListener(java.awt.event.MouseListener)>";
+    "virtualinvoke <java.awt.Component: void addMouseListener(java.awt.event.MouseListener)>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "virtualinvoke <java.awt.Component: void addMouseMotionListener(java.awt.event.MouseMotionListener)>"
+    "load.r r0"->"virtualinvoke <java.awt.Component: void addMouseMotionListener(java.awt.event.MouseMotionListener)>";
+    "virtualinvoke <java.awt.Component: void addMouseMotionListener(java.awt.event.MouseMotionListener)>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "virtualinvoke <java.awt.Component: java.awt.Rectangle getBounds()>"
+    "load.r r0"->"virtualinvoke <java.awt.Component: java.awt.Rectangle getBounds()>";
+    "fieldget <java.awt.Rectangle: int height>"
+    "virtualinvoke <java.awt.Component: java.awt.Rectangle getBounds()>"->"fieldget <java.awt.Rectangle: int height>";
+    "fieldput <hnews: int ypos>"
+    "fieldget <java.awt.Rectangle: int height>"->"fieldput <hnews: int ypos>";
+    "fieldput <hnews: int ypos>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "fieldget <hnews: int ypos>"
+    "load.r r0"->"fieldget <hnews: int ypos>";
+    "fieldget <hnews: int ypos>"->"load.r r0";
+    "load.r r0"->"fieldget <hnews: java.awt.FontMetrics fm>";
+    "virtualinvoke <java.awt.FontMetrics: int getAscent()>"
+    "fieldget <hnews: java.awt.FontMetrics fm>"->"virtualinvoke <java.awt.FontMetrics: int getAscent()>";
+    "virtualinvoke <java.awt.FontMetrics: int getAscent()>"->"load.r r0";
+    "load.r r0"->"fieldget <hnews: java.awt.FontMetrics fm>";
+    "virtualinvoke <java.awt.FontMetrics: int getDescent()>"
+    "fieldget <hnews: java.awt.FontMetrics fm>"->"virtualinvoke <java.awt.FontMetrics: int getDescent()>";
+    "add.i"
+    "virtualinvoke <java.awt.FontMetrics: int getDescent()>"->"add.i";
+    "add.i"->"sub.i";
+    "sub.i"->"fieldput <hnews: int ypos>";
+    "fieldput <hnews: int ypos>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <hnews: int ypos>";
+    "push 2"
+    "fieldget <hnews: int ypos>"->"push 2";
+    "div.i"
+    "push 2"->"div.i";
+    "div.i"->"fieldput <hnews: int ypos>";
+    "fieldput <hnews: int ypos>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <hnews: int ypos>";
+    "fieldget <hnews: int ypos>"->"load.r r0";
+    "load.r r0"->"fieldget <hnews: java.awt.FontMetrics fm>";
+    "fieldget <hnews: java.awt.FontMetrics fm>"->"virtualinvoke <java.awt.FontMetrics: int getAscent()>";
+    "virtualinvoke <java.awt.FontMetrics: int getAscent()>"->"add.i";
+    "add.i"->"fieldput <hnews: int ypos>";
+    "fieldput <hnews: int ypos>"->"load.r r0";
+    "fieldget <hnews: boolean header>"
+    "load.r r0"->"fieldget <hnews: boolean header>";
+    "ifeq return"
+    "fieldget <hnews: boolean header>"->"ifeq return";
+    "ifeq return"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <hnews: java.awt.FontMetrics fm>";
+    "fieldget <hnews: java.awt.FontMetrics fm>"->"new java.lang.StringBuffer";
+    "new java.lang.StringBuffer"->"dup1.r";
+    "dup1.r"->"specialinvoke <java.lang.StringBuffer: void <init>()>";
+    "specialinvoke <java.lang.StringBuffer: void <init>()>"->"load.r r0";
+    "fieldget <hnews: java.lang.String heading>"
+    "load.r r0"->"fieldget <hnews: java.lang.String heading>";
+    "fieldget <hnews: java.lang.String heading>"->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "push \":\""
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"push \":\"";
+    "push \":\""->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>";
+    "virtualinvoke <java.awt.FontMetrics: int stringWidth(java.lang.String)>"
+    "virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>"->"virtualinvoke <java.awt.FontMetrics: int stringWidth(java.lang.String)>";
+    "push 17"
+    "virtualinvoke <java.awt.FontMetrics: int stringWidth(java.lang.String)>"->"push 17";
+    "push 17"->"add.i";
+    "fieldput <hnews: int maxhwidth>"
+    "add.i"->"fieldput <hnews: int maxhwidth>";
+    "return"
+    "fieldput <hnews: int maxhwidth>"->"return";
+    "store.r i0"
+    "virtualinvoke <java.lang.Integer: int intValue()>"->"store.r i0";
+    "store.r i0"->"load.r r0";
+    "push 6"
+    "load.r r0"->"push 6";
+    "push 6"->"fieldput <hnews: int delay>";
+    "ifle load.r r0"->"load.r r0";
+    "load.r r0"->"new java.lang.StringBuffer";
+    "new java.lang.StringBuffer"->"dup1.r";
+    "dup1.r"->"specialinvoke <java.lang.StringBuffer: void <init>()>";
+    "specialinvoke <java.lang.StringBuffer: void <init>()>"->"push \"topic=\"";
+    "push \"topic=\""->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"load.r r0";
+    "load.r r0"->"fieldget <hnews: java.lang.String topics>";
+    "fieldget <hnews: java.lang.String topics>"->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>"->"fieldput <hnews: java.lang.String topics>";
+    "ifnull load.r r0"->"load.r r0";
+    "push \"topic=BUSINESS\""
+    "load.r r0"->"push \"topic=BUSINESS\"";
+    "push \"topic=BUSINESS\""->"fieldput <hnews: java.lang.String topics>";
+    "ifeq load.r r0"->"load.r r0";
+    "load.r r0"->"new java.lang.StringBuffer";
+    "new java.lang.StringBuffer"->"dup1.r";
+    "dup1.r"->"specialinvoke <java.lang.StringBuffer: void <init>()>";
+    "specialinvoke <java.lang.StringBuffer: void <init>()>"->"load.r r0";
+    "fieldget <hnews: java.net.URL homeUrl>"
+    "load.r r0"->"fieldget <hnews: java.net.URL homeUrl>";
+    "virtualinvoke <java.net.URL: java.lang.String getProtocol()>"
+    "fieldget <hnews: java.net.URL homeUrl>"->"virtualinvoke <java.net.URL: java.lang.String getProtocol()>";
+    "virtualinvoke <java.net.URL: java.lang.String getProtocol()>"->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "push \"://\""
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"push \"://\"";
+    "push \"://\""->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"load.r r0";
+    "load.r r0"->"fieldget <hnews: java.net.URL homeUrl>";
+    "fieldget <hnews: java.net.URL homeUrl>"->"virtualinvoke <java.net.URL: java.lang.String getHost()>";
+    "virtualinvoke <java.net.URL: java.lang.String getHost()>"->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "push \"/\""
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"push \"/\"";
+    "push \"/\""->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>"->"fieldput <hnews: java.lang.String baseUrl>";
+}

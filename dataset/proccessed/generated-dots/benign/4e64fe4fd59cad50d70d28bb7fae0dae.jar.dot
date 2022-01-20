@@ -1,0 +1,440 @@
+digraph "" {
+    "r0 := @this: Main"
+    "load.r r0"
+    "r0 := @this: Main"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "push \"NUMBER_OF_TEXTS\""
+    "load.r r0"->"push \"NUMBER_OF_TEXTS\"";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"
+    "push \"NUMBER_OF_TEXTS\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>";
+    "fieldput <Main: int m_nNumTexts>"
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"->"fieldput <Main: int m_nNumTexts>";
+    "fieldput <Main: int m_nNumTexts>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "fieldget <Main: int m_nNumTexts>"
+    "load.r r0"->"fieldget <Main: int m_nNumTexts>";
+    "newarray"
+    "fieldget <Main: int m_nNumTexts>"->"newarray";
+    "fieldput <Main: java.lang.String[] m_asText>"
+    "newarray"->"fieldput <Main: java.lang.String[] m_asText>";
+    "fieldput <Main: java.lang.String[] m_asText>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <Main: int m_nNumTexts>";
+    "fieldget <Main: int m_nNumTexts>"->"newarray";
+    "fieldput <Main: ThreeDTextParams[] m_aParam>"
+    "newarray"->"fieldput <Main: ThreeDTextParams[] m_aParam>";
+    "fieldput <Main: ThreeDTextParams[] m_aParam>"->"load.r r0";
+    "new java.lang.String"
+    "load.r r0"->"new java.lang.String";
+    "dup1.r"
+    "new java.lang.String"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "push \"COLOR\""
+    "load.r r0"->"push \"COLOR\"";
+    "push \"COLOR\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "specialinvoke <java.lang.String: void <init>(java.lang.String)>"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"specialinvoke <java.lang.String: void <init>(java.lang.String)>";
+    "fieldput <Main: java.lang.String m_sInitialColor>"
+    "specialinvoke <java.lang.String: void <init>(java.lang.String)>"->"fieldput <Main: java.lang.String m_sInitialColor>";
+    "push 0"
+    "fieldput <Main: java.lang.String m_sInitialColor>"->"push 0";
+    "store.i i19"
+    "push 0"->"store.i i19";
+    "goto load.i i19"
+    "store.i i19"->"goto load.i i19";
+    "load.i i19"
+    "goto load.i i19"->"load.i i19";
+    "load.i i19"->"load.r r0";
+    "load.r r0"->"fieldget <Main: int m_nNumTexts>";
+    "ifcmplt.i new java.lang.String"
+    "fieldget <Main: int m_nNumTexts>"->"ifcmplt.i new java.lang.String";
+    "ifcmplt.i new java.lang.String"->"new java.lang.String";
+    "new java.lang.String"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "push \"CONTROL_PANEL_AVAILABLE\""
+    "load.r r0"->"push \"CONTROL_PANEL_AVAILABLE\"";
+    "push \"CONTROL_PANEL_AVAILABLE\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"specialinvoke <java.lang.String: void <init>(java.lang.String)>";
+    "push \"true\""
+    "specialinvoke <java.lang.String: void <init>(java.lang.String)>"->"push \"true\"";
+    "virtualinvoke <java.lang.String: boolean equalsIgnoreCase(java.lang.String)>"
+    "push \"true\""->"virtualinvoke <java.lang.String: boolean equalsIgnoreCase(java.lang.String)>";
+    "ifeq load.r r0"
+    "virtualinvoke <java.lang.String: boolean equalsIgnoreCase(java.lang.String)>"->"ifeq load.r r0";
+    "ifeq load.r r0"->"load.r r0";
+    "push 1"
+    "load.r r0"->"push 1";
+    "fieldput <Main: boolean m_bPanelAvailable>"
+    "push 1"->"fieldput <Main: boolean m_bPanelAvailable>";
+    "goto load.r r0"
+    "fieldput <Main: boolean m_bPanelAvailable>"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "push \"STARTSTOP_BUTTON\""
+    "load.r r0"->"push \"STARTSTOP_BUTTON\"";
+    "push \"STARTSTOP_BUTTON\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"push \"true\"";
+    "push \"true\""->"virtualinvoke <java.lang.String: boolean equalsIgnoreCase(java.lang.String)>";
+    "virtualinvoke <java.lang.String: boolean equalsIgnoreCase(java.lang.String)>"->"ifeq load.r r0";
+    "ifeq load.r r0"->"load.r r0";
+    "load.r r0"->"push 1";
+    "fieldput <Main: boolean m_bStartStopButtonAvailable>"
+    "push 1"->"fieldput <Main: boolean m_bStartStopButtonAvailable>";
+    "fieldput <Main: boolean m_bStartStopButtonAvailable>"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "push \"FPS_BUTTON\""
+    "load.r r0"->"push \"FPS_BUTTON\"";
+    "push \"FPS_BUTTON\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"push \"true\"";
+    "push \"true\""->"virtualinvoke <java.lang.String: boolean equalsIgnoreCase(java.lang.String)>";
+    "virtualinvoke <java.lang.String: boolean equalsIgnoreCase(java.lang.String)>"->"ifeq load.r r0";
+    "ifeq load.r r0"->"load.r r0";
+    "load.r r0"->"push 1";
+    "fieldput <Main: boolean m_bFPSButtonAvailable>"
+    "push 1"->"fieldput <Main: boolean m_bFPSButtonAvailable>";
+    "fieldput <Main: boolean m_bFPSButtonAvailable>"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "push \"COLOR_BUTTON\""
+    "load.r r0"->"push \"COLOR_BUTTON\"";
+    "push \"COLOR_BUTTON\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"push \"true\"";
+    "push \"true\""->"virtualinvoke <java.lang.String: boolean equalsIgnoreCase(java.lang.String)>";
+    "virtualinvoke <java.lang.String: boolean equalsIgnoreCase(java.lang.String)>"->"ifeq load.r r0";
+    "ifeq load.r r0"->"load.r r0";
+    "load.r r0"->"push 1";
+    "fieldput <Main: boolean m_bColorButtonAvailable>"
+    "push 1"->"fieldput <Main: boolean m_bColorButtonAvailable>";
+    "fieldput <Main: boolean m_bColorButtonAvailable>"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "push \"HIDE_BUTTON\""
+    "load.r r0"->"push \"HIDE_BUTTON\"";
+    "push \"HIDE_BUTTON\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"push \"true\"";
+    "push \"true\""->"virtualinvoke <java.lang.String: boolean equalsIgnoreCase(java.lang.String)>";
+    "virtualinvoke <java.lang.String: boolean equalsIgnoreCase(java.lang.String)>"->"ifeq load.r r0";
+    "ifeq load.r r0"->"load.r r0";
+    "load.r r0"->"push 1";
+    "fieldput <Main: boolean m_bHideButtonAvailable>"
+    "push 1"->"fieldput <Main: boolean m_bHideButtonAvailable>";
+    "fieldput <Main: boolean m_bHideButtonAvailable>"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "virtualinvoke <java.awt.Component: java.awt.Dimension size()>"
+    "load.r r0"->"virtualinvoke <java.awt.Component: java.awt.Dimension size()>";
+    "fieldget <java.awt.Dimension: int width>"
+    "virtualinvoke <java.awt.Component: java.awt.Dimension size()>"->"fieldget <java.awt.Dimension: int width>";
+    "fieldput <Main: int m_nAppletWidth>"
+    "fieldget <java.awt.Dimension: int width>"->"fieldput <Main: int m_nAppletWidth>";
+    "fieldput <Main: int m_nAppletWidth>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"virtualinvoke <java.awt.Component: java.awt.Dimension size()>";
+    "fieldget <java.awt.Dimension: int height>"
+    "virtualinvoke <java.awt.Component: java.awt.Dimension size()>"->"fieldget <java.awt.Dimension: int height>";
+    "fieldput <Main: int m_nAppletHeight>"
+    "fieldget <java.awt.Dimension: int height>"->"fieldput <Main: int m_nAppletHeight>";
+    "fieldput <Main: int m_nAppletHeight>"->"load.r r0";
+    "fieldget <Main: boolean m_bPanelAvailable>"
+    "load.r r0"->"fieldget <Main: boolean m_bPanelAvailable>";
+    "fieldget <Main: boolean m_bPanelAvailable>"->"ifeq load.r r0";
+    "ifeq load.r r0"->"load.r r0";
+    "new ControlPanel"
+    "load.r r0"->"new ControlPanel";
+    "new ControlPanel"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "fieldget <Main: boolean m_bStartStopButtonAvailable>"
+    "load.r r0"->"fieldget <Main: boolean m_bStartStopButtonAvailable>";
+    "fieldget <Main: boolean m_bStartStopButtonAvailable>"->"load.r r0";
+    "fieldget <Main: boolean m_bFPSButtonAvailable>"
+    "load.r r0"->"fieldget <Main: boolean m_bFPSButtonAvailable>";
+    "fieldget <Main: boolean m_bFPSButtonAvailable>"->"load.r r0";
+    "fieldget <Main: boolean m_bColorButtonAvailable>"
+    "load.r r0"->"fieldget <Main: boolean m_bColorButtonAvailable>";
+    "fieldget <Main: boolean m_bColorButtonAvailable>"->"load.r r0";
+    "fieldget <Main: boolean m_bHideButtonAvailable>"
+    "load.r r0"->"fieldget <Main: boolean m_bHideButtonAvailable>";
+    "push \"3D Text Applet Control Panel\""
+    "fieldget <Main: boolean m_bHideButtonAvailable>"->"push \"3D Text Applet Control Panel\"";
+    "push \"3D Text Applet Control Panel\""->"load.r r0";
+    "specialinvoke <ControlPanel: void <init>(boolean,boolean,boolean,boolean,java.lang.String,Main)>"
+    "load.r r0"->"specialinvoke <ControlPanel: void <init>(boolean,boolean,boolean,boolean,java.lang.String,Main)>";
+    "fieldput <Main: ControlPanel m_ControlPanel>"
+    "specialinvoke <ControlPanel: void <init>(boolean,boolean,boolean,boolean,java.lang.String,Main)>"->"fieldput <Main: ControlPanel m_ControlPanel>";
+    "fieldput <Main: ControlPanel m_ControlPanel>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "fieldget <Main: int m_nAppletWidth>"
+    "load.r r0"->"fieldget <Main: int m_nAppletWidth>";
+    "fieldget <Main: int m_nAppletWidth>"->"load.r r0";
+    "fieldget <Main: int m_nAppletHeight>"
+    "load.r r0"->"fieldget <Main: int m_nAppletHeight>";
+    "virtualinvoke <java.applet.Applet: void resize(int,int)>"
+    "fieldget <Main: int m_nAppletHeight>"->"virtualinvoke <java.applet.Applet: void resize(int,int)>";
+    "virtualinvoke <java.applet.Applet: void resize(int,int)>"->"load.r r0";
+    "staticget <java.awt.Color: java.awt.Color black>"
+    "load.r r0"->"staticget <java.awt.Color: java.awt.Color black>";
+    "virtualinvoke <java.awt.Component: void setBackground(java.awt.Color)>"
+    "staticget <java.awt.Color: java.awt.Color black>"->"virtualinvoke <java.awt.Component: void setBackground(java.awt.Color)>";
+    "virtualinvoke <java.awt.Component: void setBackground(java.awt.Color)>"->"load.r r0";
+    "new java.awt.Dimension"
+    "load.r r0"->"new java.awt.Dimension";
+    "new java.awt.Dimension"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "load.r r0"->"fieldget <Main: int m_nAppletWidth>";
+    "fieldget <Main: int m_nAppletWidth>"->"load.r r0";
+    "load.r r0"->"fieldget <Main: int m_nAppletHeight>";
+    "specialinvoke <java.awt.Dimension: void <init>(int,int)>"
+    "fieldget <Main: int m_nAppletHeight>"->"specialinvoke <java.awt.Dimension: void <init>(int,int)>";
+    "fieldput <Main: java.awt.Dimension m_dimImage>"
+    "specialinvoke <java.awt.Dimension: void <init>(int,int)>"->"fieldput <Main: java.awt.Dimension m_dimImage>";
+    "fieldput <Main: java.awt.Dimension m_dimImage>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <Main: int m_nAppletWidth>";
+    "fieldget <Main: int m_nAppletWidth>"->"load.r r0";
+    "load.r r0"->"fieldget <Main: int m_nAppletHeight>";
+    "virtualinvoke <java.awt.Component: java.awt.Image createImage(int,int)>"
+    "fieldget <Main: int m_nAppletHeight>"->"virtualinvoke <java.awt.Component: java.awt.Image createImage(int,int)>";
+    "fieldput <Main: java.awt.Image m_image>"
+    "virtualinvoke <java.awt.Component: java.awt.Image createImage(int,int)>"->"fieldput <Main: java.awt.Image m_image>";
+    "fieldput <Main: java.awt.Image m_image>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "fieldget <Main: java.awt.Image m_image>"
+    "load.r r0"->"fieldget <Main: java.awt.Image m_image>";
+    "virtualinvoke <java.awt.Image: java.awt.Graphics getGraphics()>"
+    "fieldget <Main: java.awt.Image m_image>"->"virtualinvoke <java.awt.Image: java.awt.Graphics getGraphics()>";
+    "fieldput <Main: java.awt.Graphics m_g>"
+    "virtualinvoke <java.awt.Image: java.awt.Graphics getGraphics()>"->"fieldput <Main: java.awt.Graphics m_g>";
+    "fieldput <Main: java.awt.Graphics m_g>"->"load.r r0";
+    "load.r r0"->"push 0";
+    "fieldput <Main: int m_nTextIndex>"
+    "push 0"->"fieldput <Main: int m_nTextIndex>";
+    "fieldput <Main: int m_nTextIndex>"->"load.r r0";
+    "new ThreeDText"
+    "load.r r0"->"new ThreeDText";
+    "new ThreeDText"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "fieldget <Main: java.lang.String[] m_asText>"
+    "load.r r0"->"fieldget <Main: java.lang.String[] m_asText>";
+    "fieldget <Main: java.lang.String[] m_asText>"->"load.r r0";
+    "fieldget <Main: int m_nTextIndex>"
+    "load.r r0"->"fieldget <Main: int m_nTextIndex>";
+    "arrayread.r"
+    "fieldget <Main: int m_nTextIndex>"->"arrayread.r";
+    "arrayread.r"->"load.r r0";
+    "fieldget <Main: ThreeDTextParams[] m_aParam>"
+    "load.r r0"->"fieldget <Main: ThreeDTextParams[] m_aParam>";
+    "fieldget <Main: ThreeDTextParams[] m_aParam>"->"load.r r0";
+    "load.r r0"->"fieldget <Main: int m_nTextIndex>";
+    "fieldget <Main: int m_nTextIndex>"->"arrayread.r";
+    "arrayread.r"->"load.r r0";
+    "fieldget <Main: java.lang.String m_sInitialColor>"
+    "load.r r0"->"fieldget <Main: java.lang.String m_sInitialColor>";
+    "fieldget <Main: java.lang.String m_sInitialColor>"->"load.r r0";
+    "load.r r0"->"fieldget <Main: int m_nAppletWidth>";
+    "fieldget <Main: int m_nAppletWidth>"->"load.r r0";
+    "load.r r0"->"fieldget <Main: int m_nAppletHeight>";
+    "specialinvoke <ThreeDText: void <init>(java.lang.String,ThreeDTextParams,java.lang.String,int,int)>"
+    "fieldget <Main: int m_nAppletHeight>"->"specialinvoke <ThreeDText: void <init>(java.lang.String,ThreeDTextParams,java.lang.String,int,int)>";
+    "fieldput <Main: ThreeDText m_ThisApplet>"
+    "specialinvoke <ThreeDText: void <init>(java.lang.String,ThreeDTextParams,java.lang.String,int,int)>"->"fieldput <Main: ThreeDText m_ThisApplet>";
+    "return"
+    "fieldput <Main: ThreeDText m_ThisApplet>"->"return";
+    "ifeq load.r r0"->"load.r r0";
+    "load.r r0"->"push 0";
+    "push 0"->"fieldput <Main: boolean m_bHideButtonAvailable>";
+    "ifeq load.r r0"->"load.r r0";
+    "load.r r0"->"push 0";
+    "push 0"->"fieldput <Main: boolean m_bColorButtonAvailable>";
+    "ifeq load.r r0"->"load.r r0";
+    "load.r r0"->"push 0";
+    "push 0"->"fieldput <Main: boolean m_bFPSButtonAvailable>";
+    "ifeq load.r r0"->"load.r r0";
+    "load.r r0"->"push 0";
+    "push 0"->"fieldput <Main: boolean m_bStartStopButtonAvailable>";
+    "ifeq load.r r0"->"load.r r0";
+    "load.r r0"->"push 0";
+    "push 0"->"fieldput <Main: boolean m_bPanelAvailable>";
+    "ifcmplt.i new java.lang.String"->"new java.lang.String";
+    "store.r $r10"
+    "new java.lang.String"->"store.r $r10";
+    "load.r $r10"
+    "store.r $r10"->"load.r $r10";
+    "push \"TEXT_\""
+    "load.r $r10"->"push \"TEXT_\"";
+    "push \"TEXT_\""->"specialinvoke <java.lang.String: void <init>(java.lang.String)>";
+    "specialinvoke <java.lang.String: void <init>(java.lang.String)>"->"new java.lang.String";
+    "store.r $r15"
+    "new java.lang.String"->"store.r $r15";
+    "load.r $r15"
+    "store.r $r15"->"load.r $r15";
+    "load.r $r15"->"load.r r0";
+    "new java.lang.StringBuffer"
+    "load.r r0"->"new java.lang.StringBuffer";
+    "new java.lang.StringBuffer"->"dup1.r";
+    "specialinvoke <java.lang.StringBuffer: void <init>()>"
+    "dup1.r"->"specialinvoke <java.lang.StringBuffer: void <init>()>";
+    "specialinvoke <java.lang.StringBuffer: void <init>()>"->"load.r $r10";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"
+    "load.r $r10"->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"load.i i19";
+    "staticinvoke <java.lang.String: java.lang.String valueOf(int)>"
+    "load.i i19"->"staticinvoke <java.lang.String: java.lang.String valueOf(int)>";
+    "staticinvoke <java.lang.String: java.lang.String valueOf(int)>"->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>"
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>"->"load.r r0";
+    "load.r r0"->"fieldget <Main: java.lang.String[] m_asText>";
+    "fieldget <Main: java.lang.String[] m_asText>"->"store.r $r10";
+    "store.r $r10"->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"specialinvoke <java.lang.String: void <init>(java.lang.String)>";
+    "specialinvoke <java.lang.String: void <init>(java.lang.String)>"->"load.r $r10";
+    "load.r $r10"->"load.i i19";
+    "load.i i19"->"load.r $r15";
+    "arraywrite.r"
+    "load.r $r15"->"arraywrite.r";
+    "arraywrite.r"->"new java.lang.String";
+    "new java.lang.String"->"store.r $r15";
+    "store.r $r15"->"load.r $r15";
+    "load.r $r15"->"push \"TEXT_\"";
+    "push \"TEXT_\""->"specialinvoke <java.lang.String: void <init>(java.lang.String)>";
+    "specialinvoke <java.lang.String: void <init>(java.lang.String)>"->"new java.lang.StringBuffer";
+    "new java.lang.StringBuffer"->"dup1.r";
+    "dup1.r"->"specialinvoke <java.lang.StringBuffer: void <init>()>";
+    "specialinvoke <java.lang.StringBuffer: void <init>()>"->"load.r $r15";
+    "load.r $r15"->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"load.i i19";
+    "load.i i19"->"staticinvoke <java.lang.String: java.lang.String valueOf(int)>";
+    "staticinvoke <java.lang.String: java.lang.String valueOf(int)>"->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>";
+    "store.r r84"
+    "virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>"->"store.r r84";
+    "new java.lang.Double"
+    "store.r r84"->"new java.lang.Double";
+    "new java.lang.Double"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "load.r r0"->"new java.lang.StringBuffer";
+    "new java.lang.StringBuffer"->"dup1.r";
+    "dup1.r"->"specialinvoke <java.lang.StringBuffer: void <init>()>";
+    "load.r r84"
+    "specialinvoke <java.lang.StringBuffer: void <init>()>"->"load.r r84";
+    "load.r r84"->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "push \"_ZOOMINSPEED\""
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"push \"_ZOOMINSPEED\"";
+    "push \"_ZOOMINSPEED\""->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>"->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "specialinvoke <java.lang.Double: void <init>(java.lang.String)>"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"specialinvoke <java.lang.Double: void <init>(java.lang.String)>";
+    "specialinvoke <java.lang.Double: void <init>(java.lang.String)>"->"new java.lang.Double";
+    "new java.lang.Double"->"store.r $r15";
+    "store.r $r15"->"load.r $r15";
+    "load.r $r15"->"load.r r0";
+    "load.r r0"->"new java.lang.StringBuffer";
+    "new java.lang.StringBuffer"->"dup1.r";
+    "dup1.r"->"specialinvoke <java.lang.StringBuffer: void <init>()>";
+    "specialinvoke <java.lang.StringBuffer: void <init>()>"->"load.r r84";
+    "load.r r84"->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "push \"_DESTINATIONZ\""
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"push \"_DESTINATIONZ\"";
+    "push \"_DESTINATIONZ\""->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>"->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"specialinvoke <java.lang.Double: void <init>(java.lang.String)>";
+    "specialinvoke <java.lang.Double: void <init>(java.lang.String)>"->"new java.lang.Double";
+    "new java.lang.Double"->"store.r $r10";
+    "store.r $r10"->"load.r $r10";
+    "load.r $r10"->"load.r r0";
+    "load.r r0"->"new java.lang.StringBuffer";
+    "new java.lang.StringBuffer"->"dup1.r";
+    "dup1.r"->"specialinvoke <java.lang.StringBuffer: void <init>()>";
+    "specialinvoke <java.lang.StringBuffer: void <init>()>"->"load.r r84";
+    "load.r r84"->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "push \"_ZOOMOUTSPEED\""
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"push \"_ZOOMOUTSPEED\"";
+    "push \"_ZOOMOUTSPEED\""->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>"->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"specialinvoke <java.lang.Double: void <init>(java.lang.String)>";
+    "specialinvoke <java.lang.Double: void <init>(java.lang.String)>"->"new java.lang.Double";
+    "store.r $r41"
+    "new java.lang.Double"->"store.r $r41";
+    "load.r $r41"
+    "store.r $r41"->"load.r $r41";
+    "load.r $r41"->"load.r r0";
+    "load.r r0"->"new java.lang.StringBuffer";
+    "new java.lang.StringBuffer"->"dup1.r";
+    "dup1.r"->"specialinvoke <java.lang.StringBuffer: void <init>()>";
+    "specialinvoke <java.lang.StringBuffer: void <init>()>"->"load.r r84";
+    "load.r r84"->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "push \"_TIMETODIEZ\""
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"push \"_TIMETODIEZ\"";
+    "push \"_TIMETODIEZ\""->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>"->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"specialinvoke <java.lang.Double: void <init>(java.lang.String)>";
+    "specialinvoke <java.lang.Double: void <init>(java.lang.String)>"->"load.r r0";
+    "load.r r0"->"fieldget <Main: ThreeDTextParams[] m_aParam>";
+    "store.r $r48"
+    "fieldget <Main: ThreeDTextParams[] m_aParam>"->"store.r $r48";
+    "virtualinvoke <java.lang.Double: double doubleValue()>"
+    "store.r $r48"->"virtualinvoke <java.lang.Double: double doubleValue()>";
+    "store.d $d0"
+    "virtualinvoke <java.lang.Double: double doubleValue()>"->"store.d $d0";
+    "load.r $r48"
+    "store.d $d0"->"load.r $r48";
+    "load.r $r48"->"load.i i19";
+    "new ThreeDTextParams"
+    "load.i i19"->"new ThreeDTextParams";
+    "new ThreeDTextParams"->"dup1.r";
+    "load.d $d0"
+    "dup1.r"->"load.d $d0";
+    "load.d $d0"->"load.r $r15";
+    "load.r $r15"->"virtualinvoke <java.lang.Double: double doubleValue()>";
+    "virtualinvoke <java.lang.Double: double doubleValue()>"->"load.r $r10";
+    "load.r $r10"->"virtualinvoke <java.lang.Double: double doubleValue()>";
+    "virtualinvoke <java.lang.Double: double doubleValue()>"->"load.r $r41";
+    "load.r $r41"->"virtualinvoke <java.lang.Double: double doubleValue()>";
+    "virtualinvoke <java.lang.Double: double doubleValue()>"->"load.r r0";
+    "load.r r0"->"new java.lang.StringBuffer";
+    "new java.lang.StringBuffer"->"dup1.r";
+    "dup1.r"->"specialinvoke <java.lang.StringBuffer: void <init>()>";
+    "specialinvoke <java.lang.StringBuffer: void <init>()>"->"load.r r84";
+    "load.r r84"->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "push \"_DELAY\""
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"push \"_DELAY\"";
+    "push \"_DELAY\""->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>"->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>";
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"->"load.r r0";
+    "load.r r0"->"new java.lang.StringBuffer";
+    "new java.lang.StringBuffer"->"dup1.r";
+    "dup1.r"->"specialinvoke <java.lang.StringBuffer: void <init>()>";
+    "specialinvoke <java.lang.StringBuffer: void <init>()>"->"load.r r84";
+    "load.r r84"->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "push \"_SPIN\""
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"push \"_SPIN\"";
+    "push \"_SPIN\""->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>"->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>";
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"->"load.r r0";
+    "load.r r0"->"new java.lang.StringBuffer";
+    "new java.lang.StringBuffer"->"dup1.r";
+    "dup1.r"->"specialinvoke <java.lang.StringBuffer: void <init>()>";
+    "specialinvoke <java.lang.StringBuffer: void <init>()>"->"load.r r84";
+    "load.r r84"->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "push \"_TIP\""
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"push \"_TIP\"";
+    "push \"_TIP\""->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>"->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>";
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"->"load.r r0";
+    "load.r r0"->"fieldget <Main: java.lang.String m_sInitialColor>";
+    "specialinvoke <ThreeDTextParams: void <init>(double,double,double,double,int,int,int,java.lang.String)>"
+    "fieldget <Main: java.lang.String m_sInitialColor>"->"specialinvoke <ThreeDTextParams: void <init>(double,double,double,double,int,int,int,java.lang.String)>";
+    "specialinvoke <ThreeDTextParams: void <init>(double,double,double,double,int,int,int,java.lang.String)>"->"arraywrite.r";
+    "inc.i i19 1"
+    "arraywrite.r"->"inc.i i19 1";
+}

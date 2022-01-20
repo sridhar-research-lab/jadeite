@@ -1,0 +1,20 @@
+digraph "" {
+    "r0 := @this: youtube"
+    "new java.lang.Thread"
+    "r0 := @this: youtube"->"new java.lang.Thread";
+    "dup1.r"
+    "new java.lang.Thread"->"dup1.r";
+    "new youtube$1"
+    "dup1.r"->"new youtube$1";
+    "new youtube$1"->"dup1.r";
+    "load.r r0"
+    "dup1.r"->"load.r r0";
+    "specialinvoke <youtube$1: void <init>(youtube)>"
+    "load.r r0"->"specialinvoke <youtube$1: void <init>(youtube)>";
+    "specialinvoke <java.lang.Thread: void <init>(java.lang.Runnable)>"
+    "specialinvoke <youtube$1: void <init>(youtube)>"->"specialinvoke <java.lang.Thread: void <init>(java.lang.Runnable)>";
+    "virtualinvoke <java.lang.Thread: void start()>"
+    "specialinvoke <java.lang.Thread: void <init>(java.lang.Runnable)>"->"virtualinvoke <java.lang.Thread: void start()>";
+    "return"
+    "virtualinvoke <java.lang.Thread: void start()>"->"return";
+}

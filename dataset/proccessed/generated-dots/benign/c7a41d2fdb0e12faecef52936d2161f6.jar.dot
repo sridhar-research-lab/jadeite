@@ -1,0 +1,553 @@
+digraph "" {
+    "r0 := @this: AnimNav"
+    "load.r r0"
+    "r0 := @this: AnimNav"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "virtualinvoke <java.awt.Component: java.awt.Dimension size()>"
+    "load.r r0"->"virtualinvoke <java.awt.Component: java.awt.Dimension size()>";
+    "fieldput <AnimNav: java.awt.Dimension d>"
+    "virtualinvoke <java.awt.Component: java.awt.Dimension size()>"->"fieldput <AnimNav: java.awt.Dimension d>";
+    "fieldput <AnimNav: java.awt.Dimension d>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "fieldget <AnimNav: java.awt.Dimension d>"
+    "load.r r0"->"fieldget <AnimNav: java.awt.Dimension d>";
+    "fieldget <java.awt.Dimension: int width>"
+    "fieldget <AnimNav: java.awt.Dimension d>"->"fieldget <java.awt.Dimension: int width>";
+    "fieldget <java.awt.Dimension: int width>"->"load.r r0";
+    "load.r r0"->"fieldget <AnimNav: java.awt.Dimension d>";
+    "fieldget <java.awt.Dimension: int height>"
+    "fieldget <AnimNav: java.awt.Dimension d>"->"fieldget <java.awt.Dimension: int height>";
+    "virtualinvoke <java.awt.Component: java.awt.Image createImage(int,int)>"
+    "fieldget <java.awt.Dimension: int height>"->"virtualinvoke <java.awt.Component: java.awt.Image createImage(int,int)>";
+    "fieldput <AnimNav: java.awt.Image buf>"
+    "virtualinvoke <java.awt.Component: java.awt.Image createImage(int,int)>"->"fieldput <AnimNav: java.awt.Image buf>";
+    "fieldput <AnimNav: java.awt.Image buf>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "fieldget <AnimNav: java.awt.Image buf>"
+    "load.r r0"->"fieldget <AnimNav: java.awt.Image buf>";
+    "virtualinvoke <java.awt.Image: java.awt.Graphics getGraphics()>"
+    "fieldget <AnimNav: java.awt.Image buf>"->"virtualinvoke <java.awt.Image: java.awt.Graphics getGraphics()>";
+    "fieldput <AnimNav: java.awt.Graphics offscreen>"
+    "virtualinvoke <java.awt.Image: java.awt.Graphics getGraphics()>"->"fieldput <AnimNav: java.awt.Graphics offscreen>";
+    "fieldput <AnimNav: java.awt.Graphics offscreen>"->"load.r r0";
+    "new java.awt.MediaTracker"
+    "load.r r0"->"new java.awt.MediaTracker";
+    "dup1.r"
+    "new java.awt.MediaTracker"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "specialinvoke <java.awt.MediaTracker: void <init>(java.awt.Component)>"
+    "load.r r0"->"specialinvoke <java.awt.MediaTracker: void <init>(java.awt.Component)>";
+    "fieldput <AnimNav: java.awt.MediaTracker tracker>"
+    "specialinvoke <java.awt.MediaTracker: void <init>(java.awt.Component)>"->"fieldput <AnimNav: java.awt.MediaTracker tracker>";
+    "fieldput <AnimNav: java.awt.MediaTracker tracker>"->"load.r r0";
+    "push \"spritex\""
+    "load.r r0"->"push \"spritex\"";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"
+    "push \"spritex\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "store.r r83"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"store.r r83";
+    "load.r r83"
+    "store.r r83"->"load.r r83";
+    "ifnonnull load.r r0"
+    "load.r r83"->"ifnonnull load.r r0";
+    "ifnonnull load.r r0"->"load.r r0";
+    "push 0"
+    "load.r r0"->"push 0";
+    "fieldput <AnimNav: int spriteX>"
+    "push 0"->"fieldput <AnimNav: int spriteX>";
+    "goto load.r r0"
+    "fieldput <AnimNav: int spriteX>"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "push \"spritey\""
+    "load.r r0"->"push \"spritey\"";
+    "push \"spritey\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"store.r r83";
+    "store.r r83"->"load.r r83";
+    "load.r r83"->"ifnonnull load.r r0";
+    "ifnonnull load.r r0"->"load.r r0";
+    "load.r r0"->"push 0";
+    "fieldput <AnimNav: int spriteY>"
+    "push 0"->"fieldput <AnimNav: int spriteY>";
+    "fieldput <AnimNav: int spriteY>"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "push \"sleeptime\""
+    "load.r r0"->"push \"sleeptime\"";
+    "push \"sleeptime\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"store.r r83";
+    "store.r r83"->"load.r r83";
+    "ifnull load.r r0"
+    "load.r r83"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r r0";
+    "push 1"
+    "load.r r0"->"push 1";
+    "fieldput <AnimNav: boolean autorunP>"
+    "push 1"->"fieldput <AnimNav: boolean autorunP>";
+    "fieldput <AnimNav: boolean autorunP>"->"load.r r0";
+    "new NavAutoRun"
+    "load.r r0"->"new NavAutoRun";
+    "new NavAutoRun"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "load.r r0"->"load.r r83";
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"
+    "load.r r83"->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>";
+    "specialinvoke <NavAutoRun: void <init>(AnimNav,int)>"
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"->"specialinvoke <NavAutoRun: void <init>(AnimNav,int)>";
+    "fieldput <AnimNav: NavAutoRun autoRun>"
+    "specialinvoke <NavAutoRun: void <init>(AnimNav,int)>"->"fieldput <AnimNav: NavAutoRun autoRun>";
+    "fieldput <AnimNav: NavAutoRun autoRun>"->"load.r r0";
+    "push \"urlcount\""
+    "load.r r0"->"push \"urlcount\"";
+    "push \"urlcount\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"store.r r83";
+    "store.r r83"->"load.r r83";
+    "load.r r83"->"ifnonnull load.r r0";
+    "staticget <java.lang.System: java.io.PrintStream out>"
+    "ifnonnull load.r r0"->"staticget <java.lang.System: java.io.PrintStream out>";
+    "push \"Error Loading: urlcount, Not Optional\""
+    "staticget <java.lang.System: java.io.PrintStream out>"->"push \"Error Loading: urlcount, Not Optional\"";
+    "virtualinvoke <java.io.PrintStream: void println(java.lang.String)>"
+    "push \"Error Loading: urlcount, Not Optional\""->"virtualinvoke <java.io.PrintStream: void println(java.lang.String)>";
+    "goto push 0"
+    "virtualinvoke <java.io.PrintStream: void println(java.lang.String)>"->"goto push 0";
+    "goto push 0"->"push 0";
+    "store.i r83"
+    "push 0"->"store.i r83";
+    "goto load.i r83"
+    "store.i r83"->"goto load.i r83";
+    "load.i r83"
+    "goto load.i r83"->"load.i r83";
+    "load.i r83"->"load.r r0";
+    "fieldget <AnimNav: int URLcount>"
+    "load.r r0"->"fieldget <AnimNav: int URLcount>";
+    "ifcmplt.i load.r r0"
+    "fieldget <AnimNav: int URLcount>"->"ifcmplt.i load.r r0";
+    "ifcmplt.i load.r r0"->"push 0";
+    "push 0"->"store.i r83";
+    "store.i r83"->"goto load.i r83";
+    "goto load.i r83"->"load.i r83";
+    "load.i r83"->"load.r r0";
+    "load.r r0"->"fieldget <AnimNav: int URLcount>";
+    "fieldget <AnimNav: int URLcount>"->"ifcmplt.i load.r r0";
+    "ifcmplt.i load.r r0"->"push 0";
+    "push 0"->"store.i r83";
+    "store.i r83"->"goto load.i r83";
+    "goto load.i r83"->"load.i r83";
+    "load.i r83"->"load.r r0";
+    "load.r r0"->"fieldget <AnimNav: int URLcount>";
+    "fieldget <AnimNav: int URLcount>"->"ifcmplt.i load.r r0";
+    "ifcmplt.i load.r r0"->"load.r r0";
+    "push \"imagecount\""
+    "load.r r0"->"push \"imagecount\"";
+    "push \"imagecount\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"store.r r83";
+    "store.r r83"->"load.r r83";
+    "load.r r83"->"ifnonnull load.r r0";
+    "ifnonnull load.r r0"->"staticget <java.lang.System: java.io.PrintStream out>";
+    "push \"Error getting Parameter: imagecount, Not Optional.\""
+    "staticget <java.lang.System: java.io.PrintStream out>"->"push \"Error getting Parameter: imagecount, Not Optional.\"";
+    "push \"Error getting Parameter: imagecount, Not Optional.\""->"virtualinvoke <java.io.PrintStream: void println(java.lang.String)>";
+    "virtualinvoke <java.io.PrintStream: void println(java.lang.String)>"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "push \"translation\""
+    "load.r r0"->"push \"translation\"";
+    "push \"translation\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"store.r r83";
+    "store.r r83"->"load.r r83";
+    "load.r r83"->"ifnonnull load.r r0";
+    "ifnonnull load.r r0"->"staticget <java.lang.System: java.io.PrintStream out>";
+    "push \"Error getting Parameter: translation, Not Optional.\""
+    "staticget <java.lang.System: java.io.PrintStream out>"->"push \"Error getting Parameter: translation, Not Optional.\"";
+    "push \"Error getting Parameter: translation, Not Optional.\""->"virtualinvoke <java.io.PrintStream: void println(java.lang.String)>";
+    "virtualinvoke <java.io.PrintStream: void println(java.lang.String)>"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "push \"imagetype\""
+    "load.r r0"->"push \"imagetype\"";
+    "push \"imagetype\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"store.r r83";
+    "store.r r83"->"load.r r83";
+    "ifnonnull load.r r83"
+    "load.r r83"->"ifnonnull load.r r83";
+    "push \"jpg\""
+    "ifnonnull load.r r83"->"push \"jpg\"";
+    "push \"jpg\""->"store.r r83";
+    "store.r r83"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "push \"background\""
+    "load.r r0"->"push \"background\"";
+    "push \"background\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "store.r $r72"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"store.r $r72";
+    "load.r $r72"
+    "store.r $r72"->"load.r $r72";
+    "load.r $r72"->"ifnonnull load.r r0";
+    "ifnonnull load.r r0"->"load.r r0";
+    "load.r r0"->"push 0";
+    "fieldput <AnimNav: boolean bgP>"
+    "push 0"->"fieldput <AnimNav: boolean bgP>";
+    "fieldput <AnimNav: boolean bgP>"->"load.r r0";
+    "load.r r0"->"push 0";
+    "push 0"->"fieldput <AnimNav: int spriteX>";
+    "fieldput <AnimNav: int spriteX>"->"load.r r0";
+    "load.r r0"->"push 0";
+    "push 0"->"fieldput <AnimNav: int spriteY>";
+    "fieldput <AnimNav: int spriteY>"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "push \"prefix\""
+    "load.r r0"->"push \"prefix\"";
+    "push \"prefix\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"store.r $r72";
+    "store.r $r72"->"load.r $r72";
+    "ifnonnull push 0"
+    "load.r $r72"->"ifnonnull push 0";
+    "ifnonnull push 0"->"staticget <java.lang.System: java.io.PrintStream out>";
+    "new java.lang.StringBuffer"
+    "staticget <java.lang.System: java.io.PrintStream out>"->"new java.lang.StringBuffer";
+    "new java.lang.StringBuffer"->"dup1.r";
+    "specialinvoke <java.lang.StringBuffer: void <init>()>"
+    "dup1.r"->"specialinvoke <java.lang.StringBuffer: void <init>()>";
+    "push \"Error Loading image: \""
+    "specialinvoke <java.lang.StringBuffer: void <init>()>"->"push \"Error Loading image: \"";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"
+    "push \"Error Loading image: \""->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"load.r $r72";
+    "load.r $r72"->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "push \", Not Optional\""
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"push \", Not Optional\"";
+    "push \", Not Optional\""->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>"
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>"->"virtualinvoke <java.io.PrintStream: void println(java.lang.String)>";
+    "return"
+    "virtualinvoke <java.io.PrintStream: void println(java.lang.String)>"->"return";
+    "ifnonnull push 0"->"push 0";
+    "store.i i23"
+    "push 0"->"store.i i23";
+    "goto load.i i23"
+    "store.i i23"->"goto load.i i23";
+    "load.i i23"
+    "goto load.i i23"->"load.i i23";
+    "load.i i23"->"load.r r0";
+    "fieldget <AnimNav: int imageCount>"
+    "load.r r0"->"fieldget <AnimNav: int imageCount>";
+    "fieldget <AnimNav: int imageCount>"->"ifcmplt.i load.r r0";
+    "ifcmplt.i load.r r0"->"return";
+    "ifcmplt.i load.r r0"->"load.r r0";
+    "load.r r0"->"new java.lang.StringBuffer";
+    "new java.lang.StringBuffer"->"dup1.r";
+    "dup1.r"->"specialinvoke <java.lang.StringBuffer: void <init>()>";
+    "push \"AnimNav Loading Image :\""
+    "specialinvoke <java.lang.StringBuffer: void <init>()>"->"push \"AnimNav Loading Image :\"";
+    "push \"AnimNav Loading Image :\""->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"load.i i23";
+    "load.i i23"->"push 1";
+    "add.i"
+    "push 1"->"add.i";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(int)>"
+    "add.i"->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(int)>";
+    "push \" of \""
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(int)>"->"push \" of \"";
+    "push \" of \""->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"load.r r0";
+    "load.r r0"->"fieldget <AnimNav: int imageCount>";
+    "fieldget <AnimNav: int imageCount>"->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(int)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(int)>"->"virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>";
+    "virtualinvoke <java.applet.Applet: void showStatus(java.lang.String)>"
+    "virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>"->"virtualinvoke <java.applet.Applet: void showStatus(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: void showStatus(java.lang.String)>"->"load.r r0";
+    "fieldget <AnimNav: java.awt.Image[] img>"
+    "load.r r0"->"fieldget <AnimNav: java.awt.Image[] img>";
+    "fieldget <AnimNav: java.awt.Image[] img>"->"load.i i23";
+    "load.i i23"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "virtualinvoke <java.applet.Applet: java.net.URL getCodeBase()>"
+    "load.r r0"->"virtualinvoke <java.applet.Applet: java.net.URL getCodeBase()>";
+    "virtualinvoke <java.applet.Applet: java.net.URL getCodeBase()>"->"new java.lang.StringBuffer";
+    "new java.lang.StringBuffer"->"dup1.r";
+    "dup1.r"->"specialinvoke <java.lang.StringBuffer: void <init>()>";
+    "specialinvoke <java.lang.StringBuffer: void <init>()>"->"load.r $r72";
+    "load.r $r72"->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"load.i i23";
+    "load.i i23"->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(int)>";
+    "push \".\""
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(int)>"->"push \".\"";
+    "push \".\""->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"load.r r83";
+    "load.r r83"->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>";
+    "virtualinvoke <java.applet.Applet: java.awt.Image getImage(java.net.URL,java.lang.String)>"
+    "virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>"->"virtualinvoke <java.applet.Applet: java.awt.Image getImage(java.net.URL,java.lang.String)>";
+    "arraywrite.r"
+    "virtualinvoke <java.applet.Applet: java.awt.Image getImage(java.net.URL,java.lang.String)>"->"arraywrite.r";
+    "arraywrite.r"->"load.r r0";
+    "fieldget <AnimNav: java.awt.MediaTracker tracker>"
+    "load.r r0"->"fieldget <AnimNav: java.awt.MediaTracker tracker>";
+    "fieldget <AnimNav: java.awt.MediaTracker tracker>"->"load.r r0";
+    "load.r r0"->"fieldget <AnimNav: java.awt.Image[] img>";
+    "fieldget <AnimNav: java.awt.Image[] img>"->"load.i i23";
+    "arrayread.r"
+    "load.i i23"->"arrayread.r";
+    "arrayread.r"->"push 1";
+    "virtualinvoke <java.awt.MediaTracker: void addImage(java.awt.Image,int)>"
+    "push 1"->"virtualinvoke <java.awt.MediaTracker: void addImage(java.awt.Image,int)>";
+    "virtualinvoke <java.awt.MediaTracker: void addImage(java.awt.Image,int)>"->"load.r r0";
+    "load.r r0"->"fieldget <AnimNav: java.awt.MediaTracker tracker>";
+    "virtualinvoke <java.awt.MediaTracker: void waitForAll()>"
+    "fieldget <AnimNav: java.awt.MediaTracker tracker>"->"virtualinvoke <java.awt.MediaTracker: void waitForAll()>";
+    "virtualinvoke <java.awt.MediaTracker: void waitForAll()>"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "push \"\""
+    "load.r r0"->"push \"\"";
+    "push \"\""->"virtualinvoke <java.applet.Applet: void showStatus(java.lang.String)>";
+    "inc.i i23 1"
+    "virtualinvoke <java.applet.Applet: void showStatus(java.lang.String)>"->"inc.i i23 1";
+    "store.r $r74"
+    "virtualinvoke <java.awt.MediaTracker: void waitForAll()>"->"store.r $r74";
+    "store.r $r74"->"staticget <java.lang.System: java.io.PrintStream out>";
+    "staticget <java.lang.System: java.io.PrintStream out>"->"new java.lang.StringBuffer";
+    "new java.lang.StringBuffer"->"dup1.r";
+    "dup1.r"->"specialinvoke <java.lang.StringBuffer: void <init>()>";
+    "push \"Error waiting for image\""
+    "specialinvoke <java.lang.StringBuffer: void <init>()>"->"push \"Error waiting for image\"";
+    "push \"Error waiting for image\""->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"load.i i23";
+    "load.i i23"->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(int)>";
+    "push \" to load\""
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(int)>"->"push \" to load\"";
+    "push \" to load\""->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>"->"virtualinvoke <java.io.PrintStream: void println(java.lang.String)>";
+    "ifnonnull load.r r0"->"load.r r0";
+    "push \"Loading Background Image\""
+    "load.r r0"->"push \"Loading Background Image\"";
+    "push \"Loading Background Image\""->"virtualinvoke <java.applet.Applet: void showStatus(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: void showStatus(java.lang.String)>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"virtualinvoke <java.applet.Applet: java.net.URL getCodeBase()>";
+    "virtualinvoke <java.applet.Applet: java.net.URL getCodeBase()>"->"load.r $r72";
+    "load.r $r72"->"virtualinvoke <java.applet.Applet: java.awt.Image getImage(java.net.URL,java.lang.String)>";
+    "fieldput <AnimNav: java.awt.Image bg>"
+    "virtualinvoke <java.applet.Applet: java.awt.Image getImage(java.net.URL,java.lang.String)>"->"fieldput <AnimNav: java.awt.Image bg>";
+    "fieldput <AnimNav: java.awt.Image bg>"->"load.r r0";
+    "load.r r0"->"fieldget <AnimNav: java.awt.MediaTracker tracker>";
+    "fieldget <AnimNav: java.awt.MediaTracker tracker>"->"load.r r0";
+    "fieldget <AnimNav: java.awt.Image bg>"
+    "load.r r0"->"fieldget <AnimNav: java.awt.Image bg>";
+    "fieldget <AnimNav: java.awt.Image bg>"->"push 0";
+    "push 0"->"virtualinvoke <java.awt.MediaTracker: void addImage(java.awt.Image,int)>";
+    "virtualinvoke <java.awt.MediaTracker: void addImage(java.awt.Image,int)>"->"load.r r0";
+    "load.r r0"->"fieldget <AnimNav: java.awt.MediaTracker tracker>";
+    "fieldget <AnimNav: java.awt.MediaTracker tracker>"->"virtualinvoke <java.awt.MediaTracker: void waitForAll()>";
+    "virtualinvoke <java.awt.MediaTracker: void waitForAll()>"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "load.r r0"->"push \"\"";
+    "push \"\""->"virtualinvoke <java.applet.Applet: void showStatus(java.lang.String)>";
+    "virtualinvoke <java.awt.MediaTracker: void waitForAll()>"->"store.r $r72";
+    "store.r $r72"->"staticget <java.lang.System: java.io.PrintStream out>";
+    "push \"Error waiting for Background image to load.\""
+    "staticget <java.lang.System: java.io.PrintStream out>"->"push \"Error waiting for Background image to load.\"";
+    "push \"Error waiting for Background image to load.\""->"virtualinvoke <java.io.PrintStream: void println(java.lang.String)>";
+    "ifnonnull load.r r83"->"load.r r83";
+    "load.r r83"->"store.r r83";
+    "ifnonnull load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <AnimNav: int imageCount>";
+    "newarray"
+    "fieldget <AnimNav: int imageCount>"->"newarray";
+    "fieldput <AnimNav: int[] translate>"
+    "newarray"->"fieldput <AnimNav: int[] translate>";
+    "fieldput <AnimNav: int[] translate>"->"push 0";
+    "store.i $r72"
+    "push 0"->"store.i $r72";
+    "store.i $r72"->"push 0";
+    "push 0"->"store.i i23";
+    "store.i i23"->"goto load.i i23";
+    "goto load.i i23"->"load.i i23";
+    "load.i i23"->"load.r r83";
+    "virtualinvoke <java.lang.String: int length()>"
+    "load.r r83"->"virtualinvoke <java.lang.String: int length()>";
+    "ifcmplt.i load.i $r72"
+    "virtualinvoke <java.lang.String: int length()>"->"ifcmplt.i load.i $r72";
+    "load.i $r72"
+    "ifcmplt.i load.i $r72"->"load.i $r72";
+    "load.i $r72"->"load.r r0";
+    "load.r r0"->"fieldget <AnimNav: int imageCount>";
+    "ifcmpge.i load.r r0"
+    "fieldget <AnimNav: int imageCount>"->"ifcmpge.i load.r r0";
+    "ifcmpge.i load.r r0"->"load.r r83";
+    "push 124"
+    "load.r r83"->"push 124";
+    "push 124"->"load.i i23";
+    "virtualinvoke <java.lang.String: int indexOf(int,int)>"
+    "load.i i23"->"virtualinvoke <java.lang.String: int indexOf(int,int)>";
+    "store.i $r74"
+    "virtualinvoke <java.lang.String: int indexOf(int,int)>"->"store.i $r74";
+    "load.i $r74"
+    "store.i $r74"->"load.i $r74";
+    "push -1"
+    "load.i $r74"->"push -1";
+    "ifcmpne.i load.i i23"
+    "push -1"->"ifcmpne.i load.i i23";
+    "ifcmpne.i load.i i23"->"load.r r83";
+    "load.r r83"->"virtualinvoke <java.lang.String: int length()>";
+    "virtualinvoke <java.lang.String: int length()>"->"store.i $r74";
+    "store.i $r74"->"load.i i23";
+    "load.i i23"->"load.i $r74";
+    "ifcmpeq.i load.i $r74"
+    "load.i $r74"->"ifcmpeq.i load.i $r74";
+    "ifcmpeq.i load.i $r74"->"load.r r0";
+    "fieldget <AnimNav: int[] translate>"
+    "load.r r0"->"fieldget <AnimNav: int[] translate>";
+    "fieldget <AnimNav: int[] translate>"->"load.i $r72";
+    "load.i $r72"->"load.r r83";
+    "load.r r83"->"load.i i23";
+    "load.i i23"->"load.i $r74";
+    "virtualinvoke <java.lang.String: java.lang.String substring(int,int)>"
+    "load.i $r74"->"virtualinvoke <java.lang.String: java.lang.String substring(int,int)>";
+    "virtualinvoke <java.lang.String: java.lang.String substring(int,int)>"->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>";
+    "arraywrite.i"
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"->"arraywrite.i";
+    "inc.i $r72 1"
+    "arraywrite.i"->"inc.i $r72 1";
+    "inc.i $r72 1"->"load.i $r74";
+    "load.i $r74"->"push 1";
+    "push 1"->"add.i";
+    "add.i"->"store.i i23";
+    "ifnonnull load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r83";
+    "load.r r83"->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>";
+    "fieldput <AnimNav: int imageCount>"
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"->"fieldput <AnimNav: int imageCount>";
+    "fieldput <AnimNav: int imageCount>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <AnimNav: int imageCount>";
+    "fieldget <AnimNav: int imageCount>"->"newarray";
+    "fieldput <AnimNav: java.awt.Image[] img>"
+    "newarray"->"fieldput <AnimNav: java.awt.Image[] img>";
+    "ifcmplt.i load.r r0"->"load.r r0";
+    "load.r r0"->"new java.lang.StringBuffer";
+    "new java.lang.StringBuffer"->"dup1.r";
+    "dup1.r"->"specialinvoke <java.lang.StringBuffer: void <init>()>";
+    "push \"target\""
+    "specialinvoke <java.lang.StringBuffer: void <init>()>"->"push \"target\"";
+    "push \"target\""->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"load.i r83";
+    "load.i r83"->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(int)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(int)>"->"virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>"->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"store.r $r72";
+    "store.r $r72"->"load.r $r72";
+    "load.r $r72"->"ifnonnull load.r r0";
+    "ifnonnull load.r r0"->"load.r r0";
+    "fieldget <AnimNav: java.lang.String[] targetWindow>"
+    "load.r r0"->"fieldget <AnimNav: java.lang.String[] targetWindow>";
+    "fieldget <AnimNav: java.lang.String[] targetWindow>"->"load.i r83";
+    "push \" _parent\""
+    "load.i r83"->"push \" _parent\"";
+    "push \" _parent\""->"arraywrite.r";
+    "goto inc.i r83 1"
+    "arraywrite.r"->"goto inc.i r83 1";
+    "inc.i r83 1"
+    "goto inc.i r83 1"->"inc.i r83 1";
+    "ifnonnull load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <AnimNav: java.lang.String[] targetWindow>";
+    "fieldget <AnimNav: java.lang.String[] targetWindow>"->"load.i r83";
+    "load.i r83"->"load.r $r72";
+    "load.r $r72"->"arraywrite.r";
+    "ifcmplt.i load.r r0"->"load.r r0";
+    "load.r r0"->"new java.lang.StringBuffer";
+    "new java.lang.StringBuffer"->"dup1.r";
+    "dup1.r"->"specialinvoke <java.lang.StringBuffer: void <init>()>";
+    "push \"desc\""
+    "specialinvoke <java.lang.StringBuffer: void <init>()>"->"push \"desc\"";
+    "push \"desc\""->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"load.i r83";
+    "load.i r83"->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(int)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(int)>"->"virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>"->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"store.r $r72";
+    "store.r $r72"->"load.r $r72";
+    "ifnull inc.i r83 1"
+    "load.r $r72"->"ifnull inc.i r83 1";
+    "ifnull inc.i r83 1"->"load.r r0";
+    "fieldget <AnimNav: java.lang.String[] URLdescription>"
+    "load.r r0"->"fieldget <AnimNav: java.lang.String[] URLdescription>";
+    "fieldget <AnimNav: java.lang.String[] URLdescription>"->"load.i r83";
+    "load.i r83"->"load.r $r72";
+    "load.r $r72"->"arraywrite.r";
+    "arraywrite.r"->"inc.i r83 1";
+    "ifcmplt.i load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <AnimNav: java.lang.String[] URLdescription>";
+    "fieldget <AnimNav: java.lang.String[] URLdescription>"->"load.i r83";
+    "load.i r83"->"load.r r0";
+    "load.r r0"->"new java.lang.StringBuffer";
+    "new java.lang.StringBuffer"->"dup1.r";
+    "dup1.r"->"specialinvoke <java.lang.StringBuffer: void <init>()>";
+    "push \"dest\""
+    "specialinvoke <java.lang.StringBuffer: void <init>()>"->"push \"dest\"";
+    "push \"dest\""->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"load.i r83";
+    "load.i r83"->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(int)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(int)>"->"virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>"->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"arraywrite.r";
+    "arraywrite.r"->"load.r r0";
+    "load.r r0"->"fieldget <AnimNav: java.lang.String[] URLdescription>";
+    "fieldget <AnimNav: java.lang.String[] URLdescription>"->"load.i r83";
+    "load.i r83"->"arrayread.r";
+    "arrayread.r"->"ifnull inc.i r83 1";
+    "ifnull inc.i r83 1"->"load.r r0";
+    "fieldget <AnimNav: java.net.URL[] URLdest>"
+    "load.r r0"->"fieldget <AnimNav: java.net.URL[] URLdest>";
+    "fieldget <AnimNav: java.net.URL[] URLdest>"->"load.i r83";
+    "new java.net.URL"
+    "load.i r83"->"new java.net.URL";
+    "new java.net.URL"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "load.r r0"->"fieldget <AnimNav: java.lang.String[] URLdescription>";
+    "fieldget <AnimNav: java.lang.String[] URLdescription>"->"load.i r83";
+    "load.i r83"->"arrayread.r";
+    "specialinvoke <java.net.URL: void <init>(java.lang.String)>"
+    "arrayread.r"->"specialinvoke <java.net.URL: void <init>(java.lang.String)>";
+    "specialinvoke <java.net.URL: void <init>(java.lang.String)>"->"arraywrite.r";
+    "arraywrite.r"->"goto inc.i r83 1";
+    "goto inc.i r83 1"->"inc.i r83 1";
+    "specialinvoke <java.net.URL: void <init>(java.lang.String)>"->"store.r $r72";
+    "store.r $r72"->"staticget <java.lang.System: java.io.PrintStream out>";
+    "push \"Malformed URL: Check Applet Tag.\""
+    "staticget <java.lang.System: java.io.PrintStream out>"->"push \"Malformed URL: Check Applet Tag.\"";
+    "push \"Malformed URL: Check Applet Tag.\""->"virtualinvoke <java.io.PrintStream: void println(java.lang.String)>";
+    "virtualinvoke <java.io.PrintStream: void println(java.lang.String)>"->"goto inc.i r83 1";
+    "ifnonnull load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r83";
+    "load.r r83"->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>";
+    "fieldput <AnimNav: int URLcount>"
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"->"fieldput <AnimNav: int URLcount>";
+    "fieldput <AnimNav: int URLcount>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <AnimNav: int URLcount>";
+    "fieldget <AnimNav: int URLcount>"->"newarray";
+    "fieldput <AnimNav: java.lang.String[] URLdescription>"
+    "newarray"->"fieldput <AnimNav: java.lang.String[] URLdescription>";
+    "fieldput <AnimNav: java.lang.String[] URLdescription>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <AnimNav: int URLcount>";
+    "fieldget <AnimNav: int URLcount>"->"newarray";
+    "fieldput <AnimNav: java.lang.String[] targetWindow>"
+    "newarray"->"fieldput <AnimNav: java.lang.String[] targetWindow>";
+    "fieldput <AnimNav: java.lang.String[] targetWindow>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <AnimNav: int URLcount>";
+    "fieldget <AnimNav: int URLcount>"->"newarray";
+    "fieldput <AnimNav: java.net.URL[] URLdest>"
+    "newarray"->"fieldput <AnimNav: java.net.URL[] URLdest>";
+    "ifnonnull load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r83";
+    "load.r r83"->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>";
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"->"fieldput <AnimNav: int spriteY>";
+    "ifnonnull load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r83";
+    "load.r r83"->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>";
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"->"fieldput <AnimNav: int spriteX>";
+}

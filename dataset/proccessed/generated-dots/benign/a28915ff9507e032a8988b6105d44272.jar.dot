@@ -1,0 +1,329 @@
+digraph "" {
+    "r0 := @this: CoolScroll"
+    "load.r r0"
+    "r0 := @this: CoolScroll"->"load.r r0";
+    "push \"scrolltext\""
+    "load.r r0"->"push \"scrolltext\"";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"
+    "push \"scrolltext\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "store.r $r25"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"store.r $r25";
+    "load.r $r25"
+    "store.r $r25"->"load.r $r25";
+    "ifnonnull load.r r0"
+    "load.r $r25"->"ifnonnull load.r r0";
+    "push \"SAY SOMETHING TO THE WORLD...WRITE IT!\""
+    "ifnonnull load.r r0"->"push \"SAY SOMETHING TO THE WORLD...WRITE IT!\"";
+    "push \"SAY SOMETHING TO THE WORLD...WRITE IT!\""->"store.r $r25";
+    "store.r $r25"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "push \"scrollspeed\""
+    "load.r r0"->"push \"scrollspeed\"";
+    "push \"scrollspeed\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>";
+    "fieldput <CoolScroll: int veloce>"
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"->"fieldput <CoolScroll: int veloce>";
+    "fieldput <CoolScroll: int veloce>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "push \"fontx\""
+    "load.r r0"->"push \"fontx\"";
+    "push \"fontx\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>";
+    "fieldput <CoolScroll: int letterwidth>"
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"->"fieldput <CoolScroll: int letterwidth>";
+    "fieldput <CoolScroll: int letterwidth>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "push \"fonty\""
+    "load.r r0"->"push \"fonty\"";
+    "push \"fonty\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>";
+    "fieldput <CoolScroll: int letterheight>"
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"->"fieldput <CoolScroll: int letterheight>";
+    "fieldput <CoolScroll: int letterheight>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "fieldget <CoolScroll: int letterwidth>"
+    "load.r r0"->"fieldget <CoolScroll: int letterwidth>";
+    "fieldget <CoolScroll: int letterwidth>"->"load.r r0";
+    "fieldget <CoolScroll: int letterheight>"
+    "load.r r0"->"fieldget <CoolScroll: int letterheight>";
+    "virtualinvoke <java.awt.Component: java.awt.Image createImage(int,int)>"
+    "fieldget <CoolScroll: int letterheight>"->"virtualinvoke <java.awt.Component: java.awt.Image createImage(int,int)>";
+    "fieldput <CoolScroll: java.awt.Image letter>"
+    "virtualinvoke <java.awt.Component: java.awt.Image createImage(int,int)>"->"fieldput <CoolScroll: java.awt.Image letter>";
+    "fieldput <CoolScroll: java.awt.Image letter>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "fieldget <CoolScroll: java.awt.Image letter>"
+    "load.r r0"->"fieldget <CoolScroll: java.awt.Image letter>";
+    "virtualinvoke <java.awt.Image: java.awt.Graphics getGraphics()>"
+    "fieldget <CoolScroll: java.awt.Image letter>"->"virtualinvoke <java.awt.Image: java.awt.Graphics getGraphics()>";
+    "fieldput <CoolScroll: java.awt.Graphics lettergfx>"
+    "virtualinvoke <java.awt.Image: java.awt.Graphics getGraphics()>"->"fieldput <CoolScroll: java.awt.Graphics lettergfx>";
+    "fieldput <CoolScroll: java.awt.Graphics lettergfx>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "virtualinvoke <java.awt.Component: java.awt.Dimension size()>"
+    "load.r r0"->"virtualinvoke <java.awt.Component: java.awt.Dimension size()>";
+    "fieldget <java.awt.Dimension: int width>"
+    "virtualinvoke <java.awt.Component: java.awt.Dimension size()>"->"fieldget <java.awt.Dimension: int width>";
+    "fieldget <java.awt.Dimension: int width>"->"load.r r0";
+    "load.r r0"->"virtualinvoke <java.awt.Component: java.awt.Dimension size()>";
+    "fieldget <java.awt.Dimension: int height>"
+    "virtualinvoke <java.awt.Component: java.awt.Dimension size()>"->"fieldget <java.awt.Dimension: int height>";
+    "fieldget <java.awt.Dimension: int height>"->"virtualinvoke <java.awt.Component: java.awt.Image createImage(int,int)>";
+    "fieldput <CoolScroll: java.awt.Image appletimage>"
+    "virtualinvoke <java.awt.Component: java.awt.Image createImage(int,int)>"->"fieldput <CoolScroll: java.awt.Image appletimage>";
+    "fieldput <CoolScroll: java.awt.Image appletimage>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "fieldget <CoolScroll: java.awt.Image appletimage>"
+    "load.r r0"->"fieldget <CoolScroll: java.awt.Image appletimage>";
+    "fieldget <CoolScroll: java.awt.Image appletimage>"->"virtualinvoke <java.awt.Image: java.awt.Graphics getGraphics()>";
+    "fieldput <CoolScroll: java.awt.Graphics appletgfx>"
+    "virtualinvoke <java.awt.Image: java.awt.Graphics getGraphics()>"->"fieldput <CoolScroll: java.awt.Graphics appletgfx>";
+    "fieldput <CoolScroll: java.awt.Graphics appletgfx>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"virtualinvoke <java.awt.Component: java.awt.Dimension size()>";
+    "virtualinvoke <java.awt.Component: java.awt.Dimension size()>"->"fieldget <java.awt.Dimension: int width>";
+    "push 2"
+    "fieldget <java.awt.Dimension: int width>"->"push 2";
+    "div.i"
+    "push 2"->"div.i";
+    "fieldput <CoolScroll: int extent_x>"
+    "div.i"->"fieldput <CoolScroll: int extent_x>";
+    "fieldput <CoolScroll: int extent_x>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"virtualinvoke <java.awt.Component: java.awt.Dimension size()>";
+    "virtualinvoke <java.awt.Component: java.awt.Dimension size()>"->"fieldget <java.awt.Dimension: int height>";
+    "push 4"
+    "fieldget <java.awt.Dimension: int height>"->"push 4";
+    "push 4"->"div.i";
+    "fieldput <CoolScroll: int extent_y>"
+    "div.i"->"fieldput <CoolScroll: int extent_y>";
+    "fieldput <CoolScroll: int extent_y>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "fieldget <CoolScroll: int extent_x>"
+    "load.r r0"->"fieldget <CoolScroll: int extent_x>";
+    "fieldget <CoolScroll: int extent_x>"->"load.r r0";
+    "fieldget <CoolScroll: int extent_y>"
+    "load.r r0"->"fieldget <CoolScroll: int extent_y>";
+    "fieldget <CoolScroll: int extent_y>"->"virtualinvoke <java.awt.Component: java.awt.Image createImage(int,int)>";
+    "fieldput <CoolScroll: java.awt.Image upperimage>"
+    "virtualinvoke <java.awt.Component: java.awt.Image createImage(int,int)>"->"fieldput <CoolScroll: java.awt.Image upperimage>";
+    "fieldput <CoolScroll: java.awt.Image upperimage>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "fieldget <CoolScroll: java.awt.Image upperimage>"
+    "load.r r0"->"fieldget <CoolScroll: java.awt.Image upperimage>";
+    "fieldget <CoolScroll: java.awt.Image upperimage>"->"virtualinvoke <java.awt.Image: java.awt.Graphics getGraphics()>";
+    "fieldput <CoolScroll: java.awt.Graphics gfx>"
+    "virtualinvoke <java.awt.Image: java.awt.Graphics getGraphics()>"->"fieldput <CoolScroll: java.awt.Graphics gfx>";
+    "fieldput <CoolScroll: java.awt.Graphics gfx>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <CoolScroll: int extent_x>";
+    "fieldput <CoolScroll: int scrollpos>"
+    "fieldget <CoolScroll: int extent_x>"->"fieldput <CoolScroll: int scrollpos>";
+    "fieldput <CoolScroll: int scrollpos>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <CoolScroll: int extent_x>";
+    "fieldget <CoolScroll: int extent_x>"->"load.r r0";
+    "load.r r0"->"fieldget <CoolScroll: int extent_y>";
+    "mul.i"
+    "fieldget <CoolScroll: int extent_y>"->"mul.i";
+    "mul.i"->"load.r r0";
+    "load.r r0"->"fieldget <CoolScroll: int extent_x>";
+    "add.i"
+    "fieldget <CoolScroll: int extent_x>"->"add.i";
+    "newarray"
+    "add.i"->"newarray";
+    "fieldput <CoolScroll: int[] swappic>"
+    "newarray"->"fieldput <CoolScroll: int[] swappic>";
+    "fieldput <CoolScroll: int[] swappic>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <CoolScroll: int extent_x>";
+    "fieldget <CoolScroll: int extent_x>"->"load.r r0";
+    "load.r r0"->"fieldget <CoolScroll: int extent_y>";
+    "fieldget <CoolScroll: int extent_y>"->"mul.i";
+    "mul.i"->"load.r r0";
+    "load.r r0"->"fieldget <CoolScroll: int extent_x>";
+    "fieldget <CoolScroll: int extent_x>"->"add.i";
+    "add.i"->"newarray";
+    "fieldput <CoolScroll: int[] mirrorpic>"
+    "newarray"->"fieldput <CoolScroll: int[] mirrorpic>";
+    "fieldput <CoolScroll: int[] mirrorpic>"->"load.r r0";
+    "load.r r0"->"load.r $r25";
+    "virtualinvoke <java.lang.String: int length()>"
+    "load.r $r25"->"virtualinvoke <java.lang.String: int length()>";
+    "fieldput <CoolScroll: int msglenght>"
+    "virtualinvoke <java.lang.String: int length()>"->"fieldput <CoolScroll: int msglenght>";
+    "fieldput <CoolScroll: int msglenght>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "fieldget <CoolScroll: int msglenght>"
+    "load.r r0"->"fieldget <CoolScroll: int msglenght>";
+    "push 1"
+    "fieldget <CoolScroll: int msglenght>"->"push 1";
+    "push 1"->"add.i";
+    "add.i"->"newarray";
+    "fieldput <CoolScroll: char[] msg>"
+    "newarray"->"fieldput <CoolScroll: char[] msg>";
+    "fieldput <CoolScroll: char[] msg>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <CoolScroll: int msglenght>";
+    "fieldget <CoolScroll: int msglenght>"->"push 1";
+    "push 1"->"add.i";
+    "add.i"->"newarray";
+    "fieldput <CoolScroll: int[] msgbounceindex>"
+    "newarray"->"fieldput <CoolScroll: int[] msgbounceindex>";
+    "fieldput <CoolScroll: int[] msgbounceindex>"->"load.r r0";
+    "push 16"
+    "load.r r0"->"push 16";
+    "push 16"->"newarray";
+    "fieldput <CoolScroll: int[] lametable>"
+    "newarray"->"fieldput <CoolScroll: int[] lametable>";
+    "fieldput <CoolScroll: int[] lametable>"->"load.r r0";
+    "specialinvoke <CoolScroll: void loadlameBounce()>"
+    "load.r r0"->"specialinvoke <CoolScroll: void loadlameBounce()>";
+    "push 0"
+    "specialinvoke <CoolScroll: void loadlameBounce()>"->"push 0";
+    "store.i i32"
+    "push 0"->"store.i i32";
+    "store.i i32"->"push 0";
+    "store.i i33"
+    "push 0"->"store.i i33";
+    "goto load.i i33"
+    "store.i i33"->"goto load.i i33";
+    "load.i i33"
+    "goto load.i i33"->"load.i i33";
+    "load.i i33"->"load.r r0";
+    "load.r r0"->"fieldget <CoolScroll: int msglenght>";
+    "ifcmplt.i load.r r0"
+    "fieldget <CoolScroll: int msglenght>"->"ifcmplt.i load.r r0";
+    "ifcmplt.i load.r r0"->"load.r r0";
+    "load.r r0"->"load.r $r25";
+    "virtualinvoke <java.lang.String: char[] toCharArray()>"
+    "load.r $r25"->"virtualinvoke <java.lang.String: char[] toCharArray()>";
+    "virtualinvoke <java.lang.String: char[] toCharArray()>"->"fieldput <CoolScroll: char[] msg>";
+    "new java.awt.MediaTracker"
+    "fieldput <CoolScroll: char[] msg>"->"new java.awt.MediaTracker";
+    "new java.awt.MediaTracker"->"store.r $r25";
+    "store.r $r25"->"load.r $r25";
+    "load.r $r25"->"load.r r0";
+    "specialinvoke <java.awt.MediaTracker: void <init>(java.awt.Component)>"
+    "load.r r0"->"specialinvoke <java.awt.MediaTracker: void <init>(java.awt.Component)>";
+    "specialinvoke <java.awt.MediaTracker: void <init>(java.awt.Component)>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "virtualinvoke <java.applet.Applet: java.net.URL getDocumentBase()>"
+    "load.r r0"->"virtualinvoke <java.applet.Applet: java.net.URL getDocumentBase()>";
+    "virtualinvoke <java.applet.Applet: java.net.URL getDocumentBase()>"->"load.r r0";
+    "push \"fontimage\""
+    "load.r r0"->"push \"fontimage\"";
+    "push \"fontimage\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.awt.Image getImage(java.net.URL,java.lang.String)>"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"virtualinvoke <java.applet.Applet: java.awt.Image getImage(java.net.URL,java.lang.String)>";
+    "fieldput <CoolScroll: java.awt.Image cropfont>"
+    "virtualinvoke <java.applet.Applet: java.awt.Image getImage(java.net.URL,java.lang.String)>"->"fieldput <CoolScroll: java.awt.Image cropfont>";
+    "fieldput <CoolScroll: java.awt.Image cropfont>"->"load.r $r25";
+    "load.r $r25"->"load.r r0";
+    "fieldget <CoolScroll: java.awt.Image cropfont>"
+    "load.r r0"->"fieldget <CoolScroll: java.awt.Image cropfont>";
+    "fieldget <CoolScroll: java.awt.Image cropfont>"->"push 0";
+    "virtualinvoke <java.awt.MediaTracker: void addImage(java.awt.Image,int)>"
+    "push 0"->"virtualinvoke <java.awt.MediaTracker: void addImage(java.awt.Image,int)>";
+    "virtualinvoke <java.awt.MediaTracker: void addImage(java.awt.Image,int)>"->"load.r $r25";
+    "load.r $r25"->"push 0";
+    "virtualinvoke <java.awt.MediaTracker: void waitForID(int)>"
+    "push 0"->"virtualinvoke <java.awt.MediaTracker: void waitForID(int)>";
+    "goto new java.awt.MediaTracker"
+    "virtualinvoke <java.awt.MediaTracker: void waitForID(int)>"->"goto new java.awt.MediaTracker";
+    "goto new java.awt.MediaTracker"->"new java.awt.MediaTracker";
+    "new java.awt.MediaTracker"->"store.r $r25";
+    "store.r $r25"->"load.r $r25";
+    "load.r $r25"->"load.r r0";
+    "load.r r0"->"specialinvoke <java.awt.MediaTracker: void <init>(java.awt.Component)>";
+    "specialinvoke <java.awt.MediaTracker: void <init>(java.awt.Component)>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"virtualinvoke <java.applet.Applet: java.net.URL getDocumentBase()>";
+    "virtualinvoke <java.applet.Applet: java.net.URL getDocumentBase()>"->"load.r r0";
+    "push \"backimage\""
+    "load.r r0"->"push \"backimage\"";
+    "push \"backimage\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"virtualinvoke <java.applet.Applet: java.awt.Image getImage(java.net.URL,java.lang.String)>";
+    "fieldput <CoolScroll: java.awt.Image backdrop>"
+    "virtualinvoke <java.applet.Applet: java.awt.Image getImage(java.net.URL,java.lang.String)>"->"fieldput <CoolScroll: java.awt.Image backdrop>";
+    "fieldput <CoolScroll: java.awt.Image backdrop>"->"load.r $r25";
+    "load.r $r25"->"load.r r0";
+    "fieldget <CoolScroll: java.awt.Image backdrop>"
+    "load.r r0"->"fieldget <CoolScroll: java.awt.Image backdrop>";
+    "fieldget <CoolScroll: java.awt.Image backdrop>"->"push 1";
+    "push 1"->"virtualinvoke <java.awt.MediaTracker: void addImage(java.awt.Image,int)>";
+    "virtualinvoke <java.awt.MediaTracker: void addImage(java.awt.Image,int)>"->"load.r $r25";
+    "load.r $r25"->"push 1";
+    "push 1"->"virtualinvoke <java.awt.MediaTracker: void waitForID(int)>";
+    "goto load.r r0"
+    "virtualinvoke <java.awt.MediaTracker: void waitForID(int)>"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "new java.awt.Color"
+    "load.r r0"->"new java.awt.Color";
+    "dup1.r"
+    "new java.awt.Color"->"dup1.r";
+    "push 255"
+    "dup1.r"->"push 255";
+    "push 255"->"push 0";
+    "push 0"->"push 0";
+    "specialinvoke <java.awt.Color: void <init>(int,int,int)>"
+    "push 0"->"specialinvoke <java.awt.Color: void <init>(int,int,int)>";
+    "fieldput <CoolScroll: java.awt.Color forecolor>"
+    "specialinvoke <java.awt.Color: void <init>(int,int,int)>"->"fieldput <CoolScroll: java.awt.Color forecolor>";
+    "fieldput <CoolScroll: java.awt.Color forecolor>"->"load.r r0";
+    "load.r r0"->"new java.awt.Color";
+    "new java.awt.Color"->"dup1.r";
+    "dup1.r"->"push 0";
+    "push 0"->"push 0";
+    "push 0"->"push 0";
+    "push 0"->"specialinvoke <java.awt.Color: void <init>(int,int,int)>";
+    "fieldput <CoolScroll: java.awt.Color backcolor>"
+    "specialinvoke <java.awt.Color: void <init>(int,int,int)>"->"fieldput <CoolScroll: java.awt.Color backcolor>";
+    "fieldput <CoolScroll: java.awt.Color backcolor>"->"load.r r0";
+    "new java.awt.image.MemoryImageSource"
+    "load.r r0"->"new java.awt.image.MemoryImageSource";
+    "new java.awt.image.MemoryImageSource"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "load.r r0"->"fieldget <CoolScroll: int extent_x>";
+    "fieldget <CoolScroll: int extent_x>"->"load.r r0";
+    "load.r r0"->"fieldget <CoolScroll: int extent_y>";
+    "fieldget <CoolScroll: int extent_y>"->"load.r r0";
+    "fieldget <CoolScroll: int[] mirrorpic>"
+    "load.r r0"->"fieldget <CoolScroll: int[] mirrorpic>";
+    "fieldget <CoolScroll: int[] mirrorpic>"->"push 0";
+    "push 0"->"load.r r0";
+    "load.r r0"->"fieldget <CoolScroll: int extent_x>";
+    "specialinvoke <java.awt.image.MemoryImageSource: void <init>(int,int,int[],int,int)>"
+    "fieldget <CoolScroll: int extent_x>"->"specialinvoke <java.awt.image.MemoryImageSource: void <init>(int,int,int[],int,int)>";
+    "fieldput <CoolScroll: java.awt.image.MemoryImageSource screenMem>"
+    "specialinvoke <java.awt.image.MemoryImageSource: void <init>(int,int,int[],int,int)>"->"fieldput <CoolScroll: java.awt.image.MemoryImageSource screenMem>";
+    "return"
+    "fieldput <CoolScroll: java.awt.image.MemoryImageSource screenMem>"->"return";
+    "virtualinvoke <java.awt.MediaTracker: void waitForID(int)>"->"store.r $r25";
+    "virtualinvoke <java.awt.MediaTracker: void waitForID(int)>"->"store.r $r25";
+    "ifcmplt.i load.r r0"->"load.r r0";
+    "fieldget <CoolScroll: int[] msgbounceindex>"
+    "load.r r0"->"fieldget <CoolScroll: int[] msgbounceindex>";
+    "fieldget <CoolScroll: int[] msgbounceindex>"->"load.i i33";
+    "load.i i32"
+    "load.i i33"->"load.i i32";
+    "arraywrite.i"
+    "load.i i32"->"arraywrite.i";
+    "inc.i i32 1"
+    "arraywrite.i"->"inc.i i32 1";
+    "inc.i i32 1"->"load.i i32";
+    "push 15"
+    "load.i i32"->"push 15";
+    "ifcmple.i inc.i i33 1"
+    "push 15"->"ifcmple.i inc.i i33 1";
+    "ifcmple.i inc.i i33 1"->"push 0";
+    "push 0"->"store.i i32";
+    "inc.i i33 1"
+    "store.i i32"->"inc.i i33 1";
+}

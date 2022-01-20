@@ -1,0 +1,41 @@
+digraph "" {
+    "r0 := @this: Snow"
+    "load.r r0"
+    "r0 := @this: Snow"->"load.r r0";
+    "push \"BGCOLOR\""
+    "load.r r0"->"push \"BGCOLOR\"";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"
+    "push \"BGCOLOR\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "store.r r1"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"store.r r1";
+    "load.r r1"
+    "store.r r1"->"load.r r1";
+    "ifnull load.r r0"
+    "load.r r1"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r r1";
+    "staticinvoke <Snow: java.awt.Color stringToColor(java.lang.String)>"
+    "load.r r1"->"staticinvoke <Snow: java.awt.Color stringToColor(java.lang.String)>";
+    "staticinvoke <Snow: java.awt.Color stringToColor(java.lang.String)>"->"store.r r1";
+    "store.r r1"->"load.r r1";
+    "load.r r1"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r1";
+    "fieldput <Snow: java.awt.Color backColor>"
+    "load.r r1"->"fieldput <Snow: java.awt.Color backColor>";
+    "fieldput <Snow: java.awt.Color backColor>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "fieldget <Snow: java.awt.Color backColor>"
+    "load.r r0"->"fieldget <Snow: java.awt.Color backColor>";
+    "virtualinvoke <java.awt.Component: void setBackground(java.awt.Color)>"
+    "fieldget <Snow: java.awt.Color backColor>"->"virtualinvoke <java.awt.Component: void setBackground(java.awt.Color)>";
+    "virtualinvoke <java.awt.Component: void setBackground(java.awt.Color)>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "virtualinvoke <java.awt.Component: void addMouseMotionListener(java.awt.event.MouseMotionListener)>"
+    "load.r r0"->"virtualinvoke <java.awt.Component: void addMouseMotionListener(java.awt.event.MouseMotionListener)>";
+    "virtualinvoke <java.awt.Component: void addMouseMotionListener(java.awt.event.MouseMotionListener)>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "virtualinvoke <java.awt.Component: void addMouseListener(java.awt.event.MouseListener)>"
+    "load.r r0"->"virtualinvoke <java.awt.Component: void addMouseListener(java.awt.event.MouseListener)>";
+    "return"
+    "virtualinvoke <java.awt.Component: void addMouseListener(java.awt.event.MouseListener)>"->"return";
+}

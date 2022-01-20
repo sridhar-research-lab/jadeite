@@ -1,0 +1,303 @@
+digraph "" {
+    "r0 := @this: BouncingBalls"
+    "load.r r0"
+    "r0 := @this: BouncingBalls"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "virtualinvoke <java.awt.Component: java.awt.Dimension size()>"
+    "load.r r0"->"virtualinvoke <java.awt.Component: java.awt.Dimension size()>";
+    "fieldget <java.awt.Dimension: int width>"
+    "virtualinvoke <java.awt.Component: java.awt.Dimension size()>"->"fieldget <java.awt.Dimension: int width>";
+    "fieldget <java.awt.Dimension: int width>"->"load.r r0";
+    "load.r r0"->"virtualinvoke <java.awt.Component: java.awt.Dimension size()>";
+    "fieldget <java.awt.Dimension: int height>"
+    "virtualinvoke <java.awt.Component: java.awt.Dimension size()>"->"fieldget <java.awt.Dimension: int height>";
+    "virtualinvoke <java.awt.Component: java.awt.Image createImage(int,int)>"
+    "fieldget <java.awt.Dimension: int height>"->"virtualinvoke <java.awt.Component: java.awt.Image createImage(int,int)>";
+    "fieldput <BouncingBalls: java.awt.Image Buffer>"
+    "virtualinvoke <java.awt.Component: java.awt.Image createImage(int,int)>"->"fieldput <BouncingBalls: java.awt.Image Buffer>";
+    "fieldput <BouncingBalls: java.awt.Image Buffer>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "fieldget <BouncingBalls: java.awt.Image Buffer>"
+    "load.r r0"->"fieldget <BouncingBalls: java.awt.Image Buffer>";
+    "virtualinvoke <java.awt.Image: java.awt.Graphics getGraphics()>"
+    "fieldget <BouncingBalls: java.awt.Image Buffer>"->"virtualinvoke <java.awt.Image: java.awt.Graphics getGraphics()>";
+    "fieldput <BouncingBalls: java.awt.Graphics gBuffer>"
+    "virtualinvoke <java.awt.Image: java.awt.Graphics getGraphics()>"->"fieldput <BouncingBalls: java.awt.Graphics gBuffer>";
+    "fieldput <BouncingBalls: java.awt.Graphics gBuffer>"->"load.r r0";
+    "push 10"
+    "load.r r0"->"push 10";
+    "newarray"
+    "push 10"->"newarray";
+    "fieldput <BouncingBalls: CollideBall[] ball>"
+    "newarray"->"fieldput <BouncingBalls: CollideBall[] ball>";
+    "fieldput <BouncingBalls: CollideBall[] ball>"->"load.r r0";
+    "load.r r0"->"virtualinvoke <java.awt.Component: java.awt.Dimension size()>";
+    "virtualinvoke <java.awt.Component: java.awt.Dimension size()>"->"fieldget <java.awt.Dimension: int width>";
+    "push 5"
+    "fieldget <java.awt.Dimension: int width>"->"push 5";
+    "sub.i"
+    "push 5"->"sub.i";
+    "store.i i0"
+    "sub.i"->"store.i i0";
+    "store.i i0"->"load.r r0";
+    "load.r r0"->"virtualinvoke <java.awt.Component: java.awt.Dimension size()>";
+    "virtualinvoke <java.awt.Component: java.awt.Dimension size()>"->"fieldget <java.awt.Dimension: int height>";
+    "fieldget <java.awt.Dimension: int height>"->"push 5";
+    "push 5"->"sub.i";
+    "store.i i1"
+    "sub.i"->"store.i i1";
+    "store.i i1"->"load.r r0";
+    "fieldget <BouncingBalls: CollideBall[] ball>"
+    "load.r r0"->"fieldget <BouncingBalls: CollideBall[] ball>";
+    "push 0"
+    "fieldget <BouncingBalls: CollideBall[] ball>"->"push 0";
+    "new CollideBall"
+    "push 0"->"new CollideBall";
+    "dup1.r"
+    "new CollideBall"->"dup1.r";
+    "load.i i0"
+    "dup1.r"->"load.i i0";
+    "load.i i1"
+    "load.i i0"->"load.i i1";
+    "push 50"
+    "load.i i1"->"push 50";
+    "push 20"
+    "push 50"->"push 20";
+    "push 1.5"
+    "push 20"->"push 1.5";
+    "push 2.0"
+    "push 1.5"->"push 2.0";
+    "staticget <java.awt.Color: java.awt.Color orange>"
+    "push 2.0"->"staticget <java.awt.Color: java.awt.Color orange>";
+    "specialinvoke <CollideBall: void <init>(int,int,int,int,double,double,java.awt.Color)>"
+    "staticget <java.awt.Color: java.awt.Color orange>"->"specialinvoke <CollideBall: void <init>(int,int,int,int,double,double,java.awt.Color)>";
+    "arraywrite.r"
+    "specialinvoke <CollideBall: void <init>(int,int,int,int,double,double,java.awt.Color)>"->"arraywrite.r";
+    "arraywrite.r"->"load.r r0";
+    "load.r r0"->"fieldget <BouncingBalls: CollideBall[] ball>";
+    "push 1"
+    "fieldget <BouncingBalls: CollideBall[] ball>"->"push 1";
+    "push 1"->"new CollideBall";
+    "new CollideBall"->"dup1.r";
+    "dup1.r"->"load.i i0";
+    "load.i i0"->"load.i i1";
+    "push 60"
+    "load.i i1"->"push 60";
+    "push 210"
+    "push 60"->"push 210";
+    "push 210"->"push 2.0";
+    "push -3.0"
+    "push 2.0"->"push -3.0";
+    "staticget <java.awt.Color: java.awt.Color red>"
+    "push -3.0"->"staticget <java.awt.Color: java.awt.Color red>";
+    "staticget <java.awt.Color: java.awt.Color red>"->"specialinvoke <CollideBall: void <init>(int,int,int,int,double,double,java.awt.Color)>";
+    "specialinvoke <CollideBall: void <init>(int,int,int,int,double,double,java.awt.Color)>"->"arraywrite.r";
+    "arraywrite.r"->"load.r r0";
+    "load.r r0"->"fieldget <BouncingBalls: CollideBall[] ball>";
+    "push 2"
+    "fieldget <BouncingBalls: CollideBall[] ball>"->"push 2";
+    "push 2"->"new CollideBall";
+    "new CollideBall"->"dup1.r";
+    "dup1.r"->"load.i i0";
+    "load.i i0"->"load.i i1";
+    "push 15"
+    "load.i i1"->"push 15";
+    "push 70"
+    "push 15"->"push 70";
+    "push -2.0"
+    "push 70"->"push -2.0";
+    "push -2.5"
+    "push -2.0"->"push -2.5";
+    "staticget <java.awt.Color: java.awt.Color pink>"
+    "push -2.5"->"staticget <java.awt.Color: java.awt.Color pink>";
+    "staticget <java.awt.Color: java.awt.Color pink>"->"specialinvoke <CollideBall: void <init>(int,int,int,int,double,double,java.awt.Color)>";
+    "specialinvoke <CollideBall: void <init>(int,int,int,int,double,double,java.awt.Color)>"->"arraywrite.r";
+    "arraywrite.r"->"load.r r0";
+    "load.r r0"->"fieldget <BouncingBalls: CollideBall[] ball>";
+    "push 3"
+    "fieldget <BouncingBalls: CollideBall[] ball>"->"push 3";
+    "push 3"->"new CollideBall";
+    "new CollideBall"->"dup1.r";
+    "dup1.r"->"load.i i0";
+    "load.i i0"->"load.i i1";
+    "push 150"
+    "load.i i1"->"push 150";
+    "push 30"
+    "push 150"->"push 30";
+    "push -2.7"
+    "push 30"->"push -2.7";
+    "push -2.7"->"push -2.0";
+    "staticget <java.awt.Color: java.awt.Color cyan>"
+    "push -2.0"->"staticget <java.awt.Color: java.awt.Color cyan>";
+    "staticget <java.awt.Color: java.awt.Color cyan>"->"specialinvoke <CollideBall: void <init>(int,int,int,int,double,double,java.awt.Color)>";
+    "specialinvoke <CollideBall: void <init>(int,int,int,int,double,double,java.awt.Color)>"->"arraywrite.r";
+    "arraywrite.r"->"load.r r0";
+    "load.r r0"->"fieldget <BouncingBalls: CollideBall[] ball>";
+    "push 4"
+    "fieldget <BouncingBalls: CollideBall[] ball>"->"push 4";
+    "push 4"->"new CollideBall";
+    "new CollideBall"->"dup1.r";
+    "dup1.r"->"load.i i0";
+    "load.i i0"->"load.i i1";
+    "load.i i1"->"push 210";
+    "push 210"->"push 30";
+    "push 2.2"
+    "push 30"->"push 2.2";
+    "push -3.5"
+    "push 2.2"->"push -3.5";
+    "staticget <java.awt.Color: java.awt.Color magenta>"
+    "push -3.5"->"staticget <java.awt.Color: java.awt.Color magenta>";
+    "staticget <java.awt.Color: java.awt.Color magenta>"->"specialinvoke <CollideBall: void <init>(int,int,int,int,double,double,java.awt.Color)>";
+    "specialinvoke <CollideBall: void <init>(int,int,int,int,double,double,java.awt.Color)>"->"arraywrite.r";
+    "arraywrite.r"->"load.r r0";
+    "load.r r0"->"fieldget <BouncingBalls: CollideBall[] ball>";
+    "fieldget <BouncingBalls: CollideBall[] ball>"->"push 5";
+    "push 5"->"new CollideBall";
+    "new CollideBall"->"dup1.r";
+    "dup1.r"->"load.i i0";
+    "load.i i0"->"load.i i1";
+    "push 360"
+    "load.i i1"->"push 360";
+    "push 170"
+    "push 360"->"push 170";
+    "push 170"->"push 2.2";
+    "push -1.5"
+    "push 2.2"->"push -1.5";
+    "staticget <java.awt.Color: java.awt.Color yellow>"
+    "push -1.5"->"staticget <java.awt.Color: java.awt.Color yellow>";
+    "staticget <java.awt.Color: java.awt.Color yellow>"->"specialinvoke <CollideBall: void <init>(int,int,int,int,double,double,java.awt.Color)>";
+    "specialinvoke <CollideBall: void <init>(int,int,int,int,double,double,java.awt.Color)>"->"arraywrite.r";
+    "arraywrite.r"->"load.r r0";
+    "load.r r0"->"fieldget <BouncingBalls: CollideBall[] ball>";
+    "push 6"
+    "fieldget <BouncingBalls: CollideBall[] ball>"->"push 6";
+    "push 6"->"new CollideBall";
+    "new CollideBall"->"dup1.r";
+    "dup1.r"->"load.i i0";
+    "load.i i0"->"load.i i1";
+    "load.i i1"->"push 210";
+    "push 180"
+    "push 210"->"push 180";
+    "push -1.2"
+    "push 180"->"push -1.2";
+    "push -1.2"->"push -2.5";
+    "staticget <java.awt.Color: java.awt.Color blue>"
+    "push -2.5"->"staticget <java.awt.Color: java.awt.Color blue>";
+    "staticget <java.awt.Color: java.awt.Color blue>"->"specialinvoke <CollideBall: void <init>(int,int,int,int,double,double,java.awt.Color)>";
+    "specialinvoke <CollideBall: void <init>(int,int,int,int,double,double,java.awt.Color)>"->"arraywrite.r";
+    "arraywrite.r"->"load.r r0";
+    "load.r r0"->"fieldget <BouncingBalls: CollideBall[] ball>";
+    "push 7"
+    "fieldget <BouncingBalls: CollideBall[] ball>"->"push 7";
+    "push 7"->"new CollideBall";
+    "new CollideBall"->"dup1.r";
+    "dup1.r"->"load.i i0";
+    "load.i i0"->"load.i i1";
+    "push 330"
+    "load.i i1"->"push 330";
+    "push 330"->"push 30";
+    "push -2.2"
+    "push 30"->"push -2.2";
+    "push -1.8"
+    "push -2.2"->"push -1.8";
+    "staticget <java.awt.Color: java.awt.Color green>"
+    "push -1.8"->"staticget <java.awt.Color: java.awt.Color green>";
+    "staticget <java.awt.Color: java.awt.Color green>"->"specialinvoke <CollideBall: void <init>(int,int,int,int,double,double,java.awt.Color)>";
+    "specialinvoke <CollideBall: void <init>(int,int,int,int,double,double,java.awt.Color)>"->"arraywrite.r";
+    "arraywrite.r"->"load.r r0";
+    "load.r r0"->"fieldget <BouncingBalls: CollideBall[] ball>";
+    "push 8"
+    "fieldget <BouncingBalls: CollideBall[] ball>"->"push 8";
+    "push 8"->"new CollideBall";
+    "new CollideBall"->"dup1.r";
+    "dup1.r"->"load.i i0";
+    "load.i i0"->"load.i i1";
+    "load.i i1"->"push 180";
+    "push 220"
+    "push 180"->"push 220";
+    "push 220"->"push -2.2";
+    "push -2.2"->"push -1.8";
+    "staticget <java.awt.Color: java.awt.Color black>"
+    "push -1.8"->"staticget <java.awt.Color: java.awt.Color black>";
+    "staticget <java.awt.Color: java.awt.Color black>"->"specialinvoke <CollideBall: void <init>(int,int,int,int,double,double,java.awt.Color)>";
+    "specialinvoke <CollideBall: void <init>(int,int,int,int,double,double,java.awt.Color)>"->"arraywrite.r";
+    "arraywrite.r"->"load.r r0";
+    "load.r r0"->"fieldget <BouncingBalls: CollideBall[] ball>";
+    "push 9"
+    "fieldget <BouncingBalls: CollideBall[] ball>"->"push 9";
+    "push 9"->"new CollideBall";
+    "new CollideBall"->"dup1.r";
+    "dup1.r"->"load.i i0";
+    "load.i i0"->"load.i i1";
+    "load.i i1"->"push 330";
+    "push 130"
+    "push 330"->"push 130";
+    "push 130"->"push -2.2";
+    "push -2.2"->"push -1.8";
+    "staticget <java.awt.Color: java.awt.Color gray>"
+    "push -1.8"->"staticget <java.awt.Color: java.awt.Color gray>";
+    "staticget <java.awt.Color: java.awt.Color gray>"->"specialinvoke <CollideBall: void <init>(int,int,int,int,double,double,java.awt.Color)>";
+    "specialinvoke <CollideBall: void <init>(int,int,int,int,double,double,java.awt.Color)>"->"arraywrite.r";
+    "arraywrite.r"->"load.r r0";
+    "new Obstacle"
+    "load.r r0"->"new Obstacle";
+    "new Obstacle"->"dup1.r";
+    "dup1.r"->"push 150";
+    "push 80"
+    "push 150"->"push 80";
+    "push 80"->"push 130";
+    "push 90"
+    "push 130"->"push 90";
+    "specialinvoke <Obstacle: void <init>(int,int,int,int)>"
+    "push 90"->"specialinvoke <Obstacle: void <init>(int,int,int,int)>";
+    "fieldput <BouncingBalls: Obstacle o>"
+    "specialinvoke <Obstacle: void <init>(int,int,int,int)>"->"fieldput <BouncingBalls: Obstacle o>";
+    "fieldput <BouncingBalls: Obstacle o>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "fieldget <BouncingBalls: Obstacle o>"
+    "load.r r0"->"fieldget <BouncingBalls: Obstacle o>";
+    "fieldget <Obstacle: java.awt.Rectangle r>"
+    "fieldget <BouncingBalls: Obstacle o>"->"fieldget <Obstacle: java.awt.Rectangle r>";
+    "fieldget <java.awt.Rectangle: int x>"
+    "fieldget <Obstacle: java.awt.Rectangle r>"->"fieldget <java.awt.Rectangle: int x>";
+    "fieldput <BouncingBalls: int west>"
+    "fieldget <java.awt.Rectangle: int x>"->"fieldput <BouncingBalls: int west>";
+    "fieldput <BouncingBalls: int west>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <BouncingBalls: Obstacle o>";
+    "fieldget <BouncingBalls: Obstacle o>"->"fieldget <Obstacle: java.awt.Rectangle r>";
+    "fieldget <java.awt.Rectangle: int y>"
+    "fieldget <Obstacle: java.awt.Rectangle r>"->"fieldget <java.awt.Rectangle: int y>";
+    "fieldput <BouncingBalls: int north>"
+    "fieldget <java.awt.Rectangle: int y>"->"fieldput <BouncingBalls: int north>";
+    "fieldput <BouncingBalls: int north>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <BouncingBalls: Obstacle o>";
+    "fieldget <BouncingBalls: Obstacle o>"->"fieldget <Obstacle: java.awt.Rectangle r>";
+    "fieldget <Obstacle: java.awt.Rectangle r>"->"fieldget <java.awt.Rectangle: int x>";
+    "fieldget <java.awt.Rectangle: int x>"->"load.r r0";
+    "load.r r0"->"fieldget <BouncingBalls: Obstacle o>";
+    "fieldget <BouncingBalls: Obstacle o>"->"fieldget <Obstacle: java.awt.Rectangle r>";
+    "fieldget <java.awt.Rectangle: int width>"
+    "fieldget <Obstacle: java.awt.Rectangle r>"->"fieldget <java.awt.Rectangle: int width>";
+    "add.i"
+    "fieldget <java.awt.Rectangle: int width>"->"add.i";
+    "fieldput <BouncingBalls: int east>"
+    "add.i"->"fieldput <BouncingBalls: int east>";
+    "fieldput <BouncingBalls: int east>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <BouncingBalls: Obstacle o>";
+    "fieldget <BouncingBalls: Obstacle o>"->"fieldget <Obstacle: java.awt.Rectangle r>";
+    "fieldget <Obstacle: java.awt.Rectangle r>"->"fieldget <java.awt.Rectangle: int y>";
+    "fieldget <java.awt.Rectangle: int y>"->"load.r r0";
+    "load.r r0"->"fieldget <BouncingBalls: Obstacle o>";
+    "fieldget <BouncingBalls: Obstacle o>"->"fieldget <Obstacle: java.awt.Rectangle r>";
+    "fieldget <java.awt.Rectangle: int height>"
+    "fieldget <Obstacle: java.awt.Rectangle r>"->"fieldget <java.awt.Rectangle: int height>";
+    "fieldget <java.awt.Rectangle: int height>"->"add.i";
+    "fieldput <BouncingBalls: int south>"
+    "add.i"->"fieldput <BouncingBalls: int south>";
+    "return"
+    "fieldput <BouncingBalls: int south>"->"return";
+}

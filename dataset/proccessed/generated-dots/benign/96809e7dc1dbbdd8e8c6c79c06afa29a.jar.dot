@@ -1,0 +1,205 @@
+digraph "" {
+    "r0 := @this: Julia3D"
+    "load.r r0"
+    "r0 := @this: Julia3D"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "virtualinvoke <java.awt.Component: java.awt.Dimension getSize()>"
+    "load.r r0"->"virtualinvoke <java.awt.Component: java.awt.Dimension getSize()>";
+    "fieldget <java.awt.Dimension: int width>"
+    "virtualinvoke <java.awt.Component: java.awt.Dimension getSize()>"->"fieldget <java.awt.Dimension: int width>";
+    "fieldput <Julia3D: int w>"
+    "fieldget <java.awt.Dimension: int width>"->"fieldput <Julia3D: int w>";
+    "fieldput <Julia3D: int w>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"virtualinvoke <java.awt.Component: java.awt.Dimension getSize()>";
+    "fieldget <java.awt.Dimension: int height>"
+    "virtualinvoke <java.awt.Component: java.awt.Dimension getSize()>"->"fieldget <java.awt.Dimension: int height>";
+    "fieldput <Julia3D: int h>"
+    "fieldget <java.awt.Dimension: int height>"->"fieldput <Julia3D: int h>";
+    "fieldput <Julia3D: int h>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "fieldget <Julia3D: int w>"
+    "load.r r0"->"fieldget <Julia3D: int w>";
+    "push 2"
+    "fieldget <Julia3D: int w>"->"push 2";
+    "div.i"
+    "push 2"->"div.i";
+    "fieldput <Julia3D: int w2>"
+    "div.i"->"fieldput <Julia3D: int w2>";
+    "fieldput <Julia3D: int w2>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "fieldget <Julia3D: int h>"
+    "load.r r0"->"fieldget <Julia3D: int h>";
+    "fieldget <Julia3D: int h>"->"push 2";
+    "push 2"->"div.i";
+    "fieldput <Julia3D: int h2>"
+    "div.i"->"fieldput <Julia3D: int h2>";
+    "fieldput <Julia3D: int h2>"->"load.r r0";
+    "push \"N\""
+    "load.r r0"->"push \"N\"";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"
+    "push \"N\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "store.r $r12"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"store.r $r12";
+    "load.r $r12"
+    "store.r $r12"->"load.r $r12";
+    "ifnull load.r r0"
+    "load.r $r12"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r r0";
+    "load.r r0"->"load.r $r12";
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"
+    "load.r $r12"->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>";
+    "fieldput <Julia3D: int n>"
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"->"fieldput <Julia3D: int n>";
+    "fieldput <Julia3D: int n>"->"load.r r0";
+    "push 3"
+    "load.r r0"->"push 3";
+    "newarray"
+    "push 3"->"newarray";
+    "fieldput <Julia3D: int[] xPol>"
+    "newarray"->"fieldput <Julia3D: int[] xPol>";
+    "fieldput <Julia3D: int[] xPol>"->"load.r r0";
+    "load.r r0"->"push 3";
+    "push 3"->"newarray";
+    "fieldput <Julia3D: int[] yPol>"
+    "newarray"->"fieldput <Julia3D: int[] yPol>";
+    "fieldput <Julia3D: int[] yPol>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <Julia3D: int w>";
+    "fieldget <Julia3D: int w>"->"load.r r0";
+    "load.r r0"->"fieldget <Julia3D: int h>";
+    "virtualinvoke <java.awt.Component: java.awt.Image createImage(int,int)>"
+    "fieldget <Julia3D: int h>"->"virtualinvoke <java.awt.Component: java.awt.Image createImage(int,int)>";
+    "fieldput <Julia3D: java.awt.Image buffImage>"
+    "virtualinvoke <java.awt.Component: java.awt.Image createImage(int,int)>"->"fieldput <Julia3D: java.awt.Image buffImage>";
+    "fieldput <Julia3D: java.awt.Image buffImage>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "fieldget <Julia3D: java.awt.Image buffImage>"
+    "load.r r0"->"fieldget <Julia3D: java.awt.Image buffImage>";
+    "virtualinvoke <java.awt.Image: java.awt.Graphics getGraphics()>"
+    "fieldget <Julia3D: java.awt.Image buffImage>"->"virtualinvoke <java.awt.Image: java.awt.Graphics getGraphics()>";
+    "fieldput <Julia3D: java.awt.Graphics buffGraphics>"
+    "virtualinvoke <java.awt.Image: java.awt.Graphics getGraphics()>"->"fieldput <Julia3D: java.awt.Graphics buffGraphics>";
+    "fieldput <Julia3D: java.awt.Graphics buffGraphics>"->"load.r r0";
+    "push 256"
+    "load.r r0"->"push 256";
+    "push 256"->"newarray";
+    "fieldput <Julia3D: java.awt.Color[] col>"
+    "newarray"->"fieldput <Julia3D: java.awt.Color[] col>";
+    "push 0"
+    "fieldput <Julia3D: java.awt.Color[] col>"->"push 0";
+    "store.i $r12"
+    "push 0"->"store.i $r12";
+    "goto load.i $r12"
+    "store.i $r12"->"goto load.i $r12";
+    "load.i $r12"
+    "goto load.i $r12"->"load.i $r12";
+    "load.i $r12"->"push 256";
+    "ifcmplt.i load.r r0"
+    "push 256"->"ifcmplt.i load.r r0";
+    "ifcmplt.i load.r r0"->"load.r r0";
+    "push \"C\""
+    "load.r r0"->"push \"C\"";
+    "push \"C\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "store.r r23"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"store.r r23";
+    "load.r r23"
+    "store.r r23"->"load.r r23";
+    "load.r r23"->"ifnull load.r r0";
+    "new java.util.StringTokenizer"
+    "ifnull load.r r0"->"new java.util.StringTokenizer";
+    "new java.util.StringTokenizer"->"store.r $r12";
+    "store.r $r12"->"load.r $r12";
+    "load.r $r12"->"load.r r23";
+    "push \" ,\""
+    "load.r r23"->"push \" ,\"";
+    "specialinvoke <java.util.StringTokenizer: void <init>(java.lang.String,java.lang.String)>"
+    "push \" ,\""->"specialinvoke <java.util.StringTokenizer: void <init>(java.lang.String,java.lang.String)>";
+    "specialinvoke <java.util.StringTokenizer: void <init>(java.lang.String,java.lang.String)>"->"load.r r0";
+    "load.r r0"->"load.r $r12";
+    "virtualinvoke <java.util.StringTokenizer: java.lang.String nextToken()>"
+    "load.r $r12"->"virtualinvoke <java.util.StringTokenizer: java.lang.String nextToken()>";
+    "staticinvoke <java.lang.Double: java.lang.Double valueOf(java.lang.String)>"
+    "virtualinvoke <java.util.StringTokenizer: java.lang.String nextToken()>"->"staticinvoke <java.lang.Double: java.lang.Double valueOf(java.lang.String)>";
+    "virtualinvoke <java.lang.Double: double doubleValue()>"
+    "staticinvoke <java.lang.Double: java.lang.Double valueOf(java.lang.String)>"->"virtualinvoke <java.lang.Double: double doubleValue()>";
+    "fieldput <Julia3D: double cr>"
+    "virtualinvoke <java.lang.Double: double doubleValue()>"->"fieldput <Julia3D: double cr>";
+    "fieldput <Julia3D: double cr>"->"load.r r0";
+    "load.r r0"->"load.r $r12";
+    "load.r $r12"->"virtualinvoke <java.util.StringTokenizer: java.lang.String nextToken()>";
+    "virtualinvoke <java.util.StringTokenizer: java.lang.String nextToken()>"->"staticinvoke <java.lang.Double: java.lang.Double valueOf(java.lang.String)>";
+    "staticinvoke <java.lang.Double: java.lang.Double valueOf(java.lang.String)>"->"virtualinvoke <java.lang.Double: double doubleValue()>";
+    "fieldput <Julia3D: double ci>"
+    "virtualinvoke <java.lang.Double: double doubleValue()>"->"fieldput <Julia3D: double ci>";
+    "fieldput <Julia3D: double ci>"->"load.r r0";
+    "push \"bgColor\""
+    "load.r r0"->"push \"bgColor\"";
+    "push \"bgColor\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"store.r r23";
+    "store.r r23"->"load.r r23";
+    "load.r r23"->"ifnull load.r r0";
+    "ifnull load.r r0"->"new java.util.StringTokenizer";
+    "new java.util.StringTokenizer"->"store.r $r12";
+    "store.r $r12"->"load.r $r12";
+    "load.r $r12"->"load.r r23";
+    "specialinvoke <java.util.StringTokenizer: void <init>(java.lang.String)>"
+    "load.r r23"->"specialinvoke <java.util.StringTokenizer: void <init>(java.lang.String)>";
+    "specialinvoke <java.util.StringTokenizer: void <init>(java.lang.String)>"->"load.r r0";
+    "new java.awt.Color"
+    "load.r r0"->"new java.awt.Color";
+    "dup1.r"
+    "new java.awt.Color"->"dup1.r";
+    "dup1.r"->"load.r $r12";
+    "load.r $r12"->"virtualinvoke <java.util.StringTokenizer: java.lang.String nextToken()>";
+    "virtualinvoke <java.util.StringTokenizer: java.lang.String nextToken()>"->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>";
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"->"load.r $r12";
+    "load.r $r12"->"virtualinvoke <java.util.StringTokenizer: java.lang.String nextToken()>";
+    "virtualinvoke <java.util.StringTokenizer: java.lang.String nextToken()>"->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>";
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"->"load.r $r12";
+    "load.r $r12"->"virtualinvoke <java.util.StringTokenizer: java.lang.String nextToken()>";
+    "virtualinvoke <java.util.StringTokenizer: java.lang.String nextToken()>"->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>";
+    "specialinvoke <java.awt.Color: void <init>(int,int,int)>"
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"->"specialinvoke <java.awt.Color: void <init>(int,int,int)>";
+    "virtualinvoke <java.awt.Component: void setBackground(java.awt.Color)>"
+    "specialinvoke <java.awt.Color: void <init>(int,int,int)>"->"virtualinvoke <java.awt.Component: void setBackground(java.awt.Color)>";
+    "goto load.r r0"
+    "virtualinvoke <java.awt.Component: void setBackground(java.awt.Color)>"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "virtualinvoke <java.awt.Component: void addMouseListener(java.awt.event.MouseListener)>"
+    "load.r r0"->"virtualinvoke <java.awt.Component: void addMouseListener(java.awt.event.MouseListener)>";
+    "virtualinvoke <java.awt.Component: void addMouseListener(java.awt.event.MouseListener)>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "virtualinvoke <java.awt.Component: void addMouseMotionListener(java.awt.event.MouseMotionListener)>"
+    "load.r r0"->"virtualinvoke <java.awt.Component: void addMouseMotionListener(java.awt.event.MouseMotionListener)>";
+    "virtualinvoke <java.awt.Component: void addMouseMotionListener(java.awt.event.MouseMotionListener)>"->"load.r r0";
+    "virtualinvoke <Julia3D: void setup()>"
+    "load.r r0"->"virtualinvoke <Julia3D: void setup()>";
+    "return"
+    "virtualinvoke <Julia3D: void setup()>"->"return";
+    "ifnull load.r r0"->"load.r r0";
+    "load.r r0"->"new java.awt.Color";
+    "new java.awt.Color"->"dup1.r";
+    "push 255"
+    "dup1.r"->"push 255";
+    "push 255"->"push 255";
+    "push 255"->"push 255";
+    "push 255"->"specialinvoke <java.awt.Color: void <init>(int,int,int)>";
+    "specialinvoke <java.awt.Color: void <init>(int,int,int)>"->"virtualinvoke <java.awt.Component: void setBackground(java.awt.Color)>";
+    "ifcmplt.i load.r r0"->"load.r r0";
+    "fieldget <Julia3D: java.awt.Color[] col>"
+    "load.r r0"->"fieldget <Julia3D: java.awt.Color[] col>";
+    "fieldget <Julia3D: java.awt.Color[] col>"->"load.i $r12";
+    "load.i $r12"->"new java.awt.Color";
+    "new java.awt.Color"->"dup1.r";
+    "dup1.r"->"load.i $r12";
+    "load.i $r12"->"load.i $r12";
+    "load.i $r12"->"load.i $r12";
+    "load.i $r12"->"specialinvoke <java.awt.Color: void <init>(int,int,int)>";
+    "arraywrite.r"
+    "specialinvoke <java.awt.Color: void <init>(int,int,int)>"->"arraywrite.r";
+    "inc.i $r12 1"
+    "arraywrite.r"->"inc.i $r12 1";
+}

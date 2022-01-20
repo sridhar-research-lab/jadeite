@@ -1,0 +1,1249 @@
+digraph "" {
+    "r0 := @this: ama.MediaApplet"
+    "staticget <java.lang.System: java.io.PrintStream out>"
+    "r0 := @this: ama.MediaApplet"->"staticget <java.lang.System: java.io.PrintStream out>";
+    "new java.lang.StringBuffer"
+    "staticget <java.lang.System: java.io.PrintStream out>"->"new java.lang.StringBuffer";
+    "dup1.r"
+    "new java.lang.StringBuffer"->"dup1.r";
+    "specialinvoke <java.lang.StringBuffer: void <init>()>"
+    "dup1.r"->"specialinvoke <java.lang.StringBuffer: void <init>()>";
+    "push \"INIT \""
+    "specialinvoke <java.lang.StringBuffer: void <init>()>"->"push \"INIT \"";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"
+    "push \"INIT \""->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "load.r r0"
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"load.r r0";
+    "fieldget <ama.MediaApplet: java.lang.String info>"
+    "load.r r0"->"fieldget <ama.MediaApplet: java.lang.String info>";
+    "fieldget <ama.MediaApplet: java.lang.String info>"->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>"
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>";
+    "virtualinvoke <java.io.PrintStream: void println(java.lang.String)>"
+    "virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>"->"virtualinvoke <java.io.PrintStream: void println(java.lang.String)>";
+    "push \"java.vm.version\""
+    "virtualinvoke <java.io.PrintStream: void println(java.lang.String)>"->"push \"java.vm.version\"";
+    "staticinvoke <java.lang.System: java.lang.String getProperty(java.lang.String)>"
+    "push \"java.vm.version\""->"staticinvoke <java.lang.System: java.lang.String getProperty(java.lang.String)>";
+    "push \"^[^0-9]+\""
+    "staticinvoke <java.lang.System: java.lang.String getProperty(java.lang.String)>"->"push \"^[^0-9]+\"";
+    "push \"\""
+    "push \"^[^0-9]+\""->"push \"\"";
+    "virtualinvoke <java.lang.String: java.lang.String replaceFirst(java.lang.String,java.lang.String)>"
+    "push \"\""->"virtualinvoke <java.lang.String: java.lang.String replaceFirst(java.lang.String,java.lang.String)>";
+    "store.r $r122"
+    "virtualinvoke <java.lang.String: java.lang.String replaceFirst(java.lang.String,java.lang.String)>"->"store.r $r122";
+    "new java.util.StringTokenizer"
+    "store.r $r122"->"new java.util.StringTokenizer";
+    "store.r $r12"
+    "new java.util.StringTokenizer"->"store.r $r12";
+    "load.r $r12"
+    "store.r $r12"->"load.r $r12";
+    "load.r $r122"
+    "load.r $r12"->"load.r $r122";
+    "push \".\""
+    "load.r $r122"->"push \".\"";
+    "specialinvoke <java.util.StringTokenizer: void <init>(java.lang.String,java.lang.String)>"
+    "push \".\""->"specialinvoke <java.util.StringTokenizer: void <init>(java.lang.String,java.lang.String)>";
+    "specialinvoke <java.util.StringTokenizer: void <init>(java.lang.String,java.lang.String)>"->"load.r $r12";
+    "virtualinvoke <java.util.StringTokenizer: java.lang.String nextToken()>"
+    "load.r $r12"->"virtualinvoke <java.util.StringTokenizer: java.lang.String nextToken()>";
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"
+    "virtualinvoke <java.util.StringTokenizer: java.lang.String nextToken()>"->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>";
+    "store.i $r92"
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"->"store.i $r92";
+    "store.i $r92"->"load.r $r12";
+    "load.r $r12"->"virtualinvoke <java.util.StringTokenizer: java.lang.String nextToken()>";
+    "virtualinvoke <java.util.StringTokenizer: java.lang.String nextToken()>"->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>";
+    "store.i $r12"
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"->"store.i $r12";
+    "store.i $r12"->"staticget <java.lang.System: java.io.PrintStream out>";
+    "staticget <java.lang.System: java.io.PrintStream out>"->"new java.lang.StringBuffer";
+    "new java.lang.StringBuffer"->"dup1.r";
+    "dup1.r"->"specialinvoke <java.lang.StringBuffer: void <init>()>";
+    "push \"VM version: \""
+    "specialinvoke <java.lang.StringBuffer: void <init>()>"->"push \"VM version: \"";
+    "push \"VM version: \""->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "load.i $r92"
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"load.i $r92";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(int)>"
+    "load.i $r92"->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(int)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(int)>"->"push \".\"";
+    "push \".\""->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "load.i $r12"
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"load.i $r12";
+    "load.i $r12"->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(int)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(int)>"->"virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>"->"virtualinvoke <java.io.PrintStream: void println(java.lang.String)>";
+    "virtualinvoke <java.io.PrintStream: void println(java.lang.String)>"->"load.i $r92";
+    "push 1"
+    "load.i $r92"->"push 1";
+    "ifcmplt.i push 1"
+    "push 1"->"ifcmplt.i push 1";
+    "ifcmplt.i push 1"->"load.i $r12";
+    "push 4"
+    "load.i $r12"->"push 4";
+    "ifcmpge.i push 0"
+    "push 4"->"ifcmpge.i push 0";
+    "ifcmpge.i push 0"->"push 1";
+    "store.b $r92"
+    "push 1"->"store.b $r92";
+    "goto load.r r0"
+    "store.b $r92"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "load.b $r92"
+    "load.r r0"->"load.b $r92";
+    "fieldput <ama.MediaApplet: boolean tooOldVM>"
+    "load.b $r92"->"fieldput <ama.MediaApplet: boolean tooOldVM>";
+    "fieldput <ama.MediaApplet: boolean tooOldVM>"->"load.r r0";
+    "fieldget <ama.MediaApplet: boolean tooOldVM>"
+    "load.r r0"->"fieldget <ama.MediaApplet: boolean tooOldVM>";
+    "ifeq goto push 320"
+    "fieldget <ama.MediaApplet: boolean tooOldVM>"->"ifeq goto push 320";
+    "new javax.swing.JPanel"
+    "ifeq goto push 320"->"new javax.swing.JPanel";
+    "store.r $r92"
+    "new javax.swing.JPanel"->"store.r $r92";
+    "load.r $r92"
+    "store.r $r92"->"load.r $r92";
+    "specialinvoke <javax.swing.JPanel: void <init>()>"
+    "load.r $r92"->"specialinvoke <javax.swing.JPanel: void <init>()>";
+    "staticget <java.lang.System: java.io.PrintStream err>"
+    "specialinvoke <javax.swing.JPanel: void <init>()>"->"staticget <java.lang.System: java.io.PrintStream err>";
+    "push \"Required VM version: 1.4\""
+    "staticget <java.lang.System: java.io.PrintStream err>"->"push \"Required VM version: 1.4\"";
+    "push \"Required VM version: 1.4\""->"virtualinvoke <java.io.PrintStream: void println(java.lang.String)>";
+    "virtualinvoke <java.io.PrintStream: void println(java.lang.String)>"->"load.r $r92";
+    "new javax.swing.JLabel"
+    "load.r $r92"->"new javax.swing.JLabel";
+    "new javax.swing.JLabel"->"dup1.r";
+    "push \"Your Java VM is too old!\""
+    "dup1.r"->"push \"Your Java VM is too old!\"";
+    "specialinvoke <javax.swing.JLabel: void <init>(java.lang.String)>"
+    "push \"Your Java VM is too old!\""->"specialinvoke <javax.swing.JLabel: void <init>(java.lang.String)>";
+    "virtualinvoke <javax.swing.JPanel: java.awt.Component add(java.awt.Component)>"
+    "specialinvoke <javax.swing.JLabel: void <init>(java.lang.String)>"->"virtualinvoke <javax.swing.JPanel: java.awt.Component add(java.awt.Component)>";
+    "pop"
+    "virtualinvoke <javax.swing.JPanel: java.awt.Component add(java.awt.Component)>"->"pop";
+    "pop"->"load.r $r92";
+    "load.r $r92"->"new javax.swing.JLabel";
+    "new javax.swing.JLabel"->"dup1.r";
+    "dup1.r"->"new java.lang.StringBuffer";
+    "new java.lang.StringBuffer"->"dup1.r";
+    "dup1.r"->"specialinvoke <java.lang.StringBuffer: void <init>()>";
+    "push \"Installed Java version: \""
+    "specialinvoke <java.lang.StringBuffer: void <init>()>"->"push \"Installed Java version: \"";
+    "push \"Installed Java version: \""->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"load.r $r122";
+    "load.r $r122"->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>"->"specialinvoke <javax.swing.JLabel: void <init>(java.lang.String)>";
+    "specialinvoke <javax.swing.JLabel: void <init>(java.lang.String)>"->"virtualinvoke <javax.swing.JPanel: java.awt.Component add(java.awt.Component)>";
+    "virtualinvoke <javax.swing.JPanel: java.awt.Component add(java.awt.Component)>"->"pop";
+    "pop"->"load.r $r92";
+    "load.r $r92"->"new javax.swing.JLabel";
+    "new javax.swing.JLabel"->"dup1.r";
+    "push \"Required Java version: >=1.4\""
+    "dup1.r"->"push \"Required Java version: >=1.4\"";
+    "push \"Required Java version: >=1.4\""->"specialinvoke <javax.swing.JLabel: void <init>(java.lang.String)>";
+    "specialinvoke <javax.swing.JLabel: void <init>(java.lang.String)>"->"virtualinvoke <javax.swing.JPanel: java.awt.Component add(java.awt.Component)>";
+    "virtualinvoke <javax.swing.JPanel: java.awt.Component add(java.awt.Component)>"->"pop";
+    "pop"->"load.r r0";
+    "virtualinvoke <ama.MediaApplet: java.awt.Container getContentPane()>"
+    "load.r r0"->"virtualinvoke <ama.MediaApplet: java.awt.Container getContentPane()>";
+    "virtualinvoke <ama.MediaApplet: java.awt.Container getContentPane()>"->"load.r $r92";
+    "virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>"
+    "load.r $r92"->"virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>";
+    "virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>"->"pop";
+    "return"
+    "pop"->"return";
+    "virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>"->"staticget <java.lang.System: java.io.PrintStream err>";
+    "virtualinvoke <java.lang.Exception: void printStackTrace(java.io.PrintStream)>"
+    "staticget <java.lang.System: java.io.PrintStream err>"->"virtualinvoke <java.lang.Exception: void printStackTrace(java.io.PrintStream)>";
+    "push 320"
+    "virtualinvoke <java.lang.Exception: void printStackTrace(java.io.PrintStream)>"->"push 320";
+    "store.i $r122"
+    "push 320"->"store.i $r122";
+    "push 240"
+    "store.i $r122"->"push 240";
+    "push 240"->"store.i $r92";
+    "store.i $r92"->"load.r r0";
+    "push \"ama_url\""
+    "load.r r0"->"push \"ama_url\"";
+    "virtualinvoke <ama.MediaApplet: java.lang.String getParameter(java.lang.String)>"
+    "push \"ama_url\""->"virtualinvoke <ama.MediaApplet: java.lang.String getParameter(java.lang.String)>";
+    "store.r r208"
+    "virtualinvoke <ama.MediaApplet: java.lang.String getParameter(java.lang.String)>"->"store.r r208";
+    "load.r r208"
+    "store.r r208"->"load.r r208";
+    "ifnull load.r r0"
+    "load.r r208"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r r208";
+    "push \"/\""
+    "load.r r208"->"push \"/\"";
+    "virtualinvoke <java.lang.String: boolean startsWith(java.lang.String)>"
+    "push \"/\""->"virtualinvoke <java.lang.String: boolean startsWith(java.lang.String)>";
+    "ifeq load.r r0"
+    "virtualinvoke <java.lang.String: boolean startsWith(java.lang.String)>"->"ifeq load.r r0";
+    "ifeq load.r r0"->"load.r r0";
+    "virtualinvoke <ama.MediaApplet: java.net.URL getDocumentBase()>"
+    "load.r r0"->"virtualinvoke <ama.MediaApplet: java.net.URL getDocumentBase()>";
+    "store.r r1"
+    "virtualinvoke <ama.MediaApplet: java.net.URL getDocumentBase()>"->"store.r r1";
+    "store.r r1"->"new java.lang.StringBuffer";
+    "new java.lang.StringBuffer"->"dup1.r";
+    "dup1.r"->"specialinvoke <java.lang.StringBuffer: void <init>()>";
+    "load.r r1"
+    "specialinvoke <java.lang.StringBuffer: void <init>()>"->"load.r r1";
+    "virtualinvoke <java.net.URL: java.lang.String getProtocol()>"
+    "load.r r1"->"virtualinvoke <java.net.URL: java.lang.String getProtocol()>";
+    "virtualinvoke <java.net.URL: java.lang.String getProtocol()>"->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "push \"://\""
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"push \"://\"";
+    "push \"://\""->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"load.r r1";
+    "virtualinvoke <java.net.URL: java.lang.String getHost()>"
+    "load.r r1"->"virtualinvoke <java.net.URL: java.lang.String getHost()>";
+    "virtualinvoke <java.net.URL: java.lang.String getHost()>"->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"store.r $r12";
+    "store.r $r12"->"load.r r1";
+    "virtualinvoke <java.net.URL: int getPort()>"
+    "load.r r1"->"virtualinvoke <java.net.URL: int getPort()>";
+    "push -1"
+    "virtualinvoke <java.net.URL: int getPort()>"->"push -1";
+    "ifcmpne.i new java.lang.StringBuffer"
+    "push -1"->"ifcmpne.i new java.lang.StringBuffer";
+    "ifcmpne.i new java.lang.StringBuffer"->"push \"\"";
+    "push \"\""->"store.r r1";
+    "store.r r1"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "load.r r0"->"load.r $r12";
+    "load.r $r12"->"load.r r1";
+    "load.r r1"->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>";
+    "fieldput <ama.MediaApplet: java.lang.String wwwRoot>"
+    "virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>"->"fieldput <ama.MediaApplet: java.lang.String wwwRoot>";
+    "fieldput <ama.MediaApplet: java.lang.String wwwRoot>"->"load.r r208";
+    "load.r r208"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r r0";
+    "new java.net.URL"
+    "load.r r0"->"new java.net.URL";
+    "new java.net.URL"->"dup1.r";
+    "dup1.r"->"new java.lang.StringBuffer";
+    "new java.lang.StringBuffer"->"dup1.r";
+    "dup1.r"->"specialinvoke <java.lang.StringBuffer: void <init>()>";
+    "specialinvoke <java.lang.StringBuffer: void <init>()>"->"load.r r0";
+    "fieldget <ama.MediaApplet: java.lang.String wwwRoot>"
+    "load.r r0"->"fieldget <ama.MediaApplet: java.lang.String wwwRoot>";
+    "fieldget <ama.MediaApplet: java.lang.String wwwRoot>"->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"load.r r208";
+    "load.r r208"->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>";
+    "specialinvoke <java.net.URL: void <init>(java.lang.String)>"
+    "virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>"->"specialinvoke <java.net.URL: void <init>(java.lang.String)>";
+    "fieldput <ama.MediaApplet: java.net.URL videoURL>"
+    "specialinvoke <java.net.URL: void <init>(java.lang.String)>"->"fieldput <ama.MediaApplet: java.net.URL videoURL>";
+    "fieldput <ama.MediaApplet: java.net.URL videoURL>"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "push \"ama_cgi-path\""
+    "load.r r0"->"push \"ama_cgi-path\"";
+    "push \"ama_cgi-path\""->"virtualinvoke <ama.MediaApplet: java.lang.String getParameter(java.lang.String)>";
+    "fieldput <ama.MediaApplet: java.lang.String cgiPath>"
+    "virtualinvoke <ama.MediaApplet: java.lang.String getParameter(java.lang.String)>"->"fieldput <ama.MediaApplet: java.lang.String cgiPath>";
+    "fieldput <ama.MediaApplet: java.lang.String cgiPath>"->"load.r r0";
+    "fieldget <ama.MediaApplet: java.lang.String cgiPath>"
+    "load.r r0"->"fieldget <ama.MediaApplet: java.lang.String cgiPath>";
+    "ifnonnull load.r r0"
+    "fieldget <ama.MediaApplet: java.lang.String cgiPath>"->"ifnonnull load.r r0";
+    "ifnonnull load.r r0"->"load.r r0";
+    "push \"axis-cgi\""
+    "load.r r0"->"push \"axis-cgi\"";
+    "push \"axis-cgi\""->"fieldput <ama.MediaApplet: java.lang.String cgiPath>";
+    "fieldput <ama.MediaApplet: java.lang.String cgiPath>"->"load.r r0";
+    "fieldget <ama.MediaApplet: java.net.URL videoURL>"
+    "load.r r0"->"fieldget <ama.MediaApplet: java.net.URL videoURL>";
+    "virtualinvoke <java.net.URL: java.lang.String getPath()>"
+    "fieldget <ama.MediaApplet: java.net.URL videoURL>"->"virtualinvoke <java.net.URL: java.lang.String getPath()>";
+    "virtualinvoke <java.lang.String: int length()>"
+    "virtualinvoke <java.net.URL: java.lang.String getPath()>"->"virtualinvoke <java.lang.String: int length()>";
+    "push 2"
+    "virtualinvoke <java.lang.String: int length()>"->"push 2";
+    "ifcmpge.i load.r r0"
+    "push 2"->"ifcmpge.i load.r r0";
+    "ifcmpge.i load.r r0"->"load.r r0";
+    "load.r r0"->"new java.net.URL";
+    "new java.net.URL"->"dup1.r";
+    "dup1.r"->"new java.lang.StringBuffer";
+    "new java.lang.StringBuffer"->"dup1.r";
+    "dup1.r"->"specialinvoke <java.lang.StringBuffer: void <init>()>";
+    "specialinvoke <java.lang.StringBuffer: void <init>()>"->"load.r r0";
+    "load.r r0"->"fieldget <ama.MediaApplet: java.lang.String wwwRoot>";
+    "fieldget <ama.MediaApplet: java.lang.String wwwRoot>"->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"push \"/\"";
+    "push \"/\""->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"load.r r0";
+    "load.r r0"->"fieldget <ama.MediaApplet: java.lang.String cgiPath>";
+    "fieldget <ama.MediaApplet: java.lang.String cgiPath>"->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "push \"/mjpg/video.cgi?showlength=1\""
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"push \"/mjpg/video.cgi?showlength=1\"";
+    "push \"/mjpg/video.cgi?showlength=1\""->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>"->"specialinvoke <java.net.URL: void <init>(java.lang.String)>";
+    "specialinvoke <java.net.URL: void <init>(java.lang.String)>"->"fieldput <ama.MediaApplet: java.net.URL videoURL>";
+    "fieldput <ama.MediaApplet: java.net.URL videoURL>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <ama.MediaApplet: java.net.URL videoURL>";
+    "specialinvoke <ama.MediaApplet: void setCGIParameters(java.net.URL)>"
+    "fieldget <ama.MediaApplet: java.net.URL videoURL>"->"specialinvoke <ama.MediaApplet: void setCGIParameters(java.net.URL)>";
+    "specialinvoke <ama.MediaApplet: void setCGIParameters(java.net.URL)>"->"load.r r0";
+    "fieldget <ama.MediaApplet: java.util.Hashtable CGIParameters>"
+    "load.r r0"->"fieldget <ama.MediaApplet: java.util.Hashtable CGIParameters>";
+    "push \"resolution\""
+    "fieldget <ama.MediaApplet: java.util.Hashtable CGIParameters>"->"push \"resolution\"";
+    "virtualinvoke <java.util.Hashtable: java.lang.Object get(java.lang.Object)>"
+    "push \"resolution\""->"virtualinvoke <java.util.Hashtable: java.lang.Object get(java.lang.Object)>";
+    "checkcast"
+    "virtualinvoke <java.util.Hashtable: java.lang.Object get(java.lang.Object)>"->"checkcast";
+    "checkcast"->"store.r $r12";
+    "store.r $r12"->"load.r $r12";
+    "load.r $r12"->"ifnull load.r r0";
+    "ifnull load.r r0"->"new java.util.StringTokenizer";
+    "new java.util.StringTokenizer"->"store.r $r92";
+    "store.r $r92"->"load.r $r92";
+    "load.r $r92"->"load.r $r12";
+    "push \"x\""
+    "load.r $r12"->"push \"x\"";
+    "push \"x\""->"specialinvoke <java.util.StringTokenizer: void <init>(java.lang.String,java.lang.String)>";
+    "specialinvoke <java.util.StringTokenizer: void <init>(java.lang.String,java.lang.String)>"->"load.r $r92";
+    "load.r $r92"->"store.r $r122";
+    "store.r $r122"->"staticget <java.lang.System: java.io.PrintStream err>";
+    "staticget <java.lang.System: java.io.PrintStream err>"->"new java.lang.StringBuffer";
+    "new java.lang.StringBuffer"->"dup1.r";
+    "dup1.r"->"specialinvoke <java.lang.StringBuffer: void <init>()>";
+    "push \"Unknown resolution: \\\"\""
+    "specialinvoke <java.lang.StringBuffer: void <init>()>"->"push \"Unknown resolution: \\\"\"";
+    "push \"Unknown resolution: \\\"\""->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"load.r $r12";
+    "load.r $r12"->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "push \"\\\"! Using default.\""
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"push \"\\\"! Using default.\"";
+    "push \"\\\"! Using default.\""->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>"->"virtualinvoke <java.io.PrintStream: void println(java.lang.String)>";
+    "virtualinvoke <java.io.PrintStream: void println(java.lang.String)>"->"push 320";
+    "push 320"->"store.i $r122";
+    "store.i $r122"->"push 240";
+    "push 240"->"store.i $r92";
+    "store.i $r92"->"load.r r0";
+    "push \"camera\""
+    "load.r r0"->"push \"camera\"";
+    "virtualinvoke <ama.MediaApplet: java.lang.String getCGIParameter(java.lang.String)>"
+    "push \"camera\""->"virtualinvoke <ama.MediaApplet: java.lang.String getCGIParameter(java.lang.String)>";
+    "virtualinvoke <ama.MediaApplet: java.lang.String getCGIParameter(java.lang.String)>"->"ifnonnull load.r r0";
+    "ifnonnull load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <ama.MediaApplet: java.util.Hashtable CGIParameters>";
+    "fieldget <ama.MediaApplet: java.util.Hashtable CGIParameters>"->"push \"camera\"";
+    "push \"1\""
+    "push \"camera\""->"push \"1\"";
+    "virtualinvoke <java.util.Hashtable: java.lang.Object put(java.lang.Object,java.lang.Object)>"
+    "push \"1\""->"virtualinvoke <java.util.Hashtable: java.lang.Object put(java.lang.Object,java.lang.Object)>";
+    "virtualinvoke <java.util.Hashtable: java.lang.Object put(java.lang.Object,java.lang.Object)>"->"pop";
+    "pop"->"load.r r0";
+    "push \"ama_param-path\""
+    "load.r r0"->"push \"ama_param-path\"";
+    "push \"ama_param-path\""->"virtualinvoke <ama.MediaApplet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <ama.MediaApplet: java.lang.String getParameter(java.lang.String)>"->"store.r $r12";
+    "store.r $r12"->"load.r $r12";
+    "ifnonnull new java.lang.StringBuffer"
+    "load.r $r12"->"ifnonnull new java.lang.StringBuffer";
+    "ifnonnull new java.lang.StringBuffer"->"new java.lang.StringBuffer";
+    "new java.lang.StringBuffer"->"dup1.r";
+    "dup1.r"->"specialinvoke <java.lang.StringBuffer: void <init>()>";
+    "specialinvoke <java.lang.StringBuffer: void <init>()>"->"push \"/\"";
+    "push \"/\""->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"load.r r0";
+    "load.r r0"->"fieldget <ama.MediaApplet: java.lang.String cgiPath>";
+    "fieldget <ama.MediaApplet: java.lang.String cgiPath>"->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"push \"/\"";
+    "push \"/\""->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "push \"operator/param.cgi\""
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"push \"operator/param.cgi\"";
+    "push \"operator/param.cgi\""->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>"->"store.r $r12";
+    "store.r $r12"->"new java.lang.StringBuffer";
+    "new java.lang.StringBuffer"->"dup1.r";
+    "dup1.r"->"specialinvoke <java.lang.StringBuffer: void <init>()>";
+    "specialinvoke <java.lang.StringBuffer: void <init>()>"->"load.r r0";
+    "load.r r0"->"fieldget <ama.MediaApplet: java.lang.String wwwRoot>";
+    "fieldget <ama.MediaApplet: java.lang.String wwwRoot>"->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"push \"/\"";
+    "push \"/\""->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"load.r $r12";
+    "load.r $r12"->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>";
+    "staticinvoke <ama.ParamTool: void setDefaultURL(java.lang.String)>"
+    "virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>"->"staticinvoke <ama.ParamTool: void setDefaultURL(java.lang.String)>";
+    "goto new ama.MediaApplet$1"
+    "staticinvoke <ama.ParamTool: void setDefaultURL(java.lang.String)>"->"goto new ama.MediaApplet$1";
+    "new ama.MediaApplet$1"
+    "goto new ama.MediaApplet$1"->"new ama.MediaApplet$1";
+    "new ama.MediaApplet$1"->"store.r $r12";
+    "store.r $r12"->"load.r $r12";
+    "load.r $r12"->"load.r r0";
+    "specialinvoke <ama.MediaApplet$1: void <init>(ama.MediaApplet)>"
+    "load.r r0"->"specialinvoke <ama.MediaApplet$1: void <init>(ama.MediaApplet)>";
+    "specialinvoke <ama.MediaApplet$1: void <init>(ama.MediaApplet)>"->"load.r r0";
+    "new javax.swing.JButton"
+    "load.r r0"->"new javax.swing.JButton";
+    "new javax.swing.JButton"->"dup1.r";
+    "push \"Play\""
+    "dup1.r"->"push \"Play\"";
+    "specialinvoke <javax.swing.JButton: void <init>(java.lang.String)>"
+    "push \"Play\""->"specialinvoke <javax.swing.JButton: void <init>(java.lang.String)>";
+    "fieldput <ama.MediaApplet: javax.swing.JButton playButton>"
+    "specialinvoke <javax.swing.JButton: void <init>(java.lang.String)>"->"fieldput <ama.MediaApplet: javax.swing.JButton playButton>";
+    "fieldput <ama.MediaApplet: javax.swing.JButton playButton>"->"load.r r0";
+    "fieldget <ama.MediaApplet: javax.swing.JButton playButton>"
+    "load.r r0"->"fieldget <ama.MediaApplet: javax.swing.JButton playButton>";
+    "fieldget <ama.MediaApplet: javax.swing.JButton playButton>"->"load.r $r12";
+    "virtualinvoke <javax.swing.JButton: void addActionListener(java.awt.event.ActionListener)>"
+    "load.r $r12"->"virtualinvoke <javax.swing.JButton: void addActionListener(java.awt.event.ActionListener)>";
+    "virtualinvoke <javax.swing.JButton: void addActionListener(java.awt.event.ActionListener)>"->"load.r r0";
+    "new javax.swing.JMenuItem"
+    "load.r r0"->"new javax.swing.JMenuItem";
+    "new javax.swing.JMenuItem"->"dup1.r";
+    "dup1.r"->"push \"Play\"";
+    "specialinvoke <javax.swing.JMenuItem: void <init>(java.lang.String)>"
+    "push \"Play\""->"specialinvoke <javax.swing.JMenuItem: void <init>(java.lang.String)>";
+    "fieldput <ama.MediaApplet: javax.swing.JMenuItem playMenuButton>"
+    "specialinvoke <javax.swing.JMenuItem: void <init>(java.lang.String)>"->"fieldput <ama.MediaApplet: javax.swing.JMenuItem playMenuButton>";
+    "fieldput <ama.MediaApplet: javax.swing.JMenuItem playMenuButton>"->"load.r r0";
+    "fieldget <ama.MediaApplet: javax.swing.JMenuItem playMenuButton>"
+    "load.r r0"->"fieldget <ama.MediaApplet: javax.swing.JMenuItem playMenuButton>";
+    "fieldget <ama.MediaApplet: javax.swing.JMenuItem playMenuButton>"->"load.r $r12";
+    "virtualinvoke <javax.swing.JMenuItem: void addActionListener(java.awt.event.ActionListener)>"
+    "load.r $r12"->"virtualinvoke <javax.swing.JMenuItem: void addActionListener(java.awt.event.ActionListener)>";
+    "new ama.MediaApplet$2"
+    "virtualinvoke <javax.swing.JMenuItem: void addActionListener(java.awt.event.ActionListener)>"->"new ama.MediaApplet$2";
+    "new ama.MediaApplet$2"->"store.r $r12";
+    "store.r $r12"->"load.r $r12";
+    "load.r $r12"->"load.r r0";
+    "specialinvoke <ama.MediaApplet$2: void <init>(ama.MediaApplet)>"
+    "load.r r0"->"specialinvoke <ama.MediaApplet$2: void <init>(ama.MediaApplet)>";
+    "specialinvoke <ama.MediaApplet$2: void <init>(ama.MediaApplet)>"->"load.r r0";
+    "load.r r0"->"new javax.swing.JButton";
+    "new javax.swing.JButton"->"dup1.r";
+    "push \"Stop\""
+    "dup1.r"->"push \"Stop\"";
+    "push \"Stop\""->"specialinvoke <javax.swing.JButton: void <init>(java.lang.String)>";
+    "fieldput <ama.MediaApplet: javax.swing.JButton stopButton>"
+    "specialinvoke <javax.swing.JButton: void <init>(java.lang.String)>"->"fieldput <ama.MediaApplet: javax.swing.JButton stopButton>";
+    "fieldput <ama.MediaApplet: javax.swing.JButton stopButton>"->"load.r r0";
+    "fieldget <ama.MediaApplet: javax.swing.JButton stopButton>"
+    "load.r r0"->"fieldget <ama.MediaApplet: javax.swing.JButton stopButton>";
+    "fieldget <ama.MediaApplet: javax.swing.JButton stopButton>"->"load.r $r12";
+    "load.r $r12"->"virtualinvoke <javax.swing.JButton: void addActionListener(java.awt.event.ActionListener)>";
+    "virtualinvoke <javax.swing.JButton: void addActionListener(java.awt.event.ActionListener)>"->"load.r r0";
+    "load.r r0"->"new javax.swing.JMenuItem";
+    "new javax.swing.JMenuItem"->"dup1.r";
+    "dup1.r"->"push \"Stop\"";
+    "push \"Stop\""->"specialinvoke <javax.swing.JMenuItem: void <init>(java.lang.String)>";
+    "fieldput <ama.MediaApplet: javax.swing.JMenuItem stopMenuButton>"
+    "specialinvoke <javax.swing.JMenuItem: void <init>(java.lang.String)>"->"fieldput <ama.MediaApplet: javax.swing.JMenuItem stopMenuButton>";
+    "fieldput <ama.MediaApplet: javax.swing.JMenuItem stopMenuButton>"->"load.r r0";
+    "fieldget <ama.MediaApplet: javax.swing.JMenuItem stopMenuButton>"
+    "load.r r0"->"fieldget <ama.MediaApplet: javax.swing.JMenuItem stopMenuButton>";
+    "fieldget <ama.MediaApplet: javax.swing.JMenuItem stopMenuButton>"->"load.r $r12";
+    "load.r $r12"->"virtualinvoke <javax.swing.JMenuItem: void addActionListener(java.awt.event.ActionListener)>";
+    "new ama.MediaApplet$3"
+    "virtualinvoke <javax.swing.JMenuItem: void addActionListener(java.awt.event.ActionListener)>"->"new ama.MediaApplet$3";
+    "new ama.MediaApplet$3"->"store.r r1";
+    "store.r r1"->"load.r r1";
+    "load.r r1"->"load.r r0";
+    "specialinvoke <ama.MediaApplet$3: void <init>(ama.MediaApplet)>"
+    "load.r r0"->"specialinvoke <ama.MediaApplet$3: void <init>(ama.MediaApplet)>";
+    "specialinvoke <ama.MediaApplet$3: void <init>(ama.MediaApplet)>"->"load.r r0";
+    "new ama.MediaApplet$4"
+    "load.r r0"->"new ama.MediaApplet$4";
+    "new ama.MediaApplet$4"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "specialinvoke <ama.MediaApplet$4: void <init>(ama.MediaApplet)>"
+    "load.r r0"->"specialinvoke <ama.MediaApplet$4: void <init>(ama.MediaApplet)>";
+    "fieldput <ama.MediaApplet: javax.swing.JDesktopPane desktopPane>"
+    "specialinvoke <ama.MediaApplet$4: void <init>(ama.MediaApplet)>"->"fieldput <ama.MediaApplet: javax.swing.JDesktopPane desktopPane>";
+    "fieldput <ama.MediaApplet: javax.swing.JDesktopPane desktopPane>"->"load.r r0";
+    "push \"ama_zoom\""
+    "load.r r0"->"push \"ama_zoom\"";
+    "push \"ama_zoom\""->"virtualinvoke <ama.MediaApplet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <ama.MediaApplet: java.lang.String getParameter(java.lang.String)>"->"store.r r208";
+    "store.r r208"->"load.r r208";
+    "ifnonnull load.r r208"
+    "load.r r208"->"ifnonnull load.r r208";
+    "push 1.0F"
+    "ifnonnull load.r r208"->"push 1.0F";
+    "store.f r3"
+    "push 1.0F"->"store.f r3";
+    "push 0"
+    "store.f r3"->"push 0";
+    "store.b r208"
+    "push 0"->"store.b r208";
+    "goto load.f r3"
+    "store.b r208"->"goto load.f r3";
+    "load.f r3"
+    "goto load.f r3"->"load.f r3";
+    "push 0.0F"
+    "load.f r3"->"push 0.0F";
+    "cmpl.f"
+    "push 0.0F"->"cmpl.f";
+    "ifne push 0"
+    "cmpl.f"->"ifne push 0";
+    "ifne push 0"->"push 1";
+    "store.b $r12"
+    "push 1"->"store.b $r12";
+    "goto load.b $r12"
+    "store.b $r12"->"goto load.b $r12";
+    "load.b $r12"
+    "goto load.b $r12"->"load.b $r12";
+    "load.b $r12"->"store.b $r12";
+    "store.b $r12"->"staticget <java.lang.System: java.io.PrintStream out>";
+    "staticget <java.lang.System: java.io.PrintStream out>"->"new java.lang.StringBuffer";
+    "new java.lang.StringBuffer"->"dup1.r";
+    "dup1.r"->"specialinvoke <java.lang.StringBuffer: void <init>()>";
+    "push \"Z: \""
+    "specialinvoke <java.lang.StringBuffer: void <init>()>"->"push \"Z: \"";
+    "push \"Z: \""->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"load.f r3";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(float)>"
+    "load.f r3"->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(float)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(float)>"->"virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>"->"virtualinvoke <java.io.PrintStream: void println(java.lang.String)>";
+    "virtualinvoke <java.io.PrintStream: void println(java.lang.String)>"->"load.r r0";
+    "new ama.ImagePanel"
+    "load.r r0"->"new ama.ImagePanel";
+    "new ama.ImagePanel"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "fieldget <ama.MediaApplet: javax.swing.JDesktopPane desktopPane>"
+    "load.r r0"->"fieldget <ama.MediaApplet: javax.swing.JDesktopPane desktopPane>";
+    "load.i $r122"
+    "fieldget <ama.MediaApplet: javax.swing.JDesktopPane desktopPane>"->"load.i $r122";
+    "load.i $r122"->"load.i $r92";
+    "load.i $r92"->"load.r r0";
+    "load.r r0"->"fieldget <ama.MediaApplet: java.net.URL videoURL>";
+    "fieldget <ama.MediaApplet: java.net.URL videoURL>"->"load.f r3";
+    "load.f r3"->"load.r r1";
+    "specialinvoke <ama.ImagePanel: void <init>(javax.swing.JDesktopPane,int,int,java.net.URL,float,ama.ImagePanelObserver)>"
+    "load.r r1"->"specialinvoke <ama.ImagePanel: void <init>(javax.swing.JDesktopPane,int,int,java.net.URL,float,ama.ImagePanelObserver)>";
+    "fieldput <ama.MediaApplet: ama.ImagePanel imagePanel>"
+    "specialinvoke <ama.ImagePanel: void <init>(javax.swing.JDesktopPane,int,int,java.net.URL,float,ama.ImagePanelObserver)>"->"fieldput <ama.MediaApplet: ama.ImagePanel imagePanel>";
+    "fieldput <ama.MediaApplet: ama.ImagePanel imagePanel>"->"load.r r0";
+    "load.r r0"->"fieldget <ama.MediaApplet: javax.swing.JDesktopPane desktopPane>";
+    "fieldget <ama.MediaApplet: javax.swing.JDesktopPane desktopPane>"->"load.r r0";
+    "fieldget <ama.MediaApplet: ama.ImagePanel imagePanel>"
+    "load.r r0"->"fieldget <ama.MediaApplet: ama.ImagePanel imagePanel>";
+    "staticget <javax.swing.JDesktopPane: java.lang.Integer DEFAULT_LAYER>"
+    "fieldget <ama.MediaApplet: ama.ImagePanel imagePanel>"->"staticget <javax.swing.JDesktopPane: java.lang.Integer DEFAULT_LAYER>";
+    "virtualinvoke <javax.swing.JDesktopPane: void add(java.awt.Component,java.lang.Object)>"
+    "staticget <javax.swing.JDesktopPane: java.lang.Integer DEFAULT_LAYER>"->"virtualinvoke <javax.swing.JDesktopPane: void add(java.awt.Component,java.lang.Object)>";
+    "virtualinvoke <javax.swing.JDesktopPane: void add(java.awt.Component,java.lang.Object)>"->"load.r r0";
+    "load.r r0"->"new javax.swing.JLabel";
+    "new javax.swing.JLabel"->"dup1.r";
+    "push \"00 fps\""
+    "dup1.r"->"push \"00 fps\"";
+    "push \"00 fps\""->"push 4";
+    "specialinvoke <javax.swing.JLabel: void <init>(java.lang.String,int)>"
+    "push 4"->"specialinvoke <javax.swing.JLabel: void <init>(java.lang.String,int)>";
+    "fieldput <ama.MediaApplet: javax.swing.JLabel fpsLabel>"
+    "specialinvoke <javax.swing.JLabel: void <init>(java.lang.String,int)>"->"fieldput <ama.MediaApplet: javax.swing.JLabel fpsLabel>";
+    "fieldput <ama.MediaApplet: javax.swing.JLabel fpsLabel>"->"load.r r0";
+    "fieldget <ama.MediaApplet: javax.swing.JLabel fpsLabel>"
+    "load.r r0"->"fieldget <ama.MediaApplet: javax.swing.JLabel fpsLabel>";
+    "virtualinvoke <javax.swing.JLabel: java.awt.Dimension getPreferredSize()>"
+    "fieldget <ama.MediaApplet: javax.swing.JLabel fpsLabel>"->"virtualinvoke <javax.swing.JLabel: java.awt.Dimension getPreferredSize()>";
+    "virtualinvoke <javax.swing.JLabel: java.awt.Dimension getPreferredSize()>"->"store.r r1";
+    "store.r r1"->"load.r r0";
+    "load.r r0"->"fieldget <ama.MediaApplet: javax.swing.JLabel fpsLabel>";
+    "fieldget <ama.MediaApplet: javax.swing.JLabel fpsLabel>"->"load.r r1";
+    "virtualinvoke <javax.swing.JLabel: void setMinimumSize(java.awt.Dimension)>"
+    "load.r r1"->"virtualinvoke <javax.swing.JLabel: void setMinimumSize(java.awt.Dimension)>";
+    "virtualinvoke <javax.swing.JLabel: void setMinimumSize(java.awt.Dimension)>"->"load.r r0";
+    "load.r r0"->"fieldget <ama.MediaApplet: javax.swing.JLabel fpsLabel>";
+    "fieldget <ama.MediaApplet: javax.swing.JLabel fpsLabel>"->"load.r r1";
+    "virtualinvoke <javax.swing.JLabel: void setPreferredSize(java.awt.Dimension)>"
+    "load.r r1"->"virtualinvoke <javax.swing.JLabel: void setPreferredSize(java.awt.Dimension)>";
+    "virtualinvoke <javax.swing.JLabel: void setPreferredSize(java.awt.Dimension)>"->"load.r r0";
+    "load.r r0"->"fieldget <ama.MediaApplet: javax.swing.JLabel fpsLabel>";
+    "fieldget <ama.MediaApplet: javax.swing.JLabel fpsLabel>"->"load.r r1";
+    "virtualinvoke <javax.swing.JLabel: void setMaximumSize(java.awt.Dimension)>"
+    "load.r r1"->"virtualinvoke <javax.swing.JLabel: void setMaximumSize(java.awt.Dimension)>";
+    "virtualinvoke <javax.swing.JLabel: void setMaximumSize(java.awt.Dimension)>"->"load.r r0";
+    "load.r r0"->"fieldget <ama.MediaApplet: javax.swing.JLabel fpsLabel>";
+    "push \"0 fps\""
+    "fieldget <ama.MediaApplet: javax.swing.JLabel fpsLabel>"->"push \"0 fps\"";
+    "virtualinvoke <javax.swing.JLabel: void setText(java.lang.String)>"
+    "push \"0 fps\""->"virtualinvoke <javax.swing.JLabel: void setText(java.lang.String)>";
+    "new ama.MediaApplet$5"
+    "virtualinvoke <javax.swing.JLabel: void setText(java.lang.String)>"->"new ama.MediaApplet$5";
+    "new ama.MediaApplet$5"->"store.r r1";
+    "store.r r1"->"load.r r1";
+    "load.r r1"->"load.r r0";
+    "specialinvoke <ama.MediaApplet$5: void <init>(ama.MediaApplet)>"
+    "load.r r0"->"specialinvoke <ama.MediaApplet$5: void <init>(ama.MediaApplet)>";
+    "specialinvoke <ama.MediaApplet$5: void <init>(ama.MediaApplet)>"->"load.r r0";
+    "push \"ama_hide-video-controls\""
+    "load.r r0"->"push \"ama_hide-video-controls\"";
+    "push \"ama_hide-video-controls\""->"virtualinvoke <ama.MediaApplet: java.lang.String getParameter(java.lang.String)>";
+    "store.r r3"
+    "virtualinvoke <ama.MediaApplet: java.lang.String getParameter(java.lang.String)>"->"store.r r3";
+    "load.r r3"
+    "store.r r3"->"load.r r3";
+    "ifnull new javax.swing.JPanel"
+    "load.r r3"->"ifnull new javax.swing.JPanel";
+    "ifnull new javax.swing.JPanel"->"load.r r3";
+    "push \"yes\""
+    "load.r r3"->"push \"yes\"";
+    "virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>"
+    "push \"yes\""->"virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>";
+    "ifne load.r r0"
+    "virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>"->"ifne load.r r0";
+    "ifne load.r r0"->"new javax.swing.JPanel";
+    "new javax.swing.JPanel"->"store.r r3";
+    "store.r r3"->"load.r r3";
+    "load.r r3"->"specialinvoke <javax.swing.JPanel: void <init>()>";
+    "specialinvoke <javax.swing.JPanel: void <init>()>"->"load.r r3";
+    "new javax.swing.BoxLayout"
+    "load.r r3"->"new javax.swing.BoxLayout";
+    "new javax.swing.BoxLayout"->"dup1.r";
+    "dup1.r"->"load.r r3";
+    "load.r r3"->"push 0";
+    "specialinvoke <javax.swing.BoxLayout: void <init>(java.awt.Container,int)>"
+    "push 0"->"specialinvoke <javax.swing.BoxLayout: void <init>(java.awt.Container,int)>";
+    "virtualinvoke <javax.swing.JPanel: void setLayout(java.awt.LayoutManager)>"
+    "specialinvoke <javax.swing.BoxLayout: void <init>(java.awt.Container,int)>"->"virtualinvoke <javax.swing.JPanel: void setLayout(java.awt.LayoutManager)>";
+    "virtualinvoke <javax.swing.JPanel: void setLayout(java.awt.LayoutManager)>"->"load.r r3";
+    "load.r r3"->"load.r r1";
+    "load.r r1"->"virtualinvoke <javax.swing.JPanel: java.awt.Component add(java.awt.Component)>";
+    "virtualinvoke <javax.swing.JPanel: java.awt.Component add(java.awt.Component)>"->"pop";
+    "pop"->"load.r r3";
+    "staticinvoke <javax.swing.Box: java.awt.Component createHorizontalGlue()>"
+    "load.r r3"->"staticinvoke <javax.swing.Box: java.awt.Component createHorizontalGlue()>";
+    "staticinvoke <javax.swing.Box: java.awt.Component createHorizontalGlue()>"->"virtualinvoke <javax.swing.JPanel: java.awt.Component add(java.awt.Component)>";
+    "virtualinvoke <javax.swing.JPanel: java.awt.Component add(java.awt.Component)>"->"pop";
+    "pop"->"load.r r3";
+    "load.r r3"->"load.r r0";
+    "load.r r0"->"fieldget <ama.MediaApplet: javax.swing.JButton stopButton>";
+    "fieldget <ama.MediaApplet: javax.swing.JButton stopButton>"->"virtualinvoke <javax.swing.JPanel: java.awt.Component add(java.awt.Component)>";
+    "virtualinvoke <javax.swing.JPanel: java.awt.Component add(java.awt.Component)>"->"pop";
+    "pop"->"load.r r3";
+    "load.r r3"->"load.r r0";
+    "load.r r0"->"fieldget <ama.MediaApplet: javax.swing.JButton playButton>";
+    "fieldget <ama.MediaApplet: javax.swing.JButton playButton>"->"virtualinvoke <javax.swing.JPanel: java.awt.Component add(java.awt.Component)>";
+    "virtualinvoke <javax.swing.JPanel: java.awt.Component add(java.awt.Component)>"->"pop";
+    "pop"->"load.r r3";
+    "load.r r3"->"staticinvoke <javax.swing.Box: java.awt.Component createHorizontalGlue()>";
+    "staticinvoke <javax.swing.Box: java.awt.Component createHorizontalGlue()>"->"virtualinvoke <javax.swing.JPanel: java.awt.Component add(java.awt.Component)>";
+    "virtualinvoke <javax.swing.JPanel: java.awt.Component add(java.awt.Component)>"->"pop";
+    "pop"->"load.r r3";
+    "load.r r3"->"load.r r0";
+    "load.r r0"->"fieldget <ama.MediaApplet: javax.swing.JLabel fpsLabel>";
+    "fieldget <ama.MediaApplet: javax.swing.JLabel fpsLabel>"->"virtualinvoke <javax.swing.JPanel: java.awt.Component add(java.awt.Component)>";
+    "virtualinvoke <javax.swing.JPanel: java.awt.Component add(java.awt.Component)>"->"pop";
+    "pop"->"load.r r3";
+    "push \"Video\""
+    "load.r r3"->"push \"Video\"";
+    "virtualinvoke <javax.swing.JPanel: void setName(java.lang.String)>"
+    "push \"Video\""->"virtualinvoke <javax.swing.JPanel: void setName(java.lang.String)>";
+    "virtualinvoke <javax.swing.JPanel: void setName(java.lang.String)>"->"load.r r0";
+    "load.r r0"->"load.r r3";
+    "load.r r3"->"push 1";
+    "virtualinvoke <ama.MediaApplet: void addComponent(javax.swing.JComponent,int)>"
+    "push 1"->"virtualinvoke <ama.MediaApplet: void addComponent(javax.swing.JComponent,int)>";
+    "virtualinvoke <ama.MediaApplet: void addComponent(javax.swing.JComponent,int)>"->"load.r r0";
+    "new javax.swing.JPopupMenu"
+    "load.r r0"->"new javax.swing.JPopupMenu";
+    "new javax.swing.JPopupMenu"->"dup1.r";
+    "specialinvoke <javax.swing.JPopupMenu: void <init>()>"
+    "dup1.r"->"specialinvoke <javax.swing.JPopupMenu: void <init>()>";
+    "fieldput <ama.MediaApplet: javax.swing.JPopupMenu popupMenu>"
+    "specialinvoke <javax.swing.JPopupMenu: void <init>()>"->"fieldput <ama.MediaApplet: javax.swing.JPopupMenu popupMenu>";
+    "fieldput <ama.MediaApplet: javax.swing.JPopupMenu popupMenu>"->"load.r r0";
+    "fieldget <ama.MediaApplet: javax.swing.JPopupMenu popupMenu>"
+    "load.r r0"->"fieldget <ama.MediaApplet: javax.swing.JPopupMenu popupMenu>";
+    "fieldget <ama.MediaApplet: javax.swing.JPopupMenu popupMenu>"->"load.r r0";
+    "load.r r0"->"fieldget <ama.MediaApplet: javax.swing.JMenuItem stopMenuButton>";
+    "virtualinvoke <javax.swing.JPopupMenu: javax.swing.JMenuItem add(javax.swing.JMenuItem)>"
+    "fieldget <ama.MediaApplet: javax.swing.JMenuItem stopMenuButton>"->"virtualinvoke <javax.swing.JPopupMenu: javax.swing.JMenuItem add(javax.swing.JMenuItem)>";
+    "virtualinvoke <javax.swing.JPopupMenu: javax.swing.JMenuItem add(javax.swing.JMenuItem)>"->"pop";
+    "pop"->"load.r r0";
+    "load.r r0"->"fieldget <ama.MediaApplet: javax.swing.JPopupMenu popupMenu>";
+    "fieldget <ama.MediaApplet: javax.swing.JPopupMenu popupMenu>"->"load.r r0";
+    "load.r r0"->"fieldget <ama.MediaApplet: javax.swing.JMenuItem playMenuButton>";
+    "fieldget <ama.MediaApplet: javax.swing.JMenuItem playMenuButton>"->"virtualinvoke <javax.swing.JPopupMenu: javax.swing.JMenuItem add(javax.swing.JMenuItem)>";
+    "virtualinvoke <javax.swing.JPopupMenu: javax.swing.JMenuItem add(javax.swing.JMenuItem)>"->"pop";
+    "pop"->"load.r r0";
+    "load.r r0"->"new javax.swing.JPanel";
+    "new javax.swing.JPanel"->"dup1.r";
+    "dup1.r"->"specialinvoke <javax.swing.JPanel: void <init>()>";
+    "fieldput <ama.MediaApplet: javax.swing.JPanel clickPanel>"
+    "specialinvoke <javax.swing.JPanel: void <init>()>"->"fieldput <ama.MediaApplet: javax.swing.JPanel clickPanel>";
+    "fieldput <ama.MediaApplet: javax.swing.JPanel clickPanel>"->"load.r r0";
+    "fieldget <ama.MediaApplet: javax.swing.JPanel clickPanel>"
+    "load.r r0"->"fieldget <ama.MediaApplet: javax.swing.JPanel clickPanel>";
+    "fieldget <ama.MediaApplet: javax.swing.JPanel clickPanel>"->"load.i $r122";
+    "load.i $r122"->"load.i $r92";
+    "virtualinvoke <javax.swing.JPanel: void setSize(int,int)>"
+    "load.i $r92"->"virtualinvoke <javax.swing.JPanel: void setSize(int,int)>";
+    "virtualinvoke <javax.swing.JPanel: void setSize(int,int)>"->"load.r r0";
+    "load.r r0"->"fieldget <ama.MediaApplet: javax.swing.JPanel clickPanel>";
+    "fieldget <ama.MediaApplet: javax.swing.JPanel clickPanel>"->"push 0";
+    "virtualinvoke <javax.swing.JPanel: void setOpaque(boolean)>"
+    "push 0"->"virtualinvoke <javax.swing.JPanel: void setOpaque(boolean)>";
+    "virtualinvoke <javax.swing.JPanel: void setOpaque(boolean)>"->"load.r r0";
+    "load.r r0"->"fieldget <ama.MediaApplet: javax.swing.JPanel clickPanel>";
+    "new ama.MediaApplet$6"
+    "fieldget <ama.MediaApplet: javax.swing.JPanel clickPanel>"->"new ama.MediaApplet$6";
+    "new ama.MediaApplet$6"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "specialinvoke <ama.MediaApplet$6: void <init>(ama.MediaApplet)>"
+    "load.r r0"->"specialinvoke <ama.MediaApplet$6: void <init>(ama.MediaApplet)>";
+    "virtualinvoke <javax.swing.JPanel: void addMouseListener(java.awt.event.MouseListener)>"
+    "specialinvoke <ama.MediaApplet$6: void <init>(ama.MediaApplet)>"->"virtualinvoke <javax.swing.JPanel: void addMouseListener(java.awt.event.MouseListener)>";
+    "virtualinvoke <javax.swing.JPanel: void addMouseListener(java.awt.event.MouseListener)>"->"load.r r0";
+    "push \"ama_plugins\""
+    "load.r r0"->"push \"ama_plugins\"";
+    "push \"ama_plugins\""->"virtualinvoke <ama.MediaApplet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <ama.MediaApplet: java.lang.String getParameter(java.lang.String)>"->"store.r $r92";
+    "store.r $r92"->"load.r $r92";
+    "ifnull push 0"
+    "load.r $r92"->"ifnull push 0";
+    "ifnull push 0"->"new java.util.StringTokenizer";
+    "new java.util.StringTokenizer"->"store.r $r122";
+    "store.r $r122"->"load.r $r122";
+    "load.r $r122"->"load.r $r92";
+    "push \",\""
+    "load.r $r92"->"push \",\"";
+    "push \",\""->"specialinvoke <java.util.StringTokenizer: void <init>(java.lang.String,java.lang.String)>";
+    "specialinvoke <java.util.StringTokenizer: void <init>(java.lang.String,java.lang.String)>"->"load.r $r122";
+    "virtualinvoke <java.util.StringTokenizer: boolean hasMoreTokens()>"
+    "load.r $r122"->"virtualinvoke <java.util.StringTokenizer: boolean hasMoreTokens()>";
+    "ifeq push 0"
+    "virtualinvoke <java.util.StringTokenizer: boolean hasMoreTokens()>"->"ifeq push 0";
+    "ifeq push 0"->"load.r r0";
+    "load.r r0"->"load.r $r122";
+    "load.r $r122"->"virtualinvoke <java.util.StringTokenizer: java.lang.String nextToken()>";
+    "specialinvoke <ama.MediaApplet: ama.Plugin loadPlugin(java.lang.String)>"
+    "virtualinvoke <java.util.StringTokenizer: java.lang.String nextToken()>"->"specialinvoke <ama.MediaApplet: ama.Plugin loadPlugin(java.lang.String)>";
+    "specialinvoke <ama.MediaApplet: ama.Plugin loadPlugin(java.lang.String)>"->"store.r $r92";
+    "store.r $r92"->"load.r $r92";
+    "load.r $r92"->"load.r r0";
+    "interfaceinvoke <ama.Plugin: void init(ama.MediaApplet)> 1"
+    "load.r r0"->"interfaceinvoke <ama.Plugin: void init(ama.MediaApplet)> 1";
+    "interfaceinvoke <ama.Plugin: void init(ama.MediaApplet)> 1"->"load.r r0";
+    "fieldget <ama.MediaApplet: java.util.Vector plugins>"
+    "load.r r0"->"fieldget <ama.MediaApplet: java.util.Vector plugins>";
+    "fieldget <ama.MediaApplet: java.util.Vector plugins>"->"load.r $r92";
+    "virtualinvoke <java.util.Vector: boolean add(java.lang.Object)>"
+    "load.r $r92"->"virtualinvoke <java.util.Vector: boolean add(java.lang.Object)>";
+    "virtualinvoke <java.util.Vector: boolean add(java.lang.Object)>"->"pop";
+    "goto load.r $r122"
+    "pop"->"goto load.r $r122";
+    "virtualinvoke <java.util.Vector: boolean add(java.lang.Object)>"->"staticget <java.lang.System: java.io.PrintStream err>";
+    "staticget <java.lang.System: java.io.PrintStream err>"->"virtualinvoke <java.lang.Exception: void printStackTrace(java.io.PrintStream)>";
+    "virtualinvoke <java.lang.Exception: void printStackTrace(java.io.PrintStream)>"->"goto load.r $r122";
+    "ifeq push 0"->"push 0";
+    "push 0"->"store.i $r122";
+    "store.i $r122"->"load.i $r122";
+    "load.i $r122"->"push 4";
+    "push 4"->"ifcmpge.i load.r r0";
+    "ifcmpge.i load.r r0"->"load.r r0";
+    "fieldget <ama.MediaApplet: int[] componentCounts>"
+    "load.r r0"->"fieldget <ama.MediaApplet: int[] componentCounts>";
+    "fieldget <ama.MediaApplet: int[] componentCounts>"->"load.i $r122";
+    "arrayread.i"
+    "load.i $r122"->"arrayread.i";
+    "arrayread.i"->"push 1";
+    "ifcmpne.i inc.i $r122 1"
+    "push 1"->"ifcmpne.i inc.i $r122 1";
+    "ifcmpne.i inc.i $r122 1"->"load.r r0";
+    "fieldget <ama.MediaApplet: javax.swing.JComponent[] panels>"
+    "load.r r0"->"fieldget <ama.MediaApplet: javax.swing.JComponent[] panels>";
+    "fieldget <ama.MediaApplet: javax.swing.JComponent[] panels>"->"load.i $r122";
+    "arrayread.r"
+    "load.i $r122"->"arrayread.r";
+    "new javax.swing.border.TitledBorder"
+    "arrayread.r"->"new javax.swing.border.TitledBorder";
+    "new javax.swing.border.TitledBorder"->"dup1.r";
+    "staticinvoke <javax.swing.BorderFactory: javax.swing.border.Border createEtchedBorder()>"
+    "dup1.r"->"staticinvoke <javax.swing.BorderFactory: javax.swing.border.Border createEtchedBorder()>";
+    "staticinvoke <javax.swing.BorderFactory: javax.swing.border.Border createEtchedBorder()>"->"load.r r0";
+    "load.r r0"->"fieldget <ama.MediaApplet: javax.swing.JComponent[] panels>";
+    "fieldget <ama.MediaApplet: javax.swing.JComponent[] panels>"->"load.i $r122";
+    "load.i $r122"->"arrayread.r";
+    "virtualinvoke <javax.swing.JComponent: java.lang.String getName()>"
+    "arrayread.r"->"virtualinvoke <javax.swing.JComponent: java.lang.String getName()>";
+    "specialinvoke <javax.swing.border.TitledBorder: void <init>(javax.swing.border.Border,java.lang.String)>"
+    "virtualinvoke <javax.swing.JComponent: java.lang.String getName()>"->"specialinvoke <javax.swing.border.TitledBorder: void <init>(javax.swing.border.Border,java.lang.String)>";
+    "virtualinvoke <javax.swing.JComponent: void setBorder(javax.swing.border.Border)>"
+    "specialinvoke <javax.swing.border.TitledBorder: void <init>(javax.swing.border.Border,java.lang.String)>"->"virtualinvoke <javax.swing.JComponent: void setBorder(javax.swing.border.Border)>";
+    "inc.i $r122 1"
+    "virtualinvoke <javax.swing.JComponent: void setBorder(javax.swing.border.Border)>"->"inc.i $r122 1";
+    "goto load.i $r122"
+    "inc.i $r122 1"->"goto load.i $r122";
+    "ifcmpge.i load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <ama.MediaApplet: javax.swing.JPanel clickPanel>";
+    "virtualinvoke <ama.MediaApplet: void addOverlay(javax.swing.JComponent)>"
+    "fieldget <ama.MediaApplet: javax.swing.JPanel clickPanel>"->"virtualinvoke <ama.MediaApplet: void addOverlay(javax.swing.JComponent)>";
+    "load.b r208"
+    "virtualinvoke <ama.MediaApplet: void addOverlay(javax.swing.JComponent)>"->"load.b r208";
+    "ifeq new javax.swing.JPanel"
+    "load.b r208"->"ifeq new javax.swing.JPanel";
+    "ifeq new javax.swing.JPanel"->"load.r r0";
+    "load.r r0"->"fieldget <ama.MediaApplet: javax.swing.JDesktopPane desktopPane>";
+    "fieldget <ama.MediaApplet: javax.swing.JDesktopPane desktopPane>"->"store.r $r122";
+    "store.r $r122"->"goto load.b $r12";
+    "goto load.b $r12"->"load.b $r12";
+    "load.b $r12"->"ifeq load.r r0";
+    "ifeq load.r r0"->"load.r $r122";
+    "new ama.MediaApplet$7"
+    "load.r $r122"->"new ama.MediaApplet$7";
+    "new ama.MediaApplet$7"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "load.r r0"->"load.b r208";
+    "load.b r208"->"load.r $r122";
+    "specialinvoke <ama.MediaApplet$7: void <init>(ama.MediaApplet,boolean,java.awt.Container)>"
+    "load.r $r122"->"specialinvoke <ama.MediaApplet$7: void <init>(ama.MediaApplet,boolean,java.awt.Container)>";
+    "virtualinvoke <java.awt.Container: void addComponentListener(java.awt.event.ComponentListener)>"
+    "specialinvoke <ama.MediaApplet$7: void <init>(ama.MediaApplet,boolean,java.awt.Container)>"->"virtualinvoke <java.awt.Container: void addComponentListener(java.awt.event.ComponentListener)>";
+    "virtualinvoke <java.awt.Container: void addComponentListener(java.awt.event.ComponentListener)>"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "load.r r0"->"virtualinvoke <ama.MediaApplet: java.awt.Container getContentPane()>";
+    "virtualinvoke <ama.MediaApplet: java.awt.Container getContentPane()>"->"store.r r208";
+    "store.r r208"->"load.r r208";
+    "new java.awt.GridBagLayout"
+    "load.r r208"->"new java.awt.GridBagLayout";
+    "new java.awt.GridBagLayout"->"dup1.r";
+    "specialinvoke <java.awt.GridBagLayout: void <init>()>"
+    "dup1.r"->"specialinvoke <java.awt.GridBagLayout: void <init>()>";
+    "virtualinvoke <java.awt.Container: void setLayout(java.awt.LayoutManager)>"
+    "specialinvoke <java.awt.GridBagLayout: void <init>()>"->"virtualinvoke <java.awt.Container: void setLayout(java.awt.LayoutManager)>";
+    "new java.awt.GridBagConstraints"
+    "virtualinvoke <java.awt.Container: void setLayout(java.awt.LayoutManager)>"->"new java.awt.GridBagConstraints";
+    "new java.awt.GridBagConstraints"->"store.r $r92";
+    "store.r $r92"->"load.r $r92";
+    "specialinvoke <java.awt.GridBagConstraints: void <init>()>"
+    "load.r $r92"->"specialinvoke <java.awt.GridBagConstraints: void <init>()>";
+    "specialinvoke <java.awt.GridBagConstraints: void <init>()>"->"load.r r0";
+    "load.r r0"->"fieldget <ama.MediaApplet: javax.swing.JComponent[] panels>";
+    "fieldget <ama.MediaApplet: javax.swing.JComponent[] panels>"->"push 2";
+    "push 2"->"arrayread.r";
+    "arrayread.r"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r $r92";
+    "load.r $r92"->"push 0";
+    "fieldput <java.awt.GridBagConstraints: int gridx>"
+    "push 0"->"fieldput <java.awt.GridBagConstraints: int gridx>";
+    "fieldput <java.awt.GridBagConstraints: int gridx>"->"load.r $r92";
+    "load.r $r92"->"push 0";
+    "fieldput <java.awt.GridBagConstraints: int gridy>"
+    "push 0"->"fieldput <java.awt.GridBagConstraints: int gridy>";
+    "fieldput <java.awt.GridBagConstraints: int gridy>"->"load.r $r92";
+    "load.r $r92"->"push 1";
+    "fieldput <java.awt.GridBagConstraints: int gridwidth>"
+    "push 1"->"fieldput <java.awt.GridBagConstraints: int gridwidth>";
+    "fieldput <java.awt.GridBagConstraints: int gridwidth>"->"load.r $r92";
+    "push 3"
+    "load.r $r92"->"push 3";
+    "fieldput <java.awt.GridBagConstraints: int gridheight>"
+    "push 3"->"fieldput <java.awt.GridBagConstraints: int gridheight>";
+    "fieldput <java.awt.GridBagConstraints: int gridheight>"->"load.r $r92";
+    "push 1.0"
+    "load.r $r92"->"push 1.0";
+    "fieldput <java.awt.GridBagConstraints: double weighty>"
+    "push 1.0"->"fieldput <java.awt.GridBagConstraints: double weighty>";
+    "fieldput <java.awt.GridBagConstraints: double weighty>"->"load.b $r12";
+    "ifeq load.r $r92"
+    "load.b $r12"->"ifeq load.r $r92";
+    "ifeq load.r $r92"->"load.r $r92";
+    "load.r $r92"->"push 3";
+    "fieldput <java.awt.GridBagConstraints: int fill>"
+    "push 3"->"fieldput <java.awt.GridBagConstraints: int fill>";
+    "fieldput <java.awt.GridBagConstraints: int fill>"->"load.r $r92";
+    "push 0.0"
+    "load.r $r92"->"push 0.0";
+    "fieldput <java.awt.GridBagConstraints: double weightx>"
+    "push 0.0"->"fieldput <java.awt.GridBagConstraints: double weightx>";
+    "goto load.r r208"
+    "fieldput <java.awt.GridBagConstraints: double weightx>"->"goto load.r r208";
+    "goto load.r r208"->"load.r r208";
+    "load.r r208"->"load.r r0";
+    "load.r r0"->"fieldget <ama.MediaApplet: javax.swing.JComponent[] panels>";
+    "fieldget <ama.MediaApplet: javax.swing.JComponent[] panels>"->"push 2";
+    "push 2"->"arrayread.r";
+    "arrayread.r"->"load.r $r92";
+    "virtualinvoke <java.awt.Container: void add(java.awt.Component,java.lang.Object)>"
+    "load.r $r92"->"virtualinvoke <java.awt.Container: void add(java.awt.Component,java.lang.Object)>";
+    "virtualinvoke <java.awt.Container: void add(java.awt.Component,java.lang.Object)>"->"load.r r0";
+    "load.r r0"->"fieldget <ama.MediaApplet: javax.swing.JComponent[] panels>";
+    "fieldget <ama.MediaApplet: javax.swing.JComponent[] panels>"->"push 0";
+    "push 0"->"arrayread.r";
+    "ifnull load.r $r92"
+    "arrayread.r"->"ifnull load.r $r92";
+    "ifnull load.r $r92"->"load.r $r92";
+    "load.r $r92"->"push 1";
+    "push 1"->"fieldput <java.awt.GridBagConstraints: int gridx>";
+    "fieldput <java.awt.GridBagConstraints: int gridx>"->"load.r $r92";
+    "load.r $r92"->"push 0";
+    "push 0"->"fieldput <java.awt.GridBagConstraints: int gridy>";
+    "fieldput <java.awt.GridBagConstraints: int gridy>"->"load.r $r92";
+    "load.r $r92"->"push 1";
+    "push 1"->"fieldput <java.awt.GridBagConstraints: int gridwidth>";
+    "fieldput <java.awt.GridBagConstraints: int gridwidth>"->"load.r $r92";
+    "load.r $r92"->"push 1";
+    "push 1"->"fieldput <java.awt.GridBagConstraints: int gridheight>";
+    "fieldput <java.awt.GridBagConstraints: int gridheight>"->"load.b $r12";
+    "load.b $r12"->"ifeq load.r $r92";
+    "ifeq load.r $r92"->"load.r $r92";
+    "load.r $r92"->"push 2";
+    "push 2"->"fieldput <java.awt.GridBagConstraints: int fill>";
+    "fieldput <java.awt.GridBagConstraints: int fill>"->"load.r $r92";
+    "load.r $r92"->"push 1.0";
+    "push 1.0"->"fieldput <java.awt.GridBagConstraints: double weightx>";
+    "fieldput <java.awt.GridBagConstraints: double weightx>"->"load.r $r92";
+    "load.r $r92"->"push 0.0";
+    "push 0.0"->"fieldput <java.awt.GridBagConstraints: double weighty>";
+    "fieldput <java.awt.GridBagConstraints: double weighty>"->"goto load.r r208";
+    "goto load.r r208"->"load.r r208";
+    "load.r r208"->"load.r r0";
+    "load.r r0"->"fieldget <ama.MediaApplet: javax.swing.JComponent[] panels>";
+    "fieldget <ama.MediaApplet: javax.swing.JComponent[] panels>"->"push 0";
+    "push 0"->"arrayread.r";
+    "arrayread.r"->"load.r $r92";
+    "load.r $r92"->"virtualinvoke <java.awt.Container: void add(java.awt.Component,java.lang.Object)>";
+    "virtualinvoke <java.awt.Container: void add(java.awt.Component,java.lang.Object)>"->"load.r $r92";
+    "load.r $r92"->"push 1";
+    "push 1"->"fieldput <java.awt.GridBagConstraints: int gridx>";
+    "fieldput <java.awt.GridBagConstraints: int gridx>"->"load.r $r92";
+    "load.r $r92"->"push 1";
+    "push 1"->"fieldput <java.awt.GridBagConstraints: int gridy>";
+    "fieldput <java.awt.GridBagConstraints: int gridy>"->"load.r $r92";
+    "load.r $r92"->"push 1";
+    "push 1"->"fieldput <java.awt.GridBagConstraints: int gridwidth>";
+    "fieldput <java.awt.GridBagConstraints: int gridwidth>"->"load.r $r92";
+    "load.r $r92"->"push 1";
+    "push 1"->"fieldput <java.awt.GridBagConstraints: int gridheight>";
+    "fieldput <java.awt.GridBagConstraints: int gridheight>"->"load.b $r12";
+    "load.b $r12"->"ifeq load.r $r92";
+    "ifeq load.r $r92"->"load.r $r92";
+    "load.r $r92"->"push 1";
+    "push 1"->"fieldput <java.awt.GridBagConstraints: int fill>";
+    "fieldput <java.awt.GridBagConstraints: int fill>"->"load.r $r92";
+    "load.r $r92"->"push 1.0";
+    "push 1.0"->"fieldput <java.awt.GridBagConstraints: double weightx>";
+    "fieldput <java.awt.GridBagConstraints: double weightx>"->"load.r $r92";
+    "load.r $r92"->"push 1.0";
+    "push 1.0"->"fieldput <java.awt.GridBagConstraints: double weighty>";
+    "fieldput <java.awt.GridBagConstraints: double weighty>"->"goto load.r r208";
+    "goto load.r r208"->"load.r r208";
+    "load.r r208"->"load.r $r122";
+    "load.r $r122"->"load.r $r92";
+    "load.r $r92"->"virtualinvoke <java.awt.Container: void add(java.awt.Component,java.lang.Object)>";
+    "virtualinvoke <java.awt.Container: void add(java.awt.Component,java.lang.Object)>"->"load.r r0";
+    "load.r r0"->"fieldget <ama.MediaApplet: javax.swing.JComponent[] panels>";
+    "fieldget <ama.MediaApplet: javax.swing.JComponent[] panels>"->"push 1";
+    "push 1"->"arrayread.r";
+    "arrayread.r"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r $r92";
+    "load.r $r92"->"push 1";
+    "push 1"->"fieldput <java.awt.GridBagConstraints: int gridx>";
+    "fieldput <java.awt.GridBagConstraints: int gridx>"->"load.r $r92";
+    "load.r $r92"->"push 2";
+    "push 2"->"fieldput <java.awt.GridBagConstraints: int gridy>";
+    "fieldput <java.awt.GridBagConstraints: int gridy>"->"load.r $r92";
+    "load.r $r92"->"push 1";
+    "push 1"->"fieldput <java.awt.GridBagConstraints: int gridwidth>";
+    "fieldput <java.awt.GridBagConstraints: int gridwidth>"->"load.r $r92";
+    "load.r $r92"->"push 1";
+    "push 1"->"fieldput <java.awt.GridBagConstraints: int gridheight>";
+    "fieldput <java.awt.GridBagConstraints: int gridheight>"->"load.b $r12";
+    "load.b $r12"->"ifeq load.r $r92";
+    "ifeq load.r $r92"->"load.r $r92";
+    "load.r $r92"->"push 2";
+    "push 2"->"fieldput <java.awt.GridBagConstraints: int fill>";
+    "fieldput <java.awt.GridBagConstraints: int fill>"->"load.r $r92";
+    "load.r $r92"->"push 1.0";
+    "push 1.0"->"fieldput <java.awt.GridBagConstraints: double weightx>";
+    "fieldput <java.awt.GridBagConstraints: double weightx>"->"load.r $r92";
+    "load.r $r92"->"push 0.0";
+    "push 0.0"->"fieldput <java.awt.GridBagConstraints: double weighty>";
+    "fieldput <java.awt.GridBagConstraints: double weighty>"->"goto load.r r208";
+    "goto load.r r208"->"load.r r208";
+    "load.r r208"->"load.r r0";
+    "load.r r0"->"fieldget <ama.MediaApplet: javax.swing.JComponent[] panels>";
+    "fieldget <ama.MediaApplet: javax.swing.JComponent[] panels>"->"push 1";
+    "push 1"->"arrayread.r";
+    "arrayread.r"->"load.r $r92";
+    "load.r $r92"->"virtualinvoke <java.awt.Container: void add(java.awt.Component,java.lang.Object)>";
+    "virtualinvoke <java.awt.Container: void add(java.awt.Component,java.lang.Object)>"->"load.r r0";
+    "load.r r0"->"fieldget <ama.MediaApplet: javax.swing.JComponent[] panels>";
+    "fieldget <ama.MediaApplet: javax.swing.JComponent[] panels>"->"push 3";
+    "push 3"->"arrayread.r";
+    "arrayread.r"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r $r92";
+    "load.r $r92"->"push 2";
+    "push 2"->"fieldput <java.awt.GridBagConstraints: int gridx>";
+    "fieldput <java.awt.GridBagConstraints: int gridx>"->"load.r $r92";
+    "load.r $r92"->"push 0";
+    "push 0"->"fieldput <java.awt.GridBagConstraints: int gridy>";
+    "fieldput <java.awt.GridBagConstraints: int gridy>"->"load.r $r92";
+    "load.r $r92"->"push 1";
+    "push 1"->"fieldput <java.awt.GridBagConstraints: int gridwidth>";
+    "fieldput <java.awt.GridBagConstraints: int gridwidth>"->"load.r $r92";
+    "load.r $r92"->"push 3";
+    "push 3"->"fieldput <java.awt.GridBagConstraints: int gridheight>";
+    "fieldput <java.awt.GridBagConstraints: int gridheight>"->"load.r $r92";
+    "load.r $r92"->"push 1.0";
+    "push 1.0"->"fieldput <java.awt.GridBagConstraints: double weighty>";
+    "fieldput <java.awt.GridBagConstraints: double weighty>"->"load.b $r12";
+    "load.b $r12"->"ifeq load.r $r92";
+    "ifeq load.r $r92"->"load.r $r92";
+    "load.r $r92"->"push 3";
+    "push 3"->"fieldput <java.awt.GridBagConstraints: int fill>";
+    "fieldput <java.awt.GridBagConstraints: int fill>"->"load.r $r92";
+    "load.r $r92"->"push 0.0";
+    "push 0.0"->"fieldput <java.awt.GridBagConstraints: double weightx>";
+    "fieldput <java.awt.GridBagConstraints: double weightx>"->"goto load.r r208";
+    "goto load.r r208"->"load.r r208";
+    "load.r r208"->"load.r r0";
+    "load.r r0"->"fieldget <ama.MediaApplet: javax.swing.JComponent[] panels>";
+    "fieldget <ama.MediaApplet: javax.swing.JComponent[] panels>"->"push 3";
+    "push 3"->"arrayread.r";
+    "arrayread.r"->"load.r $r92";
+    "load.r $r92"->"virtualinvoke <java.awt.Container: void add(java.awt.Component,java.lang.Object)>";
+    "virtualinvoke <java.awt.Container: void add(java.awt.Component,java.lang.Object)>"->"load.r r0";
+    "load.r r0"->"push 1";
+    "virtualinvoke <ama.MediaApplet: void setVisible(boolean)>"
+    "push 1"->"virtualinvoke <ama.MediaApplet: void setVisible(boolean)>";
+    "new java.lang.Thread"
+    "virtualinvoke <ama.MediaApplet: void setVisible(boolean)>"->"new java.lang.Thread";
+    "new java.lang.Thread"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "load.r r0"->"fieldget <ama.MediaApplet: ama.ImagePanel imagePanel>";
+    "specialinvoke <java.lang.Thread: void <init>(java.lang.Runnable)>"
+    "fieldget <ama.MediaApplet: ama.ImagePanel imagePanel>"->"specialinvoke <java.lang.Thread: void <init>(java.lang.Runnable)>";
+    "virtualinvoke <java.lang.Thread: void start()>"
+    "specialinvoke <java.lang.Thread: void <init>(java.lang.Runnable)>"->"virtualinvoke <java.lang.Thread: void start()>";
+    "virtualinvoke <java.lang.Thread: void start()>"->"return";
+    "ifeq load.r $r92"->"load.r $r92";
+    "load.r $r92"->"push 1";
+    "push 1"->"fieldput <java.awt.GridBagConstraints: int fill>";
+    "fieldput <java.awt.GridBagConstraints: int fill>"->"load.r $r92";
+    "push 0.5"
+    "load.r $r92"->"push 0.5";
+    "push 0.5"->"fieldput <java.awt.GridBagConstraints: double weightx>";
+    "ifeq load.r $r92"->"load.r $r92";
+    "load.r $r92"->"push 1";
+    "push 1"->"fieldput <java.awt.GridBagConstraints: int fill>";
+    "fieldput <java.awt.GridBagConstraints: int fill>"->"load.r $r92";
+    "load.r $r92"->"push 0.0";
+    "push 0.0"->"fieldput <java.awt.GridBagConstraints: double weightx>";
+    "fieldput <java.awt.GridBagConstraints: double weightx>"->"load.r $r92";
+    "load.r $r92"->"push 0.5";
+    "push 0.5"->"fieldput <java.awt.GridBagConstraints: double weighty>";
+    "ifeq load.r $r92"->"load.r $r92";
+    "load.r $r92"->"push 0";
+    "push 0"->"fieldput <java.awt.GridBagConstraints: int fill>";
+    "fieldput <java.awt.GridBagConstraints: int fill>"->"load.r $r92";
+    "load.r $r92"->"push 0.0";
+    "push 0.0"->"fieldput <java.awt.GridBagConstraints: double weightx>";
+    "fieldput <java.awt.GridBagConstraints: double weightx>"->"load.r $r92";
+    "load.r $r92"->"push 0.0";
+    "push 0.0"->"fieldput <java.awt.GridBagConstraints: double weighty>";
+    "ifeq load.r $r92"->"load.r $r92";
+    "load.r $r92"->"push 1";
+    "push 1"->"fieldput <java.awt.GridBagConstraints: int fill>";
+    "fieldput <java.awt.GridBagConstraints: int fill>"->"load.r $r92";
+    "load.r $r92"->"push 0.0";
+    "push 0.0"->"fieldput <java.awt.GridBagConstraints: double weightx>";
+    "fieldput <java.awt.GridBagConstraints: double weightx>"->"load.r $r92";
+    "load.r $r92"->"push 0.5";
+    "push 0.5"->"fieldput <java.awt.GridBagConstraints: double weighty>";
+    "ifeq load.r $r92"->"load.r $r92";
+    "load.r $r92"->"push 1";
+    "push 1"->"fieldput <java.awt.GridBagConstraints: int fill>";
+    "fieldput <java.awt.GridBagConstraints: int fill>"->"load.r $r92";
+    "load.r $r92"->"push 0.5";
+    "push 0.5"->"fieldput <java.awt.GridBagConstraints: double weightx>";
+    "ifeq load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <ama.MediaApplet: ama.ImagePanel imagePanel>";
+    "new ama.MediaApplet$8"
+    "fieldget <ama.MediaApplet: ama.ImagePanel imagePanel>"->"new ama.MediaApplet$8";
+    "new ama.MediaApplet$8"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "load.r r0"->"load.r $r122";
+    "specialinvoke <ama.MediaApplet$8: void <init>(ama.MediaApplet,java.awt.Container)>"
+    "load.r $r122"->"specialinvoke <ama.MediaApplet$8: void <init>(ama.MediaApplet,java.awt.Container)>";
+    "virtualinvoke <ama.ImagePanel: void addComponentListener(java.awt.event.ComponentListener)>"
+    "specialinvoke <ama.MediaApplet$8: void <init>(ama.MediaApplet,java.awt.Container)>"->"virtualinvoke <ama.ImagePanel: void addComponentListener(java.awt.event.ComponentListener)>";
+    "ifeq new javax.swing.JPanel"->"new javax.swing.JPanel";
+    "new javax.swing.JPanel"->"store.r $r92";
+    "store.r $r92"->"load.r $r92";
+    "load.r $r92"->"specialinvoke <javax.swing.JPanel: void <init>()>";
+    "specialinvoke <javax.swing.JPanel: void <init>()>"->"load.r $r92";
+    "load.r $r92"->"store.r $r122";
+    "store.r $r122"->"load.r $r92";
+    "load.r $r92"->"new java.awt.GridBagLayout";
+    "new java.awt.GridBagLayout"->"dup1.r";
+    "dup1.r"->"specialinvoke <java.awt.GridBagLayout: void <init>()>";
+    "specialinvoke <java.awt.GridBagLayout: void <init>()>"->"virtualinvoke <java.awt.Container: void setLayout(java.awt.LayoutManager)>";
+    "virtualinvoke <java.awt.Container: void setLayout(java.awt.LayoutManager)>"->"load.r $r92";
+    "load.r $r92"->"load.r r0";
+    "load.r r0"->"fieldget <ama.MediaApplet: javax.swing.JDesktopPane desktopPane>";
+    "fieldget <ama.MediaApplet: javax.swing.JDesktopPane desktopPane>"->"virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>";
+    "virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>"->"pop";
+    "pop"->"load.b $r12";
+    "ifeq load.b $r12"
+    "load.b $r12"->"ifeq load.b $r12";
+    "ifeq load.b $r12"->"load.r $r92";
+    "staticget <java.awt.Color: java.awt.Color BLACK>"
+    "load.r $r92"->"staticget <java.awt.Color: java.awt.Color BLACK>";
+    "virtualinvoke <java.awt.Container: void setBackground(java.awt.Color)>"
+    "staticget <java.awt.Color: java.awt.Color BLACK>"->"virtualinvoke <java.awt.Container: void setBackground(java.awt.Color)>";
+    "ifne push 0"->"push 0";
+    "push 0"->"store.b $r12";
+    "ifnonnull load.r r208"->"load.r r208";
+    "push \"auto\""
+    "load.r r208"->"push \"auto\"";
+    "push \"auto\""->"virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>";
+    "ifeq load.r r208"
+    "virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>"->"ifeq load.r r208";
+    "ifeq load.r r208"->"push 0.0F";
+    "push 0.0F"->"store.f r3";
+    "store.f r3"->"push 0";
+    "push 0"->"store.b r208";
+    "store.b r208"->"goto load.f r3";
+    "ifeq load.r r208"->"load.r r208";
+    "push \"free\""
+    "load.r r208"->"push \"free\"";
+    "push \"free\""->"virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>";
+    "virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>"->"ifeq load.r r208";
+    "ifeq load.r r208"->"push 0.0F";
+    "push 0.0F"->"store.f r3";
+    "store.f r3"->"push 1";
+    "push 1"->"store.b r208";
+    "store.b r208"->"goto load.f r3";
+    "ifeq load.r r208"->"load.r r208";
+    "staticinvoke <java.lang.Float: float parseFloat(java.lang.String)>"
+    "load.r r208"->"staticinvoke <java.lang.Float: float parseFloat(java.lang.String)>";
+    "staticinvoke <java.lang.Float: float parseFloat(java.lang.String)>"->"store.f r3";
+    "goto push 0"
+    "store.f r3"->"goto push 0";
+    "goto push 0"->"push 0";
+    "push 0"->"store.b r208";
+    "staticinvoke <java.lang.Float: float parseFloat(java.lang.String)>"->"store.r $r12";
+    "staticget <ama.MediaApplet: javax.swing.JFrame frame>"
+    "store.r $r12"->"staticget <ama.MediaApplet: javax.swing.JFrame frame>";
+    "ifnonnull staticget <java.lang.System: java.io.PrintStream err>"
+    "staticget <ama.MediaApplet: javax.swing.JFrame frame>"->"ifnonnull staticget <java.lang.System: java.io.PrintStream err>";
+    "ifnonnull staticget <java.lang.System: java.io.PrintStream err>"->"load.r $r12";
+    "virtualinvoke <java.lang.NumberFormatException: void printStackTrace()>"
+    "load.r $r12"->"virtualinvoke <java.lang.NumberFormatException: void printStackTrace()>";
+    "goto push 1.0F"
+    "virtualinvoke <java.lang.NumberFormatException: void printStackTrace()>"->"goto push 1.0F";
+    "goto push 1.0F"->"push 1.0F";
+    "push 1.0F"->"store.f r3";
+    "ifnonnull staticget <java.lang.System: java.io.PrintStream err>"->"staticget <java.lang.System: java.io.PrintStream err>";
+    "staticget <java.lang.System: java.io.PrintStream err>"->"new java.lang.StringBuffer";
+    "new java.lang.StringBuffer"->"dup1.r";
+    "dup1.r"->"specialinvoke <java.lang.StringBuffer: void <init>()>";
+    "push \"Invalid zoom: \""
+    "specialinvoke <java.lang.StringBuffer: void <init>()>"->"push \"Invalid zoom: \"";
+    "push \"Invalid zoom: \""->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"load.r r208";
+    "load.r r208"->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>"->"virtualinvoke <java.io.PrintStream: void println(java.lang.String)>";
+    "virtualinvoke <java.io.PrintStream: void println(java.lang.String)>"->"push 1";
+    "staticinvoke <ama.MediaApplet: void printUsageAndExit(int)>"
+    "push 1"->"staticinvoke <ama.MediaApplet: void printUsageAndExit(int)>";
+    "staticinvoke <ama.ParamTool: void setDefaultURL(java.lang.String)>"->"staticget <java.lang.System: java.io.PrintStream err>";
+    "virtualinvoke <java.net.MalformedURLException: void printStackTrace(java.io.PrintStream)>"
+    "staticget <java.lang.System: java.io.PrintStream err>"->"virtualinvoke <java.net.MalformedURLException: void printStackTrace(java.io.PrintStream)>";
+    "virtualinvoke <java.net.MalformedURLException: void printStackTrace(java.io.PrintStream)>"->"return";
+    "load.r $r92"->"virtualinvoke <java.util.StringTokenizer: java.lang.String nextToken()>";
+    "virtualinvoke <java.util.StringTokenizer: java.lang.String nextToken()>"->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>";
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"->"store.i $r122";
+    "store.i $r122"->"load.r $r92";
+    "load.r $r92"->"virtualinvoke <java.util.StringTokenizer: java.lang.String nextToken()>";
+    "virtualinvoke <java.util.StringTokenizer: java.lang.String nextToken()>"->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>";
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"->"store.i $r92";
+    "store.i $r92"->"goto load.r r0";
+    "ifnull load.r r0"->"load.r r0";
+    "load.r r0"->"new java.net.URL";
+    "new java.net.URL"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "load.r r0"->"fieldget <ama.MediaApplet: java.lang.String wwwRoot>";
+    "fieldget <ama.MediaApplet: java.lang.String wwwRoot>"->"specialinvoke <java.net.URL: void <init>(java.lang.String)>";
+    "specialinvoke <java.net.URL: void <init>(java.lang.String)>"->"fieldput <ama.MediaApplet: java.net.URL videoURL>";
+    "fieldput <ama.MediaApplet: java.net.URL videoURL>"->"goto load.r r0";
+    "ifcmpne.i new java.lang.StringBuffer"->"new java.lang.StringBuffer";
+    "new java.lang.StringBuffer"->"dup1.r";
+    "dup1.r"->"specialinvoke <java.lang.StringBuffer: void <init>()>";
+    "push \":\""
+    "specialinvoke <java.lang.StringBuffer: void <init>()>"->"push \":\"";
+    "push \":\""->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"load.r r1";
+    "load.r r1"->"virtualinvoke <java.net.URL: int getPort()>";
+    "virtualinvoke <java.net.URL: int getPort()>"->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(int)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(int)>"->"virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>"->"store.r r1";
+    "ifeq load.r r0"->"load.r r0";
+    "load.r r0"->"new java.net.URL";
+    "new java.net.URL"->"dup1.r";
+    "dup1.r"->"load.r r208";
+    "load.r r208"->"specialinvoke <java.net.URL: void <init>(java.lang.String)>";
+    "specialinvoke <java.net.URL: void <init>(java.lang.String)>"->"fieldput <ama.MediaApplet: java.net.URL videoURL>";
+    "fieldput <ama.MediaApplet: java.net.URL videoURL>"->"new java.lang.StringBuffer";
+    "new java.lang.StringBuffer"->"dup1.r";
+    "dup1.r"->"specialinvoke <java.lang.StringBuffer: void <init>()>";
+    "specialinvoke <java.lang.StringBuffer: void <init>()>"->"load.r r0";
+    "load.r r0"->"fieldget <ama.MediaApplet: java.net.URL videoURL>";
+    "fieldget <ama.MediaApplet: java.net.URL videoURL>"->"virtualinvoke <java.net.URL: java.lang.String getProtocol()>";
+    "virtualinvoke <java.net.URL: java.lang.String getProtocol()>"->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"push \"://\"";
+    "push \"://\""->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"load.r r0";
+    "load.r r0"->"fieldget <ama.MediaApplet: java.net.URL videoURL>";
+    "fieldget <ama.MediaApplet: java.net.URL videoURL>"->"virtualinvoke <java.net.URL: java.lang.String getHost()>";
+    "virtualinvoke <java.net.URL: java.lang.String getHost()>"->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"store.r $r12";
+    "store.r $r12"->"load.r r0";
+    "load.r r0"->"fieldget <ama.MediaApplet: java.net.URL videoURL>";
+    "fieldget <ama.MediaApplet: java.net.URL videoURL>"->"virtualinvoke <java.net.URL: int getPort()>";
+    "virtualinvoke <java.net.URL: int getPort()>"->"push -1";
+    "push -1"->"ifcmpne.i new java.lang.StringBuffer";
+    "ifcmpne.i new java.lang.StringBuffer"->"push \"\"";
+    "push \"\""->"store.r r208";
+    "store.r r208"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "load.r r0"->"load.r $r12";
+    "load.r $r12"->"load.r r208";
+    "load.r r208"->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>"->"fieldput <ama.MediaApplet: java.lang.String wwwRoot>";
+    "ifcmpne.i new java.lang.StringBuffer"->"new java.lang.StringBuffer";
+    "new java.lang.StringBuffer"->"dup1.r";
+    "dup1.r"->"specialinvoke <java.lang.StringBuffer: void <init>()>";
+    "specialinvoke <java.lang.StringBuffer: void <init>()>"->"push \":\"";
+    "push \":\""->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"load.r r0";
+    "load.r r0"->"fieldget <ama.MediaApplet: java.net.URL videoURL>";
+    "fieldget <ama.MediaApplet: java.net.URL videoURL>"->"virtualinvoke <java.net.URL: int getPort()>";
+    "virtualinvoke <java.net.URL: int getPort()>"->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(int)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(int)>"->"virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>"->"store.r r208";
+    "goto push 320"
+    "ifeq goto push 320"->"goto push 320";
+    "ifcmpge.i push 0"->"push 0";
+    "push 0"->"store.b $r92";
+}

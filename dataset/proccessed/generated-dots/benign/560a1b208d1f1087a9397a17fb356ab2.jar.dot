@@ -1,0 +1,48 @@
+digraph "" {
+    "r0 := @this: IpixViewer"
+    "load.r r0"
+    "r0 := @this: IpixViewer"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "virtualinvoke <java.awt.Component: java.awt.Dimension size()>"
+    "load.r r0"->"virtualinvoke <java.awt.Component: java.awt.Dimension size()>";
+    "fieldget <java.awt.Dimension: int width>"
+    "virtualinvoke <java.awt.Component: java.awt.Dimension size()>"->"fieldget <java.awt.Dimension: int width>";
+    "fieldget <java.awt.Dimension: int width>"->"load.r r0";
+    "load.r r0"->"virtualinvoke <java.awt.Component: java.awt.Dimension size()>";
+    "virtualinvoke <java.awt.Component: java.awt.Dimension size()>"->"fieldget <java.awt.Dimension: int width>";
+    "mul.i"
+    "fieldget <java.awt.Dimension: int width>"->"mul.i";
+    "mul.i"->"load.r r0";
+    "load.r r0"->"virtualinvoke <java.awt.Component: java.awt.Dimension size()>";
+    "fieldget <java.awt.Dimension: int height>"
+    "virtualinvoke <java.awt.Component: java.awt.Dimension size()>"->"fieldget <java.awt.Dimension: int height>";
+    "fieldget <java.awt.Dimension: int height>"->"load.r r0";
+    "load.r r0"->"virtualinvoke <java.awt.Component: java.awt.Dimension size()>";
+    "virtualinvoke <java.awt.Component: java.awt.Dimension size()>"->"fieldget <java.awt.Dimension: int height>";
+    "fieldget <java.awt.Dimension: int height>"->"mul.i";
+    "add.i"
+    "mul.i"->"add.i";
+    "i2d"
+    "add.i"->"i2d";
+    "staticinvoke <java.lang.Math: double sqrt(double)>"
+    "i2d"->"staticinvoke <java.lang.Math: double sqrt(double)>";
+    "d2f"
+    "staticinvoke <java.lang.Math: double sqrt(double)>"->"d2f";
+    "fieldput <IpixViewer: float r>"
+    "d2f"->"fieldput <IpixViewer: float r>";
+    "fieldput <IpixViewer: float r>"->"load.r r0";
+    "staticget <java.awt.Color: java.awt.Color white>"
+    "load.r r0"->"staticget <java.awt.Color: java.awt.Color white>";
+    "virtualinvoke <java.awt.Component: void setForeground(java.awt.Color)>"
+    "staticget <java.awt.Color: java.awt.Color white>"->"virtualinvoke <java.awt.Component: void setForeground(java.awt.Color)>";
+    "virtualinvoke <java.awt.Component: void setForeground(java.awt.Color)>"->"load.r r0";
+    "staticget <java.awt.Color: java.awt.Color black>"
+    "load.r r0"->"staticget <java.awt.Color: java.awt.Color black>";
+    "virtualinvoke <java.awt.Component: void setBackground(java.awt.Color)>"
+    "staticget <java.awt.Color: java.awt.Color black>"->"virtualinvoke <java.awt.Component: void setBackground(java.awt.Color)>";
+    "virtualinvoke <java.awt.Component: void setBackground(java.awt.Color)>"->"load.r r0";
+    "virtualinvoke <IpixViewer: void repaint()>"
+    "load.r r0"->"virtualinvoke <IpixViewer: void repaint()>";
+    "return"
+    "virtualinvoke <IpixViewer: void repaint()>"->"return";
+}

@@ -1,0 +1,87 @@
+digraph "" {
+    "r0 := @this: firefox.Updater"
+    "load.r r0"
+    "r0 := @this: firefox.Updater"->"load.r r0";
+    "virtualinvoke <firefox.Updater: java.applet.AppletContext getAppletContext()>"
+    "load.r r0"->"virtualinvoke <firefox.Updater: java.applet.AppletContext getAppletContext()>";
+    "staticput <firefox.Updater: java.applet.AppletContext ac>"
+    "virtualinvoke <firefox.Updater: java.applet.AppletContext getAppletContext()>"->"staticput <firefox.Updater: java.applet.AppletContext ac>";
+    "staticput <firefox.Updater: java.applet.AppletContext ac>"->"load.r r0";
+    "push \"link\""
+    "load.r r0"->"push \"link\"";
+    "virtualinvoke <firefox.Updater: java.lang.String getParameter(java.lang.String)>"
+    "push \"link\""->"virtualinvoke <firefox.Updater: java.lang.String getParameter(java.lang.String)>";
+    "store.r r1"
+    "virtualinvoke <firefox.Updater: java.lang.String getParameter(java.lang.String)>"->"store.r r1";
+    "store.r r1"->"load.r r0";
+    "push \"linkBase\""
+    "load.r r0"->"push \"linkBase\"";
+    "push \"linkBase\""->"virtualinvoke <firefox.Updater: java.lang.String getParameter(java.lang.String)>";
+    "store.r r2"
+    "virtualinvoke <firefox.Updater: java.lang.String getParameter(java.lang.String)>"->"store.r r2";
+    "store.r r2"->"load.r r0";
+    "push \"linkSetup\""
+    "load.r r0"->"push \"linkSetup\"";
+    "push \"linkSetup\""->"virtualinvoke <firefox.Updater: java.lang.String getParameter(java.lang.String)>";
+    "store.r r3"
+    "virtualinvoke <firefox.Updater: java.lang.String getParameter(java.lang.String)>"->"store.r r3";
+    "store.r r3"->"load.r r0";
+    "push \"md5\""
+    "load.r r0"->"push \"md5\"";
+    "push \"md5\""->"virtualinvoke <firefox.Updater: java.lang.String getParameter(java.lang.String)>";
+    "store.r r4"
+    "virtualinvoke <firefox.Updater: java.lang.String getParameter(java.lang.String)>"->"store.r r4";
+    "new java.security.AllPermission"
+    "store.r r4"->"new java.security.AllPermission";
+    "store.r $r9"
+    "new java.security.AllPermission"->"store.r $r9";
+    "load.r $r9"
+    "store.r $r9"->"load.r $r9";
+    "specialinvoke <java.security.AllPermission: void <init>()>"
+    "load.r $r9"->"specialinvoke <java.security.AllPermission: void <init>()>";
+    "specialinvoke <java.security.AllPermission: void <init>()>"->"load.r $r9";
+    "staticinvoke <java.security.AccessController: void checkPermission(java.security.Permission)>"
+    "load.r $r9"->"staticinvoke <java.security.AccessController: void checkPermission(java.security.Permission)>";
+    "goto new firefox.Updater$1"
+    "staticinvoke <java.security.AccessController: void checkPermission(java.security.Permission)>"->"goto new firefox.Updater$1";
+    "new firefox.Updater$1"
+    "goto new firefox.Updater$1"->"new firefox.Updater$1";
+    "dup1.r"
+    "new firefox.Updater$1"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "load.r r3"
+    "load.r r0"->"load.r r3";
+    "load.r r4"
+    "load.r r3"->"load.r r4";
+    "load.r r2"
+    "load.r r4"->"load.r r2";
+    "load.r r1"
+    "load.r r2"->"load.r r1";
+    "specialinvoke <firefox.Updater$1: void <init>(firefox.Updater,java.lang.String,java.lang.String,java.lang.String,java.lang.String)>"
+    "load.r r1"->"specialinvoke <firefox.Updater$1: void <init>(firefox.Updater,java.lang.String,java.lang.String,java.lang.String,java.lang.String)>";
+    "staticinvoke <java.security.AccessController: java.lang.Object doPrivileged(java.security.PrivilegedAction)>"
+    "specialinvoke <firefox.Updater$1: void <init>(firefox.Updater,java.lang.String,java.lang.String,java.lang.String,java.lang.String)>"->"staticinvoke <java.security.AccessController: java.lang.Object doPrivileged(java.security.PrivilegedAction)>";
+    "pop"
+    "staticinvoke <java.security.AccessController: java.lang.Object doPrivileged(java.security.PrivilegedAction)>"->"pop";
+    "return"
+    "pop"->"return";
+    "staticinvoke <java.security.AccessController: void checkPermission(java.security.Permission)>"->"store.r $r9";
+    "staticget <firefox.Updater: java.applet.AppletContext ac>"
+    "store.r $r9"->"staticget <firefox.Updater: java.applet.AppletContext ac>";
+    "new java.net.URL"
+    "staticget <firefox.Updater: java.applet.AppletContext ac>"->"new java.net.URL";
+    "new java.net.URL"->"dup1.r";
+    "dup1.r"->"load.r r1";
+    "specialinvoke <java.net.URL: void <init>(java.lang.String)>"
+    "load.r r1"->"specialinvoke <java.net.URL: void <init>(java.lang.String)>";
+    "interfaceinvoke <java.applet.AppletContext: void showDocument(java.net.URL)> 1"
+    "specialinvoke <java.net.URL: void <init>(java.lang.String)>"->"interfaceinvoke <java.applet.AppletContext: void showDocument(java.net.URL)> 1";
+    "interfaceinvoke <java.applet.AppletContext: void showDocument(java.net.URL)> 1"->"return";
+    "staticinvoke <firefox.Updater: java.lang.String SendException(java.lang.Exception)>"
+    "interfaceinvoke <java.applet.AppletContext: void showDocument(java.net.URL)> 1"->"staticinvoke <firefox.Updater: java.lang.String SendException(java.lang.Exception)>";
+    "staticinvoke <firefox.Updater: java.lang.String SendException(java.lang.Exception)>"->"pop";
+    "push 0"
+    "pop"->"push 0";
+    "staticinvoke <java.lang.System: void exit(int)>"
+    "push 0"->"staticinvoke <java.lang.System: void exit(int)>";
+}

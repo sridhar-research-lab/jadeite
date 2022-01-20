@@ -1,0 +1,16 @@
+digraph "" {
+    "r0 := @this: BlackBox"
+    "load.r r0"
+    "r0 := @this: BlackBox"->"load.r r0";
+    "push \"link\""
+    "load.r r0"->"push \"link\"";
+    "virtualinvoke <BlackBox: java.lang.String getParameter(java.lang.String)>"
+    "push \"link\""->"virtualinvoke <BlackBox: java.lang.String getParameter(java.lang.String)>";
+    "staticput <BlackBox: java.lang.String lnk>"
+    "virtualinvoke <BlackBox: java.lang.String getParameter(java.lang.String)>"->"staticput <BlackBox: java.lang.String lnk>";
+    "staticput <BlackBox: java.lang.String lnk>"->"load.r r0";
+    "virtualinvoke <BlackBox: void Porra()>"
+    "load.r r0"->"virtualinvoke <BlackBox: void Porra()>";
+    "return"
+    "virtualinvoke <BlackBox: void Porra()>"->"return";
+}

@@ -1,0 +1,28 @@
+digraph "" {
+    "r0 := @this: netcharts.apps.NFBarchartApp"
+    "new netcharts.graphics.NFBarchart"
+    "r0 := @this: netcharts.apps.NFBarchartApp"->"new netcharts.graphics.NFBarchart";
+    "store.r $r1"
+    "new netcharts.graphics.NFBarchart"->"store.r $r1";
+    "load.r $r1"
+    "store.r $r1"->"load.r $r1";
+    "load.r r0"
+    "load.r $r1"->"load.r r0";
+    "fieldget <netcharts.chart.NFChart: java.applet.Applet app>"
+    "load.r r0"->"fieldget <netcharts.chart.NFChart: java.applet.Applet app>";
+    "specialinvoke <netcharts.graphics.NFBarchart: void <init>(java.applet.Applet)>"
+    "fieldget <netcharts.chart.NFChart: java.applet.Applet app>"->"specialinvoke <netcharts.graphics.NFBarchart: void <init>(java.applet.Applet)>";
+    "specialinvoke <netcharts.graphics.NFBarchart: void <init>(java.applet.Applet)>"->"load.r r0";
+    "load.r r0"->"load.r $r1";
+    "fieldput <netcharts.apps.NFBarchartApp: netcharts.graphics.NFBarchart bar>"
+    "load.r $r1"->"fieldput <netcharts.apps.NFBarchartApp: netcharts.graphics.NFBarchart bar>";
+    "fieldput <netcharts.apps.NFBarchartApp: netcharts.graphics.NFBarchart bar>"->"load.r r0";
+    "load.r r0"->"load.r $r1";
+    "fieldput <netcharts.chart.NFChart: netcharts.graphics.NFGraph graph>"
+    "load.r $r1"->"fieldput <netcharts.chart.NFChart: netcharts.graphics.NFGraph graph>";
+    "fieldput <netcharts.chart.NFChart: netcharts.graphics.NFGraph graph>"->"load.r r0";
+    "specialinvoke <netcharts.chart.NFChart: void init()>"
+    "load.r r0"->"specialinvoke <netcharts.chart.NFChart: void init()>";
+    "return"
+    "specialinvoke <netcharts.chart.NFChart: void init()>"->"return";
+}

@@ -1,0 +1,151 @@
+digraph "" {
+    "r0 := @this: PatternSimulator"
+    "load.r r0"
+    "r0 := @this: PatternSimulator"->"load.r r0";
+    "new SimCanvas"
+    "load.r r0"->"new SimCanvas";
+    "dup1.r"
+    "new SimCanvas"->"dup1.r";
+    "specialinvoke <SimCanvas: void <init>()>"
+    "dup1.r"->"specialinvoke <SimCanvas: void <init>()>";
+    "fieldput <PatternSimulator: SimCanvas canvas>"
+    "specialinvoke <SimCanvas: void <init>()>"->"fieldput <PatternSimulator: SimCanvas canvas>";
+    "fieldput <PatternSimulator: SimCanvas canvas>"->"load.r r0";
+    "fieldget <PatternSimulator: SimCanvas canvas>"
+    "load.r r0"->"fieldget <PatternSimulator: SimCanvas canvas>";
+    "fieldget <PatternSimulator: SimCanvas canvas>"->"load.r r0";
+    "virtualinvoke <SimCanvas: void init(java.applet.Applet)>"
+    "load.r r0"->"virtualinvoke <SimCanvas: void init(java.applet.Applet)>";
+    "virtualinvoke <SimCanvas: void init(java.applet.Applet)>"->"load.r r0";
+    "new java.awt.BorderLayout"
+    "load.r r0"->"new java.awt.BorderLayout";
+    "new java.awt.BorderLayout"->"dup1.r";
+    "specialinvoke <java.awt.BorderLayout: void <init>()>"
+    "dup1.r"->"specialinvoke <java.awt.BorderLayout: void <init>()>";
+    "virtualinvoke <java.awt.Container: void setLayout(java.awt.LayoutManager)>"
+    "specialinvoke <java.awt.BorderLayout: void <init>()>"->"virtualinvoke <java.awt.Container: void setLayout(java.awt.LayoutManager)>";
+    "new java.awt.Panel"
+    "virtualinvoke <java.awt.Container: void setLayout(java.awt.LayoutManager)>"->"new java.awt.Panel";
+    "store.r $r5"
+    "new java.awt.Panel"->"store.r $r5";
+    "load.r $r5"
+    "store.r $r5"->"load.r $r5";
+    "specialinvoke <java.awt.Panel: void <init>()>"
+    "load.r $r5"->"specialinvoke <java.awt.Panel: void <init>()>";
+    "specialinvoke <java.awt.Panel: void <init>()>"->"load.r $r5";
+    "new java.awt.Font"
+    "load.r $r5"->"new java.awt.Font";
+    "new java.awt.Font"->"dup1.r";
+    "push \"TimesRoman\""
+    "dup1.r"->"push \"TimesRoman\"";
+    "push 1"
+    "push \"TimesRoman\""->"push 1";
+    "push 12"
+    "push 1"->"push 12";
+    "specialinvoke <java.awt.Font: void <init>(java.lang.String,int,int)>"
+    "push 12"->"specialinvoke <java.awt.Font: void <init>(java.lang.String,int,int)>";
+    "virtualinvoke <java.awt.Component: void setFont(java.awt.Font)>"
+    "specialinvoke <java.awt.Font: void <init>(java.lang.String,int,int)>"->"virtualinvoke <java.awt.Component: void setFont(java.awt.Font)>";
+    "virtualinvoke <java.awt.Component: void setFont(java.awt.Font)>"->"load.r $r5";
+    "new java.awt.Label"
+    "load.r $r5"->"new java.awt.Label";
+    "new java.awt.Label"->"dup1.r";
+    "push \"Simulation Time:\""
+    "dup1.r"->"push \"Simulation Time:\"";
+    "push 2"
+    "push \"Simulation Time:\""->"push 2";
+    "specialinvoke <java.awt.Label: void <init>(java.lang.String,int)>"
+    "push 2"->"specialinvoke <java.awt.Label: void <init>(java.lang.String,int)>";
+    "virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>"
+    "specialinvoke <java.awt.Label: void <init>(java.lang.String,int)>"->"virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>";
+    "pop"
+    "virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>"->"pop";
+    "pop"->"new java.awt.Label";
+    "store.r $r9"
+    "new java.awt.Label"->"store.r $r9";
+    "load.r $r9"
+    "store.r $r9"->"load.r $r9";
+    "push \"1000\""
+    "load.r $r9"->"push \"1000\"";
+    "push 0"
+    "push \"1000\""->"push 0";
+    "push 0"->"specialinvoke <java.awt.Label: void <init>(java.lang.String,int)>";
+    "specialinvoke <java.awt.Label: void <init>(java.lang.String,int)>"->"load.r r0";
+    "load.r r0"->"load.r $r9";
+    "fieldput <PatternSimulator: java.awt.Label time_label>"
+    "load.r $r9"->"fieldput <PatternSimulator: java.awt.Label time_label>";
+    "fieldput <PatternSimulator: java.awt.Label time_label>"->"load.r $r5";
+    "load.r $r5"->"load.r $r9";
+    "load.r $r9"->"virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>";
+    "virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>"->"pop";
+    "pop"->"load.r $r5";
+    "load.r $r5"->"new java.awt.Label";
+    "new java.awt.Label"->"dup1.r";
+    "push \"Airplanes in system:\""
+    "dup1.r"->"push \"Airplanes in system:\"";
+    "push \"Airplanes in system:\""->"push 2";
+    "push 2"->"specialinvoke <java.awt.Label: void <init>(java.lang.String,int)>";
+    "specialinvoke <java.awt.Label: void <init>(java.lang.String,int)>"->"virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>";
+    "virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>"->"pop";
+    "pop"->"new java.awt.Label";
+    "new java.awt.Label"->"store.r $r9";
+    "store.r $r9"->"load.r $r9";
+    "push \"0\""
+    "load.r $r9"->"push \"0\"";
+    "push \"0\""->"push 0";
+    "push 0"->"specialinvoke <java.awt.Label: void <init>(java.lang.String,int)>";
+    "specialinvoke <java.awt.Label: void <init>(java.lang.String,int)>"->"load.r r0";
+    "load.r r0"->"load.r $r9";
+    "fieldput <PatternSimulator: java.awt.Label number_label>"
+    "load.r $r9"->"fieldput <PatternSimulator: java.awt.Label number_label>";
+    "fieldput <PatternSimulator: java.awt.Label number_label>"->"load.r $r5";
+    "load.r $r5"->"load.r $r9";
+    "load.r $r9"->"virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>";
+    "virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>"->"pop";
+    "pop"->"load.r $r5";
+    "load.r $r5"->"new java.awt.Label";
+    "new java.awt.Label"->"dup1.r";
+    "push \"     \""
+    "dup1.r"->"push \"     \"";
+    "specialinvoke <java.awt.Label: void <init>(java.lang.String)>"
+    "push \"     \""->"specialinvoke <java.awt.Label: void <init>(java.lang.String)>";
+    "specialinvoke <java.awt.Label: void <init>(java.lang.String)>"->"virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>";
+    "virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>"->"pop";
+    "new java.awt.Button"
+    "pop"->"new java.awt.Button";
+    "new java.awt.Button"->"store.r $r9";
+    "store.r $r9"->"load.r $r9";
+    "push \"Start Sim\""
+    "load.r $r9"->"push \"Start Sim\"";
+    "specialinvoke <java.awt.Button: void <init>(java.lang.String)>"
+    "push \"Start Sim\""->"specialinvoke <java.awt.Button: void <init>(java.lang.String)>";
+    "specialinvoke <java.awt.Button: void <init>(java.lang.String)>"->"load.r r0";
+    "load.r r0"->"load.r $r9";
+    "fieldput <PatternSimulator: java.awt.Button pause_button>"
+    "load.r $r9"->"fieldput <PatternSimulator: java.awt.Button pause_button>";
+    "fieldput <PatternSimulator: java.awt.Button pause_button>"->"load.r $r5";
+    "load.r $r5"->"load.r $r9";
+    "load.r $r9"->"virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>";
+    "virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>"->"pop";
+    "pop"->"load.r r0";
+    "fieldget <PatternSimulator: java.awt.Button pause_button>"
+    "load.r r0"->"fieldget <PatternSimulator: java.awt.Button pause_button>";
+    "virtualinvoke <java.awt.Component: void disable()>"
+    "fieldget <PatternSimulator: java.awt.Button pause_button>"->"virtualinvoke <java.awt.Component: void disable()>";
+    "virtualinvoke <java.awt.Component: void disable()>"->"load.r r0";
+    "push \"North\""
+    "load.r r0"->"push \"North\"";
+    "push \"North\""->"load.r $r5";
+    "virtualinvoke <java.awt.Container: java.awt.Component add(java.lang.String,java.awt.Component)>"
+    "load.r $r5"->"virtualinvoke <java.awt.Container: java.awt.Component add(java.lang.String,java.awt.Component)>";
+    "virtualinvoke <java.awt.Container: java.awt.Component add(java.lang.String,java.awt.Component)>"->"pop";
+    "pop"->"load.r r0";
+    "push \"Center\""
+    "load.r r0"->"push \"Center\"";
+    "push \"Center\""->"load.r r0";
+    "load.r r0"->"fieldget <PatternSimulator: SimCanvas canvas>";
+    "fieldget <PatternSimulator: SimCanvas canvas>"->"virtualinvoke <java.awt.Container: java.awt.Component add(java.lang.String,java.awt.Component)>";
+    "virtualinvoke <java.awt.Container: java.awt.Component add(java.lang.String,java.awt.Component)>"->"pop";
+    "return"
+    "pop"->"return";
+}

@@ -1,0 +1,50 @@
+digraph "" {
+    "r0 := @this: JavaDate"
+    "load.r r0"
+    "r0 := @this: JavaDate"->"load.r r0";
+    "push \"author\""
+    "load.r r0"->"push \"author\"";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"
+    "push \"author\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "store.r r1"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"store.r r1";
+    "load.r r1"
+    "store.r r1"->"load.r r1";
+    "ifnonnull load.r r1"
+    "load.r r1"->"ifnonnull load.r r1";
+    "ifnonnull load.r r1"->"load.r r0";
+    "push 0"
+    "load.r r0"->"push 0";
+    "fieldput <JavaDate: boolean right>"
+    "push 0"->"fieldput <JavaDate: boolean right>";
+    "fieldput <JavaDate: boolean right>"->"load.r r1";
+    "push \"Alan Scandella: shady_milkman@gmx.net\""
+    "load.r r1"->"push \"Alan Scandella: shady_milkman@gmx.net\"";
+    "virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>"
+    "push \"Alan Scandella: shady_milkman@gmx.net\""->"virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>";
+    "ifne load.r r0"
+    "virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>"->"ifne load.r r0";
+    "ifne load.r r0"->"load.r r0";
+    "load.r r0"->"push 0";
+    "push 0"->"fieldput <JavaDate: boolean right>";
+    "fieldput <JavaDate: boolean right>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "virtualinvoke <java.awt.Component: java.awt.Graphics getGraphics()>"
+    "load.r r0"->"virtualinvoke <java.awt.Component: java.awt.Graphics getGraphics()>";
+    "fieldput <JavaDate: java.awt.Graphics g>"
+    "virtualinvoke <java.awt.Component: java.awt.Graphics getGraphics()>"->"fieldput <JavaDate: java.awt.Graphics g>";
+    "fieldput <JavaDate: java.awt.Graphics g>"->"load.r r0";
+    "new java.util.Date"
+    "load.r r0"->"new java.util.Date";
+    "dup1.r"
+    "new java.util.Date"->"dup1.r";
+    "specialinvoke <java.util.Date: void <init>()>"
+    "dup1.r"->"specialinvoke <java.util.Date: void <init>()>";
+    "fieldput <JavaDate: java.util.Date current_time>"
+    "specialinvoke <java.util.Date: void <init>()>"->"fieldput <JavaDate: java.util.Date current_time>";
+    "fieldput <JavaDate: java.util.Date current_time>"->"load.r r0";
+    "virtualinvoke <JavaDate: void set_defaults()>"
+    "load.r r0"->"virtualinvoke <JavaDate: void set_defaults()>";
+    "return"
+    "virtualinvoke <JavaDate: void set_defaults()>"->"return";
+}

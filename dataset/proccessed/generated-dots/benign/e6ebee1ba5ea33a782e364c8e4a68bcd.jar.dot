@@ -1,0 +1,21 @@
+digraph "" {
+    "r0 := @this: tli_rbl"
+    "load.r r0"
+    "r0 := @this: tli_rbl"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "virtualinvoke <java.awt.Component: java.awt.Dimension getSize()>"
+    "load.r r0"->"virtualinvoke <java.awt.Component: java.awt.Dimension getSize()>";
+    "fieldget <java.awt.Dimension: int width>"
+    "virtualinvoke <java.awt.Component: java.awt.Dimension getSize()>"->"fieldget <java.awt.Dimension: int width>";
+    "fieldput <tli_rbl: int aW>"
+    "fieldget <java.awt.Dimension: int width>"->"fieldput <tli_rbl: int aW>";
+    "fieldput <tli_rbl: int aW>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"virtualinvoke <java.awt.Component: java.awt.Dimension getSize()>";
+    "fieldget <java.awt.Dimension: int height>"
+    "virtualinvoke <java.awt.Component: java.awt.Dimension getSize()>"->"fieldget <java.awt.Dimension: int height>";
+    "fieldput <tli_rbl: int aH>"
+    "fieldget <java.awt.Dimension: int height>"->"fieldput <tli_rbl: int aH>";
+    "return"
+    "fieldput <tli_rbl: int aH>"->"return";
+}

@@ -1,0 +1,118 @@
+digraph "" {
+    "r0 := @this: quickserv"
+    "load.r r0"
+    "r0 := @this: quickserv"->"load.r r0";
+    "virtualinvoke <quickserv: void checkRegID()>"
+    "load.r r0"->"virtualinvoke <quickserv: void checkRegID()>";
+    "virtualinvoke <quickserv: void checkRegID()>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "virtualinvoke <java.awt.Component: java.awt.Dimension size()>"
+    "load.r r0"->"virtualinvoke <java.awt.Component: java.awt.Dimension size()>";
+    "fieldget <java.awt.Dimension: int width>"
+    "virtualinvoke <java.awt.Component: java.awt.Dimension size()>"->"fieldget <java.awt.Dimension: int width>";
+    "fieldput <quickserv: int iWidth>"
+    "fieldget <java.awt.Dimension: int width>"->"fieldput <quickserv: int iWidth>";
+    "fieldput <quickserv: int iWidth>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"virtualinvoke <java.awt.Component: java.awt.Dimension size()>";
+    "fieldget <java.awt.Dimension: int height>"
+    "virtualinvoke <java.awt.Component: java.awt.Dimension size()>"->"fieldget <java.awt.Dimension: int height>";
+    "fieldput <quickserv: int iHeight>"
+    "fieldget <java.awt.Dimension: int height>"->"fieldput <quickserv: int iHeight>";
+    "fieldput <quickserv: int iHeight>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "fieldget <quickserv: int iWidth>"
+    "load.r r0"->"fieldget <quickserv: int iWidth>";
+    "fieldget <quickserv: int iWidth>"->"load.r r0";
+    "fieldget <quickserv: int iHeight>"
+    "load.r r0"->"fieldget <quickserv: int iHeight>";
+    "virtualinvoke <java.awt.Component: java.awt.Image createImage(int,int)>"
+    "fieldget <quickserv: int iHeight>"->"virtualinvoke <java.awt.Component: java.awt.Image createImage(int,int)>";
+    "fieldput <quickserv: java.awt.Image bbImage>"
+    "virtualinvoke <java.awt.Component: java.awt.Image createImage(int,int)>"->"fieldput <quickserv: java.awt.Image bbImage>";
+    "fieldput <quickserv: java.awt.Image bbImage>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "fieldget <quickserv: java.awt.Image bbImage>"
+    "load.r r0"->"fieldget <quickserv: java.awt.Image bbImage>";
+    "virtualinvoke <java.awt.Image: java.awt.Graphics getGraphics()>"
+    "fieldget <quickserv: java.awt.Image bbImage>"->"virtualinvoke <java.awt.Image: java.awt.Graphics getGraphics()>";
+    "fieldput <quickserv: java.awt.Graphics bbGraphics>"
+    "virtualinvoke <java.awt.Image: java.awt.Graphics getGraphics()>"->"fieldput <quickserv: java.awt.Graphics bbGraphics>";
+    "fieldput <quickserv: java.awt.Graphics bbGraphics>"->"load.r r0";
+    "new java.awt.Font"
+    "load.r r0"->"new java.awt.Font";
+    "dup1.r"
+    "new java.awt.Font"->"dup1.r";
+    "push \"SansSerif\""
+    "dup1.r"->"push \"SansSerif\"";
+    "push 0"
+    "push \"SansSerif\""->"push 0";
+    "push 9"
+    "push 0"->"push 9";
+    "specialinvoke <java.awt.Font: void <init>(java.lang.String,int,int)>"
+    "push 9"->"specialinvoke <java.awt.Font: void <init>(java.lang.String,int,int)>";
+    "fieldput <quickserv: java.awt.Font fFont>"
+    "specialinvoke <java.awt.Font: void <init>(java.lang.String,int,int)>"->"fieldput <quickserv: java.awt.Font fFont>";
+    "fieldput <quickserv: java.awt.Font fFont>"->"load.r r0";
+    "fieldget <quickserv: java.awt.Graphics bbGraphics>"
+    "load.r r0"->"fieldget <quickserv: java.awt.Graphics bbGraphics>";
+    "fieldget <quickserv: java.awt.Graphics bbGraphics>"->"load.r r0";
+    "fieldget <quickserv: java.awt.Font fFont>"
+    "load.r r0"->"fieldget <quickserv: java.awt.Font fFont>";
+    "virtualinvoke <java.awt.Graphics: void setFont(java.awt.Font)>"
+    "fieldget <quickserv: java.awt.Font fFont>"->"virtualinvoke <java.awt.Graphics: void setFont(java.awt.Font)>";
+    "virtualinvoke <java.awt.Graphics: void setFont(java.awt.Font)>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <quickserv: java.awt.Graphics bbGraphics>";
+    "virtualinvoke <java.awt.Graphics: java.awt.FontMetrics getFontMetrics()>"
+    "fieldget <quickserv: java.awt.Graphics bbGraphics>"->"virtualinvoke <java.awt.Graphics: java.awt.FontMetrics getFontMetrics()>";
+    "fieldput <quickserv: java.awt.FontMetrics fMetrics>"
+    "virtualinvoke <java.awt.Graphics: java.awt.FontMetrics getFontMetrics()>"->"fieldput <quickserv: java.awt.FontMetrics fMetrics>";
+    "fieldput <quickserv: java.awt.FontMetrics fMetrics>"->"load.r r0";
+    "push \"redirect\""
+    "load.r r0"->"push \"redirect\"";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"
+    "push \"redirect\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "store.r $r11"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"store.r $r11";
+    "load.r $r11"
+    "store.r $r11"->"load.r $r11";
+    "ifnull load.r r0"
+    "load.r $r11"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r r0";
+    "load.r r0"->"load.r $r11";
+    "fieldput <quickserv: java.lang.String sRedirect>"
+    "load.r $r11"->"fieldput <quickserv: java.lang.String sRedirect>";
+    "fieldput <quickserv: java.lang.String sRedirect>"->"load.r r0";
+    "push \"autoload\""
+    "load.r r0"->"push \"autoload\"";
+    "push \"autoload\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r r0";
+    "push 1"
+    "load.r r0"->"push 1";
+    "fieldput <quickserv: boolean bAuto>"
+    "push 1"->"fieldput <quickserv: boolean bAuto>";
+    "fieldput <quickserv: boolean bAuto>"->"load.r r0";
+    "virtualinvoke <quickserv: void loadLogo()>"
+    "load.r r0"->"virtualinvoke <quickserv: void loadLogo()>";
+    "virtualinvoke <quickserv: void loadLogo()>"->"load.r r0";
+    "push \"file\""
+    "load.r r0"->"push \"file\"";
+    "push \"file\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"store.r $r11";
+    "store.r $r11"->"load.r $r11";
+    "ifnonnull load.r r0"
+    "load.r $r11"->"ifnonnull load.r r0";
+    "ifnonnull load.r r0"->"load.r r0";
+    "virtualinvoke <quickserv: void parseSpecifiedItems()>"
+    "load.r r0"->"virtualinvoke <quickserv: void parseSpecifiedItems()>";
+    "return"
+    "virtualinvoke <quickserv: void parseSpecifiedItems()>"->"return";
+    "ifnonnull load.r r0"->"load.r r0";
+    "load.r r0"->"load.r $r11";
+    "virtualinvoke <quickserv: void parseSpecifiedFile(java.lang.String)>"
+    "load.r $r11"->"virtualinvoke <quickserv: void parseSpecifiedFile(java.lang.String)>";
+    "virtualinvoke <quickserv: void parseSpecifiedFile(java.lang.String)>"->"return";
+}

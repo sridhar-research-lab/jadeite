@@ -1,0 +1,125 @@
+digraph "" {
+    "r0 := @this: SnowApplet"
+    "load.r r0"
+    "r0 := @this: SnowApplet"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "virtualinvoke <java.awt.Component: java.awt.Dimension getSize()>"
+    "load.r r0"->"virtualinvoke <java.awt.Component: java.awt.Dimension getSize()>";
+    "fieldget <java.awt.Dimension: int width>"
+    "virtualinvoke <java.awt.Component: java.awt.Dimension getSize()>"->"fieldget <java.awt.Dimension: int width>";
+    "fieldput <SnowApplet: int appletsize_x>"
+    "fieldget <java.awt.Dimension: int width>"->"fieldput <SnowApplet: int appletsize_x>";
+    "fieldput <SnowApplet: int appletsize_x>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"virtualinvoke <java.awt.Component: java.awt.Dimension getSize()>";
+    "fieldget <java.awt.Dimension: int height>"
+    "virtualinvoke <java.awt.Component: java.awt.Dimension getSize()>"->"fieldget <java.awt.Dimension: int height>";
+    "fieldput <SnowApplet: int appletsize_y>"
+    "fieldget <java.awt.Dimension: int height>"->"fieldput <SnowApplet: int appletsize_y>";
+    "fieldput <SnowApplet: int appletsize_y>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "push \"Image\""
+    "load.r r0"->"push \"Image\"";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"
+    "push \"Image\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "fieldput <SnowApplet: java.lang.String paramImageFile>"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"fieldput <SnowApplet: java.lang.String paramImageFile>";
+    "fieldput <SnowApplet: java.lang.String paramImageFile>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "push \"Background\""
+    "load.r r0"->"push \"Background\"";
+    "push \"Background\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "fieldput <SnowApplet: java.lang.String paramBackground>"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"fieldput <SnowApplet: java.lang.String paramBackground>";
+    "fieldput <SnowApplet: java.lang.String paramBackground>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "push \"Flakes\""
+    "load.r r0"->"push \"Flakes\"";
+    "push \"Flakes\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "fieldput <SnowApplet: java.lang.String paramFlakes>"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"fieldput <SnowApplet: java.lang.String paramFlakes>";
+    "fieldput <SnowApplet: java.lang.String paramFlakes>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "push \"MinRad\""
+    "load.r r0"->"push \"MinRad\"";
+    "push \"MinRad\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "fieldput <SnowApplet: java.lang.String paramMinRad>"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"fieldput <SnowApplet: java.lang.String paramMinRad>";
+    "fieldput <SnowApplet: java.lang.String paramMinRad>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "push \"MaxRad\""
+    "load.r r0"->"push \"MaxRad\"";
+    "push \"MaxRad\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "fieldput <SnowApplet: java.lang.String paramMaxRad>"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"fieldput <SnowApplet: java.lang.String paramMaxRad>";
+    "fieldput <SnowApplet: java.lang.String paramMaxRad>"->"load.r r0";
+    "fieldget <SnowApplet: java.lang.String paramImageFile>"
+    "load.r r0"->"fieldget <SnowApplet: java.lang.String paramImageFile>";
+    "ifnull load.r r0"
+    "fieldget <SnowApplet: java.lang.String paramImageFile>"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "virtualinvoke <java.applet.Applet: java.net.URL getCodeBase()>"
+    "load.r r0"->"virtualinvoke <java.applet.Applet: java.net.URL getCodeBase()>";
+    "virtualinvoke <java.applet.Applet: java.net.URL getCodeBase()>"->"load.r r0";
+    "load.r r0"->"fieldget <SnowApplet: java.lang.String paramImageFile>";
+    "virtualinvoke <java.applet.Applet: java.awt.Image getImage(java.net.URL,java.lang.String)>"
+    "fieldget <SnowApplet: java.lang.String paramImageFile>"->"virtualinvoke <java.applet.Applet: java.awt.Image getImage(java.net.URL,java.lang.String)>";
+    "fieldput <SnowApplet: java.awt.Image snowImage>"
+    "virtualinvoke <java.applet.Applet: java.awt.Image getImage(java.net.URL,java.lang.String)>"->"fieldput <SnowApplet: java.awt.Image snowImage>";
+    "fieldput <SnowApplet: java.awt.Image snowImage>"->"load.r r0";
+    "fieldget <SnowApplet: java.lang.String paramBackground>"
+    "load.r r0"->"fieldget <SnowApplet: java.lang.String paramBackground>";
+    "fieldget <SnowApplet: java.lang.String paramBackground>"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"virtualinvoke <java.applet.Applet: java.net.URL getCodeBase()>";
+    "virtualinvoke <java.applet.Applet: java.net.URL getCodeBase()>"->"load.r r0";
+    "load.r r0"->"fieldget <SnowApplet: java.lang.String paramBackground>";
+    "fieldget <SnowApplet: java.lang.String paramBackground>"->"virtualinvoke <java.applet.Applet: java.awt.Image getImage(java.net.URL,java.lang.String)>";
+    "fieldput <SnowApplet: java.awt.Image backImage>"
+    "virtualinvoke <java.applet.Applet: java.awt.Image getImage(java.net.URL,java.lang.String)>"->"fieldput <SnowApplet: java.awt.Image backImage>";
+    "fieldput <SnowApplet: java.awt.Image backImage>"->"load.r r0";
+    "fieldget <SnowApplet: java.lang.String paramFlakes>"
+    "load.r r0"->"fieldget <SnowApplet: java.lang.String paramFlakes>";
+    "fieldget <SnowApplet: java.lang.String paramFlakes>"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <SnowApplet: java.lang.String paramFlakes>";
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"
+    "fieldget <SnowApplet: java.lang.String paramFlakes>"->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>";
+    "fieldput <SnowApplet: int snowFlakes>"
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"->"fieldput <SnowApplet: int snowFlakes>";
+    "goto load.r r0"
+    "fieldput <SnowApplet: int snowFlakes>"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "fieldget <SnowApplet: java.lang.String paramMaxRad>"
+    "load.r r0"->"fieldget <SnowApplet: java.lang.String paramMaxRad>";
+    "fieldget <SnowApplet: java.lang.String paramMaxRad>"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <SnowApplet: java.lang.String paramMaxRad>";
+    "fieldget <SnowApplet: java.lang.String paramMaxRad>"->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>";
+    "fieldput <SnowApplet: int maxRad>"
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"->"fieldput <SnowApplet: int maxRad>";
+    "fieldput <SnowApplet: int maxRad>"->"load.r r0";
+    "load.r r0"->"fieldget <SnowApplet: java.lang.String paramMaxRad>";
+    "ifnull return"
+    "fieldget <SnowApplet: java.lang.String paramMaxRad>"->"ifnull return";
+    "ifnull return"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "fieldget <SnowApplet: java.lang.String paramMinRad>"
+    "load.r r0"->"fieldget <SnowApplet: java.lang.String paramMinRad>";
+    "fieldget <SnowApplet: java.lang.String paramMinRad>"->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>";
+    "fieldput <SnowApplet: int minRad>"
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"->"fieldput <SnowApplet: int minRad>";
+    "return"
+    "fieldput <SnowApplet: int minRad>"->"return";
+    "ifnull load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "fieldget <SnowApplet: int flakesDefault>"
+    "load.r r0"->"fieldget <SnowApplet: int flakesDefault>";
+    "fieldget <SnowApplet: int flakesDefault>"->"fieldput <SnowApplet: int snowFlakes>";
+}

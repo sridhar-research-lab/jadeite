@@ -1,0 +1,125 @@
+digraph "" {
+    "r0 := @this: QuotesServer"
+    "load.r r0"
+    "r0 := @this: QuotesServer"->"load.r r0";
+    "push \"init start\""
+    "load.r r0"->"push \"init start\"";
+    "specialinvoke <QuotesServer: void info(java.lang.String)>"
+    "push \"init start\""->"specialinvoke <QuotesServer: void info(java.lang.String)>";
+    "specialinvoke <QuotesServer: void info(java.lang.String)>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "push \"LoginKey\""
+    "load.r r0"->"push \"LoginKey\"";
+    "virtualinvoke <QuotesServer: java.lang.String getParameter(java.lang.String)>"
+    "push \"LoginKey\""->"virtualinvoke <QuotesServer: java.lang.String getParameter(java.lang.String)>";
+    "fieldput <QuotesServer: java.lang.String loginKey>"
+    "virtualinvoke <QuotesServer: java.lang.String getParameter(java.lang.String)>"->"fieldput <QuotesServer: java.lang.String loginKey>";
+    "fieldput <QuotesServer: java.lang.String loginKey>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "push \"User\""
+    "load.r r0"->"push \"User\"";
+    "push \"User\""->"virtualinvoke <QuotesServer: java.lang.String getParameter(java.lang.String)>";
+    "fieldput <QuotesServer: java.lang.String user>"
+    "virtualinvoke <QuotesServer: java.lang.String getParameter(java.lang.String)>"->"fieldput <QuotesServer: java.lang.String user>";
+    "fieldput <QuotesServer: java.lang.String user>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "push \"TcpList\""
+    "load.r r0"->"push \"TcpList\"";
+    "push \"TcpList\""->"virtualinvoke <QuotesServer: java.lang.String getParameter(java.lang.String)>";
+    "push \",\""
+    "virtualinvoke <QuotesServer: java.lang.String getParameter(java.lang.String)>"->"push \",\"";
+    "specialinvoke <QuotesServer: java.util.Vector split(java.lang.String,java.lang.String)>"
+    "push \",\""->"specialinvoke <QuotesServer: java.util.Vector split(java.lang.String,java.lang.String)>";
+    "fieldput <QuotesServer: java.util.Vector tcpList>"
+    "specialinvoke <QuotesServer: java.util.Vector split(java.lang.String,java.lang.String)>"->"fieldput <QuotesServer: java.util.Vector tcpList>";
+    "fieldput <QuotesServer: java.util.Vector tcpList>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "push \"HttpList\""
+    "load.r r0"->"push \"HttpList\"";
+    "push \"HttpList\""->"virtualinvoke <QuotesServer: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <QuotesServer: java.lang.String getParameter(java.lang.String)>"->"push \",\"";
+    "push \",\""->"specialinvoke <QuotesServer: java.util.Vector split(java.lang.String,java.lang.String)>";
+    "fieldput <QuotesServer: java.util.Vector httpList>"
+    "specialinvoke <QuotesServer: java.util.Vector split(java.lang.String,java.lang.String)>"->"fieldput <QuotesServer: java.util.Vector httpList>";
+    "push \"Y\""
+    "fieldput <QuotesServer: java.util.Vector httpList>"->"push \"Y\"";
+    "push \"Y\""->"load.r r0";
+    "push \"Compress\""
+    "load.r r0"->"push \"Compress\"";
+    "push \"Compress\""->"virtualinvoke <QuotesServer: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <QuotesServer: java.lang.String getParameter(java.lang.String)>"->"load.r r0";
+    "push 0"
+    "load.r r0"->"push 0";
+    "fieldput <QuotesServer: boolean compress>"
+    "push 0"->"fieldput <QuotesServer: boolean compress>";
+    "virtualinvoke <java.lang.String: boolean equalsIgnoreCase(java.lang.String)>"
+    "fieldput <QuotesServer: boolean compress>"->"virtualinvoke <java.lang.String: boolean equalsIgnoreCase(java.lang.String)>";
+    "ifeq push \"Y\""
+    "virtualinvoke <java.lang.String: boolean equalsIgnoreCase(java.lang.String)>"->"ifeq push \"Y\"";
+    "ifeq push \"Y\""->"load.r r0";
+    "push 1"
+    "load.r r0"->"push 1";
+    "push 1"->"fieldput <QuotesServer: boolean compress>";
+    "fieldput <QuotesServer: boolean compress>"->"push \"Y\"";
+    "push \"Y\""->"load.r r0";
+    "push \"Encode\""
+    "load.r r0"->"push \"Encode\"";
+    "push \"Encode\""->"virtualinvoke <QuotesServer: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <QuotesServer: java.lang.String getParameter(java.lang.String)>"->"load.r r0";
+    "load.r r0"->"push 0";
+    "fieldput <QuotesServer: boolean encode>"
+    "push 0"->"fieldput <QuotesServer: boolean encode>";
+    "fieldput <QuotesServer: boolean encode>"->"virtualinvoke <java.lang.String: boolean equalsIgnoreCase(java.lang.String)>";
+    "ifeq load.r r0"
+    "virtualinvoke <java.lang.String: boolean equalsIgnoreCase(java.lang.String)>"->"ifeq load.r r0";
+    "ifeq load.r r0"->"load.r r0";
+    "load.r r0"->"push 1";
+    "push 1"->"fieldput <QuotesServer: boolean encode>";
+    "fieldput <QuotesServer: boolean encode>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "push \"RaiseMessageScript\""
+    "load.r r0"->"push \"RaiseMessageScript\"";
+    "push \"RaiseMessageScript\""->"virtualinvoke <QuotesServer: java.lang.String getParameter(java.lang.String)>";
+    "fieldput <QuotesServer: java.lang.String raiseMessageScript>"
+    "virtualinvoke <QuotesServer: java.lang.String getParameter(java.lang.String)>"->"fieldput <QuotesServer: java.lang.String raiseMessageScript>";
+    "fieldput <QuotesServer: java.lang.String raiseMessageScript>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "fieldget <QuotesServer: java.lang.String raiseMessageScript>"
+    "load.r r0"->"fieldget <QuotesServer: java.lang.String raiseMessageScript>";
+    "specialinvoke <QuotesServer: boolean hasValue(java.lang.String)>"
+    "fieldget <QuotesServer: java.lang.String raiseMessageScript>"->"specialinvoke <QuotesServer: boolean hasValue(java.lang.String)>";
+    "fieldput <QuotesServer: boolean raiseMessage>"
+    "specialinvoke <QuotesServer: boolean hasValue(java.lang.String)>"->"fieldput <QuotesServer: boolean raiseMessage>";
+    "fieldput <QuotesServer: boolean raiseMessage>"->"load.r r0";
+    "new java.util.Hashtable"
+    "load.r r0"->"new java.util.Hashtable";
+    "dup1.r"
+    "new java.util.Hashtable"->"dup1.r";
+    "specialinvoke <java.util.Hashtable: void <init>()>"
+    "dup1.r"->"specialinvoke <java.util.Hashtable: void <init>()>";
+    "fieldput <QuotesServer: java.util.Hashtable mktWatches>"
+    "specialinvoke <java.util.Hashtable: void <init>()>"->"fieldput <QuotesServer: java.util.Hashtable mktWatches>";
+    "fieldput <QuotesServer: java.util.Hashtable mktWatches>"->"load.r r0";
+    "new java.util.Vector"
+    "load.r r0"->"new java.util.Vector";
+    "new java.util.Vector"->"dup1.r";
+    "specialinvoke <java.util.Vector: void <init>()>"
+    "dup1.r"->"specialinvoke <java.util.Vector: void <init>()>";
+    "fieldput <QuotesServer: java.util.Vector mbpKeys>"
+    "specialinvoke <java.util.Vector: void <init>()>"->"fieldput <QuotesServer: java.util.Vector mbpKeys>";
+    "fieldput <QuotesServer: java.util.Vector mbpKeys>"->"load.r r0";
+    "load.r r0"->"new java.util.Hashtable";
+    "new java.util.Hashtable"->"dup1.r";
+    "dup1.r"->"specialinvoke <java.util.Hashtable: void <init>()>";
+    "fieldput <QuotesServer: java.util.Hashtable stats>"
+    "specialinvoke <java.util.Hashtable: void <init>()>"->"fieldput <QuotesServer: java.util.Hashtable stats>";
+    "fieldput <QuotesServer: java.util.Hashtable stats>"->"load.r r0";
+    "push \"init complete\""
+    "load.r r0"->"push \"init complete\"";
+    "push \"init complete\""->"specialinvoke <QuotesServer: void info(java.lang.String)>";
+    "return"
+    "specialinvoke <QuotesServer: void info(java.lang.String)>"->"return";
+}

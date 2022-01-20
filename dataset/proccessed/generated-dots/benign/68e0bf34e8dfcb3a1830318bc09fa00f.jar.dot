@@ -1,0 +1,343 @@
+digraph "" {
+    "r0 := @this: memorycheck"
+    "load.r r0"
+    "r0 := @this: memorycheck"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "specialinvoke <memorycheck: boolean unlock()>"
+    "load.r r0"->"specialinvoke <memorycheck: boolean unlock()>";
+    "fieldput <memorycheck: boolean lock>"
+    "specialinvoke <memorycheck: boolean unlock()>"->"fieldput <memorycheck: boolean lock>";
+    "fieldput <memorycheck: boolean lock>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "virtualinvoke <java.awt.Component: java.awt.Dimension size()>"
+    "load.r r0"->"virtualinvoke <java.awt.Component: java.awt.Dimension size()>";
+    "fieldget <java.awt.Dimension: int width>"
+    "virtualinvoke <java.awt.Component: java.awt.Dimension size()>"->"fieldget <java.awt.Dimension: int width>";
+    "fieldput <memorycheck: int w>"
+    "fieldget <java.awt.Dimension: int width>"->"fieldput <memorycheck: int w>";
+    "fieldput <memorycheck: int w>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"virtualinvoke <java.awt.Component: java.awt.Dimension size()>";
+    "fieldget <java.awt.Dimension: int height>"
+    "virtualinvoke <java.awt.Component: java.awt.Dimension size()>"->"fieldget <java.awt.Dimension: int height>";
+    "fieldput <memorycheck: int h>"
+    "fieldget <java.awt.Dimension: int height>"->"fieldput <memorycheck: int h>";
+    "fieldput <memorycheck: int h>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "fieldget <memorycheck: int w>"
+    "load.r r0"->"fieldget <memorycheck: int w>";
+    "fieldget <memorycheck: int w>"->"load.r r0";
+    "fieldget <memorycheck: int h>"
+    "load.r r0"->"fieldget <memorycheck: int h>";
+    "virtualinvoke <java.awt.Component: java.awt.Image createImage(int,int)>"
+    "fieldget <memorycheck: int h>"->"virtualinvoke <java.awt.Component: java.awt.Image createImage(int,int)>";
+    "fieldput <memorycheck: java.awt.Image bgi>"
+    "virtualinvoke <java.awt.Component: java.awt.Image createImage(int,int)>"->"fieldput <memorycheck: java.awt.Image bgi>";
+    "fieldput <memorycheck: java.awt.Image bgi>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "fieldget <memorycheck: java.awt.Image bgi>"
+    "load.r r0"->"fieldget <memorycheck: java.awt.Image bgi>";
+    "virtualinvoke <java.awt.Image: java.awt.Graphics getGraphics()>"
+    "fieldget <memorycheck: java.awt.Image bgi>"->"virtualinvoke <java.awt.Image: java.awt.Graphics getGraphics()>";
+    "fieldput <memorycheck: java.awt.Graphics bgg>"
+    "virtualinvoke <java.awt.Image: java.awt.Graphics getGraphics()>"->"fieldput <memorycheck: java.awt.Graphics bgg>";
+    "fieldput <memorycheck: java.awt.Graphics bgg>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "fieldget <memorycheck: java.awt.Graphics bgg>"
+    "load.r r0"->"fieldget <memorycheck: java.awt.Graphics bgg>";
+    "virtualinvoke <java.awt.Graphics: java.awt.FontMetrics getFontMetrics()>"
+    "fieldget <memorycheck: java.awt.Graphics bgg>"->"virtualinvoke <java.awt.Graphics: java.awt.FontMetrics getFontMetrics()>";
+    "fieldput <memorycheck: java.awt.FontMetrics fm>"
+    "virtualinvoke <java.awt.Graphics: java.awt.FontMetrics getFontMetrics()>"->"fieldput <memorycheck: java.awt.FontMetrics fm>";
+    "fieldput <memorycheck: java.awt.FontMetrics fm>"->"load.r r0";
+    "new java.awt.Color"
+    "load.r r0"->"new java.awt.Color";
+    "dup1.r"
+    "new java.awt.Color"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "push \"BGCOLOR\""
+    "load.r r0"->"push \"BGCOLOR\"";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"
+    "push \"BGCOLOR\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "push 16"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"push 16";
+    "push 0"
+    "push 16"->"push 0";
+    "virtualinvoke <memorycheck: int parsenum(java.lang.String,int,int)>"
+    "push 0"->"virtualinvoke <memorycheck: int parsenum(java.lang.String,int,int)>";
+    "specialinvoke <java.awt.Color: void <init>(int)>"
+    "virtualinvoke <memorycheck: int parsenum(java.lang.String,int,int)>"->"specialinvoke <java.awt.Color: void <init>(int)>";
+    "fieldput <memorycheck: java.awt.Color bgcolor>"
+    "specialinvoke <java.awt.Color: void <init>(int)>"->"fieldput <memorycheck: java.awt.Color bgcolor>";
+    "fieldput <memorycheck: java.awt.Color bgcolor>"->"load.r r0";
+    "load.r r0"->"new java.awt.Color";
+    "new java.awt.Color"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "push \"TEXTCOLOR\""
+    "load.r r0"->"push \"TEXTCOLOR\"";
+    "push \"TEXTCOLOR\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"push 16";
+    "push 16776960"
+    "push 16"->"push 16776960";
+    "push 16776960"->"virtualinvoke <memorycheck: int parsenum(java.lang.String,int,int)>";
+    "virtualinvoke <memorycheck: int parsenum(java.lang.String,int,int)>"->"specialinvoke <java.awt.Color: void <init>(int)>";
+    "fieldput <memorycheck: java.awt.Color textcolor>"
+    "specialinvoke <java.awt.Color: void <init>(int)>"->"fieldput <memorycheck: java.awt.Color textcolor>";
+    "fieldput <memorycheck: java.awt.Color textcolor>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "push \"ROWS\""
+    "load.r r0"->"push \"ROWS\"";
+    "push \"ROWS\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "push 10"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"push 10";
+    "push 10"->"push 0";
+    "push 0"->"virtualinvoke <memorycheck: int parsenum(java.lang.String,int,int)>";
+    "fieldput <memorycheck: int rows>"
+    "virtualinvoke <memorycheck: int parsenum(java.lang.String,int,int)>"->"fieldput <memorycheck: int rows>";
+    "fieldput <memorycheck: int rows>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "push \"COLS\""
+    "load.r r0"->"push \"COLS\"";
+    "push \"COLS\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"push 10";
+    "push 10"->"push 0";
+    "push 0"->"virtualinvoke <memorycheck: int parsenum(java.lang.String,int,int)>";
+    "fieldput <memorycheck: int cols>"
+    "virtualinvoke <memorycheck: int parsenum(java.lang.String,int,int)>"->"fieldput <memorycheck: int cols>";
+    "fieldput <memorycheck: int cols>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "push \"PREFIX\""
+    "load.r r0"->"push \"PREFIX\"";
+    "push \"PREFIX\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "fieldput <memorycheck: java.lang.String prefix>"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"fieldput <memorycheck: java.lang.String prefix>";
+    "fieldput <memorycheck: java.lang.String prefix>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "push \"POSTFIX\""
+    "load.r r0"->"push \"POSTFIX\"";
+    "push \"POSTFIX\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "fieldput <memorycheck: java.lang.String postfix>"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"fieldput <memorycheck: java.lang.String postfix>";
+    "fieldput <memorycheck: java.lang.String postfix>"->"load.r r0";
+    "fieldget <memorycheck: int rows>"
+    "load.r r0"->"fieldget <memorycheck: int rows>";
+    "fieldget <memorycheck: int rows>"->"load.r r0";
+    "fieldget <memorycheck: int cols>"
+    "load.r r0"->"fieldget <memorycheck: int cols>";
+    "mul.i"
+    "fieldget <memorycheck: int cols>"->"mul.i";
+    "push 2"
+    "mul.i"->"push 2";
+    "div.i"
+    "push 2"->"div.i";
+    "store.i i0"
+    "div.i"->"store.i i0";
+    "store.i i0"->"load.r r0";
+    "load.i i0"
+    "load.r r0"->"load.i i0";
+    "load.i i0"->"push 2";
+    "push 2"->"mul.i";
+    "newarray"
+    "mul.i"->"newarray";
+    "fieldput <memorycheck: int[] indexes>"
+    "newarray"->"fieldput <memorycheck: int[] indexes>";
+    "fieldput <memorycheck: int[] indexes>"->"load.r r0";
+    "load.r r0"->"load.i i0";
+    "load.i i0"->"push 2";
+    "push 2"->"mul.i";
+    "mul.i"->"newarray";
+    "fieldput <memorycheck: boolean[] show>"
+    "newarray"->"fieldput <memorycheck: boolean[] show>";
+    "fieldput <memorycheck: boolean[] show>"->"push 0";
+    "store.i i20"
+    "push 0"->"store.i i20";
+    "goto load.i i20"
+    "store.i i20"->"goto load.i i20";
+    "load.i i20"
+    "goto load.i i20"->"load.i i20";
+    "load.i i20"->"load.i i0";
+    "ifcmplt.i load.r r0"
+    "load.i i0"->"ifcmplt.i load.r r0";
+    "ifcmplt.i load.r r0"->"push 0";
+    "push 0"->"store.i i20";
+    "store.i i20"->"push 0";
+    "store.i i22"
+    "push 0"->"store.i i22";
+    "goto load.i i22"
+    "store.i i22"->"goto load.i i22";
+    "load.i i22"
+    "goto load.i i22"->"load.i i22";
+    "load.i i22"->"load.i i0";
+    "ifcmplt.i staticinvoke <java.lang.Math: double random()>"
+    "load.i i0"->"ifcmplt.i staticinvoke <java.lang.Math: double random()>";
+    "ifcmplt.i staticinvoke <java.lang.Math: double random()>"->"load.r r0";
+    "new java.awt.MediaTracker"
+    "load.r r0"->"new java.awt.MediaTracker";
+    "new java.awt.MediaTracker"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "specialinvoke <java.awt.MediaTracker: void <init>(java.awt.Component)>"
+    "load.r r0"->"specialinvoke <java.awt.MediaTracker: void <init>(java.awt.Component)>";
+    "fieldput <memorycheck: java.awt.MediaTracker mt>"
+    "specialinvoke <java.awt.MediaTracker: void <init>(java.awt.Component)>"->"fieldput <memorycheck: java.awt.MediaTracker mt>";
+    "fieldput <memorycheck: java.awt.MediaTracker mt>"->"load.r r0";
+    "load.r r0"->"load.i i0";
+    "push 1"
+    "load.i i0"->"push 1";
+    "add.i"
+    "push 1"->"add.i";
+    "add.i"->"newarray";
+    "fieldput <memorycheck: java.awt.Image[] ims>"
+    "newarray"->"fieldput <memorycheck: java.awt.Image[] ims>";
+    "fieldput <memorycheck: java.awt.Image[] ims>"->"push 0";
+    "push 0"->"store.i i20";
+    "store.i i20"->"goto load.i i20";
+    "goto load.i i20"->"load.i i20";
+    "load.i i20"->"load.i i0";
+    "load.i i0"->"push 1";
+    "push 1"->"add.i";
+    "add.i"->"ifcmplt.i load.r r0";
+    "ifcmplt.i load.r r0"->"load.r r0";
+    "fieldget <memorycheck: java.awt.MediaTracker mt>"
+    "load.r r0"->"fieldget <memorycheck: java.awt.MediaTracker mt>";
+    "fieldget <memorycheck: java.awt.MediaTracker mt>"->"push 1";
+    "virtualinvoke <java.awt.MediaTracker: boolean checkAll(boolean)>"
+    "push 1"->"virtualinvoke <java.awt.MediaTracker: boolean checkAll(boolean)>";
+    "pop"
+    "virtualinvoke <java.awt.MediaTracker: boolean checkAll(boolean)>"->"pop";
+    "pop"->"load.r r0";
+    "load.r r0"->"push 0";
+    "fieldput <memorycheck: int errors>"
+    "push 0"->"fieldput <memorycheck: int errors>";
+    "fieldput <memorycheck: int errors>"->"load.r r0";
+    "load.r r0"->"push 0";
+    "fieldput <memorycheck: int clicks>"
+    "push 0"->"fieldput <memorycheck: int clicks>";
+    "return"
+    "fieldput <memorycheck: int clicks>"->"return";
+    "ifcmplt.i load.r r0"->"load.r r0";
+    "fieldget <memorycheck: java.awt.Image[] ims>"
+    "load.r r0"->"fieldget <memorycheck: java.awt.Image[] ims>";
+    "fieldget <memorycheck: java.awt.Image[] ims>"->"load.i i20";
+    "load.i i20"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "virtualinvoke <java.applet.Applet: java.net.URL getCodeBase()>"
+    "load.r r0"->"virtualinvoke <java.applet.Applet: java.net.URL getCodeBase()>";
+    "new java.lang.StringBuffer"
+    "virtualinvoke <java.applet.Applet: java.net.URL getCodeBase()>"->"new java.lang.StringBuffer";
+    "new java.lang.StringBuffer"->"dup1.r";
+    "specialinvoke <java.lang.StringBuffer: void <init>()>"
+    "dup1.r"->"specialinvoke <java.lang.StringBuffer: void <init>()>";
+    "specialinvoke <java.lang.StringBuffer: void <init>()>"->"load.r r0";
+    "fieldget <memorycheck: java.lang.String prefix>"
+    "load.r r0"->"fieldget <memorycheck: java.lang.String prefix>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"
+    "fieldget <memorycheck: java.lang.String prefix>"->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"load.i i20";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(int)>"
+    "load.i i20"->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(int)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(int)>"->"load.r r0";
+    "fieldget <memorycheck: java.lang.String postfix>"
+    "load.r r0"->"fieldget <memorycheck: java.lang.String postfix>";
+    "fieldget <memorycheck: java.lang.String postfix>"->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>"
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>";
+    "virtualinvoke <java.applet.Applet: java.awt.Image getImage(java.net.URL,java.lang.String)>"
+    "virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>"->"virtualinvoke <java.applet.Applet: java.awt.Image getImage(java.net.URL,java.lang.String)>";
+    "arraywrite.r"
+    "virtualinvoke <java.applet.Applet: java.awt.Image getImage(java.net.URL,java.lang.String)>"->"arraywrite.r";
+    "arraywrite.r"->"load.r r0";
+    "load.r r0"->"fieldget <memorycheck: java.awt.MediaTracker mt>";
+    "fieldget <memorycheck: java.awt.MediaTracker mt>"->"load.r r0";
+    "load.r r0"->"fieldget <memorycheck: java.awt.Image[] ims>";
+    "fieldget <memorycheck: java.awt.Image[] ims>"->"load.i i20";
+    "arrayread.r"
+    "load.i i20"->"arrayread.r";
+    "arrayread.r"->"load.i i20";
+    "virtualinvoke <java.awt.MediaTracker: void addImage(java.awt.Image,int)>"
+    "load.i i20"->"virtualinvoke <java.awt.MediaTracker: void addImage(java.awt.Image,int)>";
+    "inc.i i20 1"
+    "virtualinvoke <java.awt.MediaTracker: void addImage(java.awt.Image,int)>"->"inc.i i20 1";
+    "staticinvoke <java.lang.Math: double random()>"
+    "ifcmplt.i staticinvoke <java.lang.Math: double random()>"->"staticinvoke <java.lang.Math: double random()>";
+    "staticinvoke <java.lang.Math: double random()>"->"load.i i0";
+    "i2d"
+    "load.i i0"->"i2d";
+    "mul.d"
+    "i2d"->"mul.d";
+    "push 2.0"
+    "mul.d"->"push 2.0";
+    "push 2.0"->"mul.d";
+    "d2i"
+    "mul.d"->"d2i";
+    "store.i i23"
+    "d2i"->"store.i i23";
+    "store.i i23"->"load.r r0";
+    "fieldget <memorycheck: int[] indexes>"
+    "load.r r0"->"fieldget <memorycheck: int[] indexes>";
+    "load.i i23"
+    "fieldget <memorycheck: int[] indexes>"->"load.i i23";
+    "arrayread.i"
+    "load.i i23"->"arrayread.i";
+    "ifne staticinvoke <java.lang.Math: double random()>"
+    "arrayread.i"->"ifne staticinvoke <java.lang.Math: double random()>";
+    "ifne staticinvoke <java.lang.Math: double random()>"->"load.r r0";
+    "load.r r0"->"fieldget <memorycheck: int[] indexes>";
+    "fieldget <memorycheck: int[] indexes>"->"load.i i23";
+    "load.i i23"->"load.i i22";
+    "load.i i22"->"push 1";
+    "push 1"->"add.i";
+    "arraywrite.i"
+    "add.i"->"arraywrite.i";
+    "arraywrite.i"->"staticinvoke <java.lang.Math: double random()>";
+    "staticinvoke <java.lang.Math: double random()>"->"load.i i0";
+    "load.i i0"->"i2d";
+    "i2d"->"mul.d";
+    "mul.d"->"push 2.0";
+    "push 2.0"->"mul.d";
+    "mul.d"->"d2i";
+    "d2i"->"store.i i23";
+    "store.i i23"->"load.r r0";
+    "load.r r0"->"fieldget <memorycheck: int[] indexes>";
+    "fieldget <memorycheck: int[] indexes>"->"load.i i23";
+    "load.i i23"->"arrayread.i";
+    "arrayread.i"->"ifne staticinvoke <java.lang.Math: double random()>";
+    "ifne staticinvoke <java.lang.Math: double random()>"->"load.r r0";
+    "load.r r0"->"fieldget <memorycheck: int[] indexes>";
+    "fieldget <memorycheck: int[] indexes>"->"load.i i23";
+    "load.i i23"->"load.i i22";
+    "load.i i22"->"push 1";
+    "push 1"->"add.i";
+    "add.i"->"arraywrite.i";
+    "arraywrite.i"->"load.r r0";
+    "fieldget <memorycheck: boolean[] show>"
+    "load.r r0"->"fieldget <memorycheck: boolean[] show>";
+    "fieldget <memorycheck: boolean[] show>"->"load.i i20";
+    "load.i i20"->"push 0";
+    "arraywrite.b"
+    "push 0"->"arraywrite.b";
+    "arraywrite.b"->"load.r r0";
+    "load.r r0"->"fieldget <memorycheck: boolean[] show>";
+    "fieldget <memorycheck: boolean[] show>"->"load.i i20";
+    "load.i i20"->"push 1";
+    "push 1"->"add.i";
+    "dup1.i"
+    "add.i"->"dup1.i";
+    "dup1.i"->"push 1";
+    "push 1"->"add.i";
+    "add.i"->"store.i i20";
+    "store.i i20"->"push 0";
+    "push 0"->"arraywrite.b";
+    "inc.i i22 1"
+    "arraywrite.b"->"inc.i i22 1";
+    "ifcmplt.i load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <memorycheck: int[] indexes>";
+    "fieldget <memorycheck: int[] indexes>"->"load.i i20";
+    "load.i i20"->"push 0";
+    "push 0"->"arraywrite.i";
+    "arraywrite.i"->"inc.i i20 1";
+}

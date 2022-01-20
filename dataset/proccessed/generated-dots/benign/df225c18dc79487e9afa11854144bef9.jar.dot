@@ -1,0 +1,46 @@
+digraph "" {
+    "r0 := @this: soht.client.java.console.AppletProxy"
+    "load.r r0"
+    "r0 := @this: soht.client.java.console.AppletProxy"->"load.r r0";
+    "new soht.client.java.configuration.ConfigurationManager"
+    "load.r r0"->"new soht.client.java.configuration.ConfigurationManager";
+    "dup1.r"
+    "new soht.client.java.configuration.ConfigurationManager"->"dup1.r";
+    "specialinvoke <soht.client.java.configuration.ConfigurationManager: void <init>()>"
+    "dup1.r"->"specialinvoke <soht.client.java.configuration.ConfigurationManager: void <init>()>";
+    "fieldput <soht.client.java.console.AppletProxy: soht.client.java.configuration.ConfigurationManager configurationManager>"
+    "specialinvoke <soht.client.java.configuration.ConfigurationManager: void <init>()>"->"fieldput <soht.client.java.console.AppletProxy: soht.client.java.configuration.ConfigurationManager configurationManager>";
+    "fieldput <soht.client.java.console.AppletProxy: soht.client.java.configuration.ConfigurationManager configurationManager>"->"load.r r0";
+    "fieldget <soht.client.java.console.AppletProxy: soht.client.java.configuration.ConfigurationManager configurationManager>"
+    "load.r r0"->"fieldget <soht.client.java.console.AppletProxy: soht.client.java.configuration.ConfigurationManager configurationManager>";
+    "ifnonnull load.r r0"
+    "fieldget <soht.client.java.console.AppletProxy: soht.client.java.configuration.ConfigurationManager configurationManager>"->"ifnonnull load.r r0";
+    "staticget <java.lang.System: java.io.PrintStream out>"
+    "ifnonnull load.r r0"->"staticget <java.lang.System: java.io.PrintStream out>";
+    "push \"Unable to configure the configurationmanager\""
+    "staticget <java.lang.System: java.io.PrintStream out>"->"push \"Unable to configure the configurationmanager\"";
+    "virtualinvoke <java.io.PrintStream: void println(java.lang.String)>"
+    "push \"Unable to configure the configurationmanager\""->"virtualinvoke <java.io.PrintStream: void println(java.lang.String)>";
+    "return"
+    "virtualinvoke <java.io.PrintStream: void println(java.lang.String)>"->"return";
+    "virtualinvoke <java.io.PrintStream: void println(java.lang.String)>"->"staticget <java.lang.System: java.io.PrintStream out>";
+    "store.r r0"
+    "staticget <java.lang.System: java.io.PrintStream out>"->"store.r r0";
+    "virtualinvoke <java.lang.Exception: java.lang.String getMessage()>"
+    "store.r r0"->"virtualinvoke <java.lang.Exception: java.lang.String getMessage()>";
+    "store.r $r7"
+    "virtualinvoke <java.lang.Exception: java.lang.String getMessage()>"->"store.r $r7";
+    "store.r $r7"->"load.r r0";
+    "load.r $r7"
+    "load.r r0"->"load.r $r7";
+    "load.r $r7"->"virtualinvoke <java.io.PrintStream: void println(java.lang.String)>";
+    "virtualinvoke <java.io.PrintStream: void println(java.lang.String)>"->"return";
+    "ifnonnull load.r r0"->"load.r r0";
+    "virtualinvoke <soht.client.java.console.AppletProxy: void readParameters()>"
+    "load.r r0"->"virtualinvoke <soht.client.java.console.AppletProxy: void readParameters()>";
+    "virtualinvoke <soht.client.java.console.AppletProxy: void readParameters()>"->"load.r r0";
+    "virtualinvoke <soht.client.java.console.AppletProxy: void initGraphics()>"
+    "load.r r0"->"virtualinvoke <soht.client.java.console.AppletProxy: void initGraphics()>";
+    "goto return"
+    "virtualinvoke <soht.client.java.console.AppletProxy: void initGraphics()>"->"goto return";
+}

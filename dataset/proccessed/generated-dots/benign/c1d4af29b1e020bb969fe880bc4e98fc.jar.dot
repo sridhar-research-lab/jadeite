@@ -1,0 +1,43 @@
+digraph "" {
+    "r0 := @this: ViewTree"
+    "load.r r0"
+    "r0 := @this: ViewTree"->"load.r r0";
+    "specialinvoke <ViewTree: void initForm()>"
+    "load.r r0"->"specialinvoke <ViewTree: void initForm()>";
+    "specialinvoke <ViewTree: void initForm()>"->"load.r r0";
+    "specialinvoke <ViewTree: void usePageParams()>"
+    "load.r r0"->"specialinvoke <ViewTree: void usePageParams()>";
+    "specialinvoke <ViewTree: void usePageParams()>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "virtualinvoke <java.awt.Component: java.awt.Dimension getSize()>"
+    "load.r r0"->"virtualinvoke <java.awt.Component: java.awt.Dimension getSize()>";
+    "fieldget <java.awt.Dimension: int width>"
+    "virtualinvoke <java.awt.Component: java.awt.Dimension getSize()>"->"fieldget <java.awt.Dimension: int width>";
+    "fieldget <java.awt.Dimension: int width>"->"load.r r0";
+    "load.r r0"->"virtualinvoke <java.awt.Component: java.awt.Dimension getSize()>";
+    "fieldget <java.awt.Dimension: int height>"
+    "virtualinvoke <java.awt.Component: java.awt.Dimension getSize()>"->"fieldget <java.awt.Dimension: int height>";
+    "virtualinvoke <java.awt.Component: java.awt.Image createImage(int,int)>"
+    "fieldget <java.awt.Dimension: int height>"->"virtualinvoke <java.awt.Component: java.awt.Image createImage(int,int)>";
+    "fieldput <ViewTree: java.awt.Image imgBuffer>"
+    "virtualinvoke <java.awt.Component: java.awt.Image createImage(int,int)>"->"fieldput <ViewTree: java.awt.Image imgBuffer>";
+    "fieldput <ViewTree: java.awt.Image imgBuffer>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "fieldget <ViewTree: java.awt.Image imgBuffer>"
+    "load.r r0"->"fieldget <ViewTree: java.awt.Image imgBuffer>";
+    "virtualinvoke <java.awt.Image: java.awt.Graphics getGraphics()>"
+    "fieldget <ViewTree: java.awt.Image imgBuffer>"->"virtualinvoke <java.awt.Image: java.awt.Graphics getGraphics()>";
+    "fieldput <ViewTree: java.awt.Graphics grpSurface>"
+    "virtualinvoke <java.awt.Image: java.awt.Graphics getGraphics()>"->"fieldput <ViewTree: java.awt.Graphics grpSurface>";
+    "fieldput <ViewTree: java.awt.Graphics grpSurface>"->"load.r r0";
+    "fieldget <ViewTree: java.awt.Graphics grpSurface>"
+    "load.r r0"->"fieldget <ViewTree: java.awt.Graphics grpSurface>";
+    "fieldget <ViewTree: java.awt.Graphics grpSurface>"->"load.r r0";
+    "fieldget <ViewTree: java.awt.Font fFontData>"
+    "load.r r0"->"fieldget <ViewTree: java.awt.Font fFontData>";
+    "virtualinvoke <java.awt.Graphics: void setFont(java.awt.Font)>"
+    "fieldget <ViewTree: java.awt.Font fFontData>"->"virtualinvoke <java.awt.Graphics: void setFont(java.awt.Font)>";
+    "return"
+    "virtualinvoke <java.awt.Graphics: void setFont(java.awt.Font)>"->"return";
+}

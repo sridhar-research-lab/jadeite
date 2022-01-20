@@ -1,0 +1,375 @@
+digraph "" {
+    "r0 := @this: JTOC"
+    "push \"JTOC::init\""
+    "r0 := @this: JTOC"->"push \"JTOC::init\"";
+    "staticinvoke <TocDebug: void TraceL1(java.lang.String)>"
+    "push \"JTOC::init\""->"staticinvoke <TocDebug: void TraceL1(java.lang.String)>";
+    "push 0"
+    "staticinvoke <TocDebug: void TraceL1(java.lang.String)>"->"push 0";
+    "load.r r0"
+    "push 0"->"load.r r0";
+    "staticinvoke <TocUtil: java.awt.Frame GetFrame(java.awt.Component)>"
+    "load.r r0"->"staticinvoke <TocUtil: java.awt.Frame GetFrame(java.awt.Component)>";
+    "staticinvoke <TocDebug: void Initialize(boolean,java.awt.Frame)>"
+    "staticinvoke <TocUtil: java.awt.Frame GetFrame(java.awt.Component)>"->"staticinvoke <TocDebug: void Initialize(boolean,java.awt.Frame)>";
+    "push 2"
+    "staticinvoke <TocDebug: void Initialize(boolean,java.awt.Frame)>"->"push 2";
+    "staticinvoke <TocDebug: void SetTraceLevel(int)>"
+    "push 2"->"staticinvoke <TocDebug: void SetTraceLevel(int)>";
+    "staticinvoke <TocDebug: void SetTraceLevel(int)>"->"load.r r0";
+    "specialinvoke <java.applet.Applet: void init()>"
+    "load.r r0"->"specialinvoke <java.applet.Applet: void init()>";
+    "specialinvoke <java.applet.Applet: void init()>"->"load.r r0";
+    "new JTree"
+    "load.r r0"->"new JTree";
+    "dup1.r"
+    "new JTree"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "specialinvoke <JTree: void <init>(java.applet.Applet)>"
+    "load.r r0"->"specialinvoke <JTree: void <init>(java.applet.Applet)>";
+    "fieldput <JTOC: JTree Tree>"
+    "specialinvoke <JTree: void <init>(java.applet.Applet)>"->"fieldput <JTOC: JTree Tree>";
+    "fieldput <JTOC: JTree Tree>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "fieldget <JTOC: JTree Tree>"
+    "load.r r0"->"fieldget <JTOC: JTree Tree>";
+    "fieldget <JTree: JTreeView m_TreeView>"
+    "fieldget <JTOC: JTree Tree>"->"fieldget <JTree: JTreeView m_TreeView>";
+    "fieldput <JTOC: JTreeView TreeView>"
+    "fieldget <JTree: JTreeView m_TreeView>"->"fieldput <JTOC: JTreeView TreeView>";
+    "fieldput <JTOC: JTreeView TreeView>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "virtualinvoke <java.applet.Applet: java.applet.AppletContext getAppletContext()>"
+    "load.r r0"->"virtualinvoke <java.applet.Applet: java.applet.AppletContext getAppletContext()>";
+    "fieldput <JTOC: java.applet.AppletContext Browser>"
+    "virtualinvoke <java.applet.Applet: java.applet.AppletContext getAppletContext()>"->"fieldput <JTOC: java.applet.AppletContext Browser>";
+    "fieldput <JTOC: java.applet.AppletContext Browser>"->"load.r r0";
+    "push null"
+    "load.r r0"->"push null";
+    "virtualinvoke <java.awt.Container: void setLayout(java.awt.LayoutManager)>"
+    "push null"->"virtualinvoke <java.awt.Container: void setLayout(java.awt.LayoutManager)>";
+    "virtualinvoke <java.awt.Container: void setLayout(java.awt.LayoutManager)>"->"load.r r0";
+    "virtualinvoke <java.awt.Panel: void addNotify()>"
+    "load.r r0"->"virtualinvoke <java.awt.Panel: void addNotify()>";
+    "virtualinvoke <java.awt.Panel: void addNotify()>"->"load.r r0";
+    "virtualinvoke <java.applet.Applet: java.net.URL getCodeBase()>"
+    "load.r r0"->"virtualinvoke <java.applet.Applet: java.net.URL getCodeBase()>";
+    "staticput <JTOC: java.net.URL codebase>"
+    "virtualinvoke <java.applet.Applet: java.net.URL getCodeBase()>"->"staticput <JTOC: java.net.URL codebase>";
+    "staticput <JTOC: java.net.URL codebase>"->"load.r r0";
+    "push \"ExtDll\""
+    "load.r r0"->"push \"ExtDll\"";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"
+    "push \"ExtDll\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "store.r $r59"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"store.r $r59";
+    "load.r $r59"
+    "store.r $r59"->"load.r $r59";
+    "load.r $r59"->"push 0";
+    "push 1"
+    "push 0"->"push 1";
+    "virtualinvoke <java.lang.String: java.lang.String substring(int,int)>"
+    "push 1"->"virtualinvoke <java.lang.String: java.lang.String substring(int,int)>";
+    "push \"/\""
+    "virtualinvoke <java.lang.String: java.lang.String substring(int,int)>"->"push \"/\"";
+    "virtualinvoke <java.lang.String: int compareTo(java.lang.String)>"
+    "push \"/\""->"virtualinvoke <java.lang.String: int compareTo(java.lang.String)>";
+    "ifne new java.lang.StringBuffer"
+    "virtualinvoke <java.lang.String: int compareTo(java.lang.String)>"->"ifne new java.lang.StringBuffer";
+    "ifne new java.lang.StringBuffer"->"load.r $r59";
+    "staticput <JTOC: java.lang.String szServerURL>"
+    "load.r $r59"->"staticput <JTOC: java.lang.String szServerURL>";
+    "goto new java.lang.StringBuffer"
+    "staticput <JTOC: java.lang.String szServerURL>"->"goto new java.lang.StringBuffer";
+    "new java.lang.StringBuffer"
+    "goto new java.lang.StringBuffer"->"new java.lang.StringBuffer";
+    "new java.lang.StringBuffer"->"dup1.r";
+    "specialinvoke <java.lang.StringBuffer: void <init>()>"
+    "dup1.r"->"specialinvoke <java.lang.StringBuffer: void <init>()>";
+    "push \"Server URL: \""
+    "specialinvoke <java.lang.StringBuffer: void <init>()>"->"push \"Server URL: \"";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"
+    "push \"Server URL: \""->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "staticget <JTOC: java.lang.String szServerURL>"
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"staticget <JTOC: java.lang.String szServerURL>";
+    "staticget <JTOC: java.lang.String szServerURL>"->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>"
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>";
+    "staticinvoke <TocDebug: void TraceL2(java.lang.String)>"
+    "virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>"->"staticinvoke <TocDebug: void TraceL2(java.lang.String)>";
+    "push \"Start adding images...\""
+    "staticinvoke <TocDebug: void TraceL2(java.lang.String)>"->"push \"Start adding images...\"";
+    "staticinvoke <TocDebug: void TraceL3(java.lang.String)>"
+    "push \"Start adding images...\""->"staticinvoke <TocDebug: void TraceL3(java.lang.String)>";
+    "staticinvoke <TocDebug: void TraceL3(java.lang.String)>"->"load.r r0";
+    "staticget <JTOC: java.net.URL codebase>"
+    "load.r r0"->"staticget <JTOC: java.net.URL codebase>";
+    "push \"toc-check.gif\""
+    "staticget <JTOC: java.net.URL codebase>"->"push \"toc-check.gif\"";
+    "virtualinvoke <java.applet.Applet: java.awt.Image getImage(java.net.URL,java.lang.String)>"
+    "push \"toc-check.gif\""->"virtualinvoke <java.applet.Applet: java.awt.Image getImage(java.net.URL,java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.awt.Image getImage(java.net.URL,java.lang.String)>"->"store.r $r59";
+    "store.r $r59"->"load.r r0";
+    "fieldget <JTOC: JTreeView TreeView>"
+    "load.r r0"->"fieldget <JTOC: JTreeView TreeView>";
+    "fieldget <JTOC: JTreeView TreeView>"->"load.r $r59";
+    "virtualinvoke <JTreeView: int addImage(java.awt.Image)>"
+    "load.r $r59"->"virtualinvoke <JTreeView: int addImage(java.awt.Image)>";
+    "pop"
+    "virtualinvoke <JTreeView: int addImage(java.awt.Image)>"->"pop";
+    "pop"->"load.r r0";
+    "load.r r0"->"staticget <JTOC: java.net.URL codebase>";
+    "push \"toc-site.gif\""
+    "staticget <JTOC: java.net.URL codebase>"->"push \"toc-site.gif\"";
+    "push \"toc-site.gif\""->"virtualinvoke <java.applet.Applet: java.awt.Image getImage(java.net.URL,java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.awt.Image getImage(java.net.URL,java.lang.String)>"->"store.r $r59";
+    "store.r $r59"->"load.r r0";
+    "load.r r0"->"fieldget <JTOC: JTreeView TreeView>";
+    "fieldget <JTOC: JTreeView TreeView>"->"load.r $r59";
+    "load.r $r59"->"virtualinvoke <JTreeView: int addImage(java.awt.Image)>";
+    "virtualinvoke <JTreeView: int addImage(java.awt.Image)>"->"pop";
+    "pop"->"load.r r0";
+    "load.r r0"->"staticget <JTOC: java.net.URL codebase>";
+    "push \"toc-collapsed.gif\""
+    "staticget <JTOC: java.net.URL codebase>"->"push \"toc-collapsed.gif\"";
+    "push \"toc-collapsed.gif\""->"virtualinvoke <java.applet.Applet: java.awt.Image getImage(java.net.URL,java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.awt.Image getImage(java.net.URL,java.lang.String)>"->"store.r $r59";
+    "store.r $r59"->"load.r r0";
+    "load.r r0"->"fieldget <JTOC: JTreeView TreeView>";
+    "fieldget <JTOC: JTreeView TreeView>"->"load.r $r59";
+    "load.r $r59"->"virtualinvoke <JTreeView: int addImage(java.awt.Image)>";
+    "virtualinvoke <JTreeView: int addImage(java.awt.Image)>"->"pop";
+    "pop"->"load.r r0";
+    "load.r r0"->"staticget <JTOC: java.net.URL codebase>";
+    "push \"toc-expand.gif\""
+    "staticget <JTOC: java.net.URL codebase>"->"push \"toc-expand.gif\"";
+    "push \"toc-expand.gif\""->"virtualinvoke <java.applet.Applet: java.awt.Image getImage(java.net.URL,java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.awt.Image getImage(java.net.URL,java.lang.String)>"->"store.r $r59";
+    "store.r $r59"->"load.r r0";
+    "load.r r0"->"fieldget <JTOC: JTreeView TreeView>";
+    "fieldget <JTOC: JTreeView TreeView>"->"load.r $r59";
+    "load.r $r59"->"virtualinvoke <JTreeView: int addImage(java.awt.Image)>";
+    "virtualinvoke <JTreeView: int addImage(java.awt.Image)>"->"pop";
+    "pop"->"load.r r0";
+    "load.r r0"->"staticget <JTOC: java.net.URL codebase>";
+    "push \"toc-collapsedhascontent.gif\""
+    "staticget <JTOC: java.net.URL codebase>"->"push \"toc-collapsedhascontent.gif\"";
+    "push \"toc-collapsedhascontent.gif\""->"virtualinvoke <java.applet.Applet: java.awt.Image getImage(java.net.URL,java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.awt.Image getImage(java.net.URL,java.lang.String)>"->"store.r $r59";
+    "store.r $r59"->"load.r r0";
+    "load.r r0"->"fieldget <JTOC: JTreeView TreeView>";
+    "fieldget <JTOC: JTreeView TreeView>"->"load.r $r59";
+    "load.r $r59"->"virtualinvoke <JTreeView: int addImage(java.awt.Image)>";
+    "virtualinvoke <JTreeView: int addImage(java.awt.Image)>"->"pop";
+    "pop"->"load.r r0";
+    "load.r r0"->"staticget <JTOC: java.net.URL codebase>";
+    "push \"toc-expandhascontent.gif\""
+    "staticget <JTOC: java.net.URL codebase>"->"push \"toc-expandhascontent.gif\"";
+    "push \"toc-expandhascontent.gif\""->"virtualinvoke <java.applet.Applet: java.awt.Image getImage(java.net.URL,java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.awt.Image getImage(java.net.URL,java.lang.String)>"->"store.r $r59";
+    "store.r $r59"->"load.r r0";
+    "load.r r0"->"fieldget <JTOC: JTreeView TreeView>";
+    "fieldget <JTOC: JTreeView TreeView>"->"load.r $r59";
+    "load.r $r59"->"virtualinvoke <JTreeView: int addImage(java.awt.Image)>";
+    "virtualinvoke <JTreeView: int addImage(java.awt.Image)>"->"pop";
+    "pop"->"load.r r0";
+    "load.r r0"->"staticget <JTOC: java.net.URL codebase>";
+    "push \"toc-partialcollapsed.gif\""
+    "staticget <JTOC: java.net.URL codebase>"->"push \"toc-partialcollapsed.gif\"";
+    "push \"toc-partialcollapsed.gif\""->"virtualinvoke <java.applet.Applet: java.awt.Image getImage(java.net.URL,java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.awt.Image getImage(java.net.URL,java.lang.String)>"->"store.r $r59";
+    "store.r $r59"->"load.r r0";
+    "load.r r0"->"fieldget <JTOC: JTreeView TreeView>";
+    "fieldget <JTOC: JTreeView TreeView>"->"load.r $r59";
+    "load.r $r59"->"virtualinvoke <JTreeView: int addImage(java.awt.Image)>";
+    "virtualinvoke <JTreeView: int addImage(java.awt.Image)>"->"pop";
+    "pop"->"load.r r0";
+    "load.r r0"->"staticget <JTOC: java.net.URL codebase>";
+    "push \"toc-partialexpanded.gif\""
+    "staticget <JTOC: java.net.URL codebase>"->"push \"toc-partialexpanded.gif\"";
+    "push \"toc-partialexpanded.gif\""->"virtualinvoke <java.applet.Applet: java.awt.Image getImage(java.net.URL,java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.awt.Image getImage(java.net.URL,java.lang.String)>"->"store.r $r59";
+    "store.r $r59"->"load.r r0";
+    "load.r r0"->"fieldget <JTOC: JTreeView TreeView>";
+    "fieldget <JTOC: JTreeView TreeView>"->"load.r $r59";
+    "load.r $r59"->"virtualinvoke <JTreeView: int addImage(java.awt.Image)>";
+    "virtualinvoke <JTreeView: int addImage(java.awt.Image)>"->"pop";
+    "pop"->"load.r r0";
+    "load.r r0"->"staticget <JTOC: java.net.URL codebase>";
+    "push \"toc-leaf.gif\""
+    "staticget <JTOC: java.net.URL codebase>"->"push \"toc-leaf.gif\"";
+    "push \"toc-leaf.gif\""->"virtualinvoke <java.applet.Applet: java.awt.Image getImage(java.net.URL,java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.awt.Image getImage(java.net.URL,java.lang.String)>"->"store.r $r59";
+    "store.r $r59"->"load.r r0";
+    "load.r r0"->"fieldget <JTOC: JTreeView TreeView>";
+    "fieldget <JTOC: JTreeView TreeView>"->"load.r $r59";
+    "load.r $r59"->"virtualinvoke <JTreeView: int addImage(java.awt.Image)>";
+    "virtualinvoke <JTreeView: int addImage(java.awt.Image)>"->"pop";
+    "pop"->"load.r r0";
+    "load.r r0"->"staticget <JTOC: java.net.URL codebase>";
+    "push \"toc-notpresent.gif\""
+    "staticget <JTOC: java.net.URL codebase>"->"push \"toc-notpresent.gif\"";
+    "push \"toc-notpresent.gif\""->"virtualinvoke <java.applet.Applet: java.awt.Image getImage(java.net.URL,java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.awt.Image getImage(java.net.URL,java.lang.String)>"->"store.r $r59";
+    "store.r $r59"->"load.r r0";
+    "load.r r0"->"fieldget <JTOC: JTreeView TreeView>";
+    "fieldget <JTOC: JTreeView TreeView>"->"load.r $r59";
+    "load.r $r59"->"virtualinvoke <JTreeView: int addImage(java.awt.Image)>";
+    "virtualinvoke <JTreeView: int addImage(java.awt.Image)>"->"pop";
+    "pop"->"load.r r0";
+    "load.r r0"->"staticget <JTOC: java.net.URL codebase>";
+    "push \"toc-docnotpresent.gif\""
+    "staticget <JTOC: java.net.URL codebase>"->"push \"toc-docnotpresent.gif\"";
+    "push \"toc-docnotpresent.gif\""->"virtualinvoke <java.applet.Applet: java.awt.Image getImage(java.net.URL,java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.awt.Image getImage(java.net.URL,java.lang.String)>"->"store.r $r59";
+    "store.r $r59"->"load.r r0";
+    "load.r r0"->"fieldget <JTOC: JTreeView TreeView>";
+    "fieldget <JTOC: JTreeView TreeView>"->"load.r $r59";
+    "load.r $r59"->"virtualinvoke <JTreeView: int addImage(java.awt.Image)>";
+    "virtualinvoke <JTreeView: int addImage(java.awt.Image)>"->"pop";
+    "pop"->"load.r r0";
+    "load.r r0"->"staticget <JTOC: java.net.URL codebase>";
+    "push \"toc-preload.gif\""
+    "staticget <JTOC: java.net.URL codebase>"->"push \"toc-preload.gif\"";
+    "push \"toc-preload.gif\""->"virtualinvoke <java.applet.Applet: java.awt.Image getImage(java.net.URL,java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.awt.Image getImage(java.net.URL,java.lang.String)>"->"store.r $r59";
+    "store.r $r59"->"load.r r0";
+    "load.r r0"->"fieldget <JTOC: JTreeView TreeView>";
+    "fieldget <JTOC: JTreeView TreeView>"->"load.r $r59";
+    "load.r $r59"->"virtualinvoke <JTreeView: int addImage(java.awt.Image)>";
+    "virtualinvoke <JTreeView: int addImage(java.awt.Image)>"->"pop";
+    "pop"->"load.r r0";
+    "load.r r0"->"staticget <JTOC: java.net.URL codebase>";
+    "push \"toc-loading.gif\""
+    "staticget <JTOC: java.net.URL codebase>"->"push \"toc-loading.gif\"";
+    "push \"toc-loading.gif\""->"virtualinvoke <java.applet.Applet: java.awt.Image getImage(java.net.URL,java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.awt.Image getImage(java.net.URL,java.lang.String)>"->"store.r $r59";
+    "store.r $r59"->"load.r r0";
+    "load.r r0"->"fieldget <JTOC: JTreeView TreeView>";
+    "fieldget <JTOC: JTreeView TreeView>"->"load.r $r59";
+    "load.r $r59"->"virtualinvoke <JTreeView: int addImage(java.awt.Image)>";
+    "virtualinvoke <JTreeView: int addImage(java.awt.Image)>"->"pop";
+    "pop"->"load.r r0";
+    "load.r r0"->"staticget <JTOC: java.net.URL codebase>";
+    "push \"toc-more.gif\""
+    "staticget <JTOC: java.net.URL codebase>"->"push \"toc-more.gif\"";
+    "push \"toc-more.gif\""->"virtualinvoke <java.applet.Applet: java.awt.Image getImage(java.net.URL,java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.awt.Image getImage(java.net.URL,java.lang.String)>"->"store.r $r59";
+    "store.r $r59"->"load.r r0";
+    "load.r r0"->"fieldget <JTOC: JTreeView TreeView>";
+    "fieldget <JTOC: JTreeView TreeView>"->"load.r $r59";
+    "load.r $r59"->"virtualinvoke <JTreeView: int addImage(java.awt.Image)>";
+    "virtualinvoke <JTreeView: int addImage(java.awt.Image)>"->"pop";
+    "pop"->"load.r r0";
+    "load.r r0"->"staticget <JTOC: java.net.URL codebase>";
+    "push \"toc-error.gif\""
+    "staticget <JTOC: java.net.URL codebase>"->"push \"toc-error.gif\"";
+    "push \"toc-error.gif\""->"virtualinvoke <java.applet.Applet: java.awt.Image getImage(java.net.URL,java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.awt.Image getImage(java.net.URL,java.lang.String)>"->"store.r $r59";
+    "store.r $r59"->"load.r r0";
+    "load.r r0"->"fieldget <JTOC: JTreeView TreeView>";
+    "fieldget <JTOC: JTreeView TreeView>"->"load.r $r59";
+    "load.r $r59"->"virtualinvoke <JTreeView: int addImage(java.awt.Image)>";
+    "virtualinvoke <JTreeView: int addImage(java.awt.Image)>"->"pop";
+    "push \"Fished Adding Images...\""
+    "pop"->"push \"Fished Adding Images...\"";
+    "push \"Fished Adding Images...\""->"staticinvoke <TocDebug: void TraceL3(java.lang.String)>";
+    "staticinvoke <TocDebug: void TraceL3(java.lang.String)>"->"load.r r0";
+    "virtualinvoke <JTOC: void setParameters()>"
+    "load.r r0"->"virtualinvoke <JTOC: void setParameters()>";
+    "push \"Adding Tree to container\""
+    "virtualinvoke <JTOC: void setParameters()>"->"push \"Adding Tree to container\"";
+    "push \"Adding Tree to container\""->"staticinvoke <TocDebug: void TraceL3(java.lang.String)>";
+    "staticinvoke <TocDebug: void TraceL3(java.lang.String)>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <JTOC: JTree Tree>";
+    "virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>"
+    "fieldget <JTOC: JTree Tree>"->"virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>";
+    "virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>"->"pop";
+    "push \"Resizing Tree\""
+    "pop"->"push \"Resizing Tree\"";
+    "push \"Resizing Tree\""->"staticinvoke <TocDebug: void TraceL3(java.lang.String)>";
+    "staticinvoke <TocDebug: void TraceL3(java.lang.String)>"->"load.r r0";
+    "load.r r0"->"fieldget <JTOC: JTree Tree>";
+    "fieldget <JTOC: JTree Tree>"->"push 0";
+    "push 0"->"push 0";
+    "push 0"->"load.r r0";
+    "fieldget <JTOC: java.awt.Dimension m_Size>"
+    "load.r r0"->"fieldget <JTOC: java.awt.Dimension m_Size>";
+    "fieldget <java.awt.Dimension: int width>"
+    "fieldget <JTOC: java.awt.Dimension m_Size>"->"fieldget <java.awt.Dimension: int width>";
+    "fieldget <java.awt.Dimension: int width>"->"load.r r0";
+    "load.r r0"->"fieldget <JTOC: java.awt.Dimension m_Size>";
+    "fieldget <java.awt.Dimension: int height>"
+    "fieldget <JTOC: java.awt.Dimension m_Size>"->"fieldget <java.awt.Dimension: int height>";
+    "virtualinvoke <java.awt.Component: void reshape(int,int,int,int)>"
+    "fieldget <java.awt.Dimension: int height>"->"virtualinvoke <java.awt.Component: void reshape(int,int,int,int)>";
+    "virtualinvoke <java.awt.Component: void reshape(int,int,int,int)>"->"load.r r0";
+    "virtualinvoke <JTOC: void setBrowserInfo()>"
+    "load.r r0"->"virtualinvoke <JTOC: void setBrowserInfo()>";
+    "push \"Adding Root Nodes\""
+    "virtualinvoke <JTOC: void setBrowserInfo()>"->"push \"Adding Root Nodes\"";
+    "push \"Adding Root Nodes\""->"staticinvoke <TocDebug: void TraceL3(java.lang.String)>";
+    "staticinvoke <TocDebug: void TraceL3(java.lang.String)>"->"load.r r0";
+    "new GCThread"
+    "load.r r0"->"new GCThread";
+    "new GCThread"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "load.r r0"->"staticget <JTOC: java.lang.String szServerURL>";
+    "staticget <JTOC: java.lang.String szServerURL>"->"load.r r0";
+    "load.r r0"->"fieldget <JTOC: JTreeView TreeView>";
+    "fieldget <JTOC: JTreeView TreeView>"->"push null";
+    "push null"->"load.r r0";
+    "push \"SyncPath\""
+    "load.r r0"->"push \"SyncPath\"";
+    "push \"SyncPath\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "specialinvoke <GCThread: void <init>(JTOC,java.lang.String,JTreeView,JNode,java.lang.String)>"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"specialinvoke <GCThread: void <init>(JTOC,java.lang.String,JTreeView,JNode,java.lang.String)>";
+    "fieldput <JTOC: GCThread GCThread>"
+    "specialinvoke <GCThread: void <init>(JTOC,java.lang.String,JTreeView,JNode,java.lang.String)>"->"fieldput <JTOC: GCThread GCThread>";
+    "fieldput <JTOC: GCThread GCThread>"->"load.r r0";
+    "fieldget <JTOC: GCThread GCThread>"
+    "load.r r0"->"fieldget <JTOC: GCThread GCThread>";
+    "virtualinvoke <java.lang.Thread: void start()>"
+    "fieldget <JTOC: GCThread GCThread>"->"virtualinvoke <java.lang.Thread: void start()>";
+    "return"
+    "virtualinvoke <java.lang.Thread: void start()>"->"return";
+    "virtualinvoke <java.lang.Thread: void start()>"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "load.r r0"->"staticinvoke <TocUtil: java.awt.Frame GetFrame(java.awt.Component)>";
+    "store.r r0"
+    "staticinvoke <TocUtil: java.awt.Frame GetFrame(java.awt.Component)>"->"store.r r0";
+    "store.r r0"->"new java.lang.StringBuffer";
+    "new java.lang.StringBuffer"->"dup1.r";
+    "dup1.r"->"specialinvoke <java.lang.StringBuffer: void <init>()>";
+    "push \"Unhandled exception in JTOC::Initialize: \""
+    "specialinvoke <java.lang.StringBuffer: void <init>()>"->"push \"Unhandled exception in JTOC::Initialize: \"";
+    "push \"Unhandled exception in JTOC::Initialize: \""->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"store.r $r59";
+    "virtualinvoke <java.lang.Throwable: java.lang.String toString()>"
+    "store.r $r59"->"virtualinvoke <java.lang.Throwable: java.lang.String toString()>";
+    "store.r $r60"
+    "virtualinvoke <java.lang.Throwable: java.lang.String toString()>"->"store.r $r60";
+    "store.r $r60"->"load.r r0";
+    "load.r r0"->"load.r $r59";
+    "load.r $r60"
+    "load.r $r59"->"load.r $r60";
+    "load.r $r60"->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>";
+    "push \"Exception\""
+    "virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>"->"push \"Exception\"";
+    "staticinvoke <TocDebug: void MessageBox(java.awt.Frame,java.lang.String,java.lang.String)>"
+    "push \"Exception\""->"staticinvoke <TocDebug: void MessageBox(java.awt.Frame,java.lang.String,java.lang.String)>";
+    "virtualinvoke <java.lang.Throwable: void printStackTrace()>"
+    "staticinvoke <TocDebug: void MessageBox(java.awt.Frame,java.lang.String,java.lang.String)>"->"virtualinvoke <java.lang.Throwable: void printStackTrace()>";
+    "virtualinvoke <java.lang.Throwable: void printStackTrace()>"->"return";
+    "ifne new java.lang.StringBuffer"->"new java.lang.StringBuffer";
+    "new java.lang.StringBuffer"->"dup1.r";
+    "dup1.r"->"specialinvoke <java.lang.StringBuffer: void <init>()>";
+    "specialinvoke <java.lang.StringBuffer: void <init>()>"->"push \"/\"";
+    "push \"/\""->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"load.r $r59";
+    "load.r $r59"->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>"->"staticput <JTOC: java.lang.String szServerURL>";
+}

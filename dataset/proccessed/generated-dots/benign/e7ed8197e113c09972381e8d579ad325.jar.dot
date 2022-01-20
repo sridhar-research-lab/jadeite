@@ -1,0 +1,430 @@
+digraph "" {
+    "r0 := @this: groupboard"
+    "load.r r0"
+    "r0 := @this: groupboard"->"load.r r0";
+    "push 0"
+    "load.r r0"->"push 0";
+    "fieldput <groupboard: boolean asked_for_password>"
+    "push 0"->"fieldput <groupboard: boolean asked_for_password>";
+    "fieldput <groupboard: boolean asked_for_password>"->"load.r r0";
+    "staticinvoke <java.lang.System: long currentTimeMillis()>"
+    "load.r r0"->"staticinvoke <java.lang.System: long currentTimeMillis()>";
+    "fieldput <groupboard: long last_event_time>"
+    "staticinvoke <java.lang.System: long currentTimeMillis()>"->"fieldput <groupboard: long last_event_time>";
+    "fieldput <groupboard: long last_event_time>"->"load.r r0";
+    "load.r r0"->"push 0";
+    "fieldput <groupboard: boolean ignored_stop>"
+    "push 0"->"fieldput <groupboard: boolean ignored_stop>";
+    "fieldput <groupboard: boolean ignored_stop>"->"load.r r0";
+    "push null"
+    "load.r r0"->"push null";
+    "fieldput <groupboard: game_base base>"
+    "push null"->"fieldput <groupboard: game_base base>";
+    "fieldput <groupboard: game_base base>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "push \"USE_TUNNEL\""
+    "load.r r0"->"push \"USE_TUNNEL\"";
+    "push \"USE_TUNNEL\""->"push 0";
+    "virtualinvoke <groupboard: boolean get_boolean_arg(java.lang.String,boolean)>"
+    "push 0"->"virtualinvoke <groupboard: boolean get_boolean_arg(java.lang.String,boolean)>";
+    "fieldput <groupboard: boolean use_tunnel>"
+    "virtualinvoke <groupboard: boolean get_boolean_arg(java.lang.String,boolean)>"->"fieldput <groupboard: boolean use_tunnel>";
+    "fieldput <groupboard: boolean use_tunnel>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "push \"DISABLE_ANTI_ALIASING\""
+    "load.r r0"->"push \"DISABLE_ANTI_ALIASING\"";
+    "push \"DISABLE_ANTI_ALIASING\""->"push 0";
+    "push 0"->"virtualinvoke <groupboard: boolean get_boolean_arg(java.lang.String,boolean)>";
+    "fieldput <groupboard: boolean disable_anti_aliasing>"
+    "virtualinvoke <groupboard: boolean get_boolean_arg(java.lang.String,boolean)>"->"fieldput <groupboard: boolean disable_anti_aliasing>";
+    "fieldput <groupboard: boolean disable_anti_aliasing>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "push \"USE_UTF\""
+    "load.r r0"->"push \"USE_UTF\"";
+    "push \"USE_UTF\""->"push 0";
+    "push 0"->"virtualinvoke <groupboard: boolean get_boolean_arg(java.lang.String,boolean)>";
+    "fieldput <groupboard: boolean use_utf>"
+    "virtualinvoke <groupboard: boolean get_boolean_arg(java.lang.String,boolean)>"->"fieldput <groupboard: boolean use_utf>";
+    "fieldput <groupboard: boolean use_utf>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "push \"RIGHT_TO_LEFT\""
+    "load.r r0"->"push \"RIGHT_TO_LEFT\"";
+    "push \"RIGHT_TO_LEFT\""->"push 0";
+    "push 0"->"virtualinvoke <groupboard: boolean get_boolean_arg(java.lang.String,boolean)>";
+    "fieldput <groupboard: boolean rtl>"
+    "virtualinvoke <groupboard: boolean get_boolean_arg(java.lang.String,boolean)>"->"fieldput <groupboard: boolean rtl>";
+    "fieldput <groupboard: boolean rtl>"->"load.r r0";
+    "push \"DONT_START\""
+    "load.r r0"->"push \"DONT_START\"";
+    "push \"DONT_START\""->"push 0";
+    "push 0"->"virtualinvoke <groupboard: boolean get_boolean_arg(java.lang.String,boolean)>";
+    "ifne push \"java.version\""
+    "virtualinvoke <groupboard: boolean get_boolean_arg(java.lang.String,boolean)>"->"ifne push \"java.version\"";
+    "ifne push \"java.version\""->"load.r r0";
+    "push \"HIDE_LOADING_WIN\""
+    "load.r r0"->"push \"HIDE_LOADING_WIN\"";
+    "push \"HIDE_LOADING_WIN\""->"push 0";
+    "push 0"->"virtualinvoke <groupboard: boolean get_boolean_arg(java.lang.String,boolean)>";
+    "virtualinvoke <groupboard: boolean get_boolean_arg(java.lang.String,boolean)>"->"ifne push \"java.version\"";
+    "ifne push \"java.version\""->"load.r r0";
+    "fieldget <groupboard: loading_window loading_win>"
+    "load.r r0"->"fieldget <groupboard: loading_window loading_win>";
+    "ifnonnull push \"java.version\""
+    "fieldget <groupboard: loading_window loading_win>"->"ifnonnull push \"java.version\"";
+    "ifnonnull push \"java.version\""->"load.r r0";
+    "new loading_window"
+    "load.r r0"->"new loading_window";
+    "dup1.r"
+    "new loading_window"->"dup1.r";
+    "specialinvoke <loading_window: void <init>()>"
+    "dup1.r"->"specialinvoke <loading_window: void <init>()>";
+    "fieldput <groupboard: loading_window loading_win>"
+    "specialinvoke <loading_window: void <init>()>"->"fieldput <groupboard: loading_window loading_win>";
+    "push \"java.version\""
+    "fieldput <groupboard: loading_window loading_win>"->"push \"java.version\"";
+    "staticinvoke <java.lang.System: java.lang.String getProperty(java.lang.String)>"
+    "push \"java.version\""->"staticinvoke <java.lang.System: java.lang.String getProperty(java.lang.String)>";
+    "store.r r1"
+    "staticinvoke <java.lang.System: java.lang.String getProperty(java.lang.String)>"->"store.r r1";
+    "staticget <java.lang.System: java.io.PrintStream out>"
+    "store.r r1"->"staticget <java.lang.System: java.io.PrintStream out>";
+    "push \"Groupboard Portal v2.16, Copyright 1998-2011 Group Technologies Inc. (info-contact@groupboard.com)\""
+    "staticget <java.lang.System: java.io.PrintStream out>"->"push \"Groupboard Portal v2.16, Copyright 1998-2011 Group Technologies Inc. (info-contact@groupboard.com)\"";
+    "virtualinvoke <java.io.PrintStream: void println(java.lang.String)>"
+    "push \"Groupboard Portal v2.16, Copyright 1998-2011 Group Technologies Inc. (info-contact@groupboard.com)\""->"virtualinvoke <java.io.PrintStream: void println(java.lang.String)>";
+    "virtualinvoke <java.io.PrintStream: void println(java.lang.String)>"->"staticget <java.lang.System: java.io.PrintStream out>";
+    "new java.lang.StringBuffer"
+    "staticget <java.lang.System: java.io.PrintStream out>"->"new java.lang.StringBuffer";
+    "new java.lang.StringBuffer"->"dup1.r";
+    "specialinvoke <java.lang.StringBuffer: void <init>()>"
+    "dup1.r"->"specialinvoke <java.lang.StringBuffer: void <init>()>";
+    "push \"jdk version=\""
+    "specialinvoke <java.lang.StringBuffer: void <init>()>"->"push \"jdk version=\"";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"
+    "push \"jdk version=\""->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "load.r r1"
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"load.r r1";
+    "load.r r1"->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>"
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>"->"virtualinvoke <java.io.PrintStream: void println(java.lang.String)>";
+    "virtualinvoke <java.io.PrintStream: void println(java.lang.String)>"->"load.r r1";
+    "load.r r1"->"push 0";
+    "push 3"
+    "push 0"->"push 3";
+    "virtualinvoke <java.lang.String: java.lang.String substring(int,int)>"
+    "push 3"->"virtualinvoke <java.lang.String: java.lang.String substring(int,int)>";
+    "store.r r2"
+    "virtualinvoke <java.lang.String: java.lang.String substring(int,int)>"->"store.r r2";
+    "store.r r2"->"load.r r0";
+    "load.r r2"
+    "load.r r0"->"load.r r2";
+    "staticinvoke <java.lang.Float: java.lang.Float valueOf(java.lang.String)>"
+    "load.r r2"->"staticinvoke <java.lang.Float: java.lang.Float valueOf(java.lang.String)>";
+    "virtualinvoke <java.lang.Float: float floatValue()>"
+    "staticinvoke <java.lang.Float: java.lang.Float valueOf(java.lang.String)>"->"virtualinvoke <java.lang.Float: float floatValue()>";
+    "fieldput <groupboard: float jdk_main_version>"
+    "virtualinvoke <java.lang.Float: float floatValue()>"->"fieldput <groupboard: float jdk_main_version>";
+    "push \"os.name\""
+    "fieldput <groupboard: float jdk_main_version>"->"push \"os.name\"";
+    "push \"os.name\""->"staticinvoke <java.lang.System: java.lang.String getProperty(java.lang.String)>";
+    "store.r r3"
+    "staticinvoke <java.lang.System: java.lang.String getProperty(java.lang.String)>"->"store.r r3";
+    "store.r r3"->"staticget <java.lang.System: java.io.PrintStream out>";
+    "staticget <java.lang.System: java.io.PrintStream out>"->"new java.lang.StringBuffer";
+    "new java.lang.StringBuffer"->"dup1.r";
+    "dup1.r"->"specialinvoke <java.lang.StringBuffer: void <init>()>";
+    "push \"os.name=\""
+    "specialinvoke <java.lang.StringBuffer: void <init>()>"->"push \"os.name=\"";
+    "push \"os.name=\""->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "load.r r3"
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"load.r r3";
+    "load.r r3"->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>"->"virtualinvoke <java.io.PrintStream: void println(java.lang.String)>";
+    "virtualinvoke <java.io.PrintStream: void println(java.lang.String)>"->"load.r r0";
+    "load.r r0"->"push 0";
+    "fieldput <groupboard: boolean is_mac_osx>"
+    "push 0"->"fieldput <groupboard: boolean is_mac_osx>";
+    "fieldput <groupboard: boolean is_mac_osx>"->"load.r r3";
+    "virtualinvoke <java.lang.String: int length()>"
+    "load.r r3"->"virtualinvoke <java.lang.String: int length()>";
+    "push 8"
+    "virtualinvoke <java.lang.String: int length()>"->"push 8";
+    "ifcmplt.i load.r r0"
+    "push 8"->"ifcmplt.i load.r r0";
+    "ifcmplt.i load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r3";
+    "load.r r3"->"push 0";
+    "push 0"->"push 8";
+    "push 8"->"virtualinvoke <java.lang.String: java.lang.String substring(int,int)>";
+    "push \"Mac OS X\""
+    "virtualinvoke <java.lang.String: java.lang.String substring(int,int)>"->"push \"Mac OS X\"";
+    "virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>"
+    "push \"Mac OS X\""->"virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>";
+    "virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>"->"fieldput <groupboard: boolean is_mac_osx>";
+    "fieldput <groupboard: boolean is_mac_osx>"->"load.r r0";
+    "fieldget <groupboard: boolean is_mac_osx>"
+    "load.r r0"->"fieldget <groupboard: boolean is_mac_osx>";
+    "ifeq load.r r0"
+    "fieldget <groupboard: boolean is_mac_osx>"->"ifeq load.r r0";
+    "push \"os.version\""
+    "ifeq load.r r0"->"push \"os.version\"";
+    "push \"os.version\""->"staticinvoke <java.lang.System: java.lang.String getProperty(java.lang.String)>";
+    "staticinvoke <java.lang.System: java.lang.String getProperty(java.lang.String)>"->"store.r r3";
+    "store.r r3"->"staticget <java.lang.System: java.io.PrintStream out>";
+    "staticget <java.lang.System: java.io.PrintStream out>"->"new java.lang.StringBuffer";
+    "new java.lang.StringBuffer"->"dup1.r";
+    "dup1.r"->"specialinvoke <java.lang.StringBuffer: void <init>()>";
+    "push \"os.version=\""
+    "specialinvoke <java.lang.StringBuffer: void <init>()>"->"push \"os.version=\"";
+    "push \"os.version=\""->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"load.r r3";
+    "load.r r3"->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>"->"virtualinvoke <java.io.PrintStream: void println(java.lang.String)>";
+    "virtualinvoke <java.io.PrintStream: void println(java.lang.String)>"->"load.r r3";
+    "load.r r3"->"push 0";
+    "push 4"
+    "push 0"->"push 4";
+    "push 4"->"virtualinvoke <java.lang.String: java.lang.String substring(int,int)>";
+    "push \"10.4\""
+    "virtualinvoke <java.lang.String: java.lang.String substring(int,int)>"->"push \"10.4\"";
+    "push \"10.4\""->"virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>";
+    "virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>"->"ifeq load.r r0";
+    "push \"apple.awt.graphics.UseQuartz\""
+    "ifeq load.r r0"->"push \"apple.awt.graphics.UseQuartz\"";
+    "push \"apple.awt.graphics.UseQuartz\""->"staticinvoke <java.lang.System: java.lang.String getProperty(java.lang.String)>";
+    "staticinvoke <java.lang.System: java.lang.String getProperty(java.lang.String)>"->"store.r r3";
+    "store.r r3"->"staticget <java.lang.System: java.io.PrintStream out>";
+    "staticget <java.lang.System: java.io.PrintStream out>"->"new java.lang.StringBuffer";
+    "new java.lang.StringBuffer"->"dup1.r";
+    "dup1.r"->"specialinvoke <java.lang.StringBuffer: void <init>()>";
+    "push \"UseQuartz=\""
+    "specialinvoke <java.lang.StringBuffer: void <init>()>"->"push \"UseQuartz=\"";
+    "push \"UseQuartz=\""->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"load.r r3";
+    "load.r r3"->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>"->"virtualinvoke <java.io.PrintStream: void println(java.lang.String)>";
+    "virtualinvoke <java.io.PrintStream: void println(java.lang.String)>"->"load.r r3";
+    "ifnull load.r r0"
+    "load.r r3"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r r3";
+    "push \"false\""
+    "load.r r3"->"push \"false\"";
+    "push \"false\""->"virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>";
+    "ifne load.r r0"
+    "virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>"->"ifne load.r r0";
+    "new message_box"
+    "ifne load.r r0"->"new message_box";
+    "new message_box"->"load.r r0";
+    "push \"Warning\""
+    "load.r r0"->"push \"Warning\"";
+    "push \"There is a bug in OSX 10.4 java which causes Groupboard to run very slowly.\nYou should add the following to your java applet runtime parameters\n(go to your java preferences, in the Utilities folder):\n     -Dapple.awt.graphics.UseQuartz=false\""
+    "push \"Warning\""->"push \"There is a bug in OSX 10.4 java which causes Groupboard to run very slowly.\nYou should add the following to your java applet runtime parameters\n(go to your java preferences, in the Utilities folder):\n     -Dapple.awt.graphics.UseQuartz=false\"";
+    "specialinvoke <message_box: void <init>(groupboard,java.lang.String,java.lang.String)>"
+    "push \"There is a bug in OSX 10.4 java which causes Groupboard to run very slowly.\nYou should add the following to your java applet runtime parameters\n(go to your java preferences, in the Utilities folder):\n     -Dapple.awt.graphics.UseQuartz=false\""->"specialinvoke <message_box: void <init>(groupboard,java.lang.String,java.lang.String)>";
+    "specialinvoke <message_box: void <init>(groupboard,java.lang.String,java.lang.String)>"->"load.r r0";
+    "push 1"
+    "load.r r0"->"push 1";
+    "fieldput <groupboard: boolean new_jdk>"
+    "push 1"->"fieldput <groupboard: boolean new_jdk>";
+    "fieldput <groupboard: boolean new_jdk>"->"load.r r2";
+    "push \"1.0\""
+    "load.r r2"->"push \"1.0\"";
+    "push \"1.0\""->"virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>";
+    "ifeq load.r r2"
+    "virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>"->"ifeq load.r r2";
+    "ifeq load.r r2"->"load.r r0";
+    "load.r r0"->"push 0";
+    "push 0"->"fieldput <groupboard: boolean new_jdk>";
+    "fieldput <groupboard: boolean new_jdk>"->"load.r r2";
+    "push \"1.1\""
+    "load.r r2"->"push \"1.1\"";
+    "push \"1.1\""->"virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>";
+    "virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>"->"ifne load.r r0";
+    "ifne load.r r0"->"load.r r2";
+    "push \"1.2\""
+    "load.r r2"->"push \"1.2\"";
+    "push \"1.2\""->"virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>";
+    "virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>"->"ifne load.r r0";
+    "ifne load.r r0"->"load.r r2";
+    "push \"1.3\""
+    "load.r r2"->"push \"1.3\"";
+    "push \"1.3\""->"virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>";
+    "virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>"->"ifne load.r r0";
+    "ifne load.r r0"->"load.r r2";
+    "push \"1.4\""
+    "load.r r2"->"push \"1.4\"";
+    "push \"1.4\""->"virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>";
+    "virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>"->"ifne load.r r0";
+    "ifne load.r r0"->"load.r r2";
+    "push \"1.5\""
+    "load.r r2"->"push \"1.5\"";
+    "push \"1.5\""->"virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>";
+    "ifeq load.r r1"
+    "virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>"->"ifeq load.r r1";
+    "ifeq load.r r1"->"load.r r0";
+    "load.r r0"->"push 1";
+    "push 1"->"fieldput <groupboard: boolean new_jdk>";
+    "fieldput <groupboard: boolean new_jdk>"->"load.r r1";
+    "push \"1.1.2\""
+    "load.r r1"->"push \"1.1.2\"";
+    "push \"1.1.2\""->"virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>";
+    "virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>"->"ifeq load.r r1";
+    "ifeq load.r r1"->"load.r r0";
+    "load.r r0"->"push 0";
+    "push 0"->"fieldput <groupboard: boolean new_jdk>";
+    "goto load.r r0"
+    "fieldput <groupboard: boolean new_jdk>"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "load.r r0"->"push 0";
+    "fieldput <groupboard: int num_clients>"
+    "push 0"->"fieldput <groupboard: int num_clients>";
+    "fieldput <groupboard: int num_clients>"->"load.r r0";
+    "push \"SERVER_ADDRESS\""
+    "load.r r0"->"push \"SERVER_ADDRESS\"";
+    "virtualinvoke <groupboard: java.lang.String get_arg(java.lang.String)>"
+    "push \"SERVER_ADDRESS\""->"virtualinvoke <groupboard: java.lang.String get_arg(java.lang.String)>";
+    "pop"
+    "virtualinvoke <groupboard: java.lang.String get_arg(java.lang.String)>"->"pop";
+    "pop"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "push \"GALLERY_PIC\""
+    "load.r r0"->"push \"GALLERY_PIC\"";
+    "push \"GALLERY_PIC\""->"virtualinvoke <groupboard: java.lang.String get_arg(java.lang.String)>";
+    "fieldput <groupboard: java.lang.String gallery_pic>"
+    "virtualinvoke <groupboard: java.lang.String get_arg(java.lang.String)>"->"fieldput <groupboard: java.lang.String gallery_pic>";
+    "fieldput <groupboard: java.lang.String gallery_pic>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "push \"MULTI_USER\""
+    "load.r r0"->"push \"MULTI_USER\"";
+    "push \"MULTI_USER\""->"push 1";
+    "push 1"->"virtualinvoke <groupboard: boolean get_boolean_arg(java.lang.String,boolean)>";
+    "fieldput <groupboard: boolean multiuser>"
+    "virtualinvoke <groupboard: boolean get_boolean_arg(java.lang.String,boolean)>"->"fieldput <groupboard: boolean multiuser>";
+    "fieldput <groupboard: boolean multiuser>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "push \"DISPLAY_NUM_USERS\""
+    "load.r r0"->"push \"DISPLAY_NUM_USERS\"";
+    "push \"DISPLAY_NUM_USERS\""->"load.r r0";
+    "fieldget <groupboard: boolean display_num_users>"
+    "load.r r0"->"fieldget <groupboard: boolean display_num_users>";
+    "fieldget <groupboard: boolean display_num_users>"->"virtualinvoke <groupboard: boolean get_boolean_arg(java.lang.String,boolean)>";
+    "fieldput <groupboard: boolean display_num_users>"
+    "virtualinvoke <groupboard: boolean get_boolean_arg(java.lang.String,boolean)>"->"fieldput <groupboard: boolean display_num_users>";
+    "fieldput <groupboard: boolean display_num_users>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "push \"WHITEBOARD_BACKGROUND_RED\""
+    "load.r r0"->"push \"WHITEBOARD_BACKGROUND_RED\"";
+    "push \"WHITEBOARD_BACKGROUND_RED\""->"load.r r0";
+    "fieldget <groupboard: int bg_red>"
+    "load.r r0"->"fieldget <groupboard: int bg_red>";
+    "virtualinvoke <groupboard: int get_int_arg(java.lang.String,int)>"
+    "fieldget <groupboard: int bg_red>"->"virtualinvoke <groupboard: int get_int_arg(java.lang.String,int)>";
+    "fieldput <groupboard: int bg_red>"
+    "virtualinvoke <groupboard: int get_int_arg(java.lang.String,int)>"->"fieldput <groupboard: int bg_red>";
+    "fieldput <groupboard: int bg_red>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "push \"WHITEBOARD_BACKGROUND_GREEN\""
+    "load.r r0"->"push \"WHITEBOARD_BACKGROUND_GREEN\"";
+    "push \"WHITEBOARD_BACKGROUND_GREEN\""->"load.r r0";
+    "fieldget <groupboard: int bg_green>"
+    "load.r r0"->"fieldget <groupboard: int bg_green>";
+    "fieldget <groupboard: int bg_green>"->"virtualinvoke <groupboard: int get_int_arg(java.lang.String,int)>";
+    "fieldput <groupboard: int bg_green>"
+    "virtualinvoke <groupboard: int get_int_arg(java.lang.String,int)>"->"fieldput <groupboard: int bg_green>";
+    "fieldput <groupboard: int bg_green>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "push \"WHITEBOARD_BACKGROUND_BLUE\""
+    "load.r r0"->"push \"WHITEBOARD_BACKGROUND_BLUE\"";
+    "push \"WHITEBOARD_BACKGROUND_BLUE\""->"load.r r0";
+    "fieldget <groupboard: int bg_blue>"
+    "load.r r0"->"fieldget <groupboard: int bg_blue>";
+    "fieldget <groupboard: int bg_blue>"->"virtualinvoke <groupboard: int get_int_arg(java.lang.String,int)>";
+    "fieldput <groupboard: int bg_blue>"
+    "virtualinvoke <groupboard: int get_int_arg(java.lang.String,int)>"->"fieldput <groupboard: int bg_blue>";
+    "fieldput <groupboard: int bg_blue>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "push \"BOARD_WIDTH\""
+    "load.r r0"->"push \"BOARD_WIDTH\"";
+    "push 360"
+    "push \"BOARD_WIDTH\""->"push 360";
+    "push 360"->"virtualinvoke <groupboard: int get_int_arg(java.lang.String,int)>";
+    "fieldput <groupboard: int board_width>"
+    "virtualinvoke <groupboard: int get_int_arg(java.lang.String,int)>"->"fieldput <groupboard: int board_width>";
+    "fieldput <groupboard: int board_width>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "push \"BOARD_HEIGHT\""
+    "load.r r0"->"push \"BOARD_HEIGHT\"";
+    "push 250"
+    "push \"BOARD_HEIGHT\""->"push 250";
+    "push 250"->"virtualinvoke <groupboard: int get_int_arg(java.lang.String,int)>";
+    "fieldput <groupboard: int board_height>"
+    "virtualinvoke <groupboard: int get_int_arg(java.lang.String,int)>"->"fieldput <groupboard: int board_height>";
+    "fieldput <groupboard: int board_height>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "push \"ALLOW_SAVE\""
+    "load.r r0"->"push \"ALLOW_SAVE\"";
+    "push \"ALLOW_SAVE\""->"push 1";
+    "push 1"->"virtualinvoke <groupboard: boolean get_boolean_arg(java.lang.String,boolean)>";
+    "fieldput <groupboard: boolean allow_save>"
+    "virtualinvoke <groupboard: boolean get_boolean_arg(java.lang.String,boolean)>"->"fieldput <groupboard: boolean allow_save>";
+    "fieldput <groupboard: boolean allow_save>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "push \"ALLOW_LOAD\""
+    "load.r r0"->"push \"ALLOW_LOAD\"";
+    "push \"ALLOW_LOAD\""->"push 1";
+    "push 1"->"virtualinvoke <groupboard: boolean get_boolean_arg(java.lang.String,boolean)>";
+    "fieldput <groupboard: boolean allow_load>"
+    "virtualinvoke <groupboard: boolean get_boolean_arg(java.lang.String,boolean)>"->"fieldput <groupboard: boolean allow_load>";
+    "fieldput <groupboard: boolean allow_load>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "push \"ALLOW_SET_BACKGROUND\""
+    "load.r r0"->"push \"ALLOW_SET_BACKGROUND\"";
+    "push \"ALLOW_SET_BACKGROUND\""->"push 1";
+    "push 1"->"virtualinvoke <groupboard: boolean get_boolean_arg(java.lang.String,boolean)>";
+    "fieldput <groupboard: boolean allow_set_background>"
+    "virtualinvoke <groupboard: boolean get_boolean_arg(java.lang.String,boolean)>"->"fieldput <groupboard: boolean allow_set_background>";
+    "fieldput <groupboard: boolean allow_set_background>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "push \"NEED_PASSWORD\""
+    "load.r r0"->"push \"NEED_PASSWORD\"";
+    "push \"NEED_PASSWORD\""->"push 0";
+    "push 0"->"virtualinvoke <groupboard: boolean get_boolean_arg(java.lang.String,boolean)>";
+    "fieldput <groupboard: boolean need_password>"
+    "virtualinvoke <groupboard: boolean get_boolean_arg(java.lang.String,boolean)>"->"fieldput <groupboard: boolean need_password>";
+    "fieldput <groupboard: boolean need_password>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "push \"NEED_USERNAME\""
+    "load.r r0"->"push \"NEED_USERNAME\"";
+    "push \"NEED_USERNAME\""->"push 0";
+    "push 0"->"virtualinvoke <groupboard: boolean get_boolean_arg(java.lang.String,boolean)>";
+    "fieldput <groupboard: boolean need_username>"
+    "virtualinvoke <groupboard: boolean get_boolean_arg(java.lang.String,boolean)>"->"fieldput <groupboard: boolean need_username>";
+    "fieldput <groupboard: boolean need_username>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "push \"MIN_ACTIONS\""
+    "load.r r0"->"push \"MIN_ACTIONS\"";
+    "push \"MIN_ACTIONS\""->"push 0";
+    "push 0"->"virtualinvoke <groupboard: boolean get_boolean_arg(java.lang.String,boolean)>";
+    "fieldput <groupboard: boolean min_actions>"
+    "virtualinvoke <groupboard: boolean get_boolean_arg(java.lang.String,boolean)>"->"fieldput <groupboard: boolean min_actions>";
+    "return"
+    "fieldput <groupboard: boolean min_actions>"->"return";
+    "ifeq load.r r1"->"load.r r1";
+    "push \"1.1.5\""
+    "load.r r1"->"push \"1.1.5\"";
+    "push \"1.1.5\""->"virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>";
+    "virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>"->"ifeq load.r r0";
+    "ifeq load.r r0"->"push \"os.name\"";
+    "push \"os.name\""->"staticinvoke <java.lang.System: java.lang.String getProperty(java.lang.String)>";
+    "push \"Mac OS\""
+    "staticinvoke <java.lang.System: java.lang.String getProperty(java.lang.String)>"->"push \"Mac OS\"";
+    "push \"Mac OS\""->"virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>";
+    "virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>"->"ifeq load.r r0";
+    "ifeq load.r r0"->"load.r r0";
+    "load.r r0"->"push 0";
+    "push 0"->"fieldput <groupboard: boolean new_jdk>";
+}

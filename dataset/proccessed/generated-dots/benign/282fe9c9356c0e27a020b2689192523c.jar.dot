@@ -1,0 +1,356 @@
+digraph "" {
+    "r0 := @this: jGraph"
+    "load.r r0"
+    "r0 := @this: jGraph"->"load.r r0";
+    "specialinvoke <java.applet.Applet: void init()>"
+    "load.r r0"->"specialinvoke <java.applet.Applet: void init()>";
+    "specialinvoke <java.applet.Applet: void init()>"->"load.r r0";
+    "new java.util.Vector"
+    "load.r r0"->"new java.util.Vector";
+    "dup1.r"
+    "new java.util.Vector"->"dup1.r";
+    "specialinvoke <java.util.Vector: void <init>()>"
+    "dup1.r"->"specialinvoke <java.util.Vector: void <init>()>";
+    "fieldput <jGraph: java.util.Vector teams>"
+    "specialinvoke <java.util.Vector: void <init>()>"->"fieldput <jGraph: java.util.Vector teams>";
+    "fieldput <jGraph: java.util.Vector teams>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "virtualinvoke <java.awt.Component: java.awt.Dimension size()>"
+    "load.r r0"->"virtualinvoke <java.awt.Component: java.awt.Dimension size()>";
+    "fieldput <jGraph: java.awt.Dimension dim>"
+    "virtualinvoke <java.awt.Component: java.awt.Dimension size()>"->"fieldput <jGraph: java.awt.Dimension dim>";
+    "push 10"
+    "fieldput <jGraph: java.awt.Dimension dim>"->"push 10";
+    "store.i i22"
+    "push 10"->"store.i i22";
+    "push 12"
+    "store.i i22"->"push 12";
+    "store.i i23"
+    "push 12"->"store.i i23";
+    "store.i i23"->"load.r r0";
+    "push \"ticksize\""
+    "load.r r0"->"push \"ticksize\"";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"
+    "push \"ticksize\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "store.r r1"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"store.r r1";
+    "store.r r1"->"load.r r0";
+    "push \"legendsize\""
+    "load.r r0"->"push \"legendsize\"";
+    "push \"legendsize\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "store.r r2"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"store.r r2";
+    "store.r r2"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "push \"legendonoff\""
+    "load.r r0"->"push \"legendonoff\"";
+    "push \"legendonoff\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "fieldput <jGraph: java.lang.String legonoff>"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"fieldput <jGraph: java.lang.String legonoff>";
+    "fieldput <jGraph: java.lang.String legonoff>"->"load.r r0";
+    "push \"ymax\""
+    "load.r r0"->"push \"ymax\"";
+    "push \"ymax\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "ifnull load.r r0"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"push \"ymax\"";
+    "push \"ymax\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>";
+    "fieldput <jGraph: int ymax>"
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"->"fieldput <jGraph: int ymax>";
+    "fieldput <jGraph: int ymax>"->"load.r r0";
+    "fieldget <jGraph: java.lang.String legonoff>"
+    "load.r r0"->"fieldget <jGraph: java.lang.String legonoff>";
+    "ifnonnull load.r r1"
+    "fieldget <jGraph: java.lang.String legonoff>"->"ifnonnull load.r r1";
+    "ifnonnull load.r r1"->"load.r r0";
+    "push \"on\""
+    "load.r r0"->"push \"on\"";
+    "push \"on\""->"fieldput <jGraph: java.lang.String legonoff>";
+    "load.r r1"
+    "fieldput <jGraph: java.lang.String legonoff>"->"load.r r1";
+    "ifnull load.r r2"
+    "load.r r1"->"ifnull load.r r2";
+    "ifnull load.r r2"->"load.r r1";
+    "load.r r1"->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>";
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"->"store.i i22";
+    "load.r r2"
+    "store.i i22"->"load.r r2";
+    "load.r r2"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r r2";
+    "load.r r2"->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>";
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"->"store.i i23";
+    "store.i i23"->"load.r r0";
+    "new java.awt.Font"
+    "load.r r0"->"new java.awt.Font";
+    "new java.awt.Font"->"dup1.r";
+    "push \"SansSerif\""
+    "dup1.r"->"push \"SansSerif\"";
+    "push 0"
+    "push \"SansSerif\""->"push 0";
+    "load.i i22"
+    "push 0"->"load.i i22";
+    "specialinvoke <java.awt.Font: void <init>(java.lang.String,int,int)>"
+    "load.i i22"->"specialinvoke <java.awt.Font: void <init>(java.lang.String,int,int)>";
+    "fieldput <jGraph: java.awt.Font tckfont>"
+    "specialinvoke <java.awt.Font: void <init>(java.lang.String,int,int)>"->"fieldput <jGraph: java.awt.Font tckfont>";
+    "fieldput <jGraph: java.awt.Font tckfont>"->"load.r r0";
+    "load.r r0"->"new java.awt.Font";
+    "new java.awt.Font"->"dup1.r";
+    "dup1.r"->"push \"SansSerif\"";
+    "push \"SansSerif\""->"push 0";
+    "load.i i23"
+    "push 0"->"load.i i23";
+    "load.i i23"->"specialinvoke <java.awt.Font: void <init>(java.lang.String,int,int)>";
+    "fieldput <jGraph: java.awt.Font legfont>"
+    "specialinvoke <java.awt.Font: void <init>(java.lang.String,int,int)>"->"fieldput <jGraph: java.awt.Font legfont>";
+    "staticinvoke <java.awt.Toolkit: java.awt.Toolkit getDefaultToolkit()>"
+    "fieldput <jGraph: java.awt.Font legfont>"->"staticinvoke <java.awt.Toolkit: java.awt.Toolkit getDefaultToolkit()>";
+    "staticinvoke <java.awt.Toolkit: java.awt.Toolkit getDefaultToolkit()>"->"load.r r0";
+    "fieldget <jGraph: java.awt.Font tckfont>"
+    "load.r r0"->"fieldget <jGraph: java.awt.Font tckfont>";
+    "virtualinvoke <java.awt.Toolkit: java.awt.FontMetrics getFontMetrics(java.awt.Font)>"
+    "fieldget <jGraph: java.awt.Font tckfont>"->"virtualinvoke <java.awt.Toolkit: java.awt.FontMetrics getFontMetrics(java.awt.Font)>";
+    "pop"
+    "virtualinvoke <java.awt.Toolkit: java.awt.FontMetrics getFontMetrics(java.awt.Font)>"->"pop";
+    "pop"->"staticinvoke <java.awt.Toolkit: java.awt.Toolkit getDefaultToolkit()>";
+    "staticinvoke <java.awt.Toolkit: java.awt.Toolkit getDefaultToolkit()>"->"load.r r0";
+    "fieldget <jGraph: java.awt.Font legfont>"
+    "load.r r0"->"fieldget <jGraph: java.awt.Font legfont>";
+    "fieldget <jGraph: java.awt.Font legfont>"->"virtualinvoke <java.awt.Toolkit: java.awt.FontMetrics getFontMetrics(java.awt.Font)>";
+    "virtualinvoke <java.awt.Toolkit: java.awt.FontMetrics getFontMetrics(java.awt.Font)>"->"store.r r1";
+    "push 1"
+    "store.r r1"->"push 1";
+    "store.i r2"
+    "push 1"->"store.i r2";
+    "store.i r2"->"load.r r0";
+    "push \"team\""
+    "load.r r0"->"push \"team\"";
+    "load.i r2"
+    "push \"team\""->"load.i r2";
+    "staticinvoke <java.lang.String: java.lang.String valueOf(int)>"
+    "load.i r2"->"staticinvoke <java.lang.String: java.lang.String valueOf(int)>";
+    "staticinvoke <java.lang.String: java.lang.String valueOf(java.lang.Object)>"
+    "staticinvoke <java.lang.String: java.lang.String valueOf(int)>"->"staticinvoke <java.lang.String: java.lang.String valueOf(java.lang.Object)>";
+    "virtualinvoke <java.lang.String: java.lang.String concat(java.lang.String)>"
+    "staticinvoke <java.lang.String: java.lang.String valueOf(java.lang.Object)>"->"virtualinvoke <java.lang.String: java.lang.String concat(java.lang.String)>";
+    "virtualinvoke <jGraph: Team getTeamParameters(java.lang.String)>"
+    "virtualinvoke <java.lang.String: java.lang.String concat(java.lang.String)>"->"virtualinvoke <jGraph: Team getTeamParameters(java.lang.String)>";
+    "store.r i22"
+    "virtualinvoke <jGraph: Team getTeamParameters(java.lang.String)>"->"store.r i22";
+    "load.r i22"
+    "store.r i22"->"load.r i22";
+    "load.r i22"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r r0";
+    "fieldget <jGraph: java.util.Vector teams>"
+    "load.r r0"->"fieldget <jGraph: java.util.Vector teams>";
+    "fieldget <jGraph: java.util.Vector teams>"->"load.r i22";
+    "virtualinvoke <java.util.Vector: void addElement(java.lang.Object)>"
+    "load.r i22"->"virtualinvoke <java.util.Vector: void addElement(java.lang.Object)>";
+    "virtualinvoke <java.util.Vector: void addElement(java.lang.Object)>"->"load.r r1";
+    "load.r r1"->"load.r i22";
+    "virtualinvoke <Team: java.lang.String getName()>"
+    "load.r i22"->"virtualinvoke <Team: java.lang.String getName()>";
+    "virtualinvoke <java.awt.FontMetrics: int stringWidth(java.lang.String)>"
+    "virtualinvoke <Team: java.lang.String getName()>"->"virtualinvoke <java.awt.FontMetrics: int stringWidth(java.lang.String)>";
+    "virtualinvoke <java.awt.FontMetrics: int stringWidth(java.lang.String)>"->"store.i i23";
+    "store.i i23"->"load.i i23";
+    "load.i i23"->"load.r r0";
+    "fieldget <jGraph: int maxlabel>"
+    "load.r r0"->"fieldget <jGraph: int maxlabel>";
+    "ifcmple.i load.r i22"
+    "fieldget <jGraph: int maxlabel>"->"ifcmple.i load.r i22";
+    "ifcmple.i load.r i22"->"load.i r2";
+    "push 2"
+    "load.i r2"->"push 2";
+    "rem.i"
+    "push 2"->"rem.i";
+    "rem.i"->"push 1";
+    "ifcmpne.i load.r i22"
+    "push 1"->"ifcmpne.i load.r i22";
+    "ifcmpne.i load.r i22"->"load.r r0";
+    "load.r r0"->"load.i i23";
+    "fieldput <jGraph: int maxlabel>"
+    "load.i i23"->"fieldput <jGraph: int maxlabel>";
+    "fieldput <jGraph: int maxlabel>"->"load.r i22";
+    "virtualinvoke <Team: int[] getPositions()>"
+    "load.r i22"->"virtualinvoke <Team: int[] getPositions()>";
+    "arraylength"
+    "virtualinvoke <Team: int[] getPositions()>"->"arraylength";
+    "arraylength"->"load.r r0";
+    "fieldget <jGraph: int maxgames>"
+    "load.r r0"->"fieldget <jGraph: int maxgames>";
+    "ifcmple.i inc.i r2 1"
+    "fieldget <jGraph: int maxgames>"->"ifcmple.i inc.i r2 1";
+    "ifcmple.i inc.i r2 1"->"load.r r0";
+    "load.r r0"->"load.r i22";
+    "load.r i22"->"virtualinvoke <Team: int[] getPositions()>";
+    "virtualinvoke <Team: int[] getPositions()>"->"arraylength";
+    "fieldput <jGraph: int maxgames>"
+    "arraylength"->"fieldput <jGraph: int maxgames>";
+    "inc.i r2 1"
+    "fieldput <jGraph: int maxgames>"->"inc.i r2 1";
+    "goto load.r r0"
+    "inc.i r2 1"->"goto load.r r0";
+    "ifnull load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "push \"xticks\""
+    "load.r r0"->"push \"xticks\"";
+    "virtualinvoke <jGraph: java.lang.String[] getTicksInfo(java.lang.String)>"
+    "push \"xticks\""->"virtualinvoke <jGraph: java.lang.String[] getTicksInfo(java.lang.String)>";
+    "fieldput <jGraph: java.lang.String[] xticks>"
+    "virtualinvoke <jGraph: java.lang.String[] getTicksInfo(java.lang.String)>"->"fieldput <jGraph: java.lang.String[] xticks>";
+    "fieldput <jGraph: java.lang.String[] xticks>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "push \"yticks\""
+    "load.r r0"->"push \"yticks\"";
+    "push \"yticks\""->"virtualinvoke <jGraph: java.lang.String[] getTicksInfo(java.lang.String)>";
+    "fieldput <jGraph: java.lang.String[] yticks>"
+    "virtualinvoke <jGraph: java.lang.String[] getTicksInfo(java.lang.String)>"->"fieldput <jGraph: java.lang.String[] yticks>";
+    "fieldput <jGraph: java.lang.String[] yticks>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "push \"xgrid\""
+    "load.r r0"->"push \"xgrid\"";
+    "virtualinvoke <jGraph: java.awt.Color getColorParameter(java.lang.String)>"
+    "push \"xgrid\""->"virtualinvoke <jGraph: java.awt.Color getColorParameter(java.lang.String)>";
+    "fieldput <jGraph: java.awt.Color xgrid>"
+    "virtualinvoke <jGraph: java.awt.Color getColorParameter(java.lang.String)>"->"fieldput <jGraph: java.awt.Color xgrid>";
+    "fieldput <jGraph: java.awt.Color xgrid>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "push \"ygrid\""
+    "load.r r0"->"push \"ygrid\"";
+    "push \"ygrid\""->"virtualinvoke <jGraph: java.awt.Color getColorParameter(java.lang.String)>";
+    "fieldput <jGraph: java.awt.Color ygrid>"
+    "virtualinvoke <jGraph: java.awt.Color getColorParameter(java.lang.String)>"->"fieldput <jGraph: java.awt.Color ygrid>";
+    "fieldput <jGraph: java.awt.Color ygrid>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "push \"foreground\""
+    "load.r r0"->"push \"foreground\"";
+    "push \"foreground\""->"virtualinvoke <jGraph: java.awt.Color getColorParameter(java.lang.String)>";
+    "fieldput <jGraph: java.awt.Color fg>"
+    "virtualinvoke <jGraph: java.awt.Color getColorParameter(java.lang.String)>"->"fieldput <jGraph: java.awt.Color fg>";
+    "fieldput <jGraph: java.awt.Color fg>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "push \"background\""
+    "load.r r0"->"push \"background\"";
+    "push \"background\""->"virtualinvoke <jGraph: java.awt.Color getColorParameter(java.lang.String)>";
+    "fieldput <jGraph: java.awt.Color bg>"
+    "virtualinvoke <jGraph: java.awt.Color getColorParameter(java.lang.String)>"->"fieldput <jGraph: java.awt.Color bg>";
+    "fieldput <jGraph: java.awt.Color bg>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "push \"graphbackground\""
+    "load.r r0"->"push \"graphbackground\"";
+    "push \"graphbackground\""->"virtualinvoke <jGraph: java.awt.Color getColorParameter(java.lang.String)>";
+    "fieldput <jGraph: java.awt.Color gback>"
+    "virtualinvoke <jGraph: java.awt.Color getColorParameter(java.lang.String)>"->"fieldput <jGraph: java.awt.Color gback>";
+    "fieldput <jGraph: java.awt.Color gback>"->"load.r r0";
+    "load.r r0"->"fieldget <jGraph: java.lang.String legonoff>";
+    "push \"off\""
+    "fieldget <jGraph: java.lang.String legonoff>"->"push \"off\"";
+    "virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>"
+    "push \"off\""->"virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>";
+    "ifne new java.awt.Rectangle"
+    "virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>"->"ifne new java.awt.Rectangle";
+    "new java.awt.Rectangle"
+    "ifne new java.awt.Rectangle"->"new java.awt.Rectangle";
+    "new java.awt.Rectangle"->"dup1.r";
+    "push 20"
+    "dup1.r"->"push 20";
+    "push 25"
+    "push 20"->"push 25";
+    "push 25"->"load.r r0";
+    "fieldget <jGraph: java.awt.Dimension dim>"
+    "load.r r0"->"fieldget <jGraph: java.awt.Dimension dim>";
+    "fieldget <java.awt.Dimension: int width>"
+    "fieldget <jGraph: java.awt.Dimension dim>"->"fieldget <java.awt.Dimension: int width>";
+    "push 30"
+    "fieldget <java.awt.Dimension: int width>"->"push 30";
+    "sub.i"
+    "push 30"->"sub.i";
+    "sub.i"->"load.r r0";
+    "load.r r0"->"fieldget <jGraph: java.awt.Dimension dim>";
+    "fieldget <java.awt.Dimension: int height>"
+    "fieldget <jGraph: java.awt.Dimension dim>"->"fieldget <java.awt.Dimension: int height>";
+    "push 45"
+    "fieldget <java.awt.Dimension: int height>"->"push 45";
+    "push 45"->"sub.i";
+    "sub.i"->"load.r r1";
+    "virtualinvoke <java.awt.FontMetrics: int getHeight()>"
+    "load.r r1"->"virtualinvoke <java.awt.FontMetrics: int getHeight()>";
+    "virtualinvoke <java.awt.FontMetrics: int getHeight()>"->"load.r r0";
+    "load.r r0"->"fieldget <jGraph: java.util.Vector teams>";
+    "virtualinvoke <java.util.Vector: int size()>"
+    "fieldget <jGraph: java.util.Vector teams>"->"virtualinvoke <java.util.Vector: int size()>";
+    "virtualinvoke <java.util.Vector: int size()>"->"push 2";
+    "div.i"
+    "push 2"->"div.i";
+    "div.i"->"load.r r0";
+    "load.r r0"->"fieldget <jGraph: java.util.Vector teams>";
+    "fieldget <jGraph: java.util.Vector teams>"->"virtualinvoke <java.util.Vector: int size()>";
+    "virtualinvoke <java.util.Vector: int size()>"->"push 2";
+    "push 2"->"rem.i";
+    "add.i"
+    "rem.i"->"add.i";
+    "mul.i"
+    "add.i"->"mul.i";
+    "mul.i"->"sub.i";
+    "specialinvoke <java.awt.Rectangle: void <init>(int,int,int,int)>"
+    "sub.i"->"specialinvoke <java.awt.Rectangle: void <init>(int,int,int,int)>";
+    "specialinvoke <java.awt.Rectangle: void <init>(int,int,int,int)>"->"store.r r2";
+    "store.r r2"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "new Axis"
+    "load.r r0"->"new Axis";
+    "new Axis"->"store.r r1";
+    "store.r r1"->"load.r r1";
+    "push 1.0"
+    "load.r r1"->"push 1.0";
+    "push 1.0"->"load.r r0";
+    "load.r r0"->"fieldget <jGraph: int maxgames>";
+    "i2d"
+    "fieldget <jGraph: int maxgames>"->"i2d";
+    "push 0.2"
+    "i2d"->"push 0.2";
+    "add.d"
+    "push 0.2"->"add.d";
+    "add.d"->"push 1.0";
+    "push 1.0"->"load.r r0";
+    "fieldget <jGraph: int ymax>"
+    "load.r r0"->"fieldget <jGraph: int ymax>";
+    "fieldget <jGraph: int ymax>"->"i2d";
+    "specialinvoke <Axis: void <init>(double,double,double,double)>"
+    "i2d"->"specialinvoke <Axis: void <init>(double,double,double,double)>";
+    "new GraphPlotter"
+    "specialinvoke <Axis: void <init>(double,double,double,double)>"->"new GraphPlotter";
+    "new GraphPlotter"->"dup1.r";
+    "dup1.r"->"load.r r2";
+    "load.r r2"->"load.r r1";
+    "specialinvoke <GraphPlotter: void <init>(java.awt.Rectangle,Axis)>"
+    "load.r r1"->"specialinvoke <GraphPlotter: void <init>(java.awt.Rectangle,Axis)>";
+    "fieldput <jGraph: GraphPlotter plotter>"
+    "specialinvoke <GraphPlotter: void <init>(java.awt.Rectangle,Axis)>"->"fieldput <jGraph: GraphPlotter plotter>";
+    "fieldput <jGraph: GraphPlotter plotter>"->"load.r r0";
+    "virtualinvoke <java.awt.Component: void repaint()>"
+    "load.r r0"->"virtualinvoke <java.awt.Component: void repaint()>";
+    "return"
+    "virtualinvoke <java.awt.Component: void repaint()>"->"return";
+    "ifne new java.awt.Rectangle"->"new java.awt.Rectangle";
+    "new java.awt.Rectangle"->"dup1.r";
+    "dup1.r"->"push 20";
+    "push 20"->"push 25";
+    "push 25"->"load.r r0";
+    "load.r r0"->"fieldget <jGraph: java.awt.Dimension dim>";
+    "fieldget <jGraph: java.awt.Dimension dim>"->"fieldget <java.awt.Dimension: int width>";
+    "fieldget <java.awt.Dimension: int width>"->"push 30";
+    "push 30"->"sub.i";
+    "sub.i"->"load.r r0";
+    "load.r r0"->"fieldget <jGraph: java.awt.Dimension dim>";
+    "fieldget <jGraph: java.awt.Dimension dim>"->"fieldget <java.awt.Dimension: int height>";
+    "fieldget <java.awt.Dimension: int height>"->"push 45";
+    "push 45"->"sub.i";
+    "sub.i"->"specialinvoke <java.awt.Rectangle: void <init>(int,int,int,int)>";
+    "specialinvoke <java.awt.Rectangle: void <init>(int,int,int,int)>"->"store.r r2";
+}

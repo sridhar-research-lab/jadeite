@@ -1,0 +1,47 @@
+digraph "" {
+    "r0 := @this: IpixViewer"
+    "staticget <java.lang.System: java.io.PrintStream out>"
+    "r0 := @this: IpixViewer"->"staticget <java.lang.System: java.io.PrintStream out>";
+    "push \"iPIX Java Viewer 4.0\""
+    "staticget <java.lang.System: java.io.PrintStream out>"->"push \"iPIX Java Viewer 4.0\"";
+    "virtualinvoke <java.io.PrintStream: void println(java.lang.String)>"
+    "push \"iPIX Java Viewer 4.0\""->"virtualinvoke <java.io.PrintStream: void println(java.lang.String)>";
+    "virtualinvoke <java.io.PrintStream: void println(java.lang.String)>"->"staticget <java.lang.System: java.io.PrintStream out>";
+    "push \"(C) 1986 - 2003 Internet Pictures Corporation.\""
+    "staticget <java.lang.System: java.io.PrintStream out>"->"push \"(C) 1986 - 2003 Internet Pictures Corporation.\"";
+    "push \"(C) 1986 - 2003 Internet Pictures Corporation.\""->"virtualinvoke <java.io.PrintStream: void println(java.lang.String)>";
+    "virtualinvoke <java.io.PrintStream: void println(java.lang.String)>"->"staticget <java.lang.System: java.io.PrintStream out>";
+    "push \"All Rights Reserved.\""
+    "staticget <java.lang.System: java.io.PrintStream out>"->"push \"All Rights Reserved.\"";
+    "push \"All Rights Reserved.\""->"virtualinvoke <java.io.PrintStream: void println(java.lang.String)>";
+    "load.r r0"
+    "virtualinvoke <java.io.PrintStream: void println(java.lang.String)>"->"load.r r0";
+    "push \"SpinSpeed\""
+    "load.r r0"->"push \"SpinSpeed\"";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"
+    "push \"SpinSpeed\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "ifnonnull push 1"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"ifnonnull push 1";
+    "ifnonnull push 1"->"load.r r0";
+    "push \"SpinStyle\""
+    "load.r r0"->"push \"SpinStyle\"";
+    "push \"SpinStyle\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "ifnull push 0"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"ifnull push 0";
+    "push 1"
+    "ifnull push 0"->"push 1";
+    "store.b $z0"
+    "push 1"->"store.b $z0";
+    "goto load.r r0"
+    "store.b $z0"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "load.b $z0"
+    "load.r r0"->"load.b $z0";
+    "fieldput <IpixViewer: boolean E>"
+    "load.b $z0"->"fieldput <IpixViewer: boolean E>";
+    "return"
+    "fieldput <IpixViewer: boolean E>"->"return";
+    "push 0"
+    "ifnull push 0"->"push 0";
+    "push 0"->"store.b $z0";
+}

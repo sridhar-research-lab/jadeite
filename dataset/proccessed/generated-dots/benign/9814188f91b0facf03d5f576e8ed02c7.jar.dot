@@ -1,0 +1,21 @@
+digraph "" {
+    "r0 := @this: Diffraction"
+    "load.r r0"
+    "r0 := @this: Diffraction"->"load.r r0";
+    "new DiffractionFrame"
+    "load.r r0"->"new DiffractionFrame";
+    "dup1.r"
+    "new DiffractionFrame"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "specialinvoke <DiffractionFrame: void <init>(Diffraction)>"
+    "load.r r0"->"specialinvoke <DiffractionFrame: void <init>(Diffraction)>";
+    "fieldput <Diffraction: DiffractionFrame mf>"
+    "specialinvoke <DiffractionFrame: void <init>(Diffraction)>"->"fieldput <Diffraction: DiffractionFrame mf>";
+    "fieldput <Diffraction: DiffractionFrame mf>"->"load.r r0";
+    "fieldget <Diffraction: DiffractionFrame mf>"
+    "load.r r0"->"fieldget <Diffraction: DiffractionFrame mf>";
+    "virtualinvoke <DiffractionFrame: void init()>"
+    "fieldget <Diffraction: DiffractionFrame mf>"->"virtualinvoke <DiffractionFrame: void init()>";
+    "return"
+    "virtualinvoke <DiffractionFrame: void init()>"->"return";
+}

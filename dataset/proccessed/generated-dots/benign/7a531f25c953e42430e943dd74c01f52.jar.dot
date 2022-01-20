@@ -1,0 +1,103 @@
+digraph "" {
+    "r0 := @this: Z"
+    "load.r r0"
+    "r0 := @this: Z"->"load.r r0";
+    "push 550"
+    "load.r r0"->"push 550";
+    "push 370"
+    "push 550"->"push 370";
+    "virtualinvoke <java.applet.Applet: void resize(int,int)>"
+    "push 370"->"virtualinvoke <java.applet.Applet: void resize(int,int)>";
+    "virtualinvoke <java.applet.Applet: void resize(int,int)>"->"load.r r0";
+    "push null"
+    "load.r r0"->"push null";
+    "virtualinvoke <java.awt.Container: void setLayout(java.awt.LayoutManager)>"
+    "push null"->"virtualinvoke <java.awt.Container: void setLayout(java.awt.LayoutManager)>";
+    "new Values"
+    "virtualinvoke <java.awt.Container: void setLayout(java.awt.LayoutManager)>"->"new Values";
+    "dup1.r"
+    "new Values"->"dup1.r";
+    "specialinvoke <Values: void <init>()>"
+    "dup1.r"->"specialinvoke <Values: void <init>()>";
+    "staticput <Z: Values val>"
+    "specialinvoke <Values: void <init>()>"->"staticput <Z: Values val>";
+    "new Sampler"
+    "staticput <Z: Values val>"->"new Sampler";
+    "new Sampler"->"dup1.r";
+    "specialinvoke <Sampler: void <init>()>"
+    "dup1.r"->"specialinvoke <Sampler: void <init>()>";
+    "staticput <Z: Sampler samp>"
+    "specialinvoke <Sampler: void <init>()>"->"staticput <Z: Sampler samp>";
+    "new Distribution"
+    "staticput <Z: Sampler samp>"->"new Distribution";
+    "new Distribution"->"dup1.r";
+    "specialinvoke <Distribution: void <init>()>"
+    "dup1.r"->"specialinvoke <Distribution: void <init>()>";
+    "staticput <Z: Distribution dist>"
+    "specialinvoke <Distribution: void <init>()>"->"staticput <Z: Distribution dist>";
+    "staticput <Z: Distribution dist>"->"load.r r0";
+    "virtualinvoke <Z: void get_params()>"
+    "load.r r0"->"virtualinvoke <Z: void get_params()>";
+    "staticinvoke <Distribution: void full_parameter_change()>"
+    "virtualinvoke <Z: void get_params()>"->"staticinvoke <Distribution: void full_parameter_change()>";
+    "new DistDraw"
+    "staticinvoke <Distribution: void full_parameter_change()>"->"new DistDraw";
+    "new DistDraw"->"dup1.r";
+    "staticget <Z: int DD_width>"
+    "dup1.r"->"staticget <Z: int DD_width>";
+    "staticget <Z: int DD_width>"->"push 370";
+    "specialinvoke <DistDraw: void <init>(int,int)>"
+    "push 370"->"specialinvoke <DistDraw: void <init>(int,int)>";
+    "staticput <Z: DistDraw DD_panel>"
+    "specialinvoke <DistDraw: void <init>(int,int)>"->"staticput <Z: DistDraw DD_panel>";
+    "new RightPanel"
+    "staticput <Z: DistDraw DD_panel>"->"new RightPanel";
+    "new RightPanel"->"dup1.r";
+    "staticget <Z: int RP_width>"
+    "dup1.r"->"staticget <Z: int RP_width>";
+    "staticget <Z: int RP_width>"->"push 370";
+    "specialinvoke <RightPanel: void <init>(int,int)>"
+    "push 370"->"specialinvoke <RightPanel: void <init>(int,int)>";
+    "staticput <Z: RightPanel RP_panel>"
+    "specialinvoke <RightPanel: void <init>(int,int)>"->"staticput <Z: RightPanel RP_panel>";
+    "staticput <Z: RightPanel RP_panel>"->"load.r r0";
+    "push \"Initializing\""
+    "load.r r0"->"push \"Initializing\"";
+    "virtualinvoke <java.applet.Applet: void showStatus(java.lang.String)>"
+    "push \"Initializing\""->"virtualinvoke <java.applet.Applet: void showStatus(java.lang.String)>";
+    "staticget <java.lang.System: java.io.PrintStream out>"
+    "virtualinvoke <java.applet.Applet: void showStatus(java.lang.String)>"->"staticget <java.lang.System: java.io.PrintStream out>";
+    "push \"\nClaremont Graduate University\'s -- Web Interface for Statistics Education (WISE)\nHypothesis testing applet\nVersion 1.0b\nWPA version: Updated April, 1999\nDale.Berger@cgu.edu\""
+    "staticget <java.lang.System: java.io.PrintStream out>"->"push \"\nClaremont Graduate University\'s -- Web Interface for Statistics Education (WISE)\nHypothesis testing applet\nVersion 1.0b\nWPA version: Updated April, 1999\nDale.Berger@cgu.edu\"";
+    "virtualinvoke <java.io.PrintStream: void println(java.lang.String)>"
+    "push \"\nClaremont Graduate University\'s -- Web Interface for Statistics Education (WISE)\nHypothesis testing applet\nVersion 1.0b\nWPA version: Updated April, 1999\nDale.Berger@cgu.edu\""->"virtualinvoke <java.io.PrintStream: void println(java.lang.String)>";
+    "virtualinvoke <java.io.PrintStream: void println(java.lang.String)>"->"load.r r0";
+    "staticget <Z: DistDraw DD_panel>"
+    "load.r r0"->"staticget <Z: DistDraw DD_panel>";
+    "virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>"
+    "staticget <Z: DistDraw DD_panel>"->"virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>";
+    "pop"
+    "virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>"->"pop";
+    "pop"->"staticget <Z: DistDraw DD_panel>";
+    "push 0"
+    "staticget <Z: DistDraw DD_panel>"->"push 0";
+    "push 0"->"push 0";
+    "push 400"
+    "push 0"->"push 400";
+    "push 400"->"push 370";
+    "virtualinvoke <java.awt.Component: void reshape(int,int,int,int)>"
+    "push 370"->"virtualinvoke <java.awt.Component: void reshape(int,int,int,int)>";
+    "virtualinvoke <java.awt.Component: void reshape(int,int,int,int)>"->"load.r r0";
+    "staticget <Z: RightPanel RP_panel>"
+    "load.r r0"->"staticget <Z: RightPanel RP_panel>";
+    "staticget <Z: RightPanel RP_panel>"->"virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>";
+    "virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>"->"pop";
+    "pop"->"staticget <Z: RightPanel RP_panel>";
+    "staticget <Z: RightPanel RP_panel>"->"push 400";
+    "push 400"->"push 0";
+    "push 0"->"staticget <Z: int RP_width>";
+    "staticget <Z: int RP_width>"->"push 370";
+    "push 370"->"virtualinvoke <java.awt.Component: void reshape(int,int,int,int)>";
+    "return"
+    "virtualinvoke <java.awt.Component: void reshape(int,int,int,int)>"->"return";
+}

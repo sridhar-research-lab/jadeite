@@ -1,0 +1,79 @@
+digraph "" {
+    "r0 := @this: securer"
+    "load.r r0"
+    "r0 := @this: securer"->"load.r r0";
+    "push \"target\""
+    "load.r r0"->"push \"target\"";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"
+    "push \"target\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "staticput <securer: java.lang.String target>"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"staticput <securer: java.lang.String target>";
+    "staticput <securer: java.lang.String target>"->"load.r r0";
+    "push \"badURL\""
+    "load.r r0"->"push \"badURL\"";
+    "push \"badURL\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "staticput <securer: java.lang.String badURL>"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"staticput <securer: java.lang.String badURL>";
+    "staticput <securer: java.lang.String badURL>"->"load.r r0";
+    "new java.awt.BorderLayout"
+    "load.r r0"->"new java.awt.BorderLayout";
+    "dup1.r"
+    "new java.awt.BorderLayout"->"dup1.r";
+    "specialinvoke <java.awt.BorderLayout: void <init>()>"
+    "dup1.r"->"specialinvoke <java.awt.BorderLayout: void <init>()>";
+    "virtualinvoke <java.awt.Container: void setLayout(java.awt.LayoutManager)>"
+    "specialinvoke <java.awt.BorderLayout: void <init>()>"->"virtualinvoke <java.awt.Container: void setLayout(java.awt.LayoutManager)>";
+    "new java.awt.TextField"
+    "virtualinvoke <java.awt.Container: void setLayout(java.awt.LayoutManager)>"->"new java.awt.TextField";
+    "new java.awt.TextField"->"dup1.r";
+    "push \"\""
+    "dup1.r"->"push \"\"";
+    "specialinvoke <java.awt.TextField: void <init>(java.lang.String)>"
+    "push \"\""->"specialinvoke <java.awt.TextField: void <init>(java.lang.String)>";
+    "staticput <securer: java.awt.TextField display>"
+    "specialinvoke <java.awt.TextField: void <init>(java.lang.String)>"->"staticput <securer: java.awt.TextField display>";
+    "staticget <securer: java.awt.TextField display>"
+    "staticput <securer: java.awt.TextField display>"->"staticget <securer: java.awt.TextField display>";
+    "push 1"
+    "staticget <securer: java.awt.TextField display>"->"push 1";
+    "virtualinvoke <java.awt.TextComponent: void setEditable(boolean)>"
+    "push 1"->"virtualinvoke <java.awt.TextComponent: void setEditable(boolean)>";
+    "new java.awt.Panel"
+    "virtualinvoke <java.awt.TextComponent: void setEditable(boolean)>"->"new java.awt.Panel";
+    "store.r $r7"
+    "new java.awt.Panel"->"store.r $r7";
+    "load.r $r7"
+    "store.r $r7"->"load.r $r7";
+    "specialinvoke <java.awt.Panel: void <init>()>"
+    "load.r $r7"->"specialinvoke <java.awt.Panel: void <init>()>";
+    "specialinvoke <java.awt.Panel: void <init>()>"->"load.r $r7";
+    "new java.awt.GridLayout"
+    "load.r $r7"->"new java.awt.GridLayout";
+    "new java.awt.GridLayout"->"dup1.r";
+    "dup1.r"->"push 1";
+    "push 2"
+    "push 1"->"push 2";
+    "specialinvoke <java.awt.GridLayout: void <init>(int,int)>"
+    "push 2"->"specialinvoke <java.awt.GridLayout: void <init>(int,int)>";
+    "specialinvoke <java.awt.GridLayout: void <init>(int,int)>"->"virtualinvoke <java.awt.Container: void setLayout(java.awt.LayoutManager)>";
+    "virtualinvoke <java.awt.Container: void setLayout(java.awt.LayoutManager)>"->"load.r $r7";
+    "load.r $r7"->"staticget <securer: java.awt.TextField display>";
+    "virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>"
+    "staticget <securer: java.awt.TextField display>"->"virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>";
+    "pop"
+    "virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>"->"pop";
+    "pop"->"load.r r0";
+    "load.r r0"->"load.r $r7";
+    "push \"ENTER\""
+    "load.r $r7"->"push \"ENTER\"";
+    "virtualinvoke <securer: void addButton(java.awt.Container,java.lang.String)>"
+    "push \"ENTER\""->"virtualinvoke <securer: void addButton(java.awt.Container,java.lang.String)>";
+    "virtualinvoke <securer: void addButton(java.awt.Container,java.lang.String)>"->"load.r r0";
+    "load.r r0"->"load.r $r7";
+    "push \"North\""
+    "load.r $r7"->"push \"North\"";
+    "virtualinvoke <java.awt.Container: void add(java.awt.Component,java.lang.Object)>"
+    "push \"North\""->"virtualinvoke <java.awt.Container: void add(java.awt.Component,java.lang.Object)>";
+    "return"
+    "virtualinvoke <java.awt.Container: void add(java.awt.Component,java.lang.Object)>"->"return";
+}

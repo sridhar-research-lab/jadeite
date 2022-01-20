@@ -1,0 +1,1067 @@
+digraph "" {
+    "r0 := @this: DownTime"
+    "load.r r0"
+    "r0 := @this: DownTime"->"load.r r0";
+    "push \"size\""
+    "load.r r0"->"push \"size\"";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"
+    "push \"size\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "store.r r1"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"store.r r1";
+    "load.r r1"
+    "store.r r1"->"load.r r1";
+    "ifnull load.r r0"
+    "load.r r1"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r1";
+    "staticinvoke <java.lang.Float: java.lang.Float valueOf(java.lang.String)>"
+    "load.r r1"->"staticinvoke <java.lang.Float: java.lang.Float valueOf(java.lang.String)>";
+    "virtualinvoke <java.lang.Float: float floatValue()>"
+    "staticinvoke <java.lang.Float: java.lang.Float valueOf(java.lang.String)>"->"virtualinvoke <java.lang.Float: float floatValue()>";
+    "fieldput <DownTime: float size>"
+    "virtualinvoke <java.lang.Float: float floatValue()>"->"fieldput <DownTime: float size>";
+    "fieldput <DownTime: float size>"->"load.r r0";
+    "fieldget <DownTime: float size>"
+    "load.r r0"->"fieldget <DownTime: float size>";
+    "push 1024.0F"
+    "fieldget <DownTime: float size>"->"push 1024.0F";
+    "cmpl.f"
+    "push 1024.0F"->"cmpl.f";
+    "iflt push \"KB\""
+    "cmpl.f"->"iflt push \"KB\"";
+    "push \"MB\""
+    "iflt push \"KB\""->"push \"MB\"";
+    "push \"MB\""->"store.r r1";
+    "goto load.r r0"
+    "store.r r1"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r1";
+    "fieldput <DownTime: java.lang.String incsize>"
+    "load.r r1"->"fieldput <DownTime: java.lang.String incsize>";
+    "fieldput <DownTime: java.lang.String incsize>"->"load.r r0";
+    "load.r r0"->"fieldget <DownTime: float size>";
+    "fieldget <DownTime: float size>"->"push 1024.0F";
+    "push 1024.0F"->"cmpl.f";
+    "iflt load.r r0"
+    "cmpl.f"->"iflt load.r r0";
+    "iflt load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <DownTime: float size>";
+    "fieldget <DownTime: float size>"->"push 1024.0F";
+    "div.f"
+    "push 1024.0F"->"div.f";
+    "store.f r1"
+    "div.f"->"store.f r1";
+    "store.f r1"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "load.f r1"
+    "load.r r0"->"load.f r1";
+    "fieldput <DownTime: float modsize>"
+    "load.f r1"->"fieldput <DownTime: float modsize>";
+    "fieldput <DownTime: float modsize>"->"load.r r0";
+    "push \"filename\""
+    "load.r r0"->"push \"filename\"";
+    "push \"filename\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"store.r r1";
+    "store.r r1"->"load.r r1";
+    "ifnull push \"this file\""
+    "load.r r1"->"ifnull push \"this file\"";
+    "ifnull push \"this file\""->"load.r r1";
+    "load.r r1"->"store.r r1";
+    "store.r r1"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r1";
+    "fieldput <DownTime: java.lang.String fileName>"
+    "load.r r1"->"fieldput <DownTime: java.lang.String fileName>";
+    "fieldput <DownTime: java.lang.String fileName>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <DownTime: float size>";
+    "push 8.0F"
+    "fieldget <DownTime: float size>"->"push 8.0F";
+    "mul.f"
+    "push 8.0F"->"mul.f";
+    "mul.f"->"fieldput <DownTime: float size>";
+    "fieldput <DownTime: float size>"->"load.r r0";
+    "push \"bgcolor\""
+    "load.r r0"->"push \"bgcolor\"";
+    "push \"bgcolor\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"store.r r1";
+    "store.r r1"->"load.r r1";
+    "load.r r1"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r r0";
+    "new java.awt.Color"
+    "load.r r0"->"new java.awt.Color";
+    "dup1.r"
+    "new java.awt.Color"->"dup1.r";
+    "dup1.r"->"load.r r1";
+    "push 16"
+    "load.r r1"->"push 16";
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String,int)>"
+    "push 16"->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String,int)>";
+    "specialinvoke <java.awt.Color: void <init>(int)>"
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String,int)>"->"specialinvoke <java.awt.Color: void <init>(int)>";
+    "fieldput <DownTime: java.awt.Color bgColor>"
+    "specialinvoke <java.awt.Color: void <init>(int)>"->"fieldput <DownTime: java.awt.Color bgColor>";
+    "fieldput <DownTime: java.awt.Color bgColor>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "fieldget <DownTime: java.awt.Color bgColor>"
+    "load.r r0"->"fieldget <DownTime: java.awt.Color bgColor>";
+    "virtualinvoke <java.awt.Component: void setBackground(java.awt.Color)>"
+    "fieldget <DownTime: java.awt.Color bgColor>"->"virtualinvoke <java.awt.Component: void setBackground(java.awt.Color)>";
+    "virtualinvoke <java.awt.Component: void setBackground(java.awt.Color)>"->"load.r r0";
+    "push \"textcolor\""
+    "load.r r0"->"push \"textcolor\"";
+    "push \"textcolor\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"store.r r1";
+    "store.r r1"->"load.r r1";
+    "load.r r1"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r r0";
+    "load.r r0"->"new java.awt.Color";
+    "new java.awt.Color"->"dup1.r";
+    "dup1.r"->"load.r r1";
+    "load.r r1"->"push 16";
+    "push 16"->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String,int)>";
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String,int)>"->"specialinvoke <java.awt.Color: void <init>(int)>";
+    "fieldput <DownTime: java.awt.Color fgColor>"
+    "specialinvoke <java.awt.Color: void <init>(int)>"->"fieldput <DownTime: java.awt.Color fgColor>";
+    "fieldput <DownTime: java.awt.Color fgColor>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <DownTime: float size>";
+    "f2d"
+    "fieldget <DownTime: float size>"->"f2d";
+    "push 14.0625"
+    "f2d"->"push 14.0625";
+    "div.d"
+    "push 14.0625"->"div.d";
+    "d2f"
+    "div.d"->"d2f";
+    "fieldput <DownTime: float sec144>"
+    "d2f"->"fieldput <DownTime: float sec144>";
+    "fieldput <DownTime: float sec144>"->"load.r r0";
+    "fieldget <DownTime: float sec144>"
+    "load.r r0"->"fieldget <DownTime: float sec144>";
+    "push 60.0F"
+    "fieldget <DownTime: float sec144>"->"push 60.0F";
+    "push 60.0F"->"cmpl.f";
+    "iflt push 0.0F"
+    "cmpl.f"->"iflt push 0.0F";
+    "iflt push 0.0F"->"load.r r0";
+    "load.r r0"->"fieldget <DownTime: float sec144>";
+    "fieldget <DownTime: float sec144>"->"push 60.0F";
+    "push 60.0F"->"div.f";
+    "div.f"->"store.f r1";
+    "store.f r1"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "load.r r0"->"load.f r1";
+    "fieldput <DownTime: float min144>"
+    "load.f r1"->"fieldput <DownTime: float min144>";
+    "fieldput <DownTime: float min144>"->"load.r r0";
+    "fieldget <DownTime: float min144>"
+    "load.r r0"->"fieldget <DownTime: float min144>";
+    "fieldget <DownTime: float min144>"->"push 60.0F";
+    "push 60.0F"->"cmpl.f";
+    "cmpl.f"->"iflt push 0.0F";
+    "iflt push 0.0F"->"load.r r0";
+    "load.r r0"->"fieldget <DownTime: float min144>";
+    "fieldget <DownTime: float min144>"->"push 60.0F";
+    "push 60.0F"->"div.f";
+    "div.f"->"store.f r1";
+    "store.f r1"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "load.r r0"->"load.f r1";
+    "fieldput <DownTime: float hour144>"
+    "load.f r1"->"fieldput <DownTime: float hour144>";
+    "fieldput <DownTime: float hour144>"->"load.r r0";
+    "fieldget <DownTime: float hour144>"
+    "load.r r0"->"fieldget <DownTime: float hour144>";
+    "push 1.0F"
+    "fieldget <DownTime: float hour144>"->"push 1.0F";
+    "push 1.0F"->"cmpl.f";
+    "ifle push \" \""
+    "cmpl.f"->"ifle push \" \"";
+    "push \"s \""
+    "ifle push \" \""->"push \"s \"";
+    "push \"s \""->"store.r r1";
+    "store.r r1"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r1";
+    "fieldput <DownTime: java.lang.String s144>"
+    "load.r r1"->"fieldput <DownTime: java.lang.String s144>";
+    "fieldput <DownTime: java.lang.String s144>"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <DownTime: float sec144>";
+    "fieldget <DownTime: float sec144>"->"push 60.0F";
+    "push 60.0F"->"cmpl.f";
+    "ifge load.r r0"
+    "cmpl.f"->"ifge load.r r0";
+    "ifge load.r r0"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <DownTime: float min144>";
+    "fieldget <DownTime: float min144>"->"push 60.0F";
+    "push 60.0F"->"cmpl.f";
+    "cmpl.f"->"ifge load.r r0";
+    "ifge load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <DownTime: float size>";
+    "fieldget <DownTime: float size>"->"f2d";
+    "push 28.125"
+    "f2d"->"push 28.125";
+    "push 28.125"->"div.d";
+    "div.d"->"d2f";
+    "fieldput <DownTime: float sec288>"
+    "d2f"->"fieldput <DownTime: float sec288>";
+    "fieldput <DownTime: float sec288>"->"load.r r0";
+    "fieldget <DownTime: float sec288>"
+    "load.r r0"->"fieldget <DownTime: float sec288>";
+    "fieldget <DownTime: float sec288>"->"push 60.0F";
+    "push 60.0F"->"cmpl.f";
+    "cmpl.f"->"iflt push 0.0F";
+    "iflt push 0.0F"->"load.r r0";
+    "load.r r0"->"fieldget <DownTime: float sec288>";
+    "fieldget <DownTime: float sec288>"->"push 60.0F";
+    "push 60.0F"->"div.f";
+    "div.f"->"store.f r1";
+    "store.f r1"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "load.r r0"->"load.f r1";
+    "fieldput <DownTime: float min288>"
+    "load.f r1"->"fieldput <DownTime: float min288>";
+    "fieldput <DownTime: float min288>"->"load.r r0";
+    "fieldget <DownTime: float min288>"
+    "load.r r0"->"fieldget <DownTime: float min288>";
+    "fieldget <DownTime: float min288>"->"push 60.0F";
+    "push 60.0F"->"cmpl.f";
+    "cmpl.f"->"iflt push 0.0F";
+    "iflt push 0.0F"->"load.r r0";
+    "load.r r0"->"fieldget <DownTime: float min288>";
+    "fieldget <DownTime: float min288>"->"push 60.0F";
+    "push 60.0F"->"div.f";
+    "div.f"->"store.f r1";
+    "store.f r1"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "load.r r0"->"load.f r1";
+    "fieldput <DownTime: float hour288>"
+    "load.f r1"->"fieldput <DownTime: float hour288>";
+    "fieldput <DownTime: float hour288>"->"load.r r0";
+    "fieldget <DownTime: float hour288>"
+    "load.r r0"->"fieldget <DownTime: float hour288>";
+    "fieldget <DownTime: float hour288>"->"push 1.0F";
+    "push 1.0F"->"cmpl.f";
+    "cmpl.f"->"ifle push \" \"";
+    "ifle push \" \""->"push \"s \"";
+    "push \"s \""->"store.r r1";
+    "store.r r1"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r1";
+    "fieldput <DownTime: java.lang.String s288>"
+    "load.r r1"->"fieldput <DownTime: java.lang.String s288>";
+    "fieldput <DownTime: java.lang.String s288>"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <DownTime: float sec288>";
+    "fieldget <DownTime: float sec288>"->"push 60.0F";
+    "push 60.0F"->"cmpl.f";
+    "cmpl.f"->"ifge load.r r0";
+    "ifge load.r r0"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <DownTime: float min288>";
+    "fieldget <DownTime: float min288>"->"push 60.0F";
+    "push 60.0F"->"cmpl.f";
+    "cmpl.f"->"ifge load.r r0";
+    "ifge load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <DownTime: float size>";
+    "fieldget <DownTime: float size>"->"f2d";
+    "push 32.8125"
+    "f2d"->"push 32.8125";
+    "push 32.8125"->"div.d";
+    "div.d"->"d2f";
+    "fieldput <DownTime: float sec336>"
+    "d2f"->"fieldput <DownTime: float sec336>";
+    "fieldput <DownTime: float sec336>"->"load.r r0";
+    "fieldget <DownTime: float sec336>"
+    "load.r r0"->"fieldget <DownTime: float sec336>";
+    "fieldget <DownTime: float sec336>"->"push 60.0F";
+    "push 60.0F"->"cmpl.f";
+    "cmpl.f"->"iflt push 0.0F";
+    "iflt push 0.0F"->"load.r r0";
+    "load.r r0"->"fieldget <DownTime: float sec336>";
+    "fieldget <DownTime: float sec336>"->"push 60.0F";
+    "push 60.0F"->"div.f";
+    "div.f"->"store.f r1";
+    "store.f r1"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "load.r r0"->"load.f r1";
+    "fieldput <DownTime: float min336>"
+    "load.f r1"->"fieldput <DownTime: float min336>";
+    "fieldput <DownTime: float min336>"->"load.r r0";
+    "fieldget <DownTime: float min336>"
+    "load.r r0"->"fieldget <DownTime: float min336>";
+    "fieldget <DownTime: float min336>"->"push 60.0F";
+    "push 60.0F"->"cmpl.f";
+    "cmpl.f"->"iflt push 0.0F";
+    "iflt push 0.0F"->"load.r r0";
+    "load.r r0"->"fieldget <DownTime: float min336>";
+    "fieldget <DownTime: float min336>"->"push 60.0F";
+    "push 60.0F"->"div.f";
+    "div.f"->"store.f r1";
+    "store.f r1"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "load.r r0"->"load.f r1";
+    "fieldput <DownTime: float hour336>"
+    "load.f r1"->"fieldput <DownTime: float hour336>";
+    "fieldput <DownTime: float hour336>"->"load.r r0";
+    "fieldget <DownTime: float hour336>"
+    "load.r r0"->"fieldget <DownTime: float hour336>";
+    "fieldget <DownTime: float hour336>"->"push 1.0F";
+    "push 1.0F"->"cmpl.f";
+    "cmpl.f"->"ifle push \" \"";
+    "ifle push \" \""->"push \"s \"";
+    "push \"s \""->"store.r r1";
+    "store.r r1"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r1";
+    "fieldput <DownTime: java.lang.String s336>"
+    "load.r r1"->"fieldput <DownTime: java.lang.String s336>";
+    "fieldput <DownTime: java.lang.String s336>"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <DownTime: float sec336>";
+    "fieldget <DownTime: float sec336>"->"push 60.0F";
+    "push 60.0F"->"cmpl.f";
+    "cmpl.f"->"ifge load.r r0";
+    "ifge load.r r0"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <DownTime: float min336>";
+    "fieldget <DownTime: float min336>"->"push 60.0F";
+    "push 60.0F"->"cmpl.f";
+    "cmpl.f"->"ifge load.r r0";
+    "ifge load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <DownTime: float size>";
+    "fieldget <DownTime: float size>"->"f2d";
+    "push 51.75"
+    "f2d"->"push 51.75";
+    "push 51.75"->"div.d";
+    "div.d"->"d2f";
+    "fieldput <DownTime: float sec56k>"
+    "d2f"->"fieldput <DownTime: float sec56k>";
+    "fieldput <DownTime: float sec56k>"->"load.r r0";
+    "fieldget <DownTime: float sec56k>"
+    "load.r r0"->"fieldget <DownTime: float sec56k>";
+    "fieldget <DownTime: float sec56k>"->"push 60.0F";
+    "push 60.0F"->"cmpl.f";
+    "cmpl.f"->"iflt push 0.0F";
+    "iflt push 0.0F"->"load.r r0";
+    "load.r r0"->"fieldget <DownTime: float sec56k>";
+    "fieldget <DownTime: float sec56k>"->"push 60.0F";
+    "push 60.0F"->"div.f";
+    "div.f"->"store.f r1";
+    "store.f r1"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "load.r r0"->"load.f r1";
+    "fieldput <DownTime: float min56k>"
+    "load.f r1"->"fieldput <DownTime: float min56k>";
+    "fieldput <DownTime: float min56k>"->"load.r r0";
+    "fieldget <DownTime: float min56k>"
+    "load.r r0"->"fieldget <DownTime: float min56k>";
+    "fieldget <DownTime: float min56k>"->"push 60.0F";
+    "push 60.0F"->"cmpl.f";
+    "cmpl.f"->"iflt push 0.0F";
+    "iflt push 0.0F"->"load.r r0";
+    "load.r r0"->"fieldget <DownTime: float min56k>";
+    "fieldget <DownTime: float min56k>"->"push 60.0F";
+    "push 60.0F"->"div.f";
+    "div.f"->"store.f r1";
+    "store.f r1"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "load.r r0"->"load.f r1";
+    "fieldput <DownTime: float hour56k>"
+    "load.f r1"->"fieldput <DownTime: float hour56k>";
+    "fieldput <DownTime: float hour56k>"->"load.r r0";
+    "fieldget <DownTime: float hour56k>"
+    "load.r r0"->"fieldget <DownTime: float hour56k>";
+    "fieldget <DownTime: float hour56k>"->"push 1.0F";
+    "push 1.0F"->"cmpl.f";
+    "cmpl.f"->"ifle push \" \"";
+    "ifle push \" \""->"push \"s \"";
+    "push \"s \""->"store.r r1";
+    "store.r r1"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r1";
+    "fieldput <DownTime: java.lang.String s56k>"
+    "load.r r1"->"fieldput <DownTime: java.lang.String s56k>";
+    "fieldput <DownTime: java.lang.String s56k>"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <DownTime: float sec56k>";
+    "fieldget <DownTime: float sec56k>"->"push 60.0F";
+    "push 60.0F"->"cmpl.f";
+    "cmpl.f"->"ifge load.r r0";
+    "ifge load.r r0"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <DownTime: float min56k>";
+    "fieldget <DownTime: float min56k>"->"push 60.0F";
+    "push 60.0F"->"cmpl.f";
+    "cmpl.f"->"ifge load.r r0";
+    "ifge load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <DownTime: float size>";
+    "push 125.0F"
+    "fieldget <DownTime: float size>"->"push 125.0F";
+    "push 125.0F"->"div.f";
+    "fieldput <DownTime: float secIsdn>"
+    "div.f"->"fieldput <DownTime: float secIsdn>";
+    "fieldput <DownTime: float secIsdn>"->"load.r r0";
+    "fieldget <DownTime: float secIsdn>"
+    "load.r r0"->"fieldget <DownTime: float secIsdn>";
+    "fieldget <DownTime: float secIsdn>"->"push 60.0F";
+    "push 60.0F"->"cmpl.f";
+    "cmpl.f"->"iflt push 0.0F";
+    "iflt push 0.0F"->"load.r r0";
+    "load.r r0"->"fieldget <DownTime: float secIsdn>";
+    "fieldget <DownTime: float secIsdn>"->"push 60.0F";
+    "push 60.0F"->"div.f";
+    "div.f"->"store.f r1";
+    "store.f r1"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "load.r r0"->"load.f r1";
+    "fieldput <DownTime: float minIsdn>"
+    "load.f r1"->"fieldput <DownTime: float minIsdn>";
+    "fieldput <DownTime: float minIsdn>"->"load.r r0";
+    "fieldget <DownTime: float minIsdn>"
+    "load.r r0"->"fieldget <DownTime: float minIsdn>";
+    "fieldget <DownTime: float minIsdn>"->"push 60.0F";
+    "push 60.0F"->"cmpl.f";
+    "cmpl.f"->"iflt push 0.0F";
+    "iflt push 0.0F"->"load.r r0";
+    "load.r r0"->"fieldget <DownTime: float minIsdn>";
+    "fieldget <DownTime: float minIsdn>"->"push 60.0F";
+    "push 60.0F"->"div.f";
+    "div.f"->"store.f r1";
+    "store.f r1"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "load.r r0"->"load.f r1";
+    "fieldput <DownTime: float hourIsdn>"
+    "load.f r1"->"fieldput <DownTime: float hourIsdn>";
+    "fieldput <DownTime: float hourIsdn>"->"load.r r0";
+    "fieldget <DownTime: float hourIsdn>"
+    "load.r r0"->"fieldget <DownTime: float hourIsdn>";
+    "fieldget <DownTime: float hourIsdn>"->"push 1.0F";
+    "push 1.0F"->"cmpl.f";
+    "cmpl.f"->"ifle push \" \"";
+    "ifle push \" \""->"push \"s \"";
+    "push \"s \""->"store.r r1";
+    "store.r r1"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r1";
+    "fieldput <DownTime: java.lang.String sIsdn>"
+    "load.r r1"->"fieldput <DownTime: java.lang.String sIsdn>";
+    "fieldput <DownTime: java.lang.String sIsdn>"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <DownTime: float secIsdn>";
+    "fieldget <DownTime: float secIsdn>"->"push 60.0F";
+    "push 60.0F"->"cmpl.f";
+    "cmpl.f"->"ifge load.r r0";
+    "ifge load.r r0"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <DownTime: float minIsdn>";
+    "fieldget <DownTime: float minIsdn>"->"push 60.0F";
+    "push 60.0F"->"cmpl.f";
+    "cmpl.f"->"ifge load.r r0";
+    "ifge load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <DownTime: float size>";
+    "fieldget <DownTime: float size>"->"f2d";
+    "push 390.625"
+    "f2d"->"push 390.625";
+    "push 390.625"->"div.d";
+    "div.d"->"d2f";
+    "fieldput <DownTime: float secSat>"
+    "d2f"->"fieldput <DownTime: float secSat>";
+    "fieldput <DownTime: float secSat>"->"load.r r0";
+    "fieldget <DownTime: float secSat>"
+    "load.r r0"->"fieldget <DownTime: float secSat>";
+    "fieldget <DownTime: float secSat>"->"push 60.0F";
+    "push 60.0F"->"cmpl.f";
+    "cmpl.f"->"iflt push 0.0F";
+    "iflt push 0.0F"->"load.r r0";
+    "load.r r0"->"fieldget <DownTime: float secSat>";
+    "fieldget <DownTime: float secSat>"->"push 60.0F";
+    "push 60.0F"->"div.f";
+    "div.f"->"store.f r1";
+    "store.f r1"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "load.r r0"->"load.f r1";
+    "fieldput <DownTime: float minSat>"
+    "load.f r1"->"fieldput <DownTime: float minSat>";
+    "fieldput <DownTime: float minSat>"->"load.r r0";
+    "fieldget <DownTime: float minSat>"
+    "load.r r0"->"fieldget <DownTime: float minSat>";
+    "fieldget <DownTime: float minSat>"->"push 60.0F";
+    "push 60.0F"->"cmpl.f";
+    "cmpl.f"->"iflt push 0.0F";
+    "iflt push 0.0F"->"load.r r0";
+    "load.r r0"->"fieldget <DownTime: float minSat>";
+    "fieldget <DownTime: float minSat>"->"push 60.0F";
+    "push 60.0F"->"div.f";
+    "div.f"->"store.f r1";
+    "store.f r1"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "load.r r0"->"load.f r1";
+    "fieldput <DownTime: float hourSat>"
+    "load.f r1"->"fieldput <DownTime: float hourSat>";
+    "fieldput <DownTime: float hourSat>"->"load.r r0";
+    "fieldget <DownTime: float hourSat>"
+    "load.r r0"->"fieldget <DownTime: float hourSat>";
+    "fieldget <DownTime: float hourSat>"->"push 1.0F";
+    "push 1.0F"->"cmpl.f";
+    "cmpl.f"->"ifle push \" \"";
+    "ifle push \" \""->"push \"s \"";
+    "push \"s \""->"store.r r1";
+    "store.r r1"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r1";
+    "fieldput <DownTime: java.lang.String sSat>"
+    "load.r r1"->"fieldput <DownTime: java.lang.String sSat>";
+    "fieldput <DownTime: java.lang.String sSat>"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <DownTime: float secSat>";
+    "fieldget <DownTime: float secSat>"->"push 60.0F";
+    "push 60.0F"->"cmpl.f";
+    "cmpl.f"->"ifge load.r r0";
+    "ifge load.r r0"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <DownTime: float minSat>";
+    "fieldget <DownTime: float minSat>"->"push 60.0F";
+    "push 60.0F"->"cmpl.f";
+    "cmpl.f"->"ifge load.r r0";
+    "ifge load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <DownTime: float size>";
+    "fieldget <DownTime: float size>"->"f2d";
+    "push 781.25"
+    "f2d"->"push 781.25";
+    "push 781.25"->"div.d";
+    "div.d"->"d2f";
+    "fieldput <DownTime: float secAdsl>"
+    "d2f"->"fieldput <DownTime: float secAdsl>";
+    "fieldput <DownTime: float secAdsl>"->"load.r r0";
+    "fieldget <DownTime: float secAdsl>"
+    "load.r r0"->"fieldget <DownTime: float secAdsl>";
+    "fieldget <DownTime: float secAdsl>"->"push 60.0F";
+    "push 60.0F"->"cmpl.f";
+    "cmpl.f"->"iflt push 0.0F";
+    "iflt push 0.0F"->"load.r r0";
+    "load.r r0"->"fieldget <DownTime: float secAdsl>";
+    "fieldget <DownTime: float secAdsl>"->"push 60.0F";
+    "push 60.0F"->"div.f";
+    "div.f"->"store.f r1";
+    "store.f r1"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "load.r r0"->"load.f r1";
+    "fieldput <DownTime: float minAdsl>"
+    "load.f r1"->"fieldput <DownTime: float minAdsl>";
+    "fieldput <DownTime: float minAdsl>"->"load.r r0";
+    "fieldget <DownTime: float minAdsl>"
+    "load.r r0"->"fieldget <DownTime: float minAdsl>";
+    "fieldget <DownTime: float minAdsl>"->"push 60.0F";
+    "push 60.0F"->"cmpl.f";
+    "cmpl.f"->"iflt push 0.0F";
+    "iflt push 0.0F"->"load.r r0";
+    "load.r r0"->"fieldget <DownTime: float minAdsl>";
+    "fieldget <DownTime: float minAdsl>"->"push 60.0F";
+    "push 60.0F"->"div.f";
+    "div.f"->"store.f r1";
+    "store.f r1"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "load.r r0"->"load.f r1";
+    "fieldput <DownTime: float hourAdsl>"
+    "load.f r1"->"fieldput <DownTime: float hourAdsl>";
+    "fieldput <DownTime: float hourAdsl>"->"load.r r0";
+    "fieldget <DownTime: float hourAdsl>"
+    "load.r r0"->"fieldget <DownTime: float hourAdsl>";
+    "fieldget <DownTime: float hourAdsl>"->"push 1.0F";
+    "push 1.0F"->"cmpl.f";
+    "cmpl.f"->"ifle push \" \"";
+    "ifle push \" \""->"push \"s \"";
+    "push \"s \""->"store.r r1";
+    "store.r r1"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r1";
+    "fieldput <DownTime: java.lang.String sAdsl>"
+    "load.r r1"->"fieldput <DownTime: java.lang.String sAdsl>";
+    "fieldput <DownTime: java.lang.String sAdsl>"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <DownTime: float secAdsl>";
+    "fieldget <DownTime: float secAdsl>"->"push 60.0F";
+    "push 60.0F"->"cmpl.f";
+    "cmpl.f"->"ifge load.r r0";
+    "ifge load.r r0"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <DownTime: float minAdsl>";
+    "fieldget <DownTime: float minAdsl>"->"push 60.0F";
+    "push 60.0F"->"cmpl.f";
+    "cmpl.f"->"ifge load.r r0";
+    "ifge load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <DownTime: float size>";
+    "push 1000.0F"
+    "fieldget <DownTime: float size>"->"push 1000.0F";
+    "push 1000.0F"->"div.f";
+    "fieldput <DownTime: float secCable>"
+    "div.f"->"fieldput <DownTime: float secCable>";
+    "fieldput <DownTime: float secCable>"->"load.r r0";
+    "fieldget <DownTime: float secCable>"
+    "load.r r0"->"fieldget <DownTime: float secCable>";
+    "fieldget <DownTime: float secCable>"->"push 60.0F";
+    "push 60.0F"->"cmpl.f";
+    "cmpl.f"->"iflt push 0.0F";
+    "iflt push 0.0F"->"load.r r0";
+    "load.r r0"->"fieldget <DownTime: float secCable>";
+    "fieldget <DownTime: float secCable>"->"push 60.0F";
+    "push 60.0F"->"div.f";
+    "div.f"->"store.f r1";
+    "store.f r1"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "load.r r0"->"load.f r1";
+    "fieldput <DownTime: float minCable>"
+    "load.f r1"->"fieldput <DownTime: float minCable>";
+    "fieldput <DownTime: float minCable>"->"load.r r0";
+    "fieldget <DownTime: float minCable>"
+    "load.r r0"->"fieldget <DownTime: float minCable>";
+    "fieldget <DownTime: float minCable>"->"push 60.0F";
+    "push 60.0F"->"cmpl.f";
+    "cmpl.f"->"iflt push 0.0F";
+    "iflt push 0.0F"->"load.r r0";
+    "load.r r0"->"fieldget <DownTime: float minCable>";
+    "fieldget <DownTime: float minCable>"->"push 60.0F";
+    "push 60.0F"->"div.f";
+    "div.f"->"store.f r1";
+    "store.f r1"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "load.r r0"->"load.f r1";
+    "fieldput <DownTime: float hourCable>"
+    "load.f r1"->"fieldput <DownTime: float hourCable>";
+    "fieldput <DownTime: float hourCable>"->"load.r r0";
+    "fieldget <DownTime: float hourCable>"
+    "load.r r0"->"fieldget <DownTime: float hourCable>";
+    "fieldget <DownTime: float hourCable>"->"push 1.0F";
+    "push 1.0F"->"cmpl.f";
+    "cmpl.f"->"ifle push \" \"";
+    "ifle push \" \""->"push \"s \"";
+    "push \"s \""->"store.r r1";
+    "store.r r1"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r1";
+    "fieldput <DownTime: java.lang.String sCable>"
+    "load.r r1"->"fieldput <DownTime: java.lang.String sCable>";
+    "fieldput <DownTime: java.lang.String sCable>"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <DownTime: float secCable>";
+    "fieldget <DownTime: float secCable>"->"push 60.0F";
+    "push 60.0F"->"cmpl.f";
+    "cmpl.f"->"ifge load.r r0";
+    "ifge load.r r0"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <DownTime: float minCable>";
+    "fieldget <DownTime: float minCable>"->"push 60.0F";
+    "push 60.0F"->"cmpl.f";
+    "cmpl.f"->"ifge load.r r0";
+    "ifge load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <DownTime: float size>";
+    "fieldget <DownTime: float size>"->"f2d";
+    "push 1464.84"
+    "f2d"->"push 1464.84";
+    "push 1464.84"->"div.d";
+    "div.d"->"d2f";
+    "fieldput <DownTime: float secT1>"
+    "d2f"->"fieldput <DownTime: float secT1>";
+    "fieldput <DownTime: float secT1>"->"load.r r0";
+    "fieldget <DownTime: float secT1>"
+    "load.r r0"->"fieldget <DownTime: float secT1>";
+    "fieldget <DownTime: float secT1>"->"push 60.0F";
+    "push 60.0F"->"cmpl.f";
+    "cmpl.f"->"iflt push 0.0F";
+    "iflt push 0.0F"->"load.r r0";
+    "load.r r0"->"fieldget <DownTime: float secT1>";
+    "fieldget <DownTime: float secT1>"->"push 60.0F";
+    "push 60.0F"->"div.f";
+    "div.f"->"store.f r1";
+    "store.f r1"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "load.r r0"->"load.f r1";
+    "fieldput <DownTime: float minT1>"
+    "load.f r1"->"fieldput <DownTime: float minT1>";
+    "fieldput <DownTime: float minT1>"->"load.r r0";
+    "fieldget <DownTime: float minT1>"
+    "load.r r0"->"fieldget <DownTime: float minT1>";
+    "fieldget <DownTime: float minT1>"->"push 60.0F";
+    "push 60.0F"->"cmpl.f";
+    "cmpl.f"->"iflt push 0.0F";
+    "iflt push 0.0F"->"load.r r0";
+    "load.r r0"->"fieldget <DownTime: float minT1>";
+    "fieldget <DownTime: float minT1>"->"push 60.0F";
+    "push 60.0F"->"div.f";
+    "div.f"->"store.f r1";
+    "store.f r1"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "load.r r0"->"load.f r1";
+    "fieldput <DownTime: float hourT1>"
+    "load.f r1"->"fieldput <DownTime: float hourT1>";
+    "fieldput <DownTime: float hourT1>"->"load.r r0";
+    "fieldget <DownTime: float hourT1>"
+    "load.r r0"->"fieldget <DownTime: float hourT1>";
+    "fieldget <DownTime: float hourT1>"->"push 1.0F";
+    "push 1.0F"->"cmpl.f";
+    "cmpl.f"->"ifle push \" \"";
+    "ifle push \" \""->"push \"s \"";
+    "push \"s \""->"store.r r1";
+    "store.r r1"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r1";
+    "fieldput <DownTime: java.lang.String sT1>"
+    "load.r r1"->"fieldput <DownTime: java.lang.String sT1>";
+    "fieldput <DownTime: java.lang.String sT1>"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <DownTime: float secT1>";
+    "fieldget <DownTime: float secT1>"->"push 60.0F";
+    "push 60.0F"->"cmpl.f";
+    "cmpl.f"->"ifge load.r r0";
+    "ifge load.r r0"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <DownTime: float minT1>";
+    "fieldget <DownTime: float minT1>"->"push 60.0F";
+    "push 60.0F"->"cmpl.f";
+    "cmpl.f"->"ifge load.r r0";
+    "ifge load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <DownTime: float size>";
+    "fieldget <DownTime: float size>"->"f2d";
+    "push 41992.1875"
+    "f2d"->"push 41992.1875";
+    "push 41992.1875"->"div.d";
+    "div.d"->"d2f";
+    "fieldput <DownTime: float secT3>"
+    "d2f"->"fieldput <DownTime: float secT3>";
+    "fieldput <DownTime: float secT3>"->"load.r r0";
+    "fieldget <DownTime: float secT3>"
+    "load.r r0"->"fieldget <DownTime: float secT3>";
+    "fieldget <DownTime: float secT3>"->"push 60.0F";
+    "push 60.0F"->"cmpl.f";
+    "cmpl.f"->"iflt push 0.0F";
+    "iflt push 0.0F"->"load.r r0";
+    "load.r r0"->"fieldget <DownTime: float secT3>";
+    "fieldget <DownTime: float secT3>"->"push 60.0F";
+    "push 60.0F"->"div.f";
+    "div.f"->"store.f r1";
+    "store.f r1"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "load.r r0"->"load.f r1";
+    "fieldput <DownTime: float minT3>"
+    "load.f r1"->"fieldput <DownTime: float minT3>";
+    "fieldput <DownTime: float minT3>"->"load.r r0";
+    "fieldget <DownTime: float minT3>"
+    "load.r r0"->"fieldget <DownTime: float minT3>";
+    "fieldget <DownTime: float minT3>"->"push 60.0F";
+    "push 60.0F"->"cmpl.f";
+    "cmpl.f"->"iflt push 0.0F";
+    "iflt push 0.0F"->"load.r r0";
+    "load.r r0"->"fieldget <DownTime: float minT3>";
+    "fieldget <DownTime: float minT3>"->"push 60.0F";
+    "push 60.0F"->"div.f";
+    "div.f"->"store.f r1";
+    "store.f r1"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "load.r r0"->"load.f r1";
+    "fieldput <DownTime: float hourT3>"
+    "load.f r1"->"fieldput <DownTime: float hourT3>";
+    "fieldput <DownTime: float hourT3>"->"load.r r0";
+    "fieldget <DownTime: float hourT3>"
+    "load.r r0"->"fieldget <DownTime: float hourT3>";
+    "fieldget <DownTime: float hourT3>"->"push 1.0F";
+    "push 1.0F"->"cmpl.f";
+    "cmpl.f"->"ifle push \" \"";
+    "ifle push \" \""->"push \"s \"";
+    "push \"s \""->"store.r r1";
+    "store.r r1"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r1";
+    "fieldput <DownTime: java.lang.String sT3>"
+    "load.r r1"->"fieldput <DownTime: java.lang.String sT3>";
+    "fieldput <DownTime: java.lang.String sT3>"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <DownTime: float secT3>";
+    "fieldget <DownTime: float secT3>"->"push 60.0F";
+    "push 60.0F"->"cmpl.f";
+    "cmpl.f"->"ifge load.r r0";
+    "ifge load.r r0"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <DownTime: float minT3>";
+    "fieldget <DownTime: float minT3>"->"push 60.0F";
+    "push 60.0F"->"cmpl.f";
+    "cmpl.f"->"ifge load.r r0";
+    "ifge load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "fieldget <DownTime: java.awt.BorderLayout lay>"
+    "load.r r0"->"fieldget <DownTime: java.awt.BorderLayout lay>";
+    "virtualinvoke <java.awt.Container: void setLayout(java.awt.LayoutManager)>"
+    "fieldget <DownTime: java.awt.BorderLayout lay>"->"virtualinvoke <java.awt.Container: void setLayout(java.awt.LayoutManager)>";
+    "virtualinvoke <java.awt.Container: void setLayout(java.awt.LayoutManager)>"->"load.r r0";
+    "fieldget <DownTime: java.awt.Panel p>"
+    "load.r r0"->"fieldget <DownTime: java.awt.Panel p>";
+    "fieldget <DownTime: java.awt.Panel p>"->"load.r r0";
+    "fieldget <DownTime: java.awt.BorderLayout GL>"
+    "load.r r0"->"fieldget <DownTime: java.awt.BorderLayout GL>";
+    "fieldget <DownTime: java.awt.BorderLayout GL>"->"virtualinvoke <java.awt.Container: void setLayout(java.awt.LayoutManager)>";
+    "virtualinvoke <java.awt.Container: void setLayout(java.awt.LayoutManager)>"->"load.r r0";
+    "load.r r0"->"fieldget <DownTime: java.awt.Panel p>";
+    "fieldget <DownTime: java.awt.Panel p>"->"load.r r0";
+    "load.r r0"->"fieldget <DownTime: java.awt.Color bgColor>";
+    "fieldget <DownTime: java.awt.Color bgColor>"->"virtualinvoke <java.awt.Component: void setBackground(java.awt.Color)>";
+    "virtualinvoke <java.awt.Component: void setBackground(java.awt.Color)>"->"load.r r0";
+    "fieldget <DownTime: java.awt.Button xdButton>"
+    "load.r r0"->"fieldget <DownTime: java.awt.Button xdButton>";
+    "fieldget <DownTime: java.awt.Button xdButton>"->"load.r r0";
+    "virtualinvoke <java.awt.Button: void addActionListener(java.awt.event.ActionListener)>"
+    "load.r r0"->"virtualinvoke <java.awt.Button: void addActionListener(java.awt.event.ActionListener)>";
+    "virtualinvoke <java.awt.Button: void addActionListener(java.awt.event.ActionListener)>"->"load.r r0";
+    "load.r r0"->"fieldget <DownTime: java.awt.Button xdButton>";
+    "fieldget <DownTime: java.awt.Button xdButton>"->"load.r r0";
+    "fieldget <DownTime: java.awt.Color fgColor>"
+    "load.r r0"->"fieldget <DownTime: java.awt.Color fgColor>";
+    "virtualinvoke <java.awt.Component: void setForeground(java.awt.Color)>"
+    "fieldget <DownTime: java.awt.Color fgColor>"->"virtualinvoke <java.awt.Component: void setForeground(java.awt.Color)>";
+    "virtualinvoke <java.awt.Component: void setForeground(java.awt.Color)>"->"load.r r0";
+    "load.r r0"->"fieldget <DownTime: java.awt.Button xdButton>";
+    "fieldget <DownTime: java.awt.Button xdButton>"->"load.r r0";
+    "load.r r0"->"fieldget <DownTime: java.awt.Color bgColor>";
+    "fieldget <DownTime: java.awt.Color bgColor>"->"virtualinvoke <java.awt.Component: void setBackground(java.awt.Color)>";
+    "virtualinvoke <java.awt.Component: void setBackground(java.awt.Color)>"->"load.r r0";
+    "load.r r0"->"fieldget <DownTime: java.awt.Panel p>";
+    "fieldget <DownTime: java.awt.Panel p>"->"load.r r0";
+    "load.r r0"->"fieldget <DownTime: java.awt.Button xdButton>";
+    "push \"West\""
+    "fieldget <DownTime: java.awt.Button xdButton>"->"push \"West\"";
+    "virtualinvoke <java.awt.Container: void add(java.awt.Component,java.lang.Object)>"
+    "push \"West\""->"virtualinvoke <java.awt.Container: void add(java.awt.Component,java.lang.Object)>";
+    "virtualinvoke <java.awt.Container: void add(java.awt.Component,java.lang.Object)>"->"load.r r0";
+    "fieldget <DownTime: java.awt.Button vButton>"
+    "load.r r0"->"fieldget <DownTime: java.awt.Button vButton>";
+    "fieldget <DownTime: java.awt.Button vButton>"->"load.r r0";
+    "load.r r0"->"virtualinvoke <java.awt.Button: void addActionListener(java.awt.event.ActionListener)>";
+    "virtualinvoke <java.awt.Button: void addActionListener(java.awt.event.ActionListener)>"->"load.r r0";
+    "load.r r0"->"fieldget <DownTime: java.awt.Button vButton>";
+    "staticget <java.awt.Color: java.awt.Color green>"
+    "fieldget <DownTime: java.awt.Button vButton>"->"staticget <java.awt.Color: java.awt.Color green>";
+    "staticget <java.awt.Color: java.awt.Color green>"->"virtualinvoke <java.awt.Component: void setForeground(java.awt.Color)>";
+    "virtualinvoke <java.awt.Component: void setForeground(java.awt.Color)>"->"load.r r0";
+    "load.r r0"->"fieldget <DownTime: java.awt.Button vButton>";
+    "staticget <java.awt.Color: java.awt.Color black>"
+    "fieldget <DownTime: java.awt.Button vButton>"->"staticget <java.awt.Color: java.awt.Color black>";
+    "staticget <java.awt.Color: java.awt.Color black>"->"virtualinvoke <java.awt.Component: void setBackground(java.awt.Color)>";
+    "virtualinvoke <java.awt.Component: void setBackground(java.awt.Color)>"->"load.r r0";
+    "load.r r0"->"fieldget <DownTime: java.awt.Panel p>";
+    "fieldget <DownTime: java.awt.Panel p>"->"load.r r0";
+    "load.r r0"->"fieldget <DownTime: java.awt.Button vButton>";
+    "push \"East\""
+    "fieldget <DownTime: java.awt.Button vButton>"->"push \"East\"";
+    "push \"East\""->"virtualinvoke <java.awt.Container: void add(java.awt.Component,java.lang.Object)>";
+    "virtualinvoke <java.awt.Container: void add(java.awt.Component,java.lang.Object)>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <DownTime: java.awt.Panel p>";
+    "push \"South\""
+    "fieldget <DownTime: java.awt.Panel p>"->"push \"South\"";
+    "push \"South\""->"virtualinvoke <java.awt.Container: void add(java.awt.Component,java.lang.Object)>";
+    "return"
+    "virtualinvoke <java.awt.Container: void add(java.awt.Component,java.lang.Object)>"->"return";
+    "ifge load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <DownTime: float minT3>";
+    "fieldget <DownTime: float minT3>"->"push 60.0F";
+    "sub.f"
+    "push 60.0F"->"sub.f";
+    "sub.f"->"fieldput <DownTime: float minT3>";
+    "ifge load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <DownTime: float secT3>";
+    "fieldget <DownTime: float secT3>"->"push 60.0F";
+    "push 60.0F"->"sub.f";
+    "sub.f"->"fieldput <DownTime: float secT3>";
+    "push \" \""
+    "ifle push \" \""->"push \" \"";
+    "push \" \""->"store.r r1";
+    "push 0.0F"
+    "iflt push 0.0F"->"push 0.0F";
+    "push 0.0F"->"store.f r1";
+    "iflt push 0.0F"->"push 0.0F";
+    "push 0.0F"->"store.f r1";
+    "ifge load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <DownTime: float minT1>";
+    "fieldget <DownTime: float minT1>"->"push 60.0F";
+    "push 60.0F"->"sub.f";
+    "sub.f"->"fieldput <DownTime: float minT1>";
+    "ifge load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <DownTime: float secT1>";
+    "fieldget <DownTime: float secT1>"->"push 60.0F";
+    "push 60.0F"->"sub.f";
+    "sub.f"->"fieldput <DownTime: float secT1>";
+    "ifle push \" \""->"push \" \"";
+    "push \" \""->"store.r r1";
+    "iflt push 0.0F"->"push 0.0F";
+    "push 0.0F"->"store.f r1";
+    "iflt push 0.0F"->"push 0.0F";
+    "push 0.0F"->"store.f r1";
+    "ifge load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <DownTime: float minCable>";
+    "fieldget <DownTime: float minCable>"->"push 60.0F";
+    "push 60.0F"->"sub.f";
+    "sub.f"->"fieldput <DownTime: float minCable>";
+    "ifge load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <DownTime: float secCable>";
+    "fieldget <DownTime: float secCable>"->"push 60.0F";
+    "push 60.0F"->"sub.f";
+    "sub.f"->"fieldput <DownTime: float secCable>";
+    "ifle push \" \""->"push \" \"";
+    "push \" \""->"store.r r1";
+    "iflt push 0.0F"->"push 0.0F";
+    "push 0.0F"->"store.f r1";
+    "iflt push 0.0F"->"push 0.0F";
+    "push 0.0F"->"store.f r1";
+    "ifge load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <DownTime: float minAdsl>";
+    "fieldget <DownTime: float minAdsl>"->"push 60.0F";
+    "push 60.0F"->"sub.f";
+    "sub.f"->"fieldput <DownTime: float minAdsl>";
+    "ifge load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <DownTime: float secAdsl>";
+    "fieldget <DownTime: float secAdsl>"->"push 60.0F";
+    "push 60.0F"->"sub.f";
+    "sub.f"->"fieldput <DownTime: float secAdsl>";
+    "ifle push \" \""->"push \" \"";
+    "push \" \""->"store.r r1";
+    "iflt push 0.0F"->"push 0.0F";
+    "push 0.0F"->"store.f r1";
+    "iflt push 0.0F"->"push 0.0F";
+    "push 0.0F"->"store.f r1";
+    "ifge load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <DownTime: float minSat>";
+    "fieldget <DownTime: float minSat>"->"push 60.0F";
+    "push 60.0F"->"sub.f";
+    "sub.f"->"fieldput <DownTime: float minSat>";
+    "ifge load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <DownTime: float secSat>";
+    "fieldget <DownTime: float secSat>"->"push 60.0F";
+    "push 60.0F"->"sub.f";
+    "sub.f"->"fieldput <DownTime: float secSat>";
+    "ifle push \" \""->"push \" \"";
+    "push \" \""->"store.r r1";
+    "iflt push 0.0F"->"push 0.0F";
+    "push 0.0F"->"store.f r1";
+    "iflt push 0.0F"->"push 0.0F";
+    "push 0.0F"->"store.f r1";
+    "ifge load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <DownTime: float minIsdn>";
+    "fieldget <DownTime: float minIsdn>"->"push 60.0F";
+    "push 60.0F"->"sub.f";
+    "sub.f"->"fieldput <DownTime: float minIsdn>";
+    "ifge load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <DownTime: float secIsdn>";
+    "fieldget <DownTime: float secIsdn>"->"push 60.0F";
+    "push 60.0F"->"sub.f";
+    "sub.f"->"fieldput <DownTime: float secIsdn>";
+    "ifle push \" \""->"push \" \"";
+    "push \" \""->"store.r r1";
+    "iflt push 0.0F"->"push 0.0F";
+    "push 0.0F"->"store.f r1";
+    "iflt push 0.0F"->"push 0.0F";
+    "push 0.0F"->"store.f r1";
+    "ifge load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <DownTime: float min56k>";
+    "fieldget <DownTime: float min56k>"->"push 60.0F";
+    "push 60.0F"->"sub.f";
+    "sub.f"->"fieldput <DownTime: float min56k>";
+    "ifge load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <DownTime: float sec56k>";
+    "fieldget <DownTime: float sec56k>"->"push 60.0F";
+    "push 60.0F"->"sub.f";
+    "sub.f"->"fieldput <DownTime: float sec56k>";
+    "ifle push \" \""->"push \" \"";
+    "push \" \""->"store.r r1";
+    "iflt push 0.0F"->"push 0.0F";
+    "push 0.0F"->"store.f r1";
+    "iflt push 0.0F"->"push 0.0F";
+    "push 0.0F"->"store.f r1";
+    "ifge load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <DownTime: float min336>";
+    "fieldget <DownTime: float min336>"->"push 60.0F";
+    "push 60.0F"->"sub.f";
+    "sub.f"->"fieldput <DownTime: float min336>";
+    "ifge load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <DownTime: float sec336>";
+    "fieldget <DownTime: float sec336>"->"push 60.0F";
+    "push 60.0F"->"sub.f";
+    "sub.f"->"fieldput <DownTime: float sec336>";
+    "ifle push \" \""->"push \" \"";
+    "push \" \""->"store.r r1";
+    "iflt push 0.0F"->"push 0.0F";
+    "push 0.0F"->"store.f r1";
+    "iflt push 0.0F"->"push 0.0F";
+    "push 0.0F"->"store.f r1";
+    "ifge load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <DownTime: float min288>";
+    "fieldget <DownTime: float min288>"->"push 60.0F";
+    "push 60.0F"->"sub.f";
+    "sub.f"->"fieldput <DownTime: float min288>";
+    "ifge load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <DownTime: float sec288>";
+    "fieldget <DownTime: float sec288>"->"push 60.0F";
+    "push 60.0F"->"sub.f";
+    "sub.f"->"fieldput <DownTime: float sec288>";
+    "ifle push \" \""->"push \" \"";
+    "push \" \""->"store.r r1";
+    "iflt push 0.0F"->"push 0.0F";
+    "push 0.0F"->"store.f r1";
+    "iflt push 0.0F"->"push 0.0F";
+    "push 0.0F"->"store.f r1";
+    "ifge load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <DownTime: float min144>";
+    "fieldget <DownTime: float min144>"->"push 60.0F";
+    "push 60.0F"->"sub.f";
+    "sub.f"->"fieldput <DownTime: float min144>";
+    "ifge load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <DownTime: float sec144>";
+    "fieldget <DownTime: float sec144>"->"push 60.0F";
+    "push 60.0F"->"sub.f";
+    "sub.f"->"fieldput <DownTime: float sec144>";
+    "ifle push \" \""->"push \" \"";
+    "push \" \""->"store.r r1";
+    "iflt push 0.0F"->"push 0.0F";
+    "push 0.0F"->"store.f r1";
+    "iflt push 0.0F"->"push 0.0F";
+    "push 0.0F"->"store.f r1";
+    "push \"this file\""
+    "ifnull push \"this file\""->"push \"this file\"";
+    "push \"this file\""->"store.r r1";
+    "iflt load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <DownTime: float size>";
+    "fieldget <DownTime: float size>"->"store.f r1";
+    "push \"KB\""
+    "iflt push \"KB\""->"push \"KB\"";
+    "push \"KB\""->"store.r r1";
+}

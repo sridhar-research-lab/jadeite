@@ -1,0 +1,37 @@
+digraph "" {
+    "r0 := @this: provider.TestGenerator"
+    "load.r r0"
+    "r0 := @this: provider.TestGenerator"->"load.r r0";
+    "virtualinvoke <java.awt.Component: java.awt.Container getParent()>"
+    "load.r r0"->"virtualinvoke <java.awt.Component: java.awt.Container getParent()>";
+    "store.r r3"
+    "virtualinvoke <java.awt.Component: java.awt.Container getParent()>"->"store.r r3";
+    "load.r r3"
+    "store.r r3"->"load.r r3";
+    "instanceof"
+    "load.r r3"->"instanceof";
+    "ifne load.r r0"
+    "instanceof"->"ifne load.r r0";
+    "ifne load.r r0"->"load.r r3";
+    "load.r r3"->"virtualinvoke <java.awt.Component: java.awt.Container getParent()>";
+    "virtualinvoke <java.awt.Component: java.awt.Container getParent()>"->"store.r r3";
+    "goto load.r r3"
+    "store.r r3"->"goto load.r r3";
+    "ifne load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r3";
+    "checkcast"
+    "load.r r3"->"checkcast";
+    "fieldput <provider.TestGenerator: java.awt.Frame m_ToplevelFrame>"
+    "checkcast"->"fieldput <provider.TestGenerator: java.awt.Frame m_ToplevelFrame>";
+    "staticget <java.lang.System: java.io.PrintStream out>"
+    "fieldput <provider.TestGenerator: java.awt.Frame m_ToplevelFrame>"->"staticget <java.lang.System: java.io.PrintStream out>";
+    "push \"TestGenerator 2.2 - Unicode-Test\""
+    "staticget <java.lang.System: java.io.PrintStream out>"->"push \"TestGenerator 2.2 - Unicode-Test\"";
+    "virtualinvoke <java.io.PrintStream: void println(java.lang.String)>"
+    "push \"TestGenerator 2.2 - Unicode-Test\""->"virtualinvoke <java.io.PrintStream: void println(java.lang.String)>";
+    "virtualinvoke <java.io.PrintStream: void println(java.lang.String)>"->"load.r r0";
+    "virtualinvoke <provider.TestGenerator: void initForm()>"
+    "load.r r0"->"virtualinvoke <provider.TestGenerator: void initForm()>";
+    "return"
+    "virtualinvoke <provider.TestGenerator: void initForm()>"->"return";
+}

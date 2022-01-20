@@ -1,0 +1,73 @@
+digraph "" {
+    "r0 := @this: IpixViewer"
+    "staticget <java.lang.System: java.io.PrintStream out>"
+    "r0 := @this: IpixViewer"->"staticget <java.lang.System: java.io.PrintStream out>";
+    "push \"IPIX Java Viewer 5.0.0.3\""
+    "staticget <java.lang.System: java.io.PrintStream out>"->"push \"IPIX Java Viewer 5.0.0.3\"";
+    "virtualinvoke <java.io.PrintStream: void println(java.lang.String)>"
+    "push \"IPIX Java Viewer 5.0.0.3\""->"virtualinvoke <java.io.PrintStream: void println(java.lang.String)>";
+    "virtualinvoke <java.io.PrintStream: void println(java.lang.String)>"->"staticget <java.lang.System: java.io.PrintStream out>";
+    "push \"(C) 1998 IPIX Corporation.\""
+    "staticget <java.lang.System: java.io.PrintStream out>"->"push \"(C) 1998 IPIX Corporation.\"";
+    "push \"(C) 1998 IPIX Corporation.\""->"virtualinvoke <java.io.PrintStream: void println(java.lang.String)>";
+    "virtualinvoke <java.io.PrintStream: void println(java.lang.String)>"->"staticget <java.lang.System: java.io.PrintStream out>";
+    "push \"All Rights Reserved.\""
+    "staticget <java.lang.System: java.io.PrintStream out>"->"push \"All Rights Reserved.\"";
+    "push \"All Rights Reserved.\""->"virtualinvoke <java.io.PrintStream: void println(java.lang.String)>";
+    "virtualinvoke <java.io.PrintStream: void println(java.lang.String)>"->"staticget <java.lang.System: java.io.PrintStream out>";
+    "staticinvoke <IpixViewer: java.lang.String r()>"
+    "staticget <java.lang.System: java.io.PrintStream out>"->"staticinvoke <IpixViewer: java.lang.String r()>";
+    "staticinvoke <IpixViewer: java.lang.String r()>"->"virtualinvoke <java.io.PrintStream: void println(java.lang.String)>";
+    "load.r r0"
+    "virtualinvoke <java.io.PrintStream: void println(java.lang.String)>"->"load.r r0";
+    "push \"SpinSpeed\""
+    "load.r r0"->"push \"SpinSpeed\"";
+    "virtualinvoke <IpixViewer: java.lang.String getParameter(java.lang.String)>"
+    "push \"SpinSpeed\""->"virtualinvoke <IpixViewer: java.lang.String getParameter(java.lang.String)>";
+    "ifnonnull push 1"
+    "virtualinvoke <IpixViewer: java.lang.String getParameter(java.lang.String)>"->"ifnonnull push 1";
+    "ifnonnull push 1"->"load.r r0";
+    "push \"SpinStyle\""
+    "load.r r0"->"push \"SpinStyle\"";
+    "push \"SpinStyle\""->"virtualinvoke <IpixViewer: java.lang.String getParameter(java.lang.String)>";
+    "ifnull push 0"
+    "virtualinvoke <IpixViewer: java.lang.String getParameter(java.lang.String)>"->"ifnull push 0";
+    "push 1"
+    "ifnull push 0"->"push 1";
+    "store.b $z0"
+    "push 1"->"store.b $z0";
+    "goto load.r r0"
+    "store.b $z0"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "load.b $z0"
+    "load.r r0"->"load.b $z0";
+    "fieldput <IpixViewer: boolean O>"
+    "load.b $z0"->"fieldput <IpixViewer: boolean O>";
+    "fieldput <IpixViewer: boolean O>"->"load.r r0";
+    "load.r r0"->"push \"SpinSpeed\"";
+    "push \"SpinSpeed\""->"virtualinvoke <IpixViewer: java.lang.String getParameter(java.lang.String)>";
+    "ifnull return"
+    "virtualinvoke <IpixViewer: java.lang.String getParameter(java.lang.String)>"->"ifnull return";
+    "ifnull return"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"push \"SpinSpeed\"";
+    "push \"SpinSpeed\""->"virtualinvoke <IpixViewer: java.lang.String getParameter(java.lang.String)>";
+    "staticinvoke <java.lang.Integer: java.lang.Integer valueOf(java.lang.String)>"
+    "virtualinvoke <IpixViewer: java.lang.String getParameter(java.lang.String)>"->"staticinvoke <java.lang.Integer: java.lang.Integer valueOf(java.lang.String)>";
+    "virtualinvoke <java.lang.Integer: int intValue()>"
+    "staticinvoke <java.lang.Integer: java.lang.Integer valueOf(java.lang.String)>"->"virtualinvoke <java.lang.Integer: int intValue()>";
+    "fieldput <IpixViewer: int P>"
+    "virtualinvoke <java.lang.Integer: int intValue()>"->"fieldput <IpixViewer: int P>";
+    "goto return"
+    "fieldput <IpixViewer: int P>"->"goto return";
+    "return"
+    "goto return"->"return";
+    "virtualinvoke <java.lang.Exception: void printStackTrace()>"
+    "virtualinvoke <java.lang.Integer: int intValue()>"->"virtualinvoke <java.lang.Exception: void printStackTrace()>";
+    "virtualinvoke <java.lang.Exception: void printStackTrace()>"->"load.r r0";
+    "push 0"
+    "load.r r0"->"push 0";
+    "push 0"->"fieldput <IpixViewer: int P>";
+    "ifnull push 0"->"push 0";
+    "push 0"->"store.b $z0";
+}

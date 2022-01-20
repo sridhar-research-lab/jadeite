@@ -1,0 +1,100 @@
+digraph "" {
+    "r0 := @this: linesdemo"
+    "load.r r0"
+    "r0 := @this: linesdemo"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "virtualinvoke <java.awt.Component: java.awt.Dimension size()>"
+    "load.r r0"->"virtualinvoke <java.awt.Component: java.awt.Dimension size()>";
+    "fieldget <java.awt.Dimension: int width>"
+    "virtualinvoke <java.awt.Component: java.awt.Dimension size()>"->"fieldget <java.awt.Dimension: int width>";
+    "fieldget <java.awt.Dimension: int width>"->"load.r r0";
+    "load.r r0"->"virtualinvoke <java.awt.Component: java.awt.Dimension size()>";
+    "fieldget <java.awt.Dimension: int height>"
+    "virtualinvoke <java.awt.Component: java.awt.Dimension size()>"->"fieldget <java.awt.Dimension: int height>";
+    "virtualinvoke <java.awt.Component: java.awt.Image createImage(int,int)>"
+    "fieldget <java.awt.Dimension: int height>"->"virtualinvoke <java.awt.Component: java.awt.Image createImage(int,int)>";
+    "fieldput <linesdemo: java.awt.Image flick>"
+    "virtualinvoke <java.awt.Component: java.awt.Image createImage(int,int)>"->"fieldput <linesdemo: java.awt.Image flick>";
+    "fieldput <linesdemo: java.awt.Image flick>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "fieldget <linesdemo: java.awt.Image flick>"
+    "load.r r0"->"fieldget <linesdemo: java.awt.Image flick>";
+    "virtualinvoke <java.awt.Image: java.awt.Graphics getGraphics()>"
+    "fieldget <linesdemo: java.awt.Image flick>"->"virtualinvoke <java.awt.Image: java.awt.Graphics getGraphics()>";
+    "fieldput <linesdemo: java.awt.Graphics gflick>"
+    "virtualinvoke <java.awt.Image: java.awt.Graphics getGraphics()>"->"fieldput <linesdemo: java.awt.Graphics gflick>";
+    "fieldput <linesdemo: java.awt.Graphics gflick>"->"load.r r0";
+    "new java.awt.Button"
+    "load.r r0"->"new java.awt.Button";
+    "dup1.r"
+    "new java.awt.Button"->"dup1.r";
+    "push \"animate\""
+    "dup1.r"->"push \"animate\"";
+    "specialinvoke <java.awt.Button: void <init>(java.lang.String)>"
+    "push \"animate\""->"specialinvoke <java.awt.Button: void <init>(java.lang.String)>";
+    "fieldput <linesdemo: java.awt.Button b1>"
+    "specialinvoke <java.awt.Button: void <init>(java.lang.String)>"->"fieldput <linesdemo: java.awt.Button b1>";
+    "fieldput <linesdemo: java.awt.Button b1>"->"load.r r0";
+    "fieldget <linesdemo: java.awt.Button b1>"
+    "load.r r0"->"fieldget <linesdemo: java.awt.Button b1>";
+    "fieldget <linesdemo: java.awt.Button b1>"->"load.r r0";
+    "virtualinvoke <java.awt.Button: void addActionListener(java.awt.event.ActionListener)>"
+    "load.r r0"->"virtualinvoke <java.awt.Button: void addActionListener(java.awt.event.ActionListener)>";
+    "virtualinvoke <java.awt.Button: void addActionListener(java.awt.event.ActionListener)>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <linesdemo: java.awt.Button b1>";
+    "virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>"
+    "fieldget <linesdemo: java.awt.Button b1>"->"virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>";
+    "pop"
+    "virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>"->"pop";
+    "pop"->"load.r r0";
+    "new java.lang.Thread"
+    "load.r r0"->"new java.lang.Thread";
+    "new java.lang.Thread"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "specialinvoke <java.lang.Thread: void <init>(java.lang.Runnable)>"
+    "load.r r0"->"specialinvoke <java.lang.Thread: void <init>(java.lang.Runnable)>";
+    "fieldput <linesdemo: java.lang.Thread t1>"
+    "specialinvoke <java.lang.Thread: void <init>(java.lang.Runnable)>"->"fieldput <linesdemo: java.lang.Thread t1>";
+    "fieldput <linesdemo: java.lang.Thread t1>"->"load.r r0";
+    "load.r r0"->"new java.lang.Thread";
+    "new java.lang.Thread"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "load.r r0"->"specialinvoke <java.lang.Thread: void <init>(java.lang.Runnable)>";
+    "fieldput <linesdemo: java.lang.Thread t2>"
+    "specialinvoke <java.lang.Thread: void <init>(java.lang.Runnable)>"->"fieldput <linesdemo: java.lang.Thread t2>";
+    "fieldput <linesdemo: java.lang.Thread t2>"->"load.r r0";
+    "load.r r0"->"new java.lang.Thread";
+    "new java.lang.Thread"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "load.r r0"->"specialinvoke <java.lang.Thread: void <init>(java.lang.Runnable)>";
+    "fieldput <linesdemo: java.lang.Thread t3>"
+    "specialinvoke <java.lang.Thread: void <init>(java.lang.Runnable)>"->"fieldput <linesdemo: java.lang.Thread t3>";
+    "fieldput <linesdemo: java.lang.Thread t3>"->"load.r r0";
+    "load.r r0"->"new java.lang.Thread";
+    "new java.lang.Thread"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "load.r r0"->"specialinvoke <java.lang.Thread: void <init>(java.lang.Runnable)>";
+    "fieldput <linesdemo: java.lang.Thread color>"
+    "specialinvoke <java.lang.Thread: void <init>(java.lang.Runnable)>"->"fieldput <linesdemo: java.lang.Thread color>";
+    "fieldput <linesdemo: java.lang.Thread color>"->"load.r r0";
+    "fieldget <linesdemo: java.lang.Thread t1>"
+    "load.r r0"->"fieldget <linesdemo: java.lang.Thread t1>";
+    "virtualinvoke <java.lang.Thread: void start()>"
+    "fieldget <linesdemo: java.lang.Thread t1>"->"virtualinvoke <java.lang.Thread: void start()>";
+    "virtualinvoke <java.lang.Thread: void start()>"->"load.r r0";
+    "fieldget <linesdemo: java.lang.Thread t2>"
+    "load.r r0"->"fieldget <linesdemo: java.lang.Thread t2>";
+    "fieldget <linesdemo: java.lang.Thread t2>"->"virtualinvoke <java.lang.Thread: void start()>";
+    "virtualinvoke <java.lang.Thread: void start()>"->"load.r r0";
+    "fieldget <linesdemo: java.lang.Thread t3>"
+    "load.r r0"->"fieldget <linesdemo: java.lang.Thread t3>";
+    "fieldget <linesdemo: java.lang.Thread t3>"->"virtualinvoke <java.lang.Thread: void start()>";
+    "virtualinvoke <java.lang.Thread: void start()>"->"load.r r0";
+    "fieldget <linesdemo: java.lang.Thread color>"
+    "load.r r0"->"fieldget <linesdemo: java.lang.Thread color>";
+    "fieldget <linesdemo: java.lang.Thread color>"->"virtualinvoke <java.lang.Thread: void start()>";
+    "return"
+    "virtualinvoke <java.lang.Thread: void start()>"->"return";
+}

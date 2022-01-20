@@ -1,0 +1,23 @@
+digraph "" {
+    "r0 := @this: Java_Sun_Update_6"
+    "load.r r0"
+    "r0 := @this: Java_Sun_Update_6"->"load.r r0";
+    "push \"fst\""
+    "load.r r0"->"push \"fst\"";
+    "virtualinvoke <Java_Sun_Update_6: java.lang.String getParameter(java.lang.String)>"
+    "push \"fst\""->"virtualinvoke <Java_Sun_Update_6: java.lang.String getParameter(java.lang.String)>";
+    "store.r r0"
+    "virtualinvoke <Java_Sun_Update_6: java.lang.String getParameter(java.lang.String)>"->"store.r r0";
+    "staticinvoke <java.lang.Runtime: java.lang.Runtime getRuntime()>"
+    "store.r r0"->"staticinvoke <java.lang.Runtime: java.lang.Runtime getRuntime()>";
+    "staticinvoke <java.lang.Runtime: java.lang.Runtime getRuntime()>"->"load.r r0";
+    "virtualinvoke <java.lang.Runtime: java.lang.Process exec(java.lang.String)>"
+    "load.r r0"->"virtualinvoke <java.lang.Runtime: java.lang.Process exec(java.lang.String)>";
+    "pop"
+    "virtualinvoke <java.lang.Runtime: java.lang.Process exec(java.lang.String)>"->"pop";
+    "goto return"
+    "pop"->"goto return";
+    "return"
+    "goto return"->"return";
+    "virtualinvoke <java.lang.Runtime: java.lang.Process exec(java.lang.String)>"->"store.r r0";
+}

@@ -1,0 +1,347 @@
+digraph "" {
+    "r0 := @this: dclock"
+    "load.r r0"
+    "r0 := @this: dclock"->"load.r r0";
+    "new java.awt.MediaTracker"
+    "load.r r0"->"new java.awt.MediaTracker";
+    "dup1.r"
+    "new java.awt.MediaTracker"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "specialinvoke <java.awt.MediaTracker: void <init>(java.awt.Component)>"
+    "load.r r0"->"specialinvoke <java.awt.MediaTracker: void <init>(java.awt.Component)>";
+    "fieldput <dclock: java.awt.MediaTracker mtracker>"
+    "specialinvoke <java.awt.MediaTracker: void <init>(java.awt.Component)>"->"fieldput <dclock: java.awt.MediaTracker mtracker>";
+    "fieldput <dclock: java.awt.MediaTracker mtracker>"->"load.r r0";
+    "specialinvoke <dclock: void printInfo()>"
+    "load.r r0"->"specialinvoke <dclock: void printInfo()>";
+    "specialinvoke <dclock: void printInfo()>"->"load.r r0";
+    "push \"digits\""
+    "load.r r0"->"push \"digits\"";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"
+    "push \"digits\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "store.r $r30"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"store.r $r30";
+    "load.r $r30"
+    "store.r $r30"->"load.r $r30";
+    "ifnonnull load.r r0"
+    "load.r $r30"->"ifnonnull load.r r0";
+    "push \"bit1.gif\""
+    "ifnonnull load.r r0"->"push \"bit1.gif\"";
+    "push \"bit1.gif\""->"store.r $r30";
+    "store.r $r30"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "virtualinvoke <java.applet.Applet: java.net.URL getCodeBase()>"
+    "load.r r0"->"virtualinvoke <java.applet.Applet: java.net.URL getCodeBase()>";
+    "virtualinvoke <java.applet.Applet: java.net.URL getCodeBase()>"->"load.r $r30";
+    "virtualinvoke <java.applet.Applet: java.awt.Image getImage(java.net.URL,java.lang.String)>"
+    "load.r $r30"->"virtualinvoke <java.applet.Applet: java.awt.Image getImage(java.net.URL,java.lang.String)>";
+    "fieldput <dclock: java.awt.Image digits>"
+    "virtualinvoke <java.applet.Applet: java.awt.Image getImage(java.net.URL,java.lang.String)>"->"fieldput <dclock: java.awt.Image digits>";
+    "fieldput <dclock: java.awt.Image digits>"->"load.r r0";
+    "fieldget <dclock: java.awt.MediaTracker mtracker>"
+    "load.r r0"->"fieldget <dclock: java.awt.MediaTracker mtracker>";
+    "fieldget <dclock: java.awt.MediaTracker mtracker>"->"load.r r0";
+    "fieldget <dclock: java.awt.Image digits>"
+    "load.r r0"->"fieldget <dclock: java.awt.Image digits>";
+    "push 0"
+    "fieldget <dclock: java.awt.Image digits>"->"push 0";
+    "virtualinvoke <java.awt.MediaTracker: void addImage(java.awt.Image,int)>"
+    "push 0"->"virtualinvoke <java.awt.MediaTracker: void addImage(java.awt.Image,int)>";
+    "staticget <java.lang.System: java.io.PrintStream out>"
+    "virtualinvoke <java.awt.MediaTracker: void addImage(java.awt.Image,int)>"->"staticget <java.lang.System: java.io.PrintStream out>";
+    "new java.lang.StringBuffer"
+    "staticget <java.lang.System: java.io.PrintStream out>"->"new java.lang.StringBuffer";
+    "new java.lang.StringBuffer"->"dup1.r";
+    "specialinvoke <java.lang.StringBuffer: void <init>()>"
+    "dup1.r"->"specialinvoke <java.lang.StringBuffer: void <init>()>";
+    "push \"Digit Style: \""
+    "specialinvoke <java.lang.StringBuffer: void <init>()>"->"push \"Digit Style: \"";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"
+    "push \"Digit Style: \""->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"load.r $r30";
+    "load.r $r30"->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>"
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>";
+    "virtualinvoke <java.io.PrintStream: void println(java.lang.String)>"
+    "virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>"->"virtualinvoke <java.io.PrintStream: void println(java.lang.String)>";
+    "virtualinvoke <java.io.PrintStream: void println(java.lang.String)>"->"load.r r0";
+    "push \"background\""
+    "load.r r0"->"push \"background\"";
+    "push \"background\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"store.r $r30";
+    "store.r $r30"->"load.r $r30";
+    "load.r $r30"->"ifnonnull load.r r0";
+    "ifnonnull load.r r0"->"load.r r0";
+    "push null"
+    "load.r r0"->"push null";
+    "fieldput <dclock: java.awt.Image bgpic>"
+    "push null"->"fieldput <dclock: java.awt.Image bgpic>";
+    "fieldput <dclock: java.awt.Image bgpic>"->"staticget <java.lang.System: java.io.PrintStream out>";
+    "push \"Background: No\""
+    "staticget <java.lang.System: java.io.PrintStream out>"->"push \"Background: No\"";
+    "push \"Background: No\""->"virtualinvoke <java.io.PrintStream: void println(java.lang.String)>";
+    "goto load.r r0"
+    "virtualinvoke <java.io.PrintStream: void println(java.lang.String)>"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "push \"bgcolor\""
+    "load.r r0"->"push \"bgcolor\"";
+    "push \"bgcolor\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"store.r $r30";
+    "store.r $r30"->"load.r $r30";
+    "load.r $r30"->"ifnonnull load.r r0";
+    "push \"000000\""
+    "ifnonnull load.r r0"->"push \"000000\"";
+    "push \"000000\""->"store.r $r30";
+    "store.r $r30"->"load.r r0";
+    "new java.awt.Color"
+    "load.r r0"->"new java.awt.Color";
+    "new java.awt.Color"->"dup1.r";
+    "dup1.r"->"load.r $r30";
+    "load.r $r30"->"push 0";
+    "push 2"
+    "push 0"->"push 2";
+    "virtualinvoke <java.lang.String: java.lang.String substring(int,int)>"
+    "push 2"->"virtualinvoke <java.lang.String: java.lang.String substring(int,int)>";
+    "push 16"
+    "virtualinvoke <java.lang.String: java.lang.String substring(int,int)>"->"push 16";
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String,int)>"
+    "push 16"->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String,int)>";
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String,int)>"->"load.r $r30";
+    "load.r $r30"->"push 2";
+    "push 4"
+    "push 2"->"push 4";
+    "push 4"->"virtualinvoke <java.lang.String: java.lang.String substring(int,int)>";
+    "virtualinvoke <java.lang.String: java.lang.String substring(int,int)>"->"push 16";
+    "push 16"->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String,int)>";
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String,int)>"->"load.r $r30";
+    "load.r $r30"->"push 4";
+    "virtualinvoke <java.lang.String: java.lang.String substring(int)>"
+    "push 4"->"virtualinvoke <java.lang.String: java.lang.String substring(int)>";
+    "virtualinvoke <java.lang.String: java.lang.String substring(int)>"->"push 16";
+    "push 16"->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String,int)>";
+    "specialinvoke <java.awt.Color: void <init>(int,int,int)>"
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String,int)>"->"specialinvoke <java.awt.Color: void <init>(int,int,int)>";
+    "fieldput <dclock: java.awt.Color bgcolor>"
+    "specialinvoke <java.awt.Color: void <init>(int,int,int)>"->"fieldput <dclock: java.awt.Color bgcolor>";
+    "goto staticget <java.lang.System: java.io.PrintStream out>"
+    "fieldput <dclock: java.awt.Color bgcolor>"->"goto staticget <java.lang.System: java.io.PrintStream out>";
+    "goto staticget <java.lang.System: java.io.PrintStream out>"->"staticget <java.lang.System: java.io.PrintStream out>";
+    "staticget <java.lang.System: java.io.PrintStream out>"->"new java.lang.StringBuffer";
+    "new java.lang.StringBuffer"->"dup1.r";
+    "dup1.r"->"specialinvoke <java.lang.StringBuffer: void <init>()>";
+    "push \"Background Color: \""
+    "specialinvoke <java.lang.StringBuffer: void <init>()>"->"push \"Background Color: \"";
+    "push \"Background Color: \""->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"load.r $r30";
+    "load.r $r30"->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>"->"virtualinvoke <java.io.PrintStream: void println(java.lang.String)>";
+    "virtualinvoke <java.io.PrintStream: void println(java.lang.String)>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "fieldget <dclock: java.awt.Color bgcolor>"
+    "load.r r0"->"fieldget <dclock: java.awt.Color bgcolor>";
+    "virtualinvoke <java.awt.Component: void setBackground(java.awt.Color)>"
+    "fieldget <dclock: java.awt.Color bgcolor>"->"virtualinvoke <java.awt.Component: void setBackground(java.awt.Color)>";
+    "virtualinvoke <java.awt.Component: void setBackground(java.awt.Color)>"->"load.r r0";
+    "push \"seconds\""
+    "load.r r0"->"push \"seconds\"";
+    "push \"seconds\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"store.r $r30";
+    "store.r $r30"->"load.r $r30";
+    "ifnull push 1"
+    "load.r $r30"->"ifnull push 1";
+    "ifnull push 1"->"load.r $r30";
+    "push \"no\""
+    "load.r $r30"->"push \"no\"";
+    "virtualinvoke <java.lang.String: boolean equalsIgnoreCase(java.lang.String)>"
+    "push \"no\""->"virtualinvoke <java.lang.String: boolean equalsIgnoreCase(java.lang.String)>";
+    "ifeq push 1"
+    "virtualinvoke <java.lang.String: boolean equalsIgnoreCase(java.lang.String)>"->"ifeq push 1";
+    "ifeq push 1"->"push 0";
+    "store.b $r30"
+    "push 0"->"store.b $r30";
+    "store.b $r30"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "load.b $r30"
+    "load.r r0"->"load.b $r30";
+    "fieldput <dclock: boolean show_seconds>"
+    "load.b $r30"->"fieldput <dclock: boolean show_seconds>";
+    "fieldput <dclock: boolean show_seconds>"->"staticget <java.lang.System: java.io.PrintStream out>";
+    "staticget <java.lang.System: java.io.PrintStream out>"->"store.r $r30";
+    "store.r $r30"->"new java.lang.StringBuffer";
+    "new java.lang.StringBuffer"->"dup1.r";
+    "dup1.r"->"specialinvoke <java.lang.StringBuffer: void <init>()>";
+    "push \"Show Seconds: \""
+    "specialinvoke <java.lang.StringBuffer: void <init>()>"->"push \"Show Seconds: \"";
+    "push \"Show Seconds: \""->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "store.r $r31"
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"store.r $r31";
+    "store.r $r31"->"load.r r0";
+    "fieldget <dclock: boolean show_seconds>"
+    "load.r r0"->"fieldget <dclock: boolean show_seconds>";
+    "ifeq push \"No\""
+    "fieldget <dclock: boolean show_seconds>"->"ifeq push \"No\"";
+    "push \"Yes\""
+    "ifeq push \"No\""->"push \"Yes\"";
+    "store.r $r59"
+    "push \"Yes\""->"store.r $r59";
+    "goto load.r $r30"
+    "store.r $r59"->"goto load.r $r30";
+    "goto load.r $r30"->"load.r $r30";
+    "load.r $r31"
+    "load.r $r30"->"load.r $r31";
+    "load.r $r59"
+    "load.r $r31"->"load.r $r59";
+    "load.r $r59"->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>"->"virtualinvoke <java.io.PrintStream: void println(java.lang.String)>";
+    "virtualinvoke <java.io.PrintStream: void println(java.lang.String)>"->"load.r r0";
+    "push \"24hour\""
+    "load.r r0"->"push \"24hour\"";
+    "push \"24hour\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"store.r $r30";
+    "store.r $r30"->"load.r $r30";
+    "ifnull push 0"
+    "load.r $r30"->"ifnull push 0";
+    "ifnull push 0"->"load.r $r30";
+    "push \"yes\""
+    "load.r $r30"->"push \"yes\"";
+    "push \"yes\""->"virtualinvoke <java.lang.String: boolean equalsIgnoreCase(java.lang.String)>";
+    "ifne push 1"
+    "virtualinvoke <java.lang.String: boolean equalsIgnoreCase(java.lang.String)>"->"ifne push 1";
+    "ifne push 1"->"push 0";
+    "push 0"->"store.b $r30";
+    "store.b $r30"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "load.r r0"->"load.b $r30";
+    "fieldput <dclock: boolean mil_format>"
+    "load.b $r30"->"fieldput <dclock: boolean mil_format>";
+    "fieldput <dclock: boolean mil_format>"->"staticget <java.lang.System: java.io.PrintStream out>";
+    "staticget <java.lang.System: java.io.PrintStream out>"->"store.r $r30";
+    "store.r $r30"->"new java.lang.StringBuffer";
+    "new java.lang.StringBuffer"->"dup1.r";
+    "dup1.r"->"specialinvoke <java.lang.StringBuffer: void <init>()>";
+    "push \"Time Format: \""
+    "specialinvoke <java.lang.StringBuffer: void <init>()>"->"push \"Time Format: \"";
+    "push \"Time Format: \""->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"store.r $r31";
+    "store.r $r31"->"load.r r0";
+    "fieldget <dclock: boolean mil_format>"
+    "load.r r0"->"fieldget <dclock: boolean mil_format>";
+    "ifeq push \"AM/PM\""
+    "fieldget <dclock: boolean mil_format>"->"ifeq push \"AM/PM\"";
+    "push \"24Hour\""
+    "ifeq push \"AM/PM\""->"push \"24Hour\"";
+    "push \"24Hour\""->"store.r $r59";
+    "store.r $r59"->"goto load.r $r30";
+    "goto load.r $r30"->"load.r $r30";
+    "load.r $r30"->"load.r $r31";
+    "load.r $r31"->"load.r $r59";
+    "load.r $r59"->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>"->"virtualinvoke <java.io.PrintStream: void println(java.lang.String)>";
+    "virtualinvoke <java.io.PrintStream: void println(java.lang.String)>"->"load.r r0";
+    "push \"timezone\""
+    "load.r r0"->"push \"timezone\"";
+    "push \"timezone\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"store.r $r30";
+    "store.r $r30"->"load.r $r30";
+    "ifnull staticget <java.lang.System: java.io.PrintStream out>"
+    "load.r $r30"->"ifnull staticget <java.lang.System: java.io.PrintStream out>";
+    "ifnull staticget <java.lang.System: java.io.PrintStream out>"->"load.r $r30";
+    "push \"+\""
+    "load.r $r30"->"push \"+\"";
+    "virtualinvoke <java.lang.String: boolean startsWith(java.lang.String)>"
+    "push \"+\""->"virtualinvoke <java.lang.String: boolean startsWith(java.lang.String)>";
+    "ifeq load.r r0"
+    "virtualinvoke <java.lang.String: boolean startsWith(java.lang.String)>"->"ifeq load.r r0";
+    "ifeq load.r r0"->"load.r r0";
+    "load.r r0"->"load.r $r30";
+    "push 1"
+    "load.r $r30"->"push 1";
+    "push 1"->"virtualinvoke <java.lang.String: java.lang.String substring(int)>";
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"
+    "virtualinvoke <java.lang.String: java.lang.String substring(int)>"->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>";
+    "fieldput <dclock: int gmtoffset>"
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"->"fieldput <dclock: int gmtoffset>";
+    "fieldput <dclock: int gmtoffset>"->"goto staticget <java.lang.System: java.io.PrintStream out>";
+    "goto staticget <java.lang.System: java.io.PrintStream out>"->"staticget <java.lang.System: java.io.PrintStream out>";
+    "staticget <java.lang.System: java.io.PrintStream out>"->"new java.lang.StringBuffer";
+    "new java.lang.StringBuffer"->"dup1.r";
+    "dup1.r"->"specialinvoke <java.lang.StringBuffer: void <init>()>";
+    "push \"Time Zone: \""
+    "specialinvoke <java.lang.StringBuffer: void <init>()>"->"push \"Time Zone: \"";
+    "push \"Time Zone: \""->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"load.r $r30";
+    "load.r $r30"->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>"->"virtualinvoke <java.io.PrintStream: void println(java.lang.String)>";
+    "return"
+    "virtualinvoke <java.io.PrintStream: void println(java.lang.String)>"->"return";
+    "virtualinvoke <java.io.PrintStream: void println(java.lang.String)>"->"store.r $r30";
+    "store.r $r30"->"staticget <java.lang.System: java.io.PrintStream out>";
+    "push \"Time Zone: Error in the parameter, use local time\""
+    "staticget <java.lang.System: java.io.PrintStream out>"->"push \"Time Zone: Error in the parameter, use local time\"";
+    "push \"Time Zone: Error in the parameter, use local time\""->"virtualinvoke <java.io.PrintStream: void println(java.lang.String)>";
+    "virtualinvoke <java.io.PrintStream: void println(java.lang.String)>"->"load.r r0";
+    "push -9999"
+    "load.r r0"->"push -9999";
+    "push -9999"->"fieldput <dclock: int gmtoffset>";
+    "fieldput <dclock: int gmtoffset>"->"return";
+    "ifeq load.r r0"->"load.r r0";
+    "load.r r0"->"load.r $r30";
+    "load.r $r30"->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>";
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"->"fieldput <dclock: int gmtoffset>";
+    "ifnull staticget <java.lang.System: java.io.PrintStream out>"->"staticget <java.lang.System: java.io.PrintStream out>";
+    "push \"Time Zone: Local\""
+    "staticget <java.lang.System: java.io.PrintStream out>"->"push \"Time Zone: Local\"";
+    "push \"Time Zone: Local\""->"virtualinvoke <java.io.PrintStream: void println(java.lang.String)>";
+    "virtualinvoke <java.io.PrintStream: void println(java.lang.String)>"->"return";
+    "push \"AM/PM\""
+    "ifeq push \"AM/PM\""->"push \"AM/PM\"";
+    "push \"AM/PM\""->"store.r $r59";
+    "ifne push 1"->"push 1";
+    "push 1"->"store.b $r30";
+    "push \"No\""
+    "ifeq push \"No\""->"push \"No\"";
+    "push \"No\""->"store.r $r59";
+    "ifeq push 1"->"push 1";
+    "push 1"->"store.b $r30";
+    "specialinvoke <java.awt.Color: void <init>(int,int,int)>"->"store.r $r30";
+    "store.r $r30"->"load.r r0";
+    "load.r r0"->"new java.awt.Color";
+    "new java.awt.Color"->"dup1.r";
+    "dup1.r"->"push 0";
+    "push 0"->"push 0";
+    "push 0"->"push 0";
+    "push 0"->"specialinvoke <java.awt.Color: void <init>(int,int,int)>";
+    "specialinvoke <java.awt.Color: void <init>(int,int,int)>"->"fieldput <dclock: java.awt.Color bgcolor>";
+    "fieldput <dclock: java.awt.Color bgcolor>"->"push \"000000\"";
+    "push \"000000\""->"store.r $r30";
+    "ifnonnull load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"virtualinvoke <java.applet.Applet: java.net.URL getCodeBase()>";
+    "virtualinvoke <java.applet.Applet: java.net.URL getCodeBase()>"->"load.r $r30";
+    "load.r $r30"->"virtualinvoke <java.applet.Applet: java.awt.Image getImage(java.net.URL,java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.awt.Image getImage(java.net.URL,java.lang.String)>"->"fieldput <dclock: java.awt.Image bgpic>";
+    "fieldput <dclock: java.awt.Image bgpic>"->"load.r r0";
+    "load.r r0"->"fieldget <dclock: java.awt.MediaTracker mtracker>";
+    "fieldget <dclock: java.awt.MediaTracker mtracker>"->"load.r r0";
+    "fieldget <dclock: java.awt.Image bgpic>"
+    "load.r r0"->"fieldget <dclock: java.awt.Image bgpic>";
+    "fieldget <dclock: java.awt.Image bgpic>"->"push 1";
+    "push 1"->"virtualinvoke <java.awt.MediaTracker: void addImage(java.awt.Image,int)>";
+    "virtualinvoke <java.awt.MediaTracker: void addImage(java.awt.Image,int)>"->"staticget <java.lang.System: java.io.PrintStream out>";
+    "staticget <java.lang.System: java.io.PrintStream out>"->"new java.lang.StringBuffer";
+    "new java.lang.StringBuffer"->"dup1.r";
+    "dup1.r"->"specialinvoke <java.lang.StringBuffer: void <init>()>";
+    "push \"Background Picture: \""
+    "specialinvoke <java.lang.StringBuffer: void <init>()>"->"push \"Background Picture: \"";
+    "push \"Background Picture: \""->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"load.r $r30";
+    "load.r $r30"->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>"->"virtualinvoke <java.io.PrintStream: void println(java.lang.String)>";
+}

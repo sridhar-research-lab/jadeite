@@ -1,0 +1,54 @@
+digraph "" {
+    "r0 := @this: sound"
+    "load.r r0"
+    "r0 := @this: sound"->"load.r r0";
+    "staticget <java.awt.Color: java.awt.Color white>"
+    "load.r r0"->"staticget <java.awt.Color: java.awt.Color white>";
+    "virtualinvoke <java.awt.Component: void setBackground(java.awt.Color)>"
+    "staticget <java.awt.Color: java.awt.Color white>"->"virtualinvoke <java.awt.Component: void setBackground(java.awt.Color)>";
+    "virtualinvoke <java.awt.Component: void setBackground(java.awt.Color)>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "virtualinvoke <java.applet.Applet: java.net.URL getDocumentBase()>"
+    "load.r r0"->"virtualinvoke <java.applet.Applet: java.net.URL getDocumentBase()>";
+    "push \"eagleApplet/eagle.gif\""
+    "virtualinvoke <java.applet.Applet: java.net.URL getDocumentBase()>"->"push \"eagleApplet/eagle.gif\"";
+    "virtualinvoke <java.applet.Applet: java.awt.Image getImage(java.net.URL,java.lang.String)>"
+    "push \"eagleApplet/eagle.gif\""->"virtualinvoke <java.applet.Applet: java.awt.Image getImage(java.net.URL,java.lang.String)>";
+    "fieldput <sound: java.awt.Image bild>"
+    "virtualinvoke <java.applet.Applet: java.awt.Image getImage(java.net.URL,java.lang.String)>"->"fieldput <sound: java.awt.Image bild>";
+    "fieldput <sound: java.awt.Image bild>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"virtualinvoke <java.applet.Applet: java.net.URL getDocumentBase()>";
+    "push \"eagleApplet/eagle.au\""
+    "virtualinvoke <java.applet.Applet: java.net.URL getDocumentBase()>"->"push \"eagleApplet/eagle.au\"";
+    "virtualinvoke <java.applet.Applet: java.applet.AudioClip getAudioClip(java.net.URL,java.lang.String)>"
+    "push \"eagleApplet/eagle.au\""->"virtualinvoke <java.applet.Applet: java.applet.AudioClip getAudioClip(java.net.URL,java.lang.String)>";
+    "fieldput <sound: java.applet.AudioClip eagle>"
+    "virtualinvoke <java.applet.Applet: java.applet.AudioClip getAudioClip(java.net.URL,java.lang.String)>"->"fieldput <sound: java.applet.AudioClip eagle>";
+    "fieldput <sound: java.applet.AudioClip eagle>"->"load.r r0";
+    "new java.awt.Button"
+    "load.r r0"->"new java.awt.Button";
+    "dup1.r"
+    "new java.awt.Button"->"dup1.r";
+    "push \"play sound\""
+    "dup1.r"->"push \"play sound\"";
+    "specialinvoke <java.awt.Button: void <init>(java.lang.String)>"
+    "push \"play sound\""->"specialinvoke <java.awt.Button: void <init>(java.lang.String)>";
+    "fieldput <sound: java.awt.Button button>"
+    "specialinvoke <java.awt.Button: void <init>(java.lang.String)>"->"fieldput <sound: java.awt.Button button>";
+    "fieldput <sound: java.awt.Button button>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "fieldget <sound: java.awt.Button button>"
+    "load.r r0"->"fieldget <sound: java.awt.Button button>";
+    "virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>"
+    "fieldget <sound: java.awt.Button button>"->"virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>";
+    "pop"
+    "virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>"->"pop";
+    "pop"->"load.r r0";
+    "virtualinvoke <java.awt.Component: void repaint()>"
+    "load.r r0"->"virtualinvoke <java.awt.Component: void repaint()>";
+    "return"
+    "virtualinvoke <java.awt.Component: void repaint()>"->"return";
+}

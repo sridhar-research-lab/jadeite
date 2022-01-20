@@ -1,0 +1,84 @@
+digraph "" {
+    "r0 := @this: GrappaRB"
+    "load.r r0"
+    "r0 := @this: GrappaRB"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "virtualinvoke <java.awt.Component: java.awt.Dimension size()>"
+    "load.r r0"->"virtualinvoke <java.awt.Component: java.awt.Dimension size()>";
+    "fieldget <java.awt.Dimension: int width>"
+    "virtualinvoke <java.awt.Component: java.awt.Dimension size()>"->"fieldget <java.awt.Dimension: int width>";
+    "fieldput <GrappaRB: int AppletW>"
+    "fieldget <java.awt.Dimension: int width>"->"fieldput <GrappaRB: int AppletW>";
+    "fieldput <GrappaRB: int AppletW>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"virtualinvoke <java.awt.Component: java.awt.Dimension size()>";
+    "fieldget <java.awt.Dimension: int height>"
+    "virtualinvoke <java.awt.Component: java.awt.Dimension size()>"->"fieldget <java.awt.Dimension: int height>";
+    "fieldput <GrappaRB: int AppletH>"
+    "fieldget <java.awt.Dimension: int height>"->"fieldput <GrappaRB: int AppletH>";
+    "fieldput <GrappaRB: int AppletH>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "fieldget <GrappaRB: int AppletW>"
+    "load.r r0"->"fieldget <GrappaRB: int AppletW>";
+    "fieldget <GrappaRB: int AppletW>"->"load.r r0";
+    "fieldget <GrappaRB: int AppletH>"
+    "load.r r0"->"fieldget <GrappaRB: int AppletH>";
+    "virtualinvoke <java.awt.Component: java.awt.Image createImage(int,int)>"
+    "fieldget <GrappaRB: int AppletH>"->"virtualinvoke <java.awt.Component: java.awt.Image createImage(int,int)>";
+    "fieldput <GrappaRB: java.awt.Image offscreenImage>"
+    "virtualinvoke <java.awt.Component: java.awt.Image createImage(int,int)>"->"fieldput <GrappaRB: java.awt.Image offscreenImage>";
+    "fieldput <GrappaRB: java.awt.Image offscreenImage>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "fieldget <GrappaRB: java.awt.Image offscreenImage>"
+    "load.r r0"->"fieldget <GrappaRB: java.awt.Image offscreenImage>";
+    "virtualinvoke <java.awt.Image: java.awt.Graphics getGraphics()>"
+    "fieldget <GrappaRB: java.awt.Image offscreenImage>"->"virtualinvoke <java.awt.Image: java.awt.Graphics getGraphics()>";
+    "fieldput <GrappaRB: java.awt.Graphics osg>"
+    "virtualinvoke <java.awt.Image: java.awt.Graphics getGraphics()>"->"fieldput <GrappaRB: java.awt.Graphics osg>";
+    "fieldput <GrappaRB: java.awt.Graphics osg>"->"load.r r0";
+    "push 1"
+    "load.r r0"->"push 1";
+    "fieldput <GrappaRB: int Zustand>"
+    "push 1"->"fieldput <GrappaRB: int Zustand>";
+    "fieldput <GrappaRB: int Zustand>"->"load.r r0";
+    "new GrappaRB$SmiSchirm_c"
+    "load.r r0"->"new GrappaRB$SmiSchirm_c";
+    "dup1.r"
+    "new GrappaRB$SmiSchirm_c"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <GrappaRB: int AppletW>";
+    "fieldget <GrappaRB: int AppletW>"->"load.r r0";
+    "load.r r0"->"fieldget <GrappaRB: int AppletH>";
+    "specialinvoke <GrappaRB$SmiSchirm_c: void <init>(GrappaRB,int,int)>"
+    "fieldget <GrappaRB: int AppletH>"->"specialinvoke <GrappaRB$SmiSchirm_c: void <init>(GrappaRB,int,int)>";
+    "fieldput <GrappaRB: GrappaRB$SmiSchirm_c SS>"
+    "specialinvoke <GrappaRB$SmiSchirm_c: void <init>(GrappaRB,int,int)>"->"fieldput <GrappaRB: GrappaRB$SmiSchirm_c SS>";
+    "fieldput <GrappaRB: GrappaRB$SmiSchirm_c SS>"->"load.r r0";
+    "fieldget <GrappaRB: GrappaRB$SmiSchirm_c SS>"
+    "load.r r0"->"fieldget <GrappaRB: GrappaRB$SmiSchirm_c SS>";
+    "fieldget <GrappaRB: GrappaRB$SmiSchirm_c SS>"->"push 1";
+    "virtualinvoke <GrappaRB$SmiSchirm_c: void setRealtime(boolean)>"
+    "push 1"->"virtualinvoke <GrappaRB$SmiSchirm_c: void setRealtime(boolean)>";
+    "virtualinvoke <GrappaRB$SmiSchirm_c: void setRealtime(boolean)>"->"load.r r0";
+    "new GrappaRB$MouseEventHandler"
+    "load.r r0"->"new GrappaRB$MouseEventHandler";
+    "new GrappaRB$MouseEventHandler"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "specialinvoke <GrappaRB$MouseEventHandler: void <init>(GrappaRB)>"
+    "load.r r0"->"specialinvoke <GrappaRB$MouseEventHandler: void <init>(GrappaRB)>";
+    "virtualinvoke <java.awt.Component: void addMouseListener(java.awt.event.MouseListener)>"
+    "specialinvoke <GrappaRB$MouseEventHandler: void <init>(GrappaRB)>"->"virtualinvoke <java.awt.Component: void addMouseListener(java.awt.event.MouseListener)>";
+    "virtualinvoke <java.awt.Component: void addMouseListener(java.awt.event.MouseListener)>"->"load.r r0";
+    "new GrappaRB$MouseMotionEventHandler"
+    "load.r r0"->"new GrappaRB$MouseMotionEventHandler";
+    "new GrappaRB$MouseMotionEventHandler"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "specialinvoke <GrappaRB$MouseMotionEventHandler: void <init>(GrappaRB)>"
+    "load.r r0"->"specialinvoke <GrappaRB$MouseMotionEventHandler: void <init>(GrappaRB)>";
+    "virtualinvoke <java.awt.Component: void addMouseMotionListener(java.awt.event.MouseMotionListener)>"
+    "specialinvoke <GrappaRB$MouseMotionEventHandler: void <init>(GrappaRB)>"->"virtualinvoke <java.awt.Component: void addMouseMotionListener(java.awt.event.MouseMotionListener)>";
+    "return"
+    "virtualinvoke <java.awt.Component: void addMouseMotionListener(java.awt.event.MouseMotionListener)>"->"return";
+}

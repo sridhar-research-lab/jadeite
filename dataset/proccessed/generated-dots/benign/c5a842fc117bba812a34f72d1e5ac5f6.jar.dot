@@ -1,0 +1,232 @@
+digraph "" {
+    "r0 := @this: EuroCalc"
+    "load.r r0"
+    "r0 := @this: EuroCalc"->"load.r r0";
+    "specialinvoke <EuroCalc: java.util.Hashtable getCurrenciesFromApplet()>"
+    "load.r r0"->"specialinvoke <EuroCalc: java.util.Hashtable getCurrenciesFromApplet()>";
+    "staticput <EuroCalc: java.util.Hashtable HS_CURR>"
+    "specialinvoke <EuroCalc: java.util.Hashtable getCurrenciesFromApplet()>"->"staticput <EuroCalc: java.util.Hashtable HS_CURR>";
+    "staticput <EuroCalc: java.util.Hashtable HS_CURR>"->"load.r r0";
+    "new LogicUnit"
+    "load.r r0"->"new LogicUnit";
+    "dup1.r"
+    "new LogicUnit"->"dup1.r";
+    "specialinvoke <LogicUnit: void <init>()>"
+    "dup1.r"->"specialinvoke <LogicUnit: void <init>()>";
+    "fieldput <EuroCalc: LogicUnit logicUnit>"
+    "specialinvoke <LogicUnit: void <init>()>"->"fieldput <EuroCalc: LogicUnit logicUnit>";
+    "fieldput <EuroCalc: LogicUnit logicUnit>"->"load.r r0";
+    "push null"
+    "load.r r0"->"push null";
+    "virtualinvoke <java.awt.Container: void setLayout(java.awt.LayoutManager)>"
+    "push null"->"virtualinvoke <java.awt.Container: void setLayout(java.awt.LayoutManager)>";
+    "virtualinvoke <java.awt.Container: void setLayout(java.awt.LayoutManager)>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "virtualinvoke <java.applet.Applet: java.net.URL getDocumentBase()>"
+    "load.r r0"->"virtualinvoke <java.applet.Applet: java.net.URL getDocumentBase()>";
+    "virtualinvoke <java.net.URL: java.lang.String toString()>"
+    "virtualinvoke <java.applet.Applet: java.net.URL getDocumentBase()>"->"virtualinvoke <java.net.URL: java.lang.String toString()>";
+    "specialinvoke <EuroCalc: java.lang.String getURLBase(java.lang.String)>"
+    "virtualinvoke <java.net.URL: java.lang.String toString()>"->"specialinvoke <EuroCalc: java.lang.String getURLBase(java.lang.String)>";
+    "staticput <EuroCalc: java.lang.String URLBASE>"
+    "specialinvoke <EuroCalc: java.lang.String getURLBase(java.lang.String)>"->"staticput <EuroCalc: java.lang.String URLBASE>";
+    "new EuroPanel"
+    "staticput <EuroCalc: java.lang.String URLBASE>"->"new EuroPanel";
+    "store.r $r7"
+    "new EuroPanel"->"store.r $r7";
+    "load.r $r7"
+    "store.r $r7"->"load.r $r7";
+    "load.r $r7"->"load.r r0";
+    "specialinvoke <EuroPanel: void <init>(java.applet.Applet)>"
+    "load.r r0"->"specialinvoke <EuroPanel: void <init>(java.applet.Applet)>";
+    "specialinvoke <EuroPanel: void <init>(java.applet.Applet)>"->"load.r $r7";
+    "push 10"
+    "load.r $r7"->"push 10";
+    "push 10"->"push 10";
+    "push 120"
+    "push 10"->"push 120";
+    "push 120"->"push 120";
+    "virtualinvoke <java.awt.Component: void reshape(int,int,int,int)>"
+    "push 120"->"virtualinvoke <java.awt.Component: void reshape(int,int,int,int)>";
+    "virtualinvoke <java.awt.Component: void reshape(int,int,int,int)>"->"load.r r0";
+    "load.r r0"->"load.r $r7";
+    "virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>"
+    "load.r $r7"->"virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>";
+    "pop"
+    "virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>"->"pop";
+    "pop"->"load.r r0";
+    "staticget <java.awt.Color: java.awt.Color blue>"
+    "load.r r0"->"staticget <java.awt.Color: java.awt.Color blue>";
+    "virtualinvoke <java.awt.Component: void setBackground(java.awt.Color)>"
+    "staticget <java.awt.Color: java.awt.Color blue>"->"virtualinvoke <java.awt.Component: void setBackground(java.awt.Color)>";
+    "virtualinvoke <java.awt.Component: void setBackground(java.awt.Color)>"->"load.r r0";
+    "specialinvoke <EuroCalc: void setFlagsPanel()>"
+    "load.r r0"->"specialinvoke <EuroCalc: void setFlagsPanel()>";
+    "specialinvoke <EuroCalc: void setFlagsPanel()>"->"load.r r0";
+    "specialinvoke <EuroCalc: void setCurrencyPanel()>"
+    "load.r r0"->"specialinvoke <EuroCalc: void setCurrencyPanel()>";
+    "specialinvoke <EuroCalc: void setCurrencyPanel()>"->"load.r r0";
+    "fieldget <EuroCalc: java.awt.Panel p_flags>"
+    "load.r r0"->"fieldget <EuroCalc: java.awt.Panel p_flags>";
+    "virtualinvoke <java.awt.Component: void hide()>"
+    "fieldget <EuroCalc: java.awt.Panel p_flags>"->"virtualinvoke <java.awt.Component: void hide()>";
+    "virtualinvoke <java.awt.Component: void hide()>"->"load.r r0";
+    "fieldget <EuroCalc: java.awt.Panel p_currency>"
+    "load.r r0"->"fieldget <EuroCalc: java.awt.Panel p_currency>";
+    "fieldget <EuroCalc: java.awt.Panel p_currency>"->"virtualinvoke <java.awt.Component: void hide()>";
+    "virtualinvoke <java.awt.Component: void hide()>"->"load.r r0";
+    "push 1"
+    "load.r r0"->"push 1";
+    "specialinvoke <EuroCalc: void displayFlags(boolean)>"
+    "push 1"->"specialinvoke <EuroCalc: void displayFlags(boolean)>";
+    "specialinvoke <EuroCalc: void displayFlags(boolean)>"->"load.r r0";
+    "specialinvoke <EuroCalc: void setResultatPanel()>"
+    "load.r r0"->"specialinvoke <EuroCalc: void setResultatPanel()>";
+    "specialinvoke <EuroCalc: void setResultatPanel()>"->"load.r r0";
+    "specialinvoke <EuroCalc: void setChiffresPanel()>"
+    "load.r r0"->"specialinvoke <EuroCalc: void setChiffresPanel()>";
+    "specialinvoke <EuroCalc: void setChiffresPanel()>"->"load.r r0";
+    "specialinvoke <EuroCalc: void setChoicePanel()>"
+    "load.r r0"->"specialinvoke <EuroCalc: void setChoicePanel()>";
+    "specialinvoke <EuroCalc: void setChoicePanel()>"->"load.r r0";
+    "specialinvoke <EuroCalc: void setRoundPanel()>"
+    "load.r r0"->"specialinvoke <EuroCalc: void setRoundPanel()>";
+    "specialinvoke <EuroCalc: void setRoundPanel()>"->"load.r r0";
+    "fieldget <EuroCalc: LogicUnit logicUnit>"
+    "load.r r0"->"fieldget <EuroCalc: LogicUnit logicUnit>";
+    "fieldget <EuroCalc: LogicUnit logicUnit>"->"load.r r0";
+    "fieldget <EuroCalc: DigitList t_resultat>"
+    "load.r r0"->"fieldget <EuroCalc: DigitList t_resultat>";
+    "fieldput <LogicUnit: DigitList digitList>"
+    "fieldget <EuroCalc: DigitList t_resultat>"->"fieldput <LogicUnit: DigitList digitList>";
+    "fieldput <LogicUnit: DigitList digitList>"->"load.r r0";
+    "load.r r0"->"fieldget <EuroCalc: LogicUnit logicUnit>";
+    "fieldget <EuroCalc: LogicUnit logicUnit>"->"load.r r0";
+    "fieldget <EuroCalc: DigitList t_euro_resultat>"
+    "load.r r0"->"fieldget <EuroCalc: DigitList t_euro_resultat>";
+    "fieldput <LogicUnit: DigitList digitListEuro>"
+    "fieldget <EuroCalc: DigitList t_euro_resultat>"->"fieldput <LogicUnit: DigitList digitListEuro>";
+    "fieldput <LogicUnit: DigitList digitListEuro>"->"load.r r0";
+    "virtualinvoke <java.awt.Component: void requestFocus()>"
+    "load.r r0"->"virtualinvoke <java.awt.Component: void requestFocus()>";
+    "virtualinvoke <java.awt.Component: void requestFocus()>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "fieldget <EuroCalc: FlagCanvas f_eur>"
+    "load.r r0"->"fieldget <EuroCalc: FlagCanvas f_eur>";
+    "fieldget <FlagCanvas: java.awt.Image imageFlag>"
+    "fieldget <EuroCalc: FlagCanvas f_eur>"->"fieldget <FlagCanvas: java.awt.Image imageFlag>";
+    "fieldput <EuroCalc: java.awt.Image curr1>"
+    "fieldget <FlagCanvas: java.awt.Image imageFlag>"->"fieldput <EuroCalc: java.awt.Image curr1>";
+    "fieldput <EuroCalc: java.awt.Image curr1>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "fieldget <EuroCalc: java.awt.Image curr1>"
+    "load.r r0"->"fieldget <EuroCalc: java.awt.Image curr1>";
+    "fieldput <EuroCalc: java.awt.Image curr2>"
+    "fieldget <EuroCalc: java.awt.Image curr1>"->"fieldput <EuroCalc: java.awt.Image curr2>";
+    "fieldput <EuroCalc: java.awt.Image curr2>"->"load.r r0";
+    "fieldget <EuroCalc: java.awt.Label l_copy>"
+    "load.r r0"->"fieldget <EuroCalc: java.awt.Label l_copy>";
+    "push 170"
+    "fieldget <EuroCalc: java.awt.Label l_copy>"->"push 170";
+    "push 417"
+    "push 170"->"push 417";
+    "push 400"
+    "push 417"->"push 400";
+    "push 14"
+    "push 400"->"push 14";
+    "push 14"->"virtualinvoke <java.awt.Component: void reshape(int,int,int,int)>";
+    "virtualinvoke <java.awt.Component: void reshape(int,int,int,int)>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <EuroCalc: java.awt.Label l_copy>";
+    "fieldget <EuroCalc: java.awt.Label l_copy>"->"virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>";
+    "virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>"->"pop";
+    "new java.awt.Label"
+    "pop"->"new java.awt.Label";
+    "new java.awt.Label"->"store.r $r7";
+    "store.r $r7"->"load.r $r7";
+    "push \"Direction:\""
+    "load.r $r7"->"push \"Direction:\"";
+    "specialinvoke <java.awt.Label: void <init>(java.lang.String)>"
+    "push \"Direction:\""->"specialinvoke <java.awt.Label: void <init>(java.lang.String)>";
+    "specialinvoke <java.awt.Label: void <init>(java.lang.String)>"->"load.r $r7";
+    "staticget <java.awt.Color: java.awt.Color yellow>"
+    "load.r $r7"->"staticget <java.awt.Color: java.awt.Color yellow>";
+    "virtualinvoke <java.awt.Component: void setForeground(java.awt.Color)>"
+    "staticget <java.awt.Color: java.awt.Color yellow>"->"virtualinvoke <java.awt.Component: void setForeground(java.awt.Color)>";
+    "virtualinvoke <java.awt.Component: void setForeground(java.awt.Color)>"->"load.r $r7";
+    "push 110"
+    "load.r $r7"->"push 110";
+    "push 150"
+    "push 110"->"push 150";
+    "push 80"
+    "push 150"->"push 80";
+    "push 80"->"push 14";
+    "push 14"->"virtualinvoke <java.awt.Component: void reshape(int,int,int,int)>";
+    "virtualinvoke <java.awt.Component: void reshape(int,int,int,int)>"->"load.r r0";
+    "load.r r0"->"load.r $r7";
+    "load.r $r7"->"virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>";
+    "virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>"->"pop";
+    "pop"->"load.r r0";
+    "fieldget <EuroCalc: java.awt.Choice ch_sense>"
+    "load.r r0"->"fieldget <EuroCalc: java.awt.Choice ch_sense>";
+    "staticget <java.awt.Color: java.awt.Color white>"
+    "fieldget <EuroCalc: java.awt.Choice ch_sense>"->"staticget <java.awt.Color: java.awt.Color white>";
+    "staticget <java.awt.Color: java.awt.Color white>"->"virtualinvoke <java.awt.Component: void setBackground(java.awt.Color)>";
+    "virtualinvoke <java.awt.Component: void setBackground(java.awt.Color)>"->"load.r r0";
+    "load.r r0"->"fieldget <EuroCalc: java.awt.Choice ch_sense>";
+    "push \"from Euro\""
+    "fieldget <EuroCalc: java.awt.Choice ch_sense>"->"push \"from Euro\"";
+    "virtualinvoke <java.awt.Choice: void addItem(java.lang.String)>"
+    "push \"from Euro\""->"virtualinvoke <java.awt.Choice: void addItem(java.lang.String)>";
+    "virtualinvoke <java.awt.Choice: void addItem(java.lang.String)>"->"load.r r0";
+    "load.r r0"->"fieldget <EuroCalc: java.awt.Choice ch_sense>";
+    "push \"to Euro\""
+    "fieldget <EuroCalc: java.awt.Choice ch_sense>"->"push \"to Euro\"";
+    "push \"to Euro\""->"virtualinvoke <java.awt.Choice: void addItem(java.lang.String)>";
+    "virtualinvoke <java.awt.Choice: void addItem(java.lang.String)>"->"load.r r0";
+    "load.r r0"->"fieldget <EuroCalc: java.awt.Choice ch_sense>";
+    "fieldget <EuroCalc: java.awt.Choice ch_sense>"->"push 110";
+    "push 110"->"push 170";
+    "push 170"->"push 80";
+    "push 80"->"push 10";
+    "push 10"->"virtualinvoke <java.awt.Component: void reshape(int,int,int,int)>";
+    "virtualinvoke <java.awt.Component: void reshape(int,int,int,int)>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <EuroCalc: java.awt.Choice ch_sense>";
+    "fieldget <EuroCalc: java.awt.Choice ch_sense>"->"virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>";
+    "virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>"->"pop";
+    "new java.awt.Checkbox"
+    "pop"->"new java.awt.Checkbox";
+    "new java.awt.Checkbox"->"store.r $r7";
+    "store.r $r7"->"load.r $r7";
+    "push \"Euro rules\""
+    "load.r $r7"->"push \"Euro rules\"";
+    "specialinvoke <java.awt.Checkbox: void <init>(java.lang.String)>"
+    "push \"Euro rules\""->"specialinvoke <java.awt.Checkbox: void <init>(java.lang.String)>";
+    "specialinvoke <java.awt.Checkbox: void <init>(java.lang.String)>"->"load.r $r7";
+    "load.r $r7"->"staticget <java.awt.Color: java.awt.Color yellow>";
+    "staticget <java.awt.Color: java.awt.Color yellow>"->"virtualinvoke <java.awt.Component: void setForeground(java.awt.Color)>";
+    "virtualinvoke <java.awt.Component: void setForeground(java.awt.Color)>"->"load.r $r7";
+    "load.r $r7"->"push 10";
+    "push 250"
+    "push 10"->"push 250";
+    "push 250"->"push 80";
+    "push 80"->"push 14";
+    "push 14"->"virtualinvoke <java.awt.Component: void reshape(int,int,int,int)>";
+    "virtualinvoke <java.awt.Component: void reshape(int,int,int,int)>"->"load.r r0";
+    "load.r r0"->"load.r $r7";
+    "load.r $r7"->"virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>";
+    "virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>"->"pop";
+    "pop"->"load.r r0";
+    "load.r r0"->"push null";
+    "push null"->"virtualinvoke <java.awt.Container: void setLayout(java.awt.LayoutManager)>";
+    "virtualinvoke <java.awt.Container: void setLayout(java.awt.LayoutManager)>"->"load.r r0";
+    "push 460"
+    "load.r r0"->"push 460";
+    "push 452"
+    "push 460"->"push 452";
+    "virtualinvoke <java.applet.Applet: void resize(int,int)>"
+    "push 452"->"virtualinvoke <java.applet.Applet: void resize(int,int)>";
+    "return"
+    "virtualinvoke <java.applet.Applet: void resize(int,int)>"->"return";
+}

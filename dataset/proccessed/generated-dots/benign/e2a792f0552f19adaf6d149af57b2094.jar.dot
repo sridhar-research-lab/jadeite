@@ -1,0 +1,113 @@
+digraph "" {
+    "r0 := @this: PaintApp"
+    "load.r r0"
+    "r0 := @this: PaintApp"->"load.r r0";
+    "virtualinvoke <javax.swing.JApplet: java.awt.Container getContentPane()>"
+    "load.r r0"->"virtualinvoke <javax.swing.JApplet: java.awt.Container getContentPane()>";
+    "store.r r1"
+    "virtualinvoke <javax.swing.JApplet: java.awt.Container getContentPane()>"->"store.r r1";
+    "store.r r1"->"load.r r0";
+    "new PanelMediator"
+    "load.r r0"->"new PanelMediator";
+    "dup1.r"
+    "new PanelMediator"->"dup1.r";
+    "specialinvoke <PanelMediator: void <init>()>"
+    "dup1.r"->"specialinvoke <PanelMediator: void <init>()>";
+    "fieldput <PaintApp: PanelMediator builderPanel>"
+    "specialinvoke <PanelMediator: void <init>()>"->"fieldput <PaintApp: PanelMediator builderPanel>";
+    "fieldput <PaintApp: PanelMediator builderPanel>"->"load.r r0";
+    "fieldget <PaintApp: boolean isApplet>"
+    "load.r r0"->"fieldget <PaintApp: boolean isApplet>";
+    "ifeq load.r r0"
+    "fieldget <PaintApp: boolean isApplet>"->"ifeq load.r r0";
+    "ifeq load.r r0"->"load.r r0";
+    "fieldget <PaintApp: PanelMediator builderPanel>"
+    "load.r r0"->"fieldget <PaintApp: PanelMediator builderPanel>";
+    "fieldget <PaintApp: PanelMediator builderPanel>"->"load.r r0";
+    "virtualinvoke <java.applet.Applet: java.net.URL getCodeBase()>"
+    "load.r r0"->"virtualinvoke <java.applet.Applet: java.net.URL getCodeBase()>";
+    "fieldput <PanelMediator: java.net.URL URL_STRING>"
+    "virtualinvoke <java.applet.Applet: java.net.URL getCodeBase()>"->"fieldput <PanelMediator: java.net.URL URL_STRING>";
+    "goto load.r r0"
+    "fieldput <PanelMediator: java.net.URL URL_STRING>"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "new DrawPanel"
+    "load.r r0"->"new DrawPanel";
+    "new DrawPanel"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "load.r r0"->"fieldget <PaintApp: PanelMediator builderPanel>";
+    "specialinvoke <DrawPanel: void <init>(PanelMediator)>"
+    "fieldget <PaintApp: PanelMediator builderPanel>"->"specialinvoke <DrawPanel: void <init>(PanelMediator)>";
+    "fieldput <PaintApp: DrawPanel drawPanel>"
+    "specialinvoke <DrawPanel: void <init>(PanelMediator)>"->"fieldput <PaintApp: DrawPanel drawPanel>";
+    "fieldput <PaintApp: DrawPanel drawPanel>"->"load.r r0";
+    "new ButtonsPanel"
+    "load.r r0"->"new ButtonsPanel";
+    "new ButtonsPanel"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "fieldget <PaintApp: DrawPanel drawPanel>"
+    "load.r r0"->"fieldget <PaintApp: DrawPanel drawPanel>";
+    "specialinvoke <ButtonsPanel: void <init>(DrawPanel)>"
+    "fieldget <PaintApp: DrawPanel drawPanel>"->"specialinvoke <ButtonsPanel: void <init>(DrawPanel)>";
+    "fieldput <PaintApp: ButtonsPanel buttonsPanel>"
+    "specialinvoke <ButtonsPanel: void <init>(DrawPanel)>"->"fieldput <PaintApp: ButtonsPanel buttonsPanel>";
+    "load.r r1"
+    "fieldput <PaintApp: ButtonsPanel buttonsPanel>"->"load.r r1";
+    "load.r r1"->"load.r r0";
+    "fieldget <PaintApp: ButtonsPanel buttonsPanel>"
+    "load.r r0"->"fieldget <PaintApp: ButtonsPanel buttonsPanel>";
+    "push \"West\""
+    "fieldget <PaintApp: ButtonsPanel buttonsPanel>"->"push \"West\"";
+    "virtualinvoke <java.awt.Container: void add(java.awt.Component,java.lang.Object)>"
+    "push \"West\""->"virtualinvoke <java.awt.Container: void add(java.awt.Component,java.lang.Object)>";
+    "virtualinvoke <java.awt.Container: void add(java.awt.Component,java.lang.Object)>"->"load.r r0";
+    "load.r r0"->"fieldget <PaintApp: PanelMediator builderPanel>";
+    "fieldget <PaintApp: PanelMediator builderPanel>"->"load.r r0";
+    "load.r r0"->"fieldget <PaintApp: ButtonsPanel buttonsPanel>";
+    "virtualinvoke <PanelMediator: void setButtons(ButtonsPanel)>"
+    "fieldget <PaintApp: ButtonsPanel buttonsPanel>"->"virtualinvoke <PanelMediator: void setButtons(ButtonsPanel)>";
+    "virtualinvoke <PanelMediator: void setButtons(ButtonsPanel)>"->"load.r r0";
+    "new ColorPanel"
+    "load.r r0"->"new ColorPanel";
+    "new ColorPanel"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "load.r r0"->"fieldget <PaintApp: DrawPanel drawPanel>";
+    "specialinvoke <ColorPanel: void <init>(DrawPanel)>"
+    "fieldget <PaintApp: DrawPanel drawPanel>"->"specialinvoke <ColorPanel: void <init>(DrawPanel)>";
+    "fieldput <PaintApp: ColorPanel colorPanel>"
+    "specialinvoke <ColorPanel: void <init>(DrawPanel)>"->"fieldput <PaintApp: ColorPanel colorPanel>";
+    "fieldput <PaintApp: ColorPanel colorPanel>"->"load.r r1";
+    "load.r r1"->"load.r r0";
+    "fieldget <PaintApp: ColorPanel colorPanel>"
+    "load.r r0"->"fieldget <PaintApp: ColorPanel colorPanel>";
+    "push \"South\""
+    "fieldget <PaintApp: ColorPanel colorPanel>"->"push \"South\"";
+    "push \"South\""->"virtualinvoke <java.awt.Container: void add(java.awt.Component,java.lang.Object)>";
+    "virtualinvoke <java.awt.Container: void add(java.awt.Component,java.lang.Object)>"->"load.r r0";
+    "load.r r0"->"fieldget <PaintApp: PanelMediator builderPanel>";
+    "fieldget <PaintApp: PanelMediator builderPanel>"->"load.r r0";
+    "load.r r0"->"fieldget <PaintApp: ColorPanel colorPanel>";
+    "virtualinvoke <PanelMediator: void setColor(ColorPanel)>"
+    "fieldget <PaintApp: ColorPanel colorPanel>"->"virtualinvoke <PanelMediator: void setColor(ColorPanel)>";
+    "virtualinvoke <PanelMediator: void setColor(ColorPanel)>"->"load.r r1";
+    "load.r r1"->"load.r r0";
+    "load.r r0"->"fieldget <PaintApp: DrawPanel drawPanel>";
+    "push \"Center\""
+    "fieldget <PaintApp: DrawPanel drawPanel>"->"push \"Center\"";
+    "push \"Center\""->"virtualinvoke <java.awt.Container: void add(java.awt.Component,java.lang.Object)>";
+    "return"
+    "virtualinvoke <java.awt.Container: void add(java.awt.Component,java.lang.Object)>"->"return";
+    "ifeq load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <PaintApp: PanelMediator builderPanel>";
+    "new java.net.URL"
+    "fieldget <PaintApp: PanelMediator builderPanel>"->"new java.net.URL";
+    "new java.net.URL"->"dup1.r";
+    "push \"file://\""
+    "dup1.r"->"push \"file://\"";
+    "specialinvoke <java.net.URL: void <init>(java.lang.String)>"
+    "push \"file://\""->"specialinvoke <java.net.URL: void <init>(java.lang.String)>";
+    "specialinvoke <java.net.URL: void <init>(java.lang.String)>"->"fieldput <PanelMediator: java.net.URL URL_STRING>";
+    "fieldput <PanelMediator: java.net.URL URL_STRING>"->"goto load.r r0";
+    "store.r $r8"
+    "specialinvoke <java.net.URL: void <init>(java.lang.String)>"->"store.r $r8";
+}

@@ -1,0 +1,91 @@
+digraph "" {
+    "r0 := @this: AppletX"
+    "load.r r0"
+    "r0 := @this: AppletX"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "virtualinvoke <AppletX: java.net.URL getCodeBase()>"
+    "load.r r0"->"virtualinvoke <AppletX: java.net.URL getCodeBase()>";
+    "push \"test.png\""
+    "virtualinvoke <AppletX: java.net.URL getCodeBase()>"->"push \"test.png\"";
+    "virtualinvoke <AppletX: java.awt.Image getImage(java.net.URL,java.lang.String)>"
+    "push \"test.png\""->"virtualinvoke <AppletX: java.awt.Image getImage(java.net.URL,java.lang.String)>";
+    "fieldput <AppletX: java.awt.Image src>"
+    "virtualinvoke <AppletX: java.awt.Image getImage(java.net.URL,java.lang.String)>"->"fieldput <AppletX: java.awt.Image src>";
+    "new java.awt.MediaTracker"
+    "fieldput <AppletX: java.awt.Image src>"->"new java.awt.MediaTracker";
+    "store.r $r6"
+    "new java.awt.MediaTracker"->"store.r $r6";
+    "load.r $r6"
+    "store.r $r6"->"load.r $r6";
+    "load.r $r6"->"load.r r0";
+    "specialinvoke <java.awt.MediaTracker: void <init>(java.awt.Component)>"
+    "load.r r0"->"specialinvoke <java.awt.MediaTracker: void <init>(java.awt.Component)>";
+    "specialinvoke <java.awt.MediaTracker: void <init>(java.awt.Component)>"->"load.r $r6";
+    "load.r $r6"->"load.r r0";
+    "fieldget <AppletX: java.awt.Image src>"
+    "load.r r0"->"fieldget <AppletX: java.awt.Image src>";
+    "push 0"
+    "fieldget <AppletX: java.awt.Image src>"->"push 0";
+    "virtualinvoke <java.awt.MediaTracker: void addImage(java.awt.Image,int)>"
+    "push 0"->"virtualinvoke <java.awt.MediaTracker: void addImage(java.awt.Image,int)>";
+    "virtualinvoke <java.awt.MediaTracker: void addImage(java.awt.Image,int)>"->"load.r $r6";
+    "virtualinvoke <java.awt.MediaTracker: void waitForAll()>"
+    "load.r $r6"->"virtualinvoke <java.awt.MediaTracker: void waitForAll()>";
+    "goto load.r $r6"
+    "virtualinvoke <java.awt.MediaTracker: void waitForAll()>"->"goto load.r $r6";
+    "goto load.r $r6"->"load.r $r6";
+    "load.r $r6"->"load.r r0";
+    "load.r r0"->"fieldget <AppletX: java.awt.Image src>";
+    "virtualinvoke <java.awt.MediaTracker: void removeImage(java.awt.Image)>"
+    "fieldget <AppletX: java.awt.Image src>"->"virtualinvoke <java.awt.MediaTracker: void removeImage(java.awt.Image)>";
+    "virtualinvoke <java.awt.MediaTracker: void removeImage(java.awt.Image)>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <AppletX: java.awt.Image src>";
+    "virtualinvoke <java.awt.Image: java.awt.image.ImageProducer getSource()>"
+    "fieldget <AppletX: java.awt.Image src>"->"virtualinvoke <java.awt.Image: java.awt.image.ImageProducer getSource()>";
+    "store.r $r17"
+    "virtualinvoke <java.awt.Image: java.awt.image.ImageProducer getSource()>"->"store.r $r17";
+    "new BoomFilter"
+    "store.r $r17"->"new BoomFilter";
+    "new BoomFilter"->"store.r $r6";
+    "store.r $r6"->"load.r $r6";
+    "specialinvoke <BoomFilter: void <init>()>"
+    "load.r $r6"->"specialinvoke <BoomFilter: void <init>()>";
+    "new java.awt.image.FilteredImageSource"
+    "specialinvoke <BoomFilter: void <init>()>"->"new java.awt.image.FilteredImageSource";
+    "dup1.r"
+    "new java.awt.image.FilteredImageSource"->"dup1.r";
+    "load.r $r17"
+    "dup1.r"->"load.r $r17";
+    "load.r $r17"->"load.r $r6";
+    "specialinvoke <java.awt.image.FilteredImageSource: void <init>(java.awt.image.ImageProducer,java.awt.image.ImageFilter)>"
+    "load.r $r6"->"specialinvoke <java.awt.image.FilteredImageSource: void <init>(java.awt.image.ImageProducer,java.awt.image.ImageFilter)>";
+    "virtualinvoke <AppletX: java.awt.Image createImage(java.awt.image.ImageProducer)>"
+    "specialinvoke <java.awt.image.FilteredImageSource: void <init>(java.awt.image.ImageProducer,java.awt.image.ImageFilter)>"->"virtualinvoke <AppletX: java.awt.Image createImage(java.awt.image.ImageProducer)>";
+    "fieldput <AppletX: java.awt.Image dst>"
+    "virtualinvoke <AppletX: java.awt.Image createImage(java.awt.image.ImageProducer)>"->"fieldput <AppletX: java.awt.Image dst>";
+    "fieldput <AppletX: java.awt.Image dst>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "push \"sc\""
+    "load.r r0"->"push \"sc\"";
+    "virtualinvoke <AppletX: java.lang.String getParameter(java.lang.String)>"
+    "push \"sc\""->"virtualinvoke <AppletX: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <AppletX: java.lang.String getParameter(java.lang.String)>"->"load.r r0";
+    "push \"np\""
+    "load.r r0"->"push \"np\"";
+    "push \"np\""->"virtualinvoke <AppletX: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <AppletX: java.nio.IntBuffer[] spray(java.lang.String,java.lang.String)>"
+    "virtualinvoke <AppletX: java.lang.String getParameter(java.lang.String)>"->"virtualinvoke <AppletX: java.nio.IntBuffer[] spray(java.lang.String,java.lang.String)>";
+    "fieldput <AppletX: java.nio.IntBuffer[] mem>"
+    "virtualinvoke <AppletX: java.nio.IntBuffer[] spray(java.lang.String,java.lang.String)>"->"fieldput <AppletX: java.nio.IntBuffer[] mem>";
+    "goto return"
+    "fieldput <AppletX: java.nio.IntBuffer[] mem>"->"goto return";
+    "return"
+    "goto return"->"return";
+    "store.r r0"
+    "virtualinvoke <AppletX: java.nio.IntBuffer[] spray(java.lang.String,java.lang.String)>"->"store.r r0";
+    "virtualinvoke <java.awt.MediaTracker: void waitForAll()>"->"store.r $r17";
+}

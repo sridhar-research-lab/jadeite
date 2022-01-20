@@ -1,0 +1,81 @@
+digraph "" {
+    "r0 := @this: com.mindprod.mimecheck.MimeCheck"
+    "push 1"
+    "r0 := @this: com.mindprod.mimecheck.MimeCheck"->"push 1";
+    "push 5"
+    "push 1"->"push 5";
+    "push 0"
+    "push 5"->"push 0";
+    "load.r r0"
+    "push 0"->"load.r r0";
+    "staticinvoke <com.mindprod.common11.VersionCheck: boolean isJavaVersionOK(int,int,int,java.awt.Container)>"
+    "load.r r0"->"staticinvoke <com.mindprod.common11.VersionCheck: boolean isJavaVersionOK(int,int,int,java.awt.Container)>";
+    "ifne load.r r0"
+    "staticinvoke <com.mindprod.common11.VersionCheck: boolean isJavaVersionOK(int,int,int,java.awt.Container)>"->"ifne load.r r0";
+    "return"
+    "ifne load.r r0"->"return";
+    "ifne load.r r0"->"load.r r0";
+    "specialinvoke <com.mindprod.mimecheck.MimeCheck: void getMimesDat()>"
+    "load.r r0"->"specialinvoke <com.mindprod.mimecheck.MimeCheck: void getMimesDat()>";
+    "specialinvoke <com.mindprod.mimecheck.MimeCheck: void getMimesDat()>"->"load.r r0";
+    "specialinvoke <com.mindprod.mimecheck.MimeCheck: void buildMenu()>"
+    "load.r r0"->"specialinvoke <com.mindprod.mimecheck.MimeCheck: void buildMenu()>";
+    "specialinvoke <com.mindprod.mimecheck.MimeCheck: void buildMenu()>"->"load.r r0";
+    "virtualinvoke <com.mindprod.mimecheck.MimeCheck: java.awt.Container getContentPane()>"
+    "load.r r0"->"virtualinvoke <com.mindprod.mimecheck.MimeCheck: java.awt.Container getContentPane()>";
+    "store.r r1"
+    "virtualinvoke <com.mindprod.mimecheck.MimeCheck: java.awt.Container getContentPane()>"->"store.r r1";
+    "load.r r1"
+    "store.r r1"->"load.r r1";
+    "staticget <com.mindprod.mimecheck.MimeCheck: java.awt.Color BACKGROUND_FOR_APPLET>"
+    "load.r r1"->"staticget <com.mindprod.mimecheck.MimeCheck: java.awt.Color BACKGROUND_FOR_APPLET>";
+    "virtualinvoke <java.awt.Container: void setBackground(java.awt.Color)>"
+    "staticget <com.mindprod.mimecheck.MimeCheck: java.awt.Color BACKGROUND_FOR_APPLET>"->"virtualinvoke <java.awt.Container: void setBackground(java.awt.Color)>";
+    "virtualinvoke <java.awt.Container: void setBackground(java.awt.Color)>"->"load.r r1";
+    "new java.awt.GridBagLayout"
+    "load.r r1"->"new java.awt.GridBagLayout";
+    "dup1.r"
+    "new java.awt.GridBagLayout"->"dup1.r";
+    "specialinvoke <java.awt.GridBagLayout: void <init>()>"
+    "dup1.r"->"specialinvoke <java.awt.GridBagLayout: void <init>()>";
+    "virtualinvoke <java.awt.Container: void setLayout(java.awt.LayoutManager)>"
+    "specialinvoke <java.awt.GridBagLayout: void <init>()>"->"virtualinvoke <java.awt.Container: void setLayout(java.awt.LayoutManager)>";
+    "virtualinvoke <java.awt.Container: void setLayout(java.awt.LayoutManager)>"->"load.r r0";
+    "specialinvoke <com.mindprod.mimecheck.MimeCheck: void createComponents()>"
+    "load.r r0"->"specialinvoke <com.mindprod.mimecheck.MimeCheck: void createComponents()>";
+    "specialinvoke <com.mindprod.mimecheck.MimeCheck: void createComponents()>"->"load.r r0";
+    "load.r r0"->"load.r r1";
+    "specialinvoke <com.mindprod.mimecheck.MimeCheck: void layoutComponents(java.awt.Container)>"
+    "load.r r1"->"specialinvoke <com.mindprod.mimecheck.MimeCheck: void layoutComponents(java.awt.Container)>";
+    "specialinvoke <com.mindprod.mimecheck.MimeCheck: void layoutComponents(java.awt.Container)>"->"load.r r0";
+    "specialinvoke <com.mindprod.mimecheck.MimeCheck: void hookComponents()>"
+    "load.r r0"->"specialinvoke <com.mindprod.mimecheck.MimeCheck: void hookComponents()>";
+    "specialinvoke <com.mindprod.mimecheck.MimeCheck: void hookComponents()>"->"load.r r0";
+    "fieldget <com.mindprod.mimecheck.MimeCheck: boolean asApplet>"
+    "load.r r0"->"fieldget <com.mindprod.mimecheck.MimeCheck: boolean asApplet>";
+    "ifeq return"
+    "fieldget <com.mindprod.mimecheck.MimeCheck: boolean asApplet>"->"ifeq return";
+    "ifeq return"->"load.r r0";
+    "push \"URL\""
+    "load.r r0"->"push \"URL\"";
+    "virtualinvoke <com.mindprod.mimecheck.MimeCheck: java.lang.String getParameter(java.lang.String)>"
+    "push \"URL\""->"virtualinvoke <com.mindprod.mimecheck.MimeCheck: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <com.mindprod.mimecheck.MimeCheck: java.lang.String getParameter(java.lang.String)>"->"store.r r1";
+    "store.r r1"->"load.r r1";
+    "ifnull return"
+    "load.r r1"->"ifnull return";
+    "ifnull return"->"load.r r1";
+    "virtualinvoke <java.lang.String: int length()>"
+    "load.r r1"->"virtualinvoke <java.lang.String: int length()>";
+    "virtualinvoke <java.lang.String: int length()>"->"ifeq return";
+    "ifeq return"->"load.r r0";
+    "fieldget <com.mindprod.mimecheck.MimeCheck: javax.swing.JTextField urlField>"
+    "load.r r0"->"fieldget <com.mindprod.mimecheck.MimeCheck: javax.swing.JTextField urlField>";
+    "fieldget <com.mindprod.mimecheck.MimeCheck: javax.swing.JTextField urlField>"->"load.r r1";
+    "virtualinvoke <javax.swing.JTextField: void setText(java.lang.String)>"
+    "load.r r1"->"virtualinvoke <javax.swing.JTextField: void setText(java.lang.String)>";
+    "virtualinvoke <javax.swing.JTextField: void setText(java.lang.String)>"->"load.r r0";
+    "specialinvoke <com.mindprod.mimecheck.MimeCheck: void test()>"
+    "load.r r0"->"specialinvoke <com.mindprod.mimecheck.MimeCheck: void test()>";
+    "specialinvoke <com.mindprod.mimecheck.MimeCheck: void test()>"->"return";
+}

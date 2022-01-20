@@ -1,0 +1,92 @@
+digraph "" {
+    "r0 := @this: LineEffects"
+    "load.r r0"
+    "r0 := @this: LineEffects"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "fieldget <LineEffects: int nR>"
+    "load.r r0"->"fieldget <LineEffects: int nR>";
+    "newarray"
+    "fieldget <LineEffects: int nR>"->"newarray";
+    "fieldput <LineEffects: double[] xR>"
+    "newarray"->"fieldput <LineEffects: double[] xR>";
+    "fieldput <LineEffects: double[] xR>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <LineEffects: int nR>";
+    "fieldget <LineEffects: int nR>"->"newarray";
+    "fieldput <LineEffects: int[] yM>"
+    "newarray"->"fieldput <LineEffects: int[] yM>";
+    "fieldput <LineEffects: int[] yM>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "virtualinvoke <java.awt.Component: java.awt.Dimension size()>"
+    "load.r r0"->"virtualinvoke <java.awt.Component: java.awt.Dimension size()>";
+    "fieldget <java.awt.Dimension: int width>"
+    "virtualinvoke <java.awt.Component: java.awt.Dimension size()>"->"fieldget <java.awt.Dimension: int width>";
+    "fieldput <LineEffects: int width>"
+    "fieldget <java.awt.Dimension: int width>"->"fieldput <LineEffects: int width>";
+    "fieldput <LineEffects: int width>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"virtualinvoke <java.awt.Component: java.awt.Dimension size()>";
+    "fieldget <java.awt.Dimension: int height>"
+    "virtualinvoke <java.awt.Component: java.awt.Dimension size()>"->"fieldget <java.awt.Dimension: int height>";
+    "fieldput <LineEffects: int height>"
+    "fieldget <java.awt.Dimension: int height>"->"fieldput <LineEffects: int height>";
+    "fieldput <LineEffects: int height>"->"load.r r0";
+    "new LineEffects$MouseEventHandler"
+    "load.r r0"->"new LineEffects$MouseEventHandler";
+    "dup1.r"
+    "new LineEffects$MouseEventHandler"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "specialinvoke <LineEffects$MouseEventHandler: void <init>(LineEffects)>"
+    "load.r r0"->"specialinvoke <LineEffects$MouseEventHandler: void <init>(LineEffects)>";
+    "virtualinvoke <java.awt.Component: void addMouseListener(java.awt.event.MouseListener)>"
+    "specialinvoke <LineEffects$MouseEventHandler: void <init>(LineEffects)>"->"virtualinvoke <java.awt.Component: void addMouseListener(java.awt.event.MouseListener)>";
+    "virtualinvoke <java.awt.Component: void addMouseListener(java.awt.event.MouseListener)>"->"load.r r0";
+    "new LineEffects$MouseMotionEventHandler"
+    "load.r r0"->"new LineEffects$MouseMotionEventHandler";
+    "new LineEffects$MouseMotionEventHandler"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "specialinvoke <LineEffects$MouseMotionEventHandler: void <init>(LineEffects)>"
+    "load.r r0"->"specialinvoke <LineEffects$MouseMotionEventHandler: void <init>(LineEffects)>";
+    "virtualinvoke <java.awt.Component: void addMouseMotionListener(java.awt.event.MouseMotionListener)>"
+    "specialinvoke <LineEffects$MouseMotionEventHandler: void <init>(LineEffects)>"->"virtualinvoke <java.awt.Component: void addMouseMotionListener(java.awt.event.MouseMotionListener)>";
+    "push 0"
+    "virtualinvoke <java.awt.Component: void addMouseMotionListener(java.awt.event.MouseMotionListener)>"->"push 0";
+    "store.i i7"
+    "push 0"->"store.i i7";
+    "goto load.i i7"
+    "store.i i7"->"goto load.i i7";
+    "load.i i7"
+    "goto load.i i7"->"load.i i7";
+    "load.i i7"->"load.r r0";
+    "load.r r0"->"fieldget <LineEffects: int nR>";
+    "ifcmplt.i load.r r0"
+    "fieldget <LineEffects: int nR>"->"ifcmplt.i load.r r0";
+    "ifcmplt.i load.r r0"->"load.r r0";
+    "virtualinvoke <java.awt.Component: void repaint()>"
+    "load.r r0"->"virtualinvoke <java.awt.Component: void repaint()>";
+    "return"
+    "virtualinvoke <java.awt.Component: void repaint()>"->"return";
+    "ifcmplt.i load.r r0"->"load.r r0";
+    "fieldget <LineEffects: double[] xR>"
+    "load.r r0"->"fieldget <LineEffects: double[] xR>";
+    "fieldget <LineEffects: double[] xR>"->"load.i i7";
+    "push 0.0"
+    "load.i i7"->"push 0.0";
+    "arraywrite.d"
+    "push 0.0"->"arraywrite.d";
+    "arraywrite.d"->"load.r r0";
+    "fieldget <LineEffects: int[] yM>"
+    "load.r r0"->"fieldget <LineEffects: int[] yM>";
+    "fieldget <LineEffects: int[] yM>"->"load.i i7";
+    "load.i i7"->"load.r r0";
+    "fieldget <LineEffects: int height>"
+    "load.r r0"->"fieldget <LineEffects: int height>";
+    "push 1"
+    "fieldget <LineEffects: int height>"->"push 1";
+    "sub.i"
+    "push 1"->"sub.i";
+    "arraywrite.i"
+    "sub.i"->"arraywrite.i";
+    "inc.i i7 1"
+    "arraywrite.i"->"inc.i i7 1";
+}

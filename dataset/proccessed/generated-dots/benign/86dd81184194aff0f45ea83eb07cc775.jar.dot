@@ -1,0 +1,266 @@
+digraph "" {
+    "r0 := @this: SnipMP3Converter"
+    "load.r r0"
+    "r0 := @this: SnipMP3Converter"->"load.r r0";
+    "virtualinvoke <SnipMP3Converter: java.net.URL getDocumentBase()>"
+    "load.r r0"->"virtualinvoke <SnipMP3Converter: java.net.URL getDocumentBase()>";
+    "virtualinvoke <java.net.URL: java.lang.String getHost()>"
+    "virtualinvoke <SnipMP3Converter: java.net.URL getDocumentBase()>"->"virtualinvoke <java.net.URL: java.lang.String getHost()>";
+    "virtualinvoke <java.lang.String: java.lang.String toLowerCase()>"
+    "virtualinvoke <java.net.URL: java.lang.String getHost()>"->"virtualinvoke <java.lang.String: java.lang.String toLowerCase()>";
+    "push \"snipmp3.com\""
+    "virtualinvoke <java.lang.String: java.lang.String toLowerCase()>"->"push \"snipmp3.com\"";
+    "virtualinvoke <java.lang.String: boolean contains(java.lang.CharSequence)>"
+    "push \"snipmp3.com\""->"virtualinvoke <java.lang.String: boolean contains(java.lang.CharSequence)>";
+    "ifne load.r r0"
+    "virtualinvoke <java.lang.String: boolean contains(java.lang.CharSequence)>"->"ifne load.r r0";
+    "new java.lang.SecurityException"
+    "ifne load.r r0"->"new java.lang.SecurityException";
+    "dup1.r"
+    "new java.lang.SecurityException"->"dup1.r";
+    "push \"java.io.* import failed.\""
+    "dup1.r"->"push \"java.io.* import failed.\"";
+    "specialinvoke <java.lang.SecurityException: void <init>(java.lang.String)>"
+    "push \"java.io.* import failed.\""->"specialinvoke <java.lang.SecurityException: void <init>(java.lang.String)>";
+    "athrow"
+    "specialinvoke <java.lang.SecurityException: void <init>(java.lang.String)>"->"athrow";
+    "store.r r0"
+    "athrow"->"store.r r0";
+    "staticget <java.lang.System: java.io.PrintStream out>"
+    "store.r r0"->"staticget <java.lang.System: java.io.PrintStream out>";
+    "staticget <java.lang.System: java.io.PrintStream out>"->"load.r r0";
+    "virtualinvoke <java.io.PrintStream: void println(java.lang.Object)>"
+    "load.r r0"->"virtualinvoke <java.io.PrintStream: void println(java.lang.Object)>";
+    "return"
+    "virtualinvoke <java.io.PrintStream: void println(java.lang.Object)>"->"return";
+    "ifne load.r r0"->"load.r r0";
+    "staticinvoke <netscape.javascript.JSObject: netscape.javascript.JSObject getWindow(java.applet.Applet)>"
+    "load.r r0"->"staticinvoke <netscape.javascript.JSObject: netscape.javascript.JSObject getWindow(java.applet.Applet)>";
+    "store.r r68"
+    "staticinvoke <netscape.javascript.JSObject: netscape.javascript.JSObject getWindow(java.applet.Applet)>"->"store.r r68";
+    "load.r r68"
+    "store.r r68"->"load.r r68";
+    "push \"load();\""
+    "load.r r68"->"push \"load();\"";
+    "virtualinvoke <netscape.javascript.JSObject: java.lang.Object eval(java.lang.String)>"
+    "push \"load();\""->"virtualinvoke <netscape.javascript.JSObject: java.lang.Object eval(java.lang.String)>";
+    "pop"
+    "virtualinvoke <netscape.javascript.JSObject: java.lang.Object eval(java.lang.String)>"->"pop";
+    "pop"->"load.r r0";
+    "push \"title\""
+    "load.r r0"->"push \"title\"";
+    "virtualinvoke <SnipMP3Converter: java.lang.String getParameter(java.lang.String)>"
+    "push \"title\""->"virtualinvoke <SnipMP3Converter: java.lang.String getParameter(java.lang.String)>";
+    "ifnull load.r r0"
+    "virtualinvoke <SnipMP3Converter: java.lang.String getParameter(java.lang.String)>"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r r0";
+    "push \"url\""
+    "load.r r0"->"push \"url\"";
+    "push \"url\""->"virtualinvoke <SnipMP3Converter: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <SnipMP3Converter: java.lang.String getParameter(java.lang.String)>"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"push \"title\"";
+    "push \"title\""->"virtualinvoke <SnipMP3Converter: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <SnipMP3Converter: java.lang.String getParameter(java.lang.String)>"->"load.r r0";
+    "load.r r0"->"push \"url\"";
+    "push \"url\""->"virtualinvoke <SnipMP3Converter: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <SnipMP3Converter: void downloadVideo(java.lang.String,java.lang.String)>"
+    "virtualinvoke <SnipMP3Converter: java.lang.String getParameter(java.lang.String)>"->"virtualinvoke <SnipMP3Converter: void downloadVideo(java.lang.String,java.lang.String)>";
+    "goto goto return"
+    "virtualinvoke <SnipMP3Converter: void downloadVideo(java.lang.String,java.lang.String)>"->"goto goto return";
+    "goto return"
+    "goto goto return"->"goto return";
+    "ifnull load.r r0"->"load.r r0";
+    "push \"path\""
+    "load.r r0"->"push \"path\"";
+    "push \"path\""->"virtualinvoke <SnipMP3Converter: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <SnipMP3Converter: java.lang.String getParameter(java.lang.String)>"->"ifnull load.r r0";
+    "new java.io.File"
+    "ifnull load.r r0"->"new java.io.File";
+    "new java.io.File"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "load.r r0"->"push \"path\"";
+    "push \"path\""->"virtualinvoke <SnipMP3Converter: java.lang.String getParameter(java.lang.String)>";
+    "specialinvoke <java.io.File: void <init>(java.lang.String)>"
+    "virtualinvoke <SnipMP3Converter: java.lang.String getParameter(java.lang.String)>"->"specialinvoke <java.io.File: void <init>(java.lang.String)>";
+    "staticinvoke <java.awt.Desktop: java.awt.Desktop getDesktop()>"
+    "specialinvoke <java.io.File: void <init>(java.lang.String)>"->"staticinvoke <java.awt.Desktop: java.awt.Desktop getDesktop()>";
+    "staticinvoke <java.awt.Desktop: java.awt.Desktop getDesktop()>"->"store.r r0";
+    "virtualinvoke <java.io.File: java.io.File getParentFile()>"
+    "store.r r0"->"virtualinvoke <java.io.File: java.io.File getParentFile()>";
+    "store.r r1"
+    "virtualinvoke <java.io.File: java.io.File getParentFile()>"->"store.r r1";
+    "store.r r1"->"load.r r0";
+    "load.r r1"
+    "load.r r0"->"load.r r1";
+    "virtualinvoke <java.awt.Desktop: void open(java.io.File)>"
+    "load.r r1"->"virtualinvoke <java.awt.Desktop: void open(java.io.File)>";
+    "virtualinvoke <java.awt.Desktop: void open(java.io.File)>"->"goto goto return";
+    "ifnull load.r r0"->"load.r r0";
+    "push \"u\""
+    "load.r r0"->"push \"u\"";
+    "push \"u\""->"virtualinvoke <SnipMP3Converter: java.lang.String getParameter(java.lang.String)>";
+    "push \"youtube.com\""
+    "virtualinvoke <SnipMP3Converter: java.lang.String getParameter(java.lang.String)>"->"push \"youtube.com\"";
+    "push \"youtube.com\""->"virtualinvoke <java.lang.String: boolean contains(java.lang.CharSequence)>";
+    "ifeq goto return"
+    "virtualinvoke <java.lang.String: boolean contains(java.lang.CharSequence)>"->"ifeq goto return";
+    "ifeq goto return"->"load.r r0";
+    "load.r r0"->"push \"u\"";
+    "push \"u\""->"virtualinvoke <SnipMP3Converter: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <SnipMP3Converter: java.lang.String getParameter(java.lang.String)>"->"store.r r1";
+    "store.r r1"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"push \"u\"";
+    "push \"u\""->"virtualinvoke <SnipMP3Converter: java.lang.String getParameter(java.lang.String)>";
+    "push \"v=\""
+    "virtualinvoke <SnipMP3Converter: java.lang.String getParameter(java.lang.String)>"->"push \"v=\"";
+    "push \"&\""
+    "push \"v=\""->"push \"&\"";
+    "specialinvoke <SnipMP3Converter: java.lang.String inbtwn(java.lang.String,java.lang.String,java.lang.String)>"
+    "push \"&\""->"specialinvoke <SnipMP3Converter: java.lang.String inbtwn(java.lang.String,java.lang.String,java.lang.String)>";
+    "store.r r2"
+    "specialinvoke <SnipMP3Converter: java.lang.String inbtwn(java.lang.String,java.lang.String,java.lang.String)>"->"store.r r2";
+    "store.r r2"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "new java.lang.StringBuilder"
+    "load.r r0"->"new java.lang.StringBuilder";
+    "new java.lang.StringBuilder"->"dup1.r";
+    "specialinvoke <java.lang.StringBuilder: void <init>()>"
+    "dup1.r"->"specialinvoke <java.lang.StringBuilder: void <init>()>";
+    "push \"http://www.youtube.com/watch?v=\""
+    "specialinvoke <java.lang.StringBuilder: void <init>()>"->"push \"http://www.youtube.com/watch?v=\"";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"
+    "push \"http://www.youtube.com/watch?v=\""->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "load.r r2"
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"load.r r2";
+    "load.r r2"->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "push \"&fmt=18\""
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"push \"&fmt=18\"";
+    "push \"&fmt=18\""->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.String toString()>"
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"virtualinvoke <java.lang.StringBuilder: java.lang.String toString()>";
+    "push \"GET\""
+    "virtualinvoke <java.lang.StringBuilder: java.lang.String toString()>"->"push \"GET\"";
+    "specialinvoke <SnipMP3Converter: java.lang.String getUrlContent(java.lang.String,java.lang.String)>"
+    "push \"GET\""->"specialinvoke <SnipMP3Converter: java.lang.String getUrlContent(java.lang.String,java.lang.String)>";
+    "store.r r3"
+    "specialinvoke <SnipMP3Converter: java.lang.String getUrlContent(java.lang.String,java.lang.String)>"->"store.r r3";
+    "load.r r3"
+    "store.r r3"->"load.r r3";
+    "push \"title\\\" content=\\\"\""
+    "load.r r3"->"push \"title\\\" content=\\\"\"";
+    "push \"\\\"\""
+    "push \"title\\\" content=\\\"\""->"push \"\\\"\"";
+    "push \"\\\"\""->"specialinvoke <SnipMP3Converter: java.lang.String inbtwn(java.lang.String,java.lang.String,java.lang.String)>";
+    "specialinvoke <SnipMP3Converter: java.lang.String setHTMLEntity(java.lang.String)>"
+    "specialinvoke <SnipMP3Converter: java.lang.String inbtwn(java.lang.String,java.lang.String,java.lang.String)>"->"specialinvoke <SnipMP3Converter: java.lang.String setHTMLEntity(java.lang.String)>";
+    "specialinvoke <SnipMP3Converter: java.lang.String setHTMLEntity(java.lang.String)>"->"store.r r0";
+    "store.r r0"->"load.r r3";
+    "push \"%2C5%7C\""
+    "load.r r3"->"push \"%2C5%7C\"";
+    "push \"%2C5%7C\""->"push \"&\"";
+    "push \"&\""->"specialinvoke <SnipMP3Converter: java.lang.String inbtwn(java.lang.String,java.lang.String,java.lang.String)>";
+    "push \"UTF-8\""
+    "specialinvoke <SnipMP3Converter: java.lang.String inbtwn(java.lang.String,java.lang.String,java.lang.String)>"->"push \"UTF-8\"";
+    "staticinvoke <java.net.URLDecoder: java.lang.String decode(java.lang.String,java.lang.String)>"
+    "push \"UTF-8\""->"staticinvoke <java.net.URLDecoder: java.lang.String decode(java.lang.String,java.lang.String)>";
+    "staticinvoke <java.net.URLDecoder: java.lang.String decode(java.lang.String,java.lang.String)>"->"store.r r3";
+    "store.r r3"->"new java.lang.StringBuilder";
+    "new java.lang.StringBuilder"->"dup1.r";
+    "dup1.r"->"specialinvoke <java.lang.StringBuilder: void <init>()>";
+    "push \"http://i.ytimg.com/vi/\""
+    "specialinvoke <java.lang.StringBuilder: void <init>()>"->"push \"http://i.ytimg.com/vi/\"";
+    "push \"http://i.ytimg.com/vi/\""->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"load.r r2";
+    "load.r r2"->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "push \"/default.jpg\""
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"push \"/default.jpg\"";
+    "push \"/default.jpg\""->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"virtualinvoke <java.lang.StringBuilder: java.lang.String toString()>";
+    "store.r r6"
+    "virtualinvoke <java.lang.StringBuilder: java.lang.String toString()>"->"store.r r6";
+    "store.r r6"->"load.r r3";
+    "ifnull staticget <java.lang.System: java.io.PrintStream out>"
+    "load.r r3"->"ifnull staticget <java.lang.System: java.io.PrintStream out>";
+    "ifnull staticget <java.lang.System: java.io.PrintStream out>"->"load.r r68";
+    "load.r r68"->"new java.lang.StringBuilder";
+    "new java.lang.StringBuilder"->"dup1.r";
+    "dup1.r"->"specialinvoke <java.lang.StringBuilder: void <init>()>";
+    "push \"show(\'\""
+    "specialinvoke <java.lang.StringBuilder: void <init>()>"->"push \"show(\'\"";
+    "push \"show(\'\""->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"load.r r0";
+    "load.r r0"->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "push \"\',\'\""
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"push \"\',\'\"";
+    "push \"\',\'\""->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"load.r r3";
+    "load.r r3"->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"push \"\',\'\"";
+    "push \"\',\'\""->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "load.r r6"
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"load.r r6";
+    "load.r r6"->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"push \"\',\'\"";
+    "push \"\',\'\""->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"push \"youtube.com\"";
+    "push \"youtube.com\""->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"push \"\',\'\"";
+    "push \"\',\'\""->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"load.r r1";
+    "load.r r1"->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "push \"\', \'Standard Quality\');\""
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"push \"\', \'Standard Quality\');\"";
+    "push \"\', \'Standard Quality\');\""->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"virtualinvoke <java.lang.StringBuilder: java.lang.String toString()>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.String toString()>"->"virtualinvoke <netscape.javascript.JSObject: java.lang.Object eval(java.lang.String)>";
+    "virtualinvoke <netscape.javascript.JSObject: java.lang.Object eval(java.lang.String)>"->"pop";
+    "pop"->"staticget <java.lang.System: java.io.PrintStream out>";
+    "staticget <java.lang.System: java.io.PrintStream out>"->"new java.lang.StringBuilder";
+    "new java.lang.StringBuilder"->"dup1.r";
+    "dup1.r"->"specialinvoke <java.lang.StringBuilder: void <init>()>";
+    "push \"Video ID: \""
+    "specialinvoke <java.lang.StringBuilder: void <init>()>"->"push \"Video ID: \"";
+    "push \"Video ID: \""->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"load.r r2";
+    "load.r r2"->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "push \"\r\n\""
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"push \"\r\n\"";
+    "push \"\r\n\""->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"virtualinvoke <java.lang.StringBuilder: java.lang.String toString()>";
+    "virtualinvoke <java.io.PrintStream: void println(java.lang.String)>"
+    "virtualinvoke <java.lang.StringBuilder: java.lang.String toString()>"->"virtualinvoke <java.io.PrintStream: void println(java.lang.String)>";
+    "virtualinvoke <java.io.PrintStream: void println(java.lang.String)>"->"staticget <java.lang.System: java.io.PrintStream out>";
+    "staticget <java.lang.System: java.io.PrintStream out>"->"new java.lang.StringBuilder";
+    "new java.lang.StringBuilder"->"dup1.r";
+    "dup1.r"->"specialinvoke <java.lang.StringBuilder: void <init>()>";
+    "push \"Title: \""
+    "specialinvoke <java.lang.StringBuilder: void <init>()>"->"push \"Title: \"";
+    "push \"Title: \""->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"load.r r0";
+    "load.r r0"->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"push \"\r\n\"";
+    "push \"\r\n\""->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"virtualinvoke <java.lang.StringBuilder: java.lang.String toString()>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.String toString()>"->"virtualinvoke <java.io.PrintStream: void println(java.lang.String)>";
+    "virtualinvoke <java.io.PrintStream: void println(java.lang.String)>"->"load.r r3";
+    "ifnull goto return"
+    "load.r r3"->"ifnull goto return";
+    "ifnull goto return"->"staticget <java.lang.System: java.io.PrintStream out>";
+    "staticget <java.lang.System: java.io.PrintStream out>"->"new java.lang.StringBuilder";
+    "new java.lang.StringBuilder"->"dup1.r";
+    "dup1.r"->"specialinvoke <java.lang.StringBuilder: void <init>()>";
+    "push \"FLV: \""
+    "specialinvoke <java.lang.StringBuilder: void <init>()>"->"push \"FLV: \"";
+    "push \"FLV: \""->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"load.r r3";
+    "load.r r3"->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"push \"\r\n\"";
+    "push \"\r\n\""->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"virtualinvoke <java.lang.StringBuilder: java.lang.String toString()>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.String toString()>"->"virtualinvoke <java.io.PrintStream: void println(java.lang.String)>";
+}

@@ -1,0 +1,138 @@
+digraph "" {
+    "r0 := @this: BlackViper"
+    "load.r r0"
+    "r0 := @this: BlackViper"->"load.r r0";
+    "push \"down.gif\""
+    "load.r r0"->"push \"down.gif\"";
+    "fieldput <BlackViper: java.lang.String levelData>"
+    "push \"down.gif\""->"fieldput <BlackViper: java.lang.String levelData>";
+    "fieldput <BlackViper: java.lang.String levelData>"->"load.r r0";
+    "push \"mylevel\""
+    "load.r r0"->"push \"mylevel\"";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"
+    "push \"mylevel\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "store.r $r3"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"store.r $r3";
+    "load.r $r3"
+    "store.r $r3"->"load.r $r3";
+    "ifnull load.r r0"
+    "load.r $r3"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r $r3";
+    "push \"true\""
+    "load.r $r3"->"push \"true\"";
+    "virtualinvoke <java.lang.String: boolean equalsIgnoreCase(java.lang.String)>"
+    "push \"true\""->"virtualinvoke <java.lang.String: boolean equalsIgnoreCase(java.lang.String)>";
+    "ifeq load.r r0"
+    "virtualinvoke <java.lang.String: boolean equalsIgnoreCase(java.lang.String)>"->"ifeq load.r r0";
+    "ifeq load.r r0"->"load.r r0";
+    "push \"bvlevel.dat\""
+    "load.r r0"->"push \"bvlevel.dat\"";
+    "push \"bvlevel.dat\""->"fieldput <BlackViper: java.lang.String levelData>";
+    "fieldput <BlackViper: java.lang.String levelData>"->"load.r r0";
+    "push \"sound\""
+    "load.r r0"->"push \"sound\"";
+    "push \"sound\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"store.r $r3";
+    "store.r $r3"->"load.r $r3";
+    "load.r $r3"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r $r3";
+    "push \"false\""
+    "load.r $r3"->"push \"false\"";
+    "push \"false\""->"virtualinvoke <java.lang.String: boolean equalsIgnoreCase(java.lang.String)>";
+    "ifne push 0"
+    "virtualinvoke <java.lang.String: boolean equalsIgnoreCase(java.lang.String)>"->"ifne push 0";
+    "push 1"
+    "ifne push 0"->"push 1";
+    "store.b $r3"
+    "push 1"->"store.b $r3";
+    "goto load.r r0"
+    "store.b $r3"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "load.b $r3"
+    "load.r r0"->"load.b $r3";
+    "fieldput <BlackViper: boolean SOUND>"
+    "load.b $r3"->"fieldput <BlackViper: boolean SOUND>";
+    "fieldput <BlackViper: boolean SOUND>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "fieldget <BlackViper: java.awt.Font normalFont>"
+    "load.r r0"->"fieldget <BlackViper: java.awt.Font normalFont>";
+    "virtualinvoke <java.awt.Container: void setFont(java.awt.Font)>"
+    "fieldget <BlackViper: java.awt.Font normalFont>"->"virtualinvoke <java.awt.Container: void setFont(java.awt.Font)>";
+    "virtualinvoke <java.awt.Container: void setFont(java.awt.Font)>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "fieldget <BlackViper: int WIDTH>"
+    "load.r r0"->"fieldget <BlackViper: int WIDTH>";
+    "fieldget <BlackViper: int WIDTH>"->"load.r r0";
+    "fieldget <BlackViper: int HEIGHT>"
+    "load.r r0"->"fieldget <BlackViper: int HEIGHT>";
+    "virtualinvoke <java.awt.Component: java.awt.Image createImage(int,int)>"
+    "fieldget <BlackViper: int HEIGHT>"->"virtualinvoke <java.awt.Component: java.awt.Image createImage(int,int)>";
+    "fieldput <BlackViper: java.awt.Image offImg>"
+    "virtualinvoke <java.awt.Component: java.awt.Image createImage(int,int)>"->"fieldput <BlackViper: java.awt.Image offImg>";
+    "fieldput <BlackViper: java.awt.Image offImg>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "fieldget <BlackViper: java.awt.Image offImg>"
+    "load.r r0"->"fieldget <BlackViper: java.awt.Image offImg>";
+    "virtualinvoke <java.awt.Image: java.awt.Graphics getGraphics()>"
+    "fieldget <BlackViper: java.awt.Image offImg>"->"virtualinvoke <java.awt.Image: java.awt.Graphics getGraphics()>";
+    "fieldput <BlackViper: java.awt.Graphics offG>"
+    "virtualinvoke <java.awt.Image: java.awt.Graphics getGraphics()>"->"fieldput <BlackViper: java.awt.Graphics offG>";
+    "fieldput <BlackViper: java.awt.Graphics offG>"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "new BlackViper$Game"
+    "load.r r0"->"new BlackViper$Game";
+    "dup1.r"
+    "new BlackViper$Game"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "specialinvoke <BlackViper$Game: void <init>(BlackViper)>"
+    "load.r r0"->"specialinvoke <BlackViper$Game: void <init>(BlackViper)>";
+    "fieldput <BlackViper: BlackViper$State Game>"
+    "specialinvoke <BlackViper$Game: void <init>(BlackViper)>"->"fieldput <BlackViper: BlackViper$State Game>";
+    "fieldput <BlackViper: BlackViper$State Game>"->"load.r r0";
+    "specialinvoke <BlackViper: void jbInit()>"
+    "load.r r0"->"specialinvoke <BlackViper: void jbInit()>";
+    "specialinvoke <BlackViper: void jbInit()>"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "virtualinvoke <java.awt.Component: void requestFocus()>"
+    "load.r r0"->"virtualinvoke <java.awt.Component: void requestFocus()>";
+    "virtualinvoke <java.awt.Component: void requestFocus()>"->"load.r r0";
+    "fieldget <BlackViper: java.lang.Thread loader>"
+    "load.r r0"->"fieldget <BlackViper: java.lang.Thread loader>";
+    "ifnonnull return"
+    "fieldget <BlackViper: java.lang.Thread loader>"->"ifnonnull return";
+    "new BlackViper$Loader"
+    "ifnonnull return"->"new BlackViper$Loader";
+    "new BlackViper$Loader"->"store.r $r3";
+    "store.r $r3"->"load.r $r3";
+    "load.r $r3"->"load.r r0";
+    "specialinvoke <BlackViper$Loader: void <init>(BlackViper)>"
+    "load.r r0"->"specialinvoke <BlackViper$Loader: void <init>(BlackViper)>";
+    "specialinvoke <BlackViper$Loader: void <init>(BlackViper)>"->"load.r $r3";
+    "virtualinvoke <BlackViper$Loader: void init()>"
+    "load.r $r3"->"virtualinvoke <BlackViper$Loader: void init()>";
+    "virtualinvoke <BlackViper$Loader: void init()>"->"load.r r0";
+    "new java.lang.Thread"
+    "load.r r0"->"new java.lang.Thread";
+    "new java.lang.Thread"->"dup1.r";
+    "dup1.r"->"load.r $r3";
+    "specialinvoke <java.lang.Thread: void <init>(java.lang.Runnable)>"
+    "load.r $r3"->"specialinvoke <java.lang.Thread: void <init>(java.lang.Runnable)>";
+    "fieldput <BlackViper: java.lang.Thread loader>"
+    "specialinvoke <java.lang.Thread: void <init>(java.lang.Runnable)>"->"fieldput <BlackViper: java.lang.Thread loader>";
+    "fieldput <BlackViper: java.lang.Thread loader>"->"load.r r0";
+    "load.r r0"->"load.r $r3";
+    "fieldput <BlackViper: BlackViper$State state>"
+    "load.r $r3"->"fieldput <BlackViper: BlackViper$State state>";
+    "fieldput <BlackViper: BlackViper$State state>"->"load.r r0";
+    "load.r r0"->"fieldget <BlackViper: java.lang.Thread loader>";
+    "virtualinvoke <java.lang.Thread: void start()>"
+    "fieldget <BlackViper: java.lang.Thread loader>"->"virtualinvoke <java.lang.Thread: void start()>";
+    "return"
+    "virtualinvoke <java.lang.Thread: void start()>"->"return";
+    "specialinvoke <BlackViper: void jbInit()>"->"store.r $r3";
+    "virtualinvoke <java.awt.Image: java.awt.Graphics getGraphics()>"->"store.r $r3";
+    "push 0"
+    "ifne push 0"->"push 0";
+    "push 0"->"store.b $r3";
+}

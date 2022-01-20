@@ -1,0 +1,524 @@
+digraph "" {
+    "r0 := @this: Jigsaw"
+    "load.r r0"
+    "r0 := @this: Jigsaw"->"load.r r0";
+    "push null"
+    "load.r r0"->"push null";
+    "fieldput <Jigsaw: java.lang.String sRunURL>"
+    "push null"->"fieldput <Jigsaw: java.lang.String sRunURL>";
+    "fieldput <Jigsaw: java.lang.String sRunURL>"->"load.r r0";
+    "load.r r0"->"push null";
+    "fieldput <Jigsaw: java.lang.String sRunTarget>"
+    "push null"->"fieldput <Jigsaw: java.lang.String sRunTarget>";
+    "fieldput <Jigsaw: java.lang.String sRunTarget>"->"load.r r0";
+    "fieldget <Jigsaw: java.awt.Image aImg>"
+    "load.r r0"->"fieldget <Jigsaw: java.awt.Image aImg>";
+    "ifnull load.r r0"
+    "fieldget <Jigsaw: java.awt.Image aImg>"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <Jigsaw: java.awt.Image aImg>";
+    "virtualinvoke <java.awt.Image: void flush()>"
+    "fieldget <Jigsaw: java.awt.Image aImg>"->"virtualinvoke <java.awt.Image: void flush()>";
+    "virtualinvoke <java.awt.Image: void flush()>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "virtualinvoke <java.awt.Component: void removeMouseListener(java.awt.event.MouseListener)>"
+    "load.r r0"->"virtualinvoke <java.awt.Component: void removeMouseListener(java.awt.event.MouseListener)>";
+    "virtualinvoke <java.awt.Component: void removeMouseListener(java.awt.event.MouseListener)>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "virtualinvoke <java.awt.Component: void removeMouseMotionListener(java.awt.event.MouseMotionListener)>"
+    "load.r r0"->"virtualinvoke <java.awt.Component: void removeMouseMotionListener(java.awt.event.MouseMotionListener)>";
+    "new java.awt.Cursor"
+    "virtualinvoke <java.awt.Component: void removeMouseMotionListener(java.awt.event.MouseMotionListener)>"->"new java.awt.Cursor";
+    "store.r $r3"
+    "new java.awt.Cursor"->"store.r $r3";
+    "load.r $r3"
+    "store.r $r3"->"load.r $r3";
+    "push 12"
+    "load.r $r3"->"push 12";
+    "specialinvoke <java.awt.Cursor: void <init>(int)>"
+    "push 12"->"specialinvoke <java.awt.Cursor: void <init>(int)>";
+    "specialinvoke <java.awt.Cursor: void <init>(int)>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "virtualinvoke <java.awt.Component: java.awt.Rectangle getBounds()>"
+    "load.r r0"->"virtualinvoke <java.awt.Component: java.awt.Rectangle getBounds()>";
+    "fieldget <java.awt.Rectangle: int width>"
+    "virtualinvoke <java.awt.Component: java.awt.Rectangle getBounds()>"->"fieldget <java.awt.Rectangle: int width>";
+    "fieldput <Jigsaw: int appW>"
+    "fieldget <java.awt.Rectangle: int width>"->"fieldput <Jigsaw: int appW>";
+    "fieldput <Jigsaw: int appW>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"virtualinvoke <java.awt.Component: java.awt.Rectangle getBounds()>";
+    "fieldget <java.awt.Rectangle: int height>"
+    "virtualinvoke <java.awt.Component: java.awt.Rectangle getBounds()>"->"fieldget <java.awt.Rectangle: int height>";
+    "fieldput <Jigsaw: int appH>"
+    "fieldget <java.awt.Rectangle: int height>"->"fieldput <Jigsaw: int appH>";
+    "fieldput <Jigsaw: int appH>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "fieldget <Jigsaw: int appW>"
+    "load.r r0"->"fieldget <Jigsaw: int appW>";
+    "fieldget <Jigsaw: int appW>"->"load.r r0";
+    "fieldget <Jigsaw: int appH>"
+    "load.r r0"->"fieldget <Jigsaw: int appH>";
+    "virtualinvoke <java.awt.Component: java.awt.Image createImage(int,int)>"
+    "fieldget <Jigsaw: int appH>"->"virtualinvoke <java.awt.Component: java.awt.Image createImage(int,int)>";
+    "fieldput <Jigsaw: java.awt.Image offScrImg>"
+    "virtualinvoke <java.awt.Component: java.awt.Image createImage(int,int)>"->"fieldput <Jigsaw: java.awt.Image offScrImg>";
+    "fieldput <Jigsaw: java.awt.Image offScrImg>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "fieldget <Jigsaw: java.awt.Image offScrImg>"
+    "load.r r0"->"fieldget <Jigsaw: java.awt.Image offScrImg>";
+    "virtualinvoke <java.awt.Image: java.awt.Graphics getGraphics()>"
+    "fieldget <Jigsaw: java.awt.Image offScrImg>"->"virtualinvoke <java.awt.Image: java.awt.Graphics getGraphics()>";
+    "fieldput <Jigsaw: java.awt.Graphics offScrGr>"
+    "virtualinvoke <java.awt.Image: java.awt.Graphics getGraphics()>"->"fieldput <Jigsaw: java.awt.Graphics offScrGr>";
+    "fieldput <Jigsaw: java.awt.Graphics offScrGr>"->"load.r r0";
+    "new java.awt.FlowLayout"
+    "load.r r0"->"new java.awt.FlowLayout";
+    "dup1.r"
+    "new java.awt.FlowLayout"->"dup1.r";
+    "push 0"
+    "dup1.r"->"push 0";
+    "push 3"
+    "push 0"->"push 3";
+    "push 3"->"push 3";
+    "specialinvoke <java.awt.FlowLayout: void <init>(int,int,int)>"
+    "push 3"->"specialinvoke <java.awt.FlowLayout: void <init>(int,int,int)>";
+    "virtualinvoke <java.awt.Container: void setLayout(java.awt.LayoutManager)>"
+    "specialinvoke <java.awt.FlowLayout: void <init>(int,int,int)>"->"virtualinvoke <java.awt.Container: void setLayout(java.awt.LayoutManager)>";
+    "virtualinvoke <java.awt.Container: void setLayout(java.awt.LayoutManager)>"->"load.r r0";
+    "push 4"
+    "load.r r0"->"push 4";
+    "newarray"
+    "push 4"->"newarray";
+    "fieldput <Jigsaw: java.lang.String[] t>"
+    "newarray"->"fieldput <Jigsaw: java.lang.String[] t>";
+    "fieldput <Jigsaw: java.lang.String[] t>"->"load.r r0";
+    "fieldget <Jigsaw: java.lang.String[] t>"
+    "load.r r0"->"fieldget <Jigsaw: java.lang.String[] t>";
+    "fieldget <Jigsaw: java.lang.String[] t>"->"push 0";
+    "new java.lang.String"
+    "push 0"->"new java.lang.String";
+    "new java.lang.String"->"dup1.r";
+    "push \"Breakup\""
+    "dup1.r"->"push \"Breakup\"";
+    "specialinvoke <java.lang.String: void <init>(java.lang.String)>"
+    "push \"Breakup\""->"specialinvoke <java.lang.String: void <init>(java.lang.String)>";
+    "arraywrite.r"
+    "specialinvoke <java.lang.String: void <init>(java.lang.String)>"->"arraywrite.r";
+    "arraywrite.r"->"load.r r0";
+    "load.r r0"->"fieldget <Jigsaw: java.lang.String[] t>";
+    "push 1"
+    "fieldget <Jigsaw: java.lang.String[] t>"->"push 1";
+    "push 1"->"new java.lang.String";
+    "new java.lang.String"->"dup1.r";
+    "push \"Tidy Pieces\""
+    "dup1.r"->"push \"Tidy Pieces\"";
+    "push \"Tidy Pieces\""->"specialinvoke <java.lang.String: void <init>(java.lang.String)>";
+    "specialinvoke <java.lang.String: void <init>(java.lang.String)>"->"arraywrite.r";
+    "arraywrite.r"->"load.r r0";
+    "load.r r0"->"fieldget <Jigsaw: java.lang.String[] t>";
+    "push 2"
+    "fieldget <Jigsaw: java.lang.String[] t>"->"push 2";
+    "push 2"->"new java.lang.String";
+    "new java.lang.String"->"dup1.r";
+    "push \"Solve\""
+    "dup1.r"->"push \"Solve\"";
+    "push \"Solve\""->"specialinvoke <java.lang.String: void <init>(java.lang.String)>";
+    "specialinvoke <java.lang.String: void <init>(java.lang.String)>"->"arraywrite.r";
+    "arraywrite.r"->"load.r r0";
+    "load.r r0"->"fieldget <Jigsaw: java.lang.String[] t>";
+    "fieldget <Jigsaw: java.lang.String[] t>"->"push 3";
+    "push 3"->"new java.lang.String";
+    "new java.lang.String"->"dup1.r";
+    "push \" Jigsaw solved ! \""
+    "dup1.r"->"push \" Jigsaw solved ! \"";
+    "push \" Jigsaw solved ! \""->"specialinvoke <java.lang.String: void <init>(java.lang.String)>";
+    "specialinvoke <java.lang.String: void <init>(java.lang.String)>"->"arraywrite.r";
+    "arraywrite.r"->"load.r r0";
+    "specialinvoke <Jigsaw: void readParams()>"
+    "load.r r0"->"specialinvoke <Jigsaw: void readParams()>";
+    "specialinvoke <Jigsaw: void readParams()>"->"load.r r0";
+    "fieldget <Jigsaw: int STEP_SIZE>"
+    "load.r r0"->"fieldget <Jigsaw: int STEP_SIZE>";
+    "ifne new java.awt.Button"
+    "fieldget <Jigsaw: int STEP_SIZE>"->"ifne new java.awt.Button";
+    "ifne new java.awt.Button"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "fieldget <Jigsaw: int iWidth>"
+    "load.r r0"->"fieldget <Jigsaw: int iWidth>";
+    "fieldget <Jigsaw: int iWidth>"->"load.r r0";
+    "fieldget <Jigsaw: int iHeight>"
+    "load.r r0"->"fieldget <Jigsaw: int iHeight>";
+    "fieldget <Jigsaw: int iHeight>"->"load.r r0";
+    "fieldget <Jigsaw: int rows>"
+    "load.r r0"->"fieldget <Jigsaw: int rows>";
+    "fieldget <Jigsaw: int rows>"->"load.r r0";
+    "fieldget <Jigsaw: int cols>"
+    "load.r r0"->"fieldget <Jigsaw: int cols>";
+    "specialinvoke <Jigsaw: int makeStepSize(int,int,int,int)>"
+    "fieldget <Jigsaw: int cols>"->"specialinvoke <Jigsaw: int makeStepSize(int,int,int,int)>";
+    "fieldput <Jigsaw: int STEP_SIZE>"
+    "specialinvoke <Jigsaw: int makeStepSize(int,int,int,int)>"->"fieldput <Jigsaw: int STEP_SIZE>";
+    "new java.awt.Button"
+    "fieldput <Jigsaw: int STEP_SIZE>"->"new java.awt.Button";
+    "store.r $r19"
+    "new java.awt.Button"->"store.r $r19";
+    "load.r $r19"
+    "store.r $r19"->"load.r $r19";
+    "push \"?\""
+    "load.r $r19"->"push \"?\"";
+    "specialinvoke <java.awt.Button: void <init>(java.lang.String)>"
+    "push \"?\""->"specialinvoke <java.awt.Button: void <init>(java.lang.String)>";
+    "specialinvoke <java.awt.Button: void <init>(java.lang.String)>"->"load.r r0";
+    "load.r r0"->"load.r $r19";
+    "fieldput <Jigsaw: java.awt.Button b4>"
+    "load.r $r19"->"fieldput <Jigsaw: java.awt.Button b4>";
+    "fieldput <Jigsaw: java.awt.Button b4>"->"load.r r0";
+    "load.r r0"->"load.r $r19";
+    "virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>"
+    "load.r $r19"->"virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>";
+    "pop"
+    "virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>"->"pop";
+    "pop"->"new java.awt.Button";
+    "new java.awt.Button"->"store.r $r19";
+    "store.r $r19"->"load.r $r19";
+    "load.r $r19"->"load.r r0";
+    "load.r r0"->"fieldget <Jigsaw: java.lang.String[] t>";
+    "fieldget <Jigsaw: java.lang.String[] t>"->"push 0";
+    "arrayread.r"
+    "push 0"->"arrayread.r";
+    "arrayread.r"->"specialinvoke <java.awt.Button: void <init>(java.lang.String)>";
+    "specialinvoke <java.awt.Button: void <init>(java.lang.String)>"->"load.r r0";
+    "load.r r0"->"load.r $r19";
+    "fieldput <Jigsaw: java.awt.Button b1>"
+    "load.r $r19"->"fieldput <Jigsaw: java.awt.Button b1>";
+    "fieldput <Jigsaw: java.awt.Button b1>"->"load.r r0";
+    "load.r r0"->"load.r $r19";
+    "load.r $r19"->"virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>";
+    "virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>"->"pop";
+    "new java.awt.Label"
+    "pop"->"new java.awt.Label";
+    "new java.awt.Label"->"store.r $r19";
+    "store.r $r19"->"load.r $r19";
+    "push \"\""
+    "load.r $r19"->"push \"\"";
+    "specialinvoke <java.awt.Label: void <init>(java.lang.String)>"
+    "push \"\""->"specialinvoke <java.awt.Label: void <init>(java.lang.String)>";
+    "specialinvoke <java.awt.Label: void <init>(java.lang.String)>"->"load.r r0";
+    "load.r r0"->"load.r $r19";
+    "fieldput <Jigsaw: java.awt.Label l2>"
+    "load.r $r19"->"fieldput <Jigsaw: java.awt.Label l2>";
+    "fieldput <Jigsaw: java.awt.Label l2>"->"load.r r0";
+    "load.r r0"->"load.r $r19";
+    "load.r $r19"->"virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>";
+    "virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>"->"pop";
+    "pop"->"new java.awt.Button";
+    "new java.awt.Button"->"store.r $r19";
+    "store.r $r19"->"load.r $r19";
+    "load.r $r19"->"load.r r0";
+    "load.r r0"->"fieldget <Jigsaw: java.lang.String[] t>";
+    "fieldget <Jigsaw: java.lang.String[] t>"->"push 1";
+    "push 1"->"arrayread.r";
+    "arrayread.r"->"specialinvoke <java.awt.Button: void <init>(java.lang.String)>";
+    "specialinvoke <java.awt.Button: void <init>(java.lang.String)>"->"load.r r0";
+    "load.r r0"->"load.r $r19";
+    "fieldput <Jigsaw: java.awt.Button b2>"
+    "load.r $r19"->"fieldput <Jigsaw: java.awt.Button b2>";
+    "fieldput <Jigsaw: java.awt.Button b2>"->"load.r r0";
+    "load.r r0"->"load.r $r19";
+    "load.r $r19"->"virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>";
+    "virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>"->"pop";
+    "pop"->"load.r r0";
+    "fieldget <Jigsaw: boolean showSolve>"
+    "load.r r0"->"fieldget <Jigsaw: boolean showSolve>";
+    "fieldget <Jigsaw: boolean showSolve>"->"push 1";
+    "ifcmpne.b new java.awt.Label"
+    "push 1"->"ifcmpne.b new java.awt.Label";
+    "ifcmpne.b new java.awt.Label"->"new java.awt.Button";
+    "new java.awt.Button"->"store.r $r19";
+    "store.r $r19"->"load.r $r19";
+    "load.r $r19"->"load.r r0";
+    "load.r r0"->"fieldget <Jigsaw: java.lang.String[] t>";
+    "fieldget <Jigsaw: java.lang.String[] t>"->"push 2";
+    "push 2"->"arrayread.r";
+    "arrayread.r"->"specialinvoke <java.awt.Button: void <init>(java.lang.String)>";
+    "specialinvoke <java.awt.Button: void <init>(java.lang.String)>"->"load.r r0";
+    "load.r r0"->"load.r $r19";
+    "fieldput <Jigsaw: java.awt.Button b3>"
+    "load.r $r19"->"fieldput <Jigsaw: java.awt.Button b3>";
+    "fieldput <Jigsaw: java.awt.Button b3>"->"load.r r0";
+    "load.r r0"->"load.r $r19";
+    "load.r $r19"->"virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>";
+    "virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>"->"pop";
+    "pop"->"load.r r0";
+    "fieldget <Jigsaw: java.awt.Button b3>"
+    "load.r r0"->"fieldget <Jigsaw: java.awt.Button b3>";
+    "fieldget <Jigsaw: java.awt.Button b3>"->"load.r $r3";
+    "virtualinvoke <java.awt.Component: void setCursor(java.awt.Cursor)>"
+    "load.r $r3"->"virtualinvoke <java.awt.Component: void setCursor(java.awt.Cursor)>";
+    "virtualinvoke <java.awt.Component: void setCursor(java.awt.Cursor)>"->"load.r r0";
+    "load.r r0"->"fieldget <Jigsaw: java.awt.Button b3>";
+    "fieldget <Jigsaw: java.awt.Button b3>"->"load.r r0";
+    "virtualinvoke <java.awt.Button: void addActionListener(java.awt.event.ActionListener)>"
+    "load.r r0"->"virtualinvoke <java.awt.Button: void addActionListener(java.awt.event.ActionListener)>";
+    "virtualinvoke <java.awt.Button: void addActionListener(java.awt.event.ActionListener)>"->"new java.awt.Label";
+    "new java.awt.Label"->"store.r $r19";
+    "store.r $r19"->"load.r $r19";
+    "load.r $r19"->"load.r r0";
+    "load.r r0"->"fieldget <Jigsaw: java.lang.String[] t>";
+    "fieldget <Jigsaw: java.lang.String[] t>"->"push 3";
+    "push 3"->"arrayread.r";
+    "arrayread.r"->"specialinvoke <java.awt.Label: void <init>(java.lang.String)>";
+    "specialinvoke <java.awt.Label: void <init>(java.lang.String)>"->"load.r r0";
+    "load.r r0"->"load.r $r19";
+    "fieldput <Jigsaw: java.awt.Label l1>"
+    "load.r $r19"->"fieldput <Jigsaw: java.awt.Label l1>";
+    "fieldput <Jigsaw: java.awt.Label l1>"->"load.r r0";
+    "load.r r0"->"load.r $r19";
+    "load.r $r19"->"virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>";
+    "virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>"->"pop";
+    "pop"->"load.r r0";
+    "fieldget <Jigsaw: java.awt.Button b1>"
+    "load.r r0"->"fieldget <Jigsaw: java.awt.Button b1>";
+    "fieldget <Jigsaw: java.awt.Button b1>"->"load.r $r3";
+    "load.r $r3"->"virtualinvoke <java.awt.Component: void setCursor(java.awt.Cursor)>";
+    "virtualinvoke <java.awt.Component: void setCursor(java.awt.Cursor)>"->"load.r r0";
+    "fieldget <Jigsaw: java.awt.Button b2>"
+    "load.r r0"->"fieldget <Jigsaw: java.awt.Button b2>";
+    "fieldget <Jigsaw: java.awt.Button b2>"->"load.r $r3";
+    "load.r $r3"->"virtualinvoke <java.awt.Component: void setCursor(java.awt.Cursor)>";
+    "virtualinvoke <java.awt.Component: void setCursor(java.awt.Cursor)>"->"load.r r0";
+    "fieldget <Jigsaw: java.awt.Button b4>"
+    "load.r r0"->"fieldget <Jigsaw: java.awt.Button b4>";
+    "fieldget <Jigsaw: java.awt.Button b4>"->"load.r $r3";
+    "load.r $r3"->"virtualinvoke <java.awt.Component: void setCursor(java.awt.Cursor)>";
+    "virtualinvoke <java.awt.Component: void setCursor(java.awt.Cursor)>"->"load.r r0";
+    "load.r r0"->"fieldget <Jigsaw: java.awt.Button b4>";
+    "new java.awt.Font"
+    "fieldget <Jigsaw: java.awt.Button b4>"->"new java.awt.Font";
+    "new java.awt.Font"->"dup1.r";
+    "push \"helvetica\""
+    "dup1.r"->"push \"helvetica\"";
+    "push \"helvetica\""->"push 1";
+    "push 13"
+    "push 1"->"push 13";
+    "specialinvoke <java.awt.Font: void <init>(java.lang.String,int,int)>"
+    "push 13"->"specialinvoke <java.awt.Font: void <init>(java.lang.String,int,int)>";
+    "virtualinvoke <java.awt.Component: void setFont(java.awt.Font)>"
+    "specialinvoke <java.awt.Font: void <init>(java.lang.String,int,int)>"->"virtualinvoke <java.awt.Component: void setFont(java.awt.Font)>";
+    "virtualinvoke <java.awt.Component: void setFont(java.awt.Font)>"->"load.r r0";
+    "load.r r0"->"fieldget <Jigsaw: java.awt.Button b4>";
+    "staticget <java.awt.Color: java.awt.Color white>"
+    "fieldget <Jigsaw: java.awt.Button b4>"->"staticget <java.awt.Color: java.awt.Color white>";
+    "virtualinvoke <java.awt.Component: void setForeground(java.awt.Color)>"
+    "staticget <java.awt.Color: java.awt.Color white>"->"virtualinvoke <java.awt.Component: void setForeground(java.awt.Color)>";
+    "virtualinvoke <java.awt.Component: void setForeground(java.awt.Color)>"->"load.r r0";
+    "load.r r0"->"fieldget <Jigsaw: java.awt.Button b4>";
+    "staticget <java.awt.Color: java.awt.Color darkGray>"
+    "fieldget <Jigsaw: java.awt.Button b4>"->"staticget <java.awt.Color: java.awt.Color darkGray>";
+    "virtualinvoke <java.awt.Component: void setBackground(java.awt.Color)>"
+    "staticget <java.awt.Color: java.awt.Color darkGray>"->"virtualinvoke <java.awt.Component: void setBackground(java.awt.Color)>";
+    "virtualinvoke <java.awt.Component: void setBackground(java.awt.Color)>"->"load.r r0";
+    "load.r r0"->"fieldget <Jigsaw: java.awt.Button b1>";
+    "fieldget <Jigsaw: java.awt.Button b1>"->"load.r r0";
+    "load.r r0"->"virtualinvoke <java.awt.Button: void addActionListener(java.awt.event.ActionListener)>";
+    "virtualinvoke <java.awt.Button: void addActionListener(java.awt.event.ActionListener)>"->"load.r r0";
+    "load.r r0"->"fieldget <Jigsaw: java.awt.Button b2>";
+    "fieldget <Jigsaw: java.awt.Button b2>"->"load.r r0";
+    "load.r r0"->"virtualinvoke <java.awt.Button: void addActionListener(java.awt.event.ActionListener)>";
+    "virtualinvoke <java.awt.Button: void addActionListener(java.awt.event.ActionListener)>"->"load.r r0";
+    "load.r r0"->"fieldget <Jigsaw: java.awt.Button b4>";
+    "fieldget <Jigsaw: java.awt.Button b4>"->"load.r r0";
+    "load.r r0"->"virtualinvoke <java.awt.Button: void addActionListener(java.awt.event.ActionListener)>";
+    "virtualinvoke <java.awt.Button: void addActionListener(java.awt.event.ActionListener)>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "fieldget <Jigsaw: java.awt.Color bgColor>"
+    "load.r r0"->"fieldget <Jigsaw: java.awt.Color bgColor>";
+    "fieldget <Jigsaw: java.awt.Color bgColor>"->"virtualinvoke <java.awt.Component: void setBackground(java.awt.Color)>";
+    "virtualinvoke <java.awt.Component: void setBackground(java.awt.Color)>"->"load.r r0";
+    "fieldget <Jigsaw: java.awt.Label l1>"
+    "load.r r0"->"fieldget <Jigsaw: java.awt.Label l1>";
+    "fieldget <Jigsaw: java.awt.Label l1>"->"load.r r0";
+    "load.r r0"->"fieldget <Jigsaw: java.awt.Color bgColor>";
+    "fieldget <Jigsaw: java.awt.Color bgColor>"->"virtualinvoke <java.awt.Component: void setBackground(java.awt.Color)>";
+    "virtualinvoke <java.awt.Component: void setBackground(java.awt.Color)>"->"load.r r0";
+    "fieldget <Jigsaw: java.awt.Label l2>"
+    "load.r r0"->"fieldget <Jigsaw: java.awt.Label l2>";
+    "fieldget <Jigsaw: java.awt.Label l2>"->"load.r r0";
+    "load.r r0"->"fieldget <Jigsaw: java.awt.Color bgColor>";
+    "fieldget <Jigsaw: java.awt.Color bgColor>"->"virtualinvoke <java.awt.Component: void setBackground(java.awt.Color)>";
+    "virtualinvoke <java.awt.Component: void setBackground(java.awt.Color)>"->"load.r r0";
+    "load.r r0"->"fieldget <Jigsaw: java.awt.Label l1>";
+    "fieldget <Jigsaw: java.awt.Label l1>"->"load.r r0";
+    "fieldget <Jigsaw: java.awt.Color txColor>"
+    "load.r r0"->"fieldget <Jigsaw: java.awt.Color txColor>";
+    "fieldget <Jigsaw: java.awt.Color txColor>"->"virtualinvoke <java.awt.Component: void setForeground(java.awt.Color)>";
+    "virtualinvoke <java.awt.Component: void setForeground(java.awt.Color)>"->"load.r r0";
+    "specialinvoke <Jigsaw: void validateKeepClear()>"
+    "load.r r0"->"specialinvoke <Jigsaw: void validateKeepClear()>";
+    "specialinvoke <Jigsaw: void validateKeepClear()>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <Jigsaw: int STEP_SIZE>";
+    "fieldget <Jigsaw: int STEP_SIZE>"->"push 1";
+    "add.i"
+    "push 1"->"add.i";
+    "add.i"->"newarray";
+    "fieldput <Jigsaw: int[] points>"
+    "newarray"->"fieldput <Jigsaw: int[] points>";
+    "fieldput <Jigsaw: int[] points>"->"push 0";
+    "store.i $r19"
+    "push 0"->"store.i $r19";
+    "push 0.0"
+    "store.i $r19"->"push 0.0";
+    "store.d d5"
+    "push 0.0"->"store.d d5";
+    "goto load.d d5"
+    "store.d d5"->"goto load.d d5";
+    "load.d d5"
+    "goto load.d d5"->"load.d d5";
+    "push 3.141592653589793"
+    "load.d d5"->"push 3.141592653589793";
+    "cmpg.d"
+    "push 3.141592653589793"->"cmpg.d";
+    "iflt load.d d5"
+    "cmpg.d"->"iflt load.d d5";
+    "iflt load.d d5"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <Jigsaw: int rows>";
+    "fieldget <Jigsaw: int rows>"->"load.r r0";
+    "load.r r0"->"fieldget <Jigsaw: int cols>";
+    "mul.i"
+    "fieldget <Jigsaw: int cols>"->"mul.i";
+    "fieldput <Jigsaw: int totalPieces>"
+    "mul.i"->"fieldput <Jigsaw: int totalPieces>";
+    "fieldput <Jigsaw: int totalPieces>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <Jigsaw: int appW>";
+    "fieldget <Jigsaw: int appW>"->"load.r r0";
+    "load.r r0"->"fieldget <Jigsaw: int iWidth>";
+    "sub.i"
+    "fieldget <Jigsaw: int iWidth>"->"sub.i";
+    "push 7"
+    "sub.i"->"push 7";
+    "push 7"->"sub.i";
+    "fieldput <Jigsaw: int jPosX>"
+    "sub.i"->"fieldput <Jigsaw: int jPosX>";
+    "fieldput <Jigsaw: int jPosX>"->"load.r r0";
+    "fieldget <Jigsaw: int vAlign>"
+    "load.r r0"->"fieldget <Jigsaw: int vAlign>";
+    "tableswitch {     case 0: goto load.r r0;     case 1: goto load.r r0;     case 2: goto load.r r0;     case 3: goto load.r r0;     case 4: goto load.r r0;     default: goto load.r r0; }"
+    "fieldget <Jigsaw: int vAlign>"->"tableswitch {     case 0: goto load.r r0;     case 1: goto load.r r0;     case 2: goto load.r r0;     case 3: goto load.r r0;     case 4: goto load.r r0;     default: goto load.r r0; }";
+    "tableswitch {     case 0: goto load.r r0;     case 1: goto load.r r0;     case 2: goto load.r r0;     case 3: goto load.r r0;     case 4: goto load.r r0;     default: goto load.r r0; }"->"load.r r0";
+    "push 5"
+    "load.r r0"->"push 5";
+    "fieldput <Jigsaw: int jPosY>"
+    "push 5"->"fieldput <Jigsaw: int jPosY>";
+    "goto load.r r0"
+    "fieldput <Jigsaw: int jPosY>"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <Jigsaw: int rows>";
+    "fieldget <Jigsaw: int rows>"->"load.r r0";
+    "load.r r0"->"fieldget <Jigsaw: int cols>";
+    "fieldget <Jigsaw: int cols>"->"mul.i";
+    "fieldput <Jigsaw: int iNumPieces>"
+    "mul.i"->"fieldput <Jigsaw: int iNumPieces>";
+    "fieldput <Jigsaw: int iNumPieces>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "fieldget <Jigsaw: int iNumPieces>"
+    "load.r r0"->"fieldget <Jigsaw: int iNumPieces>";
+    "fieldget <Jigsaw: int iNumPieces>"->"newarray";
+    "fieldput <Jigsaw: JigsawPiece[] jp>"
+    "newarray"->"fieldput <Jigsaw: JigsawPiece[] jp>";
+    "fieldput <Jigsaw: JigsawPiece[] jp>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <Jigsaw: int iNumPieces>";
+    "fieldget <Jigsaw: int iNumPieces>"->"newarray";
+    "fieldput <Jigsaw: int[] iOrder>"
+    "newarray"->"fieldput <Jigsaw: int[] iOrder>";
+    "fieldput <Jigsaw: int[] iOrder>"->"load.r r0";
+    "virtualinvoke <java.awt.Component: void repaint()>"
+    "load.r r0"->"virtualinvoke <java.awt.Component: void repaint()>";
+    "return"
+    "virtualinvoke <java.awt.Component: void repaint()>"->"return";
+    "tableswitch {     case 0: goto load.r r0;     case 1: goto load.r r0;     case 2: goto load.r r0;     case 3: goto load.r r0;     case 4: goto load.r r0;     default: goto load.r r0; }"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <Jigsaw: int appH>";
+    "fieldget <Jigsaw: int appH>"->"push 2";
+    "div.i"
+    "push 2"->"div.i";
+    "div.i"->"load.r r0";
+    "load.r r0"->"fieldget <Jigsaw: int iHeight>";
+    "fieldget <Jigsaw: int iHeight>"->"push 2";
+    "push 2"->"div.i";
+    "div.i"->"sub.i";
+    "sub.i"->"fieldput <Jigsaw: int jPosY>";
+    "fieldput <Jigsaw: int jPosY>"->"goto load.r r0";
+    "tableswitch {     case 0: goto load.r r0;     case 1: goto load.r r0;     case 2: goto load.r r0;     case 3: goto load.r r0;     case 4: goto load.r r0;     default: goto load.r r0; }"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <Jigsaw: int appH>";
+    "fieldget <Jigsaw: int appH>"->"load.r r0";
+    "load.r r0"->"fieldget <Jigsaw: int iHeight>";
+    "fieldget <Jigsaw: int iHeight>"->"sub.i";
+    "push 6"
+    "sub.i"->"push 6";
+    "push 6"->"sub.i";
+    "sub.i"->"fieldput <Jigsaw: int jPosY>";
+    "fieldput <Jigsaw: int jPosY>"->"goto load.r r0";
+    "tableswitch {     case 0: goto load.r r0;     case 1: goto load.r r0;     case 2: goto load.r r0;     case 3: goto load.r r0;     case 4: goto load.r r0;     default: goto load.r r0; }"->"load.r r0";
+    "push 34"
+    "load.r r0"->"push 34";
+    "push 34"->"fieldput <Jigsaw: int jPosY>";
+    "fieldput <Jigsaw: int jPosY>"->"goto load.r r0";
+    "tableswitch {     case 0: goto load.r r0;     case 1: goto load.r r0;     case 2: goto load.r r0;     case 3: goto load.r r0;     case 4: goto load.r r0;     default: goto load.r r0; }"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <Jigsaw: int appW>";
+    "fieldget <Jigsaw: int appW>"->"push 2";
+    "push 2"->"div.i";
+    "div.i"->"load.r r0";
+    "load.r r0"->"fieldget <Jigsaw: int iWidth>";
+    "fieldget <Jigsaw: int iWidth>"->"push 2";
+    "push 2"->"div.i";
+    "div.i"->"sub.i";
+    "sub.i"->"fieldput <Jigsaw: int jPosX>";
+    "iflt load.d d5"->"load.d d5";
+    "staticinvoke <java.lang.Math: double sin(double)>"
+    "load.d d5"->"staticinvoke <java.lang.Math: double sin(double)>";
+    "staticinvoke <java.lang.Math: double sin(double)>"->"load.r r0";
+    "load.r r0"->"fieldget <Jigsaw: int STEP_SIZE>";
+    "fieldget <Jigsaw: int STEP_SIZE>"->"push 2";
+    "push 2"->"sub.i";
+    "sub.i"->"push 2";
+    "push 2"->"div.i";
+    "i2d"
+    "div.i"->"i2d";
+    "mul.d"
+    "i2d"->"mul.d";
+    "d2i"
+    "mul.d"->"d2i";
+    "store.i $r3"
+    "d2i"->"store.i $r3";
+    "store.i $r3"->"load.r r0";
+    "fieldget <Jigsaw: int[] points>"
+    "load.r r0"->"fieldget <Jigsaw: int[] points>";
+    "load.i $r19"
+    "fieldget <Jigsaw: int[] points>"->"load.i $r19";
+    "load.i $r3"
+    "load.i $r19"->"load.i $r3";
+    "arraywrite.i"
+    "load.i $r3"->"arraywrite.i";
+    "arraywrite.i"->"load.d d5";
+    "load.d d5"->"push 3.141592653589793";
+    "push 3.141592653589793"->"load.r r0";
+    "load.r r0"->"fieldget <Jigsaw: int STEP_SIZE>";
+    "fieldget <Jigsaw: int STEP_SIZE>"->"i2d";
+    "div.d"
+    "i2d"->"div.d";
+    "add.d"
+    "div.d"->"add.d";
+    "add.d"->"store.d d5";
+    "inc.i $r19 1"
+    "store.d d5"->"inc.i $r19 1";
+}

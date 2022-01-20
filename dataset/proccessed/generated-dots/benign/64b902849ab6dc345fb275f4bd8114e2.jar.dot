@@ -1,0 +1,671 @@
+digraph "" {
+    "r0 := @this: GooSiteSearch"
+    "load.r r0"
+    "r0 := @this: GooSiteSearch"->"load.r r0";
+    "push \"GooSiteSearch loading...\""
+    "load.r r0"->"push \"GooSiteSearch loading...\"";
+    "virtualinvoke <java.applet.Applet: void showStatus(java.lang.String)>"
+    "push \"GooSiteSearch loading...\""->"virtualinvoke <java.applet.Applet: void showStatus(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: void showStatus(java.lang.String)>"->"load.r r0";
+    "push \"domain\""
+    "load.r r0"->"push \"domain\"";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"
+    "push \"domain\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "ifnull load.r r0"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"push \"domain\"";
+    "push \"domain\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.lang.String: java.lang.String trim()>"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"virtualinvoke <java.lang.String: java.lang.String trim()>";
+    "fieldput <GooSiteSearch: java.lang.String domain>"
+    "virtualinvoke <java.lang.String: java.lang.String trim()>"->"fieldput <GooSiteSearch: java.lang.String domain>";
+    "fieldput <GooSiteSearch: java.lang.String domain>"->"load.r r0";
+    "fieldget <GooSiteSearch: java.lang.String domain>"
+    "load.r r0"->"fieldget <GooSiteSearch: java.lang.String domain>";
+    "push \"http://\""
+    "fieldget <GooSiteSearch: java.lang.String domain>"->"push \"http://\"";
+    "virtualinvoke <java.lang.String: boolean startsWith(java.lang.String)>"
+    "push \"http://\""->"virtualinvoke <java.lang.String: boolean startsWith(java.lang.String)>";
+    "push 1"
+    "virtualinvoke <java.lang.String: boolean startsWith(java.lang.String)>"->"push 1";
+    "ifcmpne.b load.r r0"
+    "push 1"->"ifcmpne.b load.r r0";
+    "ifcmpne.b load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <GooSiteSearch: java.lang.String domain>";
+    "push 7"
+    "fieldget <GooSiteSearch: java.lang.String domain>"->"push 7";
+    "virtualinvoke <java.lang.String: java.lang.String substring(int)>"
+    "push 7"->"virtualinvoke <java.lang.String: java.lang.String substring(int)>";
+    "virtualinvoke <java.lang.String: java.lang.String substring(int)>"->"fieldput <GooSiteSearch: java.lang.String domain>";
+    "fieldput <GooSiteSearch: java.lang.String domain>"->"load.r r0";
+    "load.r r0"->"fieldget <GooSiteSearch: java.lang.String domain>";
+    "push \"/\""
+    "fieldget <GooSiteSearch: java.lang.String domain>"->"push \"/\"";
+    "virtualinvoke <java.lang.String: boolean endsWith(java.lang.String)>"
+    "push \"/\""->"virtualinvoke <java.lang.String: boolean endsWith(java.lang.String)>";
+    "virtualinvoke <java.lang.String: boolean endsWith(java.lang.String)>"->"push 1";
+    "push 1"->"ifcmpne.b load.r r0";
+    "ifcmpne.b load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <GooSiteSearch: java.lang.String domain>";
+    "push 0"
+    "fieldget <GooSiteSearch: java.lang.String domain>"->"push 0";
+    "push 0"->"load.r r0";
+    "load.r r0"->"fieldget <GooSiteSearch: java.lang.String domain>";
+    "virtualinvoke <java.lang.String: int length()>"
+    "fieldget <GooSiteSearch: java.lang.String domain>"->"virtualinvoke <java.lang.String: int length()>";
+    "virtualinvoke <java.lang.String: int length()>"->"push 1";
+    "sub.i"
+    "push 1"->"sub.i";
+    "virtualinvoke <java.lang.String: java.lang.String substring(int,int)>"
+    "sub.i"->"virtualinvoke <java.lang.String: java.lang.String substring(int,int)>";
+    "virtualinvoke <java.lang.String: java.lang.String substring(int,int)>"->"fieldput <GooSiteSearch: java.lang.String domain>";
+    "fieldput <GooSiteSearch: java.lang.String domain>"->"load.r r0";
+    "push \"target\""
+    "load.r r0"->"push \"target\"";
+    "push \"target\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"push \"target\"";
+    "push \"target\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "fieldput <GooSiteSearch: java.lang.String target>"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"fieldput <GooSiteSearch: java.lang.String target>";
+    "fieldput <GooSiteSearch: java.lang.String target>"->"load.r r0";
+    "push \"boxsize\""
+    "load.r r0"->"push \"boxsize\"";
+    "push \"boxsize\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "ifnull push \"10\""
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"ifnull push \"10\"";
+    "ifnull push \"10\""->"load.r r0";
+    "load.r r0"->"push \"boxsize\"";
+    "push \"boxsize\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "store.r $r51"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"store.r $r51";
+    "goto load.r r0"
+    "store.r $r51"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "load.r $r51"
+    "load.r r0"->"load.r $r51";
+    "fieldput <GooSiteSearch: java.lang.String tbs>"
+    "load.r $r51"->"fieldput <GooSiteSearch: java.lang.String tbs>";
+    "fieldput <GooSiteSearch: java.lang.String tbs>"->"load.r r0";
+    "fieldget <GooSiteSearch: java.awt.TextField query>"
+    "load.r r0"->"fieldget <GooSiteSearch: java.awt.TextField query>";
+    "fieldget <GooSiteSearch: java.awt.TextField query>"->"load.r r0";
+    "fieldget <GooSiteSearch: java.lang.String tbs>"
+    "load.r r0"->"fieldget <GooSiteSearch: java.lang.String tbs>";
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"
+    "fieldget <GooSiteSearch: java.lang.String tbs>"->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>";
+    "virtualinvoke <java.awt.TextField: void setColumns(int)>"
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"->"virtualinvoke <java.awt.TextField: void setColumns(int)>";
+    "virtualinvoke <java.awt.TextField: void setColumns(int)>"->"load.r r0";
+    "push \"bgcolor\""
+    "load.r r0"->"push \"bgcolor\"";
+    "push \"bgcolor\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "ifnull push \"f5f5f5\""
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"ifnull push \"f5f5f5\"";
+    "ifnull push \"f5f5f5\""->"load.r r0";
+    "load.r r0"->"push \"bgcolor\"";
+    "push \"bgcolor\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"store.r $r51";
+    "store.r $r51"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "load.r r0"->"load.r $r51";
+    "fieldput <GooSiteSearch: java.lang.String bgValue>"
+    "load.r $r51"->"fieldput <GooSiteSearch: java.lang.String bgValue>";
+    "fieldput <GooSiteSearch: java.lang.String bgValue>"->"load.r r0";
+    "new java.awt.Color"
+    "load.r r0"->"new java.awt.Color";
+    "dup1.r"
+    "new java.awt.Color"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "fieldget <GooSiteSearch: java.lang.String bgValue>"
+    "load.r r0"->"fieldget <GooSiteSearch: java.lang.String bgValue>";
+    "push 16"
+    "fieldget <GooSiteSearch: java.lang.String bgValue>"->"push 16";
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String,int)>"
+    "push 16"->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String,int)>";
+    "specialinvoke <java.awt.Color: void <init>(int)>"
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String,int)>"->"specialinvoke <java.awt.Color: void <init>(int)>";
+    "fieldput <GooSiteSearch: java.awt.Color bgColor>"
+    "specialinvoke <java.awt.Color: void <init>(int)>"->"fieldput <GooSiteSearch: java.awt.Color bgColor>";
+    "fieldput <GooSiteSearch: java.awt.Color bgColor>"->"load.r r0";
+    "new java.lang.StringBuffer"
+    "load.r r0"->"new java.lang.StringBuffer";
+    "new java.lang.StringBuffer"->"dup1.r";
+    "push \"BGC:#\""
+    "dup1.r"->"push \"BGC:#\"";
+    "specialinvoke <java.lang.StringBuffer: void <init>(java.lang.String)>"
+    "push \"BGC:#\""->"specialinvoke <java.lang.StringBuffer: void <init>(java.lang.String)>";
+    "specialinvoke <java.lang.StringBuffer: void <init>(java.lang.String)>"->"load.r r0";
+    "load.r r0"->"fieldget <GooSiteSearch: java.lang.String bgValue>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"
+    "fieldget <GooSiteSearch: java.lang.String bgValue>"->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "push \";\""
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"push \";\"";
+    "push \";\""->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>"
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>";
+    "fieldput <GooSiteSearch: java.lang.String BG>"
+    "virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>"->"fieldput <GooSiteSearch: java.lang.String BG>";
+    "fieldput <GooSiteSearch: java.lang.String BG>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "fieldget <GooSiteSearch: java.awt.Color bgColor>"
+    "load.r r0"->"fieldget <GooSiteSearch: java.awt.Color bgColor>";
+    "virtualinvoke <java.awt.Component: void setBackground(java.awt.Color)>"
+    "fieldget <GooSiteSearch: java.awt.Color bgColor>"->"virtualinvoke <java.awt.Component: void setBackground(java.awt.Color)>";
+    "virtualinvoke <java.awt.Component: void setBackground(java.awt.Color)>"->"load.r r0";
+    "push \"fgcolor\""
+    "load.r r0"->"push \"fgcolor\"";
+    "push \"fgcolor\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "ifnull push \"4487cc\""
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"ifnull push \"4487cc\"";
+    "ifnull push \"4487cc\""->"load.r r0";
+    "load.r r0"->"push \"fgcolor\"";
+    "push \"fgcolor\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"store.r $r51";
+    "store.r $r51"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "load.r r0"->"load.r $r51";
+    "fieldput <GooSiteSearch: java.lang.String fgValue>"
+    "load.r $r51"->"fieldput <GooSiteSearch: java.lang.String fgValue>";
+    "fieldput <GooSiteSearch: java.lang.String fgValue>"->"load.r r0";
+    "load.r r0"->"new java.awt.Color";
+    "new java.awt.Color"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "fieldget <GooSiteSearch: java.lang.String fgValue>"
+    "load.r r0"->"fieldget <GooSiteSearch: java.lang.String fgValue>";
+    "fieldget <GooSiteSearch: java.lang.String fgValue>"->"push 16";
+    "push 16"->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String,int)>";
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String,int)>"->"specialinvoke <java.awt.Color: void <init>(int)>";
+    "fieldput <GooSiteSearch: java.awt.Color fgColor>"
+    "specialinvoke <java.awt.Color: void <init>(int)>"->"fieldput <GooSiteSearch: java.awt.Color fgColor>";
+    "fieldput <GooSiteSearch: java.awt.Color fgColor>"->"load.r r0";
+    "push \"links\""
+    "load.r r0"->"push \"links\"";
+    "push \"links\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "ifnull push \"AA0000\""
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"ifnull push \"AA0000\"";
+    "ifnull push \"AA0000\""->"load.r r0";
+    "load.r r0"->"push \"links\"";
+    "push \"links\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"store.r $r51";
+    "store.r $r51"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "load.r r0"->"load.r $r51";
+    "fieldput <GooSiteSearch: java.lang.String lcValue>"
+    "load.r $r51"->"fieldput <GooSiteSearch: java.lang.String lcValue>";
+    "fieldput <GooSiteSearch: java.lang.String lcValue>"->"load.r r0";
+    "load.r r0"->"new java.lang.StringBuffer";
+    "new java.lang.StringBuffer"->"dup1.r";
+    "push \"LC:#\""
+    "dup1.r"->"push \"LC:#\"";
+    "push \"LC:#\""->"specialinvoke <java.lang.StringBuffer: void <init>(java.lang.String)>";
+    "specialinvoke <java.lang.StringBuffer: void <init>(java.lang.String)>"->"load.r r0";
+    "fieldget <GooSiteSearch: java.lang.String lcValue>"
+    "load.r r0"->"fieldget <GooSiteSearch: java.lang.String lcValue>";
+    "fieldget <GooSiteSearch: java.lang.String lcValue>"->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"push \";\"";
+    "push \";\""->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>";
+    "fieldput <GooSiteSearch: java.lang.String LC>"
+    "virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>"->"fieldput <GooSiteSearch: java.lang.String LC>";
+    "fieldput <GooSiteSearch: java.lang.String LC>"->"load.r r0";
+    "load.r r0"->"new java.lang.StringBuffer";
+    "new java.lang.StringBuffer"->"dup1.r";
+    "push \"VLC:#\""
+    "dup1.r"->"push \"VLC:#\"";
+    "push \"VLC:#\""->"specialinvoke <java.lang.StringBuffer: void <init>(java.lang.String)>";
+    "specialinvoke <java.lang.StringBuffer: void <init>(java.lang.String)>"->"load.r r0";
+    "load.r r0"->"fieldget <GooSiteSearch: java.lang.String lcValue>";
+    "fieldget <GooSiteSearch: java.lang.String lcValue>"->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"push \";\"";
+    "push \";\""->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>";
+    "fieldput <GooSiteSearch: java.lang.String VLC>"
+    "virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>"->"fieldput <GooSiteSearch: java.lang.String VLC>";
+    "fieldput <GooSiteSearch: java.lang.String VLC>"->"load.r r0";
+    "load.r r0"->"new java.lang.StringBuffer";
+    "new java.lang.StringBuffer"->"dup1.r";
+    "dup1.r"->"push \"VLC:#\"";
+    "push \"VLC:#\""->"specialinvoke <java.lang.StringBuffer: void <init>(java.lang.String)>";
+    "specialinvoke <java.lang.StringBuffer: void <init>(java.lang.String)>"->"load.r r0";
+    "load.r r0"->"fieldget <GooSiteSearch: java.lang.String lcValue>";
+    "fieldget <GooSiteSearch: java.lang.String lcValue>"->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"push \";\"";
+    "push \";\""->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>";
+    "fieldput <GooSiteSearch: java.lang.String GIMP>"
+    "virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>"->"fieldput <GooSiteSearch: java.lang.String GIMP>";
+    "fieldput <GooSiteSearch: java.lang.String GIMP>"->"load.r r0";
+    "load.r r0"->"new java.lang.StringBuffer";
+    "new java.lang.StringBuffer"->"dup1.r";
+    "push \"T:#\""
+    "dup1.r"->"push \"T:#\"";
+    "push \"T:#\""->"specialinvoke <java.lang.StringBuffer: void <init>(java.lang.String)>";
+    "specialinvoke <java.lang.StringBuffer: void <init>(java.lang.String)>"->"load.r r0";
+    "load.r r0"->"fieldget <GooSiteSearch: java.lang.String fgValue>";
+    "fieldget <GooSiteSearch: java.lang.String fgValue>"->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"push \";\"";
+    "push \";\""->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>";
+    "fieldput <GooSiteSearch: java.lang.String TC>"
+    "virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>"->"fieldput <GooSiteSearch: java.lang.String TC>";
+    "fieldput <GooSiteSearch: java.lang.String TC>"->"load.r r0";
+    "load.r r0"->"new java.lang.StringBuffer";
+    "new java.lang.StringBuffer"->"dup1.r";
+    "push \"GALT:#\""
+    "dup1.r"->"push \"GALT:#\"";
+    "push \"GALT:#\""->"specialinvoke <java.lang.StringBuffer: void <init>(java.lang.String)>";
+    "specialinvoke <java.lang.StringBuffer: void <init>(java.lang.String)>"->"load.r r0";
+    "load.r r0"->"fieldget <GooSiteSearch: java.lang.String fgValue>";
+    "fieldget <GooSiteSearch: java.lang.String fgValue>"->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"push \";\"";
+    "push \";\""->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>";
+    "fieldput <GooSiteSearch: java.lang.String GALT>"
+    "virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>"->"fieldput <GooSiteSearch: java.lang.String GALT>";
+    "fieldput <GooSiteSearch: java.lang.String GALT>"->"load.r r0";
+    "push \"logo\""
+    "load.r r0"->"push \"logo\"";
+    "push \"logo\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "ifnull push \"\""
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"ifnull push \"\"";
+    "ifnull push \"\""->"new java.lang.StringBuffer";
+    "new java.lang.StringBuffer"->"dup1.r";
+    "push \"L:\""
+    "dup1.r"->"push \"L:\"";
+    "push \"L:\""->"specialinvoke <java.lang.StringBuffer: void <init>(java.lang.String)>";
+    "specialinvoke <java.lang.StringBuffer: void <init>(java.lang.String)>"->"load.r r0";
+    "load.r r0"->"push \"logo\"";
+    "push \"logo\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"push \";\"";
+    "push \";\""->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>"->"store.r $r51";
+    "store.r $r51"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "load.r r0"->"load.r $r51";
+    "fieldput <GooSiteSearch: java.lang.String Logo>"
+    "load.r $r51"->"fieldput <GooSiteSearch: java.lang.String Logo>";
+    "fieldput <GooSiteSearch: java.lang.String Logo>"->"load.r r0";
+    "push \"textsize\""
+    "load.r r0"->"push \"textsize\"";
+    "push \"textsize\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"push \"textsize\"";
+    "push \"textsize\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>";
+    "fieldput <GooSiteSearch: int TS>"
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"->"fieldput <GooSiteSearch: int TS>";
+    "fieldput <GooSiteSearch: int TS>"->"load.r r0";
+    "push \"buttontext\""
+    "load.r r0"->"push \"buttontext\"";
+    "push \"buttontext\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r r0";
+    "fieldget <GooSiteSearch: java.awt.Button goButton>"
+    "load.r r0"->"fieldget <GooSiteSearch: java.awt.Button goButton>";
+    "fieldget <GooSiteSearch: java.awt.Button goButton>"->"load.r r0";
+    "load.r r0"->"push \"buttontext\"";
+    "push \"buttontext\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.awt.Button: void setLabel(java.lang.String)>"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"virtualinvoke <java.awt.Button: void setLabel(java.lang.String)>";
+    "virtualinvoke <java.awt.Button: void setLabel(java.lang.String)>"->"load.r r0";
+    "push \"labelText\""
+    "load.r r0"->"push \"labelText\"";
+    "push \"labelText\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "ifnull new java.awt.FlowLayout"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"ifnull new java.awt.FlowLayout";
+    "ifnull new java.awt.FlowLayout"->"load.r r0";
+    "fieldget <GooSiteSearch: java.awt.Label queryLabel>"
+    "load.r r0"->"fieldget <GooSiteSearch: java.awt.Label queryLabel>";
+    "fieldget <GooSiteSearch: java.awt.Label queryLabel>"->"load.r r0";
+    "push \"labeltext\""
+    "load.r r0"->"push \"labeltext\"";
+    "push \"labeltext\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.awt.Label: void setText(java.lang.String)>"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"virtualinvoke <java.awt.Label: void setText(java.lang.String)>";
+    "new java.awt.FlowLayout"
+    "virtualinvoke <java.awt.Label: void setText(java.lang.String)>"->"new java.awt.FlowLayout";
+    "new java.awt.FlowLayout"->"store.r $r51";
+    "store.r $r51"->"load.r $r51";
+    "load.r $r51"->"push 0";
+    "specialinvoke <java.awt.FlowLayout: void <init>(int)>"
+    "push 0"->"specialinvoke <java.awt.FlowLayout: void <init>(int)>";
+    "specialinvoke <java.awt.FlowLayout: void <init>(int)>"->"load.r r0";
+    "fieldget <GooSiteSearch: java.awt.Panel row1>"
+    "load.r r0"->"fieldget <GooSiteSearch: java.awt.Panel row1>";
+    "fieldget <GooSiteSearch: java.awt.Panel row1>"->"load.r $r51";
+    "virtualinvoke <java.awt.Container: void setLayout(java.awt.LayoutManager)>"
+    "load.r $r51"->"virtualinvoke <java.awt.Container: void setLayout(java.awt.LayoutManager)>";
+    "virtualinvoke <java.awt.Container: void setLayout(java.awt.LayoutManager)>"->"load.r r0";
+    "load.r r0"->"fieldget <GooSiteSearch: java.awt.Label queryLabel>";
+    "new java.awt.Font"
+    "fieldget <GooSiteSearch: java.awt.Label queryLabel>"->"new java.awt.Font";
+    "new java.awt.Font"->"dup1.r";
+    "push \"Helvetica\""
+    "dup1.r"->"push \"Helvetica\"";
+    "push 3"
+    "push \"Helvetica\""->"push 3";
+    "push 3"->"load.r r0";
+    "fieldget <GooSiteSearch: int TS>"
+    "load.r r0"->"fieldget <GooSiteSearch: int TS>";
+    "specialinvoke <java.awt.Font: void <init>(java.lang.String,int,int)>"
+    "fieldget <GooSiteSearch: int TS>"->"specialinvoke <java.awt.Font: void <init>(java.lang.String,int,int)>";
+    "virtualinvoke <java.awt.Component: void setFont(java.awt.Font)>"
+    "specialinvoke <java.awt.Font: void <init>(java.lang.String,int,int)>"->"virtualinvoke <java.awt.Component: void setFont(java.awt.Font)>";
+    "virtualinvoke <java.awt.Component: void setFont(java.awt.Font)>"->"load.r r0";
+    "load.r r0"->"fieldget <GooSiteSearch: java.awt.Panel row1>";
+    "fieldget <GooSiteSearch: java.awt.Panel row1>"->"load.r r0";
+    "load.r r0"->"fieldget <GooSiteSearch: java.awt.Label queryLabel>";
+    "virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>"
+    "fieldget <GooSiteSearch: java.awt.Label queryLabel>"->"virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>";
+    "pop"
+    "virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>"->"pop";
+    "pop"->"load.r r0";
+    "load.r r0"->"fieldget <GooSiteSearch: java.awt.TextField query>";
+    "fieldget <GooSiteSearch: java.awt.TextField query>"->"new java.awt.Font";
+    "new java.awt.Font"->"dup1.r";
+    "dup1.r"->"push \"Helvetica\"";
+    "push \"Helvetica\""->"push 0";
+    "push 0"->"load.r r0";
+    "load.r r0"->"fieldget <GooSiteSearch: int TS>";
+    "fieldget <GooSiteSearch: int TS>"->"specialinvoke <java.awt.Font: void <init>(java.lang.String,int,int)>";
+    "specialinvoke <java.awt.Font: void <init>(java.lang.String,int,int)>"->"virtualinvoke <java.awt.Component: void setFont(java.awt.Font)>";
+    "virtualinvoke <java.awt.Component: void setFont(java.awt.Font)>"->"load.r r0";
+    "load.r r0"->"fieldget <GooSiteSearch: java.awt.Panel row1>";
+    "fieldget <GooSiteSearch: java.awt.Panel row1>"->"load.r r0";
+    "load.r r0"->"fieldget <GooSiteSearch: java.awt.TextField query>";
+    "fieldget <GooSiteSearch: java.awt.TextField query>"->"virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>";
+    "virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>"->"pop";
+    "pop"->"load.r r0";
+    "fieldget <GooSiteSearch: java.awt.Panel row2>"
+    "load.r r0"->"fieldget <GooSiteSearch: java.awt.Panel row2>";
+    "new java.awt.GridLayout"
+    "fieldget <GooSiteSearch: java.awt.Panel row2>"->"new java.awt.GridLayout";
+    "new java.awt.GridLayout"->"dup1.r";
+    "dup1.r"->"push 1";
+    "push 2"
+    "push 1"->"push 2";
+    "push 60"
+    "push 2"->"push 60";
+    "push 60"->"push 1";
+    "specialinvoke <java.awt.GridLayout: void <init>(int,int,int,int)>"
+    "push 1"->"specialinvoke <java.awt.GridLayout: void <init>(int,int,int,int)>";
+    "specialinvoke <java.awt.GridLayout: void <init>(int,int,int,int)>"->"virtualinvoke <java.awt.Container: void setLayout(java.awt.LayoutManager)>";
+    "virtualinvoke <java.awt.Container: void setLayout(java.awt.LayoutManager)>"->"load.r r0";
+    "load.r r0"->"fieldget <GooSiteSearch: java.awt.Button goButton>";
+    "fieldget <GooSiteSearch: java.awt.Button goButton>"->"new java.awt.Font";
+    "new java.awt.Font"->"dup1.r";
+    "dup1.r"->"push \"Helvetica\"";
+    "push \"Helvetica\""->"push 3";
+    "push 3"->"load.r r0";
+    "load.r r0"->"fieldget <GooSiteSearch: int TS>";
+    "fieldget <GooSiteSearch: int TS>"->"specialinvoke <java.awt.Font: void <init>(java.lang.String,int,int)>";
+    "specialinvoke <java.awt.Font: void <init>(java.lang.String,int,int)>"->"virtualinvoke <java.awt.Component: void setFont(java.awt.Font)>";
+    "virtualinvoke <java.awt.Component: void setFont(java.awt.Font)>"->"load.r r0";
+    "fieldget <GooSiteSearch: java.awt.Button vButton>"
+    "load.r r0"->"fieldget <GooSiteSearch: java.awt.Button vButton>";
+    "fieldget <GooSiteSearch: java.awt.Button vButton>"->"new java.awt.Font";
+    "new java.awt.Font"->"dup1.r";
+    "dup1.r"->"push \"Helvetica\"";
+    "push \"Helvetica\""->"push 2";
+    "push 2"->"load.r r0";
+    "load.r r0"->"fieldget <GooSiteSearch: int TS>";
+    "fieldget <GooSiteSearch: int TS>"->"push 2";
+    "push 2"->"sub.i";
+    "sub.i"->"specialinvoke <java.awt.Font: void <init>(java.lang.String,int,int)>";
+    "specialinvoke <java.awt.Font: void <init>(java.lang.String,int,int)>"->"virtualinvoke <java.awt.Component: void setFont(java.awt.Font)>";
+    "virtualinvoke <java.awt.Component: void setFont(java.awt.Font)>"->"load.r r0";
+    "load.r r0"->"fieldget <GooSiteSearch: java.awt.Panel row2>";
+    "fieldget <GooSiteSearch: java.awt.Panel row2>"->"load.r r0";
+    "load.r r0"->"fieldget <GooSiteSearch: java.awt.Button vButton>";
+    "fieldget <GooSiteSearch: java.awt.Button vButton>"->"virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>";
+    "virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>"->"pop";
+    "pop"->"load.r r0";
+    "load.r r0"->"fieldget <GooSiteSearch: java.awt.Panel row2>";
+    "fieldget <GooSiteSearch: java.awt.Panel row2>"->"load.r r0";
+    "load.r r0"->"fieldget <GooSiteSearch: java.awt.Button goButton>";
+    "fieldget <GooSiteSearch: java.awt.Button goButton>"->"virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>";
+    "virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>"->"pop";
+    "pop"->"load.r r0";
+    "fieldget <GooSiteSearch: java.awt.Panel p>"
+    "load.r r0"->"fieldget <GooSiteSearch: java.awt.Panel p>";
+    "new java.awt.BorderLayout"
+    "fieldget <GooSiteSearch: java.awt.Panel p>"->"new java.awt.BorderLayout";
+    "new java.awt.BorderLayout"->"dup1.r";
+    "specialinvoke <java.awt.BorderLayout: void <init>()>"
+    "dup1.r"->"specialinvoke <java.awt.BorderLayout: void <init>()>";
+    "specialinvoke <java.awt.BorderLayout: void <init>()>"->"virtualinvoke <java.awt.Container: void setLayout(java.awt.LayoutManager)>";
+    "virtualinvoke <java.awt.Container: void setLayout(java.awt.LayoutManager)>"->"load.r r0";
+    "load.r r0"->"fieldget <GooSiteSearch: java.awt.Panel p>";
+    "fieldget <GooSiteSearch: java.awt.Panel p>"->"load.r r0";
+    "load.r r0"->"fieldget <GooSiteSearch: java.awt.Panel row1>";
+    "push \"North\""
+    "fieldget <GooSiteSearch: java.awt.Panel row1>"->"push \"North\"";
+    "virtualinvoke <java.awt.Container: void add(java.awt.Component,java.lang.Object)>"
+    "push \"North\""->"virtualinvoke <java.awt.Container: void add(java.awt.Component,java.lang.Object)>";
+    "virtualinvoke <java.awt.Container: void add(java.awt.Component,java.lang.Object)>"->"load.r r0";
+    "load.r r0"->"fieldget <GooSiteSearch: java.awt.Panel p>";
+    "fieldget <GooSiteSearch: java.awt.Panel p>"->"load.r r0";
+    "load.r r0"->"fieldget <GooSiteSearch: java.awt.Panel row2>";
+    "push \"South\""
+    "fieldget <GooSiteSearch: java.awt.Panel row2>"->"push \"South\"";
+    "push \"South\""->"virtualinvoke <java.awt.Container: void add(java.awt.Component,java.lang.Object)>";
+    "virtualinvoke <java.awt.Container: void add(java.awt.Component,java.lang.Object)>"->"load.r r0";
+    "load.r r0"->"new java.awt.BorderLayout";
+    "new java.awt.BorderLayout"->"dup1.r";
+    "dup1.r"->"specialinvoke <java.awt.BorderLayout: void <init>()>";
+    "specialinvoke <java.awt.BorderLayout: void <init>()>"->"virtualinvoke <java.awt.Container: void setLayout(java.awt.LayoutManager)>";
+    "virtualinvoke <java.awt.Container: void setLayout(java.awt.LayoutManager)>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <GooSiteSearch: java.awt.Panel p>";
+    "fieldget <GooSiteSearch: java.awt.Panel p>"->"push \"South\"";
+    "push \"South\""->"virtualinvoke <java.awt.Container: void add(java.awt.Component,java.lang.Object)>";
+    "virtualinvoke <java.awt.Container: void add(java.awt.Component,java.lang.Object)>"->"load.r r0";
+    "load.r r0"->"fieldget <GooSiteSearch: java.awt.Button goButton>";
+    "fieldget <GooSiteSearch: java.awt.Button goButton>"->"load.r r0";
+    "virtualinvoke <java.awt.Button: void addActionListener(java.awt.event.ActionListener)>"
+    "load.r r0"->"virtualinvoke <java.awt.Button: void addActionListener(java.awt.event.ActionListener)>";
+    "virtualinvoke <java.awt.Button: void addActionListener(java.awt.event.ActionListener)>"->"load.r r0";
+    "load.r r0"->"fieldget <GooSiteSearch: java.awt.Button vButton>";
+    "fieldget <GooSiteSearch: java.awt.Button vButton>"->"load.r r0";
+    "load.r r0"->"virtualinvoke <java.awt.Button: void addActionListener(java.awt.event.ActionListener)>";
+    "virtualinvoke <java.awt.Button: void addActionListener(java.awt.event.ActionListener)>"->"load.r r0";
+    "fieldget <GooSiteSearch: java.awt.Button visitButton>"
+    "load.r r0"->"fieldget <GooSiteSearch: java.awt.Button visitButton>";
+    "fieldget <GooSiteSearch: java.awt.Button visitButton>"->"load.r r0";
+    "load.r r0"->"virtualinvoke <java.awt.Button: void addActionListener(java.awt.event.ActionListener)>";
+    "virtualinvoke <java.awt.Button: void addActionListener(java.awt.event.ActionListener)>"->"load.r r0";
+    "fieldget <GooSiteSearch: java.awt.Button closeButton>"
+    "load.r r0"->"fieldget <GooSiteSearch: java.awt.Button closeButton>";
+    "fieldget <GooSiteSearch: java.awt.Button closeButton>"->"load.r r0";
+    "load.r r0"->"virtualinvoke <java.awt.Button: void addActionListener(java.awt.event.ActionListener)>";
+    "virtualinvoke <java.awt.Button: void addActionListener(java.awt.event.ActionListener)>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <GooSiteSearch: java.awt.Color bgColor>";
+    "fieldget <GooSiteSearch: java.awt.Color bgColor>"->"virtualinvoke <java.awt.Component: void setBackground(java.awt.Color)>";
+    "virtualinvoke <java.awt.Component: void setBackground(java.awt.Color)>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "fieldget <GooSiteSearch: java.awt.Color fgColor>"
+    "load.r r0"->"fieldget <GooSiteSearch: java.awt.Color fgColor>";
+    "virtualinvoke <java.awt.Component: void setForeground(java.awt.Color)>"
+    "fieldget <GooSiteSearch: java.awt.Color fgColor>"->"virtualinvoke <java.awt.Component: void setForeground(java.awt.Color)>";
+    "virtualinvoke <java.awt.Component: void setForeground(java.awt.Color)>"->"load.r r0";
+    "load.r r0"->"fieldget <GooSiteSearch: java.awt.Button goButton>";
+    "fieldget <GooSiteSearch: java.awt.Button goButton>"->"load.r r0";
+    "load.r r0"->"fieldget <GooSiteSearch: java.awt.Color fgColor>";
+    "fieldget <GooSiteSearch: java.awt.Color fgColor>"->"virtualinvoke <java.awt.Component: void setBackground(java.awt.Color)>";
+    "virtualinvoke <java.awt.Component: void setBackground(java.awt.Color)>"->"load.r r0";
+    "load.r r0"->"fieldget <GooSiteSearch: java.awt.Button goButton>";
+    "fieldget <GooSiteSearch: java.awt.Button goButton>"->"load.r r0";
+    "load.r r0"->"fieldget <GooSiteSearch: java.awt.Color bgColor>";
+    "fieldget <GooSiteSearch: java.awt.Color bgColor>"->"virtualinvoke <java.awt.Component: void setForeground(java.awt.Color)>";
+    "virtualinvoke <java.awt.Component: void setForeground(java.awt.Color)>"->"load.r r0";
+    "load.r r0"->"fieldget <GooSiteSearch: java.awt.Button vButton>";
+    "fieldget <GooSiteSearch: java.awt.Button vButton>"->"load.r r0";
+    "load.r r0"->"fieldget <GooSiteSearch: java.awt.Color bgColor>";
+    "fieldget <GooSiteSearch: java.awt.Color bgColor>"->"virtualinvoke <java.awt.Component: void setBackground(java.awt.Color)>";
+    "virtualinvoke <java.awt.Component: void setBackground(java.awt.Color)>"->"load.r r0";
+    "load.r r0"->"fieldget <GooSiteSearch: java.awt.Button vButton>";
+    "fieldget <GooSiteSearch: java.awt.Button vButton>"->"load.r r0";
+    "load.r r0"->"fieldget <GooSiteSearch: java.awt.Color fgColor>";
+    "fieldget <GooSiteSearch: java.awt.Color fgColor>"->"virtualinvoke <java.awt.Component: void setForeground(java.awt.Color)>";
+    "virtualinvoke <java.awt.Component: void setForeground(java.awt.Color)>"->"load.r r0";
+    "load.r r0"->"fieldget <GooSiteSearch: java.awt.Button vButton>";
+    "push 100"
+    "fieldget <GooSiteSearch: java.awt.Button vButton>"->"push 100";
+    "push 15"
+    "push 100"->"push 15";
+    "virtualinvoke <java.awt.Component: void setSize(int,int)>"
+    "push 15"->"virtualinvoke <java.awt.Component: void setSize(int,int)>";
+    "virtualinvoke <java.awt.Component: void setSize(int,int)>"->"load.r r0";
+    "load.r r0"->"fieldget <GooSiteSearch: java.awt.TextField query>";
+    "virtualinvoke <java.awt.Component: void requestFocus()>"
+    "fieldget <GooSiteSearch: java.awt.TextField query>"->"virtualinvoke <java.awt.Component: void requestFocus()>";
+    "virtualinvoke <java.awt.Component: void requestFocus()>"->"load.r r0";
+    "fieldget <GooSiteSearch: java.awt.Panel pp>"
+    "load.r r0"->"fieldget <GooSiteSearch: java.awt.Panel pp>";
+    "fieldget <GooSiteSearch: java.awt.Panel pp>"->"new java.awt.BorderLayout";
+    "new java.awt.BorderLayout"->"dup1.r";
+    "dup1.r"->"specialinvoke <java.awt.BorderLayout: void <init>()>";
+    "specialinvoke <java.awt.BorderLayout: void <init>()>"->"virtualinvoke <java.awt.Container: void setLayout(java.awt.LayoutManager)>";
+    "virtualinvoke <java.awt.Container: void setLayout(java.awt.LayoutManager)>"->"load.r r0";
+    "fieldget <GooSiteSearch: java.awt.Frame popup>"
+    "load.r r0"->"fieldget <GooSiteSearch: java.awt.Frame popup>";
+    "push 230"
+    "fieldget <GooSiteSearch: java.awt.Frame popup>"->"push 230";
+    "push 138"
+    "push 230"->"push 138";
+    "push 138"->"virtualinvoke <java.awt.Component: void setSize(int,int)>";
+    "virtualinvoke <java.awt.Component: void setSize(int,int)>"->"load.r r0";
+    "load.r r0"->"fieldget <GooSiteSearch: java.awt.Frame popup>";
+    "fieldget <GooSiteSearch: java.awt.Frame popup>"->"load.r r0";
+    "load.r r0"->"fieldget <GooSiteSearch: java.awt.Color bgColor>";
+    "fieldget <GooSiteSearch: java.awt.Color bgColor>"->"virtualinvoke <java.awt.Component: void setBackground(java.awt.Color)>";
+    "virtualinvoke <java.awt.Component: void setBackground(java.awt.Color)>"->"load.r r0";
+    "load.r r0"->"fieldget <GooSiteSearch: java.awt.Frame popup>";
+    "fieldget <GooSiteSearch: java.awt.Frame popup>"->"load.r r0";
+    "load.r r0"->"fieldget <GooSiteSearch: java.awt.Color fgColor>";
+    "fieldget <GooSiteSearch: java.awt.Color fgColor>"->"virtualinvoke <java.awt.Component: void setForeground(java.awt.Color)>";
+    "virtualinvoke <java.awt.Component: void setForeground(java.awt.Color)>"->"load.r r0";
+    "load.r r0"->"fieldget <GooSiteSearch: java.awt.Frame popup>";
+    "fieldget <GooSiteSearch: java.awt.Frame popup>"->"push 0";
+    "virtualinvoke <java.awt.Frame: void setResizable(boolean)>"
+    "push 0"->"virtualinvoke <java.awt.Frame: void setResizable(boolean)>";
+    "virtualinvoke <java.awt.Frame: void setResizable(boolean)>"->"load.r r0";
+    "fieldget <GooSiteSearch: java.awt.Label byLabel>"
+    "load.r r0"->"fieldget <GooSiteSearch: java.awt.Label byLabel>";
+    "fieldget <GooSiteSearch: java.awt.Label byLabel>"->"new java.awt.Font";
+    "new java.awt.Font"->"dup1.r";
+    "dup1.r"->"push \"Helvetica\"";
+    "push \"Helvetica\""->"push 1";
+    "push 1"->"push 16";
+    "push 16"->"specialinvoke <java.awt.Font: void <init>(java.lang.String,int,int)>";
+    "specialinvoke <java.awt.Font: void <init>(java.lang.String,int,int)>"->"virtualinvoke <java.awt.Component: void setFont(java.awt.Font)>";
+    "virtualinvoke <java.awt.Component: void setFont(java.awt.Font)>"->"load.r r0";
+    "fieldget <GooSiteSearch: java.awt.Label byLabel2>"
+    "load.r r0"->"fieldget <GooSiteSearch: java.awt.Label byLabel2>";
+    "fieldget <GooSiteSearch: java.awt.Label byLabel2>"->"new java.awt.Font";
+    "new java.awt.Font"->"dup1.r";
+    "dup1.r"->"push \"Helvetica\"";
+    "push \"Helvetica\""->"push 0";
+    "push 13"
+    "push 0"->"push 13";
+    "push 13"->"specialinvoke <java.awt.Font: void <init>(java.lang.String,int,int)>";
+    "specialinvoke <java.awt.Font: void <init>(java.lang.String,int,int)>"->"virtualinvoke <java.awt.Component: void setFont(java.awt.Font)>";
+    "virtualinvoke <java.awt.Component: void setFont(java.awt.Font)>"->"load.r r0";
+    "fieldget <GooSiteSearch: java.awt.Label byLabel3>"
+    "load.r r0"->"fieldget <GooSiteSearch: java.awt.Label byLabel3>";
+    "fieldget <GooSiteSearch: java.awt.Label byLabel3>"->"new java.awt.Font";
+    "new java.awt.Font"->"dup1.r";
+    "dup1.r"->"push \"Helvetica\"";
+    "push \"Helvetica\""->"push 0";
+    "push 11"
+    "push 0"->"push 11";
+    "push 11"->"specialinvoke <java.awt.Font: void <init>(java.lang.String,int,int)>";
+    "specialinvoke <java.awt.Font: void <init>(java.lang.String,int,int)>"->"virtualinvoke <java.awt.Component: void setFont(java.awt.Font)>";
+    "virtualinvoke <java.awt.Component: void setFont(java.awt.Font)>"->"load.r r0";
+    "load.r r0"->"fieldget <GooSiteSearch: java.awt.Button visitButton>";
+    "fieldget <GooSiteSearch: java.awt.Button visitButton>"->"load.r r0";
+    "load.r r0"->"fieldget <GooSiteSearch: java.awt.Color bgColor>";
+    "fieldget <GooSiteSearch: java.awt.Color bgColor>"->"virtualinvoke <java.awt.Component: void setBackground(java.awt.Color)>";
+    "virtualinvoke <java.awt.Component: void setBackground(java.awt.Color)>"->"load.r r0";
+    "load.r r0"->"fieldget <GooSiteSearch: java.awt.Button visitButton>";
+    "fieldget <GooSiteSearch: java.awt.Button visitButton>"->"load.r r0";
+    "load.r r0"->"fieldget <GooSiteSearch: java.awt.Color fgColor>";
+    "fieldget <GooSiteSearch: java.awt.Color fgColor>"->"virtualinvoke <java.awt.Component: void setForeground(java.awt.Color)>";
+    "virtualinvoke <java.awt.Component: void setForeground(java.awt.Color)>"->"load.r r0";
+    "load.r r0"->"fieldget <GooSiteSearch: java.awt.Button closeButton>";
+    "fieldget <GooSiteSearch: java.awt.Button closeButton>"->"load.r r0";
+    "load.r r0"->"fieldget <GooSiteSearch: java.awt.Color bgColor>";
+    "fieldget <GooSiteSearch: java.awt.Color bgColor>"->"virtualinvoke <java.awt.Component: void setBackground(java.awt.Color)>";
+    "virtualinvoke <java.awt.Component: void setBackground(java.awt.Color)>"->"load.r r0";
+    "load.r r0"->"fieldget <GooSiteSearch: java.awt.Button closeButton>";
+    "fieldget <GooSiteSearch: java.awt.Button closeButton>"->"load.r r0";
+    "load.r r0"->"fieldget <GooSiteSearch: java.awt.Color fgColor>";
+    "fieldget <GooSiteSearch: java.awt.Color fgColor>"->"virtualinvoke <java.awt.Component: void setForeground(java.awt.Color)>";
+    "virtualinvoke <java.awt.Component: void setForeground(java.awt.Color)>"->"load.r r0";
+    "load.r r0"->"fieldget <GooSiteSearch: java.awt.Panel pp>";
+    "fieldget <GooSiteSearch: java.awt.Panel pp>"->"load.r r0";
+    "load.r r0"->"fieldget <GooSiteSearch: java.awt.Label byLabel>";
+    "fieldget <GooSiteSearch: java.awt.Label byLabel>"->"push \"North\"";
+    "push \"North\""->"virtualinvoke <java.awt.Container: void add(java.awt.Component,java.lang.Object)>";
+    "virtualinvoke <java.awt.Container: void add(java.awt.Component,java.lang.Object)>"->"load.r r0";
+    "load.r r0"->"fieldget <GooSiteSearch: java.awt.Panel pp>";
+    "fieldget <GooSiteSearch: java.awt.Panel pp>"->"load.r r0";
+    "load.r r0"->"fieldget <GooSiteSearch: java.awt.Label byLabel2>";
+    "push \"Center\""
+    "fieldget <GooSiteSearch: java.awt.Label byLabel2>"->"push \"Center\"";
+    "push \"Center\""->"virtualinvoke <java.awt.Container: void add(java.awt.Component,java.lang.Object)>";
+    "virtualinvoke <java.awt.Container: void add(java.awt.Component,java.lang.Object)>"->"load.r r0";
+    "load.r r0"->"fieldget <GooSiteSearch: java.awt.Panel pp>";
+    "fieldget <GooSiteSearch: java.awt.Panel pp>"->"load.r r0";
+    "load.r r0"->"fieldget <GooSiteSearch: java.awt.Label byLabel3>";
+    "fieldget <GooSiteSearch: java.awt.Label byLabel3>"->"push \"South\"";
+    "push \"South\""->"virtualinvoke <java.awt.Container: void add(java.awt.Component,java.lang.Object)>";
+    "virtualinvoke <java.awt.Container: void add(java.awt.Component,java.lang.Object)>"->"load.r r0";
+    "load.r r0"->"fieldget <GooSiteSearch: java.awt.Frame popup>";
+    "fieldget <GooSiteSearch: java.awt.Frame popup>"->"load.r r0";
+    "load.r r0"->"fieldget <GooSiteSearch: java.awt.Panel pp>";
+    "fieldget <GooSiteSearch: java.awt.Panel pp>"->"push \"North\"";
+    "push \"North\""->"virtualinvoke <java.awt.Container: void add(java.awt.Component,java.lang.Object)>";
+    "virtualinvoke <java.awt.Container: void add(java.awt.Component,java.lang.Object)>"->"load.r r0";
+    "load.r r0"->"fieldget <GooSiteSearch: java.awt.Frame popup>";
+    "fieldget <GooSiteSearch: java.awt.Frame popup>"->"load.r r0";
+    "load.r r0"->"fieldget <GooSiteSearch: java.awt.Button visitButton>";
+    "fieldget <GooSiteSearch: java.awt.Button visitButton>"->"push \"Center\"";
+    "push \"Center\""->"virtualinvoke <java.awt.Container: void add(java.awt.Component,java.lang.Object)>";
+    "virtualinvoke <java.awt.Container: void add(java.awt.Component,java.lang.Object)>"->"load.r r0";
+    "load.r r0"->"fieldget <GooSiteSearch: java.awt.Frame popup>";
+    "fieldget <GooSiteSearch: java.awt.Frame popup>"->"load.r r0";
+    "load.r r0"->"fieldget <GooSiteSearch: java.awt.Button closeButton>";
+    "push \"East\""
+    "fieldget <GooSiteSearch: java.awt.Button closeButton>"->"push \"East\"";
+    "push \"East\""->"virtualinvoke <java.awt.Container: void add(java.awt.Component,java.lang.Object)>";
+    "return"
+    "virtualinvoke <java.awt.Container: void add(java.awt.Component,java.lang.Object)>"->"return";
+    "push \"\""
+    "ifnull push \"\""->"push \"\"";
+    "push \"\""->"store.r $r51";
+    "push \"AA0000\""
+    "ifnull push \"AA0000\""->"push \"AA0000\"";
+    "push \"AA0000\""->"store.r $r51";
+    "push \"4487cc\""
+    "ifnull push \"4487cc\""->"push \"4487cc\"";
+    "push \"4487cc\""->"store.r $r51";
+    "push \"f5f5f5\""
+    "ifnull push \"f5f5f5\""->"push \"f5f5f5\"";
+    "push \"f5f5f5\""->"store.r $r51";
+    "push \"10\""
+    "ifnull push \"10\""->"push \"10\"";
+    "push \"10\""->"store.r $r51";
+}

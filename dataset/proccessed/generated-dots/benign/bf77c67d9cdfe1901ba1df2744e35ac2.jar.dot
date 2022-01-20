@@ -1,0 +1,59 @@
+digraph "" {
+    "r0 := @this: hitCounter"
+    "load.r r0"
+    "r0 := @this: hitCounter"->"load.r r0";
+    "push 30"
+    "load.r r0"->"push 30";
+    "fieldput <hitCounter: int height>"
+    "push 30"->"fieldput <hitCounter: int height>";
+    "fieldput <hitCounter: int height>"->"load.r r0";
+    "push 125"
+    "load.r r0"->"push 125";
+    "fieldput <hitCounter: int width>"
+    "push 125"->"fieldput <hitCounter: int width>";
+    "fieldput <hitCounter: int width>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "fieldget <hitCounter: int width>"
+    "load.r r0"->"fieldget <hitCounter: int width>";
+    "fieldget <hitCounter: int width>"->"load.r r0";
+    "fieldget <hitCounter: int height>"
+    "load.r r0"->"fieldget <hitCounter: int height>";
+    "virtualinvoke <java.awt.Component: java.awt.Image createImage(int,int)>"
+    "fieldget <hitCounter: int height>"->"virtualinvoke <java.awt.Component: java.awt.Image createImage(int,int)>";
+    "fieldput <hitCounter: java.awt.Image imgBuffer>"
+    "virtualinvoke <java.awt.Component: java.awt.Image createImage(int,int)>"->"fieldput <hitCounter: java.awt.Image imgBuffer>";
+    "fieldput <hitCounter: java.awt.Image imgBuffer>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "fieldget <hitCounter: java.awt.Image imgBuffer>"
+    "load.r r0"->"fieldget <hitCounter: java.awt.Image imgBuffer>";
+    "virtualinvoke <java.awt.Image: java.awt.Graphics getGraphics()>"
+    "fieldget <hitCounter: java.awt.Image imgBuffer>"->"virtualinvoke <java.awt.Image: java.awt.Graphics getGraphics()>";
+    "fieldput <hitCounter: java.awt.Graphics grBuffer>"
+    "virtualinvoke <java.awt.Image: java.awt.Graphics getGraphics()>"->"fieldput <hitCounter: java.awt.Graphics grBuffer>";
+    "fieldput <hitCounter: java.awt.Graphics grBuffer>"->"load.r r0";
+    "fieldget <hitCounter: java.awt.Graphics grBuffer>"
+    "load.r r0"->"fieldget <hitCounter: java.awt.Graphics grBuffer>";
+    "new java.awt.Font"
+    "fieldget <hitCounter: java.awt.Graphics grBuffer>"->"new java.awt.Font";
+    "dup1.r"
+    "new java.awt.Font"->"dup1.r";
+    "push \"Courier\""
+    "dup1.r"->"push \"Courier\"";
+    "push 1"
+    "push \"Courier\""->"push 1";
+    "push 25"
+    "push 1"->"push 25";
+    "specialinvoke <java.awt.Font: void <init>(java.lang.String,int,int)>"
+    "push 25"->"specialinvoke <java.awt.Font: void <init>(java.lang.String,int,int)>";
+    "virtualinvoke <java.awt.Graphics: void setFont(java.awt.Font)>"
+    "specialinvoke <java.awt.Font: void <init>(java.lang.String,int,int)>"->"virtualinvoke <java.awt.Graphics: void setFont(java.awt.Font)>";
+    "virtualinvoke <java.awt.Graphics: void setFont(java.awt.Font)>"->"load.r r0";
+    "specialinvoke <hitCounter: void sendData()>"
+    "load.r r0"->"specialinvoke <hitCounter: void sendData()>";
+    "specialinvoke <hitCounter: void sendData()>"->"load.r r0";
+    "specialinvoke <hitCounter: void newView()>"
+    "load.r r0"->"specialinvoke <hitCounter: void newView()>";
+    "return"
+    "specialinvoke <hitCounter: void newView()>"->"return";
+}

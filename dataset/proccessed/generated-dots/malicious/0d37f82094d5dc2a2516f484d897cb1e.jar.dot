@@ -1,0 +1,77 @@
+digraph "" {
+    "r0 := @this: GetAccess"
+    "load.r r0"
+    "r0 := @this: GetAccess"->"load.r r0";
+    "fieldget <GetAccess: java.lang.Object oInstaller>"
+    "load.r r0"->"fieldget <GetAccess: java.lang.Object oInstaller>";
+    "ifnull load.r r0"
+    "fieldget <GetAccess: java.lang.Object oInstaller>"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <GetAccess: java.lang.Object oInstaller>";
+    "instanceof"
+    "fieldget <GetAccess: java.lang.Object oInstaller>"->"instanceof";
+    "ifeq load.r r0"
+    "instanceof"->"ifeq load.r r0";
+    "ifeq load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <GetAccess: java.lang.Object oInstaller>";
+    "checkcast"
+    "fieldget <GetAccess: java.lang.Object oInstaller>"->"checkcast";
+    "checkcast"->"load.r r0";
+    "virtualinvoke <java.applet.Applet: java.net.URL getCodeBase()>"
+    "load.r r0"->"virtualinvoke <java.applet.Applet: java.net.URL getCodeBase()>";
+    "virtualinvoke <java.applet.Applet: java.net.URL getCodeBase()>"->"load.r r0";
+    "virtualinvoke <Installer: void setApplet(java.net.URL,java.applet.Applet)>"
+    "load.r r0"->"virtualinvoke <Installer: void setApplet(java.net.URL,java.applet.Applet)>";
+    "virtualinvoke <Installer: void setApplet(java.net.URL,java.applet.Applet)>"->"load.r r0";
+    "fieldget <GetAccess: byte[] Security_Class_UCL>"
+    "load.r r0"->"fieldget <GetAccess: byte[] Security_Class_UCL>";
+    "arraylength"
+    "fieldget <GetAccess: byte[] Security_Class_UCL>"->"arraylength";
+    "push 1"
+    "arraylength"->"push 1";
+    "sub.i"
+    "push 1"->"sub.i";
+    "store.i i2"
+    "sub.i"->"store.i i2";
+    "load.i i2"
+    "store.i i2"->"load.i i2";
+    "iflt return"
+    "load.i i2"->"iflt return";
+    "staticget <java.lang.System: java.io.PrintStream out>"
+    "iflt return"->"staticget <java.lang.System: java.io.PrintStream out>";
+    "new java.lang.StringBuffer"
+    "staticget <java.lang.System: java.io.PrintStream out>"->"new java.lang.StringBuffer";
+    "dup1.r"
+    "new java.lang.StringBuffer"->"dup1.r";
+    "specialinvoke <java.lang.StringBuffer: void <init>()>"
+    "dup1.r"->"specialinvoke <java.lang.StringBuffer: void <init>()>";
+    "push \"Security_Class_UCL[\""
+    "specialinvoke <java.lang.StringBuffer: void <init>()>"->"push \"Security_Class_UCL[\"";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"
+    "push \"Security_Class_UCL[\""->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"load.i i2";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(int)>"
+    "load.i i2"->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(int)>";
+    "push \"] = \""
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(int)>"->"push \"] = \"";
+    "push \"] = \""->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"load.r r0";
+    "load.r r0"->"fieldget <GetAccess: byte[] Security_Class_UCL>";
+    "fieldget <GetAccess: byte[] Security_Class_UCL>"->"load.i i2";
+    "arrayread.b"
+    "load.i i2"->"arrayread.b";
+    "arrayread.b"->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(int)>";
+    "push \";\""
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(int)>"->"push \";\"";
+    "push \";\""->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>"
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>";
+    "virtualinvoke <java.io.PrintStream: void println(java.lang.String)>"
+    "virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>"->"virtualinvoke <java.io.PrintStream: void println(java.lang.String)>";
+    "inc.i i2 -1"
+    "virtualinvoke <java.io.PrintStream: void println(java.lang.String)>"->"inc.i i2 -1";
+    "goto load.i i2"
+    "inc.i i2 -1"->"goto load.i i2";
+    "return"
+    "iflt return"->"return";
+}

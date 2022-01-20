@@ -1,0 +1,51 @@
+digraph "" {
+    "r0 := @this: DrawTest"
+    "load.r r0"
+    "r0 := @this: DrawTest"->"load.r r0";
+    "new java.awt.BorderLayout"
+    "load.r r0"->"new java.awt.BorderLayout";
+    "dup1.r"
+    "new java.awt.BorderLayout"->"dup1.r";
+    "specialinvoke <java.awt.BorderLayout: void <init>()>"
+    "dup1.r"->"specialinvoke <java.awt.BorderLayout: void <init>()>";
+    "virtualinvoke <java.awt.Container: void setLayout(java.awt.LayoutManager)>"
+    "specialinvoke <java.awt.BorderLayout: void <init>()>"->"virtualinvoke <java.awt.Container: void setLayout(java.awt.LayoutManager)>";
+    "virtualinvoke <java.awt.Container: void setLayout(java.awt.LayoutManager)>"->"load.r r0";
+    "new DrawPanel"
+    "load.r r0"->"new DrawPanel";
+    "new DrawPanel"->"dup1.r";
+    "specialinvoke <DrawPanel: void <init>()>"
+    "dup1.r"->"specialinvoke <DrawPanel: void <init>()>";
+    "fieldput <DrawTest: DrawPanel panel>"
+    "specialinvoke <DrawPanel: void <init>()>"->"fieldput <DrawTest: DrawPanel panel>";
+    "fieldput <DrawTest: DrawPanel panel>"->"load.r r0";
+    "new DrawControls"
+    "load.r r0"->"new DrawControls";
+    "new DrawControls"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "fieldget <DrawTest: DrawPanel panel>"
+    "load.r r0"->"fieldget <DrawTest: DrawPanel panel>";
+    "specialinvoke <DrawControls: void <init>(DrawPanel)>"
+    "fieldget <DrawTest: DrawPanel panel>"->"specialinvoke <DrawControls: void <init>(DrawPanel)>";
+    "fieldput <DrawTest: DrawControls controls>"
+    "specialinvoke <DrawControls: void <init>(DrawPanel)>"->"fieldput <DrawTest: DrawControls controls>";
+    "fieldput <DrawTest: DrawControls controls>"->"load.r r0";
+    "push \"Center\""
+    "load.r r0"->"push \"Center\"";
+    "push \"Center\""->"load.r r0";
+    "load.r r0"->"fieldget <DrawTest: DrawPanel panel>";
+    "virtualinvoke <java.awt.Container: java.awt.Component add(java.lang.String,java.awt.Component)>"
+    "fieldget <DrawTest: DrawPanel panel>"->"virtualinvoke <java.awt.Container: java.awt.Component add(java.lang.String,java.awt.Component)>";
+    "pop"
+    "virtualinvoke <java.awt.Container: java.awt.Component add(java.lang.String,java.awt.Component)>"->"pop";
+    "pop"->"load.r r0";
+    "push \"North\""
+    "load.r r0"->"push \"North\"";
+    "push \"North\""->"load.r r0";
+    "fieldget <DrawTest: DrawControls controls>"
+    "load.r r0"->"fieldget <DrawTest: DrawControls controls>";
+    "fieldget <DrawTest: DrawControls controls>"->"virtualinvoke <java.awt.Container: java.awt.Component add(java.lang.String,java.awt.Component)>";
+    "virtualinvoke <java.awt.Container: java.awt.Component add(java.lang.String,java.awt.Component)>"->"pop";
+    "return"
+    "pop"->"return";
+}

@@ -1,0 +1,44 @@
+digraph "" {
+    "r0 := @this: RGBMixer"
+    "load.r r0"
+    "r0 := @this: RGBMixer"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "virtualinvoke <java.awt.Component: java.awt.Dimension size()>"
+    "load.r r0"->"virtualinvoke <java.awt.Component: java.awt.Dimension size()>";
+    "fieldget <java.awt.Dimension: int width>"
+    "virtualinvoke <java.awt.Component: java.awt.Dimension size()>"->"fieldget <java.awt.Dimension: int width>";
+    "fieldget <java.awt.Dimension: int width>"->"load.r r0";
+    "load.r r0"->"virtualinvoke <java.awt.Component: java.awt.Dimension size()>";
+    "fieldget <java.awt.Dimension: int height>"
+    "virtualinvoke <java.awt.Component: java.awt.Dimension size()>"->"fieldget <java.awt.Dimension: int height>";
+    "virtualinvoke <java.awt.Component: java.awt.Image createImage(int,int)>"
+    "fieldget <java.awt.Dimension: int height>"->"virtualinvoke <java.awt.Component: java.awt.Image createImage(int,int)>";
+    "fieldput <RGBMixer: java.awt.Image Buffer>"
+    "virtualinvoke <java.awt.Component: java.awt.Image createImage(int,int)>"->"fieldput <RGBMixer: java.awt.Image Buffer>";
+    "fieldput <RGBMixer: java.awt.Image Buffer>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "fieldget <RGBMixer: java.awt.Image Buffer>"
+    "load.r r0"->"fieldget <RGBMixer: java.awt.Image Buffer>";
+    "virtualinvoke <java.awt.Image: java.awt.Graphics getGraphics()>"
+    "fieldget <RGBMixer: java.awt.Image Buffer>"->"virtualinvoke <java.awt.Image: java.awt.Graphics getGraphics()>";
+    "fieldput <RGBMixer: java.awt.Graphics gBuffer>"
+    "virtualinvoke <java.awt.Image: java.awt.Graphics getGraphics()>"->"fieldput <RGBMixer: java.awt.Graphics gBuffer>";
+    "fieldput <RGBMixer: java.awt.Graphics gBuffer>"->"load.r r0";
+    "new java.net.URL"
+    "load.r r0"->"new java.net.URL";
+    "dup1.r"
+    "new java.net.URL"->"dup1.r";
+    "push \"http://www.programming.de/\""
+    "dup1.r"->"push \"http://www.programming.de/\"";
+    "specialinvoke <java.net.URL: void <init>(java.lang.String)>"
+    "push \"http://www.programming.de/\""->"specialinvoke <java.net.URL: void <init>(java.lang.String)>";
+    "fieldput <RGBMixer: java.net.URL url>"
+    "specialinvoke <java.net.URL: void <init>(java.lang.String)>"->"fieldput <RGBMixer: java.net.URL url>";
+    "goto return"
+    "fieldput <RGBMixer: java.net.URL url>"->"goto return";
+    "return"
+    "goto return"->"return";
+    "store.r r0"
+    "specialinvoke <java.net.URL: void <init>(java.lang.String)>"->"store.r r0";
+}

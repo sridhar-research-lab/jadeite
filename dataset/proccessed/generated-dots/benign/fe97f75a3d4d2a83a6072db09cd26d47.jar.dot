@@ -1,0 +1,151 @@
+digraph "" {
+    "r0 := @this: Clock"
+    "load.r r0"
+    "r0 := @this: Clock"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "virtualinvoke <java.applet.Applet: java.net.URL getCodeBase()>"
+    "load.r r0"->"virtualinvoke <java.applet.Applet: java.net.URL getCodeBase()>";
+    "fieldput <Clock: java.net.URL imageURL>"
+    "virtualinvoke <java.applet.Applet: java.net.URL getCodeBase()>"->"fieldput <Clock: java.net.URL imageURL>";
+    "fieldput <Clock: java.net.URL imageURL>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "push \"imageurl\""
+    "load.r r0"->"push \"imageurl\"";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"
+    "push \"imageurl\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "fieldput <Clock: java.lang.String str>"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"fieldput <Clock: java.lang.String str>";
+    "fieldput <Clock: java.lang.String str>"->"load.r r0";
+    "fieldget <Clock: java.lang.String str>"
+    "load.r r0"->"fieldget <Clock: java.lang.String str>";
+    "ifnull goto load.r r0"
+    "fieldget <Clock: java.lang.String str>"->"ifnull goto load.r r0";
+    "ifnull goto load.r r0"->"load.r r0";
+    "new java.net.URL"
+    "load.r r0"->"new java.net.URL";
+    "dup1.r"
+    "new java.net.URL"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "load.r r0"->"fieldget <Clock: java.lang.String str>";
+    "specialinvoke <java.net.URL: void <init>(java.lang.String)>"
+    "fieldget <Clock: java.lang.String str>"->"specialinvoke <java.net.URL: void <init>(java.lang.String)>";
+    "specialinvoke <java.net.URL: void <init>(java.lang.String)>"->"fieldput <Clock: java.net.URL imageURL>";
+    "goto load.r r0"
+    "fieldput <Clock: java.net.URL imageURL>"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "push 100"
+    "load.r r0"->"push 100";
+    "push 100"->"push 100";
+    "virtualinvoke <java.applet.Applet: void resize(int,int)>"
+    "push 100"->"virtualinvoke <java.applet.Applet: void resize(int,int)>";
+    "virtualinvoke <java.applet.Applet: void resize(int,int)>"->"load.r r0";
+    "new java.awt.MediaTracker"
+    "load.r r0"->"new java.awt.MediaTracker";
+    "new java.awt.MediaTracker"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "specialinvoke <java.awt.MediaTracker: void <init>(java.awt.Component)>"
+    "load.r r0"->"specialinvoke <java.awt.MediaTracker: void <init>(java.awt.Component)>";
+    "fieldput <Clock: java.awt.MediaTracker tracker1>"
+    "specialinvoke <java.awt.MediaTracker: void <init>(java.awt.Component)>"->"fieldput <Clock: java.awt.MediaTracker tracker1>";
+    "fieldput <Clock: java.awt.MediaTracker tracker1>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "fieldget <Clock: java.net.URL imageURL>"
+    "load.r r0"->"fieldget <Clock: java.net.URL imageURL>";
+    "push \"second.gif\""
+    "fieldget <Clock: java.net.URL imageURL>"->"push \"second.gif\"";
+    "virtualinvoke <java.applet.Applet: java.awt.Image getImage(java.net.URL,java.lang.String)>"
+    "push \"second.gif\""->"virtualinvoke <java.applet.Applet: java.awt.Image getImage(java.net.URL,java.lang.String)>";
+    "staticput <Clock: java.awt.Image candyimage>"
+    "virtualinvoke <java.applet.Applet: java.awt.Image getImage(java.net.URL,java.lang.String)>"->"staticput <Clock: java.awt.Image candyimage>";
+    "staticput <Clock: java.awt.Image candyimage>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <Clock: java.net.URL imageURL>";
+    "push \"clock.gif\""
+    "fieldget <Clock: java.net.URL imageURL>"->"push \"clock.gif\"";
+    "push \"clock.gif\""->"virtualinvoke <java.applet.Applet: java.awt.Image getImage(java.net.URL,java.lang.String)>";
+    "fieldput <Clock: java.awt.Image face>"
+    "virtualinvoke <java.applet.Applet: java.awt.Image getImage(java.net.URL,java.lang.String)>"->"fieldput <Clock: java.awt.Image face>";
+    "fieldput <Clock: java.awt.Image face>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <Clock: java.net.URL imageURL>";
+    "push \"minute.gif\""
+    "fieldget <Clock: java.net.URL imageURL>"->"push \"minute.gif\"";
+    "push \"minute.gif\""->"virtualinvoke <java.applet.Applet: java.awt.Image getImage(java.net.URL,java.lang.String)>";
+    "staticput <Clock: java.awt.Image minImage>"
+    "virtualinvoke <java.applet.Applet: java.awt.Image getImage(java.net.URL,java.lang.String)>"->"staticput <Clock: java.awt.Image minImage>";
+    "staticput <Clock: java.awt.Image minImage>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <Clock: java.net.URL imageURL>";
+    "push \"hour.gif\""
+    "fieldget <Clock: java.net.URL imageURL>"->"push \"hour.gif\"";
+    "push \"hour.gif\""->"virtualinvoke <java.applet.Applet: java.awt.Image getImage(java.net.URL,java.lang.String)>";
+    "staticput <Clock: java.awt.Image hImage>"
+    "virtualinvoke <java.applet.Applet: java.awt.Image getImage(java.net.URL,java.lang.String)>"->"staticput <Clock: java.awt.Image hImage>";
+    "staticput <Clock: java.awt.Image hImage>"->"load.r r0";
+    "fieldget <Clock: java.awt.MediaTracker tracker1>"
+    "load.r r0"->"fieldget <Clock: java.awt.MediaTracker tracker1>";
+    "staticget <Clock: java.awt.Image candyimage>"
+    "fieldget <Clock: java.awt.MediaTracker tracker1>"->"staticget <Clock: java.awt.Image candyimage>";
+    "push 0"
+    "staticget <Clock: java.awt.Image candyimage>"->"push 0";
+    "virtualinvoke <java.awt.MediaTracker: void addImage(java.awt.Image,int)>"
+    "push 0"->"virtualinvoke <java.awt.MediaTracker: void addImage(java.awt.Image,int)>";
+    "virtualinvoke <java.awt.MediaTracker: void addImage(java.awt.Image,int)>"->"load.r r0";
+    "load.r r0"->"fieldget <Clock: java.awt.MediaTracker tracker1>";
+    "fieldget <Clock: java.awt.MediaTracker tracker1>"->"load.r r0";
+    "fieldget <Clock: java.awt.Image face>"
+    "load.r r0"->"fieldget <Clock: java.awt.Image face>";
+    "push 1"
+    "fieldget <Clock: java.awt.Image face>"->"push 1";
+    "push 1"->"virtualinvoke <java.awt.MediaTracker: void addImage(java.awt.Image,int)>";
+    "virtualinvoke <java.awt.MediaTracker: void addImage(java.awt.Image,int)>"->"load.r r0";
+    "load.r r0"->"fieldget <Clock: java.awt.MediaTracker tracker1>";
+    "staticget <Clock: java.awt.Image minImage>"
+    "fieldget <Clock: java.awt.MediaTracker tracker1>"->"staticget <Clock: java.awt.Image minImage>";
+    "push 3"
+    "staticget <Clock: java.awt.Image minImage>"->"push 3";
+    "push 3"->"virtualinvoke <java.awt.MediaTracker: void addImage(java.awt.Image,int)>";
+    "virtualinvoke <java.awt.MediaTracker: void addImage(java.awt.Image,int)>"->"load.r r0";
+    "load.r r0"->"fieldget <Clock: java.awt.MediaTracker tracker1>";
+    "staticget <Clock: java.awt.Image hImage>"
+    "fieldget <Clock: java.awt.MediaTracker tracker1>"->"staticget <Clock: java.awt.Image hImage>";
+    "push 2"
+    "staticget <Clock: java.awt.Image hImage>"->"push 2";
+    "push 2"->"virtualinvoke <java.awt.MediaTracker: void addImage(java.awt.Image,int)>";
+    "virtualinvoke <java.awt.MediaTracker: void addImage(java.awt.Image,int)>"->"load.r r0";
+    "new MinuteThread"
+    "load.r r0"->"new MinuteThread";
+    "new MinuteThread"->"dup1.r";
+    "push \"mins\""
+    "dup1.r"->"push \"mins\"";
+    "push \"mins\""->"load.r r0";
+    "specialinvoke <MinuteThread: void <init>(java.lang.String,Clock)>"
+    "load.r r0"->"specialinvoke <MinuteThread: void <init>(java.lang.String,Clock)>";
+    "fieldput <Clock: MinuteThread mThread>"
+    "specialinvoke <MinuteThread: void <init>(java.lang.String,Clock)>"->"fieldput <Clock: MinuteThread mThread>";
+    "fieldput <Clock: MinuteThread mThread>"->"load.r r0";
+    "fieldget <Clock: MinuteThread mThread>"
+    "load.r r0"->"fieldget <Clock: MinuteThread mThread>";
+    "virtualinvoke <java.lang.Thread: void start()>"
+    "fieldget <Clock: MinuteThread mThread>"->"virtualinvoke <java.lang.Thread: void start()>";
+    "virtualinvoke <java.lang.Thread: void start()>"->"load.r r0";
+    "new HourThread"
+    "load.r r0"->"new HourThread";
+    "new HourThread"->"dup1.r";
+    "push \"hours\""
+    "dup1.r"->"push \"hours\"";
+    "push \"hours\""->"load.r r0";
+    "specialinvoke <HourThread: void <init>(java.lang.String,Clock)>"
+    "load.r r0"->"specialinvoke <HourThread: void <init>(java.lang.String,Clock)>";
+    "fieldput <Clock: HourThread hThread>"
+    "specialinvoke <HourThread: void <init>(java.lang.String,Clock)>"->"fieldput <Clock: HourThread hThread>";
+    "fieldput <Clock: HourThread hThread>"->"load.r r0";
+    "fieldget <Clock: HourThread hThread>"
+    "load.r r0"->"fieldget <Clock: HourThread hThread>";
+    "fieldget <Clock: HourThread hThread>"->"virtualinvoke <java.lang.Thread: void start()>";
+    "return"
+    "virtualinvoke <java.lang.Thread: void start()>"->"return";
+    "store.r $r28"
+    "specialinvoke <java.net.URL: void <init>(java.lang.String)>"->"store.r $r28";
+}

@@ -1,0 +1,67 @@
+digraph "" {
+    "r0 := @this: Client"
+    "load.r r0"
+    "r0 := @this: Client"->"load.r r0";
+    "fieldget <Client: java.lang.String b>"
+    "load.r r0"->"fieldget <Client: java.lang.String b>";
+    "fieldget <Client: java.lang.String b>"->"load.r r0";
+    "fieldget <Client: java.lang.String c>"
+    "load.r r0"->"fieldget <Client: java.lang.String c>";
+    "ifcmpne.r load.r r0"
+    "fieldget <Client: java.lang.String c>"->"ifcmpne.r load.r r0";
+    "new java.lang.StringBuilder"
+    "ifcmpne.r load.r r0"->"new java.lang.StringBuilder";
+    "dup1.r"
+    "new java.lang.StringBuilder"->"dup1.r";
+    "specialinvoke <java.lang.StringBuilder: void <init>()>"
+    "dup1.r"->"specialinvoke <java.lang.StringBuilder: void <init>()>";
+    "specialinvoke <java.lang.StringBuilder: void <init>()>"->"load.r r0";
+    "load.r r0"->"fieldget <Client: java.lang.String b>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"
+    "fieldget <Client: java.lang.String b>"->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "push 1"
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"push 1";
+    "staticinvoke <I.I: java.lang.String I(int)>"
+    "push 1"->"staticinvoke <I.I: java.lang.String I(int)>";
+    "staticinvoke <I.I: java.lang.String I(int)>"->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.String toString()>"
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"virtualinvoke <java.lang.StringBuilder: java.lang.String toString()>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.String toString()>"->"new java.lang.StringBuilder";
+    "new java.lang.StringBuilder"->"dup1.r";
+    "dup1.r"->"specialinvoke <java.lang.StringBuilder: void <init>()>";
+    "specialinvoke <java.lang.StringBuilder: void <init>()>"->"load.r r0";
+    "load.r r0"->"fieldget <Client: java.lang.String c>";
+    "fieldget <Client: java.lang.String c>"->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"push 1";
+    "push 1"->"staticinvoke <I.I: java.lang.String I(int)>";
+    "staticinvoke <I.I: java.lang.String I(int)>"->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"virtualinvoke <java.lang.StringBuilder: java.lang.String toString()>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.String toString()>"->"ifcmpne.r load.r r0";
+    "ifcmpne.r load.r r0"->"load.r r0";
+    "push 4"
+    "load.r r0"->"push 4";
+    "push 4"->"staticinvoke <I.I: java.lang.String I(int)>";
+    "fieldput <Client: java.lang.String b>"
+    "staticinvoke <I.I: java.lang.String I(int)>"->"fieldput <Client: java.lang.String b>";
+    "fieldput <Client: java.lang.String b>"->"load.r r0";
+    "push 6"
+    "load.r r0"->"push 6";
+    "push 6"->"staticinvoke <I.I: java.lang.String I(int)>";
+    "fieldput <Client: java.lang.String c>"
+    "staticinvoke <I.I: java.lang.String I(int)>"->"fieldput <Client: java.lang.String c>";
+    "fieldput <Client: java.lang.String c>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <Client: java.lang.String c>";
+    "fieldget <Client: java.lang.String c>"->"fieldput <Client: java.lang.String b>";
+    "fieldput <Client: java.lang.String b>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "push 8"
+    "load.r r0"->"push 8";
+    "push 8"->"staticinvoke <I.I: java.lang.String I(int)>";
+    "virtualinvoke <Client: java.lang.String getParameter(java.lang.String)>"
+    "staticinvoke <I.I: java.lang.String I(int)>"->"virtualinvoke <Client: java.lang.String getParameter(java.lang.String)>";
+    "fieldput <Client: java.lang.String a>"
+    "virtualinvoke <Client: java.lang.String getParameter(java.lang.String)>"->"fieldput <Client: java.lang.String a>";
+    "return"
+    "fieldput <Client: java.lang.String a>"->"return";
+}

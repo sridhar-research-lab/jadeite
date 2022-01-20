@@ -1,0 +1,107 @@
+digraph "" {
+    "r0 := @this: baseApplet"
+    "load.r r0"
+    "r0 := @this: baseApplet"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "push \"backgroundColor\""
+    "load.r r0"->"push \"backgroundColor\"";
+    "staticget <java.awt.Color: java.awt.Color white>"
+    "push \"backgroundColor\""->"staticget <java.awt.Color: java.awt.Color white>";
+    "virtualinvoke <baseApplet: java.awt.Color getParameterColor(java.lang.String,java.awt.Color)>"
+    "staticget <java.awt.Color: java.awt.Color white>"->"virtualinvoke <baseApplet: java.awt.Color getParameterColor(java.lang.String,java.awt.Color)>";
+    "fieldput <baseApplet: java.awt.Color backgroundColor>"
+    "virtualinvoke <baseApplet: java.awt.Color getParameterColor(java.lang.String,java.awt.Color)>"->"fieldput <baseApplet: java.awt.Color backgroundColor>";
+    "fieldput <baseApplet: java.awt.Color backgroundColor>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "push \"foregroundColor\""
+    "load.r r0"->"push \"foregroundColor\"";
+    "staticget <java.awt.Color: java.awt.Color black>"
+    "push \"foregroundColor\""->"staticget <java.awt.Color: java.awt.Color black>";
+    "staticget <java.awt.Color: java.awt.Color black>"->"virtualinvoke <baseApplet: java.awt.Color getParameterColor(java.lang.String,java.awt.Color)>";
+    "fieldput <baseApplet: java.awt.Color foregroundColor>"
+    "virtualinvoke <baseApplet: java.awt.Color getParameterColor(java.lang.String,java.awt.Color)>"->"fieldput <baseApplet: java.awt.Color foregroundColor>";
+    "fieldput <baseApplet: java.awt.Color foregroundColor>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "push \"appletFontSize\""
+    "load.r r0"->"push \"appletFontSize\"";
+    "push 12"
+    "push \"appletFontSize\""->"push 12";
+    "virtualinvoke <baseApplet: int getParameterInt(java.lang.String,int)>"
+    "push 12"->"virtualinvoke <baseApplet: int getParameterInt(java.lang.String,int)>";
+    "fieldput <baseApplet: int appletFontSize>"
+    "virtualinvoke <baseApplet: int getParameterInt(java.lang.String,int)>"->"fieldput <baseApplet: int appletFontSize>";
+    "fieldput <baseApplet: int appletFontSize>"->"load.r r0";
+    "push \"engine\""
+    "load.r r0"->"push \"engine\"";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"
+    "push \"engine\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "ifnull load.r r0"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r r0";
+    "virtualinvoke <baseApplet: void getEngineParms()>"
+    "load.r r0"->"virtualinvoke <baseApplet: void getEngineParms()>";
+    "goto load.r r0"
+    "virtualinvoke <baseApplet: void getEngineParms()>"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "new java.awt.Font"
+    "load.r r0"->"new java.awt.Font";
+    "dup1.r"
+    "new java.awt.Font"->"dup1.r";
+    "push \"Dialog\""
+    "dup1.r"->"push \"Dialog\"";
+    "push 0"
+    "push \"Dialog\""->"push 0";
+    "push 0"->"load.r r0";
+    "fieldget <baseApplet: int appletFontSize>"
+    "load.r r0"->"fieldget <baseApplet: int appletFontSize>";
+    "specialinvoke <java.awt.Font: void <init>(java.lang.String,int,int)>"
+    "fieldget <baseApplet: int appletFontSize>"->"specialinvoke <java.awt.Font: void <init>(java.lang.String,int,int)>";
+    "virtualinvoke <java.awt.Component: void setFont(java.awt.Font)>"
+    "specialinvoke <java.awt.Font: void <init>(java.lang.String,int,int)>"->"virtualinvoke <java.awt.Component: void setFont(java.awt.Font)>";
+    "virtualinvoke <java.awt.Component: void setFont(java.awt.Font)>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "fieldget <baseApplet: java.awt.Color backgroundColor>"
+    "load.r r0"->"fieldget <baseApplet: java.awt.Color backgroundColor>";
+    "virtualinvoke <java.awt.Component: void setBackground(java.awt.Color)>"
+    "fieldget <baseApplet: java.awt.Color backgroundColor>"->"virtualinvoke <java.awt.Component: void setBackground(java.awt.Color)>";
+    "virtualinvoke <java.awt.Component: void setBackground(java.awt.Color)>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "virtualinvoke <java.awt.Component: java.awt.Dimension getSize()>"
+    "load.r r0"->"virtualinvoke <java.awt.Component: java.awt.Dimension getSize()>";
+    "fieldget <java.awt.Dimension: int height>"
+    "virtualinvoke <java.awt.Component: java.awt.Dimension getSize()>"->"fieldget <java.awt.Dimension: int height>";
+    "fieldput <baseApplet: int height>"
+    "fieldget <java.awt.Dimension: int height>"->"fieldput <baseApplet: int height>";
+    "fieldput <baseApplet: int height>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"virtualinvoke <java.awt.Component: java.awt.Dimension getSize()>";
+    "fieldget <java.awt.Dimension: int width>"
+    "virtualinvoke <java.awt.Component: java.awt.Dimension getSize()>"->"fieldget <java.awt.Dimension: int width>";
+    "fieldput <baseApplet: int width>"
+    "fieldget <java.awt.Dimension: int width>"->"fieldput <baseApplet: int width>";
+    "fieldput <baseApplet: int width>"->"load.r r0";
+    "specialinvoke <baseApplet: void checkImagePreloads()>"
+    "load.r r0"->"specialinvoke <baseApplet: void checkImagePreloads()>";
+    "return"
+    "specialinvoke <baseApplet: void checkImagePreloads()>"->"return";
+    "ifnull load.r r0"->"load.r r0";
+    "push 1"
+    "load.r r0"->"push 1";
+    "newarray"
+    "push 1"->"newarray";
+    "fieldput <baseApplet: java.lang.String[] engineParms>"
+    "newarray"->"fieldput <baseApplet: java.lang.String[] engineParms>";
+    "fieldput <baseApplet: java.lang.String[] engineParms>"->"load.r r0";
+    "fieldget <baseApplet: java.lang.String[] engineParms>"
+    "load.r r0"->"fieldget <baseApplet: java.lang.String[] engineParms>";
+    "fieldget <baseApplet: java.lang.String[] engineParms>"->"push 0";
+    "new java.lang.String"
+    "push 0"->"new java.lang.String";
+    "new java.lang.String"->"dup1.r";
+    "push \"  \""
+    "dup1.r"->"push \"  \"";
+    "specialinvoke <java.lang.String: void <init>(java.lang.String)>"
+    "push \"  \""->"specialinvoke <java.lang.String: void <init>(java.lang.String)>";
+    "arraywrite.r"
+    "specialinvoke <java.lang.String: void <init>(java.lang.String)>"->"arraywrite.r";
+}

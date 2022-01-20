@@ -1,0 +1,262 @@
+digraph "" {
+    "r0 := @this: com.chess.applet.ChessApplet"
+    "load.r r0"
+    "r0 := @this: com.chess.applet.ChessApplet"->"load.r r0";
+    "specialinvoke <javax.swing.JApplet: void init()>"
+    "load.r r0"->"specialinvoke <javax.swing.JApplet: void init()>";
+    "staticinvoke <javax.swing.UIManager: java.lang.String getSystemLookAndFeelClassName()>"
+    "specialinvoke <javax.swing.JApplet: void init()>"->"staticinvoke <javax.swing.UIManager: java.lang.String getSystemLookAndFeelClassName()>";
+    "staticinvoke <javax.swing.UIManager: void setLookAndFeel(java.lang.String)>"
+    "staticinvoke <javax.swing.UIManager: java.lang.String getSystemLookAndFeelClassName()>"->"staticinvoke <javax.swing.UIManager: void setLookAndFeel(java.lang.String)>";
+    "goto load.r r0"
+    "staticinvoke <javax.swing.UIManager: void setLookAndFeel(java.lang.String)>"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "push \"logging\""
+    "load.r r0"->"push \"logging\"";
+    "virtualinvoke <com.chess.applet.ChessApplet: java.lang.String getParameter(java.lang.String)>"
+    "push \"logging\""->"virtualinvoke <com.chess.applet.ChessApplet: java.lang.String getParameter(java.lang.String)>";
+    "store.r i0"
+    "virtualinvoke <com.chess.applet.ChessApplet: java.lang.String getParameter(java.lang.String)>"->"store.r i0";
+    "load.r i0"
+    "store.r i0"->"load.r i0";
+    "ifnull load.r r0"
+    "load.r i0"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r i0";
+    "push \"\""
+    "load.r i0"->"push \"\"";
+    "virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>"
+    "push \"\""->"virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>";
+    "ifne load.r r0"
+    "virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>"->"ifne load.r r0";
+    "push class \"Lorg/apache/log4j/Level;\""
+    "ifne load.r r0"->"push class \"Lorg/apache/log4j/Level;\"";
+    "push class \"Lorg/apache/log4j/Level;\""->"load.r i0";
+    "virtualinvoke <java.lang.String: java.lang.String toUpperCase()>"
+    "load.r i0"->"virtualinvoke <java.lang.String: java.lang.String toUpperCase()>";
+    "virtualinvoke <java.lang.Class: java.lang.reflect.Field getField(java.lang.String)>"
+    "virtualinvoke <java.lang.String: java.lang.String toUpperCase()>"->"virtualinvoke <java.lang.Class: java.lang.reflect.Field getField(java.lang.String)>";
+    "push null"
+    "virtualinvoke <java.lang.Class: java.lang.reflect.Field getField(java.lang.String)>"->"push null";
+    "virtualinvoke <java.lang.reflect.Field: java.lang.Object get(java.lang.Object)>"
+    "push null"->"virtualinvoke <java.lang.reflect.Field: java.lang.Object get(java.lang.Object)>";
+    "checkcast"
+    "virtualinvoke <java.lang.reflect.Field: java.lang.Object get(java.lang.Object)>"->"checkcast";
+    "staticinvoke <com.chess.util.Util: void setLoggingLevel(org.apache.log4j.Level)>"
+    "checkcast"->"staticinvoke <com.chess.util.Util: void setLoggingLevel(org.apache.log4j.Level)>";
+    "staticinvoke <com.chess.util.Util: void setLoggingLevel(org.apache.log4j.Level)>"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "specialinvoke <com.chess.applet.ChessApplet: void loadVersions()>"
+    "load.r r0"->"specialinvoke <com.chess.applet.ChessApplet: void loadVersions()>";
+    "specialinvoke <com.chess.applet.ChessApplet: void loadVersions()>"->"load.r r0";
+    "fieldget <com.chess.applet.ChessApplet: org.apache.log4j.Logger logger>"
+    "load.r r0"->"fieldget <com.chess.applet.ChessApplet: org.apache.log4j.Logger logger>";
+    "new java.lang.StringBuilder"
+    "fieldget <com.chess.applet.ChessApplet: org.apache.log4j.Logger logger>"->"new java.lang.StringBuilder";
+    "dup1.r"
+    "new java.lang.StringBuilder"->"dup1.r";
+    "specialinvoke <java.lang.StringBuilder: void <init>()>"
+    "dup1.r"->"specialinvoke <java.lang.StringBuilder: void <init>()>";
+    "push \"Version: \""
+    "specialinvoke <java.lang.StringBuilder: void <init>()>"->"push \"Version: \"";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"
+    "push \"Version: \""->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"load.r r0";
+    "fieldget <com.chess.applet.ChessApplet: java.lang.String version>"
+    "load.r r0"->"fieldget <com.chess.applet.ChessApplet: java.lang.String version>";
+    "fieldget <com.chess.applet.ChessApplet: java.lang.String version>"->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.String toString()>"
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"virtualinvoke <java.lang.StringBuilder: java.lang.String toString()>";
+    "virtualinvoke <org.apache.log4j.Logger: void info(java.lang.Object)>"
+    "virtualinvoke <java.lang.StringBuilder: java.lang.String toString()>"->"virtualinvoke <org.apache.log4j.Logger: void info(java.lang.Object)>";
+    "virtualinvoke <org.apache.log4j.Logger: void info(java.lang.Object)>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "virtualinvoke <com.chess.applet.ChessApplet: java.awt.Container getContentPane()>"
+    "load.r r0"->"virtualinvoke <com.chess.applet.ChessApplet: java.awt.Container getContentPane()>";
+    "fieldput <com.chess.applet.ChessApplet: java.awt.Container contentPane>"
+    "virtualinvoke <com.chess.applet.ChessApplet: java.awt.Container getContentPane()>"->"fieldput <com.chess.applet.ChessApplet: java.awt.Container contentPane>";
+    "fieldput <com.chess.applet.ChessApplet: java.awt.Container contentPane>"->"load.r r0";
+    "fieldget <com.chess.applet.ChessApplet: java.awt.Container contentPane>"
+    "load.r r0"->"fieldget <com.chess.applet.ChessApplet: java.awt.Container contentPane>";
+    "new java.awt.Color"
+    "fieldget <com.chess.applet.ChessApplet: java.awt.Container contentPane>"->"new java.awt.Color";
+    "new java.awt.Color"->"dup1.r";
+    "push 255"
+    "dup1.r"->"push 255";
+    "push 255"->"push 255";
+    "push 255"->"push 255";
+    "specialinvoke <java.awt.Color: void <init>(int,int,int)>"
+    "push 255"->"specialinvoke <java.awt.Color: void <init>(int,int,int)>";
+    "virtualinvoke <java.awt.Container: void setBackground(java.awt.Color)>"
+    "specialinvoke <java.awt.Color: void <init>(int,int,int)>"->"virtualinvoke <java.awt.Container: void setBackground(java.awt.Color)>";
+    "virtualinvoke <java.awt.Container: void setBackground(java.awt.Color)>"->"load.r r0";
+    "new java.awt.CardLayout"
+    "load.r r0"->"new java.awt.CardLayout";
+    "new java.awt.CardLayout"->"dup1.r";
+    "specialinvoke <java.awt.CardLayout: void <init>()>"
+    "dup1.r"->"specialinvoke <java.awt.CardLayout: void <init>()>";
+    "fieldput <com.chess.applet.ChessApplet: java.awt.CardLayout cards>"
+    "specialinvoke <java.awt.CardLayout: void <init>()>"->"fieldput <com.chess.applet.ChessApplet: java.awt.CardLayout cards>";
+    "fieldput <com.chess.applet.ChessApplet: java.awt.CardLayout cards>"->"load.r r0";
+    "load.r r0"->"fieldget <com.chess.applet.ChessApplet: java.awt.Container contentPane>";
+    "fieldget <com.chess.applet.ChessApplet: java.awt.Container contentPane>"->"load.r r0";
+    "fieldget <com.chess.applet.ChessApplet: java.awt.CardLayout cards>"
+    "load.r r0"->"fieldget <com.chess.applet.ChessApplet: java.awt.CardLayout cards>";
+    "virtualinvoke <java.awt.Container: void setLayout(java.awt.LayoutManager)>"
+    "fieldget <com.chess.applet.ChessApplet: java.awt.CardLayout cards>"->"virtualinvoke <java.awt.Container: void setLayout(java.awt.LayoutManager)>";
+    "new javax.swing.JPanel"
+    "virtualinvoke <java.awt.Container: void setLayout(java.awt.LayoutManager)>"->"new javax.swing.JPanel";
+    "store.r $r12"
+    "new javax.swing.JPanel"->"store.r $r12";
+    "load.r $r12"
+    "store.r $r12"->"load.r $r12";
+    "load.r $r12"->"push null";
+    "specialinvoke <javax.swing.JPanel: void <init>(java.awt.LayoutManager)>"
+    "push null"->"specialinvoke <javax.swing.JPanel: void <init>(java.awt.LayoutManager)>";
+    "specialinvoke <javax.swing.JPanel: void <init>(java.awt.LayoutManager)>"->"load.r r0";
+    "new javax.swing.JLabel"
+    "load.r r0"->"new javax.swing.JLabel";
+    "new javax.swing.JLabel"->"dup1.r";
+    "new javax.swing.ImageIcon"
+    "dup1.r"->"new javax.swing.ImageIcon";
+    "new javax.swing.ImageIcon"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "virtualinvoke <java.lang.Object: java.lang.Class getClass()>"
+    "load.r r0"->"virtualinvoke <java.lang.Object: java.lang.Class getClass()>";
+    "push \"/load.png\""
+    "virtualinvoke <java.lang.Object: java.lang.Class getClass()>"->"push \"/load.png\"";
+    "virtualinvoke <java.lang.Class: java.net.URL getResource(java.lang.String)>"
+    "push \"/load.png\""->"virtualinvoke <java.lang.Class: java.net.URL getResource(java.lang.String)>";
+    "specialinvoke <javax.swing.ImageIcon: void <init>(java.net.URL)>"
+    "virtualinvoke <java.lang.Class: java.net.URL getResource(java.lang.String)>"->"specialinvoke <javax.swing.ImageIcon: void <init>(java.net.URL)>";
+    "specialinvoke <javax.swing.JLabel: void <init>(javax.swing.Icon)>"
+    "specialinvoke <javax.swing.ImageIcon: void <init>(java.net.URL)>"->"specialinvoke <javax.swing.JLabel: void <init>(javax.swing.Icon)>";
+    "fieldput <com.chess.applet.ChessApplet: javax.swing.JLabel downloadImageLabel>"
+    "specialinvoke <javax.swing.JLabel: void <init>(javax.swing.Icon)>"->"fieldput <com.chess.applet.ChessApplet: javax.swing.JLabel downloadImageLabel>";
+    "fieldput <com.chess.applet.ChessApplet: javax.swing.JLabel downloadImageLabel>"->"load.r $r12";
+    "staticget <java.awt.Color: java.awt.Color white>"
+    "load.r $r12"->"staticget <java.awt.Color: java.awt.Color white>";
+    "virtualinvoke <javax.swing.JPanel: void setBackground(java.awt.Color)>"
+    "staticget <java.awt.Color: java.awt.Color white>"->"virtualinvoke <javax.swing.JPanel: void setBackground(java.awt.Color)>";
+    "virtualinvoke <javax.swing.JPanel: void setBackground(java.awt.Color)>"->"load.r $r12";
+    "load.r $r12"->"load.r r0";
+    "fieldget <com.chess.applet.ChessApplet: javax.swing.JLabel downloadImageLabel>"
+    "load.r r0"->"fieldget <com.chess.applet.ChessApplet: javax.swing.JLabel downloadImageLabel>";
+    "virtualinvoke <javax.swing.JPanel: java.awt.Component add(java.awt.Component)>"
+    "fieldget <com.chess.applet.ChessApplet: javax.swing.JLabel downloadImageLabel>"->"virtualinvoke <javax.swing.JPanel: java.awt.Component add(java.awt.Component)>";
+    "pop"
+    "virtualinvoke <javax.swing.JPanel: java.awt.Component add(java.awt.Component)>"->"pop";
+    "pop"->"load.r r0";
+    "load.r r0"->"fieldget <com.chess.applet.ChessApplet: javax.swing.JLabel downloadImageLabel>";
+    "virtualinvoke <javax.swing.JLabel: javax.swing.Icon getIcon()>"
+    "fieldget <com.chess.applet.ChessApplet: javax.swing.JLabel downloadImageLabel>"->"virtualinvoke <javax.swing.JLabel: javax.swing.Icon getIcon()>";
+    "interfaceinvoke <javax.swing.Icon: int getIconHeight()> 0"
+    "virtualinvoke <javax.swing.JLabel: javax.swing.Icon getIcon()>"->"interfaceinvoke <javax.swing.Icon: int getIconHeight()> 0";
+    "push 4"
+    "interfaceinvoke <javax.swing.Icon: int getIconHeight()> 0"->"push 4";
+    "sub.i"
+    "push 4"->"sub.i";
+    "i2d"
+    "sub.i"->"i2d";
+    "push 1.0625"
+    "i2d"->"push 1.0625";
+    "mul.d"
+    "push 1.0625"->"mul.d";
+    "push 4.0"
+    "mul.d"->"push 4.0";
+    "add.d"
+    "push 4.0"->"add.d";
+    "d2i"
+    "add.d"->"d2i";
+    "store.i i0"
+    "d2i"->"store.i i0";
+    "store.i i0"->"load.r r0";
+    "load.r r0"->"fieldget <com.chess.applet.ChessApplet: javax.swing.JLabel downloadImageLabel>";
+    "push 0"
+    "fieldget <com.chess.applet.ChessApplet: javax.swing.JLabel downloadImageLabel>"->"push 0";
+    "push 6"
+    "push 0"->"push 6";
+    "push 6"->"load.r r0";
+    "load.r r0"->"fieldget <com.chess.applet.ChessApplet: javax.swing.JLabel downloadImageLabel>";
+    "fieldget <com.chess.applet.ChessApplet: javax.swing.JLabel downloadImageLabel>"->"virtualinvoke <javax.swing.JLabel: javax.swing.Icon getIcon()>";
+    "interfaceinvoke <javax.swing.Icon: int getIconWidth()> 0"
+    "virtualinvoke <javax.swing.JLabel: javax.swing.Icon getIcon()>"->"interfaceinvoke <javax.swing.Icon: int getIconWidth()> 0";
+    "load.i i0"
+    "interfaceinvoke <javax.swing.Icon: int getIconWidth()> 0"->"load.i i0";
+    "virtualinvoke <javax.swing.JLabel: void setBounds(int,int,int,int)>"
+    "load.i i0"->"virtualinvoke <javax.swing.JLabel: void setBounds(int,int,int,int)>";
+    "virtualinvoke <javax.swing.JLabel: void setBounds(int,int,int,int)>"->"load.r r0";
+    "load.r r0"->"fieldget <com.chess.applet.ChessApplet: java.awt.Container contentPane>";
+    "fieldget <com.chess.applet.ChessApplet: java.awt.Container contentPane>"->"load.r $r12";
+    "push \"download_panel\""
+    "load.r $r12"->"push \"download_panel\"";
+    "virtualinvoke <java.awt.Container: void add(java.awt.Component,java.lang.Object)>"
+    "push \"download_panel\""->"virtualinvoke <java.awt.Container: void add(java.awt.Component,java.lang.Object)>";
+    "virtualinvoke <java.awt.Container: void add(java.awt.Component,java.lang.Object)>"->"load.r r0";
+    "load.r r0"->"fieldget <com.chess.applet.ChessApplet: java.awt.CardLayout cards>";
+    "fieldget <com.chess.applet.ChessApplet: java.awt.CardLayout cards>"->"load.r r0";
+    "load.r r0"->"fieldget <com.chess.applet.ChessApplet: java.awt.Container contentPane>";
+    "virtualinvoke <java.awt.CardLayout: void first(java.awt.Container)>"
+    "fieldget <com.chess.applet.ChessApplet: java.awt.Container contentPane>"->"virtualinvoke <java.awt.CardLayout: void first(java.awt.Container)>";
+    "virtualinvoke <java.awt.CardLayout: void first(java.awt.Container)>"->"push null";
+    "push null"->"store.r i0";
+    "store.r i0"->"store.r $r12";
+    "new com.chess.applet.downloader.DownloadWorkerJava5"
+    "store.r $r12"->"new com.chess.applet.downloader.DownloadWorkerJava5";
+    "new com.chess.applet.downloader.DownloadWorkerJava5"->"store.r $r12";
+    "store.r $r12"->"load.r $r12";
+    "load.r $r12"->"load.r r0";
+    "specialinvoke <com.chess.applet.downloader.DownloadWorkerJava5: void <init>(com.chess.applet.downloader.DownloadAgent)>"
+    "load.r r0"->"specialinvoke <com.chess.applet.downloader.DownloadWorkerJava5: void <init>(com.chess.applet.downloader.DownloadAgent)>";
+    "specialinvoke <com.chess.applet.downloader.DownloadWorkerJava5: void <init>(com.chess.applet.downloader.DownloadAgent)>"->"load.r $r12";
+    "interfaceinvoke <com.chess.applet.ChessApplet$Worker: void execute()> 0"
+    "load.r $r12"->"interfaceinvoke <com.chess.applet.ChessApplet$Worker: void execute()> 0";
+    "goto return"
+    "interfaceinvoke <com.chess.applet.ChessApplet$Worker: void execute()> 0"->"goto return";
+    "return"
+    "goto return"->"return";
+    "store.r r0"
+    "specialinvoke <com.chess.applet.downloader.DownloadWorkerJava5: void <init>(com.chess.applet.downloader.DownloadAgent)>"->"store.r r0";
+    "store.r r0"->"load.r i0";
+    "load.r i0"->"interfaceinvoke <com.chess.applet.ChessApplet$Worker: void execute()> 0";
+    "interfaceinvoke <com.chess.applet.ChessApplet$Worker: void execute()> 0"->"load.r r0";
+    "athrow"
+    "load.r r0"->"athrow";
+    "push \"com.chess.applet.downloader.DownloadWorker\""
+    "store.r i0"->"push \"com.chess.applet.downloader.DownloadWorker\"";
+    "staticinvoke <java.lang.Class: java.lang.Class forName(java.lang.String)>"
+    "push \"com.chess.applet.downloader.DownloadWorker\""->"staticinvoke <java.lang.Class: java.lang.Class forName(java.lang.String)>";
+    "push 1"
+    "staticinvoke <java.lang.Class: java.lang.Class forName(java.lang.String)>"->"push 1";
+    "newarray"
+    "push 1"->"newarray";
+    "newarray"->"dup1.r";
+    "dup1.r"->"push 0";
+    "push class \"Lcom/chess/applet/downloader/DownloadAgent;\""
+    "push 0"->"push class \"Lcom/chess/applet/downloader/DownloadAgent;\"";
+    "arraywrite.r"
+    "push class \"Lcom/chess/applet/downloader/DownloadAgent;\""->"arraywrite.r";
+    "virtualinvoke <java.lang.Class: java.lang.reflect.Constructor getConstructor(java.lang.Class[])>"
+    "arraywrite.r"->"virtualinvoke <java.lang.Class: java.lang.reflect.Constructor getConstructor(java.lang.Class[])>";
+    "virtualinvoke <java.lang.Class: java.lang.reflect.Constructor getConstructor(java.lang.Class[])>"->"push 1";
+    "push 1"->"newarray";
+    "newarray"->"dup1.r";
+    "dup1.r"->"push 0";
+    "push 0"->"load.r r0";
+    "load.r r0"->"arraywrite.r";
+    "virtualinvoke <java.lang.reflect.Constructor: java.lang.Object newInstance(java.lang.Object[])>"
+    "arraywrite.r"->"virtualinvoke <java.lang.reflect.Constructor: java.lang.Object newInstance(java.lang.Object[])>";
+    "virtualinvoke <java.lang.reflect.Constructor: java.lang.Object newInstance(java.lang.Object[])>"->"checkcast";
+    "checkcast"->"store.r i0";
+    "store.r i0"->"load.r i0";
+    "load.r i0"->"interfaceinvoke <com.chess.applet.ChessApplet$Worker: void execute()> 0";
+    "interfaceinvoke <com.chess.applet.ChessApplet$Worker: void execute()> 0"->"goto return";
+    "staticinvoke <com.chess.util.Util: void setLoggingLevel(org.apache.log4j.Level)>"->"store.r i0";
+    "store.r i0"->"load.r r0";
+    "load.r r0"->"fieldget <com.chess.applet.ChessApplet: org.apache.log4j.Logger logger>";
+    "push \"error setting logging level. default is debug\""
+    "fieldget <com.chess.applet.ChessApplet: org.apache.log4j.Logger logger>"->"push \"error setting logging level. default is debug\"";
+    "push \"error setting logging level. default is debug\""->"load.r i0";
+    "virtualinvoke <org.apache.log4j.Logger: void warn(java.lang.Object,java.lang.Throwable)>"
+    "load.r i0"->"virtualinvoke <org.apache.log4j.Logger: void warn(java.lang.Object,java.lang.Throwable)>";
+    "staticinvoke <javax.swing.UIManager: void setLookAndFeel(java.lang.String)>"->"store.r i0";
+}

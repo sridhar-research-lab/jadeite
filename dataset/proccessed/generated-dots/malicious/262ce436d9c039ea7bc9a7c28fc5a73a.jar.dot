@@ -1,0 +1,16 @@
+digraph "" {
+    "r0 := @this: Main"
+    "load.r r0"
+    "r0 := @this: Main"->"load.r r0";
+    "virtualinvoke <Main: void Plugin()>"
+    "load.r r0"->"virtualinvoke <Main: void Plugin()>";
+    "goto load.r r0"
+    "virtualinvoke <Main: void Plugin()>"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "specialinvoke <java.applet.Applet: void init()>"
+    "load.r r0"->"specialinvoke <java.applet.Applet: void init()>";
+    "return"
+    "specialinvoke <java.applet.Applet: void init()>"->"return";
+    "virtualinvoke <java.lang.Exception: void printStackTrace()>"
+    "virtualinvoke <Main: void Plugin()>"->"virtualinvoke <java.lang.Exception: void printStackTrace()>";
+}

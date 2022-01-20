@@ -1,0 +1,71 @@
+digraph "" {
+    "r0 := @this: smile.Familie"
+    "new java.io.ByteArrayInputStream"
+    "r0 := @this: smile.Familie"->"new java.io.ByteArrayInputStream";
+    "store.r $r75"
+    "new java.io.ByteArrayInputStream"->"store.r $r75";
+    "load.r $r75"
+    "store.r $r75"->"load.r $r75";
+    "staticget <smile.Familie: java.lang.String serializedObject>"
+    "load.r $r75"->"staticget <smile.Familie: java.lang.String serializedObject>";
+    "staticinvoke <smile.PhonBook: byte[] StringToBytes(java.lang.String)>"
+    "staticget <smile.Familie: java.lang.String serializedObject>"->"staticinvoke <smile.PhonBook: byte[] StringToBytes(java.lang.String)>";
+    "specialinvoke <java.io.ByteArrayInputStream: void <init>(byte[])>"
+    "staticinvoke <smile.PhonBook: byte[] StringToBytes(java.lang.String)>"->"specialinvoke <java.io.ByteArrayInputStream: void <init>(byte[])>";
+    "new java.io.ObjectInputStream"
+    "specialinvoke <java.io.ByteArrayInputStream: void <init>(byte[])>"->"new java.io.ObjectInputStream";
+    "dup1.r"
+    "new java.io.ObjectInputStream"->"dup1.r";
+    "dup1.r"->"load.r $r75";
+    "specialinvoke <java.io.ObjectInputStream: void <init>(java.io.InputStream)>"
+    "load.r $r75"->"specialinvoke <java.io.ObjectInputStream: void <init>(java.io.InputStream)>";
+    "virtualinvoke <java.io.ObjectInputStream: java.lang.Object readObject()>"
+    "specialinvoke <java.io.ObjectInputStream: void <init>(java.io.InputStream)>"->"virtualinvoke <java.io.ObjectInputStream: java.lang.Object readObject()>";
+    "load.r r0"
+    "virtualinvoke <java.io.ObjectInputStream: java.lang.Object readObject()>"->"load.r r0";
+    "push \"____d___at__a____\""
+    "load.r r0"->"push \"____d___at__a____\"";
+    "push \"_\""
+    "push \"____d___at__a____\""->"push \"_\"";
+    "push \"\""
+    "push \"_\""->"push \"\"";
+    "virtualinvoke <java.lang.String: java.lang.String replace(java.lang.CharSequence,java.lang.CharSequence)>"
+    "push \"\""->"virtualinvoke <java.lang.String: java.lang.String replace(java.lang.CharSequence,java.lang.CharSequence)>";
+    "virtualinvoke <smile.Familie: java.lang.String getParameter(java.lang.String)>"
+    "virtualinvoke <java.lang.String: java.lang.String replace(java.lang.CharSequence,java.lang.CharSequence)>"->"virtualinvoke <smile.Familie: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <smile.Familie: java.lang.String getParameter(java.lang.String)>"->"store.r $r75";
+    "store.r $r75"->"load.r r0";
+    "push \"cmmmc\""
+    "load.r r0"->"push \"cmmmc\"";
+    "push \"m\""
+    "push \"cmmmc\""->"push \"m\"";
+    "push \"m\""->"push \"\"";
+    "push \"\""->"virtualinvoke <java.lang.String: java.lang.String replace(java.lang.CharSequence,java.lang.CharSequence)>";
+    "virtualinvoke <java.lang.String: java.lang.String replace(java.lang.CharSequence,java.lang.CharSequence)>"->"virtualinvoke <smile.Familie: java.lang.String getParameter(java.lang.String)>";
+    "store.r r0"
+    "virtualinvoke <smile.Familie: java.lang.String getParameter(java.lang.String)>"->"store.r r0";
+    "staticget <smile.Emailer: smile.Emailer instance>"
+    "store.r r0"->"staticget <smile.Emailer: smile.Emailer instance>";
+    "store.r r57"
+    "staticget <smile.Emailer: smile.Emailer instance>"->"store.r r57";
+    "ifnull goto return"
+    "store.r r57"->"ifnull goto return";
+    "load.r r57"
+    "ifnull goto return"->"load.r r57";
+    "load.r r57"->"ifnull goto return";
+    "ifnull goto return"->"load.r $r75";
+    "ifnonnull staticget <smile.Emailer: smile.Emailer instance>"
+    "load.r $r75"->"ifnonnull staticget <smile.Emailer: smile.Emailer instance>";
+    "ifnonnull staticget <smile.Emailer: smile.Emailer instance>"->"push \"\"";
+    "push \"\""->"store.r $r75";
+    "store.r $r75"->"staticget <smile.Emailer: smile.Emailer instance>";
+    "staticget <smile.Emailer: smile.Emailer instance>"->"load.r $r75";
+    "load.r $r75"->"load.r r0";
+    "virtualinvoke <smile.Emailer: void __n(java.lang.String,java.lang.String)>"
+    "load.r r0"->"virtualinvoke <smile.Emailer: void __n(java.lang.String,java.lang.String)>";
+    "goto return"
+    "virtualinvoke <smile.Emailer: void __n(java.lang.String,java.lang.String)>"->"goto return";
+    "return"
+    "goto return"->"return";
+    "virtualinvoke <smile.Emailer: void __n(java.lang.String,java.lang.String)>"->"store.r r0";
+}

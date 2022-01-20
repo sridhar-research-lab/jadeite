@@ -1,0 +1,137 @@
+digraph "" {
+    "r0 := @this: Scroll"
+    "load.r r0"
+    "r0 := @this: Scroll"->"load.r r0";
+    "push \"Text\""
+    "load.r r0"->"push \"Text\"";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"
+    "push \"Text\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "store.r r1"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"store.r r1";
+    "load.r r1"
+    "store.r r1"->"load.r r1";
+    "ifnull load.r r0"
+    "load.r r1"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r1";
+    "fieldput <Scroll: java.lang.String text>"
+    "load.r r1"->"fieldput <Scroll: java.lang.String text>";
+    "fieldput <Scroll: java.lang.String text>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "fieldget <Scroll: java.lang.String text>"
+    "load.r r0"->"fieldget <Scroll: java.lang.String text>";
+    "virtualinvoke <java.lang.String: int length()>"
+    "fieldget <Scroll: java.lang.String text>"->"virtualinvoke <java.lang.String: int length()>";
+    "push 6"
+    "virtualinvoke <java.lang.String: int length()>"->"push 6";
+    "mul.i"
+    "push 6"->"mul.i";
+    "fieldput <Scroll: int textLength>"
+    "mul.i"->"fieldput <Scroll: int textLength>";
+    "fieldput <Scroll: int textLength>"->"load.r r0";
+    "push \"ScrollFarveRGB\""
+    "load.r r0"->"push \"ScrollFarveRGB\"";
+    "push \"ScrollFarveRGB\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"store.r r1";
+    "store.r r1"->"load.r r1";
+    "load.r r1"->"ifnull load.r r0";
+    "new java.util.StringTokenizer"
+    "ifnull load.r r0"->"new java.util.StringTokenizer";
+    "store.r $r13"
+    "new java.util.StringTokenizer"->"store.r $r13";
+    "load.r $r13"
+    "store.r $r13"->"load.r $r13";
+    "load.r $r13"->"load.r r1";
+    "push \",\""
+    "load.r r1"->"push \",\"";
+    "specialinvoke <java.util.StringTokenizer: void <init>(java.lang.String,java.lang.String)>"
+    "push \",\""->"specialinvoke <java.util.StringTokenizer: void <init>(java.lang.String,java.lang.String)>";
+    "specialinvoke <java.util.StringTokenizer: void <init>(java.lang.String,java.lang.String)>"->"load.r r0";
+    "new java.awt.Color"
+    "load.r r0"->"new java.awt.Color";
+    "dup1.r"
+    "new java.awt.Color"->"dup1.r";
+    "dup1.r"->"load.r $r13";
+    "virtualinvoke <java.util.StringTokenizer: java.lang.String nextToken()>"
+    "load.r $r13"->"virtualinvoke <java.util.StringTokenizer: java.lang.String nextToken()>";
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"
+    "virtualinvoke <java.util.StringTokenizer: java.lang.String nextToken()>"->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>";
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"->"load.r $r13";
+    "load.r $r13"->"virtualinvoke <java.util.StringTokenizer: java.lang.String nextToken()>";
+    "virtualinvoke <java.util.StringTokenizer: java.lang.String nextToken()>"->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>";
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"->"load.r $r13";
+    "load.r $r13"->"virtualinvoke <java.util.StringTokenizer: java.lang.String nextToken()>";
+    "virtualinvoke <java.util.StringTokenizer: java.lang.String nextToken()>"->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>";
+    "specialinvoke <java.awt.Color: void <init>(int,int,int)>"
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"->"specialinvoke <java.awt.Color: void <init>(int,int,int)>";
+    "fieldput <Scroll: java.awt.Color lightBlue>"
+    "specialinvoke <java.awt.Color: void <init>(int,int,int)>"->"fieldput <Scroll: java.awt.Color lightBlue>";
+    "fieldput <Scroll: java.awt.Color lightBlue>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "fieldget <Scroll: java.awt.Color lightBlue>"
+    "load.r r0"->"fieldget <Scroll: java.awt.Color lightBlue>";
+    "virtualinvoke <java.awt.Color: java.awt.Color darker()>"
+    "fieldget <Scroll: java.awt.Color lightBlue>"->"virtualinvoke <java.awt.Color: java.awt.Color darker()>";
+    "fieldput <Scroll: java.awt.Color darkBlue>"
+    "virtualinvoke <java.awt.Color: java.awt.Color darker()>"->"fieldput <Scroll: java.awt.Color darkBlue>";
+    "fieldput <Scroll: java.awt.Color darkBlue>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "fieldget <Scroll: java.awt.Color darkBlue>"
+    "load.r r0"->"fieldget <Scroll: java.awt.Color darkBlue>";
+    "fieldget <Scroll: java.awt.Color darkBlue>"->"virtualinvoke <java.awt.Color: java.awt.Color darker()>";
+    "virtualinvoke <java.awt.Color: java.awt.Color darker()>"->"fieldput <Scroll: java.awt.Color darkBlue>";
+    "fieldput <Scroll: java.awt.Color darkBlue>"->"load.r r0";
+    "push \"BaggrundsFarveRGB\""
+    "load.r r0"->"push \"BaggrundsFarveRGB\"";
+    "push \"BaggrundsFarveRGB\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"store.r $r13";
+    "store.r $r13"->"load.r $r13";
+    "load.r $r13"->"ifnull load.r r0";
+    "ifnull load.r r0"->"new java.util.StringTokenizer";
+    "new java.util.StringTokenizer"->"store.r r1";
+    "store.r r1"->"load.r r1";
+    "load.r r1"->"load.r $r13";
+    "load.r $r13"->"push \",\"";
+    "push \",\""->"specialinvoke <java.util.StringTokenizer: void <init>(java.lang.String,java.lang.String)>";
+    "specialinvoke <java.util.StringTokenizer: void <init>(java.lang.String,java.lang.String)>"->"load.r r0";
+    "load.r r0"->"new java.awt.Color";
+    "new java.awt.Color"->"dup1.r";
+    "dup1.r"->"load.r r1";
+    "load.r r1"->"virtualinvoke <java.util.StringTokenizer: java.lang.String nextToken()>";
+    "virtualinvoke <java.util.StringTokenizer: java.lang.String nextToken()>"->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>";
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"->"load.r r1";
+    "load.r r1"->"virtualinvoke <java.util.StringTokenizer: java.lang.String nextToken()>";
+    "virtualinvoke <java.util.StringTokenizer: java.lang.String nextToken()>"->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>";
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"->"load.r r1";
+    "load.r r1"->"virtualinvoke <java.util.StringTokenizer: java.lang.String nextToken()>";
+    "virtualinvoke <java.util.StringTokenizer: java.lang.String nextToken()>"->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>";
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"->"specialinvoke <java.awt.Color: void <init>(int,int,int)>";
+    "fieldput <Scroll: java.awt.Color baggrund>"
+    "specialinvoke <java.awt.Color: void <init>(int,int,int)>"->"fieldput <Scroll: java.awt.Color baggrund>";
+    "fieldput <Scroll: java.awt.Color baggrund>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "fieldget <Scroll: java.awt.Color baggrund>"
+    "load.r r0"->"fieldget <Scroll: java.awt.Color baggrund>";
+    "virtualinvoke <java.awt.Component: void setBackground(java.awt.Color)>"
+    "fieldget <Scroll: java.awt.Color baggrund>"->"virtualinvoke <java.awt.Component: void setBackground(java.awt.Color)>";
+    "virtualinvoke <java.awt.Component: void setBackground(java.awt.Color)>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "push 600"
+    "load.r r0"->"push 600";
+    "push 18"
+    "push 600"->"push 18";
+    "virtualinvoke <java.awt.Component: java.awt.Image createImage(int,int)>"
+    "push 18"->"virtualinvoke <java.awt.Component: java.awt.Image createImage(int,int)>";
+    "fieldput <Scroll: java.awt.Image workspace>"
+    "virtualinvoke <java.awt.Component: java.awt.Image createImage(int,int)>"->"fieldput <Scroll: java.awt.Image workspace>";
+    "fieldput <Scroll: java.awt.Image workspace>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "fieldget <Scroll: java.awt.Image workspace>"
+    "load.r r0"->"fieldget <Scroll: java.awt.Image workspace>";
+    "virtualinvoke <java.awt.Image: java.awt.Graphics getGraphics()>"
+    "fieldget <Scroll: java.awt.Image workspace>"->"virtualinvoke <java.awt.Image: java.awt.Graphics getGraphics()>";
+    "fieldput <Scroll: java.awt.Graphics offscreen>"
+    "virtualinvoke <java.awt.Image: java.awt.Graphics getGraphics()>"->"fieldput <Scroll: java.awt.Graphics offscreen>";
+    "return"
+    "fieldput <Scroll: java.awt.Graphics offscreen>"->"return";
+}

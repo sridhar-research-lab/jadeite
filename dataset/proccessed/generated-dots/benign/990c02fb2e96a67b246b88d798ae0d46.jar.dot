@@ -1,0 +1,61 @@
+digraph "" {
+    "r0 := @this: Studio"
+    "load.r r0"
+    "r0 := @this: Studio"->"load.r r0";
+    "new Artist"
+    "load.r r0"->"new Artist";
+    "dup1.r"
+    "new Artist"->"dup1.r";
+    "specialinvoke <Artist: void <init>()>"
+    "dup1.r"->"specialinvoke <Artist: void <init>()>";
+    "fieldput <Studio: Artist theArtist>"
+    "specialinvoke <Artist: void <init>()>"->"fieldput <Studio: Artist theArtist>";
+    "fieldput <Studio: Artist theArtist>"->"load.r r0";
+    "new java.awt.BorderLayout"
+    "load.r r0"->"new java.awt.BorderLayout";
+    "new java.awt.BorderLayout"->"dup1.r";
+    "push 5"
+    "dup1.r"->"push 5";
+    "push 5"->"push 5";
+    "specialinvoke <java.awt.BorderLayout: void <init>(int,int)>"
+    "push 5"->"specialinvoke <java.awt.BorderLayout: void <init>(int,int)>";
+    "virtualinvoke <java.awt.Container: void setLayout(java.awt.LayoutManager)>"
+    "specialinvoke <java.awt.BorderLayout: void <init>(int,int)>"->"virtualinvoke <java.awt.Container: void setLayout(java.awt.LayoutManager)>";
+    "virtualinvoke <java.awt.Container: void setLayout(java.awt.LayoutManager)>"->"load.r r0";
+    "new Flipbook"
+    "load.r r0"->"new Flipbook";
+    "new Flipbook"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "fieldget <Studio: Artist theArtist>"
+    "load.r r0"->"fieldget <Studio: Artist theArtist>";
+    "push 200"
+    "fieldget <Studio: Artist theArtist>"->"push 200";
+    "push 200"->"push 200";
+    "specialinvoke <Flipbook: void <init>(Studio,Artist,int,int)>"
+    "push 200"->"specialinvoke <Flipbook: void <init>(Studio,Artist,int,int)>";
+    "fieldput <Studio: Flipbook theFlipbook>"
+    "specialinvoke <Flipbook: void <init>(Studio,Artist,int,int)>"->"fieldput <Studio: Flipbook theFlipbook>";
+    "fieldput <Studio: Flipbook theFlipbook>"->"load.r r0";
+    "push \"Center\""
+    "load.r r0"->"push \"Center\"";
+    "push \"Center\""->"load.r r0";
+    "fieldget <Studio: Flipbook theFlipbook>"
+    "load.r r0"->"fieldget <Studio: Flipbook theFlipbook>";
+    "virtualinvoke <java.awt.Container: java.awt.Component add(java.lang.String,java.awt.Component)>"
+    "fieldget <Studio: Flipbook theFlipbook>"->"virtualinvoke <java.awt.Container: java.awt.Component add(java.lang.String,java.awt.Component)>";
+    "pop"
+    "virtualinvoke <java.awt.Container: java.awt.Component add(java.lang.String,java.awt.Component)>"->"pop";
+    "pop"->"load.r r0";
+    "load.r r0"->"fieldget <Studio: Flipbook theFlipbook>";
+    "new Studio$Mouser"
+    "fieldget <Studio: Flipbook theFlipbook>"->"new Studio$Mouser";
+    "new Studio$Mouser"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "specialinvoke <Studio$Mouser: void <init>(Studio)>"
+    "load.r r0"->"specialinvoke <Studio$Mouser: void <init>(Studio)>";
+    "virtualinvoke <java.awt.Component: void addMouseListener(java.awt.event.MouseListener)>"
+    "specialinvoke <Studio$Mouser: void <init>(Studio)>"->"virtualinvoke <java.awt.Component: void addMouseListener(java.awt.event.MouseListener)>";
+    "return"
+    "virtualinvoke <java.awt.Component: void addMouseListener(java.awt.event.MouseListener)>"->"return";
+}

@@ -1,0 +1,179 @@
+digraph "" {
+    "r0 := @this: Wiper"
+    "load.r r0"
+    "r0 := @this: Wiper"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "virtualinvoke <java.awt.Component: java.awt.Rectangle bounds()>"
+    "load.r r0"->"virtualinvoke <java.awt.Component: java.awt.Rectangle bounds()>";
+    "dup1.r"
+    "virtualinvoke <java.awt.Component: java.awt.Rectangle bounds()>"->"dup1.r";
+    "fieldget <java.awt.Rectangle: int width>"
+    "dup1.r"->"fieldget <java.awt.Rectangle: int width>";
+    "store.i $i0"
+    "fieldget <java.awt.Rectangle: int width>"->"store.i $i0";
+    "store.i $i0"->"load.r r0";
+    "load.i $i0"
+    "load.r r0"->"load.i $i0";
+    "fieldput <Wiper: int width>"
+    "load.i $i0"->"fieldput <Wiper: int width>";
+    "fieldget <java.awt.Rectangle: int height>"
+    "fieldput <Wiper: int width>"->"fieldget <java.awt.Rectangle: int height>";
+    "fieldput <Wiper: int height>"
+    "fieldget <java.awt.Rectangle: int height>"->"fieldput <Wiper: int height>";
+    "fieldput <Wiper: int height>"->"load.r r0";
+    "new Bitmap"
+    "load.r r0"->"new Bitmap";
+    "new Bitmap"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "fieldget <Wiper: int width>"
+    "load.r r0"->"fieldget <Wiper: int width>";
+    "fieldget <Wiper: int width>"->"load.r r0";
+    "fieldget <Wiper: int height>"
+    "load.r r0"->"fieldget <Wiper: int height>";
+    "specialinvoke <Bitmap: void <init>(int,int)>"
+    "fieldget <Wiper: int height>"->"specialinvoke <Bitmap: void <init>(int,int)>";
+    "fieldput <Wiper: Bitmap bitmap>"
+    "specialinvoke <Bitmap: void <init>(int,int)>"->"fieldput <Wiper: Bitmap bitmap>";
+    "fieldput <Wiper: Bitmap bitmap>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "fieldget <Wiper: Bitmap bitmap>"
+    "load.r r0"->"fieldget <Wiper: Bitmap bitmap>";
+    "virtualinvoke <Bitmap: java.awt.image.MemoryImageSource prepare()>"
+    "fieldget <Wiper: Bitmap bitmap>"->"virtualinvoke <Bitmap: java.awt.image.MemoryImageSource prepare()>";
+    "virtualinvoke <java.awt.Component: java.awt.Image createImage(java.awt.image.ImageProducer)>"
+    "virtualinvoke <Bitmap: java.awt.image.MemoryImageSource prepare()>"->"virtualinvoke <java.awt.Component: java.awt.Image createImage(java.awt.image.ImageProducer)>";
+    "fieldput <Wiper: java.awt.Image backdrop>"
+    "virtualinvoke <java.awt.Component: java.awt.Image createImage(java.awt.image.ImageProducer)>"->"fieldput <Wiper: java.awt.Image backdrop>";
+    "fieldput <Wiper: java.awt.Image backdrop>"->"load.r r0";
+    "new java.util.Vector"
+    "load.r r0"->"new java.util.Vector";
+    "new java.util.Vector"->"dup1.r";
+    "specialinvoke <java.util.Vector: void <init>()>"
+    "dup1.r"->"specialinvoke <java.util.Vector: void <init>()>";
+    "fieldput <Wiper: java.util.Vector effectvect>"
+    "specialinvoke <java.util.Vector: void <init>()>"->"fieldput <Wiper: java.util.Vector effectvect>";
+    "fieldput <Wiper: java.util.Vector effectvect>"->"load.r r0";
+    "new java.util.Hashtable"
+    "load.r r0"->"new java.util.Hashtable";
+    "new java.util.Hashtable"->"dup1.r";
+    "specialinvoke <java.util.Hashtable: void <init>()>"
+    "dup1.r"->"specialinvoke <java.util.Hashtable: void <init>()>";
+    "fieldput <Wiper: java.util.Hashtable bitmaphash>"
+    "specialinvoke <java.util.Hashtable: void <init>()>"->"fieldput <Wiper: java.util.Hashtable bitmaphash>";
+    "fieldput <Wiper: java.util.Hashtable bitmaphash>"->"load.r r0";
+    "load.r r0"->"new java.util.Hashtable";
+    "new java.util.Hashtable"->"dup1.r";
+    "dup1.r"->"specialinvoke <java.util.Hashtable: void <init>()>";
+    "fieldput <Wiper: java.util.Hashtable wipehash>"
+    "specialinvoke <java.util.Hashtable: void <init>()>"->"fieldput <Wiper: java.util.Hashtable wipehash>";
+    "fieldput <Wiper: java.util.Hashtable wipehash>"->"load.r r0";
+    "push 1000.0"
+    "load.r r0"->"push 1000.0";
+    "push 1000.0"->"load.r r0";
+    "push \"secondsBetweenSleeps\""
+    "load.r r0"->"push \"secondsBetweenSleeps\"";
+    "push \"0.100\""
+    "push \"secondsBetweenSleeps\""->"push \"0.100\"";
+    "virtualinvoke <Wiper: double getDoubleParamSafely(java.lang.String,java.lang.String)>"
+    "push \"0.100\""->"virtualinvoke <Wiper: double getDoubleParamSafely(java.lang.String,java.lang.String)>";
+    "mul.d"
+    "virtualinvoke <Wiper: double getDoubleParamSafely(java.lang.String,java.lang.String)>"->"mul.d";
+    "d2i"
+    "mul.d"->"d2i";
+    "fieldput <Wiper: int secondsBetweenSleeps>"
+    "d2i"->"fieldput <Wiper: int secondsBetweenSleeps>";
+    "fieldput <Wiper: int secondsBetweenSleeps>"->"load.r r0";
+    "load.r r0"->"push 1000.0";
+    "push 1000.0"->"load.r r0";
+    "push \"secondsBetweenWipes\""
+    "load.r r0"->"push \"secondsBetweenWipes\"";
+    "push \"3.000\""
+    "push \"secondsBetweenWipes\""->"push \"3.000\"";
+    "push \"3.000\""->"virtualinvoke <Wiper: double getDoubleParamSafely(java.lang.String,java.lang.String)>";
+    "virtualinvoke <Wiper: double getDoubleParamSafely(java.lang.String,java.lang.String)>"->"mul.d";
+    "mul.d"->"d2i";
+    "fieldput <Wiper: int secondsBetweenWipes>"
+    "d2i"->"fieldput <Wiper: int secondsBetweenWipes>";
+    "fieldput <Wiper: int secondsBetweenWipes>"->"load.r r0";
+    "load.r r0"->"push 1000.0";
+    "push 1000.0"->"load.r r0";
+    "push \"secondsBetweenFrames\""
+    "load.r r0"->"push \"secondsBetweenFrames\"";
+    "push \"secondsBetweenFrames\""->"push \"0.100\"";
+    "push \"0.100\""->"virtualinvoke <Wiper: double getDoubleParamSafely(java.lang.String,java.lang.String)>";
+    "virtualinvoke <Wiper: double getDoubleParamSafely(java.lang.String,java.lang.String)>"->"mul.d";
+    "mul.d"->"d2i";
+    "fieldput <Wiper: int secondsBetweenFrames>"
+    "d2i"->"fieldput <Wiper: int secondsBetweenFrames>";
+    "fieldput <Wiper: int secondsBetweenFrames>"->"load.r r0";
+    "push \"wipeBits\""
+    "load.r r0"->"push \"wipeBits\"";
+    "push \"5\""
+    "push \"wipeBits\""->"push \"5\"";
+    "virtualinvoke <Wiper: int getIntParamSafely(java.lang.String,java.lang.String)>"
+    "push \"5\""->"virtualinvoke <Wiper: int getIntParamSafely(java.lang.String,java.lang.String)>";
+    "staticput <Wiper: int wipeBits>"
+    "virtualinvoke <Wiper: int getIntParamSafely(java.lang.String,java.lang.String)>"->"staticput <Wiper: int wipeBits>";
+    "push 1"
+    "staticput <Wiper: int wipeBits>"->"push 1";
+    "staticget <Wiper: int wipeBits>"
+    "push 1"->"staticget <Wiper: int wipeBits>";
+    "shl.i"
+    "staticget <Wiper: int wipeBits>"->"shl.i";
+    "staticput <Wiper: int wipeFactor>"
+    "shl.i"->"staticput <Wiper: int wipeFactor>";
+    "push 8"
+    "staticput <Wiper: int wipeFactor>"->"push 8";
+    "push 8"->"staticget <Wiper: int wipeBits>";
+    "sub.i"
+    "staticget <Wiper: int wipeBits>"->"sub.i";
+    "sub.i"->"staticput <Wiper: int wipeBits>";
+    "staticput <Wiper: int wipeBits>"->"load.r r0";
+    "push \"src\""
+    "load.r r0"->"push \"src\"";
+    "push \"play.txt\""
+    "push \"src\""->"push \"play.txt\"";
+    "virtualinvoke <Wiper: java.lang.String getParameterSafely(java.lang.String,java.lang.String)>"
+    "push \"play.txt\""->"virtualinvoke <Wiper: java.lang.String getParameterSafely(java.lang.String,java.lang.String)>";
+    "store.r r2"
+    "virtualinvoke <Wiper: java.lang.String getParameterSafely(java.lang.String,java.lang.String)>"->"store.r r2";
+    "push null"
+    "store.r r2"->"push null";
+    "store.r $i0"
+    "push null"->"store.r $i0";
+    "new java.io.DataInputStream"
+    "store.r $i0"->"new java.io.DataInputStream";
+    "new java.io.DataInputStream"->"dup1.r";
+    "new java.net.URL"
+    "dup1.r"->"new java.net.URL";
+    "new java.net.URL"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "virtualinvoke <java.applet.Applet: java.net.URL getDocumentBase()>"
+    "load.r r0"->"virtualinvoke <java.applet.Applet: java.net.URL getDocumentBase()>";
+    "load.r r2"
+    "virtualinvoke <java.applet.Applet: java.net.URL getDocumentBase()>"->"load.r r2";
+    "specialinvoke <java.net.URL: void <init>(java.net.URL,java.lang.String)>"
+    "load.r r2"->"specialinvoke <java.net.URL: void <init>(java.net.URL,java.lang.String)>";
+    "virtualinvoke <java.net.URL: java.io.InputStream openStream()>"
+    "specialinvoke <java.net.URL: void <init>(java.net.URL,java.lang.String)>"->"virtualinvoke <java.net.URL: java.io.InputStream openStream()>";
+    "specialinvoke <java.io.DataInputStream: void <init>(java.io.InputStream)>"
+    "virtualinvoke <java.net.URL: java.io.InputStream openStream()>"->"specialinvoke <java.io.DataInputStream: void <init>(java.io.InputStream)>";
+    "specialinvoke <java.io.DataInputStream: void <init>(java.io.InputStream)>"->"store.r $i0";
+    "goto load.r r0"
+    "store.r $i0"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "new LineReader"
+    "load.r r0"->"new LineReader";
+    "new LineReader"->"dup1.r";
+    "load.r $i0"
+    "dup1.r"->"load.r $i0";
+    "load.r $i0"->"load.r r0";
+    "specialinvoke <LineReader: void <init>(java.io.DataInputStream,Wiper)>"
+    "load.r r0"->"specialinvoke <LineReader: void <init>(java.io.DataInputStream,Wiper)>";
+    "fieldput <Wiper: LineReader linereader>"
+    "specialinvoke <LineReader: void <init>(java.io.DataInputStream,Wiper)>"->"fieldput <Wiper: LineReader linereader>";
+    "return"
+    "fieldput <Wiper: LineReader linereader>"->"return";
+    "specialinvoke <java.io.DataInputStream: void <init>(java.io.InputStream)>"->"store.r r2";
+}

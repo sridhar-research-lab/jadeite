@@ -1,0 +1,191 @@
+digraph "" {
+    "r0 := @this: ztbanner"
+    "load.r r0"
+    "r0 := @this: ztbanner"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "push \"textcolor\""
+    "load.r r0"->"push \"textcolor\"";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"
+    "push \"textcolor\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "fieldput <ztbanner: java.lang.String text>"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"fieldput <ztbanner: java.lang.String text>";
+    "fieldput <ztbanner: java.lang.String text>"->"load.r r0";
+    "new java.util.StringTokenizer"
+    "load.r r0"->"new java.util.StringTokenizer";
+    "dup1.r"
+    "new java.util.StringTokenizer"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "fieldget <ztbanner: java.lang.String text>"
+    "load.r r0"->"fieldget <ztbanner: java.lang.String text>";
+    "push \",\""
+    "fieldget <ztbanner: java.lang.String text>"->"push \",\"";
+    "specialinvoke <java.util.StringTokenizer: void <init>(java.lang.String,java.lang.String)>"
+    "push \",\""->"specialinvoke <java.util.StringTokenizer: void <init>(java.lang.String,java.lang.String)>";
+    "fieldput <ztbanner: java.util.StringTokenizer t>"
+    "specialinvoke <java.util.StringTokenizer: void <init>(java.lang.String,java.lang.String)>"->"fieldput <ztbanner: java.util.StringTokenizer t>";
+    "fieldput <ztbanner: java.util.StringTokenizer t>"->"load.r r0";
+    "new java.awt.Color"
+    "load.r r0"->"new java.awt.Color";
+    "new java.awt.Color"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "fieldget <ztbanner: java.util.StringTokenizer t>"
+    "load.r r0"->"fieldget <ztbanner: java.util.StringTokenizer t>";
+    "virtualinvoke <java.util.StringTokenizer: java.lang.String nextToken()>"
+    "fieldget <ztbanner: java.util.StringTokenizer t>"->"virtualinvoke <java.util.StringTokenizer: java.lang.String nextToken()>";
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"
+    "virtualinvoke <java.util.StringTokenizer: java.lang.String nextToken()>"->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>";
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"->"load.r r0";
+    "load.r r0"->"fieldget <ztbanner: java.util.StringTokenizer t>";
+    "fieldget <ztbanner: java.util.StringTokenizer t>"->"virtualinvoke <java.util.StringTokenizer: java.lang.String nextToken()>";
+    "virtualinvoke <java.util.StringTokenizer: java.lang.String nextToken()>"->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>";
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"->"load.r r0";
+    "load.r r0"->"fieldget <ztbanner: java.util.StringTokenizer t>";
+    "fieldget <ztbanner: java.util.StringTokenizer t>"->"virtualinvoke <java.util.StringTokenizer: java.lang.String nextToken()>";
+    "virtualinvoke <java.util.StringTokenizer: java.lang.String nextToken()>"->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>";
+    "specialinvoke <java.awt.Color: void <init>(int,int,int)>"
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"->"specialinvoke <java.awt.Color: void <init>(int,int,int)>";
+    "fieldput <ztbanner: java.awt.Color colort>"
+    "specialinvoke <java.awt.Color: void <init>(int,int,int)>"->"fieldput <ztbanner: java.awt.Color colort>";
+    "fieldput <ztbanner: java.awt.Color colort>"->"load.r r0";
+    "staticget <java.awt.Color: java.awt.Color white>"
+    "load.r r0"->"staticget <java.awt.Color: java.awt.Color white>";
+    "virtualinvoke <java.awt.Component: void setBackground(java.awt.Color)>"
+    "staticget <java.awt.Color: java.awt.Color white>"->"virtualinvoke <java.awt.Component: void setBackground(java.awt.Color)>";
+    "virtualinvoke <java.awt.Component: void setBackground(java.awt.Color)>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "virtualinvoke <java.awt.Component: java.awt.Dimension size()>"
+    "load.r r0"->"virtualinvoke <java.awt.Component: java.awt.Dimension size()>";
+    "fieldget <java.awt.Dimension: int width>"
+    "virtualinvoke <java.awt.Component: java.awt.Dimension size()>"->"fieldget <java.awt.Dimension: int width>";
+    "fieldget <java.awt.Dimension: int width>"->"load.r r0";
+    "load.r r0"->"virtualinvoke <java.awt.Component: java.awt.Dimension size()>";
+    "fieldget <java.awt.Dimension: int height>"
+    "virtualinvoke <java.awt.Component: java.awt.Dimension size()>"->"fieldget <java.awt.Dimension: int height>";
+    "virtualinvoke <java.awt.Component: java.awt.Image createImage(int,int)>"
+    "fieldget <java.awt.Dimension: int height>"->"virtualinvoke <java.awt.Component: java.awt.Image createImage(int,int)>";
+    "fieldput <ztbanner: java.awt.Image offI>"
+    "virtualinvoke <java.awt.Component: java.awt.Image createImage(int,int)>"->"fieldput <ztbanner: java.awt.Image offI>";
+    "fieldput <ztbanner: java.awt.Image offI>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "fieldget <ztbanner: java.awt.Image offI>"
+    "load.r r0"->"fieldget <ztbanner: java.awt.Image offI>";
+    "virtualinvoke <java.awt.Image: java.awt.Graphics getGraphics()>"
+    "fieldget <ztbanner: java.awt.Image offI>"->"virtualinvoke <java.awt.Image: java.awt.Graphics getGraphics()>";
+    "fieldput <ztbanner: java.awt.Graphics offG>"
+    "virtualinvoke <java.awt.Image: java.awt.Graphics getGraphics()>"->"fieldput <ztbanner: java.awt.Graphics offG>";
+    "fieldput <ztbanner: java.awt.Graphics offG>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "virtualinvoke <java.applet.Applet: java.net.URL getCodeBase()>"
+    "load.r r0"->"virtualinvoke <java.applet.Applet: java.net.URL getCodeBase()>";
+    "push \"left.gif\""
+    "virtualinvoke <java.applet.Applet: java.net.URL getCodeBase()>"->"push \"left.gif\"";
+    "virtualinvoke <java.applet.Applet: java.awt.Image getImage(java.net.URL,java.lang.String)>"
+    "push \"left.gif\""->"virtualinvoke <java.applet.Applet: java.awt.Image getImage(java.net.URL,java.lang.String)>";
+    "fieldput <ztbanner: java.awt.Image left>"
+    "virtualinvoke <java.applet.Applet: java.awt.Image getImage(java.net.URL,java.lang.String)>"->"fieldput <ztbanner: java.awt.Image left>";
+    "fieldput <ztbanner: java.awt.Image left>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"virtualinvoke <java.applet.Applet: java.net.URL getCodeBase()>";
+    "push \"right.gif\""
+    "virtualinvoke <java.applet.Applet: java.net.URL getCodeBase()>"->"push \"right.gif\"";
+    "push \"right.gif\""->"virtualinvoke <java.applet.Applet: java.awt.Image getImage(java.net.URL,java.lang.String)>";
+    "fieldput <ztbanner: java.awt.Image right>"
+    "virtualinvoke <java.applet.Applet: java.awt.Image getImage(java.net.URL,java.lang.String)>"->"fieldput <ztbanner: java.awt.Image right>";
+    "fieldput <ztbanner: java.awt.Image right>"->"load.r r0";
+    "new java.awt.Font"
+    "load.r r0"->"new java.awt.Font";
+    "new java.awt.Font"->"dup1.r";
+    "push \"Courier\""
+    "dup1.r"->"push \"Courier\"";
+    "push 1"
+    "push \"Courier\""->"push 1";
+    "push 24"
+    "push 1"->"push 24";
+    "specialinvoke <java.awt.Font: void <init>(java.lang.String,int,int)>"
+    "push 24"->"specialinvoke <java.awt.Font: void <init>(java.lang.String,int,int)>";
+    "fieldput <ztbanner: java.awt.Font font>"
+    "specialinvoke <java.awt.Font: void <init>(java.lang.String,int,int)>"->"fieldput <ztbanner: java.awt.Font font>";
+    "fieldput <ztbanner: java.awt.Font font>"->"load.r r0";
+    "fieldget <ztbanner: java.awt.Graphics offG>"
+    "load.r r0"->"fieldget <ztbanner: java.awt.Graphics offG>";
+    "fieldget <ztbanner: java.awt.Graphics offG>"->"load.r r0";
+    "fieldget <ztbanner: java.awt.Font font>"
+    "load.r r0"->"fieldget <ztbanner: java.awt.Font font>";
+    "virtualinvoke <java.awt.Graphics: void setFont(java.awt.Font)>"
+    "fieldget <ztbanner: java.awt.Font font>"->"virtualinvoke <java.awt.Graphics: void setFont(java.awt.Font)>";
+    "virtualinvoke <java.awt.Graphics: void setFont(java.awt.Font)>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "push \"message1\""
+    "load.r r0"->"push \"message1\"";
+    "push \"message1\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "fieldput <ztbanner: java.lang.String m1>"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"fieldput <ztbanner: java.lang.String m1>";
+    "fieldput <ztbanner: java.lang.String m1>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "push \"message2\""
+    "load.r r0"->"push \"message2\"";
+    "push \"message2\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "fieldput <ztbanner: java.lang.String m2>"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"fieldput <ztbanner: java.lang.String m2>";
+    "fieldput <ztbanner: java.lang.String m2>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "push \"message3\""
+    "load.r r0"->"push \"message3\"";
+    "push \"message3\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "fieldput <ztbanner: java.lang.String m3>"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"fieldput <ztbanner: java.lang.String m3>";
+    "fieldput <ztbanner: java.lang.String m3>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "push \"message4\""
+    "load.r r0"->"push \"message4\"";
+    "push \"message4\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "fieldput <ztbanner: java.lang.String m4>"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"fieldput <ztbanner: java.lang.String m4>";
+    "fieldput <ztbanner: java.lang.String m4>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "push \"message5\""
+    "load.r r0"->"push \"message5\"";
+    "push \"message5\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "fieldput <ztbanner: java.lang.String m5>"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"fieldput <ztbanner: java.lang.String m5>";
+    "fieldput <ztbanner: java.lang.String m5>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "push \"link1\""
+    "load.r r0"->"push \"link1\"";
+    "push \"link1\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "fieldput <ztbanner: java.lang.String u1>"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"fieldput <ztbanner: java.lang.String u1>";
+    "fieldput <ztbanner: java.lang.String u1>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "push \"link2\""
+    "load.r r0"->"push \"link2\"";
+    "push \"link2\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "fieldput <ztbanner: java.lang.String u2>"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"fieldput <ztbanner: java.lang.String u2>";
+    "fieldput <ztbanner: java.lang.String u2>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "push \"link3\""
+    "load.r r0"->"push \"link3\"";
+    "push \"link3\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "fieldput <ztbanner: java.lang.String u3>"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"fieldput <ztbanner: java.lang.String u3>";
+    "fieldput <ztbanner: java.lang.String u3>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "push \"link4\""
+    "load.r r0"->"push \"link4\"";
+    "push \"link4\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "fieldput <ztbanner: java.lang.String u4>"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"fieldput <ztbanner: java.lang.String u4>";
+    "fieldput <ztbanner: java.lang.String u4>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "push \"link5\""
+    "load.r r0"->"push \"link5\"";
+    "push \"link5\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "fieldput <ztbanner: java.lang.String u5>"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"fieldput <ztbanner: java.lang.String u5>";
+    "return"
+    "fieldput <ztbanner: java.lang.String u5>"->"return";
+}

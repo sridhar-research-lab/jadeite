@@ -1,0 +1,36 @@
+digraph "" {
+    "r0 := @this: com.pokw.shooter.H"
+    "load.r r0"
+    "r0 := @this: com.pokw.shooter.H"->"load.r r0";
+    "specialinvoke <com.pokw.shooter.H: void a()>"
+    "load.r r0"->"specialinvoke <com.pokw.shooter.H: void a()>";
+    "specialinvoke <com.pokw.shooter.H: void a()>"->"load.r r0";
+    "virtualinvoke <com.pokw.shooter.H: java.awt.Container getContentPane()>"
+    "load.r r0"->"virtualinvoke <com.pokw.shooter.H: java.awt.Container getContentPane()>";
+    "new java.awt.BorderLayout"
+    "virtualinvoke <com.pokw.shooter.H: java.awt.Container getContentPane()>"->"new java.awt.BorderLayout";
+    "dup1.r"
+    "new java.awt.BorderLayout"->"dup1.r";
+    "specialinvoke <java.awt.BorderLayout: void <init>()>"
+    "dup1.r"->"specialinvoke <java.awt.BorderLayout: void <init>()>";
+    "virtualinvoke <java.awt.Container: void setLayout(java.awt.LayoutManager)>"
+    "specialinvoke <java.awt.BorderLayout: void <init>()>"->"virtualinvoke <java.awt.Container: void setLayout(java.awt.LayoutManager)>";
+    "virtualinvoke <java.awt.Container: void setLayout(java.awt.LayoutManager)>"->"load.r r0";
+    "load.r r0"->"virtualinvoke <com.pokw.shooter.H: java.awt.Container getContentPane()>";
+    "virtualinvoke <com.pokw.shooter.H: java.awt.Container getContentPane()>"->"load.r r0";
+    "fieldget <com.pokw.shooter.H: com.pokw.shooter.x b>"
+    "load.r r0"->"fieldget <com.pokw.shooter.H: com.pokw.shooter.x b>";
+    "push \"Center\""
+    "fieldget <com.pokw.shooter.H: com.pokw.shooter.x b>"->"push \"Center\"";
+    "virtualinvoke <java.awt.Container: void add(java.awt.Component,java.lang.Object)>"
+    "push \"Center\""->"virtualinvoke <java.awt.Container: void add(java.awt.Component,java.lang.Object)>";
+    "virtualinvoke <java.awt.Container: void add(java.awt.Component,java.lang.Object)>"->"load.r r0";
+    "push 600"
+    "load.r r0"->"push 600";
+    "push 500"
+    "push 600"->"push 500";
+    "virtualinvoke <com.pokw.shooter.H: void setSize(int,int)>"
+    "push 500"->"virtualinvoke <com.pokw.shooter.H: void setSize(int,int)>";
+    "return"
+    "virtualinvoke <com.pokw.shooter.H: void setSize(int,int)>"->"return";
+}

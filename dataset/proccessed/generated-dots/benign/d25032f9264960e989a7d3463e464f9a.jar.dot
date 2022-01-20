@@ -1,0 +1,118 @@
+digraph "" {
+    "r0 := @this: Shifter"
+    "load.r r0"
+    "r0 := @this: Shifter"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "virtualinvoke <java.awt.Component: java.awt.Dimension size()>"
+    "load.r r0"->"virtualinvoke <java.awt.Component: java.awt.Dimension size()>";
+    "fieldget <java.awt.Dimension: int width>"
+    "virtualinvoke <java.awt.Component: java.awt.Dimension size()>"->"fieldget <java.awt.Dimension: int width>";
+    "fieldput <Shifter: int AppletW>"
+    "fieldget <java.awt.Dimension: int width>"->"fieldput <Shifter: int AppletW>";
+    "fieldput <Shifter: int AppletW>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"virtualinvoke <java.awt.Component: java.awt.Dimension size()>";
+    "fieldget <java.awt.Dimension: int height>"
+    "virtualinvoke <java.awt.Component: java.awt.Dimension size()>"->"fieldget <java.awt.Dimension: int height>";
+    "fieldput <Shifter: int AppletH>"
+    "fieldget <java.awt.Dimension: int height>"->"fieldput <Shifter: int AppletH>";
+    "fieldput <Shifter: int AppletH>"->"load.r r0";
+    "new java.awt.MediaTracker"
+    "load.r r0"->"new java.awt.MediaTracker";
+    "dup1.r"
+    "new java.awt.MediaTracker"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "specialinvoke <java.awt.MediaTracker: void <init>(java.awt.Component)>"
+    "load.r r0"->"specialinvoke <java.awt.MediaTracker: void <init>(java.awt.Component)>";
+    "fieldput <Shifter: java.awt.MediaTracker tracker>"
+    "specialinvoke <java.awt.MediaTracker: void <init>(java.awt.Component)>"->"fieldput <Shifter: java.awt.MediaTracker tracker>";
+    "fieldput <Shifter: java.awt.MediaTracker tracker>"->"load.r r0";
+    "new java.lang.StringBuffer"
+    "load.r r0"->"new java.lang.StringBuffer";
+    "new java.lang.StringBuffer"->"dup1.r";
+    "specialinvoke <java.lang.StringBuffer: void <init>()>"
+    "dup1.r"->"specialinvoke <java.lang.StringBuffer: void <init>()>";
+    "push \"#\""
+    "specialinvoke <java.lang.StringBuffer: void <init>()>"->"push \"#\"";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"
+    "push \"#\""->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"load.r r0";
+    "push \"bordercolor\""
+    "load.r r0"->"push \"bordercolor\"";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"
+    "push \"bordercolor\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>"
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>";
+    "staticinvoke <java.awt.Color: java.awt.Color decode(java.lang.String)>"
+    "virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>"->"staticinvoke <java.awt.Color: java.awt.Color decode(java.lang.String)>";
+    "fieldput <Shifter: java.awt.Color FarbeLinien>"
+    "staticinvoke <java.awt.Color: java.awt.Color decode(java.lang.String)>"->"fieldput <Shifter: java.awt.Color FarbeLinien>";
+    "fieldput <Shifter: java.awt.Color FarbeLinien>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "fieldget <Shifter: int AppletW>"
+    "load.r r0"->"fieldget <Shifter: int AppletW>";
+    "push 2"
+    "fieldget <Shifter: int AppletW>"->"push 2";
+    "mul.i"
+    "push 2"->"mul.i";
+    "mul.i"->"load.r r0";
+    "fieldget <Shifter: int AppletH>"
+    "load.r r0"->"fieldget <Shifter: int AppletH>";
+    "fieldget <Shifter: int AppletH>"->"push 2";
+    "push 2"->"mul.i";
+    "virtualinvoke <java.awt.Component: java.awt.Image createImage(int,int)>"
+    "mul.i"->"virtualinvoke <java.awt.Component: java.awt.Image createImage(int,int)>";
+    "fieldput <Shifter: java.awt.Image offscreenImage>"
+    "virtualinvoke <java.awt.Component: java.awt.Image createImage(int,int)>"->"fieldput <Shifter: java.awt.Image offscreenImage>";
+    "fieldput <Shifter: java.awt.Image offscreenImage>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "fieldget <Shifter: java.awt.Image offscreenImage>"
+    "load.r r0"->"fieldget <Shifter: java.awt.Image offscreenImage>";
+    "virtualinvoke <java.awt.Image: java.awt.Graphics getGraphics()>"
+    "fieldget <Shifter: java.awt.Image offscreenImage>"->"virtualinvoke <java.awt.Image: java.awt.Graphics getGraphics()>";
+    "fieldput <Shifter: java.awt.Graphics osg>"
+    "virtualinvoke <java.awt.Image: java.awt.Graphics getGraphics()>"->"fieldput <Shifter: java.awt.Graphics osg>";
+    "fieldput <Shifter: java.awt.Graphics osg>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <Shifter: int AppletW>";
+    "fieldget <Shifter: int AppletW>"->"load.r r0";
+    "load.r r0"->"fieldget <Shifter: int AppletH>";
+    "fieldget <Shifter: int AppletH>"->"virtualinvoke <java.awt.Component: java.awt.Image createImage(int,int)>";
+    "fieldput <Shifter: java.awt.Image offscreenImage2>"
+    "virtualinvoke <java.awt.Component: java.awt.Image createImage(int,int)>"->"fieldput <Shifter: java.awt.Image offscreenImage2>";
+    "fieldput <Shifter: java.awt.Image offscreenImage2>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "fieldget <Shifter: java.awt.Image offscreenImage2>"
+    "load.r r0"->"fieldget <Shifter: java.awt.Image offscreenImage2>";
+    "fieldget <Shifter: java.awt.Image offscreenImage2>"->"virtualinvoke <java.awt.Image: java.awt.Graphics getGraphics()>";
+    "fieldput <Shifter: java.awt.Graphics osg2>"
+    "virtualinvoke <java.awt.Image: java.awt.Graphics getGraphics()>"->"fieldput <Shifter: java.awt.Graphics osg2>";
+    "fieldput <Shifter: java.awt.Graphics osg2>"->"load.r r0";
+    "push 1"
+    "load.r r0"->"push 1";
+    "fieldput <Shifter: int Zustand>"
+    "push 1"->"fieldput <Shifter: int Zustand>";
+    "fieldput <Shifter: int Zustand>"->"load.r r0";
+    "new Shifter$MouseEventHandler"
+    "load.r r0"->"new Shifter$MouseEventHandler";
+    "new Shifter$MouseEventHandler"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "specialinvoke <Shifter$MouseEventHandler: void <init>(Shifter)>"
+    "load.r r0"->"specialinvoke <Shifter$MouseEventHandler: void <init>(Shifter)>";
+    "virtualinvoke <java.awt.Component: void addMouseListener(java.awt.event.MouseListener)>"
+    "specialinvoke <Shifter$MouseEventHandler: void <init>(Shifter)>"->"virtualinvoke <java.awt.Component: void addMouseListener(java.awt.event.MouseListener)>";
+    "virtualinvoke <java.awt.Component: void addMouseListener(java.awt.event.MouseListener)>"->"load.r r0";
+    "new Shifter$MouseMotionEventHandler"
+    "load.r r0"->"new Shifter$MouseMotionEventHandler";
+    "new Shifter$MouseMotionEventHandler"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "specialinvoke <Shifter$MouseMotionEventHandler: void <init>(Shifter)>"
+    "load.r r0"->"specialinvoke <Shifter$MouseMotionEventHandler: void <init>(Shifter)>";
+    "virtualinvoke <java.awt.Component: void addMouseMotionListener(java.awt.event.MouseMotionListener)>"
+    "specialinvoke <Shifter$MouseMotionEventHandler: void <init>(Shifter)>"->"virtualinvoke <java.awt.Component: void addMouseMotionListener(java.awt.event.MouseMotionListener)>";
+    "return"
+    "virtualinvoke <java.awt.Component: void addMouseMotionListener(java.awt.event.MouseMotionListener)>"->"return";
+}

@@ -1,0 +1,184 @@
+digraph "" {
+    "r0 := @this: esa.ESApplet"
+    "load.r r0"
+    "r0 := @this: esa.ESApplet"->"load.r r0";
+    "virtualinvoke <esa.ESApplet: void defineOS()>"
+    "load.r r0"->"virtualinvoke <esa.ESApplet: void defineOS()>";
+    "virtualinvoke <esa.ESApplet: void defineOS()>"->"load.r r0";
+    "push \"config_file\""
+    "load.r r0"->"push \"config_file\"";
+    "virtualinvoke <esa.ESApplet: java.lang.String getParameter(java.lang.String)>"
+    "push \"config_file\""->"virtualinvoke <esa.ESApplet: java.lang.String getParameter(java.lang.String)>";
+    "store.r $r11"
+    "virtualinvoke <esa.ESApplet: java.lang.String getParameter(java.lang.String)>"->"store.r $r11";
+    "store.r $r11"->"load.r r0";
+    "push \"Configuration file reading...\""
+    "load.r r0"->"push \"Configuration file reading...\"";
+    "virtualinvoke <esa.ESApplet: void showStatus(java.lang.String)>"
+    "push \"Configuration file reading...\""->"virtualinvoke <esa.ESApplet: void showStatus(java.lang.String)>";
+    "load.r $r11"
+    "virtualinvoke <esa.ESApplet: void showStatus(java.lang.String)>"->"load.r $r11";
+    "ifnull load.r r0"
+    "load.r $r11"->"ifnull load.r r0";
+    "new java.net.URL"
+    "ifnull load.r r0"->"new java.net.URL";
+    "dup1.r"
+    "new java.net.URL"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "virtualinvoke <esa.ESApplet: java.net.URL getCodeBase()>"
+    "load.r r0"->"virtualinvoke <esa.ESApplet: java.net.URL getCodeBase()>";
+    "virtualinvoke <esa.ESApplet: java.net.URL getCodeBase()>"->"load.r $r11";
+    "specialinvoke <java.net.URL: void <init>(java.net.URL,java.lang.String)>"
+    "load.r $r11"->"specialinvoke <java.net.URL: void <init>(java.net.URL,java.lang.String)>";
+    "new java.io.InputStreamReader"
+    "specialinvoke <java.net.URL: void <init>(java.net.URL,java.lang.String)>"->"new java.io.InputStreamReader";
+    "new java.io.InputStreamReader"->"store.r $r11";
+    "virtualinvoke <java.net.URL: java.io.InputStream openStream()>"
+    "store.r $r11"->"virtualinvoke <java.net.URL: java.io.InputStream openStream()>";
+    "store.r $r12"
+    "virtualinvoke <java.net.URL: java.io.InputStream openStream()>"->"store.r $r12";
+    "store.r $r12"->"load.r $r11";
+    "load.r $r12"
+    "load.r $r11"->"load.r $r12";
+    "specialinvoke <java.io.InputStreamReader: void <init>(java.io.InputStream)>"
+    "load.r $r12"->"specialinvoke <java.io.InputStreamReader: void <init>(java.io.InputStream)>";
+    "specialinvoke <java.io.InputStreamReader: void <init>(java.io.InputStream)>"->"load.r r0";
+    "new esa.Config"
+    "load.r r0"->"new esa.Config";
+    "new esa.Config"->"dup1.r";
+    "specialinvoke <esa.Config: void <init>()>"
+    "dup1.r"->"specialinvoke <esa.Config: void <init>()>";
+    "fieldput <esa.ESApplet: esa.Config config>"
+    "specialinvoke <esa.Config: void <init>()>"->"fieldput <esa.ESApplet: esa.Config config>";
+    "fieldput <esa.ESApplet: esa.Config config>"->"load.r r0";
+    "fieldget <esa.ESApplet: esa.Config config>"
+    "load.r r0"->"fieldget <esa.ESApplet: esa.Config config>";
+    "fieldget <esa.ESApplet: esa.Config config>"->"load.r $r11";
+    "virtualinvoke <esa.Config: void parseFromReader(java.io.Reader)>"
+    "load.r $r11"->"virtualinvoke <esa.Config: void parseFromReader(java.io.Reader)>";
+    "virtualinvoke <esa.Config: void parseFromReader(java.io.Reader)>"->"load.r $r11";
+    "virtualinvoke <java.io.Reader: void close()>"
+    "load.r $r11"->"virtualinvoke <java.io.Reader: void close()>";
+    "virtualinvoke <java.io.Reader: void close()>"->"load.r r0";
+    "push \"Loading the view ...\""
+    "load.r r0"->"push \"Loading the view ...\"";
+    "push \"Loading the view ...\""->"virtualinvoke <esa.ESApplet: void showStatus(java.lang.String)>";
+    "virtualinvoke <esa.ESApplet: void showStatus(java.lang.String)>"->"load.r r0";
+    "load.r r0"->"fieldget <esa.ESApplet: esa.Config config>";
+    "fieldget <esa.ESApplet: esa.Config config>"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <esa.ESApplet: esa.Config config>";
+    "push \"view-type\""
+    "fieldget <esa.ESApplet: esa.Config config>"->"push \"view-type\"";
+    "virtualinvoke <esa.Config: java.lang.Object getAttribute(java.lang.String)>"
+    "push \"view-type\""->"virtualinvoke <esa.Config: java.lang.Object getAttribute(java.lang.String)>";
+    "checkcast"
+    "virtualinvoke <esa.Config: java.lang.Object getAttribute(java.lang.String)>"->"checkcast";
+    "checkcast"->"store.r $r11";
+    "push \"planet-view\""
+    "store.r $r11"->"push \"planet-view\"";
+    "push \"planet-view\""->"load.r $r11";
+    "virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>"
+    "load.r $r11"->"virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>";
+    "ifeq push \"solar-view\""
+    "virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>"->"ifeq push \"solar-view\"";
+    "ifeq push \"solar-view\""->"load.r r0";
+    "push 0"
+    "load.r r0"->"push 0";
+    "fieldput <esa.ESApplet: int viewType>"
+    "push 0"->"fieldput <esa.ESApplet: int viewType>";
+    "goto load.r r0"
+    "fieldput <esa.ESApplet: int viewType>"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <esa.ESApplet: esa.Config config>";
+    "push \"view-planet\""
+    "fieldget <esa.ESApplet: esa.Config config>"->"push \"view-planet\"";
+    "push \"view-planet\""->"virtualinvoke <esa.Config: java.lang.Object getAttribute(java.lang.String)>";
+    "virtualinvoke <esa.Config: java.lang.Object getAttribute(java.lang.String)>"->"checkcast";
+    "checkcast"->"store.r $r11";
+    "store.r $r11"->"load.r $r11";
+    "load.r $r11"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r r0";
+    "load.r r0"->"load.r $r11";
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"
+    "load.r $r11"->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>";
+    "fieldput <esa.ESApplet: int viewPlanet>"
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"->"fieldput <esa.ESApplet: int viewPlanet>";
+    "fieldput <esa.ESApplet: int viewPlanet>"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "push \"ESA Science missions\""
+    "load.r r0"->"push \"ESA Science missions\"";
+    "virtualinvoke <esa.ESApplet: void setName(java.lang.String)>"
+    "push \"ESA Science missions\""->"virtualinvoke <esa.ESApplet: void setName(java.lang.String)>";
+    "virtualinvoke <esa.ESApplet: void setName(java.lang.String)>"->"load.r r0";
+    "new esa.D3ViewPanel"
+    "load.r r0"->"new esa.D3ViewPanel";
+    "new esa.D3ViewPanel"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "specialinvoke <esa.D3ViewPanel: void <init>(esa.ESApplet)>"
+    "load.r r0"->"specialinvoke <esa.D3ViewPanel: void <init>(esa.ESApplet)>";
+    "fieldput <esa.ESApplet: esa.D3ViewPanel pD3>"
+    "specialinvoke <esa.D3ViewPanel: void <init>(esa.ESApplet)>"->"fieldput <esa.ESApplet: esa.D3ViewPanel pD3>";
+    "fieldput <esa.ESApplet: esa.D3ViewPanel pD3>"->"load.r r0";
+    "new esa.ControlPanel"
+    "load.r r0"->"new esa.ControlPanel";
+    "new esa.ControlPanel"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "fieldget <esa.ESApplet: esa.D3ViewPanel pD3>"
+    "load.r r0"->"fieldget <esa.ESApplet: esa.D3ViewPanel pD3>";
+    "specialinvoke <esa.ControlPanel: void <init>(esa.D3ViewPanel)>"
+    "fieldget <esa.ESApplet: esa.D3ViewPanel pD3>"->"specialinvoke <esa.ControlPanel: void <init>(esa.D3ViewPanel)>";
+    "fieldput <esa.ESApplet: esa.ControlPanel pUI>"
+    "specialinvoke <esa.ControlPanel: void <init>(esa.D3ViewPanel)>"->"fieldput <esa.ESApplet: esa.ControlPanel pUI>";
+    "fieldput <esa.ESApplet: esa.ControlPanel pUI>"->"load.r r0";
+    "specialinvoke <esa.ESApplet: void jbInit()>"
+    "load.r r0"->"specialinvoke <esa.ESApplet: void jbInit()>";
+    "goto return"
+    "specialinvoke <esa.ESApplet: void jbInit()>"->"goto return";
+    "return"
+    "goto return"->"return";
+    "virtualinvoke <java.lang.Exception: void printStackTrace()>"
+    "specialinvoke <esa.ESApplet: void jbInit()>"->"virtualinvoke <java.lang.Exception: void printStackTrace()>";
+    "push \"solar-view\""
+    "ifeq push \"solar-view\""->"push \"solar-view\"";
+    "push \"solar-view\""->"load.r $r11";
+    "load.r $r11"->"virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>";
+    "ifeq push \"soho-view\""
+    "virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>"->"ifeq push \"soho-view\"";
+    "ifeq push \"soho-view\""->"load.r r0";
+    "push 1"
+    "load.r r0"->"push 1";
+    "push 1"->"fieldput <esa.ESApplet: int viewType>";
+    "fieldput <esa.ESApplet: int viewType>"->"goto load.r r0";
+    "push \"soho-view\""
+    "ifeq push \"soho-view\""->"push \"soho-view\"";
+    "push \"soho-view\""->"load.r $r11";
+    "load.r $r11"->"virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>";
+    "ifeq push \"gaia-view\""
+    "virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>"->"ifeq push \"gaia-view\"";
+    "ifeq push \"gaia-view\""->"load.r r0";
+    "push 2"
+    "load.r r0"->"push 2";
+    "push 2"->"fieldput <esa.ESApplet: int viewType>";
+    "fieldput <esa.ESApplet: int viewType>"->"goto load.r r0";
+    "push \"gaia-view\""
+    "ifeq push \"gaia-view\""->"push \"gaia-view\"";
+    "push \"gaia-view\""->"load.r $r11";
+    "load.r $r11"->"virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>";
+    "ifeq load.r r0"
+    "virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>"->"ifeq load.r r0";
+    "ifeq load.r r0"->"load.r r0";
+    "push 3"
+    "load.r r0"->"push 3";
+    "push 3"->"fieldput <esa.ESApplet: int viewType>";
+    "ifnull load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "push \"viewType\""
+    "load.r r0"->"push \"viewType\"";
+    "push \"0\""
+    "push \"viewType\""->"push \"0\"";
+    "virtualinvoke <esa.ESApplet: java.lang.String getParameter(java.lang.String,java.lang.String)>"
+    "push \"0\""->"virtualinvoke <esa.ESApplet: java.lang.String getParameter(java.lang.String,java.lang.String)>";
+    "virtualinvoke <esa.ESApplet: java.lang.String getParameter(java.lang.String,java.lang.String)>"->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>";
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"->"fieldput <esa.ESApplet: int viewType>";
+}

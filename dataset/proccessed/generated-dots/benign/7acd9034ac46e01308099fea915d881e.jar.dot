@@ -1,0 +1,84 @@
+digraph "" {
+    "r0 := @this: Kaleidoscope"
+    "load.r r0"
+    "r0 := @this: Kaleidoscope"->"load.r r0";
+    "new java.awt.BorderLayout"
+    "load.r r0"->"new java.awt.BorderLayout";
+    "dup1.r"
+    "new java.awt.BorderLayout"->"dup1.r";
+    "specialinvoke <java.awt.BorderLayout: void <init>()>"
+    "dup1.r"->"specialinvoke <java.awt.BorderLayout: void <init>()>";
+    "virtualinvoke <java.awt.Container: void setLayout(java.awt.LayoutManager)>"
+    "specialinvoke <java.awt.BorderLayout: void <init>()>"->"virtualinvoke <java.awt.Container: void setLayout(java.awt.LayoutManager)>";
+    "virtualinvoke <java.awt.Container: void setLayout(java.awt.LayoutManager)>"->"load.r r0";
+    "new KaleidoscopeControl"
+    "load.r r0"->"new KaleidoscopeControl";
+    "new KaleidoscopeControl"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "specialinvoke <KaleidoscopeControl: void <init>(Kaleidoscope)>"
+    "load.r r0"->"specialinvoke <KaleidoscopeControl: void <init>(Kaleidoscope)>";
+    "fieldput <Kaleidoscope: KaleidoscopeControl control>"
+    "specialinvoke <KaleidoscopeControl: void <init>(Kaleidoscope)>"->"fieldput <Kaleidoscope: KaleidoscopeControl control>";
+    "fieldput <Kaleidoscope: KaleidoscopeControl control>"->"load.r r0";
+    "new KaleidoscopeCanvas"
+    "load.r r0"->"new KaleidoscopeCanvas";
+    "new KaleidoscopeCanvas"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "fieldget <Kaleidoscope: KaleidoscopeControl control>"
+    "load.r r0"->"fieldget <Kaleidoscope: KaleidoscopeControl control>";
+    "virtualinvoke <KaleidoscopeControl: java.awt.Dimension getCanvasSize()>"
+    "fieldget <Kaleidoscope: KaleidoscopeControl control>"->"virtualinvoke <KaleidoscopeControl: java.awt.Dimension getCanvasSize()>";
+    "specialinvoke <KaleidoscopeCanvas: void <init>(java.awt.Dimension)>"
+    "virtualinvoke <KaleidoscopeControl: java.awt.Dimension getCanvasSize()>"->"specialinvoke <KaleidoscopeCanvas: void <init>(java.awt.Dimension)>";
+    "fieldput <Kaleidoscope: KaleidoscopeCanvas canvas>"
+    "specialinvoke <KaleidoscopeCanvas: void <init>(java.awt.Dimension)>"->"fieldput <Kaleidoscope: KaleidoscopeCanvas canvas>";
+    "fieldput <Kaleidoscope: KaleidoscopeCanvas canvas>"->"load.r r0";
+    "new java.awt.Label"
+    "load.r r0"->"new java.awt.Label";
+    "new java.awt.Label"->"dup1.r";
+    "push \" \""
+    "dup1.r"->"push \" \"";
+    "specialinvoke <java.awt.Label: void <init>(java.lang.String)>"
+    "push \" \""->"specialinvoke <java.awt.Label: void <init>(java.lang.String)>";
+    "fieldput <Kaleidoscope: java.awt.Label message>"
+    "specialinvoke <java.awt.Label: void <init>(java.lang.String)>"->"fieldput <Kaleidoscope: java.awt.Label message>";
+    "fieldput <Kaleidoscope: java.awt.Label message>"->"load.r r0";
+    "fieldget <Kaleidoscope: java.awt.Label message>"
+    "load.r r0"->"fieldget <Kaleidoscope: java.awt.Label message>";
+    "push 1"
+    "fieldget <Kaleidoscope: java.awt.Label message>"->"push 1";
+    "virtualinvoke <java.awt.Label: void setAlignment(int)>"
+    "push 1"->"virtualinvoke <java.awt.Label: void setAlignment(int)>";
+    "virtualinvoke <java.awt.Label: void setAlignment(int)>"->"load.r r0";
+    "load.r r0"->"fieldget <Kaleidoscope: java.awt.Label message>";
+    "staticget <java.awt.Color: java.awt.Color blue>"
+    "fieldget <Kaleidoscope: java.awt.Label message>"->"staticget <java.awt.Color: java.awt.Color blue>";
+    "virtualinvoke <java.awt.Component: void setForeground(java.awt.Color)>"
+    "staticget <java.awt.Color: java.awt.Color blue>"->"virtualinvoke <java.awt.Component: void setForeground(java.awt.Color)>";
+    "virtualinvoke <java.awt.Component: void setForeground(java.awt.Color)>"->"load.r r0";
+    "push \"North\""
+    "load.r r0"->"push \"North\"";
+    "push \"North\""->"load.r r0";
+    "fieldget <Kaleidoscope: KaleidoscopeCanvas canvas>"
+    "load.r r0"->"fieldget <Kaleidoscope: KaleidoscopeCanvas canvas>";
+    "virtualinvoke <java.awt.Container: java.awt.Component add(java.lang.String,java.awt.Component)>"
+    "fieldget <Kaleidoscope: KaleidoscopeCanvas canvas>"->"virtualinvoke <java.awt.Container: java.awt.Component add(java.lang.String,java.awt.Component)>";
+    "pop"
+    "virtualinvoke <java.awt.Container: java.awt.Component add(java.lang.String,java.awt.Component)>"->"pop";
+    "pop"->"load.r r0";
+    "push \"Center\""
+    "load.r r0"->"push \"Center\"";
+    "push \"Center\""->"load.r r0";
+    "load.r r0"->"fieldget <Kaleidoscope: java.awt.Label message>";
+    "fieldget <Kaleidoscope: java.awt.Label message>"->"virtualinvoke <java.awt.Container: java.awt.Component add(java.lang.String,java.awt.Component)>";
+    "virtualinvoke <java.awt.Container: java.awt.Component add(java.lang.String,java.awt.Component)>"->"pop";
+    "pop"->"load.r r0";
+    "push \"South\""
+    "load.r r0"->"push \"South\"";
+    "push \"South\""->"load.r r0";
+    "load.r r0"->"fieldget <Kaleidoscope: KaleidoscopeControl control>";
+    "fieldget <Kaleidoscope: KaleidoscopeControl control>"->"virtualinvoke <java.awt.Container: java.awt.Component add(java.lang.String,java.awt.Component)>";
+    "virtualinvoke <java.awt.Container: java.awt.Component add(java.lang.String,java.awt.Component)>"->"pop";
+    "return"
+    "pop"->"return";
+}

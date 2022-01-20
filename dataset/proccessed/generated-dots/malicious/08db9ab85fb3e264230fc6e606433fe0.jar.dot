@@ -1,0 +1,28 @@
+digraph "" {
+    "r0 := @this: BaaaaBaa"
+    "load.r r0"
+    "r0 := @this: BaaaaBaa"->"load.r r0";
+    "fieldget <BaaaaBaa: java.lang.Object ob>"
+    "load.r r0"->"fieldget <BaaaaBaa: java.lang.Object ob>";
+    "ifnull return"
+    "fieldget <BaaaaBaa: java.lang.Object ob>"->"ifnull return";
+    "ifnull return"->"load.r r0";
+    "load.r r0"->"fieldget <BaaaaBaa: java.lang.Object ob>";
+    "instanceof"
+    "fieldget <BaaaaBaa: java.lang.Object ob>"->"instanceof";
+    "ifeq return"
+    "instanceof"->"ifeq return";
+    "ifeq return"->"load.r r0";
+    "load.r r0"->"fieldget <BaaaaBaa: java.lang.Object ob>";
+    "checkcast"
+    "fieldget <BaaaaBaa: java.lang.Object ob>"->"checkcast";
+    "checkcast"->"load.r r0";
+    "push \"url\""
+    "load.r r0"->"push \"url\"";
+    "virtualinvoke <BaaaaBaa: java.lang.String getParameter(java.lang.String)>"
+    "push \"url\""->"virtualinvoke <BaaaaBaa: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <Baaaaa: void work(java.lang.String)>"
+    "virtualinvoke <BaaaaBaa: java.lang.String getParameter(java.lang.String)>"->"virtualinvoke <Baaaaa: void work(java.lang.String)>";
+    "return"
+    "virtualinvoke <Baaaaa: void work(java.lang.String)>"->"return";
+}

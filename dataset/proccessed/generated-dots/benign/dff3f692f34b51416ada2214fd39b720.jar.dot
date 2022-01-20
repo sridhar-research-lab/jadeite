@@ -1,0 +1,59 @@
+digraph "" {
+    "r0 := @this: SpaceWar"
+    "load.r r0"
+    "r0 := @this: SpaceWar"->"load.r r0";
+    "new java.awt.BorderLayout"
+    "load.r r0"->"new java.awt.BorderLayout";
+    "dup1.r"
+    "new java.awt.BorderLayout"->"dup1.r";
+    "specialinvoke <java.awt.BorderLayout: void <init>()>"
+    "dup1.r"->"specialinvoke <java.awt.BorderLayout: void <init>()>";
+    "virtualinvoke <java.awt.Container: void setLayout(java.awt.LayoutManager)>"
+    "specialinvoke <java.awt.BorderLayout: void <init>()>"->"virtualinvoke <java.awt.Container: void setLayout(java.awt.LayoutManager)>";
+    "new TGCanvas"
+    "virtualinvoke <java.awt.Container: void setLayout(java.awt.LayoutManager)>"->"new TGCanvas";
+    "new TGCanvas"->"dup1.r";
+    "push 600"
+    "dup1.r"->"push 600";
+    "push 400"
+    "push 600"->"push 400";
+    "specialinvoke <TGCanvas: void <init>(int,int)>"
+    "push 400"->"specialinvoke <TGCanvas: void <init>(int,int)>";
+    "staticput <SpaceWar: TGCanvas canvas>"
+    "specialinvoke <TGCanvas: void <init>(int,int)>"->"staticput <SpaceWar: TGCanvas canvas>";
+    "staticget <SpaceWar: TGCanvas canvas>"
+    "staticput <SpaceWar: TGCanvas canvas>"->"staticget <SpaceWar: TGCanvas canvas>";
+    "staticget <java.awt.Color: java.awt.Color white>"
+    "staticget <SpaceWar: TGCanvas canvas>"->"staticget <java.awt.Color: java.awt.Color white>";
+    "virtualinvoke <java.awt.Component: void setBackground(java.awt.Color)>"
+    "staticget <java.awt.Color: java.awt.Color white>"->"virtualinvoke <java.awt.Component: void setBackground(java.awt.Color)>";
+    "virtualinvoke <java.awt.Component: void setBackground(java.awt.Color)>"->"load.r r0";
+    "push \"Center\""
+    "load.r r0"->"push \"Center\"";
+    "push \"Center\""->"staticget <SpaceWar: TGCanvas canvas>";
+    "virtualinvoke <java.awt.Container: java.awt.Component add(java.lang.String,java.awt.Component)>"
+    "staticget <SpaceWar: TGCanvas canvas>"->"virtualinvoke <java.awt.Container: java.awt.Component add(java.lang.String,java.awt.Component)>";
+    "pop"
+    "virtualinvoke <java.awt.Container: java.awt.Component add(java.lang.String,java.awt.Component)>"->"pop";
+    "pop"->"staticget <SpaceWar: TGCanvas canvas>";
+    "staticget <SpaceWar: TGCanvas canvas>"->"load.r r0";
+    "virtualinvoke <TGCanvas: void addKeyHandler(TGKeyHandler)>"
+    "load.r r0"->"virtualinvoke <TGCanvas: void addKeyHandler(TGKeyHandler)>";
+    "virtualinvoke <TGCanvas: void addKeyHandler(TGKeyHandler)>"->"staticget <SpaceWar: TGCanvas canvas>";
+    "staticget <SpaceWar: TGCanvas canvas>"->"load.r r0";
+    "virtualinvoke <TGCanvas: void addMouseHandler(TGMouseHandler)>"
+    "load.r r0"->"virtualinvoke <TGCanvas: void addMouseHandler(TGMouseHandler)>";
+    "new Turtle"
+    "virtualinvoke <TGCanvas: void addMouseHandler(TGMouseHandler)>"->"new Turtle";
+    "new Turtle"->"dup1.r";
+    "dup1.r"->"staticget <SpaceWar: TGCanvas canvas>";
+    "specialinvoke <Turtle: void <init>(TGCanvas)>"
+    "staticget <SpaceWar: TGCanvas canvas>"->"specialinvoke <Turtle: void <init>(TGCanvas)>";
+    "staticput <SpaceWar: Turtle turtle>"
+    "specialinvoke <Turtle: void <init>(TGCanvas)>"->"staticput <SpaceWar: Turtle turtle>";
+    "staticput <SpaceWar: Turtle turtle>"->"load.r r0";
+    "specialinvoke <SpaceWar: void initialize()>"
+    "load.r r0"->"specialinvoke <SpaceWar: void initialize()>";
+    "return"
+    "specialinvoke <SpaceWar: void initialize()>"->"return";
+}

@@ -1,0 +1,70 @@
+digraph "" {
+    "r0 := @this: History1"
+    "load.r r0"
+    "r0 := @this: History1"->"load.r r0";
+    "push \"MaxRecord\""
+    "load.r r0"->"push \"MaxRecord\"";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"
+    "push \"MaxRecord\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "ifnonnull load.r r0"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"ifnonnull load.r r0";
+    "push 10"
+    "ifnonnull load.r r0"->"push 10";
+    "store.i $i1"
+    "push 10"->"store.i $i1";
+    "goto load.r r0"
+    "store.i $i1"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "load.i $i1"
+    "load.r r0"->"load.i $i1";
+    "fieldput <History1: int m_nMax>"
+    "load.i $i1"->"fieldput <History1: int m_nMax>";
+    "fieldput <History1: int m_nMax>"->"load.r r0";
+    "fieldget <History1: java.util.Vector m_vHistory>"
+    "load.r r0"->"fieldget <History1: java.util.Vector m_vHistory>";
+    "fieldget <History1: java.util.Vector m_vHistory>"->"load.r r0";
+    "fieldget <History1: int m_nMax>"
+    "load.r r0"->"fieldget <History1: int m_nMax>";
+    "virtualinvoke <java.util.Vector: void setSize(int)>"
+    "fieldget <History1: int m_nMax>"->"virtualinvoke <java.util.Vector: void setSize(int)>";
+    "virtualinvoke <java.util.Vector: void setSize(int)>"->"load.r r0";
+    "load.r r0"->"fieldget <History1: java.util.Vector m_vHistory>";
+    "virtualinvoke <java.util.Vector: void removeAllElements()>"
+    "fieldget <History1: java.util.Vector m_vHistory>"->"virtualinvoke <java.util.Vector: void removeAllElements()>";
+    "virtualinvoke <java.util.Vector: void removeAllElements()>"->"load.r r0";
+    "push \"background\""
+    "load.r r0"->"push \"background\"";
+    "push \"background\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "store.r $i1"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"store.r $i1";
+    "load.r $i1"
+    "store.r $i1"->"load.r $i1";
+    "load.r $i1"->"ifnonnull load.r r0";
+    "push \"C0C0C0\""
+    "ifnonnull load.r r0"->"push \"C0C0C0\"";
+    "push \"C0C0C0\""->"store.r $i1";
+    "store.r $i1"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"load.r $i1";
+    "specialinvoke <History1: java.awt.Color stringToColor(java.lang.String)>"
+    "load.r $i1"->"specialinvoke <History1: java.awt.Color stringToColor(java.lang.String)>";
+    "fieldput <History1: java.awt.Color m_cBackGroundColor>"
+    "specialinvoke <History1: java.awt.Color stringToColor(java.lang.String)>"->"fieldput <History1: java.awt.Color m_cBackGroundColor>";
+    "fieldput <History1: java.awt.Color m_cBackGroundColor>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "fieldget <History1: java.awt.Color m_cBackGroundColor>"
+    "load.r r0"->"fieldget <History1: java.awt.Color m_cBackGroundColor>";
+    "virtualinvoke <java.awt.Component: void setBackground(java.awt.Color)>"
+    "fieldget <History1: java.awt.Color m_cBackGroundColor>"->"virtualinvoke <java.awt.Component: void setBackground(java.awt.Color)>";
+    "virtualinvoke <java.awt.Component: void setBackground(java.awt.Color)>"->"load.r r0";
+    "specialinvoke <History1: void notifyLoaded()>"
+    "load.r r0"->"specialinvoke <History1: void notifyLoaded()>";
+    "return"
+    "specialinvoke <History1: void notifyLoaded()>"->"return";
+    "ifnonnull load.r r0"->"load.r r0";
+    "load.r r0"->"push \"MaxRecord\"";
+    "push \"MaxRecord\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>";
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"->"store.i $i1";
+}

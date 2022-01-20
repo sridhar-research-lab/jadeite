@@ -1,0 +1,104 @@
+digraph "" {
+    "r0 := @this: flame3"
+    "load.r r0"
+    "r0 := @this: flame3"->"load.r r0";
+    "staticget <java.awt.Color: java.awt.Color black>"
+    "load.r r0"->"staticget <java.awt.Color: java.awt.Color black>";
+    "virtualinvoke <java.awt.Component: void setBackground(java.awt.Color)>"
+    "staticget <java.awt.Color: java.awt.Color black>"->"virtualinvoke <java.awt.Component: void setBackground(java.awt.Color)>";
+    "virtualinvoke <java.awt.Component: void setBackground(java.awt.Color)>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "virtualinvoke <java.awt.Component: java.awt.Dimension getSize()>"
+    "load.r r0"->"virtualinvoke <java.awt.Component: java.awt.Dimension getSize()>";
+    "dup1.r"
+    "virtualinvoke <java.awt.Component: java.awt.Dimension getSize()>"->"dup1.r";
+    "fieldget <java.awt.Dimension: int width>"
+    "dup1.r"->"fieldget <java.awt.Dimension: int width>";
+    "store.i $i0"
+    "fieldget <java.awt.Dimension: int width>"->"store.i $i0";
+    "store.i $i0"->"load.r r0";
+    "load.i $i0"
+    "load.r r0"->"load.i $i0";
+    "fieldput <flame3: int XSIZE>"
+    "load.i $i0"->"fieldput <flame3: int XSIZE>";
+    "fieldget <java.awt.Dimension: int height>"
+    "fieldput <flame3: int XSIZE>"->"fieldget <java.awt.Dimension: int height>";
+    "fieldput <flame3: int YSIZE>"
+    "fieldget <java.awt.Dimension: int height>"->"fieldput <flame3: int YSIZE>";
+    "fieldput <flame3: int YSIZE>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "fieldget <flame3: int XSIZE>"
+    "load.r r0"->"fieldget <flame3: int XSIZE>";
+    "fieldget <flame3: int XSIZE>"->"load.r r0";
+    "fieldget <flame3: int YSIZE>"
+    "load.r r0"->"fieldget <flame3: int YSIZE>";
+    "mul.i"
+    "fieldget <flame3: int YSIZE>"->"mul.i";
+    "fieldput <flame3: int SIZE>"
+    "mul.i"->"fieldput <flame3: int SIZE>";
+    "staticget <java.lang.System: java.io.PrintStream err>"
+    "fieldput <flame3: int SIZE>"->"staticget <java.lang.System: java.io.PrintStream err>";
+    "new java.lang.StringBuffer"
+    "staticget <java.lang.System: java.io.PrintStream err>"->"new java.lang.StringBuffer";
+    "new java.lang.StringBuffer"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "load.r r0"->"fieldget <flame3: int XSIZE>";
+    "staticinvoke <java.lang.String: java.lang.String valueOf(int)>"
+    "fieldget <flame3: int XSIZE>"->"staticinvoke <java.lang.String: java.lang.String valueOf(int)>";
+    "specialinvoke <java.lang.StringBuffer: void <init>(java.lang.String)>"
+    "staticinvoke <java.lang.String: java.lang.String valueOf(int)>"->"specialinvoke <java.lang.StringBuffer: void <init>(java.lang.String)>";
+    "push \" \""
+    "specialinvoke <java.lang.StringBuffer: void <init>(java.lang.String)>"->"push \" \"";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"
+    "push \" \""->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"load.r r0";
+    "load.r r0"->"fieldget <flame3: int YSIZE>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(int)>"
+    "fieldget <flame3: int YSIZE>"->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(int)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(int)>"->"push \" \"";
+    "push \" \""->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"load.r r0";
+    "fieldget <flame3: int SIZE>"
+    "load.r r0"->"fieldget <flame3: int SIZE>";
+    "fieldget <flame3: int SIZE>"->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(int)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>"
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(int)>"->"virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>";
+    "virtualinvoke <java.io.PrintStream: void println(java.lang.String)>"
+    "virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>"->"virtualinvoke <java.io.PrintStream: void println(java.lang.String)>";
+    "virtualinvoke <java.io.PrintStream: void println(java.lang.String)>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <flame3: int XSIZE>";
+    "push 1"
+    "fieldget <flame3: int XSIZE>"->"push 1";
+    "sub.i"
+    "push 1"->"sub.i";
+    "fieldput <flame3: int XE>"
+    "sub.i"->"fieldput <flame3: int XE>";
+    "fieldput <flame3: int XE>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <flame3: int SIZE>";
+    "fieldget <flame3: int SIZE>"->"load.r r0";
+    "load.r r0"->"fieldget <flame3: int XSIZE>";
+    "fieldget <flame3: int XSIZE>"->"sub.i";
+    "fieldput <flame3: int BOTTOM>"
+    "sub.i"->"fieldput <flame3: int BOTTOM>";
+    "fieldput <flame3: int BOTTOM>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <flame3: int SIZE>";
+    "newarray"
+    "fieldget <flame3: int SIZE>"->"newarray";
+    "fieldput <flame3: int[] off>"
+    "newarray"->"fieldput <flame3: int[] off>";
+    "fieldput <flame3: int[] off>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <flame3: int XSIZE>";
+    "fieldget <flame3: int XSIZE>"->"load.r r0";
+    "load.r r0"->"fieldget <flame3: int YSIZE>";
+    "virtualinvoke <java.awt.Component: java.awt.Image createImage(int,int)>"
+    "fieldget <flame3: int YSIZE>"->"virtualinvoke <java.awt.Component: java.awt.Image createImage(int,int)>";
+    "fieldput <flame3: java.awt.Image art>"
+    "virtualinvoke <java.awt.Component: java.awt.Image createImage(int,int)>"->"fieldput <flame3: java.awt.Image art>";
+    "return"
+    "fieldput <flame3: java.awt.Image art>"->"return";
+}

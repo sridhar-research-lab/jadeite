@@ -1,0 +1,50 @@
+digraph "" {
+    "r0 := @this: SortItem"
+    "load.r r0"
+    "r0 := @this: SortItem"->"load.r r0";
+    "push \"alg\""
+    "load.r r0"->"push \"alg\"";
+    "virtualinvoke <SortItem: java.lang.String getParameter(java.lang.String)>"
+    "push \"alg\""->"virtualinvoke <SortItem: java.lang.String getParameter(java.lang.String)>";
+    "store.r r5"
+    "virtualinvoke <SortItem: java.lang.String getParameter(java.lang.String)>"->"store.r r5";
+    "load.r r5"
+    "store.r r5"->"load.r r5";
+    "ifnonnull load.r r0"
+    "load.r r5"->"ifnonnull load.r r0";
+    "push \"BubbleSort\""
+    "ifnonnull load.r r0"->"push \"BubbleSort\"";
+    "push \"BubbleSort\""->"store.r r5";
+    "store.r r5"->"load.r r0";
+    "new java.lang.StringBuilder"
+    "load.r r0"->"new java.lang.StringBuilder";
+    "dup1.r"
+    "new java.lang.StringBuilder"->"dup1.r";
+    "specialinvoke <java.lang.StringBuilder: void <init>()>"
+    "dup1.r"->"specialinvoke <java.lang.StringBuilder: void <init>()>";
+    "specialinvoke <java.lang.StringBuilder: void <init>()>"->"load.r r5";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"
+    "load.r r5"->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "push \"Algorithm\""
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"push \"Algorithm\"";
+    "push \"Algorithm\""->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.String toString()>"
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"virtualinvoke <java.lang.StringBuilder: java.lang.String toString()>";
+    "fieldput <SortItem: java.lang.String algName>"
+    "virtualinvoke <java.lang.StringBuilder: java.lang.String toString()>"->"fieldput <SortItem: java.lang.String algName>";
+    "fieldput <SortItem: java.lang.String algName>"->"load.r r0";
+    "virtualinvoke <SortItem: void scramble()>"
+    "load.r r0"->"virtualinvoke <SortItem: void scramble()>";
+    "virtualinvoke <SortItem: void scramble()>"->"load.r r0";
+    "push 100"
+    "load.r r0"->"push 100";
+    "push 100"->"push 100";
+    "virtualinvoke <SortItem: void resize(int,int)>"
+    "push 100"->"virtualinvoke <SortItem: void resize(int,int)>";
+    "virtualinvoke <SortItem: void resize(int,int)>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "virtualinvoke <SortItem: void addMouseListener(java.awt.event.MouseListener)>"
+    "load.r r0"->"virtualinvoke <SortItem: void addMouseListener(java.awt.event.MouseListener)>";
+    "return"
+    "virtualinvoke <SortItem: void addMouseListener(java.awt.event.MouseListener)>"->"return";
+}

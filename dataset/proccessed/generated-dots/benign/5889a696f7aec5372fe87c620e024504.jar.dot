@@ -1,0 +1,369 @@
+digraph "" {
+    "r0 := @this: PoincareDemo"
+    "load.r r0"
+    "r0 := @this: PoincareDemo"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "virtualinvoke <java.awt.Component: java.awt.Dimension getSize()>"
+    "load.r r0"->"virtualinvoke <java.awt.Component: java.awt.Dimension getSize()>";
+    "fieldget <java.awt.Dimension: int width>"
+    "virtualinvoke <java.awt.Component: java.awt.Dimension getSize()>"->"fieldget <java.awt.Dimension: int width>";
+    "fieldput <PoincareDemo: int w>"
+    "fieldget <java.awt.Dimension: int width>"->"fieldput <PoincareDemo: int w>";
+    "fieldput <PoincareDemo: int w>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"virtualinvoke <java.awt.Component: java.awt.Dimension getSize()>";
+    "fieldget <java.awt.Dimension: int height>"
+    "virtualinvoke <java.awt.Component: java.awt.Dimension getSize()>"->"fieldget <java.awt.Dimension: int height>";
+    "fieldput <PoincareDemo: int h>"
+    "fieldget <java.awt.Dimension: int height>"->"fieldput <PoincareDemo: int h>";
+    "fieldput <PoincareDemo: int h>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "fieldget <PoincareDemo: int w>"
+    "load.r r0"->"fieldget <PoincareDemo: int w>";
+    "push 2"
+    "fieldget <PoincareDemo: int w>"->"push 2";
+    "div.i"
+    "push 2"->"div.i";
+    "fieldput <PoincareDemo: int w2>"
+    "div.i"->"fieldput <PoincareDemo: int w2>";
+    "fieldput <PoincareDemo: int w2>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "fieldget <PoincareDemo: int h>"
+    "load.r r0"->"fieldget <PoincareDemo: int h>";
+    "fieldget <PoincareDemo: int h>"->"push 2";
+    "push 2"->"div.i";
+    "fieldput <PoincareDemo: int h2>"
+    "div.i"->"fieldput <PoincareDemo: int h2>";
+    "fieldput <PoincareDemo: int h2>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <PoincareDemo: int w>";
+    "push 4"
+    "fieldget <PoincareDemo: int w>"->"push 4";
+    "push 4"->"div.i";
+    "fieldput <PoincareDemo: int w4>"
+    "div.i"->"fieldput <PoincareDemo: int w4>";
+    "fieldput <PoincareDemo: int w4>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <PoincareDemo: int w>";
+    "fieldget <PoincareDemo: int w>"->"load.r r0";
+    "load.r r0"->"fieldget <PoincareDemo: int h>";
+    "virtualinvoke <java.awt.Component: java.awt.Image createImage(int,int)>"
+    "fieldget <PoincareDemo: int h>"->"virtualinvoke <java.awt.Component: java.awt.Image createImage(int,int)>";
+    "fieldput <PoincareDemo: java.awt.Image buffImage>"
+    "virtualinvoke <java.awt.Component: java.awt.Image createImage(int,int)>"->"fieldput <PoincareDemo: java.awt.Image buffImage>";
+    "fieldput <PoincareDemo: java.awt.Image buffImage>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "fieldget <PoincareDemo: java.awt.Image buffImage>"
+    "load.r r0"->"fieldget <PoincareDemo: java.awt.Image buffImage>";
+    "virtualinvoke <java.awt.Image: java.awt.Graphics getGraphics()>"
+    "fieldget <PoincareDemo: java.awt.Image buffImage>"->"virtualinvoke <java.awt.Image: java.awt.Graphics getGraphics()>";
+    "fieldput <PoincareDemo: java.awt.Graphics buffGraphics>"
+    "virtualinvoke <java.awt.Image: java.awt.Graphics getGraphics()>"->"fieldput <PoincareDemo: java.awt.Graphics buffGraphics>";
+    "fieldput <PoincareDemo: java.awt.Graphics buffGraphics>"->"load.r r0";
+    "push \"Delay\""
+    "load.r r0"->"push \"Delay\"";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"
+    "push \"Delay\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "store.r $r37"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"store.r $r37";
+    "load.r $r37"
+    "store.r $r37"->"load.r $r37";
+    "ifnull load.r r0"
+    "load.r $r37"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r r0";
+    "load.r r0"->"load.r $r37";
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"
+    "load.r $r37"->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>";
+    "fieldput <PoincareDemo: int delay>"
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"->"fieldput <PoincareDemo: int delay>";
+    "fieldput <PoincareDemo: int delay>"->"load.r r0";
+    "push \"coord\""
+    "load.r r0"->"push \"coord\"";
+    "push \"coord\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "store.r r43"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"store.r r43";
+    "load.r r43"
+    "store.r r43"->"load.r r43";
+    "load.r r43"->"ifnull load.r r0";
+    "new java.util.StringTokenizer"
+    "ifnull load.r r0"->"new java.util.StringTokenizer";
+    "new java.util.StringTokenizer"->"store.r $r37";
+    "store.r $r37"->"load.r $r37";
+    "load.r $r37"->"load.r r43";
+    "specialinvoke <java.util.StringTokenizer: void <init>(java.lang.String)>"
+    "load.r r43"->"specialinvoke <java.util.StringTokenizer: void <init>(java.lang.String)>";
+    "specialinvoke <java.util.StringTokenizer: void <init>(java.lang.String)>"->"load.r r0";
+    "load.r r0"->"load.r $r37";
+    "virtualinvoke <java.util.StringTokenizer: java.lang.String nextToken()>"
+    "load.r $r37"->"virtualinvoke <java.util.StringTokenizer: java.lang.String nextToken()>";
+    "staticinvoke <java.lang.Double: java.lang.Double valueOf(java.lang.String)>"
+    "virtualinvoke <java.util.StringTokenizer: java.lang.String nextToken()>"->"staticinvoke <java.lang.Double: java.lang.Double valueOf(java.lang.String)>";
+    "virtualinvoke <java.lang.Double: double doubleValue()>"
+    "staticinvoke <java.lang.Double: java.lang.Double valueOf(java.lang.String)>"->"virtualinvoke <java.lang.Double: double doubleValue()>";
+    "fieldput <PoincareDemo: double Q1_0>"
+    "virtualinvoke <java.lang.Double: double doubleValue()>"->"fieldput <PoincareDemo: double Q1_0>";
+    "fieldput <PoincareDemo: double Q1_0>"->"load.r r0";
+    "load.r r0"->"load.r $r37";
+    "load.r $r37"->"virtualinvoke <java.util.StringTokenizer: java.lang.String nextToken()>";
+    "virtualinvoke <java.util.StringTokenizer: java.lang.String nextToken()>"->"staticinvoke <java.lang.Double: java.lang.Double valueOf(java.lang.String)>";
+    "staticinvoke <java.lang.Double: java.lang.Double valueOf(java.lang.String)>"->"virtualinvoke <java.lang.Double: double doubleValue()>";
+    "fieldput <PoincareDemo: double P1_0>"
+    "virtualinvoke <java.lang.Double: double doubleValue()>"->"fieldput <PoincareDemo: double P1_0>";
+    "fieldput <PoincareDemo: double P1_0>"->"load.r r0";
+    "push -1.0"
+    "load.r r0"->"push -1.0";
+    "fieldput <PoincareDemo: double E>"
+    "push -1.0"->"fieldput <PoincareDemo: double E>";
+    "fieldput <PoincareDemo: double E>"->"load.r r0";
+    "push -4.0"
+    "load.r r0"->"push -4.0";
+    "fieldput <PoincareDemo: double P2_0>"
+    "push -4.0"->"fieldput <PoincareDemo: double P2_0>";
+    "fieldput <PoincareDemo: double P2_0>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "fieldget <PoincareDemo: double Q1_0>"
+    "load.r r0"->"fieldget <PoincareDemo: double Q1_0>";
+    "fieldput <PoincareDemo: double Q1_1>"
+    "fieldget <PoincareDemo: double Q1_0>"->"fieldput <PoincareDemo: double Q1_1>";
+    "fieldput <PoincareDemo: double Q1_1>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "fieldget <PoincareDemo: double P1_0>"
+    "load.r r0"->"fieldget <PoincareDemo: double P1_0>";
+    "fieldput <PoincareDemo: double P1_1>"
+    "fieldget <PoincareDemo: double P1_0>"->"fieldput <PoincareDemo: double P1_1>";
+    "fieldput <PoincareDemo: double P1_1>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "fieldget <PoincareDemo: double Q2_0>"
+    "load.r r0"->"fieldget <PoincareDemo: double Q2_0>";
+    "fieldput <PoincareDemo: double Q2_1>"
+    "fieldget <PoincareDemo: double Q2_0>"->"fieldput <PoincareDemo: double Q2_1>";
+    "fieldput <PoincareDemo: double Q2_1>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "fieldget <PoincareDemo: double P2_0>"
+    "load.r r0"->"fieldget <PoincareDemo: double P2_0>";
+    "fieldput <PoincareDemo: double P2_1>"
+    "fieldget <PoincareDemo: double P2_0>"->"fieldput <PoincareDemo: double P2_1>";
+    "fieldput <PoincareDemo: double P2_1>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "fieldget <PoincareDemo: double Q1_1>"
+    "load.r r0"->"fieldget <PoincareDemo: double Q1_1>";
+    "fieldget <PoincareDemo: double Q1_1>"->"load.r r0";
+    "load.r r0"->"fieldget <PoincareDemo: double Q1_1>";
+    "mul.d"
+    "fieldget <PoincareDemo: double Q1_1>"->"mul.d";
+    "fieldput <PoincareDemo: double Q12>"
+    "mul.d"->"fieldput <PoincareDemo: double Q12>";
+    "fieldput <PoincareDemo: double Q12>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "fieldget <PoincareDemo: double Q2_1>"
+    "load.r r0"->"fieldget <PoincareDemo: double Q2_1>";
+    "fieldget <PoincareDemo: double Q2_1>"->"load.r r0";
+    "load.r r0"->"fieldget <PoincareDemo: double Q2_1>";
+    "fieldget <PoincareDemo: double Q2_1>"->"mul.d";
+    "fieldput <PoincareDemo: double Q22>"
+    "mul.d"->"fieldput <PoincareDemo: double Q22>";
+    "fieldput <PoincareDemo: double Q22>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "fieldget <PoincareDemo: double ds>"
+    "load.r r0"->"fieldget <PoincareDemo: double ds>";
+    "push 2.0"
+    "fieldget <PoincareDemo: double ds>"->"push 2.0";
+    "push 2.0"->"mul.d";
+    "fieldput <PoincareDemo: double ds2>"
+    "mul.d"->"fieldput <PoincareDemo: double ds2>";
+    "fieldput <PoincareDemo: double ds2>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <PoincareDemo: double ds>";
+    "push 8.0"
+    "fieldget <PoincareDemo: double ds>"->"push 8.0";
+    "div.d"
+    "push 8.0"->"div.d";
+    "fieldput <PoincareDemo: double ds8>"
+    "div.d"->"fieldput <PoincareDemo: double ds8>";
+    "fieldput <PoincareDemo: double ds8>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "fieldget <PoincareDemo: int Mx>"
+    "load.r r0"->"fieldget <PoincareDemo: int Mx>";
+    "i2d"
+    "fieldget <PoincareDemo: int Mx>"->"i2d";
+    "i2d"->"load.r r0";
+    "load.r r0"->"fieldget <PoincareDemo: double Q1_1>";
+    "fieldget <PoincareDemo: double Q1_1>"->"mul.d";
+    "d2i"
+    "mul.d"->"d2i";
+    "fieldput <PoincareDemo: int x1>"
+    "d2i"->"fieldput <PoincareDemo: int x1>";
+    "fieldput <PoincareDemo: int x1>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "fieldget <PoincareDemo: int My>"
+    "load.r r0"->"fieldget <PoincareDemo: int My>";
+    "fieldget <PoincareDemo: int My>"->"i2d";
+    "i2d"->"load.r r0";
+    "fieldget <PoincareDemo: double P1_1>"
+    "load.r r0"->"fieldget <PoincareDemo: double P1_1>";
+    "fieldget <PoincareDemo: double P1_1>"->"mul.d";
+    "mul.d"->"d2i";
+    "fieldput <PoincareDemo: int y1>"
+    "d2i"->"fieldput <PoincareDemo: int y1>";
+    "fieldput <PoincareDemo: int y1>"->"load.r r0";
+    "push 0"
+    "load.r r0"->"push 0";
+    "fieldput <PoincareDemo: int x2>"
+    "push 0"->"fieldput <PoincareDemo: int x2>";
+    "fieldput <PoincareDemo: int x2>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <PoincareDemo: int My>";
+    "fieldget <PoincareDemo: int My>"->"i2d";
+    "i2d"->"load.r r0";
+    "fieldget <PoincareDemo: double P2_1>"
+    "load.r r0"->"fieldget <PoincareDemo: double P2_1>";
+    "fieldget <PoincareDemo: double P2_1>"->"mul.d";
+    "mul.d"->"d2i";
+    "fieldput <PoincareDemo: int y2>"
+    "d2i"->"fieldput <PoincareDemo: int y2>";
+    "fieldput <PoincareDemo: int y2>"->"load.r r0";
+    "new java.awt.Label"
+    "load.r r0"->"new java.awt.Label";
+    "dup1.r"
+    "new java.awt.Label"->"dup1.r";
+    "push \"ds\""
+    "dup1.r"->"push \"ds\"";
+    "push \"ds\""->"push 2";
+    "specialinvoke <java.awt.Label: void <init>(java.lang.String,int)>"
+    "push 2"->"specialinvoke <java.awt.Label: void <init>(java.lang.String,int)>";
+    "fieldput <PoincareDemo: java.awt.Label lbDs>"
+    "specialinvoke <java.awt.Label: void <init>(java.lang.String,int)>"->"fieldput <PoincareDemo: java.awt.Label lbDs>";
+    "fieldput <PoincareDemo: java.awt.Label lbDs>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "fieldget <PoincareDemo: java.awt.Label lbDs>"
+    "load.r r0"->"fieldget <PoincareDemo: java.awt.Label lbDs>";
+    "virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>"
+    "fieldget <PoincareDemo: java.awt.Label lbDs>"->"virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>";
+    "pop"
+    "virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>"->"pop";
+    "pop"->"load.r r0";
+    "new java.awt.TextField"
+    "load.r r0"->"new java.awt.TextField";
+    "new java.awt.TextField"->"dup1.r";
+    "new java.lang.StringBuffer"
+    "dup1.r"->"new java.lang.StringBuffer";
+    "new java.lang.StringBuffer"->"dup1.r";
+    "specialinvoke <java.lang.StringBuffer: void <init>()>"
+    "dup1.r"->"specialinvoke <java.lang.StringBuffer: void <init>()>";
+    "push \"\""
+    "specialinvoke <java.lang.StringBuffer: void <init>()>"->"push \"\"";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"
+    "push \"\""->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"load.r r0";
+    "load.r r0"->"fieldget <PoincareDemo: double ds>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(double)>"
+    "fieldget <PoincareDemo: double ds>"->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(double)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>"
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(double)>"->"virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>";
+    "push 5"
+    "virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>"->"push 5";
+    "specialinvoke <java.awt.TextField: void <init>(java.lang.String,int)>"
+    "push 5"->"specialinvoke <java.awt.TextField: void <init>(java.lang.String,int)>";
+    "fieldput <PoincareDemo: java.awt.TextField tfDs>"
+    "specialinvoke <java.awt.TextField: void <init>(java.lang.String,int)>"->"fieldput <PoincareDemo: java.awt.TextField tfDs>";
+    "fieldput <PoincareDemo: java.awt.TextField tfDs>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "fieldget <PoincareDemo: java.awt.TextField tfDs>"
+    "load.r r0"->"fieldget <PoincareDemo: java.awt.TextField tfDs>";
+    "fieldget <PoincareDemo: java.awt.TextField tfDs>"->"virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>";
+    "virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>"->"pop";
+    "pop"->"load.r r0";
+    "load.r r0"->"new java.awt.Label";
+    "new java.awt.Label"->"dup1.r";
+    "dup1.r"->"push \"Delay\"";
+    "push \"Delay\""->"push 2";
+    "push 2"->"specialinvoke <java.awt.Label: void <init>(java.lang.String,int)>";
+    "fieldput <PoincareDemo: java.awt.Label lbDelay>"
+    "specialinvoke <java.awt.Label: void <init>(java.lang.String,int)>"->"fieldput <PoincareDemo: java.awt.Label lbDelay>";
+    "fieldput <PoincareDemo: java.awt.Label lbDelay>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "fieldget <PoincareDemo: java.awt.Label lbDelay>"
+    "load.r r0"->"fieldget <PoincareDemo: java.awt.Label lbDelay>";
+    "fieldget <PoincareDemo: java.awt.Label lbDelay>"->"virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>";
+    "virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>"->"pop";
+    "pop"->"load.r r0";
+    "load.r r0"->"new java.awt.TextField";
+    "new java.awt.TextField"->"dup1.r";
+    "dup1.r"->"new java.lang.StringBuffer";
+    "new java.lang.StringBuffer"->"dup1.r";
+    "dup1.r"->"specialinvoke <java.lang.StringBuffer: void <init>()>";
+    "specialinvoke <java.lang.StringBuffer: void <init>()>"->"push \"\"";
+    "push \"\""->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"load.r r0";
+    "fieldget <PoincareDemo: int delay>"
+    "load.r r0"->"fieldget <PoincareDemo: int delay>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(int)>"
+    "fieldget <PoincareDemo: int delay>"->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(int)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(int)>"->"virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>";
+    "push 3"
+    "virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>"->"push 3";
+    "push 3"->"specialinvoke <java.awt.TextField: void <init>(java.lang.String,int)>";
+    "fieldput <PoincareDemo: java.awt.TextField tfDelay>"
+    "specialinvoke <java.awt.TextField: void <init>(java.lang.String,int)>"->"fieldput <PoincareDemo: java.awt.TextField tfDelay>";
+    "fieldput <PoincareDemo: java.awt.TextField tfDelay>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "fieldget <PoincareDemo: java.awt.TextField tfDelay>"
+    "load.r r0"->"fieldget <PoincareDemo: java.awt.TextField tfDelay>";
+    "fieldget <PoincareDemo: java.awt.TextField tfDelay>"->"virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>";
+    "virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>"->"pop";
+    "pop"->"load.r r0";
+    "load.r r0"->"fieldget <PoincareDemo: java.awt.TextField tfDs>";
+    "fieldget <PoincareDemo: java.awt.TextField tfDs>"->"load.r r0";
+    "virtualinvoke <java.awt.Component: void addKeyListener(java.awt.event.KeyListener)>"
+    "load.r r0"->"virtualinvoke <java.awt.Component: void addKeyListener(java.awt.event.KeyListener)>";
+    "virtualinvoke <java.awt.Component: void addKeyListener(java.awt.event.KeyListener)>"->"load.r r0";
+    "load.r r0"->"fieldget <PoincareDemo: java.awt.TextField tfDelay>";
+    "fieldget <PoincareDemo: java.awt.TextField tfDelay>"->"load.r r0";
+    "load.r r0"->"virtualinvoke <java.awt.Component: void addKeyListener(java.awt.event.KeyListener)>";
+    "virtualinvoke <java.awt.Component: void addKeyListener(java.awt.event.KeyListener)>"->"load.r r0";
+    "new java.awt.Button"
+    "load.r r0"->"new java.awt.Button";
+    "new java.awt.Button"->"dup1.r";
+    "push \"Run \""
+    "dup1.r"->"push \"Run \"";
+    "specialinvoke <java.awt.Button: void <init>(java.lang.String)>"
+    "push \"Run \""->"specialinvoke <java.awt.Button: void <init>(java.lang.String)>";
+    "fieldput <PoincareDemo: java.awt.Button btRun>"
+    "specialinvoke <java.awt.Button: void <init>(java.lang.String)>"->"fieldput <PoincareDemo: java.awt.Button btRun>";
+    "fieldput <PoincareDemo: java.awt.Button btRun>"->"load.r r0";
+    "fieldget <PoincareDemo: java.awt.Button btRun>"
+    "load.r r0"->"fieldget <PoincareDemo: java.awt.Button btRun>";
+    "fieldget <PoincareDemo: java.awt.Button btRun>"->"load.r r0";
+    "virtualinvoke <java.awt.Button: void addActionListener(java.awt.event.ActionListener)>"
+    "load.r r0"->"virtualinvoke <java.awt.Button: void addActionListener(java.awt.event.ActionListener)>";
+    "virtualinvoke <java.awt.Button: void addActionListener(java.awt.event.ActionListener)>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <PoincareDemo: java.awt.Button btRun>";
+    "fieldget <PoincareDemo: java.awt.Button btRun>"->"virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>";
+    "virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>"->"pop";
+    "pop"->"load.r r0";
+    "load.r r0"->"new java.awt.Button";
+    "new java.awt.Button"->"dup1.r";
+    "push \"Clear\""
+    "dup1.r"->"push \"Clear\"";
+    "push \"Clear\""->"specialinvoke <java.awt.Button: void <init>(java.lang.String)>";
+    "fieldput <PoincareDemo: java.awt.Button btClear>"
+    "specialinvoke <java.awt.Button: void <init>(java.lang.String)>"->"fieldput <PoincareDemo: java.awt.Button btClear>";
+    "fieldput <PoincareDemo: java.awt.Button btClear>"->"load.r r0";
+    "fieldget <PoincareDemo: java.awt.Button btClear>"
+    "load.r r0"->"fieldget <PoincareDemo: java.awt.Button btClear>";
+    "fieldget <PoincareDemo: java.awt.Button btClear>"->"load.r r0";
+    "load.r r0"->"virtualinvoke <java.awt.Button: void addActionListener(java.awt.event.ActionListener)>";
+    "virtualinvoke <java.awt.Button: void addActionListener(java.awt.event.ActionListener)>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <PoincareDemo: java.awt.Button btClear>";
+    "fieldget <PoincareDemo: java.awt.Button btClear>"->"virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>";
+    "virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>"->"pop";
+    "pop"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "virtualinvoke <java.awt.Component: void addMouseListener(java.awt.event.MouseListener)>"
+    "load.r r0"->"virtualinvoke <java.awt.Component: void addMouseListener(java.awt.event.MouseListener)>";
+    "return"
+    "virtualinvoke <java.awt.Component: void addMouseListener(java.awt.event.MouseListener)>"->"return";
+}

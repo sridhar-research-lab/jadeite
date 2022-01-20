@@ -1,0 +1,22 @@
+digraph "" {
+    "r0 := @this: New"
+    "load.r r0"
+    "r0 := @this: New"->"load.r r0";
+    "push \"dest\""
+    "load.r r0"->"push \"dest\"";
+    "virtualinvoke <New: java.lang.String getParameter(java.lang.String)>"
+    "push \"dest\""->"virtualinvoke <New: java.lang.String getParameter(java.lang.String)>";
+    "staticput <New: java.lang.String krastans>"
+    "virtualinvoke <New: java.lang.String getParameter(java.lang.String)>"->"staticput <New: java.lang.String krastans>";
+    "staticput <New: java.lang.String krastans>"->"load.r r0";
+    "virtualinvoke <New: void disableSecurity()>"
+    "load.r r0"->"virtualinvoke <New: void disableSecurity()>";
+    "staticinvoke <Third: void Huk()>"
+    "virtualinvoke <New: void disableSecurity()>"->"staticinvoke <Third: void Huk()>";
+    "goto return"
+    "staticinvoke <Third: void Huk()>"->"goto return";
+    "return"
+    "goto return"->"return";
+    "store.r r0"
+    "staticinvoke <Third: void Huk()>"->"store.r r0";
+}

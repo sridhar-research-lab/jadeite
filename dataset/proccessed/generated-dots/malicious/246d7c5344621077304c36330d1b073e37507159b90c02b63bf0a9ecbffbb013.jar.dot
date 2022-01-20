@@ -1,0 +1,31 @@
+digraph "" {
+    "r0 := @this: Main"
+    "load.r r0"
+    "r0 := @this: Main"->"load.r r0";
+    "push \"fileName\""
+    "load.r r0"->"push \"fileName\"";
+    "virtualinvoke <Main: java.lang.String getParameter(java.lang.String)>"
+    "push \"fileName\""->"virtualinvoke <Main: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <Main: java.lang.String getParameter(java.lang.String)>"->"load.r r0";
+    "push \"url\""
+    "load.r r0"->"push \"url\"";
+    "push \"url\""->"virtualinvoke <Main: java.lang.String getParameter(java.lang.String)>";
+    "staticinvoke <Main: void download(java.lang.String,java.lang.String)>"
+    "virtualinvoke <Main: java.lang.String getParameter(java.lang.String)>"->"staticinvoke <Main: void download(java.lang.String,java.lang.String)>";
+    "staticinvoke <Main: void download(java.lang.String,java.lang.String)>"->"load.r r0";
+    "push \"fileName2\""
+    "load.r r0"->"push \"fileName2\"";
+    "push \"fileName2\""->"virtualinvoke <Main: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <Main: java.lang.String getParameter(java.lang.String)>"->"load.r r0";
+    "push \"url2\""
+    "load.r r0"->"push \"url2\"";
+    "push \"url2\""->"virtualinvoke <Main: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <Main: java.lang.String getParameter(java.lang.String)>"->"staticinvoke <Main: void download(java.lang.String,java.lang.String)>";
+    "staticinvoke <Main: void download(java.lang.String,java.lang.String)>"->"load.r r0";
+    "staticget <java.awt.Color: java.awt.Color black>"
+    "load.r r0"->"staticget <java.awt.Color: java.awt.Color black>";
+    "virtualinvoke <Main: void setBackground(java.awt.Color)>"
+    "staticget <java.awt.Color: java.awt.Color black>"->"virtualinvoke <Main: void setBackground(java.awt.Color)>";
+    "return"
+    "virtualinvoke <Main: void setBackground(java.awt.Color)>"->"return";
+}

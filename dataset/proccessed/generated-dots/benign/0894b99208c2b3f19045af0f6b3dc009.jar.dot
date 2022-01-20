@@ -1,0 +1,196 @@
+digraph "" {
+    "r0 := @this: Typer"
+    "load.r r0"
+    "r0 := @this: Typer"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "push \"LINE\""
+    "load.r r0"->"push \"LINE\"";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"
+    "push \"LINE\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "fieldput <Typer: java.lang.String line>"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"fieldput <Typer: java.lang.String line>";
+    "fieldput <Typer: java.lang.String line>"->"load.r r0";
+    "fieldget <Typer: java.awt.Container content>"
+    "load.r r0"->"fieldget <Typer: java.awt.Container content>";
+    "fieldget <Typer: java.awt.Container content>"->"load.r r0";
+    "fieldget <Typer: javax.swing.JLabel theLine>"
+    "load.r r0"->"fieldget <Typer: javax.swing.JLabel theLine>";
+    "virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>"
+    "fieldget <Typer: javax.swing.JLabel theLine>"->"virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>";
+    "pop"
+    "virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>"->"pop";
+    "pop"->"load.r r0";
+    "load.r r0"->"fieldget <Typer: java.awt.Container content>";
+    "new java.awt.GridLayout"
+    "fieldget <Typer: java.awt.Container content>"->"new java.awt.GridLayout";
+    "dup1.r"
+    "new java.awt.GridLayout"->"dup1.r";
+    "push 1"
+    "dup1.r"->"push 1";
+    "push 1"->"push 1";
+    "specialinvoke <java.awt.GridLayout: void <init>(int,int)>"
+    "push 1"->"specialinvoke <java.awt.GridLayout: void <init>(int,int)>";
+    "virtualinvoke <java.awt.Container: void setLayout(java.awt.LayoutManager)>"
+    "specialinvoke <java.awt.GridLayout: void <init>(int,int)>"->"virtualinvoke <java.awt.Container: void setLayout(java.awt.LayoutManager)>";
+    "virtualinvoke <java.awt.Container: void setLayout(java.awt.LayoutManager)>"->"load.r r0";
+    "load.r r0"->"fieldget <Typer: java.awt.Container content>";
+    "staticget <java.awt.Color: java.awt.Color black>"
+    "fieldget <Typer: java.awt.Container content>"->"staticget <java.awt.Color: java.awt.Color black>";
+    "virtualinvoke <java.awt.Component: void setBackground(java.awt.Color)>"
+    "staticget <java.awt.Color: java.awt.Color black>"->"virtualinvoke <java.awt.Component: void setBackground(java.awt.Color)>";
+    "virtualinvoke <java.awt.Component: void setBackground(java.awt.Color)>"->"load.r r0";
+    "load.r r0"->"fieldget <Typer: javax.swing.JLabel theLine>";
+    "fieldget <Typer: javax.swing.JLabel theLine>"->"staticget <java.awt.Color: java.awt.Color black>";
+    "virtualinvoke <javax.swing.JComponent: void setBackground(java.awt.Color)>"
+    "staticget <java.awt.Color: java.awt.Color black>"->"virtualinvoke <javax.swing.JComponent: void setBackground(java.awt.Color)>";
+    "virtualinvoke <javax.swing.JComponent: void setBackground(java.awt.Color)>"->"load.r r0";
+    "push \"bgred\""
+    "load.r r0"->"push \"bgred\"";
+    "push \"bgred\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "ifnull load.r r0"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r r0";
+    "push \"bggreen\""
+    "load.r r0"->"push \"bggreen\"";
+    "push \"bggreen\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r r0";
+    "push \"bgblue\""
+    "load.r r0"->"push \"bgblue\"";
+    "push \"bgblue\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <Typer: java.awt.Container content>";
+    "new java.awt.Color"
+    "fieldget <Typer: java.awt.Container content>"->"new java.awt.Color";
+    "new java.awt.Color"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "load.r r0"->"push \"bgred\"";
+    "push \"bgred\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>";
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"->"load.r r0";
+    "load.r r0"->"push \"bggreen\"";
+    "push \"bggreen\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>";
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"->"load.r r0";
+    "load.r r0"->"push \"bgblue\"";
+    "push \"bgblue\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>";
+    "specialinvoke <java.awt.Color: void <init>(int,int,int)>"
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"->"specialinvoke <java.awt.Color: void <init>(int,int,int)>";
+    "specialinvoke <java.awt.Color: void <init>(int,int,int)>"->"virtualinvoke <java.awt.Component: void setBackground(java.awt.Color)>";
+    "virtualinvoke <java.awt.Component: void setBackground(java.awt.Color)>"->"load.r r0";
+    "load.r r0"->"fieldget <Typer: javax.swing.JLabel theLine>";
+    "fieldget <Typer: javax.swing.JLabel theLine>"->"new java.awt.Color";
+    "new java.awt.Color"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "load.r r0"->"push \"bgred\"";
+    "push \"bgred\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>";
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"->"load.r r0";
+    "load.r r0"->"push \"bggreen\"";
+    "push \"bggreen\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>";
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"->"load.r r0";
+    "load.r r0"->"push \"bgblue\"";
+    "push \"bgblue\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>";
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"->"specialinvoke <java.awt.Color: void <init>(int,int,int)>";
+    "specialinvoke <java.awt.Color: void <init>(int,int,int)>"->"virtualinvoke <javax.swing.JComponent: void setBackground(java.awt.Color)>";
+    "goto load.r r0"
+    "virtualinvoke <javax.swing.JComponent: void setBackground(java.awt.Color)>"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "push \"fgred\""
+    "load.r r0"->"push \"fgred\"";
+    "push \"fgred\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r r0";
+    "push \"fggreen\""
+    "load.r r0"->"push \"fggreen\"";
+    "push \"fggreen\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r r0";
+    "push \"fgblue\""
+    "load.r r0"->"push \"fgblue\"";
+    "push \"fgblue\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <Typer: javax.swing.JLabel theLine>";
+    "fieldget <Typer: javax.swing.JLabel theLine>"->"new java.awt.Color";
+    "new java.awt.Color"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "load.r r0"->"push \"fgred\"";
+    "push \"fgred\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>";
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"->"load.r r0";
+    "load.r r0"->"push \"fggreen\"";
+    "push \"fggreen\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>";
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"->"load.r r0";
+    "load.r r0"->"push \"fgblue\"";
+    "push \"fgblue\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>";
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"->"specialinvoke <java.awt.Color: void <init>(int,int,int)>";
+    "virtualinvoke <javax.swing.JComponent: void setForeground(java.awt.Color)>"
+    "specialinvoke <java.awt.Color: void <init>(int,int,int)>"->"virtualinvoke <javax.swing.JComponent: void setForeground(java.awt.Color)>";
+    "virtualinvoke <javax.swing.JComponent: void setForeground(java.awt.Color)>"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "push \"delay\""
+    "load.r r0"->"push \"delay\"";
+    "push \"delay\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"push \"delay\"";
+    "push \"delay\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>";
+    "fieldput <Typer: int delay>"
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"->"fieldput <Typer: int delay>";
+    "fieldput <Typer: int delay>"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "new Typer$1"
+    "load.r r0"->"new Typer$1";
+    "store.r $r13"
+    "new Typer$1"->"store.r $r13";
+    "load.r $r13"
+    "store.r $r13"->"load.r $r13";
+    "load.r $r13"->"load.r r0";
+    "specialinvoke <Typer$1: void <init>(Typer)>"
+    "load.r r0"->"specialinvoke <Typer$1: void <init>(Typer)>";
+    "new javax.swing.Timer"
+    "specialinvoke <Typer$1: void <init>(Typer)>"->"new javax.swing.Timer";
+    "new javax.swing.Timer"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "fieldget <Typer: int delay>"
+    "load.r r0"->"fieldget <Typer: int delay>";
+    "fieldget <Typer: int delay>"->"load.r $r13";
+    "specialinvoke <javax.swing.Timer: void <init>(int,java.awt.event.ActionListener)>"
+    "load.r $r13"->"specialinvoke <javax.swing.Timer: void <init>(int,java.awt.event.ActionListener)>";
+    "fieldput <Typer: javax.swing.Timer t>"
+    "specialinvoke <javax.swing.Timer: void <init>(int,java.awt.event.ActionListener)>"->"fieldput <Typer: javax.swing.Timer t>";
+    "fieldput <Typer: javax.swing.Timer t>"->"load.r r0";
+    "fieldget <Typer: javax.swing.Timer t>"
+    "load.r r0"->"fieldget <Typer: javax.swing.Timer t>";
+    "virtualinvoke <javax.swing.Timer: void start()>"
+    "fieldget <Typer: javax.swing.Timer t>"->"virtualinvoke <javax.swing.Timer: void start()>";
+    "return"
+    "virtualinvoke <javax.swing.Timer: void start()>"->"return";
+    "ifnull load.r r0"->"load.r r0";
+    "push 100"
+    "load.r r0"->"push 100";
+    "push 100"->"fieldput <Typer: int delay>";
+    "ifnull load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <Typer: javax.swing.JLabel theLine>";
+    "staticget <java.awt.Color: java.awt.Color green>"
+    "fieldget <Typer: javax.swing.JLabel theLine>"->"staticget <java.awt.Color: java.awt.Color green>";
+    "staticget <java.awt.Color: java.awt.Color green>"->"virtualinvoke <javax.swing.JComponent: void setForeground(java.awt.Color)>";
+    "ifnull load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <Typer: java.awt.Container content>";
+    "fieldget <Typer: java.awt.Container content>"->"staticget <java.awt.Color: java.awt.Color black>";
+    "staticget <java.awt.Color: java.awt.Color black>"->"virtualinvoke <java.awt.Component: void setBackground(java.awt.Color)>";
+    "virtualinvoke <java.awt.Component: void setBackground(java.awt.Color)>"->"load.r r0";
+    "load.r r0"->"fieldget <Typer: javax.swing.JLabel theLine>";
+    "fieldget <Typer: javax.swing.JLabel theLine>"->"staticget <java.awt.Color: java.awt.Color black>";
+    "staticget <java.awt.Color: java.awt.Color black>"->"virtualinvoke <javax.swing.JComponent: void setBackground(java.awt.Color)>";
+}

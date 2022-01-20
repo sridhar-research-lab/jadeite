@@ -1,0 +1,184 @@
+digraph "" {
+    "r0 := @this: fxText"
+    "load.r r0"
+    "r0 := @this: fxText"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "virtualinvoke <java.awt.Component: java.awt.Dimension size()>"
+    "load.r r0"->"virtualinvoke <java.awt.Component: java.awt.Dimension size()>";
+    "fieldget <java.awt.Dimension: int width>"
+    "virtualinvoke <java.awt.Component: java.awt.Dimension size()>"->"fieldget <java.awt.Dimension: int width>";
+    "fieldput <fxText: int width>"
+    "fieldget <java.awt.Dimension: int width>"->"fieldput <fxText: int width>";
+    "fieldput <fxText: int width>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"virtualinvoke <java.awt.Component: java.awt.Dimension size()>";
+    "fieldget <java.awt.Dimension: int height>"
+    "virtualinvoke <java.awt.Component: java.awt.Dimension size()>"->"fieldget <java.awt.Dimension: int height>";
+    "fieldput <fxText: int height>"
+    "fieldget <java.awt.Dimension: int height>"->"fieldput <fxText: int height>";
+    "fieldput <fxText: int height>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "fieldget <fxText: int width>"
+    "load.r r0"->"fieldget <fxText: int width>";
+    "push 2"
+    "fieldget <fxText: int width>"->"push 2";
+    "mul.i"
+    "push 2"->"mul.i";
+    "mul.i"->"load.r r0";
+    "fieldget <fxText: int height>"
+    "load.r r0"->"fieldget <fxText: int height>";
+    "fieldget <fxText: int height>"->"push 2";
+    "push 2"->"mul.i";
+    "virtualinvoke <java.awt.Component: java.awt.Image createImage(int,int)>"
+    "mul.i"->"virtualinvoke <java.awt.Component: java.awt.Image createImage(int,int)>";
+    "fieldput <fxText: java.awt.Image virtualImage>"
+    "virtualinvoke <java.awt.Component: java.awt.Image createImage(int,int)>"->"fieldput <fxText: java.awt.Image virtualImage>";
+    "fieldput <fxText: java.awt.Image virtualImage>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "fieldget <fxText: java.awt.Image virtualImage>"
+    "load.r r0"->"fieldget <fxText: java.awt.Image virtualImage>";
+    "virtualinvoke <java.awt.Image: java.awt.Graphics getGraphics()>"
+    "fieldget <fxText: java.awt.Image virtualImage>"->"virtualinvoke <java.awt.Image: java.awt.Graphics getGraphics()>";
+    "fieldput <fxText: java.awt.Graphics virtualGC>"
+    "virtualinvoke <java.awt.Image: java.awt.Graphics getGraphics()>"->"fieldput <fxText: java.awt.Graphics virtualGC>";
+    "fieldput <fxText: java.awt.Graphics virtualGC>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <fxText: int width>";
+    "fieldget <fxText: int width>"->"load.r r0";
+    "load.r r0"->"fieldget <fxText: int height>";
+    "fieldget <fxText: int height>"->"virtualinvoke <java.awt.Component: java.awt.Image createImage(int,int)>";
+    "fieldput <fxText: java.awt.Image offscrImage>"
+    "virtualinvoke <java.awt.Component: java.awt.Image createImage(int,int)>"->"fieldput <fxText: java.awt.Image offscrImage>";
+    "fieldput <fxText: java.awt.Image offscrImage>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "fieldget <fxText: java.awt.Image offscrImage>"
+    "load.r r0"->"fieldget <fxText: java.awt.Image offscrImage>";
+    "fieldget <fxText: java.awt.Image offscrImage>"->"virtualinvoke <java.awt.Image: java.awt.Graphics getGraphics()>";
+    "fieldput <fxText: java.awt.Graphics offscrImageGC>"
+    "virtualinvoke <java.awt.Image: java.awt.Graphics getGraphics()>"->"fieldput <fxText: java.awt.Graphics offscrImageGC>";
+    "staticget <java.lang.System: java.io.PrintStream out>"
+    "fieldput <fxText: java.awt.Graphics offscrImageGC>"->"staticget <java.lang.System: java.io.PrintStream out>";
+    "push \"fxText Applet Copyright(C)1996 by Bill Giel\""
+    "staticget <java.lang.System: java.io.PrintStream out>"->"push \"fxText Applet Copyright(C)1996 by Bill Giel\"";
+    "virtualinvoke <java.io.PrintStream: void println(java.lang.String)>"
+    "push \"fxText Applet Copyright(C)1996 by Bill Giel\""->"virtualinvoke <java.io.PrintStream: void println(java.lang.String)>";
+    "virtualinvoke <java.io.PrintStream: void println(java.lang.String)>"->"load.r r0";
+    "fieldget <fxText: java.lang.String[] szImages>"
+    "load.r r0"->"fieldget <fxText: java.lang.String[] szImages>";
+    "push 0"
+    "fieldget <fxText: java.lang.String[] szImages>"->"push 0";
+    "push 0"->"load.r r0";
+    "push \"BACKGROUND\""
+    "load.r r0"->"push \"BACKGROUND\"";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"
+    "push \"BACKGROUND\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "arraywrite.r"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"arraywrite.r";
+    "arraywrite.r"->"load.r r0";
+    "load.r r0"->"fieldget <fxText: java.lang.String[] szImages>";
+    "fieldget <fxText: java.lang.String[] szImages>"->"push 0";
+    "arrayread.r"
+    "push 0"->"arrayread.r";
+    "ifnonnull load.r r0"
+    "arrayread.r"->"ifnonnull load.r r0";
+    "ifnonnull load.r r0"->"staticget <java.lang.System: java.io.PrintStream out>";
+    "push \"fxText Error: No background parameter.\""
+    "staticget <java.lang.System: java.io.PrintStream out>"->"push \"fxText Error: No background parameter.\"";
+    "push \"fxText Error: No background parameter.\""->"virtualinvoke <java.io.PrintStream: void println(java.lang.String)>";
+    "virtualinvoke <java.io.PrintStream: void println(java.lang.String)>"->"load.r r0";
+    "load.r r0"->"push 0";
+    "fieldput <fxText: boolean allOK>"
+    "push 0"->"fieldput <fxText: boolean allOK>";
+    "fieldput <fxText: boolean allOK>"->"load.r r0";
+    "load.r r0"->"fieldget <fxText: java.lang.String[] szImages>";
+    "push 1"
+    "fieldget <fxText: java.lang.String[] szImages>"->"push 1";
+    "push 1"->"load.r r0";
+    "push \"FOREGROUND\""
+    "load.r r0"->"push \"FOREGROUND\"";
+    "push \"FOREGROUND\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"arraywrite.r";
+    "arraywrite.r"->"load.r r0";
+    "load.r r0"->"fieldget <fxText: java.lang.String[] szImages>";
+    "fieldget <fxText: java.lang.String[] szImages>"->"push 1";
+    "push 1"->"arrayread.r";
+    "arrayread.r"->"ifnonnull load.r r0";
+    "ifnonnull load.r r0"->"staticget <java.lang.System: java.io.PrintStream out>";
+    "push \"fxText Error: No foreground parameter.\""
+    "staticget <java.lang.System: java.io.PrintStream out>"->"push \"fxText Error: No foreground parameter.\"";
+    "push \"fxText Error: No foreground parameter.\""->"virtualinvoke <java.io.PrintStream: void println(java.lang.String)>";
+    "virtualinvoke <java.io.PrintStream: void println(java.lang.String)>"->"load.r r0";
+    "load.r r0"->"push 0";
+    "push 0"->"fieldput <fxText: boolean allOK>";
+    "fieldput <fxText: boolean allOK>"->"load.r r0";
+    "push \"HYPERLINK\""
+    "load.r r0"->"push \"HYPERLINK\"";
+    "push \"HYPERLINK\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "store.r r1"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"store.r r1";
+    "load.r r1"
+    "store.r r1"->"load.r r1";
+    "ifnull load.r r0"
+    "load.r r1"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r r0";
+    "new java.net.URL"
+    "load.r r0"->"new java.net.URL";
+    "dup1.r"
+    "new java.net.URL"->"dup1.r";
+    "dup1.r"->"load.r r1";
+    "specialinvoke <java.net.URL: void <init>(java.lang.String)>"
+    "load.r r1"->"specialinvoke <java.net.URL: void <init>(java.lang.String)>";
+    "fieldput <fxText: java.net.URL link>"
+    "specialinvoke <java.net.URL: void <init>(java.lang.String)>"->"fieldput <fxText: java.net.URL link>";
+    "goto load.r r0"
+    "fieldput <fxText: java.net.URL link>"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "fieldget <fxText: boolean allOK>"
+    "load.r r0"->"fieldget <fxText: boolean allOK>";
+    "ifeq load.r r0"
+    "fieldget <fxText: boolean allOK>"->"ifeq load.r r0";
+    "ifeq load.r r0"->"load.r r0";
+    "new imageLoader"
+    "load.r r0"->"new imageLoader";
+    "new imageLoader"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <fxText: java.lang.String[] szImages>";
+    "fieldget <fxText: java.lang.String[] szImages>"->"push 2";
+    "push null"
+    "push 2"->"push null";
+    "specialinvoke <imageLoader: void <init>(java.applet.Applet,java.lang.String[],int,java.awt.TextArea)>"
+    "push null"->"specialinvoke <imageLoader: void <init>(java.applet.Applet,java.lang.String[],int,java.awt.TextArea)>";
+    "fieldput <fxText: imageLoader il>"
+    "specialinvoke <imageLoader: void <init>(java.applet.Applet,java.lang.String[],int,java.awt.TextArea)>"->"fieldput <fxText: imageLoader il>";
+    "fieldput <fxText: imageLoader il>"->"load.r r0";
+    "fieldget <fxText: imageLoader il>"
+    "load.r r0"->"fieldget <fxText: imageLoader il>";
+    "virtualinvoke <java.lang.Thread: void start()>"
+    "fieldget <fxText: imageLoader il>"->"virtualinvoke <java.lang.Thread: void start()>";
+    "virtualinvoke <java.lang.Thread: void start()>"->"load.r r0";
+    "load.r r0"->"push 0";
+    "fieldput <fxText: int Y>"
+    "push 0"->"fieldput <fxText: int Y>";
+    "fieldput <fxText: int Y>"->"load.r r0";
+    "load.r r0"->"push 0";
+    "fieldput <fxText: int X>"
+    "push 0"->"fieldput <fxText: int X>";
+    "fieldput <fxText: int X>"->"load.r r0";
+    "load.r r0"->"push null";
+    "fieldput <fxText: java.awt.Image[] images>"
+    "push null"->"fieldput <fxText: java.awt.Image[] images>";
+    "return"
+    "fieldput <fxText: java.awt.Image[] images>"->"return";
+    "specialinvoke <java.net.URL: void <init>(java.lang.String)>"->"store.r r1";
+    "store.r r1"->"staticget <java.lang.System: java.io.PrintStream out>";
+    "push \"fxText Error: Malformed URL\""
+    "staticget <java.lang.System: java.io.PrintStream out>"->"push \"fxText Error: Malformed URL\"";
+    "push \"fxText Error: Malformed URL\""->"virtualinvoke <java.io.PrintStream: void println(java.lang.String)>";
+    "virtualinvoke <java.io.PrintStream: void println(java.lang.String)>"->"load.r r0";
+    "load.r r0"->"push null";
+    "push null"->"fieldput <fxText: java.net.URL link>";
+    "fieldput <fxText: java.net.URL link>"->"goto load.r r0";
+}

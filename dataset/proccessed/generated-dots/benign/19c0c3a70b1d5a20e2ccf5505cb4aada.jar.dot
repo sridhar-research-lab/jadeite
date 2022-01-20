@@ -1,0 +1,241 @@
+digraph "" {
+    "r0 := @this: Spice2"
+    "load.r r0"
+    "r0 := @this: Spice2"->"load.r r0";
+    "new java.awt.Choice"
+    "load.r r0"->"new java.awt.Choice";
+    "dup1.r"
+    "new java.awt.Choice"->"dup1.r";
+    "specialinvoke <java.awt.Choice: void <init>()>"
+    "dup1.r"->"specialinvoke <java.awt.Choice: void <init>()>";
+    "fieldput <Spice2: java.awt.Choice page>"
+    "specialinvoke <java.awt.Choice: void <init>()>"->"fieldput <Spice2: java.awt.Choice page>";
+    "fieldput <Spice2: java.awt.Choice page>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "fieldget <Spice2: int NUMBER_OF_URLS>"
+    "load.r r0"->"fieldget <Spice2: int NUMBER_OF_URLS>";
+    "newarray"
+    "fieldget <Spice2: int NUMBER_OF_URLS>"->"newarray";
+    "fieldput <Spice2: java.lang.String[] holdPage>"
+    "newarray"->"fieldput <Spice2: java.lang.String[] holdPage>";
+    "fieldput <Spice2: java.lang.String[] holdPage>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <Spice2: int NUMBER_OF_URLS>";
+    "fieldget <Spice2: int NUMBER_OF_URLS>"->"newarray";
+    "fieldput <Spice2: java.lang.String[] holdURL>"
+    "newarray"->"fieldput <Spice2: java.lang.String[] holdURL>";
+    "fieldput <Spice2: java.lang.String[] holdURL>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "virtualinvoke <java.awt.Component: java.awt.Dimension size()>"
+    "load.r r0"->"virtualinvoke <java.awt.Component: java.awt.Dimension size()>";
+    "fieldget <java.awt.Dimension: int width>"
+    "virtualinvoke <java.awt.Component: java.awt.Dimension size()>"->"fieldget <java.awt.Dimension: int width>";
+    "fieldget <java.awt.Dimension: int width>"->"load.r r0";
+    "load.r r0"->"virtualinvoke <java.awt.Component: java.awt.Dimension size()>";
+    "fieldget <java.awt.Dimension: int height>"
+    "virtualinvoke <java.awt.Component: java.awt.Dimension size()>"->"fieldget <java.awt.Dimension: int height>";
+    "virtualinvoke <java.awt.Component: java.awt.Image createImage(int,int)>"
+    "fieldget <java.awt.Dimension: int height>"->"virtualinvoke <java.awt.Component: java.awt.Image createImage(int,int)>";
+    "fieldput <Spice2: java.awt.Image workspace>"
+    "virtualinvoke <java.awt.Component: java.awt.Image createImage(int,int)>"->"fieldput <Spice2: java.awt.Image workspace>";
+    "fieldput <Spice2: java.awt.Image workspace>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "fieldget <Spice2: java.awt.Image workspace>"
+    "load.r r0"->"fieldget <Spice2: java.awt.Image workspace>";
+    "virtualinvoke <java.awt.Image: java.awt.Graphics getGraphics()>"
+    "fieldget <Spice2: java.awt.Image workspace>"->"virtualinvoke <java.awt.Image: java.awt.Graphics getGraphics()>";
+    "fieldput <Spice2: java.awt.Graphics offscreen>"
+    "virtualinvoke <java.awt.Image: java.awt.Graphics getGraphics()>"->"fieldput <Spice2: java.awt.Graphics offscreen>";
+    "fieldput <Spice2: java.awt.Graphics offscreen>"->"load.r r0";
+    "push \"backImage\""
+    "load.r r0"->"push \"backImage\"";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"
+    "push \"backImage\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "store.r r1"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"store.r r1";
+    "load.r r1"
+    "store.r r1"->"load.r r1";
+    "ifnull load.r r0"
+    "load.r r1"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "virtualinvoke <java.applet.Applet: java.net.URL getDocumentBase()>"
+    "load.r r0"->"virtualinvoke <java.applet.Applet: java.net.URL getDocumentBase()>";
+    "virtualinvoke <java.applet.Applet: java.net.URL getDocumentBase()>"->"load.r r1";
+    "virtualinvoke <java.applet.Applet: java.awt.Image getImage(java.net.URL,java.lang.String)>"
+    "load.r r1"->"virtualinvoke <java.applet.Applet: java.awt.Image getImage(java.net.URL,java.lang.String)>";
+    "fieldput <Spice2: java.awt.Image back>"
+    "virtualinvoke <java.applet.Applet: java.awt.Image getImage(java.net.URL,java.lang.String)>"->"fieldput <Spice2: java.awt.Image back>";
+    "fieldput <Spice2: java.awt.Image back>"->"load.r r0";
+    "push \"foreImage\""
+    "load.r r0"->"push \"foreImage\"";
+    "push \"foreImage\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"store.r r1";
+    "store.r r1"->"load.r r1";
+    "load.r r1"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"virtualinvoke <java.applet.Applet: java.net.URL getDocumentBase()>";
+    "virtualinvoke <java.applet.Applet: java.net.URL getDocumentBase()>"->"load.r r1";
+    "load.r r1"->"virtualinvoke <java.applet.Applet: java.awt.Image getImage(java.net.URL,java.lang.String)>";
+    "fieldput <Spice2: java.awt.Image fore>"
+    "virtualinvoke <java.applet.Applet: java.awt.Image getImage(java.net.URL,java.lang.String)>"->"fieldput <Spice2: java.awt.Image fore>";
+    "fieldput <Spice2: java.awt.Image fore>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"virtualinvoke <java.awt.Component: java.awt.Dimension size()>";
+    "virtualinvoke <java.awt.Component: java.awt.Dimension size()>"->"fieldget <java.awt.Dimension: int width>";
+    "fieldput <Spice2: int x2>"
+    "fieldget <java.awt.Dimension: int width>"->"fieldput <Spice2: int x2>";
+    "fieldput <Spice2: int x2>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "push \"line\""
+    "load.r r0"->"push \"line\"";
+    "push \"line\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "fieldput <Spice2: java.lang.String text>"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"fieldput <Spice2: java.lang.String text>";
+    "fieldput <Spice2: java.lang.String text>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "push \"fontType\""
+    "load.r r0"->"push \"fontType\"";
+    "push \"fontType\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "fieldput <Spice2: java.lang.String fontName>"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"fieldput <Spice2: java.lang.String fontName>";
+    "fieldput <Spice2: java.lang.String fontName>"->"load.r r0";
+    "fieldget <Spice2: java.lang.String fontName>"
+    "load.r r0"->"fieldget <Spice2: java.lang.String fontName>";
+    "ifnonnull load.r r0"
+    "fieldget <Spice2: java.lang.String fontName>"->"ifnonnull load.r r0";
+    "ifnonnull load.r r0"->"load.r r0";
+    "push \"ArialBlack\""
+    "load.r r0"->"push \"ArialBlack\"";
+    "push \"ArialBlack\""->"fieldput <Spice2: java.lang.String fontName>";
+    "fieldput <Spice2: java.lang.String fontName>"->"load.r r0";
+    "push \"fontSize\""
+    "load.r r0"->"push \"fontSize\"";
+    "push \"fontSize\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"store.r r1";
+    "store.r r1"->"load.r r1";
+    "load.r r1"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r r0";
+    "new java.lang.StringBuffer"
+    "load.r r0"->"new java.lang.StringBuffer";
+    "new java.lang.StringBuffer"->"dup1.r";
+    "specialinvoke <java.lang.StringBuffer: void <init>()>"
+    "dup1.r"->"specialinvoke <java.lang.StringBuffer: void <init>()>";
+    "push \"0\""
+    "specialinvoke <java.lang.StringBuffer: void <init>()>"->"push \"0\"";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"
+    "push \"0\""->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"load.r r1";
+    "load.r r1"->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>"
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>";
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"
+    "virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>"->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>";
+    "fieldput <Spice2: int fontSize>"
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"->"fieldput <Spice2: int fontSize>";
+    "fieldput <Spice2: int fontSize>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "fieldget <Spice2: java.awt.Choice page>"
+    "load.r r0"->"fieldget <Spice2: java.awt.Choice page>";
+    "virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>"
+    "fieldget <Spice2: java.awt.Choice page>"->"virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>";
+    "pop"
+    "virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>"->"pop";
+    "pop"->"load.r r0";
+    "push 0"
+    "load.r r0"->"push 0";
+    "fieldput <Spice2: int i>"
+    "push 0"->"fieldput <Spice2: int i>";
+    "goto load.r r0"
+    "fieldput <Spice2: int i>"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "fieldget <Spice2: int i>"
+    "load.r r0"->"fieldget <Spice2: int i>";
+    "fieldget <Spice2: int i>"->"load.r r0";
+    "load.r r0"->"fieldget <Spice2: int NUMBER_OF_URLS>";
+    "ifcmplt.i load.r r0"
+    "fieldget <Spice2: int NUMBER_OF_URLS>"->"ifcmplt.i load.r r0";
+    "return"
+    "ifcmplt.i load.r r0"->"return";
+    "ifcmplt.i load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"new java.lang.StringBuffer";
+    "new java.lang.StringBuffer"->"dup1.r";
+    "dup1.r"->"specialinvoke <java.lang.StringBuffer: void <init>()>";
+    "push \"page\""
+    "specialinvoke <java.lang.StringBuffer: void <init>()>"->"push \"page\"";
+    "push \"page\""->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"load.r r0";
+    "load.r r0"->"fieldget <Spice2: int i>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(int)>"
+    "fieldget <Spice2: int i>"->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(int)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(int)>"->"virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>"->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "fieldput <Spice2: java.lang.String webpage>"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"fieldput <Spice2: java.lang.String webpage>";
+    "fieldput <Spice2: java.lang.String webpage>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"new java.lang.StringBuffer";
+    "new java.lang.StringBuffer"->"dup1.r";
+    "dup1.r"->"specialinvoke <java.lang.StringBuffer: void <init>()>";
+    "push \"url\""
+    "specialinvoke <java.lang.StringBuffer: void <init>()>"->"push \"url\"";
+    "push \"url\""->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"load.r r0";
+    "load.r r0"->"fieldget <Spice2: int i>";
+    "fieldget <Spice2: int i>"->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(int)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(int)>"->"virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>"->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "fieldput <Spice2: java.lang.String pageURL>"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"fieldput <Spice2: java.lang.String pageURL>";
+    "fieldput <Spice2: java.lang.String pageURL>"->"load.r r0";
+    "fieldget <Spice2: java.lang.String webpage>"
+    "load.r r0"->"fieldget <Spice2: java.lang.String webpage>";
+    "ifnull return"
+    "fieldget <Spice2: java.lang.String webpage>"->"ifnull return";
+    "ifnull return"->"load.r r0";
+    "fieldget <Spice2: java.lang.String pageURL>"
+    "load.r r0"->"fieldget <Spice2: java.lang.String pageURL>";
+    "fieldget <Spice2: java.lang.String pageURL>"->"ifnonnull load.r r0";
+    "goto return"
+    "ifnonnull load.r r0"->"goto return";
+    "ifnonnull load.r r0"->"load.r r0";
+    "fieldget <Spice2: java.lang.String[] holdPage>"
+    "load.r r0"->"fieldget <Spice2: java.lang.String[] holdPage>";
+    "fieldget <Spice2: java.lang.String[] holdPage>"->"load.r r0";
+    "load.r r0"->"fieldget <Spice2: int i>";
+    "fieldget <Spice2: int i>"->"load.r r0";
+    "load.r r0"->"fieldget <Spice2: java.lang.String webpage>";
+    "arraywrite.r"
+    "fieldget <Spice2: java.lang.String webpage>"->"arraywrite.r";
+    "arraywrite.r"->"load.r r0";
+    "fieldget <Spice2: java.lang.String[] holdURL>"
+    "load.r r0"->"fieldget <Spice2: java.lang.String[] holdURL>";
+    "fieldget <Spice2: java.lang.String[] holdURL>"->"load.r r0";
+    "load.r r0"->"fieldget <Spice2: int i>";
+    "fieldget <Spice2: int i>"->"load.r r0";
+    "load.r r0"->"fieldget <Spice2: java.lang.String pageURL>";
+    "fieldget <Spice2: java.lang.String pageURL>"->"arraywrite.r";
+    "arraywrite.r"->"load.r r0";
+    "load.r r0"->"fieldget <Spice2: java.awt.Choice page>";
+    "fieldget <Spice2: java.awt.Choice page>"->"load.r r0";
+    "load.r r0"->"fieldget <Spice2: java.lang.String[] holdPage>";
+    "fieldget <Spice2: java.lang.String[] holdPage>"->"load.r r0";
+    "load.r r0"->"fieldget <Spice2: int i>";
+    "arrayread.r"
+    "fieldget <Spice2: int i>"->"arrayread.r";
+    "virtualinvoke <java.awt.Choice: void addItem(java.lang.String)>"
+    "arrayread.r"->"virtualinvoke <java.awt.Choice: void addItem(java.lang.String)>";
+    "virtualinvoke <java.awt.Choice: void addItem(java.lang.String)>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <Spice2: int i>";
+    "push 1"
+    "fieldget <Spice2: int i>"->"push 1";
+    "add.i"
+    "push 1"->"add.i";
+    "add.i"->"fieldput <Spice2: int i>";
+}

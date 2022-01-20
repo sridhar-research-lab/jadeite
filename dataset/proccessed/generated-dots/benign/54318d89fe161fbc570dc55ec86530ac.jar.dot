@@ -1,0 +1,372 @@
+digraph "" {
+    "r0 := @this: Counter"
+    "load.r r0"
+    "r0 := @this: Counter"->"load.r r0";
+    "push 0"
+    "load.r r0"->"push 0";
+    "fieldput <Counter: boolean initialized>"
+    "push 0"->"fieldput <Counter: boolean initialized>";
+    "fieldput <Counter: boolean initialized>"->"load.r r0";
+    "push 70"
+    "load.r r0"->"push 70";
+    "newarray"
+    "push 70"->"newarray";
+    "fieldput <Counter: int[] StarX>"
+    "newarray"->"fieldput <Counter: int[] StarX>";
+    "fieldput <Counter: int[] StarX>"->"load.r r0";
+    "load.r r0"->"push 70";
+    "push 70"->"newarray";
+    "fieldput <Counter: int[] StarY>"
+    "newarray"->"fieldput <Counter: int[] StarY>";
+    "fieldput <Counter: int[] StarY>"->"load.r r0";
+    "load.r r0"->"push 70";
+    "push 70"->"newarray";
+    "fieldput <Counter: int[] StarSpeed>"
+    "newarray"->"fieldput <Counter: int[] StarSpeed>";
+    "fieldput <Counter: int[] StarSpeed>"->"load.r r0";
+    "load.r r0"->"push 70";
+    "push 70"->"newarray";
+    "fieldput <Counter: int[] StarBrightness>"
+    "newarray"->"fieldput <Counter: int[] StarBrightness>";
+    "fieldput <Counter: int[] StarBrightness>"->"load.r r0";
+    "load.r r0"->"push 70";
+    "push 70"->"newarray";
+    "fieldput <Counter: java.awt.Color[] StarColor>"
+    "newarray"->"fieldput <Counter: java.awt.Color[] StarColor>";
+    "fieldput <Counter: java.awt.Color[] StarColor>"->"push 0";
+    "store.i r1"
+    "push 0"->"store.i r1";
+    "goto load.i r1"
+    "store.i r1"->"goto load.i r1";
+    "load.i r1"
+    "goto load.i r1"->"load.i r1";
+    "load.i r1"->"push 70";
+    "ifcmplt.i load.r r0"
+    "push 70"->"ifcmplt.i load.r r0";
+    "ifcmplt.i load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "virtualinvoke <java.awt.Component: java.awt.Dimension size()>"
+    "load.r r0"->"virtualinvoke <java.awt.Component: java.awt.Dimension size()>";
+    "fieldget <java.awt.Dimension: int width>"
+    "virtualinvoke <java.awt.Component: java.awt.Dimension size()>"->"fieldget <java.awt.Dimension: int width>";
+    "fieldget <java.awt.Dimension: int width>"->"load.r r0";
+    "load.r r0"->"virtualinvoke <java.awt.Component: java.awt.Dimension size()>";
+    "fieldget <java.awt.Dimension: int height>"
+    "virtualinvoke <java.awt.Component: java.awt.Dimension size()>"->"fieldget <java.awt.Dimension: int height>";
+    "virtualinvoke <java.awt.Component: java.awt.Image createImage(int,int)>"
+    "fieldget <java.awt.Dimension: int height>"->"virtualinvoke <java.awt.Component: java.awt.Image createImage(int,int)>";
+    "fieldput <Counter: java.awt.Image backBuffer>"
+    "virtualinvoke <java.awt.Component: java.awt.Image createImage(int,int)>"->"fieldput <Counter: java.awt.Image backBuffer>";
+    "fieldput <Counter: java.awt.Image backBuffer>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "fieldget <Counter: java.awt.Image backBuffer>"
+    "load.r r0"->"fieldget <Counter: java.awt.Image backBuffer>";
+    "virtualinvoke <java.awt.Image: java.awt.Graphics getGraphics()>"
+    "fieldget <Counter: java.awt.Image backBuffer>"->"virtualinvoke <java.awt.Image: java.awt.Graphics getGraphics()>";
+    "fieldput <Counter: java.awt.Graphics offScreen>"
+    "virtualinvoke <java.awt.Image: java.awt.Graphics getGraphics()>"->"fieldput <Counter: java.awt.Graphics offScreen>";
+    "fieldput <Counter: java.awt.Graphics offScreen>"->"load.r r0";
+    "new java.lang.Long"
+    "load.r r0"->"new java.lang.Long";
+    "dup1.r"
+    "new java.lang.Long"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "push \"counter_id\""
+    "load.r r0"->"push \"counter_id\"";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"
+    "push \"counter_id\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "specialinvoke <java.lang.Long: void <init>(java.lang.String)>"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"specialinvoke <java.lang.Long: void <init>(java.lang.String)>";
+    "virtualinvoke <java.lang.Long: long longValue()>"
+    "specialinvoke <java.lang.Long: void <init>(java.lang.String)>"->"virtualinvoke <java.lang.Long: long longValue()>";
+    "fieldput <Counter: long counterID>"
+    "virtualinvoke <java.lang.Long: long longValue()>"->"fieldput <Counter: long counterID>";
+    "fieldput <Counter: long counterID>"->"load.r r0";
+    "push \"increment\""
+    "load.r r0"->"push \"increment\"";
+    "push \"increment\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "store.r r1"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"store.r r1";
+    "load.r r1"
+    "store.r r1"->"load.r r1";
+    "ifnonnull load.r r1"
+    "load.r r1"->"ifnonnull load.r r1";
+    "push 1"
+    "ifnonnull load.r r1"->"push 1";
+    "store.b r1"
+    "push 1"->"store.b r1";
+    "goto load.r r0"
+    "store.b r1"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "push \"CGI_configuration\""
+    "load.r r0"->"push \"CGI_configuration\"";
+    "push \"CGI_configuration\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "ifnull load.r r0"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r r0";
+    "load.r r0"->"push \"CGI_configuration\"";
+    "push \"CGI_configuration\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "push \"true\""
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"push \"true\"";
+    "virtualinvoke <java.lang.String: int compareTo(java.lang.String)>"
+    "push \"true\""->"virtualinvoke <java.lang.String: int compareTo(java.lang.String)>";
+    "ifne load.r r0"
+    "virtualinvoke <java.lang.String: int compareTo(java.lang.String)>"->"ifne load.r r0";
+    "ifne load.r r0"->"load.r r0";
+    "load.r r0"->"push 1";
+    "fieldput <Counter: boolean CGIConfiguration>"
+    "push 1"->"fieldput <Counter: boolean CGIConfiguration>";
+    "fieldput <Counter: boolean CGIConfiguration>"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "new CountInfo"
+    "load.r r0"->"new CountInfo";
+    "new CountInfo"->"dup1.r";
+    "load.b r1"
+    "dup1.r"->"load.b r1";
+    "load.b r1"->"push 0";
+    "push 0"->"load.r r0";
+    "fieldget <Counter: long counterID>"
+    "load.r r0"->"fieldget <Counter: long counterID>";
+    "fieldget <Counter: long counterID>"->"load.r r0";
+    "specialinvoke <CountInfo: void <init>(boolean,boolean,long,java.applet.Applet)>"
+    "load.r r0"->"specialinvoke <CountInfo: void <init>(boolean,boolean,long,java.applet.Applet)>";
+    "fieldput <Counter: CountInfo counterInformation>"
+    "specialinvoke <CountInfo: void <init>(boolean,boolean,long,java.applet.Applet)>"->"fieldput <Counter: CountInfo counterInformation>";
+    "fieldput <Counter: CountInfo counterInformation>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "push \"digittype\""
+    "load.r r0"->"push \"digittype\"";
+    "push \"digittype\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "fieldput <Counter: java.lang.String digitDirectory>"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"fieldput <Counter: java.lang.String digitDirectory>";
+    "fieldput <Counter: java.lang.String digitDirectory>"->"load.r r0";
+    "fieldget <Counter: boolean CGIConfiguration>"
+    "load.r r0"->"fieldget <Counter: boolean CGIConfiguration>";
+    "fieldget <Counter: boolean CGIConfiguration>"->"push 1";
+    "ifcmpne.b load.r r0"
+    "push 1"->"ifcmpne.b load.r r0";
+    "ifcmpne.b load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "fieldget <Counter: CountInfo counterInformation>"
+    "load.r r0"->"fieldget <Counter: CountInfo counterInformation>";
+    "virtualinvoke <CountInfo: java.lang.String getDigitDirectory()>"
+    "fieldget <Counter: CountInfo counterInformation>"->"virtualinvoke <CountInfo: java.lang.String getDigitDirectory()>";
+    "virtualinvoke <CountInfo: java.lang.String getDigitDirectory()>"->"fieldput <Counter: java.lang.String digitDirectory>";
+    "fieldput <Counter: java.lang.String digitDirectory>"->"load.r r0";
+    "new Digits"
+    "load.r r0"->"new Digits";
+    "new Digits"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "fieldget <Counter: java.lang.String digitDirectory>"
+    "load.r r0"->"fieldget <Counter: java.lang.String digitDirectory>";
+    "specialinvoke <Digits: void <init>(java.applet.Applet,java.lang.String)>"
+    "fieldget <Counter: java.lang.String digitDirectory>"->"specialinvoke <Digits: void <init>(java.applet.Applet,java.lang.String)>";
+    "fieldput <Counter: Digits theDigits>"
+    "specialinvoke <Digits: void <init>(java.applet.Applet,java.lang.String)>"->"fieldput <Counter: Digits theDigits>";
+    "fieldput <Counter: Digits theDigits>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "push \"bgcolor\""
+    "load.r r0"->"push \"bgcolor\"";
+    "push \"bgcolor\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "fieldput <Counter: java.lang.String bgColorString>"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"fieldput <Counter: java.lang.String bgColorString>";
+    "fieldput <Counter: java.lang.String bgColorString>"->"load.r r0";
+    "fieldget <Counter: java.lang.String bgColorString>"
+    "load.r r0"->"fieldget <Counter: java.lang.String bgColorString>";
+    "ifnonnull load.r r0"
+    "fieldget <Counter: java.lang.String bgColorString>"->"ifnonnull load.r r0";
+    "ifnonnull load.r r0"->"load.r r0";
+    "new java.lang.String"
+    "load.r r0"->"new java.lang.String";
+    "new java.lang.String"->"dup1.r";
+    "push \"#000000\""
+    "dup1.r"->"push \"#000000\"";
+    "specialinvoke <java.lang.String: void <init>(java.lang.String)>"
+    "push \"#000000\""->"specialinvoke <java.lang.String: void <init>(java.lang.String)>";
+    "specialinvoke <java.lang.String: void <init>(java.lang.String)>"->"fieldput <Counter: java.lang.String bgColorString>";
+    "fieldput <Counter: java.lang.String bgColorString>"->"load.r r0";
+    "push \"fontcolor\""
+    "load.r r0"->"push \"fontcolor\"";
+    "push \"fontcolor\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"store.r r1";
+    "store.r r1"->"load.r r1";
+    "load.r r1"->"ifnonnull load.r r0";
+    "ifnonnull load.r r0"->"new java.lang.String";
+    "new java.lang.String"->"dup1.r";
+    "push \"#64ff64\""
+    "dup1.r"->"push \"#64ff64\"";
+    "push \"#64ff64\""->"specialinvoke <java.lang.String: void <init>(java.lang.String)>";
+    "specialinvoke <java.lang.String: void <init>(java.lang.String)>"->"store.r r1";
+    "store.r r1"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <Counter: java.lang.String bgColorString>";
+    "virtualinvoke <Counter: java.awt.Color convertColor(java.lang.String)>"
+    "fieldget <Counter: java.lang.String bgColorString>"->"virtualinvoke <Counter: java.awt.Color convertColor(java.lang.String)>";
+    "fieldput <Counter: java.awt.Color bgColor>"
+    "virtualinvoke <Counter: java.awt.Color convertColor(java.lang.String)>"->"fieldput <Counter: java.awt.Color bgColor>";
+    "fieldput <Counter: java.awt.Color bgColor>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r1";
+    "load.r r1"->"virtualinvoke <Counter: java.awt.Color convertColor(java.lang.String)>";
+    "fieldput <Counter: java.awt.Color fontColor>"
+    "virtualinvoke <Counter: java.awt.Color convertColor(java.lang.String)>"->"fieldput <Counter: java.awt.Color fontColor>";
+    "fieldput <Counter: java.awt.Color fontColor>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "fieldget <Counter: java.awt.Color bgColor>"
+    "load.r r0"->"fieldget <Counter: java.awt.Color bgColor>";
+    "virtualinvoke <java.awt.Component: void setBackground(java.awt.Color)>"
+    "fieldget <Counter: java.awt.Color bgColor>"->"virtualinvoke <java.awt.Component: void setBackground(java.awt.Color)>";
+    "virtualinvoke <java.awt.Component: void setBackground(java.awt.Color)>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"virtualinvoke <java.awt.Component: java.awt.Dimension size()>";
+    "virtualinvoke <java.awt.Component: java.awt.Dimension size()>"->"fieldget <java.awt.Dimension: int width>";
+    "fieldput <Counter: int xPos>"
+    "fieldget <java.awt.Dimension: int width>"->"fieldput <Counter: int xPos>";
+    "fieldput <Counter: int xPos>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"virtualinvoke <java.awt.Component: java.awt.Dimension size()>";
+    "virtualinvoke <java.awt.Component: java.awt.Dimension size()>"->"fieldget <java.awt.Dimension: int height>";
+    "push 2"
+    "fieldget <java.awt.Dimension: int height>"->"push 2";
+    "div.i"
+    "push 2"->"div.i";
+    "div.i"->"load.r r0";
+    "fieldget <Counter: Digits theDigits>"
+    "load.r r0"->"fieldget <Counter: Digits theDigits>";
+    "virtualinvoke <Digits: int getHeight()>"
+    "fieldget <Counter: Digits theDigits>"->"virtualinvoke <Digits: int getHeight()>";
+    "virtualinvoke <Digits: int getHeight()>"->"push 2";
+    "push 2"->"div.i";
+    "sub.i"
+    "div.i"->"sub.i";
+    "fieldput <Counter: int yPos>"
+    "sub.i"->"fieldput <Counter: int yPos>";
+    "fieldput <Counter: int yPos>"->"load.r r0";
+    "push 8"
+    "load.r r0"->"push 8";
+    "fieldput <Counter: int speed>"
+    "push 8"->"fieldput <Counter: int speed>";
+    "fieldput <Counter: int speed>"->"load.r r0";
+    "load.r r0"->"push 0";
+    "fieldput <Counter: int numRuns>"
+    "push 0"->"fieldput <Counter: int numRuns>";
+    "fieldput <Counter: int numRuns>"->"load.r r0";
+    "push 100"
+    "load.r r0"->"push 100";
+    "fieldput <Counter: int originalAdDelay>"
+    "push 100"->"fieldput <Counter: int originalAdDelay>";
+    "fieldput <Counter: int originalAdDelay>"->"load.r r0";
+    "load.r r0"->"push 0";
+    "fieldput <Counter: boolean advertising>"
+    "push 0"->"fieldput <Counter: boolean advertising>";
+    "fieldput <Counter: boolean advertising>"->"load.r r0";
+    "load.r r0"->"push 0";
+    "fieldput <Counter: boolean drewAd>"
+    "push 0"->"fieldput <Counter: boolean drewAd>";
+    "fieldput <Counter: boolean drewAd>"->"load.r r0";
+    "new java.awt.Font"
+    "load.r r0"->"new java.awt.Font";
+    "new java.awt.Font"->"dup1.r";
+    "push \"Helvetica\""
+    "dup1.r"->"push \"Helvetica\"";
+    "push \"Helvetica\""->"push 0";
+    "push 15"
+    "push 0"->"push 15";
+    "specialinvoke <java.awt.Font: void <init>(java.lang.String,int,int)>"
+    "push 15"->"specialinvoke <java.awt.Font: void <init>(java.lang.String,int,int)>";
+    "fieldput <Counter: java.awt.Font textFont>"
+    "specialinvoke <java.awt.Font: void <init>(java.lang.String,int,int)>"->"fieldput <Counter: java.awt.Font textFont>";
+    "return"
+    "fieldput <Counter: java.awt.Font textFont>"->"return";
+    "ifne load.r r0"->"load.r r0";
+    "load.r r0"->"push 0";
+    "push 0"->"fieldput <Counter: boolean CGIConfiguration>";
+    "ifnonnull load.r r1"->"load.r r1";
+    "load.r r1"->"push \"true\"";
+    "push \"true\""->"virtualinvoke <java.lang.String: int compareTo(java.lang.String)>";
+    "ifne push 0"
+    "virtualinvoke <java.lang.String: int compareTo(java.lang.String)>"->"ifne push 0";
+    "ifne push 0"->"push 1";
+    "push 1"->"store.b r1";
+    "store.b r1"->"goto load.r r0";
+    "ifne push 0"->"push 0";
+    "push 0"->"store.b r1";
+    "ifcmplt.i load.r r0"->"load.r r0";
+    "fieldget <Counter: int[] StarX>"
+    "load.r r0"->"fieldget <Counter: int[] StarX>";
+    "fieldget <Counter: int[] StarX>"->"load.i r1";
+    "staticinvoke <java.lang.Math: double random()>"
+    "load.i r1"->"staticinvoke <java.lang.Math: double random()>";
+    "staticinvoke <java.lang.Math: double random()>"->"load.r r0";
+    "load.r r0"->"virtualinvoke <java.awt.Component: java.awt.Dimension size()>";
+    "virtualinvoke <java.awt.Component: java.awt.Dimension size()>"->"fieldget <java.awt.Dimension: int width>";
+    "i2d"
+    "fieldget <java.awt.Dimension: int width>"->"i2d";
+    "mul.d"
+    "i2d"->"mul.d";
+    "d2i"
+    "mul.d"->"d2i";
+    "arraywrite.i"
+    "d2i"->"arraywrite.i";
+    "arraywrite.i"->"load.r r0";
+    "fieldget <Counter: int[] StarY>"
+    "load.r r0"->"fieldget <Counter: int[] StarY>";
+    "fieldget <Counter: int[] StarY>"->"load.i r1";
+    "load.i r1"->"staticinvoke <java.lang.Math: double random()>";
+    "staticinvoke <java.lang.Math: double random()>"->"load.r r0";
+    "load.r r0"->"virtualinvoke <java.awt.Component: java.awt.Dimension size()>";
+    "virtualinvoke <java.awt.Component: java.awt.Dimension size()>"->"fieldget <java.awt.Dimension: int height>";
+    "fieldget <java.awt.Dimension: int height>"->"i2d";
+    "i2d"->"mul.d";
+    "mul.d"->"d2i";
+    "d2i"->"arraywrite.i";
+    "arraywrite.i"->"load.r r0";
+    "fieldget <Counter: int[] StarSpeed>"
+    "load.r r0"->"fieldget <Counter: int[] StarSpeed>";
+    "fieldget <Counter: int[] StarSpeed>"->"load.i r1";
+    "load.i r1"->"staticinvoke <java.lang.Math: double random()>";
+    "push 10.0"
+    "staticinvoke <java.lang.Math: double random()>"->"push 10.0";
+    "push 10.0"->"mul.d";
+    "mul.d"->"d2i";
+    "d2i"->"arraywrite.i";
+    "arraywrite.i"->"load.r r0";
+    "fieldget <Counter: int[] StarBrightness>"
+    "load.r r0"->"fieldget <Counter: int[] StarBrightness>";
+    "fieldget <Counter: int[] StarBrightness>"->"load.i r1";
+    "load.i r1"->"staticinvoke <java.lang.Math: double random()>";
+    "push 256.0"
+    "staticinvoke <java.lang.Math: double random()>"->"push 256.0";
+    "push 256.0"->"mul.d";
+    "mul.d"->"d2i";
+    "d2i"->"arraywrite.i";
+    "arraywrite.i"->"load.r r0";
+    "fieldget <Counter: java.awt.Color[] StarColor>"
+    "load.r r0"->"fieldget <Counter: java.awt.Color[] StarColor>";
+    "fieldget <Counter: java.awt.Color[] StarColor>"->"load.i r1";
+    "new java.awt.Color"
+    "load.i r1"->"new java.awt.Color";
+    "new java.awt.Color"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "load.r r0"->"fieldget <Counter: int[] StarBrightness>";
+    "fieldget <Counter: int[] StarBrightness>"->"load.i r1";
+    "arrayread.i"
+    "load.i r1"->"arrayread.i";
+    "arrayread.i"->"load.r r0";
+    "load.r r0"->"fieldget <Counter: int[] StarBrightness>";
+    "fieldget <Counter: int[] StarBrightness>"->"load.i r1";
+    "load.i r1"->"arrayread.i";
+    "arrayread.i"->"load.r r0";
+    "load.r r0"->"fieldget <Counter: int[] StarBrightness>";
+    "fieldget <Counter: int[] StarBrightness>"->"load.i r1";
+    "load.i r1"->"arrayread.i";
+    "specialinvoke <java.awt.Color: void <init>(int,int,int)>"
+    "arrayread.i"->"specialinvoke <java.awt.Color: void <init>(int,int,int)>";
+    "arraywrite.r"
+    "specialinvoke <java.awt.Color: void <init>(int,int,int)>"->"arraywrite.r";
+    "inc.i r1 1"
+    "arraywrite.r"->"inc.i r1 1";
+}

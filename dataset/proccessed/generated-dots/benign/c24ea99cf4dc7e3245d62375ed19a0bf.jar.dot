@@ -1,0 +1,72 @@
+digraph "" {
+    "r0 := @this: IpixViewer"
+    "load.r r0"
+    "r0 := @this: IpixViewer"->"load.r r0";
+    "staticget <java.awt.Color: java.awt.Color white>"
+    "load.r r0"->"staticget <java.awt.Color: java.awt.Color white>";
+    "virtualinvoke <java.awt.Component: void setBackground(java.awt.Color)>"
+    "staticget <java.awt.Color: java.awt.Color white>"->"virtualinvoke <java.awt.Component: void setBackground(java.awt.Color)>";
+    "virtualinvoke <java.awt.Component: void setBackground(java.awt.Color)>"->"load.r r0";
+    "virtualinvoke <java.awt.Component: java.awt.Graphics getGraphics()>"
+    "load.r r0"->"virtualinvoke <java.awt.Component: java.awt.Graphics getGraphics()>";
+    "push 0"
+    "virtualinvoke <java.awt.Component: java.awt.Graphics getGraphics()>"->"push 0";
+    "push 0"->"push 0";
+    "push 0"->"load.r r0";
+    "virtualinvoke <java.awt.Component: java.awt.Dimension size()>"
+    "load.r r0"->"virtualinvoke <java.awt.Component: java.awt.Dimension size()>";
+    "fieldget <java.awt.Dimension: int width>"
+    "virtualinvoke <java.awt.Component: java.awt.Dimension size()>"->"fieldget <java.awt.Dimension: int width>";
+    "fieldget <java.awt.Dimension: int width>"->"load.r r0";
+    "load.r r0"->"virtualinvoke <java.awt.Component: java.awt.Dimension size()>";
+    "fieldget <java.awt.Dimension: int height>"
+    "virtualinvoke <java.awt.Component: java.awt.Dimension size()>"->"fieldget <java.awt.Dimension: int height>";
+    "virtualinvoke <java.awt.Graphics: void clearRect(int,int,int,int)>"
+    "fieldget <java.awt.Dimension: int height>"->"virtualinvoke <java.awt.Graphics: void clearRect(int,int,int,int)>";
+    "virtualinvoke <java.awt.Graphics: void clearRect(int,int,int,int)>"->"load.r r0";
+    "new ipixa"
+    "load.r r0"->"new ipixa";
+    "dup1.r"
+    "new ipixa"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "push \"2.4\""
+    "load.r r0"->"push \"2.4\"";
+    "specialinvoke <ipixa: void <init>(java.applet.Applet,java.lang.String)>"
+    "push \"2.4\""->"specialinvoke <ipixa: void <init>(java.applet.Applet,java.lang.String)>";
+    "fieldput <IpixViewer: ipixa a>"
+    "specialinvoke <ipixa: void <init>(java.applet.Applet,java.lang.String)>"->"fieldput <IpixViewer: ipixa a>";
+    "fieldput <IpixViewer: ipixa a>"->"load.r r0";
+    "fieldget <IpixViewer: ipixa a>"
+    "load.r r0"->"fieldget <IpixViewer: ipixa a>";
+    "virtualinvoke <ipixa: void p()>"
+    "fieldget <IpixViewer: ipixa a>"->"virtualinvoke <ipixa: void p()>";
+    "virtualinvoke <ipixa: void p()>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <IpixViewer: ipixa a>";
+    "virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>"
+    "fieldget <IpixViewer: ipixa a>"->"virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>";
+    "pop"
+    "virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>"->"pop";
+    "pop"->"load.r r0";
+    "virtualinvoke <java.awt.Container: void validate()>"
+    "load.r r0"->"virtualinvoke <java.awt.Container: void validate()>";
+    "virtualinvoke <java.awt.Container: void validate()>"->"load.r r0";
+    "push \"Refresh\""
+    "load.r r0"->"push \"Refresh\"";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"
+    "push \"Refresh\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "store.r r1"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"store.r r1";
+    "load.r r1"
+    "store.r r1"->"load.r r1";
+    "ifnull return"
+    "load.r r1"->"ifnull return";
+    "ifnull return"->"load.r r0";
+    "load.r r0"->"load.r r1";
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"
+    "load.r r1"->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>";
+    "fieldput <IpixViewer: int d>"
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"->"fieldput <IpixViewer: int d>";
+    "return"
+    "fieldput <IpixViewer: int d>"->"return";
+}

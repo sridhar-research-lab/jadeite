@@ -1,0 +1,36 @@
+digraph "" {
+    "r0 := @this: com.aviva.framework.applet.IncomePieChart"
+    "load.r r0"
+    "r0 := @this: com.aviva.framework.applet.IncomePieChart"->"load.r r0";
+    "specialinvoke <com.aviva.framework.applet.IncomePieChart: void chartPanel()>"
+    "load.r r0"->"specialinvoke <com.aviva.framework.applet.IncomePieChart: void chartPanel()>";
+    "specialinvoke <com.aviva.framework.applet.IncomePieChart: void chartPanel()>"->"load.r r0";
+    "virtualinvoke <com.aviva.framework.applet.IncomePieChart: java.awt.Container getContentPane()>"
+    "load.r r0"->"virtualinvoke <com.aviva.framework.applet.IncomePieChart: java.awt.Container getContentPane()>";
+    "dup1.r"
+    "virtualinvoke <com.aviva.framework.applet.IncomePieChart: java.awt.Container getContentPane()>"->"dup1.r";
+    "new java.awt.GridLayout"
+    "dup1.r"->"new java.awt.GridLayout";
+    "new java.awt.GridLayout"->"dup1.r";
+    "push 1"
+    "dup1.r"->"push 1";
+    "push 1"->"push 1";
+    "specialinvoke <java.awt.GridLayout: void <init>(int,int)>"
+    "push 1"->"specialinvoke <java.awt.GridLayout: void <init>(int,int)>";
+    "virtualinvoke <java.awt.Container: void setLayout(java.awt.LayoutManager)>"
+    "specialinvoke <java.awt.GridLayout: void <init>(int,int)>"->"virtualinvoke <java.awt.Container: void setLayout(java.awt.LayoutManager)>";
+    "virtualinvoke <java.awt.Container: void setLayout(java.awt.LayoutManager)>"->"load.r r0";
+    "fieldget <com.aviva.framework.applet.IncomePieChart: com.jrefinery.chart.ChartPanel chart>"
+    "load.r r0"->"fieldget <com.aviva.framework.applet.IncomePieChart: com.jrefinery.chart.ChartPanel chart>";
+    "checkcast"
+    "fieldget <com.aviva.framework.applet.IncomePieChart: com.jrefinery.chart.ChartPanel chart>"->"checkcast";
+    "virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>"
+    "checkcast"->"virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>";
+    "pop"
+    "virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>"->"pop";
+    "pop"->"load.r r0";
+    "virtualinvoke <com.aviva.framework.applet.IncomePieChart: void showChart()>"
+    "load.r r0"->"virtualinvoke <com.aviva.framework.applet.IncomePieChart: void showChart()>";
+    "return"
+    "virtualinvoke <com.aviva.framework.applet.IncomePieChart: void showChart()>"->"return";
+}

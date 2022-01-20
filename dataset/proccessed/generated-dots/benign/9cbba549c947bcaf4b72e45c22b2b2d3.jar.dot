@@ -1,0 +1,192 @@
+digraph "" {
+    "r0 := @this: com.screencastomatic.play.PlayApplet"
+    "staticget <java.lang.System: java.io.PrintStream out>"
+    "r0 := @this: com.screencastomatic.play.PlayApplet"->"staticget <java.lang.System: java.io.PrintStream out>";
+    "push \"--- Init called on applet.\""
+    "staticget <java.lang.System: java.io.PrintStream out>"->"push \"--- Init called on applet.\"";
+    "virtualinvoke <java.io.PrintStream: void println(java.lang.String)>"
+    "push \"--- Init called on applet.\""->"virtualinvoke <java.io.PrintStream: void println(java.lang.String)>";
+    "load.r r0"
+    "virtualinvoke <java.io.PrintStream: void println(java.lang.String)>"->"load.r r0";
+    "push \"noproxy\""
+    "load.r r0"->"push \"noproxy\"";
+    "virtualinvoke <com.screencastomatic.play.PlayApplet: java.lang.String getParameter(java.lang.String)>"
+    "push \"noproxy\""->"virtualinvoke <com.screencastomatic.play.PlayApplet: java.lang.String getParameter(java.lang.String)>";
+    "ifnull load.r r0"
+    "virtualinvoke <com.screencastomatic.play.PlayApplet: java.lang.String getParameter(java.lang.String)>"->"ifnull load.r r0";
+    "push 0"
+    "ifnull load.r r0"->"push 0";
+    "staticinvoke <com.screencastomatic.play.b.b: void a(boolean)>"
+    "push 0"->"staticinvoke <com.screencastomatic.play.b.b: void a(boolean)>";
+    "staticinvoke <com.screencastomatic.play.b.b: void a(boolean)>"->"load.r r0";
+    "new com.screencastomatic.play.Display"
+    "load.r r0"->"new com.screencastomatic.play.Display";
+    "dup1.r"
+    "new com.screencastomatic.play.Display"->"dup1.r";
+    "new com.screencastomatic.play.H"
+    "dup1.r"->"new com.screencastomatic.play.H";
+    "new com.screencastomatic.play.H"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "specialinvoke <com.screencastomatic.play.H: void <init>(com.screencastomatic.play.PlayApplet)>"
+    "load.r r0"->"specialinvoke <com.screencastomatic.play.H: void <init>(com.screencastomatic.play.PlayApplet)>";
+    "specialinvoke <com.screencastomatic.play.Display: void <init>(com.screencastomatic.play.D)>"
+    "specialinvoke <com.screencastomatic.play.H: void <init>(com.screencastomatic.play.PlayApplet)>"->"specialinvoke <com.screencastomatic.play.Display: void <init>(com.screencastomatic.play.D)>";
+    "fieldput <com.screencastomatic.play.PlayApplet: com.screencastomatic.play.Display m_display>"
+    "specialinvoke <com.screencastomatic.play.Display: void <init>(com.screencastomatic.play.D)>"->"fieldput <com.screencastomatic.play.PlayApplet: com.screencastomatic.play.Display m_display>";
+    "fieldput <com.screencastomatic.play.PlayApplet: com.screencastomatic.play.Display m_display>"->"load.r r0";
+    "new java.awt.BorderLayout"
+    "load.r r0"->"new java.awt.BorderLayout";
+    "new java.awt.BorderLayout"->"dup1.r";
+    "dup1.r"->"push 0";
+    "push 0"->"push 0";
+    "specialinvoke <java.awt.BorderLayout: void <init>(int,int)>"
+    "push 0"->"specialinvoke <java.awt.BorderLayout: void <init>(int,int)>";
+    "virtualinvoke <com.screencastomatic.play.PlayApplet: void setLayout(java.awt.LayoutManager)>"
+    "specialinvoke <java.awt.BorderLayout: void <init>(int,int)>"->"virtualinvoke <com.screencastomatic.play.PlayApplet: void setLayout(java.awt.LayoutManager)>";
+    "virtualinvoke <com.screencastomatic.play.PlayApplet: void setLayout(java.awt.LayoutManager)>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "fieldget <com.screencastomatic.play.PlayApplet: com.screencastomatic.play.Display m_display>"
+    "load.r r0"->"fieldget <com.screencastomatic.play.PlayApplet: com.screencastomatic.play.Display m_display>";
+    "push \"Center\""
+    "fieldget <com.screencastomatic.play.PlayApplet: com.screencastomatic.play.Display m_display>"->"push \"Center\"";
+    "virtualinvoke <com.screencastomatic.play.PlayApplet: void add(java.awt.Component,java.lang.Object)>"
+    "push \"Center\""->"virtualinvoke <com.screencastomatic.play.PlayApplet: void add(java.awt.Component,java.lang.Object)>";
+    "virtualinvoke <com.screencastomatic.play.PlayApplet: void add(java.awt.Component,java.lang.Object)>"->"load.r r0";
+    "virtualinvoke <com.screencastomatic.play.PlayApplet: void validate()>"
+    "load.r r0"->"virtualinvoke <com.screencastomatic.play.PlayApplet: void validate()>";
+    "push \"os.name\""
+    "virtualinvoke <com.screencastomatic.play.PlayApplet: void validate()>"->"push \"os.name\"";
+    "staticinvoke <java.lang.System: java.lang.String getProperty(java.lang.String)>"
+    "push \"os.name\""->"staticinvoke <java.lang.System: java.lang.String getProperty(java.lang.String)>";
+    "virtualinvoke <java.lang.String: java.lang.String toLowerCase()>"
+    "staticinvoke <java.lang.System: java.lang.String getProperty(java.lang.String)>"->"virtualinvoke <java.lang.String: java.lang.String toLowerCase()>";
+    "push \"mac\""
+    "virtualinvoke <java.lang.String: java.lang.String toLowerCase()>"->"push \"mac\"";
+    "virtualinvoke <java.lang.String: boolean startsWith(java.lang.String)>"
+    "push \"mac\""->"virtualinvoke <java.lang.String: boolean startsWith(java.lang.String)>";
+    "ifeq load.r r0"
+    "virtualinvoke <java.lang.String: boolean startsWith(java.lang.String)>"->"ifeq load.r r0";
+    "ifeq load.r r0"->"load.r r0";
+    "new javax.swing.JFrame"
+    "load.r r0"->"new javax.swing.JFrame";
+    "new javax.swing.JFrame"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "push \"title\""
+    "load.r r0"->"push \"title\"";
+    "push \"title\""->"virtualinvoke <com.screencastomatic.play.PlayApplet: java.lang.String getParameter(java.lang.String)>";
+    "specialinvoke <javax.swing.JFrame: void <init>(java.lang.String)>"
+    "virtualinvoke <com.screencastomatic.play.PlayApplet: java.lang.String getParameter(java.lang.String)>"->"specialinvoke <javax.swing.JFrame: void <init>(java.lang.String)>";
+    "fieldput <com.screencastomatic.play.PlayApplet: java.awt.Window m_popout>"
+    "specialinvoke <javax.swing.JFrame: void <init>(java.lang.String)>"->"fieldput <com.screencastomatic.play.PlayApplet: java.awt.Window m_popout>";
+    "fieldput <com.screencastomatic.play.PlayApplet: java.awt.Window m_popout>"->"load.r r0";
+    "fieldget <com.screencastomatic.play.PlayApplet: java.awt.Window m_popout>"
+    "load.r r0"->"fieldget <com.screencastomatic.play.PlayApplet: java.awt.Window m_popout>";
+    "checkcast"
+    "fieldget <com.screencastomatic.play.PlayApplet: java.awt.Window m_popout>"->"checkcast";
+    "push 1"
+    "checkcast"->"push 1";
+    "virtualinvoke <javax.swing.JFrame: void setDefaultCloseOperation(int)>"
+    "push 1"->"virtualinvoke <javax.swing.JFrame: void setDefaultCloseOperation(int)>";
+    "goto load.r r0"
+    "virtualinvoke <javax.swing.JFrame: void setDefaultCloseOperation(int)>"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <com.screencastomatic.play.PlayApplet: java.awt.Window m_popout>";
+    "fieldget <com.screencastomatic.play.PlayApplet: java.awt.Window m_popout>"->"load.r r0";
+    "virtualinvoke <com.screencastomatic.play.PlayApplet: int getWidth()>"
+    "load.r r0"->"virtualinvoke <com.screencastomatic.play.PlayApplet: int getWidth()>";
+    "virtualinvoke <com.screencastomatic.play.PlayApplet: int getWidth()>"->"load.r r0";
+    "virtualinvoke <com.screencastomatic.play.PlayApplet: int getHeight()>"
+    "load.r r0"->"virtualinvoke <com.screencastomatic.play.PlayApplet: int getHeight()>";
+    "virtualinvoke <java.awt.Window: void setSize(int,int)>"
+    "virtualinvoke <com.screencastomatic.play.PlayApplet: int getHeight()>"->"virtualinvoke <java.awt.Window: void setSize(int,int)>";
+    "virtualinvoke <java.awt.Window: void setSize(int,int)>"->"load.r r0";
+    "load.r r0"->"fieldget <com.screencastomatic.play.PlayApplet: java.awt.Window m_popout>";
+    "fieldget <com.screencastomatic.play.PlayApplet: java.awt.Window m_popout>"->"new java.awt.BorderLayout";
+    "new java.awt.BorderLayout"->"dup1.r";
+    "dup1.r"->"push 0";
+    "push 0"->"push 0";
+    "push 0"->"specialinvoke <java.awt.BorderLayout: void <init>(int,int)>";
+    "virtualinvoke <java.awt.Window: void setLayout(java.awt.LayoutManager)>"
+    "specialinvoke <java.awt.BorderLayout: void <init>(int,int)>"->"virtualinvoke <java.awt.Window: void setLayout(java.awt.LayoutManager)>";
+    "virtualinvoke <java.awt.Window: void setLayout(java.awt.LayoutManager)>"->"load.r r0";
+    "load.r r0"->"fieldget <com.screencastomatic.play.PlayApplet: java.awt.Window m_popout>";
+    "new com.screencastomatic.play.F"
+    "fieldget <com.screencastomatic.play.PlayApplet: java.awt.Window m_popout>"->"new com.screencastomatic.play.F";
+    "new com.screencastomatic.play.F"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "specialinvoke <com.screencastomatic.play.F: void <init>(com.screencastomatic.play.PlayApplet)>"
+    "load.r r0"->"specialinvoke <com.screencastomatic.play.F: void <init>(com.screencastomatic.play.PlayApplet)>";
+    "virtualinvoke <java.awt.Window: void addWindowListener(java.awt.event.WindowListener)>"
+    "specialinvoke <com.screencastomatic.play.F: void <init>(com.screencastomatic.play.PlayApplet)>"->"virtualinvoke <java.awt.Window: void addWindowListener(java.awt.event.WindowListener)>";
+    "virtualinvoke <java.awt.Window: void addWindowListener(java.awt.event.WindowListener)>"->"load.r r0";
+    "load.r r0"->"fieldget <com.screencastomatic.play.PlayApplet: com.screencastomatic.play.Display m_display>";
+    "virtualinvoke <com.screencastomatic.play.Display: void b()>"
+    "fieldget <com.screencastomatic.play.PlayApplet: com.screencastomatic.play.Display m_display>"->"virtualinvoke <com.screencastomatic.play.Display: void b()>";
+    "virtualinvoke <com.screencastomatic.play.Display: void b()>"->"load.r r0";
+    "push \"png\""
+    "load.r r0"->"push \"png\"";
+    "push \"watch_poppedout.png\""
+    "push \"png\""->"push \"watch_poppedout.png\"";
+    "staticinvoke <com.screencastomatic.play.c.b: java.awt.image.BufferedImage a(java.lang.String,java.lang.String)>"
+    "push \"watch_poppedout.png\""->"staticinvoke <com.screencastomatic.play.c.b: java.awt.image.BufferedImage a(java.lang.String,java.lang.String)>";
+    "fieldput <com.screencastomatic.play.PlayApplet: java.awt.image.BufferedImage m_poppedMsg>"
+    "staticinvoke <com.screencastomatic.play.c.b: java.awt.image.BufferedImage a(java.lang.String,java.lang.String)>"->"fieldput <com.screencastomatic.play.PlayApplet: java.awt.image.BufferedImage m_poppedMsg>";
+    "fieldput <com.screencastomatic.play.PlayApplet: java.awt.image.BufferedImage m_poppedMsg>"->"load.r r0";
+    "new com.screencastomatic.play.G"
+    "load.r r0"->"new com.screencastomatic.play.G";
+    "new com.screencastomatic.play.G"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "specialinvoke <com.screencastomatic.play.G: void <init>(com.screencastomatic.play.PlayApplet)>"
+    "load.r r0"->"specialinvoke <com.screencastomatic.play.G: void <init>(com.screencastomatic.play.PlayApplet)>";
+    "virtualinvoke <com.screencastomatic.play.PlayApplet: void addMouseListener(java.awt.event.MouseListener)>"
+    "specialinvoke <com.screencastomatic.play.G: void <init>(com.screencastomatic.play.PlayApplet)>"->"virtualinvoke <com.screencastomatic.play.PlayApplet: void addMouseListener(java.awt.event.MouseListener)>";
+    "virtualinvoke <com.screencastomatic.play.PlayApplet: void addMouseListener(java.awt.event.MouseListener)>"->"load.r r0";
+    "push \"destroyonstop\""
+    "load.r r0"->"push \"destroyonstop\"";
+    "push \"destroyonstop\""->"virtualinvoke <com.screencastomatic.play.PlayApplet: java.lang.String getParameter(java.lang.String)>";
+    "ifnull push 0"
+    "virtualinvoke <com.screencastomatic.play.PlayApplet: java.lang.String getParameter(java.lang.String)>"->"ifnull push 0";
+    "ifnull push 0"->"push 1";
+    "store.b $z1"
+    "push 1"->"store.b $z1";
+    "store.b $z1"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "load.b $z1"
+    "load.r r0"->"load.b $z1";
+    "fieldput <com.screencastomatic.play.PlayApplet: boolean m_destroyOnStop>"
+    "load.b $z1"->"fieldput <com.screencastomatic.play.PlayApplet: boolean m_destroyOnStop>";
+    "return"
+    "fieldput <com.screencastomatic.play.PlayApplet: boolean m_destroyOnStop>"->"return";
+    "ifnull push 0"->"push 0";
+    "push 0"->"store.b $z1";
+    "ifeq load.r r0"->"load.r r0";
+    "new javax.swing.JDialog"
+    "load.r r0"->"new javax.swing.JDialog";
+    "new javax.swing.JDialog"->"dup1.r";
+    "push null"
+    "dup1.r"->"push null";
+    "push null"->"checkcast";
+    "checkcast"->"load.r r0";
+    "load.r r0"->"push \"title\"";
+    "push \"title\""->"virtualinvoke <com.screencastomatic.play.PlayApplet: java.lang.String getParameter(java.lang.String)>";
+    "specialinvoke <javax.swing.JDialog: void <init>(java.awt.Frame,java.lang.String)>"
+    "virtualinvoke <com.screencastomatic.play.PlayApplet: java.lang.String getParameter(java.lang.String)>"->"specialinvoke <javax.swing.JDialog: void <init>(java.awt.Frame,java.lang.String)>";
+    "specialinvoke <javax.swing.JDialog: void <init>(java.awt.Frame,java.lang.String)>"->"fieldput <com.screencastomatic.play.PlayApplet: java.awt.Window m_popout>";
+    "fieldput <com.screencastomatic.play.PlayApplet: java.awt.Window m_popout>"->"load.r r0";
+    "load.r r0"->"fieldget <com.screencastomatic.play.PlayApplet: java.awt.Window m_popout>";
+    "virtualinvoke <java.awt.Window: java.awt.Window getOwner()>"
+    "fieldget <com.screencastomatic.play.PlayApplet: java.awt.Window m_popout>"->"virtualinvoke <java.awt.Window: java.awt.Window getOwner()>";
+    "virtualinvoke <java.awt.Window: java.awt.Window getOwner()>"->"checkcast";
+    "checkcast"->"push \"png\"";
+    "push \"watch_frame_icon.png\""
+    "push \"png\""->"push \"watch_frame_icon.png\"";
+    "push \"watch_frame_icon.png\""->"staticinvoke <com.screencastomatic.play.c.b: java.awt.image.BufferedImage a(java.lang.String,java.lang.String)>";
+    "virtualinvoke <java.awt.Frame: void setIconImage(java.awt.Image)>"
+    "staticinvoke <com.screencastomatic.play.c.b: java.awt.image.BufferedImage a(java.lang.String,java.lang.String)>"->"virtualinvoke <java.awt.Frame: void setIconImage(java.awt.Image)>";
+    "virtualinvoke <java.awt.Frame: void setIconImage(java.awt.Image)>"->"load.r r0";
+    "load.r r0"->"fieldget <com.screencastomatic.play.PlayApplet: java.awt.Window m_popout>";
+    "fieldget <com.screencastomatic.play.PlayApplet: java.awt.Window m_popout>"->"checkcast";
+    "checkcast"->"push 1";
+    "virtualinvoke <javax.swing.JDialog: void setDefaultCloseOperation(int)>"
+    "push 1"->"virtualinvoke <javax.swing.JDialog: void setDefaultCloseOperation(int)>";
+}

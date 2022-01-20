@@ -1,0 +1,82 @@
+digraph "" {
+    "r0 := @this: viewer.ImageViewerApplet"
+    "load.r r0"
+    "r0 := @this: viewer.ImageViewerApplet"->"load.r r0";
+    "specialinvoke <viewer.ImageViewerApplet: void setAppletBGColor()>"
+    "load.r r0"->"specialinvoke <viewer.ImageViewerApplet: void setAppletBGColor()>";
+    "specialinvoke <viewer.ImageViewerApplet: void setAppletBGColor()>"->"load.r r0";
+    "specialinvoke <viewer.ImageViewerApplet: java.lang.String[] getFileList()>"
+    "load.r r0"->"specialinvoke <viewer.ImageViewerApplet: java.lang.String[] getFileList()>";
+    "staticput <viewer.ImageViewerApplet: java.lang.String[] fileList>"
+    "specialinvoke <viewer.ImageViewerApplet: java.lang.String[] getFileList()>"->"staticput <viewer.ImageViewerApplet: java.lang.String[] fileList>";
+    "staticget <viewer.ImageViewerApplet: java.lang.String[] fileList>"
+    "staticput <viewer.ImageViewerApplet: java.lang.String[] fileList>"->"staticget <viewer.ImageViewerApplet: java.lang.String[] fileList>";
+    "arraylength"
+    "staticget <viewer.ImageViewerApplet: java.lang.String[] fileList>"->"arraylength";
+    "newarray"
+    "arraylength"->"newarray";
+    "staticput <viewer.ImageViewerApplet: java.awt.Image[] imageList>"
+    "newarray"->"staticput <viewer.ImageViewerApplet: java.awt.Image[] imageList>";
+    "staticput <viewer.ImageViewerApplet: java.awt.Image[] imageList>"->"load.r r0";
+    "new java.awt.MediaTracker"
+    "load.r r0"->"new java.awt.MediaTracker";
+    "dup1.r"
+    "new java.awt.MediaTracker"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "specialinvoke <java.awt.MediaTracker: void <init>(java.awt.Component)>"
+    "load.r r0"->"specialinvoke <java.awt.MediaTracker: void <init>(java.awt.Component)>";
+    "fieldput <viewer.ImageViewerApplet: java.awt.MediaTracker imageTracker>"
+    "specialinvoke <java.awt.MediaTracker: void <init>(java.awt.Component)>"->"fieldput <viewer.ImageViewerApplet: java.awt.MediaTracker imageTracker>";
+    "fieldput <viewer.ImageViewerApplet: java.awt.MediaTracker imageTracker>"->"load.r r0";
+    "specialinvoke <viewer.ImageViewerApplet: void initGUI()>"
+    "load.r r0"->"specialinvoke <viewer.ImageViewerApplet: void initGUI()>";
+    "specialinvoke <viewer.ImageViewerApplet: void initGUI()>"->"load.r r0";
+    "fieldget <viewer.ImageViewerApplet: viewer.cards.Card_GreetingsCanvas greetingsCard>"
+    "load.r r0"->"fieldget <viewer.ImageViewerApplet: viewer.cards.Card_GreetingsCanvas greetingsCard>";
+    "fieldget <viewer.ImageViewerApplet: viewer.cards.Card_GreetingsCanvas greetingsCard>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "virtualinvoke <java.applet.Applet: java.net.URL getCodeBase()>"
+    "load.r r0"->"virtualinvoke <java.applet.Applet: java.net.URL getCodeBase()>";
+    "push \"viewer/greetings.gif\""
+    "virtualinvoke <java.applet.Applet: java.net.URL getCodeBase()>"->"push \"viewer/greetings.gif\"";
+    "virtualinvoke <java.applet.Applet: java.awt.Image getImage(java.net.URL,java.lang.String)>"
+    "push \"viewer/greetings.gif\""->"virtualinvoke <java.applet.Applet: java.awt.Image getImage(java.net.URL,java.lang.String)>";
+    "fieldput <viewer.cards.Card_GreetingsCanvas: java.awt.Image pic>"
+    "virtualinvoke <java.applet.Applet: java.awt.Image getImage(java.net.URL,java.lang.String)>"->"fieldput <viewer.cards.Card_GreetingsCanvas: java.awt.Image pic>";
+    "fieldput <viewer.cards.Card_GreetingsCanvas: java.awt.Image pic>"->"load.r r0";
+    "fieldget <viewer.ImageViewerApplet: java.awt.MediaTracker imageTracker>"
+    "load.r r0"->"fieldget <viewer.ImageViewerApplet: java.awt.MediaTracker imageTracker>";
+    "fieldget <viewer.ImageViewerApplet: java.awt.MediaTracker imageTracker>"->"load.r r0";
+    "load.r r0"->"fieldget <viewer.ImageViewerApplet: viewer.cards.Card_GreetingsCanvas greetingsCard>";
+    "fieldget <viewer.cards.Card_GreetingsCanvas: java.awt.Image pic>"
+    "fieldget <viewer.ImageViewerApplet: viewer.cards.Card_GreetingsCanvas greetingsCard>"->"fieldget <viewer.cards.Card_GreetingsCanvas: java.awt.Image pic>";
+    "push 111"
+    "fieldget <viewer.cards.Card_GreetingsCanvas: java.awt.Image pic>"->"push 111";
+    "virtualinvoke <java.awt.MediaTracker: void addImage(java.awt.Image,int)>"
+    "push 111"->"virtualinvoke <java.awt.MediaTracker: void addImage(java.awt.Image,int)>";
+    "virtualinvoke <java.awt.MediaTracker: void addImage(java.awt.Image,int)>"->"load.r r0";
+    "load.r r0"->"fieldget <viewer.ImageViewerApplet: java.awt.MediaTracker imageTracker>";
+    "fieldget <viewer.ImageViewerApplet: java.awt.MediaTracker imageTracker>"->"push 111";
+    "virtualinvoke <java.awt.MediaTracker: void waitForID(int)>"
+    "push 111"->"virtualinvoke <java.awt.MediaTracker: void waitForID(int)>";
+    "goto load.r r0"
+    "virtualinvoke <java.awt.MediaTracker: void waitForID(int)>"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "fieldget <viewer.ImageViewerApplet: viewer.tools.Tools_MainPanel toolsMainPanel>"
+    "load.r r0"->"fieldget <viewer.ImageViewerApplet: viewer.tools.Tools_MainPanel toolsMainPanel>";
+    "fieldget <viewer.tools.Tools_MainPanel: viewer.tools.Tools_ImagePanel imagePanel>"
+    "fieldget <viewer.ImageViewerApplet: viewer.tools.Tools_MainPanel toolsMainPanel>"->"fieldget <viewer.tools.Tools_MainPanel: viewer.tools.Tools_ImagePanel imagePanel>";
+    "fieldget <viewer.tools.Tools_MainPanel: viewer.tools.Tools_ImagePanel imagePanel>"->"staticget <viewer.ImageViewerApplet: java.lang.String[] fileList>";
+    "virtualinvoke <viewer.tools.Tools_ImagePanel: void addImageItems(java.lang.String[])>"
+    "staticget <viewer.ImageViewerApplet: java.lang.String[] fileList>"->"virtualinvoke <viewer.tools.Tools_ImagePanel: void addImageItems(java.lang.String[])>";
+    "return"
+    "virtualinvoke <viewer.tools.Tools_ImagePanel: void addImageItems(java.lang.String[])>"->"return";
+    "store.r $r16"
+    "virtualinvoke <java.awt.MediaTracker: void waitForID(int)>"->"store.r $r16";
+    "staticget <java.lang.System: java.io.PrintStream err>"
+    "store.r $r16"->"staticget <java.lang.System: java.io.PrintStream err>";
+    "load.r $r16"
+    "staticget <java.lang.System: java.io.PrintStream err>"->"load.r $r16";
+    "virtualinvoke <java.io.PrintStream: void println(java.lang.Object)>"
+    "load.r $r16"->"virtualinvoke <java.io.PrintStream: void println(java.lang.Object)>";
+}

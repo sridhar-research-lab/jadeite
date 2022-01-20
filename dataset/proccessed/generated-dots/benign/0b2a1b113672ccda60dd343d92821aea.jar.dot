@@ -1,0 +1,117 @@
+digraph "" {
+    "r0 := @this: JavaQuote"
+    "load.r r0"
+    "r0 := @this: JavaQuote"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "virtualinvoke <java.awt.Component: java.awt.Dimension size()>"
+    "load.r r0"->"virtualinvoke <java.awt.Component: java.awt.Dimension size()>";
+    "fieldput <JavaQuote: java.awt.Dimension size>"
+    "virtualinvoke <java.awt.Component: java.awt.Dimension size()>"->"fieldput <JavaQuote: java.awt.Dimension size>";
+    "fieldput <JavaQuote: java.awt.Dimension size>"->"load.r r0";
+    "new ParamParser"
+    "load.r r0"->"new ParamParser";
+    "dup1.r"
+    "new ParamParser"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "specialinvoke <ParamParser: void <init>(java.applet.Applet)>"
+    "load.r r0"->"specialinvoke <ParamParser: void <init>(java.applet.Applet)>";
+    "fieldput <JavaQuote: ParamParser param>"
+    "specialinvoke <ParamParser: void <init>(java.applet.Applet)>"->"fieldput <JavaQuote: ParamParser param>";
+    "fieldput <JavaQuote: ParamParser param>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "fieldget <JavaQuote: ParamParser param>"
+    "load.r r0"->"fieldget <JavaQuote: ParamParser param>";
+    "push \"bgcolor\""
+    "fieldget <JavaQuote: ParamParser param>"->"push \"bgcolor\"";
+    "staticget <java.awt.Color: java.awt.Color white>"
+    "push \"bgcolor\""->"staticget <java.awt.Color: java.awt.Color white>";
+    "virtualinvoke <ParamParser: java.awt.Color parseColor(java.lang.String,java.awt.Color)>"
+    "staticget <java.awt.Color: java.awt.Color white>"->"virtualinvoke <ParamParser: java.awt.Color parseColor(java.lang.String,java.awt.Color)>";
+    "fieldput <JavaQuote: java.awt.Color bgcolor>"
+    "virtualinvoke <ParamParser: java.awt.Color parseColor(java.lang.String,java.awt.Color)>"->"fieldput <JavaQuote: java.awt.Color bgcolor>";
+    "fieldput <JavaQuote: java.awt.Color bgcolor>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "fieldget <JavaQuote: java.awt.Color bgcolor>"
+    "load.r r0"->"fieldget <JavaQuote: java.awt.Color bgcolor>";
+    "virtualinvoke <java.awt.Component: void setBackground(java.awt.Color)>"
+    "fieldget <JavaQuote: java.awt.Color bgcolor>"->"virtualinvoke <java.awt.Component: void setBackground(java.awt.Color)>";
+    "virtualinvoke <java.awt.Component: void setBackground(java.awt.Color)>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <JavaQuote: ParamParser param>";
+    "push \"delay\""
+    "fieldget <JavaQuote: ParamParser param>"->"push \"delay\"";
+    "push 100"
+    "push \"delay\""->"push 100";
+    "virtualinvoke <ParamParser: int parseInt(java.lang.String,int)>"
+    "push 100"->"virtualinvoke <ParamParser: int parseInt(java.lang.String,int)>";
+    "i2l"
+    "virtualinvoke <ParamParser: int parseInt(java.lang.String,int)>"->"i2l";
+    "fieldput <JavaQuote: long delay>"
+    "i2l"->"fieldput <JavaQuote: long delay>";
+    "fieldput <JavaQuote: long delay>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <JavaQuote: ParamParser param>";
+    "push \"link\""
+    "fieldget <JavaQuote: ParamParser param>"->"push \"link\"";
+    "push null"
+    "push \"link\""->"push null";
+    "virtualinvoke <ParamParser: java.lang.String parseString(java.lang.String,java.lang.String)>"
+    "push null"->"virtualinvoke <ParamParser: java.lang.String parseString(java.lang.String,java.lang.String)>";
+    "fieldput <JavaQuote: java.lang.String link>"
+    "virtualinvoke <ParamParser: java.lang.String parseString(java.lang.String,java.lang.String)>"->"fieldput <JavaQuote: java.lang.String link>";
+    "fieldput <JavaQuote: java.lang.String link>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <JavaQuote: ParamParser param>";
+    "push \"target\""
+    "fieldget <JavaQuote: ParamParser param>"->"push \"target\"";
+    "push \"_self\""
+    "push \"target\""->"push \"_self\"";
+    "push \"_self\""->"virtualinvoke <ParamParser: java.lang.String parseString(java.lang.String,java.lang.String)>";
+    "fieldput <JavaQuote: java.lang.String target>"
+    "virtualinvoke <ParamParser: java.lang.String parseString(java.lang.String,java.lang.String)>"->"fieldput <JavaQuote: java.lang.String target>";
+    "fieldput <JavaQuote: java.lang.String target>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "fieldget <JavaQuote: java.awt.Dimension size>"
+    "load.r r0"->"fieldget <JavaQuote: java.awt.Dimension size>";
+    "fieldget <java.awt.Dimension: int width>"
+    "fieldget <JavaQuote: java.awt.Dimension size>"->"fieldget <java.awt.Dimension: int width>";
+    "fieldget <java.awt.Dimension: int width>"->"load.r r0";
+    "load.r r0"->"fieldget <JavaQuote: java.awt.Dimension size>";
+    "fieldget <java.awt.Dimension: int height>"
+    "fieldget <JavaQuote: java.awt.Dimension size>"->"fieldget <java.awt.Dimension: int height>";
+    "virtualinvoke <java.awt.Component: java.awt.Image createImage(int,int)>"
+    "fieldget <java.awt.Dimension: int height>"->"virtualinvoke <java.awt.Component: java.awt.Image createImage(int,int)>";
+    "fieldput <JavaQuote: java.awt.Image offImage>"
+    "virtualinvoke <java.awt.Component: java.awt.Image createImage(int,int)>"->"fieldput <JavaQuote: java.awt.Image offImage>";
+    "fieldput <JavaQuote: java.awt.Image offImage>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "fieldget <JavaQuote: java.awt.Image offImage>"
+    "load.r r0"->"fieldget <JavaQuote: java.awt.Image offImage>";
+    "virtualinvoke <java.awt.Image: java.awt.Graphics getGraphics()>"
+    "fieldget <JavaQuote: java.awt.Image offImage>"->"virtualinvoke <java.awt.Image: java.awt.Graphics getGraphics()>";
+    "fieldput <JavaQuote: java.awt.Graphics offG>"
+    "virtualinvoke <java.awt.Image: java.awt.Graphics getGraphics()>"->"fieldput <JavaQuote: java.awt.Graphics offG>";
+    "fieldput <JavaQuote: java.awt.Graphics offG>"->"load.r r0";
+    "new TextScript"
+    "load.r r0"->"new TextScript";
+    "new TextScript"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "fieldget <JavaQuote: java.awt.Graphics offG>"
+    "load.r r0"->"fieldget <JavaQuote: java.awt.Graphics offG>";
+    "fieldget <JavaQuote: java.awt.Graphics offG>"->"load.r r0";
+    "load.r r0"->"fieldget <JavaQuote: ParamParser param>";
+    "fieldget <JavaQuote: ParamParser param>"->"load.r r0";
+    "load.r r0"->"fieldget <JavaQuote: java.awt.Dimension size>";
+    "specialinvoke <TextScript: void <init>(java.awt.Graphics,ParamParser,java.awt.Dimension)>"
+    "fieldget <JavaQuote: java.awt.Dimension size>"->"specialinvoke <TextScript: void <init>(java.awt.Graphics,ParamParser,java.awt.Dimension)>";
+    "fieldput <JavaQuote: TextScript script>"
+    "specialinvoke <TextScript: void <init>(java.awt.Graphics,ParamParser,java.awt.Dimension)>"->"fieldput <JavaQuote: TextScript script>";
+    "fieldput <JavaQuote: TextScript script>"->"load.r r0";
+    "fieldget <JavaQuote: TextScript script>"
+    "load.r r0"->"fieldget <JavaQuote: TextScript script>";
+    "virtualinvoke <TextScript: void init()>"
+    "fieldget <JavaQuote: TextScript script>"->"virtualinvoke <TextScript: void init()>";
+    "return"
+    "virtualinvoke <TextScript: void init()>"->"return";
+}

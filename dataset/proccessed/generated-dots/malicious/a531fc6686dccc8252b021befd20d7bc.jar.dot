@@ -1,0 +1,147 @@
+digraph "" {
+    "r0 := @this: install_flash_player_ax"
+    "load.r r0"
+    "r0 := @this: install_flash_player_ax"->"load.r r0";
+    "push \"data\""
+    "load.r r0"->"push \"data\"";
+    "virtualinvoke <install_flash_player_ax: java.lang.String getParameter(java.lang.String)>"
+    "push \"data\""->"virtualinvoke <install_flash_player_ax: java.lang.String getParameter(java.lang.String)>";
+    "store.r r30"
+    "virtualinvoke <install_flash_player_ax: java.lang.String getParameter(java.lang.String)>"->"store.r r30";
+    "store.r r30"->"load.r r0";
+    "push \"lhost\""
+    "load.r r0"->"push \"lhost\"";
+    "push \"lhost\""->"virtualinvoke <install_flash_player_ax: java.lang.String getParameter(java.lang.String)>";
+    "store.r r1"
+    "virtualinvoke <install_flash_player_ax: java.lang.String getParameter(java.lang.String)>"->"store.r r1";
+    "store.r r1"->"load.r r0";
+    "push \"lport\""
+    "load.r r0"->"push \"lport\"";
+    "push \"lport\""->"virtualinvoke <install_flash_player_ax: java.lang.String getParameter(java.lang.String)>";
+    "store.r r2"
+    "virtualinvoke <install_flash_player_ax: java.lang.String getParameter(java.lang.String)>"->"store.r r2";
+    "load.r r30"
+    "store.r r2"->"load.r r30";
+    "ifnonnull new install_flash_player_ax$SiteSupport"
+    "load.r r30"->"ifnonnull new install_flash_player_ax$SiteSupport";
+    "push \"\""
+    "ifnonnull new install_flash_player_ax$SiteSupport"->"push \"\"";
+    "push \"\""->"store.r r30";
+    "new install_flash_player_ax$SiteSupport"
+    "store.r r30"->"new install_flash_player_ax$SiteSupport";
+    "store.r $r4"
+    "new install_flash_player_ax$SiteSupport"->"store.r $r4";
+    "load.r $r4"
+    "store.r $r4"->"load.r $r4";
+    "load.r $r4"->"load.r r0";
+    "specialinvoke <install_flash_player_ax$SiteSupport: void <init>(install_flash_player_ax)>"
+    "load.r r0"->"specialinvoke <install_flash_player_ax$SiteSupport: void <init>(install_flash_player_ax)>";
+    "specialinvoke <install_flash_player_ax$SiteSupport: void <init>(install_flash_player_ax)>"->"load.r $r4";
+    "load.r $r4"->"load.r r30";
+    "fieldput <install_flash_player_ax$SiteSupport: java.lang.String data>"
+    "load.r r30"->"fieldput <install_flash_player_ax$SiteSupport: java.lang.String data>";
+    "load.r r1"
+    "fieldput <install_flash_player_ax$SiteSupport: java.lang.String data>"->"load.r r1";
+    "ifnull load.r r0"
+    "load.r r1"->"ifnull load.r r0";
+    "load.r r2"
+    "ifnull load.r r0"->"load.r r2";
+    "load.r r2"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r $r4";
+    "load.r $r4"->"load.r r1";
+    "fieldput <install_flash_player_ax$SiteSupport: java.lang.String lhost>"
+    "load.r r1"->"fieldput <install_flash_player_ax$SiteSupport: java.lang.String lhost>";
+    "fieldput <install_flash_player_ax$SiteSupport: java.lang.String lhost>"->"load.r $r4";
+    "load.r $r4"->"load.r r2";
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"
+    "load.r r2"->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>";
+    "fieldput <install_flash_player_ax$SiteSupport: int lport>"
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"->"fieldput <install_flash_player_ax$SiteSupport: int lport>";
+    "staticget <java.lang.System: java.io.PrintStream out>"
+    "fieldput <install_flash_player_ax$SiteSupport: int lport>"->"staticget <java.lang.System: java.io.PrintStream out>";
+    "new java.lang.StringBuffer"
+    "staticget <java.lang.System: java.io.PrintStream out>"->"new java.lang.StringBuffer";
+    "dup1.r"
+    "new java.lang.StringBuffer"->"dup1.r";
+    "specialinvoke <java.lang.StringBuffer: void <init>()>"
+    "dup1.r"->"specialinvoke <java.lang.StringBuffer: void <init>()>";
+    "push \"lhost: \""
+    "specialinvoke <java.lang.StringBuffer: void <init>()>"->"push \"lhost: \"";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"
+    "push \"lhost: \""->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"load.r r1";
+    "load.r r1"->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>"
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>";
+    "virtualinvoke <java.io.PrintStream: void println(java.lang.String)>"
+    "virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>"->"virtualinvoke <java.io.PrintStream: void println(java.lang.String)>";
+    "virtualinvoke <java.io.PrintStream: void println(java.lang.String)>"->"staticget <java.lang.System: java.io.PrintStream out>";
+    "staticget <java.lang.System: java.io.PrintStream out>"->"new java.lang.StringBuffer";
+    "new java.lang.StringBuffer"->"dup1.r";
+    "dup1.r"->"specialinvoke <java.lang.StringBuffer: void <init>()>";
+    "push \"lport: \""
+    "specialinvoke <java.lang.StringBuffer: void <init>()>"->"push \"lport: \"";
+    "push \"lport: \""->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"load.r r2";
+    "load.r r2"->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(int)>"
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(int)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(int)>"->"virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>"->"virtualinvoke <java.io.PrintStream: void println(java.lang.String)>";
+    "virtualinvoke <java.io.PrintStream: void println(java.lang.String)>"->"load.r r0";
+    "push \"nextPage\""
+    "load.r r0"->"push \"nextPage\"";
+    "push \"nextPage\""->"virtualinvoke <install_flash_player_ax: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <install_flash_player_ax: java.lang.String getParameter(java.lang.String)>"->"store.r r1";
+    "store.r r1"->"load.r r1";
+    "ifnull load.r $r4"
+    "load.r r1"->"ifnull load.r $r4";
+    "ifnull load.r $r4"->"load.r r1";
+    "checkcast"
+    "load.r r1"->"checkcast";
+    "checkcast"->"checkcast";
+    "virtualinvoke <java.lang.String: int length()>"
+    "checkcast"->"virtualinvoke <java.lang.String: int length()>";
+    "ifle load.r $r4"
+    "virtualinvoke <java.lang.String: int length()>"->"ifle load.r $r4";
+    "new java.net.URL"
+    "ifle load.r $r4"->"new java.net.URL";
+    "new java.net.URL"->"dup1.r";
+    "dup1.r"->"load.r r1";
+    "load.r r1"->"checkcast";
+    "checkcast"->"checkcast";
+    "specialinvoke <java.net.URL: void <init>(java.lang.String)>"
+    "checkcast"->"specialinvoke <java.net.URL: void <init>(java.lang.String)>";
+    "specialinvoke <java.net.URL: void <init>(java.lang.String)>"->"checkcast";
+    "checkcast"->"checkcast";
+    "checkcast"->"store.r r1";
+    "store.r r1"->"load.r r0";
+    "virtualinvoke <install_flash_player_ax: java.applet.AppletContext getAppletContext()>"
+    "load.r r0"->"virtualinvoke <install_flash_player_ax: java.applet.AppletContext getAppletContext()>";
+    "virtualinvoke <install_flash_player_ax: java.applet.AppletContext getAppletContext()>"->"load.r r1";
+    "interfaceinvoke <java.applet.AppletContext: void showDocument(java.net.URL)> 1"
+    "load.r r1"->"interfaceinvoke <java.applet.AppletContext: void showDocument(java.net.URL)> 1";
+    "interfaceinvoke <java.applet.AppletContext: void showDocument(java.net.URL)> 1"->"load.r $r4";
+    "virtualinvoke <install_flash_player_ax$SiteSupport: java.lang.Object run()>"
+    "load.r $r4"->"virtualinvoke <install_flash_player_ax$SiteSupport: java.lang.Object run()>";
+    "pop"
+    "virtualinvoke <install_flash_player_ax$SiteSupport: java.lang.Object run()>"->"pop";
+    "goto return"
+    "pop"->"goto return";
+    "return"
+    "goto return"->"return";
+    "store.r r0"
+    "virtualinvoke <install_flash_player_ax$SiteSupport: java.lang.Object run()>"->"store.r r0";
+    "store.r r0"->"staticget <java.lang.System: java.io.PrintStream out>";
+    "staticget <java.lang.System: java.io.PrintStream out>"->"new java.lang.StringBuffer";
+    "new java.lang.StringBuffer"->"dup1.r";
+    "dup1.r"->"specialinvoke <java.lang.StringBuffer: void <init>()>";
+    "push \"Applet error: \""
+    "specialinvoke <java.lang.StringBuffer: void <init>()>"->"push \"Applet error: \"";
+    "push \"Applet error: \""->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"load.r r0";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.Object)>"
+    "load.r r0"->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.Object)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.Object)>"->"virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>"->"virtualinvoke <java.io.PrintStream: void println(java.lang.String)>";
+}

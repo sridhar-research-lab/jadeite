@@ -1,0 +1,342 @@
+digraph "" {
+    "r0 := @this: Difus"
+    "load.r r0"
+    "r0 := @this: Difus"->"load.r r0";
+    "push null"
+    "load.r r0"->"push null";
+    "virtualinvoke <java.awt.Container: void setLayout(java.awt.LayoutManager)>"
+    "push null"->"virtualinvoke <java.awt.Container: void setLayout(java.awt.LayoutManager)>";
+    "virtualinvoke <java.awt.Container: void setLayout(java.awt.LayoutManager)>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "virtualinvoke <Difus: java.awt.Dimension getPreferredSize()>"
+    "load.r r0"->"virtualinvoke <Difus: java.awt.Dimension getPreferredSize()>";
+    "virtualinvoke <java.awt.Component: void setSize(java.awt.Dimension)>"
+    "virtualinvoke <Difus: java.awt.Dimension getPreferredSize()>"->"virtualinvoke <java.awt.Component: void setSize(java.awt.Dimension)>";
+    "virtualinvoke <java.awt.Component: void setSize(java.awt.Dimension)>"->"load.r r0";
+    "staticget <Difus: java.awt.Color CFONDO>"
+    "load.r r0"->"staticget <Difus: java.awt.Color CFONDO>";
+    "virtualinvoke <java.awt.Component: void setBackground(java.awt.Color)>"
+    "staticget <Difus: java.awt.Color CFONDO>"->"virtualinvoke <java.awt.Component: void setBackground(java.awt.Color)>";
+    "virtualinvoke <java.awt.Component: void setBackground(java.awt.Color)>"->"load.r r0";
+    "push \"an\""
+    "load.r r0"->"push \"an\"";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"
+    "push \"an\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "store.r r1"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"store.r r1";
+    "store.r r1"->"load.r r0";
+    "push \"al\""
+    "load.r r0"->"push \"al\"";
+    "push \"al\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "store.r r2"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"store.r r2";
+    "load.r r1"
+    "store.r r2"->"load.r r1";
+    "ifnonnull push 1"
+    "load.r r1"->"ifnonnull push 1";
+    "push 0"
+    "ifnonnull push 1"->"push 0";
+    "store.b $z0"
+    "push 0"->"store.b $z0";
+    "goto load.r r2"
+    "store.b $z0"->"goto load.r r2";
+    "load.r r2"
+    "goto load.r r2"->"load.r r2";
+    "load.r r2"->"ifnonnull push 1";
+    "ifnonnull push 1"->"push 0";
+    "store.b $z1"
+    "push 0"->"store.b $z1";
+    "goto load.b $z0"
+    "store.b $z1"->"goto load.b $z0";
+    "load.b $z0"
+    "goto load.b $z0"->"load.b $z0";
+    "load.b $z1"
+    "load.b $z0"->"load.b $z1";
+    "and.b"
+    "load.b $z1"->"and.b";
+    "ifeq load.r r0"
+    "and.b"->"ifeq load.r r0";
+    "ifeq load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r1";
+    "staticinvoke <java.lang.Integer: java.lang.Integer valueOf(java.lang.String)>"
+    "load.r r1"->"staticinvoke <java.lang.Integer: java.lang.Integer valueOf(java.lang.String)>";
+    "virtualinvoke <java.lang.Integer: int intValue()>"
+    "staticinvoke <java.lang.Integer: java.lang.Integer valueOf(java.lang.String)>"->"virtualinvoke <java.lang.Integer: int intValue()>";
+    "fieldput <Difus: int x>"
+    "virtualinvoke <java.lang.Integer: int intValue()>"->"fieldput <Difus: int x>";
+    "fieldput <Difus: int x>"->"load.r r0";
+    "load.r r0"->"load.r r2";
+    "load.r r2"->"staticinvoke <java.lang.Integer: java.lang.Integer valueOf(java.lang.String)>";
+    "staticinvoke <java.lang.Integer: java.lang.Integer valueOf(java.lang.String)>"->"virtualinvoke <java.lang.Integer: int intValue()>";
+    "fieldput <Difus: int y>"
+    "virtualinvoke <java.lang.Integer: int intValue()>"->"fieldput <Difus: int y>";
+    "goto load.r r0"
+    "fieldput <Difus: int y>"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "new Tapiz"
+    "load.r r0"->"new Tapiz";
+    "dup1.r"
+    "new Tapiz"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "fieldget <Difus: int x>"
+    "load.r r0"->"fieldget <Difus: int x>";
+    "fieldget <Difus: int x>"->"load.r r0";
+    "fieldget <Difus: int y>"
+    "load.r r0"->"fieldget <Difus: int y>";
+    "fieldget <Difus: int y>"->"staticget <Difus: java.awt.Color CFONDO>";
+    "specialinvoke <Tapiz: void <init>(int,int,java.awt.Color)>"
+    "staticget <Difus: java.awt.Color CFONDO>"->"specialinvoke <Tapiz: void <init>(int,int,java.awt.Color)>";
+    "fieldput <Difus: java.awt.Panel marco>"
+    "specialinvoke <Tapiz: void <init>(int,int,java.awt.Color)>"->"fieldput <Difus: java.awt.Panel marco>";
+    "fieldput <Difus: java.awt.Panel marco>"->"load.r r0";
+    "fieldget <Difus: java.awt.Panel marco>"
+    "load.r r0"->"fieldget <Difus: java.awt.Panel marco>";
+    "fieldget <Difus: java.awt.Panel marco>"->"push 0";
+    "push 0"->"push 0";
+    "push 0"->"load.r r0";
+    "load.r r0"->"fieldget <Difus: int x>";
+    "fieldget <Difus: int x>"->"load.r r0";
+    "load.r r0"->"fieldget <Difus: int y>";
+    "virtualinvoke <java.awt.Component: void setBounds(int,int,int,int)>"
+    "fieldget <Difus: int y>"->"virtualinvoke <java.awt.Component: void setBounds(int,int,int,int)>";
+    "virtualinvoke <java.awt.Component: void setBounds(int,int,int,int)>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <Difus: java.awt.Panel marco>";
+    "virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>"
+    "fieldget <Difus: java.awt.Panel marco>"->"virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>";
+    "pop"
+    "virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>"->"pop";
+    "pop"->"load.r r0";
+    "fieldget <Difus: java.awt.Panel ptitu>"
+    "load.r r0"->"fieldget <Difus: java.awt.Panel ptitu>";
+    "push 20"
+    "fieldget <Difus: java.awt.Panel ptitu>"->"push 20";
+    "push 10"
+    "push 20"->"push 10";
+    "push 10"->"load.r r0";
+    "load.r r0"->"fieldget <Difus: int x>";
+    "push 40"
+    "fieldget <Difus: int x>"->"push 40";
+    "sub.i"
+    "push 40"->"sub.i";
+    "sub.i"->"load.r r0";
+    "load.r r0"->"fieldget <Difus: int y>";
+    "fieldget <Difus: int y>"->"push 10";
+    "div.i"
+    "push 10"->"div.i";
+    "div.i"->"virtualinvoke <java.awt.Component: void setBounds(int,int,int,int)>";
+    "virtualinvoke <java.awt.Component: void setBounds(int,int,int,int)>"->"load.r r0";
+    "load.r r0"->"fieldget <Difus: java.awt.Panel ptitu>";
+    "fieldget <Difus: java.awt.Panel ptitu>"->"staticget <Difus: java.awt.Color CFONDO>";
+    "staticget <Difus: java.awt.Color CFONDO>"->"virtualinvoke <java.awt.Component: void setBackground(java.awt.Color)>";
+    "virtualinvoke <java.awt.Component: void setBackground(java.awt.Color)>"->"load.r r0";
+    "fieldget <Difus: java.awt.Label ltitu>"
+    "load.r r0"->"fieldget <Difus: java.awt.Label ltitu>";
+    "new java.awt.Color"
+    "fieldget <Difus: java.awt.Label ltitu>"->"new java.awt.Color";
+    "new java.awt.Color"->"dup1.r";
+    "dup1.r"->"push 10";
+    "push 10"->"push 10";
+    "push 240"
+    "push 10"->"push 240";
+    "specialinvoke <java.awt.Color: void <init>(int,int,int)>"
+    "push 240"->"specialinvoke <java.awt.Color: void <init>(int,int,int)>";
+    "virtualinvoke <java.awt.Component: void setForeground(java.awt.Color)>"
+    "specialinvoke <java.awt.Color: void <init>(int,int,int)>"->"virtualinvoke <java.awt.Component: void setForeground(java.awt.Color)>";
+    "virtualinvoke <java.awt.Component: void setForeground(java.awt.Color)>"->"load.r r0";
+    "load.r r0"->"fieldget <Difus: java.awt.Label ltitu>";
+    "new java.awt.Font"
+    "fieldget <Difus: java.awt.Label ltitu>"->"new java.awt.Font";
+    "new java.awt.Font"->"dup1.r";
+    "push \"Serif\""
+    "dup1.r"->"push \"Serif\"";
+    "push 1"
+    "push \"Serif\""->"push 1";
+    "push 16"
+    "push 1"->"push 16";
+    "specialinvoke <java.awt.Font: void <init>(java.lang.String,int,int)>"
+    "push 16"->"specialinvoke <java.awt.Font: void <init>(java.lang.String,int,int)>";
+    "virtualinvoke <java.awt.Component: void setFont(java.awt.Font)>"
+    "specialinvoke <java.awt.Font: void <init>(java.lang.String,int,int)>"->"virtualinvoke <java.awt.Component: void setFont(java.awt.Font)>";
+    "virtualinvoke <java.awt.Component: void setFont(java.awt.Font)>"->"load.r r0";
+    "load.r r0"->"fieldget <Difus: java.awt.Panel ptitu>";
+    "push \"Center\""
+    "fieldget <Difus: java.awt.Panel ptitu>"->"push \"Center\"";
+    "push \"Center\""->"load.r r0";
+    "load.r r0"->"fieldget <Difus: java.awt.Label ltitu>";
+    "virtualinvoke <java.awt.Container: java.awt.Component add(java.lang.String,java.awt.Component)>"
+    "fieldget <Difus: java.awt.Label ltitu>"->"virtualinvoke <java.awt.Container: java.awt.Component add(java.lang.String,java.awt.Component)>";
+    "virtualinvoke <java.awt.Container: java.awt.Component add(java.lang.String,java.awt.Component)>"->"pop";
+    "pop"->"load.r r0";
+    "load.r r0"->"fieldget <Difus: java.awt.Panel marco>";
+    "fieldget <Difus: java.awt.Panel marco>"->"load.r r0";
+    "load.r r0"->"fieldget <Difus: java.awt.Panel ptitu>";
+    "fieldget <Difus: java.awt.Panel ptitu>"->"virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>";
+    "virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>"->"pop";
+    "pop"->"load.r r0";
+    "new Digraf"
+    "load.r r0"->"new Digraf";
+    "new Digraf"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "specialinvoke <Digraf: void <init>(Difus)>"
+    "load.r r0"->"specialinvoke <Digraf: void <init>(Difus)>";
+    "fieldput <Difus: Digraf grafi>"
+    "specialinvoke <Digraf: void <init>(Difus)>"->"fieldput <Difus: Digraf grafi>";
+    "fieldput <Difus: Digraf grafi>"->"load.r r0";
+    "load.r r0"->"fieldget <Difus: java.awt.Panel marco>";
+    "fieldget <Difus: java.awt.Panel marco>"->"load.r r0";
+    "fieldget <Difus: Digraf grafi>"
+    "load.r r0"->"fieldget <Difus: Digraf grafi>";
+    "fieldget <Difus: Digraf grafi>"->"virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>";
+    "virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>"->"pop";
+    "pop"->"load.r r0";
+    "load.r r0"->"fieldget <Difus: Digraf grafi>";
+    "fieldget <Difus: Digraf grafi>"->"push 16";
+    "push 16"->"load.r r0";
+    "load.r r0"->"fieldget <Difus: int y>";
+    "fieldget <Difus: int y>"->"push 10";
+    "push 10"->"div.i";
+    "div.i"->"push 10";
+    "add.i"
+    "push 10"->"add.i";
+    "add.i"->"load.r r0";
+    "load.r r0"->"fieldget <Difus: int x>";
+    "push 32"
+    "fieldget <Difus: int x>"->"push 32";
+    "push 32"->"sub.i";
+    "push 7"
+    "sub.i"->"push 7";
+    "push 7"->"load.r r0";
+    "load.r r0"->"fieldget <Difus: int y>";
+    "mul.i"
+    "fieldget <Difus: int y>"->"mul.i";
+    "mul.i"->"push 10";
+    "push 10"->"div.i";
+    "div.i"->"virtualinvoke <java.awt.Component: void setBounds(int,int,int,int)>";
+    "virtualinvoke <java.awt.Component: void setBounds(int,int,int,int)>"->"load.r r0";
+    "load.r r0"->"fieldget <Difus: Digraf grafi>";
+    "virtualinvoke <Digraf: void iniciar()>"
+    "fieldget <Difus: Digraf grafi>"->"virtualinvoke <Digraf: void iniciar()>";
+    "virtualinvoke <Digraf: void iniciar()>"->"load.r r0";
+    "new ProceDifu"
+    "load.r r0"->"new ProceDifu";
+    "new ProceDifu"->"dup1.r";
+    "push 50"
+    "dup1.r"->"push 50";
+    "specialinvoke <ProceDifu: void <init>(int)>"
+    "push 50"->"specialinvoke <ProceDifu: void <init>(int)>";
+    "fieldput <Difus: ProceDifu calcular>"
+    "specialinvoke <ProceDifu: void <init>(int)>"->"fieldput <Difus: ProceDifu calcular>";
+    "fieldput <Difus: ProceDifu calcular>"->"load.r r0";
+    "fieldget <Difus: ProceDifu calcular>"
+    "load.r r0"->"fieldget <Difus: ProceDifu calcular>";
+    "fieldget <Difus: ProceDifu calcular>"->"load.r r0";
+    "load.r r0"->"fieldget <Difus: Digraf grafi>";
+    "virtualinvoke <java.awt.Component: java.awt.Rectangle getBounds()>"
+    "fieldget <Difus: Digraf grafi>"->"virtualinvoke <java.awt.Component: java.awt.Rectangle getBounds()>";
+    "fieldget <java.awt.Rectangle: int width>"
+    "virtualinvoke <java.awt.Component: java.awt.Rectangle getBounds()>"->"fieldget <java.awt.Rectangle: int width>";
+    "fieldget <java.awt.Rectangle: int width>"->"load.r r0";
+    "load.r r0"->"fieldget <Difus: Digraf grafi>";
+    "fieldget <Difus: Digraf grafi>"->"virtualinvoke <java.awt.Component: java.awt.Rectangle getBounds()>";
+    "fieldget <java.awt.Rectangle: int height>"
+    "virtualinvoke <java.awt.Component: java.awt.Rectangle getBounds()>"->"fieldget <java.awt.Rectangle: int height>";
+    "virtualinvoke <ProceDifu: void setorigen(int,int)>"
+    "fieldget <java.awt.Rectangle: int height>"->"virtualinvoke <ProceDifu: void setorigen(int,int)>";
+    "virtualinvoke <ProceDifu: void setorigen(int,int)>"->"load.r r0";
+    "load.r r0"->"fieldget <Difus: ProceDifu calcular>";
+    "virtualinvoke <ProceDifu: void setrandom()>"
+    "fieldget <Difus: ProceDifu calcular>"->"virtualinvoke <ProceDifu: void setrandom()>";
+    "virtualinvoke <ProceDifu: void setrandom()>"->"load.r r0";
+    "new Pancontrol"
+    "load.r r0"->"new Pancontrol";
+    "new Pancontrol"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "load.r r0"->"staticget <Difus: java.awt.Color CFONDO>";
+    "staticget <Difus: java.awt.Color CFONDO>"->"load.r r0";
+    "load.r r0"->"fieldget <Difus: int x>";
+    "fieldget <Difus: int x>"->"push 40";
+    "push 40"->"sub.i";
+    "sub.i"->"push 20";
+    "specialinvoke <Pancontrol: void <init>(Difus,java.awt.Color,int,int)>"
+    "push 20"->"specialinvoke <Pancontrol: void <init>(Difus,java.awt.Color,int,int)>";
+    "fieldput <Difus: Pancontrol pantrol>"
+    "specialinvoke <Pancontrol: void <init>(Difus,java.awt.Color,int,int)>"->"fieldput <Difus: Pancontrol pantrol>";
+    "fieldput <Difus: Pancontrol pantrol>"->"load.r r0";
+    "fieldget <Difus: Pancontrol pantrol>"
+    "load.r r0"->"fieldget <Difus: Pancontrol pantrol>";
+    "fieldget <Difus: Pancontrol pantrol>"->"push 20";
+    "push 8"
+    "push 20"->"push 8";
+    "push 8"->"load.r r0";
+    "load.r r0"->"fieldget <Difus: int y>";
+    "fieldget <Difus: int y>"->"mul.i";
+    "mul.i"->"push 10";
+    "push 10"->"div.i";
+    "div.i"->"push 20";
+    "push 20"->"add.i";
+    "add.i"->"load.r r0";
+    "load.r r0"->"fieldget <Difus: int x>";
+    "fieldget <Difus: int x>"->"push 40";
+    "push 40"->"sub.i";
+    "sub.i"->"push 20";
+    "push 20"->"virtualinvoke <java.awt.Component: void setBounds(int,int,int,int)>";
+    "virtualinvoke <java.awt.Component: void setBounds(int,int,int,int)>"->"load.r r0";
+    "load.r r0"->"fieldget <Difus: java.awt.Panel marco>";
+    "fieldget <Difus: java.awt.Panel marco>"->"load.r r0";
+    "load.r r0"->"fieldget <Difus: Pancontrol pantrol>";
+    "fieldget <Difus: Pancontrol pantrol>"->"virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>";
+    "virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>"->"pop";
+    "pop"->"load.r r0";
+    "new Panbotones"
+    "load.r r0"->"new Panbotones";
+    "new Panbotones"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "load.r r0"->"staticget <Difus: java.awt.Color CFONDO>";
+    "specialinvoke <Panbotones: void <init>(Difus,java.awt.Color)>"
+    "staticget <Difus: java.awt.Color CFONDO>"->"specialinvoke <Panbotones: void <init>(Difus,java.awt.Color)>";
+    "fieldput <Difus: Panbotones panbot>"
+    "specialinvoke <Panbotones: void <init>(Difus,java.awt.Color)>"->"fieldput <Difus: Panbotones panbot>";
+    "fieldput <Difus: Panbotones panbot>"->"load.r r0";
+    "fieldget <Difus: Panbotones panbot>"
+    "load.r r0"->"fieldget <Difus: Panbotones panbot>";
+    "fieldget <Difus: Panbotones panbot>"->"push 20";
+    "push 20"->"push 7";
+    "push 7"->"load.r r0";
+    "load.r r0"->"fieldget <Difus: int y>";
+    "fieldget <Difus: int y>"->"mul.i";
+    "mul.i"->"push 8";
+    "push 8"->"div.i";
+    "div.i"->"push 20";
+    "push 20"->"add.i";
+    "add.i"->"load.r r0";
+    "load.r r0"->"fieldget <Difus: int x>";
+    "fieldget <Difus: int x>"->"push 40";
+    "push 40"->"sub.i";
+    "sub.i"->"load.r r0";
+    "load.r r0"->"fieldget <Difus: int y>";
+    "fieldget <Difus: int y>"->"push 16";
+    "push 16"->"div.i";
+    "div.i"->"virtualinvoke <java.awt.Component: void setBounds(int,int,int,int)>";
+    "virtualinvoke <java.awt.Component: void setBounds(int,int,int,int)>"->"load.r r0";
+    "load.r r0"->"fieldget <Difus: java.awt.Panel marco>";
+    "fieldget <Difus: java.awt.Panel marco>"->"load.r r0";
+    "load.r r0"->"fieldget <Difus: Panbotones panbot>";
+    "fieldget <Difus: Panbotones panbot>"->"virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>";
+    "virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>"->"pop";
+    "pop"->"load.r r0";
+    "new Dif_info"
+    "load.r r0"->"new Dif_info";
+    "new Dif_info"->"dup1.r";
+    "specialinvoke <Dif_info: void <init>()>"
+    "dup1.r"->"specialinvoke <Dif_info: void <init>()>";
+    "fieldput <Difus: Dif_info finfo>"
+    "specialinvoke <Dif_info: void <init>()>"->"fieldput <Difus: Dif_info finfo>";
+    "return"
+    "fieldput <Difus: Dif_info finfo>"->"return";
+    "virtualinvoke <java.lang.Integer: int intValue()>"->"store.r r1";
+    "ifnonnull push 1"->"push 1";
+    "push 1"->"store.b $z1";
+    "ifnonnull push 1"->"push 1";
+    "push 1"->"store.b $z0";
+}

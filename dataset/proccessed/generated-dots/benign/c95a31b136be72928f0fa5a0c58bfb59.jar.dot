@@ -1,0 +1,92 @@
+digraph "" {
+    "r0 := @this: com.evological.evocam"
+    "load.r r0"
+    "r0 := @this: com.evological.evocam"->"load.r r0";
+    "push \"video\""
+    "load.r r0"->"push \"video\"";
+    "virtualinvoke <com.evological.evocam: java.lang.String getParameter(java.lang.String)>"
+    "push \"video\""->"virtualinvoke <com.evological.evocam: java.lang.String getParameter(java.lang.String)>";
+    "store.r r1"
+    "virtualinvoke <com.evological.evocam: java.lang.String getParameter(java.lang.String)>"->"store.r r1";
+    "load.r r1"
+    "store.r r1"->"load.r r1";
+    "ifnonnull load.r r0"
+    "load.r r1"->"ifnonnull load.r r0";
+    "push \"video.cgi\""
+    "ifnonnull load.r r0"->"push \"video.cgi\"";
+    "push \"video.cgi\""->"store.r r1";
+    "store.r r1"->"load.r r0";
+    "new com.evological.VideoPanel"
+    "load.r r0"->"new com.evological.VideoPanel";
+    "dup1.r"
+    "new com.evological.VideoPanel"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "virtualinvoke <com.evological.evocam: java.net.URL getCodeBase()>"
+    "load.r r0"->"virtualinvoke <com.evological.evocam: java.net.URL getCodeBase()>";
+    "virtualinvoke <com.evological.evocam: java.net.URL getCodeBase()>"->"load.r r1";
+    "specialinvoke <com.evological.VideoPanel: void <init>(java.net.URL,java.lang.String)>"
+    "load.r r1"->"specialinvoke <com.evological.VideoPanel: void <init>(java.net.URL,java.lang.String)>";
+    "fieldput <com.evological.evocam: com.evological.VideoPanel videoPanel>"
+    "specialinvoke <com.evological.VideoPanel: void <init>(java.net.URL,java.lang.String)>"->"fieldput <com.evological.evocam: com.evological.VideoPanel videoPanel>";
+    "fieldput <com.evological.evocam: com.evological.VideoPanel videoPanel>"->"load.r r0";
+    "fieldget <com.evological.evocam: com.evological.VideoPanel videoPanel>"
+    "load.r r0"->"fieldget <com.evological.evocam: com.evological.VideoPanel videoPanel>";
+    "fieldget <com.evological.evocam: com.evological.VideoPanel videoPanel>"->"load.r r0";
+    "virtualinvoke <com.evological.evocam: int getWidth()>"
+    "load.r r0"->"virtualinvoke <com.evological.evocam: int getWidth()>";
+    "virtualinvoke <com.evological.evocam: int getWidth()>"->"load.r r0";
+    "virtualinvoke <com.evological.evocam: int getHeight()>"
+    "load.r r0"->"virtualinvoke <com.evological.evocam: int getHeight()>";
+    "virtualinvoke <com.evological.VideoPanel: void setSize(int,int)>"
+    "virtualinvoke <com.evological.evocam: int getHeight()>"->"virtualinvoke <com.evological.VideoPanel: void setSize(int,int)>";
+    "virtualinvoke <com.evological.VideoPanel: void setSize(int,int)>"->"load.r r0";
+    "virtualinvoke <com.evological.evocam: java.awt.Container getContentPane()>"
+    "load.r r0"->"virtualinvoke <com.evological.evocam: java.awt.Container getContentPane()>";
+    "virtualinvoke <com.evological.evocam: java.awt.Container getContentPane()>"->"load.r r0";
+    "load.r r0"->"fieldget <com.evological.evocam: com.evological.VideoPanel videoPanel>";
+    "virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>"
+    "fieldget <com.evological.evocam: com.evological.VideoPanel videoPanel>"->"virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>";
+    "pop"
+    "virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>"->"pop";
+    "pop"->"load.r r0";
+    "fieldget <com.evological.evocam: boolean enableAudio>"
+    "load.r r0"->"fieldget <com.evological.evocam: boolean enableAudio>";
+    "ifeq return"
+    "fieldget <com.evological.evocam: boolean enableAudio>"->"ifeq return";
+    "ifeq return"->"load.r r0";
+    "push \"audio\""
+    "load.r r0"->"push \"audio\"";
+    "push \"audio\""->"virtualinvoke <com.evological.evocam: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <com.evological.evocam: java.lang.String getParameter(java.lang.String)>"->"store.r r1";
+    "store.r r1"->"load.r r1";
+    "ifnull return"
+    "load.r r1"->"ifnull return";
+    "ifnull return"->"load.r r0";
+    "new com.evological.AudioPanel"
+    "load.r r0"->"new com.evological.AudioPanel";
+    "new com.evological.AudioPanel"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "load.r r0"->"virtualinvoke <com.evological.evocam: java.net.URL getCodeBase()>";
+    "virtualinvoke <com.evological.evocam: java.net.URL getCodeBase()>"->"load.r r1";
+    "specialinvoke <com.evological.AudioPanel: void <init>(java.net.URL,java.lang.String)>"
+    "load.r r1"->"specialinvoke <com.evological.AudioPanel: void <init>(java.net.URL,java.lang.String)>";
+    "fieldput <com.evological.evocam: com.evological.AudioPanel audioPanel>"
+    "specialinvoke <com.evological.AudioPanel: void <init>(java.net.URL,java.lang.String)>"->"fieldput <com.evological.evocam: com.evological.AudioPanel audioPanel>";
+    "fieldput <com.evological.evocam: com.evological.AudioPanel audioPanel>"->"load.r r0";
+    "fieldget <com.evological.evocam: com.evological.AudioPanel audioPanel>"
+    "load.r r0"->"fieldget <com.evological.evocam: com.evological.AudioPanel audioPanel>";
+    "fieldget <com.evological.evocam: com.evological.AudioPanel audioPanel>"->"load.r r0";
+    "load.r r0"->"virtualinvoke <com.evological.evocam: int getWidth()>";
+    "push 0"
+    "virtualinvoke <com.evological.evocam: int getWidth()>"->"push 0";
+    "virtualinvoke <com.evological.AudioPanel: void setSize(int,int)>"
+    "push 0"->"virtualinvoke <com.evological.AudioPanel: void setSize(int,int)>";
+    "virtualinvoke <com.evological.AudioPanel: void setSize(int,int)>"->"load.r r0";
+    "load.r r0"->"virtualinvoke <com.evological.evocam: java.awt.Container getContentPane()>";
+    "virtualinvoke <com.evological.evocam: java.awt.Container getContentPane()>"->"load.r r0";
+    "load.r r0"->"fieldget <com.evological.evocam: com.evological.AudioPanel audioPanel>";
+    "fieldget <com.evological.evocam: com.evological.AudioPanel audioPanel>"->"virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>";
+    "virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>"->"pop";
+    "return"
+    "pop"->"return";
+}

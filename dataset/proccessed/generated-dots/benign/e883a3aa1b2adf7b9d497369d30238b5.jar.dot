@@ -1,0 +1,221 @@
+digraph "" {
+    "r0 := @this: com.jafar.applets.adbanner.BJAdBanner"
+    "load.r r0"
+    "r0 := @this: com.jafar.applets.adbanner.BJAdBanner"->"load.r r0";
+    "push \"width\""
+    "load.r r0"->"push \"width\"";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"
+    "push \"width\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "store.r r28"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"store.r r28";
+    "load.r r28"
+    "store.r r28"->"load.r r28";
+    "ifnull load.r r0"
+    "load.r r28"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r28";
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"
+    "load.r r28"->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>";
+    "fieldput <com.jafar.applets.adbanner.BJAdBanner: int width>"
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"->"fieldput <com.jafar.applets.adbanner.BJAdBanner: int width>";
+    "goto load.r r0"
+    "fieldput <com.jafar.applets.adbanner.BJAdBanner: int width>"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "push \"height\""
+    "load.r r0"->"push \"height\"";
+    "push \"height\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"store.r r28";
+    "store.r r28"->"load.r r28";
+    "load.r r28"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r28";
+    "load.r r28"->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>";
+    "fieldput <com.jafar.applets.adbanner.BJAdBanner: int height>"
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"->"fieldput <com.jafar.applets.adbanner.BJAdBanner: int height>";
+    "fieldput <com.jafar.applets.adbanner.BJAdBanner: int height>"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "staticget <com.jafar.applets.adbanner.BJAdBanner: java.lang.String[] imgStrings>"
+    "load.r r0"->"staticget <com.jafar.applets.adbanner.BJAdBanner: java.lang.String[] imgStrings>";
+    "arraylength"
+    "staticget <com.jafar.applets.adbanner.BJAdBanner: java.lang.String[] imgStrings>"->"arraylength";
+    "fieldput <com.jafar.applets.adbanner.BJAdBanner: int numImages>"
+    "arraylength"->"fieldput <com.jafar.applets.adbanner.BJAdBanner: int numImages>";
+    "fieldput <com.jafar.applets.adbanner.BJAdBanner: int numImages>"->"load.r r0";
+    "fieldget <com.jafar.applets.adbanner.BJAdBanner: int numImages>"
+    "load.r r0"->"fieldget <com.jafar.applets.adbanner.BJAdBanner: int numImages>";
+    "ifle load.r r0"
+    "fieldget <com.jafar.applets.adbanner.BJAdBanner: int numImages>"->"ifle load.r r0";
+    "ifle load.r r0"->"load.r r0";
+    "virtualinvoke <java.applet.Applet: java.net.URL getDocumentBase()>"
+    "load.r r0"->"virtualinvoke <java.applet.Applet: java.net.URL getDocumentBase()>";
+    "pop"
+    "virtualinvoke <java.applet.Applet: java.net.URL getDocumentBase()>"->"pop";
+    "pop"->"load.r r0";
+    "new java.awt.MediaTracker"
+    "load.r r0"->"new java.awt.MediaTracker";
+    "dup1.r"
+    "new java.awt.MediaTracker"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "specialinvoke <java.awt.MediaTracker: void <init>(java.awt.Component)>"
+    "load.r r0"->"specialinvoke <java.awt.MediaTracker: void <init>(java.awt.Component)>";
+    "fieldput <com.jafar.applets.adbanner.BJAdBanner: java.awt.MediaTracker tracker>"
+    "specialinvoke <java.awt.MediaTracker: void <init>(java.awt.Component)>"->"fieldput <com.jafar.applets.adbanner.BJAdBanner: java.awt.MediaTracker tracker>";
+    "fieldput <com.jafar.applets.adbanner.BJAdBanner: java.awt.MediaTracker tracker>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <com.jafar.applets.adbanner.BJAdBanner: int numImages>";
+    "newarray"
+    "fieldget <com.jafar.applets.adbanner.BJAdBanner: int numImages>"->"newarray";
+    "fieldput <com.jafar.applets.adbanner.BJAdBanner: java.awt.Image[] images>"
+    "newarray"->"fieldput <com.jafar.applets.adbanner.BJAdBanner: java.awt.Image[] images>";
+    "push 0"
+    "fieldput <com.jafar.applets.adbanner.BJAdBanner: java.awt.Image[] images>"->"push 0";
+    "store.i r28"
+    "push 0"->"store.i r28";
+    "goto load.i r28"
+    "store.i r28"->"goto load.i r28";
+    "load.i r28"
+    "goto load.i r28"->"load.i r28";
+    "load.i r28"->"load.r r0";
+    "load.r r0"->"fieldget <com.jafar.applets.adbanner.BJAdBanner: int numImages>";
+    "ifcmplt.i load.r r0"
+    "fieldget <com.jafar.applets.adbanner.BJAdBanner: int numImages>"->"ifcmplt.i load.r r0";
+    "ifcmplt.i load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <com.jafar.applets.adbanner.BJAdBanner: int numImages>";
+    "fieldget <com.jafar.applets.adbanner.BJAdBanner: int numImages>"->"newarray";
+    "fieldput <com.jafar.applets.adbanner.BJAdBanner: java.net.URL[] urls>"
+    "newarray"->"fieldput <com.jafar.applets.adbanner.BJAdBanner: java.net.URL[] urls>";
+    "fieldput <com.jafar.applets.adbanner.BJAdBanner: java.net.URL[] urls>"->"push 0";
+    "push 0"->"store.i r28";
+    "store.i r28"->"goto load.i r28";
+    "goto load.i r28"->"load.i r28";
+    "load.i r28"->"load.r r0";
+    "load.r r0"->"fieldget <com.jafar.applets.adbanner.BJAdBanner: int numImages>";
+    "ifcmplt.i staticget <com.jafar.applets.adbanner.BJAdBanner: java.lang.String[] urlStrings>"
+    "fieldget <com.jafar.applets.adbanner.BJAdBanner: int numImages>"->"ifcmplt.i staticget <com.jafar.applets.adbanner.BJAdBanner: java.lang.String[] urlStrings>";
+    "ifcmplt.i staticget <com.jafar.applets.adbanner.BJAdBanner: java.lang.String[] urlStrings>"->"load.r r0";
+    "push \"updateInterval\""
+    "load.r r0"->"push \"updateInterval\"";
+    "push \"updateInterval\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"store.r r28";
+    "store.r r28"->"load.r r28";
+    "load.r r28"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r28";
+    "load.r r28"->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>";
+    "push 1000"
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"->"push 1000";
+    "mul.i"
+    "push 1000"->"mul.i";
+    "fieldput <com.jafar.applets.adbanner.BJAdBanner: int rotateInterval>"
+    "mul.i"->"fieldput <com.jafar.applets.adbanner.BJAdBanner: int rotateInterval>";
+    "fieldput <com.jafar.applets.adbanner.BJAdBanner: int rotateInterval>"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "virtualinvoke <java.awt.Component: void addMouseListener(java.awt.event.MouseListener)>"
+    "load.r r0"->"virtualinvoke <java.awt.Component: void addMouseListener(java.awt.event.MouseListener)>";
+    "virtualinvoke <java.awt.Component: void addMouseListener(java.awt.event.MouseListener)>"->"load.r r0";
+    "push 1"
+    "load.r r0"->"push 1";
+    "fieldput <com.jafar.applets.adbanner.BJAdBanner: boolean Active>"
+    "push 1"->"fieldput <com.jafar.applets.adbanner.BJAdBanner: boolean Active>";
+    "fieldput <com.jafar.applets.adbanner.BJAdBanner: boolean Active>"->"load.r r0";
+    "virtualinvoke <com.jafar.applets.adbanner.BJAdBanner: void start()>"
+    "load.r r0"->"virtualinvoke <com.jafar.applets.adbanner.BJAdBanner: void start()>";
+    "return"
+    "virtualinvoke <com.jafar.applets.adbanner.BJAdBanner: void start()>"->"return";
+    "store.r $r22"
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"->"store.r $r22";
+    "staticget <java.lang.System: java.io.PrintStream err>"
+    "store.r $r22"->"staticget <java.lang.System: java.io.PrintStream err>";
+    "new java.lang.StringBuffer"
+    "staticget <java.lang.System: java.io.PrintStream err>"->"new java.lang.StringBuffer";
+    "new java.lang.StringBuffer"->"dup1.r";
+    "push \"Invalid update interval: \""
+    "dup1.r"->"push \"Invalid update interval: \"";
+    "specialinvoke <java.lang.StringBuffer: void <init>(java.lang.String)>"
+    "push \"Invalid update interval: \""->"specialinvoke <java.lang.StringBuffer: void <init>(java.lang.String)>";
+    "specialinvoke <java.lang.StringBuffer: void <init>(java.lang.String)>"->"load.r r28";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"
+    "load.r r28"->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>"
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>";
+    "virtualinvoke <java.io.PrintStream: void println(java.lang.String)>"
+    "virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>"->"virtualinvoke <java.io.PrintStream: void println(java.lang.String)>";
+    "virtualinvoke <java.io.PrintStream: void println(java.lang.String)>"->"goto load.r r0";
+    "ifnull load.r r0"->"load.r r0";
+    "push 30000"
+    "load.r r0"->"push 30000";
+    "push 30000"->"fieldput <com.jafar.applets.adbanner.BJAdBanner: int rotateInterval>";
+    "staticget <com.jafar.applets.adbanner.BJAdBanner: java.lang.String[] urlStrings>"
+    "ifcmplt.i staticget <com.jafar.applets.adbanner.BJAdBanner: java.lang.String[] urlStrings>"->"staticget <com.jafar.applets.adbanner.BJAdBanner: java.lang.String[] urlStrings>";
+    "staticget <com.jafar.applets.adbanner.BJAdBanner: java.lang.String[] urlStrings>"->"load.i r28";
+    "arrayread.r"
+    "load.i r28"->"arrayread.r";
+    "ifnull inc.i r28 1"
+    "arrayread.r"->"ifnull inc.i r28 1";
+    "ifnull inc.i r28 1"->"load.r r0";
+    "fieldget <com.jafar.applets.adbanner.BJAdBanner: java.net.URL[] urls>"
+    "load.r r0"->"fieldget <com.jafar.applets.adbanner.BJAdBanner: java.net.URL[] urls>";
+    "fieldget <com.jafar.applets.adbanner.BJAdBanner: java.net.URL[] urls>"->"load.i r28";
+    "new java.net.URL"
+    "load.i r28"->"new java.net.URL";
+    "new java.net.URL"->"dup1.r";
+    "dup1.r"->"staticget <com.jafar.applets.adbanner.BJAdBanner: java.lang.String[] urlStrings>";
+    "staticget <com.jafar.applets.adbanner.BJAdBanner: java.lang.String[] urlStrings>"->"load.i r28";
+    "load.i r28"->"arrayread.r";
+    "specialinvoke <java.net.URL: void <init>(java.lang.String)>"
+    "arrayread.r"->"specialinvoke <java.net.URL: void <init>(java.lang.String)>";
+    "arraywrite.r"
+    "specialinvoke <java.net.URL: void <init>(java.lang.String)>"->"arraywrite.r";
+    "goto inc.i r28 1"
+    "arraywrite.r"->"goto inc.i r28 1";
+    "inc.i r28 1"
+    "goto inc.i r28 1"->"inc.i r28 1";
+    "specialinvoke <java.net.URL: void <init>(java.lang.String)>"->"store.r $r22";
+    "store.r $r22"->"goto inc.i r28 1";
+    "ifcmplt.i load.r r0"->"load.r r0";
+    "fieldget <com.jafar.applets.adbanner.BJAdBanner: java.awt.Image[] images>"
+    "load.r r0"->"fieldget <com.jafar.applets.adbanner.BJAdBanner: java.awt.Image[] images>";
+    "fieldget <com.jafar.applets.adbanner.BJAdBanner: java.awt.Image[] images>"->"load.i r28";
+    "load.i r28"->"load.r r0";
+    "load.r r0"->"new java.lang.StringBuffer";
+    "new java.lang.StringBuffer"->"dup1.r";
+    "push \"/adbres/images/\""
+    "dup1.r"->"push \"/adbres/images/\"";
+    "push \"/adbres/images/\""->"specialinvoke <java.lang.StringBuffer: void <init>(java.lang.String)>";
+    "specialinvoke <java.lang.StringBuffer: void <init>(java.lang.String)>"->"staticget <com.jafar.applets.adbanner.BJAdBanner: java.lang.String[] imgStrings>";
+    "staticget <com.jafar.applets.adbanner.BJAdBanner: java.lang.String[] imgStrings>"->"load.i r28";
+    "load.i r28"->"arrayread.r";
+    "arrayread.r"->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>";
+    "specialinvoke <com.jafar.applets.adbanner.BJAdBanner: java.awt.Image getImageResource(java.lang.String)>"
+    "virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>"->"specialinvoke <com.jafar.applets.adbanner.BJAdBanner: java.awt.Image getImageResource(java.lang.String)>";
+    "specialinvoke <com.jafar.applets.adbanner.BJAdBanner: java.awt.Image getImageResource(java.lang.String)>"->"arraywrite.r";
+    "arraywrite.r"->"load.r r0";
+    "fieldget <com.jafar.applets.adbanner.BJAdBanner: java.awt.MediaTracker tracker>"
+    "load.r r0"->"fieldget <com.jafar.applets.adbanner.BJAdBanner: java.awt.MediaTracker tracker>";
+    "fieldget <com.jafar.applets.adbanner.BJAdBanner: java.awt.MediaTracker tracker>"->"load.r r0";
+    "load.r r0"->"fieldget <com.jafar.applets.adbanner.BJAdBanner: java.awt.Image[] images>";
+    "fieldget <com.jafar.applets.adbanner.BJAdBanner: java.awt.Image[] images>"->"load.i r28";
+    "load.i r28"->"arrayread.r";
+    "arrayread.r"->"load.i r28";
+    "virtualinvoke <java.awt.MediaTracker: void addImage(java.awt.Image,int)>"
+    "load.i r28"->"virtualinvoke <java.awt.MediaTracker: void addImage(java.awt.Image,int)>";
+    "virtualinvoke <java.awt.MediaTracker: void addImage(java.awt.Image,int)>"->"load.r r0";
+    "load.r r0"->"fieldget <com.jafar.applets.adbanner.BJAdBanner: java.awt.MediaTracker tracker>";
+    "fieldget <com.jafar.applets.adbanner.BJAdBanner: java.awt.MediaTracker tracker>"->"load.i r28";
+    "load.i r28"->"push 1";
+    "virtualinvoke <java.awt.MediaTracker: boolean checkID(int,boolean)>"
+    "push 1"->"virtualinvoke <java.awt.MediaTracker: boolean checkID(int,boolean)>";
+    "virtualinvoke <java.awt.MediaTracker: boolean checkID(int,boolean)>"->"pop";
+    "pop"->"inc.i r28 1";
+    "ifnull load.r r0"->"load.r r0";
+    "push 60"
+    "load.r r0"->"push 60";
+    "push 60"->"fieldput <com.jafar.applets.adbanner.BJAdBanner: int height>";
+    "ifnull load.r r0"->"load.r r0";
+    "push 468"
+    "load.r r0"->"push 468";
+    "push 468"->"fieldput <com.jafar.applets.adbanner.BJAdBanner: int width>";
+}

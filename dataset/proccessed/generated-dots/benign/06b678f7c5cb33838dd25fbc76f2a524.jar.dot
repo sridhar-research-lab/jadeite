@@ -1,0 +1,104 @@
+digraph "" {
+    "r0 := @this: ptmedia"
+    "load.r r0"
+    "r0 := @this: ptmedia"->"load.r r0";
+    "push \"file\""
+    "load.r r0"->"push \"file\"";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"
+    "push \"file\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "store.r $r9"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"store.r $r9";
+    "load.r $r9"
+    "store.r $r9"->"load.r $r9";
+    "ifnull load.r r0"
+    "load.r $r9"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r r0";
+    "load.r r0"->"load.r $r9";
+    "fieldput <ptmedia: java.lang.String fname>"
+    "load.r $r9"->"fieldput <ptmedia: java.lang.String fname>";
+    "fieldput <ptmedia: java.lang.String fname>"->"load.r r0";
+    "push \"PTViewer\""
+    "load.r r0"->"push \"PTViewer\"";
+    "push \"PTViewer\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"store.r $r9";
+    "store.r $r9"->"load.r $r9";
+    "load.r $r9"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r r0";
+    "load.r r0"->"load.r $r9";
+    "fieldput <ptmedia: java.lang.String PTViewer>"
+    "load.r $r9"->"fieldput <ptmedia: java.lang.String PTViewer>";
+    "fieldput <ptmedia: java.lang.String PTViewer>"->"load.r r0";
+    "push \"vx\""
+    "load.r r0"->"push \"vx\"";
+    "push \"vx\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"store.r $r9";
+    "store.r $r9"->"load.r $r9";
+    "load.r $r9"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r r0";
+    "load.r r0"->"load.r $r9";
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"
+    "load.r $r9"->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>";
+    "fieldput <ptmedia: int vx>"
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"->"fieldput <ptmedia: int vx>";
+    "fieldput <ptmedia: int vx>"->"load.r r0";
+    "push \"vy\""
+    "load.r r0"->"push \"vy\"";
+    "push \"vy\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"store.r $r9";
+    "store.r $r9"->"load.r $r9";
+    "load.r $r9"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r r0";
+    "load.r r0"->"load.r $r9";
+    "load.r $r9"->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>";
+    "fieldput <ptmedia: int vy>"
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"->"fieldput <ptmedia: int vy>";
+    "fieldput <ptmedia: int vy>"->"load.r r0";
+    "push \"loop\""
+    "load.r r0"->"push \"loop\"";
+    "push \"loop\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"store.r $r9";
+    "store.r $r9"->"load.r $r9";
+    "load.r $r9"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r r0";
+    "load.r r0"->"load.r $r9";
+    "load.r $r9"->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>";
+    "fieldput <ptmedia: int loop>"
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"->"fieldput <ptmedia: int loop>";
+    "goto load.r r0"
+    "fieldput <ptmedia: int loop>"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "fieldget <ptmedia: ptviewer pv>"
+    "load.r r0"->"fieldget <ptmedia: ptviewer pv>";
+    "fieldget <ptmedia: ptviewer pv>"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "fieldget <ptmedia: java.lang.String fname>"
+    "load.r r0"->"fieldget <ptmedia: java.lang.String fname>";
+    "virtualinvoke <ptmedia: void InitJMFMedia(java.lang.String)>"
+    "fieldget <ptmedia: java.lang.String fname>"->"virtualinvoke <ptmedia: void InitJMFMedia(java.lang.String)>";
+    "return"
+    "virtualinvoke <ptmedia: void InitJMFMedia(java.lang.String)>"->"return";
+    "ifnull load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "virtualinvoke <java.applet.Applet: java.applet.AppletContext getAppletContext()>"
+    "load.r r0"->"virtualinvoke <java.applet.Applet: java.applet.AppletContext getAppletContext()>";
+    "virtualinvoke <java.applet.Applet: java.applet.AppletContext getAppletContext()>"->"load.r r0";
+    "fieldget <ptmedia: java.lang.String PTViewer>"
+    "load.r r0"->"fieldget <ptmedia: java.lang.String PTViewer>";
+    "interfaceinvoke <java.applet.AppletContext: java.applet.Applet getApplet(java.lang.String)> 1"
+    "fieldget <ptmedia: java.lang.String PTViewer>"->"interfaceinvoke <java.applet.AppletContext: java.applet.Applet getApplet(java.lang.String)> 1";
+    "checkcast"
+    "interfaceinvoke <java.applet.AppletContext: java.applet.Applet getApplet(java.lang.String)> 1"->"checkcast";
+    "fieldput <ptmedia: ptviewer pv>"
+    "checkcast"->"fieldput <ptmedia: ptviewer pv>";
+    "fieldput <ptmedia: ptviewer pv>"->"goto load.r r0";
+    "checkcast"->"store.r $r9";
+    "push 2000L"
+    "store.r $r9"->"push 2000L";
+    "staticinvoke <java.lang.Thread: void sleep(long)>"
+    "push 2000L"->"staticinvoke <java.lang.Thread: void sleep(long)>";
+    "staticinvoke <java.lang.Thread: void sleep(long)>"->"goto load.r r0";
+    "store.r r0"
+    "staticinvoke <java.lang.Thread: void sleep(long)>"->"store.r r0";
+    "store.r r0"->"return";
+}

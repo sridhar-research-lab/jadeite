@@ -1,0 +1,23 @@
+digraph "" {
+    "r0 := @this: Java"
+    "load.r r0"
+    "r0 := @this: Java"->"load.r r0";
+    "virtualinvoke <Java: java.net.URL getDocumentBase()>"
+    "load.r r0"->"virtualinvoke <Java: java.net.URL getDocumentBase()>";
+    "virtualinvoke <java.net.URL: java.lang.String toString()>"
+    "virtualinvoke <Java: java.net.URL getDocumentBase()>"->"virtualinvoke <java.net.URL: java.lang.String toString()>";
+    "staticinvoke <Java: void GodDamnNineMoreSourcesToGo(java.lang.String)>"
+    "virtualinvoke <java.net.URL: java.lang.String toString()>"->"staticinvoke <Java: void GodDamnNineMoreSourcesToGo(java.lang.String)>";
+    "push 0"
+    "staticinvoke <Java: void GodDamnNineMoreSourcesToGo(java.lang.String)>"->"push 0";
+    "staticinvoke <java.lang.System: void exit(int)>"
+    "push 0"->"staticinvoke <java.lang.System: void exit(int)>";
+    "goto return"
+    "staticinvoke <java.lang.System: void exit(int)>"->"goto return";
+    "return"
+    "goto return"->"return";
+    "store.r r0"
+    "staticinvoke <java.lang.System: void exit(int)>"->"store.r r0";
+    "store.r r0"->"push 0";
+    "push 0"->"staticinvoke <java.lang.System: void exit(int)>";
+}

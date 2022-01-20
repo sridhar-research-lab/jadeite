@@ -1,0 +1,55 @@
+digraph "" {
+    "r0 := @this: de.mmkh.tams.YieldApplet"
+    "load.r r0"
+    "r0 := @this: de.mmkh.tams.YieldApplet"->"load.r r0";
+    "new de.mmkh.tams.YieldDemo"
+    "load.r r0"->"new de.mmkh.tams.YieldDemo";
+    "dup1.r"
+    "new de.mmkh.tams.YieldDemo"->"dup1.r";
+    "specialinvoke <de.mmkh.tams.YieldDemo: void <init>()>"
+    "dup1.r"->"specialinvoke <de.mmkh.tams.YieldDemo: void <init>()>";
+    "fieldput <de.mmkh.tams.YieldApplet: de.mmkh.tams.YieldDemo wafer>"
+    "specialinvoke <de.mmkh.tams.YieldDemo: void <init>()>"->"fieldput <de.mmkh.tams.YieldApplet: de.mmkh.tams.YieldDemo wafer>";
+    "fieldput <de.mmkh.tams.YieldApplet: de.mmkh.tams.YieldDemo wafer>"->"load.r r0";
+    "new de.mmkh.tams.YieldGUI"
+    "load.r r0"->"new de.mmkh.tams.YieldGUI";
+    "new de.mmkh.tams.YieldGUI"->"dup1.r";
+    "specialinvoke <de.mmkh.tams.YieldGUI: void <init>()>"
+    "dup1.r"->"specialinvoke <de.mmkh.tams.YieldGUI: void <init>()>";
+    "fieldput <de.mmkh.tams.YieldApplet: de.mmkh.tams.YieldGUI gui>"
+    "specialinvoke <de.mmkh.tams.YieldGUI: void <init>()>"->"fieldput <de.mmkh.tams.YieldApplet: de.mmkh.tams.YieldGUI gui>";
+    "fieldput <de.mmkh.tams.YieldApplet: de.mmkh.tams.YieldGUI gui>"->"load.r r0";
+    "fieldget <de.mmkh.tams.YieldApplet: de.mmkh.tams.YieldGUI gui>"
+    "load.r r0"->"fieldget <de.mmkh.tams.YieldApplet: de.mmkh.tams.YieldGUI gui>";
+    "fieldget <de.mmkh.tams.YieldApplet: de.mmkh.tams.YieldGUI gui>"->"load.r r0";
+    "fieldget <de.mmkh.tams.YieldApplet: de.mmkh.tams.YieldDemo wafer>"
+    "load.r r0"->"fieldget <de.mmkh.tams.YieldApplet: de.mmkh.tams.YieldDemo wafer>";
+    "virtualinvoke <de.mmkh.tams.YieldGUI: void setWafer(de.mmkh.tams.YieldDemo)>"
+    "fieldget <de.mmkh.tams.YieldApplet: de.mmkh.tams.YieldDemo wafer>"->"virtualinvoke <de.mmkh.tams.YieldGUI: void setWafer(de.mmkh.tams.YieldDemo)>";
+    "virtualinvoke <de.mmkh.tams.YieldGUI: void setWafer(de.mmkh.tams.YieldDemo)>"->"load.r r0";
+    "new java.awt.BorderLayout"
+    "load.r r0"->"new java.awt.BorderLayout";
+    "new java.awt.BorderLayout"->"dup1.r";
+    "specialinvoke <java.awt.BorderLayout: void <init>()>"
+    "dup1.r"->"specialinvoke <java.awt.BorderLayout: void <init>()>";
+    "virtualinvoke <de.mmkh.tams.YieldApplet: void setLayout(java.awt.LayoutManager)>"
+    "specialinvoke <java.awt.BorderLayout: void <init>()>"->"virtualinvoke <de.mmkh.tams.YieldApplet: void setLayout(java.awt.LayoutManager)>";
+    "virtualinvoke <de.mmkh.tams.YieldApplet: void setLayout(java.awt.LayoutManager)>"->"load.r r0";
+    "push \"North\""
+    "load.r r0"->"push \"North\"";
+    "push \"North\""->"load.r r0";
+    "load.r r0"->"fieldget <de.mmkh.tams.YieldApplet: de.mmkh.tams.YieldGUI gui>";
+    "virtualinvoke <de.mmkh.tams.YieldApplet: java.awt.Component add(java.lang.String,java.awt.Component)>"
+    "fieldget <de.mmkh.tams.YieldApplet: de.mmkh.tams.YieldGUI gui>"->"virtualinvoke <de.mmkh.tams.YieldApplet: java.awt.Component add(java.lang.String,java.awt.Component)>";
+    "pop"
+    "virtualinvoke <de.mmkh.tams.YieldApplet: java.awt.Component add(java.lang.String,java.awt.Component)>"->"pop";
+    "pop"->"load.r r0";
+    "push \"South\""
+    "load.r r0"->"push \"South\"";
+    "push \"South\""->"load.r r0";
+    "load.r r0"->"fieldget <de.mmkh.tams.YieldApplet: de.mmkh.tams.YieldDemo wafer>";
+    "fieldget <de.mmkh.tams.YieldApplet: de.mmkh.tams.YieldDemo wafer>"->"virtualinvoke <de.mmkh.tams.YieldApplet: java.awt.Component add(java.lang.String,java.awt.Component)>";
+    "virtualinvoke <de.mmkh.tams.YieldApplet: java.awt.Component add(java.lang.String,java.awt.Component)>"->"pop";
+    "return"
+    "pop"->"return";
+}

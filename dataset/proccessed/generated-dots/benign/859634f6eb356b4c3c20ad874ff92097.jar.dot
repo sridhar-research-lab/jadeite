@@ -1,0 +1,192 @@
+digraph "" {
+    "r0 := @this: jagoclient.JagoGame"
+    "load.r r0"
+    "r0 := @this: jagoclient.JagoGame"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "push \"Game\""
+    "load.r r0"->"push \"Game\"";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"
+    "push \"Game\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "fieldput <jagoclient.JagoGame: java.lang.String Game>"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"fieldput <jagoclient.JagoGame: java.lang.String Game>";
+    "fieldput <jagoclient.JagoGame: java.lang.String Game>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "push \"Games\""
+    "load.r r0"->"push \"Games\"";
+    "push \"Games\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "fieldput <jagoclient.JagoGame: java.lang.String Games>"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"fieldput <jagoclient.JagoGame: java.lang.String Games>";
+    "fieldput <jagoclient.JagoGame: java.lang.String Games>"->"load.r r0";
+    "new java.awt.BorderLayout"
+    "load.r r0"->"new java.awt.BorderLayout";
+    "dup1.r"
+    "new java.awt.BorderLayout"->"dup1.r";
+    "specialinvoke <java.awt.BorderLayout: void <init>()>"
+    "dup1.r"->"specialinvoke <java.awt.BorderLayout: void <init>()>";
+    "virtualinvoke <java.awt.Container: void setLayout(java.awt.LayoutManager)>"
+    "specialinvoke <java.awt.BorderLayout: void <init>()>"->"virtualinvoke <java.awt.Container: void setLayout(java.awt.LayoutManager)>";
+    "virtualinvoke <java.awt.Container: void setLayout(java.awt.LayoutManager)>"->"load.r r0";
+    "fieldget <jagoclient.JagoGame: java.lang.String Games>"
+    "load.r r0"->"fieldget <jagoclient.JagoGame: java.lang.String Games>";
+    "ifnull new java.awt.Button"
+    "fieldget <jagoclient.JagoGame: java.lang.String Games>"->"ifnull new java.awt.Button";
+    "ifnull new java.awt.Button"->"load.r r0";
+    "load.r r0"->"fieldget <jagoclient.JagoGame: java.lang.String Games>";
+    "push \"\""
+    "fieldget <jagoclient.JagoGame: java.lang.String Games>"->"push \"\"";
+    "virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>"
+    "push \"\""->"virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>";
+    "ifne new java.awt.Button"
+    "virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>"->"ifne new java.awt.Button";
+    "ifne new java.awt.Button"->"load.r r0";
+    "new java.awt.List"
+    "load.r r0"->"new java.awt.List";
+    "new java.awt.List"->"dup1.r";
+    "specialinvoke <java.awt.List: void <init>()>"
+    "dup1.r"->"specialinvoke <java.awt.List: void <init>()>";
+    "fieldput <jagoclient.JagoGame: java.awt.List L>"
+    "specialinvoke <java.awt.List: void <init>()>"->"fieldput <jagoclient.JagoGame: java.awt.List L>";
+    "fieldput <jagoclient.JagoGame: java.awt.List L>"->"load.r r0";
+    "push \"Center\""
+    "load.r r0"->"push \"Center\"";
+    "push \"Center\""->"load.r r0";
+    "fieldget <jagoclient.JagoGame: java.awt.List L>"
+    "load.r r0"->"fieldget <jagoclient.JagoGame: java.awt.List L>";
+    "virtualinvoke <java.awt.Container: java.awt.Component add(java.lang.String,java.awt.Component)>"
+    "fieldget <jagoclient.JagoGame: java.awt.List L>"->"virtualinvoke <java.awt.Container: java.awt.Component add(java.lang.String,java.awt.Component)>";
+    "pop"
+    "virtualinvoke <java.awt.Container: java.awt.Component add(java.lang.String,java.awt.Component)>"->"pop";
+    "pop"->"load.r r0";
+    "new java.util.Vector"
+    "load.r r0"->"new java.util.Vector";
+    "new java.util.Vector"->"dup1.r";
+    "specialinvoke <java.util.Vector: void <init>()>"
+    "dup1.r"->"specialinvoke <java.util.Vector: void <init>()>";
+    "fieldput <jagoclient.JagoGame: java.util.Vector Urls>"
+    "specialinvoke <java.util.Vector: void <init>()>"->"fieldput <jagoclient.JagoGame: java.util.Vector Urls>";
+    "new java.io.BufferedReader"
+    "fieldput <jagoclient.JagoGame: java.util.Vector Urls>"->"new java.io.BufferedReader";
+    "store.r $r15"
+    "new java.io.BufferedReader"->"store.r $r15";
+    "load.r $r15"
+    "store.r $r15"->"load.r $r15";
+    "new java.io.InputStreamReader"
+    "load.r $r15"->"new java.io.InputStreamReader";
+    "new java.io.InputStreamReader"->"dup1.r";
+    "new java.io.DataInputStream"
+    "dup1.r"->"new java.io.DataInputStream";
+    "new java.io.DataInputStream"->"dup1.r";
+    "new java.net.URL"
+    "dup1.r"->"new java.net.URL";
+    "new java.net.URL"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "load.r r0"->"fieldget <jagoclient.JagoGame: java.lang.String Games>";
+    "specialinvoke <java.net.URL: void <init>(java.lang.String)>"
+    "fieldget <jagoclient.JagoGame: java.lang.String Games>"->"specialinvoke <java.net.URL: void <init>(java.lang.String)>";
+    "virtualinvoke <java.net.URL: java.io.InputStream openStream()>"
+    "specialinvoke <java.net.URL: void <init>(java.lang.String)>"->"virtualinvoke <java.net.URL: java.io.InputStream openStream()>";
+    "specialinvoke <java.io.DataInputStream: void <init>(java.io.InputStream)>"
+    "virtualinvoke <java.net.URL: java.io.InputStream openStream()>"->"specialinvoke <java.io.DataInputStream: void <init>(java.io.InputStream)>";
+    "specialinvoke <java.io.InputStreamReader: void <init>(java.io.InputStream)>"
+    "specialinvoke <java.io.DataInputStream: void <init>(java.io.InputStream)>"->"specialinvoke <java.io.InputStreamReader: void <init>(java.io.InputStream)>";
+    "specialinvoke <java.io.BufferedReader: void <init>(java.io.Reader)>"
+    "specialinvoke <java.io.InputStreamReader: void <init>(java.io.InputStream)>"->"specialinvoke <java.io.BufferedReader: void <init>(java.io.Reader)>";
+    "specialinvoke <java.io.BufferedReader: void <init>(java.io.Reader)>"->"load.r $r15";
+    "virtualinvoke <java.io.BufferedReader: java.lang.String readLine()>"
+    "load.r $r15"->"virtualinvoke <java.io.BufferedReader: java.lang.String readLine()>";
+    "store.r r1"
+    "virtualinvoke <java.io.BufferedReader: java.lang.String readLine()>"->"store.r r1";
+    "load.r r1"
+    "store.r r1"->"load.r r1";
+    "ifnull goto new java.awt.Panel"
+    "load.r r1"->"ifnull goto new java.awt.Panel";
+    "ifnull goto new java.awt.Panel"->"load.r $r15";
+    "load.r $r15"->"virtualinvoke <java.io.BufferedReader: java.lang.String readLine()>";
+    "store.r r2"
+    "virtualinvoke <java.io.BufferedReader: java.lang.String readLine()>"->"store.r r2";
+    "load.r r2"
+    "store.r r2"->"load.r r2";
+    "load.r r2"->"ifnull goto new java.awt.Panel";
+    "ifnull goto new java.awt.Panel"->"load.r r0";
+    "load.r r0"->"fieldget <jagoclient.JagoGame: java.awt.List L>";
+    "fieldget <jagoclient.JagoGame: java.awt.List L>"->"load.r r1";
+    "virtualinvoke <java.awt.List: void add(java.lang.String)>"
+    "load.r r1"->"virtualinvoke <java.awt.List: void add(java.lang.String)>";
+    "virtualinvoke <java.awt.List: void add(java.lang.String)>"->"load.r r0";
+    "fieldget <jagoclient.JagoGame: java.util.Vector Urls>"
+    "load.r r0"->"fieldget <jagoclient.JagoGame: java.util.Vector Urls>";
+    "fieldget <jagoclient.JagoGame: java.util.Vector Urls>"->"load.r r2";
+    "virtualinvoke <java.util.Vector: void addElement(java.lang.Object)>"
+    "load.r r2"->"virtualinvoke <java.util.Vector: void addElement(java.lang.Object)>";
+    "goto load.r $r15"
+    "virtualinvoke <java.util.Vector: void addElement(java.lang.Object)>"->"goto load.r $r15";
+    "virtualinvoke <java.util.Vector: void addElement(java.lang.Object)>"->"store.r r1";
+    "new java.awt.Panel"
+    "store.r r1"->"new java.awt.Panel";
+    "new java.awt.Panel"->"store.r r1";
+    "store.r r1"->"load.r r1";
+    "specialinvoke <java.awt.Panel: void <init>()>"
+    "load.r r1"->"specialinvoke <java.awt.Panel: void <init>()>";
+    "new java.awt.Button"
+    "specialinvoke <java.awt.Panel: void <init>()>"->"new java.awt.Button";
+    "new java.awt.Button"->"store.r r2";
+    "store.r r2"->"load.r r2";
+    "push \"Load\""
+    "load.r r2"->"push \"Load\"";
+    "staticinvoke <jagoclient.Global: java.lang.String resourceString(java.lang.String)>"
+    "push \"Load\""->"staticinvoke <jagoclient.Global: java.lang.String resourceString(java.lang.String)>";
+    "specialinvoke <java.awt.Button: void <init>(java.lang.String)>"
+    "staticinvoke <jagoclient.Global: java.lang.String resourceString(java.lang.String)>"->"specialinvoke <java.awt.Button: void <init>(java.lang.String)>";
+    "specialinvoke <java.awt.Button: void <init>(java.lang.String)>"->"load.r r0";
+    "load.r r0"->"load.r r2";
+    "fieldput <jagoclient.JagoGame: java.awt.Button B>"
+    "load.r r2"->"fieldput <jagoclient.JagoGame: java.awt.Button B>";
+    "fieldput <jagoclient.JagoGame: java.awt.Button B>"->"load.r r1";
+    "load.r r1"->"load.r r2";
+    "virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>"
+    "load.r r2"->"virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>";
+    "virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>"->"pop";
+    "pop"->"load.r r0";
+    "push \"South\""
+    "load.r r0"->"push \"South\"";
+    "push \"South\""->"load.r r1";
+    "load.r r1"->"virtualinvoke <java.awt.Container: java.awt.Component add(java.lang.String,java.awt.Component)>";
+    "virtualinvoke <java.awt.Container: java.awt.Component add(java.lang.String,java.awt.Component)>"->"pop";
+    "goto load.r r0"
+    "pop"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "fieldget <jagoclient.JagoGame: java.awt.Button B>"
+    "load.r r0"->"fieldget <jagoclient.JagoGame: java.awt.Button B>";
+    "fieldget <jagoclient.JagoGame: java.awt.Button B>"->"load.r r0";
+    "virtualinvoke <java.awt.Button: void addActionListener(java.awt.event.ActionListener)>"
+    "load.r r0"->"virtualinvoke <java.awt.Button: void addActionListener(java.awt.event.ActionListener)>";
+    "virtualinvoke <java.awt.Button: void addActionListener(java.awt.event.ActionListener)>"->"load.r r0";
+    "virtualinvoke <java.applet.Applet: java.net.URL getCodeBase()>"
+    "load.r r0"->"virtualinvoke <java.applet.Applet: java.net.URL getCodeBase()>";
+    "staticinvoke <jagoclient.Global: void url(java.net.URL)>"
+    "virtualinvoke <java.applet.Applet: java.net.URL getCodeBase()>"->"staticinvoke <jagoclient.Global: void url(java.net.URL)>";
+    "push \"jago/go.cfg\""
+    "staticinvoke <jagoclient.Global: void url(java.net.URL)>"->"push \"jago/go.cfg\"";
+    "staticinvoke <jagoclient.Global: void readparameter(java.lang.String)>"
+    "push \"jago/go.cfg\""->"staticinvoke <jagoclient.Global: void readparameter(java.lang.String)>";
+    "staticinvoke <jagoclient.Global: void createfonts()>"
+    "staticinvoke <jagoclient.Global: void readparameter(java.lang.String)>"->"staticinvoke <jagoclient.Global: void createfonts()>";
+    "return"
+    "staticinvoke <jagoclient.Global: void createfonts()>"->"return";
+    "goto new java.awt.Panel"
+    "ifnull goto new java.awt.Panel"->"goto new java.awt.Panel";
+    "ifne new java.awt.Button"->"new java.awt.Button";
+    "new java.awt.Button"->"store.r r1";
+    "store.r r1"->"load.r r1";
+    "load.r r1"->"push \"Load\"";
+    "push \"Load\""->"staticinvoke <jagoclient.Global: java.lang.String resourceString(java.lang.String)>";
+    "staticinvoke <jagoclient.Global: java.lang.String resourceString(java.lang.String)>"->"specialinvoke <java.awt.Button: void <init>(java.lang.String)>";
+    "specialinvoke <java.awt.Button: void <init>(java.lang.String)>"->"load.r r0";
+    "load.r r0"->"load.r r1";
+    "load.r r1"->"fieldput <jagoclient.JagoGame: java.awt.Button B>";
+    "fieldput <jagoclient.JagoGame: java.awt.Button B>"->"load.r r0";
+    "load.r r0"->"push \"Center\"";
+    "push \"Center\""->"load.r r1";
+    "load.r r1"->"virtualinvoke <java.awt.Container: java.awt.Component add(java.lang.String,java.awt.Component)>";
+    "virtualinvoke <java.awt.Container: java.awt.Component add(java.lang.String,java.awt.Component)>"->"pop";
+}

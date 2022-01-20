@@ -1,0 +1,82 @@
+digraph "" {
+    "r0 := @this: com.fsecure.launchpoint.JLaunchPoint"
+    "load.r r0"
+    "r0 := @this: com.fsecure.launchpoint.JLaunchPoint"->"load.r r0";
+    "push \"fail\""
+    "load.r r0"->"push \"fail\"";
+    "fieldput <com.fsecure.launchpoint.JLaunchPoint: java.lang.String statusCheck>"
+    "push \"fail\""->"fieldput <com.fsecure.launchpoint.JLaunchPoint: java.lang.String statusCheck>";
+    "fieldput <com.fsecure.launchpoint.JLaunchPoint: java.lang.String statusCheck>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "push \"language\""
+    "load.r r0"->"push \"language\"";
+    "staticget <java.lang.System: java.io.PrintStream out>"
+    "push \"language\""->"staticget <java.lang.System: java.io.PrintStream out>";
+    "store.r $r2"
+    "staticget <java.lang.System: java.io.PrintStream out>"->"store.r $r2";
+    "new java.lang.StringBuilder"
+    "store.r $r2"->"new java.lang.StringBuilder";
+    "store.r r0"
+    "new java.lang.StringBuilder"->"store.r r0";
+    "store.r r0"->"load.r r0";
+    "specialinvoke <java.lang.StringBuilder: void <init>()>"
+    "load.r r0"->"specialinvoke <java.lang.StringBuilder: void <init>()>";
+    "virtualinvoke <java.lang.NullPointerException: java.lang.String getMessage()>"
+    "specialinvoke <java.lang.StringBuilder: void <init>()>"->"virtualinvoke <java.lang.NullPointerException: java.lang.String getMessage()>";
+    "store.r $r6"
+    "virtualinvoke <java.lang.NullPointerException: java.lang.String getMessage()>"->"store.r $r6";
+    "load.r $r2"
+    "store.r $r6"->"load.r $r2";
+    "load.r $r2"->"load.r r0";
+    "load.r $r6"
+    "load.r r0"->"load.r $r6";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"
+    "load.r $r6"->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "push \" init()\""
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"push \" init()\"";
+    "push \" init()\""->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.String toString()>"
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"virtualinvoke <java.lang.StringBuilder: java.lang.String toString()>";
+    "virtualinvoke <java.io.PrintStream: void println(java.lang.String)>"
+    "virtualinvoke <java.lang.StringBuilder: java.lang.String toString()>"->"virtualinvoke <java.io.PrintStream: void println(java.lang.String)>";
+    "goto return"
+    "virtualinvoke <java.io.PrintStream: void println(java.lang.String)>"->"goto return";
+    "return"
+    "goto return"->"return";
+    "push \"language\""->"staticget <java.lang.System: java.io.PrintStream out>";
+    "staticget <java.lang.System: java.io.PrintStream out>"->"store.r $r2";
+    "store.r $r2"->"new java.lang.StringBuilder";
+    "new java.lang.StringBuilder"->"store.r r0";
+    "store.r r0"->"load.r r0";
+    "load.r r0"->"specialinvoke <java.lang.StringBuilder: void <init>()>";
+    "virtualinvoke <java.security.AccessControlException: java.lang.String getMessage()>"
+    "specialinvoke <java.lang.StringBuilder: void <init>()>"->"virtualinvoke <java.security.AccessControlException: java.lang.String getMessage()>";
+    "virtualinvoke <java.security.AccessControlException: java.lang.String getMessage()>"->"store.r $r6";
+    "store.r $r6"->"load.r $r2";
+    "load.r $r2"->"load.r r0";
+    "load.r r0"->"load.r $r6";
+    "load.r $r6"->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"push \" init()\"";
+    "push \" init()\""->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"virtualinvoke <java.lang.StringBuilder: java.lang.String toString()>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.String toString()>"->"virtualinvoke <java.io.PrintStream: void println(java.lang.String)>";
+    "virtualinvoke <java.io.PrintStream: void println(java.lang.String)>"->"goto return";
+    "push \"language\""->"store.r $r2";
+    "store.r $r2"->"load.r r0";
+    "load.r r0"->"push \"fail\"";
+    "push \"fail\""->"fieldput <com.fsecure.launchpoint.JLaunchPoint: java.lang.String statusCheck>";
+    "fieldput <com.fsecure.launchpoint.JLaunchPoint: java.lang.String statusCheck>"->"load.r r0";
+    "push \"ERROR_OCCURED\""
+    "load.r r0"->"push \"ERROR_OCCURED\"";
+    "specialinvoke <com.fsecure.launchpoint.JLaunchPoint: void setMessage(java.lang.String)>"
+    "push \"ERROR_OCCURED\""->"specialinvoke <com.fsecure.launchpoint.JLaunchPoint: void setMessage(java.lang.String)>";
+    "virtualinvoke <com.fsecure.launchpoint.JLaunchPoint: java.lang.String getParameter(java.lang.String)>"
+    "push \"language\""->"virtualinvoke <com.fsecure.launchpoint.JLaunchPoint: java.lang.String getParameter(java.lang.String)>";
+    "fieldput <com.fsecure.launchpoint.JLaunchPoint: java.lang.String language>"
+    "virtualinvoke <com.fsecure.launchpoint.JLaunchPoint: java.lang.String getParameter(java.lang.String)>"->"fieldput <com.fsecure.launchpoint.JLaunchPoint: java.lang.String language>";
+    "fieldput <com.fsecure.launchpoint.JLaunchPoint: java.lang.String language>"->"load.r r0";
+    "push \"success\""
+    "load.r r0"->"push \"success\"";
+    "push \"success\""->"fieldput <com.fsecure.launchpoint.JLaunchPoint: java.lang.String statusCheck>";
+    "fieldput <com.fsecure.launchpoint.JLaunchPoint: java.lang.String statusCheck>"->"goto return";
+}

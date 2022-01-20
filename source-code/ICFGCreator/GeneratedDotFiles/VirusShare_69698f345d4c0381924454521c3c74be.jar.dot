@@ -1,0 +1,257 @@
+digraph "" {
+    "r0 := @this: avatar.as"
+    "push \"INIT_LOCK\""
+    "r0 := @this: avatar.as"->"push \"INIT_LOCK\"";
+    "entermonitor"
+    "push \"INIT_LOCK\""->"entermonitor";
+    "staticinvoke <com.jme.util.TextureManager: void clearCache()>"
+    "entermonitor"->"staticinvoke <com.jme.util.TextureManager: void clearCache()>";
+    "staticinvoke <com.jme.scene.Text: void resetFontTexture()>"
+    "staticinvoke <com.jme.util.TextureManager: void clearCache()>"->"staticinvoke <com.jme.scene.Text: void resetFontTexture()>";
+    "store.r r2"
+    "staticinvoke <com.jme.scene.Text: void resetFontTexture()>"->"store.r r2";
+    "staticinvoke <com.jme.system.DisplaySystem: com.jme.system.DisplaySystem getDisplaySystem()>"
+    "store.r r2"->"staticinvoke <com.jme.system.DisplaySystem: com.jme.system.DisplaySystem getDisplaySystem()>";
+    "staticinvoke <com.jme.system.DisplaySystem: com.jme.system.DisplaySystem getDisplaySystem()>"->"store.r r2";
+    "load.r r2"
+    "store.r r2"->"load.r r2";
+    "load.r r0"
+    "load.r r2"->"load.r r0";
+    "fieldget <avatar.as: int try>"
+    "load.r r0"->"fieldget <avatar.as: int try>";
+    "virtualinvoke <com.jme.system.DisplaySystem: void setMinDepthBits(int)>"
+    "fieldget <avatar.as: int try>"->"virtualinvoke <com.jme.system.DisplaySystem: void setMinDepthBits(int)>";
+    "virtualinvoke <com.jme.system.DisplaySystem: void setMinDepthBits(int)>"->"load.r r2";
+    "load.r r2"->"load.r r0";
+    "fieldget <avatar.as: int for>"
+    "load.r r0"->"fieldget <avatar.as: int for>";
+    "virtualinvoke <com.jme.system.DisplaySystem: void setMinStencilBits(int)>"
+    "fieldget <avatar.as: int for>"->"virtualinvoke <com.jme.system.DisplaySystem: void setMinStencilBits(int)>";
+    "virtualinvoke <com.jme.system.DisplaySystem: void setMinStencilBits(int)>"->"load.r r2";
+    "load.r r2"->"load.r r0";
+    "fieldget <avatar.as: int 'goto'>"
+    "load.r r0"->"fieldget <avatar.as: int 'goto'>";
+    "virtualinvoke <com.jme.system.DisplaySystem: void setMinAlphaBits(int)>"
+    "fieldget <avatar.as: int 'goto'>"->"virtualinvoke <com.jme.system.DisplaySystem: void setMinAlphaBits(int)>";
+    "virtualinvoke <com.jme.system.DisplaySystem: void setMinAlphaBits(int)>"->"load.r r2";
+    "load.r r2"->"load.r r0";
+    "fieldget <avatar.as: int d>"
+    "load.r r0"->"fieldget <avatar.as: int d>";
+    "virtualinvoke <com.jme.system.DisplaySystem: void setMinSamples(int)>"
+    "fieldget <avatar.as: int d>"->"virtualinvoke <com.jme.system.DisplaySystem: void setMinSamples(int)>";
+    "virtualinvoke <com.jme.system.DisplaySystem: void setMinSamples(int)>"->"load.r r0";
+    "push \"useAppletCanvasSize\""
+    "load.r r0"->"push \"useAppletCanvasSize\"";
+    "virtualinvoke <avatar.as: java.lang.String getParameter(java.lang.String)>"
+    "push \"useAppletCanvasSize\""->"virtualinvoke <avatar.as: java.lang.String getParameter(java.lang.String)>";
+    "staticinvoke <java.lang.Boolean: boolean parseBoolean(java.lang.String)>"
+    "virtualinvoke <avatar.as: java.lang.String getParameter(java.lang.String)>"->"staticinvoke <java.lang.Boolean: boolean parseBoolean(java.lang.String)>";
+    "ifeq push 640"
+    "staticinvoke <java.lang.Boolean: boolean parseBoolean(java.lang.String)>"->"ifeq push 640";
+    "ifeq push 640"->"load.r r0";
+    "virtualinvoke <avatar.as: int getWidth()>"
+    "load.r r0"->"virtualinvoke <avatar.as: int getWidth()>";
+    "store.i r2"
+    "virtualinvoke <avatar.as: int getWidth()>"->"store.i r2";
+    "store.i r2"->"load.r r0";
+    "virtualinvoke <avatar.as: int getHeight()>"
+    "load.r r0"->"virtualinvoke <avatar.as: int getHeight()>";
+    "store.i i7"
+    "virtualinvoke <avatar.as: int getHeight()>"->"store.i i7";
+    "goto load.r r0"
+    "store.i i7"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "load.r r0"->"staticinvoke <com.jme.system.DisplaySystem: com.jme.system.DisplaySystem getDisplaySystem()>";
+    "load.i r2"
+    "staticinvoke <com.jme.system.DisplaySystem: com.jme.system.DisplaySystem getDisplaySystem()>"->"load.i r2";
+    "load.i i7"
+    "load.i r2"->"load.i i7";
+    "virtualinvoke <com.jme.system.DisplaySystem: java.awt.Canvas createCanvas(int,int)>"
+    "load.i i7"->"virtualinvoke <com.jme.system.DisplaySystem: java.awt.Canvas createCanvas(int,int)>";
+    "fieldput <avatar.as: java.awt.Canvas do>"
+    "virtualinvoke <com.jme.system.DisplaySystem: java.awt.Canvas createCanvas(int,int)>"->"fieldput <avatar.as: java.awt.Canvas do>";
+    "fieldput <avatar.as: java.awt.Canvas do>"->"load.r r0";
+    "new avatar.as$a"
+    "load.r r0"->"new avatar.as$a";
+    "dup1.r"
+    "new avatar.as$a"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"virtualinvoke <avatar.as: int getWidth()>";
+    "virtualinvoke <avatar.as: int getWidth()>"->"load.r r0";
+    "load.r r0"->"virtualinvoke <avatar.as: int getHeight()>";
+    "specialinvoke <avatar.as$a: void <init>(avatar.as,int,int)>"
+    "virtualinvoke <avatar.as: int getHeight()>"->"specialinvoke <avatar.as$a: void <init>(avatar.as,int,int)>";
+    "fieldput <avatar.as: avatar.as$a h>"
+    "specialinvoke <avatar.as$a: void <init>(avatar.as,int,int)>"->"fieldput <avatar.as: avatar.as$a h>";
+    "fieldput <avatar.as: avatar.as$a h>"->"load.r r0";
+    "fieldget <avatar.as: java.awt.Canvas do>"
+    "load.r r0"->"fieldget <avatar.as: java.awt.Canvas do>";
+    "checkcast"
+    "fieldget <avatar.as: java.awt.Canvas do>"->"checkcast";
+    "checkcast"->"load.r r0";
+    "fieldget <avatar.as: avatar.as$a h>"
+    "load.r r0"->"fieldget <avatar.as: avatar.as$a h>";
+    "fieldget <avatar.as: avatar.as$a h>"->"checkcast";
+    "interfaceinvoke <com.jmex.awt.JMECanvas: void setImplementor(com.jmex.awt.JMECanvasImplementor)> 1"
+    "checkcast"->"interfaceinvoke <com.jmex.awt.JMECanvas: void setImplementor(com.jmex.awt.JMECanvasImplementor)> 1";
+    "interfaceinvoke <com.jmex.awt.JMECanvas: void setImplementor(com.jmex.awt.JMECanvasImplementor)> 1"->"load.r r0";
+    "new java.awt.BorderLayout"
+    "load.r r0"->"new java.awt.BorderLayout";
+    "new java.awt.BorderLayout"->"dup1.r";
+    "specialinvoke <java.awt.BorderLayout: void <init>()>"
+    "dup1.r"->"specialinvoke <java.awt.BorderLayout: void <init>()>";
+    "virtualinvoke <avatar.as: void setLayout(java.awt.LayoutManager)>"
+    "specialinvoke <java.awt.BorderLayout: void <init>()>"->"virtualinvoke <avatar.as: void setLayout(java.awt.LayoutManager)>";
+    "virtualinvoke <avatar.as: void setLayout(java.awt.LayoutManager)>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <avatar.as: java.awt.Canvas do>";
+    "push \"Center\""
+    "fieldget <avatar.as: java.awt.Canvas do>"->"push \"Center\"";
+    "virtualinvoke <avatar.as: void add(java.awt.Component,java.lang.Object)>"
+    "push \"Center\""->"virtualinvoke <avatar.as: void add(java.awt.Component,java.lang.Object)>";
+    "new avatar.as$1"
+    "virtualinvoke <avatar.as: void add(java.awt.Component,java.lang.Object)>"->"new avatar.as$1";
+    "new avatar.as$1"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "specialinvoke <avatar.as$1: void <init>(avatar.as)>"
+    "load.r r0"->"specialinvoke <avatar.as$1: void <init>(avatar.as)>";
+    "staticput <avatar.as: java.awt.event.ComponentAdapter 'case'>"
+    "specialinvoke <avatar.as$1: void <init>(avatar.as)>"->"staticput <avatar.as: java.awt.event.ComponentAdapter 'case'>";
+    "staticput <avatar.as: java.awt.event.ComponentAdapter 'case'>"->"load.r r0";
+    "load.r r0"->"fieldget <avatar.as: java.awt.Canvas do>";
+    "staticget <avatar.as: java.awt.event.ComponentAdapter 'case'>"
+    "fieldget <avatar.as: java.awt.Canvas do>"->"staticget <avatar.as: java.awt.event.ComponentAdapter 'case'>";
+    "virtualinvoke <java.awt.Canvas: void addComponentListener(java.awt.event.ComponentListener)>"
+    "staticget <avatar.as: java.awt.event.ComponentAdapter 'case'>"->"virtualinvoke <java.awt.Canvas: void addComponentListener(java.awt.event.ComponentListener)>";
+    "virtualinvoke <java.awt.Canvas: void addComponentListener(java.awt.event.ComponentListener)>"->"load.r r0";
+    "load.r r0"->"fieldget <avatar.as: java.awt.Canvas do>";
+    "push 1"
+    "fieldget <avatar.as: java.awt.Canvas do>"->"push 1";
+    "virtualinvoke <java.awt.Canvas: void setFocusable(boolean)>"
+    "push 1"->"virtualinvoke <java.awt.Canvas: void setFocusable(boolean)>";
+    "new avatar.as$2"
+    "virtualinvoke <java.awt.Canvas: void setFocusable(boolean)>"->"new avatar.as$2";
+    "new avatar.as$2"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "specialinvoke <avatar.as$2: void <init>(avatar.as)>"
+    "load.r r0"->"specialinvoke <avatar.as$2: void <init>(avatar.as)>";
+    "staticput <avatar.as: java.awt.event.FocusListener focusListener>"
+    "specialinvoke <avatar.as$2: void <init>(avatar.as)>"->"staticput <avatar.as: java.awt.event.FocusListener focusListener>";
+    "staticput <avatar.as: java.awt.event.FocusListener focusListener>"->"load.r r0";
+    "load.r r0"->"fieldget <avatar.as: java.awt.Canvas do>";
+    "staticget <avatar.as: java.awt.event.FocusListener focusListener>"
+    "fieldget <avatar.as: java.awt.Canvas do>"->"staticget <avatar.as: java.awt.event.FocusListener focusListener>";
+    "virtualinvoke <java.awt.Canvas: void addFocusListener(java.awt.event.FocusListener)>"
+    "staticget <avatar.as: java.awt.event.FocusListener focusListener>"->"virtualinvoke <java.awt.Canvas: void addFocusListener(java.awt.event.FocusListener)>";
+    "virtualinvoke <java.awt.Canvas: void addFocusListener(java.awt.event.FocusListener)>"->"load.r r0";
+    "load.r r0"->"fieldget <avatar.as: java.awt.Canvas do>";
+    "fieldget <avatar.as: java.awt.Canvas do>"->"checkcast";
+    "checkcast"->"push 1";
+    "interfaceinvoke <com.jmex.awt.JMECanvas: void setUpdateInput(boolean)> 1"
+    "push 1"->"interfaceinvoke <com.jmex.awt.JMECanvas: void setUpdateInput(boolean)> 1";
+    "staticinvoke <com.jme.input.KeyInput: boolean isInited()>"
+    "interfaceinvoke <com.jmex.awt.JMECanvas: void setUpdateInput(boolean)> 1"->"staticinvoke <com.jme.input.KeyInput: boolean isInited()>";
+    "ifne staticinvoke <com.jme.input.KeyInput: com.jme.input.KeyInput get()>"
+    "staticinvoke <com.jme.input.KeyInput: boolean isInited()>"->"ifne staticinvoke <com.jme.input.KeyInput: com.jme.input.KeyInput get()>";
+    "push \"AWT\""
+    "ifne staticinvoke <com.jme.input.KeyInput: com.jme.input.KeyInput get()>"->"push \"AWT\"";
+    "staticinvoke <com.jme.input.KeyInput: void setProvider(java.lang.String)>"
+    "push \"AWT\""->"staticinvoke <com.jme.input.KeyInput: void setProvider(java.lang.String)>";
+    "staticinvoke <com.jme.input.KeyInput: com.jme.input.KeyInput get()>"
+    "staticinvoke <com.jme.input.KeyInput: void setProvider(java.lang.String)>"->"staticinvoke <com.jme.input.KeyInput: com.jme.input.KeyInput get()>";
+    "staticinvoke <com.jme.input.KeyInput: com.jme.input.KeyInput get()>"->"checkcast";
+    "push 0"
+    "checkcast"->"push 0";
+    "virtualinvoke <com.jmex.awt.input.AWTKeyInput: void setEnabled(boolean)>"
+    "push 0"->"virtualinvoke <com.jmex.awt.input.AWTKeyInput: void setEnabled(boolean)>";
+    "virtualinvoke <com.jmex.awt.input.AWTKeyInput: void setEnabled(boolean)>"->"staticinvoke <com.jme.input.KeyInput: com.jme.input.KeyInput get()>";
+    "staticinvoke <com.jme.input.KeyInput: com.jme.input.KeyInput get()>"->"checkcast";
+    "checkcast"->"store.r r2";
+    "store.r r2"->"load.r r0";
+    "load.r r0"->"fieldget <avatar.as: java.awt.Canvas do>";
+    "fieldget <avatar.as: java.awt.Canvas do>"->"load.r r2";
+    "virtualinvoke <java.awt.Canvas: void addKeyListener(java.awt.event.KeyListener)>"
+    "load.r r2"->"virtualinvoke <java.awt.Canvas: void addKeyListener(java.awt.event.KeyListener)>";
+    "staticinvoke <com.jme.input.MouseInput: boolean isInited()>"
+    "virtualinvoke <java.awt.Canvas: void addKeyListener(java.awt.event.KeyListener)>"->"staticinvoke <com.jme.input.MouseInput: boolean isInited()>";
+    "ifne staticinvoke <com.jme.input.MouseInput: com.jme.input.MouseInput get()>"
+    "staticinvoke <com.jme.input.MouseInput: boolean isInited()>"->"ifne staticinvoke <com.jme.input.MouseInput: com.jme.input.MouseInput get()>";
+    "ifne staticinvoke <com.jme.input.MouseInput: com.jme.input.MouseInput get()>"->"push \"AWT\"";
+    "staticinvoke <com.jme.input.MouseInput: void setProvider(java.lang.String)>"
+    "push \"AWT\""->"staticinvoke <com.jme.input.MouseInput: void setProvider(java.lang.String)>";
+    "staticinvoke <com.jme.input.MouseInput: com.jme.input.MouseInput get()>"
+    "staticinvoke <com.jme.input.MouseInput: void setProvider(java.lang.String)>"->"staticinvoke <com.jme.input.MouseInput: com.jme.input.MouseInput get()>";
+    "staticinvoke <com.jme.input.MouseInput: com.jme.input.MouseInput get()>"->"checkcast";
+    "checkcast"->"push 0";
+    "virtualinvoke <com.jmex.awt.input.AWTMouseInput: void setEnabled(boolean)>"
+    "push 0"->"virtualinvoke <com.jmex.awt.input.AWTMouseInput: void setEnabled(boolean)>";
+    "virtualinvoke <com.jmex.awt.input.AWTMouseInput: void setEnabled(boolean)>"->"staticinvoke <com.jme.input.MouseInput: com.jme.input.MouseInput get()>";
+    "staticinvoke <com.jme.input.MouseInput: com.jme.input.MouseInput get()>"->"checkcast";
+    "checkcast"->"push 1";
+    "virtualinvoke <com.jmex.awt.input.AWTMouseInput: void setDragOnly(boolean)>"
+    "push 1"->"virtualinvoke <com.jmex.awt.input.AWTMouseInput: void setDragOnly(boolean)>";
+    "virtualinvoke <com.jmex.awt.input.AWTMouseInput: void setDragOnly(boolean)>"->"load.r r0";
+    "load.r r0"->"fieldget <avatar.as: java.awt.Canvas do>";
+    "fieldget <avatar.as: java.awt.Canvas do>"->"staticinvoke <com.jme.input.MouseInput: com.jme.input.MouseInput get()>";
+    "staticinvoke <com.jme.input.MouseInput: com.jme.input.MouseInput get()>"->"checkcast";
+    "virtualinvoke <java.awt.Canvas: void addMouseListener(java.awt.event.MouseListener)>"
+    "checkcast"->"virtualinvoke <java.awt.Canvas: void addMouseListener(java.awt.event.MouseListener)>";
+    "virtualinvoke <java.awt.Canvas: void addMouseListener(java.awt.event.MouseListener)>"->"load.r r0";
+    "load.r r0"->"fieldget <avatar.as: java.awt.Canvas do>";
+    "fieldget <avatar.as: java.awt.Canvas do>"->"staticinvoke <com.jme.input.MouseInput: com.jme.input.MouseInput get()>";
+    "staticinvoke <com.jme.input.MouseInput: com.jme.input.MouseInput get()>"->"checkcast";
+    "virtualinvoke <java.awt.Canvas: void addMouseWheelListener(java.awt.event.MouseWheelListener)>"
+    "checkcast"->"virtualinvoke <java.awt.Canvas: void addMouseWheelListener(java.awt.event.MouseWheelListener)>";
+    "virtualinvoke <java.awt.Canvas: void addMouseWheelListener(java.awt.event.MouseWheelListener)>"->"load.r r0";
+    "load.r r0"->"fieldget <avatar.as: java.awt.Canvas do>";
+    "fieldget <avatar.as: java.awt.Canvas do>"->"staticinvoke <com.jme.input.MouseInput: com.jme.input.MouseInput get()>";
+    "staticinvoke <com.jme.input.MouseInput: com.jme.input.MouseInput get()>"->"checkcast";
+    "virtualinvoke <java.awt.Canvas: void addMouseMotionListener(java.awt.event.MouseMotionListener)>"
+    "checkcast"->"virtualinvoke <java.awt.Canvas: void addMouseMotionListener(java.awt.event.MouseMotionListener)>";
+    "new avatar.as$3"
+    "virtualinvoke <java.awt.Canvas: void addMouseMotionListener(java.awt.event.MouseMotionListener)>"->"new avatar.as$3";
+    "new avatar.as$3"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "specialinvoke <avatar.as$3: void <init>(avatar.as)>"
+    "load.r r0"->"specialinvoke <avatar.as$3: void <init>(avatar.as)>";
+    "staticput <avatar.as: java.awt.event.MouseMotionAdapter c>"
+    "specialinvoke <avatar.as$3: void <init>(avatar.as)>"->"staticput <avatar.as: java.awt.event.MouseMotionAdapter c>";
+    "staticput <avatar.as: java.awt.event.MouseMotionAdapter c>"->"load.r r0";
+    "load.r r0"->"fieldget <avatar.as: java.awt.Canvas do>";
+    "staticget <avatar.as: java.awt.event.MouseMotionAdapter c>"
+    "fieldget <avatar.as: java.awt.Canvas do>"->"staticget <avatar.as: java.awt.event.MouseMotionAdapter c>";
+    "staticget <avatar.as: java.awt.event.MouseMotionAdapter c>"->"virtualinvoke <java.awt.Canvas: void addMouseMotionListener(java.awt.event.MouseMotionListener)>";
+    "new avatar.as$4"
+    "virtualinvoke <java.awt.Canvas: void addMouseMotionListener(java.awt.event.MouseMotionListener)>"->"new avatar.as$4";
+    "new avatar.as$4"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "specialinvoke <avatar.as$4: void <init>(avatar.as)>"
+    "load.r r0"->"specialinvoke <avatar.as$4: void <init>(avatar.as)>";
+    "virtualinvoke <avatar.as$4: void start()>"
+    "specialinvoke <avatar.as$4: void <init>(avatar.as)>"->"virtualinvoke <avatar.as$4: void start()>";
+    "virtualinvoke <avatar.as$4: void start()>"->"push \"INIT_LOCK\"";
+    "exitmonitor"
+    "push \"INIT_LOCK\""->"exitmonitor";
+    "goto return"
+    "exitmonitor"->"goto return";
+    "return"
+    "goto return"->"return";
+    "store.r r0"
+    "push \"INIT_LOCK\""->"store.r r0";
+    "store.r r0"->"push \"INIT_LOCK\"";
+    "push \"INIT_LOCK\""->"exitmonitor";
+    "exitmonitor"->"load.r r0";
+    "athrow"
+    "load.r r0"->"athrow";
+    "push 640"
+    "ifeq push 640"->"push 640";
+    "push 640"->"store.i r2";
+    "push 480"
+    "store.i r2"->"push 480";
+    "push 480"->"store.i i7";
+    "staticinvoke <avatar.f: void 'if'()>"
+    "staticinvoke <com.jme.scene.Text: void resetFontTexture()>"->"staticinvoke <avatar.f: void 'if'()>";
+    "goto staticinvoke <com.jme.system.DisplaySystem: com.jme.system.DisplaySystem getDisplaySystem()>"
+    "staticinvoke <avatar.f: void 'if'()>"->"goto staticinvoke <com.jme.system.DisplaySystem: com.jme.system.DisplaySystem getDisplaySystem()>";
+}

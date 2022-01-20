@@ -1,0 +1,286 @@
+digraph "" {
+    "r0 := @this: com.revfad.gui.SearchToHTML"
+    "load.r r0"
+    "r0 := @this: com.revfad.gui.SearchToHTML"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "virtualinvoke <java.applet.Applet: java.net.URL getDocumentBase()>"
+    "load.r r0"->"virtualinvoke <java.applet.Applet: java.net.URL getDocumentBase()>";
+    "fieldput <com.revfad.gui.SearchToHTML: java.net.URL baseUrl>"
+    "virtualinvoke <java.applet.Applet: java.net.URL getDocumentBase()>"->"fieldput <com.revfad.gui.SearchToHTML: java.net.URL baseUrl>";
+    "fieldput <com.revfad.gui.SearchToHTML: java.net.URL baseUrl>"->"load.r r0";
+    "push \"base_url\""
+    "load.r r0"->"push \"base_url\"";
+    "virtualinvoke <com.revfad.gui.SearchToHTML: java.lang.String getParameter(java.lang.String)>"
+    "push \"base_url\""->"virtualinvoke <com.revfad.gui.SearchToHTML: java.lang.String getParameter(java.lang.String)>";
+    "store.r r1"
+    "virtualinvoke <com.revfad.gui.SearchToHTML: java.lang.String getParameter(java.lang.String)>"->"store.r r1";
+    "load.r r1"
+    "store.r r1"->"load.r r1";
+    "ifnull load.r r0"
+    "load.r r1"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r r0";
+    "new java.net.URL"
+    "load.r r0"->"new java.net.URL";
+    "dup1.r"
+    "new java.net.URL"->"dup1.r";
+    "dup1.r"->"load.r r1";
+    "specialinvoke <java.net.URL: void <init>(java.lang.String)>"
+    "load.r r1"->"specialinvoke <java.net.URL: void <init>(java.lang.String)>";
+    "specialinvoke <java.net.URL: void <init>(java.lang.String)>"->"fieldput <com.revfad.gui.SearchToHTML: java.net.URL baseUrl>";
+    "goto load.r r0"
+    "fieldput <com.revfad.gui.SearchToHTML: java.net.URL baseUrl>"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "push 1"
+    "load.r r0"->"push 1";
+    "fieldput <com.revfad.gui.SearchToHTML: boolean searching>"
+    "push 1"->"fieldput <com.revfad.gui.SearchToHTML: boolean searching>";
+    "fieldput <com.revfad.gui.SearchToHTML: boolean searching>"->"load.r r0";
+    "new java.util.Hashtable"
+    "load.r r0"->"new java.util.Hashtable";
+    "new java.util.Hashtable"->"dup1.r";
+    "specialinvoke <java.util.Hashtable: void <init>()>"
+    "dup1.r"->"specialinvoke <java.util.Hashtable: void <init>()>";
+    "fieldput <com.revfad.gui.SearchToHTML: java.util.Hashtable options>"
+    "specialinvoke <java.util.Hashtable: void <init>()>"->"fieldput <com.revfad.gui.SearchToHTML: java.util.Hashtable options>";
+    "fieldput <com.revfad.gui.SearchToHTML: java.util.Hashtable options>"->"load.r r0";
+    "push \"leadingcontextlength\""
+    "load.r r0"->"push \"leadingcontextlength\"";
+    "push 15"
+    "push \"leadingcontextlength\""->"push 15";
+    "specialinvoke <com.revfad.gui.SearchToHTML: int getPositiveParameter(java.lang.String,int)>"
+    "push 15"->"specialinvoke <com.revfad.gui.SearchToHTML: int getPositiveParameter(java.lang.String,int)>";
+    "store.i i1"
+    "specialinvoke <com.revfad.gui.SearchToHTML: int getPositiveParameter(java.lang.String,int)>"->"store.i i1";
+    "store.i i1"->"load.r r0";
+    "push \"trailingcontextlength\""
+    "load.r r0"->"push \"trailingcontextlength\"";
+    "push 0"
+    "push \"trailingcontextlength\""->"push 0";
+    "push 0"->"specialinvoke <com.revfad.gui.SearchToHTML: int getPositiveParameter(java.lang.String,int)>";
+    "store.i r1"
+    "specialinvoke <com.revfad.gui.SearchToHTML: int getPositiveParameter(java.lang.String,int)>"->"store.i r1";
+    "store.i r1"->"load.r r0";
+    "fieldget <com.revfad.gui.SearchToHTML: java.util.Hashtable options>"
+    "load.r r0"->"fieldget <com.revfad.gui.SearchToHTML: java.util.Hashtable options>";
+    "staticget <com.revfad.search.SearchThread$Option: com.revfad.search.SearchThread$Option LEADING_CONTEXT_LENGTH>"
+    "fieldget <com.revfad.gui.SearchToHTML: java.util.Hashtable options>"->"staticget <com.revfad.search.SearchThread$Option: com.revfad.search.SearchThread$Option LEADING_CONTEXT_LENGTH>";
+    "new java.lang.Integer"
+    "staticget <com.revfad.search.SearchThread$Option: com.revfad.search.SearchThread$Option LEADING_CONTEXT_LENGTH>"->"new java.lang.Integer";
+    "new java.lang.Integer"->"dup1.r";
+    "load.i i1"
+    "dup1.r"->"load.i i1";
+    "specialinvoke <java.lang.Integer: void <init>(int)>"
+    "load.i i1"->"specialinvoke <java.lang.Integer: void <init>(int)>";
+    "virtualinvoke <java.util.Hashtable: java.lang.Object put(java.lang.Object,java.lang.Object)>"
+    "specialinvoke <java.lang.Integer: void <init>(int)>"->"virtualinvoke <java.util.Hashtable: java.lang.Object put(java.lang.Object,java.lang.Object)>";
+    "pop"
+    "virtualinvoke <java.util.Hashtable: java.lang.Object put(java.lang.Object,java.lang.Object)>"->"pop";
+    "pop"->"load.r r0";
+    "load.r r0"->"fieldget <com.revfad.gui.SearchToHTML: java.util.Hashtable options>";
+    "staticget <com.revfad.search.SearchThread$Option: com.revfad.search.SearchThread$Option TRAILING_CONTEXT_LENGTH>"
+    "fieldget <com.revfad.gui.SearchToHTML: java.util.Hashtable options>"->"staticget <com.revfad.search.SearchThread$Option: com.revfad.search.SearchThread$Option TRAILING_CONTEXT_LENGTH>";
+    "staticget <com.revfad.search.SearchThread$Option: com.revfad.search.SearchThread$Option TRAILING_CONTEXT_LENGTH>"->"new java.lang.Integer";
+    "new java.lang.Integer"->"dup1.r";
+    "load.i r1"
+    "dup1.r"->"load.i r1";
+    "load.i r1"->"specialinvoke <java.lang.Integer: void <init>(int)>";
+    "specialinvoke <java.lang.Integer: void <init>(int)>"->"virtualinvoke <java.util.Hashtable: java.lang.Object put(java.lang.Object,java.lang.Object)>";
+    "virtualinvoke <java.util.Hashtable: java.lang.Object put(java.lang.Object,java.lang.Object)>"->"pop";
+    "pop"->"load.r r0";
+    "specialinvoke <com.revfad.gui.SearchToHTML: java.lang.String getFilesToSearch()>"
+    "load.r r0"->"specialinvoke <com.revfad.gui.SearchToHTML: java.lang.String getFilesToSearch()>";
+    "store.r i1"
+    "specialinvoke <com.revfad.gui.SearchToHTML: java.lang.String getFilesToSearch()>"->"store.r i1";
+    "load.r i1"
+    "store.r i1"->"load.r i1";
+    "ifnonnull new java.util.StringTokenizer"
+    "load.r i1"->"ifnonnull new java.util.StringTokenizer";
+    "push \"\""
+    "ifnonnull new java.util.StringTokenizer"->"push \"\"";
+    "push \"\""->"store.r i1";
+    "new java.util.StringTokenizer"
+    "store.r i1"->"new java.util.StringTokenizer";
+    "new java.util.StringTokenizer"->"store.r r1";
+    "store.r r1"->"load.r r1";
+    "load.r r1"->"load.r i1";
+    "push \"\n\r \t,\""
+    "load.r i1"->"push \"\n\r \t,\"";
+    "push \"\n\r \t,\""->"push 0";
+    "specialinvoke <java.util.StringTokenizer: void <init>(java.lang.String,java.lang.String,boolean)>"
+    "push 0"->"specialinvoke <java.util.StringTokenizer: void <init>(java.lang.String,java.lang.String,boolean)>";
+    "specialinvoke <java.util.StringTokenizer: void <init>(java.lang.String,java.lang.String,boolean)>"->"load.r r1";
+    "virtualinvoke <java.util.StringTokenizer: int countTokens()>"
+    "load.r r1"->"virtualinvoke <java.util.StringTokenizer: int countTokens()>";
+    "virtualinvoke <java.util.StringTokenizer: int countTokens()>"->"store.i i1";
+    "store.i i1"->"load.r r0";
+    "new java.util.Vector"
+    "load.r r0"->"new java.util.Vector";
+    "new java.util.Vector"->"dup1.r";
+    "specialinvoke <java.util.Vector: void <init>()>"
+    "dup1.r"->"specialinvoke <java.util.Vector: void <init>()>";
+    "fieldput <com.revfad.gui.SearchToHTML: java.util.Vector documents>"
+    "specialinvoke <java.util.Vector: void <init>()>"->"fieldput <com.revfad.gui.SearchToHTML: java.util.Vector documents>";
+    "fieldput <com.revfad.gui.SearchToHTML: java.util.Vector documents>"->"push 0";
+    "store.i i5"
+    "push 0"->"store.i i5";
+    "load.i i5"
+    "store.i i5"->"load.i i5";
+    "load.i i5"->"load.i i1";
+    "ifcmpge.i load.r r0"
+    "load.i i1"->"ifcmpge.i load.r r0";
+    "ifcmpge.i load.r r0"->"load.r r1";
+    "virtualinvoke <java.util.StringTokenizer: java.lang.String nextToken()>"
+    "load.r r1"->"virtualinvoke <java.util.StringTokenizer: java.lang.String nextToken()>";
+    "store.r r40"
+    "virtualinvoke <java.util.StringTokenizer: java.lang.String nextToken()>"->"store.r r40";
+    "store.r r40"->"load.r r0";
+    "fieldget <com.revfad.gui.SearchToHTML: java.util.Vector documents>"
+    "load.r r0"->"fieldget <com.revfad.gui.SearchToHTML: java.util.Vector documents>";
+    "new com.revfad.search.Document"
+    "fieldget <com.revfad.gui.SearchToHTML: java.util.Vector documents>"->"new com.revfad.search.Document";
+    "new com.revfad.search.Document"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "fieldget <com.revfad.gui.SearchToHTML: java.net.URL baseUrl>"
+    "load.r r0"->"fieldget <com.revfad.gui.SearchToHTML: java.net.URL baseUrl>";
+    "load.r r40"
+    "fieldget <com.revfad.gui.SearchToHTML: java.net.URL baseUrl>"->"load.r r40";
+    "staticinvoke <com.revfad.search.Document: java.net.URL buildUrl(java.net.URL,java.lang.String)>"
+    "load.r r40"->"staticinvoke <com.revfad.search.Document: java.net.URL buildUrl(java.net.URL,java.lang.String)>";
+    "push null"
+    "staticinvoke <com.revfad.search.Document: java.net.URL buildUrl(java.net.URL,java.lang.String)>"->"push null";
+    "specialinvoke <com.revfad.search.Document: void <init>(java.net.URL,java.lang.String)>"
+    "push null"->"specialinvoke <com.revfad.search.Document: void <init>(java.net.URL,java.lang.String)>";
+    "virtualinvoke <java.util.Vector: void addElement(java.lang.Object)>"
+    "specialinvoke <com.revfad.search.Document: void <init>(java.net.URL,java.lang.String)>"->"virtualinvoke <java.util.Vector: void addElement(java.lang.Object)>";
+    "goto inc.i i5 1"
+    "virtualinvoke <java.util.Vector: void addElement(java.lang.Object)>"->"goto inc.i i5 1";
+    "inc.i i5 1"
+    "goto inc.i i5 1"->"inc.i i5 1";
+    "goto load.i i5"
+    "inc.i i5 1"->"goto load.i i5";
+    "virtualinvoke <java.lang.Throwable: void printStackTrace()>"
+    "virtualinvoke <java.util.Vector: void addElement(java.lang.Object)>"->"virtualinvoke <java.lang.Throwable: void printStackTrace()>";
+    "ifcmpge.i load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <com.revfad.gui.SearchToHTML: java.util.Vector documents>";
+    "virtualinvoke <java.util.Vector: int size()>"
+    "fieldget <com.revfad.gui.SearchToHTML: java.util.Vector documents>"->"virtualinvoke <java.util.Vector: int size()>";
+    "fieldput <com.revfad.gui.SearchToHTML: int numberOfDocuments>"
+    "virtualinvoke <java.util.Vector: int size()>"->"fieldput <com.revfad.gui.SearchToHTML: int numberOfDocuments>";
+    "fieldput <com.revfad.gui.SearchToHTML: int numberOfDocuments>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "push \"max_num_matches\""
+    "load.r r0"->"push \"max_num_matches\"";
+    "push 100000000"
+    "push \"max_num_matches\""->"push 100000000";
+    "push 100000000"->"specialinvoke <com.revfad.gui.SearchToHTML: int getPositiveParameter(java.lang.String,int)>";
+    "fieldput <com.revfad.gui.SearchToHTML: int maxNumOfMatches>"
+    "specialinvoke <com.revfad.gui.SearchToHTML: int getPositiveParameter(java.lang.String,int)>"->"fieldput <com.revfad.gui.SearchToHTML: int maxNumOfMatches>";
+    "fieldput <com.revfad.gui.SearchToHTML: int maxNumOfMatches>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "push \"target\""
+    "load.r r0"->"push \"target\"";
+    "push \"results\""
+    "push \"target\""->"push \"results\"";
+    "specialinvoke <com.revfad.gui.SearchToHTML: java.lang.String getParameter(java.lang.String,java.lang.String)>"
+    "push \"results\""->"specialinvoke <com.revfad.gui.SearchToHTML: java.lang.String getParameter(java.lang.String,java.lang.String)>";
+    "fieldput <com.revfad.gui.SearchToHTML: java.lang.String target>"
+    "specialinvoke <com.revfad.gui.SearchToHTML: java.lang.String getParameter(java.lang.String,java.lang.String)>"->"fieldput <com.revfad.gui.SearchToHTML: java.lang.String target>";
+    "fieldput <com.revfad.gui.SearchToHTML: java.lang.String target>"->"load.r r0";
+    "push \"resultspage\""
+    "load.r r0"->"push \"resultspage\"";
+    "push \"displaymatches.html\""
+    "push \"resultspage\""->"push \"displaymatches.html\"";
+    "push \"displaymatches.html\""->"specialinvoke <com.revfad.gui.SearchToHTML: java.lang.String getParameter(java.lang.String,java.lang.String)>";
+    "specialinvoke <com.revfad.gui.SearchToHTML: java.lang.String getParameter(java.lang.String,java.lang.String)>"->"store.r r1";
+    "store.r r1"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <com.revfad.gui.SearchToHTML: java.net.URL baseUrl>";
+    "fieldget <com.revfad.gui.SearchToHTML: java.net.URL baseUrl>"->"load.r r1";
+    "load.r r1"->"staticinvoke <com.revfad.search.Document: java.net.URL buildUrl(java.net.URL,java.lang.String)>";
+    "fieldput <com.revfad.gui.SearchToHTML: java.net.URL resultsBaseUrl>"
+    "staticinvoke <com.revfad.search.Document: java.net.URL buildUrl(java.net.URL,java.lang.String)>"->"fieldput <com.revfad.gui.SearchToHTML: java.net.URL resultsBaseUrl>";
+    "fieldput <com.revfad.gui.SearchToHTML: java.net.URL resultsBaseUrl>"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "push \"send_context\""
+    "load.r r0"->"push \"send_context\"";
+    "push \"send_context\""->"push 1";
+    "specialinvoke <com.revfad.gui.SearchToHTML: boolean getParameter(java.lang.String,boolean)>"
+    "push 1"->"specialinvoke <com.revfad.gui.SearchToHTML: boolean getParameter(java.lang.String,boolean)>";
+    "fieldput <com.revfad.gui.SearchToHTML: boolean sendContext>"
+    "specialinvoke <com.revfad.gui.SearchToHTML: boolean getParameter(java.lang.String,boolean)>"->"fieldput <com.revfad.gui.SearchToHTML: boolean sendContext>";
+    "fieldput <com.revfad.gui.SearchToHTML: boolean sendContext>"->"load.r r0";
+    "fieldget <com.revfad.gui.SearchToHTML: boolean sendContext>"
+    "load.r r0"->"fieldget <com.revfad.gui.SearchToHTML: boolean sendContext>";
+    "ifne load.r r0"
+    "fieldget <com.revfad.gui.SearchToHTML: boolean sendContext>"->"ifne load.r r0";
+    "ifne load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <com.revfad.gui.SearchToHTML: java.util.Hashtable options>";
+    "fieldget <com.revfad.gui.SearchToHTML: java.util.Hashtable options>"->"staticget <com.revfad.search.SearchThread$Option: com.revfad.search.SearchThread$Option LEADING_CONTEXT_LENGTH>";
+    "staticget <com.revfad.search.SearchThread$Option: com.revfad.search.SearchThread$Option LEADING_CONTEXT_LENGTH>"->"new java.lang.Integer";
+    "new java.lang.Integer"->"dup1.r";
+    "dup1.r"->"push 0";
+    "push 0"->"specialinvoke <java.lang.Integer: void <init>(int)>";
+    "specialinvoke <java.lang.Integer: void <init>(int)>"->"virtualinvoke <java.util.Hashtable: java.lang.Object put(java.lang.Object,java.lang.Object)>";
+    "virtualinvoke <java.util.Hashtable: java.lang.Object put(java.lang.Object,java.lang.Object)>"->"pop";
+    "pop"->"load.r r0";
+    "load.r r0"->"fieldget <com.revfad.gui.SearchToHTML: java.util.Hashtable options>";
+    "fieldget <com.revfad.gui.SearchToHTML: java.util.Hashtable options>"->"staticget <com.revfad.search.SearchThread$Option: com.revfad.search.SearchThread$Option TRAILING_CONTEXT_LENGTH>";
+    "staticget <com.revfad.search.SearchThread$Option: com.revfad.search.SearchThread$Option TRAILING_CONTEXT_LENGTH>"->"new java.lang.Integer";
+    "new java.lang.Integer"->"dup1.r";
+    "dup1.r"->"push 0";
+    "push 0"->"specialinvoke <java.lang.Integer: void <init>(int)>";
+    "specialinvoke <java.lang.Integer: void <init>(int)>"->"virtualinvoke <java.util.Hashtable: java.lang.Object put(java.lang.Object,java.lang.Object)>";
+    "virtualinvoke <java.util.Hashtable: java.lang.Object put(java.lang.Object,java.lang.Object)>"->"pop";
+    "pop"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "push \"send_titles\""
+    "load.r r0"->"push \"send_titles\"";
+    "push \"send_titles\""->"push 1";
+    "push 1"->"specialinvoke <com.revfad.gui.SearchToHTML: boolean getParameter(java.lang.String,boolean)>";
+    "fieldput <com.revfad.gui.SearchToHTML: boolean sendTitles>"
+    "specialinvoke <com.revfad.gui.SearchToHTML: boolean getParameter(java.lang.String,boolean)>"->"fieldput <com.revfad.gui.SearchToHTML: boolean sendTitles>";
+    "fieldput <com.revfad.gui.SearchToHTML: boolean sendTitles>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "push \"send_info\""
+    "load.r r0"->"push \"send_info\"";
+    "push \"send_info\""->"push 1";
+    "push 1"->"specialinvoke <com.revfad.gui.SearchToHTML: boolean getParameter(java.lang.String,boolean)>";
+    "fieldput <com.revfad.gui.SearchToHTML: boolean sendDocumentInfo>"
+    "specialinvoke <com.revfad.gui.SearchToHTML: boolean getParameter(java.lang.String,boolean)>"->"fieldput <com.revfad.gui.SearchToHTML: boolean sendDocumentInfo>";
+    "fieldput <com.revfad.gui.SearchToHTML: boolean sendDocumentInfo>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "push \"send_anchors\""
+    "load.r r0"->"push \"send_anchors\"";
+    "push \"send_anchors\""->"push 1";
+    "push 1"->"specialinvoke <com.revfad.gui.SearchToHTML: boolean getParameter(java.lang.String,boolean)>";
+    "fieldput <com.revfad.gui.SearchToHTML: boolean sendAnchors>"
+    "specialinvoke <com.revfad.gui.SearchToHTML: boolean getParameter(java.lang.String,boolean)>"->"fieldput <com.revfad.gui.SearchToHTML: boolean sendAnchors>";
+    "fieldput <com.revfad.gui.SearchToHTML: boolean sendAnchors>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "push \"phrase_searches_only\""
+    "load.r r0"->"push \"phrase_searches_only\"";
+    "push \"phrase_searches_only\""->"push 0";
+    "push 0"->"specialinvoke <com.revfad.gui.SearchToHTML: boolean getParameter(java.lang.String,boolean)>";
+    "fieldput <com.revfad.gui.SearchToHTML: boolean phraseSearchesOnly>"
+    "specialinvoke <com.revfad.gui.SearchToHTML: boolean getParameter(java.lang.String,boolean)>"->"fieldput <com.revfad.gui.SearchToHTML: boolean phraseSearchesOnly>";
+    "fieldput <com.revfad.gui.SearchToHTML: boolean phraseSearchesOnly>"->"load.r r0";
+    "specialinvoke <com.revfad.gui.SearchToHTML: void initNormalGui()>"
+    "load.r r0"->"specialinvoke <com.revfad.gui.SearchToHTML: void initNormalGui()>";
+    "return"
+    "specialinvoke <com.revfad.gui.SearchToHTML: void initNormalGui()>"->"return";
+    "virtualinvoke <java.lang.Throwable: java.lang.String toString()>"
+    "staticinvoke <com.revfad.search.Document: java.net.URL buildUrl(java.net.URL,java.lang.String)>"->"virtualinvoke <java.lang.Throwable: java.lang.String toString()>";
+    "store.r r0"
+    "virtualinvoke <java.lang.Throwable: java.lang.String toString()>"->"store.r r0";
+    "new java.lang.RuntimeException"
+    "store.r r0"->"new java.lang.RuntimeException";
+    "new java.lang.RuntimeException"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "specialinvoke <java.lang.RuntimeException: void <init>(java.lang.String)>"
+    "load.r r0"->"specialinvoke <java.lang.RuntimeException: void <init>(java.lang.String)>";
+    "athrow"
+    "specialinvoke <java.lang.RuntimeException: void <init>(java.lang.String)>"->"athrow";
+    "specialinvoke <java.net.URL: void <init>(java.lang.String)>"->"virtualinvoke <java.lang.Throwable: void printStackTrace()>";
+}

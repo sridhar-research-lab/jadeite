@@ -1,0 +1,280 @@
+digraph "" {
+    "r0 := @this: goph"
+    "load.r r0"
+    "r0 := @this: goph"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "push \"check\""
+    "load.r r0"->"push \"check\"";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"
+    "push \"check\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "fieldput <goph: java.lang.String check>"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"fieldput <goph: java.lang.String check>";
+    "fieldput <goph: java.lang.String check>"->"load.r r0";
+    "fieldget <goph: java.lang.String check>"
+    "load.r r0"->"fieldget <goph: java.lang.String check>";
+    "ifnonnull load.r r0"
+    "fieldget <goph: java.lang.String check>"->"ifnonnull load.r r0";
+    "ifnonnull load.r r0"->"load.r r0";
+    "push \"BS\""
+    "load.r r0"->"push \"BS\"";
+    "push \"BS\""->"fieldput <goph: java.lang.String check>";
+    "fieldput <goph: java.lang.String check>"->"load.r r0";
+    "load.r r0"->"fieldget <goph: java.lang.String check>";
+    "fieldget <goph: java.lang.String check>"->"load.r r0";
+    "fieldget <goph: java.lang.String appsig>"
+    "load.r r0"->"fieldget <goph: java.lang.String appsig>";
+    "virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>"
+    "fieldget <goph: java.lang.String appsig>"->"virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>";
+    "ifeq return"
+    "virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>"->"ifeq return";
+    "ifeq return"->"load.r r0";
+    "new java.awt.MediaTracker"
+    "load.r r0"->"new java.awt.MediaTracker";
+    "dup1.r"
+    "new java.awt.MediaTracker"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "specialinvoke <java.awt.MediaTracker: void <init>(java.awt.Component)>"
+    "load.r r0"->"specialinvoke <java.awt.MediaTracker: void <init>(java.awt.Component)>";
+    "fieldput <goph: java.awt.MediaTracker tracker>"
+    "specialinvoke <java.awt.MediaTracker: void <init>(java.awt.Component)>"->"fieldput <goph: java.awt.MediaTracker tracker>";
+    "fieldput <goph: java.awt.MediaTracker tracker>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "virtualinvoke <java.applet.Applet: java.net.URL getCodeBase()>"
+    "load.r r0"->"virtualinvoke <java.applet.Applet: java.net.URL getCodeBase()>";
+    "push \"hole.gif\""
+    "virtualinvoke <java.applet.Applet: java.net.URL getCodeBase()>"->"push \"hole.gif\"";
+    "virtualinvoke <java.applet.Applet: java.awt.Image getImage(java.net.URL,java.lang.String)>"
+    "push \"hole.gif\""->"virtualinvoke <java.applet.Applet: java.awt.Image getImage(java.net.URL,java.lang.String)>";
+    "fieldput <goph: java.awt.Image hole>"
+    "virtualinvoke <java.applet.Applet: java.awt.Image getImage(java.net.URL,java.lang.String)>"->"fieldput <goph: java.awt.Image hole>";
+    "fieldput <goph: java.awt.Image hole>"->"load.r r0";
+    "fieldget <goph: java.awt.MediaTracker tracker>"
+    "load.r r0"->"fieldget <goph: java.awt.MediaTracker tracker>";
+    "fieldget <goph: java.awt.MediaTracker tracker>"->"load.r r0";
+    "fieldget <goph: java.awt.Image hole>"
+    "load.r r0"->"fieldget <goph: java.awt.Image hole>";
+    "push 0"
+    "fieldget <goph: java.awt.Image hole>"->"push 0";
+    "virtualinvoke <java.awt.MediaTracker: void addImage(java.awt.Image,int)>"
+    "push 0"->"virtualinvoke <java.awt.MediaTracker: void addImage(java.awt.Image,int)>";
+    "virtualinvoke <java.awt.MediaTracker: void addImage(java.awt.Image,int)>"->"load.r r0";
+    "fieldget <goph: java.awt.Image[] gopherPics>"
+    "load.r r0"->"fieldget <goph: java.awt.Image[] gopherPics>";
+    "fieldget <goph: java.awt.Image[] gopherPics>"->"push 0";
+    "push 0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"virtualinvoke <java.applet.Applet: java.net.URL getCodeBase()>";
+    "virtualinvoke <java.applet.Applet: java.net.URL getCodeBase()>"->"push \"hole.gif\"";
+    "push \"hole.gif\""->"virtualinvoke <java.applet.Applet: java.awt.Image getImage(java.net.URL,java.lang.String)>";
+    "arraywrite.r"
+    "virtualinvoke <java.applet.Applet: java.awt.Image getImage(java.net.URL,java.lang.String)>"->"arraywrite.r";
+    "arraywrite.r"->"load.r r0";
+    "load.r r0"->"fieldget <goph: java.awt.MediaTracker tracker>";
+    "fieldget <goph: java.awt.MediaTracker tracker>"->"load.r r0";
+    "load.r r0"->"fieldget <goph: java.awt.Image[] gopherPics>";
+    "fieldget <goph: java.awt.Image[] gopherPics>"->"push 0";
+    "arrayread.r"
+    "push 0"->"arrayread.r";
+    "push 1"
+    "arrayread.r"->"push 1";
+    "push 1"->"virtualinvoke <java.awt.MediaTracker: void addImage(java.awt.Image,int)>";
+    "virtualinvoke <java.awt.MediaTracker: void addImage(java.awt.Image,int)>"->"load.r r0";
+    "load.r r0"->"fieldget <goph: java.awt.Image[] gopherPics>";
+    "fieldget <goph: java.awt.Image[] gopherPics>"->"push 1";
+    "push 1"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"virtualinvoke <java.applet.Applet: java.net.URL getCodeBase()>";
+    "push \"gopher1.gif\""
+    "virtualinvoke <java.applet.Applet: java.net.URL getCodeBase()>"->"push \"gopher1.gif\"";
+    "push \"gopher1.gif\""->"virtualinvoke <java.applet.Applet: java.awt.Image getImage(java.net.URL,java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.awt.Image getImage(java.net.URL,java.lang.String)>"->"arraywrite.r";
+    "arraywrite.r"->"load.r r0";
+    "load.r r0"->"fieldget <goph: java.awt.MediaTracker tracker>";
+    "fieldget <goph: java.awt.MediaTracker tracker>"->"load.r r0";
+    "load.r r0"->"fieldget <goph: java.awt.Image[] gopherPics>";
+    "fieldget <goph: java.awt.Image[] gopherPics>"->"push 1";
+    "push 1"->"arrayread.r";
+    "push 2"
+    "arrayread.r"->"push 2";
+    "push 2"->"virtualinvoke <java.awt.MediaTracker: void addImage(java.awt.Image,int)>";
+    "virtualinvoke <java.awt.MediaTracker: void addImage(java.awt.Image,int)>"->"load.r r0";
+    "load.r r0"->"fieldget <goph: java.awt.Image[] gopherPics>";
+    "fieldget <goph: java.awt.Image[] gopherPics>"->"push 2";
+    "push 2"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"virtualinvoke <java.applet.Applet: java.net.URL getCodeBase()>";
+    "push \"gopher2.gif\""
+    "virtualinvoke <java.applet.Applet: java.net.URL getCodeBase()>"->"push \"gopher2.gif\"";
+    "push \"gopher2.gif\""->"virtualinvoke <java.applet.Applet: java.awt.Image getImage(java.net.URL,java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.awt.Image getImage(java.net.URL,java.lang.String)>"->"arraywrite.r";
+    "arraywrite.r"->"load.r r0";
+    "load.r r0"->"fieldget <goph: java.awt.MediaTracker tracker>";
+    "fieldget <goph: java.awt.MediaTracker tracker>"->"load.r r0";
+    "load.r r0"->"fieldget <goph: java.awt.Image[] gopherPics>";
+    "fieldget <goph: java.awt.Image[] gopherPics>"->"push 2";
+    "push 2"->"arrayread.r";
+    "push 3"
+    "arrayread.r"->"push 3";
+    "push 3"->"virtualinvoke <java.awt.MediaTracker: void addImage(java.awt.Image,int)>";
+    "virtualinvoke <java.awt.MediaTracker: void addImage(java.awt.Image,int)>"->"load.r r0";
+    "load.r r0"->"fieldget <goph: java.awt.Image[] gopherPics>";
+    "fieldget <goph: java.awt.Image[] gopherPics>"->"push 3";
+    "push 3"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"virtualinvoke <java.applet.Applet: java.net.URL getCodeBase()>";
+    "push \"gopher3.gif\""
+    "virtualinvoke <java.applet.Applet: java.net.URL getCodeBase()>"->"push \"gopher3.gif\"";
+    "push \"gopher3.gif\""->"virtualinvoke <java.applet.Applet: java.awt.Image getImage(java.net.URL,java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.awt.Image getImage(java.net.URL,java.lang.String)>"->"arraywrite.r";
+    "arraywrite.r"->"load.r r0";
+    "load.r r0"->"fieldget <goph: java.awt.MediaTracker tracker>";
+    "fieldget <goph: java.awt.MediaTracker tracker>"->"load.r r0";
+    "load.r r0"->"fieldget <goph: java.awt.Image[] gopherPics>";
+    "fieldget <goph: java.awt.Image[] gopherPics>"->"push 3";
+    "push 3"->"arrayread.r";
+    "push 4"
+    "arrayread.r"->"push 4";
+    "push 4"->"virtualinvoke <java.awt.MediaTracker: void addImage(java.awt.Image,int)>";
+    "virtualinvoke <java.awt.MediaTracker: void addImage(java.awt.Image,int)>"->"load.r r0";
+    "fieldget <goph: java.awt.Image[] gopherHurt>"
+    "load.r r0"->"fieldget <goph: java.awt.Image[] gopherHurt>";
+    "fieldget <goph: java.awt.Image[] gopherHurt>"->"push 0";
+    "push 0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"virtualinvoke <java.applet.Applet: java.net.URL getCodeBase()>";
+    "push \"hurt1.gif\""
+    "virtualinvoke <java.applet.Applet: java.net.URL getCodeBase()>"->"push \"hurt1.gif\"";
+    "push \"hurt1.gif\""->"virtualinvoke <java.applet.Applet: java.awt.Image getImage(java.net.URL,java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.awt.Image getImage(java.net.URL,java.lang.String)>"->"arraywrite.r";
+    "arraywrite.r"->"load.r r0";
+    "load.r r0"->"fieldget <goph: java.awt.MediaTracker tracker>";
+    "fieldget <goph: java.awt.MediaTracker tracker>"->"load.r r0";
+    "load.r r0"->"fieldget <goph: java.awt.Image[] gopherHurt>";
+    "fieldget <goph: java.awt.Image[] gopherHurt>"->"push 0";
+    "push 0"->"arrayread.r";
+    "push 5"
+    "arrayread.r"->"push 5";
+    "push 5"->"virtualinvoke <java.awt.MediaTracker: void addImage(java.awt.Image,int)>";
+    "virtualinvoke <java.awt.MediaTracker: void addImage(java.awt.Image,int)>"->"load.r r0";
+    "load.r r0"->"fieldget <goph: java.awt.Image[] gopherHurt>";
+    "fieldget <goph: java.awt.Image[] gopherHurt>"->"push 1";
+    "push 1"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"virtualinvoke <java.applet.Applet: java.net.URL getCodeBase()>";
+    "push \"hurt2.gif\""
+    "virtualinvoke <java.applet.Applet: java.net.URL getCodeBase()>"->"push \"hurt2.gif\"";
+    "push \"hurt2.gif\""->"virtualinvoke <java.applet.Applet: java.awt.Image getImage(java.net.URL,java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.awt.Image getImage(java.net.URL,java.lang.String)>"->"arraywrite.r";
+    "arraywrite.r"->"load.r r0";
+    "load.r r0"->"fieldget <goph: java.awt.MediaTracker tracker>";
+    "fieldget <goph: java.awt.MediaTracker tracker>"->"load.r r0";
+    "load.r r0"->"fieldget <goph: java.awt.Image[] gopherHurt>";
+    "fieldget <goph: java.awt.Image[] gopherHurt>"->"push 1";
+    "push 1"->"arrayread.r";
+    "push 6"
+    "arrayread.r"->"push 6";
+    "push 6"->"virtualinvoke <java.awt.MediaTracker: void addImage(java.awt.Image,int)>";
+    "virtualinvoke <java.awt.MediaTracker: void addImage(java.awt.Image,int)>"->"load.r r0";
+    "load.r r0"->"fieldget <goph: java.awt.Image[] gopherHurt>";
+    "fieldget <goph: java.awt.Image[] gopherHurt>"->"push 2";
+    "push 2"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"virtualinvoke <java.applet.Applet: java.net.URL getCodeBase()>";
+    "push \"hurt3.gif\""
+    "virtualinvoke <java.applet.Applet: java.net.URL getCodeBase()>"->"push \"hurt3.gif\"";
+    "push \"hurt3.gif\""->"virtualinvoke <java.applet.Applet: java.awt.Image getImage(java.net.URL,java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.awt.Image getImage(java.net.URL,java.lang.String)>"->"arraywrite.r";
+    "arraywrite.r"->"load.r r0";
+    "load.r r0"->"fieldget <goph: java.awt.MediaTracker tracker>";
+    "fieldget <goph: java.awt.MediaTracker tracker>"->"load.r r0";
+    "load.r r0"->"fieldget <goph: java.awt.Image[] gopherHurt>";
+    "fieldget <goph: java.awt.Image[] gopherHurt>"->"push 2";
+    "push 2"->"arrayread.r";
+    "push 7"
+    "arrayread.r"->"push 7";
+    "push 7"->"virtualinvoke <java.awt.MediaTracker: void addImage(java.awt.Image,int)>";
+    "virtualinvoke <java.awt.MediaTracker: void addImage(java.awt.Image,int)>"->"load.r r0";
+    "load.r r0"->"fieldget <goph: java.awt.Image[] gopherHurt>";
+    "fieldget <goph: java.awt.Image[] gopherHurt>"->"push 3";
+    "push 3"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"virtualinvoke <java.applet.Applet: java.net.URL getCodeBase()>";
+    "virtualinvoke <java.applet.Applet: java.net.URL getCodeBase()>"->"push \"hole.gif\"";
+    "push \"hole.gif\""->"virtualinvoke <java.applet.Applet: java.awt.Image getImage(java.net.URL,java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.awt.Image getImage(java.net.URL,java.lang.String)>"->"arraywrite.r";
+    "arraywrite.r"->"load.r r0";
+    "load.r r0"->"fieldget <goph: java.awt.MediaTracker tracker>";
+    "fieldget <goph: java.awt.MediaTracker tracker>"->"load.r r0";
+    "load.r r0"->"fieldget <goph: java.awt.Image[] gopherHurt>";
+    "fieldget <goph: java.awt.Image[] gopherHurt>"->"push 3";
+    "push 3"->"arrayread.r";
+    "push 8"
+    "arrayread.r"->"push 8";
+    "push 8"->"virtualinvoke <java.awt.MediaTracker: void addImage(java.awt.Image,int)>";
+    "virtualinvoke <java.awt.MediaTracker: void addImage(java.awt.Image,int)>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"virtualinvoke <java.applet.Applet: java.net.URL getCodeBase()>";
+    "push \"ss.jpg\""
+    "virtualinvoke <java.applet.Applet: java.net.URL getCodeBase()>"->"push \"ss.jpg\"";
+    "push \"ss.jpg\""->"virtualinvoke <java.applet.Applet: java.awt.Image getImage(java.net.URL,java.lang.String)>";
+    "fieldput <goph: java.awt.Image startStop>"
+    "virtualinvoke <java.applet.Applet: java.awt.Image getImage(java.net.URL,java.lang.String)>"->"fieldput <goph: java.awt.Image startStop>";
+    "fieldput <goph: java.awt.Image startStop>"->"load.r r0";
+    "load.r r0"->"fieldget <goph: java.awt.MediaTracker tracker>";
+    "fieldget <goph: java.awt.MediaTracker tracker>"->"load.r r0";
+    "fieldget <goph: java.awt.Image startStop>"
+    "load.r r0"->"fieldget <goph: java.awt.Image startStop>";
+    "push 9"
+    "fieldget <goph: java.awt.Image startStop>"->"push 9";
+    "push 9"->"virtualinvoke <java.awt.MediaTracker: void addImage(java.awt.Image,int)>";
+    "virtualinvoke <java.awt.MediaTracker: void addImage(java.awt.Image,int)>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"virtualinvoke <java.applet.Applet: java.net.URL getCodeBase()>";
+    "push \"ow.au\""
+    "virtualinvoke <java.applet.Applet: java.net.URL getCodeBase()>"->"push \"ow.au\"";
+    "virtualinvoke <java.applet.Applet: java.applet.AudioClip getAudioClip(java.net.URL,java.lang.String)>"
+    "push \"ow.au\""->"virtualinvoke <java.applet.Applet: java.applet.AudioClip getAudioClip(java.net.URL,java.lang.String)>";
+    "fieldput <goph: java.applet.AudioClip ouch>"
+    "virtualinvoke <java.applet.Applet: java.applet.AudioClip getAudioClip(java.net.URL,java.lang.String)>"->"fieldput <goph: java.applet.AudioClip ouch>";
+    "fieldput <goph: java.applet.AudioClip ouch>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"virtualinvoke <java.applet.Applet: java.net.URL getCodeBase()>";
+    "push \"bang.au\""
+    "virtualinvoke <java.applet.Applet: java.net.URL getCodeBase()>"->"push \"bang.au\"";
+    "push \"bang.au\""->"virtualinvoke <java.applet.Applet: java.applet.AudioClip getAudioClip(java.net.URL,java.lang.String)>";
+    "fieldput <goph: java.applet.AudioClip bang>"
+    "virtualinvoke <java.applet.Applet: java.applet.AudioClip getAudioClip(java.net.URL,java.lang.String)>"->"fieldput <goph: java.applet.AudioClip bang>";
+    "fieldput <goph: java.applet.AudioClip bang>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"virtualinvoke <java.applet.Applet: java.net.URL getCodeBase()>";
+    "push \"gup.au\""
+    "virtualinvoke <java.applet.Applet: java.net.URL getCodeBase()>"->"push \"gup.au\"";
+    "push \"gup.au\""->"virtualinvoke <java.applet.Applet: java.applet.AudioClip getAudioClip(java.net.URL,java.lang.String)>";
+    "fieldput <goph: java.applet.AudioClip gup>"
+    "virtualinvoke <java.applet.Applet: java.applet.AudioClip getAudioClip(java.net.URL,java.lang.String)>"->"fieldput <goph: java.applet.AudioClip gup>";
+    "fieldput <goph: java.applet.AudioClip gup>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"virtualinvoke <java.applet.Applet: java.net.URL getCodeBase()>";
+    "push \"gdown.au\""
+    "virtualinvoke <java.applet.Applet: java.net.URL getCodeBase()>"->"push \"gdown.au\"";
+    "push \"gdown.au\""->"virtualinvoke <java.applet.Applet: java.applet.AudioClip getAudioClip(java.net.URL,java.lang.String)>";
+    "fieldput <goph: java.applet.AudioClip gdown>"
+    "virtualinvoke <java.applet.Applet: java.applet.AudioClip getAudioClip(java.net.URL,java.lang.String)>"->"fieldput <goph: java.applet.AudioClip gdown>";
+    "fieldput <goph: java.applet.AudioClip gdown>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"virtualinvoke <java.applet.Applet: java.net.URL getCodeBase()>";
+    "push \"laugh.au\""
+    "virtualinvoke <java.applet.Applet: java.net.URL getCodeBase()>"->"push \"laugh.au\"";
+    "push \"laugh.au\""->"virtualinvoke <java.applet.Applet: java.applet.AudioClip getAudioClip(java.net.URL,java.lang.String)>";
+    "fieldput <goph: java.applet.AudioClip laugh>"
+    "virtualinvoke <java.applet.Applet: java.applet.AudioClip getAudioClip(java.net.URL,java.lang.String)>"->"fieldput <goph: java.applet.AudioClip laugh>";
+    "return"
+    "fieldput <goph: java.applet.AudioClip laugh>"->"return";
+}

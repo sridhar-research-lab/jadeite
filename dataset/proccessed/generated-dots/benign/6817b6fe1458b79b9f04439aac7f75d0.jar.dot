@@ -1,0 +1,29 @@
+digraph "" {
+    "r0 := @this: listmaker"
+    "load.r r0"
+    "r0 := @this: listmaker"->"load.r r0";
+    "new listmaker$appPanel"
+    "load.r r0"->"new listmaker$appPanel";
+    "dup1.r"
+    "new listmaker$appPanel"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "specialinvoke <listmaker$appPanel: void <init>(listmaker)>"
+    "load.r r0"->"specialinvoke <listmaker$appPanel: void <init>(listmaker)>";
+    "virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>"
+    "specialinvoke <listmaker$appPanel: void <init>(listmaker)>"->"virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>";
+    "pop"
+    "virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>"->"pop";
+    "pop"->"load.r r0";
+    "push 1"
+    "load.r r0"->"push 1";
+    "virtualinvoke <java.awt.Component: void setVisible(boolean)>"
+    "push 1"->"virtualinvoke <java.awt.Component: void setVisible(boolean)>";
+    "virtualinvoke <java.awt.Component: void setVisible(boolean)>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "fieldget <listmaker: java.awt.Font thefont>"
+    "load.r r0"->"fieldget <listmaker: java.awt.Font thefont>";
+    "virtualinvoke <java.awt.Component: void setFont(java.awt.Font)>"
+    "fieldget <listmaker: java.awt.Font thefont>"->"virtualinvoke <java.awt.Component: void setFont(java.awt.Font)>";
+    "return"
+    "virtualinvoke <java.awt.Component: void setFont(java.awt.Font)>"->"return";
+}

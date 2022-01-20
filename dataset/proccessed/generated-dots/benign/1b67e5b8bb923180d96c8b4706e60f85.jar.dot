@@ -1,0 +1,32 @@
+digraph "" {
+    "r0 := @this: AdvTypewriter"
+    "load.r r0"
+    "r0 := @this: AdvTypewriter"->"load.r r0";
+    "virtualinvoke <java.applet.Applet: java.net.URL getDocumentBase()>"
+    "load.r r0"->"virtualinvoke <java.applet.Applet: java.net.URL getDocumentBase()>";
+    "virtualinvoke <java.net.URL: java.lang.String toString()>"
+    "virtualinvoke <java.applet.Applet: java.net.URL getDocumentBase()>"->"virtualinvoke <java.net.URL: java.lang.String toString()>";
+    "push \"http://www.jpowered.com\""
+    "virtualinvoke <java.net.URL: java.lang.String toString()>"->"push \"http://www.jpowered.com\"";
+    "virtualinvoke <java.lang.String: boolean startsWith(java.lang.String)>"
+    "push \"http://www.jpowered.com\""->"virtualinvoke <java.lang.String: boolean startsWith(java.lang.String)>";
+    "ifne load.r r0"
+    "virtualinvoke <java.lang.String: boolean startsWith(java.lang.String)>"->"ifne load.r r0";
+    "ifne load.r r0"->"load.r r0";
+    "load.r r0"->"virtualinvoke <java.applet.Applet: java.net.URL getDocumentBase()>";
+    "virtualinvoke <java.applet.Applet: java.net.URL getDocumentBase()>"->"virtualinvoke <java.net.URL: java.lang.String toString()>";
+    "push \"http://jpowered.com\""
+    "virtualinvoke <java.net.URL: java.lang.String toString()>"->"push \"http://jpowered.com\"";
+    "push \"http://jpowered.com\""->"virtualinvoke <java.lang.String: boolean startsWith(java.lang.String)>";
+    "virtualinvoke <java.lang.String: boolean startsWith(java.lang.String)>"->"ifne load.r r0";
+    "push 0"
+    "ifne load.r r0"->"push 0";
+    "staticinvoke <java.lang.System: void exit(int)>"
+    "push 0"->"staticinvoke <java.lang.System: void exit(int)>";
+    "staticinvoke <java.lang.System: void exit(int)>"->"load.r r0";
+    "load.r r0"->"push 0";
+    "fieldput <AdvTypewriter: boolean openConnection>"
+    "push 0"->"fieldput <AdvTypewriter: boolean openConnection>";
+    "return"
+    "fieldput <AdvTypewriter: boolean openConnection>"->"return";
+}

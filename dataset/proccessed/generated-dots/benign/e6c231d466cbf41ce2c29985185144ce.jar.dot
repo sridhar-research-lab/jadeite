@@ -1,0 +1,145 @@
+digraph "" {
+    "r0 := @this: Maze3D"
+    "load.r r0"
+    "r0 := @this: Maze3D"->"load.r r0";
+    "push 0"
+    "load.r r0"->"push 0";
+    "fieldput <Maze3D: boolean solutionDisplayed>"
+    "push 0"->"fieldput <Maze3D: boolean solutionDisplayed>";
+    "fieldput <Maze3D: boolean solutionDisplayed>"->"load.r r0";
+    "new java.awt.BorderLayout"
+    "load.r r0"->"new java.awt.BorderLayout";
+    "dup1.r"
+    "new java.awt.BorderLayout"->"dup1.r";
+    "specialinvoke <java.awt.BorderLayout: void <init>()>"
+    "dup1.r"->"specialinvoke <java.awt.BorderLayout: void <init>()>";
+    "virtualinvoke <java.awt.Container: void setLayout(java.awt.LayoutManager)>"
+    "specialinvoke <java.awt.BorderLayout: void <init>()>"->"virtualinvoke <java.awt.Container: void setLayout(java.awt.LayoutManager)>";
+    "new java.awt.Panel"
+    "virtualinvoke <java.awt.Container: void setLayout(java.awt.LayoutManager)>"->"new java.awt.Panel";
+    "specialinvoke <java.awt.Panel: void <init>()>"
+    "new java.awt.Panel"->"specialinvoke <java.awt.Panel: void <init>()>";
+    "specialinvoke <java.awt.Panel: void <init>()>"->"load.r r0";
+    "load.r r0"->"push 0";
+    "fieldput <Maze3D: boolean hexagonalRooms>"
+    "push 0"->"fieldput <Maze3D: boolean hexagonalRooms>";
+    "fieldput <Maze3D: boolean hexagonalRooms>"->"load.r r0";
+    "new MazeCanvas"
+    "load.r r0"->"new MazeCanvas";
+    "new MazeCanvas"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "specialinvoke <MazeCanvas: void <init>(Maze3D)>"
+    "load.r r0"->"specialinvoke <MazeCanvas: void <init>(Maze3D)>";
+    "fieldput <Maze3D: MazeCanvas mazeCanvas>"
+    "specialinvoke <MazeCanvas: void <init>(Maze3D)>"->"fieldput <Maze3D: MazeCanvas mazeCanvas>";
+    "fieldput <Maze3D: MazeCanvas mazeCanvas>"->"load.r r0";
+    "push \"Center\""
+    "load.r r0"->"push \"Center\"";
+    "push \"Center\""->"load.r r0";
+    "fieldget <Maze3D: MazeCanvas mazeCanvas>"
+    "load.r r0"->"fieldget <Maze3D: MazeCanvas mazeCanvas>";
+    "virtualinvoke <java.awt.Container: java.awt.Component add(java.lang.String,java.awt.Component)>"
+    "fieldget <Maze3D: MazeCanvas mazeCanvas>"->"virtualinvoke <java.awt.Container: java.awt.Component add(java.lang.String,java.awt.Component)>";
+    "pop"
+    "virtualinvoke <java.awt.Container: java.awt.Component add(java.lang.String,java.awt.Component)>"->"pop";
+    "pop"->"load.r r0";
+    "new MazeControls"
+    "load.r r0"->"new MazeControls";
+    "new MazeControls"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "specialinvoke <MazeControls: void <init>(Maze3D)>"
+    "load.r r0"->"specialinvoke <MazeControls: void <init>(Maze3D)>";
+    "fieldput <Maze3D: MazeControls mazeControls>"
+    "specialinvoke <MazeControls: void <init>(Maze3D)>"->"fieldput <Maze3D: MazeControls mazeControls>";
+    "fieldput <Maze3D: MazeControls mazeControls>"->"load.r r0";
+    "push \"South\""
+    "load.r r0"->"push \"South\"";
+    "push \"South\""->"load.r r0";
+    "fieldget <Maze3D: MazeControls mazeControls>"
+    "load.r r0"->"fieldget <Maze3D: MazeControls mazeControls>";
+    "fieldget <Maze3D: MazeControls mazeControls>"->"virtualinvoke <java.awt.Container: java.awt.Component add(java.lang.String,java.awt.Component)>";
+    "virtualinvoke <java.awt.Container: java.awt.Component add(java.lang.String,java.awt.Component)>"->"pop";
+    "pop"->"load.r r0";
+    "push 45.0"
+    "load.r r0"->"push 45.0";
+    "fieldput <Maze3D: double tilt>"
+    "push 45.0"->"fieldput <Maze3D: double tilt>";
+    "fieldput <Maze3D: double tilt>"->"load.r r0";
+    "new java.awt.Scrollbar"
+    "load.r r0"->"new java.awt.Scrollbar";
+    "new java.awt.Scrollbar"->"dup1.r";
+    "push 1"
+    "dup1.r"->"push 1";
+    "push 1"->"load.r r0";
+    "fieldget <Maze3D: double tilt>"
+    "load.r r0"->"fieldget <Maze3D: double tilt>";
+    "d2i"
+    "fieldget <Maze3D: double tilt>"->"d2i";
+    "push 5"
+    "d2i"->"push 5";
+    "push 30"
+    "push 5"->"push 30";
+    "push 60"
+    "push 30"->"push 60";
+    "specialinvoke <java.awt.Scrollbar: void <init>(int,int,int,int,int)>"
+    "push 60"->"specialinvoke <java.awt.Scrollbar: void <init>(int,int,int,int,int)>";
+    "fieldput <Maze3D: java.awt.Scrollbar tiltScrollbar>"
+    "specialinvoke <java.awt.Scrollbar: void <init>(int,int,int,int,int)>"->"fieldput <Maze3D: java.awt.Scrollbar tiltScrollbar>";
+    "fieldput <Maze3D: java.awt.Scrollbar tiltScrollbar>"->"load.r r0";
+    "push \"East\""
+    "load.r r0"->"push \"East\"";
+    "push \"East\""->"load.r r0";
+    "fieldget <Maze3D: java.awt.Scrollbar tiltScrollbar>"
+    "load.r r0"->"fieldget <Maze3D: java.awt.Scrollbar tiltScrollbar>";
+    "fieldget <Maze3D: java.awt.Scrollbar tiltScrollbar>"->"virtualinvoke <java.awt.Container: java.awt.Component add(java.lang.String,java.awt.Component)>";
+    "virtualinvoke <java.awt.Container: java.awt.Component add(java.lang.String,java.awt.Component)>"->"pop";
+    "pop"->"load.r r0";
+    "new java.awt.TextField"
+    "load.r r0"->"new java.awt.TextField";
+    "new java.awt.TextField"->"dup1.r";
+    "push 117"
+    "dup1.r"->"push 117";
+    "specialinvoke <java.awt.TextField: void <init>(int)>"
+    "push 117"->"specialinvoke <java.awt.TextField: void <init>(int)>";
+    "fieldput <Maze3D: java.awt.TextField message>"
+    "specialinvoke <java.awt.TextField: void <init>(int)>"->"fieldput <Maze3D: java.awt.TextField message>";
+    "fieldput <Maze3D: java.awt.TextField message>"->"load.r r0";
+    "fieldget <Maze3D: java.awt.TextField message>"
+    "load.r r0"->"fieldget <Maze3D: java.awt.TextField message>";
+    "fieldget <Maze3D: java.awt.TextField message>"->"push 0";
+    "virtualinvoke <java.awt.TextComponent: void setEditable(boolean)>"
+    "push 0"->"virtualinvoke <java.awt.TextComponent: void setEditable(boolean)>";
+    "virtualinvoke <java.awt.TextComponent: void setEditable(boolean)>"->"load.r r0";
+    "push \"North\""
+    "load.r r0"->"push \"North\"";
+    "push \"North\""->"load.r r0";
+    "load.r r0"->"fieldget <Maze3D: java.awt.TextField message>";
+    "fieldget <Maze3D: java.awt.TextField message>"->"virtualinvoke <java.awt.Container: java.awt.Component add(java.lang.String,java.awt.Component)>";
+    "virtualinvoke <java.awt.Container: java.awt.Component add(java.lang.String,java.awt.Component)>"->"pop";
+    "pop"->"load.r r0";
+    "push 600"
+    "load.r r0"->"push 600";
+    "push 350"
+    "push 600"->"push 350";
+    "virtualinvoke <java.applet.Applet: void resize(int,int)>"
+    "push 350"->"virtualinvoke <java.applet.Applet: void resize(int,int)>";
+    "virtualinvoke <java.applet.Applet: void resize(int,int)>"->"load.r r0";
+    "fieldget <Maze3D: boolean hexagonalRooms>"
+    "load.r r0"->"fieldget <Maze3D: boolean hexagonalRooms>";
+    "ifeq load.r r0"
+    "fieldget <Maze3D: boolean hexagonalRooms>"->"ifeq load.r r0";
+    "ifeq load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <Maze3D: java.awt.TextField message>";
+    "push \"Use Home, Up Arrow, PgUp, End, Down Arrow, or PgDn to solve.\""
+    "fieldget <Maze3D: java.awt.TextField message>"->"push \"Use Home, Up Arrow, PgUp, End, Down Arrow, or PgDn to solve.\"";
+    "virtualinvoke <java.awt.TextComponent: void setText(java.lang.String)>"
+    "push \"Use Home, Up Arrow, PgUp, End, Down Arrow, or PgDn to solve.\""->"virtualinvoke <java.awt.TextComponent: void setText(java.lang.String)>";
+    "return"
+    "virtualinvoke <java.awt.TextComponent: void setText(java.lang.String)>"->"return";
+    "ifeq load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <Maze3D: java.awt.TextField message>";
+    "push \"Use the arrow keys to solve.\""
+    "fieldget <Maze3D: java.awt.TextField message>"->"push \"Use the arrow keys to solve.\"";
+    "push \"Use the arrow keys to solve.\""->"virtualinvoke <java.awt.TextComponent: void setText(java.lang.String)>";
+    "virtualinvoke <java.awt.TextComponent: void setText(java.lang.String)>"->"return";
+}

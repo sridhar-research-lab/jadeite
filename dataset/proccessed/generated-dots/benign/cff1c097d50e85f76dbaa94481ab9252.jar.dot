@@ -1,0 +1,109 @@
+digraph "" {
+    "r0 := @this: NewsPro"
+    "load.r r0"
+    "r0 := @this: NewsPro"->"load.r r0";
+    "push null"
+    "load.r r0"->"push null";
+    "virtualinvoke <java.awt.Container: void setLayout(java.awt.LayoutManager)>"
+    "push null"->"virtualinvoke <java.awt.Container: void setLayout(java.awt.LayoutManager)>";
+    "virtualinvoke <java.awt.Container: void setLayout(java.awt.LayoutManager)>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "virtualinvoke <java.awt.Component: java.awt.Dimension getSize()>"
+    "load.r r0"->"virtualinvoke <java.awt.Component: java.awt.Dimension getSize()>";
+    "fieldput <NewsPro: java.awt.Dimension dim>"
+    "virtualinvoke <java.awt.Component: java.awt.Dimension getSize()>"->"fieldput <NewsPro: java.awt.Dimension dim>";
+    "fieldput <NewsPro: java.awt.Dimension dim>"->"load.r r0";
+    "new Skin"
+    "load.r r0"->"new Skin";
+    "dup1.r"
+    "new Skin"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "specialinvoke <Skin: void <init>(NewsPro)>"
+    "load.r r0"->"specialinvoke <Skin: void <init>(NewsPro)>";
+    "fieldput <NewsPro: Skin skin>"
+    "specialinvoke <Skin: void <init>(NewsPro)>"->"fieldput <NewsPro: Skin skin>";
+    "fieldput <NewsPro: Skin skin>"->"load.r r0";
+    "new RAMLReader"
+    "load.r r0"->"new RAMLReader";
+    "new RAMLReader"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "push \"Newsfile\""
+    "load.r r0"->"push \"Newsfile\"";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"
+    "push \"Newsfile\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "specialinvoke <RAMLReader: void <init>(NewsPro,java.lang.String)>"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"specialinvoke <RAMLReader: void <init>(NewsPro,java.lang.String)>";
+    "fieldput <NewsPro: RAMLReader raml>"
+    "specialinvoke <RAMLReader: void <init>(NewsPro,java.lang.String)>"->"fieldput <NewsPro: RAMLReader raml>";
+    "fieldput <NewsPro: RAMLReader raml>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "push \"delay\""
+    "load.r r0"->"push \"delay\"";
+    "push \"delay\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>";
+    "fieldput <NewsPro: int delayTime>"
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"->"fieldput <NewsPro: int delayTime>";
+    "fieldput <NewsPro: int delayTime>"->"load.r r0";
+    "new java.awt.Color"
+    "load.r r0"->"new java.awt.Color";
+    "new java.awt.Color"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "push \"bgcolor\""
+    "load.r r0"->"push \"bgcolor\"";
+    "push \"bgcolor\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "push 0"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"push 0";
+    "push 3"
+    "push 0"->"push 3";
+    "virtualinvoke <java.lang.String: java.lang.String substring(int,int)>"
+    "push 3"->"virtualinvoke <java.lang.String: java.lang.String substring(int,int)>";
+    "virtualinvoke <java.lang.String: java.lang.String substring(int,int)>"->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>";
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"->"load.r r0";
+    "load.r r0"->"push \"bgcolor\"";
+    "push \"bgcolor\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "push 4"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"push 4";
+    "push 7"
+    "push 4"->"push 7";
+    "push 7"->"virtualinvoke <java.lang.String: java.lang.String substring(int,int)>";
+    "virtualinvoke <java.lang.String: java.lang.String substring(int,int)>"->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>";
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"->"load.r r0";
+    "load.r r0"->"push \"bgcolor\"";
+    "push \"bgcolor\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "push 8"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"push 8";
+    "push 11"
+    "push 8"->"push 11";
+    "push 11"->"virtualinvoke <java.lang.String: java.lang.String substring(int,int)>";
+    "virtualinvoke <java.lang.String: java.lang.String substring(int,int)>"->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>";
+    "specialinvoke <java.awt.Color: void <init>(int,int,int)>"
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"->"specialinvoke <java.awt.Color: void <init>(int,int,int)>";
+    "fieldput <NewsPro: java.awt.Color bgcolor>"
+    "specialinvoke <java.awt.Color: void <init>(int,int,int)>"->"fieldput <NewsPro: java.awt.Color bgcolor>";
+    "fieldput <NewsPro: java.awt.Color bgcolor>"->"load.r r0";
+    "new java.lang.Thread"
+    "load.r r0"->"new java.lang.Thread";
+    "new java.lang.Thread"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "specialinvoke <java.lang.Thread: void <init>(java.lang.Runnable)>"
+    "load.r r0"->"specialinvoke <java.lang.Thread: void <init>(java.lang.Runnable)>";
+    "fieldput <NewsPro: java.lang.Thread newsThread>"
+    "specialinvoke <java.lang.Thread: void <init>(java.lang.Runnable)>"->"fieldput <NewsPro: java.lang.Thread newsThread>";
+    "fieldput <NewsPro: java.lang.Thread newsThread>"->"load.r r0";
+    "fieldget <NewsPro: java.lang.Thread newsThread>"
+    "load.r r0"->"fieldget <NewsPro: java.lang.Thread newsThread>";
+    "virtualinvoke <java.lang.Thread: void start()>"
+    "fieldget <NewsPro: java.lang.Thread newsThread>"->"virtualinvoke <java.lang.Thread: void start()>";
+    "virtualinvoke <java.lang.Thread: void start()>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "virtualinvoke <java.awt.Component: void addMouseMotionListener(java.awt.event.MouseMotionListener)>"
+    "load.r r0"->"virtualinvoke <java.awt.Component: void addMouseMotionListener(java.awt.event.MouseMotionListener)>";
+    "virtualinvoke <java.awt.Component: void addMouseMotionListener(java.awt.event.MouseMotionListener)>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "virtualinvoke <java.awt.Component: void addMouseListener(java.awt.event.MouseListener)>"
+    "load.r r0"->"virtualinvoke <java.awt.Component: void addMouseListener(java.awt.event.MouseListener)>";
+    "return"
+    "virtualinvoke <java.awt.Component: void addMouseListener(java.awt.event.MouseListener)>"->"return";
+}

@@ -1,0 +1,2599 @@
+digraph "" {
+    "r0 := @this: Marquee"
+    "load.r r0"
+    "r0 := @this: Marquee"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "virtualinvoke <java.applet.Applet: java.net.URL getDocumentBase()>"
+    "load.r r0"->"virtualinvoke <java.applet.Applet: java.net.URL getDocumentBase()>";
+    "virtualinvoke <java.net.URL: java.lang.String getHost()>"
+    "virtualinvoke <java.applet.Applet: java.net.URL getDocumentBase()>"->"virtualinvoke <java.net.URL: java.lang.String getHost()>";
+    "virtualinvoke <java.lang.String: java.lang.String toLowerCase()>"
+    "virtualinvoke <java.net.URL: java.lang.String getHost()>"->"virtualinvoke <java.lang.String: java.lang.String toLowerCase()>";
+    "fieldput <Marquee: java.lang.String host>"
+    "virtualinvoke <java.lang.String: java.lang.String toLowerCase()>"->"fieldput <Marquee: java.lang.String host>";
+    "new java.awt.MediaTracker"
+    "fieldput <Marquee: java.lang.String host>"->"new java.awt.MediaTracker";
+    "store.r $r5"
+    "new java.awt.MediaTracker"->"store.r $r5";
+    "load.r $r5"
+    "store.r $r5"->"load.r $r5";
+    "load.r $r5"->"load.r r0";
+    "specialinvoke <java.awt.MediaTracker: void <init>(java.awt.Component)>"
+    "load.r r0"->"specialinvoke <java.awt.MediaTracker: void <init>(java.awt.Component)>";
+    "specialinvoke <java.awt.MediaTracker: void <init>(java.awt.Component)>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "virtualinvoke <java.awt.Component: java.awt.Dimension size()>"
+    "load.r r0"->"virtualinvoke <java.awt.Component: java.awt.Dimension size()>";
+    "fieldget <java.awt.Dimension: int width>"
+    "virtualinvoke <java.awt.Component: java.awt.Dimension size()>"->"fieldget <java.awt.Dimension: int width>";
+    "fieldput <Marquee: int appletWidth>"
+    "fieldget <java.awt.Dimension: int width>"->"fieldput <Marquee: int appletWidth>";
+    "fieldput <Marquee: int appletWidth>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"virtualinvoke <java.awt.Component: java.awt.Dimension size()>";
+    "fieldget <java.awt.Dimension: int height>"
+    "virtualinvoke <java.awt.Component: java.awt.Dimension size()>"->"fieldget <java.awt.Dimension: int height>";
+    "fieldput <Marquee: int appletHeight>"
+    "fieldget <java.awt.Dimension: int height>"->"fieldput <Marquee: int appletHeight>";
+    "fieldput <Marquee: int appletHeight>"->"load.r r0";
+    "fieldget <Marquee: int appletWidth>"
+    "load.r r0"->"fieldget <Marquee: int appletWidth>";
+    "ifne load.r r0"
+    "fieldget <Marquee: int appletWidth>"->"ifne load.r r0";
+    "ifne load.r r0"->"load.r r0";
+    "push \"WIDTH\""
+    "load.r r0"->"push \"WIDTH\"";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"
+    "push \"WIDTH\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "store.r $r169"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"store.r $r169";
+    "load.r $r169"
+    "store.r $r169"->"load.r $r169";
+    "ifnull load.r r0"
+    "load.r $r169"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r r0";
+    "load.r r0"->"load.r $r169";
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"
+    "load.r $r169"->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>";
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"->"fieldput <Marquee: int appletWidth>";
+    "fieldput <Marquee: int appletWidth>"->"load.r r0";
+    "fieldget <Marquee: int appletHeight>"
+    "load.r r0"->"fieldget <Marquee: int appletHeight>";
+    "fieldget <Marquee: int appletHeight>"->"ifne load.r r0";
+    "ifne load.r r0"->"load.r r0";
+    "push \"HEIGHT\""
+    "load.r r0"->"push \"HEIGHT\"";
+    "push \"HEIGHT\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"store.r $r169";
+    "store.r $r169"->"load.r $r169";
+    "load.r $r169"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r r0";
+    "load.r r0"->"load.r $r169";
+    "load.r $r169"->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>";
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"->"fieldput <Marquee: int appletHeight>";
+    "fieldput <Marquee: int appletHeight>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "virtualinvoke <java.awt.Component: java.awt.Graphics getGraphics()>"
+    "load.r r0"->"virtualinvoke <java.awt.Component: java.awt.Graphics getGraphics()>";
+    "fieldput <Marquee: java.awt.Graphics g>"
+    "virtualinvoke <java.awt.Component: java.awt.Graphics getGraphics()>"->"fieldput <Marquee: java.awt.Graphics g>";
+    "fieldput <Marquee: java.awt.Graphics g>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <Marquee: int appletWidth>";
+    "fieldget <Marquee: int appletWidth>"->"load.r r0";
+    "load.r r0"->"fieldget <Marquee: int appletHeight>";
+    "virtualinvoke <java.awt.Component: java.awt.Image createImage(int,int)>"
+    "fieldget <Marquee: int appletHeight>"->"virtualinvoke <java.awt.Component: java.awt.Image createImage(int,int)>";
+    "fieldput <Marquee: java.awt.Image offScrImage>"
+    "virtualinvoke <java.awt.Component: java.awt.Image createImage(int,int)>"->"fieldput <Marquee: java.awt.Image offScrImage>";
+    "fieldput <Marquee: java.awt.Image offScrImage>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "fieldget <Marquee: java.awt.Image offScrImage>"
+    "load.r r0"->"fieldget <Marquee: java.awt.Image offScrImage>";
+    "virtualinvoke <java.awt.Image: java.awt.Graphics getGraphics()>"
+    "fieldget <Marquee: java.awt.Image offScrImage>"->"virtualinvoke <java.awt.Image: java.awt.Graphics getGraphics()>";
+    "fieldput <Marquee: java.awt.Graphics offScrGC>"
+    "virtualinvoke <java.awt.Image: java.awt.Graphics getGraphics()>"->"fieldput <Marquee: java.awt.Graphics offScrGC>";
+    "fieldput <Marquee: java.awt.Graphics offScrGC>"->"load.r r0";
+    "push \"REGISTRATION\""
+    "load.r r0"->"push \"REGISTRATION\"";
+    "push \"REGISTRATION\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "store.r $r290"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"store.r $r290";
+    "load.r $r290"
+    "store.r $r290"->"load.r $r290";
+    "load.r $r290"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r r0";
+    "push 0"
+    "load.r r0"->"push 0";
+    "fieldput <Marquee: boolean demoMode>"
+    "push 0"->"fieldput <Marquee: boolean demoMode>";
+    "new java.util.StringTokenizer"
+    "fieldput <Marquee: boolean demoMode>"->"new java.util.StringTokenizer";
+    "new java.util.StringTokenizer"->"store.r $r169";
+    "store.r $r169"->"load.r $r169";
+    "load.r $r169"->"load.r r0";
+    "load.r r0"->"load.r $r290";
+    "specialinvoke <Marquee: java.lang.String loadFile(java.lang.String)>"
+    "load.r $r290"->"specialinvoke <Marquee: java.lang.String loadFile(java.lang.String)>";
+    "push \";\""
+    "specialinvoke <Marquee: java.lang.String loadFile(java.lang.String)>"->"push \";\"";
+    "specialinvoke <java.util.StringTokenizer: void <init>(java.lang.String,java.lang.String)>"
+    "push \";\""->"specialinvoke <java.util.StringTokenizer: void <init>(java.lang.String,java.lang.String)>";
+    "goto load.r $r169"
+    "specialinvoke <java.util.StringTokenizer: void <init>(java.lang.String,java.lang.String)>"->"goto load.r $r169";
+    "goto load.r $r169"->"load.r $r169";
+    "virtualinvoke <java.util.StringTokenizer: boolean hasMoreTokens()>"
+    "load.r $r169"->"virtualinvoke <java.util.StringTokenizer: boolean hasMoreTokens()>";
+    "virtualinvoke <java.util.StringTokenizer: boolean hasMoreTokens()>"->"ifne load.r r0";
+    "goto load.r r0"
+    "ifne load.r r0"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "fieldget <Marquee: boolean demoMode>"
+    "load.r r0"->"fieldget <Marquee: boolean demoMode>";
+    "ifne staticget <java.lang.System: java.io.PrintStream out>"
+    "fieldget <Marquee: boolean demoMode>"->"ifne staticget <java.lang.System: java.io.PrintStream out>";
+    "ifne staticget <java.lang.System: java.io.PrintStream out>"->"load.r r0";
+    "push 1"
+    "load.r r0"->"push 1";
+    "fieldput <Marquee: boolean pirated>"
+    "push 1"->"fieldput <Marquee: boolean pirated>";
+    "fieldput <Marquee: boolean pirated>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "fieldget <Marquee: java.lang.String host>"
+    "load.r r0"->"fieldget <Marquee: java.lang.String host>";
+    "specialinvoke <Marquee: java.lang.String hashValue(java.lang.String)>"
+    "fieldget <Marquee: java.lang.String host>"->"specialinvoke <Marquee: java.lang.String hashValue(java.lang.String)>";
+    "specialinvoke <Marquee: java.lang.String hashValue(java.lang.String)>"->"store.r $r169";
+    "store.r $r169"->"load.r r0";
+    "load.r r0"->"fieldget <Marquee: java.lang.String host>";
+    "push \"\""
+    "fieldget <Marquee: java.lang.String host>"->"push \"\"";
+    "virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>"
+    "push \"\""->"virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>";
+    "virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>"->"ifne load.r r0";
+    "ifne load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <Marquee: java.lang.String host>";
+    "push \"localhost\""
+    "fieldget <Marquee: java.lang.String host>"->"push \"localhost\"";
+    "push \"localhost\""->"virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>";
+    "virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>"->"ifne load.r r0";
+    "ifne load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <Marquee: java.lang.String host>";
+    "push \"127.0.0.1\""
+    "fieldget <Marquee: java.lang.String host>"->"push \"127.0.0.1\"";
+    "push \"127.0.0.1\""->"virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>";
+    "ifeq push 0"
+    "virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>"->"ifeq push 0";
+    "ifeq push 0"->"load.r r0";
+    "load.r r0"->"push 0";
+    "push 0"->"fieldput <Marquee: boolean pirated>";
+    "fieldput <Marquee: boolean pirated>"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "fieldget <Marquee: boolean pirated>"
+    "load.r r0"->"fieldget <Marquee: boolean pirated>";
+    "fieldget <Marquee: boolean pirated>"->"push 1";
+    "ifcmpne.b staticget <java.lang.System: java.io.PrintStream out>"
+    "push 1"->"ifcmpne.b staticget <java.lang.System: java.io.PrintStream out>";
+    "ifcmpne.b staticget <java.lang.System: java.io.PrintStream out>"->"new java.util.StringTokenizer";
+    "new java.util.StringTokenizer"->"store.r $r169";
+    "store.r $r169"->"load.r $r169";
+    "load.r $r169"->"load.r r0";
+    "load.r r0"->"fieldget <Marquee: java.lang.String host>";
+    "push \".\""
+    "fieldget <Marquee: java.lang.String host>"->"push \".\"";
+    "push \".\""->"specialinvoke <java.util.StringTokenizer: void <init>(java.lang.String,java.lang.String)>";
+    "specialinvoke <java.util.StringTokenizer: void <init>(java.lang.String,java.lang.String)>"->"push 0";
+    "store.i $r290"
+    "push 0"->"store.i $r290";
+    "store.i $r290"->"goto load.r $r169";
+    "goto load.r $r169"->"load.r $r169";
+    "load.r $r169"->"virtualinvoke <java.util.StringTokenizer: boolean hasMoreTokens()>";
+    "virtualinvoke <java.util.StringTokenizer: boolean hasMoreTokens()>"->"ifne load.r r0";
+    "load.i $r290"
+    "ifne load.r r0"->"load.i $r290";
+    "push 2"
+    "load.i $r290"->"push 2";
+    "ifcmplt.i load.r r0"
+    "push 2"->"ifcmplt.i load.r r0";
+    "ifcmplt.i load.r r0"->"load.r r0";
+    "new java.lang.StringBuffer"
+    "load.r r0"->"new java.lang.StringBuffer";
+    "dup1.r"
+    "new java.lang.StringBuffer"->"dup1.r";
+    "specialinvoke <java.lang.StringBuffer: void <init>()>"
+    "dup1.r"->"specialinvoke <java.lang.StringBuffer: void <init>()>";
+    "specialinvoke <java.lang.StringBuffer: void <init>()>"->"load.r r0";
+    "fieldget <Marquee: java.lang.String[] theHost>"
+    "load.r r0"->"fieldget <Marquee: java.lang.String[] theHost>";
+    "fieldget <Marquee: java.lang.String[] theHost>"->"load.i $r290";
+    "load.i $r290"->"push 2";
+    "sub.i"
+    "push 2"->"sub.i";
+    "arrayread.r"
+    "sub.i"->"arrayread.r";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"
+    "arrayread.r"->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"push \".\"";
+    "push \".\""->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"load.r r0";
+    "load.r r0"->"fieldget <Marquee: java.lang.String[] theHost>";
+    "fieldget <Marquee: java.lang.String[] theHost>"->"load.i $r290";
+    "load.i $r290"->"push 1";
+    "push 1"->"sub.i";
+    "sub.i"->"arrayread.r";
+    "arrayread.r"->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>"
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>"->"specialinvoke <Marquee: java.lang.String hashValue(java.lang.String)>";
+    "specialinvoke <Marquee: java.lang.String hashValue(java.lang.String)>"->"store.r $r169";
+    "store.r $r169"->"push 0";
+    "push 0"->"store.i $r290";
+    "goto load.i $r290"
+    "store.i $r290"->"goto load.i $r290";
+    "goto load.i $r290"->"load.i $r290";
+    "load.i $r290"->"load.r r0";
+    "fieldget <Marquee: java.util.Vector regEntry>"
+    "load.r r0"->"fieldget <Marquee: java.util.Vector regEntry>";
+    "virtualinvoke <java.util.Vector: int size()>"
+    "fieldget <Marquee: java.util.Vector regEntry>"->"virtualinvoke <java.util.Vector: int size()>";
+    "virtualinvoke <java.util.Vector: int size()>"->"push 1";
+    "push 1"->"sub.i";
+    "ifcmple.i load.r r0"
+    "sub.i"->"ifcmple.i load.r r0";
+    "goto staticget <java.lang.System: java.io.PrintStream out>"
+    "ifcmple.i load.r r0"->"goto staticget <java.lang.System: java.io.PrintStream out>";
+    "staticget <java.lang.System: java.io.PrintStream out>"
+    "goto staticget <java.lang.System: java.io.PrintStream out>"->"staticget <java.lang.System: java.io.PrintStream out>";
+    "staticget <java.lang.System: java.io.PrintStream out>"->"load.r r0";
+    "virtualinvoke <Marquee: java.lang.String getAppletInfo()>"
+    "load.r r0"->"virtualinvoke <Marquee: java.lang.String getAppletInfo()>";
+    "virtualinvoke <java.io.PrintStream: void println(java.lang.String)>"
+    "virtualinvoke <Marquee: java.lang.String getAppletInfo()>"->"virtualinvoke <java.io.PrintStream: void println(java.lang.String)>";
+    "virtualinvoke <java.io.PrintStream: void println(java.lang.String)>"->"load.r r0";
+    "load.r r0"->"fieldget <Marquee: boolean pirated>";
+    "ifeq load.r r0"
+    "fieldget <Marquee: boolean pirated>"->"ifeq load.r r0";
+    "ifeq load.r r0"->"load.r r0";
+    "fieldget <Marquee: java.lang.String[] messages>"
+    "load.r r0"->"fieldget <Marquee: java.lang.String[] messages>";
+    "fieldget <Marquee: java.lang.String[] messages>"->"push 0";
+    "push \"Security Violation! Click on applet for product information.\""
+    "push 0"->"push \"Security Violation! Click on applet for product information.\"";
+    "arraywrite.r"
+    "push \"Security Violation! Click on applet for product information.\""->"arraywrite.r";
+    "arraywrite.r"->"load.r r0";
+    "load.r r0"->"push 0";
+    "fieldput <Marquee: int messageCount>"
+    "push 0"->"fieldput <Marquee: int messageCount>";
+    "fieldput <Marquee: int messageCount>"->"load.r r0";
+    "load.r r0"->"push 0";
+    "fieldput <Marquee: int messageIndex>"
+    "push 0"->"fieldput <Marquee: int messageIndex>";
+    "fieldput <Marquee: int messageIndex>"->"load.r r0";
+    "new java.awt.Color"
+    "load.r r0"->"new java.awt.Color";
+    "new java.awt.Color"->"dup1.r";
+    "dup1.r"->"push 0";
+    "push 0"->"push 0";
+    "push 255"
+    "push 0"->"push 255";
+    "specialinvoke <java.awt.Color: void <init>(int,int,int)>"
+    "push 255"->"specialinvoke <java.awt.Color: void <init>(int,int,int)>";
+    "fieldput <Marquee: java.awt.Color winColor>"
+    "specialinvoke <java.awt.Color: void <init>(int,int,int)>"->"fieldput <Marquee: java.awt.Color winColor>";
+    "fieldput <Marquee: java.awt.Color winColor>"->"load.r r0";
+    "fieldget <Marquee: java.awt.Color[] textColor>"
+    "load.r r0"->"fieldget <Marquee: java.awt.Color[] textColor>";
+    "fieldget <Marquee: java.awt.Color[] textColor>"->"push 0";
+    "push 0"->"new java.awt.Color";
+    "new java.awt.Color"->"dup1.r";
+    "dup1.r"->"push 255";
+    "push 255"->"push 255";
+    "push 255"->"push 0";
+    "push 0"->"specialinvoke <java.awt.Color: void <init>(int,int,int)>";
+    "specialinvoke <java.awt.Color: void <init>(int,int,int)>"->"arraywrite.r";
+    "arraywrite.r"->"load.r r0";
+    "fieldget <Marquee: java.awt.Color[] default_textColor>"
+    "load.r r0"->"fieldget <Marquee: java.awt.Color[] default_textColor>";
+    "fieldget <Marquee: java.awt.Color[] default_textColor>"->"push 0";
+    "push 0"->"load.r r0";
+    "load.r r0"->"fieldget <Marquee: java.awt.Color[] textColor>";
+    "fieldget <Marquee: java.awt.Color[] textColor>"->"push 0";
+    "push 0"->"arrayread.r";
+    "arrayread.r"->"arraywrite.r";
+    "arraywrite.r"->"load.r r0";
+    "fieldget <Marquee: boolean[] dropShadow>"
+    "load.r r0"->"fieldget <Marquee: boolean[] dropShadow>";
+    "fieldget <Marquee: boolean[] dropShadow>"->"push 0";
+    "push 0"->"push 1";
+    "arraywrite.b"
+    "push 1"->"arraywrite.b";
+    "arraywrite.b"->"load.r r0";
+    "fieldget <Marquee: int[] shadowXOffset>"
+    "load.r r0"->"fieldget <Marquee: int[] shadowXOffset>";
+    "fieldget <Marquee: int[] shadowXOffset>"->"push 0";
+    "push 0"->"push 2";
+    "arraywrite.i"
+    "push 2"->"arraywrite.i";
+    "arraywrite.i"->"load.r r0";
+    "fieldget <Marquee: int[] shadowYOffset>"
+    "load.r r0"->"fieldget <Marquee: int[] shadowYOffset>";
+    "fieldget <Marquee: int[] shadowYOffset>"->"push 0";
+    "push 0"->"push 2";
+    "push 2"->"arraywrite.i";
+    "arraywrite.i"->"load.r r0";
+    "fieldget <Marquee: java.awt.Color[] shadowColor>"
+    "load.r r0"->"fieldget <Marquee: java.awt.Color[] shadowColor>";
+    "fieldget <Marquee: java.awt.Color[] shadowColor>"->"push 0";
+    "staticget <java.awt.Color: java.awt.Color black>"
+    "push 0"->"staticget <java.awt.Color: java.awt.Color black>";
+    "staticget <java.awt.Color: java.awt.Color black>"->"arraywrite.r";
+    "arraywrite.r"->"load.r r0";
+    "fieldget <Marquee: int[] mode>"
+    "load.r r0"->"fieldget <Marquee: int[] mode>";
+    "fieldget <Marquee: int[] mode>"->"push 0";
+    "push 0"->"push 1";
+    "push 1"->"arraywrite.i";
+    "arraywrite.i"->"load.r r0";
+    "load.r r0"->"push 1";
+    "fieldput <Marquee: int mode1>"
+    "push 1"->"fieldput <Marquee: int mode1>";
+    "fieldput <Marquee: int mode1>"->"load.r r0";
+    "fieldget <Marquee: int[] delay>"
+    "load.r r0"->"fieldget <Marquee: int[] delay>";
+    "fieldget <Marquee: int[] delay>"->"push 0";
+    "push 20"
+    "push 0"->"push 20";
+    "push 20"->"arraywrite.i";
+    "arraywrite.i"->"load.r r0";
+    "fieldget <Marquee: java.applet.AudioClip[] soundClip>"
+    "load.r r0"->"fieldget <Marquee: java.applet.AudioClip[] soundClip>";
+    "fieldget <Marquee: java.applet.AudioClip[] soundClip>"->"push 0";
+    "push null"
+    "push 0"->"push null";
+    "push null"->"arraywrite.r";
+    "arraywrite.r"->"load.r r0";
+    "fieldget <Marquee: java.awt.Image[] images>"
+    "load.r r0"->"fieldget <Marquee: java.awt.Image[] images>";
+    "fieldget <Marquee: java.awt.Image[] images>"->"push 0";
+    "push 0"->"push null";
+    "push null"->"arraywrite.r";
+    "arraywrite.r"->"load.r r0";
+    "fieldget <Marquee: java.lang.String[] default_messages>"
+    "load.r r0"->"fieldget <Marquee: java.lang.String[] default_messages>";
+    "fieldget <Marquee: java.lang.String[] default_messages>"->"push 0";
+    "push 0"->"push \"\"";
+    "push \"\""->"arraywrite.r";
+    "arraywrite.r"->"load.r r0";
+    "fieldget <Marquee: java.lang.String[] font_type>"
+    "load.r r0"->"fieldget <Marquee: java.lang.String[] font_type>";
+    "fieldget <Marquee: java.lang.String[] font_type>"->"push 0";
+    "push \"TimesRoman\""
+    "push 0"->"push \"TimesRoman\"";
+    "push \"TimesRoman\""->"arraywrite.r";
+    "arraywrite.r"->"load.r r0";
+    "fieldget <Marquee: int[] font_style>"
+    "load.r r0"->"fieldget <Marquee: int[] font_style>";
+    "fieldget <Marquee: int[] font_style>"->"push 0";
+    "push 0"->"push 1";
+    "push 1"->"arraywrite.i";
+    "arraywrite.i"->"load.r r0";
+    "fieldget <Marquee: int[] font_size>"
+    "load.r r0"->"fieldget <Marquee: int[] font_size>";
+    "fieldget <Marquee: int[] font_size>"->"push 0";
+    "push 18"
+    "push 0"->"push 18";
+    "push 18"->"arraywrite.i";
+    "arraywrite.i"->"load.r r0";
+    "fieldget <Marquee: java.awt.Font[] myFont>"
+    "load.r r0"->"fieldget <Marquee: java.awt.Font[] myFont>";
+    "fieldget <Marquee: java.awt.Font[] myFont>"->"push 0";
+    "new java.awt.Font"
+    "push 0"->"new java.awt.Font";
+    "new java.awt.Font"->"dup1.r";
+    "dup1.r"->"push \"TimesRoman\"";
+    "push \"TimesRoman\""->"load.r r0";
+    "load.r r0"->"fieldget <Marquee: int[] font_style>";
+    "fieldget <Marquee: int[] font_style>"->"push 0";
+    "arrayread.i"
+    "push 0"->"arrayread.i";
+    "arrayread.i"->"load.r r0";
+    "load.r r0"->"fieldget <Marquee: int[] font_size>";
+    "fieldget <Marquee: int[] font_size>"->"push 0";
+    "push 0"->"arrayread.i";
+    "specialinvoke <java.awt.Font: void <init>(java.lang.String,int,int)>"
+    "arrayread.i"->"specialinvoke <java.awt.Font: void <init>(java.lang.String,int,int)>";
+    "specialinvoke <java.awt.Font: void <init>(java.lang.String,int,int)>"->"arraywrite.r";
+    "arraywrite.r"->"load.r r0";
+    "fieldget <Marquee: java.awt.Font[] default_myFont>"
+    "load.r r0"->"fieldget <Marquee: java.awt.Font[] default_myFont>";
+    "fieldget <Marquee: java.awt.Font[] default_myFont>"->"push 0";
+    "push 0"->"load.r r0";
+    "load.r r0"->"fieldget <Marquee: java.awt.Font[] myFont>";
+    "fieldget <Marquee: java.awt.Font[] myFont>"->"push 0";
+    "push 0"->"arrayread.r";
+    "arrayread.r"->"arraywrite.r";
+    "arraywrite.r"->"load.r r0";
+    "fieldget <Marquee: java.awt.Graphics g>"
+    "load.r r0"->"fieldget <Marquee: java.awt.Graphics g>";
+    "fieldget <Marquee: java.awt.Graphics g>"->"load.r r0";
+    "load.r r0"->"fieldget <Marquee: java.awt.Font[] myFont>";
+    "fieldget <Marquee: java.awt.Font[] myFont>"->"push 0";
+    "push 0"->"arrayread.r";
+    "virtualinvoke <java.awt.Graphics: java.awt.FontMetrics getFontMetrics(java.awt.Font)>"
+    "arrayread.r"->"virtualinvoke <java.awt.Graphics: java.awt.FontMetrics getFontMetrics(java.awt.Font)>";
+    "virtualinvoke <java.awt.Graphics: java.awt.FontMetrics getFontMetrics(java.awt.Font)>"->"store.r $r5";
+    "store.r $r5"->"load.r r0";
+    "fieldget <Marquee: int[] msgWidth>"
+    "load.r r0"->"fieldget <Marquee: int[] msgWidth>";
+    "fieldget <Marquee: int[] msgWidth>"->"push 0";
+    "push 0"->"load.r $r5";
+    "load.r $r5"->"load.r r0";
+    "load.r r0"->"fieldget <Marquee: java.lang.String[] messages>";
+    "fieldget <Marquee: java.lang.String[] messages>"->"push 0";
+    "push 0"->"arrayread.r";
+    "virtualinvoke <java.awt.FontMetrics: int stringWidth(java.lang.String)>"
+    "arrayread.r"->"virtualinvoke <java.awt.FontMetrics: int stringWidth(java.lang.String)>";
+    "push 4"
+    "virtualinvoke <java.awt.FontMetrics: int stringWidth(java.lang.String)>"->"push 4";
+    "add.i"
+    "push 4"->"add.i";
+    "add.i"->"arraywrite.i";
+    "arraywrite.i"->"load.r r0";
+    "fieldget <Marquee: int[] longLineWidth>"
+    "load.r r0"->"fieldget <Marquee: int[] longLineWidth>";
+    "fieldget <Marquee: int[] longLineWidth>"->"push 0";
+    "push 0"->"load.r r0";
+    "load.r r0"->"fieldget <Marquee: int[] msgWidth>";
+    "fieldget <Marquee: int[] msgWidth>"->"push 0";
+    "push 0"->"arrayread.i";
+    "arrayread.i"->"arraywrite.i";
+    "arraywrite.i"->"load.r r0";
+    "fieldget <Marquee: int[] scrollIn>"
+    "load.r r0"->"fieldget <Marquee: int[] scrollIn>";
+    "fieldget <Marquee: int[] scrollIn>"->"push 0";
+    "push 0"->"push 1";
+    "push 1"->"arraywrite.i";
+    "arraywrite.i"->"load.r r0";
+    "fieldget <Marquee: int[] scrollPause>"
+    "load.r r0"->"fieldget <Marquee: int[] scrollPause>";
+    "fieldget <Marquee: int[] scrollPause>"->"push 0";
+    "push 0"->"push 0";
+    "push 0"->"arraywrite.i";
+    "arraywrite.i"->"load.r r0";
+    "fieldget <Marquee: int[] scrollOut>"
+    "load.r r0"->"fieldget <Marquee: int[] scrollOut>";
+    "fieldget <Marquee: int[] scrollOut>"->"push 0";
+    "push 0"->"push 1";
+    "push 1"->"arraywrite.i";
+    "arraywrite.i"->"load.r r0";
+    "fieldget <Marquee: int[] default_x_pos>"
+    "load.r r0"->"fieldget <Marquee: int[] default_x_pos>";
+    "fieldget <Marquee: int[] default_x_pos>"->"push 0";
+    "push 0"->"load.r r0";
+    "load.r r0"->"fieldget <Marquee: int appletWidth>";
+    "fieldget <Marquee: int appletWidth>"->"load.r r0";
+    "load.r r0"->"fieldget <Marquee: int[] msgWidth>";
+    "fieldget <Marquee: int[] msgWidth>"->"push 0";
+    "push 0"->"arrayread.i";
+    "arrayread.i"->"sub.i";
+    "sub.i"->"push 2";
+    "div.i"
+    "push 2"->"div.i";
+    "div.i"->"arraywrite.i";
+    "arraywrite.i"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <Marquee: int appletWidth>";
+    "push 50"
+    "fieldget <Marquee: int appletWidth>"->"push 50";
+    "push 50"->"add.i";
+    "fieldput <Marquee: int x_pos>"
+    "add.i"->"fieldput <Marquee: int x_pos>";
+    "fieldput <Marquee: int x_pos>"->"load.r r0";
+    "fieldget <Marquee: int[] y_pos>"
+    "load.r r0"->"fieldget <Marquee: int[] y_pos>";
+    "fieldget <Marquee: int[] y_pos>"->"push 0";
+    "push 0"->"load.r r0";
+    "load.r r0"->"fieldget <Marquee: int appletHeight>";
+    "fieldget <Marquee: int appletHeight>"->"load.r $r5";
+    "virtualinvoke <java.awt.FontMetrics: int getAscent()>"
+    "load.r $r5"->"virtualinvoke <java.awt.FontMetrics: int getAscent()>";
+    "virtualinvoke <java.awt.FontMetrics: int getAscent()>"->"sub.i";
+    "sub.i"->"load.r $r5";
+    "virtualinvoke <java.awt.FontMetrics: int getDescent()>"
+    "load.r $r5"->"virtualinvoke <java.awt.FontMetrics: int getDescent()>";
+    "virtualinvoke <java.awt.FontMetrics: int getDescent()>"->"sub.i";
+    "sub.i"->"push 2";
+    "push 2"->"div.i";
+    "div.i"->"load.r $r5";
+    "load.r $r5"->"virtualinvoke <java.awt.FontMetrics: int getAscent()>";
+    "virtualinvoke <java.awt.FontMetrics: int getAscent()>"->"add.i";
+    "add.i"->"arraywrite.i";
+    "arraywrite.i"->"load.r r0";
+    "fieldget <Marquee: int[] default_y_pos>"
+    "load.r r0"->"fieldget <Marquee: int[] default_y_pos>";
+    "fieldget <Marquee: int[] default_y_pos>"->"push 0";
+    "push 0"->"load.r r0";
+    "load.r r0"->"fieldget <Marquee: int[] y_pos>";
+    "fieldget <Marquee: int[] y_pos>"->"push 0";
+    "push 0"->"arrayread.i";
+    "arrayread.i"->"arraywrite.i";
+    "arraywrite.i"->"load.r r0";
+    "load.r r0"->"push null";
+    "fieldput <Marquee: java.lang.String target>"
+    "push null"->"fieldput <Marquee: java.lang.String target>";
+    "fieldput <Marquee: java.lang.String target>"->"load.r r0";
+    "fieldget <Marquee: java.lang.String[] myURL>"
+    "load.r r0"->"fieldget <Marquee: java.lang.String[] myURL>";
+    "fieldget <Marquee: java.lang.String[] myURL>"->"push 0";
+    "push \"http://www.triview.com/marquee-link.html\""
+    "push 0"->"push \"http://www.triview.com/marquee-link.html\"";
+    "push \"http://www.triview.com/marquee-link.html\""->"arraywrite.r";
+    "arraywrite.r"->"load.r r0";
+    "fieldget <Marquee: java.net.URL[] theURL>"
+    "load.r r0"->"fieldget <Marquee: java.net.URL[] theURL>";
+    "fieldget <Marquee: java.net.URL[] theURL>"->"push 0";
+    "new java.net.URL"
+    "push 0"->"new java.net.URL";
+    "new java.net.URL"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "load.r r0"->"fieldget <Marquee: java.lang.String[] myURL>";
+    "fieldget <Marquee: java.lang.String[] myURL>"->"push 0";
+    "push 0"->"arrayread.r";
+    "specialinvoke <java.net.URL: void <init>(java.lang.String)>"
+    "arrayread.r"->"specialinvoke <java.net.URL: void <init>(java.lang.String)>";
+    "specialinvoke <java.net.URL: void <init>(java.lang.String)>"->"arraywrite.r";
+    "return"
+    "arraywrite.r"->"return";
+    "specialinvoke <java.net.URL: void <init>(java.lang.String)>"->"store.r $r5";
+    "store.r $r5"->"load.r r0";
+    "load.r r0"->"fieldget <Marquee: java.net.URL[] theURL>";
+    "fieldget <Marquee: java.net.URL[] theURL>"->"push 0";
+    "push 0"->"push null";
+    "push null"->"arraywrite.r";
+    "arraywrite.r"->"return";
+    "ifeq load.r r0"->"load.r r0";
+    "push \"MESSAGEFILE\""
+    "load.r r0"->"push \"MESSAGEFILE\"";
+    "push \"MESSAGEFILE\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"store.r $r290";
+    "store.r $r290"->"load.r $r290";
+    "load.r $r290"->"ifnull load.r r0";
+    "ifnull load.r r0"->"new java.util.StringTokenizer";
+    "new java.util.StringTokenizer"->"store.r $r169";
+    "store.r $r169"->"load.r $r169";
+    "load.r $r169"->"load.r r0";
+    "load.r r0"->"load.r $r290";
+    "load.r $r290"->"specialinvoke <Marquee: java.lang.String loadFile(java.lang.String)>";
+    "specialinvoke <Marquee: java.lang.String loadFile(java.lang.String)>"->"push \";\"";
+    "push \";\""->"specialinvoke <java.util.StringTokenizer: void <init>(java.lang.String,java.lang.String)>";
+    "specialinvoke <java.util.StringTokenizer: void <init>(java.lang.String,java.lang.String)>"->"push 0";
+    "store.i $r171"
+    "push 0"->"store.i $r171";
+    "store.i $r171"->"goto load.r $r169";
+    "goto load.r $r169"->"load.r $r169";
+    "load.r $r169"->"virtualinvoke <java.util.StringTokenizer: boolean hasMoreTokens()>";
+    "virtualinvoke <java.util.StringTokenizer: boolean hasMoreTokens()>"->"ifne load.r r0";
+    "ifne load.r r0"->"load.r r0";
+    "load.i $r171"
+    "load.r r0"->"load.i $r171";
+    "load.i $r171"->"push 1";
+    "push 1"->"sub.i";
+    "sub.i"->"fieldput <Marquee: int messageCount>";
+    "fieldput <Marquee: int messageCount>"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <Marquee: boolean demoMode>";
+    "fieldget <Marquee: boolean demoMode>"->"ifeq load.r r0";
+    "ifeq load.r r0"->"push 0";
+    "store.i $r169"
+    "push 0"->"store.i $r169";
+    "goto load.i $r169"
+    "store.i $r169"->"goto load.i $r169";
+    "load.i $r169"
+    "goto load.i $r169"->"load.i $r169";
+    "push 19"
+    "load.i $r169"->"push 19";
+    "push 19"->"ifcmple.i load.r r0";
+    "ifcmple.i load.r r0"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "push \"target\""
+    "load.r r0"->"push \"target\"";
+    "push \"target\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"fieldput <Marquee: java.lang.String target>";
+    "fieldput <Marquee: java.lang.String target>"->"load.r r0";
+    "push \"FONT_TYPE\""
+    "load.r r0"->"push \"FONT_TYPE\"";
+    "push \"FONT_TYPE\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"store.r $r290";
+    "store.r $r290"->"load.r $r290";
+    "load.r $r290"->"ifnull load.r r0";
+    "ifnull load.r r0"->"new java.util.StringTokenizer";
+    "new java.util.StringTokenizer"->"store.r $r169";
+    "store.r $r169"->"load.r $r169";
+    "load.r $r169"->"load.r $r290";
+    "load.r $r290"->"push \";\"";
+    "push \";\""->"specialinvoke <java.util.StringTokenizer: void <init>(java.lang.String,java.lang.String)>";
+    "specialinvoke <java.util.StringTokenizer: void <init>(java.lang.String,java.lang.String)>"->"push 0";
+    "push 0"->"store.i $r290";
+    "store.i $r290"->"goto load.r $r169";
+    "goto load.r $r169"->"load.r $r169";
+    "load.r $r169"->"virtualinvoke <java.util.StringTokenizer: boolean hasMoreTokens()>";
+    "virtualinvoke <java.util.StringTokenizer: boolean hasMoreTokens()>"->"ifne load.r r0";
+    "ifne load.r r0"->"load.r r0";
+    "push \"FONT_STYLE\""
+    "load.r r0"->"push \"FONT_STYLE\"";
+    "push \"FONT_STYLE\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"store.r $r290";
+    "store.r $r290"->"load.r $r290";
+    "load.r $r290"->"ifnull load.r r0";
+    "ifnull load.r r0"->"new java.util.StringTokenizer";
+    "new java.util.StringTokenizer"->"store.r $r169";
+    "store.r $r169"->"load.r $r169";
+    "load.r $r169"->"load.r $r290";
+    "load.r $r290"->"push \";\"";
+    "push \";\""->"specialinvoke <java.util.StringTokenizer: void <init>(java.lang.String,java.lang.String)>";
+    "specialinvoke <java.util.StringTokenizer: void <init>(java.lang.String,java.lang.String)>"->"push 0";
+    "push 0"->"store.i $r290";
+    "store.i $r290"->"goto load.r $r169";
+    "goto load.r $r169"->"load.r $r169";
+    "load.r $r169"->"virtualinvoke <java.util.StringTokenizer: boolean hasMoreTokens()>";
+    "ifne load.r $r169"
+    "virtualinvoke <java.util.StringTokenizer: boolean hasMoreTokens()>"->"ifne load.r $r169";
+    "ifne load.r $r169"->"load.r r0";
+    "push \"FONT_SIZE\""
+    "load.r r0"->"push \"FONT_SIZE\"";
+    "push \"FONT_SIZE\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"store.r $r290";
+    "store.r $r290"->"load.r $r290";
+    "load.r $r290"->"ifnull load.r r0";
+    "ifnull load.r r0"->"new java.util.StringTokenizer";
+    "new java.util.StringTokenizer"->"store.r $r169";
+    "store.r $r169"->"load.r $r169";
+    "load.r $r169"->"load.r $r290";
+    "load.r $r290"->"push \";\"";
+    "push \";\""->"specialinvoke <java.util.StringTokenizer: void <init>(java.lang.String,java.lang.String)>";
+    "specialinvoke <java.util.StringTokenizer: void <init>(java.lang.String,java.lang.String)>"->"push 0";
+    "push 0"->"store.i $r290";
+    "store.i $r290"->"goto load.r $r169";
+    "goto load.r $r169"->"load.r $r169";
+    "load.r $r169"->"virtualinvoke <java.util.StringTokenizer: boolean hasMoreTokens()>";
+    "virtualinvoke <java.util.StringTokenizer: boolean hasMoreTokens()>"->"ifne load.r r0";
+    "ifne load.r r0"->"load.r r0";
+    "push \"DELAY\""
+    "load.r r0"->"push \"DELAY\"";
+    "push \"DELAY\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"store.r $r290";
+    "store.r $r290"->"load.r $r290";
+    "load.r $r290"->"ifnull load.r r0";
+    "ifnull load.r r0"->"new java.util.StringTokenizer";
+    "new java.util.StringTokenizer"->"store.r $r169";
+    "store.r $r169"->"load.r $r169";
+    "load.r $r169"->"load.r $r290";
+    "load.r $r290"->"push \";\"";
+    "push \";\""->"specialinvoke <java.util.StringTokenizer: void <init>(java.lang.String,java.lang.String)>";
+    "specialinvoke <java.util.StringTokenizer: void <init>(java.lang.String,java.lang.String)>"->"push 0";
+    "push 0"->"store.i $r290";
+    "store.i $r290"->"goto load.r $r169";
+    "goto load.r $r169"->"load.r $r169";
+    "load.r $r169"->"virtualinvoke <java.util.StringTokenizer: boolean hasMoreTokens()>";
+    "virtualinvoke <java.util.StringTokenizer: boolean hasMoreTokens()>"->"ifne load.r r0";
+    "ifne load.r r0"->"load.r r0";
+    "push \"TYPEWRITERDELAY\""
+    "load.r r0"->"push \"TYPEWRITERDELAY\"";
+    "push \"TYPEWRITERDELAY\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"store.r $r290";
+    "store.r $r290"->"load.r $r290";
+    "load.r $r290"->"ifnull load.r r0";
+    "ifnull load.r r0"->"new java.util.StringTokenizer";
+    "new java.util.StringTokenizer"->"store.r $r169";
+    "store.r $r169"->"load.r $r169";
+    "load.r $r169"->"load.r $r290";
+    "load.r $r290"->"push \";\"";
+    "push \";\""->"specialinvoke <java.util.StringTokenizer: void <init>(java.lang.String,java.lang.String)>";
+    "specialinvoke <java.util.StringTokenizer: void <init>(java.lang.String,java.lang.String)>"->"push 0";
+    "push 0"->"store.i $r290";
+    "store.i $r290"->"goto load.r $r169";
+    "goto load.r $r169"->"load.r $r169";
+    "load.r $r169"->"virtualinvoke <java.util.StringTokenizer: boolean hasMoreTokens()>";
+    "virtualinvoke <java.util.StringTokenizer: boolean hasMoreTokens()>"->"ifne load.r r0";
+    "ifne load.r r0"->"load.r r0";
+    "push \"FADEFRAMES\""
+    "load.r r0"->"push \"FADEFRAMES\"";
+    "push \"FADEFRAMES\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"store.r $r290";
+    "store.r $r290"->"load.r $r290";
+    "load.r $r290"->"ifnull load.r r0";
+    "ifnull load.r r0"->"new java.util.StringTokenizer";
+    "new java.util.StringTokenizer"->"store.r $r169";
+    "store.r $r169"->"load.r $r169";
+    "load.r $r169"->"load.r $r290";
+    "load.r $r290"->"push \";\"";
+    "push \";\""->"specialinvoke <java.util.StringTokenizer: void <init>(java.lang.String,java.lang.String)>";
+    "specialinvoke <java.util.StringTokenizer: void <init>(java.lang.String,java.lang.String)>"->"push 0";
+    "push 0"->"store.i $r290";
+    "store.i $r290"->"goto load.r $r169";
+    "goto load.r $r169"->"load.r $r169";
+    "load.r $r169"->"virtualinvoke <java.util.StringTokenizer: boolean hasMoreTokens()>";
+    "virtualinvoke <java.util.StringTokenizer: boolean hasMoreTokens()>"->"ifne load.r r0";
+    "ifne load.r r0"->"load.r r0";
+    "push \"SOUND\""
+    "load.r r0"->"push \"SOUND\"";
+    "push \"SOUND\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"store.r $r290";
+    "store.r $r290"->"load.r $r290";
+    "load.r $r290"->"ifnull load.r r0";
+    "ifnull load.r r0"->"new java.util.StringTokenizer";
+    "new java.util.StringTokenizer"->"store.r $r169";
+    "store.r $r169"->"load.r $r169";
+    "load.r $r169"->"load.r $r290";
+    "load.r $r290"->"push \";\"";
+    "push \";\""->"specialinvoke <java.util.StringTokenizer: void <init>(java.lang.String,java.lang.String)>";
+    "specialinvoke <java.util.StringTokenizer: void <init>(java.lang.String,java.lang.String)>"->"push 0";
+    "push 0"->"store.i $r290";
+    "store.i $r290"->"goto load.r $r169";
+    "goto load.r $r169"->"load.r $r169";
+    "load.r $r169"->"virtualinvoke <java.util.StringTokenizer: boolean hasMoreTokens()>";
+    "virtualinvoke <java.util.StringTokenizer: boolean hasMoreTokens()>"->"ifne load.r r0";
+    "ifne load.r r0"->"load.r r0";
+    "push \"IMAGES\""
+    "load.r r0"->"push \"IMAGES\"";
+    "push \"IMAGES\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"store.r $r290";
+    "store.r $r290"->"load.r $r290";
+    "load.r $r290"->"ifnull load.r r0";
+    "ifnull load.r r0"->"new java.util.StringTokenizer";
+    "new java.util.StringTokenizer"->"store.r $r169";
+    "store.r $r169"->"load.r $r169";
+    "load.r $r169"->"load.r $r290";
+    "load.r $r290"->"push \";\"";
+    "push \";\""->"specialinvoke <java.util.StringTokenizer: void <init>(java.lang.String,java.lang.String)>";
+    "specialinvoke <java.util.StringTokenizer: void <init>(java.lang.String,java.lang.String)>"->"push 0";
+    "push 0"->"store.i $r290";
+    "store.i $r290"->"goto load.r $r169";
+    "goto load.r $r169"->"load.r $r169";
+    "load.r $r169"->"virtualinvoke <java.util.StringTokenizer: boolean hasMoreTokens()>";
+    "virtualinvoke <java.util.StringTokenizer: boolean hasMoreTokens()>"->"ifne load.r $r169";
+    "ifne load.r $r169"->"load.r r0";
+    "push \"ALIGNTEXT\""
+    "load.r r0"->"push \"ALIGNTEXT\"";
+    "push \"ALIGNTEXT\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"store.r $r290";
+    "store.r $r290"->"load.r $r290";
+    "load.r $r290"->"ifnull load.r r0";
+    "ifnull load.r r0"->"new java.util.StringTokenizer";
+    "new java.util.StringTokenizer"->"store.r $r169";
+    "store.r $r169"->"load.r $r169";
+    "load.r $r169"->"load.r $r290";
+    "load.r $r290"->"push \";\"";
+    "push \";\""->"specialinvoke <java.util.StringTokenizer: void <init>(java.lang.String,java.lang.String)>";
+    "specialinvoke <java.util.StringTokenizer: void <init>(java.lang.String,java.lang.String)>"->"push 0";
+    "push 0"->"store.i $r290";
+    "store.i $r290"->"goto load.r $r169";
+    "goto load.r $r169"->"load.r $r169";
+    "load.r $r169"->"virtualinvoke <java.util.StringTokenizer: boolean hasMoreTokens()>";
+    "virtualinvoke <java.util.StringTokenizer: boolean hasMoreTokens()>"->"ifne load.r r0";
+    "ifne load.r r0"->"load.r r0";
+    "push \"shadow_toggle\""
+    "load.r r0"->"push \"shadow_toggle\"";
+    "push \"shadow_toggle\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"store.r $r290";
+    "store.r $r290"->"load.r $r290";
+    "load.r $r290"->"ifnull load.r r0";
+    "ifnull load.r r0"->"new java.util.StringTokenizer";
+    "new java.util.StringTokenizer"->"store.r $r169";
+    "store.r $r169"->"load.r $r169";
+    "load.r $r169"->"load.r $r290";
+    "load.r $r290"->"push \";\"";
+    "push \";\""->"specialinvoke <java.util.StringTokenizer: void <init>(java.lang.String,java.lang.String)>";
+    "specialinvoke <java.util.StringTokenizer: void <init>(java.lang.String,java.lang.String)>"->"push 0";
+    "push 0"->"store.i $r290";
+    "store.i $r290"->"goto load.r $r169";
+    "goto load.r $r169"->"load.r $r169";
+    "load.r $r169"->"virtualinvoke <java.util.StringTokenizer: boolean hasMoreTokens()>";
+    "virtualinvoke <java.util.StringTokenizer: boolean hasMoreTokens()>"->"ifne load.r r0";
+    "ifne load.r r0"->"load.r r0";
+    "push \"shadowXoffset\""
+    "load.r r0"->"push \"shadowXoffset\"";
+    "push \"shadowXoffset\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"store.r $r290";
+    "store.r $r290"->"load.r $r290";
+    "load.r $r290"->"ifnull load.r r0";
+    "ifnull load.r r0"->"new java.util.StringTokenizer";
+    "new java.util.StringTokenizer"->"store.r $r169";
+    "store.r $r169"->"load.r $r169";
+    "load.r $r169"->"load.r $r290";
+    "load.r $r290"->"push \";\"";
+    "push \";\""->"specialinvoke <java.util.StringTokenizer: void <init>(java.lang.String,java.lang.String)>";
+    "specialinvoke <java.util.StringTokenizer: void <init>(java.lang.String,java.lang.String)>"->"push 0";
+    "push 0"->"store.i $r290";
+    "store.i $r290"->"goto load.r $r169";
+    "goto load.r $r169"->"load.r $r169";
+    "load.r $r169"->"virtualinvoke <java.util.StringTokenizer: boolean hasMoreTokens()>";
+    "virtualinvoke <java.util.StringTokenizer: boolean hasMoreTokens()>"->"ifne load.r r0";
+    "ifne load.r r0"->"load.r r0";
+    "push \"shadowYoffset\""
+    "load.r r0"->"push \"shadowYoffset\"";
+    "push \"shadowYoffset\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"store.r $r290";
+    "store.r $r290"->"load.r $r290";
+    "load.r $r290"->"ifnull load.r r0";
+    "ifnull load.r r0"->"new java.util.StringTokenizer";
+    "new java.util.StringTokenizer"->"store.r $r169";
+    "store.r $r169"->"load.r $r169";
+    "load.r $r169"->"load.r $r290";
+    "load.r $r290"->"push \";\"";
+    "push \";\""->"specialinvoke <java.util.StringTokenizer: void <init>(java.lang.String,java.lang.String)>";
+    "specialinvoke <java.util.StringTokenizer: void <init>(java.lang.String,java.lang.String)>"->"push 0";
+    "push 0"->"store.i $r290";
+    "store.i $r290"->"goto load.r $r169";
+    "goto load.r $r169"->"load.r $r169";
+    "load.r $r169"->"virtualinvoke <java.util.StringTokenizer: boolean hasMoreTokens()>";
+    "virtualinvoke <java.util.StringTokenizer: boolean hasMoreTokens()>"->"ifne load.r r0";
+    "ifne load.r r0"->"load.r r0";
+    "push \"shadowColor\""
+    "load.r r0"->"push \"shadowColor\"";
+    "push \"shadowColor\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"store.r $r290";
+    "store.r $r290"->"load.r $r290";
+    "load.r $r290"->"ifnull load.r r0";
+    "ifnull load.r r0"->"new java.util.StringTokenizer";
+    "new java.util.StringTokenizer"->"store.r $r169";
+    "store.r $r169"->"load.r $r169";
+    "load.r $r169"->"load.r $r290";
+    "load.r $r290"->"push \";\"";
+    "push \";\""->"specialinvoke <java.util.StringTokenizer: void <init>(java.lang.String,java.lang.String)>";
+    "specialinvoke <java.util.StringTokenizer: void <init>(java.lang.String,java.lang.String)>"->"push 0";
+    "push 0"->"store.i $r290";
+    "store.i $r290"->"goto load.r $r169";
+    "goto load.r $r169"->"load.r $r169";
+    "load.r $r169"->"virtualinvoke <java.util.StringTokenizer: boolean hasMoreTokens()>";
+    "ifne new java.util.StringTokenizer"
+    "virtualinvoke <java.util.StringTokenizer: boolean hasMoreTokens()>"->"ifne new java.util.StringTokenizer";
+    "ifne new java.util.StringTokenizer"->"load.r r0";
+    "push \"WINCOLOR\""
+    "load.r r0"->"push \"WINCOLOR\"";
+    "push \"WINCOLOR\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"store.r $r290";
+    "store.r $r290"->"load.r $r290";
+    "load.r $r290"->"ifnull load.r r0";
+    "ifnull load.r r0"->"new java.util.StringTokenizer";
+    "new java.util.StringTokenizer"->"store.r $r169";
+    "store.r $r169"->"load.r $r169";
+    "load.r $r169"->"load.r $r290";
+    "specialinvoke <java.util.StringTokenizer: void <init>(java.lang.String)>"
+    "load.r $r290"->"specialinvoke <java.util.StringTokenizer: void <init>(java.lang.String)>";
+    "specialinvoke <java.util.StringTokenizer: void <init>(java.lang.String)>"->"load.r r0";
+    "load.r r0"->"load.r $r169";
+    "virtualinvoke <java.util.StringTokenizer: java.lang.String nextToken()>"
+    "load.r $r169"->"virtualinvoke <java.util.StringTokenizer: java.lang.String nextToken()>";
+    "virtualinvoke <java.util.StringTokenizer: java.lang.String nextToken()>"->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>";
+    "fieldput <Marquee: int winColorRed>"
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"->"fieldput <Marquee: int winColorRed>";
+    "fieldput <Marquee: int winColorRed>"->"load.r r0";
+    "load.r r0"->"load.r $r169";
+    "load.r $r169"->"virtualinvoke <java.util.StringTokenizer: java.lang.String nextToken()>";
+    "virtualinvoke <java.util.StringTokenizer: java.lang.String nextToken()>"->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>";
+    "fieldput <Marquee: int winColorGreen>"
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"->"fieldput <Marquee: int winColorGreen>";
+    "fieldput <Marquee: int winColorGreen>"->"load.r r0";
+    "load.r r0"->"load.r $r169";
+    "load.r $r169"->"virtualinvoke <java.util.StringTokenizer: java.lang.String nextToken()>";
+    "virtualinvoke <java.util.StringTokenizer: java.lang.String nextToken()>"->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>";
+    "fieldput <Marquee: int winColorBlue>"
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"->"fieldput <Marquee: int winColorBlue>";
+    "fieldput <Marquee: int winColorBlue>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "push \"BACKGROUNDIMAGE\""
+    "load.r r0"->"push \"BACKGROUNDIMAGE\"";
+    "push \"BACKGROUNDIMAGE\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"store.r $r169";
+    "store.r $r169"->"load.r $r169";
+    "fieldput <Marquee: java.lang.String backgroundImage>"
+    "load.r $r169"->"fieldput <Marquee: java.lang.String backgroundImage>";
+    "fieldput <Marquee: java.lang.String backgroundImage>"->"load.r $r169";
+    "load.r $r169"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r r0";
+    "load.r r0"->"push 1";
+    "fieldput <Marquee: boolean image_toggle>"
+    "push 1"->"fieldput <Marquee: boolean image_toggle>";
+    "fieldput <Marquee: boolean image_toggle>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"virtualinvoke <java.applet.Applet: java.net.URL getDocumentBase()>";
+    "virtualinvoke <java.applet.Applet: java.net.URL getDocumentBase()>"->"load.r r0";
+    "fieldget <Marquee: java.lang.String backgroundImage>"
+    "load.r r0"->"fieldget <Marquee: java.lang.String backgroundImage>";
+    "virtualinvoke <java.applet.Applet: java.awt.Image getImage(java.net.URL,java.lang.String)>"
+    "fieldget <Marquee: java.lang.String backgroundImage>"->"virtualinvoke <java.applet.Applet: java.awt.Image getImage(java.net.URL,java.lang.String)>";
+    "fieldput <Marquee: java.awt.Image background>"
+    "virtualinvoke <java.applet.Applet: java.awt.Image getImage(java.net.URL,java.lang.String)>"->"fieldput <Marquee: java.awt.Image background>";
+    "fieldput <Marquee: java.awt.Image background>"->"load.r $r5";
+    "load.r $r5"->"load.r r0";
+    "fieldget <Marquee: java.awt.Image background>"
+    "load.r r0"->"fieldget <Marquee: java.awt.Image background>";
+    "fieldget <Marquee: java.awt.Image background>"->"push 0";
+    "virtualinvoke <java.awt.MediaTracker: void addImage(java.awt.Image,int)>"
+    "push 0"->"virtualinvoke <java.awt.MediaTracker: void addImage(java.awt.Image,int)>";
+    "virtualinvoke <java.awt.MediaTracker: void addImage(java.awt.Image,int)>"->"load.r r0";
+    "load.r r0"->"new java.awt.Color";
+    "new java.awt.Color"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "fieldget <Marquee: int winColorRed>"
+    "load.r r0"->"fieldget <Marquee: int winColorRed>";
+    "fieldget <Marquee: int winColorRed>"->"load.r r0";
+    "fieldget <Marquee: int winColorGreen>"
+    "load.r r0"->"fieldget <Marquee: int winColorGreen>";
+    "fieldget <Marquee: int winColorGreen>"->"load.r r0";
+    "fieldget <Marquee: int winColorBlue>"
+    "load.r r0"->"fieldget <Marquee: int winColorBlue>";
+    "fieldget <Marquee: int winColorBlue>"->"specialinvoke <java.awt.Color: void <init>(int,int,int)>";
+    "specialinvoke <java.awt.Color: void <init>(int,int,int)>"->"fieldput <Marquee: java.awt.Color winColor>";
+    "fieldput <Marquee: java.awt.Color winColor>"->"push 20";
+    "newarray"
+    "push 20"->"newarray";
+    "newarray"->"store.r $r290";
+    "store.r $r290"->"load.r r0";
+    "push \"TEXTCOLOR\""
+    "load.r r0"->"push \"TEXTCOLOR\"";
+    "push \"TEXTCOLOR\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "store.r $r171"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"store.r $r171";
+    "load.r $r171"
+    "store.r $r171"->"load.r $r171";
+    "ifnull push 20"
+    "load.r $r171"->"ifnull push 20";
+    "ifnull push 20"->"new java.util.StringTokenizer";
+    "new java.util.StringTokenizer"->"store.r $r169";
+    "store.r $r169"->"load.r $r169";
+    "load.r $r169"->"load.r $r171";
+    "load.r $r171"->"push \";\"";
+    "push \";\""->"specialinvoke <java.util.StringTokenizer: void <init>(java.lang.String,java.lang.String)>";
+    "specialinvoke <java.util.StringTokenizer: void <init>(java.lang.String,java.lang.String)>"->"push 0";
+    "store.i i177"
+    "push 0"->"store.i i177";
+    "store.i i177"->"goto load.r $r169";
+    "goto load.r $r169"->"load.r $r169";
+    "load.r $r169"->"virtualinvoke <java.util.StringTokenizer: boolean hasMoreTokens()>";
+    "ifne load.r $r290"
+    "virtualinvoke <java.util.StringTokenizer: boolean hasMoreTokens()>"->"ifne load.r $r290";
+    "ifne load.r $r290"->"push 20";
+    "push 20"->"newarray";
+    "newarray"->"store.r $r290";
+    "store.r $r290"->"load.r r0";
+    "push \"ANIMATION\""
+    "load.r r0"->"push \"ANIMATION\"";
+    "push \"ANIMATION\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"store.r $r171";
+    "store.r $r171"->"load.r $r171";
+    "ifnull push 0"
+    "load.r $r171"->"ifnull push 0";
+    "ifnull push 0"->"new java.util.StringTokenizer";
+    "new java.util.StringTokenizer"->"store.r $r169";
+    "store.r $r169"->"load.r $r169";
+    "load.r $r169"->"load.r $r171";
+    "load.r $r171"->"push \";\"";
+    "push \";\""->"specialinvoke <java.util.StringTokenizer: void <init>(java.lang.String,java.lang.String)>";
+    "specialinvoke <java.util.StringTokenizer: void <init>(java.lang.String,java.lang.String)>"->"push 0";
+    "push 0"->"store.i i177";
+    "store.i i177"->"goto load.r $r169";
+    "goto load.r $r169"->"load.r $r169";
+    "load.r $r169"->"virtualinvoke <java.util.StringTokenizer: boolean hasMoreTokens()>";
+    "virtualinvoke <java.util.StringTokenizer: boolean hasMoreTokens()>"->"ifne load.r $r290";
+    "ifne load.r $r290"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <Marquee: int[] scrollIn>";
+    "fieldget <Marquee: int[] scrollIn>"->"push 0";
+    "push 0"->"arrayread.i";
+    "fieldput <Marquee: int scrollStyle>"
+    "arrayread.i"->"fieldput <Marquee: int scrollStyle>";
+    "goto load.r $r5"
+    "fieldput <Marquee: int scrollStyle>"->"goto load.r $r5";
+    "goto load.r $r5"->"load.r $r5";
+    "virtualinvoke <java.awt.MediaTracker: void waitForAll()>"
+    "load.r $r5"->"virtualinvoke <java.awt.MediaTracker: void waitForAll()>";
+    "virtualinvoke <java.awt.MediaTracker: void waitForAll()>"->"goto load.r $r5";
+    "goto load.r $r5"->"load.r $r5";
+    "virtualinvoke <java.awt.MediaTracker: boolean isErrorAny()>"
+    "load.r $r5"->"virtualinvoke <java.awt.MediaTracker: boolean isErrorAny()>";
+    "virtualinvoke <java.awt.MediaTracker: boolean isErrorAny()>"->"ifeq push 0";
+    "ifeq push 0"->"load.r r0";
+    "load.r r0"->"fieldget <Marquee: java.lang.String[] messages>";
+    "fieldget <Marquee: java.lang.String[] messages>"->"push 0";
+    "push \"A required file could not be loaded!\""
+    "push 0"->"push \"A required file could not be loaded!\"";
+    "push \"A required file could not be loaded!\""->"arraywrite.r";
+    "arraywrite.r"->"load.r r0";
+    "load.r r0"->"fieldget <Marquee: java.lang.String[] default_messages>";
+    "fieldget <Marquee: java.lang.String[] default_messages>"->"push 0";
+    "push 0"->"load.r r0";
+    "load.r r0"->"fieldget <Marquee: java.lang.String[] messages>";
+    "fieldget <Marquee: java.lang.String[] messages>"->"push 0";
+    "push 0"->"arrayread.r";
+    "arrayread.r"->"arraywrite.r";
+    "arraywrite.r"->"load.r r0";
+    "load.r r0"->"push 0";
+    "push 0"->"fieldput <Marquee: int messageCount>";
+    "fieldput <Marquee: int messageCount>"->"load.r r0";
+    "load.r r0"->"fieldget <Marquee: java.awt.Color[] textColor>";
+    "fieldget <Marquee: java.awt.Color[] textColor>"->"push 0";
+    "push 0"->"new java.awt.Color";
+    "new java.awt.Color"->"dup1.r";
+    "dup1.r"->"push 0";
+    "push 0"->"push 0";
+    "push 0"->"push 0";
+    "push 0"->"specialinvoke <java.awt.Color: void <init>(int,int,int)>";
+    "specialinvoke <java.awt.Color: void <init>(int,int,int)>"->"arraywrite.r";
+    "arraywrite.r"->"load.r r0";
+    "load.r r0"->"fieldget <Marquee: java.awt.Color[] default_textColor>";
+    "fieldget <Marquee: java.awt.Color[] default_textColor>"->"push 0";
+    "push 0"->"load.r r0";
+    "load.r r0"->"fieldget <Marquee: java.awt.Color[] textColor>";
+    "fieldget <Marquee: java.awt.Color[] textColor>"->"push 0";
+    "push 0"->"arrayread.r";
+    "arrayread.r"->"arraywrite.r";
+    "arraywrite.r"->"load.r r0";
+    "load.r r0"->"fieldget <Marquee: boolean[] dropShadow>";
+    "fieldget <Marquee: boolean[] dropShadow>"->"push 0";
+    "push 0"->"push 0";
+    "push 0"->"arraywrite.b";
+    "arraywrite.b"->"load.r r0";
+    "load.r r0"->"push 0";
+    "push 0"->"fieldput <Marquee: boolean image_toggle>";
+    "fieldput <Marquee: boolean image_toggle>"->"push 0";
+    "store.i $r5"
+    "push 0"->"store.i $r5";
+    "goto load.i $r5"
+    "store.i $r5"->"goto load.i $r5";
+    "load.i $r5"
+    "goto load.i $r5"->"load.i $r5";
+    "load.i $r5"->"load.r r0";
+    "fieldget <Marquee: int messageCount>"
+    "load.r r0"->"fieldget <Marquee: int messageCount>";
+    "fieldget <Marquee: int messageCount>"->"ifcmple.i load.r r0";
+    "ifcmple.i load.r r0"->"load.r r0";
+    "fieldget <Marquee: int mode2>"
+    "load.r r0"->"fieldget <Marquee: int mode2>";
+    "ifle return"
+    "fieldget <Marquee: int mode2>"->"ifle return";
+    "ifle return"->"load.r r0";
+    "fieldget <Marquee: int mode0>"
+    "load.r r0"->"fieldget <Marquee: int mode0>";
+    "ifne return"
+    "fieldget <Marquee: int mode0>"->"ifne return";
+    "ifne return"->"load.r r0";
+    "fieldget <Marquee: int mode1>"
+    "load.r r0"->"fieldget <Marquee: int mode1>";
+    "fieldget <Marquee: int mode1>"->"ifne return";
+    "ifne return"->"load.r r0";
+    "fieldget <Marquee: int mode3>"
+    "load.r r0"->"fieldget <Marquee: int mode3>";
+    "fieldget <Marquee: int mode3>"->"ifne return";
+    "ifne return"->"load.r r0";
+    "fieldget <Marquee: boolean image_toggle>"
+    "load.r r0"->"fieldget <Marquee: boolean image_toggle>";
+    "fieldget <Marquee: boolean image_toggle>"->"push 1";
+    "ifcmpne.b return"
+    "push 1"->"ifcmpne.b return";
+    "ifcmpne.b return"->"load.r r0";
+    "push \"BANNERMODE\""
+    "load.r r0"->"push \"BANNERMODE\"";
+    "push \"BANNERMODE\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"store.r $r169";
+    "store.r $r169"->"load.r $r169";
+    "ifnull return"
+    "load.r $r169"->"ifnull return";
+    "ifnull return"->"new java.util.StringTokenizer";
+    "new java.util.StringTokenizer"->"store.r $r5";
+    "store.r $r5"->"load.r $r5";
+    "load.r $r5"->"load.r $r169";
+    "load.r $r169"->"push \";\"";
+    "push \";\""->"specialinvoke <java.util.StringTokenizer: void <init>(java.lang.String,java.lang.String)>";
+    "specialinvoke <java.util.StringTokenizer: void <init>(java.lang.String,java.lang.String)>"->"push 0";
+    "push 0"->"store.i $r169";
+    "store.i $r169"->"goto load.r $r5";
+    "goto load.r $r5"->"load.r $r5";
+    "load.r $r5"->"virtualinvoke <java.util.StringTokenizer: boolean hasMoreTokens()>";
+    "virtualinvoke <java.util.StringTokenizer: boolean hasMoreTokens()>"->"ifne load.r r0";
+    "ifne load.r r0"->"return";
+    "ifne load.r r0"->"load.r r0";
+    "fieldget <Marquee: boolean[] bannermode>"
+    "load.r r0"->"fieldget <Marquee: boolean[] bannermode>";
+    "fieldget <Marquee: boolean[] bannermode>"->"load.i $r169";
+    "load.i $r169"->"load.r $r5";
+    "load.r $r5"->"virtualinvoke <java.util.StringTokenizer: java.lang.String nextToken()>";
+    "staticinvoke <java.lang.Boolean: java.lang.Boolean valueOf(java.lang.String)>"
+    "virtualinvoke <java.util.StringTokenizer: java.lang.String nextToken()>"->"staticinvoke <java.lang.Boolean: java.lang.Boolean valueOf(java.lang.String)>";
+    "virtualinvoke <java.lang.Boolean: boolean booleanValue()>"
+    "staticinvoke <java.lang.Boolean: java.lang.Boolean valueOf(java.lang.String)>"->"virtualinvoke <java.lang.Boolean: boolean booleanValue()>";
+    "virtualinvoke <java.lang.Boolean: boolean booleanValue()>"->"arraywrite.b";
+    "inc.i $r169 1"
+    "arraywrite.b"->"inc.i $r169 1";
+    "ifcmple.i load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <Marquee: java.lang.String[] messages>";
+    "fieldget <Marquee: java.lang.String[] messages>"->"load.i $r5";
+    "load.i $r5"->"arrayread.r";
+    "push \"?\""
+    "arrayread.r"->"push \"?\"";
+    "push \"?\""->"virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>";
+    "virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>"->"ifeq load.r r0";
+    "ifeq load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <Marquee: java.awt.Image[] images>";
+    "fieldget <Marquee: java.awt.Image[] images>"->"load.i $r5";
+    "load.i $r5"->"arrayread.r";
+    "ifnonnull load.r r0"
+    "arrayread.r"->"ifnonnull load.r r0";
+    "ifnonnull load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <Marquee: int[] mode>";
+    "fieldget <Marquee: int[] mode>"->"load.i $r5";
+    "load.i $r5"->"push 0";
+    "push 0"->"arraywrite.i";
+    "arraywrite.i"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <Marquee: int mode0>";
+    "fieldget <Marquee: int mode0>"->"push 1";
+    "push 1"->"add.i";
+    "fieldput <Marquee: int mode0>"
+    "add.i"->"fieldput <Marquee: int mode0>";
+    "fieldput <Marquee: int mode0>"->"staticget <java.lang.System: java.io.PrintStream out>";
+    "staticget <java.lang.System: java.io.PrintStream out>"->"new java.lang.StringBuffer";
+    "new java.lang.StringBuffer"->"dup1.r";
+    "dup1.r"->"specialinvoke <java.lang.StringBuffer: void <init>()>";
+    "push \"Error: Message \""
+    "specialinvoke <java.lang.StringBuffer: void <init>()>"->"push \"Error: Message \"";
+    "push \"Error: Message \""->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"load.i $r5";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(int)>"
+    "load.i $r5"->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(int)>";
+    "push \" does not have any text or graphics defined.\""
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(int)>"->"push \" does not have any text or graphics defined.\"";
+    "push \" does not have any text or graphics defined.\""->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>"->"virtualinvoke <java.io.PrintStream: void println(java.lang.String)>";
+    "goto inc.i $r5 1"
+    "virtualinvoke <java.io.PrintStream: void println(java.lang.String)>"->"goto inc.i $r5 1";
+    "inc.i $r5 1"
+    "goto inc.i $r5 1"->"inc.i $r5 1";
+    "ifnonnull load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <Marquee: int[] mode>";
+    "fieldget <Marquee: int[] mode>"->"load.i $r5";
+    "load.i $r5"->"push 2";
+    "push 2"->"arraywrite.i";
+    "arraywrite.i"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <Marquee: int mode2>";
+    "fieldget <Marquee: int mode2>"->"push 1";
+    "push 1"->"add.i";
+    "fieldput <Marquee: int mode2>"
+    "add.i"->"fieldput <Marquee: int mode2>";
+    "fieldput <Marquee: int mode2>"->"load.r r0";
+    "load.r r0"->"fieldget <Marquee: int[] msgWidth>";
+    "fieldget <Marquee: int[] msgWidth>"->"load.i $r5";
+    "load.i $r5"->"load.r r0";
+    "load.r r0"->"fieldget <Marquee: java.awt.Image[] images>";
+    "fieldget <Marquee: java.awt.Image[] images>"->"load.i $r5";
+    "load.i $r5"->"arrayread.r";
+    "arrayread.r"->"load.r r0";
+    "virtualinvoke <java.awt.Image: int getWidth(java.awt.image.ImageObserver)>"
+    "load.r r0"->"virtualinvoke <java.awt.Image: int getWidth(java.awt.image.ImageObserver)>";
+    "virtualinvoke <java.awt.Image: int getWidth(java.awt.image.ImageObserver)>"->"arraywrite.i";
+    "arraywrite.i"->"load.r r0";
+    "fieldget <Marquee: int[] msgHeight>"
+    "load.r r0"->"fieldget <Marquee: int[] msgHeight>";
+    "fieldget <Marquee: int[] msgHeight>"->"load.i $r5";
+    "load.i $r5"->"load.r r0";
+    "load.r r0"->"fieldget <Marquee: java.awt.Image[] images>";
+    "fieldget <Marquee: java.awt.Image[] images>"->"load.i $r5";
+    "load.i $r5"->"arrayread.r";
+    "arrayread.r"->"load.r r0";
+    "virtualinvoke <java.awt.Image: int getHeight(java.awt.image.ImageObserver)>"
+    "load.r r0"->"virtualinvoke <java.awt.Image: int getHeight(java.awt.image.ImageObserver)>";
+    "virtualinvoke <java.awt.Image: int getHeight(java.awt.image.ImageObserver)>"->"arraywrite.i";
+    "arraywrite.i"->"load.r r0";
+    "fieldget <Marquee: int[] lineHeight>"
+    "load.r r0"->"fieldget <Marquee: int[] lineHeight>";
+    "fieldget <Marquee: int[] lineHeight>"->"load.i $r5";
+    "load.i $r5"->"load.r r0";
+    "load.r r0"->"fieldget <Marquee: int[] msgHeight>";
+    "fieldget <Marquee: int[] msgHeight>"->"load.i $r5";
+    "load.i $r5"->"arrayread.i";
+    "arrayread.i"->"arraywrite.i";
+    "arraywrite.i"->"load.r r0";
+    "load.r r0"->"fieldget <Marquee: int[] default_x_pos>";
+    "fieldget <Marquee: int[] default_x_pos>"->"load.i $r5";
+    "load.i $r5"->"load.r r0";
+    "load.r r0"->"fieldget <Marquee: int appletWidth>";
+    "fieldget <Marquee: int appletWidth>"->"load.r r0";
+    "load.r r0"->"fieldget <Marquee: int[] msgWidth>";
+    "fieldget <Marquee: int[] msgWidth>"->"load.i $r5";
+    "load.i $r5"->"arrayread.i";
+    "arrayread.i"->"sub.i";
+    "sub.i"->"push 2";
+    "push 2"->"div.i";
+    "div.i"->"arraywrite.i";
+    "arraywrite.i"->"load.r r0";
+    "load.r r0"->"fieldget <Marquee: int[] default_y_pos>";
+    "fieldget <Marquee: int[] default_y_pos>"->"load.i $r5";
+    "load.i $r5"->"load.r r0";
+    "load.r r0"->"fieldget <Marquee: int appletHeight>";
+    "fieldget <Marquee: int appletHeight>"->"load.r r0";
+    "load.r r0"->"fieldget <Marquee: int[] msgHeight>";
+    "fieldget <Marquee: int[] msgHeight>"->"load.i $r5";
+    "load.i $r5"->"arrayread.i";
+    "arrayread.i"->"sub.i";
+    "sub.i"->"push 2";
+    "push 2"->"div.i";
+    "div.i"->"arraywrite.i";
+    "arraywrite.i"->"load.r r0";
+    "load.r r0"->"fieldget <Marquee: int[] y_pos>";
+    "fieldget <Marquee: int[] y_pos>"->"load.i $r5";
+    "load.i $r5"->"load.r r0";
+    "load.r r0"->"fieldget <Marquee: int[] default_y_pos>";
+    "fieldget <Marquee: int[] default_y_pos>"->"load.i $r5";
+    "load.i $r5"->"arrayread.i";
+    "arrayread.i"->"arraywrite.i";
+    "arraywrite.i"->"load.r r0";
+    "load.r r0"->"fieldget <Marquee: int[] longLineWidth>";
+    "fieldget <Marquee: int[] longLineWidth>"->"load.i $r5";
+    "load.i $r5"->"load.r r0";
+    "load.r r0"->"fieldget <Marquee: int[] msgWidth>";
+    "fieldget <Marquee: int[] msgWidth>"->"load.i $r5";
+    "load.i $r5"->"arrayread.i";
+    "arrayread.i"->"arraywrite.i";
+    "arraywrite.i"->"goto inc.i $r5 1";
+    "ifeq load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <Marquee: java.awt.Image[] images>";
+    "fieldget <Marquee: java.awt.Image[] images>"->"load.i $r5";
+    "load.i $r5"->"arrayread.r";
+    "arrayread.r"->"ifnonnull load.r r0";
+    "ifnonnull load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <Marquee: int[] mode>";
+    "fieldget <Marquee: int[] mode>"->"load.i $r5";
+    "load.i $r5"->"push 1";
+    "push 1"->"arraywrite.i";
+    "arraywrite.i"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <Marquee: int mode1>";
+    "fieldget <Marquee: int mode1>"->"push 1";
+    "push 1"->"add.i";
+    "add.i"->"fieldput <Marquee: int mode1>";
+    "fieldput <Marquee: int mode1>"->"load.r r0";
+    "load.r r0"->"fieldget <Marquee: java.lang.String[] font_type>";
+    "fieldget <Marquee: java.lang.String[] font_type>"->"load.i $r5";
+    "load.i $r5"->"arrayread.r";
+    "arrayread.r"->"ifnonnull load.r r0";
+    "ifnonnull load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <Marquee: java.lang.String[] font_type>";
+    "fieldget <Marquee: java.lang.String[] font_type>"->"load.i $r5";
+    "load.i $r5"->"push \"TimesRoman\"";
+    "push \"TimesRoman\""->"arraywrite.r";
+    "arraywrite.r"->"load.r r0";
+    "load.r r0"->"fieldget <Marquee: java.awt.Font[] default_myFont>";
+    "fieldget <Marquee: java.awt.Font[] default_myFont>"->"load.i $r5";
+    "load.i $r5"->"new java.awt.Font";
+    "new java.awt.Font"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "load.r r0"->"fieldget <Marquee: java.lang.String[] font_type>";
+    "fieldget <Marquee: java.lang.String[] font_type>"->"load.i $r5";
+    "load.i $r5"->"arrayread.r";
+    "arrayread.r"->"load.r r0";
+    "load.r r0"->"fieldget <Marquee: int[] font_style>";
+    "fieldget <Marquee: int[] font_style>"->"load.i $r5";
+    "load.i $r5"->"arrayread.i";
+    "arrayread.i"->"load.r r0";
+    "load.r r0"->"fieldget <Marquee: int[] font_size>";
+    "fieldget <Marquee: int[] font_size>"->"load.i $r5";
+    "load.i $r5"->"arrayread.i";
+    "arrayread.i"->"specialinvoke <java.awt.Font: void <init>(java.lang.String,int,int)>";
+    "specialinvoke <java.awt.Font: void <init>(java.lang.String,int,int)>"->"arraywrite.r";
+    "arraywrite.r"->"load.r r0";
+    "load.r r0"->"fieldget <Marquee: java.awt.Font[] myFont>";
+    "fieldget <Marquee: java.awt.Font[] myFont>"->"load.i $r5";
+    "load.i $r5"->"load.r r0";
+    "load.r r0"->"fieldget <Marquee: java.awt.Font[] default_myFont>";
+    "fieldget <Marquee: java.awt.Font[] default_myFont>"->"load.i $r5";
+    "load.i $r5"->"arrayread.r";
+    "arrayread.r"->"arraywrite.r";
+    "arraywrite.r"->"load.r r0";
+    "load.r r0"->"fieldget <Marquee: java.awt.Graphics g>";
+    "fieldget <Marquee: java.awt.Graphics g>"->"load.r r0";
+    "load.r r0"->"fieldget <Marquee: java.awt.Font[] myFont>";
+    "fieldget <Marquee: java.awt.Font[] myFont>"->"load.i $r5";
+    "load.i $r5"->"arrayread.r";
+    "arrayread.r"->"virtualinvoke <java.awt.Graphics: java.awt.FontMetrics getFontMetrics(java.awt.Font)>";
+    "virtualinvoke <java.awt.Graphics: java.awt.FontMetrics getFontMetrics(java.awt.Font)>"->"store.r $r169";
+    "store.r $r169"->"load.r r0";
+    "fieldget <Marquee: boolean[] multiFlag>"
+    "load.r r0"->"fieldget <Marquee: boolean[] multiFlag>";
+    "fieldget <Marquee: boolean[] multiFlag>"->"load.i $r5";
+    "arrayread.b"
+    "load.i $r5"->"arrayread.b";
+    "arrayread.b"->"ifeq load.r r0";
+    "ifeq load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <Marquee: int[] msgWidth>";
+    "fieldget <Marquee: int[] msgWidth>"->"load.i $r5";
+    "load.i $r5"->"load.r $r169";
+    "load.r $r169"->"load.r r0";
+    "fieldget <Marquee: java.lang.String[][] multiMessages>"
+    "load.r r0"->"fieldget <Marquee: java.lang.String[][] multiMessages>";
+    "fieldget <Marquee: java.lang.String[][] multiMessages>"->"load.i $r5";
+    "load.i $r5"->"arrayread.r";
+    "arrayread.r"->"push 0";
+    "push 0"->"arrayread.r";
+    "arrayread.r"->"virtualinvoke <java.awt.FontMetrics: int stringWidth(java.lang.String)>";
+    "virtualinvoke <java.awt.FontMetrics: int stringWidth(java.lang.String)>"->"push 4";
+    "push 4"->"add.i";
+    "add.i"->"arraywrite.i";
+    "arraywrite.i"->"load.r r0";
+    "load.r r0"->"fieldget <Marquee: int[] msgHeight>";
+    "fieldget <Marquee: int[] msgHeight>"->"load.i $r5";
+    "load.i $r5"->"load.r $r169";
+    "load.r $r169"->"virtualinvoke <java.awt.FontMetrics: int getAscent()>";
+    "virtualinvoke <java.awt.FontMetrics: int getAscent()>"->"load.r $r169";
+    "load.r $r169"->"virtualinvoke <java.awt.FontMetrics: int getDescent()>";
+    "virtualinvoke <java.awt.FontMetrics: int getDescent()>"->"add.i";
+    "add.i"->"load.r r0";
+    "fieldget <Marquee: int[] multiCount>"
+    "load.r r0"->"fieldget <Marquee: int[] multiCount>";
+    "fieldget <Marquee: int[] multiCount>"->"load.i $r5";
+    "load.i $r5"->"arrayread.i";
+    "mul.i"
+    "arrayread.i"->"mul.i";
+    "mul.i"->"arraywrite.i";
+    "arraywrite.i"->"load.r r0";
+    "load.r r0"->"fieldget <Marquee: int[] lineHeight>";
+    "fieldget <Marquee: int[] lineHeight>"->"load.i $r5";
+    "load.i $r5"->"load.r $r169";
+    "load.r $r169"->"virtualinvoke <java.awt.FontMetrics: int getAscent()>";
+    "virtualinvoke <java.awt.FontMetrics: int getAscent()>"->"load.r $r169";
+    "load.r $r169"->"virtualinvoke <java.awt.FontMetrics: int getDescent()>";
+    "virtualinvoke <java.awt.FontMetrics: int getDescent()>"->"add.i";
+    "add.i"->"arraywrite.i";
+    "arraywrite.i"->"load.r r0";
+    "load.r r0"->"fieldget <Marquee: int[] longLineWidth>";
+    "fieldget <Marquee: int[] longLineWidth>"->"load.i $r5";
+    "load.i $r5"->"push 0";
+    "push 0"->"arraywrite.i";
+    "arraywrite.i"->"push 0";
+    "push 0"->"store.i $r290";
+    "store.i $r290"->"goto load.i $r290";
+    "goto load.i $r290"->"load.i $r290";
+    "load.i $r290"->"load.r r0";
+    "load.r r0"->"fieldget <Marquee: int[] multiCount>";
+    "fieldget <Marquee: int[] multiCount>"->"load.i $r5";
+    "load.i $r5"->"arrayread.i";
+    "arrayread.i"->"push 1";
+    "push 1"->"sub.i";
+    "ifcmple.i load.r $r169"
+    "sub.i"->"ifcmple.i load.r $r169";
+    "ifcmple.i load.r $r169"->"load.r r0";
+    "load.r r0"->"fieldget <Marquee: int[] longLineWidth>";
+    "fieldget <Marquee: int[] longLineWidth>"->"load.i $r5";
+    "load.i $r5"->"load.r r0";
+    "load.r r0"->"fieldget <Marquee: int[] longLineWidth>";
+    "fieldget <Marquee: int[] longLineWidth>"->"load.i $r5";
+    "load.i $r5"->"arrayread.i";
+    "arrayread.i"->"push 4";
+    "push 4"->"add.i";
+    "add.i"->"arraywrite.i";
+    "arraywrite.i"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <Marquee: int[] default_x_pos>";
+    "fieldget <Marquee: int[] default_x_pos>"->"load.i $r5";
+    "load.i $r5"->"load.r r0";
+    "load.r r0"->"fieldget <Marquee: int appletWidth>";
+    "fieldget <Marquee: int appletWidth>"->"load.r r0";
+    "load.r r0"->"fieldget <Marquee: int[] msgWidth>";
+    "fieldget <Marquee: int[] msgWidth>"->"load.i $r5";
+    "load.i $r5"->"arrayread.i";
+    "arrayread.i"->"sub.i";
+    "sub.i"->"push 2";
+    "push 2"->"div.i";
+    "div.i"->"arraywrite.i";
+    "arraywrite.i"->"load.r r0";
+    "load.r r0"->"fieldget <Marquee: int[] default_y_pos>";
+    "fieldget <Marquee: int[] default_y_pos>"->"load.i $r5";
+    "load.i $r5"->"load.r r0";
+    "load.r r0"->"fieldget <Marquee: int appletHeight>";
+    "fieldget <Marquee: int appletHeight>"->"load.r r0";
+    "load.r r0"->"fieldget <Marquee: int[] msgHeight>";
+    "fieldget <Marquee: int[] msgHeight>"->"load.i $r5";
+    "load.i $r5"->"arrayread.i";
+    "arrayread.i"->"sub.i";
+    "sub.i"->"push 2";
+    "push 2"->"div.i";
+    "div.i"->"load.r $r169";
+    "load.r $r169"->"virtualinvoke <java.awt.FontMetrics: int getAscent()>";
+    "virtualinvoke <java.awt.FontMetrics: int getAscent()>"->"add.i";
+    "add.i"->"arraywrite.i";
+    "arraywrite.i"->"load.r r0";
+    "load.r r0"->"fieldget <Marquee: int[] y_pos>";
+    "fieldget <Marquee: int[] y_pos>"->"load.i $r5";
+    "load.i $r5"->"load.r r0";
+    "load.r r0"->"fieldget <Marquee: int[] default_y_pos>";
+    "fieldget <Marquee: int[] default_y_pos>"->"load.i $r5";
+    "load.i $r5"->"arrayread.i";
+    "arrayread.i"->"arraywrite.i";
+    "arraywrite.i"->"goto inc.i $r5 1";
+    "ifcmple.i load.r $r169"->"load.r $r169";
+    "load.r $r169"->"load.r r0";
+    "load.r r0"->"fieldget <Marquee: java.lang.String[][] multiMessages>";
+    "fieldget <Marquee: java.lang.String[][] multiMessages>"->"load.i $r5";
+    "load.i $r5"->"arrayread.r";
+    "arrayread.r"->"load.i $r290";
+    "load.i $r290"->"arrayread.r";
+    "arrayread.r"->"virtualinvoke <java.awt.FontMetrics: int stringWidth(java.lang.String)>";
+    "virtualinvoke <java.awt.FontMetrics: int stringWidth(java.lang.String)>"->"load.r r0";
+    "load.r r0"->"fieldget <Marquee: int[] longLineWidth>";
+    "fieldget <Marquee: int[] longLineWidth>"->"load.i $r5";
+    "load.i $r5"->"arrayread.i";
+    "ifcmple.i inc.i $r290 1"
+    "arrayread.i"->"ifcmple.i inc.i $r290 1";
+    "ifcmple.i inc.i $r290 1"->"load.r r0";
+    "load.r r0"->"fieldget <Marquee: int[] longLineWidth>";
+    "fieldget <Marquee: int[] longLineWidth>"->"load.i $r5";
+    "load.i $r5"->"load.r $r169";
+    "load.r $r169"->"load.r r0";
+    "load.r r0"->"fieldget <Marquee: java.lang.String[][] multiMessages>";
+    "fieldget <Marquee: java.lang.String[][] multiMessages>"->"load.i $r5";
+    "load.i $r5"->"arrayread.r";
+    "arrayread.r"->"load.i $r290";
+    "load.i $r290"->"arrayread.r";
+    "arrayread.r"->"virtualinvoke <java.awt.FontMetrics: int stringWidth(java.lang.String)>";
+    "virtualinvoke <java.awt.FontMetrics: int stringWidth(java.lang.String)>"->"arraywrite.i";
+    "inc.i $r290 1"
+    "arraywrite.i"->"inc.i $r290 1";
+    "ifeq load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <Marquee: int[] msgWidth>";
+    "fieldget <Marquee: int[] msgWidth>"->"load.i $r5";
+    "load.i $r5"->"load.r $r169";
+    "load.r $r169"->"load.r r0";
+    "load.r r0"->"fieldget <Marquee: java.lang.String[] messages>";
+    "fieldget <Marquee: java.lang.String[] messages>"->"load.i $r5";
+    "load.i $r5"->"arrayread.r";
+    "arrayread.r"->"virtualinvoke <java.awt.FontMetrics: int stringWidth(java.lang.String)>";
+    "virtualinvoke <java.awt.FontMetrics: int stringWidth(java.lang.String)>"->"push 4";
+    "push 4"->"add.i";
+    "add.i"->"arraywrite.i";
+    "arraywrite.i"->"load.r r0";
+    "load.r r0"->"fieldget <Marquee: int[] msgHeight>";
+    "fieldget <Marquee: int[] msgHeight>"->"load.i $r5";
+    "load.i $r5"->"load.r $r169";
+    "load.r $r169"->"virtualinvoke <java.awt.FontMetrics: int getAscent()>";
+    "virtualinvoke <java.awt.FontMetrics: int getAscent()>"->"load.r $r169";
+    "load.r $r169"->"virtualinvoke <java.awt.FontMetrics: int getDescent()>";
+    "virtualinvoke <java.awt.FontMetrics: int getDescent()>"->"add.i";
+    "add.i"->"arraywrite.i";
+    "arraywrite.i"->"load.r r0";
+    "load.r r0"->"fieldget <Marquee: int[] lineHeight>";
+    "fieldget <Marquee: int[] lineHeight>"->"load.i $r5";
+    "load.i $r5"->"load.r r0";
+    "load.r r0"->"fieldget <Marquee: int[] msgHeight>";
+    "fieldget <Marquee: int[] msgHeight>"->"load.i $r5";
+    "load.i $r5"->"arrayread.i";
+    "arrayread.i"->"arraywrite.i";
+    "arraywrite.i"->"load.r r0";
+    "load.r r0"->"fieldget <Marquee: int[] longLineWidth>";
+    "fieldget <Marquee: int[] longLineWidth>"->"load.i $r5";
+    "load.i $r5"->"load.r r0";
+    "load.r r0"->"fieldget <Marquee: int[] msgWidth>";
+    "fieldget <Marquee: int[] msgWidth>"->"load.i $r5";
+    "load.i $r5"->"arrayread.i";
+    "arrayread.i"->"arraywrite.i";
+    "ifnonnull load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <Marquee: int[] mode>";
+    "fieldget <Marquee: int[] mode>"->"load.i $r5";
+    "push 3"
+    "load.i $r5"->"push 3";
+    "push 3"->"arraywrite.i";
+    "arraywrite.i"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <Marquee: int mode3>";
+    "fieldget <Marquee: int mode3>"->"push 1";
+    "push 1"->"add.i";
+    "fieldput <Marquee: int mode3>"
+    "add.i"->"fieldput <Marquee: int mode3>";
+    "fieldput <Marquee: int mode3>"->"load.r r0";
+    "load.r r0"->"fieldget <Marquee: java.lang.String[] font_type>";
+    "fieldget <Marquee: java.lang.String[] font_type>"->"load.i $r5";
+    "load.i $r5"->"arrayread.r";
+    "arrayread.r"->"ifnonnull load.r r0";
+    "ifnonnull load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <Marquee: java.lang.String[] font_type>";
+    "fieldget <Marquee: java.lang.String[] font_type>"->"load.i $r5";
+    "load.i $r5"->"push \"TimesRoman\"";
+    "push \"TimesRoman\""->"arraywrite.r";
+    "arraywrite.r"->"load.r r0";
+    "load.r r0"->"fieldget <Marquee: java.awt.Font[] default_myFont>";
+    "fieldget <Marquee: java.awt.Font[] default_myFont>"->"load.i $r5";
+    "load.i $r5"->"new java.awt.Font";
+    "new java.awt.Font"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "load.r r0"->"fieldget <Marquee: java.lang.String[] font_type>";
+    "fieldget <Marquee: java.lang.String[] font_type>"->"load.i $r5";
+    "load.i $r5"->"arrayread.r";
+    "arrayread.r"->"load.r r0";
+    "load.r r0"->"fieldget <Marquee: int[] font_style>";
+    "fieldget <Marquee: int[] font_style>"->"load.i $r5";
+    "load.i $r5"->"arrayread.i";
+    "arrayread.i"->"load.r r0";
+    "load.r r0"->"fieldget <Marquee: int[] font_size>";
+    "fieldget <Marquee: int[] font_size>"->"load.i $r5";
+    "load.i $r5"->"arrayread.i";
+    "arrayread.i"->"specialinvoke <java.awt.Font: void <init>(java.lang.String,int,int)>";
+    "specialinvoke <java.awt.Font: void <init>(java.lang.String,int,int)>"->"arraywrite.r";
+    "arraywrite.r"->"load.r r0";
+    "load.r r0"->"fieldget <Marquee: java.awt.Font[] myFont>";
+    "fieldget <Marquee: java.awt.Font[] myFont>"->"load.i $r5";
+    "load.i $r5"->"load.r r0";
+    "load.r r0"->"fieldget <Marquee: java.awt.Font[] default_myFont>";
+    "fieldget <Marquee: java.awt.Font[] default_myFont>"->"load.i $r5";
+    "load.i $r5"->"arrayread.r";
+    "arrayread.r"->"arraywrite.r";
+    "arraywrite.r"->"load.r r0";
+    "load.r r0"->"fieldget <Marquee: java.awt.Graphics g>";
+    "fieldget <Marquee: java.awt.Graphics g>"->"load.r r0";
+    "load.r r0"->"fieldget <Marquee: java.awt.Font[] myFont>";
+    "fieldget <Marquee: java.awt.Font[] myFont>"->"load.i $r5";
+    "load.i $r5"->"arrayread.r";
+    "arrayread.r"->"virtualinvoke <java.awt.Graphics: java.awt.FontMetrics getFontMetrics(java.awt.Font)>";
+    "virtualinvoke <java.awt.Graphics: java.awt.FontMetrics getFontMetrics(java.awt.Font)>"->"store.r $r169";
+    "store.r $r169"->"load.r r0";
+    "fieldget <Marquee: int[] imageW>"
+    "load.r r0"->"fieldget <Marquee: int[] imageW>";
+    "fieldget <Marquee: int[] imageW>"->"load.i $r5";
+    "load.i $r5"->"load.r r0";
+    "load.r r0"->"fieldget <Marquee: java.awt.Image[] images>";
+    "fieldget <Marquee: java.awt.Image[] images>"->"load.i $r5";
+    "load.i $r5"->"arrayread.r";
+    "arrayread.r"->"load.r r0";
+    "load.r r0"->"virtualinvoke <java.awt.Image: int getWidth(java.awt.image.ImageObserver)>";
+    "virtualinvoke <java.awt.Image: int getWidth(java.awt.image.ImageObserver)>"->"arraywrite.i";
+    "arraywrite.i"->"load.r r0";
+    "fieldget <Marquee: int[] imageH>"
+    "load.r r0"->"fieldget <Marquee: int[] imageH>";
+    "fieldget <Marquee: int[] imageH>"->"load.i $r5";
+    "load.i $r5"->"load.r r0";
+    "load.r r0"->"fieldget <Marquee: java.awt.Image[] images>";
+    "fieldget <Marquee: java.awt.Image[] images>"->"load.i $r5";
+    "load.i $r5"->"arrayread.r";
+    "arrayread.r"->"load.r r0";
+    "load.r r0"->"virtualinvoke <java.awt.Image: int getHeight(java.awt.image.ImageObserver)>";
+    "virtualinvoke <java.awt.Image: int getHeight(java.awt.image.ImageObserver)>"->"arraywrite.i";
+    "arraywrite.i"->"load.r r0";
+    "load.r r0"->"fieldget <Marquee: boolean[] multiFlag>";
+    "fieldget <Marquee: boolean[] multiFlag>"->"load.i $r5";
+    "load.i $r5"->"arrayread.b";
+    "arrayread.b"->"ifeq load.r r0";
+    "ifeq load.r r0"->"load.r r0";
+    "fieldget <Marquee: int[] textW>"
+    "load.r r0"->"fieldget <Marquee: int[] textW>";
+    "fieldget <Marquee: int[] textW>"->"load.i $r5";
+    "load.i $r5"->"load.r $r169";
+    "load.r $r169"->"load.r r0";
+    "load.r r0"->"fieldget <Marquee: java.lang.String[][] multiMessages>";
+    "fieldget <Marquee: java.lang.String[][] multiMessages>"->"load.i $r5";
+    "load.i $r5"->"arrayread.r";
+    "arrayread.r"->"push 0";
+    "push 0"->"arrayread.r";
+    "arrayread.r"->"virtualinvoke <java.awt.FontMetrics: int stringWidth(java.lang.String)>";
+    "virtualinvoke <java.awt.FontMetrics: int stringWidth(java.lang.String)>"->"push 4";
+    "push 4"->"add.i";
+    "add.i"->"arraywrite.i";
+    "arraywrite.i"->"load.r r0";
+    "fieldget <Marquee: int[] textH>"
+    "load.r r0"->"fieldget <Marquee: int[] textH>";
+    "fieldget <Marquee: int[] textH>"->"load.i $r5";
+    "load.i $r5"->"load.r $r169";
+    "load.r $r169"->"virtualinvoke <java.awt.FontMetrics: int getAscent()>";
+    "virtualinvoke <java.awt.FontMetrics: int getAscent()>"->"load.r $r169";
+    "load.r $r169"->"virtualinvoke <java.awt.FontMetrics: int getDescent()>";
+    "virtualinvoke <java.awt.FontMetrics: int getDescent()>"->"sub.i";
+    "sub.i"->"arraywrite.i";
+    "arraywrite.i"->"load.r r0";
+    "load.r r0"->"fieldget <Marquee: int[] msgWidth>";
+    "fieldget <Marquee: int[] msgWidth>"->"load.i $r5";
+    "load.i $r5"->"load.r r0";
+    "load.r r0"->"fieldget <Marquee: int[] imageW>";
+    "fieldget <Marquee: int[] imageW>"->"load.i $r5";
+    "load.i $r5"->"arrayread.i";
+    "arrayread.i"->"load.r r0";
+    "load.r r0"->"fieldget <Marquee: int[] textW>";
+    "fieldget <Marquee: int[] textW>"->"load.i $r5";
+    "load.i $r5"->"arrayread.i";
+    "arrayread.i"->"add.i";
+    "push 10"
+    "add.i"->"push 10";
+    "push 10"->"add.i";
+    "add.i"->"arraywrite.i";
+    "arraywrite.i"->"load.r r0";
+    "load.r r0"->"fieldget <Marquee: int[] msgHeight>";
+    "fieldget <Marquee: int[] msgHeight>"->"load.i $r5";
+    "load.i $r5"->"load.r r0";
+    "load.r r0"->"fieldget <Marquee: int[] imageH>";
+    "fieldget <Marquee: int[] imageH>"->"load.i $r5";
+    "load.i $r5"->"arrayread.i";
+    "arrayread.i"->"arraywrite.i";
+    "arraywrite.i"->"load.r r0";
+    "load.r r0"->"fieldget <Marquee: int[] lineHeight>";
+    "fieldget <Marquee: int[] lineHeight>"->"load.i $r5";
+    "load.i $r5"->"load.r $r169";
+    "virtualinvoke <java.awt.FontMetrics: int getHeight()>"
+    "load.r $r169"->"virtualinvoke <java.awt.FontMetrics: int getHeight()>";
+    "virtualinvoke <java.awt.FontMetrics: int getHeight()>"->"arraywrite.i";
+    "arraywrite.i"->"load.r r0";
+    "load.r r0"->"fieldget <Marquee: int[] longLineWidth>";
+    "fieldget <Marquee: int[] longLineWidth>"->"load.i $r5";
+    "load.i $r5"->"push 0";
+    "push 0"->"arraywrite.i";
+    "arraywrite.i"->"push 0";
+    "push 0"->"store.i $r290";
+    "store.i $r290"->"goto load.i $r290";
+    "goto load.i $r290"->"load.i $r290";
+    "load.i $r290"->"load.r r0";
+    "load.r r0"->"fieldget <Marquee: int[] multiCount>";
+    "fieldget <Marquee: int[] multiCount>"->"load.i $r5";
+    "load.i $r5"->"arrayread.i";
+    "arrayread.i"->"push 1";
+    "push 1"->"sub.i";
+    "sub.i"->"ifcmple.i load.r $r169";
+    "ifcmple.i load.r $r169"->"load.r r0";
+    "load.r r0"->"fieldget <Marquee: int[] longLineWidth>";
+    "fieldget <Marquee: int[] longLineWidth>"->"load.i $r5";
+    "load.i $r5"->"load.r r0";
+    "load.r r0"->"fieldget <Marquee: int[] longLineWidth>";
+    "fieldget <Marquee: int[] longLineWidth>"->"load.i $r5";
+    "load.i $r5"->"arrayread.i";
+    "arrayread.i"->"push 4";
+    "push 4"->"add.i";
+    "add.i"->"arraywrite.i";
+    "arraywrite.i"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <Marquee: int[] default_y_pos>";
+    "fieldget <Marquee: int[] default_y_pos>"->"load.i $r5";
+    "load.i $r5"->"load.r r0";
+    "load.r r0"->"fieldget <Marquee: int appletHeight>";
+    "fieldget <Marquee: int appletHeight>"->"load.r r0";
+    "load.r r0"->"fieldget <Marquee: int[] msgHeight>";
+    "fieldget <Marquee: int[] msgHeight>"->"load.i $r5";
+    "load.i $r5"->"arrayread.i";
+    "arrayread.i"->"sub.i";
+    "sub.i"->"push 2";
+    "push 2"->"div.i";
+    "div.i"->"arraywrite.i";
+    "arraywrite.i"->"load.r r0";
+    "load.r r0"->"fieldget <Marquee: int[] default_x_pos>";
+    "fieldget <Marquee: int[] default_x_pos>"->"load.i $r5";
+    "load.i $r5"->"load.r r0";
+    "load.r r0"->"fieldget <Marquee: int appletWidth>";
+    "fieldget <Marquee: int appletWidth>"->"load.r r0";
+    "load.r r0"->"fieldget <Marquee: int[] msgWidth>";
+    "fieldget <Marquee: int[] msgWidth>"->"load.i $r5";
+    "load.i $r5"->"arrayread.i";
+    "arrayread.i"->"sub.i";
+    "sub.i"->"push 2";
+    "push 2"->"div.i";
+    "div.i"->"arraywrite.i";
+    "arraywrite.i"->"load.r r0";
+    "load.r r0"->"fieldget <Marquee: int[] y_pos>";
+    "fieldget <Marquee: int[] y_pos>"->"load.i $r5";
+    "load.i $r5"->"load.r r0";
+    "load.r r0"->"fieldget <Marquee: int[] default_y_pos>";
+    "fieldget <Marquee: int[] default_y_pos>"->"load.i $r5";
+    "load.i $r5"->"arrayread.i";
+    "arrayread.i"->"arraywrite.i";
+    "ifcmple.i load.r $r169"->"load.r $r169";
+    "load.r $r169"->"load.r r0";
+    "load.r r0"->"fieldget <Marquee: java.lang.String[][] multiMessages>";
+    "fieldget <Marquee: java.lang.String[][] multiMessages>"->"load.i $r5";
+    "load.i $r5"->"arrayread.r";
+    "arrayread.r"->"load.i $r290";
+    "load.i $r290"->"arrayread.r";
+    "arrayread.r"->"virtualinvoke <java.awt.FontMetrics: int stringWidth(java.lang.String)>";
+    "virtualinvoke <java.awt.FontMetrics: int stringWidth(java.lang.String)>"->"load.r r0";
+    "load.r r0"->"fieldget <Marquee: int[] longLineWidth>";
+    "fieldget <Marquee: int[] longLineWidth>"->"load.i $r5";
+    "load.i $r5"->"arrayread.i";
+    "arrayread.i"->"ifcmple.i inc.i $r290 1";
+    "ifcmple.i inc.i $r290 1"->"load.r r0";
+    "load.r r0"->"fieldget <Marquee: int[] longLineWidth>";
+    "fieldget <Marquee: int[] longLineWidth>"->"load.i $r5";
+    "load.i $r5"->"load.r $r169";
+    "load.r $r169"->"load.r r0";
+    "load.r r0"->"fieldget <Marquee: java.lang.String[][] multiMessages>";
+    "fieldget <Marquee: java.lang.String[][] multiMessages>"->"load.i $r5";
+    "load.i $r5"->"arrayread.r";
+    "arrayread.r"->"load.i $r290";
+    "load.i $r290"->"arrayread.r";
+    "arrayread.r"->"virtualinvoke <java.awt.FontMetrics: int stringWidth(java.lang.String)>";
+    "virtualinvoke <java.awt.FontMetrics: int stringWidth(java.lang.String)>"->"arraywrite.i";
+    "arraywrite.i"->"inc.i $r290 1";
+    "ifeq load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <Marquee: int[] textW>";
+    "fieldget <Marquee: int[] textW>"->"load.i $r5";
+    "load.i $r5"->"load.r $r169";
+    "load.r $r169"->"load.r r0";
+    "load.r r0"->"fieldget <Marquee: java.lang.String[] messages>";
+    "fieldget <Marquee: java.lang.String[] messages>"->"load.i $r5";
+    "load.i $r5"->"arrayread.r";
+    "arrayread.r"->"virtualinvoke <java.awt.FontMetrics: int stringWidth(java.lang.String)>";
+    "virtualinvoke <java.awt.FontMetrics: int stringWidth(java.lang.String)>"->"push 4";
+    "push 4"->"add.i";
+    "add.i"->"arraywrite.i";
+    "arraywrite.i"->"load.r r0";
+    "load.r r0"->"fieldget <Marquee: int[] textH>";
+    "fieldget <Marquee: int[] textH>"->"load.i $r5";
+    "load.i $r5"->"load.r $r169";
+    "load.r $r169"->"virtualinvoke <java.awt.FontMetrics: int getAscent()>";
+    "virtualinvoke <java.awt.FontMetrics: int getAscent()>"->"load.r $r169";
+    "load.r $r169"->"virtualinvoke <java.awt.FontMetrics: int getDescent()>";
+    "virtualinvoke <java.awt.FontMetrics: int getDescent()>"->"sub.i";
+    "sub.i"->"arraywrite.i";
+    "arraywrite.i"->"load.r r0";
+    "load.r r0"->"fieldget <Marquee: int[] msgWidth>";
+    "fieldget <Marquee: int[] msgWidth>"->"load.i $r5";
+    "load.i $r5"->"load.r r0";
+    "load.r r0"->"fieldget <Marquee: int[] imageW>";
+    "fieldget <Marquee: int[] imageW>"->"load.i $r5";
+    "load.i $r5"->"arrayread.i";
+    "arrayread.i"->"load.r r0";
+    "load.r r0"->"fieldget <Marquee: int[] textW>";
+    "fieldget <Marquee: int[] textW>"->"load.i $r5";
+    "load.i $r5"->"arrayread.i";
+    "arrayread.i"->"add.i";
+    "add.i"->"push 10";
+    "push 10"->"add.i";
+    "add.i"->"arraywrite.i";
+    "arraywrite.i"->"load.r r0";
+    "load.r r0"->"fieldget <Marquee: int[] msgHeight>";
+    "fieldget <Marquee: int[] msgHeight>"->"load.i $r5";
+    "load.i $r5"->"load.r r0";
+    "load.r r0"->"fieldget <Marquee: int[] imageH>";
+    "fieldget <Marquee: int[] imageH>"->"load.i $r5";
+    "load.i $r5"->"arrayread.i";
+    "arrayread.i"->"arraywrite.i";
+    "arraywrite.i"->"load.r r0";
+    "load.r r0"->"fieldget <Marquee: int[] lineHeight>";
+    "fieldget <Marquee: int[] lineHeight>"->"load.i $r5";
+    "load.i $r5"->"load.r r0";
+    "load.r r0"->"fieldget <Marquee: int[] msgHeight>";
+    "fieldget <Marquee: int[] msgHeight>"->"load.i $r5";
+    "load.i $r5"->"arrayread.i";
+    "arrayread.i"->"arraywrite.i";
+    "arraywrite.i"->"load.r r0";
+    "load.r r0"->"fieldget <Marquee: int[] longLineWidth>";
+    "fieldget <Marquee: int[] longLineWidth>"->"load.i $r5";
+    "load.i $r5"->"load.r r0";
+    "load.r r0"->"fieldget <Marquee: int[] msgWidth>";
+    "fieldget <Marquee: int[] msgWidth>"->"load.i $r5";
+    "load.i $r5"->"arrayread.i";
+    "arrayread.i"->"arraywrite.i";
+    "virtualinvoke <java.awt.MediaTracker: void waitForAll()>"->"store.r $r169";
+    "store.r $r169"->"load.r r0";
+    "push \"The loading process was interrupted.\""
+    "load.r r0"->"push \"The loading process was interrupted.\"";
+    "virtualinvoke <java.applet.Applet: void showStatus(java.lang.String)>"
+    "push \"The loading process was interrupted.\""->"virtualinvoke <java.applet.Applet: void showStatus(java.lang.String)>";
+    "ifne load.r $r290"->"load.r $r290";
+    "load.i i177"
+    "load.r $r290"->"load.i i177";
+    "load.i i177"->"load.r $r169";
+    "load.r $r169"->"virtualinvoke <java.util.StringTokenizer: java.lang.String nextToken()>";
+    "virtualinvoke <java.util.StringTokenizer: java.lang.String nextToken()>"->"arraywrite.r";
+    "arraywrite.r"->"new java.util.StringTokenizer";
+    "new java.util.StringTokenizer"->"store.r $r171";
+    "store.r $r171"->"load.r $r171";
+    "load.r $r171"->"load.r $r290";
+    "load.r $r290"->"load.i i177";
+    "load.i i177"->"arrayread.r";
+    "arrayread.r"->"specialinvoke <java.util.StringTokenizer: void <init>(java.lang.String)>";
+    "specialinvoke <java.util.StringTokenizer: void <init>(java.lang.String)>"->"load.r r0";
+    "load.r r0"->"fieldget <Marquee: int[] scrollIn>";
+    "fieldget <Marquee: int[] scrollIn>"->"load.i i177";
+    "load.i i177"->"load.r $r171";
+    "load.r $r171"->"virtualinvoke <java.util.StringTokenizer: java.lang.String nextToken()>";
+    "virtualinvoke <java.util.StringTokenizer: java.lang.String nextToken()>"->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>";
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"->"arraywrite.i";
+    "arraywrite.i"->"load.r r0";
+    "load.r r0"->"fieldget <Marquee: int[] scrollPause>";
+    "fieldget <Marquee: int[] scrollPause>"->"load.i i177";
+    "load.i i177"->"load.r $r171";
+    "load.r $r171"->"virtualinvoke <java.util.StringTokenizer: java.lang.String nextToken()>";
+    "virtualinvoke <java.util.StringTokenizer: java.lang.String nextToken()>"->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>";
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"->"arraywrite.i";
+    "arraywrite.i"->"load.r r0";
+    "load.r r0"->"fieldget <Marquee: int[] scrollOut>";
+    "fieldget <Marquee: int[] scrollOut>"->"load.i i177";
+    "load.i i177"->"load.r $r171";
+    "load.r $r171"->"virtualinvoke <java.util.StringTokenizer: java.lang.String nextToken()>";
+    "virtualinvoke <java.util.StringTokenizer: java.lang.String nextToken()>"->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>";
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"->"arraywrite.i";
+    "inc.i i177 1"
+    "arraywrite.i"->"inc.i i177 1";
+    "ifnull push 0"->"push 0";
+    "push 0"->"store.i $r169";
+    "store.i $r169"->"goto load.i $r169";
+    "goto load.i $r169"->"load.i $r169";
+    "load.i $r169"->"load.r r0";
+    "load.r r0"->"fieldget <Marquee: int messageCount>";
+    "fieldget <Marquee: int messageCount>"->"ifcmple.i load.r r0";
+    "ifcmple.i load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <Marquee: int[] scrollIn>";
+    "fieldget <Marquee: int[] scrollIn>"->"load.i $r169";
+    "load.i $r169"->"push 1";
+    "push 1"->"arraywrite.i";
+    "arraywrite.i"->"load.r r0";
+    "load.r r0"->"fieldget <Marquee: int[] scrollPause>";
+    "fieldget <Marquee: int[] scrollPause>"->"load.i $r169";
+    "load.i $r169"->"push 0";
+    "push 0"->"arraywrite.i";
+    "arraywrite.i"->"load.r r0";
+    "load.r r0"->"fieldget <Marquee: int[] scrollOut>";
+    "fieldget <Marquee: int[] scrollOut>"->"load.i $r169";
+    "load.i $r169"->"push 1";
+    "push 1"->"arraywrite.i";
+    "arraywrite.i"->"inc.i $r169 1";
+    "ifne load.r $r290"->"load.r $r290";
+    "load.r $r290"->"load.i i177";
+    "load.i i177"->"load.r $r169";
+    "load.r $r169"->"virtualinvoke <java.util.StringTokenizer: java.lang.String nextToken()>";
+    "virtualinvoke <java.util.StringTokenizer: java.lang.String nextToken()>"->"arraywrite.r";
+    "arraywrite.r"->"new java.util.StringTokenizer";
+    "new java.util.StringTokenizer"->"store.r $r171";
+    "store.r $r171"->"load.r $r171";
+    "load.r $r171"->"load.r $r290";
+    "load.r $r290"->"load.i i177";
+    "load.i i177"->"arrayread.r";
+    "arrayread.r"->"specialinvoke <java.util.StringTokenizer: void <init>(java.lang.String)>";
+    "specialinvoke <java.util.StringTokenizer: void <init>(java.lang.String)>"->"load.r r0";
+    "fieldget <Marquee: int[] textColorRed>"
+    "load.r r0"->"fieldget <Marquee: int[] textColorRed>";
+    "fieldget <Marquee: int[] textColorRed>"->"load.i i177";
+    "load.i i177"->"load.r $r171";
+    "load.r $r171"->"virtualinvoke <java.util.StringTokenizer: java.lang.String nextToken()>";
+    "virtualinvoke <java.util.StringTokenizer: java.lang.String nextToken()>"->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>";
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"->"arraywrite.i";
+    "arraywrite.i"->"load.r r0";
+    "fieldget <Marquee: int[] textColorGreen>"
+    "load.r r0"->"fieldget <Marquee: int[] textColorGreen>";
+    "fieldget <Marquee: int[] textColorGreen>"->"load.i i177";
+    "load.i i177"->"load.r $r171";
+    "load.r $r171"->"virtualinvoke <java.util.StringTokenizer: java.lang.String nextToken()>";
+    "virtualinvoke <java.util.StringTokenizer: java.lang.String nextToken()>"->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>";
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"->"arraywrite.i";
+    "arraywrite.i"->"load.r r0";
+    "fieldget <Marquee: int[] textColorBlue>"
+    "load.r r0"->"fieldget <Marquee: int[] textColorBlue>";
+    "fieldget <Marquee: int[] textColorBlue>"->"load.i i177";
+    "load.i i177"->"load.r $r171";
+    "load.r $r171"->"virtualinvoke <java.util.StringTokenizer: java.lang.String nextToken()>";
+    "virtualinvoke <java.util.StringTokenizer: java.lang.String nextToken()>"->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>";
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"->"arraywrite.i";
+    "arraywrite.i"->"load.r r0";
+    "load.r r0"->"fieldget <Marquee: java.awt.Color[] textColor>";
+    "fieldget <Marquee: java.awt.Color[] textColor>"->"load.i i177";
+    "load.i i177"->"new java.awt.Color";
+    "new java.awt.Color"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "load.r r0"->"fieldget <Marquee: int[] textColorRed>";
+    "fieldget <Marquee: int[] textColorRed>"->"load.i i177";
+    "load.i i177"->"arrayread.i";
+    "arrayread.i"->"load.r r0";
+    "load.r r0"->"fieldget <Marquee: int[] textColorGreen>";
+    "fieldget <Marquee: int[] textColorGreen>"->"load.i i177";
+    "load.i i177"->"arrayread.i";
+    "arrayread.i"->"load.r r0";
+    "load.r r0"->"fieldget <Marquee: int[] textColorBlue>";
+    "fieldget <Marquee: int[] textColorBlue>"->"load.i i177";
+    "load.i i177"->"arrayread.i";
+    "arrayread.i"->"specialinvoke <java.awt.Color: void <init>(int,int,int)>";
+    "specialinvoke <java.awt.Color: void <init>(int,int,int)>"->"arraywrite.r";
+    "arraywrite.r"->"load.r r0";
+    "load.r r0"->"fieldget <Marquee: java.awt.Color[] default_textColor>";
+    "fieldget <Marquee: java.awt.Color[] default_textColor>"->"load.i i177";
+    "load.i i177"->"load.r r0";
+    "load.r r0"->"fieldget <Marquee: java.awt.Color[] textColor>";
+    "fieldget <Marquee: java.awt.Color[] textColor>"->"load.i i177";
+    "load.i i177"->"arrayread.r";
+    "arrayread.r"->"arraywrite.r";
+    "arraywrite.r"->"load.r r0";
+    "fieldget <Marquee: int[] deltaRed>"
+    "load.r r0"->"fieldget <Marquee: int[] deltaRed>";
+    "fieldget <Marquee: int[] deltaRed>"->"load.i i177";
+    "load.i i177"->"load.r r0";
+    "load.r r0"->"fieldget <Marquee: int winColorRed>";
+    "fieldget <Marquee: int winColorRed>"->"load.r r0";
+    "load.r r0"->"fieldget <Marquee: int[] textColorRed>";
+    "fieldget <Marquee: int[] textColorRed>"->"load.i i177";
+    "load.i i177"->"arrayread.i";
+    "arrayread.i"->"sub.i";
+    "sub.i"->"arraywrite.i";
+    "arraywrite.i"->"load.r r0";
+    "fieldget <Marquee: int[] deltaGreen>"
+    "load.r r0"->"fieldget <Marquee: int[] deltaGreen>";
+    "fieldget <Marquee: int[] deltaGreen>"->"load.i i177";
+    "load.i i177"->"load.r r0";
+    "load.r r0"->"fieldget <Marquee: int winColorGreen>";
+    "fieldget <Marquee: int winColorGreen>"->"load.r r0";
+    "load.r r0"->"fieldget <Marquee: int[] textColorGreen>";
+    "fieldget <Marquee: int[] textColorGreen>"->"load.i i177";
+    "load.i i177"->"arrayread.i";
+    "arrayread.i"->"sub.i";
+    "sub.i"->"arraywrite.i";
+    "arraywrite.i"->"load.r r0";
+    "fieldget <Marquee: int[] deltaBlue>"
+    "load.r r0"->"fieldget <Marquee: int[] deltaBlue>";
+    "fieldget <Marquee: int[] deltaBlue>"->"load.i i177";
+    "load.i i177"->"load.r r0";
+    "load.r r0"->"fieldget <Marquee: int winColorBlue>";
+    "fieldget <Marquee: int winColorBlue>"->"load.r r0";
+    "load.r r0"->"fieldget <Marquee: int[] textColorBlue>";
+    "fieldget <Marquee: int[] textColorBlue>"->"load.i i177";
+    "load.i i177"->"arrayread.i";
+    "arrayread.i"->"sub.i";
+    "sub.i"->"arraywrite.i";
+    "arraywrite.i"->"inc.i i177 1";
+    "ifne new java.util.StringTokenizer"->"new java.util.StringTokenizer";
+    "store.r $r217"
+    "new java.util.StringTokenizer"->"store.r $r217";
+    "load.r $r217"
+    "store.r $r217"->"load.r $r217";
+    "load.r $r217"->"load.r $r169";
+    "load.r $r169"->"virtualinvoke <java.util.StringTokenizer: java.lang.String nextToken()>";
+    "virtualinvoke <java.util.StringTokenizer: java.lang.String nextToken()>"->"specialinvoke <java.util.StringTokenizer: void <init>(java.lang.String)>";
+    "specialinvoke <java.util.StringTokenizer: void <init>(java.lang.String)>"->"load.r $r217";
+    "load.r $r217"->"virtualinvoke <java.util.StringTokenizer: java.lang.String nextToken()>";
+    "virtualinvoke <java.util.StringTokenizer: java.lang.String nextToken()>"->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>";
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"->"store.i $r171";
+    "store.i $r171"->"load.r $r217";
+    "load.r $r217"->"virtualinvoke <java.util.StringTokenizer: java.lang.String nextToken()>";
+    "virtualinvoke <java.util.StringTokenizer: java.lang.String nextToken()>"->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>";
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"->"store.i i177";
+    "store.i i177"->"load.r $r217";
+    "load.r $r217"->"virtualinvoke <java.util.StringTokenizer: java.lang.String nextToken()>";
+    "virtualinvoke <java.util.StringTokenizer: java.lang.String nextToken()>"->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>";
+    "store.i $r217"
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"->"store.i $r217";
+    "store.i $r217"->"load.r r0";
+    "load.r r0"->"fieldget <Marquee: java.awt.Color[] shadowColor>";
+    "fieldget <Marquee: java.awt.Color[] shadowColor>"->"load.i $r290";
+    "load.i $r290"->"new java.awt.Color";
+    "new java.awt.Color"->"dup1.r";
+    "dup1.r"->"load.i $r171";
+    "load.i $r171"->"load.i i177";
+    "load.i $r217"
+    "load.i i177"->"load.i $r217";
+    "load.i $r217"->"specialinvoke <java.awt.Color: void <init>(int,int,int)>";
+    "specialinvoke <java.awt.Color: void <init>(int,int,int)>"->"arraywrite.r";
+    "arraywrite.r"->"inc.i $r290 1";
+    "ifne load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <Marquee: int[] shadowYOffset>";
+    "fieldget <Marquee: int[] shadowYOffset>"->"load.i $r290";
+    "load.i $r290"->"load.r $r169";
+    "load.r $r169"->"virtualinvoke <java.util.StringTokenizer: java.lang.String nextToken()>";
+    "virtualinvoke <java.util.StringTokenizer: java.lang.String nextToken()>"->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>";
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"->"arraywrite.i";
+    "arraywrite.i"->"inc.i $r290 1";
+    "ifne load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <Marquee: int[] shadowXOffset>";
+    "fieldget <Marquee: int[] shadowXOffset>"->"load.i $r290";
+    "load.i $r290"->"load.r $r169";
+    "load.r $r169"->"virtualinvoke <java.util.StringTokenizer: java.lang.String nextToken()>";
+    "virtualinvoke <java.util.StringTokenizer: java.lang.String nextToken()>"->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>";
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"->"arraywrite.i";
+    "arraywrite.i"->"inc.i $r290 1";
+    "ifne load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <Marquee: boolean[] dropShadow>";
+    "fieldget <Marquee: boolean[] dropShadow>"->"load.i $r290";
+    "load.i $r290"->"load.r $r169";
+    "load.r $r169"->"virtualinvoke <java.util.StringTokenizer: java.lang.String nextToken()>";
+    "virtualinvoke <java.util.StringTokenizer: java.lang.String nextToken()>"->"staticinvoke <java.lang.Boolean: java.lang.Boolean valueOf(java.lang.String)>";
+    "staticinvoke <java.lang.Boolean: java.lang.Boolean valueOf(java.lang.String)>"->"virtualinvoke <java.lang.Boolean: boolean booleanValue()>";
+    "virtualinvoke <java.lang.Boolean: boolean booleanValue()>"->"arraywrite.b";
+    "arraywrite.b"->"inc.i $r290 1";
+    "ifne load.r r0"->"load.r r0";
+    "fieldget <Marquee: char[] align>"
+    "load.r r0"->"fieldget <Marquee: char[] align>";
+    "fieldget <Marquee: char[] align>"->"load.i $r290";
+    "load.i $r290"->"load.r $r169";
+    "load.r $r169"->"virtualinvoke <java.util.StringTokenizer: java.lang.String nextToken()>";
+    "virtualinvoke <java.util.StringTokenizer: java.lang.String nextToken()>"->"push 0";
+    "virtualinvoke <java.lang.String: char charAt(int)>"
+    "push 0"->"virtualinvoke <java.lang.String: char charAt(int)>";
+    "arraywrite.c"
+    "virtualinvoke <java.lang.String: char charAt(int)>"->"arraywrite.c";
+    "arraywrite.c"->"inc.i $r290 1";
+    "ifne load.r $r169"->"load.r $r169";
+    "load.r $r169"->"virtualinvoke <java.util.StringTokenizer: java.lang.String nextToken()>";
+    "virtualinvoke <java.util.StringTokenizer: java.lang.String nextToken()>"->"store.r $r171";
+    "store.r $r171"->"load.r $r171";
+    "load.r $r171"->"push 0";
+    "push 0"->"virtualinvoke <java.lang.String: char charAt(int)>";
+    "push 63"
+    "virtualinvoke <java.lang.String: char charAt(int)>"->"push 63";
+    "ifcmpeq.c load.r r0"
+    "push 63"->"ifcmpeq.c load.r r0";
+    "ifcmpeq.c load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <Marquee: java.awt.Image[] images>";
+    "fieldget <Marquee: java.awt.Image[] images>"->"load.i $r290";
+    "load.i $r290"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"virtualinvoke <java.applet.Applet: java.net.URL getDocumentBase()>";
+    "virtualinvoke <java.applet.Applet: java.net.URL getDocumentBase()>"->"load.r $r171";
+    "load.r $r171"->"virtualinvoke <java.applet.Applet: java.awt.Image getImage(java.net.URL,java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.awt.Image getImage(java.net.URL,java.lang.String)>"->"arraywrite.r";
+    "arraywrite.r"->"load.r $r5";
+    "load.r $r5"->"load.r r0";
+    "load.r r0"->"fieldget <Marquee: java.awt.Image[] images>";
+    "fieldget <Marquee: java.awt.Image[] images>"->"load.i $r290";
+    "load.i $r290"->"arrayread.r";
+    "arrayread.r"->"push 0";
+    "push 0"->"virtualinvoke <java.awt.MediaTracker: void addImage(java.awt.Image,int)>";
+    "goto inc.i $r290 1"
+    "virtualinvoke <java.awt.MediaTracker: void addImage(java.awt.Image,int)>"->"goto inc.i $r290 1";
+    "goto inc.i $r290 1"->"inc.i $r290 1";
+    "ifcmpeq.c load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <Marquee: java.awt.Image[] images>";
+    "fieldget <Marquee: java.awt.Image[] images>"->"load.i $r290";
+    "load.i $r290"->"push null";
+    "push null"->"arraywrite.r";
+    "ifne load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <Marquee: java.applet.AudioClip[] soundClip>";
+    "fieldget <Marquee: java.applet.AudioClip[] soundClip>"->"load.i $r290";
+    "load.i $r290"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"virtualinvoke <java.applet.Applet: java.net.URL getDocumentBase()>";
+    "virtualinvoke <java.applet.Applet: java.net.URL getDocumentBase()>"->"load.r $r169";
+    "load.r $r169"->"virtualinvoke <java.util.StringTokenizer: java.lang.String nextToken()>";
+    "virtualinvoke <java.applet.Applet: java.applet.AudioClip getAudioClip(java.net.URL,java.lang.String)>"
+    "virtualinvoke <java.util.StringTokenizer: java.lang.String nextToken()>"->"virtualinvoke <java.applet.Applet: java.applet.AudioClip getAudioClip(java.net.URL,java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.applet.AudioClip getAudioClip(java.net.URL,java.lang.String)>"->"arraywrite.r";
+    "arraywrite.r"->"inc.i $r290 1";
+    "ifne load.r r0"->"load.r r0";
+    "fieldget <Marquee: int[] fadeFrames>"
+    "load.r r0"->"fieldget <Marquee: int[] fadeFrames>";
+    "fieldget <Marquee: int[] fadeFrames>"->"load.i $r290";
+    "load.i $r290"->"load.r $r169";
+    "load.r $r169"->"virtualinvoke <java.util.StringTokenizer: java.lang.String nextToken()>";
+    "virtualinvoke <java.util.StringTokenizer: java.lang.String nextToken()>"->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>";
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"->"arraywrite.i";
+    "arraywrite.i"->"inc.i $r290 1";
+    "ifne load.r r0"->"load.r r0";
+    "fieldget <Marquee: int[] typewriterDelay>"
+    "load.r r0"->"fieldget <Marquee: int[] typewriterDelay>";
+    "fieldget <Marquee: int[] typewriterDelay>"->"load.i $r290";
+    "load.i $r290"->"load.r $r169";
+    "load.r $r169"->"virtualinvoke <java.util.StringTokenizer: java.lang.String nextToken()>";
+    "virtualinvoke <java.util.StringTokenizer: java.lang.String nextToken()>"->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>";
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"->"arraywrite.i";
+    "arraywrite.i"->"inc.i $r290 1";
+    "ifne load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <Marquee: int[] delay>";
+    "fieldget <Marquee: int[] delay>"->"load.i $r290";
+    "load.i $r290"->"load.r $r169";
+    "load.r $r169"->"virtualinvoke <java.util.StringTokenizer: java.lang.String nextToken()>";
+    "virtualinvoke <java.util.StringTokenizer: java.lang.String nextToken()>"->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>";
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"->"arraywrite.i";
+    "arraywrite.i"->"inc.i $r290 1";
+    "ifne load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <Marquee: int[] font_size>";
+    "fieldget <Marquee: int[] font_size>"->"load.i $r290";
+    "load.i $r290"->"load.r $r169";
+    "load.r $r169"->"virtualinvoke <java.util.StringTokenizer: java.lang.String nextToken()>";
+    "virtualinvoke <java.util.StringTokenizer: java.lang.String nextToken()>"->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>";
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"->"arraywrite.i";
+    "arraywrite.i"->"inc.i $r290 1";
+    "ifne load.r $r169"->"load.r $r169";
+    "load.r $r169"->"virtualinvoke <java.util.StringTokenizer: java.lang.String nextToken()>";
+    "virtualinvoke <java.util.StringTokenizer: java.lang.String nextToken()>"->"virtualinvoke <java.lang.String: java.lang.String toLowerCase()>";
+    "virtualinvoke <java.lang.String: java.lang.String toLowerCase()>"->"store.r $r171";
+    "store.r $r171"->"load.r $r171";
+    "push \"plain\""
+    "load.r $r171"->"push \"plain\"";
+    "push \"plain\""->"virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>";
+    "ifeq load.r $r171"
+    "virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>"->"ifeq load.r $r171";
+    "ifeq load.r $r171"->"load.r r0";
+    "load.r r0"->"fieldget <Marquee: int[] font_style>";
+    "fieldget <Marquee: int[] font_style>"->"load.i $r290";
+    "load.i $r290"->"push 0";
+    "push 0"->"arraywrite.i";
+    "arraywrite.i"->"goto inc.i $r290 1";
+    "goto inc.i $r290 1"->"inc.i $r290 1";
+    "ifeq load.r $r171"->"load.r $r171";
+    "push \"bold\""
+    "load.r $r171"->"push \"bold\"";
+    "push \"bold\""->"virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>";
+    "virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>"->"ifeq load.r $r171";
+    "ifeq load.r $r171"->"load.r r0";
+    "load.r r0"->"fieldget <Marquee: int[] font_style>";
+    "fieldget <Marquee: int[] font_style>"->"load.i $r290";
+    "load.i $r290"->"push 1";
+    "push 1"->"arraywrite.i";
+    "arraywrite.i"->"goto inc.i $r290 1";
+    "ifeq load.r $r171"->"load.r $r171";
+    "push \"italic\""
+    "load.r $r171"->"push \"italic\"";
+    "push \"italic\""->"virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>";
+    "virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>"->"ifeq load.r $r171";
+    "ifeq load.r $r171"->"load.r r0";
+    "load.r r0"->"fieldget <Marquee: int[] font_style>";
+    "fieldget <Marquee: int[] font_style>"->"load.i $r290";
+    "load.i $r290"->"push 2";
+    "push 2"->"arraywrite.i";
+    "arraywrite.i"->"goto inc.i $r290 1";
+    "ifeq load.r $r171"->"load.r $r171";
+    "push \"bold+italic\""
+    "load.r $r171"->"push \"bold+italic\"";
+    "push \"bold+italic\""->"virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>";
+    "virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>"->"ifeq load.r r0";
+    "ifeq load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <Marquee: int[] font_style>";
+    "fieldget <Marquee: int[] font_style>"->"load.i $r290";
+    "load.i $r290"->"push 3";
+    "push 3"->"arraywrite.i";
+    "arraywrite.i"->"goto inc.i $r290 1";
+    "ifeq load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <Marquee: int[] font_style>";
+    "fieldget <Marquee: int[] font_style>"->"load.i $r290";
+    "load.i $r290"->"push 0";
+    "push 0"->"arraywrite.i";
+    "ifne load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <Marquee: java.lang.String[] font_type>";
+    "fieldget <Marquee: java.lang.String[] font_type>"->"load.i $r290";
+    "load.i $r290"->"load.r $r169";
+    "load.r $r169"->"virtualinvoke <java.util.StringTokenizer: java.lang.String nextToken()>";
+    "virtualinvoke <java.util.StringTokenizer: java.lang.String nextToken()>"->"arraywrite.r";
+    "arraywrite.r"->"inc.i $r290 1";
+    "ifcmple.i load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <Marquee: java.lang.String[] myURL>";
+    "fieldget <Marquee: java.lang.String[] myURL>"->"load.i $r169";
+    "load.i $r169"->"new java.lang.StringBuffer";
+    "new java.lang.StringBuffer"->"dup1.r";
+    "dup1.r"->"specialinvoke <java.lang.StringBuffer: void <init>()>";
+    "push \"http://www.triview.com/cgibin/applet-link.pl?source=\""
+    "specialinvoke <java.lang.StringBuffer: void <init>()>"->"push \"http://www.triview.com/cgibin/applet-link.pl?source=\"";
+    "push \"http://www.triview.com/cgibin/applet-link.pl?source=\""->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"load.r r0";
+    "load.r r0"->"virtualinvoke <java.applet.Applet: java.net.URL getDocumentBase()>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.Object)>"
+    "virtualinvoke <java.applet.Applet: java.net.URL getDocumentBase()>"->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.Object)>";
+    "push \"&applet=marquee&version=\""
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.Object)>"->"push \"&applet=marquee&version=\"";
+    "push \"&applet=marquee&version=\""->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "push \"2.4\""
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"push \"2.4\"";
+    "push \"2.4\""->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>"->"arraywrite.r";
+    "arraywrite.r"->"load.r r0";
+    "load.r r0"->"fieldget <Marquee: java.net.URL[] theURL>";
+    "fieldget <Marquee: java.net.URL[] theURL>"->"load.i $r169";
+    "load.i $r169"->"new java.net.URL";
+    "new java.net.URL"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "load.r r0"->"fieldget <Marquee: java.lang.String[] myURL>";
+    "fieldget <Marquee: java.lang.String[] myURL>"->"load.i $r169";
+    "load.i $r169"->"arrayread.r";
+    "arrayread.r"->"specialinvoke <java.net.URL: void <init>(java.lang.String)>";
+    "specialinvoke <java.net.URL: void <init>(java.lang.String)>"->"arraywrite.r";
+    "goto inc.i $r169 1"
+    "arraywrite.r"->"goto inc.i $r169 1";
+    "goto inc.i $r169 1"->"inc.i $r169 1";
+    "specialinvoke <java.net.URL: void <init>(java.lang.String)>"->"store.r $r290";
+    "store.r $r290"->"load.r r0";
+    "load.r r0"->"fieldget <Marquee: java.net.URL[] theURL>";
+    "fieldget <Marquee: java.net.URL[] theURL>"->"load.i $r169";
+    "load.i $r169"->"push null";
+    "push null"->"arraywrite.r";
+    "ifeq load.r r0"->"load.r r0";
+    "push \"URL\""
+    "load.r r0"->"push \"URL\"";
+    "push \"URL\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"store.r $r290";
+    "store.r $r290"->"load.r $r290";
+    "load.r $r290"->"ifnull load.r r0";
+    "ifnull load.r r0"->"new java.util.StringTokenizer";
+    "new java.util.StringTokenizer"->"store.r $r169";
+    "store.r $r169"->"load.r $r169";
+    "load.r $r169"->"load.r $r290";
+    "load.r $r290"->"push \";\"";
+    "push \";\""->"specialinvoke <java.util.StringTokenizer: void <init>(java.lang.String,java.lang.String)>";
+    "specialinvoke <java.util.StringTokenizer: void <init>(java.lang.String,java.lang.String)>"->"push 0";
+    "push 0"->"store.i $r290";
+    "store.i $r290"->"goto load.r $r169";
+    "goto load.r $r169"->"load.r $r169";
+    "load.r $r169"->"virtualinvoke <java.util.StringTokenizer: boolean hasMoreTokens()>";
+    "virtualinvoke <java.util.StringTokenizer: boolean hasMoreTokens()>"->"ifne load.r r0";
+    "ifne load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <Marquee: java.lang.String[] myURL>";
+    "fieldget <Marquee: java.lang.String[] myURL>"->"load.i $r290";
+    "load.i $r290"->"load.r $r169";
+    "load.r $r169"->"virtualinvoke <java.util.StringTokenizer: java.lang.String nextToken()>";
+    "virtualinvoke <java.util.StringTokenizer: java.lang.String nextToken()>"->"arraywrite.r";
+    "arraywrite.r"->"load.r r0";
+    "load.r r0"->"fieldget <Marquee: java.lang.String[] myURL>";
+    "fieldget <Marquee: java.lang.String[] myURL>"->"load.i $r290";
+    "load.i $r290"->"arrayread.r";
+    "arrayread.r"->"push \"?\"";
+    "ifcmpeq.r load.r r0"
+    "push \"?\""->"ifcmpeq.r load.r r0";
+    "ifcmpeq.r load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <Marquee: java.net.URL[] theURL>";
+    "fieldget <Marquee: java.net.URL[] theURL>"->"load.i $r290";
+    "load.i $r290"->"new java.net.URL";
+    "new java.net.URL"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "load.r r0"->"fieldget <Marquee: java.lang.String[] myURL>";
+    "fieldget <Marquee: java.lang.String[] myURL>"->"load.i $r290";
+    "load.i $r290"->"arrayread.r";
+    "arrayread.r"->"specialinvoke <java.net.URL: void <init>(java.lang.String)>";
+    "specialinvoke <java.net.URL: void <init>(java.lang.String)>"->"arraywrite.r";
+    "arraywrite.r"->"goto inc.i $r290 1";
+    "goto inc.i $r290 1"->"inc.i $r290 1";
+    "specialinvoke <java.net.URL: void <init>(java.lang.String)>"->"store.r $r171";
+    "store.r $r171"->"staticget <java.lang.System: java.io.PrintStream out>";
+    "staticget <java.lang.System: java.io.PrintStream out>"->"new java.lang.StringBuffer";
+    "new java.lang.StringBuffer"->"dup1.r";
+    "dup1.r"->"specialinvoke <java.lang.StringBuffer: void <init>()>";
+    "push \"Incorrect URL Syntax for URL: \""
+    "specialinvoke <java.lang.StringBuffer: void <init>()>"->"push \"Incorrect URL Syntax for URL: \"";
+    "push \"Incorrect URL Syntax for URL: \""->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"load.r r0";
+    "load.r r0"->"fieldget <Marquee: java.lang.String[] myURL>";
+    "fieldget <Marquee: java.lang.String[] myURL>"->"load.i $r290";
+    "load.i $r290"->"arrayread.r";
+    "arrayread.r"->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "push \"  (Absolute URL\'s are required.)\""
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"push \"  (Absolute URL\'s are required.)\"";
+    "push \"  (Absolute URL\'s are required.)\""->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>"->"virtualinvoke <java.io.PrintStream: void println(java.lang.String)>";
+    "virtualinvoke <java.io.PrintStream: void println(java.lang.String)>"->"load.r r0";
+    "load.r r0"->"fieldget <Marquee: java.net.URL[] theURL>";
+    "fieldget <Marquee: java.net.URL[] theURL>"->"load.i $r290";
+    "load.i $r290"->"push null";
+    "push null"->"arraywrite.r";
+    "arraywrite.r"->"goto inc.i $r290 1";
+    "ifcmpeq.r load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <Marquee: java.net.URL[] theURL>";
+    "fieldget <Marquee: java.net.URL[] theURL>"->"load.i $r290";
+    "load.i $r290"->"push null";
+    "push null"->"arraywrite.r";
+    "ifne load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <Marquee: java.lang.String[] messages>";
+    "fieldget <Marquee: java.lang.String[] messages>"->"load.i $r171";
+    "load.i $r171"->"load.r $r169";
+    "load.r $r169"->"virtualinvoke <java.util.StringTokenizer: java.lang.String nextToken()>";
+    "virtualinvoke <java.util.StringTokenizer: java.lang.String nextToken()>"->"arraywrite.r";
+    "arraywrite.r"->"new java.util.StringTokenizer";
+    "new java.util.StringTokenizer"->"store.r $r290";
+    "store.r $r290"->"load.r $r290";
+    "load.r $r290"->"load.r r0";
+    "load.r r0"->"fieldget <Marquee: java.lang.String[] messages>";
+    "fieldget <Marquee: java.lang.String[] messages>"->"load.i $r171";
+    "load.i $r171"->"arrayread.r";
+    "push \"|\""
+    "arrayread.r"->"push \"|\"";
+    "push \"|\""->"specialinvoke <java.util.StringTokenizer: void <init>(java.lang.String,java.lang.String)>";
+    "specialinvoke <java.util.StringTokenizer: void <init>(java.lang.String,java.lang.String)>"->"push 0";
+    "push 0"->"store.i i177";
+    "goto load.r $r290"
+    "store.i i177"->"goto load.r $r290";
+    "goto load.r $r290"->"load.r $r290";
+    "load.r $r290"->"virtualinvoke <java.util.StringTokenizer: boolean hasMoreTokens()>";
+    "virtualinvoke <java.util.StringTokenizer: boolean hasMoreTokens()>"->"ifne load.r r0";
+    "ifne load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <Marquee: java.lang.String[][] multiMessages>";
+    "fieldget <Marquee: java.lang.String[][] multiMessages>"->"load.i $r171";
+    "load.i $r171"->"arrayread.r";
+    "arrayread.r"->"push 1";
+    "push 1"->"arrayread.r";
+    "arrayread.r"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <Marquee: boolean[] multiFlag>";
+    "fieldget <Marquee: boolean[] multiFlag>"->"load.i $r171";
+    "load.i $r171"->"push 1";
+    "push 1"->"arraywrite.b";
+    "arraywrite.b"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <Marquee: java.lang.String[] default_messages>";
+    "fieldget <Marquee: java.lang.String[] default_messages>"->"load.i $r171";
+    "load.i $r171"->"load.r r0";
+    "load.r r0"->"fieldget <Marquee: java.lang.String[] messages>";
+    "fieldget <Marquee: java.lang.String[] messages>"->"load.i $r171";
+    "load.i $r171"->"arrayread.r";
+    "arrayread.r"->"arraywrite.r";
+    "arraywrite.r"->"load.r r0";
+    "load.r r0"->"fieldget <Marquee: java.awt.Color[] textColor>";
+    "fieldget <Marquee: java.awt.Color[] textColor>"->"load.i $r171";
+    "load.i $r171"->"new java.awt.Color";
+    "new java.awt.Color"->"dup1.r";
+    "dup1.r"->"push 0";
+    "push 0"->"push 0";
+    "push 0"->"push 0";
+    "push 0"->"specialinvoke <java.awt.Color: void <init>(int,int,int)>";
+    "specialinvoke <java.awt.Color: void <init>(int,int,int)>"->"arraywrite.r";
+    "arraywrite.r"->"load.r r0";
+    "load.r r0"->"fieldget <Marquee: java.awt.Color[] default_textColor>";
+    "fieldget <Marquee: java.awt.Color[] default_textColor>"->"load.i $r171";
+    "load.i $r171"->"new java.awt.Color";
+    "new java.awt.Color"->"dup1.r";
+    "dup1.r"->"push 0";
+    "push 0"->"push 0";
+    "push 0"->"push 0";
+    "push 0"->"specialinvoke <java.awt.Color: void <init>(int,int,int)>";
+    "specialinvoke <java.awt.Color: void <init>(int,int,int)>"->"arraywrite.r";
+    "arraywrite.r"->"load.r r0";
+    "load.r r0"->"fieldget <Marquee: int[] delay>";
+    "fieldget <Marquee: int[] delay>"->"load.i $r171";
+    "load.i $r171"->"push 20";
+    "push 20"->"arraywrite.i";
+    "arraywrite.i"->"load.r r0";
+    "load.r r0"->"fieldget <Marquee: int[] typewriterDelay>";
+    "fieldget <Marquee: int[] typewriterDelay>"->"load.i $r171";
+    "push 300"
+    "load.i $r171"->"push 300";
+    "push 300"->"arraywrite.i";
+    "arraywrite.i"->"load.r r0";
+    "load.r r0"->"fieldget <Marquee: int[] fadeFrames>";
+    "fieldget <Marquee: int[] fadeFrames>"->"load.i $r171";
+    "load.i $r171"->"push 50";
+    "push 50"->"arraywrite.i";
+    "arraywrite.i"->"load.r r0";
+    "load.r r0"->"fieldget <Marquee: int[] shadowXOffset>";
+    "fieldget <Marquee: int[] shadowXOffset>"->"load.i $r171";
+    "load.i $r171"->"push 2";
+    "push 2"->"arraywrite.i";
+    "arraywrite.i"->"load.r r0";
+    "load.r r0"->"fieldget <Marquee: int[] shadowYOffset>";
+    "fieldget <Marquee: int[] shadowYOffset>"->"load.i $r171";
+    "load.i $r171"->"push 2";
+    "push 2"->"arraywrite.i";
+    "arraywrite.i"->"load.r r0";
+    "load.r r0"->"fieldget <Marquee: java.awt.Color[] shadowColor>";
+    "fieldget <Marquee: java.awt.Color[] shadowColor>"->"load.i $r171";
+    "load.i $r171"->"staticget <java.awt.Color: java.awt.Color black>";
+    "staticget <java.awt.Color: java.awt.Color black>"->"arraywrite.r";
+    "inc.i $r171 1"
+    "arraywrite.r"->"inc.i $r171 1";
+    "ifnull load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <Marquee: boolean[] multiFlag>";
+    "fieldget <Marquee: boolean[] multiFlag>"->"load.i $r171";
+    "load.i $r171"->"push 0";
+    "push 0"->"arraywrite.b";
+    "ifne load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <Marquee: java.lang.String[][] multiMessages>";
+    "fieldget <Marquee: java.lang.String[][] multiMessages>"->"load.i $r171";
+    "load.i $r171"->"arrayread.r";
+    "arrayread.r"->"load.i i177";
+    "load.i i177"->"load.r $r290";
+    "load.r $r290"->"virtualinvoke <java.util.StringTokenizer: java.lang.String nextToken()>";
+    "virtualinvoke <java.util.StringTokenizer: java.lang.String nextToken()>"->"arraywrite.r";
+    "arraywrite.r"->"inc.i i177 1";
+    "inc.i i177 1"->"load.r r0";
+    "load.r r0"->"fieldget <Marquee: int[] multiCount>";
+    "fieldget <Marquee: int[] multiCount>"->"load.i $r171";
+    "load.i $r171"->"load.i i177";
+    "load.i i177"->"arraywrite.i";
+    "ifnull load.r r0"->"load.r r0";
+    "push \"MESSAGE\""
+    "load.r r0"->"push \"MESSAGE\"";
+    "push \"MESSAGE\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"store.r $r290";
+    "store.r $r290"->"load.r $r290";
+    "load.r $r290"->"ifnull load.r r0";
+    "ifnull load.r r0"->"new java.util.StringTokenizer";
+    "new java.util.StringTokenizer"->"store.r $r169";
+    "store.r $r169"->"load.r $r169";
+    "load.r $r169"->"load.r $r290";
+    "load.r $r290"->"push \";\"";
+    "push \";\""->"specialinvoke <java.util.StringTokenizer: void <init>(java.lang.String,java.lang.String)>";
+    "specialinvoke <java.util.StringTokenizer: void <init>(java.lang.String,java.lang.String)>"->"push 0";
+    "push 0"->"store.i $r171";
+    "store.i $r171"->"goto load.r $r169";
+    "goto load.r $r169"->"load.r $r169";
+    "load.r $r169"->"virtualinvoke <java.util.StringTokenizer: boolean hasMoreTokens()>";
+    "virtualinvoke <java.util.StringTokenizer: boolean hasMoreTokens()>"->"ifne load.r r0";
+    "ifne load.r r0"->"load.r r0";
+    "load.r r0"->"load.i $r171";
+    "load.i $r171"->"push 1";
+    "push 1"->"sub.i";
+    "sub.i"->"fieldput <Marquee: int messageCount>";
+    "ifne load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <Marquee: java.lang.String[] messages>";
+    "fieldget <Marquee: java.lang.String[] messages>"->"load.i $r171";
+    "load.i $r171"->"load.r $r169";
+    "load.r $r169"->"virtualinvoke <java.util.StringTokenizer: java.lang.String nextToken()>";
+    "virtualinvoke <java.util.StringTokenizer: java.lang.String nextToken()>"->"arraywrite.r";
+    "arraywrite.r"->"new java.util.StringTokenizer";
+    "new java.util.StringTokenizer"->"store.r $r290";
+    "store.r $r290"->"load.r $r290";
+    "load.r $r290"->"load.r r0";
+    "load.r r0"->"fieldget <Marquee: java.lang.String[] messages>";
+    "fieldget <Marquee: java.lang.String[] messages>"->"load.i $r171";
+    "load.i $r171"->"arrayread.r";
+    "arrayread.r"->"push \"|\"";
+    "push \"|\""->"specialinvoke <java.util.StringTokenizer: void <init>(java.lang.String,java.lang.String)>";
+    "specialinvoke <java.util.StringTokenizer: void <init>(java.lang.String,java.lang.String)>"->"push 0";
+    "push 0"->"store.i i177";
+    "store.i i177"->"goto load.r $r290";
+    "goto load.r $r290"->"load.r $r290";
+    "load.r $r290"->"virtualinvoke <java.util.StringTokenizer: boolean hasMoreTokens()>";
+    "virtualinvoke <java.util.StringTokenizer: boolean hasMoreTokens()>"->"ifne load.r r0";
+    "ifne load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <Marquee: java.lang.String[][] multiMessages>";
+    "fieldget <Marquee: java.lang.String[][] multiMessages>"->"load.i $r171";
+    "load.i $r171"->"arrayread.r";
+    "arrayread.r"->"push 1";
+    "push 1"->"arrayread.r";
+    "arrayread.r"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <Marquee: boolean[] multiFlag>";
+    "fieldget <Marquee: boolean[] multiFlag>"->"load.i $r171";
+    "load.i $r171"->"push 1";
+    "push 1"->"arraywrite.b";
+    "arraywrite.b"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <Marquee: java.lang.String[] default_messages>";
+    "fieldget <Marquee: java.lang.String[] default_messages>"->"load.i $r171";
+    "load.i $r171"->"load.r r0";
+    "load.r r0"->"fieldget <Marquee: java.lang.String[] messages>";
+    "fieldget <Marquee: java.lang.String[] messages>"->"load.i $r171";
+    "load.i $r171"->"arrayread.r";
+    "arrayread.r"->"arraywrite.r";
+    "arraywrite.r"->"load.r r0";
+    "load.r r0"->"fieldget <Marquee: java.awt.Color[] textColor>";
+    "fieldget <Marquee: java.awt.Color[] textColor>"->"load.i $r171";
+    "load.i $r171"->"new java.awt.Color";
+    "new java.awt.Color"->"dup1.r";
+    "dup1.r"->"push 0";
+    "push 0"->"push 0";
+    "push 0"->"push 0";
+    "push 0"->"specialinvoke <java.awt.Color: void <init>(int,int,int)>";
+    "specialinvoke <java.awt.Color: void <init>(int,int,int)>"->"arraywrite.r";
+    "arraywrite.r"->"load.r r0";
+    "load.r r0"->"fieldget <Marquee: java.awt.Color[] default_textColor>";
+    "fieldget <Marquee: java.awt.Color[] default_textColor>"->"load.i $r171";
+    "load.i $r171"->"new java.awt.Color";
+    "new java.awt.Color"->"dup1.r";
+    "dup1.r"->"push 0";
+    "push 0"->"push 0";
+    "push 0"->"push 0";
+    "push 0"->"specialinvoke <java.awt.Color: void <init>(int,int,int)>";
+    "specialinvoke <java.awt.Color: void <init>(int,int,int)>"->"arraywrite.r";
+    "arraywrite.r"->"load.r r0";
+    "load.r r0"->"fieldget <Marquee: int[] delay>";
+    "fieldget <Marquee: int[] delay>"->"load.i $r171";
+    "load.i $r171"->"push 20";
+    "push 20"->"arraywrite.i";
+    "arraywrite.i"->"load.r r0";
+    "load.r r0"->"fieldget <Marquee: int[] typewriterDelay>";
+    "fieldget <Marquee: int[] typewriterDelay>"->"load.i $r171";
+    "load.i $r171"->"push 300";
+    "push 300"->"arraywrite.i";
+    "arraywrite.i"->"load.r r0";
+    "load.r r0"->"fieldget <Marquee: int[] fadeFrames>";
+    "fieldget <Marquee: int[] fadeFrames>"->"load.i $r171";
+    "load.i $r171"->"push 50";
+    "push 50"->"arraywrite.i";
+    "arraywrite.i"->"load.r r0";
+    "load.r r0"->"fieldget <Marquee: int[] shadowXOffset>";
+    "fieldget <Marquee: int[] shadowXOffset>"->"load.i $r171";
+    "load.i $r171"->"push 2";
+    "push 2"->"arraywrite.i";
+    "arraywrite.i"->"load.r r0";
+    "load.r r0"->"fieldget <Marquee: int[] shadowYOffset>";
+    "fieldget <Marquee: int[] shadowYOffset>"->"load.i $r171";
+    "load.i $r171"->"push 2";
+    "push 2"->"arraywrite.i";
+    "arraywrite.i"->"load.r r0";
+    "load.r r0"->"fieldget <Marquee: java.awt.Color[] shadowColor>";
+    "fieldget <Marquee: java.awt.Color[] shadowColor>"->"load.i $r171";
+    "load.i $r171"->"staticget <java.awt.Color: java.awt.Color black>";
+    "staticget <java.awt.Color: java.awt.Color black>"->"arraywrite.r";
+    "arraywrite.r"->"inc.i $r171 1";
+    "ifnull load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <Marquee: boolean[] multiFlag>";
+    "fieldget <Marquee: boolean[] multiFlag>"->"load.i $r171";
+    "load.i $r171"->"push 0";
+    "push 0"->"arraywrite.b";
+    "ifne load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <Marquee: java.lang.String[][] multiMessages>";
+    "fieldget <Marquee: java.lang.String[][] multiMessages>"->"load.i $r171";
+    "load.i $r171"->"arrayread.r";
+    "arrayread.r"->"load.i i177";
+    "load.i i177"->"load.r $r290";
+    "load.r $r290"->"virtualinvoke <java.util.StringTokenizer: java.lang.String nextToken()>";
+    "virtualinvoke <java.util.StringTokenizer: java.lang.String nextToken()>"->"arraywrite.r";
+    "arraywrite.r"->"inc.i i177 1";
+    "inc.i i177 1"->"load.r r0";
+    "load.r r0"->"fieldget <Marquee: int[] multiCount>";
+    "fieldget <Marquee: int[] multiCount>"->"load.i $r171";
+    "load.i $r171"->"load.i i177";
+    "load.i i177"->"arraywrite.i";
+    "ifcmple.i load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <Marquee: java.util.Vector regEntry>";
+    "fieldget <Marquee: java.util.Vector regEntry>"->"load.i $r290";
+    "virtualinvoke <java.util.Vector: java.lang.Object elementAt(int)>"
+    "load.i $r290"->"virtualinvoke <java.util.Vector: java.lang.Object elementAt(int)>";
+    "checkcast"
+    "virtualinvoke <java.util.Vector: java.lang.Object elementAt(int)>"->"checkcast";
+    "checkcast"->"load.r $r169";
+    "load.r $r169"->"virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>";
+    "ifeq inc.i $r290 1"
+    "virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>"->"ifeq inc.i $r290 1";
+    "ifeq inc.i $r290 1"->"load.r r0";
+    "load.r r0"->"push 0";
+    "push 0"->"fieldput <Marquee: boolean pirated>";
+    "fieldput <Marquee: boolean pirated>"->"inc.i $r290 1";
+    "ifcmplt.i load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <Marquee: java.lang.String[] theHost>";
+    "fieldget <Marquee: java.lang.String[] theHost>"->"push 0";
+    "push 0"->"arrayread.r";
+    "arrayread.r"->"specialinvoke <Marquee: java.lang.String hashValue(java.lang.String)>";
+    "specialinvoke <Marquee: java.lang.String hashValue(java.lang.String)>"->"store.r $r169";
+    "store.r $r169"->"push 0";
+    "push 0"->"store.i $r290";
+    "store.i $r290"->"goto load.i $r290";
+    "goto load.i $r290"->"load.i $r290";
+    "load.i $r290"->"load.r r0";
+    "load.r r0"->"fieldget <Marquee: java.util.Vector regEntry>";
+    "fieldget <Marquee: java.util.Vector regEntry>"->"virtualinvoke <java.util.Vector: int size()>";
+    "virtualinvoke <java.util.Vector: int size()>"->"push 1";
+    "push 1"->"sub.i";
+    "sub.i"->"ifcmple.i load.r r0";
+    "ifcmple.i load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <Marquee: java.util.Vector regEntry>";
+    "fieldget <Marquee: java.util.Vector regEntry>"->"load.i $r290";
+    "load.i $r290"->"virtualinvoke <java.util.Vector: java.lang.Object elementAt(int)>";
+    "virtualinvoke <java.util.Vector: java.lang.Object elementAt(int)>"->"checkcast";
+    "checkcast"->"load.r $r169";
+    "load.r $r169"->"virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>";
+    "virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>"->"ifeq inc.i $r290 1";
+    "ifeq inc.i $r290 1"->"load.r r0";
+    "load.r r0"->"push 0";
+    "push 0"->"fieldput <Marquee: boolean pirated>";
+    "fieldput <Marquee: boolean pirated>"->"inc.i $r290 1";
+    "ifne load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <Marquee: java.lang.String[] theHost>";
+    "fieldget <Marquee: java.lang.String[] theHost>"->"load.i $r290";
+    "load.i $r290"->"load.r $r169";
+    "load.r $r169"->"virtualinvoke <java.util.StringTokenizer: java.lang.String nextToken()>";
+    "virtualinvoke <java.util.StringTokenizer: java.lang.String nextToken()>"->"arraywrite.r";
+    "arraywrite.r"->"inc.i $r290 1";
+    "ifeq push 0"->"push 0";
+    "push 0"->"store.i $r290";
+    "store.i $r290"->"goto load.i $r290";
+    "goto load.i $r290"->"load.i $r290";
+    "load.i $r290"->"load.r r0";
+    "load.r r0"->"fieldget <Marquee: java.util.Vector regEntry>";
+    "fieldget <Marquee: java.util.Vector regEntry>"->"virtualinvoke <java.util.Vector: int size()>";
+    "virtualinvoke <java.util.Vector: int size()>"->"push 1";
+    "push 1"->"sub.i";
+    "sub.i"->"ifcmple.i load.r r0";
+    "ifcmple.i load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <Marquee: java.util.Vector regEntry>";
+    "fieldget <Marquee: java.util.Vector regEntry>"->"load.i $r290";
+    "load.i $r290"->"virtualinvoke <java.util.Vector: java.lang.Object elementAt(int)>";
+    "virtualinvoke <java.util.Vector: java.lang.Object elementAt(int)>"->"checkcast";
+    "checkcast"->"load.r $r169";
+    "load.r $r169"->"virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>";
+    "virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>"->"ifeq inc.i $r290 1";
+    "ifeq inc.i $r290 1"->"load.r r0";
+    "load.r r0"->"push 0";
+    "push 0"->"fieldput <Marquee: boolean pirated>";
+    "fieldput <Marquee: boolean pirated>"->"inc.i $r290 1";
+    "ifne load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <Marquee: java.util.Vector regEntry>";
+    "fieldget <Marquee: java.util.Vector regEntry>"->"load.r $r169";
+    "load.r $r169"->"virtualinvoke <java.util.StringTokenizer: java.lang.String nextToken()>";
+    "virtualinvoke <java.util.Vector: void addElement(java.lang.Object)>"
+    "virtualinvoke <java.util.StringTokenizer: java.lang.String nextToken()>"->"virtualinvoke <java.util.Vector: void addElement(java.lang.Object)>";
+    "ifnull load.r r0"->"load.r r0";
+    "load.r r0"->"push 1";
+    "push 1"->"fieldput <Marquee: boolean demoMode>";
+}

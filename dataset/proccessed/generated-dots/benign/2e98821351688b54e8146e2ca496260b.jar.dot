@@ -1,0 +1,39 @@
+digraph "" {
+    "r0 := @this: DatabaseManager"
+    "new DatabaseManager"
+    "r0 := @this: DatabaseManager"->"new DatabaseManager";
+    "store.r r0"
+    "new DatabaseManager"->"store.r r0";
+    "load.r r0"
+    "store.r r0"->"load.r r0";
+    "specialinvoke <DatabaseManager: void <init>()>"
+    "load.r r0"->"specialinvoke <DatabaseManager: void <init>()>";
+    "specialinvoke <DatabaseManager: void <init>()>"->"load.r r0";
+    "virtualinvoke <DatabaseManager: void main()>"
+    "load.r r0"->"virtualinvoke <DatabaseManager: void main()>";
+    "virtualinvoke <DatabaseManager: void main()>"->"load.r r0";
+    "push \"org.hsql.jdbcDriver\""
+    "load.r r0"->"push \"org.hsql.jdbcDriver\"";
+    "push \"jdbc:HypersonicSQL:.\""
+    "push \"org.hsql.jdbcDriver\""->"push \"jdbc:HypersonicSQL:.\"";
+    "push \"sa\""
+    "push \"jdbc:HypersonicSQL:.\""->"push \"sa\"";
+    "push \"\""
+    "push \"sa\""->"push \"\"";
+    "staticinvoke <ConnectionDialog: java.sql.Connection createConnection(java.lang.String,java.lang.String,java.lang.String,java.lang.String)>"
+    "push \"\""->"staticinvoke <ConnectionDialog: java.sql.Connection createConnection(java.lang.String,java.lang.String,java.lang.String,java.lang.String)>";
+    "virtualinvoke <DatabaseManager: void connect(java.sql.Connection)>"
+    "staticinvoke <ConnectionDialog: java.sql.Connection createConnection(java.lang.String,java.lang.String,java.lang.String,java.lang.String)>"->"virtualinvoke <DatabaseManager: void connect(java.sql.Connection)>";
+    "virtualinvoke <DatabaseManager: void connect(java.sql.Connection)>"->"load.r r0";
+    "virtualinvoke <DatabaseManager: void insertTestData()>"
+    "load.r r0"->"virtualinvoke <DatabaseManager: void insertTestData()>";
+    "virtualinvoke <DatabaseManager: void insertTestData()>"->"load.r r0";
+    "specialinvoke <DatabaseManager: void refreshTree()>"
+    "load.r r0"->"specialinvoke <DatabaseManager: void refreshTree()>";
+    "goto return"
+    "specialinvoke <DatabaseManager: void refreshTree()>"->"goto return";
+    "return"
+    "goto return"->"return";
+    "virtualinvoke <java.lang.Exception: void printStackTrace()>"
+    "specialinvoke <DatabaseManager: void refreshTree()>"->"virtualinvoke <java.lang.Exception: void printStackTrace()>";
+}

@@ -1,0 +1,46 @@
+digraph "" {
+    "$r5 := @this: com.photochannel.easyUploader.EasyUploader"
+    "staticget <com.photochannel.easyUploader.EasyUploader: java.lang.Boolean a>"
+    "$r5 := @this: com.photochannel.easyUploader.EasyUploader"->"staticget <com.photochannel.easyUploader.EasyUploader: java.lang.Boolean a>";
+    "store.r $r1"
+    "staticget <com.photochannel.easyUploader.EasyUploader: java.lang.Boolean a>"->"store.r $r1";
+    "load.r $r1"
+    "store.r $r1"->"load.r $r1";
+    "entermonitor"
+    "load.r $r1"->"entermonitor";
+    "entermonitor"->"staticget <com.photochannel.easyUploader.EasyUploader: java.lang.Boolean a>";
+    "virtualinvoke <java.lang.Boolean: boolean booleanValue()>"
+    "staticget <com.photochannel.easyUploader.EasyUploader: java.lang.Boolean a>"->"virtualinvoke <java.lang.Boolean: boolean booleanValue()>";
+    "ifeq push 1"
+    "virtualinvoke <java.lang.Boolean: boolean booleanValue()>"->"ifeq push 1";
+    "staticget <java.lang.System: java.io.PrintStream out>"
+    "ifeq push 1"->"staticget <java.lang.System: java.io.PrintStream out>";
+    "push \".....2nd instance detected --- IGNORING\""
+    "staticget <java.lang.System: java.io.PrintStream out>"->"push \".....2nd instance detected --- IGNORING\"";
+    "virtualinvoke <java.io.PrintStream: void println(java.lang.String)>"
+    "push \".....2nd instance detected --- IGNORING\""->"virtualinvoke <java.io.PrintStream: void println(java.lang.String)>";
+    "push 1"
+    "virtualinvoke <java.io.PrintStream: void println(java.lang.String)>"->"push 1";
+    "staticinvoke <java.lang.Boolean: java.lang.Boolean valueOf(boolean)>"
+    "push 1"->"staticinvoke <java.lang.Boolean: java.lang.Boolean valueOf(boolean)>";
+    "staticput <com.photochannel.easyUploader.EasyUploader: java.lang.Boolean a>"
+    "staticinvoke <java.lang.Boolean: java.lang.Boolean valueOf(boolean)>"->"staticput <com.photochannel.easyUploader.EasyUploader: java.lang.Boolean a>";
+    "staticput <com.photochannel.easyUploader.EasyUploader: java.lang.Boolean a>"->"load.r $r1";
+    "exitmonitor"
+    "load.r $r1"->"exitmonitor";
+    "goto load.r $r5"
+    "exitmonitor"->"goto load.r $r5";
+    "load.r $r5"
+    "goto load.r $r5"->"load.r $r5";
+    "specialinvoke <javax.swing.JApplet: void init()>"
+    "load.r $r5"->"specialinvoke <javax.swing.JApplet: void init()>";
+    "return"
+    "specialinvoke <javax.swing.JApplet: void init()>"->"return";
+    "store.r $r5"
+    "load.r $r1"->"store.r $r5";
+    "store.r $r5"->"load.r $r1";
+    "load.r $r1"->"exitmonitor";
+    "exitmonitor"->"load.r $r5";
+    "athrow"
+    "load.r $r5"->"athrow";
+}

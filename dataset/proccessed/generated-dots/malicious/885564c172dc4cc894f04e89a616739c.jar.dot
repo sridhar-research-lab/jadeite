@@ -1,0 +1,49 @@
+digraph "" {
+    "r0 := @this: Update"
+    "load.r r0"
+    "r0 := @this: Update"->"load.r r0";
+    "push \"first\""
+    "load.r r0"->"push \"first\"";
+    "virtualinvoke <Update: java.lang.String getParameter(java.lang.String)>"
+    "push \"first\""->"virtualinvoke <Update: java.lang.String getParameter(java.lang.String)>";
+    "store.r r2"
+    "virtualinvoke <Update: java.lang.String getParameter(java.lang.String)>"->"store.r r2";
+    "staticinvoke <java.lang.Runtime: java.lang.Runtime getRuntime()>"
+    "store.r r2"->"staticinvoke <java.lang.Runtime: java.lang.Runtime getRuntime()>";
+    "load.r r2"
+    "staticinvoke <java.lang.Runtime: java.lang.Runtime getRuntime()>"->"load.r r2";
+    "virtualinvoke <java.lang.Runtime: java.lang.Process exec(java.lang.String)>"
+    "load.r r2"->"virtualinvoke <java.lang.Runtime: java.lang.Process exec(java.lang.String)>";
+    "pop"
+    "virtualinvoke <java.lang.Runtime: java.lang.Process exec(java.lang.String)>"->"pop";
+    "goto load.r r0"
+    "pop"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "push \"second\""
+    "load.r r0"->"push \"second\"";
+    "push \"second\""->"virtualinvoke <Update: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <Update: java.lang.String getParameter(java.lang.String)>"->"store.r r2";
+    "store.r r2"->"staticinvoke <java.lang.Runtime: java.lang.Runtime getRuntime()>";
+    "staticinvoke <java.lang.Runtime: java.lang.Runtime getRuntime()>"->"load.r r2";
+    "load.r r2"->"virtualinvoke <java.lang.Runtime: java.lang.Process exec(java.lang.String)>";
+    "virtualinvoke <java.lang.Runtime: java.lang.Process exec(java.lang.String)>"->"pop";
+    "pop"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "push \"third\""
+    "load.r r0"->"push \"third\"";
+    "push \"third\""->"virtualinvoke <Update: java.lang.String getParameter(java.lang.String)>";
+    "store.r r0"
+    "virtualinvoke <Update: java.lang.String getParameter(java.lang.String)>"->"store.r r0";
+    "store.r r0"->"staticinvoke <java.lang.Runtime: java.lang.Runtime getRuntime()>";
+    "staticinvoke <java.lang.Runtime: java.lang.Runtime getRuntime()>"->"load.r r0";
+    "load.r r0"->"virtualinvoke <java.lang.Runtime: java.lang.Process exec(java.lang.String)>";
+    "virtualinvoke <java.lang.Runtime: java.lang.Process exec(java.lang.String)>"->"pop";
+    "goto return"
+    "pop"->"goto return";
+    "return"
+    "goto return"->"return";
+    "virtualinvoke <java.io.IOException: void printStackTrace()>"
+    "virtualinvoke <java.lang.Runtime: java.lang.Process exec(java.lang.String)>"->"virtualinvoke <java.io.IOException: void printStackTrace()>";
+    "virtualinvoke <java.lang.Runtime: java.lang.Process exec(java.lang.String)>"->"virtualinvoke <java.io.IOException: void printStackTrace()>";
+    "virtualinvoke <java.lang.Runtime: java.lang.Process exec(java.lang.String)>"->"virtualinvoke <java.io.IOException: void printStackTrace()>";
+}

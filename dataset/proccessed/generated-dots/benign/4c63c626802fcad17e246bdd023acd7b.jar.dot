@@ -1,0 +1,968 @@
+digraph "" {
+    "r0 := @this: tov"
+    "load.r r0"
+    "r0 := @this: tov"->"load.r r0";
+    "specialinvoke <java.applet.Applet: void init()>"
+    "load.r r0"->"specialinvoke <java.applet.Applet: void init()>";
+    "specialinvoke <java.applet.Applet: void init()>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "virtualinvoke <java.awt.Component: java.awt.Dimension size()>"
+    "load.r r0"->"virtualinvoke <java.awt.Component: java.awt.Dimension size()>";
+    "fieldget <java.awt.Dimension: int width>"
+    "virtualinvoke <java.awt.Component: java.awt.Dimension size()>"->"fieldget <java.awt.Dimension: int width>";
+    "fieldput <tov: int width>"
+    "fieldget <java.awt.Dimension: int width>"->"fieldput <tov: int width>";
+    "fieldput <tov: int width>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"virtualinvoke <java.awt.Component: java.awt.Dimension size()>";
+    "fieldget <java.awt.Dimension: int height>"
+    "virtualinvoke <java.awt.Component: java.awt.Dimension size()>"->"fieldget <java.awt.Dimension: int height>";
+    "fieldput <tov: int height>"
+    "fieldget <java.awt.Dimension: int height>"->"fieldput <tov: int height>";
+    "fieldput <tov: int height>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "fieldget <tov: int width>"
+    "load.r r0"->"fieldget <tov: int width>";
+    "push 20"
+    "fieldget <tov: int width>"->"push 20";
+    "sub.i"
+    "push 20"->"sub.i";
+    "fieldput <tov: int canvasw>"
+    "sub.i"->"fieldput <tov: int canvasw>";
+    "fieldput <tov: int canvasw>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "fieldget <tov: int height>"
+    "load.r r0"->"fieldget <tov: int height>";
+    "push 120"
+    "fieldget <tov: int height>"->"push 120";
+    "push 120"->"sub.i";
+    "fieldput <tov: int canvash>"
+    "sub.i"->"fieldput <tov: int canvash>";
+    "fieldput <tov: int canvash>"->"load.r r0";
+    "push \"regcode\""
+    "load.r r0"->"push \"regcode\"";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"
+    "push \"regcode\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "store.r r2"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"store.r r2";
+    "load.r r2"
+    "store.r r2"->"load.r r2";
+    "virtualinvoke <java.lang.String: java.lang.String trim()>"
+    "load.r r2"->"virtualinvoke <java.lang.String: java.lang.String trim()>";
+    "pop"
+    "virtualinvoke <java.lang.String: java.lang.String trim()>"->"pop";
+    "pop"->"load.r r2";
+    "virtualinvoke <java.lang.String: java.lang.String toUpperCase()>"
+    "load.r r2"->"virtualinvoke <java.lang.String: java.lang.String toUpperCase()>";
+    "virtualinvoke <java.lang.String: java.lang.String toUpperCase()>"->"pop";
+    "pop"->"load.r r2";
+    "push 0"
+    "load.r r2"->"push 0";
+    "virtualinvoke <java.lang.String: char charAt(int)>"
+    "push 0"->"virtualinvoke <java.lang.String: char charAt(int)>";
+    "push 48"
+    "virtualinvoke <java.lang.String: char charAt(int)>"->"push 48";
+    "sub.c"
+    "push 48"->"sub.c";
+    "store.i r1"
+    "sub.c"->"store.i r1";
+    "load.i r1"
+    "store.i r1"->"load.i r1";
+    "push 9"
+    "load.i r1"->"push 9";
+    "ifcmple.i load.r r2"
+    "push 9"->"ifcmple.i load.r r2";
+    "inc.i r1 -7"
+    "ifcmple.i load.r r2"->"inc.i r1 -7";
+    "inc.i r1 -7"->"load.r r2";
+    "load.r r2"->"load.r r2";
+    "virtualinvoke <java.lang.String: int length()>"
+    "load.r r2"->"virtualinvoke <java.lang.String: int length()>";
+    "push 1"
+    "virtualinvoke <java.lang.String: int length()>"->"push 1";
+    "push 1"->"sub.i";
+    "sub.i"->"virtualinvoke <java.lang.String: char charAt(int)>";
+    "virtualinvoke <java.lang.String: char charAt(int)>"->"push 48";
+    "push 48"->"sub.c";
+    "store.i i0"
+    "sub.c"->"store.i i0";
+    "store.i i0"->"load.i r1";
+    "push 3"
+    "load.i r1"->"push 3";
+    "add.i"
+    "push 3"->"add.i";
+    "add.i"->"load.r r2";
+    "load.r r2"->"virtualinvoke <java.lang.String: int length()>";
+    "ifcmpge.i load.r r0"
+    "virtualinvoke <java.lang.String: int length()>"->"ifcmpge.i load.r r0";
+    "new java.lang.Integer"
+    "ifcmpge.i load.r r0"->"new java.lang.Integer";
+    "dup1.r"
+    "new java.lang.Integer"->"dup1.r";
+    "dup1.r"->"load.r r2";
+    "load.r r2"->"load.i r1";
+    "load.i r1"->"load.i r1";
+    "load.i r1"->"push 3";
+    "push 3"->"add.i";
+    "virtualinvoke <java.lang.String: java.lang.String substring(int,int)>"
+    "add.i"->"virtualinvoke <java.lang.String: java.lang.String substring(int,int)>";
+    "specialinvoke <java.lang.Integer: void <init>(java.lang.String)>"
+    "virtualinvoke <java.lang.String: java.lang.String substring(int,int)>"->"specialinvoke <java.lang.Integer: void <init>(java.lang.String)>";
+    "virtualinvoke <java.lang.Integer: int intValue()>"
+    "specialinvoke <java.lang.Integer: void <init>(java.lang.String)>"->"virtualinvoke <java.lang.Integer: int intValue()>";
+    "push 163"
+    "virtualinvoke <java.lang.Integer: int intValue()>"->"push 163";
+    "ifcmpne.i load.r r0"
+    "push 163"->"ifcmpne.i load.r r0";
+    "load.i i0"
+    "ifcmpne.i load.r r0"->"load.i i0";
+    "load.i i0"->"load.i r1";
+    "load.i r1"->"push 163";
+    "mul.i"
+    "push 163"->"mul.i";
+    "push 10"
+    "mul.i"->"push 10";
+    "rem.i"
+    "push 10"->"rem.i";
+    "rem.i"->"ifcmpne.i load.r r0";
+    "ifcmpne.i load.r r0"->"load.r r0";
+    "load.r r0"->"push 1";
+    "fieldput <tov: boolean registered>"
+    "push 1"->"fieldput <tov: boolean registered>";
+    "fieldput <tov: boolean registered>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "push \"tovdata\""
+    "load.r r0"->"push \"tovdata\"";
+    "push \"tovdata\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "fieldput <tov: java.lang.String tovdata>"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"fieldput <tov: java.lang.String tovdata>";
+    "fieldput <tov: java.lang.String tovdata>"->"load.r r0";
+    "load.r r0"->"new java.lang.Integer";
+    "new java.lang.Integer"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "push \"anglestep\""
+    "load.r r0"->"push \"anglestep\"";
+    "push \"anglestep\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"specialinvoke <java.lang.Integer: void <init>(java.lang.String)>";
+    "specialinvoke <java.lang.Integer: void <init>(java.lang.String)>"->"virtualinvoke <java.lang.Integer: int intValue()>";
+    "fieldput <tov: int anglestep>"
+    "virtualinvoke <java.lang.Integer: int intValue()>"->"fieldput <tov: int anglestep>";
+    "fieldput <tov: int anglestep>"->"load.r r0";
+    "new java.lang.Float"
+    "load.r r0"->"new java.lang.Float";
+    "new java.lang.Float"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "push \"scale\""
+    "load.r r0"->"push \"scale\"";
+    "push \"scale\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "specialinvoke <java.lang.Float: void <init>(java.lang.String)>"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"specialinvoke <java.lang.Float: void <init>(java.lang.String)>";
+    "virtualinvoke <java.lang.Float: float floatValue()>"
+    "specialinvoke <java.lang.Float: void <init>(java.lang.String)>"->"virtualinvoke <java.lang.Float: float floatValue()>";
+    "fieldput <tov: float scale>"
+    "virtualinvoke <java.lang.Float: float floatValue()>"->"fieldput <tov: float scale>";
+    "fieldput <tov: float scale>"->"load.r r0";
+    "fieldget <tov: float scale>"
+    "load.r r0"->"fieldget <tov: float scale>";
+    "push 1.0F"
+    "fieldget <tov: float scale>"->"push 1.0F";
+    "cmpl.f"
+    "push 1.0F"->"cmpl.f";
+    "ifle load.r r0"
+    "cmpl.f"->"ifle load.r r0";
+    "ifle load.r r0"->"load.r r0";
+    "load.r r0"->"push 1.0F";
+    "push 1.0F"->"fieldput <tov: float scale>";
+    "fieldput <tov: float scale>"->"load.r r0";
+    "load.r r0"->"fieldget <tov: float scale>";
+    "push 0.1F"
+    "fieldget <tov: float scale>"->"push 0.1F";
+    "cmpg.f"
+    "push 0.1F"->"cmpg.f";
+    "ifge load.r r0"
+    "cmpg.f"->"ifge load.r r0";
+    "ifge load.r r0"->"load.r r0";
+    "load.r r0"->"push 0.1F";
+    "push 0.1F"->"fieldput <tov: float scale>";
+    "fieldput <tov: float scale>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "push \"objcolor\""
+    "load.r r0"->"push \"objcolor\"";
+    "push \"objcolor\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <tov: int[] parseInt(java.lang.String)>"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"virtualinvoke <tov: int[] parseInt(java.lang.String)>";
+    "virtualinvoke <tov: int[] parseInt(java.lang.String)>"->"store.r r2";
+    "store.r r2"->"load.r r0";
+    "load.r r0"->"load.r r2";
+    "load.r r2"->"push 0";
+    "arrayread.i"
+    "push 0"->"arrayread.i";
+    "fieldput <tov: int faceR>"
+    "arrayread.i"->"fieldput <tov: int faceR>";
+    "fieldput <tov: int faceR>"->"load.r r0";
+    "load.r r0"->"load.r r2";
+    "load.r r2"->"push 1";
+    "push 1"->"arrayread.i";
+    "fieldput <tov: int faceG>"
+    "arrayread.i"->"fieldput <tov: int faceG>";
+    "fieldput <tov: int faceG>"->"load.r r0";
+    "load.r r0"->"load.r r2";
+    "push 2"
+    "load.r r2"->"push 2";
+    "push 2"->"arrayread.i";
+    "fieldput <tov: int faceB>"
+    "arrayread.i"->"fieldput <tov: int faceB>";
+    "fieldput <tov: int faceB>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "push \"wfcolor\""
+    "load.r r0"->"push \"wfcolor\"";
+    "push \"wfcolor\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"virtualinvoke <tov: int[] parseInt(java.lang.String)>";
+    "virtualinvoke <tov: int[] parseInt(java.lang.String)>"->"store.r r2";
+    "store.r r2"->"load.r r0";
+    "load.r r0"->"load.r r2";
+    "load.r r2"->"push 0";
+    "push 0"->"arrayread.i";
+    "fieldput <tov: int wfR>"
+    "arrayread.i"->"fieldput <tov: int wfR>";
+    "fieldput <tov: int wfR>"->"load.r r0";
+    "load.r r0"->"load.r r2";
+    "load.r r2"->"push 1";
+    "push 1"->"arrayread.i";
+    "fieldput <tov: int wfG>"
+    "arrayread.i"->"fieldput <tov: int wfG>";
+    "fieldput <tov: int wfG>"->"load.r r0";
+    "load.r r0"->"load.r r2";
+    "load.r r2"->"push 2";
+    "push 2"->"arrayread.i";
+    "fieldput <tov: int wfB>"
+    "arrayread.i"->"fieldput <tov: int wfB>";
+    "fieldput <tov: int wfB>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "push \"bgcolor\""
+    "load.r r0"->"push \"bgcolor\"";
+    "push \"bgcolor\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"virtualinvoke <tov: int[] parseInt(java.lang.String)>";
+    "virtualinvoke <tov: int[] parseInt(java.lang.String)>"->"store.r r2";
+    "store.r r2"->"load.r r0";
+    "load.r r0"->"load.r r2";
+    "load.r r2"->"push 0";
+    "push 0"->"arrayread.i";
+    "fieldput <tov: int bgR>"
+    "arrayread.i"->"fieldput <tov: int bgR>";
+    "fieldput <tov: int bgR>"->"load.r r0";
+    "load.r r0"->"load.r r2";
+    "load.r r2"->"push 1";
+    "push 1"->"arrayread.i";
+    "fieldput <tov: int bgG>"
+    "arrayread.i"->"fieldput <tov: int bgG>";
+    "fieldput <tov: int bgG>"->"load.r r0";
+    "load.r r0"->"load.r r2";
+    "load.r r2"->"push 2";
+    "push 2"->"arrayread.i";
+    "fieldput <tov: int bgB>"
+    "arrayread.i"->"fieldput <tov: int bgB>";
+    "fieldput <tov: int bgB>"->"load.r r0";
+    "load.r r0"->"new java.lang.Integer";
+    "new java.lang.Integer"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "push \"delay\""
+    "load.r r0"->"push \"delay\"";
+    "push \"delay\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"specialinvoke <java.lang.Integer: void <init>(java.lang.String)>";
+    "specialinvoke <java.lang.Integer: void <init>(java.lang.String)>"->"virtualinvoke <java.lang.Integer: int intValue()>";
+    "fieldput <tov: int delay>"
+    "virtualinvoke <java.lang.Integer: int intValue()>"->"fieldput <tov: int delay>";
+    "push null"
+    "fieldput <tov: int delay>"->"push null";
+    "store.r i0"
+    "push null"->"store.r i0";
+    "store.r i0"->"load.r r0";
+    "fieldget <tov: java.lang.String tovdata>"
+    "load.r r0"->"fieldget <tov: java.lang.String tovdata>";
+    "fieldget <tov: java.lang.String tovdata>"->"store.r r2";
+    "store.r r2"->"load.r r0";
+    "new java.lang.StringBuffer"
+    "load.r r0"->"new java.lang.StringBuffer";
+    "new java.lang.StringBuffer"->"dup1.r";
+    "specialinvoke <java.lang.StringBuffer: void <init>()>"
+    "dup1.r"->"specialinvoke <java.lang.StringBuffer: void <init>()>";
+    "push \"Reading TOV data file \""
+    "specialinvoke <java.lang.StringBuffer: void <init>()>"->"push \"Reading TOV data file \"";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"
+    "push \"Reading TOV data file \""->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"load.r r0";
+    "load.r r0"->"fieldget <tov: java.lang.String tovdata>";
+    "fieldget <tov: java.lang.String tovdata>"->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "push \"...\""
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"push \"...\"";
+    "push \"...\""->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>"
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>";
+    "virtualinvoke <java.applet.Applet: void showStatus(java.lang.String)>"
+    "virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>"->"virtualinvoke <java.applet.Applet: void showStatus(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: void showStatus(java.lang.String)>"->"load.r r0";
+    "load.r r0"->"fieldget <tov: java.lang.String tovdata>";
+    "fieldget <tov: java.lang.String tovdata>"->"virtualinvoke <java.lang.String: java.lang.String toUpperCase()>";
+    "push \"HTTP\""
+    "virtualinvoke <java.lang.String: java.lang.String toUpperCase()>"->"push \"HTTP\"";
+    "virtualinvoke <java.lang.String: boolean startsWith(java.lang.String)>"
+    "push \"HTTP\""->"virtualinvoke <java.lang.String: boolean startsWith(java.lang.String)>";
+    "ifeq new java.net.URL"
+    "virtualinvoke <java.lang.String: boolean startsWith(java.lang.String)>"->"ifeq new java.net.URL";
+    "new java.net.URL"
+    "ifeq new java.net.URL"->"new java.net.URL";
+    "new java.net.URL"->"dup1.r";
+    "dup1.r"->"load.r r2";
+    "specialinvoke <java.net.URL: void <init>(java.lang.String)>"
+    "load.r r2"->"specialinvoke <java.net.URL: void <init>(java.lang.String)>";
+    "store.r r1"
+    "specialinvoke <java.net.URL: void <init>(java.lang.String)>"->"store.r r1";
+    "goto new java.io.DataInputStream"
+    "store.r r1"->"goto new java.io.DataInputStream";
+    "new java.io.DataInputStream"
+    "goto new java.io.DataInputStream"->"new java.io.DataInputStream";
+    "new java.io.DataInputStream"->"dup1.r";
+    "load.r r1"
+    "dup1.r"->"load.r r1";
+    "virtualinvoke <java.net.URL: java.io.InputStream openStream()>"
+    "load.r r1"->"virtualinvoke <java.net.URL: java.io.InputStream openStream()>";
+    "specialinvoke <java.io.DataInputStream: void <init>(java.io.InputStream)>"
+    "virtualinvoke <java.net.URL: java.io.InputStream openStream()>"->"specialinvoke <java.io.DataInputStream: void <init>(java.io.InputStream)>";
+    "specialinvoke <java.io.DataInputStream: void <init>(java.io.InputStream)>"->"store.r i0";
+    "goto load.r r0"
+    "store.r i0"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "load.r i0"
+    "load.r r0"->"load.r i0";
+    "virtualinvoke <java.io.DataInputStream: java.lang.String readLine()>"
+    "load.r i0"->"virtualinvoke <java.io.DataInputStream: java.lang.String readLine()>";
+    "fieldput <tov: java.lang.String target>"
+    "virtualinvoke <java.io.DataInputStream: java.lang.String readLine()>"->"fieldput <tov: java.lang.String target>";
+    "fieldput <tov: java.lang.String target>"->"load.r r0";
+    "load.r r0"->"load.r i0";
+    "load.r i0"->"virtualinvoke <java.io.DataInputStream: java.lang.String readLine()>";
+    "virtualinvoke <java.io.DataInputStream: java.lang.String readLine()>"->"virtualinvoke <tov: int[] parseInt(java.lang.String)>";
+    "virtualinvoke <tov: int[] parseInt(java.lang.String)>"->"store.r r1";
+    "store.r r1"->"load.r r0";
+    "load.r r0"->"load.r r1";
+    "load.r r1"->"push 0";
+    "push 0"->"arrayread.i";
+    "fieldput <tov: int tovpcount>"
+    "arrayread.i"->"fieldput <tov: int tovpcount>";
+    "fieldput <tov: int tovpcount>"->"load.r r0";
+    "load.r r0"->"load.r r1";
+    "load.r r1"->"push 1";
+    "push 1"->"arrayread.i";
+    "fieldput <tov: int tovlcount>"
+    "arrayread.i"->"fieldput <tov: int tovlcount>";
+    "fieldput <tov: int tovlcount>"->"load.r r0";
+    "load.r r0"->"load.r r1";
+    "load.r r1"->"push 2";
+    "push 2"->"arrayread.i";
+    "fieldput <tov: int tovtcount>"
+    "arrayread.i"->"fieldput <tov: int tovtcount>";
+    "fieldput <tov: int tovtcount>"->"load.r r0";
+    "fieldget <tov: int tovpcount>"
+    "load.r r0"->"fieldget <tov: int tovpcount>";
+    "fieldget <tov: int tovpcount>"->"ifle load.r r0";
+    "ifle load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <tov: int tovpcount>";
+    "fieldget <tov: int tovpcount>"->"push 3";
+    "newmultiarray 2"
+    "push 3"->"newmultiarray 2";
+    "fieldput <tov: float[][] tovp>"
+    "newmultiarray 2"->"fieldput <tov: float[][] tovp>";
+    "fieldput <tov: float[][] tovp>"->"push 0";
+    "store.i $r63"
+    "push 0"->"store.i $r63";
+    "goto load.i $r63"
+    "store.i $r63"->"goto load.i $r63";
+    "load.i $r63"
+    "goto load.i $r63"->"load.i $r63";
+    "load.i $r63"->"load.r r0";
+    "load.r r0"->"fieldget <tov: int tovpcount>";
+    "ifcmplt.i load.r r0"
+    "fieldget <tov: int tovpcount>"->"ifcmplt.i load.r r0";
+    "ifcmplt.i load.r r0"->"load.r r0";
+    "fieldget <tov: int tovlcount>"
+    "load.r r0"->"fieldget <tov: int tovlcount>";
+    "fieldget <tov: int tovlcount>"->"ifle load.r r0";
+    "ifle load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <tov: int tovlcount>";
+    "fieldget <tov: int tovlcount>"->"push 2";
+    "push 2"->"newmultiarray 2";
+    "fieldput <tov: int[][] tovl>"
+    "newmultiarray 2"->"fieldput <tov: int[][] tovl>";
+    "fieldput <tov: int[][] tovl>"->"push 0";
+    "push 0"->"store.i r1";
+    "goto load.i r1"
+    "store.i r1"->"goto load.i r1";
+    "goto load.i r1"->"load.i r1";
+    "load.i r1"->"load.r r0";
+    "load.r r0"->"fieldget <tov: int tovlcount>";
+    "fieldget <tov: int tovlcount>"->"ifcmplt.i load.r r0";
+    "ifcmplt.i load.r r0"->"load.r r0";
+    "fieldget <tov: int tovtcount>"
+    "load.r r0"->"fieldget <tov: int tovtcount>";
+    "ifle load.r i0"
+    "fieldget <tov: int tovtcount>"->"ifle load.r i0";
+    "ifle load.r i0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <tov: int tovtcount>";
+    "fieldget <tov: int tovtcount>"->"push 3";
+    "push 3"->"newmultiarray 2";
+    "fieldput <tov: int[][] tovt>"
+    "newmultiarray 2"->"fieldput <tov: int[][] tovt>";
+    "fieldput <tov: int[][] tovt>"->"push 0";
+    "push 0"->"store.i r1";
+    "store.i r1"->"goto load.i r1";
+    "goto load.i r1"->"load.i r1";
+    "load.i r1"->"load.r r0";
+    "load.r r0"->"fieldget <tov: int tovtcount>";
+    "fieldget <tov: int tovtcount>"->"ifcmplt.i load.r r0";
+    "ifcmplt.i load.r r0"->"load.r i0";
+    "virtualinvoke <java.io.FilterInputStream: void close()>"
+    "load.r i0"->"virtualinvoke <java.io.FilterInputStream: void close()>";
+    "virtualinvoke <java.io.FilterInputStream: void close()>"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "new tovcanvas"
+    "load.r r0"->"new tovcanvas";
+    "new tovcanvas"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "fieldget <tov: int canvasw>"
+    "load.r r0"->"fieldget <tov: int canvasw>";
+    "fieldget <tov: int canvasw>"->"load.r r0";
+    "fieldget <tov: int canvash>"
+    "load.r r0"->"fieldget <tov: int canvash>";
+    "specialinvoke <tovcanvas: void <init>(int,int)>"
+    "fieldget <tov: int canvash>"->"specialinvoke <tovcanvas: void <init>(int,int)>";
+    "fieldput <tov: tovcanvas rp>"
+    "specialinvoke <tovcanvas: void <init>(int,int)>"->"fieldput <tov: tovcanvas rp>";
+    "fieldput <tov: tovcanvas rp>"->"load.r r0";
+    "virtualinvoke <tov: void setbox()>"
+    "load.r r0"->"virtualinvoke <tov: void setbox()>";
+    "virtualinvoke <tov: void setbox()>"->"load.r r0";
+    "fieldget <tov: tovcanvas rp>"
+    "load.r r0"->"fieldget <tov: tovcanvas rp>";
+    "fieldget <tov: tovcanvas rp>"->"push 1";
+    "fieldput <tovcanvas: boolean sketch>"
+    "push 1"->"fieldput <tovcanvas: boolean sketch>";
+    "fieldput <tovcanvas: boolean sketch>"->"load.r r0";
+    "load.r r0"->"fieldget <tov: tovcanvas rp>";
+    "virtualinvoke <tovcanvas: void allocateSpace()>"
+    "fieldget <tov: tovcanvas rp>"->"virtualinvoke <tovcanvas: void allocateSpace()>";
+    "virtualinvoke <tovcanvas: void allocateSpace()>"->"load.r r0";
+    "load.r r0"->"fieldget <tov: tovcanvas rp>";
+    "push 0.26179916666666664"
+    "fieldget <tov: tovcanvas rp>"->"push 0.26179916666666664";
+    "fieldput <tovcanvas: double angle>"
+    "push 0.26179916666666664"->"fieldput <tovcanvas: double angle>";
+    "fieldput <tovcanvas: double angle>"->"load.r r0";
+    "load.r r0"->"fieldget <tov: tovcanvas rp>";
+    "fieldget <tov: tovcanvas rp>"->"push 0";
+    "fieldput <tovcanvas: int axis>"
+    "push 0"->"fieldput <tovcanvas: int axis>";
+    "fieldput <tovcanvas: int axis>"->"load.r r0";
+    "load.r r0"->"fieldget <tov: tovcanvas rp>";
+    "virtualinvoke <tovcanvas: void rotMatrix()>"
+    "fieldget <tov: tovcanvas rp>"->"virtualinvoke <tovcanvas: void rotMatrix()>";
+    "virtualinvoke <tovcanvas: void rotMatrix()>"->"load.r r0";
+    "load.r r0"->"fieldget <tov: tovcanvas rp>";
+    "fieldget <tov: tovcanvas rp>"->"virtualinvoke <tovcanvas: void rotMatrix()>";
+    "virtualinvoke <tovcanvas: void rotMatrix()>"->"load.r r0";
+    "load.r r0"->"fieldget <tov: tovcanvas rp>";
+    "fieldget <tov: tovcanvas rp>"->"push 1";
+    "push 1"->"fieldput <tovcanvas: int axis>";
+    "fieldput <tovcanvas: int axis>"->"load.r r0";
+    "load.r r0"->"fieldget <tov: tovcanvas rp>";
+    "fieldget <tov: tovcanvas rp>"->"virtualinvoke <tovcanvas: void rotMatrix()>";
+    "virtualinvoke <tovcanvas: void rotMatrix()>"->"load.r r0";
+    "load.r r0"->"fieldget <tov: tovcanvas rp>";
+    "fieldget <tov: tovcanvas rp>"->"virtualinvoke <tovcanvas: void rotMatrix()>";
+    "virtualinvoke <tovcanvas: void rotMatrix()>"->"load.r r0";
+    "load.r r0"->"fieldget <tov: tovcanvas rp>";
+    "fieldget <tov: tovcanvas rp>"->"load.r r0";
+    "fieldget <tov: int anglestep>"
+    "load.r r0"->"fieldget <tov: int anglestep>";
+    "i2d"
+    "fieldget <tov: int anglestep>"->"i2d";
+    "push 3.14159"
+    "i2d"->"push 3.14159";
+    "mul.d"
+    "push 3.14159"->"mul.d";
+    "push 180.0"
+    "mul.d"->"push 180.0";
+    "div.d"
+    "push 180.0"->"div.d";
+    "div.d"->"fieldput <tovcanvas: double angle>";
+    "fieldput <tovcanvas: double angle>"->"load.r r0";
+    "load.r r0"->"fieldget <tov: tovcanvas rp>";
+    "fieldget <tov: tovcanvas rp>"->"push 1";
+    "fieldput <tovcanvas: int displaymode>"
+    "push 1"->"fieldput <tovcanvas: int displaymode>";
+    "fieldput <tovcanvas: int displaymode>"->"load.r r0";
+    "load.r r0"->"fieldget <tov: tovcanvas rp>";
+    "fieldget <tov: tovcanvas rp>"->"load.r r0";
+    "fieldget <tov: boolean registered>"
+    "load.r r0"->"fieldget <tov: boolean registered>";
+    "fieldput <tovcanvas: boolean registered>"
+    "fieldget <tov: boolean registered>"->"fieldput <tovcanvas: boolean registered>";
+    "fieldput <tovcanvas: boolean registered>"->"load.r r0";
+    "load.r r0"->"fieldget <tov: tovcanvas rp>";
+    "fieldget <tov: tovcanvas rp>"->"push 1";
+    "fieldput <tovcanvas: boolean rotateObj>"
+    "push 1"->"fieldput <tovcanvas: boolean rotateObj>";
+    "fieldput <tovcanvas: boolean rotateObj>"->"load.r r0";
+    "load.r r0"->"fieldget <tov: tovcanvas rp>";
+    "virtualinvoke <java.awt.Component: void repaint()>"
+    "fieldget <tov: tovcanvas rp>"->"virtualinvoke <java.awt.Component: void repaint()>";
+    "virtualinvoke <java.awt.Component: void repaint()>"->"load.r r0";
+    "push \"tovwf.gif\""
+    "load.r r0"->"push \"tovwf.gif\"";
+    "virtualinvoke <tov: void readPhoto(java.lang.String)>"
+    "push \"tovwf.gif\""->"virtualinvoke <tov: void readPhoto(java.lang.String)>";
+    "virtualinvoke <tov: void readPhoto(java.lang.String)>"->"load.r r0";
+    "new tovImage"
+    "load.r r0"->"new tovImage";
+    "new tovImage"->"store.r r2";
+    "store.r r2"->"load.r r2";
+    "load.r r2"->"load.r r0";
+    "fieldget <tov: java.awt.Image photo>"
+    "load.r r0"->"fieldget <tov: java.awt.Image photo>";
+    "fieldget <tov: java.awt.Image photo>"->"load.r r0";
+    "fieldget <tov: int picwidth>"
+    "load.r r0"->"fieldget <tov: int picwidth>";
+    "fieldget <tov: int picwidth>"->"load.r r0";
+    "fieldget <tov: int picheight>"
+    "load.r r0"->"fieldget <tov: int picheight>";
+    "specialinvoke <tovImage: void <init>(java.awt.Image,int,int)>"
+    "fieldget <tov: int picheight>"->"specialinvoke <tovImage: void <init>(java.awt.Image,int,int)>";
+    "new tovButton"
+    "specialinvoke <tovImage: void <init>(java.awt.Image,int,int)>"->"new tovButton";
+    "new tovButton"->"dup1.r";
+    "dup1.r"->"load.r r2";
+    "push 50"
+    "load.r r2"->"push 50";
+    "push 6"
+    "push 50"->"push 6";
+    "push \"wireframe\""
+    "push 6"->"push \"wireframe\"";
+    "push \"wireframe\""->"push 1";
+    "push 15"
+    "push 1"->"push 15";
+    "specialinvoke <tovButton: void <init>(tovImage,int,int,java.lang.String,int,int)>"
+    "push 15"->"specialinvoke <tovButton: void <init>(tovImage,int,int,java.lang.String,int,int)>";
+    "fieldput <tov: tovButton showWireframe>"
+    "specialinvoke <tovButton: void <init>(tovImage,int,int,java.lang.String,int,int)>"->"fieldput <tov: tovButton showWireframe>";
+    "fieldput <tov: tovButton showWireframe>"->"load.r r0";
+    "push \"tovshade.gif\""
+    "load.r r0"->"push \"tovshade.gif\"";
+    "push \"tovshade.gif\""->"virtualinvoke <tov: void readPhoto(java.lang.String)>";
+    "virtualinvoke <tov: void readPhoto(java.lang.String)>"->"load.r r0";
+    "load.r r0"->"new tovImage";
+    "new tovImage"->"store.r r2";
+    "store.r r2"->"load.r r2";
+    "load.r r2"->"load.r r0";
+    "load.r r0"->"fieldget <tov: java.awt.Image photo>";
+    "fieldget <tov: java.awt.Image photo>"->"load.r r0";
+    "load.r r0"->"fieldget <tov: int picwidth>";
+    "fieldget <tov: int picwidth>"->"load.r r0";
+    "load.r r0"->"fieldget <tov: int picheight>";
+    "fieldget <tov: int picheight>"->"specialinvoke <tovImage: void <init>(java.awt.Image,int,int)>";
+    "specialinvoke <tovImage: void <init>(java.awt.Image,int,int)>"->"new tovButton";
+    "new tovButton"->"dup1.r";
+    "dup1.r"->"load.r r2";
+    "load.r r2"->"push 50";
+    "push 50"->"push 6";
+    "push \"shaded\""
+    "push 6"->"push \"shaded\"";
+    "push \"shaded\""->"push 1";
+    "push 1"->"push 15";
+    "push 15"->"specialinvoke <tovButton: void <init>(tovImage,int,int,java.lang.String,int,int)>";
+    "fieldput <tov: tovButton showShade>"
+    "specialinvoke <tovButton: void <init>(tovImage,int,int,java.lang.String,int,int)>"->"fieldput <tov: tovButton showShade>";
+    "fieldput <tov: tovButton showShade>"->"load.r r0";
+    "new java.awt.Color"
+    "load.r r0"->"new java.awt.Color";
+    "new java.awt.Color"->"dup1.r";
+    "push 192"
+    "dup1.r"->"push 192";
+    "push 192"->"push 192";
+    "push 192"->"push 192";
+    "specialinvoke <java.awt.Color: void <init>(int,int,int)>"
+    "push 192"->"specialinvoke <java.awt.Color: void <init>(int,int,int)>";
+    "virtualinvoke <java.awt.Component: void setBackground(java.awt.Color)>"
+    "specialinvoke <java.awt.Color: void <init>(int,int,int)>"->"virtualinvoke <java.awt.Component: void setBackground(java.awt.Color)>";
+    "virtualinvoke <java.awt.Component: void setBackground(java.awt.Color)>"->"load.r r0";
+    "staticget <java.awt.Color: java.awt.Color black>"
+    "load.r r0"->"staticget <java.awt.Color: java.awt.Color black>";
+    "virtualinvoke <java.awt.Component: void setForeground(java.awt.Color)>"
+    "staticget <java.awt.Color: java.awt.Color black>"->"virtualinvoke <java.awt.Component: void setForeground(java.awt.Color)>";
+    "new java.awt.GridBagLayout"
+    "virtualinvoke <java.awt.Component: void setForeground(java.awt.Color)>"->"new java.awt.GridBagLayout";
+    "new java.awt.GridBagLayout"->"store.r r2";
+    "store.r r2"->"load.r r2";
+    "specialinvoke <java.awt.GridBagLayout: void <init>()>"
+    "load.r r2"->"specialinvoke <java.awt.GridBagLayout: void <init>()>";
+    "specialinvoke <java.awt.GridBagLayout: void <init>()>"->"load.r r0";
+    "load.r r0"->"load.r r2";
+    "virtualinvoke <java.awt.Container: void setLayout(java.awt.LayoutManager)>"
+    "load.r r2"->"virtualinvoke <java.awt.Container: void setLayout(java.awt.LayoutManager)>";
+    "new java.awt.GridBagConstraints"
+    "virtualinvoke <java.awt.Container: void setLayout(java.awt.LayoutManager)>"->"new java.awt.GridBagConstraints";
+    "new java.awt.GridBagConstraints"->"store.r i0";
+    "store.r i0"->"load.r i0";
+    "specialinvoke <java.awt.GridBagConstraints: void <init>()>"
+    "load.r i0"->"specialinvoke <java.awt.GridBagConstraints: void <init>()>";
+    "specialinvoke <java.awt.GridBagConstraints: void <init>()>"->"load.r i0";
+    "load.r i0"->"push 0";
+    "fieldput <java.awt.GridBagConstraints: int fill>"
+    "push 0"->"fieldput <java.awt.GridBagConstraints: int fill>";
+    "fieldput <java.awt.GridBagConstraints: int fill>"->"load.r i0";
+    "load.r i0"->"push 0";
+    "fieldput <java.awt.GridBagConstraints: int gridwidth>"
+    "push 0"->"fieldput <java.awt.GridBagConstraints: int gridwidth>";
+    "fieldput <java.awt.GridBagConstraints: int gridwidth>"->"load.r i0";
+    "load.r i0"->"push 10";
+    "fieldput <java.awt.GridBagConstraints: int anchor>"
+    "push 10"->"fieldput <java.awt.GridBagConstraints: int anchor>";
+    "new java.awt.Panel"
+    "fieldput <java.awt.GridBagConstraints: int anchor>"->"new java.awt.Panel";
+    "new java.awt.Panel"->"store.r r1";
+    "store.r r1"->"load.r r1";
+    "specialinvoke <java.awt.Panel: void <init>()>"
+    "load.r r1"->"specialinvoke <java.awt.Panel: void <init>()>";
+    "specialinvoke <java.awt.Panel: void <init>()>"->"load.r r0";
+    "new tovdata"
+    "load.r r0"->"new tovdata";
+    "new tovdata"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "load.r r0"->"fieldget <tov: int canvasw>";
+    "push 30"
+    "fieldget <tov: int canvasw>"->"push 30";
+    "specialinvoke <tovdata: void <init>(int,int)>"
+    "push 30"->"specialinvoke <tovdata: void <init>(int,int)>";
+    "fieldput <tov: tovdata ri>"
+    "specialinvoke <tovdata: void <init>(int,int)>"->"fieldput <tov: tovdata ri>";
+    "fieldput <tov: tovdata ri>"->"load.r r0";
+    "fieldget <tov: tovdata ri>"
+    "load.r r0"->"fieldget <tov: tovdata ri>";
+    "fieldget <tov: tovdata ri>"->"load.r r0";
+    "fieldget <tov: java.lang.String target>"
+    "load.r r0"->"fieldget <tov: java.lang.String target>";
+    "fieldput <tovdata: java.lang.String target>"
+    "fieldget <tov: java.lang.String target>"->"fieldput <tovdata: java.lang.String target>";
+    "fieldput <tovdata: java.lang.String target>"->"load.r r1";
+    "load.r r1"->"load.r r0";
+    "load.r r0"->"fieldget <tov: tovdata ri>";
+    "virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>"
+    "fieldget <tov: tovdata ri>"->"virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>";
+    "virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>"->"pop";
+    "pop"->"new java.awt.Panel";
+    "store.r $r63"
+    "new java.awt.Panel"->"store.r $r63";
+    "load.r $r63"
+    "store.r $r63"->"load.r $r63";
+    "load.r $r63"->"specialinvoke <java.awt.Panel: void <init>()>";
+    "specialinvoke <java.awt.Panel: void <init>()>"->"load.r $r63";
+    "load.r $r63"->"load.r r0";
+    "load.r r0"->"fieldget <tov: tovcanvas rp>";
+    "fieldget <tov: tovcanvas rp>"->"virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>";
+    "virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>"->"pop";
+    "pop"->"new java.awt.Panel";
+    "store.r $r65"
+    "new java.awt.Panel"->"store.r $r65";
+    "load.r $r65"
+    "store.r $r65"->"load.r $r65";
+    "load.r $r65"->"specialinvoke <java.awt.Panel: void <init>()>";
+    "specialinvoke <java.awt.Panel: void <init>()>"->"load.r $r65";
+    "new java.awt.FlowLayout"
+    "load.r $r65"->"new java.awt.FlowLayout";
+    "new java.awt.FlowLayout"->"dup1.r";
+    "dup1.r"->"push 1";
+    "specialinvoke <java.awt.FlowLayout: void <init>(int)>"
+    "push 1"->"specialinvoke <java.awt.FlowLayout: void <init>(int)>";
+    "specialinvoke <java.awt.FlowLayout: void <init>(int)>"->"virtualinvoke <java.awt.Container: void setLayout(java.awt.LayoutManager)>";
+    "virtualinvoke <java.awt.Container: void setLayout(java.awt.LayoutManager)>"->"load.r $r65";
+    "load.r $r65"->"load.r r0";
+    "fieldget <tov: tovButton showWireframe>"
+    "load.r r0"->"fieldget <tov: tovButton showWireframe>";
+    "fieldget <tov: tovButton showWireframe>"->"virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>";
+    "virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>"->"pop";
+    "pop"->"load.r $r65";
+    "load.r $r65"->"load.r r0";
+    "fieldget <tov: tovButton showShade>"
+    "load.r r0"->"fieldget <tov: tovButton showShade>";
+    "fieldget <tov: tovButton showShade>"->"virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>";
+    "virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>"->"pop";
+    "pop"->"new java.awt.Panel";
+    "store.r $r69"
+    "new java.awt.Panel"->"store.r $r69";
+    "load.r $r69"
+    "store.r $r69"->"load.r $r69";
+    "load.r $r69"->"specialinvoke <java.awt.Panel: void <init>()>";
+    "specialinvoke <java.awt.Panel: void <init>()>"->"load.r $r69";
+    "new java.awt.GridLayout"
+    "load.r $r69"->"new java.awt.GridLayout";
+    "new java.awt.GridLayout"->"dup1.r";
+    "dup1.r"->"push 2";
+    "push 4"
+    "push 2"->"push 4";
+    "specialinvoke <java.awt.GridLayout: void <init>(int,int)>"
+    "push 4"->"specialinvoke <java.awt.GridLayout: void <init>(int,int)>";
+    "specialinvoke <java.awt.GridLayout: void <init>(int,int)>"->"virtualinvoke <java.awt.Container: void setLayout(java.awt.LayoutManager)>";
+    "virtualinvoke <java.awt.Container: void setLayout(java.awt.LayoutManager)>"->"load.r $r69";
+    "load.r $r69"->"load.r r0";
+    "fieldget <tov: java.awt.Button butx>"
+    "load.r r0"->"fieldget <tov: java.awt.Button butx>";
+    "fieldget <tov: java.awt.Button butx>"->"virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>";
+    "virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>"->"pop";
+    "pop"->"load.r $r69";
+    "load.r $r69"->"load.r r0";
+    "fieldget <tov: java.awt.Button buty>"
+    "load.r r0"->"fieldget <tov: java.awt.Button buty>";
+    "fieldget <tov: java.awt.Button buty>"->"virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>";
+    "virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>"->"pop";
+    "pop"->"load.r $r69";
+    "load.r $r69"->"load.r r0";
+    "fieldget <tov: java.awt.Button butz>"
+    "load.r r0"->"fieldget <tov: java.awt.Button butz>";
+    "fieldget <tov: java.awt.Button butz>"->"virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>";
+    "virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>"->"pop";
+    "pop"->"load.r $r69";
+    "load.r $r69"->"load.r r0";
+    "fieldget <tov: java.awt.Button butStop>"
+    "load.r r0"->"fieldget <tov: java.awt.Button butStop>";
+    "fieldget <tov: java.awt.Button butStop>"->"virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>";
+    "virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>"->"pop";
+    "pop"->"load.r $r69";
+    "load.r $r69"->"load.r r0";
+    "fieldget <tov: java.awt.Button butxn>"
+    "load.r r0"->"fieldget <tov: java.awt.Button butxn>";
+    "fieldget <tov: java.awt.Button butxn>"->"virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>";
+    "virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>"->"pop";
+    "pop"->"load.r $r69";
+    "load.r $r69"->"load.r r0";
+    "fieldget <tov: java.awt.Button butyn>"
+    "load.r r0"->"fieldget <tov: java.awt.Button butyn>";
+    "fieldget <tov: java.awt.Button butyn>"->"virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>";
+    "virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>"->"pop";
+    "pop"->"load.r $r69";
+    "load.r $r69"->"load.r r0";
+    "fieldget <tov: java.awt.Button butzn>"
+    "load.r r0"->"fieldget <tov: java.awt.Button butzn>";
+    "fieldget <tov: java.awt.Button butzn>"->"virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>";
+    "virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>"->"pop";
+    "pop"->"load.r $r69";
+    "load.r $r69"->"load.r r0";
+    "fieldget <tov: java.awt.Button butReset>"
+    "load.r r0"->"fieldget <tov: java.awt.Button butReset>";
+    "fieldget <tov: java.awt.Button butReset>"->"virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>";
+    "virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>"->"pop";
+    "pop"->"load.r $r69";
+    "load.r $r69"->"virtualinvoke <java.awt.Component: void repaint()>";
+    "virtualinvoke <java.awt.Component: void repaint()>"->"load.r $r65";
+    "load.r $r65"->"load.r $r69";
+    "load.r $r69"->"virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>";
+    "virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>"->"pop";
+    "pop"->"load.r r2";
+    "load.r r2"->"load.r r1";
+    "load.r r1"->"load.r i0";
+    "virtualinvoke <java.awt.GridBagLayout: void setConstraints(java.awt.Component,java.awt.GridBagConstraints)>"
+    "load.r i0"->"virtualinvoke <java.awt.GridBagLayout: void setConstraints(java.awt.Component,java.awt.GridBagConstraints)>";
+    "virtualinvoke <java.awt.GridBagLayout: void setConstraints(java.awt.Component,java.awt.GridBagConstraints)>"->"load.r r0";
+    "load.r r0"->"load.r r1";
+    "load.r r1"->"virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>";
+    "virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>"->"pop";
+    "pop"->"load.r r2";
+    "load.r r2"->"load.r $r63";
+    "load.r $r63"->"load.r i0";
+    "load.r i0"->"virtualinvoke <java.awt.GridBagLayout: void setConstraints(java.awt.Component,java.awt.GridBagConstraints)>";
+    "virtualinvoke <java.awt.GridBagLayout: void setConstraints(java.awt.Component,java.awt.GridBagConstraints)>"->"load.r r0";
+    "load.r r0"->"load.r $r63";
+    "load.r $r63"->"virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>";
+    "virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>"->"pop";
+    "pop"->"load.r r2";
+    "load.r r2"->"load.r $r65";
+    "load.r $r65"->"load.r i0";
+    "load.r i0"->"virtualinvoke <java.awt.GridBagLayout: void setConstraints(java.awt.Component,java.awt.GridBagConstraints)>";
+    "virtualinvoke <java.awt.GridBagLayout: void setConstraints(java.awt.Component,java.awt.GridBagConstraints)>"->"load.r r0";
+    "load.r r0"->"load.r $r65";
+    "load.r $r65"->"virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>";
+    "virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>"->"pop";
+    "pop"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <tov: int width>";
+    "fieldget <tov: int width>"->"load.r r0";
+    "load.r r0"->"fieldget <tov: int height>";
+    "virtualinvoke <java.applet.Applet: void resize(int,int)>"
+    "fieldget <tov: int height>"->"virtualinvoke <java.applet.Applet: void resize(int,int)>";
+    "virtualinvoke <java.applet.Applet: void resize(int,int)>"->"load.r r0";
+    "load.r r0"->"fieldget <tov: boolean registered>";
+    "ifeq load.r r0"
+    "fieldget <tov: boolean registered>"->"ifeq load.r r0";
+    "ifeq load.r r0"->"load.r r0";
+    "push \"\""
+    "load.r r0"->"push \"\"";
+    "push \"\""->"virtualinvoke <java.applet.Applet: void showStatus(java.lang.String)>";
+    "goto return"
+    "virtualinvoke <java.applet.Applet: void showStatus(java.lang.String)>"->"goto return";
+    "return"
+    "goto return"->"return";
+    "ifeq load.r r0"->"load.r r0";
+    "push \"tov (C) 2001 The J Maker\""
+    "load.r r0"->"push \"tov (C) 2001 The J Maker\"";
+    "push \"tov (C) 2001 The J Maker\""->"virtualinvoke <java.applet.Applet: void showStatus(java.lang.String)>";
+    "virtualinvoke <java.io.FilterInputStream: void close()>"->"store.r i0";
+    "store.r i0"->"load.r r0";
+    "load.r r0"->"new java.lang.StringBuffer";
+    "new java.lang.StringBuffer"->"dup1.r";
+    "dup1.r"->"specialinvoke <java.lang.StringBuffer: void <init>()>";
+    "push \"[Error]: Exception: \""
+    "specialinvoke <java.lang.StringBuffer: void <init>()>"->"push \"[Error]: Exception: \"";
+    "push \"[Error]: Exception: \""->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"load.r i0";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.Object)>"
+    "load.r i0"->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.Object)>";
+    "push \" File: \""
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.Object)>"->"push \" File: \"";
+    "push \" File: \""->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"load.r r2";
+    "load.r r2"->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>"->"virtualinvoke <java.applet.Applet: void showStatus(java.lang.String)>";
+    "ifcmplt.i load.r r0"->"load.r r0";
+    "load.r r0"->"load.r i0";
+    "load.r i0"->"virtualinvoke <java.io.DataInputStream: java.lang.String readLine()>";
+    "virtualinvoke <java.io.DataInputStream: java.lang.String readLine()>"->"virtualinvoke <tov: int[] parseInt(java.lang.String)>";
+    "virtualinvoke <tov: int[] parseInt(java.lang.String)>"->"store.r $r63";
+    "store.r $r63"->"load.r r0";
+    "fieldget <tov: int[][] tovt>"
+    "load.r r0"->"fieldget <tov: int[][] tovt>";
+    "fieldget <tov: int[][] tovt>"->"load.i r1";
+    "arrayread.r"
+    "load.i r1"->"arrayread.r";
+    "arrayread.r"->"push 0";
+    "push 0"->"load.r $r63";
+    "load.r $r63"->"push 1";
+    "push 1"->"arrayread.i";
+    "arraywrite.i"
+    "arrayread.i"->"arraywrite.i";
+    "arraywrite.i"->"load.r r0";
+    "load.r r0"->"fieldget <tov: int[][] tovt>";
+    "fieldget <tov: int[][] tovt>"->"load.i r1";
+    "load.i r1"->"arrayread.r";
+    "arrayread.r"->"push 1";
+    "push 1"->"load.r $r63";
+    "load.r $r63"->"push 2";
+    "push 2"->"arrayread.i";
+    "arrayread.i"->"arraywrite.i";
+    "arraywrite.i"->"load.r r0";
+    "load.r r0"->"fieldget <tov: int[][] tovt>";
+    "fieldget <tov: int[][] tovt>"->"load.i r1";
+    "load.i r1"->"arrayread.r";
+    "arrayread.r"->"push 2";
+    "push 2"->"load.r $r63";
+    "load.r $r63"->"push 3";
+    "push 3"->"arrayread.i";
+    "arrayread.i"->"arraywrite.i";
+    "inc.i r1 1"
+    "arraywrite.i"->"inc.i r1 1";
+    "ifcmplt.i load.r r0"->"load.r r0";
+    "load.r r0"->"load.r i0";
+    "load.r i0"->"virtualinvoke <java.io.DataInputStream: java.lang.String readLine()>";
+    "virtualinvoke <java.io.DataInputStream: java.lang.String readLine()>"->"virtualinvoke <tov: int[] parseInt(java.lang.String)>";
+    "virtualinvoke <tov: int[] parseInt(java.lang.String)>"->"dup1.r";
+    "dup1.r"->"push 1";
+    "push 1"->"arrayread.i";
+    "arrayread.i"->"store.i $r63";
+    "store.i $r63"->"load.r r0";
+    "fieldget <tov: int[][] tovl>"
+    "load.r r0"->"fieldget <tov: int[][] tovl>";
+    "fieldget <tov: int[][] tovl>"->"load.i r1";
+    "load.i r1"->"arrayread.r";
+    "arrayread.r"->"push 0";
+    "push 0"->"load.i $r63";
+    "load.i $r63"->"arraywrite.i";
+    "arraywrite.i"->"push 2";
+    "push 2"->"arrayread.i";
+    "arrayread.i"->"store.i $r63";
+    "store.i $r63"->"load.r r0";
+    "load.r r0"->"fieldget <tov: int[][] tovl>";
+    "fieldget <tov: int[][] tovl>"->"load.i r1";
+    "load.i r1"->"arrayread.r";
+    "arrayread.r"->"push 1";
+    "push 1"->"load.i $r63";
+    "load.i $r63"->"arraywrite.i";
+    "arraywrite.i"->"inc.i r1 1";
+    "ifcmplt.i load.r r0"->"load.r r0";
+    "load.r r0"->"load.r i0";
+    "load.r i0"->"virtualinvoke <java.io.DataInputStream: java.lang.String readLine()>";
+    "virtualinvoke <tov: float[] parseFloat(java.lang.String)>"
+    "virtualinvoke <java.io.DataInputStream: java.lang.String readLine()>"->"virtualinvoke <tov: float[] parseFloat(java.lang.String)>";
+    "virtualinvoke <tov: float[] parseFloat(java.lang.String)>"->"store.r r1";
+    "store.r r1"->"load.r r0";
+    "fieldget <tov: float[][] tovp>"
+    "load.r r0"->"fieldget <tov: float[][] tovp>";
+    "fieldget <tov: float[][] tovp>"->"load.i $r63";
+    "load.i $r63"->"arrayread.r";
+    "arrayread.r"->"push 0";
+    "push 0"->"load.r r1";
+    "load.r r1"->"push 1";
+    "arrayread.f"
+    "push 1"->"arrayread.f";
+    "arraywrite.f"
+    "arrayread.f"->"arraywrite.f";
+    "arraywrite.f"->"load.r r0";
+    "load.r r0"->"fieldget <tov: float[][] tovp>";
+    "fieldget <tov: float[][] tovp>"->"load.i $r63";
+    "load.i $r63"->"arrayread.r";
+    "arrayread.r"->"push 1";
+    "push 1"->"load.r r1";
+    "load.r r1"->"push 2";
+    "push 2"->"arrayread.f";
+    "arrayread.f"->"arraywrite.f";
+    "arraywrite.f"->"load.r r0";
+    "load.r r0"->"fieldget <tov: float[][] tovp>";
+    "fieldget <tov: float[][] tovp>"->"load.i $r63";
+    "load.i $r63"->"arrayread.r";
+    "arrayread.r"->"push 2";
+    "push 2"->"load.r r1";
+    "load.r r1"->"push 3";
+    "push 3"->"arrayread.f";
+    "arrayread.f"->"arraywrite.f";
+    "inc.i $r63 1"
+    "arraywrite.f"->"inc.i $r63 1";
+    "specialinvoke <java.io.DataInputStream: void <init>(java.io.InputStream)>"->"store.r r1";
+    "store.r r1"->"load.r r0";
+    "load.r r0"->"new java.lang.StringBuffer";
+    "new java.lang.StringBuffer"->"dup1.r";
+    "dup1.r"->"specialinvoke <java.lang.StringBuffer: void <init>()>";
+    "specialinvoke <java.lang.StringBuffer: void <init>()>"->"push \"[Error]: Exception: \"";
+    "push \"[Error]: Exception: \""->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"load.r r1";
+    "load.r r1"->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.Object)>";
+    "push \" File = \""
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.Object)>"->"push \" File = \"";
+    "push \" File = \""->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"load.r r2";
+    "load.r r2"->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>"->"virtualinvoke <java.applet.Applet: void showStatus(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: void showStatus(java.lang.String)>"->"load.r r0";
+    "virtualinvoke <tov: void stop()>"
+    "load.r r0"->"virtualinvoke <tov: void stop()>";
+    "ifeq new java.net.URL"->"new java.net.URL";
+    "new java.net.URL"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "virtualinvoke <java.applet.Applet: java.net.URL getDocumentBase()>"
+    "load.r r0"->"virtualinvoke <java.applet.Applet: java.net.URL getDocumentBase()>";
+    "virtualinvoke <java.applet.Applet: java.net.URL getDocumentBase()>"->"load.r r0";
+    "load.r r0"->"fieldget <tov: java.lang.String tovdata>";
+    "specialinvoke <java.net.URL: void <init>(java.net.URL,java.lang.String)>"
+    "fieldget <tov: java.lang.String tovdata>"->"specialinvoke <java.net.URL: void <init>(java.net.URL,java.lang.String)>";
+    "specialinvoke <java.net.URL: void <init>(java.net.URL,java.lang.String)>"->"store.r r1";
+}

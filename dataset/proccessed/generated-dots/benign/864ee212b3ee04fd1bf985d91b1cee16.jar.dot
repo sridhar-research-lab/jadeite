@@ -1,0 +1,235 @@
+digraph "" {
+    "r0 := @this: geracemenu.parseMenuApplet"
+    "load.r r0"
+    "r0 := @this: geracemenu.parseMenuApplet"->"load.r r0";
+    "new java.awt.BorderLayout"
+    "load.r r0"->"new java.awt.BorderLayout";
+    "dup1.r"
+    "new java.awt.BorderLayout"->"dup1.r";
+    "specialinvoke <java.awt.BorderLayout: void <init>()>"
+    "dup1.r"->"specialinvoke <java.awt.BorderLayout: void <init>()>";
+    "virtualinvoke <java.awt.Container: void setLayout(java.awt.LayoutManager)>"
+    "specialinvoke <java.awt.BorderLayout: void <init>()>"->"virtualinvoke <java.awt.Container: void setLayout(java.awt.LayoutManager)>";
+    "virtualinvoke <java.awt.Container: void setLayout(java.awt.LayoutManager)>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "fieldput <geracemenu.parseMenuApplet: java.applet.Applet applet>"
+    "load.r r0"->"fieldput <geracemenu.parseMenuApplet: java.applet.Applet applet>";
+    "push \"menudef.p\""
+    "fieldput <geracemenu.parseMenuApplet: java.applet.Applet applet>"->"push \"menudef.p\"";
+    "store.r $r35"
+    "push \"menudef.p\""->"store.r $r35";
+    "new geracemenu.parseMenuApplet$1"
+    "store.r $r35"->"new geracemenu.parseMenuApplet$1";
+    "store.r $r4"
+    "new geracemenu.parseMenuApplet$1"->"store.r $r4";
+    "store.r $r4"->"load.r r0";
+    "ifnonnull load.r $r4"
+    "load.r r0"->"ifnonnull load.r $r4";
+    "push null"
+    "ifnonnull load.r $r4"->"push null";
+    "athrow"
+    "push null"->"athrow";
+    "load.r $r4"
+    "ifnonnull load.r $r4"->"load.r $r4";
+    "load.r $r4"->"load.r r0";
+    "specialinvoke <geracemenu.parseMenuApplet$1: void <init>(geracemenu.parseMenuApplet)>"
+    "load.r r0"->"specialinvoke <geracemenu.parseMenuApplet$1: void <init>(geracemenu.parseMenuApplet)>";
+    "specialinvoke <geracemenu.parseMenuApplet$1: void <init>(geracemenu.parseMenuApplet)>"->"load.r r0";
+    "load.r r0"->"load.r $r4";
+    "virtualinvoke <java.awt.Component: void addMouseListener(java.awt.event.MouseListener)>"
+    "load.r $r4"->"virtualinvoke <java.awt.Component: void addMouseListener(java.awt.event.MouseListener)>";
+    "new geracemenu.parseMenuApplet$2"
+    "virtualinvoke <java.awt.Component: void addMouseListener(java.awt.event.MouseListener)>"->"new geracemenu.parseMenuApplet$2";
+    "new geracemenu.parseMenuApplet$2"->"store.r $r4";
+    "store.r $r4"->"load.r r0";
+    "load.r r0"->"ifnonnull load.r $r4";
+    "ifnonnull load.r $r4"->"push null";
+    "push null"->"athrow";
+    "ifnonnull load.r $r4"->"load.r $r4";
+    "load.r $r4"->"load.r r0";
+    "specialinvoke <geracemenu.parseMenuApplet$2: void <init>(geracemenu.parseMenuApplet)>"
+    "load.r r0"->"specialinvoke <geracemenu.parseMenuApplet$2: void <init>(geracemenu.parseMenuApplet)>";
+    "specialinvoke <geracemenu.parseMenuApplet$2: void <init>(geracemenu.parseMenuApplet)>"->"load.r r0";
+    "load.r r0"->"load.r $r4";
+    "virtualinvoke <java.awt.Component: void addFocusListener(java.awt.event.FocusListener)>"
+    "load.r $r4"->"virtualinvoke <java.awt.Component: void addFocusListener(java.awt.event.FocusListener)>";
+    "virtualinvoke <java.awt.Component: void addFocusListener(java.awt.event.FocusListener)>"->"load.r r0";
+    "push \"menu\""
+    "load.r r0"->"push \"menu\"";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"
+    "push \"menu\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"store.r $r4";
+    "store.r $r4"->"load.r $r4";
+    "ifnull load.r r0"
+    "load.r $r4"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r $r4";
+    "load.r $r4"->"store.r $r35";
+    "store.r $r35"->"load.r r0";
+    "virtualinvoke <java.applet.Applet: java.net.URL getCodeBase()>"
+    "load.r r0"->"virtualinvoke <java.applet.Applet: java.net.URL getCodeBase()>";
+    "staticput <geracemenu.parseMenuApplet: java.net.URL codeBase>"
+    "virtualinvoke <java.applet.Applet: java.net.URL getCodeBase()>"->"staticput <geracemenu.parseMenuApplet: java.net.URL codeBase>";
+    "new java.lang.StringBuffer"
+    "staticput <geracemenu.parseMenuApplet: java.net.URL codeBase>"->"new java.lang.StringBuffer";
+    "new java.lang.StringBuffer"->"store.r $r4";
+    "store.r $r4"->"load.r $r4";
+    "load.r $r4"->"load.r r0";
+    "load.r r0"->"virtualinvoke <java.applet.Applet: java.net.URL getCodeBase()>";
+    "virtualinvoke <java.net.URL: java.lang.String getProtocol()>"
+    "virtualinvoke <java.applet.Applet: java.net.URL getCodeBase()>"->"virtualinvoke <java.net.URL: java.lang.String getProtocol()>";
+    "specialinvoke <java.lang.StringBuffer: void <init>(java.lang.String)>"
+    "virtualinvoke <java.net.URL: java.lang.String getProtocol()>"->"specialinvoke <java.lang.StringBuffer: void <init>(java.lang.String)>";
+    "staticget <geracemenu.parseMenuApplet: java.net.URL codeBase>"
+    "specialinvoke <java.lang.StringBuffer: void <init>(java.lang.String)>"->"staticget <geracemenu.parseMenuApplet: java.net.URL codeBase>";
+    "virtualinvoke <java.net.URL: java.lang.String getHost()>"
+    "staticget <geracemenu.parseMenuApplet: java.net.URL codeBase>"->"virtualinvoke <java.net.URL: java.lang.String getHost()>";
+    "ifnonnull new java.lang.StringBuffer"
+    "virtualinvoke <java.net.URL: java.lang.String getHost()>"->"ifnonnull new java.lang.StringBuffer";
+    "push \":\""
+    "ifnonnull new java.lang.StringBuffer"->"push \":\"";
+    "store.r $r59"
+    "push \":\""->"store.r $r59";
+    "goto load.r $r4"
+    "store.r $r59"->"goto load.r $r4";
+    "goto load.r $r4"->"load.r $r4";
+    "load.r $r59"
+    "load.r $r4"->"load.r $r59";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"
+    "load.r $r59"->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"load.r r0";
+    "load.r r0"->"virtualinvoke <java.applet.Applet: java.net.URL getCodeBase()>";
+    "virtualinvoke <java.net.URL: java.lang.String getFile()>"
+    "virtualinvoke <java.applet.Applet: java.net.URL getCodeBase()>"->"virtualinvoke <java.net.URL: java.lang.String getFile()>";
+    "virtualinvoke <java.net.URL: java.lang.String getFile()>"->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>"
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>";
+    "staticput <geracemenu.parseMenuApplet: java.lang.String URLspec>"
+    "virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>"->"staticput <geracemenu.parseMenuApplet: java.lang.String URLspec>";
+    "new java.net.URL"
+    "staticput <geracemenu.parseMenuApplet: java.lang.String URLspec>"->"new java.net.URL";
+    "new java.net.URL"->"store.r $r4";
+    "store.r $r4"->"load.r $r4";
+    "load.r $r4"->"new java.lang.StringBuffer";
+    "new java.lang.StringBuffer"->"dup1.r";
+    "specialinvoke <java.lang.StringBuffer: void <init>()>"
+    "dup1.r"->"specialinvoke <java.lang.StringBuffer: void <init>()>";
+    "staticget <geracemenu.parseMenuApplet: java.lang.String URLspec>"
+    "specialinvoke <java.lang.StringBuffer: void <init>()>"->"staticget <geracemenu.parseMenuApplet: java.lang.String URLspec>";
+    "staticget <geracemenu.parseMenuApplet: java.lang.String URLspec>"->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "load.r $r35"
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"load.r $r35";
+    "load.r $r35"->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>";
+    "specialinvoke <java.net.URL: void <init>(java.lang.String)>"
+    "virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>"->"specialinvoke <java.net.URL: void <init>(java.lang.String)>";
+    "staticget <java.lang.System: java.io.PrintStream out>"
+    "specialinvoke <java.net.URL: void <init>(java.lang.String)>"->"staticget <java.lang.System: java.io.PrintStream out>";
+    "staticget <java.lang.System: java.io.PrintStream out>"->"new java.lang.StringBuffer";
+    "new java.lang.StringBuffer"->"dup1.r";
+    "dup1.r"->"specialinvoke <java.lang.StringBuffer: void <init>()>";
+    "push \"Looking for menu definition file at \""
+    "specialinvoke <java.lang.StringBuffer: void <init>()>"->"push \"Looking for menu definition file at \"";
+    "push \"Looking for menu definition file at \""->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"load.r $r4";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.Object)>"
+    "load.r $r4"->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.Object)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.Object)>"->"virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>";
+    "virtualinvoke <java.io.PrintStream: void println(java.lang.String)>"
+    "virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>"->"virtualinvoke <java.io.PrintStream: void println(java.lang.String)>";
+    "virtualinvoke <java.io.PrintStream: void println(java.lang.String)>"->"load.r r0";
+    "virtualinvoke <java.applet.Applet: java.applet.AppletContext getAppletContext()>"
+    "load.r r0"->"virtualinvoke <java.applet.Applet: java.applet.AppletContext getAppletContext()>";
+    "staticinvoke <geracemenu.parser.MenuBuilder: void setAppletContext(java.applet.AppletContext)>"
+    "virtualinvoke <java.applet.Applet: java.applet.AppletContext getAppletContext()>"->"staticinvoke <geracemenu.parser.MenuBuilder: void setAppletContext(java.applet.AppletContext)>";
+    "staticinvoke <geracemenu.parser.MenuBuilder: void setAppletContext(java.applet.AppletContext)>"->"load.r r0";
+    "push \"Center\""
+    "load.r r0"->"push \"Center\"";
+    "new geracemenu.parser.MenuItemTokenizer"
+    "push \"Center\""->"new geracemenu.parser.MenuItemTokenizer";
+    "new geracemenu.parser.MenuItemTokenizer"->"store.r $r35";
+    "store.r $r35"->"load.r $r35";
+    "load.r $r35"->"load.r r0";
+    "new java.io.InputStreamReader"
+    "load.r r0"->"new java.io.InputStreamReader";
+    "new java.io.InputStreamReader"->"dup1.r";
+    "dup1.r"->"load.r $r4";
+    "load.r $r4"->"staticget <java.lang.System: java.io.PrintStream out>";
+    "store.r r0"
+    "staticget <java.lang.System: java.io.PrintStream out>"->"store.r r0";
+    "virtualinvoke <java.lang.Throwable: java.lang.String getMessage()>"
+    "store.r r0"->"virtualinvoke <java.lang.Throwable: java.lang.String getMessage()>";
+    "virtualinvoke <java.lang.Throwable: java.lang.String getMessage()>"->"store.r $r35";
+    "store.r $r35"->"load.r r0";
+    "load.r r0"->"load.r $r35";
+    "load.r $r35"->"virtualinvoke <java.io.PrintStream: void println(java.lang.String)>";
+    "goto goto return"
+    "virtualinvoke <java.io.PrintStream: void println(java.lang.String)>"->"goto goto return";
+    "goto return"
+    "goto goto return"->"goto return";
+    "return"
+    "goto return"->"return";
+    "virtualinvoke <java.io.PrintStream: void println(java.lang.String)>"->"staticget <java.lang.System: java.io.PrintStream out>";
+    "staticget <java.lang.System: java.io.PrintStream out>"->"store.r r0";
+    "store.r r0"->"virtualinvoke <java.lang.Throwable: java.lang.String getMessage()>";
+    "virtualinvoke <java.lang.Throwable: java.lang.String getMessage()>"->"store.r $r35";
+    "store.r $r35"->"load.r r0";
+    "load.r r0"->"load.r $r35";
+    "load.r $r35"->"virtualinvoke <java.io.PrintStream: void println(java.lang.String)>";
+    "virtualinvoke <java.io.PrintStream: void println(java.lang.String)>"->"goto return";
+    "load.r $r4"->"staticget <java.lang.System: java.io.PrintStream out>";
+    "staticget <java.lang.System: java.io.PrintStream out>"->"store.r r0";
+    "store.r r0"->"virtualinvoke <java.lang.Throwable: java.lang.String getMessage()>";
+    "virtualinvoke <java.lang.Throwable: java.lang.String getMessage()>"->"store.r $r35";
+    "store.r $r35"->"load.r r0";
+    "load.r r0"->"load.r $r35";
+    "load.r $r35"->"virtualinvoke <java.io.PrintStream: void println(java.lang.String)>";
+    "virtualinvoke <java.io.PrintStream: void println(java.lang.String)>"->"goto goto return";
+    "load.r $r4"->"store.r r0";
+    "store.r r0"->"staticget <java.lang.System: java.io.PrintStream out>";
+    "push \"No menu definiton file found.\""
+    "staticget <java.lang.System: java.io.PrintStream out>"->"push \"No menu definiton file found.\"";
+    "push \"No menu definiton file found.\""->"virtualinvoke <java.io.PrintStream: void println(java.lang.String)>";
+    "virtualinvoke <java.io.PrintStream: void println(java.lang.String)>"->"goto goto return";
+    "load.r $r4"->"staticget <java.lang.System: java.io.PrintStream out>";
+    "staticget <java.lang.System: java.io.PrintStream out>"->"store.r r0";
+    "store.r r0"->"virtualinvoke <java.lang.Throwable: java.lang.String getMessage()>";
+    "virtualinvoke <java.lang.Throwable: java.lang.String getMessage()>"->"store.r $r35";
+    "store.r $r35"->"load.r r0";
+    "load.r r0"->"load.r $r35";
+    "load.r $r35"->"virtualinvoke <java.io.PrintStream: void println(java.lang.String)>";
+    "virtualinvoke <java.io.PrintStream: void println(java.lang.String)>"->"goto goto return";
+    "virtualinvoke <java.net.URL: java.io.InputStream openStream()>"
+    "load.r $r4"->"virtualinvoke <java.net.URL: java.io.InputStream openStream()>";
+    "specialinvoke <java.io.InputStreamReader: void <init>(java.io.InputStream)>"
+    "virtualinvoke <java.net.URL: java.io.InputStream openStream()>"->"specialinvoke <java.io.InputStreamReader: void <init>(java.io.InputStream)>";
+    "specialinvoke <geracemenu.parseMenuApplet: java.lang.String read(java.io.InputStreamReader)>"
+    "specialinvoke <java.io.InputStreamReader: void <init>(java.io.InputStream)>"->"specialinvoke <geracemenu.parseMenuApplet: java.lang.String read(java.io.InputStreamReader)>";
+    "specialinvoke <geracemenu.parser.MenuItemTokenizer: void <init>(java.lang.String)>"
+    "specialinvoke <geracemenu.parseMenuApplet: java.lang.String read(java.io.InputStreamReader)>"->"specialinvoke <geracemenu.parser.MenuItemTokenizer: void <init>(java.lang.String)>";
+    "new geracemenu.parser.MenuItemParser"
+    "specialinvoke <geracemenu.parser.MenuItemTokenizer: void <init>(java.lang.String)>"->"new geracemenu.parser.MenuItemParser";
+    "new geracemenu.parser.MenuItemParser"->"dup1.r";
+    "dup1.r"->"load.r $r35";
+    "specialinvoke <geracemenu.parser.MenuItemParser: void <init>(geracemenu.parser.MenuItemTokenizer)>"
+    "load.r $r35"->"specialinvoke <geracemenu.parser.MenuItemParser: void <init>(geracemenu.parser.MenuItemTokenizer)>";
+    "virtualinvoke <geracemenu.parser.MenuItemParser: geracemenu.parser.ItemNode parseMenu()>"
+    "specialinvoke <geracemenu.parser.MenuItemParser: void <init>(geracemenu.parser.MenuItemTokenizer)>"->"virtualinvoke <geracemenu.parser.MenuItemParser: geracemenu.parser.ItemNode parseMenu()>";
+    "staticinvoke <geracemenu.parser.MenuBuilder: java.awt.Panel getMenuPanel(geracemenu.parser.ItemNode)>"
+    "virtualinvoke <geracemenu.parser.MenuItemParser: geracemenu.parser.ItemNode parseMenu()>"->"staticinvoke <geracemenu.parser.MenuBuilder: java.awt.Panel getMenuPanel(geracemenu.parser.ItemNode)>";
+    "virtualinvoke <java.awt.Container: java.awt.Component add(java.lang.String,java.awt.Component)>"
+    "staticinvoke <geracemenu.parser.MenuBuilder: java.awt.Panel getMenuPanel(geracemenu.parser.ItemNode)>"->"virtualinvoke <java.awt.Container: java.awt.Component add(java.lang.String,java.awt.Component)>";
+    "pop"
+    "virtualinvoke <java.awt.Container: java.awt.Component add(java.lang.String,java.awt.Component)>"->"pop";
+    "pop"->"goto goto return";
+    "ifnonnull new java.lang.StringBuffer"->"new java.lang.StringBuffer";
+    "new java.lang.StringBuffer"->"dup1.r";
+    "dup1.r"->"specialinvoke <java.lang.StringBuffer: void <init>()>";
+    "push \"://\""
+    "specialinvoke <java.lang.StringBuffer: void <init>()>"->"push \"://\"";
+    "push \"://\""->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"staticget <geracemenu.parseMenuApplet: java.net.URL codeBase>";
+    "staticget <geracemenu.parseMenuApplet: java.net.URL codeBase>"->"virtualinvoke <java.net.URL: java.lang.String getHost()>";
+    "virtualinvoke <java.net.URL: java.lang.String getHost()>"->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>"->"store.r $r59";
+}

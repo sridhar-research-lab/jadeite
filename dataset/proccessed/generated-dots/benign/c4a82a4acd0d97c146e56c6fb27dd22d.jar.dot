@@ -1,0 +1,56 @@
+digraph "" {
+    "r0 := @this: vfSpotLight"
+    "load.r r0"
+    "r0 := @this: vfSpotLight"->"load.r r0";
+    "virtualinvoke <vfSpotLight: void GetParameters()>"
+    "load.r r0"->"virtualinvoke <vfSpotLight: void GetParameters()>";
+    "virtualinvoke <vfSpotLight: void GetParameters()>"->"load.r r0";
+    "virtualinvoke <java.awt.Component: java.awt.Dimension size()>"
+    "load.r r0"->"virtualinvoke <java.awt.Component: java.awt.Dimension size()>";
+    "fieldget <java.awt.Dimension: int width>"
+    "virtualinvoke <java.awt.Component: java.awt.Dimension size()>"->"fieldget <java.awt.Dimension: int width>";
+    "store.i $i0"
+    "fieldget <java.awt.Dimension: int width>"->"store.i $i0";
+    "store.i $i0"->"load.r r0";
+    "load.i $i0"
+    "load.r r0"->"load.i $i0";
+    "fieldput <vfSpotLight: int screen_W>"
+    "load.i $i0"->"fieldput <vfSpotLight: int screen_W>";
+    "fieldput <vfSpotLight: int screen_W>"->"load.r r0";
+    "load.r r0"->"load.i $i0";
+    "fieldput <vfSpotLight: int mouse_X>"
+    "load.i $i0"->"fieldput <vfSpotLight: int mouse_X>";
+    "fieldput <vfSpotLight: int mouse_X>"->"load.r r0";
+    "load.r r0"->"virtualinvoke <java.awt.Component: java.awt.Dimension size()>";
+    "fieldget <java.awt.Dimension: int height>"
+    "virtualinvoke <java.awt.Component: java.awt.Dimension size()>"->"fieldget <java.awt.Dimension: int height>";
+    "store.i $i1"
+    "fieldget <java.awt.Dimension: int height>"->"store.i $i1";
+    "store.i $i1"->"load.r r0";
+    "load.i $i1"
+    "load.r r0"->"load.i $i1";
+    "fieldput <vfSpotLight: int screen_H>"
+    "load.i $i1"->"fieldput <vfSpotLight: int screen_H>";
+    "fieldput <vfSpotLight: int screen_H>"->"load.r r0";
+    "load.r r0"->"load.i $i1";
+    "fieldput <vfSpotLight: int mouse_Y>"
+    "load.i $i1"->"fieldput <vfSpotLight: int mouse_Y>";
+    "fieldput <vfSpotLight: int mouse_Y>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"load.i $i0";
+    "load.i $i0"->"load.i $i1";
+    "virtualinvoke <java.awt.Component: java.awt.Image createImage(int,int)>"
+    "load.i $i1"->"virtualinvoke <java.awt.Component: java.awt.Image createImage(int,int)>";
+    "fieldput <vfSpotLight: java.awt.Image buf>"
+    "virtualinvoke <java.awt.Component: java.awt.Image createImage(int,int)>"->"fieldput <vfSpotLight: java.awt.Image buf>";
+    "fieldput <vfSpotLight: java.awt.Image buf>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "fieldget <vfSpotLight: java.awt.Image buf>"
+    "load.r r0"->"fieldget <vfSpotLight: java.awt.Image buf>";
+    "virtualinvoke <java.awt.Image: java.awt.Graphics getGraphics()>"
+    "fieldget <vfSpotLight: java.awt.Image buf>"->"virtualinvoke <java.awt.Image: java.awt.Graphics getGraphics()>";
+    "fieldput <vfSpotLight: java.awt.Graphics gbuf>"
+    "virtualinvoke <java.awt.Image: java.awt.Graphics getGraphics()>"->"fieldput <vfSpotLight: java.awt.Graphics gbuf>";
+    "return"
+    "fieldput <vfSpotLight: java.awt.Graphics gbuf>"->"return";
+}

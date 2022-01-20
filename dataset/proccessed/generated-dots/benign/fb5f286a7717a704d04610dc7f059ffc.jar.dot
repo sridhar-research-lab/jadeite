@@ -1,0 +1,379 @@
+digraph "" {
+    "r0 := @this: ColoringBook"
+    "load.r r0"
+    "r0 := @this: ColoringBook"->"load.r r0";
+    "new java.awt.Choice"
+    "load.r r0"->"new java.awt.Choice";
+    "dup1.r"
+    "new java.awt.Choice"->"dup1.r";
+    "specialinvoke <java.awt.Choice: void <init>()>"
+    "dup1.r"->"specialinvoke <java.awt.Choice: void <init>()>";
+    "fieldput <ColoringBook: java.awt.Choice pages>"
+    "specialinvoke <java.awt.Choice: void <init>()>"->"fieldput <ColoringBook: java.awt.Choice pages>";
+    "push 0"
+    "fieldput <ColoringBook: java.awt.Choice pages>"->"push 0";
+    "store.i $r22"
+    "push 0"->"store.i $r22";
+    "store.i $r22"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "push \"bgColor\""
+    "load.r r0"->"push \"bgColor\"";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"
+    "push \"bgColor\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "specialinvoke <ColoringBook: java.awt.Color getColorParm(java.lang.String)>"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"specialinvoke <ColoringBook: java.awt.Color getColorParm(java.lang.String)>";
+    "staticput <ColoringBook: java.awt.Color bgColor>"
+    "specialinvoke <ColoringBook: java.awt.Color getColorParm(java.lang.String)>"->"staticput <ColoringBook: java.awt.Color bgColor>";
+    "staticput <ColoringBook: java.awt.Color bgColor>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "virtualinvoke <java.applet.Applet: java.net.URL getDocumentBase()>"
+    "load.r r0"->"virtualinvoke <java.applet.Applet: java.net.URL getDocumentBase()>";
+    "virtualinvoke <java.applet.Applet: java.net.URL getDocumentBase()>"->"load.r r0";
+    "push \"bgImage\""
+    "load.r r0"->"push \"bgImage\"";
+    "push \"bgImage\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.awt.Image getImage(java.net.URL,java.lang.String)>"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"virtualinvoke <java.applet.Applet: java.awt.Image getImage(java.net.URL,java.lang.String)>";
+    "staticput <ColoringBook: java.awt.Image bgImage>"
+    "virtualinvoke <java.applet.Applet: java.awt.Image getImage(java.net.URL,java.lang.String)>"->"staticput <ColoringBook: java.awt.Image bgImage>";
+    "goto load.r r0"
+    "staticput <ColoringBook: java.awt.Image bgImage>"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "new java.lang.StringBuffer"
+    "load.r r0"->"new java.lang.StringBuffer";
+    "new java.lang.StringBuffer"->"dup1.r";
+    "push \"image_\""
+    "dup1.r"->"push \"image_\"";
+    "specialinvoke <java.lang.StringBuffer: void <init>(java.lang.String)>"
+    "push \"image_\""->"specialinvoke <java.lang.StringBuffer: void <init>(java.lang.String)>";
+    "load.i $r22"
+    "specialinvoke <java.lang.StringBuffer: void <init>(java.lang.String)>"->"load.i $r22";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(int)>"
+    "load.i $r22"->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(int)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>"
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(int)>"->"virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>"->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "store.r $r16"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"store.r $r16";
+    "load.r $r16"
+    "store.r $r16"->"load.r $r16";
+    "ifnonnull load.r r0"
+    "load.r $r16"->"ifnonnull load.r r0";
+    "ifnonnull load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "push \"image_0\""
+    "load.r r0"->"push \"image_0\"";
+    "push \"image_0\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <ColoringBook: void processImages(java.lang.String)>"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"virtualinvoke <ColoringBook: void processImages(java.lang.String)>";
+    "virtualinvoke <ColoringBook: void processImages(java.lang.String)>"->"load.r r0";
+    "staticget <ColoringBook: int w>"
+    "load.r r0"->"staticget <ColoringBook: int w>";
+    "staticget <ColoringBook: int h>"
+    "staticget <ColoringBook: int w>"->"staticget <ColoringBook: int h>";
+    "virtualinvoke <java.awt.Component: java.awt.Image createImage(int,int)>"
+    "staticget <ColoringBook: int h>"->"virtualinvoke <java.awt.Component: java.awt.Image createImage(int,int)>";
+    "staticput <ColoringBook: java.awt.Image bufImage>"
+    "virtualinvoke <java.awt.Component: java.awt.Image createImage(int,int)>"->"staticput <ColoringBook: java.awt.Image bufImage>";
+    "new java.awt.Panel"
+    "staticput <ColoringBook: java.awt.Image bufImage>"->"new java.awt.Panel";
+    "new java.awt.Panel"->"store.r $r16";
+    "store.r $r16"->"load.r $r16";
+    "specialinvoke <java.awt.Panel: void <init>()>"
+    "load.r $r16"->"specialinvoke <java.awt.Panel: void <init>()>";
+    "specialinvoke <java.awt.Panel: void <init>()>"->"load.r $r16";
+    "new java.awt.GridLayout"
+    "load.r $r16"->"new java.awt.GridLayout";
+    "new java.awt.GridLayout"->"dup1.r";
+    "push 1"
+    "dup1.r"->"push 1";
+    "push 1"->"push 1";
+    "specialinvoke <java.awt.GridLayout: void <init>(int,int)>"
+    "push 1"->"specialinvoke <java.awt.GridLayout: void <init>(int,int)>";
+    "virtualinvoke <java.awt.Container: void setLayout(java.awt.LayoutManager)>"
+    "specialinvoke <java.awt.GridLayout: void <init>(int,int)>"->"virtualinvoke <java.awt.Container: void setLayout(java.awt.LayoutManager)>";
+    "virtualinvoke <java.awt.Container: void setLayout(java.awt.LayoutManager)>"->"new java.awt.Panel";
+    "store.r $r22"
+    "new java.awt.Panel"->"store.r $r22";
+    "load.r $r22"
+    "store.r $r22"->"load.r $r22";
+    "load.r $r22"->"specialinvoke <java.awt.Panel: void <init>()>";
+    "specialinvoke <java.awt.Panel: void <init>()>"->"load.r $r16";
+    "staticget <ColoringBook: Controller con>"
+    "load.r $r16"->"staticget <ColoringBook: Controller con>";
+    "virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>"
+    "staticget <ColoringBook: Controller con>"->"virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>";
+    "pop"
+    "virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>"->"pop";
+    "pop"->"new java.awt.Panel";
+    "store.r $r25"
+    "new java.awt.Panel"->"store.r $r25";
+    "load.r $r25"
+    "store.r $r25"->"load.r $r25";
+    "load.r $r25"->"specialinvoke <java.awt.Panel: void <init>()>";
+    "new PalletColors"
+    "specialinvoke <java.awt.Panel: void <init>()>"->"new PalletColors";
+    "store.r $r26"
+    "new PalletColors"->"store.r $r26";
+    "load.r $r26"
+    "store.r $r26"->"load.r $r26";
+    "specialinvoke <PalletColors: void <init>()>"
+    "load.r $r26"->"specialinvoke <PalletColors: void <init>()>";
+    "new ColorListener"
+    "specialinvoke <PalletColors: void <init>()>"->"new ColorListener";
+    "store.r $r27"
+    "new ColorListener"->"store.r $r27";
+    "load.r $r27"
+    "store.r $r27"->"load.r $r27";
+    "specialinvoke <ColorListener: void <init>()>"
+    "load.r $r27"->"specialinvoke <ColorListener: void <init>()>";
+    "specialinvoke <ColorListener: void <init>()>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"virtualinvoke <java.applet.Applet: java.net.URL getDocumentBase()>";
+    "push \"pal.jpg\""
+    "virtualinvoke <java.applet.Applet: java.net.URL getDocumentBase()>"->"push \"pal.jpg\"";
+    "push \"pal.jpg\""->"virtualinvoke <java.applet.Applet: java.awt.Image getImage(java.net.URL,java.lang.String)>";
+    "staticput <ColoringBook: java.awt.Image palPic>"
+    "virtualinvoke <java.applet.Applet: java.awt.Image getImage(java.net.URL,java.lang.String)>"->"staticput <ColoringBook: java.awt.Image palPic>";
+    "new java.awt.MediaTracker"
+    "staticput <ColoringBook: java.awt.Image palPic>"->"new java.awt.MediaTracker";
+    "store.r $r30"
+    "new java.awt.MediaTracker"->"store.r $r30";
+    "load.r $r30"
+    "store.r $r30"->"load.r $r30";
+    "load.r $r30"->"load.r r0";
+    "specialinvoke <java.awt.MediaTracker: void <init>(java.awt.Component)>"
+    "load.r r0"->"specialinvoke <java.awt.MediaTracker: void <init>(java.awt.Component)>";
+    "specialinvoke <java.awt.MediaTracker: void <init>(java.awt.Component)>"->"load.r $r30";
+    "staticget <ColoringBook: java.awt.Image palPic>"
+    "load.r $r30"->"staticget <ColoringBook: java.awt.Image palPic>";
+    "staticget <ColoringBook: java.awt.Image palPic>"->"push 0";
+    "virtualinvoke <java.awt.MediaTracker: void addImage(java.awt.Image,int)>"
+    "push 0"->"virtualinvoke <java.awt.MediaTracker: void addImage(java.awt.Image,int)>";
+    "virtualinvoke <java.awt.MediaTracker: void addImage(java.awt.Image,int)>"->"load.r $r30";
+    "staticget <ColoringBook: java.awt.Image bgImage>"
+    "load.r $r30"->"staticget <ColoringBook: java.awt.Image bgImage>";
+    "staticget <ColoringBook: java.awt.Image bgImage>"->"push 1";
+    "push 1"->"virtualinvoke <java.awt.MediaTracker: void addImage(java.awt.Image,int)>";
+    "virtualinvoke <java.awt.MediaTracker: void addImage(java.awt.Image,int)>"->"load.r $r30";
+    "virtualinvoke <java.awt.MediaTracker: void waitForAll()>"
+    "load.r $r30"->"virtualinvoke <java.awt.MediaTracker: void waitForAll()>";
+    "virtualinvoke <java.awt.MediaTracker: void waitForAll()>"->"load.r $r30";
+    "virtualinvoke <java.awt.MediaTracker: boolean isErrorAny()>"
+    "load.r $r30"->"virtualinvoke <java.awt.MediaTracker: boolean isErrorAny()>";
+    "ifeq push 1"
+    "virtualinvoke <java.awt.MediaTracker: boolean isErrorAny()>"->"ifeq push 1";
+    "ifeq push 1"->"push 0";
+    "store.b $r30"
+    "push 0"->"store.b $r30";
+    "store.b $r30"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "load.b $r30"
+    "load.r r0"->"load.b $r30";
+    "fieldput <ColoringBook: boolean m_fAllLoaded>"
+    "load.b $r30"->"fieldput <ColoringBook: boolean m_fAllLoaded>";
+    "goto push 0"
+    "fieldput <ColoringBook: boolean m_fAllLoaded>"->"goto push 0";
+    "goto push 0"->"push 0";
+    "store.i $r30"
+    "push 0"->"store.i $r30";
+    "goto load.i $r30"
+    "store.i $r30"->"goto load.i $r30";
+    "load.i $r30"
+    "goto load.i $r30"->"load.i $r30";
+    "push 16"
+    "load.i $r30"->"push 16";
+    "ifcmplt.i load.r $r26"
+    "push 16"->"ifcmplt.i load.r $r26";
+    "staticget <ColoringBook: java.util.Vector pallete>"
+    "ifcmplt.i load.r $r26"->"staticget <ColoringBook: java.util.Vector pallete>";
+    "staticget <ColoringBook: java.util.Vector pallete>"->"push 0";
+    "virtualinvoke <java.util.Vector: java.lang.Object elementAt(int)>"
+    "push 0"->"virtualinvoke <java.util.Vector: java.lang.Object elementAt(int)>";
+    "checkcast"
+    "virtualinvoke <java.util.Vector: java.lang.Object elementAt(int)>"->"checkcast";
+    "virtualinvoke <ColorCanvas: java.awt.Color getColor()>"
+    "checkcast"->"virtualinvoke <ColorCanvas: java.awt.Color getColor()>";
+    "staticput <ColoringBook: java.awt.Color col>"
+    "virtualinvoke <ColorCanvas: java.awt.Color getColor()>"->"staticput <ColoringBook: java.awt.Color col>";
+    "new bookCanvas"
+    "staticput <ColoringBook: java.awt.Color col>"->"new bookCanvas";
+    "new bookCanvas"->"dup1.r";
+    "specialinvoke <bookCanvas: void <init>()>"
+    "dup1.r"->"specialinvoke <bookCanvas: void <init>()>";
+    "staticput <ColoringBook: bookCanvas book>"
+    "specialinvoke <bookCanvas: void <init>()>"->"staticput <ColoringBook: bookCanvas book>";
+    "new java.awt.Checkbox"
+    "staticput <ColoringBook: bookCanvas book>"->"new java.awt.Checkbox";
+    "new java.awt.Checkbox"->"store.r $r26";
+    "store.r $r26"->"load.r $r26";
+    "push \"Trace\""
+    "load.r $r26"->"push \"Trace\"";
+    "staticget <ColoringBook: java.awt.CheckboxGroup cbg>"
+    "push \"Trace\""->"staticget <ColoringBook: java.awt.CheckboxGroup cbg>";
+    "staticget <ColoringBook: java.awt.CheckboxGroup cbg>"->"push 0";
+    "specialinvoke <java.awt.Checkbox: void <init>(java.lang.String,java.awt.CheckboxGroup,boolean)>"
+    "push 0"->"specialinvoke <java.awt.Checkbox: void <init>(java.lang.String,java.awt.CheckboxGroup,boolean)>";
+    "specialinvoke <java.awt.Checkbox: void <init>(java.lang.String,java.awt.CheckboxGroup,boolean)>"->"load.r $r26";
+    "load.r $r26"->"load.r r0";
+    "virtualinvoke <java.awt.Checkbox: void addItemListener(java.awt.event.ItemListener)>"
+    "load.r r0"->"virtualinvoke <java.awt.Checkbox: void addItemListener(java.awt.event.ItemListener)>";
+    "virtualinvoke <java.awt.Checkbox: void addItemListener(java.awt.event.ItemListener)>"->"new java.awt.Checkbox";
+    "new java.awt.Checkbox"->"store.r $r27";
+    "store.r $r27"->"load.r $r27";
+    "push \"Color\""
+    "load.r $r27"->"push \"Color\"";
+    "push \"Color\""->"staticget <ColoringBook: java.awt.CheckboxGroup cbg>";
+    "staticget <ColoringBook: java.awt.CheckboxGroup cbg>"->"push 1";
+    "push 1"->"specialinvoke <java.awt.Checkbox: void <init>(java.lang.String,java.awt.CheckboxGroup,boolean)>";
+    "specialinvoke <java.awt.Checkbox: void <init>(java.lang.String,java.awt.CheckboxGroup,boolean)>"->"load.r $r27";
+    "load.r $r27"->"load.r r0";
+    "load.r r0"->"virtualinvoke <java.awt.Checkbox: void addItemListener(java.awt.event.ItemListener)>";
+    "virtualinvoke <java.awt.Checkbox: void addItemListener(java.awt.event.ItemListener)>"->"load.r $r25";
+    "load.r $r25"->"load.r $r26";
+    "load.r $r26"->"virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>";
+    "virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>"->"pop";
+    "pop"->"load.r $r25";
+    "load.r $r25"->"load.r $r27";
+    "load.r $r27"->"virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>";
+    "virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>"->"pop";
+    "pop"->"load.r r0";
+    "fieldget <ColoringBook: java.awt.Choice pages>"
+    "load.r r0"->"fieldget <ColoringBook: java.awt.Choice pages>";
+    "fieldget <ColoringBook: java.awt.Choice pages>"->"load.r r0";
+    "virtualinvoke <java.awt.Choice: void addItemListener(java.awt.event.ItemListener)>"
+    "load.r r0"->"virtualinvoke <java.awt.Choice: void addItemListener(java.awt.event.ItemListener)>";
+    "virtualinvoke <java.awt.Choice: void addItemListener(java.awt.event.ItemListener)>"->"load.r r0";
+    "staticget <ColoringBook: java.awt.Color bgColor>"
+    "load.r r0"->"staticget <ColoringBook: java.awt.Color bgColor>";
+    "virtualinvoke <java.awt.Component: void setBackground(java.awt.Color)>"
+    "staticget <ColoringBook: java.awt.Color bgColor>"->"virtualinvoke <java.awt.Component: void setBackground(java.awt.Color)>";
+    "virtualinvoke <java.awt.Component: void setBackground(java.awt.Color)>"->"load.r $r25";
+    "new java.awt.Label"
+    "load.r $r25"->"new java.awt.Label";
+    "new java.awt.Label"->"dup1.r";
+    "push \"Page:\""
+    "dup1.r"->"push \"Page:\"";
+    "specialinvoke <java.awt.Label: void <init>(java.lang.String)>"
+    "push \"Page:\""->"specialinvoke <java.awt.Label: void <init>(java.lang.String)>";
+    "specialinvoke <java.awt.Label: void <init>(java.lang.String)>"->"load.r r0";
+    "load.r r0"->"fieldget <ColoringBook: java.awt.Choice pages>";
+    "push 100"
+    "fieldget <ColoringBook: java.awt.Choice pages>"->"push 100";
+    "push 25"
+    "push 100"->"push 25";
+    "virtualinvoke <java.awt.Component: void setSize(int,int)>"
+    "push 25"->"virtualinvoke <java.awt.Component: void setSize(int,int)>";
+    "virtualinvoke <java.awt.Component: void setSize(int,int)>"->"virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>";
+    "virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>"->"pop";
+    "pop"->"load.r $r25";
+    "load.r $r25"->"load.r r0";
+    "load.r r0"->"fieldget <ColoringBook: java.awt.Choice pages>";
+    "fieldget <ColoringBook: java.awt.Choice pages>"->"virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>";
+    "virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>"->"pop";
+    "pop"->"load.r r0";
+    "load.r r0"->"load.r $r25";
+    "push \"North\""
+    "load.r $r25"->"push \"North\"";
+    "virtualinvoke <java.awt.Container: void add(java.awt.Component,java.lang.Object)>"
+    "push \"North\""->"virtualinvoke <java.awt.Container: void add(java.awt.Component,java.lang.Object)>";
+    "staticget <ColoringBook: bookCanvas book>"
+    "virtualinvoke <java.awt.Container: void add(java.awt.Component,java.lang.Object)>"->"staticget <ColoringBook: bookCanvas book>";
+    "staticget <ColoringBook: bookCanvas book>"->"staticget <ColoringBook: int w>";
+    "staticget <ColoringBook: int w>"->"staticget <ColoringBook: int h>";
+    "staticget <ColoringBook: int h>"->"virtualinvoke <java.awt.Component: void setSize(int,int)>";
+    "virtualinvoke <java.awt.Component: void setSize(int,int)>"->"load.r r0";
+    "load.r r0"->"load.r $r22";
+    "push \"East\""
+    "load.r $r22"->"push \"East\"";
+    "push \"East\""->"virtualinvoke <java.awt.Container: void add(java.awt.Component,java.lang.Object)>";
+    "virtualinvoke <java.awt.Container: void add(java.awt.Component,java.lang.Object)>"->"load.r r0";
+    "load.r r0"->"staticget <ColoringBook: bookCanvas book>";
+    "push \"Center\""
+    "staticget <ColoringBook: bookCanvas book>"->"push \"Center\"";
+    "push \"Center\""->"virtualinvoke <java.awt.Container: void add(java.awt.Component,java.lang.Object)>";
+    "virtualinvoke <java.awt.Container: void add(java.awt.Component,java.lang.Object)>"->"load.r $r22";
+    "load.r $r22"->"staticget <ColoringBook: int w>";
+    "push 35"
+    "staticget <ColoringBook: int w>"->"push 35";
+    "push 35"->"virtualinvoke <java.awt.Component: void setSize(int,int)>";
+    "virtualinvoke <java.awt.Component: void setSize(int,int)>"->"load.r r0";
+    "load.r r0"->"load.r $r16";
+    "push \"South\""
+    "load.r $r16"->"push \"South\"";
+    "push \"South\""->"virtualinvoke <java.awt.Container: void add(java.awt.Component,java.lang.Object)>";
+    "virtualinvoke <java.awt.Container: void add(java.awt.Component,java.lang.Object)>"->"staticget <ColoringBook: bookCanvas book>";
+    "new PaintListener"
+    "staticget <ColoringBook: bookCanvas book>"->"new PaintListener";
+    "new PaintListener"->"dup1.r";
+    "specialinvoke <PaintListener: void <init>()>"
+    "dup1.r"->"specialinvoke <PaintListener: void <init>()>";
+    "virtualinvoke <java.awt.Component: void addMouseListener(java.awt.event.MouseListener)>"
+    "specialinvoke <PaintListener: void <init>()>"->"virtualinvoke <java.awt.Component: void addMouseListener(java.awt.event.MouseListener)>";
+    "virtualinvoke <java.awt.Component: void addMouseListener(java.awt.event.MouseListener)>"->"staticget <ColoringBook: bookCanvas book>";
+    "new PaintMoveListener"
+    "staticget <ColoringBook: bookCanvas book>"->"new PaintMoveListener";
+    "new PaintMoveListener"->"dup1.r";
+    "specialinvoke <PaintMoveListener: void <init>()>"
+    "dup1.r"->"specialinvoke <PaintMoveListener: void <init>()>";
+    "virtualinvoke <java.awt.Component: void addMouseMotionListener(java.awt.event.MouseMotionListener)>"
+    "specialinvoke <PaintMoveListener: void <init>()>"->"virtualinvoke <java.awt.Component: void addMouseMotionListener(java.awt.event.MouseMotionListener)>";
+    "virtualinvoke <java.awt.Component: void addMouseMotionListener(java.awt.event.MouseMotionListener)>"->"load.r $r22";
+    "virtualinvoke <java.awt.Component: void repaint()>"
+    "load.r $r22"->"virtualinvoke <java.awt.Component: void repaint()>";
+    "virtualinvoke <java.awt.Component: void repaint()>"->"staticget <ColoringBook: Controller con>";
+    "staticget <ColoringBook: Controller con>"->"virtualinvoke <java.awt.Component: void repaint()>";
+    "return"
+    "virtualinvoke <java.awt.Component: void repaint()>"->"return";
+    "ifcmplt.i load.r $r26"->"load.r $r26";
+    "load.r $r26"->"load.i $r30";
+    "virtualinvoke <PalletColors: java.awt.Color getColor(int)>"
+    "load.i $r30"->"virtualinvoke <PalletColors: java.awt.Color getColor(int)>";
+    "store.r r67"
+    "virtualinvoke <PalletColors: java.awt.Color getColor(int)>"->"store.r r67";
+    "store.r r67"->"staticget <ColoringBook: java.util.Vector pallete>";
+    "new ColorCanvas"
+    "staticget <ColoringBook: java.util.Vector pallete>"->"new ColorCanvas";
+    "new ColorCanvas"->"dup1.r";
+    "load.r r67"
+    "dup1.r"->"load.r r67";
+    "load.r r67"->"load.i $r30";
+    "specialinvoke <ColorCanvas: void <init>(java.awt.Color,int)>"
+    "load.i $r30"->"specialinvoke <ColorCanvas: void <init>(java.awt.Color,int)>";
+    "virtualinvoke <java.util.Vector: void addElement(java.lang.Object)>"
+    "specialinvoke <ColorCanvas: void <init>(java.awt.Color,int)>"->"virtualinvoke <java.util.Vector: void addElement(java.lang.Object)>";
+    "virtualinvoke <java.util.Vector: void addElement(java.lang.Object)>"->"staticget <ColoringBook: java.util.Vector pallete>";
+    "staticget <ColoringBook: java.util.Vector pallete>"->"load.i $r30";
+    "load.i $r30"->"virtualinvoke <java.util.Vector: java.lang.Object elementAt(int)>";
+    "virtualinvoke <java.util.Vector: java.lang.Object elementAt(int)>"->"checkcast";
+    "store.r r68"
+    "checkcast"->"store.r r68";
+    "load.r r68"
+    "store.r r68"->"load.r r68";
+    "push 15"
+    "load.r r68"->"push 15";
+    "push 15"->"push 15";
+    "push 15"->"virtualinvoke <java.awt.Component: void setSize(int,int)>";
+    "virtualinvoke <java.awt.Component: void setSize(int,int)>"->"load.r r68";
+    "load.r r68"->"load.r r67";
+    "load.r r67"->"virtualinvoke <java.awt.Component: void setBackground(java.awt.Color)>";
+    "virtualinvoke <java.awt.Component: void setBackground(java.awt.Color)>"->"load.r r68";
+    "load.r r68"->"load.r $r27";
+    "load.r $r27"->"virtualinvoke <java.awt.Component: void addMouseListener(java.awt.event.MouseListener)>";
+    "virtualinvoke <java.awt.Component: void addMouseListener(java.awt.event.MouseListener)>"->"load.r $r22";
+    "load.r $r22"->"load.r r68";
+    "load.r r68"->"virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>";
+    "virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>"->"pop";
+    "inc.i $r30 1"
+    "pop"->"inc.i $r30 1";
+    "ifeq push 1"->"push 1";
+    "push 1"->"store.b $r30";
+    "virtualinvoke <java.awt.MediaTracker: boolean isErrorAny()>"->"store.r $r30";
+    "ifnonnull load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <ColoringBook: java.awt.Choice pages>";
+    "fieldget <ColoringBook: java.awt.Choice pages>"->"load.r $r16";
+    "virtualinvoke <java.awt.Choice: void add(java.lang.String)>"
+    "load.r $r16"->"virtualinvoke <java.awt.Choice: void add(java.lang.String)>";
+    "inc.i $r22 1"
+    "virtualinvoke <java.awt.Choice: void add(java.lang.String)>"->"inc.i $r22 1";
+}

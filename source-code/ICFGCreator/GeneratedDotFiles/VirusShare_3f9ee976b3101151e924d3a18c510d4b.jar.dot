@@ -1,0 +1,47 @@
+digraph "" {
+    "r0 := @this: loader"
+    "load.r r0"
+    "r0 := @this: loader"->"load.r r0";
+    "virtualinvoke <java.awt.Component: java.awt.Container getParent()>"
+    "load.r r0"->"virtualinvoke <java.awt.Component: java.awt.Container getParent()>";
+    "store.r r7"
+    "virtualinvoke <java.awt.Component: java.awt.Container getParent()>"->"store.r r7";
+    "load.r r7"
+    "store.r r7"->"load.r r7";
+    "ifnonnull load.r r7"
+    "load.r r7"->"ifnonnull load.r r7";
+    "goto load.r r0"
+    "ifnonnull load.r r7"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "push 0"
+    "load.r r0"->"push 0";
+    "fieldput <loader: boolean m>"
+    "push 0"->"fieldput <loader: boolean m>";
+    "fieldput <loader: boolean m>"->"load.r r0";
+    "staticget <java.awt.Color: java.awt.Color black>"
+    "load.r r0"->"staticget <java.awt.Color: java.awt.Color black>";
+    "virtualinvoke <java.awt.Component: void setBackground(java.awt.Color)>"
+    "staticget <java.awt.Color: java.awt.Color black>"->"virtualinvoke <java.awt.Component: void setBackground(java.awt.Color)>";
+    "new java.lang.Thread"
+    "virtualinvoke <java.awt.Component: void setBackground(java.awt.Color)>"->"new java.lang.Thread";
+    "dup1.r"
+    "new java.lang.Thread"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "specialinvoke <java.lang.Thread: void <init>(java.lang.Runnable)>"
+    "load.r r0"->"specialinvoke <java.lang.Thread: void <init>(java.lang.Runnable)>";
+    "virtualinvoke <java.lang.Thread: void start()>"
+    "specialinvoke <java.lang.Thread: void <init>(java.lang.Runnable)>"->"virtualinvoke <java.lang.Thread: void start()>";
+    "goto return"
+    "virtualinvoke <java.lang.Thread: void start()>"->"goto return";
+    "return"
+    "goto return"->"return";
+    "push \"loader.init()\""
+    "virtualinvoke <java.lang.Thread: void start()>"->"push \"loader.init()\"";
+    "staticinvoke <h: h a(java.lang.Throwable,java.lang.String)>"
+    "push \"loader.init()\""->"staticinvoke <h: h a(java.lang.Throwable,java.lang.String)>";
+    "athrow"
+    "staticinvoke <h: h a(java.lang.Throwable,java.lang.String)>"->"athrow";
+    "ifnonnull load.r r7"->"load.r r7";
+    "load.r r7"->"staticget <java.awt.Color: java.awt.Color black>";
+    "staticget <java.awt.Color: java.awt.Color black>"->"virtualinvoke <java.awt.Component: void setBackground(java.awt.Color)>";
+}

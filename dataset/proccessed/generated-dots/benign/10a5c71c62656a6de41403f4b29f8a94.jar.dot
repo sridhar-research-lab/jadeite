@@ -1,0 +1,487 @@
+digraph "" {
+    "r0 := @this: gong.NanoGong"
+    "new gong.NanoGong$1"
+    "r0 := @this: gong.NanoGong"->"new gong.NanoGong$1";
+    "dup1.r"
+    "new gong.NanoGong$1"->"dup1.r";
+    "load.r r0"
+    "dup1.r"->"load.r r0";
+    "specialinvoke <gong.NanoGong$1: void <init>(gong.NanoGong)>"
+    "load.r r0"->"specialinvoke <gong.NanoGong$1: void <init>(gong.NanoGong)>";
+    "staticinvoke <java.awt.EventQueue: void invokeAndWait(java.lang.Runnable)>"
+    "specialinvoke <gong.NanoGong$1: void <init>(gong.NanoGong)>"->"staticinvoke <java.awt.EventQueue: void invokeAndWait(java.lang.Runnable)>";
+    "goto load.r r0"
+    "staticinvoke <java.awt.EventQueue: void invokeAndWait(java.lang.Runnable)>"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "fieldget <gong.NanoGong: gong.audio.AudioHandler handler>"
+    "load.r r0"->"fieldget <gong.NanoGong: gong.audio.AudioHandler handler>";
+    "fieldget <gong.NanoGong: gong.audio.AudioHandler handler>"->"load.r r0";
+    "virtualinvoke <gong.audio.AudioHandler: void addListener(gong.event.AudioHandlerListener)>"
+    "load.r r0"->"virtualinvoke <gong.audio.AudioHandler: void addListener(gong.event.AudioHandlerListener)>";
+    "virtualinvoke <gong.audio.AudioHandler: void addListener(gong.event.AudioHandlerListener)>"->"load.r r0";
+    "push \"SoundFileURL\""
+    "load.r r0"->"push \"SoundFileURL\"";
+    "virtualinvoke <gong.NanoGong: java.lang.String getParameter(java.lang.String)>"
+    "push \"SoundFileURL\""->"virtualinvoke <gong.NanoGong: java.lang.String getParameter(java.lang.String)>";
+    "store.r $r4"
+    "virtualinvoke <gong.NanoGong: java.lang.String getParameter(java.lang.String)>"->"store.r $r4";
+    "store.r $r4"->"load.r r0";
+    "load.r $r4"
+    "load.r r0"->"load.r $r4";
+    "specialinvoke <gong.NanoGong: java.lang.String resolveURL(java.lang.String)>"
+    "load.r $r4"->"specialinvoke <gong.NanoGong: java.lang.String resolveURL(java.lang.String)>";
+    "specialinvoke <gong.NanoGong: java.lang.String resolveURL(java.lang.String)>"->"store.r $r4";
+    "store.r $r4"->"load.r r0";
+    "load.r r0"->"fieldget <gong.NanoGong: gong.audio.AudioHandler handler>";
+    "fieldget <gong.NanoGong: gong.audio.AudioHandler handler>"->"load.r $r4";
+    "virtualinvoke <gong.audio.AudioHandler: void setURL(java.lang.String)>"
+    "load.r $r4"->"virtualinvoke <gong.audio.AudioHandler: void setURL(java.lang.String)>";
+    "goto load.r $r4"
+    "virtualinvoke <gong.audio.AudioHandler: void setURL(java.lang.String)>"->"goto load.r $r4";
+    "goto load.r $r4"->"load.r $r4";
+    "ifnull load.r r0"
+    "load.r $r4"->"ifnull load.r r0";
+    "new gong.NanoGong$2"
+    "ifnull load.r r0"->"new gong.NanoGong$2";
+    "new gong.NanoGong$2"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "specialinvoke <gong.NanoGong$2: void <init>(gong.NanoGong)>"
+    "load.r r0"->"specialinvoke <gong.NanoGong$2: void <init>(gong.NanoGong)>";
+    "staticinvoke <javax.swing.SwingUtilities: void invokeAndWait(java.lang.Runnable)>"
+    "specialinvoke <gong.NanoGong$2: void <init>(gong.NanoGong)>"->"staticinvoke <javax.swing.SwingUtilities: void invokeAndWait(java.lang.Runnable)>";
+    "goto new gong.NanoGong$3"
+    "staticinvoke <javax.swing.SwingUtilities: void invokeAndWait(java.lang.Runnable)>"->"goto new gong.NanoGong$3";
+    "new gong.NanoGong$3"
+    "goto new gong.NanoGong$3"->"new gong.NanoGong$3";
+    "new gong.NanoGong$3"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "specialinvoke <gong.NanoGong$3: void <init>(gong.NanoGong)>"
+    "load.r r0"->"specialinvoke <gong.NanoGong$3: void <init>(gong.NanoGong)>";
+    "virtualinvoke <gong.NanoGong$3: void start()>"
+    "specialinvoke <gong.NanoGong$3: void <init>(gong.NanoGong)>"->"virtualinvoke <gong.NanoGong$3: void start()>";
+    "virtualinvoke <gong.NanoGong$3: void start()>"->"load.r r0";
+    "push \"ShowAudioLevel\""
+    "load.r r0"->"push \"ShowAudioLevel\"";
+    "push \"ShowAudioLevel\""->"virtualinvoke <gong.NanoGong: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <gong.NanoGong: java.lang.String getParameter(java.lang.String)>"->"store.r $r4";
+    "store.r $r4"->"load.r $r4";
+    "load.r $r4"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r $r4";
+    "push \"false\""
+    "load.r $r4"->"push \"false\"";
+    "virtualinvoke <java.lang.String: boolean equalsIgnoreCase(java.lang.String)>"
+    "push \"false\""->"virtualinvoke <java.lang.String: boolean equalsIgnoreCase(java.lang.String)>";
+    "ifeq load.r r0"
+    "virtualinvoke <java.lang.String: boolean equalsIgnoreCase(java.lang.String)>"->"ifeq load.r r0";
+    "ifeq load.r r0"->"load.r r0";
+    "fieldget <gong.NanoGong: javax.swing.JSlider slrAmplitude>"
+    "load.r r0"->"fieldget <gong.NanoGong: javax.swing.JSlider slrAmplitude>";
+    "push 0"
+    "fieldget <gong.NanoGong: javax.swing.JSlider slrAmplitude>"->"push 0";
+    "virtualinvoke <javax.swing.JSlider: void setVisible(boolean)>"
+    "push 0"->"virtualinvoke <javax.swing.JSlider: void setVisible(boolean)>";
+    "virtualinvoke <javax.swing.JSlider: void setVisible(boolean)>"->"load.r r0";
+    "push \"ShowRecordButton\""
+    "load.r r0"->"push \"ShowRecordButton\"";
+    "push \"ShowRecordButton\""->"virtualinvoke <gong.NanoGong: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <gong.NanoGong: java.lang.String getParameter(java.lang.String)>"->"store.r $r4";
+    "store.r $r4"->"load.r $r4";
+    "load.r $r4"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r $r4";
+    "load.r $r4"->"push \"false\"";
+    "push \"false\""->"virtualinvoke <java.lang.String: boolean equalsIgnoreCase(java.lang.String)>";
+    "virtualinvoke <java.lang.String: boolean equalsIgnoreCase(java.lang.String)>"->"ifeq load.r r0";
+    "ifeq load.r r0"->"load.r r0";
+    "fieldget <gong.NanoGong: javax.swing.JButton btnRecord>"
+    "load.r r0"->"fieldget <gong.NanoGong: javax.swing.JButton btnRecord>";
+    "fieldget <gong.NanoGong: javax.swing.JButton btnRecord>"->"push 0";
+    "virtualinvoke <javax.swing.JButton: void setVisible(boolean)>"
+    "push 0"->"virtualinvoke <javax.swing.JButton: void setVisible(boolean)>";
+    "virtualinvoke <javax.swing.JButton: void setVisible(boolean)>"->"load.r r0";
+    "push \"ShowSpeedButton\""
+    "load.r r0"->"push \"ShowSpeedButton\"";
+    "push \"ShowSpeedButton\""->"virtualinvoke <gong.NanoGong: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <gong.NanoGong: java.lang.String getParameter(java.lang.String)>"->"store.r $r4";
+    "store.r $r4"->"load.r $r4";
+    "load.r $r4"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r $r4";
+    "load.r $r4"->"push \"false\"";
+    "push \"false\""->"virtualinvoke <java.lang.String: boolean equalsIgnoreCase(java.lang.String)>";
+    "virtualinvoke <java.lang.String: boolean equalsIgnoreCase(java.lang.String)>"->"ifeq load.r r0";
+    "ifeq load.r r0"->"load.r r0";
+    "fieldget <gong.NanoGong: javax.swing.JPanel panSpeed>"
+    "load.r r0"->"fieldget <gong.NanoGong: javax.swing.JPanel panSpeed>";
+    "fieldget <gong.NanoGong: javax.swing.JPanel panSpeed>"->"push 0";
+    "virtualinvoke <javax.swing.JPanel: void setVisible(boolean)>"
+    "push 0"->"virtualinvoke <javax.swing.JPanel: void setVisible(boolean)>";
+    "virtualinvoke <javax.swing.JPanel: void setVisible(boolean)>"->"load.r r0";
+    "push \"ShowSaveButton\""
+    "load.r r0"->"push \"ShowSaveButton\"";
+    "push \"ShowSaveButton\""->"virtualinvoke <gong.NanoGong: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <gong.NanoGong: java.lang.String getParameter(java.lang.String)>"->"store.r $r4";
+    "store.r $r4"->"load.r $r4";
+    "load.r $r4"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r $r4";
+    "load.r $r4"->"push \"false\"";
+    "push \"false\""->"virtualinvoke <java.lang.String: boolean equalsIgnoreCase(java.lang.String)>";
+    "virtualinvoke <java.lang.String: boolean equalsIgnoreCase(java.lang.String)>"->"ifeq load.r r0";
+    "ifeq load.r r0"->"load.r r0";
+    "fieldget <gong.NanoGong: javax.swing.JButton btnSave>"
+    "load.r r0"->"fieldget <gong.NanoGong: javax.swing.JButton btnSave>";
+    "fieldget <gong.NanoGong: javax.swing.JButton btnSave>"->"push 0";
+    "push 0"->"virtualinvoke <javax.swing.JButton: void setVisible(boolean)>";
+    "virtualinvoke <javax.swing.JButton: void setVisible(boolean)>"->"load.r r0";
+    "push \"ShowTime\""
+    "load.r r0"->"push \"ShowTime\"";
+    "push \"ShowTime\""->"virtualinvoke <gong.NanoGong: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <gong.NanoGong: java.lang.String getParameter(java.lang.String)>"->"store.r $r4";
+    "store.r $r4"->"load.r $r4";
+    "load.r $r4"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r $r4";
+    "push \"true\""
+    "load.r $r4"->"push \"true\"";
+    "push \"true\""->"virtualinvoke <java.lang.String: boolean equalsIgnoreCase(java.lang.String)>";
+    "virtualinvoke <java.lang.String: boolean equalsIgnoreCase(java.lang.String)>"->"ifeq load.r r0";
+    "ifeq load.r r0"->"load.r r0";
+    "push 1"
+    "load.r r0"->"push 1";
+    "fieldput <gong.NanoGong: boolean showTime>"
+    "push 1"->"fieldput <gong.NanoGong: boolean showTime>";
+    "fieldput <gong.NanoGong: boolean showTime>"->"load.r r0";
+    "push \"AudioFormat\""
+    "load.r r0"->"push \"AudioFormat\"";
+    "push \"AudioFormat\""->"virtualinvoke <gong.NanoGong: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <gong.NanoGong: java.lang.String getParameter(java.lang.String)>"->"store.r $r4";
+    "store.r $r4"->"load.r $r4";
+    "load.r $r4"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r $r4";
+    "push \"ImaADPCM\""
+    "load.r $r4"->"push \"ImaADPCM\"";
+    "virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>"
+    "push \"ImaADPCM\""->"virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>";
+    "virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>"->"ifeq load.r r0";
+    "ifeq load.r r0"->"load.r r0";
+    "load.r r0"->"push \"ImaADPCM\"";
+    "fieldput <gong.NanoGong: java.lang.String audioFormat>"
+    "push \"ImaADPCM\""->"fieldput <gong.NanoGong: java.lang.String audioFormat>";
+    "fieldput <gong.NanoGong: java.lang.String audioFormat>"->"load.r r0";
+    "push \"SamplingRate\""
+    "load.r r0"->"push \"SamplingRate\"";
+    "push \"SamplingRate\""->"virtualinvoke <gong.NanoGong: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <gong.NanoGong: java.lang.String getParameter(java.lang.String)>"->"store.r $r4";
+    "store.r $r4"->"load.r $r4";
+    "load.r $r4"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r $r4";
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"
+    "load.r $r4"->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>";
+    "store.i $r4"
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"->"store.i $r4";
+    "store.i $r4"->"load.r r0";
+    "fieldget <gong.NanoGong: java.lang.String audioFormat>"
+    "load.r r0"->"fieldget <gong.NanoGong: java.lang.String audioFormat>";
+    "fieldget <gong.NanoGong: java.lang.String audioFormat>"->"push \"ImaADPCM\"";
+    "push \"ImaADPCM\""->"virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>";
+    "ifeq load.i $r4"
+    "virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>"->"ifeq load.i $r4";
+    "load.i $r4"
+    "ifeq load.i $r4"->"load.i $r4";
+    "push 8000"
+    "load.i $r4"->"push 8000";
+    "ifcmpeq.i load.r r0"
+    "push 8000"->"ifcmpeq.i load.r r0";
+    "ifcmpeq.i load.r r0"->"load.i $r4";
+    "push 11025"
+    "load.i $r4"->"push 11025";
+    "push 11025"->"ifcmpeq.i load.r r0";
+    "ifcmpeq.i load.r r0"->"load.i $r4";
+    "push 22050"
+    "load.i $r4"->"push 22050";
+    "push 22050"->"ifcmpeq.i load.r r0";
+    "ifcmpeq.i load.r r0"->"load.i $r4";
+    "push 44100"
+    "load.i $r4"->"push 44100";
+    "ifcmpne.i goto load.r r0"
+    "push 44100"->"ifcmpne.i goto load.r r0";
+    "ifcmpne.i goto load.r r0"->"load.r r0";
+    "load.r r0"->"load.i $r4";
+    "i2f"
+    "load.i $r4"->"i2f";
+    "fieldput <gong.NanoGong: float samplingRate>"
+    "i2f"->"fieldput <gong.NanoGong: float samplingRate>";
+    "goto goto load.r r0"
+    "fieldput <gong.NanoGong: float samplingRate>"->"goto goto load.r r0";
+    "goto goto load.r r0"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "push \"SpeexQuality\""
+    "load.r r0"->"push \"SpeexQuality\"";
+    "push \"SpeexQuality\""->"virtualinvoke <gong.NanoGong: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <gong.NanoGong: java.lang.String getParameter(java.lang.String)>"->"store.r $r4";
+    "store.r $r4"->"load.r $r4";
+    "load.r $r4"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r $r4";
+    "load.r $r4"->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>";
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"->"store.i $r4";
+    "store.i $r4"->"load.i $r4";
+    "iflt goto load.r r0"
+    "load.i $r4"->"iflt goto load.r r0";
+    "iflt goto load.r r0"->"load.i $r4";
+    "push 10"
+    "load.i $r4"->"push 10";
+    "ifcmpgt.i goto load.r r0"
+    "push 10"->"ifcmpgt.i goto load.r r0";
+    "ifcmpgt.i goto load.r r0"->"load.r r0";
+    "load.r r0"->"load.i $r4";
+    "fieldput <gong.NanoGong: int speexQuality>"
+    "load.i $r4"->"fieldput <gong.NanoGong: int speexQuality>";
+    "fieldput <gong.NanoGong: int speexQuality>"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "push \"Color\""
+    "load.r r0"->"push \"Color\"";
+    "push \"Color\""->"virtualinvoke <gong.NanoGong: java.lang.String getParameter(java.lang.String)>";
+    "store.r $r31"
+    "virtualinvoke <gong.NanoGong: java.lang.String getParameter(java.lang.String)>"->"store.r $r31";
+    "load.r $r31"
+    "store.r $r31"->"load.r $r31";
+    "load.r $r31"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r $r31";
+    "virtualinvoke <java.lang.String: int length()>"
+    "load.r $r31"->"virtualinvoke <java.lang.String: int length()>";
+    "virtualinvoke <java.lang.String: int length()>"->"push 1";
+    "ifcmple.i load.r r0"
+    "push 1"->"ifcmple.i load.r r0";
+    "new java.awt.Color"
+    "ifcmple.i load.r r0"->"new java.awt.Color";
+    "new java.awt.Color"->"store.r $r4";
+    "store.r $r4"->"load.r $r4";
+    "load.r $r4"->"load.r $r31";
+    "load.r $r31"->"push 1";
+    "virtualinvoke <java.lang.String: java.lang.String substring(int)>"
+    "push 1"->"virtualinvoke <java.lang.String: java.lang.String substring(int)>";
+    "push 16"
+    "virtualinvoke <java.lang.String: java.lang.String substring(int)>"->"push 16";
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String,int)>"
+    "push 16"->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String,int)>";
+    "specialinvoke <java.awt.Color: void <init>(int)>"
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String,int)>"->"specialinvoke <java.awt.Color: void <init>(int)>";
+    "specialinvoke <java.awt.Color: void <init>(int)>"->"load.r r0";
+    "fieldget <gong.NanoGong: javax.swing.JPanel panPanel>"
+    "load.r r0"->"fieldget <gong.NanoGong: javax.swing.JPanel panPanel>";
+    "fieldget <gong.NanoGong: javax.swing.JPanel panPanel>"->"load.r $r4";
+    "virtualinvoke <javax.swing.JPanel: void setBackground(java.awt.Color)>"
+    "load.r $r4"->"virtualinvoke <javax.swing.JPanel: void setBackground(java.awt.Color)>";
+    "virtualinvoke <javax.swing.JPanel: void setBackground(java.awt.Color)>"->"load.r r0";
+    "fieldget <gong.NanoGong: javax.swing.JButton btnPlay>"
+    "load.r r0"->"fieldget <gong.NanoGong: javax.swing.JButton btnPlay>";
+    "fieldget <gong.NanoGong: javax.swing.JButton btnPlay>"->"load.r $r4";
+    "virtualinvoke <javax.swing.JButton: void setBackground(java.awt.Color)>"
+    "load.r $r4"->"virtualinvoke <javax.swing.JButton: void setBackground(java.awt.Color)>";
+    "virtualinvoke <javax.swing.JButton: void setBackground(java.awt.Color)>"->"load.r r0";
+    "load.r r0"->"fieldget <gong.NanoGong: javax.swing.JButton btnRecord>";
+    "fieldget <gong.NanoGong: javax.swing.JButton btnRecord>"->"load.r $r4";
+    "load.r $r4"->"virtualinvoke <javax.swing.JButton: void setBackground(java.awt.Color)>";
+    "virtualinvoke <javax.swing.JButton: void setBackground(java.awt.Color)>"->"load.r r0";
+    "fieldget <gong.NanoGong: javax.swing.JButton btnStop>"
+    "load.r r0"->"fieldget <gong.NanoGong: javax.swing.JButton btnStop>";
+    "fieldget <gong.NanoGong: javax.swing.JButton btnStop>"->"load.r $r4";
+    "load.r $r4"->"virtualinvoke <javax.swing.JButton: void setBackground(java.awt.Color)>";
+    "virtualinvoke <javax.swing.JButton: void setBackground(java.awt.Color)>"->"load.r r0";
+    "load.r r0"->"fieldget <gong.NanoGong: javax.swing.JSlider slrAmplitude>";
+    "fieldget <gong.NanoGong: javax.swing.JSlider slrAmplitude>"->"load.r $r4";
+    "virtualinvoke <javax.swing.JSlider: void setBackground(java.awt.Color)>"
+    "load.r $r4"->"virtualinvoke <javax.swing.JSlider: void setBackground(java.awt.Color)>";
+    "virtualinvoke <javax.swing.JSlider: void setBackground(java.awt.Color)>"->"load.r r0";
+    "load.r r0"->"fieldget <gong.NanoGong: javax.swing.JPanel panSpeed>";
+    "fieldget <gong.NanoGong: javax.swing.JPanel panSpeed>"->"load.r $r4";
+    "load.r $r4"->"virtualinvoke <javax.swing.JPanel: void setBackground(java.awt.Color)>";
+    "virtualinvoke <javax.swing.JPanel: void setBackground(java.awt.Color)>"->"load.r r0";
+    "fieldget <gong.NanoGong: javax.swing.JButton btnSlow>"
+    "load.r r0"->"fieldget <gong.NanoGong: javax.swing.JButton btnSlow>";
+    "fieldget <gong.NanoGong: javax.swing.JButton btnSlow>"->"load.r $r4";
+    "load.r $r4"->"virtualinvoke <javax.swing.JButton: void setBackground(java.awt.Color)>";
+    "virtualinvoke <javax.swing.JButton: void setBackground(java.awt.Color)>"->"load.r r0";
+    "fieldget <gong.NanoGong: javax.swing.JButton btnFast>"
+    "load.r r0"->"fieldget <gong.NanoGong: javax.swing.JButton btnFast>";
+    "fieldget <gong.NanoGong: javax.swing.JButton btnFast>"->"load.r $r4";
+    "load.r $r4"->"virtualinvoke <javax.swing.JButton: void setBackground(java.awt.Color)>";
+    "virtualinvoke <javax.swing.JButton: void setBackground(java.awt.Color)>"->"load.r r0";
+    "fieldget <gong.NanoGong: javax.swing.JLabel lblSpeed>"
+    "load.r r0"->"fieldget <gong.NanoGong: javax.swing.JLabel lblSpeed>";
+    "fieldget <gong.NanoGong: javax.swing.JLabel lblSpeed>"->"load.r $r4";
+    "virtualinvoke <javax.swing.JLabel: void setBackground(java.awt.Color)>"
+    "load.r $r4"->"virtualinvoke <javax.swing.JLabel: void setBackground(java.awt.Color)>";
+    "virtualinvoke <javax.swing.JLabel: void setBackground(java.awt.Color)>"->"load.r r0";
+    "load.r r0"->"fieldget <gong.NanoGong: javax.swing.JButton btnSave>";
+    "fieldget <gong.NanoGong: javax.swing.JButton btnSave>"->"load.r $r4";
+    "load.r $r4"->"virtualinvoke <javax.swing.JButton: void setBackground(java.awt.Color)>";
+    "virtualinvoke <javax.swing.JButton: void setBackground(java.awt.Color)>"->"load.r r0";
+    "fieldget <gong.NanoGong: javax.swing.JSlider slrTime>"
+    "load.r r0"->"fieldget <gong.NanoGong: javax.swing.JSlider slrTime>";
+    "fieldget <gong.NanoGong: javax.swing.JSlider slrTime>"->"load.r $r4";
+    "load.r $r4"->"virtualinvoke <javax.swing.JSlider: void setBackground(java.awt.Color)>";
+    "virtualinvoke <javax.swing.JSlider: void setBackground(java.awt.Color)>"->"load.r r0";
+    "fieldget <gong.NanoGong: javax.swing.JPanel panWait>"
+    "load.r r0"->"fieldget <gong.NanoGong: javax.swing.JPanel panWait>";
+    "fieldget <gong.NanoGong: javax.swing.JPanel panWait>"->"load.r $r4";
+    "load.r $r4"->"virtualinvoke <javax.swing.JPanel: void setBackground(java.awt.Color)>";
+    "virtualinvoke <javax.swing.JPanel: void setBackground(java.awt.Color)>"->"load.r r0";
+    "fieldget <gong.NanoGong: javax.swing.JLabel lblMessage>"
+    "load.r r0"->"fieldget <gong.NanoGong: javax.swing.JLabel lblMessage>";
+    "fieldget <gong.NanoGong: javax.swing.JLabel lblMessage>"->"load.r $r4";
+    "load.r $r4"->"virtualinvoke <javax.swing.JLabel: void setBackground(java.awt.Color)>";
+    "virtualinvoke <javax.swing.JLabel: void setBackground(java.awt.Color)>"->"load.r r0";
+    "fieldget <gong.NanoGong: javax.swing.JProgressBar pbrWait>"
+    "load.r r0"->"fieldget <gong.NanoGong: javax.swing.JProgressBar pbrWait>";
+    "fieldget <gong.NanoGong: javax.swing.JProgressBar pbrWait>"->"load.r $r4";
+    "virtualinvoke <javax.swing.JProgressBar: void setBackground(java.awt.Color)>"
+    "load.r $r4"->"virtualinvoke <javax.swing.JProgressBar: void setBackground(java.awt.Color)>";
+    "virtualinvoke <javax.swing.JProgressBar: void setBackground(java.awt.Color)>"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "push \"MaxDuration\""
+    "load.r r0"->"push \"MaxDuration\"";
+    "push \"MaxDuration\""->"virtualinvoke <gong.NanoGong: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <gong.NanoGong: java.lang.String getParameter(java.lang.String)>"->"store.r $r4";
+    "store.r $r4"->"load.r $r4";
+    "load.r $r4"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r $r4";
+    "staticinvoke <java.lang.Long: long parseLong(java.lang.String)>"
+    "load.r $r4"->"staticinvoke <java.lang.Long: long parseLong(java.lang.String)>";
+    "store.l l16"
+    "staticinvoke <java.lang.Long: long parseLong(java.lang.String)>"->"store.l l16";
+    "load.l l16"
+    "store.l l16"->"load.l l16";
+    "push 0L"
+    "load.l l16"->"push 0L";
+    "cmp.l"
+    "push 0L"->"cmp.l";
+    "ifle goto load.r r0"
+    "cmp.l"->"ifle goto load.r r0";
+    "ifle goto load.r r0"->"load.l l16";
+    "push 1200L"
+    "load.l l16"->"push 1200L";
+    "push 1200L"->"cmp.l";
+    "ifgt goto load.r r0"
+    "cmp.l"->"ifgt goto load.r r0";
+    "ifgt goto load.r r0"->"load.r r0";
+    "load.r r0"->"load.l l16";
+    "push 1000L"
+    "load.l l16"->"push 1000L";
+    "mul.l"
+    "push 1000L"->"mul.l";
+    "fieldput <gong.NanoGong: long maxDuration>"
+    "mul.l"->"fieldput <gong.NanoGong: long maxDuration>";
+    "fieldput <gong.NanoGong: long maxDuration>"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "push \"StartTime\""
+    "load.r r0"->"push \"StartTime\"";
+    "push \"StartTime\""->"virtualinvoke <gong.NanoGong: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <gong.NanoGong: java.lang.String getParameter(java.lang.String)>"->"store.r $r4";
+    "store.r $r4"->"load.r $r4";
+    "load.r $r4"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r $r4";
+    "staticinvoke <java.lang.Double: double parseDouble(java.lang.String)>"
+    "load.r $r4"->"staticinvoke <java.lang.Double: double parseDouble(java.lang.String)>";
+    "store.d l16"
+    "staticinvoke <java.lang.Double: double parseDouble(java.lang.String)>"->"store.d l16";
+    "load.d l16"
+    "store.d l16"->"load.d l16";
+    "push 0.0"
+    "load.d l16"->"push 0.0";
+    "cmpl.d"
+    "push 0.0"->"cmpl.d";
+    "cmpl.d"->"ifle goto load.r r0";
+    "ifle goto load.r r0"->"load.r r0";
+    "load.r r0"->"load.d l16";
+    "push 1000.0"
+    "load.d l16"->"push 1000.0";
+    "mul.d"
+    "push 1000.0"->"mul.d";
+    "d2l"
+    "mul.d"->"d2l";
+    "fieldput <gong.NanoGong: long startTime>"
+    "d2l"->"fieldput <gong.NanoGong: long startTime>";
+    "fieldput <gong.NanoGong: long startTime>"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "push \"EndTime\""
+    "load.r r0"->"push \"EndTime\"";
+    "push \"EndTime\""->"virtualinvoke <gong.NanoGong: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <gong.NanoGong: java.lang.String getParameter(java.lang.String)>"->"store.r $r4";
+    "store.r $r4"->"load.r $r4";
+    "load.r $r4"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r $r4";
+    "load.r $r4"->"staticinvoke <java.lang.Double: double parseDouble(java.lang.String)>";
+    "staticinvoke <java.lang.Double: double parseDouble(java.lang.String)>"->"store.d l16";
+    "store.d l16"->"load.d l16";
+    "load.d l16"->"push 0.0";
+    "push 0.0"->"cmpl.d";
+    "cmpl.d"->"ifle goto load.r r0";
+    "ifle goto load.r r0"->"load.r r0";
+    "load.r r0"->"load.d l16";
+    "load.d l16"->"push 1000.0";
+    "push 1000.0"->"mul.d";
+    "mul.d"->"d2l";
+    "fieldput <gong.NanoGong: long endTime>"
+    "d2l"->"fieldput <gong.NanoGong: long endTime>";
+    "fieldput <gong.NanoGong: long endTime>"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "fieldget <gong.NanoGong: long startTime>"
+    "load.r r0"->"fieldget <gong.NanoGong: long startTime>";
+    "fieldget <gong.NanoGong: long startTime>"->"push 0L";
+    "push 0L"->"cmp.l";
+    "ifle return"
+    "cmp.l"->"ifle return";
+    "ifle return"->"load.r r0";
+    "fieldget <gong.NanoGong: long endTime>"
+    "load.r r0"->"fieldget <gong.NanoGong: long endTime>";
+    "fieldget <gong.NanoGong: long endTime>"->"push 0L";
+    "push 0L"->"cmp.l";
+    "cmp.l"->"ifle return";
+    "ifle return"->"load.r r0";
+    "load.r r0"->"fieldget <gong.NanoGong: long endTime>";
+    "fieldget <gong.NanoGong: long endTime>"->"load.r r0";
+    "load.r r0"->"fieldget <gong.NanoGong: long startTime>";
+    "fieldget <gong.NanoGong: long startTime>"->"cmp.l";
+    "ifgt return"
+    "cmp.l"->"ifgt return";
+    "ifgt return"->"load.r r0";
+    "push -1L"
+    "load.r r0"->"push -1L";
+    "push -1L"->"fieldput <gong.NanoGong: long endTime>";
+    "return"
+    "fieldput <gong.NanoGong: long endTime>"->"return";
+    "staticinvoke <java.lang.Double: double parseDouble(java.lang.String)>"->"store.r $r4";
+    "staticinvoke <java.lang.Double: double parseDouble(java.lang.String)>"->"store.r $r4";
+    "staticinvoke <java.lang.Long: long parseLong(java.lang.String)>"->"store.r $r4";
+    "virtualinvoke <javax.swing.JProgressBar: void setBackground(java.awt.Color)>"->"store.r $r4";
+    "store.r $r4"->"load.r r0";
+    "load.r r0"->"push 0";
+    "push 0"->"fieldput <gong.NanoGong: int speexQuality>";
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"->"store.r $r4";
+    "ifeq load.i $r4"->"load.i $r4";
+    "load.i $r4"->"push 8000";
+    "push 8000"->"ifcmpeq.i load.r r0";
+    "ifcmpeq.i load.r r0"->"load.i $r4";
+    "push 16000"
+    "load.i $r4"->"push 16000";
+    "push 16000"->"ifcmpeq.i load.r r0";
+    "ifcmpeq.i load.r r0"->"load.i $r4";
+    "push 32000"
+    "load.i $r4"->"push 32000";
+    "push 32000"->"ifcmpeq.i load.r r0";
+    "ifcmpeq.i load.r r0"->"load.i $r4";
+    "load.i $r4"->"push 44100";
+    "push 44100"->"ifcmpne.i goto load.r r0";
+    "ifcmpne.i goto load.r r0"->"load.r r0";
+    "load.r r0"->"load.i $r4";
+    "load.i $r4"->"i2f";
+    "i2f"->"fieldput <gong.NanoGong: float samplingRate>";
+    "virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>"->"store.r $r4";
+    "virtualinvoke <java.lang.Exception: void printStackTrace()>"
+    "staticinvoke <javax.swing.SwingUtilities: void invokeAndWait(java.lang.Runnable)>"->"virtualinvoke <java.lang.Exception: void printStackTrace()>";
+    "virtualinvoke <gong.audio.AudioHandler: void setURL(java.lang.String)>"->"store.r $r31";
+    "store.r $r31"->"load.r r0";
+    "load.r r0"->"fieldget <gong.NanoGong: gong.audio.AudioHandler handler>";
+    "push null"
+    "fieldget <gong.NanoGong: gong.audio.AudioHandler handler>"->"push null";
+    "push null"->"virtualinvoke <gong.audio.AudioHandler: void setURL(java.lang.String)>";
+    "staticinvoke <java.awt.EventQueue: void invokeAndWait(java.lang.Runnable)>"->"virtualinvoke <java.lang.Exception: void printStackTrace()>";
+}

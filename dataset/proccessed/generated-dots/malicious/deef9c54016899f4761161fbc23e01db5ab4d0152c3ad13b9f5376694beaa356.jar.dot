@@ -1,0 +1,61 @@
+digraph "" {
+    "r0 := @this: hw"
+    "load.r r0"
+    "r0 := @this: hw"->"load.r r0";
+    "push \"val\""
+    "load.r r0"->"push \"val\"";
+    "virtualinvoke <hw: java.lang.String getParameter(java.lang.String)>"
+    "push \"val\""->"virtualinvoke <hw: java.lang.String getParameter(java.lang.String)>";
+    "store.r r1"
+    "virtualinvoke <hw: java.lang.String getParameter(java.lang.String)>"->"store.r r1";
+    "store.r r1"->"load.r r0";
+    "push \"prime\""
+    "load.r r0"->"push \"prime\"";
+    "push \"prime\""->"virtualinvoke <hw: java.lang.String getParameter(java.lang.String)>";
+    "store.r r0"
+    "virtualinvoke <hw: java.lang.String getParameter(java.lang.String)>"->"store.r r0";
+    "push class \"[Lmac;\""
+    "store.r r0"->"push class \"[Lmac;\"";
+    "virtualinvoke <java.lang.Class: java.lang.String getName()>"
+    "push class \"[Lmac;\""->"virtualinvoke <java.lang.Class: java.lang.String getName()>";
+    "staticinvoke <mac: java.io.InputStream qwe(java.lang.String)>"
+    "virtualinvoke <java.lang.Class: java.lang.String getName()>"->"staticinvoke <mac: java.io.InputStream qwe(java.lang.String)>";
+    "store.r r4"
+    "staticinvoke <mac: java.io.InputStream qwe(java.lang.String)>"->"store.r r4";
+    "new java.io.ObjectInputStream"
+    "store.r r4"->"new java.io.ObjectInputStream";
+    "dup1.r"
+    "new java.io.ObjectInputStream"->"dup1.r";
+    "load.r r4"
+    "dup1.r"->"load.r r4";
+    "specialinvoke <java.io.ObjectInputStream: void <init>(java.io.InputStream)>"
+    "load.r r4"->"specialinvoke <java.io.ObjectInputStream: void <init>(java.io.InputStream)>";
+    "virtualinvoke <java.io.ObjectInputStream: java.lang.Object readObject()>"
+    "specialinvoke <java.io.ObjectInputStream: void <init>(java.io.InputStream)>"->"virtualinvoke <java.io.ObjectInputStream: java.lang.Object readObject()>";
+    "checkcast"
+    "virtualinvoke <java.io.ObjectInputStream: java.lang.Object readObject()>"->"checkcast";
+    "checkcast"->"dup1.r";
+    "push 1"
+    "dup1.r"->"push 1";
+    "arrayread.r"
+    "push 1"->"arrayread.r";
+    "arrayread.r"->"checkcast";
+    "staticinvoke <test: void aa(java.util.concurrent.atomic.AtomicReferenceArray)>"
+    "checkcast"->"staticinvoke <test: void aa(java.util.concurrent.atomic.AtomicReferenceArray)>";
+    "push 0"
+    "staticinvoke <test: void aa(java.util.concurrent.atomic.AtomicReferenceArray)>"->"push 0";
+    "push 0"->"arrayread.r";
+    "arrayread.r"->"checkcast";
+    "checkcast"->"push 0";
+    "push 0"->"arrayread.r";
+    "load.r r1"
+    "arrayread.r"->"load.r r1";
+    "load.r r1"->"load.r r0";
+    "staticinvoke <mac: void fuck(mac,java.lang.String,java.lang.String)>"
+    "load.r r0"->"staticinvoke <mac: void fuck(mac,java.lang.String,java.lang.String)>";
+    "goto return"
+    "staticinvoke <mac: void fuck(mac,java.lang.String,java.lang.String)>"->"goto return";
+    "return"
+    "goto return"->"return";
+    "staticinvoke <mac: void fuck(mac,java.lang.String,java.lang.String)>"->"store.r r0";
+}

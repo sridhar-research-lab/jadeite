@@ -1,0 +1,364 @@
+digraph "" {
+    "r0 := @this: TMenu"
+    "load.r r0"
+    "r0 := @this: TMenu"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "virtualinvoke <java.awt.Component: java.awt.Dimension size()>"
+    "load.r r0"->"virtualinvoke <java.awt.Component: java.awt.Dimension size()>";
+    "fieldget <java.awt.Dimension: int width>"
+    "virtualinvoke <java.awt.Component: java.awt.Dimension size()>"->"fieldget <java.awt.Dimension: int width>";
+    "fieldput <TMenu: int maxWidth>"
+    "fieldget <java.awt.Dimension: int width>"->"fieldput <TMenu: int maxWidth>";
+    "fieldput <TMenu: int maxWidth>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"virtualinvoke <java.awt.Component: java.awt.Dimension size()>";
+    "fieldget <java.awt.Dimension: int height>"
+    "virtualinvoke <java.awt.Component: java.awt.Dimension size()>"->"fieldget <java.awt.Dimension: int height>";
+    "fieldput <TMenu: int maxHeight>"
+    "fieldget <java.awt.Dimension: int height>"->"fieldput <TMenu: int maxHeight>";
+    "fieldput <TMenu: int maxHeight>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "push \"BACKGROUND\""
+    "load.r r0"->"push \"BACKGROUND\"";
+    "staticget <java.awt.Color: java.awt.Color white>"
+    "push \"BACKGROUND\""->"staticget <java.awt.Color: java.awt.Color white>";
+    "virtualinvoke <TMenu: java.awt.Color ReadColor(java.lang.String,java.awt.Color)>"
+    "staticget <java.awt.Color: java.awt.Color white>"->"virtualinvoke <TMenu: java.awt.Color ReadColor(java.lang.String,java.awt.Color)>";
+    "fieldput <TMenu: java.awt.Color backColor>"
+    "virtualinvoke <TMenu: java.awt.Color ReadColor(java.lang.String,java.awt.Color)>"->"fieldput <TMenu: java.awt.Color backColor>";
+    "fieldput <TMenu: java.awt.Color backColor>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "push \"FOREGROUND\""
+    "load.r r0"->"push \"FOREGROUND\"";
+    "push \"FOREGROUND\""->"staticget <java.awt.Color: java.awt.Color white>";
+    "staticget <java.awt.Color: java.awt.Color white>"->"virtualinvoke <TMenu: java.awt.Color ReadColor(java.lang.String,java.awt.Color)>";
+    "fieldput <TMenu: java.awt.Color foreColor>"
+    "virtualinvoke <TMenu: java.awt.Color ReadColor(java.lang.String,java.awt.Color)>"->"fieldput <TMenu: java.awt.Color foreColor>";
+    "fieldput <TMenu: java.awt.Color foreColor>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "fieldget <TMenu: java.awt.Color backColor>"
+    "load.r r0"->"fieldget <TMenu: java.awt.Color backColor>";
+    "virtualinvoke <java.awt.Component: void setBackground(java.awt.Color)>"
+    "fieldget <TMenu: java.awt.Color backColor>"->"virtualinvoke <java.awt.Component: void setBackground(java.awt.Color)>";
+    "virtualinvoke <java.awt.Component: void setBackground(java.awt.Color)>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "fieldget <TMenu: java.awt.Color foreColor>"
+    "load.r r0"->"fieldget <TMenu: java.awt.Color foreColor>";
+    "virtualinvoke <java.awt.Component: void setForeground(java.awt.Color)>"
+    "fieldget <TMenu: java.awt.Color foreColor>"->"virtualinvoke <java.awt.Component: void setForeground(java.awt.Color)>";
+    "virtualinvoke <java.awt.Component: void setForeground(java.awt.Color)>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "push \"TARGET\""
+    "load.r r0"->"push \"TARGET\"";
+    "virtualinvoke <TMenu: java.lang.String ReadText(java.lang.String)>"
+    "push \"TARGET\""->"virtualinvoke <TMenu: java.lang.String ReadText(java.lang.String)>";
+    "fieldput <TMenu: java.lang.String target>"
+    "virtualinvoke <TMenu: java.lang.String ReadText(java.lang.String)>"->"fieldput <TMenu: java.lang.String target>";
+    "fieldput <TMenu: java.lang.String target>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "push \"TITLE\""
+    "load.r r0"->"push \"TITLE\"";
+    "push \"TITLE\""->"virtualinvoke <TMenu: java.lang.String ReadText(java.lang.String)>";
+    "fieldput <TMenu: java.lang.String title>"
+    "virtualinvoke <TMenu: java.lang.String ReadText(java.lang.String)>"->"fieldput <TMenu: java.lang.String title>";
+    "fieldput <TMenu: java.lang.String title>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "push \"TSPACE\""
+    "load.r r0"->"push \"TSPACE\"";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"
+    "push \"TSPACE\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "fieldput <TMenu: java.lang.String tspacestr>"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"fieldput <TMenu: java.lang.String tspacestr>";
+    "fieldput <TMenu: java.lang.String tspacestr>"->"load.r r0";
+    "fieldget <TMenu: java.lang.String tspacestr>"
+    "load.r r0"->"fieldget <TMenu: java.lang.String tspacestr>";
+    "ifnonnull load.r r0"
+    "fieldget <TMenu: java.lang.String tspacestr>"->"ifnonnull load.r r0";
+    "ifnonnull load.r r0"->"load.r r0";
+    "push \"\""
+    "load.r r0"->"push \"\"";
+    "push \"\""->"fieldput <TMenu: java.lang.String tspacestr>";
+    "goto new java.awt.GridBagLayout"
+    "fieldput <TMenu: java.lang.String tspacestr>"->"goto new java.awt.GridBagLayout";
+    "new java.awt.GridBagLayout"
+    "goto new java.awt.GridBagLayout"->"new java.awt.GridBagLayout";
+    "store.r $r21"
+    "new java.awt.GridBagLayout"->"store.r $r21";
+    "load.r $r21"
+    "store.r $r21"->"load.r $r21";
+    "specialinvoke <java.awt.GridBagLayout: void <init>()>"
+    "load.r $r21"->"specialinvoke <java.awt.GridBagLayout: void <init>()>";
+    "new java.awt.GridBagConstraints"
+    "specialinvoke <java.awt.GridBagLayout: void <init>()>"->"new java.awt.GridBagConstraints";
+    "store.r $r22"
+    "new java.awt.GridBagConstraints"->"store.r $r22";
+    "load.r $r22"
+    "store.r $r22"->"load.r $r22";
+    "specialinvoke <java.awt.GridBagConstraints: void <init>()>"
+    "load.r $r22"->"specialinvoke <java.awt.GridBagConstraints: void <init>()>";
+    "specialinvoke <java.awt.GridBagConstraints: void <init>()>"->"load.r r0";
+    "load.r r0"->"load.r $r21";
+    "virtualinvoke <java.awt.Container: void setLayout(java.awt.LayoutManager)>"
+    "load.r $r21"->"virtualinvoke <java.awt.Container: void setLayout(java.awt.LayoutManager)>";
+    "virtualinvoke <java.awt.Container: void setLayout(java.awt.LayoutManager)>"->"load.r r0";
+    "new java.awt.Button"
+    "load.r r0"->"new java.awt.Button";
+    "dup1.r"
+    "new java.awt.Button"->"dup1.r";
+    "push \" \""
+    "dup1.r"->"push \" \"";
+    "specialinvoke <java.awt.Button: void <init>(java.lang.String)>"
+    "push \" \""->"specialinvoke <java.awt.Button: void <init>(java.lang.String)>";
+    "fieldput <TMenu: java.awt.Button titleLabel>"
+    "specialinvoke <java.awt.Button: void <init>(java.lang.String)>"->"fieldput <TMenu: java.awt.Button titleLabel>";
+    "fieldput <TMenu: java.awt.Button titleLabel>"->"load.r r0";
+    "fieldget <TMenu: java.awt.Button titleLabel>"
+    "load.r r0"->"fieldget <TMenu: java.awt.Button titleLabel>";
+    "fieldget <TMenu: java.awt.Button titleLabel>"->"load.r r0";
+    "fieldget <TMenu: int maxWidth>"
+    "load.r r0"->"fieldget <TMenu: int maxWidth>";
+    "fieldget <TMenu: int maxWidth>"->"load.r r0";
+    "fieldget <TMenu: int maxHeight>"
+    "load.r r0"->"fieldget <TMenu: int maxHeight>";
+    "virtualinvoke <java.awt.Component: void setSize(int,int)>"
+    "fieldget <TMenu: int maxHeight>"->"virtualinvoke <java.awt.Component: void setSize(int,int)>";
+    "virtualinvoke <java.awt.Component: void setSize(int,int)>"->"load.r r0";
+    "load.r r0"->"fieldget <TMenu: java.awt.Button titleLabel>";
+    "new java.lang.StringBuffer"
+    "fieldget <TMenu: java.awt.Button titleLabel>"->"new java.lang.StringBuffer";
+    "new java.lang.StringBuffer"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "load.r r0"->"fieldget <TMenu: java.lang.String tspacestr>";
+    "staticinvoke <java.lang.String: java.lang.String valueOf(java.lang.Object)>"
+    "fieldget <TMenu: java.lang.String tspacestr>"->"staticinvoke <java.lang.String: java.lang.String valueOf(java.lang.Object)>";
+    "specialinvoke <java.lang.StringBuffer: void <init>(java.lang.String)>"
+    "staticinvoke <java.lang.String: java.lang.String valueOf(java.lang.Object)>"->"specialinvoke <java.lang.StringBuffer: void <init>(java.lang.String)>";
+    "specialinvoke <java.lang.StringBuffer: void <init>(java.lang.String)>"->"load.r r0";
+    "fieldget <TMenu: java.lang.String title>"
+    "load.r r0"->"fieldget <TMenu: java.lang.String title>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"
+    "fieldget <TMenu: java.lang.String title>"->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"load.r r0";
+    "load.r r0"->"fieldget <TMenu: java.lang.String tspacestr>";
+    "fieldget <TMenu: java.lang.String tspacestr>"->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>"
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>";
+    "virtualinvoke <java.awt.Button: void setLabel(java.lang.String)>"
+    "virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>"->"virtualinvoke <java.awt.Button: void setLabel(java.lang.String)>";
+    "virtualinvoke <java.awt.Button: void setLabel(java.lang.String)>"->"load.r $r22";
+    "push 0.0"
+    "load.r $r22"->"push 0.0";
+    "fieldput <java.awt.GridBagConstraints: double weightx>"
+    "push 0.0"->"fieldput <java.awt.GridBagConstraints: double weightx>";
+    "fieldput <java.awt.GridBagConstraints: double weightx>"->"load.r $r22";
+    "push 0"
+    "load.r $r22"->"push 0";
+    "fieldput <java.awt.GridBagConstraints: int gridx>"
+    "push 0"->"fieldput <java.awt.GridBagConstraints: int gridx>";
+    "fieldput <java.awt.GridBagConstraints: int gridx>"->"load.r $r22";
+    "load.r $r22"->"push 0";
+    "fieldput <java.awt.GridBagConstraints: int gridy>"
+    "push 0"->"fieldput <java.awt.GridBagConstraints: int gridy>";
+    "fieldput <java.awt.GridBagConstraints: int gridy>"->"load.r $r21";
+    "load.r $r21"->"load.r r0";
+    "load.r r0"->"fieldget <TMenu: java.awt.Button titleLabel>";
+    "fieldget <TMenu: java.awt.Button titleLabel>"->"load.r $r22";
+    "virtualinvoke <java.awt.GridBagLayout: void setConstraints(java.awt.Component,java.awt.GridBagConstraints)>"
+    "load.r $r22"->"virtualinvoke <java.awt.GridBagLayout: void setConstraints(java.awt.Component,java.awt.GridBagConstraints)>";
+    "virtualinvoke <java.awt.GridBagLayout: void setConstraints(java.awt.Component,java.awt.GridBagConstraints)>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <TMenu: java.awt.Button titleLabel>";
+    "virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>"
+    "fieldget <TMenu: java.awt.Button titleLabel>"->"virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>";
+    "pop"
+    "virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>"->"pop";
+    "pop"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "fieldget <TMenu: int NUMBER_OF_URLS>"
+    "load.r r0"->"fieldget <TMenu: int NUMBER_OF_URLS>";
+    "newarray"
+    "fieldget <TMenu: int NUMBER_OF_URLS>"->"newarray";
+    "fieldput <TMenu: java.lang.String[] holdPage>"
+    "newarray"->"fieldput <TMenu: java.lang.String[] holdPage>";
+    "fieldput <TMenu: java.lang.String[] holdPage>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <TMenu: int NUMBER_OF_URLS>";
+    "fieldget <TMenu: int NUMBER_OF_URLS>"->"newarray";
+    "fieldput <TMenu: java.lang.String[] holdURL>"
+    "newarray"->"fieldput <TMenu: java.lang.String[] holdURL>";
+    "fieldput <TMenu: java.lang.String[] holdURL>"->"load.r r0";
+    "new java.awt.PopupMenu"
+    "load.r r0"->"new java.awt.PopupMenu";
+    "new java.awt.PopupMenu"->"dup1.r";
+    "push \"MENULIST\""
+    "dup1.r"->"push \"MENULIST\"";
+    "specialinvoke <java.awt.PopupMenu: void <init>(java.lang.String)>"
+    "push \"MENULIST\""->"specialinvoke <java.awt.PopupMenu: void <init>(java.lang.String)>";
+    "fieldput <TMenu: java.awt.PopupMenu popup>"
+    "specialinvoke <java.awt.PopupMenu: void <init>(java.lang.String)>"->"fieldput <TMenu: java.awt.PopupMenu popup>";
+    "fieldput <TMenu: java.awt.PopupMenu popup>"->"load.r r0";
+    "load.r r0"->"push 0";
+    "fieldput <TMenu: int i>"
+    "push 0"->"fieldput <TMenu: int i>";
+    "goto load.r r0"
+    "fieldput <TMenu: int i>"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "fieldget <TMenu: int i>"
+    "load.r r0"->"fieldget <TMenu: int i>";
+    "fieldget <TMenu: int i>"->"load.r r0";
+    "load.r r0"->"fieldget <TMenu: int NUMBER_OF_URLS>";
+    "ifcmplt.i load.r r0"
+    "fieldget <TMenu: int NUMBER_OF_URLS>"->"ifcmplt.i load.r r0";
+    "ifcmplt.i load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "fieldget <TMenu: java.awt.PopupMenu popup>"
+    "load.r r0"->"fieldget <TMenu: java.awt.PopupMenu popup>";
+    "virtualinvoke <java.awt.Component: void add(java.awt.PopupMenu)>"
+    "fieldget <TMenu: java.awt.PopupMenu popup>"->"virtualinvoke <java.awt.Component: void add(java.awt.PopupMenu)>";
+    "return"
+    "virtualinvoke <java.awt.Component: void add(java.awt.PopupMenu)>"->"return";
+    "ifcmplt.i load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"new java.lang.StringBuffer";
+    "new java.lang.StringBuffer"->"dup1.r";
+    "push \"page\""
+    "dup1.r"->"push \"page\"";
+    "push \"page\""->"specialinvoke <java.lang.StringBuffer: void <init>(java.lang.String)>";
+    "specialinvoke <java.lang.StringBuffer: void <init>(java.lang.String)>"->"load.r r0";
+    "load.r r0"->"fieldget <TMenu: int i>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(int)>"
+    "fieldget <TMenu: int i>"->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(int)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(int)>"->"virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>"->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "fieldput <TMenu: java.lang.String webpage>"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"fieldput <TMenu: java.lang.String webpage>";
+    "fieldput <TMenu: java.lang.String webpage>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"new java.lang.StringBuffer";
+    "new java.lang.StringBuffer"->"dup1.r";
+    "push \"url\""
+    "dup1.r"->"push \"url\"";
+    "push \"url\""->"specialinvoke <java.lang.StringBuffer: void <init>(java.lang.String)>";
+    "specialinvoke <java.lang.StringBuffer: void <init>(java.lang.String)>"->"load.r r0";
+    "load.r r0"->"fieldget <TMenu: int i>";
+    "fieldget <TMenu: int i>"->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(int)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(int)>"->"virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>"->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "fieldput <TMenu: java.lang.String pageURL>"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"fieldput <TMenu: java.lang.String pageURL>";
+    "fieldput <TMenu: java.lang.String pageURL>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"new java.lang.StringBuffer";
+    "new java.lang.StringBuffer"->"dup1.r";
+    "push \"separator\""
+    "dup1.r"->"push \"separator\"";
+    "push \"separator\""->"specialinvoke <java.lang.StringBuffer: void <init>(java.lang.String)>";
+    "specialinvoke <java.lang.StringBuffer: void <init>(java.lang.String)>"->"load.r r0";
+    "load.r r0"->"fieldget <TMenu: int i>";
+    "fieldget <TMenu: int i>"->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(int)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(int)>"->"virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>"->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "fieldput <TMenu: java.lang.String separator>"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"fieldput <TMenu: java.lang.String separator>";
+    "fieldput <TMenu: java.lang.String separator>"->"load.r r0";
+    "fieldget <TMenu: java.lang.String webpage>"
+    "load.r r0"->"fieldget <TMenu: java.lang.String webpage>";
+    "ifnull load.r r0"
+    "fieldget <TMenu: java.lang.String webpage>"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r r0";
+    "fieldget <TMenu: java.lang.String pageURL>"
+    "load.r r0"->"fieldget <TMenu: java.lang.String pageURL>";
+    "fieldget <TMenu: java.lang.String pageURL>"->"ifnonnull load.r r0";
+    "ifnonnull load.r r0"->"goto load.r r0";
+    "ifnonnull load.r r0"->"load.r r0";
+    "fieldget <TMenu: java.lang.String[] holdPage>"
+    "load.r r0"->"fieldget <TMenu: java.lang.String[] holdPage>";
+    "fieldget <TMenu: java.lang.String[] holdPage>"->"load.r r0";
+    "load.r r0"->"fieldget <TMenu: int i>";
+    "fieldget <TMenu: int i>"->"load.r r0";
+    "load.r r0"->"fieldget <TMenu: java.lang.String webpage>";
+    "arraywrite.r"
+    "fieldget <TMenu: java.lang.String webpage>"->"arraywrite.r";
+    "arraywrite.r"->"load.r r0";
+    "fieldget <TMenu: java.lang.String[] holdURL>"
+    "load.r r0"->"fieldget <TMenu: java.lang.String[] holdURL>";
+    "fieldget <TMenu: java.lang.String[] holdURL>"->"load.r r0";
+    "load.r r0"->"fieldget <TMenu: int i>";
+    "fieldget <TMenu: int i>"->"load.r r0";
+    "load.r r0"->"fieldget <TMenu: java.lang.String pageURL>";
+    "fieldget <TMenu: java.lang.String pageURL>"->"arraywrite.r";
+    "new java.awt.MenuItem"
+    "arraywrite.r"->"new java.awt.MenuItem";
+    "new java.awt.MenuItem"->"store.r $r21";
+    "store.r $r21"->"load.r $r21";
+    "load.r $r21"->"load.r r0";
+    "load.r r0"->"fieldget <TMenu: java.lang.String[] holdPage>";
+    "fieldget <TMenu: java.lang.String[] holdPage>"->"load.r r0";
+    "load.r r0"->"fieldget <TMenu: int i>";
+    "arrayread.r"
+    "fieldget <TMenu: int i>"->"arrayread.r";
+    "specialinvoke <java.awt.MenuItem: void <init>(java.lang.String)>"
+    "arrayread.r"->"specialinvoke <java.awt.MenuItem: void <init>(java.lang.String)>";
+    "specialinvoke <java.awt.MenuItem: void <init>(java.lang.String)>"->"load.r $r21";
+    "load.r $r21"->"load.r r0";
+    "virtualinvoke <java.awt.MenuItem: void addActionListener(java.awt.event.ActionListener)>"
+    "load.r r0"->"virtualinvoke <java.awt.MenuItem: void addActionListener(java.awt.event.ActionListener)>";
+    "virtualinvoke <java.awt.MenuItem: void addActionListener(java.awt.event.ActionListener)>"->"load.r r0";
+    "load.r r0"->"fieldget <TMenu: java.awt.PopupMenu popup>";
+    "fieldget <TMenu: java.awt.PopupMenu popup>"->"load.r $r21";
+    "virtualinvoke <java.awt.Menu: java.awt.MenuItem add(java.awt.MenuItem)>"
+    "load.r $r21"->"virtualinvoke <java.awt.Menu: java.awt.MenuItem add(java.awt.MenuItem)>";
+    "virtualinvoke <java.awt.Menu: java.awt.MenuItem add(java.awt.MenuItem)>"->"pop";
+    "pop"->"load.r r0";
+    "fieldget <TMenu: java.lang.String separator>"
+    "load.r r0"->"fieldget <TMenu: java.lang.String separator>";
+    "fieldget <TMenu: java.lang.String separator>"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <TMenu: java.awt.PopupMenu popup>";
+    "virtualinvoke <java.awt.Menu: void addSeparator()>"
+    "fieldget <TMenu: java.awt.PopupMenu popup>"->"virtualinvoke <java.awt.Menu: void addSeparator()>";
+    "virtualinvoke <java.awt.Menu: void addSeparator()>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <TMenu: int i>";
+    "push 1"
+    "fieldget <TMenu: int i>"->"push 1";
+    "add.i"
+    "push 1"->"add.i";
+    "add.i"->"fieldput <TMenu: int i>";
+    "ifnonnull load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <TMenu: java.lang.String tspacestr>";
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"
+    "fieldget <TMenu: java.lang.String tspacestr>"->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>";
+    "fieldput <TMenu: int tspace>"
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"->"fieldput <TMenu: int tspace>";
+    "fieldput <TMenu: int tspace>"->"load.r r0";
+    "load.r r0"->"push \"\"";
+    "push \"\""->"fieldput <TMenu: java.lang.String tspacestr>";
+    "fieldput <TMenu: java.lang.String tspacestr>"->"load.r r0";
+    "load.r r0"->"push 1";
+    "push 1"->"fieldput <TMenu: int i>";
+    "fieldput <TMenu: int i>"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <TMenu: int i>";
+    "fieldget <TMenu: int i>"->"load.r r0";
+    "fieldget <TMenu: int tspace>"
+    "load.r r0"->"fieldget <TMenu: int tspace>";
+    "fieldget <TMenu: int tspace>"->"ifcmplt.i load.r r0";
+    "ifcmplt.i load.r r0"->"load.r r0";
+    "load.r r0"->"new java.lang.StringBuffer";
+    "new java.lang.StringBuffer"->"dup1.r";
+    "dup1.r"->"push \" \"";
+    "push \" \""->"specialinvoke <java.lang.StringBuffer: void <init>(java.lang.String)>";
+    "specialinvoke <java.lang.StringBuffer: void <init>(java.lang.String)>"->"load.r r0";
+    "load.r r0"->"fieldget <TMenu: java.lang.String tspacestr>";
+    "fieldget <TMenu: java.lang.String tspacestr>"->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>"->"fieldput <TMenu: java.lang.String tspacestr>";
+    "fieldput <TMenu: java.lang.String tspacestr>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <TMenu: int i>";
+    "fieldget <TMenu: int i>"->"push 1";
+    "push 1"->"add.i";
+    "add.i"->"fieldput <TMenu: int i>";
+}

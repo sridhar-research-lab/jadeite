@@ -1,0 +1,194 @@
+digraph "" {
+    "r0 := @this: Time"
+    "load.r r0"
+    "r0 := @this: Time"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "virtualinvoke <java.awt.Component: java.awt.Dimension size()>"
+    "load.r r0"->"virtualinvoke <java.awt.Component: java.awt.Dimension size()>";
+    "fieldget <java.awt.Dimension: int height>"
+    "virtualinvoke <java.awt.Component: java.awt.Dimension size()>"->"fieldget <java.awt.Dimension: int height>";
+    "fieldput <Time: int height>"
+    "fieldget <java.awt.Dimension: int height>"->"fieldput <Time: int height>";
+    "fieldput <Time: int height>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"virtualinvoke <java.awt.Component: java.awt.Dimension size()>";
+    "fieldget <java.awt.Dimension: int width>"
+    "virtualinvoke <java.awt.Component: java.awt.Dimension size()>"->"fieldget <java.awt.Dimension: int width>";
+    "fieldput <Time: int width>"
+    "fieldget <java.awt.Dimension: int width>"->"fieldput <Time: int width>";
+    "fieldput <Time: int width>"->"load.r r0";
+    "push \"delay\""
+    "load.r r0"->"push \"delay\"";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"
+    "push \"delay\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "store.r r16"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"store.r r16";
+    "load.r r16"
+    "store.r r16"->"load.r r16";
+    "ifnonnull load.r r16"
+    "load.r r16"->"ifnonnull load.r r16";
+    "push 5000"
+    "ifnonnull load.r r16"->"push 5000";
+    "store.i r16"
+    "push 5000"->"store.i r16";
+    "goto load.r r0"
+    "store.i r16"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "load.i r16"
+    "load.r r0"->"load.i r16";
+    "fieldput <Time: int delay>"
+    "load.i r16"->"fieldput <Time: int delay>";
+    "fieldput <Time: int delay>"->"load.r r0";
+    "push \"title\""
+    "load.r r0"->"push \"title\"";
+    "push \"title\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"store.r r16";
+    "store.r r16"->"load.r r16";
+    "load.r r16"->"ifnonnull load.r r16";
+    "push \" \""
+    "ifnonnull load.r r16"->"push \" \"";
+    "push \" \""->"store.r r16";
+    "store.r r16"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r16";
+    "fieldput <Time: java.lang.String title>"
+    "load.r r16"->"fieldput <Time: java.lang.String title>";
+    "fieldput <Time: java.lang.String title>"->"load.r r0";
+    "push \"font\""
+    "load.r r0"->"push \"font\"";
+    "push \"font\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"store.r r16";
+    "store.r r16"->"load.r r16";
+    "load.r r16"->"ifnonnull load.r r16";
+    "push \"TimesRoman\""
+    "ifnonnull load.r r16"->"push \"TimesRoman\"";
+    "push \"TimesRoman\""->"store.r r16";
+    "store.r r16"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r16";
+    "fieldput <Time: java.lang.String font_name>"
+    "load.r r16"->"fieldput <Time: java.lang.String font_name>";
+    "fieldput <Time: java.lang.String font_name>"->"load.r r0";
+    "push \"fontsize\""
+    "load.r r0"->"push \"fontsize\"";
+    "push \"fontsize\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"store.r r16";
+    "store.r r16"->"load.r r16";
+    "load.r r16"->"ifnonnull load.r r16";
+    "push 12"
+    "ifnonnull load.r r16"->"push 12";
+    "push 12"->"store.i r16";
+    "store.i r16"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "load.r r0"->"load.i r16";
+    "fieldput <Time: int font_size>"
+    "load.i r16"->"fieldput <Time: int font_size>";
+    "fieldput <Time: int font_size>"->"load.r r0";
+    "new java.awt.Font"
+    "load.r r0"->"new java.awt.Font";
+    "dup1.r"
+    "new java.awt.Font"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "fieldget <Time: java.lang.String font_name>"
+    "load.r r0"->"fieldget <Time: java.lang.String font_name>";
+    "push 1"
+    "fieldget <Time: java.lang.String font_name>"->"push 1";
+    "push 1"->"load.r r0";
+    "fieldget <Time: int font_size>"
+    "load.r r0"->"fieldget <Time: int font_size>";
+    "specialinvoke <java.awt.Font: void <init>(java.lang.String,int,int)>"
+    "fieldget <Time: int font_size>"->"specialinvoke <java.awt.Font: void <init>(java.lang.String,int,int)>";
+    "fieldput <Time: java.awt.Font wordFont>"
+    "specialinvoke <java.awt.Font: void <init>(java.lang.String,int,int)>"->"fieldput <Time: java.awt.Font wordFont>";
+    "fieldput <Time: java.awt.Font wordFont>"->"load.r r0";
+    "fieldget <Time: java.awt.Font wordFont>"
+    "load.r r0"->"fieldget <Time: java.awt.Font wordFont>";
+    "ifnonnull load.r r0"
+    "fieldget <Time: java.awt.Font wordFont>"->"ifnonnull load.r r0";
+    "ifnonnull load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "virtualinvoke <java.awt.Component: java.awt.Font getFont()>"
+    "load.r r0"->"virtualinvoke <java.awt.Component: java.awt.Font getFont()>";
+    "virtualinvoke <java.awt.Component: java.awt.Font getFont()>"->"fieldput <Time: java.awt.Font wordFont>";
+    "fieldput <Time: java.awt.Font wordFont>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <Time: java.awt.Font wordFont>";
+    "virtualinvoke <java.awt.Component: java.awt.FontMetrics getFontMetrics(java.awt.Font)>"
+    "fieldget <Time: java.awt.Font wordFont>"->"virtualinvoke <java.awt.Component: java.awt.FontMetrics getFontMetrics(java.awt.Font)>";
+    "fieldput <Time: java.awt.FontMetrics wordMetrics>"
+    "virtualinvoke <java.awt.Component: java.awt.FontMetrics getFontMetrics(java.awt.Font)>"->"fieldput <Time: java.awt.FontMetrics wordMetrics>";
+    "fieldput <Time: java.awt.FontMetrics wordMetrics>"->"load.r r0";
+    "push \"textcolor\""
+    "load.r r0"->"push \"textcolor\"";
+    "push \"textcolor\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"store.r r16";
+    "store.r r16"->"load.r r16";
+    "load.r r16"->"ifnonnull load.r r16";
+    "push 0"
+    "ifnonnull load.r r16"->"push 0";
+    "push 0"->"store.i r16";
+    "store.i r16"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "load.r r0"->"load.i r16";
+    "fieldput <Time: int textcolor>"
+    "load.i r16"->"fieldput <Time: int textcolor>";
+    "fieldput <Time: int textcolor>"->"load.r r0";
+    "push \"backcolor\""
+    "load.r r0"->"push \"backcolor\"";
+    "push \"backcolor\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"store.r r16";
+    "store.r r16"->"load.r r16";
+    "load.r r16"->"ifnonnull load.r r16";
+    "push 16777215"
+    "ifnonnull load.r r16"->"push 16777215";
+    "push 16777215"->"store.i r16";
+    "store.i r16"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "load.r r0"->"load.i r16";
+    "fieldput <Time: int backcolor>"
+    "load.i r16"->"fieldput <Time: int backcolor>";
+    "fieldput <Time: int backcolor>"->"load.r r0";
+    "push \"bordercolor\""
+    "load.r r0"->"push \"bordercolor\"";
+    "push \"bordercolor\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"store.r r16";
+    "store.r r16"->"load.r r16";
+    "load.r r16"->"ifnonnull load.r r16";
+    "ifnonnull load.r r16"->"load.r r0";
+    "fieldget <Time: int backcolor>"
+    "load.r r0"->"fieldget <Time: int backcolor>";
+    "fieldget <Time: int backcolor>"->"store.i r16";
+    "store.i r16"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "load.r r0"->"load.i r16";
+    "fieldput <Time: int bordercolor>"
+    "load.i r16"->"fieldput <Time: int bordercolor>";
+    "return"
+    "fieldput <Time: int bordercolor>"->"return";
+    "ifnonnull load.r r16"->"load.r r16";
+    "push 16"
+    "load.r r16"->"push 16";
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String,int)>"
+    "push 16"->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String,int)>";
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String,int)>"->"store.i r16";
+    "ifnonnull load.r r16"->"load.r r16";
+    "load.r r16"->"push 16";
+    "push 16"->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String,int)>";
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String,int)>"->"store.i r16";
+    "ifnonnull load.r r16"->"load.r r16";
+    "load.r r16"->"push 16";
+    "push 16"->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String,int)>";
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String,int)>"->"store.i r16";
+    "ifnonnull load.r r16"->"load.r r16";
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"
+    "load.r r16"->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>";
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"->"store.i r16";
+    "ifnonnull load.r r16"->"load.r r16";
+    "load.r r16"->"store.r r16";
+    "ifnonnull load.r r16"->"load.r r16";
+    "load.r r16"->"store.r r16";
+    "ifnonnull load.r r16"->"load.r r16";
+    "load.r r16"->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>";
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"->"store.i r16";
+}

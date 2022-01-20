@@ -1,0 +1,36 @@
+digraph "" {
+    "r0 := @this: IRCApplet"
+    "staticinvoke <irc.EventDispatcher: void disableBadThreadWarning()>"
+    "r0 := @this: IRCApplet"->"staticinvoke <irc.EventDispatcher: void disableBadThreadWarning()>";
+    "load.r r0"
+    "staticinvoke <irc.EventDispatcher: void disableBadThreadWarning()>"->"load.r r0";
+    "push \"startEff\""
+    "load.r r0"->"push \"startEff\"";
+    "push 0"
+    "push \"startEff\""->"push 0";
+    "newarray"
+    "push 0"->"newarray";
+    "staticinvoke <irc.EventDispatcher: java.lang.Object dispatchEventSyncEx(java.lang.Object,java.lang.String,java.lang.Object[])>"
+    "newarray"->"staticinvoke <irc.EventDispatcher: java.lang.Object dispatchEventSyncEx(java.lang.Object,java.lang.String,java.lang.Object[])>";
+    "pop"
+    "staticinvoke <irc.EventDispatcher: java.lang.Object dispatchEventSyncEx(java.lang.Object,java.lang.String,java.lang.Object[])>"->"pop";
+    "staticinvoke <irc.EventDispatcher: void enableBadThreadWarning()>"
+    "pop"->"staticinvoke <irc.EventDispatcher: void enableBadThreadWarning()>";
+    "goto return"
+    "staticinvoke <irc.EventDispatcher: void enableBadThreadWarning()>"->"goto return";
+    "return"
+    "goto return"->"return";
+    "virtualinvoke <java.lang.Throwable: java.lang.String toString()>"
+    "staticinvoke <irc.EventDispatcher: void enableBadThreadWarning()>"->"virtualinvoke <java.lang.Throwable: java.lang.String toString()>";
+    "store.r r0"
+    "virtualinvoke <java.lang.Throwable: java.lang.String toString()>"->"store.r r0";
+    "new java.lang.RuntimeException"
+    "store.r r0"->"new java.lang.RuntimeException";
+    "dup1.r"
+    "new java.lang.RuntimeException"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "specialinvoke <java.lang.RuntimeException: void <init>(java.lang.String)>"
+    "load.r r0"->"specialinvoke <java.lang.RuntimeException: void <init>(java.lang.String)>";
+    "athrow"
+    "specialinvoke <java.lang.RuntimeException: void <init>(java.lang.String)>"->"athrow";
+}

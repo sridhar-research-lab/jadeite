@@ -1,0 +1,20 @@
+digraph "" {
+    "r0 := @this: flash"
+    "new java.lang.Thread"
+    "r0 := @this: flash"->"new java.lang.Thread";
+    "dup1.r"
+    "new java.lang.Thread"->"dup1.r";
+    "new flash$1"
+    "dup1.r"->"new flash$1";
+    "new flash$1"->"dup1.r";
+    "load.r r0"
+    "dup1.r"->"load.r r0";
+    "specialinvoke <flash$1: void <init>(flash)>"
+    "load.r r0"->"specialinvoke <flash$1: void <init>(flash)>";
+    "specialinvoke <java.lang.Thread: void <init>(java.lang.Runnable)>"
+    "specialinvoke <flash$1: void <init>(flash)>"->"specialinvoke <java.lang.Thread: void <init>(java.lang.Runnable)>";
+    "virtualinvoke <java.lang.Thread: void start()>"
+    "specialinvoke <java.lang.Thread: void <init>(java.lang.Runnable)>"->"virtualinvoke <java.lang.Thread: void start()>";
+    "return"
+    "virtualinvoke <java.lang.Thread: void start()>"->"return";
+}

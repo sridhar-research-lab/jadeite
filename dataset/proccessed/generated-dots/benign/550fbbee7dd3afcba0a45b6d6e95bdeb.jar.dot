@@ -1,0 +1,65 @@
+digraph "" {
+    "r0 := @this: PixScreen"
+    "load.r r0"
+    "r0 := @this: PixScreen"->"load.r r0";
+    "push \"ss2.gif\""
+    "load.r r0"->"push \"ss2.gif\"";
+    "specialinvoke <PixScreen: void p(java.lang.String)>"
+    "push \"ss2.gif\""->"specialinvoke <PixScreen: void p(java.lang.String)>";
+    "specialinvoke <PixScreen: void p(java.lang.String)>"->"load.r r0";
+    "virtualinvoke <PixScreen: void d()>"
+    "load.r r0"->"virtualinvoke <PixScreen: void d()>";
+    "virtualinvoke <PixScreen: void d()>"->"load.r r0";
+    "fieldget <PixScreen: int nf>"
+    "load.r r0"->"fieldget <PixScreen: int nf>";
+    "push 4095"
+    "fieldget <PixScreen: int nf>"->"push 4095";
+    "and.i"
+    "push 4095"->"and.i";
+    "push 1003"
+    "and.i"->"push 1003";
+    "ifcmpne.i load.r r0"
+    "push 1003"->"ifcmpne.i load.r r0";
+    "ifcmpne.i load.r r0"->"load.r r0";
+    "push 0"
+    "load.r r0"->"push 0";
+    "fieldput <PixScreen: boolean ah>"
+    "push 0"->"fieldput <PixScreen: boolean ah>";
+    "fieldput <PixScreen: boolean ah>"->"load.r r0";
+    "push \"autoHide\""
+    "load.r r0"->"push \"autoHide\"";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"
+    "push \"autoHide\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "store.r r1"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"store.r r1";
+    "load.r r1"
+    "store.r r1"->"load.r r1";
+    "ifnull load.r r0"
+    "load.r r1"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r r1";
+    "push \"yes\""
+    "load.r r1"->"push \"yes\"";
+    "virtualinvoke <java.lang.String: int compareTo(java.lang.String)>"
+    "push \"yes\""->"virtualinvoke <java.lang.String: int compareTo(java.lang.String)>";
+    "ifne load.r r0"
+    "virtualinvoke <java.lang.String: int compareTo(java.lang.String)>"->"ifne load.r r0";
+    "ifne load.r r0"->"load.r r0";
+    "push 1"
+    "load.r r0"->"push 1";
+    "fieldput <PixScreen: boolean af>"
+    "push 1"->"fieldput <PixScreen: boolean af>";
+    "fieldput <PixScreen: boolean af>"->"load.r r0";
+    "virtualinvoke <PixScreen: void p()>"
+    "load.r r0"->"virtualinvoke <PixScreen: void p()>";
+    "virtualinvoke <PixScreen: void p()>"->"load.r r0";
+    "new java.util.Hashtable"
+    "load.r r0"->"new java.util.Hashtable";
+    "dup1.r"
+    "new java.util.Hashtable"->"dup1.r";
+    "specialinvoke <java.util.Hashtable: void <init>()>"
+    "dup1.r"->"specialinvoke <java.util.Hashtable: void <init>()>";
+    "fieldput <PixScreen: java.util.Hashtable ar>"
+    "specialinvoke <java.util.Hashtable: void <init>()>"->"fieldput <PixScreen: java.util.Hashtable ar>";
+    "return"
+    "fieldput <PixScreen: java.util.Hashtable ar>"->"return";
+}

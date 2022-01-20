@@ -1,0 +1,31 @@
+digraph "" {
+    "r0 := @this: MaTocante"
+    "load.r r0"
+    "r0 := @this: MaTocante"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "push 120"
+    "load.r r0"->"push 120";
+    "push 15"
+    "push 120"->"push 15";
+    "virtualinvoke <java.awt.Component: java.awt.Image createImage(int,int)>"
+    "push 15"->"virtualinvoke <java.awt.Component: java.awt.Image createImage(int,int)>";
+    "fieldput <MaTocante: java.awt.Image datas_image>"
+    "virtualinvoke <java.awt.Component: java.awt.Image createImage(int,int)>"->"fieldput <MaTocante: java.awt.Image datas_image>";
+    "fieldput <MaTocante: java.awt.Image datas_image>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "fieldget <MaTocante: java.awt.Image datas_image>"
+    "load.r r0"->"fieldget <MaTocante: java.awt.Image datas_image>";
+    "virtualinvoke <java.awt.Image: java.awt.Graphics getGraphics()>"
+    "fieldget <MaTocante: java.awt.Image datas_image>"->"virtualinvoke <java.awt.Image: java.awt.Graphics getGraphics()>";
+    "fieldput <MaTocante: java.awt.Graphics datas_g>"
+    "virtualinvoke <java.awt.Image: java.awt.Graphics getGraphics()>"->"fieldput <MaTocante: java.awt.Graphics datas_g>";
+    "fieldput <MaTocante: java.awt.Graphics datas_g>"->"load.r r0";
+    "push 100"
+    "load.r r0"->"push 100";
+    "push 20"
+    "push 100"->"push 20";
+    "virtualinvoke <java.applet.Applet: void resize(int,int)>"
+    "push 20"->"virtualinvoke <java.applet.Applet: void resize(int,int)>";
+    "return"
+    "virtualinvoke <java.applet.Applet: void resize(int,int)>"->"return";
+}

@@ -1,0 +1,242 @@
+digraph "" {
+    "r0 := @this: Runic"
+    "load.r r0"
+    "r0 := @this: Runic"->"load.r r0";
+    "push null"
+    "load.r r0"->"push null";
+    "virtualinvoke <java.awt.Container: void setLayout(java.awt.LayoutManager)>"
+    "push null"->"virtualinvoke <java.awt.Container: void setLayout(java.awt.LayoutManager)>";
+    "virtualinvoke <java.awt.Container: void setLayout(java.awt.LayoutManager)>"->"load.r r0";
+    "push 474"
+    "load.r r0"->"push 474";
+    "push 374"
+    "push 474"->"push 374";
+    "virtualinvoke <java.awt.Component: void setSize(int,int)>"
+    "push 374"->"virtualinvoke <java.awt.Component: void setSize(int,int)>";
+    "virtualinvoke <java.awt.Component: void setSize(int,int)>"->"load.r r0";
+    "virtualinvoke <java.applet.Applet: java.net.URL getDocumentBase()>"
+    "load.r r0"->"virtualinvoke <java.applet.Applet: java.net.URL getDocumentBase()>";
+    "virtualinvoke <java.net.URL: java.lang.String getProtocol()>"
+    "virtualinvoke <java.applet.Applet: java.net.URL getDocumentBase()>"->"virtualinvoke <java.net.URL: java.lang.String getProtocol()>";
+    "virtualinvoke <java.lang.String: java.lang.String toLowerCase()>"
+    "virtualinvoke <java.net.URL: java.lang.String getProtocol()>"->"virtualinvoke <java.lang.String: java.lang.String toLowerCase()>";
+    "store.r r1"
+    "virtualinvoke <java.lang.String: java.lang.String toLowerCase()>"->"store.r r1";
+    "store.r r1"->"load.r r0";
+    "load.r r0"->"virtualinvoke <java.applet.Applet: java.net.URL getDocumentBase()>";
+    "virtualinvoke <java.net.URL: java.lang.String toString()>"
+    "virtualinvoke <java.applet.Applet: java.net.URL getDocumentBase()>"->"virtualinvoke <java.net.URL: java.lang.String toString()>";
+    "staticinvoke <java.net.URLEncoder: java.lang.String encode(java.lang.String)>"
+    "virtualinvoke <java.net.URL: java.lang.String toString()>"->"staticinvoke <java.net.URLEncoder: java.lang.String encode(java.lang.String)>";
+    "store.r $r34"
+    "staticinvoke <java.net.URLEncoder: java.lang.String encode(java.lang.String)>"->"store.r $r34";
+    "store.r $r34"->"load.r r0";
+    "virtualinvoke <java.applet.Applet: java.applet.AppletContext getAppletContext()>"
+    "load.r r0"->"virtualinvoke <java.applet.Applet: java.applet.AppletContext getAppletContext()>";
+    "new java.net.URL"
+    "virtualinvoke <java.applet.Applet: java.applet.AppletContext getAppletContext()>"->"new java.net.URL";
+    "dup1.r"
+    "new java.net.URL"->"dup1.r";
+    "new java.lang.StringBuffer"
+    "dup1.r"->"new java.lang.StringBuffer";
+    "new java.lang.StringBuffer"->"dup1.r";
+    "push \"http://www.4webgames.com/gemgame/popunder.php?host=\""
+    "dup1.r"->"push \"http://www.4webgames.com/gemgame/popunder.php?host=\"";
+    "specialinvoke <java.lang.StringBuffer: void <init>(java.lang.String)>"
+    "push \"http://www.4webgames.com/gemgame/popunder.php?host=\""->"specialinvoke <java.lang.StringBuffer: void <init>(java.lang.String)>";
+    "load.r $r34"
+    "specialinvoke <java.lang.StringBuffer: void <init>(java.lang.String)>"->"load.r $r34";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"
+    "load.r $r34"->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>"
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>";
+    "specialinvoke <java.net.URL: void <init>(java.lang.String)>"
+    "virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>"->"specialinvoke <java.net.URL: void <init>(java.lang.String)>";
+    "push \"_new\""
+    "specialinvoke <java.net.URL: void <init>(java.lang.String)>"->"push \"_new\"";
+    "interfaceinvoke <java.applet.AppletContext: void showDocument(java.net.URL,java.lang.String)> 2"
+    "push \"_new\""->"interfaceinvoke <java.applet.AppletContext: void showDocument(java.net.URL,java.lang.String)> 2";
+    "goto load.r r1"
+    "interfaceinvoke <java.applet.AppletContext: void showDocument(java.net.URL,java.lang.String)> 2"->"goto load.r r1";
+    "load.r r1"
+    "goto load.r r1"->"load.r r1";
+    "push \"file\""
+    "load.r r1"->"push \"file\"";
+    "virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>"
+    "push \"file\""->"virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>";
+    "ifne load.r r0"
+    "virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>"->"ifne load.r r0";
+    "ifne load.r r0"->"load.r r0";
+    "new RunicCanvas"
+    "load.r r0"->"new RunicCanvas";
+    "new RunicCanvas"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "specialinvoke <RunicCanvas: void <init>(Runic)>"
+    "load.r r0"->"specialinvoke <RunicCanvas: void <init>(Runic)>";
+    "fieldput <Runic: RunicCanvas canvas1>"
+    "specialinvoke <RunicCanvas: void <init>(Runic)>"->"fieldput <Runic: RunicCanvas canvas1>";
+    "fieldput <Runic: RunicCanvas canvas1>"->"load.r r0";
+    "fieldget <Runic: RunicCanvas canvas1>"
+    "load.r r0"->"fieldget <Runic: RunicCanvas canvas1>";
+    "push 0"
+    "fieldget <Runic: RunicCanvas canvas1>"->"push 0";
+    "push 0"->"push 0";
+    "push 0"->"push 474";
+    "push 474"->"push 374";
+    "virtualinvoke <java.awt.Component: void setBounds(int,int,int,int)>"
+    "push 374"->"virtualinvoke <java.awt.Component: void setBounds(int,int,int,int)>";
+    "virtualinvoke <java.awt.Component: void setBounds(int,int,int,int)>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <Runic: RunicCanvas canvas1>";
+    "virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>"
+    "fieldget <Runic: RunicCanvas canvas1>"->"virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>";
+    "pop"
+    "virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>"->"pop";
+    "pop"->"load.r r0";
+    "new java.lang.Thread"
+    "load.r r0"->"new java.lang.Thread";
+    "new java.lang.Thread"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "load.r r0"->"fieldget <Runic: RunicCanvas canvas1>";
+    "specialinvoke <java.lang.Thread: void <init>(java.lang.Runnable)>"
+    "fieldget <Runic: RunicCanvas canvas1>"->"specialinvoke <java.lang.Thread: void <init>(java.lang.Runnable)>";
+    "fieldput <Runic: java.lang.Thread canvasThread>"
+    "specialinvoke <java.lang.Thread: void <init>(java.lang.Runnable)>"->"fieldput <Runic: java.lang.Thread canvasThread>";
+    "fieldput <Runic: java.lang.Thread canvasThread>"->"load.r r0";
+    "fieldget <Runic: java.lang.Thread canvasThread>"
+    "load.r r0"->"fieldget <Runic: java.lang.Thread canvasThread>";
+    "virtualinvoke <java.lang.Thread: void start()>"
+    "fieldget <Runic: java.lang.Thread canvasThread>"->"virtualinvoke <java.lang.Thread: void start()>";
+    "return"
+    "virtualinvoke <java.lang.Thread: void start()>"->"return";
+    "store.r r0"
+    "virtualinvoke <java.lang.Thread: void start()>"->"store.r r0";
+    "store.r r0"->"return";
+    "ifne load.r r0"->"load.r r0";
+    "staticget <java.awt.Color: java.awt.Color black>"
+    "load.r r0"->"staticget <java.awt.Color: java.awt.Color black>";
+    "virtualinvoke <java.awt.Component: void setBackground(java.awt.Color)>"
+    "staticget <java.awt.Color: java.awt.Color black>"->"virtualinvoke <java.awt.Component: void setBackground(java.awt.Color)>";
+    "new java.awt.Label"
+    "virtualinvoke <java.awt.Component: void setBackground(java.awt.Color)>"->"new java.awt.Label";
+    "new java.awt.Label"->"store.r r1";
+    "store.r r1"->"load.r r1";
+    "push \"This version not intended for desktop play.\""
+    "load.r r1"->"push \"This version not intended for desktop play.\"";
+    "push 1"
+    "push \"This version not intended for desktop play.\""->"push 1";
+    "specialinvoke <java.awt.Label: void <init>(java.lang.String,int)>"
+    "push 1"->"specialinvoke <java.awt.Label: void <init>(java.lang.String,int)>";
+    "specialinvoke <java.awt.Label: void <init>(java.lang.String,int)>"->"load.r r1";
+    "load.r r1"->"push 0";
+    "push 70"
+    "push 0"->"push 70";
+    "push 388"
+    "push 70"->"push 388";
+    "push 30"
+    "push 388"->"push 30";
+    "push 30"->"virtualinvoke <java.awt.Component: void setBounds(int,int,int,int)>";
+    "virtualinvoke <java.awt.Component: void setBounds(int,int,int,int)>"->"load.r r1";
+    "new java.awt.Font"
+    "load.r r1"->"new java.awt.Font";
+    "new java.awt.Font"->"dup1.r";
+    "push \"Serif\""
+    "dup1.r"->"push \"Serif\"";
+    "push \"Serif\""->"push 1";
+    "push 16"
+    "push 1"->"push 16";
+    "specialinvoke <java.awt.Font: void <init>(java.lang.String,int,int)>"
+    "push 16"->"specialinvoke <java.awt.Font: void <init>(java.lang.String,int,int)>";
+    "virtualinvoke <java.awt.Component: void setFont(java.awt.Font)>"
+    "specialinvoke <java.awt.Font: void <init>(java.lang.String,int,int)>"->"virtualinvoke <java.awt.Component: void setFont(java.awt.Font)>";
+    "virtualinvoke <java.awt.Component: void setFont(java.awt.Font)>"->"load.r r1";
+    "new java.awt.Color"
+    "load.r r1"->"new java.awt.Color";
+    "new java.awt.Color"->"dup1.r";
+    "push 16756655"
+    "dup1.r"->"push 16756655";
+    "specialinvoke <java.awt.Color: void <init>(int)>"
+    "push 16756655"->"specialinvoke <java.awt.Color: void <init>(int)>";
+    "virtualinvoke <java.awt.Component: void setForeground(java.awt.Color)>"
+    "specialinvoke <java.awt.Color: void <init>(int)>"->"virtualinvoke <java.awt.Component: void setForeground(java.awt.Color)>";
+    "virtualinvoke <java.awt.Component: void setForeground(java.awt.Color)>"->"load.r r1";
+    "load.r r1"->"push 1";
+    "virtualinvoke <java.awt.Component: void setVisible(boolean)>"
+    "push 1"->"virtualinvoke <java.awt.Component: void setVisible(boolean)>";
+    "virtualinvoke <java.awt.Component: void setVisible(boolean)>"->"load.r r0";
+    "load.r r0"->"load.r r1";
+    "load.r r1"->"virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>";
+    "virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>"->"pop";
+    "pop"->"new java.awt.Label";
+    "new java.awt.Label"->"store.r r1";
+    "store.r r1"->"load.r r1";
+    "push \"A Windows version can be found at\""
+    "load.r r1"->"push \"A Windows version can be found at\"";
+    "push \"A Windows version can be found at\""->"push 1";
+    "push 1"->"specialinvoke <java.awt.Label: void <init>(java.lang.String,int)>";
+    "specialinvoke <java.awt.Label: void <init>(java.lang.String,int)>"->"load.r r1";
+    "load.r r1"->"push 0";
+    "push 100"
+    "push 0"->"push 100";
+    "push 100"->"push 388";
+    "push 388"->"push 30";
+    "push 30"->"virtualinvoke <java.awt.Component: void setBounds(int,int,int,int)>";
+    "virtualinvoke <java.awt.Component: void setBounds(int,int,int,int)>"->"load.r r1";
+    "load.r r1"->"new java.awt.Font";
+    "new java.awt.Font"->"dup1.r";
+    "dup1.r"->"push \"Serif\"";
+    "push \"Serif\""->"push 1";
+    "push 1"->"push 16";
+    "push 16"->"specialinvoke <java.awt.Font: void <init>(java.lang.String,int,int)>";
+    "specialinvoke <java.awt.Font: void <init>(java.lang.String,int,int)>"->"virtualinvoke <java.awt.Component: void setFont(java.awt.Font)>";
+    "virtualinvoke <java.awt.Component: void setFont(java.awt.Font)>"->"load.r r1";
+    "load.r r1"->"new java.awt.Color";
+    "new java.awt.Color"->"dup1.r";
+    "dup1.r"->"push 16756655";
+    "push 16756655"->"specialinvoke <java.awt.Color: void <init>(int)>";
+    "specialinvoke <java.awt.Color: void <init>(int)>"->"virtualinvoke <java.awt.Component: void setForeground(java.awt.Color)>";
+    "virtualinvoke <java.awt.Component: void setForeground(java.awt.Color)>"->"load.r r1";
+    "load.r r1"->"push 1";
+    "push 1"->"virtualinvoke <java.awt.Component: void setVisible(boolean)>";
+    "virtualinvoke <java.awt.Component: void setVisible(boolean)>"->"load.r r0";
+    "load.r r0"->"load.r r1";
+    "load.r r1"->"virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>";
+    "virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>"->"pop";
+    "pop"->"new java.awt.Label";
+    "new java.awt.Label"->"store.r r1";
+    "store.r r1"->"load.r r1";
+    "push \"http://www.4webgames.com\""
+    "load.r r1"->"push \"http://www.4webgames.com\"";
+    "push \"http://www.4webgames.com\""->"push 1";
+    "push 1"->"specialinvoke <java.awt.Label: void <init>(java.lang.String,int)>";
+    "specialinvoke <java.awt.Label: void <init>(java.lang.String,int)>"->"load.r r1";
+    "load.r r1"->"push 0";
+    "push 150"
+    "push 0"->"push 150";
+    "push 150"->"push 388";
+    "push 388"->"push 30";
+    "push 30"->"virtualinvoke <java.awt.Component: void setBounds(int,int,int,int)>";
+    "virtualinvoke <java.awt.Component: void setBounds(int,int,int,int)>"->"load.r r1";
+    "load.r r1"->"new java.awt.Font";
+    "new java.awt.Font"->"dup1.r";
+    "dup1.r"->"push \"Serif\"";
+    "push \"Serif\""->"push 1";
+    "push 1"->"push 16";
+    "push 16"->"specialinvoke <java.awt.Font: void <init>(java.lang.String,int,int)>";
+    "specialinvoke <java.awt.Font: void <init>(java.lang.String,int,int)>"->"virtualinvoke <java.awt.Component: void setFont(java.awt.Font)>";
+    "virtualinvoke <java.awt.Component: void setFont(java.awt.Font)>"->"load.r r1";
+    "load.r r1"->"new java.awt.Color";
+    "new java.awt.Color"->"dup1.r";
+    "dup1.r"->"push 16756655";
+    "push 16756655"->"specialinvoke <java.awt.Color: void <init>(int)>";
+    "specialinvoke <java.awt.Color: void <init>(int)>"->"virtualinvoke <java.awt.Component: void setForeground(java.awt.Color)>";
+    "virtualinvoke <java.awt.Component: void setForeground(java.awt.Color)>"->"load.r r1";
+    "load.r r1"->"push 1";
+    "push 1"->"virtualinvoke <java.awt.Component: void setVisible(boolean)>";
+    "virtualinvoke <java.awt.Component: void setVisible(boolean)>"->"load.r r0";
+    "load.r r0"->"load.r r1";
+    "load.r r1"->"virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>";
+    "virtualinvoke <java.awt.Container: java.awt.Component add(java.awt.Component)>"->"pop";
+    "pop"->"return";
+    "interfaceinvoke <java.applet.AppletContext: void showDocument(java.net.URL,java.lang.String)> 2"->"store.r $r34";
+}

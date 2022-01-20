@@ -1,0 +1,232 @@
+digraph "" {
+    "r0 := @this: LoveMeter"
+    "staticget <java.lang.System: java.io.PrintStream out>"
+    "r0 := @this: LoveMeter"->"staticget <java.lang.System: java.io.PrintStream out>";
+    "push \"\nLoveMeter Version 2.0\""
+    "staticget <java.lang.System: java.io.PrintStream out>"->"push \"\nLoveMeter Version 2.0\"";
+    "virtualinvoke <java.io.PrintStream: void println(java.lang.String)>"
+    "push \"\nLoveMeter Version 2.0\""->"virtualinvoke <java.io.PrintStream: void println(java.lang.String)>";
+    "virtualinvoke <java.io.PrintStream: void println(java.lang.String)>"->"staticget <java.lang.System: java.io.PrintStream out>";
+    "push \"***********************\n\""
+    "staticget <java.lang.System: java.io.PrintStream out>"->"push \"***********************\n\"";
+    "push \"***********************\n\""->"virtualinvoke <java.io.PrintStream: void println(java.lang.String)>";
+    "load.r r0"
+    "virtualinvoke <java.io.PrintStream: void println(java.lang.String)>"->"load.r r0";
+    "virtualinvoke <java.applet.Applet: java.net.URL getDocumentBase()>"
+    "load.r r0"->"virtualinvoke <java.applet.Applet: java.net.URL getDocumentBase()>";
+    "virtualinvoke <java.net.URL: java.lang.String getHost()>"
+    "virtualinvoke <java.applet.Applet: java.net.URL getDocumentBase()>"->"virtualinvoke <java.net.URL: java.lang.String getHost()>";
+    "store.r r1"
+    "virtualinvoke <java.net.URL: java.lang.String getHost()>"->"store.r r1";
+    "load.r r1"
+    "store.r r1"->"load.r r1";
+    "ifnonnull load.r r0"
+    "load.r r1"->"ifnonnull load.r r0";
+    "push \"\""
+    "ifnonnull load.r r0"->"push \"\"";
+    "push \"\""->"store.r r1";
+    "store.r r1"->"load.r r0";
+    "load.r r0"->"load.r r1";
+    "push \"www.realapplets.com\""
+    "load.r r1"->"push \"www.realapplets.com\"";
+    "virtualinvoke <java.lang.String: boolean equalsIgnoreCase(java.lang.String)>"
+    "push \"www.realapplets.com\""->"virtualinvoke <java.lang.String: boolean equalsIgnoreCase(java.lang.String)>";
+    "fieldput <LoveMeter: boolean registered>"
+    "virtualinvoke <java.lang.String: boolean equalsIgnoreCase(java.lang.String)>"->"fieldput <LoveMeter: boolean registered>";
+    "fieldput <LoveMeter: boolean registered>"->"staticget <java.lang.System: java.io.PrintStream out>";
+    "push \" Unregistered applet, written by Geoffrey from RealApplets\""
+    "staticget <java.lang.System: java.io.PrintStream out>"->"push \" Unregistered applet, written by Geoffrey from RealApplets\"";
+    "push \" Unregistered applet, written by Geoffrey from RealApplets\""->"virtualinvoke <java.io.PrintStream: void println(java.lang.String)>";
+    "virtualinvoke <java.io.PrintStream: void println(java.lang.String)>"->"staticget <java.lang.System: java.io.PrintStream out>";
+    "push \" Get your applets from http://www.realapplets.com\""
+    "staticget <java.lang.System: java.io.PrintStream out>"->"push \" Get your applets from http://www.realapplets.com\"";
+    "push \" Get your applets from http://www.realapplets.com\""->"virtualinvoke <java.io.PrintStream: void println(java.lang.String)>";
+    "virtualinvoke <java.io.PrintStream: void println(java.lang.String)>"->"staticget <java.lang.System: java.io.PrintStream out>";
+    "push \" Removal of add without registration is punishable in a court of law.\n\""
+    "staticget <java.lang.System: java.io.PrintStream out>"->"push \" Removal of add without registration is punishable in a court of law.\n\"";
+    "push \" Removal of add without registration is punishable in a court of law.\n\""->"virtualinvoke <java.io.PrintStream: void println(java.lang.String)>";
+    "virtualinvoke <java.io.PrintStream: void println(java.lang.String)>"->"load.r r0";
+    "virtualinvoke <java.awt.Component: java.awt.Dimension getSize()>"
+    "load.r r0"->"virtualinvoke <java.awt.Component: java.awt.Dimension getSize()>";
+    "virtualinvoke <java.awt.Component: java.awt.Dimension getSize()>"->"store.r r1";
+    "store.r r1"->"load.r r1";
+    "fieldget <java.awt.Dimension: int width>"
+    "load.r r1"->"fieldget <java.awt.Dimension: int width>";
+    "push 260"
+    "fieldget <java.awt.Dimension: int width>"->"push 260";
+    "ifcmplt.i load.r r0"
+    "push 260"->"ifcmplt.i load.r r0";
+    "ifcmplt.i load.r r0"->"load.r r1";
+    "fieldget <java.awt.Dimension: int height>"
+    "load.r r1"->"fieldget <java.awt.Dimension: int height>";
+    "fieldget <java.awt.Dimension: int height>"->"push 260";
+    "ifcmpge.i load.r r0"
+    "push 260"->"ifcmpge.i load.r r0";
+    "ifcmpge.i load.r r0"->"load.r r0";
+    "push \"The WIDTH or the HEIGHT of the applet must be bigger then 260.\""
+    "load.r r0"->"push \"The WIDTH or the HEIGHT of the applet must be bigger then 260.\"";
+    "virtualinvoke <LoveMeter: void setErrorString(java.lang.String)>"
+    "push \"The WIDTH or the HEIGHT of the applet must be bigger then 260.\""->"virtualinvoke <LoveMeter: void setErrorString(java.lang.String)>";
+    "return"
+    "virtualinvoke <LoveMeter: void setErrorString(java.lang.String)>"->"return";
+    "ifcmpge.i load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r1";
+    "load.r r1"->"fieldget <java.awt.Dimension: int width>";
+    "fieldget <java.awt.Dimension: int width>"->"load.r r1";
+    "load.r r1"->"fieldget <java.awt.Dimension: int height>";
+    "virtualinvoke <java.awt.Component: java.awt.Image createImage(int,int)>"
+    "fieldget <java.awt.Dimension: int height>"->"virtualinvoke <java.awt.Component: java.awt.Image createImage(int,int)>";
+    "fieldput <LoveMeter: java.awt.Image bufferImage>"
+    "virtualinvoke <java.awt.Component: java.awt.Image createImage(int,int)>"->"fieldput <LoveMeter: java.awt.Image bufferImage>";
+    "fieldput <LoveMeter: java.awt.Image bufferImage>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "fieldget <LoveMeter: java.awt.Image bufferImage>"
+    "load.r r0"->"fieldget <LoveMeter: java.awt.Image bufferImage>";
+    "virtualinvoke <java.awt.Image: java.awt.Graphics getGraphics()>"
+    "fieldget <LoveMeter: java.awt.Image bufferImage>"->"virtualinvoke <java.awt.Image: java.awt.Graphics getGraphics()>";
+    "fieldput <LoveMeter: java.awt.Graphics bufferGraphics>"
+    "virtualinvoke <java.awt.Image: java.awt.Graphics getGraphics()>"->"fieldput <LoveMeter: java.awt.Graphics bufferGraphics>";
+    "fieldput <LoveMeter: java.awt.Graphics bufferGraphics>"->"load.r r0";
+    "fieldget <LoveMeter: java.awt.Color[] colors>"
+    "load.r r0"->"fieldget <LoveMeter: java.awt.Color[] colors>";
+    "push 0"
+    "fieldget <LoveMeter: java.awt.Color[] colors>"->"push 0";
+    "new java.awt.Color"
+    "push 0"->"new java.awt.Color";
+    "dup1.r"
+    "new java.awt.Color"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "push \"BackgroundColor\""
+    "load.r r0"->"push \"BackgroundColor\"";
+    "virtualinvoke <LoveMeter: java.lang.String getParameter(java.lang.String)>"
+    "push \"BackgroundColor\""->"virtualinvoke <LoveMeter: java.lang.String getParameter(java.lang.String)>";
+    "push 16"
+    "virtualinvoke <LoveMeter: java.lang.String getParameter(java.lang.String)>"->"push 16";
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String,int)>"
+    "push 16"->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String,int)>";
+    "specialinvoke <java.awt.Color: void <init>(int)>"
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String,int)>"->"specialinvoke <java.awt.Color: void <init>(int)>";
+    "arraywrite.r"
+    "specialinvoke <java.awt.Color: void <init>(int)>"->"arraywrite.r";
+    "arraywrite.r"->"load.r r0";
+    "load.r r0"->"fieldget <LoveMeter: java.awt.Color[] colors>";
+    "push 1"
+    "fieldget <LoveMeter: java.awt.Color[] colors>"->"push 1";
+    "push 1"->"new java.awt.Color";
+    "new java.awt.Color"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "push \"ForegroundColor\""
+    "load.r r0"->"push \"ForegroundColor\"";
+    "push \"ForegroundColor\""->"virtualinvoke <LoveMeter: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <LoveMeter: java.lang.String getParameter(java.lang.String)>"->"push 16";
+    "push 16"->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String,int)>";
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String,int)>"->"specialinvoke <java.awt.Color: void <init>(int)>";
+    "specialinvoke <java.awt.Color: void <init>(int)>"->"arraywrite.r";
+    "arraywrite.r"->"load.r r0";
+    "load.r r0"->"fieldget <LoveMeter: java.awt.Color[] colors>";
+    "push 2"
+    "fieldget <LoveMeter: java.awt.Color[] colors>"->"push 2";
+    "push 2"->"new java.awt.Color";
+    "new java.awt.Color"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "push \"ResultLabelColor\""
+    "load.r r0"->"push \"ResultLabelColor\"";
+    "push \"ResultLabelColor\""->"virtualinvoke <LoveMeter: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <LoveMeter: java.lang.String getParameter(java.lang.String)>"->"push 16";
+    "push 16"->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String,int)>";
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String,int)>"->"specialinvoke <java.awt.Color: void <init>(int)>";
+    "specialinvoke <java.awt.Color: void <init>(int)>"->"arraywrite.r";
+    "arraywrite.r"->"load.r r0";
+    "load.r r0"->"fieldget <LoveMeter: java.awt.Color[] colors>";
+    "push 3"
+    "fieldget <LoveMeter: java.awt.Color[] colors>"->"push 3";
+    "push 3"->"new java.awt.Color";
+    "new java.awt.Color"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "push \"WinningResultLabelColor\""
+    "load.r r0"->"push \"WinningResultLabelColor\"";
+    "push \"WinningResultLabelColor\""->"virtualinvoke <LoveMeter: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <LoveMeter: java.lang.String getParameter(java.lang.String)>"->"push 16";
+    "push 16"->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String,int)>";
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String,int)>"->"specialinvoke <java.awt.Color: void <init>(int)>";
+    "specialinvoke <java.awt.Color: void <init>(int)>"->"arraywrite.r";
+    "goto load.r r0"
+    "arraywrite.r"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <LoveMeter: java.awt.Color[] colors>";
+    "fieldget <LoveMeter: java.awt.Color[] colors>"->"push 0";
+    "arrayread.r"
+    "push 0"->"arrayread.r";
+    "virtualinvoke <java.awt.Component: void setBackground(java.awt.Color)>"
+    "arrayread.r"->"virtualinvoke <java.awt.Component: void setBackground(java.awt.Color)>";
+    "virtualinvoke <java.awt.Component: void setBackground(java.awt.Color)>"->"load.r r0";
+    "new java.awt.Font"
+    "load.r r0"->"new java.awt.Font";
+    "new java.awt.Font"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "push \"NameLabelFontStyle\""
+    "load.r r0"->"push \"NameLabelFontStyle\"";
+    "push \"NameLabelFontStyle\""->"virtualinvoke <LoveMeter: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <LoveMeter: java.lang.String getParameter(java.lang.String)>"->"push 0";
+    "push 14"
+    "push 0"->"push 14";
+    "specialinvoke <java.awt.Font: void <init>(java.lang.String,int,int)>"
+    "push 14"->"specialinvoke <java.awt.Font: void <init>(java.lang.String,int,int)>";
+    "fieldput <LoveMeter: java.awt.Font nameLabelFont>"
+    "specialinvoke <java.awt.Font: void <init>(java.lang.String,int,int)>"->"fieldput <LoveMeter: java.awt.Font nameLabelFont>";
+    "fieldput <LoveMeter: java.awt.Font nameLabelFont>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "push \"LoadingAppletMessage\""
+    "load.r r0"->"push \"LoadingAppletMessage\"";
+    "push \"LoadingAppletMessage\""->"virtualinvoke <LoveMeter: java.lang.String getParameter(java.lang.String)>";
+    "fieldput <LoveMeter: java.lang.String loadingString>"
+    "virtualinvoke <LoveMeter: java.lang.String getParameter(java.lang.String)>"->"fieldput <LoveMeter: java.lang.String loadingString>";
+    "fieldput <LoveMeter: java.lang.String loadingString>"->"load.r r0";
+    "new BoundsLayout"
+    "load.r r0"->"new BoundsLayout";
+    "new BoundsLayout"->"dup1.r";
+    "dup1.r"->"push 260";
+    "push 260"->"push 260";
+    "specialinvoke <BoundsLayout: void <init>(int,int)>"
+    "push 260"->"specialinvoke <BoundsLayout: void <init>(int,int)>";
+    "virtualinvoke <java.awt.Container: void setLayout(java.awt.LayoutManager)>"
+    "specialinvoke <BoundsLayout: void <init>(int,int)>"->"virtualinvoke <java.awt.Container: void setLayout(java.awt.LayoutManager)>";
+    "virtualinvoke <java.awt.Container: void setLayout(java.awt.LayoutManager)>"->"load.r r0";
+    "new java.lang.Thread"
+    "load.r r0"->"new java.lang.Thread";
+    "new java.lang.Thread"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "specialinvoke <java.lang.Thread: void <init>(java.lang.Runnable)>"
+    "load.r r0"->"specialinvoke <java.lang.Thread: void <init>(java.lang.Runnable)>";
+    "fieldput <LoveMeter: java.lang.Thread loadingThread>"
+    "specialinvoke <java.lang.Thread: void <init>(java.lang.Runnable)>"->"fieldput <LoveMeter: java.lang.Thread loadingThread>";
+    "fieldput <LoveMeter: java.lang.Thread loadingThread>"->"load.r r0";
+    "fieldget <LoveMeter: java.lang.Thread loadingThread>"
+    "load.r r0"->"fieldget <LoveMeter: java.lang.Thread loadingThread>";
+    "staticinvoke <java.lang.Thread: java.lang.Thread currentThread()>"
+    "fieldget <LoveMeter: java.lang.Thread loadingThread>"->"staticinvoke <java.lang.Thread: java.lang.Thread currentThread()>";
+    "virtualinvoke <java.lang.Thread: int getPriority()>"
+    "staticinvoke <java.lang.Thread: java.lang.Thread currentThread()>"->"virtualinvoke <java.lang.Thread: int getPriority()>";
+    "virtualinvoke <java.lang.Thread: int getPriority()>"->"push 1";
+    "add.i"
+    "push 1"->"add.i";
+    "virtualinvoke <java.lang.Thread: void setPriority(int)>"
+    "add.i"->"virtualinvoke <java.lang.Thread: void setPriority(int)>";
+    "virtualinvoke <java.lang.Thread: void setPriority(int)>"->"load.r r0";
+    "load.r r0"->"fieldget <LoveMeter: java.lang.Thread loadingThread>";
+    "virtualinvoke <java.lang.Thread: void start()>"
+    "fieldget <LoveMeter: java.lang.Thread loadingThread>"->"virtualinvoke <java.lang.Thread: void start()>";
+    "virtualinvoke <java.lang.Thread: void start()>"->"load.r r0";
+    "virtualinvoke <java.awt.Component: void repaint()>"
+    "load.r r0"->"virtualinvoke <java.awt.Component: void repaint()>";
+    "virtualinvoke <java.awt.Component: void repaint()>"->"return";
+    "specialinvoke <java.awt.Color: void <init>(int)>"->"store.r r1";
+    "store.r r1"->"load.r r0";
+    "push \"One of the non button Color parameters is wrong\""
+    "load.r r0"->"push \"One of the non button Color parameters is wrong\"";
+    "push \"One of the non button Color parameters is wrong\""->"load.r r1";
+    "virtualinvoke <LoveMeter: void setErrorString(java.lang.String,java.lang.Exception)>"
+    "load.r r1"->"virtualinvoke <LoveMeter: void setErrorString(java.lang.String,java.lang.Exception)>";
+}

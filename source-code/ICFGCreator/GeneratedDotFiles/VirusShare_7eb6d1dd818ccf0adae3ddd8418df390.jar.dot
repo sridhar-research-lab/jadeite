@@ -1,0 +1,54 @@
+digraph "" {
+    "r0 := @this: vmain"
+    "load.r r0"
+    "r0 := @this: vmain"->"load.r r0";
+    "specialinvoke <vmain: javax.management.remote.rmi.RMIServerImpl b()>"
+    "load.r r0"->"specialinvoke <vmain: javax.management.remote.rmi.RMIServerImpl b()>";
+    "store.r r9"
+    "specialinvoke <vmain: javax.management.remote.rmi.RMIServerImpl b()>"->"store.r r9";
+    "load.r r9"
+    "store.r r9"->"load.r r9";
+    "load.r r9"->"load.r r0";
+    "specialinvoke <vmain: javax.management.MBeanServer a()>"
+    "load.r r0"->"specialinvoke <vmain: javax.management.MBeanServer a()>";
+    "virtualinvoke <javax.management.remote.rmi.RMIServerImpl: void setMBeanServer(javax.management.MBeanServer)>"
+    "specialinvoke <vmain: javax.management.MBeanServer a()>"->"virtualinvoke <javax.management.remote.rmi.RMIServerImpl: void setMBeanServer(javax.management.MBeanServer)>";
+    "new javax.management.remote.rmi.RMIConnectionImpl"
+    "virtualinvoke <javax.management.remote.rmi.RMIServerImpl: void setMBeanServer(javax.management.MBeanServer)>"->"new javax.management.remote.rmi.RMIConnectionImpl";
+    "dup1.r"
+    "new javax.management.remote.rmi.RMIConnectionImpl"->"dup1.r";
+    "dup1.r"->"load.r r9";
+    "push \"/\""
+    "load.r r9"->"push \"/\"";
+    "push null"
+    "push \"/\""->"push null";
+    "push null"->"push null";
+    "push null"->"push null";
+    "specialinvoke <javax.management.remote.rmi.RMIConnectionImpl: void <init>(javax.management.remote.rmi.RMIServerImpl,java.lang.String,java.lang.ClassLoader,javax.security.auth.Subject,java.util.Map)>"
+    "push null"->"specialinvoke <javax.management.remote.rmi.RMIConnectionImpl: void <init>(javax.management.remote.rmi.RMIServerImpl,java.lang.String,java.lang.ClassLoader,javax.security.auth.Subject,java.util.Map)>";
+    "staticget <vmain: java.lang.String z>"
+    "specialinvoke <javax.management.remote.rmi.RMIConnectionImpl: void <init>(javax.management.remote.rmi.RMIServerImpl,java.lang.String,java.lang.ClassLoader,javax.security.auth.Subject,java.util.Map)>"->"staticget <vmain: java.lang.String z>";
+    "staticget <vmain: java.lang.String z>"->"push null";
+    "push null"->"push null";
+    "push null"->"load.r r0";
+    "virtualinvoke <vmain: java.rmi.MarshalledObject c()>"
+    "load.r r0"->"virtualinvoke <vmain: java.rmi.MarshalledObject c()>";
+    "virtualinvoke <vmain: java.rmi.MarshalledObject c()>"->"push null";
+    "push null"->"push null";
+    "virtualinvoke <javax.management.remote.rmi.RMIConnectionImpl: javax.management.ObjectInstance createMBean(java.lang.String,javax.management.ObjectName,javax.management.ObjectName,java.rmi.MarshalledObject,java.lang.String[],javax.security.auth.Subject)>"
+    "push null"->"virtualinvoke <javax.management.remote.rmi.RMIConnectionImpl: javax.management.ObjectInstance createMBean(java.lang.String,javax.management.ObjectName,javax.management.ObjectName,java.rmi.MarshalledObject,java.lang.String[],javax.security.auth.Subject)>";
+    "pop"
+    "virtualinvoke <javax.management.remote.rmi.RMIConnectionImpl: javax.management.ObjectInstance createMBean(java.lang.String,javax.management.ObjectName,javax.management.ObjectName,java.rmi.MarshalledObject,java.lang.String[],javax.security.auth.Subject)>"->"pop";
+    "goto return"
+    "pop"->"goto return";
+    "return"
+    "goto return"->"return";
+    "store.r r0"
+    "virtualinvoke <javax.management.remote.rmi.RMIConnectionImpl: javax.management.ObjectInstance createMBean(java.lang.String,javax.management.ObjectName,javax.management.ObjectName,java.rmi.MarshalledObject,java.lang.String[],javax.security.auth.Subject)>"->"store.r r0";
+    "staticget <vload: vload a>"
+    "store.r r0"->"staticget <vload: vload a>";
+    "virtualinvoke <vload: void b()>"
+    "staticget <vload: vload a>"->"virtualinvoke <vload: void b()>";
+    "virtualinvoke <vload: void b()>"->"goto return";
+    "virtualinvoke <vload: void b()>"->"store.r r0";
+}

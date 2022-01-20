@@ -1,0 +1,45 @@
+digraph "" {
+    "r0 := @this: Applet"
+    "load.r r0"
+    "r0 := @this: Applet"->"load.r r0";
+    "push 1"
+    "load.r r0"->"push 1";
+    "newarray"
+    "push 1"->"newarray";
+    "store.r $r1"
+    "newarray"->"store.r $r1";
+    "load.r $r1"
+    "store.r $r1"->"load.r $r1";
+    "push 0"
+    "load.r $r1"->"push 0";
+    "push 0"->"load.r r0";
+    "specialinvoke <Applet: java.lang.Object 'enum'()>"
+    "load.r r0"->"specialinvoke <Applet: java.lang.Object 'enum'()>";
+    "arraywrite.r"
+    "specialinvoke <Applet: java.lang.Object 'enum'()>"->"arraywrite.r";
+    "new javax.swing.JList"
+    "arraywrite.r"->"new javax.swing.JList";
+    "dup1.r"
+    "new javax.swing.JList"->"dup1.r";
+    "dup1.r"->"load.r $r1";
+    "specialinvoke <javax.swing.JList: void <init>(java.lang.Object[])>"
+    "load.r $r1"->"specialinvoke <javax.swing.JList: void <init>(java.lang.Object[])>";
+    "virtualinvoke <Applet: java.awt.Component add(java.awt.Component)>"
+    "specialinvoke <javax.swing.JList: void <init>(java.lang.Object[])>"->"virtualinvoke <Applet: java.awt.Component add(java.awt.Component)>";
+    "pop"
+    "virtualinvoke <Applet: java.awt.Component add(java.awt.Component)>"->"pop";
+    "return"
+    "pop"->"return";
+    "store.r r0"
+    "virtualinvoke <Applet: java.awt.Component add(java.awt.Component)>"->"store.r r0";
+    "staticget <Applet: java.lang.Boolean try>"
+    "store.r r0"->"staticget <Applet: java.lang.Boolean try>";
+    "virtualinvoke <java.lang.Boolean: boolean booleanValue()>"
+    "staticget <Applet: java.lang.Boolean try>"->"virtualinvoke <java.lang.Boolean: boolean booleanValue()>";
+    "ifeq return"
+    "virtualinvoke <java.lang.Boolean: boolean booleanValue()>"->"ifeq return";
+    "ifeq return"->"load.r r0";
+    "virtualinvoke <java.lang.Exception: void printStackTrace()>"
+    "load.r r0"->"virtualinvoke <java.lang.Exception: void printStackTrace()>";
+    "virtualinvoke <java.lang.Exception: void printStackTrace()>"->"return";
+}

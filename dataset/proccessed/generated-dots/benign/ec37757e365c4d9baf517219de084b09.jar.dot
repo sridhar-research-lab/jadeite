@@ -1,0 +1,360 @@
+digraph "" {
+    "r0 := @this: headline_newsticker"
+    "load.r r0"
+    "r0 := @this: headline_newsticker"->"load.r r0";
+    "new headline_newsticker$Style"
+    "load.r r0"->"new headline_newsticker$Style";
+    "dup1.r"
+    "new headline_newsticker$Style"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "push null"
+    "load.r r0"->"push null";
+    "push null"->"load.r r0";
+    "specialinvoke <headline_newsticker$Style: void <init>(headline_newsticker,java.lang.String,java.applet.Applet)>"
+    "load.r r0"->"specialinvoke <headline_newsticker$Style: void <init>(headline_newsticker,java.lang.String,java.applet.Applet)>";
+    "fieldput <headline_newsticker: headline_newsticker$Style defaultstyle>"
+    "specialinvoke <headline_newsticker$Style: void <init>(headline_newsticker,java.lang.String,java.applet.Applet)>"->"fieldput <headline_newsticker: headline_newsticker$Style defaultstyle>";
+    "fieldput <headline_newsticker: headline_newsticker$Style defaultstyle>"->"load.r r0";
+    "push \"width\""
+    "load.r r0"->"push \"width\"";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"
+    "push \"width\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "store.r r1"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"store.r r1";
+    "store.r r1"->"load.r r0";
+    "push \"height\""
+    "load.r r0"->"push \"height\"";
+    "push \"height\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "store.r r2"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"store.r r2";
+    "load.r r1"
+    "store.r r2"->"load.r r1";
+    "ifnull load.r r2"
+    "load.r r1"->"ifnull load.r r2";
+    "ifnull load.r r2"->"load.r r0";
+    "load.r r0"->"load.r r1";
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"
+    "load.r r1"->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>";
+    "fieldput <headline_newsticker: int appW>"
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"->"fieldput <headline_newsticker: int appW>";
+    "load.r r2"
+    "fieldput <headline_newsticker: int appW>"->"load.r r2";
+    "ifnull load.r r0"
+    "load.r r2"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r2";
+    "load.r r2"->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>";
+    "fieldput <headline_newsticker: int appH>"
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"->"fieldput <headline_newsticker: int appH>";
+    "fieldput <headline_newsticker: int appH>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "fieldget <headline_newsticker: int appW>"
+    "load.r r0"->"fieldget <headline_newsticker: int appW>";
+    "fieldget <headline_newsticker: int appW>"->"load.r r0";
+    "fieldget <headline_newsticker: int appH>"
+    "load.r r0"->"fieldget <headline_newsticker: int appH>";
+    "virtualinvoke <java.awt.Component: java.awt.Image createImage(int,int)>"
+    "fieldget <headline_newsticker: int appH>"->"virtualinvoke <java.awt.Component: java.awt.Image createImage(int,int)>";
+    "fieldput <headline_newsticker: java.awt.Image buffer>"
+    "virtualinvoke <java.awt.Component: java.awt.Image createImage(int,int)>"->"fieldput <headline_newsticker: java.awt.Image buffer>";
+    "fieldput <headline_newsticker: java.awt.Image buffer>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "fieldget <headline_newsticker: java.awt.Image buffer>"
+    "load.r r0"->"fieldget <headline_newsticker: java.awt.Image buffer>";
+    "virtualinvoke <java.awt.Image: java.awt.Graphics getGraphics()>"
+    "fieldget <headline_newsticker: java.awt.Image buffer>"->"virtualinvoke <java.awt.Image: java.awt.Graphics getGraphics()>";
+    "fieldput <headline_newsticker: java.awt.Graphics offScreen>"
+    "virtualinvoke <java.awt.Image: java.awt.Graphics getGraphics()>"->"fieldput <headline_newsticker: java.awt.Graphics offScreen>";
+    "goto push 0"
+    "fieldput <headline_newsticker: java.awt.Graphics offScreen>"->"goto push 0";
+    "push 0"
+    "goto push 0"->"push 0";
+    "store.i r1"
+    "push 0"->"store.i r1";
+    "goto load.i r1"
+    "store.i r1"->"goto load.i r1";
+    "load.i r1"
+    "goto load.i r1"->"load.i r1";
+    "push 64"
+    "load.i r1"->"push 64";
+    "ifcmplt.i load.r r0"
+    "push 64"->"ifcmplt.i load.r r0";
+    "ifcmplt.i load.r r0"->"load.r r0";
+    "push \"copyright\""
+    "load.r r0"->"push \"copyright\"";
+    "push \"copyright\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"store.r r1";
+    "store.r r1"->"load.r r1";
+    "load.r r1"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r1";
+    "virtualinvoke <java.lang.String: java.lang.String toLowerCase()>"
+    "load.r r1"->"virtualinvoke <java.lang.String: java.lang.String toLowerCase()>";
+    "virtualinvoke <java.lang.String: java.lang.String toLowerCase()>"->"load.r r0";
+    "fieldget <headline_newsticker: java.lang.String infostr>"
+    "load.r r0"->"fieldget <headline_newsticker: java.lang.String infostr>";
+    "virtualinvoke <headline_newsticker: boolean test(java.lang.String,java.lang.String)>"
+    "fieldget <headline_newsticker: java.lang.String infostr>"->"virtualinvoke <headline_newsticker: boolean test(java.lang.String,java.lang.String)>";
+    "ifeq load.r r0"
+    "virtualinvoke <headline_newsticker: boolean test(java.lang.String,java.lang.String)>"->"ifeq load.r r0";
+    "ifeq load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "fieldget <headline_newsticker: int rg>"
+    "load.r r0"->"fieldget <headline_newsticker: int rg>";
+    "push 1"
+    "fieldget <headline_newsticker: int rg>"->"push 1";
+    "add.i"
+    "push 1"->"add.i";
+    "fieldput <headline_newsticker: int rg>"
+    "add.i"->"fieldput <headline_newsticker: int rg>";
+    "fieldput <headline_newsticker: int rg>"->"load.r r0";
+    "push \"regcode\""
+    "load.r r0"->"push \"regcode\"";
+    "push \"regcode\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"store.r r1";
+    "store.r r1"->"load.r r1";
+    "load.r r1"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r1";
+    "virtualinvoke <java.lang.String: java.lang.String toUpperCase()>"
+    "load.r r1"->"virtualinvoke <java.lang.String: java.lang.String toUpperCase()>";
+    "new java.lang.StringBuffer"
+    "virtualinvoke <java.lang.String: java.lang.String toUpperCase()>"->"new java.lang.StringBuffer";
+    "new java.lang.StringBuffer"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "push 19496"
+    "load.r r0"->"push 19496";
+    "virtualinvoke <headline_newsticker: java.lang.String spp(int)>"
+    "push 19496"->"virtualinvoke <headline_newsticker: java.lang.String spp(int)>";
+    "staticinvoke <java.lang.String: java.lang.String valueOf(java.lang.Object)>"
+    "virtualinvoke <headline_newsticker: java.lang.String spp(int)>"->"staticinvoke <java.lang.String: java.lang.String valueOf(java.lang.Object)>";
+    "specialinvoke <java.lang.StringBuffer: void <init>(java.lang.String)>"
+    "staticinvoke <java.lang.String: java.lang.String valueOf(java.lang.Object)>"->"specialinvoke <java.lang.StringBuffer: void <init>(java.lang.String)>";
+    "specialinvoke <java.lang.StringBuffer: void <init>(java.lang.String)>"->"load.r r0";
+    "push 49996"
+    "load.r r0"->"push 49996";
+    "push 49996"->"virtualinvoke <headline_newsticker: java.lang.String spp(int)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"
+    "virtualinvoke <headline_newsticker: java.lang.String spp(int)>"->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"load.r r0";
+    "push 37752"
+    "load.r r0"->"push 37752";
+    "push 37752"->"virtualinvoke <headline_newsticker: java.lang.String spp(int)>";
+    "virtualinvoke <headline_newsticker: java.lang.String spp(int)>"->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"load.r r0";
+    "push 56549"
+    "load.r r0"->"push 56549";
+    "push 56549"->"virtualinvoke <headline_newsticker: java.lang.String spp(int)>";
+    "virtualinvoke <headline_newsticker: java.lang.String spp(int)>"->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>"
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>"->"virtualinvoke <headline_newsticker: boolean test(java.lang.String,java.lang.String)>";
+    "virtualinvoke <headline_newsticker: boolean test(java.lang.String,java.lang.String)>"->"ifeq load.r r0";
+    "ifeq load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <headline_newsticker: int rg>";
+    "push 2"
+    "fieldget <headline_newsticker: int rg>"->"push 2";
+    "push 2"->"add.i";
+    "add.i"->"fieldput <headline_newsticker: int rg>";
+    "fieldput <headline_newsticker: int rg>"->"load.r r0";
+    "virtualinvoke <java.applet.Applet: java.net.URL getDocumentBase()>"
+    "load.r r0"->"virtualinvoke <java.applet.Applet: java.net.URL getDocumentBase()>";
+    "virtualinvoke <java.applet.Applet: java.net.URL getDocumentBase()>"->"store.r r1";
+    "store.r r1"->"load.r r0";
+    "load.r r0"->"load.r r1";
+    "virtualinvoke <java.net.URL: java.lang.String getHost()>"
+    "load.r r1"->"virtualinvoke <java.net.URL: java.lang.String getHost()>";
+    "virtualinvoke <java.net.URL: java.lang.String getHost()>"->"virtualinvoke <java.lang.String: java.lang.String toLowerCase()>";
+    "push \"secretplus\""
+    "virtualinvoke <java.lang.String: java.lang.String toLowerCase()>"->"push \"secretplus\"";
+    "push \"secretplus\""->"virtualinvoke <headline_newsticker: boolean test(java.lang.String,java.lang.String)>";
+    "ifne load.r r0"
+    "virtualinvoke <headline_newsticker: boolean test(java.lang.String,java.lang.String)>"->"ifne load.r r0";
+    "ifne load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r1";
+    "virtualinvoke <java.net.URL: java.lang.String getProtocol()>"
+    "load.r r1"->"virtualinvoke <java.net.URL: java.lang.String getProtocol()>";
+    "virtualinvoke <java.net.URL: java.lang.String getProtocol()>"->"virtualinvoke <java.lang.String: java.lang.String toLowerCase()>";
+    "push \"file\""
+    "virtualinvoke <java.lang.String: java.lang.String toLowerCase()>"->"push \"file\"";
+    "push \"file\""->"virtualinvoke <headline_newsticker: boolean test(java.lang.String,java.lang.String)>";
+    "virtualinvoke <headline_newsticker: boolean test(java.lang.String,java.lang.String)>"->"ifeq load.r r0";
+    "ifeq load.r r0"->"load.r r0";
+    "push 3"
+    "load.r r0"->"push 3";
+    "push 3"->"fieldput <headline_newsticker: int rg>";
+    "fieldput <headline_newsticker: int rg>"->"load.r r0";
+    "load.r r0"->"fieldget <headline_newsticker: int rg>";
+    "ifle load.r r0"
+    "fieldget <headline_newsticker: int rg>"->"ifle load.r r0";
+    "ifle load.r r0"->"push 0";
+    "push 0"->"store.i r1";
+    "store.i r1"->"goto load.i r1";
+    "goto load.i r1"->"load.i r1";
+    "load.i r1"->"push 64";
+    "push 64"->"ifcmplt.i load.r r0";
+    "ifcmplt.i load.r r0"->"load.r r0";
+    "load.r r0"->"load.i r1";
+    "fieldput <headline_newsticker: int itemcount>"
+    "load.i r1"->"fieldput <headline_newsticker: int itemcount>";
+    "goto load.r r0"
+    "fieldput <headline_newsticker: int itemcount>"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "push \"direction\""
+    "load.r r0"->"push \"direction\"";
+    "push \"direction\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"store.r r1";
+    "store.r r1"->"load.r r1";
+    "load.r r1"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r1";
+    "load.r r1"->"virtualinvoke <java.lang.String: java.lang.String toLowerCase()>";
+    "push \"up\""
+    "virtualinvoke <java.lang.String: java.lang.String toLowerCase()>"->"push \"up\"";
+    "push \"up\""->"virtualinvoke <headline_newsticker: boolean test(java.lang.String,java.lang.String)>";
+    "virtualinvoke <headline_newsticker: boolean test(java.lang.String,java.lang.String)>"->"ifeq load.r r0";
+    "ifeq load.r r0"->"load.r r0";
+    "push -1"
+    "load.r r0"->"push -1";
+    "fieldput <headline_newsticker: int dir>"
+    "push -1"->"fieldput <headline_newsticker: int dir>";
+    "fieldput <headline_newsticker: int dir>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "fieldget <headline_newsticker: int itemcount>"
+    "load.r r0"->"fieldget <headline_newsticker: int itemcount>";
+    "fieldget <headline_newsticker: int itemcount>"->"push 1";
+    "sub.i"
+    "push 1"->"sub.i";
+    "fieldput <headline_newsticker: int cur>"
+    "sub.i"->"fieldput <headline_newsticker: int cur>";
+    "fieldput <headline_newsticker: int cur>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "push \"pause\""
+    "load.r r0"->"push \"pause\"";
+    "push 10"
+    "push \"pause\""->"push 10";
+    "push 4"
+    "push 10"->"push 4";
+    "virtualinvoke <headline_newsticker: int pint(java.lang.String,int,int)>"
+    "push 4"->"virtualinvoke <headline_newsticker: int pint(java.lang.String,int,int)>";
+    "fieldput <headline_newsticker: int pause>"
+    "virtualinvoke <headline_newsticker: int pint(java.lang.String,int,int)>"->"fieldput <headline_newsticker: int pause>";
+    "fieldput <headline_newsticker: int pause>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "push \"delay\""
+    "load.r r0"->"push \"delay\"";
+    "push \"delay\""->"push 10";
+    "push 10"->"push 2";
+    "push 2"->"virtualinvoke <headline_newsticker: int pint(java.lang.String,int,int)>";
+    "fieldput <headline_newsticker: int delay>"
+    "virtualinvoke <headline_newsticker: int pint(java.lang.String,int,int)>"->"fieldput <headline_newsticker: int delay>";
+    "fieldput <headline_newsticker: int delay>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "virtualinvoke <java.awt.Component: java.awt.Container getParent()>"
+    "load.r r0"->"virtualinvoke <java.awt.Component: java.awt.Container getParent()>";
+    "fieldput <headline_newsticker: java.awt.Container container>"
+    "virtualinvoke <java.awt.Component: java.awt.Container getParent()>"->"fieldput <headline_newsticker: java.awt.Container container>";
+    "fieldput <headline_newsticker: java.awt.Container container>"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "fieldget <headline_newsticker: java.awt.Container container>"
+    "load.r r0"->"fieldget <headline_newsticker: java.awt.Container container>";
+    "instanceof"
+    "fieldget <headline_newsticker: java.awt.Container container>"->"instanceof";
+    "instanceof"->"ifeq load.r r0";
+    "ifeq load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <headline_newsticker: java.awt.Container container>";
+    "checkcast"
+    "fieldget <headline_newsticker: java.awt.Container container>"->"checkcast";
+    "fieldput <headline_newsticker: java.awt.Frame frm>"
+    "checkcast"->"fieldput <headline_newsticker: java.awt.Frame frm>";
+    "return"
+    "fieldput <headline_newsticker: java.awt.Frame frm>"->"return";
+    "ifeq load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <headline_newsticker: java.awt.Container container>";
+    "fieldget <headline_newsticker: java.awt.Container container>"->"virtualinvoke <java.awt.Component: java.awt.Container getParent()>";
+    "virtualinvoke <java.awt.Component: java.awt.Container getParent()>"->"fieldput <headline_newsticker: java.awt.Container container>";
+    "ifcmplt.i load.r r0"->"load.r r0";
+    "load.r r0"->"new java.lang.StringBuffer";
+    "new java.lang.StringBuffer"->"dup1.r";
+    "push \"item\""
+    "dup1.r"->"push \"item\"";
+    "push \"item\""->"specialinvoke <java.lang.StringBuffer: void <init>(java.lang.String)>";
+    "specialinvoke <java.lang.StringBuffer: void <init>(java.lang.String)>"->"load.i r1";
+    "load.i r1"->"push 1";
+    "push 1"->"add.i";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(int)>"
+    "add.i"->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(int)>";
+    "push \"_label\""
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(int)>"->"push \"_label\"";
+    "push \"_label\""->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>"->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"store.r r2";
+    "store.r r2"->"load.r r2";
+    "load.r r2"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r r0";
+    "fieldget <headline_newsticker: headline_newsticker$Item[] items>"
+    "load.r r0"->"fieldget <headline_newsticker: headline_newsticker$Item[] items>";
+    "fieldget <headline_newsticker: headline_newsticker$Item[] items>"->"load.i r1";
+    "new headline_newsticker$Item"
+    "load.i r1"->"new headline_newsticker$Item";
+    "new headline_newsticker$Item"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "load.r r0"->"load.i r1";
+    "load.i r1"->"load.r r2";
+    "specialinvoke <headline_newsticker$Item: void <init>(headline_newsticker,int,java.lang.String)>"
+    "load.r r2"->"specialinvoke <headline_newsticker$Item: void <init>(headline_newsticker,int,java.lang.String)>";
+    "arraywrite.r"
+    "specialinvoke <headline_newsticker$Item: void <init>(headline_newsticker,int,java.lang.String)>"->"arraywrite.r";
+    "inc.i r1 1"
+    "arraywrite.r"->"inc.i r1 1";
+    "ifle load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <headline_newsticker: headline_newsticker$Item[] items>";
+    "fieldget <headline_newsticker: headline_newsticker$Item[] items>"->"push 0";
+    "push 0"->"new headline_newsticker$Item";
+    "new headline_newsticker$Item"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "load.r r0"->"push 0";
+    "push 0"->"load.r r0";
+    "load.r r0"->"fieldget <headline_newsticker: java.lang.String infostr>";
+    "fieldget <headline_newsticker: java.lang.String infostr>"->"specialinvoke <headline_newsticker$Item: void <init>(headline_newsticker,int,java.lang.String)>";
+    "specialinvoke <headline_newsticker$Item: void <init>(headline_newsticker,int,java.lang.String)>"->"arraywrite.r";
+    "arraywrite.r"->"load.r r0";
+    "load.r r0"->"push 1";
+    "push 1"->"fieldput <headline_newsticker: int itemcount>";
+    "ifcmplt.i load.r r0"->"load.r r0";
+    "load.r r0"->"new java.lang.StringBuffer";
+    "new java.lang.StringBuffer"->"dup1.r";
+    "push \"style\""
+    "dup1.r"->"push \"style\"";
+    "push \"style\""->"specialinvoke <java.lang.StringBuffer: void <init>(java.lang.String)>";
+    "specialinvoke <java.lang.StringBuffer: void <init>(java.lang.String)>"->"load.i r1";
+    "load.i r1"->"push 1";
+    "push 1"->"add.i";
+    "add.i"->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(int)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(int)>"->"virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>"->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"store.r r2";
+    "store.r r2"->"load.r r2";
+    "load.r r2"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r r0";
+    "fieldget <headline_newsticker: headline_newsticker$Style[] styles>"
+    "load.r r0"->"fieldget <headline_newsticker: headline_newsticker$Style[] styles>";
+    "fieldget <headline_newsticker: headline_newsticker$Style[] styles>"->"load.i r1";
+    "load.i r1"->"new headline_newsticker$Style";
+    "new headline_newsticker$Style"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "load.r r0"->"load.r r2";
+    "load.r r2"->"load.r r0";
+    "load.r r0"->"specialinvoke <headline_newsticker$Style: void <init>(headline_newsticker,java.lang.String,java.applet.Applet)>";
+    "specialinvoke <headline_newsticker$Style: void <init>(headline_newsticker,java.lang.String,java.applet.Applet)>"->"arraywrite.r";
+    "arraywrite.r"->"inc.i r1 1";
+    "virtualinvoke <java.awt.Image: java.awt.Graphics getGraphics()>"->"store.r r1";
+    "store.r r1"->"load.r r0";
+    "load.r r0"->"push null";
+    "push null"->"fieldput <headline_newsticker: java.awt.Graphics offScreen>";
+}

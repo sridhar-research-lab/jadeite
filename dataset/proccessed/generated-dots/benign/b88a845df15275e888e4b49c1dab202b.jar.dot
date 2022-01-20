@@ -1,0 +1,45 @@
+digraph "" {
+    "r0 := @this: jmaster.util.A.A"
+    "load.r r0"
+    "r0 := @this: jmaster.util.A.A"->"load.r r0";
+    "specialinvoke <javax.swing.JApplet: void init()>"
+    "load.r r0"->"specialinvoke <javax.swing.JApplet: void init()>";
+    "specialinvoke <javax.swing.JApplet: void init()>"->"load.r r0";
+    "staticinvoke <netscape.javascript.JSObject: netscape.javascript.JSObject getWindow(java.applet.Applet)>"
+    "load.r r0"->"staticinvoke <netscape.javascript.JSObject: netscape.javascript.JSObject getWindow(java.applet.Applet)>";
+    "push 2"
+    "staticinvoke <netscape.javascript.JSObject: netscape.javascript.JSObject getWindow(java.applet.Applet)>"->"push 2";
+    "newarray"
+    "push 2"->"newarray";
+    "store.r r0"
+    "newarray"->"store.r r0";
+    "store.r r0"->"load.r r0";
+    "push 0"
+    "load.r r0"->"push 0";
+    "push \"java.version\""
+    "push 0"->"push \"java.version\"";
+    "staticinvoke <java.lang.System: java.lang.String getProperty(java.lang.String)>"
+    "push \"java.version\""->"staticinvoke <java.lang.System: java.lang.String getProperty(java.lang.String)>";
+    "arraywrite.r"
+    "staticinvoke <java.lang.System: java.lang.String getProperty(java.lang.String)>"->"arraywrite.r";
+    "arraywrite.r"->"load.r r0";
+    "push 1"
+    "load.r r0"->"push 1";
+    "push \"java.vendor\""
+    "push 1"->"push \"java.vendor\"";
+    "push \"java.vendor\""->"staticinvoke <java.lang.System: java.lang.String getProperty(java.lang.String)>";
+    "staticinvoke <java.lang.System: java.lang.String getProperty(java.lang.String)>"->"arraywrite.r";
+    "push \"javaInfo\""
+    "arraywrite.r"->"push \"javaInfo\"";
+    "push \"javaInfo\""->"load.r r0";
+    "virtualinvoke <netscape.javascript.JSObject: java.lang.Object call(java.lang.String,java.lang.Object[])>"
+    "load.r r0"->"virtualinvoke <netscape.javascript.JSObject: java.lang.Object call(java.lang.String,java.lang.Object[])>";
+    "pop"
+    "virtualinvoke <netscape.javascript.JSObject: java.lang.Object call(java.lang.String,java.lang.Object[])>"->"pop";
+    "goto return"
+    "pop"->"goto return";
+    "return"
+    "goto return"->"return";
+    "virtualinvoke <java.lang.Throwable: void printStackTrace()>"
+    "virtualinvoke <netscape.javascript.JSObject: java.lang.Object call(java.lang.String,java.lang.Object[])>"->"virtualinvoke <java.lang.Throwable: void printStackTrace()>";
+}

@@ -1,0 +1,322 @@
+digraph "" {
+    "r0 := @this: YawApplet"
+    "load.r r0"
+    "r0 := @this: YawApplet"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "fieldput <YawApplet: java.applet.Applet applet>"
+    "load.r r0"->"fieldput <YawApplet: java.applet.Applet applet>";
+    "fieldput <YawApplet: java.applet.Applet applet>"->"load.r r0";
+    "virtualinvoke <java.awt.Component: void repaint()>"
+    "load.r r0"->"virtualinvoke <java.awt.Component: void repaint()>";
+    "virtualinvoke <java.awt.Component: void repaint()>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "push \"Host\""
+    "load.r r0"->"push \"Host\"";
+    "store.r $r12"
+    "push \"Host\""->"store.r $r12";
+    "store.r $r12"->"load.r r0";
+    "push 1"
+    "load.r r0"->"push 1";
+    "fieldput <YawApplet: boolean error>"
+    "push 1"->"fieldput <YawApplet: boolean error>";
+    "fieldput <YawApplet: boolean error>"->"load.r r0";
+    "push \"User offline!\""
+    "load.r r0"->"push \"User offline!\"";
+    "fieldput <YawApplet: java.lang.String errorMessage>"
+    "push \"User offline!\""->"fieldput <YawApplet: java.lang.String errorMessage>";
+    "staticget <java.lang.System: java.io.PrintStream out>"
+    "fieldput <YawApplet: java.lang.String errorMessage>"->"staticget <java.lang.System: java.io.PrintStream out>";
+    "push \"Err. Unknown Host!\""
+    "staticget <java.lang.System: java.io.PrintStream out>"->"push \"Err. Unknown Host!\"";
+    "virtualinvoke <java.io.PrintStream: void println(java.lang.String)>"
+    "push \"Err. Unknown Host!\""->"virtualinvoke <java.io.PrintStream: void println(java.lang.String)>";
+    "return"
+    "virtualinvoke <java.io.PrintStream: void println(java.lang.String)>"->"return";
+    "push \"Host\""->"store.r $r12";
+    "store.r $r12"->"load.r r0";
+    "load.r r0"->"push 1";
+    "push 1"->"fieldput <YawApplet: boolean error>";
+    "fieldput <YawApplet: boolean error>"->"load.r r0";
+    "load.r r0"->"push \"User offline!\"";
+    "push \"User offline!\""->"fieldput <YawApplet: java.lang.String errorMessage>";
+    "fieldput <YawApplet: java.lang.String errorMessage>"->"staticget <java.lang.System: java.io.PrintStream out>";
+    "push \"Err. Timed out! Usr online?\""
+    "staticget <java.lang.System: java.io.PrintStream out>"->"push \"Err. Timed out! Usr online?\"";
+    "push \"Err. Timed out! Usr online?\""->"virtualinvoke <java.io.PrintStream: void println(java.lang.String)>";
+    "virtualinvoke <java.io.PrintStream: void println(java.lang.String)>"->"return";
+    "push \"Host\""->"store.r $r12";
+    "load.r $r12"
+    "store.r $r12"->"load.r $r12";
+    "virtualinvoke <java.lang.Throwable: java.lang.String getMessage()>"
+    "load.r $r12"->"virtualinvoke <java.lang.Throwable: java.lang.String getMessage()>";
+    "push \"No URL supplied...\""
+    "virtualinvoke <java.lang.Throwable: java.lang.String getMessage()>"->"push \"No URL supplied...\"";
+    "virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>"
+    "push \"No URL supplied...\""->"virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>";
+    "ifeq load.r $r12"
+    "virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>"->"ifeq load.r $r12";
+    "ifeq load.r $r12"->"load.r r0";
+    "push \"Err. No URL supplied!\""
+    "load.r r0"->"push \"Err. No URL supplied!\"";
+    "push \"Err. No URL supplied!\""->"fieldput <YawApplet: java.lang.String errorMessage>";
+    "goto load.r r0"
+    "fieldput <YawApplet: java.lang.String errorMessage>"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "load.r r0"->"push 1";
+    "push 1"->"fieldput <YawApplet: boolean error>";
+    "fieldput <YawApplet: boolean error>"->"return";
+    "ifeq load.r $r12"->"load.r $r12";
+    "virtualinvoke <java.lang.Throwable: void printStackTrace()>"
+    "load.r $r12"->"virtualinvoke <java.lang.Throwable: void printStackTrace()>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"
+    "push \"Host\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "fieldput <YawApplet: java.lang.String host>"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"fieldput <YawApplet: java.lang.String host>";
+    "fieldput <YawApplet: java.lang.String host>"->"load.r r0";
+    "fieldget <YawApplet: java.lang.String host>"
+    "load.r r0"->"fieldget <YawApplet: java.lang.String host>";
+    "ifnonnull load.r r0"
+    "fieldget <YawApplet: java.lang.String host>"->"ifnonnull load.r r0";
+    "ifnonnull load.r r0"->"staticget <java.lang.System: java.io.PrintStream out>";
+    "push \"No valid URL supplied...\""
+    "staticget <java.lang.System: java.io.PrintStream out>"->"push \"No valid URL supplied...\"";
+    "push \"No valid URL supplied...\""->"virtualinvoke <java.io.PrintStream: void println(java.lang.String)>";
+    "new java.lang.Exception"
+    "virtualinvoke <java.io.PrintStream: void println(java.lang.String)>"->"new java.lang.Exception";
+    "dup1.r"
+    "new java.lang.Exception"->"dup1.r";
+    "dup1.r"->"push \"No URL supplied...\"";
+    "specialinvoke <java.lang.Exception: void <init>(java.lang.String)>"
+    "push \"No URL supplied...\""->"specialinvoke <java.lang.Exception: void <init>(java.lang.String)>";
+    "athrow"
+    "specialinvoke <java.lang.Exception: void <init>(java.lang.String)>"->"athrow";
+    "ifnonnull load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "push \"Port\""
+    "load.r r0"->"push \"Port\"";
+    "push \"Port\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>";
+    "fieldput <YawApplet: int port>"
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"->"fieldput <YawApplet: int port>";
+    "fieldput <YawApplet: int port>"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "push \"OfflineImage\""
+    "load.r r0"->"push \"OfflineImage\"";
+    "push \"OfflineImage\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "fieldput <YawApplet: java.lang.String offImgUrl>"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"fieldput <YawApplet: java.lang.String offImgUrl>";
+    "fieldput <YawApplet: java.lang.String offImgUrl>"->"load.r r0";
+    "fieldget <YawApplet: java.lang.String offImgUrl>"
+    "load.r r0"->"fieldget <YawApplet: java.lang.String offImgUrl>";
+    "fieldget <YawApplet: java.lang.String offImgUrl>"->"ifnonnull load.r r0";
+    "ifnonnull load.r r0"->"staticget <java.lang.System: java.io.PrintStream out>";
+    "push \"No offlineImage supplied...\""
+    "staticget <java.lang.System: java.io.PrintStream out>"->"push \"No offlineImage supplied...\"";
+    "push \"No offlineImage supplied...\""->"virtualinvoke <java.io.PrintStream: void println(java.lang.String)>";
+    "virtualinvoke <java.io.PrintStream: void println(java.lang.String)>"->"goto load.r r0";
+    "goto load.r r0"->"load.r r0";
+    "push \"Zoom\""
+    "load.r r0"->"push \"Zoom\"";
+    "push \"Zoom\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"store.r $r12";
+    "store.r $r12"->"load.r $r12";
+    "ifnonnull load.r $r12"
+    "load.r $r12"->"ifnonnull load.r $r12";
+    "ifnonnull load.r $r12"->"staticget <java.lang.System: java.io.PrintStream out>";
+    "push \"Zoom enabled...\""
+    "staticget <java.lang.System: java.io.PrintStream out>"->"push \"Zoom enabled...\"";
+    "push \"Zoom enabled...\""->"virtualinvoke <java.io.PrintStream: void println(java.lang.String)>";
+    "goto staticget <java.lang.System: java.io.PrintStream out>"
+    "virtualinvoke <java.io.PrintStream: void println(java.lang.String)>"->"goto staticget <java.lang.System: java.io.PrintStream out>";
+    "goto staticget <java.lang.System: java.io.PrintStream out>"->"staticget <java.lang.System: java.io.PrintStream out>";
+    "new java.lang.StringBuffer"
+    "staticget <java.lang.System: java.io.PrintStream out>"->"new java.lang.StringBuffer";
+    "new java.lang.StringBuffer"->"dup1.r";
+    "push \"Host: \""
+    "dup1.r"->"push \"Host: \"";
+    "specialinvoke <java.lang.StringBuffer: void <init>(java.lang.String)>"
+    "push \"Host: \""->"specialinvoke <java.lang.StringBuffer: void <init>(java.lang.String)>";
+    "specialinvoke <java.lang.StringBuffer: void <init>(java.lang.String)>"->"load.r r0";
+    "load.r r0"->"fieldget <YawApplet: java.lang.String host>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"
+    "fieldget <YawApplet: java.lang.String host>"->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "push \":\""
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"push \":\"";
+    "push \":\""->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>"->"load.r r0";
+    "fieldget <YawApplet: int port>"
+    "load.r r0"->"fieldget <YawApplet: int port>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(int)>"
+    "fieldget <YawApplet: int port>"->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(int)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>"
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(int)>"->"virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>"->"virtualinvoke <java.io.PrintStream: void println(java.lang.String)>";
+    "virtualinvoke <java.io.PrintStream: void println(java.lang.String)>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "virtualinvoke <java.awt.Component: java.awt.Dimension size()>"
+    "load.r r0"->"virtualinvoke <java.awt.Component: java.awt.Dimension size()>";
+    "fieldget <java.awt.Dimension: int width>"
+    "virtualinvoke <java.awt.Component: java.awt.Dimension size()>"->"fieldget <java.awt.Dimension: int width>";
+    "fieldput <YawApplet: int width>"
+    "fieldget <java.awt.Dimension: int width>"->"fieldput <YawApplet: int width>";
+    "fieldput <YawApplet: int width>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"virtualinvoke <java.awt.Component: java.awt.Dimension size()>";
+    "fieldget <java.awt.Dimension: int height>"
+    "virtualinvoke <java.awt.Component: java.awt.Dimension size()>"->"fieldget <java.awt.Dimension: int height>";
+    "fieldput <YawApplet: int height>"
+    "fieldget <java.awt.Dimension: int height>"->"fieldput <YawApplet: int height>";
+    "fieldput <YawApplet: int height>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "fieldget <YawApplet: int width>"
+    "load.r r0"->"fieldget <YawApplet: int width>";
+    "fieldget <YawApplet: int width>"->"load.r r0";
+    "fieldget <YawApplet: int height>"
+    "load.r r0"->"fieldget <YawApplet: int height>";
+    "virtualinvoke <java.awt.Component: java.awt.Image createImage(int,int)>"
+    "fieldget <YawApplet: int height>"->"virtualinvoke <java.awt.Component: java.awt.Image createImage(int,int)>";
+    "fieldput <YawApplet: java.awt.Image m_offScrImg>"
+    "virtualinvoke <java.awt.Component: java.awt.Image createImage(int,int)>"->"fieldput <YawApplet: java.awt.Image m_offScrImg>";
+    "fieldput <YawApplet: java.awt.Image m_offScrImg>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "fieldget <YawApplet: java.awt.Image m_offScrImg>"
+    "load.r r0"->"fieldget <YawApplet: java.awt.Image m_offScrImg>";
+    "virtualinvoke <java.awt.Image: java.awt.Graphics getGraphics()>"
+    "fieldget <YawApplet: java.awt.Image m_offScrImg>"->"virtualinvoke <java.awt.Image: java.awt.Graphics getGraphics()>";
+    "fieldput <YawApplet: java.awt.Graphics m_offScr>"
+    "virtualinvoke <java.awt.Image: java.awt.Graphics getGraphics()>"->"fieldput <YawApplet: java.awt.Graphics m_offScr>";
+    "fieldput <YawApplet: java.awt.Graphics m_offScr>"->"load.r r0";
+    "new java.net.Socket"
+    "load.r r0"->"new java.net.Socket";
+    "new java.net.Socket"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "load.r r0"->"fieldget <YawApplet: java.lang.String host>";
+    "fieldget <YawApplet: java.lang.String host>"->"load.r r0";
+    "load.r r0"->"fieldget <YawApplet: int port>";
+    "specialinvoke <java.net.Socket: void <init>(java.lang.String,int)>"
+    "fieldget <YawApplet: int port>"->"specialinvoke <java.net.Socket: void <init>(java.lang.String,int)>";
+    "fieldput <YawApplet: java.net.Socket soc>"
+    "specialinvoke <java.net.Socket: void <init>(java.lang.String,int)>"->"fieldput <YawApplet: java.net.Socket soc>";
+    "fieldput <YawApplet: java.net.Socket soc>"->"load.r r0";
+    "new java.net.DatagramSocket"
+    "load.r r0"->"new java.net.DatagramSocket";
+    "new java.net.DatagramSocket"->"dup1.r";
+    "specialinvoke <java.net.DatagramSocket: void <init>()>"
+    "dup1.r"->"specialinvoke <java.net.DatagramSocket: void <init>()>";
+    "fieldput <YawApplet: java.net.DatagramSocket dsoc>"
+    "specialinvoke <java.net.DatagramSocket: void <init>()>"->"fieldput <YawApplet: java.net.DatagramSocket dsoc>";
+    "fieldput <YawApplet: java.net.DatagramSocket dsoc>"->"staticget <java.lang.System: java.io.PrintStream out>";
+    "staticget <java.lang.System: java.io.PrintStream out>"->"new java.lang.StringBuffer";
+    "new java.lang.StringBuffer"->"dup1.r";
+    "push \"Will look for UDP packs on: localhost:\""
+    "dup1.r"->"push \"Will look for UDP packs on: localhost:\"";
+    "push \"Will look for UDP packs on: localhost:\""->"specialinvoke <java.lang.StringBuffer: void <init>(java.lang.String)>";
+    "specialinvoke <java.lang.StringBuffer: void <init>(java.lang.String)>"->"load.r r0";
+    "fieldget <YawApplet: java.net.DatagramSocket dsoc>"
+    "load.r r0"->"fieldget <YawApplet: java.net.DatagramSocket dsoc>";
+    "virtualinvoke <java.net.DatagramSocket: int getLocalPort()>"
+    "fieldget <YawApplet: java.net.DatagramSocket dsoc>"->"virtualinvoke <java.net.DatagramSocket: int getLocalPort()>";
+    "virtualinvoke <java.net.DatagramSocket: int getLocalPort()>"->"virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(int)>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.StringBuffer append(int)>"->"virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>";
+    "virtualinvoke <java.lang.StringBuffer: java.lang.String toString()>"->"virtualinvoke <java.io.PrintStream: void println(java.lang.String)>";
+    "virtualinvoke <java.io.PrintStream: void println(java.lang.String)>"->"load.r r0";
+    "new java.io.DataOutputStream"
+    "load.r r0"->"new java.io.DataOutputStream";
+    "new java.io.DataOutputStream"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "fieldget <YawApplet: java.net.Socket soc>"
+    "load.r r0"->"fieldget <YawApplet: java.net.Socket soc>";
+    "virtualinvoke <java.net.Socket: java.io.OutputStream getOutputStream()>"
+    "fieldget <YawApplet: java.net.Socket soc>"->"virtualinvoke <java.net.Socket: java.io.OutputStream getOutputStream()>";
+    "specialinvoke <java.io.DataOutputStream: void <init>(java.io.OutputStream)>"
+    "virtualinvoke <java.net.Socket: java.io.OutputStream getOutputStream()>"->"specialinvoke <java.io.DataOutputStream: void <init>(java.io.OutputStream)>";
+    "fieldput <YawApplet: java.io.DataOutputStream out>"
+    "specialinvoke <java.io.DataOutputStream: void <init>(java.io.OutputStream)>"->"fieldput <YawApplet: java.io.DataOutputStream out>";
+    "fieldput <YawApplet: java.io.DataOutputStream out>"->"load.r r0";
+    "new java.io.DataInputStream"
+    "load.r r0"->"new java.io.DataInputStream";
+    "new java.io.DataInputStream"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "load.r r0"->"fieldget <YawApplet: java.net.Socket soc>";
+    "virtualinvoke <java.net.Socket: java.io.InputStream getInputStream()>"
+    "fieldget <YawApplet: java.net.Socket soc>"->"virtualinvoke <java.net.Socket: java.io.InputStream getInputStream()>";
+    "specialinvoke <java.io.DataInputStream: void <init>(java.io.InputStream)>"
+    "virtualinvoke <java.net.Socket: java.io.InputStream getInputStream()>"->"specialinvoke <java.io.DataInputStream: void <init>(java.io.InputStream)>";
+    "fieldput <YawApplet: java.io.DataInputStream in>"
+    "specialinvoke <java.io.DataInputStream: void <init>(java.io.InputStream)>"->"fieldput <YawApplet: java.io.DataInputStream in>";
+    "fieldput <YawApplet: java.io.DataInputStream in>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "virtualinvoke <java.awt.Component: void addMouseListener(java.awt.event.MouseListener)>"
+    "load.r r0"->"virtualinvoke <java.awt.Component: void addMouseListener(java.awt.event.MouseListener)>";
+    "virtualinvoke <java.awt.Component: void addMouseListener(java.awt.event.MouseListener)>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "virtualinvoke <java.awt.Component: void addMouseMotionListener(java.awt.event.MouseMotionListener)>"
+    "load.r r0"->"virtualinvoke <java.awt.Component: void addMouseMotionListener(java.awt.event.MouseMotionListener)>";
+    "virtualinvoke <java.awt.Component: void addMouseMotionListener(java.awt.event.MouseMotionListener)>"->"load.r r0";
+    "fieldget <YawApplet: java.awt.Button btn>"
+    "load.r r0"->"fieldget <YawApplet: java.awt.Button btn>";
+    "fieldget <YawApplet: java.awt.Button btn>"->"load.r r0";
+    "virtualinvoke <java.awt.Button: void addActionListener(java.awt.event.ActionListener)>"
+    "load.r r0"->"virtualinvoke <java.awt.Button: void addActionListener(java.awt.event.ActionListener)>";
+    "virtualinvoke <java.awt.Button: void addActionListener(java.awt.event.ActionListener)>"->"load.r r0";
+    "fieldget <YawApplet: java.awt.TextField pass>"
+    "load.r r0"->"fieldget <YawApplet: java.awt.TextField pass>";
+    "fieldget <YawApplet: java.awt.TextField pass>"->"load.r r0";
+    "virtualinvoke <java.awt.TextField: void addActionListener(java.awt.event.ActionListener)>"
+    "load.r r0"->"virtualinvoke <java.awt.TextField: void addActionListener(java.awt.event.ActionListener)>";
+    "virtualinvoke <java.awt.TextField: void addActionListener(java.awt.event.ActionListener)>"->"load.r r0";
+    "virtualinvoke <YawApplet: void buildMenu()>"
+    "load.r r0"->"virtualinvoke <YawApplet: void buildMenu()>";
+    "virtualinvoke <YawApplet: void buildMenu()>"->"load.r r0";
+    "new java.lang.Thread"
+    "load.r r0"->"new java.lang.Thread";
+    "new java.lang.Thread"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "specialinvoke <java.lang.Thread: void <init>(java.lang.Runnable)>"
+    "load.r r0"->"specialinvoke <java.lang.Thread: void <init>(java.lang.Runnable)>";
+    "fieldput <YawApplet: java.lang.Thread thread>"
+    "specialinvoke <java.lang.Thread: void <init>(java.lang.Runnable)>"->"fieldput <YawApplet: java.lang.Thread thread>";
+    "fieldput <YawApplet: java.lang.Thread thread>"->"load.r r0";
+    "fieldget <YawApplet: java.lang.Thread thread>"
+    "load.r r0"->"fieldget <YawApplet: java.lang.Thread thread>";
+    "ifnull return"
+    "fieldget <YawApplet: java.lang.Thread thread>"->"ifnull return";
+    "ifnull return"->"load.r r0";
+    "load.r r0"->"fieldget <YawApplet: java.lang.Thread thread>";
+    "virtualinvoke <java.lang.Thread: void start()>"
+    "fieldget <YawApplet: java.lang.Thread thread>"->"virtualinvoke <java.lang.Thread: void start()>";
+    "virtualinvoke <java.lang.Thread: void start()>"->"return";
+    "ifnonnull load.r $r12"->"load.r $r12";
+    "push \"false\""
+    "load.r $r12"->"push \"false\"";
+    "push \"false\""->"virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>";
+    "ifne load.r r0"
+    "virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>"->"ifne load.r r0";
+    "ifne load.r r0"->"load.r $r12";
+    "push \"FALSE\""
+    "load.r $r12"->"push \"FALSE\"";
+    "push \"FALSE\""->"virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>";
+    "ifeq staticget <java.lang.System: java.io.PrintStream out>"
+    "virtualinvoke <java.lang.String: boolean equals(java.lang.Object)>"->"ifeq staticget <java.lang.System: java.io.PrintStream out>";
+    "ifeq staticget <java.lang.System: java.io.PrintStream out>"->"load.r r0";
+    "push 0"
+    "load.r r0"->"push 0";
+    "fieldput <YawApplet: boolean allowZoom>"
+    "push 0"->"fieldput <YawApplet: boolean allowZoom>";
+    "fieldput <YawApplet: boolean allowZoom>"->"staticget <java.lang.System: java.io.PrintStream out>";
+    "push \"Zoom disabled...\""
+    "staticget <java.lang.System: java.io.PrintStream out>"->"push \"Zoom disabled...\"";
+    "push \"Zoom disabled...\""->"virtualinvoke <java.io.PrintStream: void println(java.lang.String)>";
+    "ifnonnull load.r r0"->"load.r r0";
+    "load.r r0"->"push 1";
+    "fieldput <YawApplet: boolean hasErrImg>"
+    "push 1"->"fieldput <YawApplet: boolean hasErrImg>";
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>"->"store.r $r12";
+    "store.r $r12"->"load.r r0";
+    "push 8081"
+    "load.r r0"->"push 8081";
+    "push 8081"->"fieldput <YawApplet: int port>";
+}

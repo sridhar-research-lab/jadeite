@@ -1,0 +1,245 @@
+digraph "" {
+    "r0 := @this: ScrollM"
+    "load.r r0"
+    "r0 := @this: ScrollM"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "push \"fontname\""
+    "load.r r0"->"push \"fontname\"";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"
+    "push \"fontname\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "fieldput <ScrollM: java.lang.String fontname>"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"fieldput <ScrollM: java.lang.String fontname>";
+    "fieldput <ScrollM: java.lang.String fontname>"->"load.r r0";
+    "fieldget <ScrollM: java.lang.String fontname>"
+    "load.r r0"->"fieldget <ScrollM: java.lang.String fontname>";
+    "ifnonnull load.r r0"
+    "fieldget <ScrollM: java.lang.String fontname>"->"ifnonnull load.r r0";
+    "ifnonnull load.r r0"->"load.r r0";
+    "new java.lang.String"
+    "load.r r0"->"new java.lang.String";
+    "dup1.r"
+    "new java.lang.String"->"dup1.r";
+    "push \"Verdana\""
+    "dup1.r"->"push \"Verdana\"";
+    "specialinvoke <java.lang.String: void <init>(java.lang.String)>"
+    "push \"Verdana\""->"specialinvoke <java.lang.String: void <init>(java.lang.String)>";
+    "specialinvoke <java.lang.String: void <init>(java.lang.String)>"->"fieldput <ScrollM: java.lang.String fontname>";
+    "fieldput <ScrollM: java.lang.String fontname>"->"load.r r0";
+    "push \"fontsize\""
+    "load.r r0"->"push \"fontsize\"";
+    "push \"fontsize\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "store.r r28"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"store.r r28";
+    "load.r r28"
+    "store.r r28"->"load.r r28";
+    "ifnull load.r r0"
+    "load.r r28"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r28";
+    "staticinvoke <java.lang.Integer: java.lang.Integer valueOf(java.lang.String)>"
+    "load.r r28"->"staticinvoke <java.lang.Integer: java.lang.Integer valueOf(java.lang.String)>";
+    "virtualinvoke <java.lang.Integer: int intValue()>"
+    "staticinvoke <java.lang.Integer: java.lang.Integer valueOf(java.lang.String)>"->"virtualinvoke <java.lang.Integer: int intValue()>";
+    "fieldput <ScrollM: int fontsize>"
+    "virtualinvoke <java.lang.Integer: int intValue()>"->"fieldput <ScrollM: int fontsize>";
+    "fieldput <ScrollM: int fontsize>"->"load.r r0";
+    "new java.awt.Font"
+    "load.r r0"->"new java.awt.Font";
+    "new java.awt.Font"->"dup1.r";
+    "dup1.r"->"load.r r0";
+    "load.r r0"->"fieldget <ScrollM: java.lang.String fontname>";
+    "push 0"
+    "fieldget <ScrollM: java.lang.String fontname>"->"push 0";
+    "push 0"->"load.r r0";
+    "fieldget <ScrollM: int fontsize>"
+    "load.r r0"->"fieldget <ScrollM: int fontsize>";
+    "specialinvoke <java.awt.Font: void <init>(java.lang.String,int,int)>"
+    "fieldget <ScrollM: int fontsize>"->"specialinvoke <java.awt.Font: void <init>(java.lang.String,int,int)>";
+    "fieldput <ScrollM: java.awt.Font theFont>"
+    "specialinvoke <java.awt.Font: void <init>(java.lang.String,int,int)>"->"fieldput <ScrollM: java.awt.Font theFont>";
+    "fieldput <ScrollM: java.awt.Font theFont>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "fieldget <ScrollM: java.awt.Font theFont>"
+    "load.r r0"->"fieldget <ScrollM: java.awt.Font theFont>";
+    "virtualinvoke <java.awt.Component: java.awt.FontMetrics getFontMetrics(java.awt.Font)>"
+    "fieldget <ScrollM: java.awt.Font theFont>"->"virtualinvoke <java.awt.Component: java.awt.FontMetrics getFontMetrics(java.awt.Font)>";
+    "fieldput <ScrollM: java.awt.FontMetrics fm>"
+    "virtualinvoke <java.awt.Component: java.awt.FontMetrics getFontMetrics(java.awt.Font)>"->"fieldput <ScrollM: java.awt.FontMetrics fm>";
+    "fieldput <ScrollM: java.awt.FontMetrics fm>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "virtualinvoke <java.awt.Component: java.awt.Dimension size()>"
+    "load.r r0"->"virtualinvoke <java.awt.Component: java.awt.Dimension size()>";
+    "fieldget <java.awt.Dimension: int width>"
+    "virtualinvoke <java.awt.Component: java.awt.Dimension size()>"->"fieldget <java.awt.Dimension: int width>";
+    "fieldget <java.awt.Dimension: int width>"->"load.r r0";
+    "load.r r0"->"virtualinvoke <java.awt.Component: java.awt.Dimension size()>";
+    "fieldget <java.awt.Dimension: int height>"
+    "virtualinvoke <java.awt.Component: java.awt.Dimension size()>"->"fieldget <java.awt.Dimension: int height>";
+    "virtualinvoke <java.awt.Component: java.awt.Image createImage(int,int)>"
+    "fieldget <java.awt.Dimension: int height>"->"virtualinvoke <java.awt.Component: java.awt.Image createImage(int,int)>";
+    "fieldput <ScrollM: java.awt.Image offscreenImage>"
+    "virtualinvoke <java.awt.Component: java.awt.Image createImage(int,int)>"->"fieldput <ScrollM: java.awt.Image offscreenImage>";
+    "fieldput <ScrollM: java.awt.Image offscreenImage>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "fieldget <ScrollM: java.awt.Image offscreenImage>"
+    "load.r r0"->"fieldget <ScrollM: java.awt.Image offscreenImage>";
+    "virtualinvoke <java.awt.Image: java.awt.Graphics getGraphics()>"
+    "fieldget <ScrollM: java.awt.Image offscreenImage>"->"virtualinvoke <java.awt.Image: java.awt.Graphics getGraphics()>";
+    "fieldput <ScrollM: java.awt.Graphics offscreenGfx>"
+    "virtualinvoke <java.awt.Image: java.awt.Graphics getGraphics()>"->"fieldput <ScrollM: java.awt.Graphics offscreenGfx>";
+    "fieldput <ScrollM: java.awt.Graphics offscreenGfx>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "push \"text\""
+    "load.r r0"->"push \"text\"";
+    "push \"text\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "fieldput <ScrollM: java.lang.String scrolltxt>"
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"fieldput <ScrollM: java.lang.String scrolltxt>";
+    "fieldput <ScrollM: java.lang.String scrolltxt>"->"load.r r0";
+    "fieldget <ScrollM: java.lang.String scrolltxt>"
+    "load.r r0"->"fieldget <ScrollM: java.lang.String scrolltxt>";
+    "fieldget <ScrollM: java.lang.String scrolltxt>"->"ifnonnull load.r r0";
+    "ifnonnull load.r r0"->"load.r r0";
+    "load.r r0"->"new java.lang.String";
+    "new java.lang.String"->"dup1.r";
+    "push \"Error, Please refer to the doc file\""
+    "dup1.r"->"push \"Error, Please refer to the doc file\"";
+    "push \"Error, Please refer to the doc file\""->"specialinvoke <java.lang.String: void <init>(java.lang.String)>";
+    "specialinvoke <java.lang.String: void <init>(java.lang.String)>"->"fieldput <ScrollM: java.lang.String scrolltxt>";
+    "fieldput <ScrollM: java.lang.String scrolltxt>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "fieldget <ScrollM: java.awt.FontMetrics fm>"
+    "load.r r0"->"fieldget <ScrollM: java.awt.FontMetrics fm>";
+    "virtualinvoke <java.awt.FontMetrics: int getHeight()>"
+    "fieldget <ScrollM: java.awt.FontMetrics fm>"->"virtualinvoke <java.awt.FontMetrics: int getHeight()>";
+    "fieldput <ScrollM: int stringheight>"
+    "virtualinvoke <java.awt.FontMetrics: int getHeight()>"->"fieldput <ScrollM: int stringheight>";
+    "fieldput <ScrollM: int stringheight>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"fieldget <ScrollM: java.awt.FontMetrics fm>";
+    "fieldget <ScrollM: java.awt.FontMetrics fm>"->"load.r r0";
+    "load.r r0"->"fieldget <ScrollM: java.lang.String scrolltxt>";
+    "virtualinvoke <java.awt.FontMetrics: int stringWidth(java.lang.String)>"
+    "fieldget <ScrollM: java.lang.String scrolltxt>"->"virtualinvoke <java.awt.FontMetrics: int stringWidth(java.lang.String)>";
+    "fieldput <ScrollM: int stringwidth>"
+    "virtualinvoke <java.awt.FontMetrics: int stringWidth(java.lang.String)>"->"fieldput <ScrollM: int stringwidth>";
+    "fieldput <ScrollM: int stringwidth>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "load.r r0"->"virtualinvoke <java.awt.Component: java.awt.Dimension size()>";
+    "virtualinvoke <java.awt.Component: java.awt.Dimension size()>"->"fieldget <java.awt.Dimension: int height>";
+    "fieldget <java.awt.Dimension: int height>"->"load.r r0";
+    "fieldget <ScrollM: int stringheight>"
+    "load.r r0"->"fieldget <ScrollM: int stringheight>";
+    "push 2"
+    "fieldget <ScrollM: int stringheight>"->"push 2";
+    "div.i"
+    "push 2"->"div.i";
+    "add.i"
+    "div.i"->"add.i";
+    "add.i"->"push 2";
+    "push 2"->"div.i";
+    "fieldput <ScrollM: int ypos>"
+    "div.i"->"fieldput <ScrollM: int ypos>";
+    "fieldput <ScrollM: int ypos>"->"load.r r0";
+    "push 1"
+    "load.r r0"->"push 1";
+    "fieldput <ScrollM: boolean movestring>"
+    "push 1"->"fieldput <ScrollM: boolean movestring>";
+    "fieldput <ScrollM: boolean movestring>"->"load.r r0";
+    "push \"msleft\""
+    "load.r r0"->"push \"msleft\"";
+    "push \"msleft\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"store.r r28";
+    "store.r r28"->"load.r r28";
+    "load.r r28"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r28";
+    "load.r r28"->"staticinvoke <java.lang.Integer: java.lang.Integer valueOf(java.lang.String)>";
+    "staticinvoke <java.lang.Integer: java.lang.Integer valueOf(java.lang.String)>"->"virtualinvoke <java.lang.Integer: int intValue()>";
+    "fieldput <ScrollM: int speedleft>"
+    "virtualinvoke <java.lang.Integer: int intValue()>"->"fieldput <ScrollM: int speedleft>";
+    "fieldput <ScrollM: int speedleft>"->"load.r r0";
+    "push \"msright\""
+    "load.r r0"->"push \"msright\"";
+    "push \"msright\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"store.r r28";
+    "store.r r28"->"load.r r28";
+    "load.r r28"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r28";
+    "load.r r28"->"staticinvoke <java.lang.Integer: java.lang.Integer valueOf(java.lang.String)>";
+    "staticinvoke <java.lang.Integer: java.lang.Integer valueOf(java.lang.String)>"->"virtualinvoke <java.lang.Integer: int intValue()>";
+    "fieldput <ScrollM: int speedright>"
+    "virtualinvoke <java.lang.Integer: int intValue()>"->"fieldput <ScrollM: int speedright>";
+    "fieldput <ScrollM: int speedright>"->"load.r r0";
+    "push \"pixleft\""
+    "load.r r0"->"push \"pixleft\"";
+    "push \"pixleft\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"store.r r28";
+    "store.r r28"->"load.r r28";
+    "load.r r28"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r28";
+    "load.r r28"->"staticinvoke <java.lang.Integer: java.lang.Integer valueOf(java.lang.String)>";
+    "staticinvoke <java.lang.Integer: java.lang.Integer valueOf(java.lang.String)>"->"virtualinvoke <java.lang.Integer: int intValue()>";
+    "fieldput <ScrollM: int pixleft>"
+    "virtualinvoke <java.lang.Integer: int intValue()>"->"fieldput <ScrollM: int pixleft>";
+    "fieldput <ScrollM: int pixleft>"->"load.r r0";
+    "push \"pixright\""
+    "load.r r0"->"push \"pixright\"";
+    "push \"pixright\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"store.r r28";
+    "store.r r28"->"load.r r28";
+    "load.r r28"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r r0";
+    "load.r r0"->"load.r r28";
+    "load.r r28"->"staticinvoke <java.lang.Integer: java.lang.Integer valueOf(java.lang.String)>";
+    "staticinvoke <java.lang.Integer: java.lang.Integer valueOf(java.lang.String)>"->"virtualinvoke <java.lang.Integer: int intValue()>";
+    "fieldput <ScrollM: int pixright>"
+    "virtualinvoke <java.lang.Integer: int intValue()>"->"fieldput <ScrollM: int pixright>";
+    "fieldput <ScrollM: int pixright>"->"load.r r0";
+    "push \"textcolor\""
+    "load.r r0"->"push \"textcolor\"";
+    "push \"textcolor\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"store.r r28";
+    "store.r r28"->"load.r r28";
+    "load.r r28"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r r0";
+    "new java.awt.Color"
+    "load.r r0"->"new java.awt.Color";
+    "new java.awt.Color"->"dup1.r";
+    "dup1.r"->"load.r r28";
+    "push 16"
+    "load.r r28"->"push 16";
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String,int)>"
+    "push 16"->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String,int)>";
+    "specialinvoke <java.awt.Color: void <init>(int)>"
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String,int)>"->"specialinvoke <java.awt.Color: void <init>(int)>";
+    "fieldput <ScrollM: java.awt.Color textcolor>"
+    "specialinvoke <java.awt.Color: void <init>(int)>"->"fieldput <ScrollM: java.awt.Color textcolor>";
+    "fieldput <ScrollM: java.awt.Color textcolor>"->"load.r r0";
+    "push \"bgcolor\""
+    "load.r r0"->"push \"bgcolor\"";
+    "push \"bgcolor\""->"virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>";
+    "virtualinvoke <java.applet.Applet: java.lang.String getParameter(java.lang.String)>"->"store.r r28";
+    "store.r r28"->"load.r r28";
+    "load.r r28"->"ifnull load.r r0";
+    "ifnull load.r r0"->"load.r r0";
+    "load.r r0"->"new java.awt.Color";
+    "new java.awt.Color"->"dup1.r";
+    "dup1.r"->"load.r r28";
+    "load.r r28"->"push 16";
+    "push 16"->"staticinvoke <java.lang.Integer: int parseInt(java.lang.String,int)>";
+    "staticinvoke <java.lang.Integer: int parseInt(java.lang.String,int)>"->"specialinvoke <java.awt.Color: void <init>(int)>";
+    "fieldput <ScrollM: java.awt.Color bgcolor>"
+    "specialinvoke <java.awt.Color: void <init>(int)>"->"fieldput <ScrollM: java.awt.Color bgcolor>";
+    "fieldput <ScrollM: java.awt.Color bgcolor>"->"load.r r0";
+    "load.r r0"->"load.r r0";
+    "fieldget <ScrollM: java.awt.Color bgcolor>"
+    "load.r r0"->"fieldget <ScrollM: java.awt.Color bgcolor>";
+    "virtualinvoke <java.awt.Component: void setBackground(java.awt.Color)>"
+    "fieldget <ScrollM: java.awt.Color bgcolor>"->"virtualinvoke <java.awt.Component: void setBackground(java.awt.Color)>";
+    "return"
+    "virtualinvoke <java.awt.Component: void setBackground(java.awt.Color)>"->"return";
+}
